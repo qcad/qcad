@@ -8,6 +8,19 @@ xmlns:rs="http://www.ribbonsoft.com">
   hasShell="false" sharedPointerSupport="false" isQObject="false"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
     <baseClass name="RSnap" specifier="public" />
+    <enum name="Mode">
+      <value name="None" />
+      <value name="Intersections" />
+      <value name="EndPoints" />
+      <value name="MiddlePoints" />
+      <value name="CenterPoints" />
+      <value name="Perpendicular" />
+      <value name="Tangential" />
+      <value name="ReferencePoints" />
+      <value name="GridPoints" />
+      <value name="PointsOnEntity" />
+      <value name="FreePositioning" />
+    </enum>
     <constructor>
       <variant />
     </constructor>
@@ -29,7 +42,121 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
-    <method name="getGridPoints" cppName="getGridPoints"
+    <method name="getModes" cppName="getModes" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RSnapAuto::Modes"
+      isPureVirtual="false" />
+    </method>
+    <method name="setModes" cppName="setModes" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RSnapAuto::Modes" typeName="RSnapAuto::Modes"
+        name="m" isConst="false" />
+      </variant>
+    </method>
+    <method name="setMode" cppName="setMode" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RSnapAuto::Mode" typeName="RSnapAuto::Mode"
+        name="mode" isConst="false" />
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getMode" cppName="getMode" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RSnapAuto::Mode" typeName="RSnapAuto::Mode"
+        name="mode" isConst="false" />
+      </variant>
+    </method>
+    <method name="setIntersections" cppName="setIntersections"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getIntersections" cppName="getIntersections"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setEndPoints" cppName="setEndPoints"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getEndPoints" cppName="getEndPoints"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setMiddlePoints" cppName="setMiddlePoints"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getMiddlePoints" cppName="getMiddlePoints"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setCenterPoints" cppName="setCenterPoints"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getCenterPoints" cppName="getCenterPoints"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setPerpendicular" cppName="setPerpendicular"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getPerpendicular" cppName="getPerpendicular"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setTangential" cppName="setTangential"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getTangential" cppName="getTangential"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setReferencePoints" cppName="setReferencePoints"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getReferencePoints" cppName="getReferencePoints"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
@@ -42,7 +169,20 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
-    <method name="getFreePositioning" cppName="getFreePositioning"
+    <method name="getGridPoints" cppName="getGridPoints"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setPointsOnEntity" cppName="setPointsOnEntity"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getPointsOnEntity" cppName="getPointsOnEntity"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
@@ -54,6 +194,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="bool" typeName="bool" name="on"
         isConst="false" />
       </variant>
+    </method>
+    <method name="getFreePositioning" cppName="getFreePositioning"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="reset" cppName="reset" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">

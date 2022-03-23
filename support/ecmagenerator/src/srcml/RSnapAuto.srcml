@@ -23,6 +23,8 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"snap_global.h"</cpp:file></cpp:include>
 
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QFlags&gt;</cpp:file></cpp:include>
+
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RSnap.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>RMouseEvent</name>;</class_decl>
@@ -37,6 +39,22 @@
  */</comment>
 <class>class <macro><name>QCADSNAP_EXPORT</name></macro> <name>RSnapAuto</name> <super>: <specifier>public</specifier> <name>RSnap</name></super> <block>{<private type="default">
 </private><public>public:
+    <enum>enum <name>Mode</name> <block>{
+        <expr><name>None</name> = 0x0000</expr>,
+        <expr><name>Intersections</name> = 0x0001</expr>,
+        <expr><name>EndPoints</name> = 0x0002</expr>,
+        <expr><name>MiddlePoints</name> = 0x0004</expr>,
+        <expr><name>CenterPoints</name> = 0x0008</expr>,
+        <expr><name>Perpendicular</name> = 0x0010</expr>,
+        <expr><name>Tangential</name> = 0x0020</expr>,
+        <expr><name>ReferencePoints</name> = 0x0040</expr>,
+        <expr><name>GridPoints</name> = 0x0080</expr>,
+        <expr><name>PointsOnEntity</name> = 0x0100</expr>,
+        <expr><name>FreePositioning</name> = 0x0200</expr>
+    }</block>;</enum>
+    <macro><name>Q_DECLARE_FLAGS</name><argument_list>(<argument>Modes</argument>, <argument>Mode</argument>)</argument_list></macro>
+
+</public><public>public:
     <constructor><name>RSnapAuto</name><parameter_list>()</parameter_list> <member_list>: <call><name>RSnap</name><argument_list>(<argument><expr><name><name>RSnap</name>::<name>Unknown</name></name></expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
     <destructor><specifier>virtual</specifier> <name>~RSnapAuto</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
 
@@ -48,21 +66,110 @@
 
     <function_decl><type><name>static</name> <name>void</name></type> <name>init</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>force</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
-    <function><type><name>static</name> <name>bool</name></type> <name>getGridPoints</name><parameter_list>()</parameter_list> <block>{
-        <return>return <expr><name>gridPoints</name></expr>;</return>
+    <function><type><name>static</name> <name><name>RSnapAuto</name>::<name>Modes</name></name></type> <name>getModes</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>modes</name></expr>;</return>
+    }</block></function>
+    <function><type><name>static</name> <name>void</name></type> <name>setModes</name><parameter_list>(<param><decl><type><name><name>RSnapAuto</name>::<name>Modes</name></name></type> <name>m</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>modes</name> = <name>m</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>static</name> <name>void</name></type> <name>setMode</name><parameter_list>(<param><decl><type><name><name>RSnapAuto</name>::<name>Mode</name></name></type> <name>mode</name></decl></param>, <param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <if>if <condition>(<expr><name>on</name></expr>)</condition><then> <block>{
+            <expr_stmt><expr><name>modes</name> |= <name>mode</name></expr>;</expr_stmt>
+        }</block></then> <else>else <block>{
+            <expr_stmt><expr><name>modes</name> &amp;= ~<name>mode</name></expr>;</expr_stmt>
+        }</block></else></if>
+    }</block></function>
+
+    <function><type><name>static</name> <name>bool</name></type> <name>getMode</name><parameter_list>(<param><decl><type><name><name>RSnapAuto</name>::<name>Mode</name></name></type> <name>mode</name></decl></param>)</parameter_list> <block>{
+        <return>return <expr>(<name>modes</name> &amp; <name>mode</name>) == <name>mode</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>static</name> <name>void</name></type> <name>setIntersections</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setMode</name><parameter_list>(<param><decl><type><name>Intersections</name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+    <function><type><name>static</name> <name>bool</name></type> <name>getIntersections</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><call><name>getMode</name><argument_list>(<argument><expr><name>Intersections</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>static</name> <name>void</name></type> <name>setEndPoints</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setMode</name><parameter_list>(<param><decl><type><name>EndPoints</name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+    <function><type><name>static</name> <name>bool</name></type> <name>getEndPoints</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><call><name>getMode</name><argument_list>(<argument><expr><name>EndPoints</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>static</name> <name>void</name></type> <name>setMiddlePoints</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setMode</name><parameter_list>(<param><decl><type><name>MiddlePoints</name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+    <function><type><name>static</name> <name>bool</name></type> <name>getMiddlePoints</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><call><name>getMode</name><argument_list>(<argument><expr><name>MiddlePoints</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>static</name> <name>void</name></type> <name>setCenterPoints</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setMode</name><parameter_list>(<param><decl><type><name>CenterPoints</name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+    <function><type><name>static</name> <name>bool</name></type> <name>getCenterPoints</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><call><name>getMode</name><argument_list>(<argument><expr><name>CenterPoints</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>static</name> <name>void</name></type> <name>setPerpendicular</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setMode</name><parameter_list>(<param><decl><type><name>Perpendicular</name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+    <function><type><name>static</name> <name>bool</name></type> <name>getPerpendicular</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><call><name>getMode</name><argument_list>(<argument><expr><name>Perpendicular</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>static</name> <name>void</name></type> <name>setTangential</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setMode</name><parameter_list>(<param><decl><type><name>Tangential</name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+    <function><type><name>static</name> <name>bool</name></type> <name>getTangential</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><call><name>getMode</name><argument_list>(<argument><expr><name>Tangential</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>static</name> <name>void</name></type> <name>setReferencePoints</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setMode</name><parameter_list>(<param><decl><type><name>ReferencePoints</name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+    <function><type><name>static</name> <name>bool</name></type> <name>getReferencePoints</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><call><name>getMode</name><argument_list>(<argument><expr><name>ReferencePoints</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name>static</name> <name>void</name></type> <name>setGridPoints</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>gridPoints</name> = <name>on</name></expr>;</expr_stmt>
+        <constructor_decl><name>setMode</name><parameter_list>(<param><decl><type><name>GridPoints</name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+    <function><type><name>static</name> <name>bool</name></type> <name>getGridPoints</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><call><name>getMode</name><argument_list>(<argument><expr><name>GridPoints</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function><type><name>static</name> <name>bool</name></type> <name>getFreePositioning</name><parameter_list>()</parameter_list> <block>{
-        <return>return <expr><name>freePositioning</name></expr>;</return>
+    <function><type><name>static</name> <name>void</name></type> <name>setPointsOnEntity</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setMode</name><parameter_list>(<param><decl><type><name>PointsOnEntity</name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+    <function><type><name>static</name> <name>bool</name></type> <name>getPointsOnEntity</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><call><name>getMode</name><argument_list>(<argument><expr><name>PointsOnEntity</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name>static</name> <name>void</name></type> <name>setFreePositioning</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>freePositioning</name> = <name>on</name></expr>;</expr_stmt>
+        <constructor_decl><name>setMode</name><parameter_list>(<param><decl><type><name>FreePositioning</name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
     }</block></function>
+    <function><type><name>static</name> <name>bool</name></type> <name>getFreePositioning</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><call><name>getMode</name><argument_list>(<argument><expr><name>FreePositioning</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+<comment type="line">//    static bool getGridPoints() {</comment>
+<comment type="line">//        return gridPoints;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    static void setGridPoints(bool on) {</comment>
+<comment type="line">//        gridPoints = on;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    static bool getFreePositioning() {</comment>
+<comment type="line">//        return freePositioning;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    static void setFreePositioning(bool on) {</comment>
+<comment type="line">//        freePositioning = on;</comment>
+<comment type="line">//    }</comment>
 
     <function><type><name>virtual</name> <name>void</name></type> <name>reset</name><parameter_list>()</parameter_list> <block>{
         <expr_stmt><expr><name>status</name> = <name><name>RSnap</name>::<name>Unknown</name></name></expr>;</expr_stmt>
@@ -71,19 +178,24 @@
 </public><private>private:
     <decl_stmt><decl><type><name>static</name> <name>bool</name></type> <name>initialized</name></decl>;</decl_stmt>
 
-    <decl_stmt><decl><type><name>static</name> <name>bool</name></type> <name>intersections</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>static</name> <name>bool</name></type> <name>endPoints</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>static</name> <name>bool</name></type> <name>middlePoints</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>static</name> <name>bool</name></type> <name>centerPoints</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>static</name> <name>bool</name></type> <name>perpendicular</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>static</name> <name>bool</name></type> <name>tangential</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>static</name> <name>bool</name></type> <name>referencePoints</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>static</name> <name>bool</name></type> <name>gridPoints</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>static</name> <name>bool</name></type> <name>pointsOnEntity</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>static</name> <name>bool</name></type> <name>freePositioning</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>Modes</name></type> <name>modes</name></decl>;</decl_stmt>
+
+<comment type="line">//    static bool intersections;</comment>
+<comment type="line">//    static bool endPoints;</comment>
+<comment type="line">//    static bool middlePoints;</comment>
+<comment type="line">//    static bool centerPoints;</comment>
+<comment type="line">//    static bool perpendicular;</comment>
+<comment type="line">//    static bool tangential;</comment>
+<comment type="line">//    static bool referencePoints;</comment>
+<comment type="line">//    static bool gridPoints;</comment>
+<comment type="line">//    static bool pointsOnEntity;</comment>
+<comment type="line">//    static bool freePositioning;</comment>
 </private>}</block>;</class>
 
+<macro><name>Q_DECLARE_OPERATORS_FOR_FLAGS</name><argument_list>(<argument>RSnapAuto::Modes</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RSnapAuto*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RSnapAuto::Mode</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RSnapAuto::Mode*</argument>)</argument_list></macro>
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

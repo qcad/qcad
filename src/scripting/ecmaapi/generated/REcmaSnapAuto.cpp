@@ -85,13 +85,53 @@
     
             REcmaHelper::registerFunction(&engine, &ctor, init, "init");
             
-            REcmaHelper::registerFunction(&engine, &ctor, getGridPoints, "getGridPoints");
+            REcmaHelper::registerFunction(&engine, &ctor, getModes, "getModes");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, setModes, "setModes");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, setMode, "setMode");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getMode, "getMode");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, setIntersections, "setIntersections");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getIntersections, "getIntersections");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, setEndPoints, "setEndPoints");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getEndPoints, "getEndPoints");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, setMiddlePoints, "setMiddlePoints");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getMiddlePoints, "getMiddlePoints");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, setCenterPoints, "setCenterPoints");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getCenterPoints, "getCenterPoints");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, setPerpendicular, "setPerpendicular");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getPerpendicular, "getPerpendicular");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, setTangential, "setTangential");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getTangential, "getTangential");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, setReferencePoints, "setReferencePoints");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getReferencePoints, "getReferencePoints");
             
             REcmaHelper::registerFunction(&engine, &ctor, setGridPoints, "setGridPoints");
             
-            REcmaHelper::registerFunction(&engine, &ctor, getFreePositioning, "getFreePositioning");
+            REcmaHelper::registerFunction(&engine, &ctor, getGridPoints, "getGridPoints");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, setPointsOnEntity, "setPointsOnEntity");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getPointsOnEntity, "getPointsOnEntity");
             
             REcmaHelper::registerFunction(&engine, &ctor, setFreePositioning, "setFreePositioning");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getFreePositioning, "getFreePositioning");
             
 
     // static properties:
@@ -100,8 +140,70 @@
     // enum values:
     
 
+    ctor.setProperty("None",
+    QScriptValue(RSnapAuto::None),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Intersections",
+    QScriptValue(RSnapAuto::Intersections),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("EndPoints",
+    QScriptValue(RSnapAuto::EndPoints),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("MiddlePoints",
+    QScriptValue(RSnapAuto::MiddlePoints),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("CenterPoints",
+    QScriptValue(RSnapAuto::CenterPoints),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Perpendicular",
+    QScriptValue(RSnapAuto::Perpendicular),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Tangential",
+    QScriptValue(RSnapAuto::Tangential),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("ReferencePoints",
+    QScriptValue(RSnapAuto::ReferencePoints),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("GridPoints",
+    QScriptValue(RSnapAuto::GridPoints),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("PointsOnEntity",
+    QScriptValue(RSnapAuto::PointsOnEntity),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("FreePositioning",
+    QScriptValue(RSnapAuto::FreePositioning),
+    QScriptValue::ReadOnly);
+
+
     // enum conversions:
     
+    qScriptRegisterMetaType<RSnapAuto::Mode>(
+        &engine,
+        toScriptValueEnumMode,
+        fromScriptValueEnumMode,
+        ctor.property(QString::fromLatin1("prototype"))
+    );
+
         
     // init class:
     engine.globalObject().setProperty("RSnapAuto",
@@ -431,12 +533,269 @@
             return result;
         }
          QScriptValue
-        REcmaSnapAuto::getGridPoints
+        REcmaSnapAuto::getModes
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSnapAuto::getGridPoints", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSnapAuto::getGridPoints";
+            //REcmaHelper::functionStart("REcmaSnapAuto::getModes", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSnapAuto::getModes";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RSnapAuto::Modes'
+    RSnapAuto::Modes cppResult =
+        RSnapAuto::
+       getModes();
+        // return type: RSnapAuto::Modes
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSnapAuto.getModes().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSnapAuto::getModes", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSnapAuto::setModes
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSnapAuto::setModes", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSnapAuto::setModes";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RSnapAuto::Modes */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RSnapAuto::Modes
+                    a0 =
+                    (RSnapAuto::Modes)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RSnapAuto::
+       setModes(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSnapAuto.setModes().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSnapAuto::setModes", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSnapAuto::setMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSnapAuto::setMode", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSnapAuto::setMode";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RSnapAuto::Mode */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RSnapAuto::Mode*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RSnapAuto::Mode*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RSnapAuto: Argument 0 is not of type RSnapAuto::Mode*.",
+                               context);                    
+                    }
+                    RSnapAuto::Mode& a0 = *ap0;
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RSnapAuto::
+       setMode(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSnapAuto.setMode().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSnapAuto::setMode", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSnapAuto::getMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSnapAuto::getMode", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSnapAuto::getMode";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RSnapAuto::Mode */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RSnapAuto::Mode*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RSnapAuto::Mode*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RSnapAuto: Argument 0 is not of type RSnapAuto::Mode*.",
+                               context);                    
+                    }
+                    RSnapAuto::Mode& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSnapAuto::
+       getMode(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSnapAuto.getMode().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSnapAuto::getMode", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSnapAuto::setIntersections
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSnapAuto::setIntersections", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSnapAuto::setIntersections";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RSnapAuto::
+       setIntersections(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSnapAuto.setIntersections().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSnapAuto::setIntersections", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSnapAuto::getIntersections
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSnapAuto::getIntersections", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSnapAuto::getIntersections";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
@@ -453,7 +812,7 @@
     // return type 'bool'
     bool cppResult =
         RSnapAuto::
-       getGridPoints();
+       getIntersections();
         // return type: bool
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -463,10 +822,514 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RSnapAuto.getGridPoints().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSnapAuto.getIntersections().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSnapAuto::getGridPoints", context, engine);
+            //REcmaHelper::functionEnd("REcmaSnapAuto::getIntersections", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSnapAuto::setEndPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSnapAuto::setEndPoints", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSnapAuto::setEndPoints";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RSnapAuto::
+       setEndPoints(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSnapAuto.setEndPoints().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSnapAuto::setEndPoints", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSnapAuto::getEndPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSnapAuto::getEndPoints", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSnapAuto::getEndPoints";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSnapAuto::
+       getEndPoints();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSnapAuto.getEndPoints().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSnapAuto::getEndPoints", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSnapAuto::setMiddlePoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSnapAuto::setMiddlePoints", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSnapAuto::setMiddlePoints";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RSnapAuto::
+       setMiddlePoints(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSnapAuto.setMiddlePoints().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSnapAuto::setMiddlePoints", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSnapAuto::getMiddlePoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSnapAuto::getMiddlePoints", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSnapAuto::getMiddlePoints";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSnapAuto::
+       getMiddlePoints();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSnapAuto.getMiddlePoints().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSnapAuto::getMiddlePoints", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSnapAuto::setCenterPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSnapAuto::setCenterPoints", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSnapAuto::setCenterPoints";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RSnapAuto::
+       setCenterPoints(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSnapAuto.setCenterPoints().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSnapAuto::setCenterPoints", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSnapAuto::getCenterPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSnapAuto::getCenterPoints", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSnapAuto::getCenterPoints";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSnapAuto::
+       getCenterPoints();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSnapAuto.getCenterPoints().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSnapAuto::getCenterPoints", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSnapAuto::setPerpendicular
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSnapAuto::setPerpendicular", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSnapAuto::setPerpendicular";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RSnapAuto::
+       setPerpendicular(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSnapAuto.setPerpendicular().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSnapAuto::setPerpendicular", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSnapAuto::getPerpendicular
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSnapAuto::getPerpendicular", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSnapAuto::getPerpendicular";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSnapAuto::
+       getPerpendicular();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSnapAuto.getPerpendicular().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSnapAuto::getPerpendicular", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSnapAuto::setTangential
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSnapAuto::setTangential", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSnapAuto::setTangential";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RSnapAuto::
+       setTangential(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSnapAuto.setTangential().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSnapAuto::setTangential", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSnapAuto::getTangential
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSnapAuto::getTangential", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSnapAuto::getTangential";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSnapAuto::
+       getTangential();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSnapAuto.getTangential().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSnapAuto::getTangential", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSnapAuto::setReferencePoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSnapAuto::setReferencePoints", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSnapAuto::setReferencePoints";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RSnapAuto::
+       setReferencePoints(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSnapAuto.setReferencePoints().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSnapAuto::setReferencePoints", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSnapAuto::getReferencePoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSnapAuto::getReferencePoints", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSnapAuto::getReferencePoints";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSnapAuto::
+       getReferencePoints();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSnapAuto.getReferencePoints().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSnapAuto::getReferencePoints", context, engine);
             return result;
         }
          QScriptValue
@@ -515,12 +1378,12 @@
             return result;
         }
          QScriptValue
-        REcmaSnapAuto::getFreePositioning
+        REcmaSnapAuto::getGridPoints
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSnapAuto::getFreePositioning", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSnapAuto::getFreePositioning";
+            //REcmaHelper::functionStart("REcmaSnapAuto::getGridPoints", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSnapAuto::getGridPoints";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
@@ -537,7 +1400,7 @@
     // return type 'bool'
     bool cppResult =
         RSnapAuto::
-       getFreePositioning();
+       getGridPoints();
         // return type: bool
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -547,10 +1410,94 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RSnapAuto.getFreePositioning().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSnapAuto.getGridPoints().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSnapAuto::getFreePositioning", context, engine);
+            //REcmaHelper::functionEnd("REcmaSnapAuto::getGridPoints", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSnapAuto::setPointsOnEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSnapAuto::setPointsOnEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSnapAuto::setPointsOnEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RSnapAuto::
+       setPointsOnEntity(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSnapAuto.setPointsOnEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSnapAuto::setPointsOnEntity", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSnapAuto::getPointsOnEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSnapAuto::getPointsOnEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSnapAuto::getPointsOnEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSnapAuto::
+       getPointsOnEntity();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSnapAuto.getPointsOnEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSnapAuto::getPointsOnEntity", context, engine);
             return result;
         }
          QScriptValue
@@ -596,6 +1543,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSnapAuto::setFreePositioning", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSnapAuto::getFreePositioning
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSnapAuto::getFreePositioning", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSnapAuto::getFreePositioning";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSnapAuto::
+       getFreePositioning();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSnapAuto.getFreePositioning().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSnapAuto::getFreePositioning", context, engine);
             return result;
         }
          QScriptValue
@@ -718,5 +1704,15 @@
             
 
 
+        }
+         QScriptValue REcmaSnapAuto::toScriptValueEnumMode(QScriptEngine* engine, const RSnapAuto::Mode& value)
+    
+        {
+            return QScriptValue(engine, (int)value);
+        }
+         void REcmaSnapAuto::fromScriptValueEnumMode(const QScriptValue& value, RSnapAuto::Mode& out)
+    
+        {
+            out = qvariant_cast<RSnapAuto::Mode>(value.toVariant());
         }
         

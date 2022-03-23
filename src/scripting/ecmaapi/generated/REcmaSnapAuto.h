@@ -54,16 +54,76 @@
         init
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getGridPoints
+        getModes
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setModes
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setIntersections
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getIntersections
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setEndPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getEndPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setMiddlePoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getMiddlePoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setCenterPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getCenterPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setPerpendicular
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPerpendicular
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setTangential
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getTangential
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setReferencePoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getReferencePoints
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setGridPoints
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getFreePositioning
+        getGridPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setPointsOnEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPointsOnEntity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setFreePositioning
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getFreePositioning
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         reset
@@ -73,6 +133,8 @@
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RSnapAuto* getSelf(const QString& fName, QScriptContext* context)
     ;static RSnapAuto* getSelfShell(const QString& fName, QScriptContext* context)
+    ;static  QScriptValue toScriptValueEnumMode(QScriptEngine* engine, const RSnapAuto::Mode& value)
+    ;static  void fromScriptValueEnumMode(const QScriptValue& value, RSnapAuto::Mode& out)
     ;};
     #endif
     
