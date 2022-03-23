@@ -40,6 +40,9 @@ PropertyWatcher.prototype.propertyChanged = function(value) {
     // only do something if the value has actually changed
     // remember edited status of widgets
 
+//    qDebug("propertyChanged:", value);
+//    qDebug("propertyChanged: sender: ", this.sender);
+
     var attributes = this.propertyEditor.getPropertyAttributes(this.propertyType);
 
     var typeHint = 0;
@@ -60,7 +63,6 @@ PropertyWatcher.prototype.propertyChanged = function(value) {
 
     // value comes from a combo box:
     else if (isComboBox(this.sender)) {
-
         // value is index of combo box:
         if (isNumber(value)) {
             if (this.sender.itemData(value)===PropertyEditor.varies) {
@@ -97,6 +99,19 @@ PropertyWatcher.prototype.propertyChanged = function(value) {
         }
         if (this.sender.isInteger()) {
             typeHint = 2;
+        }
+    }
+
+    // value is number from a math combo box:
+    else if (this.sender.toString().startsWith("RMathComboBox")) {
+        if (this.sender.currentText===this.sender.originalText) {
+            return;
+        }
+        this.sender.setProperty("originalText", this.sender.text);
+        value = this.sender.getValue();
+        if (isNaN(value)) {
+            this.propertyEditor.updateGui(true);
+            return;
         }
     }
 
@@ -983,6 +998,8 @@ PropertyEditorImpl.prototype.initControls = function(propertyTypeId, onlyChanges
  * \internal
  */
 PropertyEditorImpl.prototype.initNumberControls = function(objectName, propertyTypeId, onlyChanges, control, index) {
+    var document = EAction.getDocument();
+
     var value = this.getAdjustedPropertyValue(propertyTypeId);
     if (isNumber(index)) {
         value = value[index];
@@ -990,14 +1007,16 @@ PropertyEditorImpl.prototype.initNumberControls = function(objectName, propertyT
     var attributes = this.getPropertyAttributes(propertyTypeId);
 
     if (isNull(control)) {
-        control = new RMathLineEdit(this.geometryGroup);
-        if (attributes.isAngleType()) {
-            control.setAngle(true);
+        if (attributes.isScaleType() && !isNull(document)) {
+            control = new RMathComboBox(this.geometryGroup);
+            control.setScale(true, document.getUnit());
         }
-        // TODO: support scale in RMathLineEdit:
-//        if (attributes.isScaleType()) {
-//            control.setScale(true);
-//        }
+        else {
+            control = new RMathLineEdit(this.geometryGroup);
+            if (attributes.isAngleType()) {
+                control.setAngle(true);
+            }
+        }
         control.objectName = objectName;
     }
 
@@ -1010,7 +1029,6 @@ PropertyEditorImpl.prototype.initNumberControls = function(objectName, propertyT
             if (attributes.isAngleType()) {
                 value = RMath.rad2deg(value);
             }
-            var document = EAction.getDocument();
 
             var decimals = RSettings.getIntValue("PropertyEditor/Decimals", 8);
             if (decimals<0) {
@@ -1047,11 +1065,30 @@ PropertyEditorImpl.prototype.initNumberControls = function(objectName, propertyT
         }
     }
 
-    if (control.text !== newText) {
-        control.text = newText;
-        control.setProperty("originalText", newText);
-        if (isFunction(control.clearError)) {
-            control.clearError();
+    if (isOfType(control, RMathLineEdit)) {
+        if (control.text!==newText) {
+            control.text = newText;
+            control.setProperty("originalText", newText);
+            if (isFunction(control.clearError)) {
+                control.clearError();
+            }
+        }
+    }
+
+    if (isOfType(control, RMathComboBox)) {
+        if (control.currentText!==newText) {
+            // TODO: try to set scale value
+            // (note that 1" = 2" is the same as 6" = 1', so the conversion from scale notation to value is irreverible)
+//            if (!isNull(value)) {
+//                control.setValue(value);
+//            }
+//            else {
+                control.currentText = newText;
+//            }
+            control.setProperty("originalText", newText);
+            if (isFunction(control.lineEdit().clearError)) {
+                control.lineEdit().clearError();
+            }
         }
     }
 
@@ -1062,14 +1099,27 @@ PropertyEditorImpl.prototype.initNumberControls = function(objectName, propertyT
     }
 
     if (!onlyChanges) {
-        control.editingFinished.connect(
+        var lineEdit;
+        if (isOfType(control, RMathComboBox)) {
+            lineEdit = control.lineEdit();
+
+            control.editTextChanged.connect(
+                        new PropertyWatcher(this, control, propertyTypeId),
+                        'propertyChanged');
+        }
+        else {
+            lineEdit = control;
+        }
+        lineEdit.editingFinished.connect(
                     new PropertyWatcher(this, control, propertyTypeId),
                     'propertyChanged');
     }
 
     // move cursor to start if field is not being edited:
     if (!control.focus) {
-        control.cursorPosition = 0;
+        if (isOfType(control, RMathLineEdit)) {
+            control.cursorPosition = 0;
+        }
     }
 
     return new Array(control);
