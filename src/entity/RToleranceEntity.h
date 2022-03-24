@@ -156,6 +156,10 @@ public:
         return data.getFrame();
     }
 
+    int getRows() const {
+        return data.getRows();
+    }
+
     void clearStyleOverrides() {
         data.clearStyleOverrides();
     }
