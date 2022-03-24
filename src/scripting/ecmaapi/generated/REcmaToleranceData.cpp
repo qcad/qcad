@@ -126,6 +126,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getFrame, "getFrame");
             
+            REcmaHelper::registerFunction(&engine, proto, getRows, "getRows");
+            
             REcmaHelper::registerFunction(&engine, proto, getPointOnEntity, "getPointOnEntity");
             
             REcmaHelper::registerFunction(&engine, proto, clearStyleOverrides, "clearStyleOverrides");
@@ -2331,6 +2333,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaToleranceData::getFrame", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaToleranceData::getRows
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaToleranceData::getRows", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaToleranceData::getRows";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RToleranceData* self = 
+                        getSelf("getRows", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getRows();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RToleranceData.getRows().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaToleranceData::getRows", context, engine);
             return result;
         }
          QScriptValue

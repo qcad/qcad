@@ -157,6 +157,10 @@
         <return>return <expr><name>data</name>.<call><name>getFrame</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
+    <function><type><name>int</name></type> <name>getRows</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>getRows</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
     <function><type><name>void</name></type> <name>clearStyleOverrides</name><parameter_list>()</parameter_list> <block>{
         <expr_stmt><expr><name>data</name>.<call><name>clearStyleOverrides</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
     }</block></function>

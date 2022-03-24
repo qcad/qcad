@@ -175,6 +175,10 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QList &lt; RLine &gt;"
       isPureVirtual="false" />
     </method>
+    <method name="getRows" cppName="getRows" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
     <method name="clearStyleOverrides"
     cppName="clearStyleOverrides" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

@@ -26,6 +26,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QComboBox&gt;</cpp:file></cpp:include>
 
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RSettings.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMath.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMathLineEdit.h"</cpp:file></cpp:include>
 
@@ -78,7 +79,20 @@
     }</block></function>
 
     <function><type><name>void</name></type> <name>setValue</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>, <param><decl><type><name>int</name></type> <name>precision</name>=<init><expr>6</expr></init></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><call><name>getMathLineEdit</name><argument_list>()</argument_list></call>-&gt;<call><name>setValue</name><argument_list>(<argument><expr><name>v</name></expr></argument>, <argument><expr><name>precision</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <if>if <condition>(<expr><call><name>isScale</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <comment type="line">// find matching item:</comment>
+            <for>for (<init><expr><type><name>int</name></type> <name>i</name>=<init><expr>0</expr></init></expr>;</init> <condition><expr><name>i</name>&lt;<call><name>count</name><argument_list>()</argument_list></call></expr>;</condition> <incr><expr><name>i</name>++</expr></incr>) <block>{
+                <decl_stmt><decl><type><name>QString</name></type> <name>text</name> =<init> <expr><call><name>itemText</name><argument_list>(<argument><expr><name>i</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+                <decl_stmt><decl><type><name>double</name></type> <name>val</name> =<init> <expr><call><name><name>RMath</name>::<name>parseScale</name></name><argument_list>(<argument><expr><name>text</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+                <if>if <condition>(<expr><call><name><name>RMath</name>::<name>fuzzyCompare</name></name><argument_list>(<argument><expr><name>val</name></expr></argument>, <argument><expr><name>v</name></expr></argument>, <argument><expr>0.0001</expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+                    <constructor_decl><name>setEditText</name><parameter_list>(<param><decl><type><name>text</name></type></decl></param>)</parameter_list>;</constructor_decl>
+                    <continue>continue;</continue>
+                }</block></then></if>
+            }</block></for>
+        }</block></then>
+        <else>else <block>{
+            <expr_stmt><expr><call><name>getMathLineEdit</name><argument_list>()</argument_list></call>-&gt;<call><name>setValue</name><argument_list>(<argument><expr><name>v</name></expr></argument>, <argument><expr><name>precision</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></else></if>
     }</block></function>
     <function><type><name>double</name></type> <name>getValue</name><parameter_list>()</parameter_list> <block>{
         <return>return <expr><call><name>getMathLineEdit</name><argument_list>()</argument_list></call>-&gt;<call><name>getValue</name><argument_list>()</argument_list></call></expr>;</return>

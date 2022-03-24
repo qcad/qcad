@@ -118,6 +118,9 @@
         getFrame
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getRows
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         clearStyleOverrides
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

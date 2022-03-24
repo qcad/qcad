@@ -135,6 +135,9 @@
         getFrame
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getRows
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getPointOnEntity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
