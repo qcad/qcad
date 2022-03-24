@@ -179,6 +179,9 @@ public:
 
     QList<RTextData> getTextLabels() const;
     QList<RLine> getFrame() const;
+    int getRows() const {
+        return divisions.length();
+    }
 
     RVector getPointOnEntity() const;
 
