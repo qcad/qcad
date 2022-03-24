@@ -55,36 +55,38 @@ Dimension.prototype.initUiOptions = function(resume, optionsToolBar) {
     EAction.prototype.initUiOptions.call(this, resume, optionsToolBar);
 
     var prefixCombo = optionsToolBar.findChild("Prefix");
-    if (isNull(prefixCombo)) {
-        // for some dimensions (e.g. leader), no standard dimensions toolbar
-        // is shown:
-        return;
+    if (!isNull(prefixCombo)) {
+        prefixCombo.clear();
+        prefixCombo.addItem("(" + qsTr("No prefix") + ")");
+        prefixCombo.addItem("R (" + qsTr("Radius") + ")");
+        prefixCombo.addItem("M (" + qsTr("Metric screw") + ")");
+        prefixCombo.addItem("\u00F8 (" + qsTr("Diameter") + ")");
+        prefixCombo.addItem("\u2312 (" + qsTr("Arc") + ")");
+        prefixCombo.addItem("\u00B1 (" + qsTr("Plus/Minus") + ")");
+        prefixCombo.addItem("\u2248 (" + qsTr("Almost equal to") + ")");
+        prefixCombo.addItem("\u2243 (" + qsTr("Asymptotically equal to") + ")");
+        prefixCombo.addItem("\u25FB (" + qsTr("Square") + ")");
+        prefixCombo.addItem("\u0394 (" + qsTr("Delta") + ")");
+        prefixCombo.currentIndex = 0;
     }
 
-    prefixCombo.clear();
-    prefixCombo.addItem("(" + qsTr("No prefix") + ")");
-    prefixCombo.addItem("R (" + qsTr("Radius") + ")");
-    prefixCombo.addItem("M (" + qsTr("Metric screw") + ")");
-    prefixCombo.addItem("\u00F8 (" + qsTr("Diameter") + ")");
-    prefixCombo.addItem("\u2312 (" + qsTr("Arc") + ")");
-    prefixCombo.addItem("\u00B1 (" + qsTr("Plus/Minus") + ")");
-    prefixCombo.addItem("\u2248 (" + qsTr("Almost equal to") + ")");
-    prefixCombo.addItem("\u2243 (" + qsTr("Asymptotically equal to") + ")");
-    prefixCombo.addItem("\u25FB (" + qsTr("Square") + ")");
-    prefixCombo.addItem("\u0394 (" + qsTr("Delta") + ")");
-    prefixCombo.currentIndex = 0;
-
     var textLineEdit = optionsToolBar.findChild("Text");
-    textLineEdit.text = "";
-    WidgetFactory.initLineEdit(textLineEdit, true);
+    if (!isNull(textLineEdit)) {
+        textLineEdit.text = "";
+        WidgetFactory.initLineEdit(textLineEdit, true);
+    }
 
     var upperToleranceLineEdit = optionsToolBar.findChild("UpperTolerance");
-    upperToleranceLineEdit.text = "";
-    WidgetFactory.initLineEdit(upperToleranceLineEdit, true);
+    if (!isNull(upperToleranceLineEdit)) {
+        upperToleranceLineEdit.text = "";
+        WidgetFactory.initLineEdit(upperToleranceLineEdit, true);
+    }
 
     var lowerToleranceLineEdit = optionsToolBar.findChild("LowerTolerance");
-    lowerToleranceLineEdit.text = "";
-    WidgetFactory.initLineEdit(lowerToleranceLineEdit, true);
+    if (!isNull(lowerToleranceLineEdit)) {
+        lowerToleranceLineEdit.text = "";
+        WidgetFactory.initLineEdit(lowerToleranceLineEdit, true);
+    }
 
     this.initScaleCombo();
 
@@ -112,10 +114,18 @@ Dimension.prototype.initUiOptions = function(resume, optionsToolBar) {
     // if we are resuming, restore previous values (automatic)
     // it not, keep them empty.
     if (!resume) {
-        prefixCombo.setProperty("Loaded", true);
-        textLineEdit.setProperty("Loaded", true);
-        upperToleranceLineEdit.setProperty("Loaded", true);
-        lowerToleranceLineEdit.setProperty("Loaded", true);
+        if (!isNull(prefixCombo)) {
+            prefixCombo.setProperty("Loaded", true);
+        }
+        if (!isNull(textLineEdit)) {
+            textLineEdit.setProperty("Loaded", true);
+        }
+        if (!isNull(upperToleranceLineEdit)) {
+            upperToleranceLineEdit.setProperty("Loaded", true);
+        }
+        if (!isNull(lowerToleranceLineEdit)) {
+            lowerToleranceLineEdit.setProperty("Loaded", true);
+        }
     }
 };
 
@@ -248,7 +258,10 @@ Dimension.prototype.updateText = function() {
     var prefixCombo = optionsToolBar.findChild("Prefix");
     var textLineEdit = optionsToolBar.findChild("Text");
     var text = textLineEdit.text;
-    var prefix = prefixCombo.currentText.replace(/[ ]*\(.*\)/, "");
+    var prefix = "";
+    if (!isNull(prefixCombo)) {
+        prefix = prefixCombo.currentText.replace(/[ ]*\(.*\)/, "");
+    }
 
     if (prefix.length>0 && text.length===0) {
         this.data.setText(prefix + "<>");
