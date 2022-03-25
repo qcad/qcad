@@ -66,7 +66,9 @@ public:
 
         if (on) {
             QStringList scales = RSettings::getScaleList(unit);
+            blockSignals(true);
             addItems(scales);
+            blockSignals(false);
         }
     }
 
