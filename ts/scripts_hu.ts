@@ -204,7 +204,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+63"/>
+        <location line="+65"/>
         <source>Hatch Patterns</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1389,7 +1389,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockListExport</name>
     <message>
-        <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+92"/>
+        <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+93"/>
         <source>Export Block List (CSV)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1401,6 +1401,24 @@ Do you wish to recover it?</source>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block List</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>BlockRefExport</name>
+    <message>
+        <location filename="../scripts/Misc/MiscBlock/BlockRefExport/BlockRefExport.js" line="+97"/>
+        <source>Export Block References List (CSV)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>CSV</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>&amp;Export Block References List</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2969,7 +2987,7 @@ Do you wish to recover it?</source>
 <context>
     <name>Dimension</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/Dimension.js" line="+65"/>
+        <location filename="../scripts/Draw/Dimension/Dimension.js" line="+60"/>
         <source>No prefix</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3019,7 +3037,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+122"/>
         <source>Dimension Tools</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4194,12 +4212,12 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2115"/>
+        <location line="+2123"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-2114"/>
+        <location line="-2122"/>
         <source>Done</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4230,7 +4248,7 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+568"/>
+        <location line="+576"/>
         <source>Invalid position</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6952,6 +6970,39 @@ BUG: Interferes with group castings.</source>
     </message>
 </context>
 <context>
+    <name>InfoBearing</name>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoBearing/InfoBearing.js" line="+41"/>
+        <source>Reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Direction</source>
+        <translation type="unfinished">Irány</translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>Distance:</source>
+        <translation type="unfinished">Távolság:</translation>
+    </message>
+    <message>
+        <location line="+72"/>
+        <source>Bearing:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Azimuth:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>&amp;Bearing / Azimuth</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>InfoCentroids</name>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroids.js" line="+52"/>
@@ -7121,39 +7172,6 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Information/InfoDistancePP/InfoDistancePPInit.js" line="+2"/>
         <source>Distance &amp;Point to Point</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>InfoPolylineArea</name>
-    <message>
-        <location filename="../scripts/Information/InfoPolylineArea/InfoPolylineArea.js" line="+53"/>
-        <source>Choose polyline</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+51"/>
-        <source>Area</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Circumference</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+49"/>
-        <source>Polyline area:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>circumference:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../scripts/Information/InfoPolylineArea/InfoPolylineAreaInit.js" line="+2"/>
-        <source>Polyl&amp;ine Area</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -10294,7 +10312,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+438"/>
+        <location line="+446"/>
         <source>Export to PDF</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10435,7 +10453,7 @@ shown in search results:</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+198"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+213"/>
         <source>:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10495,7 +10513,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+161"/>
+        <location line="+196"/>
         <source>Use auto measurement</source>
         <translation type="unfinished"></translation>
     </message>

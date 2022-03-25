@@ -522,8 +522,6 @@ SOURCES = \
 ../scripts/Information/InfoDistancePP/InfoDistancePP.js \
 ../scripts/Information/InfoDistancePP/InfoDistancePPInit.js \
 ../scripts/Information/InfoDistancePP/Tests/InfoDistancePPTest00.js \
-../scripts/Information/InfoPolylineArea/InfoPolylineArea.js \
-../scripts/Information/InfoPolylineArea/InfoPolylineAreaInit.js \
 ../scripts/Information/InfoPosition/InfoPosition.js \
 ../scripts/Information/InfoPosition/InfoPositionInit.js \
 ../scripts/Information/InfoPositionPol/InfoPositionPol.js \
@@ -613,6 +611,7 @@ SOURCES = \
 ../scripts/Misc/MiscBlock/BlockFixNames/BlockFixNames.js \
 ../scripts/Misc/MiscBlock/BlockListAttributes/BlockListAttributes.js \
 ../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js \
+../scripts/Misc/MiscBlock/BlockRefExport/BlockRefExport.js \
 ../scripts/Misc/MiscBlock/MiscBlock.js \
 ../scripts/Misc/MiscDevelopment/DevDebug/DevDebug.js \
 ../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js \
@@ -659,6 +658,7 @@ SOURCES = \
 ../scripts/Misc/MiscIO/MolImport/MolImport.js \
 ../scripts/Misc/MiscIO/MolImport/MolImportInit.js \
 ../scripts/Misc/MiscIO/MolImport/MolImporter.js \
+../scripts/Misc/MiscInformation/InfoBearing/InfoBearing.js \
 ../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroid.js \
 ../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroidInit.js \
 ../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroid.js \
@@ -881,6 +881,7 @@ SOURCES = \
 ../scripts/Projection/IsometricProjection/IsoProject/Tests/IsoProjectTest04.js \
 ../scripts/Projection/IsometricProjection/IsoProject/Tests/IsoProjectTest10.js \
 ../scripts/Projection/IsometricProjection/IsoProject/Tests/IsoProjectTest11.js \
+../scripts/Projection/IsometricProjection/IsoProject/Tests/IsoProjectTest12.js \
 ../scripts/Projection/IsometricProjection/IsometricProjection.js \
 ../scripts/Projection/Projection.js \
 ../scripts/Reset/Reset.js \

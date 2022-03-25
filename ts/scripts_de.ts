@@ -252,7 +252,7 @@
         <translation>Programmierung</translation>
     </message>
     <message>
-        <location line="+63"/>
+        <location line="+65"/>
         <source>Hatch Patterns</source>
         <translation>Schraffurmuster</translation>
     </message>
@@ -1634,7 +1634,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
 <context>
     <name>BlockListExport</name>
     <message>
-        <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+92"/>
+        <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+93"/>
         <source>Export Block List (CSV)</source>
         <translation>Blockliste exportieren (CSV)</translation>
     </message>
@@ -1654,6 +1654,24 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <source>Form</source>
         <translation type="obsolete">Formular</translation>
+    </message>
+</context>
+<context>
+    <name>BlockRefExport</name>
+    <message>
+        <location filename="../scripts/Misc/MiscBlock/BlockRefExport/BlockRefExport.js" line="+97"/>
+        <source>Export Block References List (CSV)</source>
+        <translation>Blockreferenzliste exportieren (CSV)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>CSV</source>
+        <translation>CSV</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>&amp;Export Block References List</source>
+        <translation>Blockreferenzliste &amp;exportieren</translation>
     </message>
 </context>
 <context>
@@ -3556,7 +3574,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
 <context>
     <name>Dimension</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/Dimension.js" line="+65"/>
+        <location filename="../scripts/Draw/Dimension/Dimension.js" line="+60"/>
         <source>No prefix</source>
         <translation>Kein Präfix</translation>
     </message>
@@ -3610,7 +3628,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+122"/>
         <source>Dimension Tools</source>
         <translation>Bemassungswerkzeuge</translation>
     </message>
@@ -5245,12 +5263,12 @@ ist bereits in der Liste.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2115"/>
+        <location line="+2123"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location line="-2114"/>
+        <location line="-2122"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
@@ -5289,7 +5307,7 @@ ist bereits in der Liste.</translation>
         <translation>CAD Werkzeuge</translation>
     </message>
     <message>
-        <location line="+568"/>
+        <location line="+576"/>
         <source>Invalid position</source>
         <translation>Ungültige Position</translation>
     </message>
@@ -8896,6 +8914,39 @@ BUG: Interferes with group castings.</translation>
     </message>
 </context>
 <context>
+    <name>InfoBearing</name>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoBearing/InfoBearing.js" line="+41"/>
+        <source>Reference</source>
+        <translation>Referenz</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Direction</source>
+        <translation>Richtung</translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>Distance:</source>
+        <translation>Abstand:</translation>
+    </message>
+    <message>
+        <location line="+72"/>
+        <source>Bearing:</source>
+        <translation>Peilung:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Azimuth:</source>
+        <translation>Azimuth:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>&amp;Bearing / Azimuth</source>
+        <translation>&amp;Peilung / Azimuth</translation>
+    </message>
+</context>
+<context>
     <name>InfoCentroids</name>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroids.js" line="+52"/>
@@ -9099,38 +9150,32 @@ BUG: Interferes with group castings.</translation>
 <context>
     <name>InfoPolylineArea</name>
     <message>
-        <location filename="../scripts/Information/InfoPolylineArea/InfoPolylineArea.js" line="+53"/>
         <source>Choose polyline</source>
-        <translation>Polyline wählen</translation>
+        <translation type="vanished">Polyline wählen</translation>
     </message>
     <message>
         <source>Done</source>
         <translation type="vanished">Fertig</translation>
     </message>
     <message>
-        <location line="+51"/>
         <source>Area</source>
-        <translation>Fläche</translation>
+        <translation type="vanished">Fläche</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Circumference</source>
-        <translation>Umfang</translation>
+        <translation type="vanished">Umfang</translation>
     </message>
     <message>
-        <location line="+49"/>
         <source>Polyline area:</source>
-        <translation>Polylinienfläche:</translation>
+        <translation type="vanished">Polylinienfläche:</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>circumference:</source>
-        <translation>Umfang:</translation>
+        <translation type="vanished">Umfang:</translation>
     </message>
     <message>
-        <location filename="../scripts/Information/InfoPolylineArea/InfoPolylineAreaInit.js" line="+2"/>
         <source>Polyl&amp;ine Area</source>
-        <translation>Polylinien&amp;fläche</translation>
+        <translation type="vanished">Polylinien&amp;fläche</translation>
     </message>
 </context>
 <context>
@@ -13537,7 +13582,7 @@ nicht öffnen.
         <translation>Querformat</translation>
     </message>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+438"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+446"/>
         <source>Export to PDF</source>
         <translation>PDF exportieren</translation>
     </message>
@@ -13547,12 +13592,12 @@ nicht öffnen.
         <translation>Drucken ...</translation>
     </message>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="-439"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="-447"/>
         <source>Drag to move paper</source>
         <translation>Ziehen zum Verschieben des Papiers</translation>
     </message>
     <message>
-        <location line="+452"/>
+        <location line="+460"/>
         <source>Exporting to %1...</source>
         <translation>Exportiere nach %1...</translation>
     </message>
@@ -13702,12 +13747,12 @@ nicht öffnen.
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1540"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1590"/>
         <source>*VARIES*</source>
         <translation>*VARIIERT*</translation>
     </message>
     <message>
-        <location line="-1342"/>
+        <location line="-1377"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -13756,7 +13801,7 @@ nicht öffnen.
         <translation>Alle Eigenschaften anzeigen</translation>
     </message>
     <message>
-        <location line="+722"/>
+        <location line="+757"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -13793,7 +13838,7 @@ nicht öffnen.
         <translation type="obsolete">Mittelpunkt</translation>
     </message>
     <message>
-        <location line="-768"/>
+        <location line="-803"/>
         <source>Add custom property to selected objects</source>
         <translation>Benutzerdefinierte Eigenschaft an ausgewählte Objekte hinzufügen</translation>
     </message>
@@ -13811,7 +13856,7 @@ nicht öffnen.
         <translation>auto</translation>
     </message>
     <message>
-        <location line="+161"/>
+        <location line="+196"/>
         <source>Use auto measurement</source>
         <translation>Automatisch</translation>
     </message>
@@ -13891,7 +13936,7 @@ nicht öffnen.
         <translation type="vanished">Auswahl auf neuen Layer verschieben</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1205"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1240"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>

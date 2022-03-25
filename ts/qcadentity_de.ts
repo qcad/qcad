@@ -41,7 +41,7 @@
         <location filename="../src/entity/RLineEntity.cpp" line="+84"/>
         <location line="+3"/>
         <location filename="../src/entity/RPointEntity.cpp" line="+72"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+108"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+109"/>
         <location filename="../src/entity/RRayEntity.cpp" line="+79"/>
         <location line="+3"/>
         <location line="+4"/>
@@ -312,7 +312,7 @@
     <message>
         <location line="+2"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+5"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+2"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+4"/>
         <source>Total Area</source>
         <translation>Gesamtfläche</translation>
     </message>
@@ -356,7 +356,7 @@
         <location line="+1"/>
         <location filename="../src/entity/RImageEntity.cpp" line="+14"/>
         <location filename="../src/entity/RLineEntity.cpp" line="-2"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-11"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-13"/>
         <location filename="../src/entity/RRayEntity.cpp" line="+2"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="+2"/>
         <source>Angle</source>
@@ -458,7 +458,7 @@
     <message>
         <location filename="../src/entity/RArcEntity.cpp" line="+4"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+1"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+10"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+12"/>
         <source>Area</source>
         <translation>Fläche</translation>
     </message>
@@ -493,7 +493,7 @@
         <translation type="vanished">Gegenuhrzeigersinn</translation>
     </message>
     <message>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-16"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-18"/>
         <source>Polyline Pattern</source>
         <translation>Polylinienmuster</translation>
     </message>
@@ -523,7 +523,7 @@
         <translation>Ausrichtung</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+9"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Size</source>
@@ -556,7 +556,7 @@
         <location filename="../src/entity/RLeaderEntity.cpp" line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-21"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-24"/>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>

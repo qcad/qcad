@@ -228,7 +228,7 @@
         <translation>Programiranje</translation>
     </message>
     <message>
-        <location line="+63"/>
+        <location line="+65"/>
         <source>Hatch Patterns</source>
         <translation>Vzorec črtkanja</translation>
     </message>
@@ -1484,7 +1484,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockListExport</name>
     <message>
-        <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+92"/>
+        <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+93"/>
         <source>Export Block List (CSV)</source>
         <translation>Izvozi blokovni seznam (CSV)</translation>
     </message>
@@ -1497,6 +1497,24 @@ Do you wish to recover it?</source>
         <location line="+20"/>
         <source>&amp;Export Block List</source>
         <translation>&amp;Izvozi blokovni seznam</translation>
+    </message>
+</context>
+<context>
+    <name>BlockRefExport</name>
+    <message>
+        <location filename="../scripts/Misc/MiscBlock/BlockRefExport/BlockRefExport.js" line="+97"/>
+        <source>Export Block References List (CSV)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>CSV</source>
+        <translation type="unfinished">CSV</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>&amp;Export Block References List</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3199,7 +3217,7 @@ Do you wish to recover it?</source>
 <context>
     <name>Dimension</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/Dimension.js" line="+65"/>
+        <location filename="../scripts/Draw/Dimension/Dimension.js" line="+60"/>
         <source>No prefix</source>
         <translation>Brez predpone</translation>
     </message>
@@ -3249,7 +3267,7 @@ Do you wish to recover it?</source>
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+122"/>
         <source>Dimension Tools</source>
         <translation>Orodja dimenzij</translation>
     </message>
@@ -4560,12 +4578,12 @@ je že na seznamu.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2115"/>
+        <location line="+2123"/>
         <source>Cancel</source>
         <translation>Prekliči</translation>
     </message>
     <message>
-        <location line="-2114"/>
+        <location line="-2122"/>
         <source>Done</source>
         <translation>Končano</translation>
     </message>
@@ -4600,7 +4618,7 @@ je že na seznamu.</translation>
         <translation>CAD orodja</translation>
     </message>
     <message>
-        <location line="+568"/>
+        <location line="+576"/>
         <source>Invalid position</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7656,6 +7674,39 @@ BUG: Interferes with group castings.</source>
     </message>
 </context>
 <context>
+    <name>InfoBearing</name>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoBearing/InfoBearing.js" line="+41"/>
+        <source>Reference</source>
+        <translation type="unfinished">Referenca</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Direction</source>
+        <translation type="unfinished">Smer</translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>Distance:</source>
+        <translation type="unfinished">Razdalja:</translation>
+    </message>
+    <message>
+        <location line="+72"/>
+        <source>Bearing:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Azimuth:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>&amp;Bearing / Azimuth</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>InfoCentroids</name>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroids.js" line="+52"/>
@@ -7843,38 +7894,32 @@ BUG: Interferes with group castings.</source>
 <context>
     <name>InfoPolylineArea</name>
     <message>
-        <location filename="../scripts/Information/InfoPolylineArea/InfoPolylineArea.js" line="+53"/>
         <source>Choose polyline</source>
-        <translation>Izberite lomljenko</translation>
+        <translation type="vanished">Izberite lomljenko</translation>
     </message>
     <message>
         <source>Done</source>
         <translation type="vanished">Končano</translation>
     </message>
     <message>
-        <location line="+51"/>
         <source>Area</source>
-        <translation>Območje</translation>
+        <translation type="vanished">Območje</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Circumference</source>
-        <translation>Obseg</translation>
+        <translation type="vanished">Obseg</translation>
     </message>
     <message>
-        <location line="+49"/>
         <source>Polyline area:</source>
-        <translation>Površina območja:</translation>
+        <translation type="vanished">Površina območja:</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>circumference:</source>
-        <translation>obseg:</translation>
+        <translation type="vanished">obseg:</translation>
     </message>
     <message>
-        <location filename="../scripts/Information/InfoPolylineArea/InfoPolylineAreaInit.js" line="+2"/>
         <source>Polyl&amp;ine Area</source>
-        <translation>Območje &amp;lomljenke</translation>
+        <translation type="vanished">Območje &amp;lomljenke</translation>
     </message>
 </context>
 <context>
@@ -11474,7 +11519,7 @@ shown in search results:</source>
         <translation>Končano</translation>
     </message>
     <message>
-        <location line="+438"/>
+        <location line="+446"/>
         <source>Export to PDF</source>
         <translation>Izvozi v PDF</translation>
     </message>
@@ -11619,12 +11664,12 @@ shown in search results:</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1540"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1590"/>
         <source>*VARIES*</source>
         <translation>*RAZLIČNO*</translation>
     </message>
     <message>
-        <location line="-1342"/>
+        <location line="-1377"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -11683,7 +11728,7 @@ shown in search results:</source>
         <translation>Prikaži vse lasnosti</translation>
     </message>
     <message>
-        <location line="+722"/>
+        <location line="+757"/>
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>
@@ -11724,12 +11769,12 @@ shown in search results:</source>
         <translation type="obsolete">Dno</translation>
     </message>
     <message>
-        <location line="-588"/>
+        <location line="-623"/>
         <source>Auto</source>
         <translation>Samodejno</translation>
     </message>
     <message>
-        <location line="+161"/>
+        <location line="+196"/>
         <source>Use auto measurement</source>
         <translation>Uporabi samodejne meritve</translation>
     </message>

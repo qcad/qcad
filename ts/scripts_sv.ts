@@ -204,7 +204,7 @@
         <translation>Programmering</translation>
     </message>
     <message>
-        <location line="+63"/>
+        <location line="+65"/>
         <source>Hatch Patterns</source>
         <translation>Skraffermönster</translation>
     </message>
@@ -1404,7 +1404,7 @@ Vill du återställa den?</translation>
 <context>
     <name>BlockListExport</name>
     <message>
-        <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+92"/>
+        <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+93"/>
         <source>Export Block List (CSV)</source>
         <translation>Exportera blocklista (CSV)</translation>
     </message>
@@ -1417,6 +1417,24 @@ Vill du återställa den?</translation>
         <location line="+20"/>
         <source>&amp;Export Block List</source>
         <translation>Exportera blocklista</translation>
+    </message>
+</context>
+<context>
+    <name>BlockRefExport</name>
+    <message>
+        <location filename="../scripts/Misc/MiscBlock/BlockRefExport/BlockRefExport.js" line="+97"/>
+        <source>Export Block References List (CSV)</source>
+        <translation>Exportera en lista över blockreferenser (CSV)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>CSV</source>
+        <translation>CSV</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>&amp;Export Block References List</source>
+        <translation>&amp;Exportera en lista över blockreferenser</translation>
     </message>
 </context>
 <context>
@@ -2985,7 +3003,7 @@ Vill du återställa den?</translation>
 <context>
     <name>Dimension</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/Dimension.js" line="+65"/>
+        <location filename="../scripts/Draw/Dimension/Dimension.js" line="+60"/>
         <source>No prefix</source>
         <translation>Inget prefix</translation>
     </message>
@@ -3035,7 +3053,7 @@ Vill du återställa den?</translation>
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+122"/>
         <source>Dimension Tools</source>
         <translation>Verktyg för dimensioner</translation>
     </message>
@@ -4501,12 +4519,12 @@ finns redan i listan.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2115"/>
+        <location line="+2123"/>
         <source>Cancel</source>
         <translation>Avbryt</translation>
     </message>
     <message>
-        <location line="-2114"/>
+        <location line="-2122"/>
         <source>Done</source>
         <translation>Klart</translation>
     </message>
@@ -4537,7 +4555,7 @@ finns redan i listan.</translation>
         <translation>CAD-verktyg</translation>
     </message>
     <message>
-        <location line="+568"/>
+        <location line="+576"/>
         <source>Invalid position</source>
         <translation>Ogiltig position</translation>
     </message>
@@ -7323,6 +7341,39 @@ BUG: Störningar vid gruppgjutningar.</translation>
     </message>
 </context>
 <context>
+    <name>InfoBearing</name>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoBearing/InfoBearing.js" line="+41"/>
+        <source>Reference</source>
+        <translation>Referens</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Direction</source>
+        <translation>Riktning</translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>Distance:</source>
+        <translation>Avstånd:</translation>
+    </message>
+    <message>
+        <location line="+72"/>
+        <source>Bearing:</source>
+        <translation>Bäring:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Azimuth:</source>
+        <translation>Azimut:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>&amp;Bearing / Azimuth</source>
+        <translation>&amp;Bäring / azimut</translation>
+    </message>
+</context>
+<context>
     <name>InfoCentroids</name>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroids.js" line="+52"/>
@@ -7510,38 +7561,32 @@ BUG: Störningar vid gruppgjutningar.</translation>
 <context>
     <name>InfoPolylineArea</name>
     <message>
-        <location filename="../scripts/Information/InfoPolylineArea/InfoPolylineArea.js" line="+53"/>
         <source>Choose polyline</source>
-        <translation>Välj polylinje</translation>
+        <translation type="vanished">Välj polylinje</translation>
     </message>
     <message>
         <source>Done</source>
         <translation type="obsolete">Klar</translation>
     </message>
     <message>
-        <location line="+51"/>
         <source>Area</source>
-        <translation>Område</translation>
+        <translation type="vanished">Område</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Circumference</source>
-        <translation>Omkrets</translation>
+        <translation type="vanished">Omkrets</translation>
     </message>
     <message>
-        <location line="+49"/>
         <source>Polyline area:</source>
-        <translation>Polylinjeområde:</translation>
+        <translation type="vanished">Polylinjeområde:</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>circumference:</source>
-        <translation>omkrets:</translation>
+        <translation type="vanished">omkrets:</translation>
     </message>
     <message>
-        <location filename="../scripts/Information/InfoPolylineArea/InfoPolylineAreaInit.js" line="+2"/>
         <source>Polyl&amp;ine Area</source>
-        <translation>Polylinjeområde</translation>
+        <translation type="vanished">Polylinjeområde</translation>
     </message>
 </context>
 <context>
@@ -10832,7 +10877,7 @@ som visas i sökresultaten:</translation>
         <translation>Klart</translation>
     </message>
     <message>
-        <location line="+438"/>
+        <location line="+446"/>
         <source>Export to PDF</source>
         <translation>Exportera till PDF</translation>
     </message>
@@ -10973,7 +11018,7 @@ som visas i sökresultaten:</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+198"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+213"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -11033,7 +11078,7 @@ som visas i sökresultaten:</translation>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+161"/>
+        <location line="+196"/>
         <source>Use auto measurement</source>
         <translation>Använd automatisk mätning</translation>
     </message>

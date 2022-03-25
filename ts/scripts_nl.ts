@@ -232,7 +232,7 @@
         <translation>Programmering</translation>
     </message>
     <message>
-        <location line="+63"/>
+        <location line="+65"/>
         <source>Hatch Patterns</source>
         <translation>Arceerpatronen</translation>
     </message>
@@ -1501,7 +1501,7 @@ Wilt u het herstellen?</translation>
 <context>
     <name>BlockListExport</name>
     <message>
-        <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+92"/>
+        <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+93"/>
         <source>Export Block List (CSV)</source>
         <translation>Bloklijst exporteren (CSV)</translation>
     </message>
@@ -1514,6 +1514,24 @@ Wilt u het herstellen?</translation>
         <location line="+20"/>
         <source>&amp;Export Block List</source>
         <translation>Bloklijst &amp;exporteren</translation>
+    </message>
+</context>
+<context>
+    <name>BlockRefExport</name>
+    <message>
+        <location filename="../scripts/Misc/MiscBlock/BlockRefExport/BlockRefExport.js" line="+97"/>
+        <source>Export Block References List (CSV)</source>
+        <translation>Lijst met blokreferenties exporteren (CSV)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>CSV</source>
+        <translation>CSV</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>&amp;Export Block References List</source>
+        <translation>Lijst met blokreferenties &amp;exporteren</translation>
     </message>
 </context>
 <context>
@@ -3166,7 +3184,7 @@ Wilt u het herstellen?</translation>
 <context>
     <name>Dimension</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/Dimension.js" line="+65"/>
+        <location filename="../scripts/Draw/Dimension/Dimension.js" line="+60"/>
         <source>No prefix</source>
         <translation>Geen prefix</translation>
     </message>
@@ -3216,7 +3234,7 @@ Wilt u het herstellen?</translation>
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+122"/>
         <source>Dimension Tools</source>
         <translation>Bematinggereedschappen</translation>
     </message>
@@ -4769,12 +4787,12 @@ is al in de lijst.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2115"/>
+        <location line="+2123"/>
         <source>Cancel</source>
         <translation>Annuleer</translation>
     </message>
     <message>
-        <location line="-2114"/>
+        <location line="-2122"/>
         <source>Done</source>
         <translation>Klaar</translation>
     </message>
@@ -4805,7 +4823,7 @@ is al in de lijst.</translation>
         <translation>CAD-gereedschappen</translation>
     </message>
     <message>
-        <location line="+568"/>
+        <location line="+576"/>
         <source>Invalid position</source>
         <translation>Ongeldige positie</translation>
     </message>
@@ -7817,6 +7835,39 @@ BUG: Interferes with group castings.</source>
     </message>
 </context>
 <context>
+    <name>InfoBearing</name>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoBearing/InfoBearing.js" line="+41"/>
+        <source>Reference</source>
+        <translation>Referentie</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Direction</source>
+        <translation>Richting</translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>Distance:</source>
+        <translation>Afstand:</translation>
+    </message>
+    <message>
+        <location line="+72"/>
+        <source>Bearing:</source>
+        <translation>Peiling:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Azimuth:</source>
+        <translation>Azimut:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>&amp;Bearing / Azimuth</source>
+        <translation>&amp;Peiling / azimut</translation>
+    </message>
+</context>
+<context>
     <name>InfoCentroids</name>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroids.js" line="+52"/>
@@ -8004,38 +8055,32 @@ BUG: Interferes with group castings.</source>
 <context>
     <name>InfoPolylineArea</name>
     <message>
-        <location filename="../scripts/Information/InfoPolylineArea/InfoPolylineArea.js" line="+53"/>
         <source>Choose polyline</source>
-        <translation>Polylijn kiesen</translation>
+        <translation type="vanished">Polylijn kiesen</translation>
     </message>
     <message>
         <source>Done</source>
         <translation type="vanished">Klaar</translation>
     </message>
     <message>
-        <location line="+51"/>
         <source>Area</source>
-        <translation>Oppervlakte</translation>
+        <translation type="vanished">Oppervlakte</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Circumference</source>
-        <translation>Omtrek</translation>
+        <translation type="vanished">Omtrek</translation>
     </message>
     <message>
-        <location line="+49"/>
         <source>Polyline area:</source>
-        <translation>Oppervlakte:</translation>
+        <translation type="vanished">Oppervlakte:</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>circumference:</source>
-        <translation>Omtrek:</translation>
+        <translation type="vanished">Omtrek:</translation>
     </message>
     <message>
-        <location filename="../scripts/Information/InfoPolylineArea/InfoPolylineAreaInit.js" line="+2"/>
         <source>Polyl&amp;ine Area</source>
-        <translation>Polylijn&amp;oppervlakte</translation>
+        <translation type="vanished">Polylijn&amp;oppervlakte</translation>
     </message>
 </context>
 <context>
@@ -11619,7 +11664,7 @@ getoond in zoekresultaten:</translation>
         <translation>Klaar</translation>
     </message>
     <message>
-        <location line="+438"/>
+        <location line="+446"/>
         <source>Export to PDF</source>
         <translation>PDF exporteren</translation>
     </message>
@@ -11764,12 +11809,12 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1540"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1590"/>
         <source>*VARIES*</source>
         <translation>*VARIEERT*</translation>
     </message>
     <message>
-        <location line="-1342"/>
+        <location line="-1377"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -11829,7 +11874,7 @@ getoond in zoekresultaten:</translation>
         <translation>auto</translation>
     </message>
     <message>
-        <location line="+161"/>
+        <location line="+196"/>
         <source>Use auto measurement</source>
         <translation>Automatisch</translation>
     </message>

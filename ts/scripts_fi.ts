@@ -204,7 +204,7 @@
         <translation>Ohjelmointi</translation>
     </message>
     <message>
-        <location line="+63"/>
+        <location line="+65"/>
         <source>Hatch Patterns</source>
         <translation>Peittokuviot</translation>
     </message>
@@ -1455,7 +1455,7 @@ Haluatko palauttaa sen?</translation>
 <context>
     <name>BlockListExport</name>
     <message>
-        <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+92"/>
+        <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+93"/>
         <source>Export Block List (CSV)</source>
         <translation>Vie lohkoluettelo (CSV)</translation>
     </message>
@@ -1468,6 +1468,24 @@ Haluatko palauttaa sen?</translation>
         <location line="+20"/>
         <source>&amp;Export Block List</source>
         <translation>&amp;Vie lohkoluettelo</translation>
+    </message>
+</context>
+<context>
+    <name>BlockRefExport</name>
+    <message>
+        <location filename="../scripts/Misc/MiscBlock/BlockRefExport/BlockRefExport.js" line="+97"/>
+        <source>Export Block References List (CSV)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>CSV</source>
+        <translation type="unfinished">CSV</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>&amp;Export Block References List</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3144,7 +3162,7 @@ Haluatko palauttaa sen?</translation>
 <context>
     <name>Dimension</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/Dimension.js" line="+65"/>
+        <location filename="../scripts/Draw/Dimension/Dimension.js" line="+60"/>
         <source>No prefix</source>
         <translation>Ei etuliitettä</translation>
     </message>
@@ -3194,7 +3212,7 @@ Haluatko palauttaa sen?</translation>
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+122"/>
         <source>Dimension Tools</source>
         <translation>Mittatyökalut</translation>
     </message>
@@ -4495,12 +4513,12 @@ on jo luettelossa.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2115"/>
+        <location line="+2123"/>
         <source>Cancel</source>
         <translation>Peruuta</translation>
     </message>
     <message>
-        <location line="-2114"/>
+        <location line="-2122"/>
         <source>Done</source>
         <translation>Valmis</translation>
     </message>
@@ -4535,7 +4553,7 @@ on jo luettelossa.</translation>
         <translation>CAD työkalut</translation>
     </message>
     <message>
-        <location line="+568"/>
+        <location line="+576"/>
         <source>Invalid position</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7493,6 +7511,39 @@ BUG: Interferes with group castings.</source>
     </message>
 </context>
 <context>
+    <name>InfoBearing</name>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoBearing/InfoBearing.js" line="+41"/>
+        <source>Reference</source>
+        <translation type="unfinished">Viite</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Direction</source>
+        <translation type="unfinished">Suunta</translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>Distance:</source>
+        <translation type="unfinished">Etäisyys:</translation>
+    </message>
+    <message>
+        <location line="+72"/>
+        <source>Bearing:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Azimuth:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>&amp;Bearing / Azimuth</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>InfoCentroids</name>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroids.js" line="+52"/>
@@ -7680,38 +7731,32 @@ BUG: Interferes with group castings.</source>
 <context>
     <name>InfoPolylineArea</name>
     <message>
-        <location filename="../scripts/Information/InfoPolylineArea/InfoPolylineArea.js" line="+53"/>
         <source>Choose polyline</source>
-        <translation>Valitse murtoviiva</translation>
+        <translation type="vanished">Valitse murtoviiva</translation>
     </message>
     <message>
         <source>Done</source>
         <translation type="vanished">Valmis</translation>
     </message>
     <message>
-        <location line="+51"/>
         <source>Area</source>
-        <translation>Alue</translation>
+        <translation type="vanished">Alue</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Circumference</source>
-        <translation>Ympärysmitta</translation>
+        <translation type="vanished">Ympärysmitta</translation>
     </message>
     <message>
-        <location line="+49"/>
         <source>Polyline area:</source>
-        <translation>Murtoviiva-alue:</translation>
+        <translation type="vanished">Murtoviiva-alue:</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>circumference:</source>
-        <translation>ympärysmitta:</translation>
+        <translation type="vanished">ympärysmitta:</translation>
     </message>
     <message>
-        <location filename="../scripts/Information/InfoPolylineArea/InfoPolylineAreaInit.js" line="+2"/>
         <source>Polyl&amp;ine Area</source>
-        <translation>Murto&amp;viiva-alue</translation>
+        <translation type="vanished">Murto&amp;viiva-alue</translation>
     </message>
 </context>
 <context>
@@ -11083,7 +11128,7 @@ näkyy hakutuloksissa:</translation>
         <translation>Valmis</translation>
     </message>
     <message>
-        <location line="+438"/>
+        <location line="+446"/>
         <source>Export to PDF</source>
         <translation>Vie PDF:ksi</translation>
     </message>
@@ -11263,12 +11308,12 @@ näkyy hakutuloksissa:</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1540"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1590"/>
         <source>*VARIES*</source>
         <translation>*VAIHTELEVA*</translation>
     </message>
     <message>
-        <location line="-1342"/>
+        <location line="-1377"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -11332,7 +11377,7 @@ näkyy hakutuloksissa:</translation>
         <translation>Automaattinen</translation>
     </message>
     <message>
-        <location line="+161"/>
+        <location line="+196"/>
         <source>Use auto measurement</source>
         <translation>Käytä automaattista mittausta</translation>
     </message>

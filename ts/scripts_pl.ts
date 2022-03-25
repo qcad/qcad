@@ -216,7 +216,7 @@
         <translation>Programowanie</translation>
     </message>
     <message>
-        <location line="+63"/>
+        <location line="+65"/>
         <source>Hatch Patterns</source>
         <translation type="unfinished">Wzór kreskowania</translation>
     </message>
@@ -1428,7 +1428,7 @@ Odzyskać ją?</translation>
 <context>
     <name>BlockListExport</name>
     <message>
-        <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+92"/>
+        <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+93"/>
         <source>Export Block List (CSV)</source>
         <translation type="unfinished">Eksport listy bloków (CSV)</translation>
     </message>
@@ -1441,6 +1441,24 @@ Odzyskać ją?</translation>
         <location line="+20"/>
         <source>&amp;Export Block List</source>
         <translation type="unfinished">Eksportuj listę bloków</translation>
+    </message>
+</context>
+<context>
+    <name>BlockRefExport</name>
+    <message>
+        <location filename="../scripts/Misc/MiscBlock/BlockRefExport/BlockRefExport.js" line="+97"/>
+        <source>Export Block References List (CSV)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>CSV</source>
+        <translation type="unfinished">CSV</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>&amp;Export Block References List</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3038,7 +3056,7 @@ Odzyskać ją?</translation>
 <context>
     <name>Dimension</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/Dimension.js" line="+65"/>
+        <location filename="../scripts/Draw/Dimension/Dimension.js" line="+60"/>
         <source>No prefix</source>
         <translation type="unfinished">Brak prefiksu</translation>
     </message>
@@ -3088,7 +3106,7 @@ Odzyskać ją?</translation>
         <translation type="unfinished">Delta</translation>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+122"/>
         <source>Dimension Tools</source>
         <translation type="unfinished">Narzędzia wymiarowe</translation>
     </message>
@@ -4574,12 +4592,12 @@ jest już na liście.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2115"/>
+        <location line="+2123"/>
         <source>Cancel</source>
         <translation type="unfinished">Anuluj</translation>
     </message>
     <message>
-        <location line="-2114"/>
+        <location line="-2122"/>
         <source>Done</source>
         <translation type="unfinished">Gotowe</translation>
     </message>
@@ -4610,7 +4628,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Narzędzia CAD</translation>
     </message>
     <message>
-        <location line="+568"/>
+        <location line="+576"/>
         <source>Invalid position</source>
         <translation type="unfinished">Nieprawidłowa pozycja</translation>
     </message>
@@ -7381,6 +7399,39 @@ BUG: Interferes with group castings.</source>
     </message>
 </context>
 <context>
+    <name>InfoBearing</name>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoBearing/InfoBearing.js" line="+41"/>
+        <source>Reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Direction</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>Distance:</source>
+        <translation type="unfinished">Odległość:</translation>
+    </message>
+    <message>
+        <location line="+72"/>
+        <source>Bearing:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Azimuth:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>&amp;Bearing / Azimuth</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>InfoCentroids</name>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroids.js" line="+52"/>
@@ -7560,38 +7611,32 @@ BUG: Interferes with group castings.</source>
 <context>
     <name>InfoPolylineArea</name>
     <message>
-        <location filename="../scripts/Information/InfoPolylineArea/InfoPolylineArea.js" line="+53"/>
         <source>Choose polyline</source>
-        <translation>Proszę wskazać linię łamaną</translation>
+        <translation type="vanished">Proszę wskazać linię łamaną</translation>
     </message>
     <message>
         <source>Done</source>
         <translation type="vanished">Zrobione</translation>
     </message>
     <message>
-        <location line="+51"/>
         <source>Area</source>
-        <translation>Pole powierzchni</translation>
+        <translation type="vanished">Pole powierzchni</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Circumference</source>
-        <translation>Obwód</translation>
+        <translation type="vanished">Obwód</translation>
     </message>
     <message>
-        <location line="+49"/>
         <source>Polyline area:</source>
-        <translation>Pole powierzchni linii łamanej:</translation>
+        <translation type="vanished">Pole powierzchni linii łamanej:</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>circumference:</source>
-        <translation>obwód:</translation>
+        <translation type="vanished">obwód:</translation>
     </message>
     <message>
-        <location filename="../scripts/Information/InfoPolylineArea/InfoPolylineAreaInit.js" line="+2"/>
         <source>Polyl&amp;ine Area</source>
-        <translation>Pole powierzchni &amp;linii łamanej</translation>
+        <translation type="vanished">Pole powierzchni &amp;linii łamanej</translation>
     </message>
 </context>
 <context>
@@ -10774,7 +10819,7 @@ shown in search results:</source>
         <translation type="unfinished">Gotowe</translation>
     </message>
     <message>
-        <location line="+438"/>
+        <location line="+446"/>
         <source>Export to PDF</source>
         <translation type="unfinished">Eksport do PDF</translation>
     </message>
@@ -10915,12 +10960,12 @@ shown in search results:</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1540"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1590"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*VARIES*</translation>
     </message>
     <message>
-        <location line="-1342"/>
+        <location line="-1377"/>
         <source>:</source>
         <translation type="unfinished">:</translation>
     </message>
@@ -10970,12 +11015,12 @@ shown in search results:</source>
         <translation type="unfinished">Pokaż wszystkie nieruchomości</translation>
     </message>
     <message>
-        <location line="+722"/>
+        <location line="+757"/>
         <source>Widgets</source>
         <translation>Widżety</translation>
     </message>
     <message>
-        <location line="-768"/>
+        <location line="-803"/>
         <source>Add custom property to selected objects</source>
         <translation>Dodaj dostosowaną właściwość do zaznaczonych obiektów</translation>
     </message>
@@ -10985,7 +11030,7 @@ shown in search results:</source>
         <translation type="unfinished">Auto</translation>
     </message>
     <message>
-        <location line="+161"/>
+        <location line="+196"/>
         <source>Use auto measurement</source>
         <translation type="unfinished">Użyj pomiaru automatycznego</translation>
     </message>
