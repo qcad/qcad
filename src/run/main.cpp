@@ -360,6 +360,7 @@ int main(int argc, char *argv[]) {
 
     int ret = 0;
 
+#if QT_VERSION >= 0x060000
     RScriptHandler* handler = RScriptHandlerRegistry::getGlobalScriptHandler("js");
     if (handler!=NULL) {
         // got a custom JS handler from a plugin:
@@ -369,7 +370,7 @@ int main(int argc, char *argv[]) {
         delete handler;
     }
     else {
-#if QT_VERSION < 0x060000
+#else
         RScriptHandlerRegistry::registerScriptHandler(RScriptHandlerEcma::factory,
                 RScriptHandlerEcma::getSupportedFileExtensionsStatic());
 

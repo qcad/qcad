@@ -28,7 +28,7 @@
 #include <QPair>
 #include <QString>
 #include <QStringList>
-#include <QTextCodec>
+//#include <QTextCodec>
 #include <QVariant>
 
 #if QT_VERSION >= 0x060000

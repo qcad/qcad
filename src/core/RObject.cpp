@@ -489,7 +489,7 @@ bool RObject::hasCustomProperty(const QString& title, const QString& key) const 
     return customProperties.value(title).contains(key);
 }
 
-bool RObject::hasCustomProperty(const QString& title, const QRegExp& key) const {
+bool RObject::hasCustomProperty(const QString& title, const QRegularExpression& key) const {
     if (!customProperties.contains(title)) {
         return false;
     }

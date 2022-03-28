@@ -165,7 +165,7 @@ double RMath::eval(const QString& expression, bool* ok) {
 
     // 'correct' commas in numbers to points:
     if (RSettings::getNumberLocale().decimalPoint()==',') {
-        expr.replace(QRegExp("(\\d*),(\\d+)"), "\\1.\\2");
+        expr.replace(QRegularExpression("(\\d*),(\\d+)"), "\\1.\\2");
     }
 
     int idx = -1;

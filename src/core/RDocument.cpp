@@ -3083,7 +3083,7 @@ QString RDocument::substituteAutoVariables(const QString& expression) {
         if (RMath::isNaN(value)) {
             continue;
         }
-        exp = exp.replace(QRegExp(QString("\\b%1\\b").arg(key)), QString("%1").arg(value, 0, 'f', 12));
+        exp = exp.replace(QRegularExpression(QString("\\b%1\\b").arg(key)), QString("%1").arg(value, 0, 'f', 12));
     }
 
     return exp;

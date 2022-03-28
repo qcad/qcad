@@ -233,7 +233,7 @@ public:
     /**
      * \nonscriptable
      */
-    bool hasCustomProperty(const QString& title, const QRegExp& key) const;
+    bool hasCustomProperty(const QString& title, const QRegularExpression& key) const;
 
     virtual QVariant getCustomProperty(const QString& title, const QString& key, const QVariant& defaultValue = RDEFAULT_QVARIANT) const;
     virtual double getCustomDoubleProperty(const QString& title, const QString& key, double defaultValue) const;
