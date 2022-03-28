@@ -370,11 +370,13 @@ int main(int argc, char *argv[]) {
         delete handler;
     }
     else {
-#else
+#endif
+
+#if QT_VERSION < 0x060000
         RScriptHandlerRegistry::registerScriptHandler(RScriptHandlerEcma::factory,
                 RScriptHandlerEcma::getSupportedFileExtensionsStatic());
 
-        handler = RScriptHandlerRegistry::getGlobalScriptHandler("js");
+        RScriptHandler* handler = RScriptHandlerRegistry::getGlobalScriptHandler("js");
         Q_ASSERT(handler!=NULL);
         handler->init(autostartFile, arguments.mid(i+1));
 
@@ -385,7 +387,10 @@ int main(int argc, char *argv[]) {
         // delete script handler and print uncaught exceptions:
         delete handler;
 #endif
+
+#if QT_VERSION >= 0x060000
     }
+#endif
 
     RPluginLoader::unloadPlugins();
 
