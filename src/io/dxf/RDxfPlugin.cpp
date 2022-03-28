@@ -6,7 +6,10 @@
 #include "RSettings.h"
 
 bool RDxfPlugin::init() {
-    //qDebug() << "RDxfPlugin::init";
+#ifdef QT_DEBUG
+    qDebug() << "RDxfPlugin::init";
+#endif
+
     RDxfImporterFactory::registerFileImporter();
     RDxfExporterFactory::registerFileExporter();
     return true;
