@@ -332,7 +332,7 @@ double RMath::eval(const QString& expression, bool* ok) {
 
     // convert explicitly indicated bearing angles (e.g. "90b30'5\"") to degrees:
     {
-        QRegExp re(
+        QRegularExpression re = RS::createRegEpCI(
             "(?:[^a-zA-Z0-9]|^)"                                // not preceded by letter or number (could be part of a function)
             "("
               "(?:((?:\\.\\d+)|(?:\\d+\\.\\d*)|(?:\\d+))b)"  // degrees
@@ -340,9 +340,10 @@ double RMath::eval(const QString& expression, bool* ok) {
               "(?:((?:\\.\\d+)|(?:\\d+\\.\\d*)|(?:\\d+))\")?"   // seconds
             ")"
             "(?:[^\\d]|$)",             // followed by not a number or end
-            Qt::CaseInsensitive, QRegExp::RegExp2);
+            true);
+        QRegularExpressionMatch match;
         do {
-            idx = re.indexIn(expr);
+            idx = RS::indexIn(re, match, expr);
             if (idx==-1) {
                 break;
             }
@@ -350,16 +351,16 @@ double RMath::eval(const QString& expression, bool* ok) {
             double degrees = 0.0;
             double minutes = 0.0;
             double seconds = 0.0;
-            degrees = re.cap(2).toDouble(ok);
-            minutes = re.cap(3).toDouble(ok);
-            seconds = re.cap(4).toDouble(ok);
+            degrees = RS::captured(re, match, 2).toDouble(ok);
+            minutes = RS::captured(re, match, 3).toDouble(ok);
+            seconds = RS::captured(re, match, 4).toDouble(ok);
 
             double angle = degrees + minutes/60.0 + seconds/3600.0;
             angle = 90.0 - angle;
             angle = fmod(angle,360.0);
 
             expr.replace(
-                re.cap(1),
+                RS::captured(re, match, 1),
                 QString("%1").arg(angle, 0, 'g', 16)
             );
         } while(idx!=-1);

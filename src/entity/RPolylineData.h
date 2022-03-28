@@ -218,8 +218,8 @@ public:
         return RPolyline::getStartPoint();
     }
 
-    void relocateStartPoint(const RVector& p) {
-        RPolyline::relocateStartPoint(p);
+    bool relocateStartPoint(const RVector& p) {
+        return RPolyline::relocateStartPoint(p);
     }
 
     void setClosed(bool on) {
