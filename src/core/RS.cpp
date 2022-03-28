@@ -22,6 +22,9 @@
 #if QT_VERSION < 0x050000
 #include <QTextDocument>
 #endif
+#if QT_VERSION < 0x060000
+#include <QTextCodec>
+#endif
 
 #include "RColor.h"
 #include "RGlobal.h"
