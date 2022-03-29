@@ -19,11 +19,11 @@
 
 #include <QtGlobal>
 #if QT_VERSION < 0x050000
-#include <QDesktopWidget>
 #include <QTextDocument>
 #endif
 #if QT_VERSION < 0x060000
 #include <QTextCodec>
+#include <QDesktopWidget>
 #endif
 
 #include "RColor.h"
