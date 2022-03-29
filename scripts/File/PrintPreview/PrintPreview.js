@@ -61,6 +61,8 @@ PrintPreview.isRunning = function() {
  */
 PrintPreview.start = function(initialAction, instance) {
     var di = EAction.getDocumentInterface();
+    var doc = di.getDocument();
+
     var a = di.getDefaultAction();
     a.finishEvent();
     if (isNull(instance)) {
@@ -72,12 +74,68 @@ PrintPreview.start = function(initialAction, instance) {
     if (!isNull(initialAction)) {
         PrintPreview.instance.initialAction = initialAction;
     }
+
+    // auto setup:
+    var appWin = RMainWindowQt.getMainWindow();
+    var buttons = new QMessageBox.StandardButtons(QMessageBox.Yes, QMessageBox.No);
+
+    var paperSizeMM = Print.getPaperSizeMM(doc);
+    var paperSizeName = Print.getPaperSizeNameFromSize(paperSizeMM);
+    qDebug("paperSizeName:", paperSizeName);
+    var paperSizeAccepted = doc.getVariable("PageSettings/PaperSizeAccepted");
+    qDebug("paperSizeAccepted:", paperSizeAccepted);
+
+    if (paperSizeName==="" && paperSizeAccepted!==true) {
+        // custom paper size:
+        // ask user to adjust to default paper size:
+        var defaultPaperSizeName = Print.getDefaultPaperSizeName(doc);
+        var ret = QMessageBox.warning(
+            appWin,
+            qsTr("Auto Paper Size"),
+            qsTr("The paper size is set to a custom size (%1x%2). Do you want to change it to the default paper size of your printer (%3)?".arg(paperSizeMM.width()).arg(paperSizeMM.height()).arg(defaultPaperSizeName)),
+            buttons
+        );
+        if (ret===QMessageBox.Yes) {
+            var defPaperSize = Print.getDefaultPaperSizeMM();
+            qDebug("defPaperSize:", defPaperSize);
+            doc.setVariable("PageSettings/PaperWidth", defPaperSize.width());
+            doc.setVariable("PageSettings/PaperHeight", defPaperSize.height());
+        }
+        else {
+            // store information that paper size was accepted as is (don't show dialog again):
+            doc.setVariable("PageSettings/PaperSizeAccepted", true);
+        }
+    }
+
+    var bbPaper = Print.getPaperBox(doc);
+    bbPaper.growXY(bbPaper.getWidth()/100, bbPaper.getHeight()/100);
+    var bbDoc = doc.getBoundingBox();
+    var positionAccepted = doc.getVariable("PageSettings/PositionAccepted");
+    // check if paper contains drawing:
+    if (!bbPaper.containsBox(bbDoc) && !positionAccepted) {
+        var initialZoom = appWin.property("PrintPreview/InitialZoom");
+        if (initialZoom!=="View") {
+            var ret = QMessageBox.warning(appWin,
+                qsTr("Auto fit"),
+                qsTr("Auto fit drawing to paper?"),
+                buttons);
+            if (ret===QMessageBox.Yes) {
+                qDebug("drawing not on paper, auto fit drawing");
+                appWin.setProperty("PrintPreview/InitialZoom", "Auto");
+            }
+            else {
+                doc.setVariable("PageSettings/PositionAccepted", true);
+            }
+        }
+    }
+
     di.setDefaultAction(PrintPreview.instance);
 
     var ga = RGuiAction.getByScriptFile("scripts/File/PrintPreview/PrintPreview.js")
     if (!isNull(ga)) {
         ga.setChecked(true);
     }
+
 };
 
 /**
@@ -157,6 +215,7 @@ PrintPreviewImpl.State = {
 };
 
 PrintPreviewImpl.prototype.beginEvent = function() {
+    qDebug("PrintPreviewImpl.prototype.beginEvent");
     var di = this.getDocumentInterface();
 
     var appWin = RMainWindowQt.getMainWindow();
@@ -208,6 +267,7 @@ PrintPreviewImpl.prototype.beginEvent = function() {
     action.triggered.connect(this, "updateBackgroundDecoration");
 
     if (initialZoom==="Auto") {
+        qDebug("auto fit");
         this.slotAutoFitDrawing();
     }
     else if (initialZoom==="View") {
