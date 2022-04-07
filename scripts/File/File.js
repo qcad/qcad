@@ -147,7 +147,7 @@ File.getInitialSaveAsPath = function(filePath, extension) {
  *
  * \return Array with complete file path and selected name filter or undefined.
  */
-File.getSaveFileName = function(parentWidget, caption, path, filterStrings) {
+File.getSaveFileName = function(parentWidget, caption, path, filterStrings, defaultNameFilter) {
     var fileDialog = new QFileDialog(parentWidget);
     
     // use native dialog:
@@ -168,6 +168,20 @@ File.getSaveFileName = function(parentWidget, caption, path, filterStrings) {
 
     filterStrings = translateFilterStrings(filterStrings);
     fileDialog.setNameFilters(filterStrings);
+
+    // preselect configured name filter:
+    if (isNull(defaultNameFilter) || defaultNameFilter.length===0) {
+        // preselect default name filter DXF R27:
+        for (var i=0; i<filterStrings.length; ++i) {
+            if (filterStrings[i].contains("R27") && filterStrings[i].contains("*.dxf")) {
+                fileDialog.selectNameFilter(filterStrings[i]);
+                break;
+            }
+        }
+    }
+    else {
+        fileDialog.selectNameFilter(defaultNameFilter);
+    }
     
     fileDialog.selectFile(fiDir.completeBaseName());
 

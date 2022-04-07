@@ -1521,7 +1521,7 @@ Wilt u het herstellen?</translation>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockRefExport/BlockRefExport.js" line="+97"/>
         <source>Export Block References List (CSV)</source>
-        <translation>Lijst met blokreferenties exporteren (CSV)</translation>
+        <translation>Lijst met blokverwijzingen exporteren (CSV)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1531,7 +1531,7 @@ Wilt u het herstellen?</translation>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block References List</source>
-        <translation>Lijst met blokreferenties &amp;exporteren</translation>
+        <translation>Lijst met blokverwijzingen &amp;exporteren</translation>
     </message>
 </context>
 <context>
@@ -2620,7 +2620,7 @@ Wilt u het herstellen?</translation>
     <message>
         <location filename="../scripts/Block/CreateBlock/CreateBlockInit.js" line="+2"/>
         <source>&amp;Create Block from Selection</source>
-        <translation>&amp;Maak block uit selectie</translation>
+        <translation>&amp;Blok maken uit selectie</translation>
     </message>
 </context>
 <context>
@@ -6459,12 +6459,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+10"/>
         <source>Double-click on block reference opens block</source>
-        <translation>Dubbelklik op blokreferentie opent blok</translation>
+        <translation>Dubbelklik op blokverwijzing opent blok</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Edit block reference in-place</source>
-        <translation>Bewerk blokreferentie ter plekke</translation>
+        <translation>Bewerk blokverwijzing ter plekke</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -7113,7 +7113,7 @@ BUG: Interferes with group castings.</source>
     </message>
     <message>
         <source>Draw hatch or solid fill</source>
-        <translation type="vanished">Teken arceringen of inkleuringen</translation>
+        <translation type="vanished">Teken arceringen of opvullingen</translation>
     </message>
     <message>
         <location line="-27"/>
@@ -7140,7 +7140,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+6"/>
         <source>Solid Fill</source>
-        <translation>Inkleuring</translation>
+        <translation>Opvulling</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -12853,7 +12853,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Block/SelectBlockReferences/SelectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Select Block References</source>
-        <translation>Blokreferentie &amp;selecteren</translation>
+        <translation>Blokverwijzing &amp;selecteren</translation>
     </message>
 </context>
 <context>

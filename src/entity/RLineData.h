@@ -96,16 +96,16 @@ public:
         return REntityData::intersectsWith(shape);
     }
     virtual bool move(const RVector& offset) {
-        return REntityData::move(offset);
+        return RLine::move(offset);
     }
     virtual bool rotate(double rotation, const RVector& center = RDEFAULT_RVECTOR) {
-        return REntityData::rotate(rotation, center);
+        return RLine::rotate(rotation, center);
     }
     virtual bool scale(const RVector& scaleFactors, const RVector& center = RDEFAULT_RVECTOR) {
-        return REntityData::scale(scaleFactors, center);
+        return RLine::scale(scaleFactors, center);
     }
     virtual bool mirror(const RLine& axis) {
-        return REntityData::mirror(axis);
+        return RLine::mirror(axis);
     }
     virtual bool mirror(const RVector& axis1, const RVector& axis2) {
         return REntityData::mirror(axis1, axis2);
@@ -117,7 +117,7 @@ public:
         return REntityData::flipHorizontal();
     }
     virtual bool stretch(const RPolyline& area, const RVector& offset) {
-        return REntityData::stretch(area, offset);
+        return RLine::stretch(area, offset);
     }
 
     virtual RBox getBoundingBox(bool ignoreEmpty) const;

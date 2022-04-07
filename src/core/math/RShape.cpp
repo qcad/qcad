@@ -2508,12 +2508,12 @@ QList<QSharedPointer<RShape> > RShape::roundShapes(
     QSharedPointer<RShape> parallel1 = parallels1[0];
     QSharedPointer<RShape> parallel2 = parallels2[0];
 
-    QList<RVector> sol2 = simpleShape1->getIntersectionPoints(*simpleShape2.data(), false);
-
     QList<RVector> ipParallel = parallel1->getIntersectionPoints(*parallel2.data(), false);
     if (ipParallel.isEmpty()) {
         return ret;
     }
+
+    QList<RVector> sol2 = simpleShape1->getIntersectionPoints(*simpleShape2.data(), false);
 
     // there might be two intersections: choose the closest:
     RVector ip = p.getClosest(ipParallel);

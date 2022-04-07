@@ -89,16 +89,16 @@ public:
         return REntityData::intersectsWith(shape);
     }
     virtual bool move(const RVector& offset) {
-        return REntityData::move(offset);
+        return RSpline::move(offset);
     }
     virtual bool rotate(double rotation, const RVector& center = RDEFAULT_RVECTOR) {
-        return REntityData::rotate(rotation, center);
+        return RSpline::rotate(rotation, center);
     }
     virtual bool scale(const RVector& scaleFactors, const RVector& center = RDEFAULT_RVECTOR) {
-        return REntityData::scale(scaleFactors, center);
+        return RSpline::scale(scaleFactors, center);
     }
     virtual bool mirror(const RLine& axis) {
-        return REntityData::mirror(axis);
+        return RSpline::mirror(axis);
     }
     virtual bool mirror(const RVector& axis1, const RVector& axis2) {
         return REntityData::mirror(axis1, axis2);
@@ -110,7 +110,7 @@ public:
         return REntityData::flipHorizontal();
     }
     virtual bool stretch(const RPolyline& area, const RVector& offset) {
-        return REntityData::stretch(area, offset);
+        return RSpline::stretch(area, offset);
     }
 
     virtual QList<RRefPoint> getReferencePoints(RS::ProjectionRenderingHint hint = RS::RenderTop) const;

@@ -79,6 +79,7 @@ CreateLibraryItem.prototype.coordinateEvent = function(event) {
     // Last used path or user data location:
     var userPath = RSettings.getDataLocation() + QDir.separator + "libraries";
     var initialPath = RSettings.getStringValue("CreateLibraryItem/Path", userPath);
+    var defaultNameFilter = RSettings.getStringValue("SaveAs/Filter", "");
 
     // Revert to the original default when the folder does not exist:
     var destDir = new QDir(initialPath);
@@ -92,7 +93,8 @@ CreateLibraryItem.prototype.coordinateEvent = function(event) {
         EAction.getMainWindow(),
         qsTr("Save library item as..."),
         initialPath,
-        filterStrings);
+        filterStrings,
+        defaultNameFilter);
 
     if (!isNull(res)) {
         // # Issue Fixed # The export may not be successful, a warning is handled
@@ -109,3 +111,4 @@ CreateLibraryItem.prototype.coordinateEvent = function(event) {
     itemDocumentInterface.destroy();
     this.terminate();
 };
+
