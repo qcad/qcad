@@ -452,11 +452,11 @@ QString RS::escape(const QString& plain) {
 #endif
 }
 
-long long RS::getScreenCount() {
+int RS::getScreenCount() {
 #if QT_VERSION >= 0x060000
-    return QGuiApplication::screens().count();
+    return (int)QGuiApplication::screens().count();
 #else
-    return QApplication::desktop()->screenCount();
+    return (int)QApplication::desktop()->screenCount();
 #endif
 }
 

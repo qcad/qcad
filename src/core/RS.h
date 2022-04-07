@@ -818,7 +818,7 @@ public:
     /**
      * \nonscriptable
      */
-    static long long getScreenCount();
+    static int getScreenCount();
     /**
      * \nonscriptable
      */
