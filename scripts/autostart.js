@@ -481,7 +481,7 @@ function main() {
         execScripts(args);
     });
 
-    var args = QCoreApplication.arguments();
+    var args = RSettings.getOriginalArguments();
     if (args.contains("-help") || args.contains("-h")) {
         usage();
         return;
@@ -578,7 +578,7 @@ function main() {
     }
 
     // if locale is given, don't show first start dialog:
-    if (isFirstStart && !QCoreApplication.arguments().contains("-locale")) {
+    if (isFirstStart && !args.contains("-locale")) {
         include("Widgets/FirstStart/FirstStart.js");
         var first = new FirstStart();
         first.showDialog();
@@ -649,7 +649,7 @@ function main() {
         var pixmap = new QPixmap(fn);
         splash = new QSplashScreen(pixmap);
         splash.objectName = "Splash";
-        if (!QCoreApplication.arguments().contains("-no-show")) {
+        if (!args.contains("-no-show")) {
             splash.show();
         }
     }
@@ -673,8 +673,8 @@ function main() {
     var addOns;
     var addOnFilePaths = RSettings.getValue("AddOns/List", []);
     if (addOnFilePaths.length===0 || newVersion ||
-            QCoreApplication.arguments().contains("-rescan") ||
-            RSettings.getBoolValue("Scripting/Rescan", true)===true) {
+        args.contains("-rescan") ||
+        RSettings.getBoolValue("Scripting/Rescan", true)===true) {
 
         if (!isNull(splash)) {
             // no translations yet:
@@ -761,7 +761,7 @@ function main() {
 
     RPluginLoader.postInitPlugins(RPluginInterface.GotMainWindowBeforeShow);
 
-    if (!QCoreApplication.arguments().contains("-no-show")) {
+    if (!args.contains("-no-show")) {
         appWin.show();
     }
 
