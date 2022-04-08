@@ -5,7 +5,7 @@ function init(basePath) {
     action.setScriptFile(basePath + "/Reverse.js");
     action.setIcon(basePath + "/Reverse.svg");
     action.setDefaultShortcut(new QKeySequence("r,v"));
-    action.setDefaultCommands(["reverse"]);
+    action.setDefaultCommands(["reverse", "rv"]);
     action.setNoState();
     action.setGroupSortOrder(13450);
     action.setSortOrder(100);
