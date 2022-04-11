@@ -33,15 +33,13 @@ FirstStart.prototype.showDialog = function() {
     this.dialog = WidgetFactory.createWidget(this.path, "FirstStartDialog.ui", null);
 
     var pathFi = new QFileInfo(this.path);
-    this.dialog.windowTitle = qsTr("%1 First Start").arg(qApp.applicationName);
+    this.dialog.setWindowTitle(qsTr("%1 First Start").arg(qApp.applicationName));
     if (qApp.applicationName.contains("QCAD")) {
         if (RSettings.hasDarkGuiBackground()) {
-            this.dialog.styleSheet =
-                 "QDialog { border-image: url(" + pathFi.absoluteFilePath() + "/firststart-inverse.jpg) 0 0 0 0 stretch stretch; border-width: 0px; }";
+            this.dialog.setStyleSheet("QDialog { border-image: url(" + pathFi.absoluteFilePath() + "/firststart-inverse.jpg) 0 0 0 0 stretch stretch; border-width: 0px; }");
         }
         else {
-            this.dialog.styleSheet =
-                 "QDialog { border-image: url(" + pathFi.absoluteFilePath() + "/firststart.jpg) 0 0 0 0 stretch stretch; border-width: 0px; }";
+            this.dialog.setStyleSheet("QDialog { border-image: url(" + pathFi.absoluteFilePath() + "/firststart.jpg) 0 0 0 0 stretch stretch; border-width: 0px; }");
                 //"QDialog{ background-image: url(" + pathFi.absoluteFilePath() + "/firststart.png) }";
         }
 
