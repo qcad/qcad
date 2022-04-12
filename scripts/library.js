@@ -2883,7 +2883,7 @@ function makeQDirFilters() {
         return ret;
     }
     else {
-        return new QDir.Filters(arguments);
+        return QDir.Filters.apply(this, arguments);
     }
 }
 
