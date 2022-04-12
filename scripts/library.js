@@ -2874,6 +2874,19 @@ function qsTranslate2(context, sourceText, disambiguation, n) {
     return qsTranslate(context, sourceText, disambiguation, n);
 }
 
+function makeQDirFilters() {
+    if (RSettings.isQt(6)) {
+        var ret = 0;
+        for (var i=0; i<arguments.length; i++) {
+            ret |= arguments[i];
+        }
+        return ret;
+    }
+    else {
+        return new QDir.Filters(arguments);
+    }
+}
+
 // fix QPlainTextEdit API for Qt 5:
 if (!isFunction(QPlainTextEdit.prototype.toPlainText)) {
     QPlainTextEdit.prototype.toPlainText = function() {
