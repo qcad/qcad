@@ -579,7 +579,7 @@ function main() {
 
     // if locale is given, don't show first start dialog:
     if (isFirstStart && !args.contains("-locale")) {
-        include("Widgets/FirstStart/FirstStart.js");
+        include("scripts/Widgets/FirstStart/FirstStart.js");
         var first = new FirstStart();
         first.showDialog();
     }
