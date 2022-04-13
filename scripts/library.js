@@ -2875,15 +2875,27 @@ function qsTranslate2(context, sourceText, disambiguation, n) {
 }
 
 function makeQDirFilters() {
+    var argumentsNew = [].slice.call(arguments, 0);
+    argumentsNew.unshift(QDir.Filters);
+    return makeFlags.apply(null, argumentsNew);
+}
+
+function makeQDirSortFlags() {
+    var argumentsNew = [].slice.call(arguments, 0);
+    argumentsNew.unshift(QDir.SortFlags);
+    return makeFlags.apply(this, argumentsNew);
+}
+
+function makeFlags() {
     if (RSettings.isQt(6)) {
         var ret = 0;
-        for (var i=0; i<arguments.length; i++) {
+        for (var i=1; i<arguments.length; i++) {
             ret |= arguments[i];
         }
         return ret;
     }
     else {
-        return QDir.Filters.apply(this, arguments);
+        return flg.apply(this, arguments);
     }
 }
 
