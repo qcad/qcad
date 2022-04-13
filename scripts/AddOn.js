@@ -457,8 +457,8 @@ AddOn.getAddOns = function(dir) {
     var fileMenuList, i, k;
 
     var addOns = [];
-    var dirFilter = new QDir.Filters(QDir.NoDotAndDotDot, QDir.Readable, QDir.Dirs);
-    var sortFlags = new QDir.SortFlags(QDir.NoSort);
+    var dirFilter = makeQDirFilters(QDir.NoDotAndDotDot, QDir.Readable, QDir.Dirs);
+    var sortFlags = makeQDirSortFlags(QDir.NoSort);
     
     // first call without recursion:
     if (topCall) {
