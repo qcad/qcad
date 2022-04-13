@@ -2895,7 +2895,9 @@ function makeFlags() {
         return ret;
     }
     else {
-        return flg.apply(this, arguments);
+        var argumentsNew = [].slice.call(arguments, 0);
+        var flgs = argumentsNew.shift();
+        return flgs.apply(this, argumentsNew);
     }
 }
 
