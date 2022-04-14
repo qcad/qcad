@@ -462,12 +462,12 @@ AddOn.getAddOns = function(dir) {
     
     // first call without recursion:
     if (topCall) {
-        var args = QCoreApplication.arguments();
+        var args = RSettings.getOriginalArguments();
 
         // ignore all scripts in ./scripts directory
         // and only load scripts from plugins
         // used mainly for testing / development
-        if (RSettings.getOriginalArguments().contains("-ignore-script-files")) {
+        if (args.contains("-ignore-script-files")) {
             dir = undefined;
         }
         else {
@@ -654,7 +654,7 @@ AddOn.getLocalAddOns = function() {
 
 AddOn.isIgnored = function(path) {
     if (isNull(AddOn.ignores)) {
-        var args = QCoreApplication.arguments();
+        var args = RSettings.getOriginalArguments();
         AddOn.ignores = [];
         for (var i=1; i < args.length; ++i) {
             if (args[i] === "-ignore") {
