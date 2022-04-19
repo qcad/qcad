@@ -5737,17 +5737,17 @@ is al in de lijst.</translation>
     <message>
         <location line="+0"/>
         <source>Explode</source>
-        <translation>Opbreken</translation>
+        <translation>Opsplitsen</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
         <source>&amp;Explode</source>
-        <translation>&amp;Opbreken</translation>
+        <translation>&amp;Opsplitsen</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+244"/>
         <source>Explode text glyphs to polylines</source>
-        <translation>Tekstcontouren opbreken in polylines</translation>
+        <translation>Tekstcontouren opsplitsen in polylines</translation>
     </message>
     <message>
         <location line="-121"/>
@@ -5762,7 +5762,7 @@ is al in de lijst.</translation>
     <message>
         <location line="-111"/>
         <source>Explode splines to polylines with line segments</source>
-        <translation>Splines opbreken in polylijnen met lijnstukken</translation>
+        <translation>Splines opsplitsen in polylijnen met lijnstukken</translation>
     </message>
     <message>
         <location line="+125"/>
@@ -5777,7 +5777,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+10"/>
         <source>Explode multiline texts into multiple simple text blocks</source>
-        <translation>Teksten met meerdere regels in meerdere eenvoudige tekstblokken opbreken</translation>
+        <translation>Teksten met meerdere regels in meerdere eenvoudige tekstblokken opsplitsen</translation>
     </message>
     <message>
         <location line="-27"/>
