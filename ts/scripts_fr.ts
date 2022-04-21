@@ -12621,7 +12621,12 @@ dans les résultats de recherche :</translation>
         <translation>Taille du papier automatique</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+1"/>
+        <source>The paper size is set to a custom size (%1x%2mm). Do you want to change it to the default paper size of your printer (%3)?</source>
+        <translation>Le format du papier est défini sur un format personnalisé (%1x%2mm). Voulez-vous le changer pour le format de papier par défaut de votre imprimante (%3) ?</translation>
+    </message>
+    <message>
+        <location line="+35"/>
         <source>Auto fit</source>
         <translation>Ajustement automatique</translation>
     </message>
@@ -12631,7 +12636,7 @@ dans les résultats de recherche :</translation>
         <translation>Adapter automatiquement le dessin au papier ?</translation>
     </message>
     <message>
-        <location line="+189"/>
+        <location line="+188"/>
         <source>Drag to move paper</source>
         <translation>Faites glisser pour déplacer le papier</translation>
     </message>

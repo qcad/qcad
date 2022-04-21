@@ -13557,7 +13557,7 @@ nicht öffnen.
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+310"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+320"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
@@ -13592,12 +13592,17 @@ nicht öffnen.
         <translation>Drucken ...</translation>
     </message>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="-662"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="-672"/>
         <source>Auto Paper Size</source>
         <translation>Auto Papiergrösse</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+1"/>
+        <source>The paper size is set to a custom size (%1x%2mm). Do you want to change it to the default paper size of your printer (%3)?</source>
+        <translation>Das Papierformat ist auf ein benutzerdefiniertes Format (%1x%2mm) eingestellt. Möchten Sie es auf das Standardpapierformat Ihres Druckers (%3) ändern?</translation>
+    </message>
+    <message>
+        <location line="+35"/>
         <source>Auto fit</source>
         <translation>Automatisch einpassen</translation>
     </message>
@@ -13607,7 +13612,7 @@ nicht öffnen.
         <translation>Automatische Skalierung der Zeichnung auf die Papiergrösse?</translation>
     </message>
     <message>
-        <location line="+189"/>
+        <location line="+188"/>
         <source>Drag to move paper</source>
         <translation>Ziehen zum Verschieben des Papiers</translation>
     </message>

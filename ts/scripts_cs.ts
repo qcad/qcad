@@ -11108,7 +11108,12 @@ ve výsledcích vyhledávání:</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+1"/>
+        <source>The paper size is set to a custom size (%1x%2mm). Do you want to change it to the default paper size of your printer (%3)?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+35"/>
         <source>Auto fit</source>
         <translation type="unfinished"></translation>
     </message>
@@ -11118,7 +11123,7 @@ ve výsledcích vyhledávání:</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+189"/>
+        <location line="+188"/>
         <source>Drag to move paper</source>
         <translation>Přetažením přesuňte papír</translation>
     </message>

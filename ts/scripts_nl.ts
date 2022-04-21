@@ -11659,7 +11659,12 @@ getoond in zoekresultaten:</translation>
         <translation>Automatisch papierformaat</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+1"/>
+        <source>The paper size is set to a custom size (%1x%2mm). Do you want to change it to the default paper size of your printer (%3)?</source>
+        <translation>Het papierformaat is ingesteld op een afwijkend formaat (%1x%2mm). Wilt u dit wijzigen in het standaard papierformaat van uw printer (%3)?</translation>
+    </message>
+    <message>
+        <location line="+35"/>
         <source>Auto fit</source>
         <translation>Automatisch passen</translation>
     </message>
@@ -11669,7 +11674,7 @@ getoond in zoekresultaten:</translation>
         <translation>Automatisch tekening op papier passen?</translation>
     </message>
     <message>
-        <location line="+189"/>
+        <location line="+188"/>
         <source>Drag to move paper</source>
         <translation>Slepen om papier te verplaatsen</translation>
     </message>

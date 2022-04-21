@@ -12713,7 +12713,12 @@ mostrati nei risultati di ricerca:</translation>
         <translation>Formato carta automatico</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+1"/>
+        <source>The paper size is set to a custom size (%1x%2mm). Do you want to change it to the default paper size of your printer (%3)?</source>
+        <translation>Il formato carta è impostato su un formato personalizzato (%1x%2mm). Vuoi cambiarlo con il formato carta predefinito della tua stampante (%3)?</translation>
+    </message>
+    <message>
+        <location line="+35"/>
         <source>Auto fit</source>
         <translation>Auto adatta</translation>
     </message>
@@ -12723,7 +12728,7 @@ mostrati nei risultati di ricerca:</translation>
         <translation>Adattare automaticamente il disegno alla carta?</translation>
     </message>
     <message>
-        <location line="+189"/>
+        <location line="+188"/>
         <source>Drag to move paper</source>
         <translation>Trascinare per spostare la carta</translation>
     </message>
