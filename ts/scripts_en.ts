@@ -2593,7 +2593,7 @@ Do you wish to recover it?</translation>
         <translation>Reference Point</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+45"/>
         <source>Save library item as...</source>
         <translation>Save library item as...</translation>
     </message>
@@ -5767,7 +5767,7 @@ is already in the list.</translation>
         <translation>&amp;File</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+106"/>
         <location line="+76"/>
         <source>Format:</source>
         <translation>Format:</translation>
@@ -5796,7 +5796,7 @@ is already in the list.</translation>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+36"/>
-        <location line="+225"/>
+        <location line="+223"/>
         <source>%1 First Start</source>
         <translation>%1 First Start</translation>
     </message>
@@ -11529,7 +11529,22 @@ shown in search results:</translation>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+249"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+94"/>
+        <source>Auto Paper Size</source>
+        <translation>Auto Paper Size</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Auto fit</source>
+        <translation>Auto fit</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Auto fit drawing to paper?</source>
+        <translation>Auto fit drawing to paper?</translation>
+    </message>
+    <message>
+        <location line="+189"/>
         <source>Drag to move paper</source>
         <translation>Drag to move paper</translation>
     </message>

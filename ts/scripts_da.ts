@@ -2430,7 +2430,7 @@ Do you wish to recover it?</source>
         <translation>Referencepunkt</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+45"/>
         <source>Save library item as...</source>
         <translation>Gem bibliotekselement som...</translation>
     </message>
@@ -5418,7 +5418,7 @@ er allerede på listen.</translation>
         <translation>&amp;Fil</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+106"/>
         <location line="+76"/>
         <source>Format:</source>
         <translation>Format:</translation>
@@ -5443,7 +5443,7 @@ er allerede på listen.</translation>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+36"/>
-        <location line="+225"/>
+        <location line="+223"/>
         <source>%1 First Start</source>
         <translation>%1 Første start</translation>
     </message>
@@ -10664,7 +10664,22 @@ vist i søgeresultaterne:</translation>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+249"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+94"/>
+        <source>Auto Paper Size</source>
+        <translation>Automatisk papirstørrelse</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Auto fit</source>
+        <translation>Automatisk tilpasning</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Auto fit drawing to paper?</source>
+        <translation>Automatisk tilpasning af tegning til papir?</translation>
+    </message>
+    <message>
+        <location line="+189"/>
         <source>Drag to move paper</source>
         <translation>Træk for at flytte papiret</translation>
     </message>

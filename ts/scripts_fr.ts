@@ -2828,7 +2828,7 @@ Voulez-vous le récupérer ?</translation>
         <translation>Point de référence</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+45"/>
         <source>Save library item as...</source>
         <translation>Enregistrer élément de bibliothèque...</translation>
     </message>
@@ -6115,7 +6115,7 @@ est déjà dans la liste.</translation>
         <translation>&amp;Fichier</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+106"/>
         <location line="+76"/>
         <source>Format:</source>
         <translation>Format :</translation>
@@ -6139,7 +6139,7 @@ est déjà dans la liste.</translation>
 <context>
     <name>FirstStart</name>
     <message>
-        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+256"/>
+        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+254"/>
         <source>Black</source>
         <translation>Noir</translation>
     </message>
@@ -6158,8 +6158,8 @@ est déjà dans la liste.</translation>
         <translation type="obsolete">Bienvenue à QCAD</translation>
     </message>
     <message>
-        <location line="-226"/>
-        <location line="+225"/>
+        <location line="-224"/>
+        <location line="+223"/>
         <source>%1 First Start</source>
         <translation>%1 premier démarrage</translation>
     </message>
@@ -12616,7 +12616,22 @@ dans les résultats de recherche :</translation>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+249"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+94"/>
+        <source>Auto Paper Size</source>
+        <translation>Taille du papier automatique</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Auto fit</source>
+        <translation>Ajustement automatique</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Auto fit drawing to paper?</source>
+        <translation>Adapter automatiquement le dessin au papier ?</translation>
+    </message>
+    <message>
+        <location line="+189"/>
         <source>Drag to move paper</source>
         <translation>Faites glisser pour déplacer le papier</translation>
     </message>

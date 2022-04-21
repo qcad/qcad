@@ -2582,7 +2582,7 @@ Přejete si ho obnovit?</translation>
         <translation>Referenční bod</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+45"/>
         <source>Save library item as...</source>
         <translation>Uložit položku knihovny jako...</translation>
     </message>
@@ -5724,7 +5724,7 @@ již v seznamu je.</translation>
         <translation>&amp;Soubor</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+106"/>
         <location line="+76"/>
         <source>Format:</source>
         <translation>Formát:</translation>
@@ -5753,7 +5753,7 @@ již v seznamu je.</translation>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+36"/>
-        <location line="+225"/>
+        <location line="+223"/>
         <source>%1 First Start</source>
         <translation>%1 První spuštění</translation>
     </message>
@@ -11103,7 +11103,22 @@ ve výsledcích vyhledávání:</translation>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+249"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+94"/>
+        <source>Auto Paper Size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Auto fit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Auto fit drawing to paper?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+189"/>
         <source>Drag to move paper</source>
         <translation>Přetažením přesuňte papír</translation>
     </message>

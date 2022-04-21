@@ -2981,7 +2981,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Referenzpunkt</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+45"/>
         <source>Save library item as...</source>
         <translation>Bibliothekeintrag speichern unter...</translation>
     </message>
@@ -6411,7 +6411,7 @@ ist bereits in der Liste.</translation>
         <translation>&amp;Datei</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+106"/>
         <location line="+76"/>
         <source>Format:</source>
         <translation>Format:</translation>
@@ -6443,7 +6443,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>FirstStart</name>
     <message>
-        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+256"/>
+        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+254"/>
         <source>Black</source>
         <translation>Schwarz</translation>
     </message>
@@ -6462,8 +6462,8 @@ ist bereits in der Liste.</translation>
         <translation type="obsolete">Willkommen zu QCAD</translation>
     </message>
     <message>
-        <location line="-226"/>
-        <location line="+225"/>
+        <location line="-224"/>
+        <location line="+223"/>
         <source>%1 First Start</source>
         <translation>%1 Erster Start</translation>
     </message>
@@ -13557,7 +13557,7 @@ nicht öffnen.
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+250"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+310"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
@@ -13592,7 +13592,22 @@ nicht öffnen.
         <translation>Drucken ...</translation>
     </message>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="-447"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="-662"/>
+        <source>Auto Paper Size</source>
+        <translation>Auto Papiergrösse</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Auto fit</source>
+        <translation>Automatisch einpassen</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Auto fit drawing to paper?</source>
+        <translation>Automatische Skalierung der Zeichnung auf die Papiergrösse?</translation>
+    </message>
+    <message>
+        <location line="+189"/>
         <source>Drag to move paper</source>
         <translation>Ziehen zum Verschieben des Papiers</translation>
     </message>
