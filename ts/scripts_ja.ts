@@ -75,7 +75,7 @@
     <message>
         <location line="-94"/>
         <source>Additional tools, features and file formats including DWG are available in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; or &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">DWG を含むその他のツール、機能、およびファイル形式は、&lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; または &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt; で利用可能です。</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -85,12 +85,12 @@
     <message>
         <location line="+5"/>
         <source>Portions of this software © %1 The Qt Company Ltd.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">このソフトウェアの一部は、© %1 The Qt Company Ltd.の著作物です。</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Qt ships with QCAD under the &lt;a href=&apos;%1&apos;&gt;LGPL Open Source license&lt;/a&gt; which confers various rights to you as the user, including the right to recompile the Qt libraries for your platform. To do that follow the &lt;a href=&apos;%2&apos;&gt;documentation shown on the Qt website&lt;/a&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Qtは、&lt;a href=&apos;%1&apos;&gt;LGPL Open Source License&lt;/a&gt;のもとでQCADとともに出荷され、ユーザーとしてQtライブラリをあなたのプラットフォーム用に再コンパイルする権利を含むさまざまな権利を与えています。これを行うには、Qt ウェブサイト&lt;/a&gt;に示されている &lt;a href=&apos;%2&apos;&gt;documentation に従います。</translation>
     </message>
     <message>
         <location line="+89"/>
@@ -122,7 +122,7 @@
     <message>
         <location line="+3"/>
         <source>License Key:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ライセンスキーです。</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -200,7 +200,7 @@
     <message>
         <location line="+164"/>
         <source>Licenses</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ライセンス</translation>
     </message>
     <message>
         <location filename="../scripts/Help/About/AboutInit.js" line="+2"/>
@@ -218,12 +218,12 @@
     <message>
         <location line="+65"/>
         <source>Hatch Patterns</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ハッチパターン</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Themes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">テーマ</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -279,7 +279,7 @@
     <message>
         <location line="+23"/>
         <source>Licenses</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ライセンス</translation>
     </message>
     <message>
         <location line="-224"/>
@@ -371,12 +371,12 @@ QCADを再起動してください。</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/AddCentroidDialog.ui" line="+14"/>
         <source>Add  point mass 2D Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">点質量の追加 2D Centroid</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Position Y:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ポジションY。</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -388,17 +388,17 @@ QCADを再起動してください。</translation>
     <message>
         <location line="-42"/>
         <source>Position X:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ポジションX</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Point mass:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">点質量。</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Reset to &apos;Undefined&apos;</source>
-        <translation type="unfinished">「未定義」にリセットする</translation>
+        <translation type="unfinished">未定義」にリセットする</translation>
     </message>
 </context>
 <context>
@@ -968,7 +968,7 @@ Do you wish to recover it/them?</source>
         <location line="+69"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
@@ -1120,13 +1120,13 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2Pdf.js" line="+30"/>
         <source>Export to PDF</source>
-        <translation type="unfinished">PDFにエクスポート</translation>
+        <translation type="unfinished">PDFへの書き出し</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
         <location line="+4"/>
         <source>&amp;Batch2Pdf visible layout blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Batch2Pdf可視化レイアウトブロック</translation>
     </message>
 </context>
 <context>
@@ -1167,12 +1167,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+17"/>
         <source>Length &amp;1:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">長さ 1:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Length &amp;2:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">長さ 2:</translation>
     </message>
     <message>
         <source>Length 1:</source>
@@ -1193,12 +1193,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExport.js" line="+78"/>
         <source>Error while generating bitmap file &quot;%1&quot;: %2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ビットマップ・ファイル &quot;%1&quot; の生成時にエラーが発生しました: %2</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Bitmap file has been exported to &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ビットマップファイルが &quot;%1&quot; にエクスポートされました。</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -1246,12 +1246,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+72"/>
         <source>Export bounding box of selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">選択範囲のバウンディングボックスの書き出し</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Transparent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">トランスペアレント</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1349,7 +1349,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+110"/>
         <source>Cannot edit block while editing a block in-place</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ブロックのインプレース編集中にブロックの編集ができない</translation>
     </message>
     <message>
         <source>Show block tools</source>
@@ -1367,7 +1367,7 @@ Do you wish to recover it?</source>
         <location filename="../scripts/Block/BlockDialog.js" line="+81"/>
         <source>block</source>
         <comment>default block name prefix</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ブロック</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -1387,7 +1387,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+11"/>
         <source>Block &quot;%1&quot; already exists&lt;br&gt;and will be overwritten.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ブロック &quot;%1&quot; は既に存在します&lt;br&gt;そして上書きされます。</translation>
     </message>
     <message>
         <source>Block &apos;%1&apos; already exists&lt;br&gt;and will be overwritten.</source>
@@ -1422,7 +1422,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/Examples/BlockExamples/BlockExamples.js" line="+51"/>
         <source>&amp;Block</source>
-        <translation type="unfinished">&amp;B ブロック</translation>
+        <translation type="unfinished">ブロック</translation>
     </message>
 </context>
 <context>
@@ -1430,7 +1430,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockFixNames/BlockFixNames.js" line="+80"/>
         <source>&amp;Fix Block Names</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ブロック名の修正</translation>
     </message>
 </context>
 <context>
@@ -1463,22 +1463,22 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockListAttributes/BlockListAttributes.js" line="+47"/>
         <source>Block:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ブロックです。</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Block reference ID:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ブロックリファレンスIDです。</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Block attribute:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ブロック属性です。</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>&amp;List Block Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ブロックの属性を一覧表示</translation>
     </message>
 </context>
 <context>
@@ -1486,17 +1486,17 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+93"/>
         <source>Export Block List (CSV)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ブロックリストのエクスポート(CSV)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>CSV</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">シーエスブイ</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block List</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ブロックリストのエクスポート</translation>
     </message>
 </context>
 <context>
@@ -1504,17 +1504,17 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockRefExport/BlockRefExport.js" line="+97"/>
         <source>Export Block References List (CSV)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ブロックリファレンス一覧（CSV）エクスポート</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>CSV</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">シーエスブイ</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block References List</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ブロックリファレンス一覧の書き出し</translation>
     </message>
 </context>
 <context>
@@ -1649,7 +1649,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+17"/>
         <source>Icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">アイコンのサイズです。</translation>
     </message>
     <message>
         <location line="+71"/>
@@ -1716,7 +1716,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/CadToolMatrix/PreferencesPage.ui" line="+17"/>
         <source>Icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">アイコンのサイズです。</translation>
     </message>
     <message>
         <location line="+96"/>
@@ -1739,7 +1739,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscModify/ChangeFontToArial/ChangeFontToArial.js" line="+65"/>
         <source>Set Font to Arial</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">フォントをArialに設定する</translation>
     </message>
 </context>
 <context>
@@ -2444,7 +2444,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/CommandLine/PreferencesPage.ui" line="+17"/>
         <source>History size:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ヒストリーサイズ。</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -2462,7 +2462,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/Examples/CommandLineExamples/CommandLineExamples.js" line="+50"/>
         <source>&amp;Command Line</source>
-        <translation type="unfinished">&amp;C コマンドライン</translation>
+        <translation type="unfinished">コマンドライン</translation>
     </message>
 </context>
 <context>
@@ -2478,7 +2478,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/CommandLineTools/CommandLineTools.js" line="+50"/>
         <source>&amp;Command Line Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">コマンドラインツール</translation>
     </message>
 </context>
 <context>
@@ -2491,7 +2491,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+3"/>
         <source>Unit &quot;%1&quot; selected. Nothing to be done</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ユニット &quot;%1&quot; が選択されました。何もしていない</translation>
     </message>
     <message>
         <source>Unit &apos;%1&apos; selected - Nothing to be done</source>
@@ -2562,12 +2562,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+0"/>
         <source>Coordinate Display</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">座標表示</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/PreferencesPage.ui" line="+17"/>
         <source>Forced update every N mouse moves:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">マウスがN回動くごとに強制的に更新される。</translation>
     </message>
 </context>
 <context>
@@ -2591,32 +2591,32 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+67"/>
         <source>Position</source>
-        <translation type="unfinished">位置</translation>
+        <translation type="unfinished">ポジション</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Counter/CounterInit.js" line="+2"/>
         <source>&amp;Counter</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">カウンター</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Auto increment number</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">オートインクリメント数</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Counter/Counter.ui" line="+17"/>
         <source>Start:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">開始します。</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Increment:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">増量。</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number Format:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">番号形式。</translation>
     </message>
     <message>
         <source>Width:</source>
@@ -2625,12 +2625,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+79"/>
         <source>Prefix:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">接頭辞。</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Suffix:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">サフィックス</translation>
     </message>
 </context>
 <context>
@@ -2674,17 +2674,17 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Cross/Cross.js" line="+56"/>
         <source>Select arc, circle, ellipse or elliptical arc</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">円弧、円、楕円、楕円弧の選択</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Cross/CrossInit.js" line="+2"/>
         <source>Centerline Cross</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">センターラインクロス</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">円弧、円、楕円の中心線クロス描画</translation>
     </message>
 </context>
 <context>
@@ -2702,22 +2702,22 @@ Do you wish to recover it?</source>
     <message>
         <location line="+57"/>
         <source>Extension</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">エクステンション</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Total length</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">全長</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Percent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">パーセント</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Angle:</source>
-        <translation type="unfinished">角度:</translation>
+        <translation type="unfinished">アングルです。</translation>
     </message>
     <message>
         <source>Line</source>
@@ -2771,17 +2771,17 @@ Do you wish to recover it?</source>
     <message>
         <location line="+11"/>
         <source>Second corner</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">第2コーナー</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Target point of reference point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">基準点の目標点</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Target point of selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">選択対象点</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2806,7 +2806,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+127"/>
         <source>Editing block &quot;%1&quot;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ブロック &quot;%1&quot; を編集中&lt;br&gt;終了したら &lt;i&gt;Block &gt; [Return to Main Drawing&lt;/i&gt; を選択。</translation>
     </message>
     <message>
         <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
@@ -2874,7 +2874,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer Entities</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">レイヤーエンティティの選択解除</translation>
     </message>
 </context>
 <context>
@@ -2882,7 +2882,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/DevDebug/DevDebug.js" line="+45"/>
         <source>&amp;Debug Mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">デバッグモード</translation>
     </message>
 </context>
 <context>
@@ -3048,7 +3048,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
         <source>Use maximum angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">最大角度を使用</translation>
     </message>
 </context>
 <context>
@@ -3144,7 +3144,7 @@ Do you wish to recover it?</source>
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>%n 個のディメンジョンのラベル位置がリセットされました。</numerusform>
         </translation>
     </message>
     <message>
@@ -3307,7 +3307,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+18"/>
         <source>Auto</source>
-        <translation type="unfinished">自動</translation>
+        <translation type="unfinished">オート</translation>
     </message>
 </context>
 <context>
@@ -3315,17 +3315,17 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
         <source>Dimension Scale</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ディメンション・スケール</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>The scale for new dimensions is not 1:1. Dimension labels will show values that differ from the measured value in the drawing. You can correct the scale factor in the options toolbar at the top.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">新規寸法の縮尺が1:1でない。寸法ラベルには、図面の測定値とは異なる値が表示されます。上部のオプションツールバーで、縮尺を修正することができます。</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Don&apos;t show this warning again</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">この警告を二度と表示しない</translation>
     </message>
 </context>
 <context>
@@ -3409,7 +3409,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+1"/>
         <source>The drawing unit must be &quot;Inch&quot; to display dimension labels in formats &quot;Architectural&quot; or &quot;Engineering&quot;. Format changed to &quot;Decimal&quot;.</source>
-        <translation type="unfinished">寸法ラベルを’建築’または’エンジニアリング’フォーマットで表示するには、図面単位は’インチ’でなければなりません。フォーマットは’小数’に変更されました。</translation>
+        <translation type="unfinished">フォーマット「Architectural」または「Engineering」で寸法ラベルを表示するには、図面単位が「Inch」でなければならない。形式を &quot;Decimal &quot;に変更しました。</translation>
     </message>
     <message>
         <source>The drawing unit must be &apos;Inch&apos; or &apos;Foot&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
@@ -3447,17 +3447,17 @@ Do you wish to recover it?</source>
     <message>
         <location line="-115"/>
         <source>Dimension Style</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ディメンションスタイル</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Horizontal text labels</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">水平方向のテキストラベル</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Text above dimension line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">寸法線上の文字</translation>
     </message>
     <message>
         <location line="+50"/>
@@ -3472,7 +3472,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+108"/>
         <source>Dimension line increment:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">寸法線増分。</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -3504,22 +3504,22 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Architectural tick</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">建築用ダニ</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Label</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ラベル</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Label font:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ラベルのフォントです。</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Label color:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ラベルの色。</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -3667,7 +3667,7 @@ is already in the list.</source>
     <message>
         <location line="+15"/>
         <source>Drawing Tools</source>
-        <translation type="unfinished">描画ツール</translation>
+        <translation type="unfinished">ドローイングツール</translation>
     </message>
 </context>
 <context>
@@ -3802,7 +3802,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawBoundingBox/DrawBoundingBox.js" line="+71"/>
         <source>Draw &amp;Bounding Box</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">バウンディングボックスの描画</translation>
     </message>
 </context>
 <context>
@@ -3810,7 +3810,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/DrawExamples.js" line="+51"/>
         <source>&amp;Draw</source>
-        <translation type="unfinished">&amp;D 描画</translation>
+        <translation type="unfinished">ドロー</translation>
     </message>
 </context>
 <context>
@@ -3820,122 +3820,122 @@ is already in the list.</source>
         <location line="+15"/>
         <location line="+1275"/>
         <source>Command ended.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">コマンドを終了しました。</translation>
     </message>
     <message>
         <location line="-1293"/>
         <source>No import file selected.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">インポートファイルが選択されていません。</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>No file opened.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ファイルが開かれていません。</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>DrawFromCSV script (v3.03) by CVH</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">CVH製DrawFromCSVスクリプト(v3.03)</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Cast CSV</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">キャストCSV</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Reading from file: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ファイルから読み込んでいます。%1</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Switched to comma/dot CSV style.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">カンマ/ドットのCSVスタイルに切り替えました。</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Switched to semicolon/dot CSV style.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">セミコロン/ドットのCSVスタイルに切り替えました。</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Switched to semicolon/comma CSV style.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">セミコロン/カンマのCSVスタイルに変更しました。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Unsupported or invalid CSV style, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">サポートされていない、または無効な CSV スタイルです。テキスト行: %1</translation>
     </message>
     <message>
         <location line="+82"/>
         <source>Setting new relative origin failed, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">新しい相対原点の設定に失敗し、無視されました。テキスト行: %1</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Setting new rounding radius failed, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">新しい丸め半径の設定に失敗し、無視されました。テキスト行: %1</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Rounding polylines requires QCAD Professional, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ポリラインを丸めるには QCAD Professional が必要ですが、無視されます。テキスト行: %1</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Can not switch to non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">存在しないレイヤに切り替えられない、無視される。テキスト行: %1%2 レイヤー: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct set active &apos;Layer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">アクティブな &apos;Layer&apos; スイッチが正しく設定されていません。テキスト行: %1</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Not a correct &apos;New layer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">正しい &apos;新規レイヤー&apos; スイッチではありません。無視されます。テキスト行: %1</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Can not hide non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">存在しないレイヤーを隠すことはできません。テキスト行: %1%2 レイヤー: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;HideLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">正しい &apos;HideLayer&apos; スイッチではないため、無視されます。テキスト行: %1</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Can not freeze non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">存在しないレイヤーをフリーズできません、無視されます。テキスト行: %1%2 レイヤー: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;FreezeLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">正しい &apos;FreezeLayer&apos; スイッチではないため、無視されます。テキスト行: %1</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Can not lock non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">存在しないレイヤーをロックできません、無視されます。テキスト行: %1%2 レイヤー: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;LockLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">正しい &apos;LockLayer&apos; スイッチではありません、無視されます。テキスト行: %1</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Can not allow non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">存在しないレイヤを許可できない、無視される。テキスト行: %1%2 レイヤー: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;AllowLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">正しい &apos;AllowLayer&apos; スイッチではありません、無視されます。テキスト行: %1</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -3960,7 +3960,7 @@ is already in the list.</source>
         <location line="+33"/>
         <location line="+135"/>
         <source>Low field count.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">フィールド数が少ない。</translation>
     </message>
     <message>
         <location line="-656"/>
@@ -3989,7 +3989,7 @@ is already in the list.</source>
         <location line="+25"/>
         <location line="+23"/>
         <source>Odd field count.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">奇数フィールド数。</translation>
     </message>
     <message>
         <location line="-655"/>
@@ -4001,7 +4001,7 @@ is already in the list.</source>
         <location line="+188"/>
         <location line="+168"/>
         <source>Rv Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rv 無効です。</translation>
     </message>
     <message>
         <location line="-640"/>
@@ -4017,7 +4017,7 @@ is already in the list.</source>
         <location line="+33"/>
         <location line="+62"/>
         <source>Rv1 Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rv1 無効です。</translation>
     </message>
     <message>
         <location line="-503"/>
@@ -4035,7 +4035,7 @@ is already in the list.</source>
         <location line="+33"/>
         <location line="+35"/>
         <source>Rv2 Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rv2 無効。</translation>
     </message>
     <message>
         <location line="-510"/>
@@ -4048,7 +4048,7 @@ is already in the list.</source>
         <location line="+49"/>
         <location line="+67"/>
         <source>Equal positions.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">イコールポジション。</translation>
     </message>
     <message>
         <location line="-265"/>
@@ -4061,7 +4061,7 @@ is already in the list.</source>
         <location line="+22"/>
         <location line="+33"/>
         <source>Radius Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">半径が無効です。</translation>
     </message>
     <message>
         <location line="-298"/>
@@ -4071,22 +4071,22 @@ is already in the list.</source>
         <location line="+35"/>
         <location line="+150"/>
         <source>Angle Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">角度が無効です。</translation>
     </message>
     <message>
         <location line="-527"/>
         <source>Angle1 Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Angle1 無効です。</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angle2 Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Angle2 無効です。</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Equal angles.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">イコールアングル。</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -4096,7 +4096,7 @@ is already in the list.</source>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 1-2.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">イコールポジション1-2。</translation>
     </message>
     <message>
         <location line="-286"/>
@@ -4108,7 +4108,7 @@ is already in the list.</source>
         <location line="+32"/>
         <location line="+35"/>
         <source>Rv3 Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rv3 無効。</translation>
     </message>
     <message>
         <location line="-354"/>
@@ -4118,7 +4118,7 @@ is already in the list.</source>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 1-3.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">イコールポジション1～3。</translation>
     </message>
     <message>
         <location line="-287"/>
@@ -4128,7 +4128,7 @@ is already in the list.</source>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 2-3.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">イコールポジション2-3。</translation>
     </message>
     <message>
         <location line="-284"/>
@@ -4136,28 +4136,28 @@ is already in the list.</source>
         <location line="+168"/>
         <location line="+2"/>
         <source>Near co-linear positions.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">共線位置の近く。</translation>
     </message>
     <message>
         <location line="-168"/>
         <source>Arc Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">アーク無効。</translation>
     </message>
     <message>
         <location line="+46"/>
         <location line="+47"/>
         <source>Center Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">センター無効。</translation>
     </message>
     <message>
         <location line="-21"/>
         <source>Radius too small.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">半径が小さすぎる。</translation>
     </message>
     <message>
         <location line="+98"/>
         <source>Circle Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">サークル無効。</translation>
     </message>
     <message>
         <location line="+79"/>
@@ -4165,45 +4165,45 @@ is already in the list.</source>
         <location line="+30"/>
         <location line="+35"/>
         <source>Rv4 Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rv4 無効。</translation>
     </message>
     <message>
         <location line="-97"/>
         <location line="+33"/>
         <source>Equal positions 1-4.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">イコールポジション1〜4。</translation>
     </message>
     <message>
         <location line="-32"/>
         <location line="+33"/>
         <source>Equal positions 2-4.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">イコールポジション2〜4。</translation>
     </message>
     <message>
         <location line="-32"/>
         <location line="+33"/>
         <source>Equal positions 3-4.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">イコールポジション3-4。</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Size Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">サイズが無効です。</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Size in X Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">サイズ（X） 無効です。</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Size in Y Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">サイズ（Y） 無効</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Polygon: less than 5 references.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ポリゴン：参照数5以下。</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4211,207 +4211,207 @@ is already in the list.</source>
         <location line="+26"/>
         <location line="+28"/>
         <source>Rv%1 Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rv%1 無効です。</translation>
     </message>
     <message>
         <location line="-61"/>
         <source>Polyline, less than 2 references.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ポリライン、参照数2以下。</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Bulge%1 Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bulge%1 無効です。</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Unsupported QCAD Professional feature.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">QCAD Professionalのサポート対象外の機能。</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>3th degree fit point Spline, less than 3 references.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">3 次適合点スプライン、参照数 3 未満。</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>3th degree control point Spline, less than 4 references.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">3次制御点スプライン、参照数4以下。</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Height Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">高さが無効です。</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Width Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">幅が無効です。</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Vert. alignment Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vert. alignment 無効。</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Horz. alignment Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Horz. alignment 無効。</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Drawing direction Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">描画方向が無効です。</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Line spacing style Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">行間スタイルが無効です。</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Line spacing Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">行間無効。</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Unsupported method. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">サポートされていないメソッドです。テキスト行: %1</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Error with first optional list.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">最初のオプションリストでエラーが発生しました。</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Error with second optional list.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2つ目のオプションリストでエラーが発生しました。</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Not a correct entry, ignored. Text line: %1 &gt; %2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">正しいエントリではないので、無視されます。テキスト行: %1 &gt; %2</translation>
     </message>
     <message>
         <location line="+80"/>
         <source>Casted entries: %1 out of %2 text lines</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">キャストされたエントリ: %2 テキスト行のうち %1 が表示されます。</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Nothing casted.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">何も鋳造していない。</translation>
     </message>
     <message>
         <location line="+227"/>
         <source>Attributes empty. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">属性は空です。テキスト行: %1</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Not a correct layer name, ignored. Text line: %1%2 Name: %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">正しいレイヤ名でないため、無視されます。テキスト行: %1%2 名前。%3</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Layer doesn&apos;t exist, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">レイヤが存在しないため、無視されます。テキスト行: %1%2 レイヤ: %3</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Not a correct color, ignored. Text line: %1%2 Color: %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">正しい色ではありません、無視されます。テキスト行： %1%2 色： %3</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">正しい Lineweight ではないので、無視されます。テキスト行: %1%2 重み: %3</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Not a correct Linetype, ignored. Text line: %1%2 Type: %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">正しい Linetype ではないので、無視されます。テキスト行: %1%2 Type:%3</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype scale, ignored. Text line: %1%2 Scale: %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">正しい Linetype スケールではありません、無視されます。テキスト行: %1%2 スケール: %3</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Unsupported attribute, ignored. Text line: %1 &gt; %2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">サポートされていない属性で、無視されます。テキスト行: %1 &gt; %2</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>Not a correct layer name. Text line: %1%2 Name: %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">正しいレイヤ名ではありません。テキスト行: %1%2 名前。%3</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Parent layer doesn&apos;t exist. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">親レイヤーが存在しません。テキスト行: %1%2 レイヤー: %3</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Not a correct color. Text line: %1%2 Color: %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">正しい色ではありません。テキスト行： %1%2 色： %3</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Lineweight. Text line: %1%2 Weight: %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">正しい Lineweight ではありません。テキスト行: %1%2 重み: %3</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype. Text line: %1%2 Type: %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">正しい Linetype ではありません。テキスト行: %1%2 Type:%3</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Add/Update layer ignored.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">レイヤーの追加/更新は無視されます。</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Updated layer: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">更新されたレイヤ: %1</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Added new layer: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">新しいレイヤーを追加しました: %1</translation>
     </message>
     <message>
         <location line="-447"/>
         <source>Importing CSV complete. Command ended.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">CSVのインポートが完了しました。コマンドは終了しました。</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Draw from CSV</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">CSVからの描画</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>CSV</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">シーエスブイ</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>All Files</source>
-        <translation type="unfinished">全てのファイル</translation>
+        <translation type="unfinished">すべてのファイル</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
         <source>&amp;Draw from CSV</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">CSVからの描画</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Draws entities based on textual entries in a CSV file</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">CSVファイルのテキスト入力に基づくエンティティの描画</translation>
     </message>
 </context>
 <context>
@@ -4419,12 +4419,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+92"/>
         <source>&amp;Draw Order</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ドローオーダー</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Draw Order</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ドローオーダー</translation>
     </message>
 </context>
 <context>
@@ -4555,7 +4555,7 @@ is already in the list.</source>
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+54"/>
         <source>%n entity/ies duplicated</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>%n 個のエンティティ/iesが重複している</numerusform>
         </translation>
     </message>
 </context>
@@ -4610,12 +4610,12 @@ is already in the list.</source>
     <message>
         <location line="+576"/>
         <source>Invalid position</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">無効な位置</translation>
     </message>
     <message>
         <location line="+177"/>
         <source>Entity is not in working set.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">エンティティがワーキングセットに含まれていない。</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4650,7 +4650,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Entityはアークではありません。</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4665,7 +4665,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, spline, ellipse arc or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">エンティティは、ライン、アーク、スプライン、楕円弧、ポリラインではありません。</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4690,7 +4690,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, spline or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">エンティティは、ライン、アーク、サークル、スプライン、ポリラインではありません。</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4705,7 +4705,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Entity is not a spline with fit points.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">エンティティは、フィットポイントを持つスプラインではありません。</translation>
     </message>
 </context>
 <context>
@@ -4713,33 +4713,33 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+58"/>
         <source>Show ECMAScript Shell</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ECMAScript シェルを表示する</translation>
     </message>
     <message>
         <location line="+56"/>
         <source>&amp;Script Shell</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">スクリプトシェル</translation>
     </message>
     <message>
         <location line="+35"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">スクリプトシェル</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShellDialog.ui" line="+20"/>
         <source>ECMAScript Shell</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ECMAScript シェル</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You are about to enable the ECMAScript Shell.&lt;/p&gt;&lt;p&gt;Through the ECMAScript Shell you can &lt;span style=&quot; color:#ff0000;&quot;&gt;modify your drawings&lt;/span&gt; but also &lt;span style=&quot; color:#ff0000;&quot;&gt;delete files&lt;/span&gt; or &lt;span style=&quot; color:#ff0000;&quot;&gt;crash the application&lt;/span&gt; which can lead to &lt;span style=&quot; color:#ff0000;&quot;&gt;data loss&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;For inexperienced programmers, it is recommended to limit the use of the ECMAScript shell to the &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; which is considered to be &quot;safe&quot; to use.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ECMAScript Shell を有効にしようとしているところです。&lt;/p&gt;&lt;p&gt;ECMAScript シェルを通して、&lt;span style=&quot; color:#ff0000;&quot;&gt; 図面を修正する&lt;/span&gt;ことができますが、&lt;span style=&quot; color:#ff0000;&quot;&gt; ファイルを削除する&lt;/span&gt;こともできます。#ファイルの削除&lt;/span&gt;や、&lt;span style=&quot; color:#ff0000;&quot;&gt;データの損失&lt;/span&gt;につながる可能性のあるアプリケーションのクラッシュ&lt;/span&gt;も可能です。&lt;/p&gt;&lt;p&gt; 経験の浅いプログラマーには、ECMAScript シェルの使用を &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; は使用するのが「安全」であると考えられています。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;。</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Don&apos;t show this dialog again</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">このダイアログを二度と表示しない</translation>
     </message>
 </context>
 <context>
@@ -5154,7 +5154,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/BlockExamples/ExAddBlock/ExAddBlock.js" line="+85"/>
         <source>&amp;Create Block</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ブロック作成</translation>
     </message>
 </context>
 <context>
@@ -5162,12 +5162,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/ExAddLayer/ExAddLayer.js" line="+44"/>
         <source>Added layer &quot;MyLayer&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">レイヤー &quot;MyLayer &quot;を追加</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Add Layer</source>
-        <translation type="unfinished">レイヤーを追加</translation>
+        <translation type="unfinished">レイヤーを追加する</translation>
     </message>
 </context>
 <context>
@@ -5175,17 +5175,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ExDeleteObject.js" line="+59"/>
         <source>Deleted line with ID %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ID %1 を持つ行が削除されました。</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>You can use &lt;i&gt;Edit &gt; Undo&lt;/i&gt; to restore the line entity.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;i&gt;Edit &gt; Undo&lt;/i&gt; で行の実体を復元することができます。</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Add and Delete Line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">線の追加と削除</translation>
     </message>
 </context>
 <context>
@@ -5193,7 +5193,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExDirListing/ExDirListing.js" line="+66"/>
         <source>&amp;Directory Listing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ディレクトリ一覧</translation>
     </message>
 </context>
 <context>
@@ -5201,7 +5201,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExDrawColors/ExDrawColors.js" line="+66"/>
         <source>Draw &amp;Colors</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ドローカラーズ</translation>
     </message>
 </context>
 <context>
@@ -5209,7 +5209,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExDrawFonts/ExDrawFonts.js" line="+85"/>
         <source>Draw &amp;Fonts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ドローフォント</translation>
     </message>
 </context>
 <context>
@@ -5217,17 +5217,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExDumpPolyline/ExDumpPolyline.js" line="+48"/>
         <source>Clockwise polyline:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">時計回りのポリライン。</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Counterclockwise polyline:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">反時計回りのポリライン。</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>&amp;Output Polyline Vertices</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ポリラインの頂点を出力する</translation>
     </message>
 </context>
 <context>
@@ -5235,12 +5235,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/ExLayerCustomProperty/ExLayerCustomProperty.js" line="+43"/>
         <source>Added custom property &quot;MyCustomProperty&quot; to layer &quot;0&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">レイヤー &quot;0 &quot;にカスタムプロパティ &quot;MyCustomProperty &quot;を追加しました。</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Add Custom Property to a Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">レイヤーにカスタムプロパティを追加する</translation>
     </message>
 </context>
 <context>
@@ -5248,22 +5248,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDove.js" line="+56"/>
         <source>First corner</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">第1コーナー</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second corner</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">第2コーナー</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ダブテールジョイント</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw a dovetail joint</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ダブテールジョイントを描く</translation>
     </message>
 </context>
 <context>
@@ -5271,7 +5271,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExMainWindow/ExMainWindow.js" line="+50"/>
         <source>&amp;Main Window</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">メインウインドウ</translation>
     </message>
 </context>
 <context>
@@ -5279,7 +5279,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/ExMandelbrot/ExMandelbrot.js" line="+48"/>
         <source>&amp;Mandelbrot Example</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">マンデルブローの例</translation>
     </message>
 </context>
 <context>
@@ -5287,7 +5287,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/ExMathSpiral/ExMathSpiral.js" line="+73"/>
         <source>&amp;Spiral</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">スパイラル</translation>
     </message>
 </context>
 <context>
@@ -5295,12 +5295,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal/ExMinimal.js" line="+12"/>
         <source>Hello World.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ハローワールド</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Minimal Example</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">最小限の例</translation>
     </message>
 </context>
 <context>
@@ -5308,12 +5308,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.js" line="+51"/>
         <source>&amp;Minimal Example 2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">最小限の例2</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+9"/>
         <source>&amp;Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">半径</translation>
     </message>
 </context>
 <context>
@@ -5321,7 +5321,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExProcess/ExProcess.js" line="+81"/>
         <source>&amp;Run Process</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">実行プロセス</translation>
     </message>
 </context>
 <context>
@@ -5329,7 +5329,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExRegisterFileExporter/ExRegisterFileExporter.js" line="+37"/>
         <source>Example Files %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ファイル例 %1</translation>
     </message>
     <message>
         <location line="+84"/>
@@ -5339,12 +5339,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Registered a file exporter for file type &quot;.example&quot;. Use File &gt; Save As to see the filter in action.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ファイルタイプ「.example」用のファイルエクスポーターを登録しました。ファイル] &gt; [名前を付けて保存]で、フィルタの動作を確認できます。</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Register File Exporter</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">レジスターファイルエクスポーター</translation>
     </message>
 </context>
 <context>
@@ -5352,12 +5352,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExRegisterFileImporter/ExRegisterFileImporter.js" line="+37"/>
         <source>Example Files %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ファイル例 %1</translation>
     </message>
     <message>
         <location line="+54"/>
         <source>Read from file: &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ファイルからの読み取り: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -5367,12 +5367,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Registered a file importer for file type &quot;.example&quot;. Use File &gt; Open to see the filter in action.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ファイルタイプ「.example」用のファイルインポーターを登録しました。ファイル] &gt; [開く]で、フィルタの動作を確認することができます。</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Register File Importer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ファイルインポーターを登録する</translation>
     </message>
 </context>
 <context>
@@ -5380,27 +5380,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExResizeWindow/ExResizeWindow.js" line="+60"/>
         <source>&amp;Resize Window</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ウィンドウのサイズ変更</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExResizeWindow/ExResizeWindow.ui" line="+14"/>
         <source>Enter Size</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">サイズ入力</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Size:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">サイズ</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>1280x720 (720p) 16:9</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">1280x720 (720p) 16:9</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>1920x1080 (1080p, Full HD) 16:9</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">1920x1080 (1080p、フルHD) 16:9</translation>
     </message>
 </context>
 <context>
@@ -5413,7 +5413,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Draw text</source>
-        <translation type="unfinished">テキストを描画</translation>
+        <translation type="unfinished">テキストを描画する</translation>
     </message>
 </context>
 <context>
@@ -5421,17 +5421,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExThreePoints/ExThreePoints.js" line="+58"/>
         <source>Position</source>
-        <translation type="unfinished">位置</translation>
+        <translation type="unfinished">ポジション</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Three Points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">3つのポイント</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw three points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ドロー3ポイント</translation>
     </message>
 </context>
 <context>
@@ -5440,13 +5440,13 @@ is already in the list.</source>
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>トランザクションは %n 個のオブジェクトに影響しました。</numerusform>
         </translation>
     </message>
     <message>
         <location line="+67"/>
         <source>&amp;Transaction Listener</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">トランザクションリスナ</translation>
     </message>
 </context>
 <context>
@@ -5454,7 +5454,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExWidget/ExWidget.js" line="+28"/>
         <source>&amp;Widget</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ウィジェット</translation>
     </message>
 </context>
 <context>
@@ -5462,17 +5462,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlExport/ExXmlExport.js" line="+39"/>
         <source>All Files</source>
-        <translation type="unfinished">全てのファイル</translation>
+        <translation type="unfinished">すべてのファイル</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Export XML</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">XMLの書き出し</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlExport/ExXmlExportInit.js" line="+2"/>
         <source>&amp;Export XML</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">XMLの書き出し</translation>
     </message>
 </context>
 <context>
@@ -5480,17 +5480,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlImport/ExXmlImport.js" line="+73"/>
         <source>All Files</source>
-        <translation type="unfinished">全てのファイル</translation>
+        <translation type="unfinished">すべてのファイル</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Import XML</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">インポートXML</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlImport/ExXmlImportInit.js" line="+2"/>
         <source>&amp;Import XML</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">インポートXML</translation>
     </message>
 </context>
 <context>
@@ -5498,7 +5498,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/Examples.js" line="+55"/>
         <source>Script &amp;Examples</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">スクリプトの例</translation>
     </message>
 </context>
 <context>
@@ -5536,7 +5536,7 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Convert splines from texts to arcs or lines if appropriate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">テキストからスプラインを円弧や直線に変換する（必要に応じて）。</translation>
     </message>
     <message>
         <location line="-125"/>
@@ -5546,7 +5546,7 @@ is already in the list.</source>
     <message>
         <location line="+135"/>
         <source>Explode circles into polylines with two half circles</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">円を2つの半円でポリラインに展開する</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5597,7 +5597,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ファイル&quot;%1 &quot;はすでに存在します。上書きしますか？</translation>
     </message>
     <message>
         <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
@@ -5606,7 +5606,7 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>All Files</source>
-        <translation type="unfinished">全てのファイル</translation>
+        <translation type="unfinished">すべてのファイル</translation>
     </message>
 </context>
 <context>
@@ -5668,17 +5668,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1115"/>
         <source>Add Active SubLayer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">アクティブサブレイヤーの追加</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>FP added layer:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">FPはレイヤーを追加しました。</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
         <source>Paints over selection mimicking a roller stamp</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ローラースタンプを模倣して選択部分を塗り潰す</translation>
     </message>
 </context>
 <context>
@@ -5686,243 +5686,243 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ペインターのオプション</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ペインターのキャスティングオプション</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Flip Painters</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">フリップペインターズ</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cast in group</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">グループ内キャスト</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">キャストオンサブレイヤー</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Add Begin Apex</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Begin Apexの追加</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add End Apex</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Add End Apex</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add Insertions</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">挿入物の追加</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ペインターセット</translation>
     </message>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ベースラインを超える鏡面塗装。</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Group all castings to one operation.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">すべての鋳物を1つの操作にまとめる。</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Cast on newly sub-layer &apos;Painted&apos;.
 BUG: Interferes with group castings.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">まず、オープンフォームにビギナーエイペックスをキャストすることから始めます。</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">オープンフォルムにエンド・エイペックスを鋳造して終了。</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add insertions in between eg. spacers, knots. (Not implemented)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">スペーサーやノットなど、間に挿入するものを追加。(未実装)</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Preview of painters.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ペインターのプレビューです。</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">画家セットを選択します。</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>CurtainRope</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">カーテンロープ</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalBar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">直交バー</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalPointsGlobal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">直交座標系（OrthogonalPointsGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWave</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">SinusoidWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWaveGlobal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">SinusoidWaveGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>3PhaseWaveGlobal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">3PhaseWaveGlobal（スリーフェイズウェーブグローバル</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>TriangleWave</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">トライアングルウェーブ</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SawtoothWave</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">鋸歯状波</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqaureWave</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">SqaureWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SteppedWave</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ステップウェーブ</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShape</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">スクエアードシェイプ</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShapeFlexing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">スクエアードシェイプフレキシング</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>AllPainterDataTypes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">AllPainterDataTypes</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Insertion type</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">挿入型</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Preview of insertion.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">挿入のプレビューです。</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Select Insertion or Enter void space. (Not implemented)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">挿入」または「空白の入力」を選択します。(未実装)</translation>
     </message>
     <message>
         <location line="+250"/>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">バージョン</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>FlexPainter Beta 0.42e © CVH 2020 </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">FlexPainterベータ版0.42e © CVH 2020</translation>
     </message>
     <message>
         <location line="+245"/>
         <source>Document Units.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ドキュメント単位。</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ペインターの幅を入力します。(+0)</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">メインペインターステップサイズを入力します。(+0)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Enter main painter length. (+)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">メインペインターの長さを入力します。(+)</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Keep painters proportional.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ペインタープロポーションを維持する。</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Select percentage of Stepsize.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Stepsizeのパーセンテージを選択します。</translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Adapt scaling f 1.00-0.90 to fit the whole form.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">フォーム全体にフィットするように、スケーリングf 1.00-0.90を適応させる。</translation>
     </message>
     <message>
         <location line="+92"/>
         <source>Verbose info. (persistent on)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">バーボーズ情報です。(永続的なオン)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ベースとなる実体を塗り潰したものを削除。(永続化オフ)</translation>
     </message>
     <message>
         <location line="-879"/>
         <source>&lt;Enter space size&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;スペースサイズを入力してください&gt;。</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Curtain Rope Knot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">カーテンロープの結び方</translation>
     </message>
     <message>
         <location line="+489"/>
         <source>#Undefined#</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">#未定義#</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Width : </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">幅 :</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5932,57 +5932,57 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Repetitive Painterのオプション</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Stepsize :</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ステップサイズ:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Length :</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">長さ:</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Closed Forms shifting % :</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">閉じたフォームのシフト % :</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Open forms scaling options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">オープンフォームのスケーリングオプション</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Dynamically scale to fit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ダイナミックに拡大縮小</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Align with begin</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">アライン・トゥ・ビート</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Centered</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">センタリング</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Align with End</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">端面との位置合わせ</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Verbose *</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Verbose _tmp_ja qcadcore_ja.ts qcadentity_ja.ts qcadgui_ja.ts scripts_ja.ts</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Delete Base Entities *</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ベースエンティティの削除 _tmp_ja qcadcore_ja.ts qcadentity_ja.ts qcadgui_ja.ts scripts_ja.ts</translation>
     </message>
 </context>
 <context>
@@ -5990,7 +5990,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
         <source>&amp;FlexPainter</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">FlexPainter</translation>
     </message>
 </context>
 <context>
@@ -6021,22 +6021,22 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/MiscModify/FlushBackLog/FlushBackLog.js" line="+38"/>
         <source>Flush Undo History</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Undoの履歴をフラッシュする</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Are you sure that you want to flush the undo / redo transaction history?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">取り消し/やり直しの取引履歴をフラッシュするのは、本当に必要ですか？</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>This cannot be undone.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">これは元に戻せません。</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Flush &amp;Undo History</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Undoの履歴をフラッシュする</translation>
     </message>
 </context>
 <context>
@@ -6121,7 +6121,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+6"/>
         <source>Cube size:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">キューブサイズ。</translation>
     </message>
     <message>
         <source>10</source>
@@ -6130,7 +6130,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+14"/>
         <source>Draw glue lap</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ドローグルーラップ</translation>
     </message>
 </context>
 <context>
@@ -6190,12 +6190,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+28"/>
         <source>Edit block reference in-place</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ブロック参照のインプレース編集</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Tolerance:</source>
-        <translation type="unfinished">許容誤差:</translation>
+        <translation type="unfinished">公差がある。</translation>
     </message>
     <message>
         <source>0.001</source>
@@ -6323,12 +6323,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+68"/>
         <source>This can be used if cursors are not visible on external monitors</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">外部モニターにカーソルが表示されない場合に使用します。</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use system cursors</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">システムカーソルを使用する</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -6358,22 +6358,22 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+136"/>
         <source>Apply line weight to points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ポイントに線の太さを適用する</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Use full resolution for Retina / high resolution display</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Retina/高解像度ディスプレイではフル解像度を使用します。</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>auto</source>
-        <translation type="unfinished">自動</translation>
+        <translation type="unfinished">オート</translation>
     </message>
     <message>
         <location line="+426"/>
         <source>Maximum selected entities with reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">参照点を持つエンティティの最大選択。</translation>
     </message>
     <message>
         <source>1000</source>
@@ -6382,12 +6382,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+219"/>
         <source>Maximum selected entities with displayed reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">表示されている参照点での最大選択実体。</translation>
     </message>
     <message>
         <location line="-656"/>
         <source>Number of threads:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">スレッドの数</translation>
     </message>
     <message>
         <source>100000</source>
@@ -6396,17 +6396,17 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+507"/>
         <source>Reference point size (px):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">基準点の大きさ(px)。</translation>
     </message>
     <message>
         <location line="+77"/>
         <source>Text height threshold (px):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">テキストの高さの閾値(px)。</translation>
     </message>
     <message>
         <location line="+151"/>
         <source>Persistent selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">永続的な選択</translation>
     </message>
     <message>
         <location line="-930"/>
@@ -6416,7 +6416,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+39"/>
         <source>Disable for printing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">プリント禁止</translation>
     </message>
     <message>
         <source>Linetypes</source>
@@ -6455,12 +6455,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="-388"/>
         <source>Linetypes and Lineweights</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">線種と線幅</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Default lineweight:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">デフォルトのlineweight。</translation>
     </message>
     <message>
         <source>Use full resolution for Retina display</source>
@@ -6595,7 +6595,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+36"/>
         <source>Primary reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">一次基準点。</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -6630,7 +6630,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+47"/>
         <source>Tertiary reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">三次基準点。</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -6665,7 +6665,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+30"/>
         <source>Working set fading factor:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ワーキングセットのフェージングファクター。</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -6757,17 +6757,17 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+41"/>
         <source>Ruler font:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">定規のフォント。</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Snap label font:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">スナップラベルのフォントです。</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Info label font:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">情報ラベルのフォントです。</translation>
     </message>
 </context>
 <context>
@@ -6790,12 +6790,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+217"/>
         <source>Panning threshold (px):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">パンニングスレッショルド(px)。</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Middle mouse button zoom factor:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">マウス中ボタンによる拡大率。</translation>
     </message>
     <message>
         <location line="-255"/>
@@ -7003,7 +7003,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/IOExamples.js" line="+51"/>
         <source>&amp;Import/Export</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">インポート/エクスポート</translation>
     </message>
 </context>
 <context>
@@ -7065,7 +7065,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Draw/Image/ImageInit.js" line="+2"/>
         <source>&amp;Insert Bitmap</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ビットマップの挿入</translation>
     </message>
 </context>
 <context>
@@ -7107,67 +7107,67 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As block:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ブロックとして。</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Rotation:</source>
-        <translation type="unfinished">回転:</translation>
+        <translation type="unfinished">回転させる。</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation type="unfinished">貼り付けエンティティを回転&lt;br&gt;この角度で</translation>
+        <translation type="unfinished">貼り付けられたエンティティを&lt;br&gt;この角度だけ回転させる</translation>
     </message>
     <message>
         <location line="+110"/>
         <source>Scale:</source>
-        <translation type="unfinished">縮尺:</translation>
+        <translation type="unfinished">スケール。</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation type="unfinished">貼り付けエンティティを拡縮&lt;br&gt;この係数で</translation>
+        <translation type="unfinished">貼り付けられたエンティティを&lt;br&gt;この倍率で拡大縮小する。</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation type="unfinished">貼り付けエンティティを反転&lt;br&gt;水平</translation>
+        <translation type="unfinished">貼り付けられたエンティティを水平方向に反転させる&lt;br&gt;。</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation type="unfinished">貼り付けエンティティを反転&lt;br&gt;垂直</translation>
+        <translation type="unfinished">貼り付けられたエンティティを反転させる&lt;br&gt;垂直方向へ</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation type="unfinished">オリジナルの画層の代わりに&lt;br&gt;全てのエンティティを現在の画層に&lt;br&gt;貼り付け</translation>
+        <translation type="unfinished">すべてのエンティティを&lt;br&gt;元のレイヤーの代わりに&lt;br&gt;現在のレイヤーに貼り付けます。</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>To current layer</source>
-        <translation type="unfinished">現在の画層へ</translation>
+        <translation type="unfinished">現在のレイヤーへ</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation type="unfinished">クリップボードから図面の&lt;br&gt;既存の画層に上書き</translation>
+        <translation type="unfinished">描画中の既存のレイヤーをクリップボードからのレイヤーで上書きする&lt;br&gt;。</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite layers</source>
-        <translation type="unfinished">画層に上書き</translation>
+        <translation type="unfinished">レイヤーを上書きする</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation type="unfinished">クリップボードから図面の&lt;br&gt;既存のブロックに上書き</translation>
+        <translation type="unfinished">描画中の既存のブロックをクリップボードからのブロックで上書きする&lt;br&gt;。</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite blocks</source>
-        <translation type="unfinished">ブロックに上書き</translation>
+        <translation type="unfinished">ブロックの上書き</translation>
     </message>
 </context>
 <context>
@@ -7175,17 +7175,17 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/ImportPoints/ImportPoints.js" line="+39"/>
         <source>All Files</source>
-        <translation type="unfinished">全てのファイル</translation>
+        <translation type="unfinished">すべてのファイル</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Import Points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">インポートポイント</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>&amp;Import Points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">インポートポイント</translation>
     </message>
 </context>
 <context>
@@ -7193,37 +7193,37 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroid.js" line="+78"/>
         <source>Position</source>
-        <translation type="unfinished">位置</translation>
+        <translation type="unfinished">ポジション</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Specify position</source>
-        <translation type="unfinished">位置を指定</translation>
+        <translation type="unfinished">ポジションを指定する</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>2D point mass Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2次元点質量 セントロイド</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Undefined</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">未定義</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroidInit.js" line="+19"/>
         <source>Add &amp;custom 2D centroid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">カスタム2Dセントロイドの追加</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Create a customizable 2D Centroid marker</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">カスタマイズ可能な2Dセントロイドマーカーの作成</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Creates a new point mass 2D Centroid marker customizable by dialog</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ダイアログでカスタマイズ可能な新しいポイントマス2Dセントロイドマーカーを作成する</translation>
     </message>
 </context>
 <context>
@@ -7441,131 +7441,131 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroid.js" line="+123"/>
         <source>No selection.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">選択しない。</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please, make a selection first. Command terminated.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">まず、選択をしてください。コマンドは終了しました。</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Not implemented. Command terminated.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">実装されていない。コマンドは終了しました。</translation>
     </message>
     <message>
         <location line="+5"/>
         <location line="+2"/>
         <source>Area 2D Centroid script (v0.32) by CVH</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">エリア2Dセントロイドスクリプト (v0.32) by CVH</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Arc sector mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">アークセクターモード</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Enclosed area:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">囲われたエリア。</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Approximated enclosed area:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">おおよその囲い込み面積。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Hatched area:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ハッチングを施した部分。</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Total hatched area:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ハッチングされた部分の合計。</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Differential hatched area:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">差分ハッチング領域。</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>2D area Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2Dエリア セントロイド</translation>
     </message>
     <message>
         <location line="-89"/>
         <source>Multiple entities in selection.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">選択範囲に複数のエンティティがある。</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Centroid markers circle in selection. No results.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">選択範囲にセントロイドマーカーが丸く表示される。結果はありません。</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Unsupported entity type. No results.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">サポートされていないエンティティタイプです。結果はありません。</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>No results.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">結果が出ない。</translation>
     </message>
     <message>
         <location line="+49"/>
         <location line="+6"/>
         <source>(Incl. approximations)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">(近似値含む)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Approximated centroid:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">セントロイドの近似値。</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Centroid:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">セントロイド</translation>
     </message>
     <message>
         <location line="+207"/>
         <location line="+578"/>
         <source>Encountered an unsupported polyline with custom widths</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">カスタム幅のサポートされていないポリラインに遭遇しました。</translation>
     </message>
     <message>
         <location line="-488"/>
         <location line="+596"/>
         <source>Encountered an unsupported polygon with custom widths</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">カスタム幅でサポートされていないポリゴンに遭遇した</translation>
     </message>
     <message>
         <location line="+687"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ハッチループからの未処理形状。</translation>
     </message>
     <message>
         <location line="+70"/>
         <source>Self-intersecting shape near (%1). No Results.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">(%1) の近くで自己交差する形状があります。結果がありません。</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+19"/>
         <source>&amp;Area Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">面積セントロイド</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Create an area 2D Centroid for a selected entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">選択されたエンティティのエリア2Dセントロイドを作成する</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Creates a new uniform areal density 2D Centroid marker and value labels for a selected entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">選択されたエンティティに対して、新しい一様な面密度の2D Centroidマーカーと値ラベルを作成する</translation>
     </message>
 </context>
 <context>
@@ -7573,32 +7573,32 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoBearing/InfoBearing.js" line="+41"/>
         <source>Reference</source>
-        <translation type="unfinished">基準点</translation>
+        <translation type="unfinished">参考</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Direction</source>
-        <translation type="unfinished">向き</translation>
+        <translation type="unfinished">方向性</translation>
     </message>
     <message>
         <location line="+42"/>
         <source>Distance:</source>
-        <translation type="unfinished">距離:</translation>
+        <translation type="unfinished">距離です。</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Bearing:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ベアリング</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Azimuth:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">アジマス（方位角）。</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>&amp;Bearing / Azimuth</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">方位/方角</translation>
     </message>
 </context>
 <context>
@@ -7606,52 +7606,52 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroids.js" line="+52"/>
         <source>2D Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2次元セントロイド</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Point mass</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">点質量</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Area</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">エリア</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Wire</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ワイヤー</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>X position</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Xポジション</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Y position</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Y位置</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Undefined</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">未定義</translation>
     </message>
     <message>
         <location line="+428"/>
         <source>2D &amp;Centroids</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2次元セントロイド</translation>
     </message>
     <message>
         <location line="-431"/>
         <source>Weighted</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">加重</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Density</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">密度</translation>
     </message>
 </context>
 <context>
@@ -7659,12 +7659,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListener.js" line="+191"/>
         <source>2D Centroids transaction listener active.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2D Centroids トランザクションリスナーがアクティブになりました。</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Deactivated/removed the 2D Centroids transaction listener.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2D Centroidsトランザクションリスナーを非アクティブ化/削除しました。</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -7672,22 +7672,22 @@ BUG: Interferes with group castings.</source>
         <location line="+40"/>
         <location line="+5"/>
         <source>Syntax error: &apos;%1&apos; parse error</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">構文エラー: &apos;%1&apos; パース・エラー</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListenerInit.js" line="+19"/>
         <source>Centroid &amp;Listener</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">セントロイドリストナー</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">(2次元セントロイドのトランザクションリスナーを（脱）アクティブ化する。</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>(De-)Activate a transaction listener for binding changes applied to 2D Centroid markers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2D Centroidマーカーに適用されるバインディング変更のトランザクションリスナーを(De-)Activateする。</translation>
     </message>
 </context>
 <context>
@@ -7863,131 +7863,131 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeighted.js" line="+105"/>
         <source>No selection.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">選択しない。</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please, make a selection first. Command terminated.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">まず、選択をしてください。コマンドは終了しました。</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>2D Centroids weighted sum script (v0.24) by CVH.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">CVHによる2次元セントロイド加重和スクリプト(v0.24)です。</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Encountered a missing coordinate value.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">座標値の欠落に遭遇しました。</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Encountered an invalid coordinate value.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">無効な座標値に遭遇しました。</translation>
     </message>
     <message>
         <location line="+8"/>
         <location line="+11"/>
         <location line="+10"/>
         <source>Encountered a missing &apos;%1&apos; value.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">見つからない &apos;%1&apos; 値が発生しました。</translation>
     </message>
     <message>
         <location line="-16"/>
         <location line="+11"/>
         <location line="+17"/>
         <source>Encountered an invalid &apos;%1&apos; value.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">無効な &apos;%1&apos; 値が発生しました。</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Encountered an unknown marker type.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">不明なマーカータイプに遭遇しました。</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>No result.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">結果が出ない。</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>No 2D Centroid markers found in the selection.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">選択範囲に2Dセントロイドマーカーがありません。</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Single marker selected, point mass = %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">シングル・マーカが選択され、ポイント・マス = %1。</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Density is undefined</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">密度は未定義</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Results in a division by zero.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">結果はゼロで除算されます。</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Results in a NaN value.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">結果は NaN 値となる。</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Combined 2D Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">複合2次元セントロイド</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Combined uniform point mass (%1):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">均一な点状質量の組み合わせ（%1）。</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Combined point mass (%1):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">結合点質量(%1)。</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>All densities are undefined</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">すべての密度は未定義です</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Some densities are undefined</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">一部のデンシティは未定義です</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>area (Informational):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">領域（Informational）。</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>wire length (Informational):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ワイヤー長（Informational）。</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Combined centroid:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">複合セントロイド。</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+19"/>
         <source>&amp;Sum 2D Centroids weighted</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2次元セントロイドの重み付け和</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Combine selected 2D Centroid markers weighted</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">選択した2Dセントロイドマーカーを重み付けして合成する。</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Combines selected 2D Centroid markers, summing all properties weighted</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">選択された2Dセントロイドマーカーを結合し、すべてのプロパティを重み付けして合計する。</translation>
     </message>
 </context>
 <context>
@@ -7995,99 +7995,99 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroid.js" line="+121"/>
         <source>No selection.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">選択しない。</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please, make a selection first. Command terminated.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">まず、選択をしてください。コマンドは終了しました。</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Length:</source>
-        <translation type="unfinished">長さ:</translation>
+        <translation type="unfinished">長さです。</translation>
     </message>
     <message>
         <location line="+35"/>
         <location line="+7"/>
         <source>Approximated length:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">長さの目安。</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Unsupported entity type. No results.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">サポートされていないエンティティタイプです。結果はありません。</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>No results.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">結果が出ない。</translation>
     </message>
     <message>
         <location line="-71"/>
         <source>Wire 2D Centroid script (v0.32) by CVH</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wire 2Dセントロイドスクリプト (v0.32) by CVH</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>2D Centroid markers circle in selection. No results.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2D Centroidのマーカーが選択範囲に丸で表示される。結果が出ない。</translation>
     </message>
     <message>
         <location line="+55"/>
         <source>Results in a division by zero.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">結果はゼロで除算されます。</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>2D wire Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2Dワイヤ セントロイド</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Total length:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">全長。</translation>
     </message>
     <message>
         <location line="+4"/>
         <location line="+6"/>
         <source>(Incl. approximations)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">(近似値含む)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Approximated centroid:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">セントロイドの近似値。</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Centroid:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">セントロイド</translation>
     </message>
     <message>
         <location line="+125"/>
         <source>Encountered an unsupported polyline with custom widths</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">カスタム幅のサポートされていないポリラインに遭遇しました。</translation>
     </message>
     <message>
         <location line="+105"/>
         <source>Encountered an unsupported polygon with custom widths</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">カスタム幅でサポートされていないポリゴンに遭遇した</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+19"/>
         <source>&amp;Wire Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ワイヤーセントロイド</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Create a wire 2D Centroid for a selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">選択範囲のワイヤ2Dセントロイドを作成する</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Creates a new uniform linear density 2D Centroid marker and value labels for a selection of entities</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">選択されたエンティティに対して、新しい均一な線形密度の2D Centroidマーカーと値ラベルを作成する</translation>
     </message>
 </context>
 <context>
@@ -8142,22 +8142,22 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/InputPreferences/PreferencesPage.ui" line="+19"/>
         <source>Decimal point:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">小数点以下</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Cartesian coordinate separator:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">直交座標セパレータ。</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Polar coordinate separator:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">極座標セパレータ。</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Relative coordinate prefix:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">相対座標の接頭辞。</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -8167,22 +8167,22 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+6"/>
         <source>Absolute Cartesian coordinate:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">絶対直交座標。</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Absolute polar coordinate:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">絶対極座標。</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Relative Cartesian coordinate:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">相対的な直交座標。</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Relative polar coordinate:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">相対極座標。</translation>
     </message>
     <message>
         <source>Absolute Cartesian Coordinate:</source>
@@ -8362,7 +8362,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+26"/>
         <source>Adjusted invalid block name to &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">無効なブロック名を &quot;%1&quot; に調整しました。</translation>
     </message>
     <message>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
@@ -8594,12 +8594,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/KeyboardPreferences/PreferencesPage.ui" line="+17"/>
         <source>Shortcut timeout:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ショートカットのタイムアウト。</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Enable keyboard navigation in list widgets</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">リストウィジェットでキーボードナビゲーションを有効にする</translation>
     </message>
 </context>
 <context>
@@ -8607,12 +8607,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/KeyboardPreferences/KeyboardPreferences.js" line="+24"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">一般</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Keyboard</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">キーボード</translation>
     </message>
 </context>
 <context>
@@ -8624,7 +8624,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/PreferencesPage.ui" line="+20"/>
         <source>Language of user interface:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ユーザーインターフェースの言語。</translation>
     </message>
 </context>
 <context>
@@ -8650,12 +8650,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+7"/>
         <source>Default lineweight for layer 0:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">レイヤー 0 のデフォルトの線幅。</translation>
     </message>
     <message>
         <location line="-48"/>
         <source>Default color for layer 0:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">レイヤー0のデフォルトの色。</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -8746,7 +8746,7 @@ BUG: Interferes with group castings.</source>
         <location filename="../scripts/Layer/LayerDialog.js" line="+40"/>
         <source>layer</source>
         <comment>default layer name prefix</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">層</translation>
     </message>
     <message>
         <location line="+150"/>
@@ -8807,7 +8807,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/LayerExamples.js" line="+50"/>
         <source>&amp;Layer</source>
-        <translation type="unfinished">&amp;L 画層</translation>
+        <translation type="unfinished">レイヤー</translation>
     </message>
 </context>
 <context>
@@ -8874,7 +8874,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
         <source>Undo Last Segment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">直前のセグメントを元に戻す</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -8887,12 +8887,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
         <source>Leader was created successfully</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">リーダーの作成に成功</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">テキストを選択したときのリーダー</translation>
     </message>
 </context>
 <context>
@@ -9153,7 +9153,7 @@ Database file: %3
     <message>
         <location line="+53"/>
         <source>Dark icon background</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ダークアイコンの背景</translation>
     </message>
     <message>
         <source>View Mode:</source>
@@ -9162,12 +9162,12 @@ Database file: %3
     <message>
         <location line="-44"/>
         <source>Icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">アイコンのサイズです。</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>View mode:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">表示モードです。</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -9456,12 +9456,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.js" line="+63"/>
         <source>First point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">1点目</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2点目</translation>
     </message>
     <message>
         <source>Done</source>
@@ -9470,47 +9470,47 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js" line="+2"/>
         <source>Box &amp;Joint from 2 Points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2ポイントからのボックスジョイント</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ドローボックスジョイントのフィンガー、スロット、テノン</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui" line="+17"/>
         <source>Depth:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">奥行き。</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Finger Width:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">指の幅。</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Finger/Slot Ratio:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">フィンガー／スロット比。</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Style:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">スタイル</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Finger first</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">フィンガーファースト</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Slot first</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">スロットファースト</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Tenons</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">テノン</translation>
     </message>
 </context>
 <context>
@@ -9518,12 +9518,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.js" line="+63"/>
         <source>First point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">1点目</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2点目</translation>
     </message>
     <message>
         <source>Done</source>
@@ -9532,32 +9532,32 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint from 2 Points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2点支持のダブテールジョイント</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw a dovetail joint</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ダブテールジョイントを描く</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.ui" line="+18"/>
         <source>Number of Dovetails:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ダブテイルの数</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Dovetail Height:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ダブテールハイト。</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Dovetail Gradient:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dovetail グラデーション。</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Dovetail/Pin Ratio:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ダブテール/ピン比。</translation>
     </message>
 </context>
 <context>
@@ -9700,7 +9700,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>Dist&amp;ance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">距離です。</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -9799,22 +9799,22 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.js" line="+68"/>
         <source>First arc or circle</source>
-        <translation type="unfinished">最初の弧または円</translation>
+        <translation type="unfinished">最初の円弧または円</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second arc or circle</source>
-        <translation type="unfinished">第2の弧または円</translation>
+        <translation type="unfinished">第2円弧または円</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxisInit.js" line="+2"/>
         <source>Radical Axis of 2 Circles</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2つの円のラジカル軸</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="unfinished">長さ:</translation>
+        <translation type="unfinished">長さです。</translation>
     </message>
 </context>
 <context>
@@ -9961,7 +9961,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineSimilarityAxes/LineSimilarityAxesInit.js" line="+2"/>
         <source>Similarity Axes of 3 Circles</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">3つの円の相似軸</translation>
     </message>
 </context>
 <context>
@@ -10072,12 +10072,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/PreferencesPage.ui" line="+19"/>
         <source>Global linetype scale:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">グローバルな線種スケール。</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Scale of linetypes matches the scale of each viewport</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">線種の縮尺は各ビューポートの縮尺に合わせる</translation>
     </message>
 </context>
 <context>
@@ -10085,7 +10085,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Examples/ListenerExamples/ListenerExamples.js" line="+50"/>
         <source>&amp;Listeners</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">リスナー</translation>
     </message>
 </context>
 <context>
@@ -10109,7 +10109,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/MathExamples.js" line="+51"/>
         <source>&amp;Mathematics</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">数学</translation>
     </message>
 </context>
 <context>
@@ -10130,12 +10130,12 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>Menu Bar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">メニューバー</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/MenuBar/PreferencesPage.ui" line="+17"/>
         <source>Use native menu bar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ネイティブメニューバーを使用する</translation>
     </message>
 </context>
 <context>
@@ -10143,12 +10143,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/MenusAndToolBars/MenusAndToolBars.js" line="+32"/>
         <source>MenusAndToolBars() is running...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">MenusAndToolBars()が実行されています...</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Menus and Toolbars</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">メニューとツールバー</translation>
     </message>
 </context>
 <context>
@@ -10156,12 +10156,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.js" line="+44"/>
         <source>Modify</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">修正</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Mirror</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ミラー</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -10186,12 +10186,12 @@ shown in search results:</source>
     <message>
         <location line="+14"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">現在のレイヤーとアトリビュートを使用する</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished">ツールオプションのためダイアログを使用</translation>
+        <translation type="unfinished">ツールオプションのダイアログを使用する</translation>
     </message>
 </context>
 <context>
@@ -10254,12 +10254,12 @@ shown in search results:</source>
     <message>
         <location line="+9"/>
         <source>Misc Block Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ブロック用工具</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>&amp;Block</source>
-        <translation type="unfinished">&amp;B ブロック</translation>
+        <translation type="unfinished">ブロック</translation>
     </message>
 </context>
 <context>
@@ -10272,12 +10272,12 @@ shown in search results:</source>
     <message>
         <location line="+9"/>
         <source>Misc Development Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">その他の開発ツール</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>De&amp;velopment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">開発</translation>
     </message>
 </context>
 <context>
@@ -10290,17 +10290,17 @@ shown in search results:</source>
     <message>
         <location line="+9"/>
         <source>Misc Drawing Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">各種描画ツール</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Misc Draw</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Misc Draw</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Draw</source>
-        <translation type="unfinished">&amp;D 描画</translation>
+        <translation type="unfinished">ドロー</translation>
     </message>
 </context>
 <context>
@@ -10313,12 +10313,12 @@ shown in search results:</source>
     <message>
         <location line="+9"/>
         <source>Misc Import / Export Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">その他のインポート/エクスポートツール</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>&amp;Import/Export</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">インポート/エクスポート</translation>
     </message>
 </context>
 <context>
@@ -10331,12 +10331,12 @@ shown in search results:</source>
     <message>
         <location line="+10"/>
         <source>Misc Information Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">その他の情報ツール</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Information</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">インフォメーション</translation>
     </message>
 </context>
 <context>
@@ -10349,12 +10349,12 @@ shown in search results:</source>
     <message>
         <location line="+10"/>
         <source>Misc Modification Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">その他の改造ツール</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Modify</source>
-        <translation type="unfinished">&amp;M 修正</translation>
+        <translation type="unfinished">修正</translation>
     </message>
 </context>
 <context>
@@ -10367,12 +10367,12 @@ shown in search results:</source>
     <message>
         <location line="+9"/>
         <source>Misc Selection Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">その他の選択ツール</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Select</source>
-        <translation type="unfinished">&amp;S 選択</translation>
+        <translation type="unfinished">選択</translation>
     </message>
 </context>
 <context>
@@ -10420,7 +10420,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Examples/ModifyExamples/ModifyExamples.js" line="+49"/>
         <source>&amp;Modify</source>
-        <translation type="unfinished">&amp;M 修正</translation>
+        <translation type="unfinished">修正</translation>
     </message>
 </context>
 <context>
@@ -10428,22 +10428,22 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+38"/>
         <source>Import MOL</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">インポートMOL</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>All Files</source>
-        <translation type="unfinished">全てのファイル</translation>
+        <translation type="unfinished">すべてのファイル</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>MOL Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">MOLファイル</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImportInit.js" line="+2"/>
         <source>Leetro MOL Import...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">リートロMOLインポート...</translation>
     </message>
 </context>
 <context>
@@ -10451,7 +10451,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImporter.js" line="+161"/>
         <source>Importing Leetro MOL file...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Leetro MOLファイルのインポート...</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -10472,12 +10472,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/PersistentWidgets/PersistentWidgets.ui" line="+14"/>
         <source>Enter Position</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ポジションを入力する</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Position X:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ポジションX</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -10488,7 +10488,7 @@ shown in search results:</source>
     <message>
         <location line="-7"/>
         <source>Position Y:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ポジションY。</translation>
     </message>
 </context>
 <context>
@@ -10496,7 +10496,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/MenusAndToolBars/MyScripts.js" line="+53"/>
         <source>My Scripts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">マイスクリプト</translation>
     </message>
 </context>
 <context>
@@ -10509,12 +10509,12 @@ shown in search results:</source>
     <message>
         <location line="+6"/>
         <source>MyLineEdit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">マイラインエディット</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>MyButton</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">マイボタン</translation>
     </message>
 </context>
 <context>
@@ -10654,14 +10654,14 @@ shown in search results:</source>
         <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>同心円を %n 回繰り返した後、半径が 0.0 より小さくなりました。</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>%n 回の同心円の後、半径が 0.0 より小さくなりました。</numerusform>
         </translation>
     </message>
     <message>
@@ -10862,7 +10862,7 @@ shown in search results:</source>
     <message>
         <location line="+6"/>
         <source>Point size (mm):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ポイントサイズ（mm）。</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -10883,7 +10883,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/Paste/Paste.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation type="unfinished">回転:</translation>
+        <translation type="unfinished">回転させる。</translation>
     </message>
     <message>
         <source>Rotate block&lt;br&gt;by this angle</source>
@@ -11027,7 +11027,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/PersistentWidgets/PersistentWidgets.js" line="+74"/>
         <source>&amp;Persistent Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">永続的なウィジェット</translation>
     </message>
 </context>
 <context>
@@ -11090,7 +11090,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
         <source>Mode:</source>
-        <translation type="unfinished">モード:</translation>
+        <translation type="unfinished">モードです。</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -11103,17 +11103,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPole/PointPole.js" line="+67"/>
         <source>Arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">円弧または円</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Line</source>
-        <translation type="unfinished">線分</translation>
+        <translation type="unfinished">ライン</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPole/PointPoleInit.js" line="+2"/>
         <source>Pole of Line and Circle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">線と円の極</translation>
     </message>
 </context>
 <context>
@@ -11121,12 +11121,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenter.js" line="+45"/>
         <source>No solution</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">解決策なし</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">3つの輪のパワーセンター</translation>
     </message>
 </context>
 <context>
@@ -11166,47 +11166,47 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.js" line="+108"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation type="unfinished">分解のために線分、弧、円、楕円、スプラインまたはポリラインを選択して下さい。</translation>
+        <translation type="unfinished">分割する線分、円弧、円、楕円、スプライン、ポリラインの選択</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Choose line, arc, circle or ellipse to break up</source>
-        <translation type="unfinished">線分、弧、円または楕円の切片を選択してください</translation>
+        <translation type="unfinished">分割する線、弧、円、楕円を選ぶ</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Pick the first point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">1点目を選ぶ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pick the first break point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">最初のブレイクポイントを選ぶ</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Pick the second point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2点目を選ぶ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pick the second break point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">第2ブレイクポイントを選ぶ</translation>
     </message>
     <message>
         <location line="+170"/>
         <source>Break Out Segment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ブレイクアウトセグメント</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
         <source>Remove line break segment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">改行セグメントを削除する</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Remove the line segment between the break symbol</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ブレークシンボル間の線分を削除する</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11216,64 +11216,64 @@ shown in search results:</source>
     <message>
         <location line="+17"/>
         <source>Inherit entity properties</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">エンティティのプロパティを継承する</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inherit all properties from the chosen entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">選択されたエンティティからすべてのプロパティを継承する</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inherit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">継承する</translation>
     </message>
     <message>
         <location line="+17"/>
         <location line="+13"/>
         <source>Peak ratio</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ピーク比率</translation>
     </message>
     <message>
         <location line="-10"/>
         <location line="+13"/>
         <source>The ratio of the peak height to the break width</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ピークの高さとブレーク幅の比</translation>
     </message>
     <message>
         <location line="-10"/>
         <source>Peak Ratio:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ピーク比。</translation>
     </message>
     <message>
         <location line="+78"/>
         <source>First/Last segment inclined</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ファースト/ラストセグメント傾斜型</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>The first and last segment of the break symbol are inclined</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ブレークシンボルの最初と最後のセグメントは傾斜している</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>First/Last segment vertical</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ファースト/ラストセグメント バーティカル</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>The first and last segment of the break symbol are vertical</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ブレークシンボルの最初と最後のセグメントは、垂直方向</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js" line="+2"/>
         <source>&amp;Polyline break symbol from 2 points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2点からのポリライン切断記号</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw a polyline break symbol from 2 points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2点からポリラインの折れ線記号を描画する</translation>
     </message>
 </context>
 <context>
@@ -11357,17 +11357,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+94"/>
         <source>Auto Paper Size</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">オートペーパーサイズ</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Auto fit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">オートフィット</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Auto fit drawing to paper?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">図面を用紙にオートフィットさせる？</translation>
     </message>
     <message>
         <location line="+189"/>
@@ -11576,12 +11576,12 @@ shown in search results:</source>
     <message>
         <location line="+69"/>
         <source>Show</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">表示</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Show all properties</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">すべての物件を表示する</translation>
     </message>
     <message>
         <location line="+757"/>
@@ -11675,27 +11675,27 @@ shown in search results:</source>
     <message>
         <location line="+7"/>
         <source>Allow adding custom properties</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">カスタムプロパティの追加を可能にする</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Always show all properties (this may slow down selection of entities)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">常にすべてのプロパティを表示する（エンティティの選択が遅くなる場合があります。）</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Always format property values as decimal numbers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">プロパティ値は常に10進数でフォーマットする</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Decimals / precision for displayed property values:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">表示されるプロパティ値の小数点以下の桁数／精度。</translation>
     </message>
     <message>
         <location line="-19"/>
         <source>Display advanced dimension style overrides</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">高度なディメンジョンスタイルのオーバーライドを表示する</translation>
     </message>
 </context>
 <context>
@@ -11703,7 +11703,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/QtExamples.js" line="+50"/>
         <source>&amp;Qt</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Qt</translation>
     </message>
 </context>
 <context>
@@ -11772,7 +11772,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscModify/ReloadLinetypes/ReloadLinetypes.js" line="+48"/>
         <source>Reload Linetype Definitions</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">線種定義の再読み込み</translation>
     </message>
 </context>
 <context>
@@ -11906,12 +11906,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.js" line="+47"/>
         <source>Modify</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">修正</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Rotate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">回転</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -11936,7 +11936,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Rotate/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished">ツールオプションのためダイアログを使用</translation>
+        <translation type="unfinished">ツールオプションのダイアログを使用する</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
@@ -11946,22 +11946,22 @@ shown in search results:</source>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished">コピーの数:</translation>
+        <translation type="unfinished">コピー枚数</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">現在のレイヤーとアトリビュートを使用する</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Angle:</source>
-        <translation type="unfinished">角度:</translation>
+        <translation type="unfinished">アングルです。</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Define angle using mouse cursor</source>
-        <translation type="unfinished">マウスカーソルで角度を指定して下さい</translation>
+        <translation type="unfinished">マウスカーソルを使って角度を定義する</translation>
     </message>
 </context>
 <context>
@@ -12027,12 +12027,12 @@ shown in search results:</source>
     <message>
         <location line="+97"/>
         <source>Angle &amp;a:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">アングルa。</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Angle &amp;b:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">アングルb。</translation>
     </message>
     <message>
         <source>Angle (&amp;a):</source>
@@ -12116,7 +12116,7 @@ shown in search results:</source>
     <message>
         <location line="+17"/>
         <source>&amp;Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">半径</translation>
     </message>
     <message>
         <source>Radius:</source>
@@ -12133,47 +12133,47 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScript.js" line="+60"/>
         <source>Open Script File</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">スクリプトファイルを開く</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>All Files</source>
-        <translation type="unfinished">全てのファイル</translation>
+        <translation type="unfinished">すべてのファイル</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>ECMAScript Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ECMAScriptファイル</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Run Script</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">実行スクリプト</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptInit.js" line="+2"/>
         <source>R&amp;un Script</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">実行スクリプト</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Open and run a script file</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">スクリプトファイルを開いて実行する</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptDialog.ui" line="+20"/>
         <source>Running Script</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ランニングスクリプト</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You are about to run the following script(s):&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt;This script could potentially modify your drawings, modify or delete your files or access your network connection.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;It is strongly recommended to only run scripts from trusted sources.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; 次のスクリプトを実行しようとしています:&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt; このスクリプトは、あなたの描画を変更したり、ファイルを変更または削除したり、あなたのネットワーク接続にアクセスしたりする可能性があります。&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt; 信頼できるソースからのスクリプトのみを実行することを強くお勧めします。&lt;/span&gt;&lt;/p&gt;&lt;/b&gt;&lt;/html&gt;。</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Don&apos;t show this dialog again</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">このダイアログを二度と表示しない</translation>
     </message>
 </context>
 <context>
@@ -12231,32 +12231,32 @@ shown in search results:</source>
     <message>
         <location line="-41"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ファイル&quot;%1 &quot;はすでに存在します。上書きしますか？</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>The file format version you are using is not recommended: &quot;%1&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">使用しているファイルフォーマットのバージョンは推奨されていません。&quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Custom properties will not be saved.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">カスタムプロパティは保存されません。</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>All custom colors will be adjusted to the nearest fixed color.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">すべてのカスタムカラーは、最も近い固定色に調整されます。</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Saving to file format version &quot;%1&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ファイル形式バージョン &quot;%1&quot; に保存しています。</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Custom colors are adjusted to the nearest fixed color.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">カスタムカラーは、最も近い固定色に調整されます。</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -12266,7 +12266,7 @@ shown in search results:</source>
     <message>
         <location line="+21"/>
         <source>Saved file:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">保存されたファイルです。</translation>
     </message>
     <message>
         <source>Saved drawing:</source>
@@ -12298,17 +12298,17 @@ shown in search results:</source>
     <message>
         <location line="+13"/>
         <source>Opening</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">オープニング</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Allow opening of zero size files (e.g. online files that are not synched to disk)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ゼロサイズのファイル（ディスクに同期していないオンラインファイルなど）を開くことができるようになりました。</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Decode strings in DXF/DWG as UTF-8 (experimental)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">DXF/DWGの文字列をUTF-8としてデコードする(実験的)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -12328,12 +12328,12 @@ shown in search results:</source>
     <message>
         <location line="+27"/>
         <source>Store &quot;last saved by&quot; file information as:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">last saved by &quot;のファイル情報を保存する。</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>(empty for username)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">(ユーザー名の場合は空欄)</translation>
     </message>
     <message>
         <source>Load/Save</source>
@@ -12355,7 +12355,7 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>Open/Save</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">開く/保存</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -12383,7 +12383,7 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>Modify</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">修正</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -12408,7 +12408,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Scale/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished">ツールオプションのためダイアログを使用</translation>
+        <translation type="unfinished">ツールオプションのダイアログを使用する</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>
@@ -12418,17 +12418,17 @@ shown in search results:</source>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished">コピーの数:</translation>
+        <translation type="unfinished">コピー枚数</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">現在のレイヤーとアトリビュートを使用する</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Factor x:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ファクターx。</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -12439,17 +12439,17 @@ shown in search results:</source>
     <message>
         <location line="-7"/>
         <source>Factor y:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">因子y。</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Proportional</source>
-        <translation type="unfinished">比例</translation>
+        <translation type="unfinished">プロポーショナル</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Define factor using mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">マウスカーソルを使って因子を定義する</translation>
     </message>
 </context>
 <context>
@@ -12482,12 +12482,12 @@ shown in search results:</source>
     <message>
         <location line="+115"/>
         <source>Factor x:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ファクターx。</translation>
     </message>
     <message>
         <location line="+49"/>
         <source>Factor y:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">因子y。</translation>
     </message>
     <message>
         <source>Factor &amp;x:</source>
@@ -12505,7 +12505,7 @@ shown in search results:</source>
     <message>
         <location line="+70"/>
         <source>Define factor using mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">マウスカーソルを使って因子を定義する</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -12577,17 +12577,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByColor/SelectByColor.js" line="+64"/>
         <source>Select one or more objects only of the desired color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">希望する色のオブジェクトのみを1つまたは複数選択する</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Selected all visible entities of color %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">色 %1 の可視エンティティがすべて選択されました。</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByColor/SelectByColorInit.js" line="+2"/>
         <source>By Color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">カラー別</translation>
     </message>
 </context>
 <context>
@@ -12595,7 +12595,7 @@ shown in search results:</source>
     <message>
         <location line="+3"/>
         <source>Select all objects of a color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ある色のオブジェクトをすべて選択する</translation>
     </message>
 </context>
 <context>
@@ -12603,17 +12603,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandle.js" line="+58"/>
         <source>Object selected:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">選択されたオブジェクト。</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Object is not a drawing entity:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">オブジェクトは描画対象ではありません。</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js" line="+2"/>
         <source>By Handle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ハンドルネームで</translation>
     </message>
 </context>
 <context>
@@ -12621,12 +12621,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleDialog.ui" line="+17"/>
         <source>Selection by Handle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ハンドルネームで選ぶ</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Handle (hex):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ハンドル（六角）。</translation>
     </message>
 </context>
 <context>
@@ -12673,7 +12673,7 @@ shown in search results:</source>
     <message>
         <location line="+27"/>
         <source>Same Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">同一レイヤー</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2"/>
@@ -12783,17 +12783,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
         <source>%1 entities added to selection.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">1 つのエンティティが選択に追加されました。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>%1 entities removed from selection.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">1 つのエンティティが選択から削除されました。</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
         <source>&amp;Select Layer Entities</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">レイヤーエンティティの選択</translation>
     </message>
 </context>
 <context>
@@ -12996,26 +12996,26 @@ shown in search results:</source>
         <location line="+4"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>レイヤ &quot;%1&quot; の %n エンティティ。</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>%n エンティティ</numerusform>
         </translation>
     </message>
     <message>
         <location line="+0"/>
         <source>on</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">において</translation>
     </message>
     <message numerus="yes">
         <location line="+0"/>
         <source>%n Layers</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>%n レイヤー</numerusform>
         </translation>
     </message>
     <message>
@@ -13097,7 +13097,7 @@ shown in search results:</source>
     <message>
         <location line="+14"/>
         <source>Radius:</source>
-        <translation type="unfinished">半径:</translation>
+        <translation type="unfinished">半径</translation>
     </message>
     <message>
         <source>1</source>
@@ -13338,7 +13338,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
         <source>Rotate:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">回転させる。</translation>
     </message>
 </context>
 <context>
@@ -13468,7 +13468,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Help/ShowReadme/ShowReadme.js" line="+46"/>
         <source>File &quot;%1&quot; doesn&apos;t exist.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ファイル &quot;%1&quot; は存在しません。</translation>
     </message>
 </context>
 <context>
@@ -13532,7 +13532,7 @@ shown in search results:</source>
     <message>
         <location line="+1"/>
         <source>Enter</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">入力</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+17"/>
@@ -13726,7 +13726,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/PreferencesPage.ui" line="+17"/>
         <source>Terminate manual intersection tool after one use</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">手動交差点ツールを1回使用したら終了させる</translation>
     </message>
 </context>
 <context>
@@ -13875,7 +13875,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscModify/SplineToLine/SplineToLine.js" line="+71"/>
         <source>Convert Straight Splines to Lines</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">直線のスプラインを直線に変換する</translation>
     </message>
 </context>
 <context>
@@ -13901,7 +13901,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+53"/>
         <source>Status bar font:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ステータスバーのフォント。</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -13974,12 +13974,12 @@ shown in search results:</source>
     <message>
         <location line="+141"/>
         <source>No selected entities in given range</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">指定された範囲に選択されたエンティティがない</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>No entities in given range</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">指定された範囲にエンティティが存在しない</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Stretch/StretchInit.js" line="+2"/>
@@ -14046,7 +14046,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">SVG ファイル %1</translation>
     </message>
 </context>
 <context>
@@ -14104,7 +14104,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+19"/>
         <source>Font size in text dialog preview:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">テキストダイアログのプレビューの文字サイズ。</translation>
     </message>
     <message>
         <location line="+99"/>
@@ -14134,17 +14134,17 @@ shown in search results:</source>
     <message>
         <location line="+17"/>
         <source>Text height</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">文字高さ</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">スペーシング</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Letter spacing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">文字間隔</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -14154,27 +14154,27 @@ shown in search results:</source>
     <message>
         <location line="+14"/>
         <source>Direction:</source>
-        <translation type="unfinished">向き:</translation>
+        <translation type="unfinished">方向性</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">反時計回り</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">時計回り</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Fit text to line, arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">テキストを線、円弧、円にフィットさせる</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Fit</source>
-        <translation type="unfinished">フィット</translation>
+        <translation type="unfinished">フィット感</translation>
     </message>
 </context>
 <context>
@@ -14182,7 +14182,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeader.js" line="+41"/>
         <source>Arrow position</source>
-        <translation type="unfinished">矢の位置</translation>
+        <translation type="unfinished">矢印の位置</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -14192,12 +14192,12 @@ shown in search results:</source>
     <message>
         <location line="+102"/>
         <source>Leader was created successfully</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">リーダーの作成に成功</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
         <source>&amp;Text Aligned Leader</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">テキストアラインリーダー</translation>
     </message>
 </context>
 <context>
@@ -14206,23 +14206,23 @@ shown in search results:</source>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.js" line="+99"/>
         <location line="+1"/>
         <source>Select Entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">エンティティを選択する</translation>
     </message>
     <message>
         <location line="+6"/>
         <location line="+1"/>
         <source>Position</source>
-        <translation type="unfinished">位置</translation>
+        <translation type="unfinished">ポジション</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlongInit.js" line="+2"/>
         <source>&amp;Text Along Entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">エンティティに沿ったテキスト</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw text along an entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">エンティティに沿ってテキストを描画する</translation>
     </message>
 </context>
 <context>
@@ -14270,7 +14270,7 @@ shown in search results:</source>
     <message>
         <location line="+9"/>
         <source>&amp;Underline</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">アンダーライン</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -14599,7 +14599,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ThemePreferences/PreferencesPage.ui" line="+20"/>
         <source>User interface theme:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ユーザーインターフェースのテーマです。</translation>
     </message>
 </context>
 <context>
@@ -14683,7 +14683,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Layer/ToggleLayerLock/ToggleLayerLockInit.js" line="+2"/>
         <source>&amp;Toggle Lock Status</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">トグルロックステータス</translation>
     </message>
 </context>
 <context>
@@ -14703,7 +14703,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ToolBarPreferences/PreferencesPage.ui" line="+19"/>
         <source>Icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">アイコンのサイズです。</translation>
     </message>
     <message>
         <location line="+72"/>
@@ -14723,7 +14723,7 @@ shown in search results:</source>
     <message>
         <location line="+6"/>
         <source>Shortcut prefix character:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ショートカットのプレフィックス文字。</translation>
     </message>
     <message>
         <source>Shortcut Prefix Character:</source>
@@ -14761,7 +14761,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/View/ToolMatrixFocus/ToolMatrixFocusInit.js" line="+2"/>
         <source>&amp;Focus on Tool Matrix</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">フォーカス・オン・ツール・マトリックス</translation>
     </message>
 </context>
 <context>
@@ -14980,7 +14980,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/Tutorials.js" line="+56"/>
         <source>Script &amp;Tutorials</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">スクリプトチュートリアル</translation>
     </message>
 </context>
 <context>
@@ -15004,22 +15004,22 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui" line="+17"/>
         <source>These settings affect the resolution and scale of the QCAD user interface. These preferences can be adjusted if there are problems with the user interface of QCAD, such as very large or very small icons or text labels.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">これらの設定は、QCADのユーザーインターフェースの解像度とスケールに影響します。これらの設定は、アイコンやテキストラベルが非常に大きい、または非常に小さいなど、QCADのユーザーインターフェイスに問題がある場合に調整することができます。</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Auto screen scale factor</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">自動画面拡大率</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Enable high DPI scaling</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">高DPIスケーリングを有効にする</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Scale factor:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">スケールファクター。</translation>
     </message>
 </context>
 <context>
@@ -15027,12 +15027,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/UiPreferences.js" line="+29"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">一般</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>User Interface</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ユーザーインターフェース</translation>
     </message>
 </context>
 <context>
@@ -15191,17 +15191,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/PreferencesPage.ui" line="+17"/>
         <source>Drawing unit:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">描画ユニット。</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Paper unit:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ペーパーユニット。</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Measurement system (for line types and hatch patterns):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">測定システム（ラインタイプ、ハッチパターン用）。</translation>
     </message>
 </context>
 <context>
@@ -15271,7 +15271,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+105"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="unfinished">グリッド間隔＜メタグリッド間隔</translation>
+        <translation type="unfinished">グリッド間隔 &lt; メタグリッドスペーシング</translation>
     </message>
 </context>
 <context>
@@ -15462,42 +15462,42 @@ shown in search results:</source>
     <message>
         <location line="-10"/>
         <source>Degrees</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ディグリー</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Almost Equal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ほぼ均等</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angle</source>
-        <translation type="unfinished">角度</translation>
+        <translation type="unfinished">アングル</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Asymptotically Equal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">漸近的に等しい</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Center Line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">センターライン</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Electrical Phase</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">電気的位相</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Identity</source>
-        <translation type="unfinished">合同</translation>
+        <translation type="unfinished">アイデンティティ</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Not Equal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ノットイコール</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -15507,27 +15507,27 @@ shown in search results:</source>
     <message>
         <location line="+6"/>
         <source>Property Line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">プロパティーライン</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Subscript 2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">添え字2</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Square Root</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">平方根</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Squared</source>
-        <translation type="unfinished">平方</translation>
+        <translation type="unfinished">2乗</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation type="unfinished">立方</translation>
+        <translation type="unfinished">立方体</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15588,12 +15588,12 @@ shown in search results:</source>
     <message>
         <location line="+5"/>
         <source>Scientific</source>
-        <translation type="unfinished">科学</translation>
+        <translation type="unfinished">サイエンティフィック</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal</source>
-        <translation type="unfinished">小数</translation>
+        <translation type="unfinished">10進数</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15603,23 +15603,23 @@ shown in search results:</source>
     <message>
         <location line="+1"/>
         <source>Architectural</source>
-        <translation type="unfinished">建築</translation>
+        <translation type="unfinished">アーキテクチュラル</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fractional</source>
-        <translation type="unfinished">分数</translation>
+        <translation type="unfinished">フラクショナル</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Centered</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">センタリング</translation>
     </message>
     <message>
         <location line="+13"/>
         <location line="+38"/>
         <source>Show trailing zeroes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">末尾のゼロを表示する</translation>
     </message>
     <message>
         <source>0</source>
@@ -15660,17 +15660,17 @@ shown in search results:</source>
     <message>
         <location line="-9"/>
         <source>Decimal Degrees</source>
-        <translation type="unfinished">小数角度</translation>
+        <translation type="unfinished">十進の度数</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Deg/min/sec</source>
-        <translation type="unfinished">度/分/秒</translation>
+        <translation type="unfinished">デグ/分/秒</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gradians</source>
-        <translation type="unfinished">グラード</translation>
+        <translation type="unfinished">グラディエーター</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15680,41 +15680,41 @@ shown in search results:</source>
     <message>
         <location line="+1"/>
         <source>Surveyor&apos;s units</source>
-        <translation type="unfinished">測量</translation>
+        <translation type="unfinished">サーベイヤーユニット</translation>
     </message>
     <message>
         <location line="-28"/>
         <location line="+35"/>
         <source>Suppress trailing zeroes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">末尾のゼロを抑制する</translation>
     </message>
     <message>
         <location line="+22"/>
         <location line="+4"/>
         <source>Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">時計回り</translation>
     </message>
     <message>
         <location line="-3"/>
         <location line="+4"/>
         <source>Counterclockwise</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">反時計回り</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Preceding</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">先行</translation>
     </message>
     <message>
         <location line="-86"/>
         <location line="+87"/>
         <source>Above</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">上記</translation>
     </message>
     <message>
         <location line="-74"/>
         <source>Include 0&apos;0&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">インクルード 0&apos;0&quot;</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -15725,29 +15725,29 @@ shown in search results:</source>
         <location line="+33"/>
         <location line="+2"/>
         <source>(unsupported)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">(未対応)</translation>
     </message>
     <message>
         <location line="-39"/>
         <source>Include 0&apos;, suppress 0&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">インクルード0&apos;、サプレス0&quot;</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Include 0&quot;, suppress 0&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">インクルード0&quot;、サプレス0&apos;</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+35"/>
         <source>Suppress leading zeroes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">先頭のゼロを抑制する</translation>
     </message>
     <message>
         <location line="-33"/>
         <location line="+35"/>
         <source>Suppress leading / trailing zeroes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">先行/後続のゼロを抑制する</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -15773,7 +15773,7 @@ shown in search results:</source>
     <message>
         <location line="+13"/>
         <source>Window Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ウィンドウズ・ツール</translation>
     </message>
 </context>
 <context>
@@ -15789,12 +15789,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/XLineHorizontal/XLineHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal Construction Line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">横型コンストラクションライン</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw horizontal construction line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">水平方向のコンストラクションラインを引く</translation>
     </message>
 </context>
 <context>
@@ -15802,12 +15802,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/XLineVertical/XLineVerticalInit.js" line="+2"/>
         <source>&amp;Vertical Construction Line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">縦型コンストラクションライン</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw vertical construction line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">垂直方向の工事線を引く</translation>
     </message>
 </context>
 <context>
@@ -15963,12 +15963,12 @@ shown in search results:</source>
     <message>
         <location line="+2"/>
         <source>Dimension Styles</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ディメンションスタイル</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Dimension Style</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ディメンションスタイル</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -16083,27 +16083,27 @@ shown in search results:</source>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (2 Line)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">角型寸法（2線）</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (2 Line)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">角度寸法(2ライン)</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (3 Point)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">角度寸法（3点）</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (3 Point)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">角度寸法（3点）</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Arc Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">アーク寸法</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -16188,12 +16188,12 @@ shown in search results:</source>
     <message>
         <location line="+2"/>
         <source>Tolerances</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">公差</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Tolerance</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">公差</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -16323,12 +16323,12 @@ shown in search results:</source>
     <message>
         <location line="+102"/>
         <source>All CAD Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">すべてのCADファイル</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>DXF Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">DXFファイル</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -16338,22 +16338,22 @@ shown in search results:</source>
     <message>
         <location line="+1"/>
         <source>DXF Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">DXF図面</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>DWG Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">DWG図面</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>PDF File</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">PDFファイル</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>PDF/A-1B File</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">PDF/A-1Bファイル</translation>
     </message>
 </context>
 <context>
