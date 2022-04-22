@@ -10874,7 +10874,7 @@ som visas i sökresultaten:</translation>
     <message>
         <location line="+1"/>
         <source>The paper size is set to a custom size (%1x%2mm). Do you want to change it to the default paper size of your printer (%3)?</source>
-        <translation type="unfinished"></translation>
+        <translation>Pappersstorleken är inställd på en anpassad storlek (%1x%2mm). Vill du ändra den till skrivarens standardpappersstorlek (%3)?</translation>
     </message>
     <message>
         <location line="+35"/>
