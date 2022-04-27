@@ -968,7 +968,8 @@ Do you wish to recover it/them?</source>
         <location line="+69"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
-        <translation></translation>
+        <translation>%1 の自動保存バックアップファイルが存在します。
+これを復元しますか？</translation>
     </message>
     <message>
         <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
@@ -5742,7 +5743,7 @@ is already in the list.</source>
         <location line="+16"/>
         <source>Cast on newly sub-layer &apos;Painted&apos;.
 BUG: Interferes with group castings.</source>
-        <translation></translation>
+        <translation>新たにサブレイヤー Paintedにキャストする。</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11362,7 +11363,7 @@ shown in search results:</source>
     <message>
         <location line="+1"/>
         <source>The paper size is set to a custom size (%1x%2mm). Do you want to change it to the default paper size of your printer (%3)?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">用紙サイズがカスタムサイズ(%1x%2mm)に設定されています。お使いのプリンターのデフォルトの用紙サイズ（%3）に変更しますか？</translation>
     </message>
     <message>
         <location line="+35"/>

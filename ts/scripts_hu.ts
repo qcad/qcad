@@ -293,7 +293,8 @@
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
-        <translation></translation>
+        <translation>Kérjük, indítsa újra a QCAD-et a
+a beállítások módosításai hatályba lépjenek.</translation>
     </message>
     <message>
         <location line="+86"/>
@@ -919,7 +920,8 @@ the preference changes to take effect.</source>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>%n automatikus mentési biztonsági mentési fájlokat találtunk cím nélküli rajzokhoz.
+Szeretné visszaállítani őket?</numerusform>
         </translation>
     </message>
     <message>
@@ -941,7 +943,8 @@ Do you wish to recover it/them?</source>
         <location line="+1"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
-        <translation></translation>
+        <translation>A &quot;%1&quot; automatikus mentési biztonsági mentési fájl létezik.
+Szeretné visszaállítani?</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -2929,7 +2932,7 @@ Do you wish to recover it?</source>
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>A %n dimenzió címke pozíciója vissza lett állítva.</numerusform>
         </translation>
     </message>
     <message>
@@ -3303,7 +3306,9 @@ Do you wish to recover it?</source>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
-        <translation></translation>
+        <translation>A mappa
+&quot;%1&quot;
+már szerepel a listában.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4194,7 +4199,7 @@ is already in the list.</source>
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+54"/>
         <source>%n entity/ies duplicated</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>%n megkettőzött egység</numerusform>
         </translation>
     </message>
     <message>
@@ -5064,7 +5069,7 @@ is already in the list.</source>
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>A tranzakció %n objektumot érintett</numerusform>
         </translation>
     </message>
     <message>
@@ -5358,7 +5363,7 @@ is already in the list.</source>
         <location line="+16"/>
         <source>Cast on newly sub-layer &apos;Painted&apos;.
 BUG: Interferes with group castings.</source>
-        <translation></translation>
+        <translation>Cast on newly sub-layer &apos;Painted&apos;..</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -8443,7 +8448,8 @@ Library browser will not be available.</source>
         <location line="+10"/>
         <source>Number of items
 shown in search results:</source>
-        <translation></translation>
+        <translation>Tételek száma
+a keresési eredményekben megjelenő elemek száma:</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -9687,14 +9693,14 @@ shown in search results:</source>
         <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>A sugár %n koncentrikus kör után 0,0 alá csökkent.</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>A sugár %n koncentrikus ív után 0,0 alá csökkent.</numerusform>
         </translation>
     </message>
     <message>
@@ -11547,7 +11553,7 @@ shown in search results:</source>
     <message>
         <location line="+27"/>
         <source>Same Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ugyanaz a réteg</translation>
     </message>
 </context>
 <context>
