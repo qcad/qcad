@@ -297,7 +297,8 @@
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
-        <translation></translation>
+        <translation>Restartujte QCAD pro
+aby se změny předvoleb projevily.</translation>
     </message>
     <message>
         <location line="+86"/>

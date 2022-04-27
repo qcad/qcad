@@ -8357,7 +8357,8 @@ Library browser will not be available.</source>
         <location line="+10"/>
         <source>Number of items
 shown in search results:</source>
-        <translation></translation>
+        <translation>Elementų skaičius
+rodomas paieškos rezultatuose:</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -9263,12 +9264,12 @@ shown in search results:</source>
     <message>
         <location line="+9"/>
         <source>Misc Development Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Įvairūs kūrimo įrankiai</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>De&amp;velopment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kūrimo įrankiai</translation>
     </message>
 </context>
 <context>
@@ -9281,12 +9282,12 @@ shown in search results:</source>
     <message>
         <location line="+9"/>
         <source>Misc Drawing Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Įvairūs piešimo įrankiai</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Misc Draw</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Įvairūs piešiniai</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -9304,7 +9305,7 @@ shown in search results:</source>
     <message>
         <location line="+9"/>
         <source>Misc Import / Export Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Įvairūs importo / eksporto įrankiai</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -9322,12 +9323,12 @@ shown in search results:</source>
     <message>
         <location line="+10"/>
         <source>Misc Information Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Įvairūs informacijos įrankiai</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Information</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Informacija</translation>
     </message>
 </context>
 <context>
@@ -9340,7 +9341,7 @@ shown in search results:</source>
     <message>
         <location line="+10"/>
         <source>Misc Modification Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Įvairūs modifikavimo įrankiai</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -9358,7 +9359,7 @@ shown in search results:</source>
     <message>
         <location line="+9"/>
         <source>Misc Selection Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Įvairūs atrankos įrankiai</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -9371,7 +9372,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Modify.js" line="+99"/>
         <source>Modification Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Modifikavimo įrankiai</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -9384,22 +9385,22 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/ModifyCorner.js" line="+86"/>
         <source>Choose corner</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pasirinkite kampą</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Choose first entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pasirinkite pirmąjį subjektą</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Choose second entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pasirinkite antrąjį subjektą</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Set point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nustatytas taškas</translation>
     </message>
 </context>
 <context>
