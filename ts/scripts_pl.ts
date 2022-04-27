@@ -1448,7 +1448,7 @@ Odzyskać ją?</translation>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockRefExport/BlockRefExport.js" line="+97"/>
         <source>Export Block References List (CSV)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Eksport listy odwołań do bloków (CSV)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1458,7 +1458,7 @@ Odzyskać ją?</translation>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block References List</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Eksportuj listę odwołań do bloków</translation>
     </message>
 </context>
 <context>
@@ -7403,12 +7403,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoBearing/InfoBearing.js" line="+41"/>
         <source>Reference</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Odnośnik</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Direction</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kierunek</translation>
     </message>
     <message>
         <location line="+42"/>
@@ -7418,17 +7418,17 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+72"/>
         <source>Bearing:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Łożyskowanie:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Azimuth:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Azymut:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>&amp;Bearing / Azimuth</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Namiar / Azymut</translation>
     </message>
 </context>
 <context>
@@ -10809,24 +10809,24 @@ shown in search results:</source>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+94"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+92"/>
         <source>Auto Paper Size</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Automatyczny rozmiar papieru</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The paper size is set to a custom size (%1x%2mm). Do you want to change it to the default paper size of your printer (%3)?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rozmiar papieru jest ustawiony na rozmiar niestandardowy (%1x%2mm). Czy chcesz zmienić go na domyślny rozmiar papieru drukarki (%3)?</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Auto fit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Automatyczne dopasowanie</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Auto fit drawing to paper?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Automatyczne dopasowywanie rysunku do papieru?</translation>
     </message>
     <message>
         <location line="+188"/>

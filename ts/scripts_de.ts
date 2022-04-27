@@ -13557,7 +13557,7 @@ nicht öffnen.
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+320"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+318"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
