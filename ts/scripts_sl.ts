@@ -13187,7 +13187,8 @@ shown in search results:</source>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
-        <translation></translation>
+        <translation>Izbrani subjekti:
+%1.</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>

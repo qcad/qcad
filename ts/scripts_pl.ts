@@ -924,7 +924,8 @@ Odzyskać je?</numerusform>
         <location line="+69"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
-        <translation></translation>
+        <translation>Istnieje plik kopii zapasowej autozapisu dla &quot;%1&quot;.
+Czy chcesz go odzyskać?</translation>
     </message>
     <message>
         <source>An &apos;autosave&apos; backup file for an untitled drawing was found.

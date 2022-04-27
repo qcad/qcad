@@ -5363,7 +5363,7 @@ már szerepel a listában.</translation>
         <location line="+16"/>
         <source>Cast on newly sub-layer &apos;Painted&apos;.
 BUG: Interferes with group castings.</source>
-        <translation>Cast on newly sub-layer &apos;Painted&apos;..</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11609,17 +11609,17 @@ a keresési eredményekben megjelenő elemek száma:</translation>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
         <source>%1 entities added to selection.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%1 entitás hozzáadva a kiválasztáshoz.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>%1 entities removed from selection.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%1 entitást eltávolítottunk a kiválasztásból.</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
         <source>&amp;Select Layer Entities</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Réteg entitások kiválasztása</translation>
     </message>
 </context>
 <context>
@@ -11627,7 +11627,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntity.js" line="+68"/>
         <source>Choose entity on layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Válasszon entitást a rétegen</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntityInit.js" line="+2"/>
@@ -11746,14 +11746,14 @@ a keresési eredményekben megjelenő elemek száma:</translation>
         <location line="+4"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>%n Entitások a &quot;%1&quot; rétegen</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>%n Entitások</numerusform>
         </translation>
     </message>
     <message>
@@ -11765,7 +11765,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
         <location line="+0"/>
         <source>%n Layers</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>%n réteg</numerusform>
         </translation>
     </message>
     <message>

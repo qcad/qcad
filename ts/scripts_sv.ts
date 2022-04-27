@@ -2940,8 +2940,8 @@ Vill du återställa den?</translation>
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Etikettpositionen för %1 dimension har återställts.</numerusform>
+            <numerusform>Etikettpositionen för %2 dimensioner har återställts.</numerusform>
         </translation>
     </message>
     <message>
@@ -4500,8 +4500,8 @@ finns redan i listan.</translation>
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+54"/>
         <source>%n entity/ies duplicated</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n enhet duplicerad</numerusform>
+            <numerusform>%n enheter dupliceras</numerusform>
         </translation>
     </message>
     <message>
@@ -5357,8 +5357,8 @@ finns redan i listan.</translation>
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Transaktionen påverkade %n objekt.</numerusform>
+            <numerusform>Transaktionen påverkade %n objekt.</numerusform>
         </translation>
     </message>
     <message>
@@ -10219,16 +10219,16 @@ som visas i sökresultaten:</translation>
         <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Radien sjönk under 0,0 efter %n koncentrisk cirkel.</numerusform>
+            <numerusform>Radien sjönk under 0,0 efter %n koncentriska cirklar.</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Radien har sjunkit under 0,0 efter %n koncentrisk båge.</numerusform>
+            <numerusform>Radien sjönk under 0,0 efter %n koncentriska bågar.</numerusform>
         </translation>
     </message>
     <message>
@@ -12317,16 +12317,16 @@ som visas i sökresultaten:</translation>
         <location line="+4"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>1 enhet på lagret &quot;%1&quot;</numerusform>
+            <numerusform>%n enheter på lager &quot;%1&quot;</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>1 enhet</numerusform>
+            <numerusform>%n enheter</numerusform>
         </translation>
     </message>
     <message>
@@ -12338,8 +12338,8 @@ som visas i sökresultaten:</translation>
         <location line="+0"/>
         <source>%n Layers</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n lager</numerusform>
+            <numerusform>%n lager</numerusform>
         </translation>
     </message>
     <message>

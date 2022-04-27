@@ -293,7 +293,8 @@
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
-        <translation></translation>
+        <translation>Iš naujo paleiskite QCAD, kad
+nuostatos pakeitimai įsigaliotų.</translation>
     </message>
     <message>
         <location line="+86"/>
@@ -3251,7 +3252,9 @@ Do you wish to recover it?</source>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
-        <translation></translation>
+        <translation>Aplankas
+&quot;%1&quot;
+jau yra sąraše.</translation>
     </message>
     <message>
         <location line="+2"/>
