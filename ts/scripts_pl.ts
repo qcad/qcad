@@ -7512,12 +7512,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+7"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
-        <translation type="unfinished">(De-)Aktywacja słuchacza transakcji dla centroidów 2D</translation>
+        <translation type="unfinished">Aktywacja słuchacza transakcji dla centroidów 2D</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>(De-)Activate a transaction listener for binding changes applied to 2D Centroid markers</source>
-        <translation type="unfinished">(De-)Aktywacja słuchacza transakcji dla zmian wiązania zastosowanych do znaczników centroidów 2D</translation>
+        <translation type="unfinished">Aktywacja słuchacza transakcji dla zmian wiązania zastosowanych do znaczników centroidów 2D</translation>
     </message>
 </context>
 <context>
@@ -12057,12 +12057,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2"/>
         <source>(De-)Select &amp;Contour</source>
-        <translation type="unfinished">(De-)Select Contour</translation>
+        <translation type="unfinished">Zaznacz kontur</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select connected entities</source>
-        <translation type="unfinished">(De-)Select connected entities</translation>
+        <translation type="unfinished">Wybierz połączone elementy</translation>
     </message>
 </context>
 <context>
@@ -12105,12 +12105,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntitiesInit.js" line="+2"/>
         <source>(De-)Select In&amp;tersected Entities</source>
-        <translation type="unfinished">(De-)Select Intersected Entities</translation>
+        <translation type="unfinished">Wybierz elementy, które się przecinają</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select all entities intersected by a line</source>
-        <translation type="unfinished">(De-)Zaznacz wszystkie elementy przecięte linią</translation>
+        <translation type="unfinished">Zaznacz wszystkie elementy przecięte linią</translation>
     </message>
 </context>
 <context>
@@ -12227,12 +12227,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangleInit.js" line="+2"/>
         <source>(De-)Select &amp;Rectangular Area</source>
-        <translation type="unfinished">(De-)Select Prostokątna powierzchnia</translation>
+        <translation type="unfinished">Zaznacz obszar prostokątny</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select all entities inside a rectangle</source>
-        <translation type="unfinished">(De-)Zaznacz wszystkie elementy wewnątrz prostokąta</translation>
+        <translation type="unfinished">Zaznacz wszystkie obiekty znajdujące się wewnątrz prostokąta</translation>
     </message>
 </context>
 <context>

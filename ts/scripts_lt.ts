@@ -7009,12 +7009,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+7"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
-        <translation type="unfinished">(De-)aktyvuoti 2D centroidų sandorio klausytoją</translation>
+        <translation type="unfinished">Suaktyvinti sandorio klausytoją, skirtą 2D centroidams</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>(De-)Activate a transaction listener for binding changes applied to 2D Centroid markers</source>
-        <translation type="unfinished">(De-)aktyvuoti sandorio klausytoją, skirtą 2D centroido žymekliams taikomiems privalomiesiems pakeitimams</translation>
+        <translation type="unfinished">Suaktyvinti sandorio klausytoją, skirtą 2D centroidų žymekliams taikomiems privalomiesiems pakeitimams</translation>
     </message>
 </context>
 <context>
@@ -11410,12 +11410,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2"/>
         <source>(De-)Select &amp;Contour</source>
-        <translation type="unfinished">(De-)pasirinkite kontūrą</translation>
+        <translation type="unfinished">Pasirinkite kontūrą</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select connected entities</source>
-        <translation type="unfinished">(De-)atrinkti prijungtus subjektus</translation>
+        <translation type="unfinished">Pasirinkite sujungtus subjektus</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContour.ui" line="+17"/>
@@ -11468,12 +11468,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntitiesInit.js" line="+2"/>
         <source>(De-)Select In&amp;tersected Entities</source>
-        <translation type="unfinished">susikertančių subjektų (de-)atrinkimas</translation>
+        <translation type="unfinished">Pasirinkite susikertančius subjektus</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select all entities intersected by a line</source>
-        <translation type="unfinished">(De-)atrinkti visus subjektus, kuriuos kerta linija</translation>
+        <translation type="unfinished">Pasirinkite visus subjektus, kuriuos kerta linija</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.ui" line="+17"/>
@@ -11529,12 +11529,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntityInit.js" line="+2"/>
         <source>(De-)Select La&amp;yer</source>
-        <translation type="unfinished">(De-)pasirinkite sluoksnį</translation>
+        <translation type="unfinished">Pasirinkti sluoksnį</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select all entities on the same layer</source>
-        <translation type="unfinished">(De-)pažymėkite visus tame pačiame sluoksnyje esančius subjektus</translation>
+        <translation type="unfinished">Pasirinkite visus to paties sluoksnio subjektus</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntity.ui" line="+17"/>
@@ -11577,12 +11577,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangleInit.js" line="+2"/>
         <source>(De-)Select &amp;Rectangular Area</source>
-        <translation type="unfinished">(De-)pasirinkite stačiakampį plotą</translation>
+        <translation type="unfinished">Pasirinkti stačiakampį plotą</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select all entities inside a rectangle</source>
-        <translation type="unfinished">(De-)pažymėkite visus stačiakampio viduje esančius subjektus</translation>
+        <translation type="unfinished">Pasirinkite visus stačiakampio viduje esančius subjektus</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.ui" line="+17"/>

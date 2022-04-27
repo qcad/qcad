@@ -12506,12 +12506,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2"/>
         <source>(De-)Select &amp;Contour</source>
-        <translation>Выделить &amp;контур (отменить выделение)</translation>
+        <translation>Выбрать контур</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select connected entities</source>
-        <translation>Выделяет (или отменяет выделение) объектов</translation>
+        <translation>Выбрать связанные объекты</translation>
     </message>
 </context>
 <context>

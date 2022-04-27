@@ -7083,12 +7083,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+7"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
-        <translation type="unfinished">tranzakcióhallgató (deaktiválása) a 2D Centroidok számára</translation>
+        <translation type="unfinished">Tranzakcióhallgató aktiválása a 2D centroidokhoz</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>(De-)Activate a transaction listener for binding changes applied to 2D Centroid markers</source>
-        <translation type="unfinished">(De-)aktiválja a tranzakcióhallgatót a 2D Centroid markerekre alkalmazott kötésmódosítások esetén</translation>
+        <translation type="unfinished">Tranzakcióhallgató aktiválása a 2D centroid jelölőkre alkalmazott kötési változásokhoz.</translation>
     </message>
 </context>
 <context>
@@ -11507,12 +11507,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2"/>
         <source>(De-)Select &amp;Contour</source>
-        <translation type="unfinished">kontúr (de-)választása</translation>
+        <translation type="unfinished">Kontúr kijelölése</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select connected entities</source>
-        <translation type="unfinished">kapcsolódó entitások (de-)kijelölése</translation>
+        <translation type="unfinished">Összekapcsolt elemek kiválasztása</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContour.ui" line="+17"/>
@@ -11565,12 +11565,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntitiesInit.js" line="+2"/>
         <source>(De-)Select In&amp;tersected Entities</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Metszett entitások kiválasztása</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select all entities intersected by a line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Egy vonal által metszett összes entitás kijelölése</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.ui" line="+17"/>
@@ -11626,12 +11626,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntityInit.js" line="+2"/>
         <source>(De-)Select La&amp;yer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Réteg kiválasztása</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select all entities on the same layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Az ugyanazon a rétegen lévő összes entitás kiválasztása</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntity.ui" line="+17"/>
@@ -11674,12 +11674,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangleInit.js" line="+2"/>
         <source>(De-)Select &amp;Rectangular Area</source>
-        <translation type="unfinished">téglalap alakú terület (de-)kiválasztása</translation>
+        <translation type="unfinished">Téglalap alakú terület kiválasztása</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select all entities inside a rectangle</source>
-        <translation type="unfinished">egy téglalapon belüli összes elem (de-)kijelölése</translation>
+        <translation type="unfinished">Egy téglalapon belüli összes entitás kiválasztása</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.ui" line="+17"/>

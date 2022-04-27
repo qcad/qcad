@@ -12399,12 +12399,12 @@ ve výsledcích vyhledávání:</translation>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2"/>
         <source>(De-)Select &amp;Contour</source>
-        <translation>(Ne-)Vybrat &amp;obrys</translation>
+        <translation>Vybrat &amp;obrys</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select connected entities</source>
-        <translation>(Ne-)Vybrat propojené objekty</translation>
+        <translation>Vybrat propojené objekty</translation>
     </message>
 </context>
 <context>
@@ -12451,12 +12451,12 @@ ve výsledcích vyhledávání:</translation>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntitiesInit.js" line="+2"/>
         <source>(De-)Select In&amp;tersected Entities</source>
-        <translation>(Ne-)Vybrat protínající se objekty</translation>
+        <translation>Vybrat protínající se objekty</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select all entities intersected by a line</source>
-        <translation>(Ne-) Vybrat všechny objekty protínající se čárou</translation>
+        <translation>Vybrat všechny objekty protínající se čárou</translation>
     </message>
 </context>
 <context>
@@ -12520,12 +12520,12 @@ ve výsledcích vyhledávání:</translation>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntityInit.js" line="+2"/>
         <source>(De-)Select La&amp;yer</source>
-        <translation>(Ne-)Vybrat &amp;vrstvu</translation>
+        <translation>Vybrat &amp;vrstvu</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select all entities on the same layer</source>
-        <translation>(Ne-)Vybrat všechny objekty na stejné &amp;vrstvě</translation>
+        <translation>Vybrat všechny objekty na stejné &amp;vrstvě</translation>
     </message>
 </context>
 <context>
@@ -12581,12 +12581,12 @@ ve výsledcích vyhledávání:</translation>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangleInit.js" line="+2"/>
         <source>(De-)Select &amp;Rectangular Area</source>
-        <translation>(Ne-)Vybrat &amp;obdélníkem</translation>
+        <translation>Vybrat &amp;obdélníkem</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select all entities inside a rectangle</source>
-        <translation>(Ne-)Vybrat všechny objekty v obdélníku</translation>
+        <translation>Vybrat všechny objekty v obdélníku</translation>
     </message>
 </context>
 <context>
