@@ -6354,13 +6354,7 @@ is already in the list.</source>
         <translation>Raggruppa tutte in un&apos;unica operazione.</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>Cast on newly sub-layer &apos;Painted&apos;.
-BUG: Interferes with group castings.</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
         <translation>Iniziare con il lancio di un vertice iniziale su forme aperte.</translation>
     </message>
@@ -6465,7 +6459,7 @@ BUG: Interferes with group castings.</source>
         <translation>Selezionare Inserisci o Inserisci spazio vuoto. (Non implementato)</translation>
     </message>
     <message>
-        <location line="+250"/>
+        <location line="+277"/>
         <source>Version</source>
         <translation>Versione</translation>
     </message>
@@ -6475,7 +6469,7 @@ BUG: Interferes with group castings.</source>
         <translation>FlexPainter Beta 0.42e © CVH 2020 </translation>
     </message>
     <message>
-        <location line="+245"/>
+        <location line="+272"/>
         <source>Document Units.</source>
         <translation>Unità di documenti.</translation>
     </message>
@@ -6528,7 +6522,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Selezionare inserimento o inserire spazio vuoto</translation>
     </message>
     <message>
-        <location line="-879"/>
+        <location line="-933"/>
         <source>&lt;Enter space size&gt;</source>
         <translation>&lt;Invio dimensione dello spazio&gt;</translation>
     </message>
@@ -6542,7 +6536,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Unità di documento</translation>
     </message>
     <message>
-        <location line="+489"/>
+        <location line="+543"/>
         <source>#Undefined#</source>
         <translation>#Indefinito#</translation>
     </message>
@@ -10252,20 +10246,19 @@ BUG: Interferes with group castings.</source>
         <translation>DB errore</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Plugin LibraryBrowser: cannot connect to DB.
 Driver error: %1
 Database error: %2
 Database file: %3
 Library browser will not be available.</source>
-        <translation>Plugin LibraryBrowser: cannot connect to DB.
+        <translation type="vanished">Plugin LibraryBrowser: cannot connect to DB.
 Driver error: %1
 Database error: %2
 Database file: %3
 Library browser will not be available.</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+44"/>
         <source>Source removed from part library: %1</source>
         <translation>Fonte rimosso dalla librerie: %1</translation>
     </message>

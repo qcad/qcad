@@ -6306,13 +6306,7 @@ est déjà dans la liste.</translation>
         <translation>Regroupez tous en une seule opération.</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>Cast on newly sub-layer &apos;Painted&apos;.
-BUG: Interferes with group castings.</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
         <translation>Commencez par lancer un début d&apos;apex sur des formes ouvertes.</translation>
     </message>
@@ -6417,7 +6411,7 @@ BUG: Interferes with group castings.</source>
         <translation>Sélectionnez Insertion ou Saisir un espace vide. (Non implémenté)</translation>
     </message>
     <message>
-        <location line="+250"/>
+        <location line="+277"/>
         <source>Version</source>
         <translation>Version</translation>
     </message>
@@ -6427,7 +6421,7 @@ BUG: Interferes with group castings.</source>
         <translation>FlexPainter Beta 0.42e © CVH 2020 </translation>
     </message>
     <message>
-        <location line="+245"/>
+        <location line="+272"/>
         <source>Document Units.</source>
         <translation>Unités de document.</translation>
     </message>
@@ -6480,7 +6474,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Sélectionner insertion ou entrer un espace vide</translation>
     </message>
     <message>
-        <location line="-879"/>
+        <location line="-933"/>
         <source>&lt;Enter space size&gt;</source>
         <translation>&lt;entrée taille de l&apos;espace&gt;</translation>
     </message>
@@ -6494,7 +6488,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Unités de document</translation>
     </message>
     <message>
-        <location line="+489"/>
+        <location line="+543"/>
         <source>#Undefined#</source>
         <translation>#Non défini#</translation>
     </message>
@@ -10164,20 +10158,19 @@ BUG: Interferes with group castings.</source>
         <translation>Erreur DB</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Plugin LibraryBrowser: cannot connect to DB.
 Driver error: %1
 Database error: %2
 Database file: %3
 Library browser will not be available.</source>
-        <translation>Plugin LibraryBrowser: cannot connect to DB.
+        <translation type="vanished">Plugin LibraryBrowser: cannot connect to DB.
 Driver error: %1
 Database error: %2
 Database file: %3
 Library browser will not be available.</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+44"/>
         <source>Source removed from part library: %1</source>
         <translation>Source retiré de la bibliothèque : %1</translation>
     </message>

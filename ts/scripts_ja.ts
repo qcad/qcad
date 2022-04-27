@@ -5740,13 +5740,12 @@ is already in the list.</source>
         <translation type="unfinished">すべての鋳物を1つの操作にまとめる。</translation>
     </message>
     <message>
-        <location line="+16"/>
         <source>Cast on newly sub-layer &apos;Painted&apos;.
 BUG: Interferes with group castings.</source>
-        <translation>新たにサブレイヤー Paintedにキャストする。</translation>
+        <translation type="vanished">新たにサブレイヤー Paintedにキャストする。</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
         <translation type="unfinished">まず、オープンフォームにビギナーエイペックスをキャストすることから始めます。</translation>
     </message>
@@ -5851,7 +5850,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">挿入」または「空白の入力」を選択します。(未実装)</translation>
     </message>
     <message>
-        <location line="+250"/>
+        <location line="+277"/>
         <source>Version</source>
         <translation type="unfinished">バージョン</translation>
     </message>
@@ -5861,7 +5860,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">FlexPainterベータ版0.42e © CVH 2020</translation>
     </message>
     <message>
-        <location line="+245"/>
+        <location line="+272"/>
         <source>Document Units.</source>
         <translation type="unfinished">ドキュメント単位。</translation>
     </message>
@@ -5906,7 +5905,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">ベースとなる実体を塗り潰したものを削除。(永続化オフ)</translation>
     </message>
     <message>
-        <location line="-879"/>
+        <location line="-933"/>
         <source>&lt;Enter space size&gt;</source>
         <translation type="unfinished">&lt;スペースサイズを入力してください&gt;。</translation>
     </message>
@@ -5916,7 +5915,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">カーテンロープの結び方</translation>
     </message>
     <message>
-        <location line="+489"/>
+        <location line="+543"/>
         <source>#Undefined#</source>
         <translation type="unfinished">#未定義#</translation>
     </message>
@@ -9050,20 +9049,19 @@ BUG: Interferes with group castings.</source>
         <translation>DBエラー</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Plugin LibraryBrowser: cannot connect to DB.
 Driver error: %1
 Database error: %2
 Database file: %3
 Library browser will not be available.</source>
-        <translation>Plugin ライブラリブラウザ: DBに接続できません。
+        <translation type="vanished">Plugin ライブラリブラウザ: DBに接続できません。
 Driver error: %1
 Database error: %2
 Database file: %3
 ライブラリブラウザは利用できません。</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+44"/>
         <source>Source removed from part library: %1</source>
         <translation>一部のライブラリからソースが削除されました: %1</translation>
     </message>

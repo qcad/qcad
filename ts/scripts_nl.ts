@@ -6001,13 +6001,7 @@ is al in de lijst.</translation>
         <translation>Groepeer alles in één operatie.</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>Cast on newly sub-layer &apos;Painted&apos;.
-BUG: Interferes with group castings.</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
         <translation>Begin met het gieten van een begin apex op open vormen.</translation>
     </message>
@@ -6112,7 +6106,7 @@ BUG: Interferes with group castings.</source>
         <translation>Selecteer Invoegen of Voer lege ruimte in. (Niet geïmplementeerd)</translation>
     </message>
     <message>
-        <location line="+250"/>
+        <location line="+277"/>
         <source>Version</source>
         <translation>Versie</translation>
     </message>
@@ -6122,7 +6116,7 @@ BUG: Interferes with group castings.</source>
         <translation>FlexPainter Beta 0.42e © CVH 2020 </translation>
     </message>
     <message>
-        <location line="+245"/>
+        <location line="+272"/>
         <source>Document Units.</source>
         <translation>Document Eenheden.</translation>
     </message>
@@ -6175,7 +6169,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Selecteer toevoeging of voer een lege ruimte in</translation>
     </message>
     <message>
-        <location line="-879"/>
+        <location line="-933"/>
         <source>&lt;Enter space size&gt;</source>
         <translation>&lt;Voer ruimtegrootte in&gt;</translation>
     </message>
@@ -6189,7 +6183,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Document eenheden</translation>
     </message>
     <message>
-        <location line="+489"/>
+        <location line="+543"/>
         <source>#Undefined#</source>
         <translation>#Onbepaald#</translation>
     </message>
@@ -9435,20 +9429,19 @@ BUG: Interferes with group castings.</source>
         <translation>DB fout</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Plugin LibraryBrowser: cannot connect to DB.
 Driver error: %1
 Database error: %2
 Database file: %3
 Library browser will not be available.</source>
-        <translation>Plugin LibraryBrowser: cannot connect to DB.
+        <translation type="vanished">Plugin LibraryBrowser: cannot connect to DB.
 Driver error: %1
 Database error: %2
 Database file: %3
 Library browser will not be available.</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+44"/>
         <source>Source removed from part library: %1</source>
         <translation>Bron verwijderd uit bibliotheek: %1</translation>
     </message>

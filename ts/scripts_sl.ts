@@ -5813,13 +5813,7 @@ je že na seznamu.</translation>
         <translation type="unfinished">Združite vse ulitke v eno operacijo.</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>Cast on newly sub-layer &apos;Painted&apos;.
-BUG: Interferes with group castings.</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
         <translation type="unfinished">Začnite z odlivanjem začetnega vrha na odprtih obrazcih.</translation>
     </message>
@@ -5924,7 +5918,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">Izberite možnost Vstavljanje ali Vnesi prazen prostor. (Ni izvedeno)</translation>
     </message>
     <message>
-        <location line="+250"/>
+        <location line="+277"/>
         <source>Version</source>
         <translation type="unfinished">Različica</translation>
     </message>
@@ -5934,7 +5928,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">FlexPainter Beta 0.42e © CVH 2020</translation>
     </message>
     <message>
-        <location line="+245"/>
+        <location line="+272"/>
         <source>Document Units.</source>
         <translation type="unfinished">Enote dokumentov.</translation>
     </message>
@@ -5987,7 +5981,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Izberi vstavek ali vnesi prazno polje</translation>
     </message>
     <message>
-        <location line="-879"/>
+        <location line="-933"/>
         <source>&lt;Enter space size&gt;</source>
         <translation>&lt;velikost praznega polja&gt;</translation>
     </message>
@@ -6001,7 +5995,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Enote dokumenta</translation>
     </message>
     <message>
-        <location line="+489"/>
+        <location line="+543"/>
         <source>#Undefined#</source>
         <translation>#Nedoločeno#</translation>
     </message>
@@ -9139,20 +9133,19 @@ BUG: Interferes with group castings.</source>
         <translation>Napaka podatkovne baze</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Plugin LibraryBrowser: cannot connect to DB.
 Driver error: %1
 Database error: %2
 Database file: %3
 Library browser will not be available.</source>
-        <translation>Vtičnik LibraryBrowser: Nemorem se povezat na podatkovno bazo.
+        <translation type="vanished">Vtičnik LibraryBrowser: Nemorem se povezat na podatkovno bazo.
 Napaka gonilnika: %1
 Napaka na baze: %2
 Datoteka baze: %3
 Vtičnik LibraryBrowser ne bo navoljo.</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+44"/>
         <source>Source removed from part library: %1</source>
         <translation>Vir odstranjen iz knjižnice: %1</translation>
     </message>

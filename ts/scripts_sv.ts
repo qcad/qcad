@@ -5649,14 +5649,13 @@ finns redan i listan.</translation>
         <translation>Gruppera alla gjutningar till en operation.</translation>
     </message>
     <message>
-        <location line="+16"/>
         <source>Cast on newly sub-layer &apos;Painted&apos;.
 BUG: Interferes with group castings.</source>
-        <translation>Gjutet på ett nytt underlag &apos;Painted&apos;.
+        <translation type="vanished">Gjutet på ett nytt underlag &apos;Painted&apos;.
 BUG: Störningar vid gruppgjutningar.</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
         <translation>Börja med att gjuta en början av en spets på öppna former.</translation>
     </message>
@@ -5761,7 +5760,7 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <translation>Välj Infogning eller Ange tomrum. (Ej implementerat)</translation>
     </message>
     <message>
-        <location line="+250"/>
+        <location line="+277"/>
         <source>Version</source>
         <translation>Version</translation>
     </message>
@@ -5771,7 +5770,7 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <translation>FlexPainter Beta 0.42e © CVH 2020</translation>
     </message>
     <message>
-        <location line="+245"/>
+        <location line="+272"/>
         <source>Document Units.</source>
         <translation>Dokumentenheter.</translation>
     </message>
@@ -5816,7 +5815,7 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <translation>Borttagen målad över basenheter. (bestående av)</translation>
     </message>
     <message>
-        <location line="-879"/>
+        <location line="-933"/>
         <source>&lt;Enter space size&gt;</source>
         <translation>&lt;Ange storlek på utrymme&gt;</translation>
     </message>
@@ -5826,7 +5825,7 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <translation>Gardin rep knut</translation>
     </message>
     <message>
-        <location line="+489"/>
+        <location line="+543"/>
         <source>#Undefined#</source>
         <translation>#Odefinierad#</translation>
     </message>
@@ -8838,20 +8837,19 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <translation>DB-fel</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Plugin LibraryBrowser: cannot connect to DB.
 Driver error: %1
 Database error: %2
 Database file: %3
 Library browser will not be available.</source>
-        <translation>Plugin LibraryBrowser: kan inte ansluta till DB.
+        <translation type="vanished">Plugin LibraryBrowser: kan inte ansluta till DB.
 Fel i drivrutinen: %1
 Fel i databasen: %2
 Databasfil: %3
 Bibliotekswebbläsaren kommer inte att vara tillgänglig.</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+44"/>
         <source>Source removed from part library: %1</source>
         <translation>Källan har tagits bort från delbiblioteket: %1</translation>
     </message>

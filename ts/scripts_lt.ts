@@ -920,7 +920,8 @@ Do you wish to recover it/them?</source>
         <location line="+1"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
-        <translation></translation>
+        <translation>Egzistuoja &quot;%1&quot; automatinio išsaugojimo atsarginės kopijos failas.
+Ar norite jį atkurti?</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -5288,13 +5289,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Sugrupuokite visus liejinius į vieną operaciją.</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>Cast on newly sub-layer &apos;Painted&apos;.
-BUG: Interferes with group castings.</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
         <translation type="unfinished">Pradėkite nuo liejimo pradžios viršūnės ant atvirų formų.</translation>
     </message>
@@ -5399,7 +5394,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">Pasirinkite Įterpimas arba Įveskite tuščią vietą. (Neįgyvendinta)</translation>
     </message>
     <message>
-        <location line="+250"/>
+        <location line="+277"/>
         <source>Version</source>
         <translation type="unfinished">Versija</translation>
     </message>
@@ -5409,7 +5404,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">FlexPainter Beta 0.42e © CVH 2020</translation>
     </message>
     <message>
-        <location line="+245"/>
+        <location line="+272"/>
         <source>Document Units.</source>
         <translation type="unfinished">Dokumentų vienetai.</translation>
     </message>
@@ -5454,7 +5449,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">Ištrinti dažyti ant bazinių subjektų. (nuolatinis išjungtas)</translation>
     </message>
     <message>
-        <location line="-879"/>
+        <location line="-933"/>
         <source>&lt;Enter space size&gt;</source>
         <translation type="unfinished">&lt;Įveskite vietos dydį&gt;</translation>
     </message>
@@ -5464,7 +5459,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">Užuolaidų virvės mazgas</translation>
     </message>
     <message>
-        <location line="+489"/>
+        <location line="+543"/>
         <source>#Undefined#</source>
         <translation type="unfinished">#Nedeterminuota#</translation>
     </message>
@@ -8245,16 +8240,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">DB klaida</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Plugin LibraryBrowser: cannot connect to DB.
-Driver error: %1
-Database error: %2
-Database file: %3
-Library browser will not be available.</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location line="+43"/>
+        <location line="+44"/>
         <source>Source removed from part library: %1</source>
         <translation type="unfinished">Šaltinis pašalintas iš dalies bibliotekos: %1</translation>
     </message>
@@ -11672,7 +11658,8 @@ rodomas paieškos rezultatuose:</translation>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
-        <translation></translation>
+        <translation>Pasirinkti subjektai:
+%1.</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
@@ -12885,7 +12872,8 @@ rodomas paieškos rezultatuose:</translation>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
-        <translation></translation>
+        <translation>Paprastas tekstas
+(viena eilutė, be formatavimo)</translation>
     </message>
     <message>
         <location line="+21"/>

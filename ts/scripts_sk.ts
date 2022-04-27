@@ -5729,13 +5729,7 @@ už existuje v zozname.</translation>
         <translation type="unfinished">Zoskupte všetky odliatky do jednej operácie.</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>Cast on newly sub-layer &apos;Painted&apos;.
-BUG: Interferes with group castings.</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
         <translation type="unfinished">Začnite odlievaním začiatočného vrcholu na otvorených formulároch.</translation>
     </message>
@@ -5840,7 +5834,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">Vyberte položku Vloženie alebo Zadajte prázdne miesto. (Nie je implementované)</translation>
     </message>
     <message>
-        <location line="+250"/>
+        <location line="+277"/>
         <source>Version</source>
         <translation type="unfinished">Verzia</translation>
     </message>
@@ -5850,7 +5844,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">FlexPainter Beta 0.42e © CVH 2020</translation>
     </message>
     <message>
-        <location line="+245"/>
+        <location line="+272"/>
         <source>Document Units.</source>
         <translation type="unfinished">Jednotky dokumentov.</translation>
     </message>
@@ -5895,7 +5889,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">Odstránená farba nad základnými subjektmi. (trvalé vypnutie)</translation>
     </message>
     <message>
-        <location line="-879"/>
+        <location line="-933"/>
         <source>&lt;Enter space size&gt;</source>
         <translation type="unfinished">&lt;Vložte veľkosť priestoru&gt;</translation>
     </message>
@@ -5905,7 +5899,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">Uzol záclonového lana</translation>
     </message>
     <message>
-        <location line="+489"/>
+        <location line="+543"/>
         <source>#Undefined#</source>
         <translation type="unfinished">#Nedefinované#</translation>
     </message>
@@ -8927,20 +8921,19 @@ BUG: Interferes with group castings.</source>
         <translation>chyba DB</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Plugin LibraryBrowser: cannot connect to DB.
 Driver error: %1
 Database error: %2
 Database file: %3
 Library browser will not be available.</source>
-        <translation>Doplnok Prehliadač Knižnica: nedá sa pripojiť k DB.
+        <translation type="vanished">Doplnok Prehliadač Knižnica: nedá sa pripojiť k DB.
 Chyba ovládača: %1
 Chyba databázy: %2
 Súbor databázy: %3
 Prehliadač Knižnica nebude k dispozícii.</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+44"/>
         <source>Source removed from part library: %1</source>
         <translation>Zdroj odstránený z časti knižnice: %1</translation>
     </message>

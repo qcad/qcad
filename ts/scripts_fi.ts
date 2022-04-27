@@ -5717,14 +5717,13 @@ on jo luettelossa.</translation>
         <translation type="unfinished">Ryhmittele kaikki valukappaleet yhteen toimintoon.</translation>
     </message>
     <message>
-        <location line="+16"/>
         <source>Cast on newly sub-layer &apos;Painted&apos;.
 BUG: Interferes with group castings.</source>
-        <translation>Cast on newly sub-layer &apos;Painted&apos;.
+        <translation type="vanished">Cast on newly sub-layer &apos;Painted&apos;.
 BUG: Interferes with group castings.</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
         <translation type="unfinished">Aloita valamalla alku apex avoimiin muotoihin.</translation>
     </message>
@@ -5829,7 +5828,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="unfinished">Valitse Insertion tai Enter void space. (Ei toteutettu)</translation>
     </message>
     <message>
-        <location line="+250"/>
+        <location line="+277"/>
         <source>Version</source>
         <translation type="unfinished">Versio</translation>
     </message>
@@ -5839,7 +5838,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="unfinished">FlexPainter Beta 0.42e © CVH 2020</translation>
     </message>
     <message>
-        <location line="+245"/>
+        <location line="+272"/>
         <source>Document Units.</source>
         <translation type="unfinished">Asiakirjan yksiköt.</translation>
     </message>
@@ -5892,7 +5891,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="vanished">Valitse lisäys tai syötä tyhjä tila</translation>
     </message>
     <message>
-        <location line="-879"/>
+        <location line="-933"/>
         <source>&lt;Enter space size&gt;</source>
         <translation>&lt;Syötä tilan koko&gt;</translation>
     </message>
@@ -5906,7 +5905,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="vanished">Asiakirjan yksiköt</translation>
     </message>
     <message>
-        <location line="+489"/>
+        <location line="+543"/>
         <source>#Undefined#</source>
         <translation>#Määrittämätön#</translation>
     </message>
@@ -8988,20 +8987,19 @@ BUG: Interferes with group castings.</translation>
         <translation>Tietokantavirhe</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Plugin LibraryBrowser: cannot connect to DB.
 Driver error: %1
 Database error: %2
 Database file: %3
 Library browser will not be available.</source>
-        <translation>Laajennusosan -kirjastoselain: ei voi yhdistää DB:een.
+        <translation type="vanished">Laajennusosan -kirjastoselain: ei voi yhdistää DB:een.
 Levyaseman virhe: %1
 Tietokantavirhe: %2
 Tietokanta tiedosto: %3
 Kirjastoselain ei ole käytettävissä.</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+44"/>
         <source>Source removed from part library: %1</source>
         <translation>Lähde poistettu osakirjastosta: %1</translation>
     </message>

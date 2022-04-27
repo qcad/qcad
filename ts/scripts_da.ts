@@ -5571,14 +5571,13 @@ er allerede på listen.</translation>
         <translation>Saml alle støbegods til én arbejdsgang.</translation>
     </message>
     <message>
-        <location line="+16"/>
         <source>Cast on newly sub-layer &apos;Painted&apos;.
 BUG: Interferes with group castings.</source>
-        <translation>Støbt på nyligt underlag &apos;Malet&apos;.
+        <translation type="vanished">Støbt på nyligt underlag &apos;Malet&apos;.
 BUG: Forstyrrer gruppegodstøbninger.</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
         <translation>Begynd med at støbe en begyndelsesspids på åbne former.</translation>
     </message>
@@ -5683,7 +5682,7 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
         <translation>Vælg Indsætning eller Indtast tomrum. (Ikke implementeret)</translation>
     </message>
     <message>
-        <location line="+250"/>
+        <location line="+277"/>
         <source>Version</source>
         <translation>Version</translation>
     </message>
@@ -5693,7 +5692,7 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
         <translation>FlexPainter Beta 0.42e © CVH 2020 </translation>
     </message>
     <message>
-        <location line="+245"/>
+        <location line="+272"/>
         <source>Document Units.</source>
         <translation>Dokumentenheder.</translation>
     </message>
@@ -5748,7 +5747,7 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
         <translation>Slet basisenheder *</translation>
     </message>
     <message>
-        <location line="-882"/>
+        <location line="-936"/>
         <source>&lt;Enter space size&gt;</source>
         <translation>&lt;Indtast pladsstørrelse&gt;</translation>
     </message>
@@ -5758,7 +5757,7 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
         <translation>Gardin reb knude</translation>
     </message>
     <message>
-        <location line="+489"/>
+        <location line="+543"/>
         <source>#Undefined#</source>
         <translation>#Udefineret#</translation>
     </message>
@@ -8692,20 +8691,19 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
         <translation>DB-fejl</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Plugin LibraryBrowser: cannot connect to DB.
 Driver error: %1
 Database error: %2
 Database file: %3
 Library browser will not be available.</source>
-        <translation>Plugin LibraryBrowser: kan ikke oprette forbindelse til DB.
+        <translation type="vanished">Plugin LibraryBrowser: kan ikke oprette forbindelse til DB.
 Driverfejl: %1
 Databasefejl: %2
 Databasefil: %3
 Biblioteksbrowser vil ikke være tilgængelig.</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+44"/>
         <source>Source removed from part library: %1</source>
         <translation>Kilde fjernet fra delbibliotek: %1</translation>
     </message>

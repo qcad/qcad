@@ -5742,13 +5742,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Grupuj wszystkie odlewy do jednej operacji.</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>Cast on newly sub-layer &apos;Painted&apos;.
-BUG: Interferes with group castings.</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
         <translation type="unfinished">Zacznij od rzucania początku wierzchołka na otwartych formach.</translation>
     </message>
@@ -5853,7 +5847,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">Wybierz opcję Wstaw lub Wprowadź pustą przestrzeń. (Nie zaimplementowano)</translation>
     </message>
     <message>
-        <location line="+250"/>
+        <location line="+277"/>
         <source>Version</source>
         <translation type="unfinished">Wersja</translation>
     </message>
@@ -5863,7 +5857,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">FlexPainter Beta 0.42e © CVH 2020</translation>
     </message>
     <message>
-        <location line="+245"/>
+        <location line="+272"/>
         <source>Document Units.</source>
         <translation type="unfinished">Jednostki dokumentu.</translation>
     </message>
@@ -5908,7 +5902,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">Usunięto pomalowane podmioty bazowe. (trwałe wyłączone)</translation>
     </message>
     <message>
-        <location line="-879"/>
+        <location line="-933"/>
         <source>&lt;Enter space size&gt;</source>
         <translation type="unfinished">&lt;Wprowadź wielkość przestrzeni&gt;.</translation>
     </message>
@@ -5918,7 +5912,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">Węzeł linowy do zasłon</translation>
     </message>
     <message>
-        <location line="+489"/>
+        <location line="+543"/>
         <source>#Undefined#</source>
         <translation type="unfinished">#Undefined#</translation>
     </message>
@@ -8789,20 +8783,19 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">Błąd DB</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Plugin LibraryBrowser: cannot connect to DB.
 Driver error: %1
 Database error: %2
 Database file: %3
 Library browser will not be available.</source>
-        <translation>Wtyczka LibraryBrowser: nie można połączyć się z bazą danych.
+        <translation type="vanished">Wtyczka LibraryBrowser: nie można połączyć się z bazą danych.
 Błąd sterownika: %1
 Błąd bazy danych: %2
 Plik bazy danych: %3
 Przeglądarka kolekcji nie będzie dostępna.</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+44"/>
         <source>Source removed from part library: %1</source>
         <translation>Usunięto źródło z kolekcji części: %1</translation>
     </message>
@@ -8905,7 +8898,8 @@ Przeglądarka kolekcji nie będzie dostępna.</translation>
         <location line="+10"/>
         <source>Number of items
 shown in search results:</source>
-        <translation></translation>
+        <translation>Liczba elementów
+wyświetlanych w wynikach wyszukiwania:</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -13661,7 +13655,8 @@ shown in search results:</source>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
-        <translation></translation>
+        <translation>Prosty tekst
+(jedna linia, bez formatowania)</translation>
     </message>
     <message>
         <location line="+21"/>
