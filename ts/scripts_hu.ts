@@ -11772,7 +11772,8 @@ a keresési eredményekben megjelenő elemek száma:</translation>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
-        <translation></translation>
+        <translation>Kiválasztott szervezetek:
+%1.</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
@@ -12989,7 +12990,8 @@ a keresési eredményekben megjelenő elemek száma:</translation>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
-        <translation></translation>
+        <translation>Egyszerű szöveg
+(egy sor, formázás nélkül)</translation>
     </message>
     <message>
         <location line="+21"/>

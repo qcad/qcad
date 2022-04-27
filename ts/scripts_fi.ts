@@ -5720,7 +5720,8 @@ on jo luettelossa.</translation>
         <location line="+16"/>
         <source>Cast on newly sub-layer &apos;Painted&apos;.
 BUG: Interferes with group castings.</source>
-        <translation></translation>
+        <translation>Cast on newly sub-layer &apos;Painted&apos;.
+BUG: Interferes with group castings.</translation>
     </message>
     <message>
         <location line="+14"/>

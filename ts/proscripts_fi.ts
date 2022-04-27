@@ -4925,11 +4925,6 @@
         <translation>tasainen välistys</translation>
     </message>
     <message>
-        <location filename="../PolylineMorph.js" line="+83"/>
-        <source></source>
-        <translation></translation>
-    </message>
-    <message>
         <location filename="../scripts/Pro/Draw/Polyline/PolylineMorph/PolylineMorph.js" line="+104"/>
         <source>Choose first entity</source>
         <translation>Valitse ensimmäinen kohde</translation>
@@ -5432,7 +5427,7 @@
         <location filename="../scripts/Pro/File/PrintPro/PrintPro.js" line="+66"/>
         <source>Printed with a trial version
 of</source>
-        <translation></translation>
+        <translation>Tulostettu kokeiluversiolla</translation>
     </message>
 </context>
 <context>

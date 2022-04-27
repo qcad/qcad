@@ -896,8 +896,10 @@ the preference changes to take effect.</source>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Der blev fundet %n autosave-backupfil for en tegning uden titel.
+Ønsker du at gendanne den?</numerusform>
+            <numerusform>Der blev fundet %n autosave-backupfiler for tegninger uden titel.
+Ønsker du at gendanne dem?</numerusform>
         </translation>
     </message>
     <message>
