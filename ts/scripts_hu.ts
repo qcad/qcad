@@ -55,12 +55,12 @@
     <message>
         <location line="+5"/>
         <source>%1 is an application for computer-aided design (CAD).</source>
-        <translation type="unfinished">a %1 egy számítógépes tervezésre (CAD) szolgáló alkalmazás.</translation>
+        <translation type="unfinished">A %1 egy számítógépes tervezésre (CAD) szolgáló alkalmazás.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>%1 is based on QCAD, a free (open source) software.</source>
-        <translation type="unfinished">a %1 a QCAD-en, egy ingyenes (nyílt forráskódú) szoftveren alapul.</translation>
+        <translation type="unfinished">A %1 a QCAD-en, egy ingyenes (nyílt forráskódú) szoftveren alapul.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -6383,7 +6383,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchFromSelection/HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation type="unfinished">Hatch from Selection</translation>
+        <translation type="unfinished">Sraffozás a kiválasztásból</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -12554,7 +12554,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Stretch/StretchInit.js" line="+2"/>
         <source>&amp;Stretch</source>
-        <translation type="unfinished">Stretch</translation>
+        <translation type="unfinished">Nyújtás</translation>
     </message>
 </context>
 <context>
