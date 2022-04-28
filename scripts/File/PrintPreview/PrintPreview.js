@@ -473,6 +473,9 @@ PrintPreviewImpl.prototype.showUiOptions = function(resume) {
     var di = this.getDocumentInterface();
     var scaleString = Print.getScaleString(document);
 
+    var mod = document.isModified();
+
+    // note: this modifies the document:
     this.initScaleCombo();
 
     // update option toolbar widgets
@@ -530,6 +533,9 @@ PrintPreviewImpl.prototype.showUiOptions = function(resume) {
     }
     widgets["Landscape"].blockSignals(false);
     widgets["Portrait"].blockSignals(false);
+
+    // workaround for FS#2356 - File > Close: Closing dialog stays open after clicking Save
+    document.setModified(mod);
 };
 
 /**
