@@ -119,7 +119,7 @@ public:
         return REntityData::flipHorizontal();
     }
     virtual bool flipVertical() {
-        return REntityData::flipHorizontal();
+        return REntityData::flipVertical();
     }
     virtual bool stretch(const RPolyline& area, const RVector& offset) {
         return RArc::stretch(area, offset);

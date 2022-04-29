@@ -110,7 +110,7 @@ public:
         return REntityData::flipHorizontal();
     }
     virtual bool flipVertical() {
-        return REntityData::flipHorizontal();
+        return REntityData::flipVertical();
     }
 
     double getDimasz(bool scale = true) const {
