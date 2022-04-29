@@ -47,7 +47,7 @@ function version() {
  * Prints command line usage information on stdout.
  */
 function usage() {
-    print("\nUsage: " + QCoreApplication.arguments()[0] + " [Options] [Files to open]\n"
+    print("\nUsage: " + RSettings.getOriginalArguments()[0] + " [Options] [Files to open]\n"
           + "\n"
           + "-allow-multiple-instances        Don't try to avoid multiple instances from running\n"
           + "                                 simultaneously.\n"
@@ -336,7 +336,7 @@ function loadTranslations(addOns, splash) {
     //RSettings.loadTranslations("scripts_" + locale, [autoPath("scripts/ts")]);
 
     // load translations from arguments:
-    var args = QCoreApplication.arguments();
+    var args = RSettings.getOriginalArguments();
     for (i = 0; i < args.length; ++i) {
         if (args[i] === "-ts") {
             if (++i>=args.length) {
@@ -562,7 +562,7 @@ function main() {
     }
 
     // detect very first start of this installation:
-    var fiSettings = new QFileInfo(RSettings.getQSettings().fileName());
+    var fiSettings = new QFileInfo(RSettings.getFileName());
     var isFirstStart = !fiSettings.exists();
 
     var numPlugins = RPluginLoader.countPlugins();
@@ -571,8 +571,8 @@ function main() {
     // look up app name override:
     for (i=0; i<numPlugins; i++) {
         pluginInfo = RPluginLoader.getPluginInfo(i);
-        var n = pluginInfo.get("NameOverride");
-        if (!isNull(n)) {
+        var n = pluginInfo.get("NameOverride", "");
+        if (n.length>0) {
             qApp.applicationName = n;
         }
     }
