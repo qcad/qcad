@@ -895,7 +895,7 @@
         <source>Grounded %n recursive block reference(s) in blocks: %1</source>
         <translation type="obsolete">
             <numerusform>Eine Blockreferenz geerdet in Blöcken: %1</numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n Blockreferenzen geerdet in Blöchen: %1</numerusform>
         </translation>
     </message>
 </context>

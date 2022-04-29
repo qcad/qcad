@@ -2631,7 +2631,7 @@ Wilt u het herstellen?</translation>
         <translation>Referentiepunt</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+45"/>
         <source>Save library item as...</source>
         <translation>Bibliotheekitem opslaan als...</translation>
     </message>
@@ -5737,17 +5737,17 @@ is al in de lijst.</translation>
     <message>
         <location line="+0"/>
         <source>Explode</source>
-        <translation>Opbreken</translation>
+        <translation>Opsplitsen</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
         <source>&amp;Explode</source>
-        <translation>&amp;Opbreken</translation>
+        <translation>&amp;Opsplitsen</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+244"/>
         <source>Explode text glyphs to polylines</source>
-        <translation>Tekstcontouren opbreken in polylines</translation>
+        <translation>Tekstcontouren opsplitsen in polylines</translation>
     </message>
     <message>
         <location line="-121"/>
@@ -5762,7 +5762,7 @@ is al in de lijst.</translation>
     <message>
         <location line="-111"/>
         <source>Explode splines to polylines with line segments</source>
-        <translation>Splines opbreken in polylijnen met lijnstukken</translation>
+        <translation>Splines opsplitsen in polylijnen met lijnstukken</translation>
     </message>
     <message>
         <location line="+125"/>
@@ -5777,7 +5777,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+10"/>
         <source>Explode multiline texts into multiple simple text blocks</source>
-        <translation>Teksten met meerdere regels in meerdere eenvoudige tekstblokken opbreken</translation>
+        <translation>Teksten met meerdere regels in meerdere eenvoudige tekstblokken opsplitsen</translation>
     </message>
     <message>
         <location line="-27"/>
@@ -5810,7 +5810,7 @@ is al in de lijst.</translation>
         <translation>&amp;Bestand</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+106"/>
         <location line="+76"/>
         <source>Format:</source>
         <translation>Formaat:</translation>
@@ -5839,7 +5839,7 @@ is al in de lijst.</translation>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+36"/>
-        <location line="+225"/>
+        <location line="+223"/>
         <source>%1 First Start</source>
         <translation>%1 eerste start</translation>
     </message>
@@ -6001,13 +6001,7 @@ is al in de lijst.</translation>
         <translation>Groepeer alles in één operatie.</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>Cast on newly sub-layer &apos;Painted&apos;.
-BUG: Interferes with group castings.</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
         <translation>Begin met het gieten van een begin apex op open vormen.</translation>
     </message>
@@ -6112,7 +6106,7 @@ BUG: Interferes with group castings.</source>
         <translation>Selecteer Invoegen of Voer lege ruimte in. (Niet geïmplementeerd)</translation>
     </message>
     <message>
-        <location line="+250"/>
+        <location line="+277"/>
         <source>Version</source>
         <translation>Versie</translation>
     </message>
@@ -6122,7 +6116,7 @@ BUG: Interferes with group castings.</source>
         <translation>FlexPainter Beta 0.42e © CVH 2020 </translation>
     </message>
     <message>
-        <location line="+245"/>
+        <location line="+272"/>
         <source>Document Units.</source>
         <translation>Document Eenheden.</translation>
     </message>
@@ -6175,7 +6169,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Selecteer toevoeging of voer een lege ruimte in</translation>
     </message>
     <message>
-        <location line="-879"/>
+        <location line="-933"/>
         <source>&lt;Enter space size&gt;</source>
         <translation>&lt;Voer ruimtegrootte in&gt;</translation>
     </message>
@@ -6189,7 +6183,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Document eenheden</translation>
     </message>
     <message>
-        <location line="+489"/>
+        <location line="+543"/>
         <source>#Undefined#</source>
         <translation>#Onbepaald#</translation>
     </message>
@@ -9435,20 +9429,19 @@ BUG: Interferes with group castings.</source>
         <translation>DB fout</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Plugin LibraryBrowser: cannot connect to DB.
 Driver error: %1
 Database error: %2
 Database file: %3
 Library browser will not be available.</source>
-        <translation>Plugin LibraryBrowser: cannot connect to DB.
+        <translation type="vanished">Plugin LibraryBrowser: cannot connect to DB.
 Driver error: %1
 Database error: %2
 Database file: %3
 Library browser will not be available.</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+44"/>
         <source>Source removed from part library: %1</source>
         <translation>Bron verwijderd uit bibliotheek: %1</translation>
     </message>
@@ -11654,7 +11647,27 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+249"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+92"/>
+        <source>Auto Paper Size</source>
+        <translation>Automatisch papierformaat</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The paper size is set to a custom size (%1x%2mm). Do you want to change it to the default paper size of your printer (%3)?</source>
+        <translation>Het papierformaat is ingesteld op een afwijkend formaat (%1x%2mm). Wilt u dit wijzigen in het standaard papierformaat van uw printer (%3)?</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Auto fit</source>
+        <translation>Automatisch passen</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Auto fit drawing to paper?</source>
+        <translation>Automatisch tekening op papier passen?</translation>
+    </message>
+    <message>
+        <location line="+188"/>
         <source>Drag to move paper</source>
         <translation>Slepen om papier te verplaatsen</translation>
     </message>

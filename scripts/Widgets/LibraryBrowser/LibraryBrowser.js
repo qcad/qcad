@@ -1266,11 +1266,11 @@ LibraryBrowser.initDb = function(dropTables) {
         var err = db.lastError();
         QMessageBox.warning(null,
                         qsTr("DB error"),
-                        qsTr("Plugin LibraryBrowser: cannot connect to DB.\n" +
+                        "Plugin LibraryBrowser: cannot connect to DB.\n" +
                              "Driver error: %1\n" +
                              "Database error: %2\n" +
                              "Database file: %3\n" +
-                             "Library browser will not be available.")
+                             "Library browser will not be available."
                              .arg(err.driverText())
                              .arg(err.databaseText())
                              .arg(db.databaseName())

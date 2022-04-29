@@ -2981,7 +2981,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Referenzpunkt</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+45"/>
         <source>Save library item as...</source>
         <translation>Bibliothekeintrag speichern unter...</translation>
     </message>
@@ -6411,7 +6411,7 @@ ist bereits in der Liste.</translation>
         <translation>&amp;Datei</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+106"/>
         <location line="+76"/>
         <source>Format:</source>
         <translation>Format:</translation>
@@ -6443,7 +6443,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>FirstStart</name>
     <message>
-        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+256"/>
+        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+254"/>
         <source>Black</source>
         <translation>Schwarz</translation>
     </message>
@@ -6462,8 +6462,8 @@ ist bereits in der Liste.</translation>
         <translation type="obsolete">Willkommen zu QCAD</translation>
     </message>
     <message>
-        <location line="-226"/>
-        <location line="+225"/>
+        <location line="-224"/>
+        <location line="+223"/>
         <source>%1 First Start</source>
         <translation>%1 Erster Start</translation>
     </message>
@@ -6618,14 +6618,13 @@ ist bereits in der Liste.</translation>
         <translation>Gruppieren zu einer Operation.</translation>
     </message>
     <message>
-        <location line="+16"/>
         <source>Cast on newly sub-layer &apos;Painted&apos;.
 BUG: Interferes with group castings.</source>
-        <translation>Cast on newly sub-layer &apos;Painted&apos;.
+        <translation type="vanished">Cast on newly sub-layer &apos;Painted&apos;.
 BUG: Interferes with group castings.</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
         <translation>Start with casting a begin apex on open forms.</translation>
     </message>
@@ -6730,7 +6729,7 @@ BUG: Interferes with group castings.</translation>
         <translation>Select Insertion or Enter void space. (Not implemented)</translation>
     </message>
     <message>
-        <location line="+250"/>
+        <location line="+277"/>
         <source>Version</source>
         <translation>Version</translation>
     </message>
@@ -6740,7 +6739,7 @@ BUG: Interferes with group castings.</translation>
         <translation>FlexPainter Beta 0.42e © CVH 2020 </translation>
     </message>
     <message>
-        <location line="+245"/>
+        <location line="+272"/>
         <source>Document Units.</source>
         <translation>Dokumenteinheiten.</translation>
     </message>
@@ -6793,7 +6792,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="vanished">Wählen Sie Einfügen oder Geben Sie den Hohlraum ein</translation>
     </message>
     <message>
-        <location line="-879"/>
+        <location line="-933"/>
         <source>&lt;Enter space size&gt;</source>
         <translation>&lt;Raumgrösse eingeben&gt;</translation>
     </message>
@@ -6807,7 +6806,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="vanished">Dokumenteinheiten</translation>
     </message>
     <message>
-        <location line="+489"/>
+        <location line="+543"/>
         <source>#Undefined#</source>
         <translation>#Undefiniert#</translation>
     </message>
@@ -10697,20 +10696,19 @@ BUG: Interferes with group castings.</translation>
         <translation>DB Error</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Plugin LibraryBrowser: cannot connect to DB.
 Driver error: %1
 Database error: %2
 Database file: %3
 Library browser will not be available.</source>
-        <translation>Plugin LibraryBrowser: cannot connect to DB.
+        <translation type="vanished">Plugin LibraryBrowser: cannot connect to DB.
 Driver error: %1
 Database error: %2
 Database file: %3
 Library browser will not be available.</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+44"/>
         <source>Source removed from part library: %1</source>
         <translation>Quelle entfernt von Teilebibliothek: %1</translation>
     </message>
@@ -13557,7 +13555,7 @@ nicht öffnen.
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+250"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+318"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
@@ -13592,7 +13590,27 @@ nicht öffnen.
         <translation>Drucken ...</translation>
     </message>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="-447"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="-672"/>
+        <source>Auto Paper Size</source>
+        <translation>Auto Papiergrösse</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The paper size is set to a custom size (%1x%2mm). Do you want to change it to the default paper size of your printer (%3)?</source>
+        <translation>Das Papierformat ist auf ein benutzerdefiniertes Format (%1x%2mm) eingestellt. Möchten Sie es auf das Standardpapierformat Ihres Druckers (%3) ändern?</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Auto fit</source>
+        <translation>Automatisch einpassen</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Auto fit drawing to paper?</source>
+        <translation>Automatische Skalierung der Zeichnung auf die Papiergrösse?</translation>
+    </message>
+    <message>
+        <location line="+188"/>
         <source>Drag to move paper</source>
         <translation>Ziehen zum Verschieben des Papiers</translation>
     </message>

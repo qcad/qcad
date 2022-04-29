@@ -367,7 +367,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/AddCentroidDialog.ui" line="+14"/>
         <source>Add  point mass 2D Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Добавить массу точки 2D Центроид</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -389,12 +389,12 @@ the preference changes to take effect.</source>
     <message>
         <location line="+24"/>
         <source>Point mass:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Точечная масса:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Reset to &apos;Undefined&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Сброс на &apos;Undefined&apos;</translation>
     </message>
 </context>
 <context>
@@ -1501,7 +1501,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockRefExport/BlockRefExport.js" line="+97"/>
         <source>Export Block References List (CSV)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Экспорт списка ссылок на блоки (CSV)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1511,7 +1511,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block References List</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Экспорт списка ссылок блока</translation>
     </message>
 </context>
 <context>
@@ -2615,7 +2615,7 @@ Do you wish to recover it?</source>
         <translation>Точка привязки</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+45"/>
         <source>Save library item as...</source>
         <translation>Сохранить элемент библиотеки как...</translation>
     </message>
@@ -5506,7 +5506,7 @@ is already in the list.</source>
         <translation>&amp;Файл</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+106"/>
         <location line="+76"/>
         <source>Format:</source>
         <translation>Формат:</translation>
@@ -5535,7 +5535,7 @@ is already in the list.</source>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+36"/>
-        <location line="+225"/>
+        <location line="+223"/>
         <source>%1 First Start</source>
         <translation>%1 первый запуск</translation>
     </message>
@@ -5697,14 +5697,13 @@ is already in the list.</source>
         <translation>Сгруппировать все размещения в одну операцию.</translation>
     </message>
     <message>
-        <location line="+16"/>
         <source>Cast on newly sub-layer &apos;Painted&apos;.
 BUG: Interferes with group castings.</source>
-        <translation>Разместить на новом подслое «Роликовый штамп».
+        <translation type="vanished">Разместить на новом подслое «Роликовый штамп».
 Ошибка: препятствует групповому размещению.</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
         <translation>Начать с размещения начальной вершины на открытых формах.</translation>
     </message>
@@ -5809,7 +5808,7 @@ BUG: Interferes with group castings.</source>
         <translation>Выбрать вставку или ввести пустое пространство. (Не реализовано)</translation>
     </message>
     <message>
-        <location line="+250"/>
+        <location line="+277"/>
         <source>Version</source>
         <translation>Версия</translation>
     </message>
@@ -5819,7 +5818,7 @@ BUG: Interferes with group castings.</source>
         <translation>FlexPainter Beta 0.42e © CVH 2020 </translation>
     </message>
     <message>
-        <location line="+245"/>
+        <location line="+272"/>
         <source>Document Units.</source>
         <translation>Единицы измерения документа.</translation>
     </message>
@@ -5872,7 +5871,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Выбрать вставку или ввести пустое пространство</translation>
     </message>
     <message>
-        <location line="-879"/>
+        <location line="-933"/>
         <source>&lt;Enter space size&gt;</source>
         <translation>&lt;Введите размер пространства&gt;</translation>
     </message>
@@ -5886,7 +5885,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Единицы измерения документа</translation>
     </message>
     <message>
-        <location line="+489"/>
+        <location line="+543"/>
         <source>#Undefined#</source>
         <translation>#Не задано#</translation>
     </message>
@@ -7094,27 +7093,27 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+52"/>
         <source>2D point mass Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">масса двумерной точки Центроид</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Undefined</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Неопределенный</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroidInit.js" line="+19"/>
         <source>Add &amp;custom 2D centroid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Добавить пользовательский 2D центроид</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Create a customizable 2D Centroid marker</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Создание настраиваемого 2D маркера центроида</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Creates a new point mass 2D Centroid marker customizable by dialog</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Создает новую точечную массу 2D Centroid marker, настраиваемую с помощью диалога</translation>
     </message>
 </context>
 <context>
@@ -7348,12 +7347,12 @@ BUG: Interferes with group castings.</source>
         <location line="+5"/>
         <location line="+2"/>
         <source>Area 2D Centroid script (v0.32) by CVH</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Скрипт Area 2D Centroid (v0.32) by CVH</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Arc sector mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Режим дугового сектора</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -7383,7 +7382,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+21"/>
         <source>2D area Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">двумерная область Центроид</translation>
     </message>
     <message>
         <location line="-89"/>
@@ -7463,12 +7462,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+8"/>
         <source>Create an area 2D Centroid for a selected entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Создать область 2D Centroid для выбранного объекта</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Creates a new uniform areal density 2D Centroid marker and value labels for a selected entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Создает новый маркер 2D Centroid с равномерной плотностью ареала и метки значений для выбранного объекта</translation>
     </message>
     <message>
         <source>Add 2D area centroid for a selected entity.</source>
@@ -7499,17 +7498,17 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+72"/>
         <source>Bearing:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Подшипник:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Azimuth:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Азимут:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>&amp;Bearing / Azimuth</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Пеленг / Азимут</translation>
     </message>
 </context>
 <context>
@@ -7522,7 +7521,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+1"/>
         <source>Point mass</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Точечная масса</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7532,7 +7531,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+1"/>
         <source>Wire</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Провод</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -7547,12 +7546,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+1"/>
         <source>Undefined</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Неопределенный</translation>
     </message>
     <message>
         <location line="+428"/>
         <source>2D &amp;Centroids</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2D центроиды</translation>
     </message>
     <message>
         <location line="-431"/>
@@ -7570,12 +7569,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListener.js" line="+191"/>
         <source>2D Centroids transaction listener active.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">активен слушатель транзакций 2D Centroids.</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Deactivated/removed the 2D Centroids transaction listener.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Деактивирован/удален слушатель транзакции 2D Centroids.</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -7583,22 +7582,22 @@ BUG: Interferes with group castings.</source>
         <location line="+40"/>
         <location line="+5"/>
         <source>Syntax error: &apos;%1&apos; parse error</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Синтаксическая ошибка: ошибка разбора &apos;%1&apos;</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListenerInit.js" line="+19"/>
         <source>Centroid &amp;Listener</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Слушатель центроида</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">(Де-)активация слушателя транзакций для 2D центроидов</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>(De-)Activate a transaction listener for binding changes applied to 2D Centroid markers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">(Де-)активация слушателя транзакций для изменений привязки, применяемых к маркерам 2D Centroid</translation>
     </message>
 </context>
 <context>
@@ -7780,106 +7779,106 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+5"/>
         <source>2D Centroids weighted sum script (v0.24) by CVH.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">скрипт взвешенной суммы 2D центроидов (v0.24) от CVH.</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Encountered a missing coordinate value.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Встречается отсутствующее значение координат.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Encountered an invalid coordinate value.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Встречено недопустимое значение координат.</translation>
     </message>
     <message>
         <location line="+8"/>
         <location line="+11"/>
         <location line="+10"/>
         <source>Encountered a missing &apos;%1&apos; value.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Встречено отсутствующее значение &apos;%1&apos;.</translation>
     </message>
     <message>
         <location line="-16"/>
         <location line="+11"/>
         <location line="+17"/>
         <source>Encountered an invalid &apos;%1&apos; value.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Встречено недопустимое значение &apos;%1&apos;.</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Encountered an unknown marker type.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Встретился неизвестный тип маркера.</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>No result.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Безрезультатно.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>No 2D Centroid markers found in the selection.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">В выборке не найдено ни одного маркера 2D Centroid.</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Single marker selected, point mass = %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Выбран один маркер, масса точки = %1</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Density is undefined</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Плотность не определена</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Results in a division by zero.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Приводит к делению на ноль.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Results in a NaN value.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Выдает значение NaN.</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Combined 2D Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Комбинированная двухмерная центроид</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Combined uniform point mass (%1):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Комбинированная равномерная точечная масса (%1):</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Combined point mass (%1):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Масса комбинированной точки (%1):</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>All densities are undefined</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Все плотности не определены</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Some densities are undefined</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Некоторые плотности не определены</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>area (Informational):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">область (Информационная):</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>wire length (Informational):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">длина провода (Информационный):</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Combined centroid:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Объединенный центроид:</translation>
     </message>
     <message>
         <source>Centroids weighted sum script (v0.10b) by CVH</source>
@@ -7944,17 +7943,17 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+19"/>
         <source>&amp;Sum 2D Centroids weighted</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Сумма взвешенных центроидов 2D</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Combine selected 2D Centroid markers weighted</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Объединить выбранные двухмерные центроидные маркеры взвешенными</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Combines selected 2D Centroid markers, summing all properties weighted</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Объединяет выбранные двухмерные центроидные маркеры, суммируя все взвешенные свойства</translation>
     </message>
 </context>
 <context>
@@ -8013,22 +8012,22 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="-71"/>
         <source>Wire 2D Centroid script (v0.32) by CVH</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Скрипт Wire 2D Centroid (v0.32) by CVH</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>2D Centroid markers circle in selection. No results.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2D Центроид маркеры круг в выделении. Нет результатов.</translation>
     </message>
     <message>
         <location line="+55"/>
         <source>Results in a division by zero.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Приводит к делению на ноль.</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>2D wire Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">двухмерная проволока Центроид</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -8069,12 +8068,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+8"/>
         <source>Create a wire 2D Centroid for a selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Создание проводного 2D центроида для выделения</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Creates a new uniform linear density 2D Centroid marker and value labels for a selection of entities</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Создает новый маркер 2D Centroid с равномерной линейной плотностью и метки значений для выбранных объектов</translation>
     </message>
     <message>
         <source>Add 2D wire centroid for a selection.</source>
@@ -9044,20 +9043,19 @@ BUG: Interferes with group castings.</source>
         <translation>Ошибка базы данных</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Plugin LibraryBrowser: cannot connect to DB.
 Driver error: %1
 Database error: %2
 Database file: %3
 Library browser will not be available.</source>
-        <translation>Модуль обзора библиотеки: не удается подключиться к БД.
+        <translation type="vanished">Модуль обзора библиотеки: не удается подключиться к БД.
 Ошибка драйвера: %1
 Ошибка базы данных: %2
 Файл базы данных: %3
 Средство обзора библиотеки не доступно.</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+44"/>
         <source>Source removed from part library: %1</source>
         <translation>Источник удалён из части библиотеки: %1</translation>
     </message>
@@ -11186,7 +11184,27 @@ shown in search results:</source>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+249"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+92"/>
+        <source>Auto Paper Size</source>
+        <translation type="unfinished">Автоматический размер бумаги</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The paper size is set to a custom size (%1x%2mm). Do you want to change it to the default paper size of your printer (%3)?</source>
+        <translation type="unfinished">Размер бумаги установлен на пользовательский размер (%1x%2 мм). Вы хотите изменить его на размер бумаги по умолчанию для вашего принтера (%3)?</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Auto fit</source>
+        <translation type="unfinished">Автоматическая подгонка</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Auto fit drawing to paper?</source>
+        <translation type="unfinished">Автоматическая подгонка рисунка к бумаге?</translation>
+    </message>
+    <message>
+        <location line="+188"/>
         <source>Drag to move paper</source>
         <translation>Для перемещения бумаги перетащите её</translation>
     </message>
@@ -12486,12 +12504,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2"/>
         <source>(De-)Select &amp;Contour</source>
-        <translation>Выделить &amp;контур (отменить выделение)</translation>
+        <translation>Выбрать контур</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select connected entities</source>
-        <translation>Выделяет (или отменяет выделение) объектов</translation>
+        <translation>Выбрать связанные объекты</translation>
     </message>
 </context>
 <context>
@@ -15118,12 +15136,12 @@ shown in search results:</source>
     <message>
         <location line="-10"/>
         <source>Degrees</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Степени</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Almost Equal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Почти равные</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15133,17 +15151,17 @@ shown in search results:</source>
     <message>
         <location line="+2"/>
         <source>Asymptotically Equal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Асимптотически равны</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Center Line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Линия центра</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Electrical Phase</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Электрическая фаза</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -15153,7 +15171,7 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>Not Equal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Не равны</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -15163,17 +15181,17 @@ shown in search results:</source>
     <message>
         <location line="+6"/>
         <source>Property Line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Линия собственности</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Subscript 2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Абонемент 2</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Square Root</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Квадратный корень</translation>
     </message>
     <message>
         <location line="+2"/>

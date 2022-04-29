@@ -426,22 +426,22 @@
     <message>
         <location line="+3"/>
         <source>Flip First Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">フリップファーストアロー</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Flip Second Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">フリップセカンドアロー</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Fixed Extension Line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">固定内線</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension Line Length</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">エクステンションラインの長さ</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -517,7 +517,7 @@
     <message>
         <location line="+1"/>
         <source>Alpha</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">アルファ</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -598,13 +598,13 @@
         <location line="+2"/>
         <location line="+1"/>
         <source>U</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">U</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <source>V</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">V</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -674,34 +674,34 @@
     <message>
         <location line="+2"/>
         <source>Orientation</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">オリエンテーション</translation>
     </message>
     <message>
         <location line="+9"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">サイズ</translation>
     </message>
     <message>
         <location line="-2"/>
         <source>Base Angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ベースアングル</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Size 1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">サイズ1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Size 2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">サイズ2</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Global Z</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">グローバルZ</translation>
     </message>
     <message>
         <location filename="../src/entity/RFaceEntity.cpp" line="-14"/>
@@ -792,26 +792,26 @@
     <message>
         <location line="+6"/>
         <source>Use Start Tangent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Start Tangentを使用する</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Start Tangent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">スタート・タンジェント</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Use End Tangent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">エンドタンジェント使用</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>End Tangent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">エンドタンジェント</translation>
     </message>
     <message>
         <source>Simple</source>
@@ -826,14 +826,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Location</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">所在地</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Direction</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">方向性</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -940,7 +940,7 @@
     <message>
         <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+185"/>
         <source>Arc Symbol Type</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">アークシンボルタイプ</translation>
     </message>
 </context>
 </TS>

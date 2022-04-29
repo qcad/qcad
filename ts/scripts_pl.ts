@@ -924,7 +924,8 @@ Odzyskać je?</numerusform>
         <location line="+69"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
-        <translation></translation>
+        <translation>Istnieje plik kopii zapasowej autozapisu dla &quot;%1&quot;.
+Czy chcesz go odzyskać?</translation>
     </message>
     <message>
         <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
@@ -1448,7 +1449,7 @@ Odzyskać ją?</translation>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockRefExport/BlockRefExport.js" line="+97"/>
         <source>Export Block References List (CSV)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Eksport listy odwołań do bloków (CSV)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1458,7 +1459,7 @@ Odzyskać ją?</translation>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block References List</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Eksportuj listę odwołań do bloków</translation>
     </message>
 </context>
 <context>
@@ -2518,7 +2519,7 @@ Odzyskać ją?</translation>
         <translation type="unfinished">Punkt odniesienia</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+45"/>
         <source>Save library item as...</source>
         <translation type="unfinished">Zapisz element biblioteki jako...</translation>
     </message>
@@ -5590,7 +5591,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Plik</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+106"/>
         <location line="+76"/>
         <source>Format:</source>
         <translation type="unfinished">Format:</translation>
@@ -5615,7 +5616,7 @@ jest już na liście.</translation>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+36"/>
-        <location line="+225"/>
+        <location line="+223"/>
         <source>%1 First Start</source>
         <translation type="unfinished">%1 Pierwszy start</translation>
     </message>
@@ -5741,13 +5742,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Grupuj wszystkie odlewy do jednej operacji.</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>Cast on newly sub-layer &apos;Painted&apos;.
-BUG: Interferes with group castings.</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
         <translation type="unfinished">Zacznij od rzucania początku wierzchołka na otwartych formach.</translation>
     </message>
@@ -5852,7 +5847,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">Wybierz opcję Wstaw lub Wprowadź pustą przestrzeń. (Nie zaimplementowano)</translation>
     </message>
     <message>
-        <location line="+250"/>
+        <location line="+277"/>
         <source>Version</source>
         <translation type="unfinished">Wersja</translation>
     </message>
@@ -5862,7 +5857,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">FlexPainter Beta 0.42e © CVH 2020</translation>
     </message>
     <message>
-        <location line="+245"/>
+        <location line="+272"/>
         <source>Document Units.</source>
         <translation type="unfinished">Jednostki dokumentu.</translation>
     </message>
@@ -5907,7 +5902,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">Usunięto pomalowane podmioty bazowe. (trwałe wyłączone)</translation>
     </message>
     <message>
-        <location line="-879"/>
+        <location line="-933"/>
         <source>&lt;Enter space size&gt;</source>
         <translation type="unfinished">&lt;Wprowadź wielkość przestrzeni&gt;.</translation>
     </message>
@@ -5917,7 +5912,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">Węzeł linowy do zasłon</translation>
     </message>
     <message>
-        <location line="+489"/>
+        <location line="+543"/>
         <source>#Undefined#</source>
         <translation type="unfinished">#Undefined#</translation>
     </message>
@@ -7403,12 +7398,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoBearing/InfoBearing.js" line="+41"/>
         <source>Reference</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Odnośnik</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Direction</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kierunek</translation>
     </message>
     <message>
         <location line="+42"/>
@@ -7418,17 +7413,17 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+72"/>
         <source>Bearing:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Łożyskowanie:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Azimuth:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Azymut:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>&amp;Bearing / Azimuth</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Namiar / Azymut</translation>
     </message>
 </context>
 <context>
@@ -7512,12 +7507,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+7"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
-        <translation type="unfinished">(De-)Aktywacja słuchacza transakcji dla centroidów 2D</translation>
+        <translation type="unfinished">Aktywacja słuchacza transakcji dla centroidów 2D</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>(De-)Activate a transaction listener for binding changes applied to 2D Centroid markers</source>
-        <translation type="unfinished">(De-)Aktywacja słuchacza transakcji dla zmian wiązania zastosowanych do znaczników centroidów 2D</translation>
+        <translation type="unfinished">Aktywacja słuchacza transakcji dla zmian wiązania zastosowanych do znaczników centroidów 2D</translation>
     </message>
 </context>
 <context>
@@ -8788,20 +8783,19 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">Błąd DB</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Plugin LibraryBrowser: cannot connect to DB.
 Driver error: %1
 Database error: %2
 Database file: %3
 Library browser will not be available.</source>
-        <translation>Wtyczka LibraryBrowser: nie można połączyć się z bazą danych.
+        <translation type="vanished">Wtyczka LibraryBrowser: nie można połączyć się z bazą danych.
 Błąd sterownika: %1
 Błąd bazy danych: %2
 Plik bazy danych: %3
 Przeglądarka kolekcji nie będzie dostępna.</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+44"/>
         <source>Source removed from part library: %1</source>
         <translation>Usunięto źródło z kolekcji części: %1</translation>
     </message>
@@ -8904,7 +8898,8 @@ Przeglądarka kolekcji nie będzie dostępna.</translation>
         <location line="+10"/>
         <source>Number of items
 shown in search results:</source>
-        <translation></translation>
+        <translation>Liczba elementów
+wyświetlanych w wynikach wyszukiwania:</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -10809,7 +10804,27 @@ shown in search results:</source>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+249"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+92"/>
+        <source>Auto Paper Size</source>
+        <translation type="unfinished">Automatyczny rozmiar papieru</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The paper size is set to a custom size (%1x%2mm). Do you want to change it to the default paper size of your printer (%3)?</source>
+        <translation type="unfinished">Rozmiar papieru jest ustawiony na rozmiar niestandardowy (%1x%2mm). Czy chcesz zmienić go na domyślny rozmiar papieru drukarki (%3)?</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Auto fit</source>
+        <translation type="unfinished">Automatyczne dopasowanie</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Auto fit drawing to paper?</source>
+        <translation type="unfinished">Automatyczne dopasowywanie rysunku do papieru?</translation>
+    </message>
+    <message>
+        <location line="+188"/>
         <source>Drag to move paper</source>
         <translation type="unfinished">Przeciągnij, aby przesunąć papier</translation>
     </message>
@@ -12037,12 +12052,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2"/>
         <source>(De-)Select &amp;Contour</source>
-        <translation type="unfinished">(De-)Select Contour</translation>
+        <translation type="unfinished">Zaznacz kontur</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select connected entities</source>
-        <translation type="unfinished">(De-)Select connected entities</translation>
+        <translation type="unfinished">Wybierz połączone elementy</translation>
     </message>
 </context>
 <context>
@@ -12085,12 +12100,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntitiesInit.js" line="+2"/>
         <source>(De-)Select In&amp;tersected Entities</source>
-        <translation type="unfinished">(De-)Select Intersected Entities</translation>
+        <translation type="unfinished">Wybierz elementy, które się przecinają</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select all entities intersected by a line</source>
-        <translation type="unfinished">(De-)Zaznacz wszystkie elementy przecięte linią</translation>
+        <translation type="unfinished">Zaznacz wszystkie elementy przecięte linią</translation>
     </message>
 </context>
 <context>
@@ -12207,12 +12222,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangleInit.js" line="+2"/>
         <source>(De-)Select &amp;Rectangular Area</source>
-        <translation type="unfinished">(De-)Select Prostokątna powierzchnia</translation>
+        <translation type="unfinished">Zaznacz obszar prostokątny</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select all entities inside a rectangle</source>
-        <translation type="unfinished">(De-)Zaznacz wszystkie elementy wewnątrz prostokąta</translation>
+        <translation type="unfinished">Zaznacz wszystkie obiekty znajdujące się wewnątrz prostokąta</translation>
     </message>
 </context>
 <context>
@@ -13640,7 +13655,8 @@ shown in search results:</source>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
-        <translation></translation>
+        <translation>Prosty tekst
+(jedna linia, bez formatowania)</translation>
     </message>
     <message>
         <location line="+21"/>

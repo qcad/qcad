@@ -81,9 +81,7 @@ PrintPreview.start = function(initialAction, instance) {
 
     var paperSizeMM = Print.getPaperSizeMM(doc);
     var paperSizeName = Print.getPaperSizeNameFromSize(paperSizeMM);
-    qDebug("paperSizeName:", paperSizeName);
     var paperSizeAccepted = doc.getVariable("PageSettings/PaperSizeAccepted");
-    qDebug("paperSizeAccepted:", paperSizeAccepted);
 
     if (paperSizeName==="" && paperSizeAccepted!==true) {
         // custom paper size:
@@ -92,14 +90,25 @@ PrintPreview.start = function(initialAction, instance) {
         var ret = QMessageBox.warning(
             appWin,
             qsTr("Auto Paper Size"),
-            qsTr("The paper size is set to a custom size (%1x%2). Do you want to change it to the default paper size of your printer (%3)?".arg(paperSizeMM.width()).arg(paperSizeMM.height()).arg(defaultPaperSizeName)),
+            qsTr("The paper size is set to a custom size (%1x%2mm). Do you want to change it to the default paper size of your printer (%3)?").arg(paperSizeMM.width()).arg(paperSizeMM.height()).arg(defaultPaperSizeName),
             buttons
         );
         if (ret===QMessageBox.Yes) {
+            var paperUnit = Print.getPaperUnit(doc);
             var defPaperSize = Print.getDefaultPaperSizeMM();
-            qDebug("defPaperSize:", defPaperSize);
-            doc.setVariable("PageSettings/PaperWidth", defPaperSize.width());
-            doc.setVariable("PageSettings/PaperHeight", defPaperSize.height());
+            var w = RUnit.convert(defPaperSize.width(), RS.Millimeter, paperUnit);
+            doc.setVariable("PageSettings/PaperWidth", w);
+            var h = RUnit.convert(defPaperSize.height(), RS.Millimeter, paperUnit);
+            doc.setVariable("PageSettings/PaperHeight", h);
+            doc.setVariable("MultiPageSettings/Columns", 1);
+            doc.setVariable("MultiPageSettings/Rows", 1);
+
+            // 10mm margin:
+            var m = RUnit.convert(10, RS.Millimeter, paperUnit);
+            doc.setVariable("MultiPageSettings/GlueMarginsLeft", m);
+            doc.setVariable("MultiPageSettings/GlueMarginsTop", m);
+            doc.setVariable("MultiPageSettings/GlueMarginsRight", m);
+            doc.setVariable("MultiPageSettings/GlueMarginsBottom", m);
         }
         else {
             // store information that paper size was accepted as is (don't show dialog again):
@@ -120,7 +129,6 @@ PrintPreview.start = function(initialAction, instance) {
                 qsTr("Auto fit drawing to paper?"),
                 buttons);
             if (ret===QMessageBox.Yes) {
-                qDebug("drawing not on paper, auto fit drawing");
                 appWin.setProperty("PrintPreview/InitialZoom", "Auto");
             }
             else {
@@ -465,6 +473,9 @@ PrintPreviewImpl.prototype.showUiOptions = function(resume) {
     var di = this.getDocumentInterface();
     var scaleString = Print.getScaleString(document);
 
+    var mod = document.isModified();
+
+    // note: this modifies the document:
     this.initScaleCombo();
 
     // update option toolbar widgets
@@ -522,6 +533,9 @@ PrintPreviewImpl.prototype.showUiOptions = function(resume) {
     }
     widgets["Landscape"].blockSignals(false);
     widgets["Portrait"].blockSignals(false);
+
+    // workaround for FS#2356 - File > Close: Closing dialog stays open after clicking Save
+    document.setModified(mod);
 };
 
 /**

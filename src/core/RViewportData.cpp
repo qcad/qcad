@@ -244,7 +244,4 @@ bool RViewportData::scale(const RVector& scaleFactors, const RVector& center) {
     position.scale(scaleFactors, center);
 
     return true;
-
-    // TODO: crashes:
-    //return REntityData::scale(scaleFactors, center);
 }

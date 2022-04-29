@@ -2828,7 +2828,7 @@ Voulez-vous le récupérer ?</translation>
         <translation>Point de référence</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+45"/>
         <source>Save library item as...</source>
         <translation>Enregistrer élément de bibliothèque...</translation>
     </message>
@@ -6115,7 +6115,7 @@ est déjà dans la liste.</translation>
         <translation>&amp;Fichier</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+106"/>
         <location line="+76"/>
         <source>Format:</source>
         <translation>Format :</translation>
@@ -6139,7 +6139,7 @@ est déjà dans la liste.</translation>
 <context>
     <name>FirstStart</name>
     <message>
-        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+256"/>
+        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+254"/>
         <source>Black</source>
         <translation>Noir</translation>
     </message>
@@ -6158,8 +6158,8 @@ est déjà dans la liste.</translation>
         <translation type="obsolete">Bienvenue à QCAD</translation>
     </message>
     <message>
-        <location line="-226"/>
-        <location line="+225"/>
+        <location line="-224"/>
+        <location line="+223"/>
         <source>%1 First Start</source>
         <translation>%1 premier démarrage</translation>
     </message>
@@ -6306,13 +6306,7 @@ est déjà dans la liste.</translation>
         <translation>Regroupez tous en une seule opération.</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>Cast on newly sub-layer &apos;Painted&apos;.
-BUG: Interferes with group castings.</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
         <translation>Commencez par lancer un début d&apos;apex sur des formes ouvertes.</translation>
     </message>
@@ -6417,7 +6411,7 @@ BUG: Interferes with group castings.</source>
         <translation>Sélectionnez Insertion ou Saisir un espace vide. (Non implémenté)</translation>
     </message>
     <message>
-        <location line="+250"/>
+        <location line="+277"/>
         <source>Version</source>
         <translation>Version</translation>
     </message>
@@ -6427,7 +6421,7 @@ BUG: Interferes with group castings.</source>
         <translation>FlexPainter Beta 0.42e © CVH 2020 </translation>
     </message>
     <message>
-        <location line="+245"/>
+        <location line="+272"/>
         <source>Document Units.</source>
         <translation>Unités de document.</translation>
     </message>
@@ -6480,7 +6474,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Sélectionner insertion ou entrer un espace vide</translation>
     </message>
     <message>
-        <location line="-879"/>
+        <location line="-933"/>
         <source>&lt;Enter space size&gt;</source>
         <translation>&lt;entrée taille de l&apos;espace&gt;</translation>
     </message>
@@ -6494,7 +6488,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Unités de document</translation>
     </message>
     <message>
-        <location line="+489"/>
+        <location line="+543"/>
         <source>#Undefined#</source>
         <translation>#Non défini#</translation>
     </message>
@@ -10164,20 +10158,19 @@ BUG: Interferes with group castings.</source>
         <translation>Erreur DB</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Plugin LibraryBrowser: cannot connect to DB.
 Driver error: %1
 Database error: %2
 Database file: %3
 Library browser will not be available.</source>
-        <translation>Plugin LibraryBrowser: cannot connect to DB.
+        <translation type="vanished">Plugin LibraryBrowser: cannot connect to DB.
 Driver error: %1
 Database error: %2
 Database file: %3
 Library browser will not be available.</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+44"/>
         <source>Source removed from part library: %1</source>
         <translation>Source retiré de la bibliothèque : %1</translation>
     </message>
@@ -12616,7 +12609,27 @@ dans les résultats de recherche :</translation>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+249"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+92"/>
+        <source>Auto Paper Size</source>
+        <translation>Taille du papier automatique</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The paper size is set to a custom size (%1x%2mm). Do you want to change it to the default paper size of your printer (%3)?</source>
+        <translation>Le format du papier est défini sur un format personnalisé (%1x%2mm). Voulez-vous le changer pour le format de papier par défaut de votre imprimante (%3) ?</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Auto fit</source>
+        <translation>Ajustement automatique</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Auto fit drawing to paper?</source>
+        <translation>Adapter automatiquement le dessin au papier ?</translation>
+    </message>
+    <message>
+        <location line="+188"/>
         <source>Drag to move paper</source>
         <translation>Faites glisser pour déplacer le papier</translation>
     </message>

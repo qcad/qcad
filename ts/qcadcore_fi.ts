@@ -319,7 +319,7 @@
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-6"/>
         <source>Referenced Block</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Viitattu lohko</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -410,7 +410,7 @@
     <message>
         <location line="+2"/>
         <source>Parent Id</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vanhemman tunnus</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -468,7 +468,7 @@
     <message>
         <location line="+1"/>
         <source>Object Invisible</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Näkymätön esine</translation>
     </message>
     <message>
         <source>Invisible</source>
@@ -580,12 +580,12 @@
     <message>
         <location line="+1"/>
         <source>Backward</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Takaisin</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Upside Down</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ylösalaisin</translation>
     </message>
     <message>
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
@@ -716,122 +716,122 @@
     <message>
         <location filename="../src/core/RDimStyle.cpp" line="+72"/>
         <source>Style</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tyyli</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Overall scale</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yleinen asteikko</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linear measurement factor</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lineaarinen mittauskerroin</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text height</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tekstin korkeus</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mittaviivan rako</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow size</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nuolen koko</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension line increment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mittaviivan lisäys</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line extension</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Laajennuslinjan laajennus</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line offset</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Jatkojohdon offset</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text position vertical</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tekstin sijainti pystysuunnassa</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Teksti vaakasuorassa</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tick size</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rastin koko</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linear format</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lineaarinen muoto</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal places</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Desimaaliluvut</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal separator</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Desimaalierotin</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Zero suppression</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nollasuppressio</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular format</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Angular-muoto</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular decimal places</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kulmamääräiset desimaaliluvut</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular zero suppression</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kulman nollakohdan tukahduttaminen</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Arkkitehtuurin rasti</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tekstin väri</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nuolilohko</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nuolilohko 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nuolilohko 2</translation>
     </message>
 </context>
 <context>

@@ -319,7 +319,7 @@
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-6"/>
         <source>Referenced Block</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Referenčni blok</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -410,7 +410,7 @@
     <message>
         <location line="+2"/>
         <source>Parent Id</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Id staršev</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -468,7 +468,7 @@
     <message>
         <location line="+1"/>
         <source>Object Invisible</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nevidni predmet</translation>
     </message>
     <message>
         <source>Invisible</source>
@@ -477,7 +477,7 @@
     <message>
         <location line="+1"/>
         <source>Working Set</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Delovni komplet</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>
@@ -534,7 +534,7 @@
     <message>
         <location line="+1"/>
         <source>Text Width</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Širina besedila</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -716,122 +716,122 @@
     <message>
         <location filename="../src/core/RDimStyle.cpp" line="+72"/>
         <source>Style</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Slog</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Overall scale</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Splošna lestvica</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linear measurement factor</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Faktor linearnega merjenja</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text height</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Višina besedila</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vrzel v dimenzijski liniji</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow size</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Velikost puščice</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension line increment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Prirastek linije dimenzij</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line extension</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Podaljšek podaljšek linije</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line offset</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Odmik razširitvene linije</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text position vertical</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Položaj besedila navpično</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vodoravno besedilo</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tick size</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Velikost kljukic</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linear format</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Linearni format</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal places</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Decimalna mesta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal separator</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Decimalni ločilnik</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Zero suppression</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ničelno zatiranje</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular format</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Angularna oblika</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular decimal places</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kotna decimalna mesta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular zero suppression</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Izbris kotne ničle</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Architectur tick</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Barva besedila</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blok puščic</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blok puščic 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blok puščic 2</translation>
     </message>
 </context>
 <context>

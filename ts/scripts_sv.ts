@@ -2490,7 +2490,7 @@ Vill du återställa den?</translation>
         <translation>Referenspunkt</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+45"/>
         <source>Save library item as...</source>
         <translation>Spara biblioteksobjekt som...</translation>
     </message>
@@ -2940,8 +2940,8 @@ Vill du återställa den?</translation>
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Etikettpositionen för %1 dimension har återställts.</numerusform>
+            <numerusform>Etikettpositionen för %2 dimensioner har återställts.</numerusform>
         </translation>
     </message>
     <message>
@@ -4500,8 +4500,8 @@ finns redan i listan.</translation>
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+54"/>
         <source>%n entity/ies duplicated</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n enhet duplicerad</numerusform>
+            <numerusform>%n enheter dupliceras</numerusform>
         </translation>
     </message>
     <message>
@@ -5357,8 +5357,8 @@ finns redan i listan.</translation>
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Transaktionen påverkade %n objekt.</numerusform>
+            <numerusform>Transaktionen påverkade %n objekt.</numerusform>
         </translation>
     </message>
     <message>
@@ -5498,7 +5498,7 @@ finns redan i listan.</translation>
         <translation>Fil</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+106"/>
         <location line="+76"/>
         <source>Format:</source>
         <translation>Format:</translation>
@@ -5523,7 +5523,7 @@ finns redan i listan.</translation>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+36"/>
-        <location line="+225"/>
+        <location line="+223"/>
         <source>%1 First Start</source>
         <translation>%1 Första start</translation>
     </message>
@@ -5649,14 +5649,13 @@ finns redan i listan.</translation>
         <translation>Gruppera alla gjutningar till en operation.</translation>
     </message>
     <message>
-        <location line="+16"/>
         <source>Cast on newly sub-layer &apos;Painted&apos;.
 BUG: Interferes with group castings.</source>
-        <translation>Gjutet på ett nytt underlag &apos;Painted&apos;.
+        <translation type="vanished">Gjutet på ett nytt underlag &apos;Painted&apos;.
 BUG: Störningar vid gruppgjutningar.</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
         <translation>Börja med att gjuta en början av en spets på öppna former.</translation>
     </message>
@@ -5761,7 +5760,7 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <translation>Välj Infogning eller Ange tomrum. (Ej implementerat)</translation>
     </message>
     <message>
-        <location line="+250"/>
+        <location line="+277"/>
         <source>Version</source>
         <translation>Version</translation>
     </message>
@@ -5771,7 +5770,7 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <translation>FlexPainter Beta 0.42e © CVH 2020</translation>
     </message>
     <message>
-        <location line="+245"/>
+        <location line="+272"/>
         <source>Document Units.</source>
         <translation>Dokumentenheter.</translation>
     </message>
@@ -5816,7 +5815,7 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <translation>Borttagen målad över basenheter. (bestående av)</translation>
     </message>
     <message>
-        <location line="-879"/>
+        <location line="-933"/>
         <source>&lt;Enter space size&gt;</source>
         <translation>&lt;Ange storlek på utrymme&gt;</translation>
     </message>
@@ -5826,7 +5825,7 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <translation>Gardin rep knut</translation>
     </message>
     <message>
-        <location line="+489"/>
+        <location line="+543"/>
         <source>#Undefined#</source>
         <translation>#Odefinierad#</translation>
     </message>
@@ -8838,20 +8837,19 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <translation>DB-fel</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Plugin LibraryBrowser: cannot connect to DB.
 Driver error: %1
 Database error: %2
 Database file: %3
 Library browser will not be available.</source>
-        <translation>Plugin LibraryBrowser: kan inte ansluta till DB.
+        <translation type="vanished">Plugin LibraryBrowser: kan inte ansluta till DB.
 Fel i drivrutinen: %1
 Fel i databasen: %2
 Databasfil: %3
 Bibliotekswebbläsaren kommer inte att vara tillgänglig.</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+44"/>
         <source>Source removed from part library: %1</source>
         <translation>Källan har tagits bort från delbiblioteket: %1</translation>
     </message>
@@ -10219,16 +10217,16 @@ som visas i sökresultaten:</translation>
         <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Radien sjönk under 0,0 efter %n koncentrisk cirkel.</numerusform>
+            <numerusform>Radien sjönk under 0,0 efter %n koncentriska cirklar.</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Radien har sjunkit under 0,0 efter %n koncentrisk båge.</numerusform>
+            <numerusform>Radien sjönk under 0,0 efter %n koncentriska bågar.</numerusform>
         </translation>
     </message>
     <message>
@@ -10867,7 +10865,27 @@ som visas i sökresultaten:</translation>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+249"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+92"/>
+        <source>Auto Paper Size</source>
+        <translation>Automatisk pappersstorlek</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The paper size is set to a custom size (%1x%2mm). Do you want to change it to the default paper size of your printer (%3)?</source>
+        <translation>Pappersstorleken är inställd på en anpassad storlek (%1x%2mm). Vill du ändra den till skrivarens standardpappersstorlek (%3)?</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Auto fit</source>
+        <translation>Automatisk anpassning</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Auto fit drawing to paper?</source>
+        <translation>Automatisk anpassning av ritning till papper?</translation>
+    </message>
+    <message>
+        <location line="+188"/>
         <source>Drag to move paper</source>
         <translation>Dra för att flytta papper</translation>
     </message>
@@ -12297,16 +12315,16 @@ som visas i sökresultaten:</translation>
         <location line="+4"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>1 enhet på lagret &quot;%1&quot;</numerusform>
+            <numerusform>%n enheter på lager &quot;%1&quot;</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>1 enhet</numerusform>
+            <numerusform>%n enheter</numerusform>
         </translation>
     </message>
     <message>
@@ -12318,8 +12336,8 @@ som visas i sökresultaten:</translation>
         <location line="+0"/>
         <source>%n Layers</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n lager</numerusform>
+            <numerusform>%n lager</numerusform>
         </translation>
     </message>
     <message>

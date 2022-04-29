@@ -240,7 +240,7 @@
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="+94"/>
         <source>Referenced Block</source>
-        <translation type="unfinished">参照ブロック</translation>
+        <translation>参照先ブロック</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -255,7 +255,7 @@
     <message>
         <location filename="../src/core/RBlock.cpp" line="+65"/>
         <source>Pixel Unit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">画素数単位</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -352,7 +352,7 @@
     <message>
         <location line="+3"/>
         <source>Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">属性</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+96"/>
@@ -410,7 +410,7 @@
     <message>
         <location line="+2"/>
         <source>Parent Id</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">親 ID</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -463,17 +463,17 @@
     <message>
         <location line="+1"/>
         <source>Selected</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">選択された</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Object Invisible</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">オブジェクト・インビジブル</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Working Set</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ワーキングセット</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>
@@ -530,7 +530,7 @@
     <message>
         <location line="+1"/>
         <source>Text Width</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">文字幅</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -576,12 +576,12 @@
     <message>
         <location line="+1"/>
         <source>Backward</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">バックワード</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Upside Down</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">アップサイドダウン</translation>
     </message>
     <message>
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
@@ -642,22 +642,22 @@
     <message>
         <location line="+1"/>
         <source>Collapsed</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">折りたたみ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plottable</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">プロッタブル</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Snappable</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">スナップ可能</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Off is Freeze</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">オフはフリーズ</translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
@@ -702,7 +702,7 @@
     <message>
         <location filename="../src/core/RBlockReferenceData.cpp" line="+858"/>
         <source>Circular (recursive) block referencing detected:</source>
-        <translation>回状（再起的）ブロック参照が検出されました:</translation>
+        <translation>循環的な（再帰的な）ブロック参照が検出されました:</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -712,122 +712,122 @@
     <message>
         <location filename="../src/core/RDimStyle.cpp" line="+72"/>
         <source>Style</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">スタイル</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Overall scale</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">全体規模</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linear measurement factor</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">リニア測定係数</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text height</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">文字高さ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ディメンションラインギャップ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow size</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">矢印の大きさ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension line increment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ディメンションラインインクリメント</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line extension</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">エクステンションラインの延長</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line offset</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">内線オフセット</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text position vertical</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">テキスト位置縦</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">テキスト水平</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tick size</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ティックサイズ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linear format</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">リニア方式</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal places</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">小数点以下の桁数</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal separator</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">小数点以下のセパレータ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Zero suppression</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ゼロサプレス</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular format</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">アンギュラフォーマット</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular decimal places</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">角度のある小数点以下の桁数</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular zero suppression</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">角度ゼロサプレッション</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">アーキテクチャー・チック</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">文字色</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">アローブロック</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">アローブロック1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">アローブロック2</translation>
     </message>
 </context>
 <context>

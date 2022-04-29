@@ -146,14 +146,10 @@ RVector RSnapIntersection::snap(
                 minDist = dist;
 
                 mainEntityId1 = e1->getId();
-                if (subEntityIds.first!=REntity::INVALID_ID) {
-                    subEntityId1 = subEntityIds.first;
-                }
+                subEntityId1 = subEntityIds.first;
 
                 mainEntityId2 = e2->getId();
-                if (subEntityIds.second!=REntity::INVALID_ID) {
-                    subEntityId2 = subEntityIds.second;
-                }
+                subEntityId2 = subEntityIds.second;
             }
         }
     }

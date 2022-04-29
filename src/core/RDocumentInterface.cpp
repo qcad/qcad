@@ -2248,6 +2248,7 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
     bool layoutHasChanged = false;
     bool viewHasChanged = false;
     bool entityHasChanged = false;
+    bool entityDeleted = false;
 
     QList<RObject::Id> objectIds = transaction.getAffectedObjects();
 
@@ -2337,6 +2338,9 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
         if (!entity.isNull()) {
             entityHasChanged = true;
             entityIdsToRegenerate.insert(entity->getId());
+            if (entity->isUndone()) {
+                entityDeleted = true;
+            }
             continue;
         }
 
@@ -2465,7 +2469,14 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
                 regenerateScenes(false, true);
             }
             else {
-                regenerateScenes(false, false);
+                if (entityDeleted) {
+                    // entity deleted: regen to update reference points:
+                    regenerateScenes(entityIdsToRegenerate, false);
+                    regenerateViews(entityIdsToRegenerate);
+                }
+                else {
+                    regenerateScenes(false, false);
+                }
             }
             return;
         }
