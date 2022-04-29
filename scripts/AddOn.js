@@ -525,7 +525,7 @@ AddOn.getAddOns = function(dir) {
         var fileInfo = new QFileInfo(dirInfo.filePath() + "/" + dirInfo.fileName() + ".js");
 
         if (dirInfo.fileName().startsWith("AutoLoad")) {
-            RAutoLoadEcma.addAutoLoadFile(fileInfo.filePath());
+            // #qt6 RAutoLoadEcma.addAutoLoadFile(fileInfo.filePath());
         }
         else {
             if (fileInfo.exists() && !AddOn.isIgnored(fileInfo.absoluteFilePath())) {
@@ -647,8 +647,8 @@ AddOn.getAddOns = function(dir) {
 
 AddOn.getLocalAddOns = function() {
     var dataDir = new QDir(RSettings.getDataLocation());
-    var fs = new QDir.Filters(QDir.NoDotAndDotDot, QDir.Readable, QDir.Dirs, QDir.Executable);
-    var sf = new QDir.SortFlags(QDir.Name);
+    var fs = makeQDirFilters(QDir.NoDotAndDotDot, QDir.Readable, QDir.Dirs, QDir.Executable);
+    var sf = makeQDirSortFlags(QDir.Name);
     return dataDir.entryList([], fs, sf);
 };
 

@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 
-include("WidgetFactory.js");
+include("scripts/WidgetFactory.js");
 include("scripts/Widgets/OptionsToolBar/OptionsToolBar.js");
 
 if (RSettings.isGuiEnabled()) {
