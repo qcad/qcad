@@ -1060,7 +1060,15 @@
     <file alias="scripts/Edit/CopyWithReference/CopyWithReference.svg">../../scripts/Edit/CopyWithReference/CopyWithReference.svg</file>
     <file alias="scripts/Edit/CopyWithReference/CopyWithReferenceInit.js">../../scripts/Edit/CopyWithReference/CopyWithReferenceInit.js</file>
     <file alias="scripts/Edit/CopyWithReference/Tests/CopyWithReferenceTest00.js">../../scripts/Edit/CopyWithReference/Tests/CopyWithReferenceTest00.js</file>
+    <file alias="scripts/Edit/CopyWithReference/Tests/CopyWithReferenceTest01.js">../../scripts/Edit/CopyWithReference/Tests/CopyWithReferenceTest01.js</file>
+    <file alias="scripts/Edit/CopyWithReference/Tests/CopyWithReferenceTest02.js">../../scripts/Edit/CopyWithReference/Tests/CopyWithReferenceTest02.js</file>
+    <file alias="scripts/Edit/CopyWithReference/Tests/CopyWithReferenceTest03.js">../../scripts/Edit/CopyWithReference/Tests/CopyWithReferenceTest03.js</file>
+    <file alias="scripts/Edit/CopyWithReference/Tests/CopyWithReferenceTest04.js">../../scripts/Edit/CopyWithReference/Tests/CopyWithReferenceTest04.js</file>
     <file alias="scripts/Edit/CopyWithReference/Tests/required/CopyWithReferenceTest00_000.dxf">../../scripts/Edit/CopyWithReference/Tests/required/CopyWithReferenceTest00_000.dxf</file>
+    <file alias="scripts/Edit/CopyWithReference/Tests/required/CopyWithReferenceTest01_000.dxf">../../scripts/Edit/CopyWithReference/Tests/required/CopyWithReferenceTest01_000.dxf</file>
+    <file alias="scripts/Edit/CopyWithReference/Tests/required/CopyWithReferenceTest02_000.dxf">../../scripts/Edit/CopyWithReference/Tests/required/CopyWithReferenceTest02_000.dxf</file>
+    <file alias="scripts/Edit/CopyWithReference/Tests/required/CopyWithReferenceTest03_000.dxf">../../scripts/Edit/CopyWithReference/Tests/required/CopyWithReferenceTest03_000.dxf</file>
+    <file alias="scripts/Edit/CopyWithReference/Tests/required/CopyWithReferenceTest04_000.dxf">../../scripts/Edit/CopyWithReference/Tests/required/CopyWithReferenceTest04_000.dxf</file>
     <file alias="scripts/Edit/Cut/Cut-inverse.svg">../../scripts/Edit/Cut/Cut-inverse.svg</file>
     <file alias="scripts/Edit/Cut/Cut.js">../../scripts/Edit/Cut/Cut.js</file>
     <file alias="scripts/Edit/Cut/Cut.svg">../../scripts/Edit/Cut/Cut.svg</file>
