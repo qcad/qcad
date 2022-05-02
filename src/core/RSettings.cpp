@@ -1666,7 +1666,7 @@ QStringList RSettings::getScaleList(const RS::Unit unit) {
                  << "1\" = 4096\"";
 
         // Standard Imperial Engineering Scale
-        defaults << "1\ = 10'"
+        defaults << "1\"= 10'"
                  << "1\" = 20'"
                  << "1\" = 30'"
                  << "1\" = 40'"
