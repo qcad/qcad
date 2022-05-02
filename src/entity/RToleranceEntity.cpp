@@ -218,6 +218,7 @@ void RToleranceEntity::print(QDebug dbg) const {
     dbg.nospace() << "RToleranceEntity(";
     dbg.nospace() << "location: " << data.getLocation() << ", ";
     dbg.nospace() << "dimscale: " << data.getDimscale() << ", ";
+    dbg.nospace() << "text: " << data.getText() << ", ";
     REntity::print(dbg);
     dbg.nospace()  << ")";
 }
