@@ -6,8 +6,8 @@ fi
 
 echo "Generating script bindings for the QCAD Application Framework..."
 
-sh ./cpp2srcml.sh $scope
-if [ $? -ne 0 ]; then exit $?; fi
+#sh ./cpp2srcml.sh $scope
+#if [ $? -ne 0 ]; then exit $?; fi
 sh ./srcml2xml.sh $scope
 if [ $? -ne 0 ]; then exit $?; fi
 sh ./xml2shell.sh $scope
