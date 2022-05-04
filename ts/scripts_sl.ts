@@ -11517,7 +11517,7 @@ shown in search results:</source>
         <translation>Končano</translation>
     </message>
     <message>
-        <location line="+446"/>
+        <location line="+452"/>
         <source>Export to PDF</source>
         <translation>Izvozi v PDF</translation>
     </message>

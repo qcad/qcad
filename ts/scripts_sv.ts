@@ -10895,7 +10895,7 @@ som visas i sökresultaten:</translation>
         <translation>Klart</translation>
     </message>
     <message>
-        <location line="+446"/>
+        <location line="+452"/>
         <source>Export to PDF</source>
         <translation>Exportera till PDF</translation>
     </message>

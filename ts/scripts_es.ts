@@ -12612,7 +12612,7 @@ en los resultados de búsqueda:</translation>
         <translation>Terminar</translation>
     </message>
     <message>
-        <location line="+446"/>
+        <location line="+452"/>
         <source>Export to PDF</source>
         <translation>Exportar a PDF</translation>
     </message>

@@ -10834,7 +10834,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation type="unfinished">Gotowe</translation>
     </message>
     <message>
-        <location line="+446"/>
+        <location line="+452"/>
         <source>Export to PDF</source>
         <translation type="unfinished">Eksport do PDF</translation>
     </message>

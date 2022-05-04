@@ -11147,7 +11147,7 @@ näkyy hakutuloksissa:</translation>
         <translation>Valmis</translation>
     </message>
     <message>
-        <location line="+446"/>
+        <location line="+452"/>
         <source>Export to PDF</source>
         <translation>Vie PDF:ksi</translation>
     </message>

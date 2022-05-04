@@ -10694,7 +10694,7 @@ vist i søgeresultaterne:</translation>
         <translation>Udført</translation>
     </message>
     <message>
-        <location line="+446"/>
+        <location line="+452"/>
         <source>Export to PDF</source>
         <translation>Eksporter til PDF</translation>
     </message>

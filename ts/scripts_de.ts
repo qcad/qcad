@@ -13580,7 +13580,7 @@ nicht öffnen.
         <translation>Querformat</translation>
     </message>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+446"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+452"/>
         <source>Export to PDF</source>
         <translation>PDF exportieren</translation>
     </message>
@@ -13590,7 +13590,7 @@ nicht öffnen.
         <translation>Drucken ...</translation>
     </message>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="-672"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="-678"/>
         <source>Auto Paper Size</source>
         <translation>Auto Papiergrösse</translation>
     </message>
@@ -13615,7 +13615,7 @@ nicht öffnen.
         <translation>Ziehen zum Verschieben des Papiers</translation>
     </message>
     <message>
-        <location line="+460"/>
+        <location line="+466"/>
         <source>Exporting to %1...</source>
         <translation>Exportiere nach %1...</translation>
     </message>

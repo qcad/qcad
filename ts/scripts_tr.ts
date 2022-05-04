@@ -10550,7 +10550,7 @@ shown in search results:</source>
         <translation>Bitti</translation>
     </message>
     <message>
-        <location line="+446"/>
+        <location line="+452"/>
         <source>Export to PDF</source>
         <translation>PDF Olarak Dışa Aktar</translation>
     </message>

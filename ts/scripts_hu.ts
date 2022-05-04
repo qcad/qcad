@@ -10323,7 +10323,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
         <translation type="unfinished">Kész</translation>
     </message>
     <message>
-        <location line="+446"/>
+        <location line="+452"/>
         <source>Export to PDF</source>
         <translation type="unfinished">Exportálás PDF-be</translation>
     </message>

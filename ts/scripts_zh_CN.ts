@@ -10441,7 +10441,7 @@ shown in search results:</source>
         <translation type="unfinished">完成</translation>
     </message>
     <message>
-        <location line="+446"/>
+        <location line="+452"/>
         <source>Export to PDF</source>
         <translation type="unfinished"></translation>
     </message>

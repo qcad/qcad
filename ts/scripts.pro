@@ -398,6 +398,10 @@ SOURCES = \
 ../scripts/Edit/CopyWithReference/CopyWithReference.js \
 ../scripts/Edit/CopyWithReference/CopyWithReferenceInit.js \
 ../scripts/Edit/CopyWithReference/Tests/CopyWithReferenceTest00.js \
+../scripts/Edit/CopyWithReference/Tests/CopyWithReferenceTest01.js \
+../scripts/Edit/CopyWithReference/Tests/CopyWithReferenceTest02.js \
+../scripts/Edit/CopyWithReference/Tests/CopyWithReferenceTest03.js \
+../scripts/Edit/CopyWithReference/Tests/CopyWithReferenceTest04.js \
 ../scripts/Edit/Cut/Cut.js \
 ../scripts/Edit/Cut/CutInit.js \
 ../scripts/Edit/Cut/Tests/CutTest00.js \
