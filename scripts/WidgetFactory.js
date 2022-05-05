@@ -1203,7 +1203,7 @@ WidgetFactory.initLineEdit = function(lineEdit, dimension) {
                 symbolSelf = symbolCode;
             }
             var symbolText = symbol[1];
-            var insertion = symbol[0];
+            var insertion = String.fromCharCode(symbol[0]);
             if (symbol.length===3) {
                 insertion = symbol[2];
             }
