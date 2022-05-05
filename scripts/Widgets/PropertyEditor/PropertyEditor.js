@@ -1103,9 +1103,10 @@ PropertyEditorImpl.prototype.initNumberControls = function(objectName, propertyT
         if (isOfType(control, RMathComboBox)) {
             lineEdit = control.lineEdit();
 
-            control.editTextChanged.connect(
-                        new PropertyWatcher(this, control, propertyTypeId),
-                        'propertyChanged');
+            // don't trigger change on text changes (makes editing impossible):
+//            control.editTextChanged.connect(
+//                        new PropertyWatcher(this, control, propertyTypeId),
+//                        'propertyChanged');
         }
         else {
             lineEdit = control;
