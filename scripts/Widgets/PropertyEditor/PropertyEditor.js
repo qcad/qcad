@@ -1020,7 +1020,7 @@ PropertyEditorImpl.prototype.initNumberControls = function(objectName, propertyT
         control.objectName = objectName;
     }
 
-    var newText;
+    var newText = "";
     if (attributes.isMixed()) {
         newText = PropertyEditor.varies;
     }
@@ -1065,7 +1065,7 @@ PropertyEditorImpl.prototype.initNumberControls = function(objectName, propertyT
         }
     }
 
-    if (isOfType(control, RMathLineEdit)) {
+    if (isOfType(control, RMathLineEdit) || isOfType(control, QLineEdit)) {
         if (control.text!==newText) {
             control.text = newText;
             control.setProperty("originalText", newText);
@@ -1078,7 +1078,7 @@ PropertyEditorImpl.prototype.initNumberControls = function(objectName, propertyT
     if (isOfType(control, RMathComboBox)) {
         if (control.currentText!==newText) {
             // TODO: try to set scale value
-            // (note that 1" = 2" is the same as 6" = 1', so the conversion from scale notation to value is irreverible)
+            // (note that 1" = 2" is the same as 6" = 1', so the conversion from scale notation to value is irreversible)
 //            if (!isNull(value)) {
 //                control.setValue(value);
 //            }
