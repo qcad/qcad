@@ -10975,12 +10975,12 @@ wyświetlanych w wynikach wyszukiwania:</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1590"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1591"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*VARIES*</translation>
     </message>
     <message>
-        <location line="-1377"/>
+        <location line="-1378"/>
         <source>:</source>
         <translation type="unfinished">:</translation>
     </message>
@@ -11030,12 +11030,12 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation type="unfinished">Pokaż wszystkie nieruchomości</translation>
     </message>
     <message>
-        <location line="+757"/>
+        <location line="+758"/>
         <source>Widgets</source>
         <translation>Widżety</translation>
     </message>
     <message>
-        <location line="-803"/>
+        <location line="-804"/>
         <source>Add custom property to selected objects</source>
         <translation>Dodaj dostosowaną właściwość do zaznaczonych obiektów</translation>
     </message>
@@ -11045,7 +11045,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation type="unfinished">Auto</translation>
     </message>
     <message>
-        <location line="+196"/>
+        <location line="+197"/>
         <source>Use auto measurement</source>
         <translation type="unfinished">Użyj pomiaru automatycznego</translation>
     </message>

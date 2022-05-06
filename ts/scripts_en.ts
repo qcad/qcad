@@ -11797,7 +11797,7 @@ shown in search results:</translation>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+196"/>
+        <location line="+197"/>
         <source>Use auto measurement</source>
         <translation>Use auto measurement</translation>
     </message>

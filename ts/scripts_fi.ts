@@ -11327,12 +11327,12 @@ näkyy hakutuloksissa:</translation>
         <translation type="unfinished">Näytä laajennetun ulottuvuuden tyylin ohitukset</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1590"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1591"/>
         <source>*VARIES*</source>
         <translation>*VAIHTELEVA*</translation>
     </message>
     <message>
-        <location line="-1377"/>
+        <location line="-1378"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -11396,7 +11396,7 @@ näkyy hakutuloksissa:</translation>
         <translation>Automaattinen</translation>
     </message>
     <message>
-        <location line="+196"/>
+        <location line="+197"/>
         <source>Use auto measurement</source>
         <translation>Käytä automaattista mittausta</translation>
     </message>

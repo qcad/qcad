@@ -10430,7 +10430,7 @@ rodomas paieškos rezultatuose:</translation>
         <translation type="unfinished">Automatinis</translation>
     </message>
     <message>
-        <location line="+196"/>
+        <location line="+197"/>
         <source>Use auto measurement</source>
         <translation type="unfinished">Naudokite automatinį matavimą</translation>
     </message>

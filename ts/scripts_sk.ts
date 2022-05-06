@@ -11300,12 +11300,12 @@ vo výsledku vyhľadania:</translation>
         <translation type="unfinished">Zobrazenie rozšíreného štýlu dimenzie</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1590"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1591"/>
         <source>*VARIES*</source>
         <translation>*Rôzne*</translation>
     </message>
     <message>
-        <location line="-1377"/>
+        <location line="-1378"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -11369,7 +11369,7 @@ vo výsledku vyhľadania:</translation>
         <translation>automatický</translation>
     </message>
     <message>
-        <location line="+196"/>
+        <location line="+197"/>
         <source>Use auto measurement</source>
         <translation>Použiť automatické meranie</translation>
     </message>

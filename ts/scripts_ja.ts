@@ -11529,12 +11529,12 @@ shown in search results:</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1590"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1591"/>
         <source>*VARIES*</source>
         <translation>*VARIES*</translation>
     </message>
     <message>
-        <location line="-1377"/>
+        <location line="-1378"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -11588,7 +11588,7 @@ shown in search results:</source>
         <translation type="unfinished">すべての物件を表示する</translation>
     </message>
     <message>
-        <location line="+757"/>
+        <location line="+758"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
@@ -11597,7 +11597,7 @@ shown in search results:</source>
         <translation type="obsolete">カスタムプロパティを追加</translation>
     </message>
     <message>
-        <location line="-803"/>
+        <location line="-804"/>
         <source>Add custom property to selected objects</source>
         <translation>選択したオブジェクトにカスタムプロパティを追加</translation>
     </message>
@@ -11607,7 +11607,7 @@ shown in search results:</source>
         <translation>自動</translation>
     </message>
     <message>
-        <location line="+196"/>
+        <location line="+197"/>
         <source>Use auto measurement</source>
         <translation>自動計測を使用</translation>
     </message>

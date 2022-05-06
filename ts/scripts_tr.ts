@@ -10790,7 +10790,7 @@ shown in search results:</source>
         <translation>Oto</translation>
     </message>
     <message>
-        <location line="+196"/>
+        <location line="+197"/>
         <source>Use auto measurement</source>
         <translation type="unfinished"></translation>
     </message>

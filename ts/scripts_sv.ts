@@ -11096,7 +11096,7 @@ som visas i sökresultaten:</translation>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+196"/>
+        <location line="+197"/>
         <source>Use auto measurement</source>
         <translation>Använd automatisk mätning</translation>
     </message>

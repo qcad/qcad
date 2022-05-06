@@ -10524,7 +10524,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
         <translation type="unfinished">Auto</translation>
     </message>
     <message>
-        <location line="+196"/>
+        <location line="+197"/>
         <source>Use auto measurement</source>
         <translation type="unfinished">Automatikus mérés használata</translation>
     </message>
