@@ -1,5 +1,6 @@
 #include "qtscriptshell_QStackedLayout.h"
 
+#include <QtGlobal>
 #include <QtScript/QScriptEngine>
 #include <QVariant>
 #include <qbytearray.h>
@@ -268,7 +269,13 @@ QSize  QtScriptShell_QStackedLayout::minimumSize() const
     QScriptValue _q_function = __qtscript_self.property("minimumSize");
     if (!_q_function.isFunction() || QTSCRIPT_IS_GENERATED_FUNCTION(_q_function)
         || (__qtscript_self.propertyFlags("minimumSize") & QScriptValue::QObjectMember)) {
+
+#ifdef Q_OS_MACOS
+        // macOS on M1: random crashes in QStackedLayout::minimumSize (FS#2271):
+        return QSize(80, 840);
+#else
         return QStackedLayout::minimumSize();
+#endif
     } else {
         return qscriptvalue_cast<QSize >(_q_function.call(__qtscript_self));
     }
