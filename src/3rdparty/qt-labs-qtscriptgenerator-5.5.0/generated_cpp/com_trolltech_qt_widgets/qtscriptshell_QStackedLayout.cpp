@@ -272,7 +272,7 @@ QSize  QtScriptShell_QStackedLayout::minimumSize() const
 
 #ifdef Q_OS_MACOS
         // macOS on M1: random crashes in QStackedLayout::minimumSize (FS#2271):
-        return QSize(80, 840);
+        return QSize(0, 0);
 #else
         return QStackedLayout::minimumSize();
 #endif
