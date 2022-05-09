@@ -50,5 +50,5 @@ DrawingPreferences.init = function(basePath) {
     action.setNoState();
     action.setGroupSortOrder(2800);
     action.setSortOrder(100);
-    action.setWidgetNames(["EditMenu"]);
+    action.setWidgetNames(["EditMenu", "!EditToolBar", "!EditToolsPanel", "!EditMatrixPanel"]);
 };
