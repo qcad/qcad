@@ -2255,6 +2255,13 @@ RPolyline RPolyline::roundAllCorners(double radius) const {
     return *this;
 }
 
+RPolyline RPolyline::getPolygon(double segmentLength) const {
+    if (polylineProxy!=NULL) {
+        return polylineProxy->getPolygon(*this, segmentLength);
+    }
+    return *this;
+}
+
 RPolyline RPolyline::getPolygonHull(double angle, double tolerance, bool inner) const {
     if (polylineProxy!=NULL) {
         return polylineProxy->getPolygonHull(*this, angle, tolerance, inner);

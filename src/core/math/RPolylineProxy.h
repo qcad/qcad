@@ -67,6 +67,7 @@ public:
 
     virtual QList<RPolyline> morph(const RPolyline& polyline, const RPolyline& target, int steps, RS::Easing easing = RS::Linear, bool zLinear = true, double customFactor = RNANDOUBLE) = 0;
     virtual RPolyline roundAllCorners(const RPolyline& polyline, double radius) = 0;
+    virtual RPolyline getPolygon(const RPolyline& polyline, double segmentLength) = 0;
     virtual RPolyline getPolygonHull(const RPolyline& polyline, double angle, double tolerance, bool inner = false) = 0;
     virtual RVector insertVertexAtDistance(RPolyline& polyline, double dist) = 0;
 
