@@ -51,6 +51,8 @@ public:
     void setActivationWindow(QWidget* aw, bool activateOnMessage = true);
     QWidget* activationWindow() const;
 
+//    bool notify(QObject* receiver, QEvent* e);
+
 public slots:
     bool sendMessage(const QString& message, int timeout = 5000);
     void activateWindow();

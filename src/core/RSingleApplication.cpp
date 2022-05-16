@@ -130,3 +130,13 @@ bool RSingleApplication::event(QEvent* e) {
     bool ret = QApplication::event(e);
     return ret;
 }
+
+//bool RSingleApplication::notify(QObject* receiver, QEvent* e) {
+//    qDebug() << "RSingleApplication::notify:" << receiver->objectName();
+
+//    qDebug() << "type:" << e->type();
+
+//    RDebug::printBacktrace();
+
+//    QApplication::notify(receiver, e);
+//}
