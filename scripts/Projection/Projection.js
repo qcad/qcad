@@ -243,31 +243,46 @@ Projection.prototype.transform = function(entity, k, op, preview, flags, rec) {
         this.preTransform(entity);
     }
 
+    var explode = false;
+
     if (this.retainTexts && isTextBasedEntity(entity)) {
-        // don't explode text, only project position:
-        var e = entity.clone();
-        e.setSelected(false);
-        var p = e.getAlignmentPoint();
-        var ph = p.operator_add(new RVector(0,e.getTextHeight()));
-        //qDebug("p before:", p);
-        //qDebug("ap:", e.getAlignmentPoint());
-        this.project(p);
-        this.project(ph);
+        if (isAttributeEntity(entity)) {
+            explode = true;
+        }
+        else {
+            // don't explode text, only project position:
+            var e = entity.clone();
+            e.setSelected(false);
+            var p = e.getAlignmentPoint();
+            var ph = p.operator_add(new RVector(0,e.getTextHeight()));
+            //qDebug("p before:", p);
+            //qDebug("ph before:", ph);
+            //qDebug("ap:", e.getAlignmentPoint());
+            this.project(p);
+            this.project(ph);
 
-        // project height:
-        //qDebug("p after:", p);
-        //e.setPosition(p);
+            // project height:
+            //qDebug("p after:", p);
+            //qDebug("ph after:", ph);
+            //e.setPosition(p);
 
-        e.setAlignmentPoint(p);
-        e.setTextHeight(p.getDistanceTo(ph));
+            e.setAlignmentPoint(p);
+            e.setTextHeight(p.getDistanceTo(ph));
 
-        flags = flags | RAddObjectsOperation.UseAttributes;
-        op.addObject(e, flags);
-        return;
+            flags = flags | RAddObjectsOperation.UseAttributes;
+            op.addObject(e, flags);
+            return;
+        }
     }
 
     // explode block reference to keep attributes (colors, etc.):
     if (isBlockReferenceEntity(entity)) {
+        explode = true;
+    }
+
+    if (explode) {
+        // explode attributes to texts
+        // explode block reference
         var explodedEntities = Explode.explodeEntity(entity);
         if (!isNull(explodedEntities)) {
             for (i=0; i<explodedEntities.length; i++) {

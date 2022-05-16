@@ -588,7 +588,12 @@ Explode.explodeEntity = function(entity, options) {
         d.setParentId(RObject.INVALID_ID);
         e = new RTextEntity(document, d);
         e.setSelected(true);
-        e.copyAttributesFrom(entity.data());
+        if (isFunction(entity.data)) {
+            e.copyAttributesFrom(entity.data());
+        }
+        else {
+            e.copyAttributesFrom(entity);
+        }
         ret.push(e);
     }
 
