@@ -300,7 +300,12 @@ QSize  QtScriptShell_QStackedLayout::sizeHint() const
     QScriptValue _q_function = __qtscript_self.property("sizeHint");
     if (!_q_function.isFunction() || QTSCRIPT_IS_GENERATED_FUNCTION(_q_function)
         || (__qtscript_self.propertyFlags("sizeHint") & QScriptValue::QObjectMember)) {
+#ifdef Q_OS_MACOS
+        // macOS on M1: random crashes in QStackedLayout::minimumSize (FS#2271):
+        return QSize(0, 0);
+#else
         return QStackedLayout::sizeHint();
+#endif
     } else {
         return qscriptvalue_cast<QSize >(_q_function.call(__qtscript_self));
     }
