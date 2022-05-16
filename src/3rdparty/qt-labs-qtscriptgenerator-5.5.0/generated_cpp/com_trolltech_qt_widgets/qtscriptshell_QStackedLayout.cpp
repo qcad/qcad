@@ -272,7 +272,11 @@ QSize  QtScriptShell_QStackedLayout::minimumSize() const
 
 #ifdef Q_OS_MACOS
         // macOS on M1: random crashes in QStackedLayout::minimumSize (FS#2271):
-        return QSize(0, 0);
+        if (cacheMinimumSize.isValid()) {
+            return cacheMinimumSize;
+        }
+        cacheMinimumSize = QStackedLayout::minimumSize();
+        return cacheMinimumSize;
 #else
         return QStackedLayout::minimumSize();
 #endif
@@ -302,7 +306,11 @@ QSize  QtScriptShell_QStackedLayout::sizeHint() const
         || (__qtscript_self.propertyFlags("sizeHint") & QScriptValue::QObjectMember)) {
 #ifdef Q_OS_MACOS
         // macOS on M1: random crashes in QStackedLayout::minimumSize (FS#2271):
-        return QSize(0, 0);
+        if (cacheSizeHint.isValid()) {
+            return cacheSizeHint;
+        }
+        cacheSizeHint = QStackedLayout::sizeHint();
+        return cacheSizeHint;
 #else
         return QStackedLayout::sizeHint();
 #endif
