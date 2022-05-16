@@ -199,7 +199,6 @@ int main(int argc, char *argv[]) {
     QStringList originalArguments;
     for (int i=0; i<argc; i++) {
         QString a = argv[i];
-        qDebug() << "arg:" << a;
         originalArguments.append(a);
     }
     RSettings::setOriginalArguments(originalArguments);
@@ -220,6 +219,8 @@ int main(int argc, char *argv[]) {
     }
 
     RSingleApplication* app = new RSingleApplication(appId, argc, argv, guiEnabled);
+
+    // make sure arguments are correctly encoded:
     RSettings::setOriginalArguments(QCoreApplication::arguments());
 
 #if defined(Q_OS_MAC) || defined(Q_OS_LINUX)
