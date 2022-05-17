@@ -30,13 +30,26 @@ Q_DECLARE_METATYPE(QSpacerItem*)
 Q_DECLARE_METATYPE(QTimerEvent*)
 
 QtScriptShell_QStackedLayout::QtScriptShell_QStackedLayout()
-    : QStackedLayout(), cacheMinimumSizeOri(-1), cacheSizeHintOri(-1) {}
+    : QStackedLayout()
+#ifdef Q_OS_MACOS
+    , cacheMinimumSizeOri(-1), cacheSizeHintOri(-1)
+#endif
+{}
+
 
 QtScriptShell_QStackedLayout::QtScriptShell_QStackedLayout(QLayout*  parentLayout)
-    : QStackedLayout(parentLayout), cacheMinimumSizeOri(-1), cacheSizeHintOri(-1) {}
+    : QStackedLayout(parentLayout)
+#ifdef Q_OS_MACOS
+    , cacheMinimumSizeOri(-1), cacheSizeHintOri(-1)
+#endif
+{}
 
 QtScriptShell_QStackedLayout::QtScriptShell_QStackedLayout(QWidget*  parent)
-    : QStackedLayout(parent), cacheMinimumSizeOri(-1), cacheSizeHintOri(-1) {}
+    : QStackedLayout(parent)
+#ifdef Q_OS_MACOS
+    , cacheMinimumSizeOri(-1), cacheSizeHintOri(-1)
+#endif
+{}
 
 QtScriptShell_QStackedLayout::~QtScriptShell_QStackedLayout() {}
 
