@@ -452,12 +452,25 @@ Print.getPaperBox = function(document) {
 
 /**
  * Auto fit drawing to page size.
+ * \param ori: True: auto set page orientation
  */
-Print.autoFitDrawing = function(di) {
+Print.autoFitDrawing = function(di, ori) {
+    if (isNull(ori)) {
+        ori = false;
+    }
+
     var document = di.getDocument();
     // drawing bounding box in drawing units:
     var bBox = document.getBoundingBox(true, true);
     //qDebug("bb: ", bBox);
+    if (ori) {
+        if (bBox.getWidth()>bBox.getHeight()) {
+            Print.setPageOrientationEnum(di, QPrinter.Landscape);
+        }
+        else {
+            Print.setPageOrientationEnum(di, QPrinter.Portrait);
+        }
+    }
     Print.autoFitBox(di, bBox);
     Print.centerBox(di, bBox);
 };
