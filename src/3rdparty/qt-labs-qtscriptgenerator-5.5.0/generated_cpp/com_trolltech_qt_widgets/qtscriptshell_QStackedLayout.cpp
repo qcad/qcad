@@ -15,6 +15,8 @@
 #include <qstackedlayout.h>
 #include <qwidget.h>
 
+#include <QToolBar>
+
 #define QTSCRIPT_IS_GENERATED_FUNCTION(fun) ((fun.data().toUInt32() & 0xFFFF0000) == 0xBABE0000)
 
 Q_DECLARE_METATYPE(QLayoutItem*)
@@ -28,13 +30,13 @@ Q_DECLARE_METATYPE(QSpacerItem*)
 Q_DECLARE_METATYPE(QTimerEvent*)
 
 QtScriptShell_QStackedLayout::QtScriptShell_QStackedLayout()
-    : QStackedLayout() {}
+    : QStackedLayout(), cacheMinimumSizeOri(-1), cacheSizeHintOri(-1) {}
 
 QtScriptShell_QStackedLayout::QtScriptShell_QStackedLayout(QLayout*  parentLayout)
-    : QStackedLayout(parentLayout) {}
+    : QStackedLayout(parentLayout), cacheMinimumSizeOri(-1), cacheSizeHintOri(-1) {}
 
 QtScriptShell_QStackedLayout::QtScriptShell_QStackedLayout(QWidget*  parent)
-    : QStackedLayout(parent) {}
+    : QStackedLayout(parent), cacheMinimumSizeOri(-1), cacheSizeHintOri(-1) {}
 
 QtScriptShell_QStackedLayout::~QtScriptShell_QStackedLayout() {}
 
@@ -272,11 +274,22 @@ QSize  QtScriptShell_QStackedLayout::minimumSize() const
 
 #ifdef Q_OS_MACOS
         // macOS on M1: random crashes in QStackedLayout::minimumSize (FS#2271):
-        if (cacheMinimumSize.isValid()) {
-            return cacheMinimumSize;
+        QWidget* parent = parentWidget();
+        if (parent) {
+            QWidget* parent2 = parent->parentWidget();
+            QToolBar* tb = qobject_cast<QToolBar*>(parent2);
+            if (tb) {
+                Qt::Orientation ori = tb->orientation();
+                if (cacheMinimumSize.isValid() && cacheSizeHintOri==(int)ori) {
+                    return cacheMinimumSize;
+                }
+                cacheMinimumSize = QStackedLayout::minimumSize();
+                cacheMinimumSizeOri=(int)ori;
+                return cacheMinimumSize;
+            }
+
         }
-        cacheMinimumSize = QStackedLayout::minimumSize();
-        return cacheMinimumSize;
+        return QStackedLayout::minimumSize();
 #else
         return QStackedLayout::minimumSize();
 #endif
@@ -306,11 +319,21 @@ QSize  QtScriptShell_QStackedLayout::sizeHint() const
         || (__qtscript_self.propertyFlags("sizeHint") & QScriptValue::QObjectMember)) {
 #ifdef Q_OS_MACOS
         // macOS on M1: random crashes in QStackedLayout::minimumSize (FS#2271):
-        if (cacheSizeHint.isValid()) {
-            return cacheSizeHint;
+        QWidget* parent = parentWidget();
+        if (parent) {
+            QWidget* parent2 = parent->parentWidget();
+            QToolBar* tb = qobject_cast<QToolBar*>(parent2);
+            if (tb) {
+                Qt::Orientation ori = tb->orientation();
+                if (cacheSizeHint.isValid() && cacheSizeHintOri==(int)ori) {
+                    return cacheSizeHint;
+                }
+                cacheSizeHint = QStackedLayout::sizeHint();
+                cacheSizeHintOri=(int)ori;
+                return cacheSizeHint;
+            }
         }
-        cacheSizeHint = QStackedLayout::sizeHint();
-        return cacheSizeHint;
+        return QStackedLayout::sizeHint();
 #else
         return QStackedLayout::sizeHint();
 #endif
