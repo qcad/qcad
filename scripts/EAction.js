@@ -1205,11 +1205,6 @@ EAction.getCadToolBarPanel = function(title, objectName, hasBackButton) {
         toolBar.objectName = "CadQToolBar";
         cadToolBar = new CadToolBar(toolBar);
         toolBar.addWidget(cadToolBar);
-        if (RS.getSystemId()==="osx") {
-            // size hint of tool bar not available due to crashes in QStackedLayout
-            // disable floatable toolbar:
-            toolBar.floatable = false;
-        }
         cadToolBar.updateIconSize();
 
         toolBar.topLevelChanged.connect(function(onOff) {
