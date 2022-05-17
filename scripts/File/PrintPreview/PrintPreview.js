@@ -275,8 +275,8 @@ PrintPreviewImpl.prototype.beginEvent = function() {
     action.triggered.connect(this, "updateBackgroundDecoration");
 
     if (initialZoom==="Auto") {
-        qDebug("auto fit");
-        this.slotAutoFitDrawing();
+        // auto fit drawing and auto set orientation:
+        this.slotAutoFitDrawing(true);
     }
     else if (initialZoom==="View") {
         Print.setColumns(di, 1);
@@ -981,10 +981,10 @@ PrintPreviewImpl.prototype.slotAutoFitBox = function(box) {
 /**
  * Auto fit drawing button clicked in options toolbar.
  */
-PrintPreviewImpl.prototype.slotAutoFitDrawing = function() {
+PrintPreviewImpl.prototype.slotAutoFitDrawing = function(ori) {
     var di = this.getDocumentInterface();
     var document = di.getDocument();
-    Print.autoFitDrawing(di);
+    Print.autoFitDrawing(di, ori);
     PrintPreviewImpl.updateScaleString(document);
 
     // needed to update pattern scaling according to drawing scale:
