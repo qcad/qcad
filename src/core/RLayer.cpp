@@ -244,14 +244,13 @@ QPair<QVariant, RPropertyAttributes> RLayer::getProperty(RPropertyTypeId& proper
 /**
  * Stream operator for QDebug
  */
-QDebug operator<<(QDebug dbg, const RLayer& l) {
+void RLayer::print(QDebug dbg) const {
+    dbg.nospace() << "RLayer(";
+    RObject::print(dbg);
     dbg.nospace()
-       << "\nRLayer("
-       << (RObject&) l
-       << ", name: " << l.getName()
-       << ", color: " << l.getColor()
-       << ", lineweight: " << l.getLineweight()
-       << ", linetype: " << l.getLinetypeId()
-       << ")";
-    return dbg.space();
+        << ", name: " << getName()
+        << ", color: " << getColor()
+        << ", lineweight: " << getLineweight()
+        << ", linetype: " << getLinetypeId()
+        << ")";
 }
