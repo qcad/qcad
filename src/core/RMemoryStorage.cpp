@@ -1026,15 +1026,17 @@ void RMemoryStorage::setObjectHandle(RObject& object, RObject::Handle objectHand
     }
 
     if (objectHandleMap.contains(objectHandle)) {
-        qWarning() << "cannot assign original handle to object";
+        qWarning() << "cannot assign original handle to object" << QString("0x%1").arg(objectHandle, 0, 16);
         QSharedPointer<RObject> obj = queryObjectByHandle(objectHandle);
         if (obj.isNull()) {
             qWarning() << "collision with null object";
         }
         else {
             qWarning() << "collision with object of type:" << obj->getType();
+            //obj->dump();
         }
         objectHandle = getNewObjectHandle();
+        qWarning() << "new handle" << QString("0x%1").arg(objectHandle, 0, 16);
     }
     Q_ASSERT(!objectHandleMap.contains(objectHandle));
     RStorage::setObjectHandle(object, objectHandle);
