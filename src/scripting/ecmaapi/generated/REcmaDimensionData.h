@@ -108,7 +108,13 @@
         setUpperTolerance
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getUpperTolerance
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setLowerTolerance
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLowerTolerance
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setTextPosition

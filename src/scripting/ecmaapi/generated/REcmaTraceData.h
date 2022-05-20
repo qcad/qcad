@@ -35,6 +35,12 @@
             QScriptEngine *engine)
         ;static  QScriptValue getREntityData(QScriptContext *context,
             QScriptEngine *engine)
+        ;static  QScriptValue getRPolyline(QScriptContext *context,
+            QScriptEngine *engine)
+        ;static  QScriptValue getRShape(QScriptContext *context,
+            QScriptEngine *engine)
+        ;static  QScriptValue getRExplodable(QScriptContext *context,
+            QScriptEngine *engine)
         ;
 
     // returns class name:

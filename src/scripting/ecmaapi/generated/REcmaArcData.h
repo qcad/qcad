@@ -33,6 +33,10 @@
     // conversion functions for base classes:
     static  QScriptValue getREntityData(QScriptContext *context,
             QScriptEngine *engine)
+        ;static  QScriptValue getRArc(QScriptContext *context,
+            QScriptEngine *engine)
+        ;static  QScriptValue getRShape(QScriptContext *context,
+            QScriptEngine *engine)
         ;
 
     // returns class name:
@@ -41,6 +45,147 @@
 
     // returns all base classes (in case of multiple inheritance):
     static  QScriptValue getBaseClasses(QScriptContext *context, QScriptEngine *engine) 
+        ;
+        // properties of secondary base class RArc:
+        static  QScriptValue getSetCenter
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue getSetRadius
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue getSetStartAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue getSetEndAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue getSetReversed
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;
+
+        // methods of secondary base class RArc:
+        static  QScriptValue
+        getShapeType
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        clone
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isDirected
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getVectorProperties
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDoubleProperties
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getBoolProperties
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isFullCircle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        createFrom3Points
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        createFrom2PBulge
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        createTangential
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        createBiarc
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPointCloud
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setCenter
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setRadius
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setStartAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setEndAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setReversed
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isAngleWithinArc
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDiameter
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDiameter
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setLength
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getArea
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setArea
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getChordArea
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getSideOfPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getSweep
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setSweep
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getStartPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getEndPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPointAtAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getAngleAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getMiddlePoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        moveStartPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        moveEndPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        moveMiddlePoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getTransformed
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDistanceFromStart
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        approximateWithLinesTan
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getTangents
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getOffsetShapes
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        splitAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        splitAtQuadrantLines
+        (QScriptContext* context, QScriptEngine* engine) 
         ;
 
     // properties:
@@ -52,6 +197,66 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getArc
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isValid
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getEndPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setZ
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        to2D
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getBoundingBox
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getMiddlePoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getCenterPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getArcReferencePoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPointsWithDistanceToEnd
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getIntersectionPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getVectorTo
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDistanceTo
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        intersectsWith
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        move
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        rotate
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        scale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        mirror
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        flipHorizontal
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        flipVertical
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        stretch
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getCenter

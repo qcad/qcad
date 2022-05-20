@@ -352,6 +352,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, roundAllCorners, "roundAllCorners");
             
+            REcmaHelper::registerFunction(&engine, proto, getPolygon, "getPolygon");
+            
             REcmaHelper::registerFunction(&engine, proto, getPolygonHull, "getPolygonHull");
             
         engine.setDefaultPrototype(
@@ -11329,6 +11331,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolyline::roundAllCorners", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolyline::getPolygon
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolyline::getPolygon", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::getPolygon";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("getPolygon", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RPolyline'
+    RPolyline cppResult =
+        
+               self->getPolygon(a0);
+        // return type: RPolyline
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getPolygon().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolyline::getPolygon", context, engine);
             return result;
         }
          QScriptValue

@@ -33,6 +33,12 @@
     // conversion functions for base classes:
     static  QScriptValue getREntityData(QScriptContext *context,
             QScriptEngine *engine)
+        ;static  QScriptValue getRSpline(QScriptContext *context,
+            QScriptEngine *engine)
+        ;static  QScriptValue getRShape(QScriptContext *context,
+            QScriptEngine *engine)
+        ;static  QScriptValue getRExplodable(QScriptContext *context,
+            QScriptEngine *engine)
         ;
 
     // returns class name:
@@ -41,6 +47,207 @@
 
     // returns all base classes (in case of multiple inheritance):
     static  QScriptValue getBaseClasses(QScriptContext *context, QScriptEngine *engine) 
+        ;
+        // properties of secondary base class RSpline:
+        static  QScriptValue getSetControlPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue getSetKnotVector
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue getSetWeights
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue getSetFitPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue getSetDegree
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;
+
+        // methods of secondary base class RSpline:
+        static  QScriptValue
+        operator_assign
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getShapeType
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        clone
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isDirected
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        copySpline
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        createSplinesFromArc
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        createBezierFromSmallArc
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getVectorProperties
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getIntProperties
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDoubleProperties
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getBoolProperties
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isInterpolated
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        appendControlPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        removeLastControlPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setControlPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        countControlPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getControlPointAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        removeFirstFitPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        removeLastFitPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setFitPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        countFitPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasFitPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getFitPointAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setKnotVector
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        appendKnot
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setWeights
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDegree
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getOrder
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isGeometricallyClosed
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getSideOfPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setTangents
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        unsetTangents
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setTangentAtStart
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        unsetTangentAtStart
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setTangentAtEnd
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        unsetTangentAtEnd
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        updateTangentsPeriodic
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getMiddlePoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPointCloud
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isOnShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getTransformed
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDistanceFromStart
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        splitAtPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        splitAtParams
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getExploded
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getExplodedBezier
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getExplodedWithSegmentLength
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getBezierSegments
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getTDelta
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getTMin
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getTMax
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getTAtPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getTAtDistance
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDistanceAtT
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getSegments
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDiscontinuities
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        updateFromControlPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        updateFromFitPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        splitAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isDirty
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getSelfIntersectionPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasProxy
+        (QScriptContext* context, QScriptEngine* engine) 
         ;
 
     // properties:
@@ -52,6 +259,60 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getBoundingBox
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getEndPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setZ
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        to2D
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getMiddlePoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getCenterPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getArcReferencePoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPointsWithDistanceToEnd
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getIntersectionPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getVectorTo
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDistanceTo
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        intersectsWith
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        move
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        rotate
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        scale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        mirror
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        flipHorizontal
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        flipVertical
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        stretch
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getReferencePoints

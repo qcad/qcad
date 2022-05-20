@@ -105,7 +105,11 @@
             
             REcmaHelper::registerFunction(&engine, proto, setUpperTolerance, "setUpperTolerance");
             
+            REcmaHelper::registerFunction(&engine, proto, getUpperTolerance, "getUpperTolerance");
+            
             REcmaHelper::registerFunction(&engine, proto, setLowerTolerance, "setLowerTolerance");
+            
+            REcmaHelper::registerFunction(&engine, proto, getLowerTolerance, "getLowerTolerance");
             
             REcmaHelper::registerFunction(&engine, proto, setTextPosition, "setTextPosition");
             
@@ -2102,6 +2106,55 @@
             return result;
         }
          QScriptValue
+        REcmaDimensionData::getUpperTolerance
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::getUpperTolerance", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getUpperTolerance";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("getUpperTolerance", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getUpperTolerance();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getUpperTolerance().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::getUpperTolerance", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaDimensionData::setLowerTolerance
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -2154,6 +2207,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimensionData::setLowerTolerance", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::getLowerTolerance
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::getLowerTolerance", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getLowerTolerance";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("getLowerTolerance", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getLowerTolerance();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getLowerTolerance().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::getLowerTolerance", context, engine);
             return result;
         }
          QScriptValue
