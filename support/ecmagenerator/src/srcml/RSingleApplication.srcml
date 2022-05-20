@@ -52,6 +52,8 @@
     <function_decl><type><name>void</name></type> <name>setActivationWindow</name><parameter_list>(<param><decl><type><name>QWidget</name>*</type> <name>aw</name></decl></param>, <param><decl><type><name>bool</name></type> <name>activateOnMessage</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>QWidget</name>*</type> <name>activationWindow</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
+<comment type="line">//    bool notify(QObject* receiver, QEvent* e);</comment>
+
 </public><public>public slots:
     <function_decl><type><name>bool</name></type> <name>sendMessage</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>, <param><decl><type><name>int</name></type> <name>timeout</name> =<init> <expr>5000</expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>activateWindow</name><parameter_list>()</parameter_list>;</function_decl>

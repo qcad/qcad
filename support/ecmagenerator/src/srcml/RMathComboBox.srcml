@@ -67,7 +67,9 @@
 
         <if>if <condition>(<expr><name>on</name></expr>)</condition><then> <block>{
             <decl_stmt><decl><type><name>QStringList</name></type> <name>scales</name> =<init> <expr><call><name><name>RSettings</name>::<name>getScaleList</name></name><argument_list>(<argument><expr><name>unit</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+            <constructor_decl><name>blockSignals</name><parameter_list>(<param><decl><type><name>true</name></type></decl></param>)</parameter_list>;</constructor_decl>
             <constructor_decl><name>addItems</name><parameter_list>(<param><decl><type><name>scales</name></type></decl></param>)</parameter_list>;</constructor_decl>
+            <constructor_decl><name>blockSignals</name><parameter_list>(<param><decl><type><name>false</name></type></decl></param>)</parameter_list>;</constructor_decl>
         }</block></then></if>
     }</block></function>
 

@@ -177,11 +177,18 @@
         <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
     }</block></function>
 
+    <function><type><name>QString</name></type> <name>getUpperTolerance</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>upperTolerance</name></expr>;</return>
+    }</block></function>
+
     <function><type><name>void</name></type> <name>setLowerTolerance</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>t</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>lowerTolerance</name> = <name>t</name></expr>;</expr_stmt>
         <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
     }</block></function>
 
+    <function><type><name>QString</name></type> <name>getLowerTolerance</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>lowerTolerance</name></expr>;</return>
+    }</block></function>
 
     <function><type><name>void</name></type> <name>setTextPosition</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p</name></decl></param>)</parameter_list> <block>{
         <if>if <condition>(<expr><name>p</name>.<call><name>isSane</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{

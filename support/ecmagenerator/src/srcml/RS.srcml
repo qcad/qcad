@@ -29,7 +29,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QPair&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QStringList&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QTextCodec&gt;</cpp:file></cpp:include>
+<comment type="line">//#include &lt;QTextCodec&gt;</comment>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QVariant&gt;</cpp:file></cpp:include>
 
 <cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x060000</expr></cpp:if>
@@ -819,7 +819,7 @@
     <comment type="block">/**
      * \nonscriptable
      */</comment>
-    <function_decl><type><name>static</name> <name>long</name> <name>long</name></type> <name>getScreenCount</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>int</name></type> <name>getScreenCount</name><parameter_list>()</parameter_list>;</function_decl>
     <comment type="block">/**
      * \nonscriptable
      */</comment>
