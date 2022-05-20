@@ -176,11 +176,18 @@ public:
         update();
     }
 
+    QString getUpperTolerance() const {
+        return upperTolerance;
+    }
+
     void setLowerTolerance(const QString& t) {
         lowerTolerance = t;
         update();
     }
 
+    QString getLowerTolerance() const {
+        return lowerTolerance;
+    }
 
     void setTextPosition(const RVector& p) {
         if (p.isSane()) {
