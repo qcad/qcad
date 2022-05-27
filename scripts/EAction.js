@@ -979,7 +979,7 @@ EAction.getMenu = function(title, objectName, initFunction) {
     var appWin = EAction.getMainWindow();
     var menuBar = appWin.menuBar();
     var menu;
-    for ( var i in menuBar.children()) {
+    for (var i in menuBar.children()) {
         menu = menuBar.children()[i];
         if (menu.objectName === objectName) {
             break;
