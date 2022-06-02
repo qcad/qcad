@@ -80,7 +80,7 @@
     <message>
         <location line="+3"/>
         <source>Plugins and script add-ons are subject to their respective license (see &quot;Plugins&quot; tab).</source>
-        <translation type="unfinished">プラグインおよびスクリプトアドオンには、それぞれのライセンスが適用されます（「プラグイン」タブを参照）。</translation>
+        <translation>プラグインおよびスクリプトアドオンには、それぞれのライセンスが適用されます（「プラグイン」タブを参照）。</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -398,7 +398,7 @@ QCADを再起動してください。</translation>
     <message>
         <location line="+7"/>
         <source>Reset to &apos;Undefined&apos;</source>
-        <translation type="unfinished">未定義」にリセットする</translation>
+        <translation>「未定義」にリセットする</translation>
     </message>
 </context>
 <context>
@@ -959,7 +959,7 @@ QCADを再起動してください。</translation>
         <location line="+19"/>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>無題の図面に対する自動保存バックアップファイルが %n 個見つかりました。
 復元しますか？</numerusform>
         </translation>

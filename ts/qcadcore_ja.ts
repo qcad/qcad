@@ -352,7 +352,7 @@
     <message>
         <location line="+3"/>
         <source>Attributes</source>
-        <translation type="unfinished">属性</translation>
+        <translation>属性</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+96"/>
@@ -530,7 +530,7 @@
     <message>
         <location line="+1"/>
         <source>Text Width</source>
-        <translation type="unfinished">文字幅</translation>
+        <translation>テキストの幅</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -647,17 +647,17 @@
     <message>
         <location line="+1"/>
         <source>Plottable</source>
-        <translation type="unfinished">プロッタブル</translation>
+        <translation>プロット可能</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Snappable</source>
-        <translation type="unfinished">スナップ可能</translation>
+        <translation>スナップ可能</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Off is Freeze</source>
-        <translation type="unfinished">オフはフリーズ</translation>
+        <translation type="unfinished">オフはフリーズです</translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
@@ -727,17 +727,17 @@
     <message>
         <location line="+1"/>
         <source>Text height</source>
-        <translation type="unfinished">文字高さ</translation>
+        <translation>テキストの高さ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation type="unfinished">ディメンションラインギャップ</translation>
+        <translation type="unfinished">寸法線のギャップ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow size</source>
-        <translation type="unfinished">矢印の大きさ</translation>
+        <translation>矢印のサイズ</translation>
     </message>
     <message>
         <location line="+1"/>

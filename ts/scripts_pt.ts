@@ -12584,7 +12584,7 @@ nos resultados de busca:</translation>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
         <source>&amp;Round</source>
-        <translation>&amp;Rodada</translation>
+        <translation>&amp;Canto arredondado</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/Round.ui" line="+17"/>
