@@ -1936,6 +1936,15 @@ bool RPolyline::mirror(const RLine& axis) {
 }
 
 bool RPolyline::reverse() {
+    QList<double> nStartWidths = startWidths;
+    QList<double> nEndWidths = endWidths;
+    double swl = nStartWidths.takeLast();
+    double ewl = nEndWidths.takeLast();
+    std::reverse(nStartWidths.begin(), nStartWidths.end());
+    std::reverse(nEndWidths.begin(), nEndWidths.end());
+    nStartWidths.append(swl);
+    nEndWidths.append(ewl);
+
     RPolyline nPolyline;
     QList<QSharedPointer<RShape> > segments = getExploded();
 
@@ -1948,6 +1957,8 @@ bool RPolyline::reverse() {
         nPolyline.convertToClosed();
     }
     *this = nPolyline;
+    startWidths = nEndWidths;
+    endWidths = nStartWidths;
 
     Q_ASSERT(vertices.length()==bulges.length());
     Q_ASSERT(vertices.length()==startWidths.length());
