@@ -2,3 +2,23 @@
 a new window within the QCAD application window. You can switch between
 different loaded drawings using the menu "Windows" or the tabs at the top of
 the drawing area.</p>
+
+<h3>PDF Files</h3>
+
+<p>
+If you open a PDF file, QCAD show a dialog. In this dialog, you can specify 
+the page to import, if you want to import images and if clipping should be applied. 
+Imported images are stored in a new folder called "pdf_images" located where the 
+PDF file is located.
+Without clipping, all vector data is imported from the PDF file. This might include 
+data outside the paper.
+</p>
+
+<h3>CXF Font Files</h3>
+
+<p>
+QCAD can also open CXF font files. When opening such a file, each glyph is loaded 
+into a separate block. You can then edit the glyph or add new glyphs.
+Block names are in the format "[Hexadecimal Unicode] [Character]", 
+for example "0x0041 A" for a capital "A" with Unicode 65 (41 in hexadecimal).
+</p>
