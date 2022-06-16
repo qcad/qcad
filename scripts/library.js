@@ -2886,6 +2886,12 @@ function makeQDirSortFlags() {
     return makeFlags.apply(this, argumentsNew);
 }
 
+function makeQtMatchFlags() {
+    var argumentsNew = [].slice.call(arguments, 0);
+    argumentsNew.unshift(Qt.MatchFlags);
+    return makeFlags.apply(this, argumentsNew);
+}
+
 function makeFlags() {
     if (RSettings.isQt(6)) {
         var ret = 0;
@@ -2898,6 +2904,16 @@ function makeFlags() {
         var argumentsNew = [].slice.call(arguments, 0);
         var flgs = argumentsNew.shift();
         return flgs.apply(this, argumentsNew);
+    }
+}
+
+function getQLocaleName(locale) {
+    if (isFunction(locale.name)) {
+        return locale.name();
+    }
+    else {
+        // QJSEngine does not allow "name" as function.
+        return locale.name2();
     }
 }
 

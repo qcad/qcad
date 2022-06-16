@@ -62,8 +62,9 @@ FirstStart.prototype.showDialog = function() {
     }
 
     // try to set the locale from system
-    var systemLocale = QLocale.system().name();
-    var flags = new Qt.MatchFlags(Qt.MatchExactly);
+    var sysLocale = QLocale.system();
+    var systemLocale = getQLocaleName(sysLocale);
+    var flags = makeQtMatchFlags(Qt.MatchExactly);
     var index = langCombo.findData(systemLocale, Qt.UserRole, flags);
     if (index == -1) {
         var re = new RegExp("(.+)_(.+)", "i");
@@ -74,7 +75,7 @@ FirstStart.prototype.showDialog = function() {
         } else {
             lang = found[1];
         }
-        flags = new Qt.MatchFlags(Qt.MatchContains);
+        flags = makeQtMatchFlags(Qt.MatchContains);
         index = langCombo.findData(lang, Qt.UserRole, flags);
     }
     if (index != -1) {
