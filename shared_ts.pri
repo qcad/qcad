@@ -1,6 +1,7 @@
 TSDIR = ts
 
 TRANSLATIONS = \
+    $$PWD/ts/$${NAME}_bg.ts \
     $$PWD/ts/$${NAME}_cs.ts \
     $$PWD/ts/$${NAME}_da.ts \
     $$PWD/ts/$${NAME}_de.ts \

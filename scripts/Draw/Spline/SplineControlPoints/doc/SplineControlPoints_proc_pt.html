@@ -1,13 +1,28 @@
-<ol>
-  <li>
-  </li>
-  <li>
-  </li>
-  <li>
-  </li>
-  <li>
-  </li>
-</ol>
-
-<p>
-</p>
+<div>
+  <ol>
+    <li>Escolher o grau da estria na barra de ferramentas de opções. Os graus
+    suportados são 2 (quadrática b-spline) e 3 (cubic b-spline). Quanto mais
+    alto for o grau, mais "suave" se torna a curva. 
+    <br />Note-se que uma b-spline quadrática requer por definição pelo menos 3
+    pontos de controlo, enquanto uma b-spline cúbica tem pelo menos 4 pontos de
+    controlo.</li>
+    <li>Marque a caixa de verificação 'Fechado' na barra de ferramentas de
+    opções, se quiser criar uma estria fechada. Estrias fechadas são loops
+    fechados contínuos.</li>
+    <li>Especificar os pontos de controlo. Depois de definir o terceiro (para
+    b-splines quadráticos) ou quarto (para b-splines cúbicos) ponto de
+    controlo, será mostrada uma pré-visualização. Pode remover novamente o
+    último ponto de controlo clicando no botão 'Desfazer' na barra de
+    ferramentas de opções.</li>
+    <li>Carregue em escapar ou clique no botão direito do rato depois de
+    definir o último ponto para confirmar a forma da estria.</li>
+    <li>Pode agora criar outra estria ou clicar novamente com o botão direito
+    do rato para terminar a ferramenta.</li>
+  </ol>
+  <p>Exemplo para duas estrias abertas (quadrática e cúbica): 
+  <br />
+  <img src="SplineControlPoints01.png" class="figure" />
+  <br />Exemplo para dois splines fechados e periódicos (quadrático e cúbico): 
+  <br />
+  <img src="SplineControlPoints02.png" class="figure" /></p>
+</div>

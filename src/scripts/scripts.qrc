@@ -2006,8 +2006,14 @@
     <file alias="scripts/Modify/Reverse/Reverse.svg">../../scripts/Modify/Reverse/Reverse.svg</file>
     <file alias="scripts/Modify/Reverse/ReverseInit.js">../../scripts/Modify/Reverse/ReverseInit.js</file>
     <file alias="scripts/Modify/Reverse/Tests/ReverseTest00.js">../../scripts/Modify/Reverse/Tests/ReverseTest00.js</file>
+    <file alias="scripts/Modify/Reverse/Tests/ReverseTest01.js">../../scripts/Modify/Reverse/Tests/ReverseTest01.js</file>
+    <file alias="scripts/Modify/Reverse/Tests/ReverseTest02.js">../../scripts/Modify/Reverse/Tests/ReverseTest02.js</file>
     <file alias="scripts/Modify/Reverse/Tests/data/entities.dxf">../../scripts/Modify/Reverse/Tests/data/entities.dxf</file>
+    <file alias="scripts/Modify/Reverse/Tests/data/polyline01.dxf">../../scripts/Modify/Reverse/Tests/data/polyline01.dxf</file>
+    <file alias="scripts/Modify/Reverse/Tests/data/polyline02.dxf">../../scripts/Modify/Reverse/Tests/data/polyline02.dxf</file>
     <file alias="scripts/Modify/Reverse/Tests/required/ReverseTest00_000.dxf">../../scripts/Modify/Reverse/Tests/required/ReverseTest00_000.dxf</file>
+    <file alias="scripts/Modify/Reverse/Tests/required/ReverseTest01_000.dxf">../../scripts/Modify/Reverse/Tests/required/ReverseTest01_000.dxf</file>
+    <file alias="scripts/Modify/Reverse/Tests/required/ReverseTest02_000.dxf">../../scripts/Modify/Reverse/Tests/required/ReverseTest02_000.dxf</file>
     <file alias="scripts/Modify/Rotate/ByMouse-inverse.svg">../../scripts/Modify/Rotate/ByMouse-inverse.svg</file>
     <file alias="scripts/Modify/Rotate/ByMouse.svg">../../scripts/Modify/Rotate/ByMouse.svg</file>
     <file alias="scripts/Modify/Rotate/PreferencesPage.ui">../../scripts/Modify/Rotate/PreferencesPage.ui</file>
@@ -2739,6 +2745,7 @@
     <file alias="scripts/splashscreen@2x.png">../../scripts/splashscreen@2x.png</file>
     <file alias="scripts/sprintf.js">../../scripts/sprintf.js</file>
     <file alias="ts/proscripts_fi.qm">../../ts/proscripts_fi.qm</file>
+    <file alias="ts/scripts_bg.qm">../../ts/scripts_bg.qm</file>
     <file alias="ts/scripts_cs.qm">../../ts/scripts_cs.qm</file>
     <file alias="ts/scripts_da.qm">../../ts/scripts_da.qm</file>
     <file alias="ts/scripts_de.qm">../../ts/scripts_de.qm</file>

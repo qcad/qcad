@@ -1,1 +1,45 @@
-<p></p>
+<div>
+  <p>QCADのコマンドラインでは、コマンドの起動、座標の入力、距離や半径などの値の入力を行うことができます。</p>
+  <h3>座標の入力</h3>
+  <p>絶対座標は、"x,y "の形式で入力します。</p>
+  <p class="code">40,5</p>
+  <p>相対座標は、フォーマット "@x,y" で入力されます。</p>
+  <p class="code">@10,6</p>
+  <p>絶対極座標は、「distance&lt;angle」の形式で入力します。</p>
+  <p class="code">10&lt;30</p>
+  <p>相対極座標は「@distance&lt;angle」のフォーマットで入力します。</p>
+  <p class="code">@10&lt;45</p>
+  <p>座標や値を入力する際に、既知の値に基づいて座標を計算するための
+  <a href="#expr">数式を</a>使用することができます。例えば、座標10,5は、次のように入力することもできます。</p>
+  <p class="code">5+5,30/6</p>
+  <h3>計算機</h3>
+  <p>コマンドラインは、電卓として使用することもできます。そのためには、等号の後に
+  <a href="#expr">数式を</a>入力します。</p>
+  <p class="code">=3+4
+  <br />7</p>
+  <p>変数を使って値を保存することができます。</p>
+  <p class="code">=a=5+6
+  <br />11
+  <br />=a/2
+  <br />5.5
+  <br /></p>
+  <a name="expr"></a>
+  <h3>数学的表現</h3>
+  <p>利用可能な数学定数は以下の通りです。</p>
+  <p class="code">円周率、ln2、ln10、log2e、log10e、sqrt1_2、sqrt2</p>
+  <p>使用可能な数学関数は以下の通りです。</p>
+  <p class="code">abs, ceil, floor, exp, log, max, min, pow, sqrt, random,
+  round, rad2deg, deg2rad, sin, cos, tan, asin, acos, atan, atan2, log10,
+  log1p, log2, sign, cosh, sinh, tanh, acosh, asinh, atanh, expm1, hypot, cbrt,
+  trunc.</p>
+  <p>これらの定数や関数のほとんどは、ECMAScript（JavaScript）の標準関数であり、オンラインで文書化されています。標準的な
+  ECMAScript では、これらの関数は Math クラスの一部ですので、関数
+  <i>abs</i>は
+  <i>Math.abs</i>と書かなければなりません。QCAD のコマンドラインでは、便宜上、
+  <i>Math.の</i>部分を省くことができます。三角関数（sin, cos, tan, asin, acos, atan,
+  atan2）は度単位で角度を受け取ったり、返したりします。これらの関数のラジアン・バージョンを好む場合は、代わりに元の
+  <i>Math.</i>関数を使用します。</p>
+  <p>
+  <i>rad2deg</i>と
+  <i>deg2rad</i>関数は、ラジアンと度数の間で角度を変換するために使用できます。</p>
+</div>
