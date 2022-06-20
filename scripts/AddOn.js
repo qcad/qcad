@@ -525,7 +525,9 @@ AddOn.getAddOns = function(dir) {
         var fileInfo = new QFileInfo(dirInfo.filePath() + "/" + dirInfo.fileName() + ".js");
 
         if (dirInfo.fileName().startsWith("AutoLoad")) {
-            RAutoLoadEcma.addAutoLoadFile(fileInfo.filePath());
+            if (typeof(RAutoLoadEcma)!=="undefined") {
+                RAutoLoadEcma.addAutoLoadFile(fileInfo.filePath());
+            }
         }
         else {
             if (fileInfo.exists() && !AddOn.isIgnored(fileInfo.absoluteFilePath())) {

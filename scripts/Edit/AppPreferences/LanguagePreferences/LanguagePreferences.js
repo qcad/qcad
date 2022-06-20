@@ -17,8 +17,14 @@
  * along with QCAD.
  */
 
-include("../../EAction.js");
-include("../../WidgetFactory.js");
+include("scripts/EAction.js");
+include("scripts/WidgetFactory.js");
+
+function LanguagePreferences(guiAction) {
+    //EAction.call(this, guiAction);
+}
+
+LanguagePreferences.prototype = {}; //new EAction();
 
 LanguagePreferences.localLanguageName = [];
 LanguagePreferences.localLanguageName["cs"] = "Čeština";
@@ -46,12 +52,6 @@ LanguagePreferences.localLanguageName["sv"] = "Svenska";
 LanguagePreferences.localLanguageName["tr"] = "Türkçe";
 LanguagePreferences.localLanguageName["zh_TW"] = "繁體中文";
 LanguagePreferences.localLanguageName["zh_ZN"] = "简体中文";
-
-function LanguagePreferences(guiAction) {
-    EAction.call(this, guiAction);
-}
-
-LanguagePreferences.prototype = new EAction();
 
 LanguagePreferences.getPreferencesCategory = function() {
     return [qsTr("Language Settings"), qsTr("Language")];
@@ -116,7 +116,7 @@ LanguagePreferences.getLanguages = function(dirName) {
     var codes = [];
     
     var dir = new QDir(dirName);
-    var sortFlags = new QDir.SortFlags(QDir.NoSort);
+    var sortFlags = makeQDirSortFlags(QDir.NoSort);
     /*
     var dirFilter = new QDir.Filters(QDir.NoDotAndDotDot, QDir.Readable,
             QDir.Dirs);
@@ -127,7 +127,7 @@ LanguagePreferences.getLanguages = function(dirName) {
     }
     */
     
-    var fileFilter = new QDir.Filters(QDir.Readable, QDir.Files);
+    var fileFilter = makeQDirFilters(QDir.Readable, QDir.Files);
     var files = dir.entryInfoList(["*.qm"], fileFilter, sortFlags);
     for (var j = 0; j < files.length; ++j) {
         var fileName = files[j].baseName();
