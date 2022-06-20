@@ -54,6 +54,7 @@ public:
     static RPropertyTypeId PropertyDrawOrder;
 
     static RPropertyTypeId PropertyArrowHead;
+    static RPropertyTypeId PropertySplineShaped;
     static RPropertyTypeId PropertyDimLeaderBlock;
     static RPropertyTypeId PropertyVertexNX;
     static RPropertyTypeId PropertyVertexNY;
@@ -61,6 +62,7 @@ public:
 
     static RPropertyTypeId PropertyDimscale;
     static RPropertyTypeId PropertyDimasz;
+
 
 public:
     RLeaderEntity(RDocument* document, const RLeaderData& data);
@@ -105,6 +107,14 @@ public:
 
     bool hasArrowHead() const {
         return data.hasArrowHead();
+    }
+
+    void setSplineShaped(bool on) {
+        data.setSplineShaped(on);
+    }
+
+    bool isSplineShaped() const {
+        return data.isSplineShaped();
     }
 
     void clear() {

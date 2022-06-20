@@ -20,6 +20,7 @@
 #include "RLineEntity.h"
 
 RRayData::RRayData() {
+    qDebug() << "creating RRayData";
 }
 
 RRayData::RRayData(RDocument* document, const RRayData& data)
