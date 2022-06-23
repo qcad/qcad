@@ -236,7 +236,7 @@ FirstStart.prototype.changeLanguage = function(code) {
     if (index===-1) {
         index = 0;
     }
-    paperSizeCombo.currentIndex = index;
+    paperSizeCombo.setCurrentIndex(index);
 
     // decimal point combo
     var dpCombo = this.widgets["DecimalPoint"];
@@ -245,7 +245,7 @@ FirstStart.prototype.changeLanguage = function(code) {
     for (i = 0; i < dpCombo.count; ++i) {
         var data = dpCombo.itemData(i);
         if (dp == data) {
-            dpCombo.currentIndex = i;
+            dpCombo.setCurrentIndex(i);
         }
     }
 
