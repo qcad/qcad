@@ -592,9 +592,9 @@ ScMirrored.createPixmap = function(file, w, h) {
     pixmap.fill(new QColor(0,0,0,0));
     var p = new QPainter();
     p.begin(pixmap);
-    var r = new QSvgRenderer();
-    r.load(file);
-    r.render(p);
+    //var r = new QSvgRenderer();
+    //r.load(file);
+    //r.render(p);
     p.end();
     return pixmap;
 }

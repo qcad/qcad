@@ -23,7 +23,8 @@ RLeaderData::RLeaderData()
     : arrowHead(true),
       dimasz(-1.0),
       dimscale(-1.0),
-      dimLeaderBlockId(REntity::INVALID_ID) {
+      dimLeaderBlockId(REntity::INVALID_ID),
+      splineShaped(false) {
 }
 
 RLeaderData::RLeaderData(RDocument* document, const RLeaderData& data)
@@ -37,7 +38,11 @@ RLeaderData::RLeaderData(RDocument* document, const RLeaderData& data)
 
 RLeaderData::RLeaderData(const RPolyline& polyline, bool arrowHead)
     : RPolyline(polyline),
-      arrowHead(arrowHead), dimasz(-1.0), dimscale(-1.0), dimLeaderBlockId(REntity::INVALID_ID) {
+      arrowHead(arrowHead),
+      dimasz(-1.0),
+      dimscale(-1.0),
+      dimLeaderBlockId(REntity::INVALID_ID),
+      splineShaped(false) {
 
 }
 

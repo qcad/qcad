@@ -293,6 +293,7 @@
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+86"/>
@@ -917,6 +918,7 @@ Do you wish to recover it/them?</source>
         <location line="+1"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+25"/>
@@ -3247,6 +3249,7 @@ Do you wish to recover it?</source>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -3493,12 +3496,12 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>Not a correct set active &apos;Layer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished">Не е правилно зададен активен превключвател "Layer", игнориран. Текстов ред: %1</translation>
+        <translation type="unfinished">Не е правилно зададен активен превключвател &quot;Layer&quot;, игнориран. Текстов ред: %1</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Not a correct &apos;New layer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished">Не е правилен превключвател "Нов слой", игнориран. Текстов ред: %1</translation>
+        <translation type="unfinished">Не е правилен превключвател &quot;Нов слой&quot;, игнориран. Текстов ред: %1</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -3518,7 +3521,7 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;FreezeLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished">Не е правилен превключвател "FreezeLayer", игнориран. Текстов ред: %1</translation>
+        <translation type="unfinished">Не е правилен превключвател &quot;FreezeLayer&quot;, игнориран. Текстов ред: %1</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -3528,7 +3531,7 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;LockLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished">Не е правилен превключвател "LockLayer", игнориран. Текстов ред: %1</translation>
+        <translation type="unfinished">Не е правилен превключвател &quot;LockLayer&quot;, игнориран. Текстов ред: %1</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -4809,7 +4812,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Draw a dovetail joint</source>
-        <translation type="unfinished">Начертайте съединение тип "лястовича опашка</translation>
+        <translation type="unfinished">Начертайте съединение тип &quot;лястовича опашка</translation>
     </message>
 </context>
 <context>
@@ -8332,6 +8335,7 @@ is already in the list.</source>
         <location line="+10"/>
         <source>Number of items
 shown in search results:</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+18"/>
@@ -8682,7 +8686,7 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>Draw a dovetail joint</source>
-        <translation type="unfinished">Начертайте съединение тип "лястовича опашка</translation>
+        <translation type="unfinished">Начертайте съединение тип &quot;лястовича опашка</translation>
     </message>
 </context>
 <context>
@@ -11640,6 +11644,7 @@ shown in search results:</source>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
@@ -12852,6 +12857,7 @@ shown in search results:</source>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+21"/>
@@ -14737,4 +14743,3 @@ shown in search results:</source>
     </message>
 </context>
 </TS>
-
