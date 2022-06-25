@@ -45,9 +45,11 @@ FirstStart.prototype.showDialog = function() {
 
     }
     else {
-        this.dialog.findChild("LanguageBackground").styleSheet = "";
-        this.dialog.findChild("Background").styleSheet = "";
-        this.dialog.findChild("Left").minimumSize = 0;
+        this.dialog.findChild("LanguageBackground").setStyleSheet("");
+        this.dialog.findChild("Background").setStyleSheet("");
+        if (!isNull(this.dialog.findChild("Left"))) {
+            this.dialog.findChild("Left").setMinimumSize(0);
+        }
     }
 
     this.widgets = getWidgets(this.dialog);
@@ -91,7 +93,7 @@ FirstStart.prototype.showDialog = function() {
     this.translators = [];
     this.changeLanguage(code);
 
-    if (QCoreApplication.arguments().contains("-no-initial-dialog") || this.dialog.exec()) {
+    if (RSettings.getOriginalArguments().contains("-no-initial-dialog") || this.dialog.exec()) {
         // save settings
 
         // language:

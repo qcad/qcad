@@ -208,8 +208,8 @@ void RPluginLoader::unloadPlugin(const QString& fileName, bool remove) {
     loader.unload();
 }
 
-void RPluginLoader::unloadPlugin(const QObject* plugin, bool remove) {
-    RPluginInterface* p = qobject_cast<RPluginInterface*>(plugin);
+void RPluginLoader::unloadPlugin(QObject* plugin, bool remove) {
+    RPluginInterface* p = dynamic_cast<RPluginInterface*>(plugin);
     if (p) {
         p->uninit(remove);
     }
