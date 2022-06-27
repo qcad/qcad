@@ -56,19 +56,21 @@ FirstStart.prototype.showDialog = function() {
 
     // language combo
     var langCombo = this.widgets["Language"];
+    langCombo.blockSignals(true);
     langCombo.addItem("English", "en");
     var codes = LanguagePreferences.getLanguages();
     for ( var i = 0; i < codes.length; ++i) {
         code = codes[i];
         langCombo.addItem(LanguagePreferences.codeToString(code), code);
     }
+    langCombo.blockSignals(false);
 
     // try to set the locale from system
     var sysLocale = QLocale.system();
     var systemLocale = getQLocaleName(sysLocale);
     var flags = makeQtMatchFlags(Qt.MatchExactly);
     var index = langCombo.findData(systemLocale, Qt.UserRole, flags);
-    if (index == -1) {
+    if (index===-1) {
         var re = new RegExp("(.+)_(.+)", "i");
         var found = systemLocale.match(re);
         var lang;
@@ -80,14 +82,16 @@ FirstStart.prototype.showDialog = function() {
         flags = makeQtMatchFlags(Qt.MatchContains);
         index = langCombo.findData(lang, Qt.UserRole, flags);
     }
-    if (index != -1) {
+    if (index!==-1) {
         langCombo.setCurrentIndex(index);
     }
-    code = langCombo.itemData(langCombo.currentIndex);
+    code = langCombo.itemData(langCombo.currentIndex());
     langCombo.model().sort(0);
-    langCombo["currentIndexChanged(int)"].connect(this, function(index) {
+    var self = this;
+    //langCombo["currentIndexChanged(int)"].connect(function(index) {
+    langCombo.currentIndexChanged.connect(function(index) {
         var code = langCombo.itemData(index);
-        this.changeLanguage(code);
+        self.changeLanguage(code);
     });
 
     this.translators = [];
@@ -97,10 +101,10 @@ FirstStart.prototype.showDialog = function() {
         // save settings
 
         // language:
-        RSettings.setValue("Language/UiLanguage", langCombo.itemData(langCombo.currentIndex));
+        RSettings.setValue("Language/UiLanguage", langCombo.itemData(langCombo.currentIndex()));
 
         // drawing unit and related settings:
-        var drawingUnit = this.widgets["Unit"].currentIndex;
+        var drawingUnit = this.widgets["Unit"].currentIndex();
         RSettings.setValue("UnitSettings/Unit", drawingUnit);
 
         // adjust default dimension settings:
@@ -181,7 +185,7 @@ FirstStart.prototype.showDialog = function() {
 
 FirstStart.prototype.changeLanguage = function(code) {
     var i;
-    for (i = 0; i < this.translators.length; ++i) {
+    for (i=0; i<this.translators.length; ++i) {
         QCoreApplication.removeTranslator(this.translators[i]);
     }
     
@@ -225,11 +229,27 @@ FirstStart.prototype.changeLanguage = function(code) {
 
     // default paper size
     var paperSizeOverride = qApp.property("FirstStartPaperSizeOverride");
+    if (isNull(paperSizeOverride)) {
+        paperSizeOverride = "";
+    }
     var index = paperSizeCombo.findText(paperSizeOverride);
     if (index===-1) {
         var defaultPrinter = new QPrinter();
-        var paperSize = defaultPrinter.paperSize(QPrinter.Millimeter);
-        defaultPrinter.destroy();
+        var paperSize;
+        if (isFunction(defaultPrinter.paperSize)) {
+            /// Qt 4, 5:
+            paperSize = defaultPrinter.paperSize(QPrinter.Millimeter);
+        }
+        else {
+            // Qt 6:
+            var pageLayout = defaultPrinter.pageLayout();
+            var pageSize = pageLayout.pageSize();
+            paperSize = pageSize.id();
+        }
+
+        if (!RSettings.isQt(6)) {
+            defaultPrinter.destroy();
+        }
         index = paperSizeCombo.findData(paperSize, Qt.UserRole + 1);
         if (index===-1) {
             index = paperSizeCombo.findText("ISO A4");
