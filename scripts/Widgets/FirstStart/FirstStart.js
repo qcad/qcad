@@ -88,7 +88,6 @@ FirstStart.prototype.showDialog = function() {
     code = langCombo.itemData(langCombo.currentIndex());
     langCombo.model().sort(0);
     var self = this;
-    //langCombo["currentIndexChanged(int)"].connect(function(index) {
     langCombo.currentIndexChanged.connect(function(index) {
         var code = langCombo.itemData(index);
         self.changeLanguage(code);
