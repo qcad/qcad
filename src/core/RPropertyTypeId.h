@@ -74,6 +74,8 @@ public:
     RPropertyTypeId(const RPropertyTypeId& other);
     RPropertyTypeId(long int id = INVALID_ID);
 
+    RPropertyTypeId& operator=(const RPropertyTypeId& other);
+
     long int getId() const;
     void setId(long int id);
     QString getCustomPropertyTitle() const;

@@ -45,14 +45,20 @@ RPropertyTypeId::RPropertyTypeId(const QString& customPropertyName) :
 }
 
 RPropertyTypeId::RPropertyTypeId(const RPropertyTypeId& other) {
-    id = other.id;
-    options = other.options;
-    customPropertyTitle = other.customPropertyTitle;
-    customPropertyName = other.customPropertyName;
+    *this = other;
 }
 
 RPropertyTypeId::RPropertyTypeId(long int id) :
     id(id), options(false) {
+}
+
+RPropertyTypeId& RPropertyTypeId::operator=(const RPropertyTypeId& other) {
+    id = other.id;
+    options = other.options;
+    customPropertyTitle = other.customPropertyTitle;
+    customPropertyName = other.customPropertyName;
+
+    return *this;
 }
 
 void RPropertyTypeId::generateId(RS::EntityType type,
