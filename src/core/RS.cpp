@@ -18,12 +18,18 @@
  */
 
 #include <QtGlobal>
+
 #if QT_VERSION < 0x050000
 #include <QTextDocument>
 #endif
+
 #if QT_VERSION < 0x060000
 #include <QTextCodec>
 #include <QDesktopWidget>
+#endif
+
+#if QT_VERSION >= 0x050300
+#include <QPageSize>
 #endif
 
 #include "RColor.h"
@@ -366,6 +372,479 @@ bool RS::lessThanAlphanumerical(const QString& s1, const QString& s2) {
     return RS::compareAlphanumerical(s1, s2)<0;
 }
 
+int RS::getPageSizeId(const QString& name) {
+
+    if (name=="A0" || name=="ISO A0") {
+        return QPageSize::A0;
+    }
+    else if (name=="A1" || name=="ISO A1") {
+        return QPageSize::A1;
+    }
+    else if (name=="A2" || name=="ISO A2") {
+        return QPageSize::A2;
+    }
+    else if (name=="A3" || name=="ISO A3") {
+        return QPageSize::A3;
+    }
+    else if (name=="A4" || name=="ISO A4") {
+        return QPageSize::A4;
+    }
+    else if (name=="A5" || name=="ISO A5") {
+        return QPageSize::A5;
+    }
+    else if (name=="A6" || name=="ISO A6") {
+        return QPageSize::A6;
+    }
+    else if (name=="A7" || name=="ISO A7") {
+        return QPageSize::A7;
+    }
+    else if (name=="A8" || name=="ISO A8") {
+        return QPageSize::A8;
+    }
+    else if (name=="A9" || name=="ISO A9") {
+        return QPageSize::A9;
+    }
+    else if (name=="A10" || name=="ISO A10") {
+        return QPageSize::Custom;
+    }
+
+    else if (name=="B0" || name=="ISO B0") {
+        return QPageSize::B0;
+    }
+    else if (name=="B1" || name=="ISO B1") {
+        return QPageSize::B1;
+    }
+    else if (name=="B2" || name=="ISO B2") {
+        return QPageSize::B2;
+    }
+    else if (name=="B3" || name=="ISO B3") {
+        return QPageSize::B3;
+    }
+    else if (name=="B4" || name=="ISO B4") {
+        return QPageSize::B4;
+    }
+    else if (name=="B5" || name=="ISO B5") {
+        return QPageSize::B5;
+    }
+    else if (name=="B6" || name=="ISO B6") {
+        return QPageSize::B6;
+    }
+    else if (name=="B7" || name=="ISO B7") {
+        return QPageSize::B7;
+    }
+    else if (name=="B8" || name=="ISO B8") {
+        return QPageSize::B8;
+    }
+    else if (name=="B9" || name=="ISO B9") {
+        return QPageSize::B9;
+    }
+    else if (name=="B10" || name=="ISO B10") {
+        return QPageSize::B10;
+    }
+
+    else if (name=="C0" || name=="ISO C0") {
+        return QPageSize::Custom;
+    }
+    else if (name=="C1" || name=="ISO C1") {
+        return QPageSize::Custom;
+    }
+    else if (name=="C2" || name=="ISO C2") {
+        return QPageSize::Custom;
+    }
+    else if (name=="C3" || name=="ISO C3") {
+        return QPageSize::Custom;
+    }
+    else if (name=="C4" || name=="ISO C4") {
+        return QPageSize::Custom;
+    }
+    else if (name=="C5" || name=="ISO C5") {
+        return QPageSize::Custom;
+    }
+    else if (name=="C6" || name=="ISO C6") {
+        return QPageSize::Custom;
+    }
+    else if (name=="C7" || name=="ISO C7") {
+        return QPageSize::Custom;
+    }
+    else if (name=="C8" || name=="ISO C8") {
+        return QPageSize::Custom;
+    }
+    else if (name=="C9" || name=="ISO C9") {
+        return QPageSize::Custom;
+    }
+    else if (name=="C10" || name=="ISO C10") {
+        return QPageSize::Custom;
+    }
+
+    else if (name=="DIN 476 4A0") {
+        return QPageSize::Custom;
+    }
+    else if (name=="DIN 476 2A0") {
+        return QPageSize::Custom;
+    }
+
+    // JIS:
+    else if (name=="JIS B0") {
+        return QPageSize::Custom;
+    }
+    else if (name=="JIS B1") {
+        return QPageSize::Custom;
+    }
+    else if (name=="JIS B2") {
+        return QPageSize::Custom;
+    }
+    else if (name=="JIS B3") {
+        return QPageSize::Custom;
+    }
+    else if (name=="JIS B4") {
+        return QPageSize::Custom;
+    }
+    else if (name=="JIS B5") {
+        return QPageSize::Custom;
+    }
+    else if (name=="JIS B6") {
+        return QPageSize::Custom;
+    }
+    else if (name=="JIS B7") {
+        return QPageSize::Custom;
+    }
+    else if (name=="JIS B8") {
+        return QPageSize::Custom;
+    }
+    else if (name=="JIS B9") {
+        return QPageSize::Custom;
+    }
+    else if (name=="JIS B10") {
+        return QPageSize::Custom;
+    }
+    else if (name=="JIS B11") {
+        return QPageSize::Custom;
+    }
+    else if (name=="JIS B12") {
+        return QPageSize::Custom;
+    }
+
+    // 7.5" x 10"
+    else if (name=="Executive") {
+        return QPageSize::Executive;
+    }
+    // 8.5" x 14"
+    else if (name=="Legal") {
+        return QPageSize::Legal;
+    }
+    // 8.5" x 11"
+    else if (name=="ANSI A" || name=="Letter" || name=="ANSI A (Letter)") {
+        return QPageSize::Letter;
+    }
+    // 11" x 17"
+    else if (name=="ANSI B" || name=="Ledger" || name=="Tabloid" || name=="ANSI B (Ledger, Tabloid)") {
+        return QPageSize::Tabloid;
+    }
+    // 13" x 19"
+    else if (name=="Super B") {
+        return QPageSize::Custom;
+    }
+    // 17" x 22"
+    else if (name=="ANSI C") {
+        return QPageSize::Custom;
+    }
+    // 22" x 34"
+    else if (name=="ANSI D") {
+        return QPageSize::Custom;
+    }
+    // 34" x 44"
+    else if (name=="ANSI E") {
+        return QPageSize::Custom;
+    }
+
+    // US Architectural:
+    // 9" x 12"
+    else if (name=="Arch A") {
+        return QPageSize::Custom;
+    }
+    // 12" x 18"
+    else if (name=="Arch B") {
+        return QPageSize::Custom;
+    }
+    // 18" x 24"
+    else if (name=="Arch C") {
+        return QPageSize::Custom;
+    }
+    // 24" x 36"
+    else if (name=="Arch D") {
+        return QPageSize::Custom;
+    }
+    // 36" x 48"
+    else if (name=="Arch E") {
+        return QPageSize::Custom;
+    }
+    // 30" x 42"
+    else if (name=="Arch E1") {
+        return QPageSize::Custom;
+    }
+    // 26" x 38"
+    else if (name=="Arch E2") {
+        return QPageSize::Custom;
+    }
+    // 27" x 39"
+    else if (name=="Arch E3") {
+        return QPageSize::Custom;
+    }
+
+    // Others:
+    // Folio / Foolscap:
+    else if (name=="F4" || name=="Folio" || name=="Foolscap" || name=="F4 (Folio, Foolscap)") {
+        return QPageSize::Folio;
+    }
+    // U.S. Common 10 Envelope:
+    else if (name=="Common 10 Envelope") {
+        return QPageSize::Comm10E;
+    }
+    // DLE Envelope:
+    else if (name=="DLE Envelope") {
+        return QPageSize::DLE;
+    }
+
+    else {
+        return QPageSize::Custom;
+    }
+}
+
+QSizeF RS::getPageSize(const QString& name) {
+    if (name=="A4" || name=="ISO A4") {
+        return QSizeF(210,  297);
+    }
+
+    else if (name=="ISO A0" || name=="A0") {
+        return QSizeF(841, 1189);
+    }
+    else if (name=="ISO A1" || name=="A1") {
+        return QSizeF(594, 841);
+    }
+    else if (name=="ISO A2" || name=="A2") {
+        return QSizeF(420, 594);
+    }
+    else if (name=="ISO A3" || name=="A3") {
+        return QSizeF(297, 420);
+    }
+    else if (name=="ISO A4" || name=="A4") {
+        return QSizeF(148, 210);
+    }
+    else if (name=="ISO A6" || name=="A6") {
+        return QSizeF(105, 148);
+    }
+    else if (name=="ISO A7" || name=="A7") {
+        return QSizeF(74, 105);
+    }
+    else if (name=="ISO A8" || name=="A8") {
+        return QSizeF(52, 74);
+    }
+    else if (name=="ISO A9" || name=="A9") {
+        return QSizeF(37, 52);
+    }
+    else if (name=="ISO A10" || name=="A10") {
+        return QSizeF(26, 37);
+    }
+
+    else if (name=="ISO B0" || name=="B0") {
+        return QSizeF(1000, 1414);
+    }
+    else if (name=="ISO B1" || name=="B1") {
+        return QSizeF(707, 1000);
+    }
+    else if (name=="ISO B2" || name=="B2") {
+        return QSizeF(500, 707);
+    }
+    else if (name=="ISO B3" || name=="B3") {
+        return QSizeF(353, 500);
+    }
+    else if (name=="ISO B4" || name=="B4") {
+        return QSizeF(250, 353);
+    }
+    else if (name=="ISO B5" || name=="B5") {
+        return QSizeF(176, 250);
+    }
+    else if (name=="ISO B6" || name=="B6") {
+        return QSizeF(125, 176);
+    }
+    else if (name=="ISO B7" || name=="B7") {
+        return QSizeF(88, 125);
+    }
+    else if (name=="ISO B8" || name=="B8") {
+        return QSizeF(62, 88);
+    }
+    else if (name=="ISO B9" || name=="B9") {
+        return QSizeF(44, 62);
+    }
+    else if (name=="ISO B10" || name=="B10") {
+        return QSizeF(31, 44);
+    }
+
+    else if (name=="ISO C0" || name=="C0") {
+        return QSizeF(917, 1297);
+    }
+    else if (name=="ISO C1" || name=="C1") {
+        return QSizeF(648, 917);
+    }
+    else if (name=="ISO C2" || name=="C2") {
+        return QSizeF(458, 648);
+    }
+    else if (name=="ISO C3" || name=="C3") {
+        return QSizeF(324, 458);
+    }
+    else if (name=="ISO C4" || name=="C4") {
+        return QSizeF(229, 324);
+    }
+    else if (name=="ISO C5" || name=="C5") {
+        return QSizeF(162, 229);
+    }
+    else if (name=="ISO C6" || name=="C6") {
+        return QSizeF(114, 162);
+    }
+    else if (name=="ISO C7" || name=="C7") {
+        return QSizeF(81, 114);
+    }
+    else if (name=="ISO C8" || name=="C8") {
+        return QSizeF(57, 81);
+    }
+    else if (name=="ISO C9" || name=="C9") {
+        return QSizeF(40, 57);
+    }
+    else if (name=="ISO C10" || name=="C10") {
+        return QSizeF(28, 40);
+    }
+
+    else if (name=="DIN 476 4A0") {
+        return QSizeF(1682, 2378);
+    }
+    else if (name=="DIN 476 2A0") {
+        return QSizeF(1189, 1682);
+    }
+
+    // JIS:
+    else if (name=="JIS B0") {
+        return QSizeF(1030, 1456);
+    }
+    else if (name=="JIS B1") {
+        return QSizeF(728, 1030);
+    }
+    else if (name=="JIS B2") {
+        return QSizeF(515, 728);
+    }
+    else if (name=="JIS B3") {
+        return QSizeF(364, 515);
+    }
+    else if (name=="JIS B4") {
+        return QSizeF(257, 364);
+    }
+    else if (name=="JIS B5") {
+        return QSizeF(182, 257);
+    }
+    else if (name=="JIS B6") {
+        return QSizeF(128, 182);
+    }
+    else if (name=="JIS B7") {
+        return QSizeF(91, 128);
+    }
+    else if (name=="JIS B8") {
+        return QSizeF(64, 91);
+    }
+    else if (name=="JIS B9") {
+        return QSizeF(45, 64);
+    }
+    else if (name=="JIS B10") {
+        return QSizeF(32, 45);
+    }
+    else if (name=="JIS B11") {
+        return QSizeF(22, 32);
+    }
+    else if (name=="JIS B12") {
+        return QSizeF(16, 22);
+    }
+
+    // 7.5" x 10"
+    else if (name=="Executive") {
+        return QSizeF(190.5, 254);
+    }
+    // 8.5" x 14"
+    else if (name=="Legal") {
+        return QSizeF(215.9, 355.6);
+    }
+    // 8.5" x 11"
+    else if (name=="ANSI A" || name=="Letter" || name=="ANSI A (Letter)") {
+        return QSizeF(215.9, 279.4);
+    }
+    // 11" x 17"
+    else if (name=="ANSI B" || name=="Ledger" || name=="Tabloid" || name=="ANSI B (Ledger, Tabloid)") {
+        return QSizeF(279.4, 431.8);
+    }
+    // 13" x 19"
+    else if (name=="Super B") {
+        return QSizeF(330.2, 482.6);
+    }
+    // 17" x 22"
+    else if (name=="ANSI C") {
+        return QSizeF(431.8, 558.8);
+    }
+    // 22" x 34"
+    else if (name=="ANSI D") {
+        return QSizeF(558.8, 863.6);
+    }
+    // 34" x 44"
+    else if (name=="ANSI E") {
+        return QSizeF(863.6, 1117.6);
+    }
+
+    // US Architectural:
+    // 9" x 12"
+    else if (name=="Arch A") {
+        return QSizeF(228.6, 304.8);
+    }
+    // 12" x 18"
+    else if (name=="Arch B") {
+        return QSizeF(304.8, 457.2);
+    }
+    // 18" x 24"
+    else if (name=="Arch C") {
+        return QSizeF(457.2, 609.6);
+    }
+    // 24" x 36"
+    else if (name=="Arch D") {
+        return QSizeF(609.6, 914.4);
+    }
+    // 36" x 48"
+    else if (name=="Arch E") {
+        return QSizeF(914.4, 1219.2);
+    }
+    // 30" x 42"
+    else if (name=="Arch E1") {
+        return QSizeF(762, 1066.8);
+    }
+    // 26" x 38"
+    else if (name=="Arch E2") {
+        return QSizeF(660.4, 965.2);
+    }
+    // 27" x 39"
+    else if (name=="Arch E3") {
+        return QSizeF(685.8, 990.6);
+    }
+
+    // Others:
+    // Folio / Foolscap:
+    else if (name=="F4 (Folio, Foolscap)") {
+        return QSizeF(210, 330);
+    }
+    // U.S. Common 10 Envelope:
+    else if (name=="Common 10 Envelope") {
+        return QSizeF(105, 241);
+    }
+    // DLE Envelope:
+    else if (name=="DLE Envelope") {
+        return QSizeF(110, 220);
+    }
+
+    return QSizeF();
+}
 
 bool RS::exactMatch(const QRegularExpression& rx, const QString& string) {
 #if QT_VERSION >= 0x050000
