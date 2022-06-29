@@ -18,11 +18,12 @@
  */
 #include "RArc.h"
 #include "RCircle.h"
-#include "RMetaTypes.h"
 #include "REllipse.h"
 #include "RExporter.h"
 #include "RHatchEntity.h"
 #include "RLine.h"
+#include "RMetaTypes.h"
+#include "RPluginLoader.h"
 #include "RPoint.h"
 #include "RSpline.h"
 
@@ -54,6 +55,11 @@ RPropertyTypeId RHatchEntity::PropertyOriginY;
 RPropertyTypeId RHatchEntity::PropertyVertexNX;
 RPropertyTypeId RHatchEntity::PropertyVertexNY;
 RPropertyTypeId RHatchEntity::PropertyVertexNZ;
+
+RPropertyTypeId RHatchEntity::PropertyLength;
+RPropertyTypeId RHatchEntity::PropertyTotalLength;
+RPropertyTypeId RHatchEntity::PropertyArea;
+RPropertyTypeId RHatchEntity::PropertyTotalArea;
 
 
 RHatchEntity::RHatchEntity(RDocument* document, const RHatchData& data) :
@@ -96,6 +102,13 @@ void RHatchEntity::init() {
     RHatchEntity::PropertyVertexNX.generateId(RHatchEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
     RHatchEntity::PropertyVertexNY.generateId(RHatchEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
     RHatchEntity::PropertyVertexNZ.generateId(RHatchEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
+
+    if (RPluginLoader::hasPlugin("PROTOOLS")) {
+        RHatchEntity::PropertyLength.generateId(RHatchEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Length"));
+        RHatchEntity::PropertyTotalLength.generateId(RHatchEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Total Length"));
+        RHatchEntity::PropertyArea.generateId(RHatchEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Area"));
+        RHatchEntity::PropertyTotalArea.generateId(RHatchEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Total Area"));
+    }
 }
 
 bool RHatchEntity::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
@@ -361,6 +374,48 @@ QPair<QVariant, RPropertyAttributes> RHatchEntity::getProperty(
         QVariant v;
         v.setValue(list);
         return qMakePair(v, RPropertyAttributes(RPropertyAttributes::List));
+    }
+
+    // human readable properties (not relevant for transactions):
+    if (humanReadable) {
+        if (propertyTypeId == PropertyLength) {
+            QVariant v;
+            v.setValue(data.getLength());
+            return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::ReadOnly));
+        } else if (propertyTypeId == PropertyTotalLength) {
+            if (showOnRequest) {
+                QVariant v;
+                v.setValue(data.getLength());
+                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Sum));
+            }
+            else {
+                QVariant v;
+                v.setValue(0.0);
+                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::OnRequest));
+            }
+        } else if (propertyTypeId == PropertyArea) {
+            if (showOnRequest) {
+                QVariant v;
+                v.setValue(data.getArea());
+                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::ReadOnly|RPropertyAttributes::Area));
+            }
+            else {
+                QVariant v;
+                v.setValue(0.0);
+                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::OnRequest|RPropertyAttributes::Area));
+            }
+        } else if (propertyTypeId == PropertyTotalArea) {
+            if (showOnRequest) {
+                QVariant v;
+                v.setValue(data.getArea());
+                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Sum|RPropertyAttributes::Area));
+            }
+            else {
+                QVariant v;
+                v.setValue(0.0);
+                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::OnRequest|RPropertyAttributes::Area));
+            }
+        }
     }
 
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
