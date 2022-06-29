@@ -114,7 +114,9 @@ WidgetFactory.createWidget = function(basePath, uiFile, parent) {
 
     var formWidget = loader.load(buf, parent);
     buf.close();
-    loader.destroy();
+    if (!RSettings.isQt(6)) {
+        loader.destroy();
+    }
 
     if (isNull(formWidget)) {
         qDebug("WidgetFactory.createWidget: widget is NULL");
@@ -1469,7 +1471,9 @@ WidgetFactory.installComboBoxEventFilter = function(widget) {
             isOfType(c, RLineweightCombo) ||
             isOfType(c, RLinetypeCombo)) {
 
-            c.installEventFilter(new REventFilter(QEvent.Wheel.valueOf(), true));
+            if (isFunction(c.installEventFilter)) {
+                c.installEventFilter(new REventFilter(QEvent.Wheel.valueOf(), true));
+            }
             c.focusPolicy = Qt.ClickFocus;
             continue;
         }

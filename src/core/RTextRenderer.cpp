@@ -150,8 +150,7 @@ QString RTextRenderer::rxOptionalBreakStr = "[ ]+";
 QRegularExpression RTextRenderer::rxOptionalBreak(rxOptionalBreakStr);
 
 QString rxAllTmp =
-      RTextRenderer::rxLineFeedStr + "|"
-    + RTextRenderer::rxAlignmentLeftStr + "|"
+    RTextRenderer::rxAlignmentLeftStr + "|"
     + RTextRenderer::rxAlignmentCenterStr + "|"
     + RTextRenderer::rxAlignmentRightStr + "|"
     + RTextRenderer::rxXAlignmentLeftStr + "|"
@@ -188,7 +187,9 @@ QString rxAllTmp =
     + RTextRenderer::rxPlusMinusStr + "|"
     + RTextRenderer::rxDiameterStr + "|"
     + RTextRenderer::rxUnderlineStr + "|"
-    + RTextRenderer::rxUnicodeStr;
+    + RTextRenderer::rxUnicodeStr + "|"
+      // keep at the end as replacing \p first will break \pqc;, etc.
+    + RTextRenderer::rxLineFeedStr;
 
 QString RTextRenderer::rxAllStr = "(" + rxAllTmp + ")";
 QString RTextRenderer::rxAllBreakStr = "(" + rxAllTmp + "|" + RTextRenderer::rxOptionalBreakStr + ")";
@@ -1624,26 +1625,28 @@ void RTextRenderer::render() {
             }
         }
 
-        // color change (custom):
-        //reg.setPattern(rxColorChangeCustom);
-        QRegularExpressionMatch match;
-        if (RS::exactMatch(rxColorChangeCustom, match, formatting)) {
-            RColor blockColor = RColor::createFromCadCustom(RS::captured(rxColorChangeCustom, match, 1));
-            if (!currentFormat.isEmpty()) {
-                currentFormat.top().setForeground(blockColor);
-                fr.format = currentFormat.top();
-                formats.append(fr);
-                //qDebug() << "formatting:" << formatting;
-                //qDebug() << "appending format 3:" << fr.format.foreground();
-            }
+        {
+            // color change (custom):
+            //reg.setPattern(rxColorChangeCustom);
+            QRegularExpressionMatch match;
+            if (RS::exactMatch(rxColorChangeCustom, match, formatting)) {
+                RColor blockColor = RColor::createFromCadCustom(RS::captured(rxColorChangeCustom, match, 1));
+                if (!currentFormat.isEmpty()) {
+                    currentFormat.top().setForeground(blockColor);
+                    fr.format = currentFormat.top();
+                    formats.append(fr);
+                    //qDebug() << "formatting:" << formatting;
+                    //qDebug() << "appending format 3:" << fr.format.foreground();
+                }
 
-            if (target==RichText && !openTags.isEmpty()) {
-                QString style;
-                style += QString("color:%1;").arg(blockColor.name());
-                richText += QString("<span style=\"%1\">").arg(style);
-                openTags.top().append("span");
+                if (target==RichText && !openTags.isEmpty()) {
+                    QString style;
+                    style += QString("color:%1;").arg(blockColor.name());
+                    richText += QString("<span style=\"%1\">").arg(style);
+                    openTags.top().append("span");
+                }
+                continue;
             }
-            continue;
         }
 
 //        if (RS::exactMatch(rxOptionalBreak, textBlock)) {

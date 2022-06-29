@@ -1080,6 +1080,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="getPolygon" cppName="getPolygon"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RPolyline" isPureVirtual="false">
+        <arg type="double" typeName="double" name="segmentLength"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getPolygonHull" cppName="getPolygonHull"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

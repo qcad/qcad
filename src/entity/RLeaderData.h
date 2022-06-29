@@ -206,6 +206,14 @@ public:
         RPolyline::appendVertex(vertex);
     }
 
+    bool isSplineShaped() const {
+        return splineShaped;
+    }
+
+    void setSplineShaped(bool on) {
+        splineShaped = on;
+    }
+
     virtual QList<RRefPoint> getReferencePoints(RS::ProjectionRenderingHint hint = RS::RenderTop) const;
 
     virtual bool moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint, Qt::KeyboardModifiers modifiers = Qt::NoModifier);
@@ -240,6 +248,8 @@ private:
     double dimscale;
     /** Block to use instead of arrow */
     RBlock::Id dimLeaderBlockId;
+    /** Spline shaped leader */
+    bool splineShaped;
 };
 
 Q_DECLARE_METATYPE(RLeaderData)

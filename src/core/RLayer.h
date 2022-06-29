@@ -305,6 +305,8 @@ public:
         return layerProxy;
     }
 
+    virtual void print(QDebug dbg) const;
+
 private:
     QString name;
     LayerFlags flags;
@@ -314,8 +316,6 @@ private:
 
     static RLayerProxy* layerProxy;
 };
-
-QCADCORE_EXPORT QDebug operator<<(QDebug dbg, const RLayer& l);
 
 Q_DECLARE_METATYPE(QSharedPointer<RLayer>)
 Q_DECLARE_METATYPE(QSharedPointer<RLayer>*)

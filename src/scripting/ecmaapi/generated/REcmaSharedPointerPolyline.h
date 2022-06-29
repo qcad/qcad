@@ -462,6 +462,9 @@
         roundAllCorners
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getPolygon
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getPolygonHull
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

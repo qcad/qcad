@@ -172,6 +172,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="getUpperTolerance" cppName="getUpperTolerance"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
     <method name="setLowerTolerance" cppName="setLowerTolerance"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -179,6 +184,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QString &amp;" typeName="QString" name="t"
         isConst="true" />
       </variant>
+    </method>
+    <method name="getLowerTolerance" cppName="getLowerTolerance"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
     </method>
     <method name="setTextPosition" cppName="setTextPosition"
     specifier="public" isStatic="false" isVirtual="false"

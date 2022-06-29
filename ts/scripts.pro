@@ -804,6 +804,8 @@ SOURCES = \
 ../scripts/Modify/Reverse/Reverse.js \
 ../scripts/Modify/Reverse/ReverseInit.js \
 ../scripts/Modify/Reverse/Tests/ReverseTest00.js \
+../scripts/Modify/Reverse/Tests/ReverseTest01.js \
+../scripts/Modify/Reverse/Tests/ReverseTest02.js \
 ../scripts/Modify/Rotate/Rotate.js \
 ../scripts/Modify/Rotate/RotateInit.js \
 ../scripts/Modify/Rotate/Tests/RotateTest00.js \

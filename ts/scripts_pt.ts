@@ -1386,7 +1386,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location line="-82"/>
         <source>&amp;Block</source>
-        <translation>&amp;Bloqueio</translation>
+        <translation>&amp;Bloco</translation>
     </message>
 </context>
 <context>
@@ -1460,7 +1460,7 @@ Você deseja recuperá-lo?</translation>
         <location line="+53"/>
         <location line="+39"/>
         <source>Block List</source>
-        <translation>Lista de Bloqueios</translation>
+        <translation>Lista de blocos</translation>
     </message>
     <message>
         <location line="-92"/>
@@ -1510,7 +1510,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+93"/>
         <source>Export Block List (CSV)</source>
-        <translation>Exportar lista de bloqueios (CSV)</translation>
+        <translation>Exportar lista de blocos (CSV)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1520,7 +1520,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block List</source>
-        <translation>&amp;Exportar lista de bloqueios</translation>
+        <translation>&amp;Exportar lista de blocos</translation>
     </message>
 </context>
 <context>
@@ -10520,7 +10520,7 @@ nos resultados de busca:</translation>
     <message>
         <location filename="../scripts/Layer/LockAllLayers/LockAllLayersInit.js" line="+2"/>
         <source>&amp;Lock All Layers</source>
-        <translation>&amp;Bloqueie Todas as Camadas</translation>
+        <translation>&amp;Bloqueie todas as Camadas</translation>
     </message>
 </context>
 <context>
@@ -12584,7 +12584,7 @@ nos resultados de busca:</translation>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
         <source>&amp;Round</source>
-        <translation>&amp;Rodada</translation>
+        <translation>&amp;Canto arredondado</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/Round.ui" line="+17"/>

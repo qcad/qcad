@@ -62,8 +62,9 @@ FirstStart.prototype.showDialog = function() {
     }
 
     // try to set the locale from system
-    var systemLocale = QLocale.system().name();
-    var flags = new Qt.MatchFlags(Qt.MatchExactly);
+    var sysLocale = QLocale.system();
+    var systemLocale = getQLocaleName(sysLocale);
+    var flags = makeQtMatchFlags(Qt.MatchExactly);
     var index = langCombo.findData(systemLocale, Qt.UserRole, flags);
     if (index == -1) {
         var re = new RegExp("(.+)_(.+)", "i");
@@ -74,7 +75,7 @@ FirstStart.prototype.showDialog = function() {
         } else {
             lang = found[1];
         }
-        flags = new Qt.MatchFlags(Qt.MatchContains);
+        flags = makeQtMatchFlags(Qt.MatchContains);
         index = langCombo.findData(lang, Qt.UserRole, flags);
     }
     if (index != -1) {
@@ -210,10 +211,10 @@ FirstStart.prototype.changeLanguage = function(code) {
     var msys = systemLocale.measurementSystem();
     if (msys.valueOf() != QLocale.MetricSystem.valueOf()) {
         // imperial system:
-        this.widgets["Unit"].currentIndex = 1;
+        this.widgets["Unit"].setCurrentIndex(1);
     } else {
         // metrics system (fall back):
-        this.widgets["Unit"].currentIndex = 4;
+        this.widgets["Unit"].setCurrentIndex(4);
     }
 
     // paper size combo
@@ -235,7 +236,7 @@ FirstStart.prototype.changeLanguage = function(code) {
     if (index===-1) {
         index = 0;
     }
-    paperSizeCombo.currentIndex = index;
+    paperSizeCombo.setCurrentIndex(index);
 
     // decimal point combo
     var dpCombo = this.widgets["DecimalPoint"];
@@ -244,7 +245,7 @@ FirstStart.prototype.changeLanguage = function(code) {
     for (i = 0; i < dpCombo.count; ++i) {
         var data = dpCombo.itemData(i);
         if (dp == data) {
-            dpCombo.currentIndex = i;
+            dpCombo.setCurrentIndex(i);
         }
     }
 
@@ -256,12 +257,14 @@ FirstStart.prototype.changeLanguage = function(code) {
 };
 
 FirstStart.prototype.retranslateStrings = function() {
-    this.dialog.windowTitle = qsTr("%1 First Start").arg(qApp.applicationName);
-    this.widgets["LanguageLabel"].text = qsTr("Language:");
+    this.dialog.setWindowTitle(qsTr("%1 First Start").arg(qApp.applicationName));
+
+    this.widgets["LanguageLabel"].setText(qsTr("Language:"));
     var title = qsTr("Welcome to %1").arg(qApp.applicationName);
     var text = qsTr("Please choose the settings used for new drawings. "
             + "All these settings can be changed later in the Preference Dialog.");
-    this.widgets["Text"].html = "<html><head><meta name=\"qrichtext\" content=\"1\" />"
+
+    this.widgets["Text"].setHtml("<html><head><meta name=\"qrichtext\" content=\"1\" />"
             + "<style type=\"text/css\">p, li { white-space: pre-wrap; }</style></head>"
             + "<body style=\" font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:normal;\">"
             + "\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">"
@@ -272,9 +275,9 @@ FirstStart.prototype.retranslateStrings = function() {
             + "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">"
             + text
             + "</p><p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p>"
-            + "</body></html>";
-    this.widgets["UnitLabel"].text = qsTr("Unit:");
-    this.widgets["DefaultPaperSizeLabel"].text = qsTr("Default Paper Size:");
-    this.widgets["DecimalPointLabel"].text = qsTr("Decimal Point:");
-    this.widgets["BackgroundColorLabel"].text = qsTr("Background Color:");
+            + "</body></html>");
+    this.widgets["UnitLabel"].setText(qsTr("Unit:"));
+    this.widgets["DefaultPaperSizeLabel"].setText(qsTr("Default Paper Size:"));
+    this.widgets["DecimalPointLabel"].setText(qsTr("Decimal Point:"));
+    this.widgets["BackgroundColorLabel"].setText(qsTr("Background Color:"));
 };

@@ -39,7 +39,7 @@ Screencast.includeBasePath = includeBasePath;
 Screencast.getMenu = function() {
     var menu = EAction.getSubMenu(
         Misc.getMenu(),
-        10000,
+        10000, 10,
         Screencast.getTitle(),
         "screencast"
     );

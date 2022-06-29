@@ -37,6 +37,7 @@ RPropertyTypeId RLeaderEntity::PropertyDisplayedColor;
 RPropertyTypeId RLeaderEntity::PropertyDrawOrder;
 
 RPropertyTypeId RLeaderEntity::PropertyArrowHead;
+RPropertyTypeId RLeaderEntity::PropertySplineShaped;
 RPropertyTypeId RLeaderEntity::PropertyDimLeaderBlock;
 RPropertyTypeId RLeaderEntity::PropertyVertexNX;
 RPropertyTypeId RLeaderEntity::PropertyVertexNY;
@@ -76,6 +77,7 @@ void RLeaderEntity::init() {
     RLeaderEntity::PropertyDrawOrder.generateId(RLeaderEntity::getRtti(), REntity::PropertyDrawOrder);
 
     RLeaderEntity::PropertyArrowHead.generateId(RLeaderEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Arrow"));
+    RLeaderEntity::PropertySplineShaped.generateId(RLeaderEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Spline"));
     RLeaderEntity::PropertyDimLeaderBlock.generateId(RLeaderEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Arrow Block"));
     RLeaderEntity::PropertyVertexNX.generateId(RLeaderEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
     RLeaderEntity::PropertyVertexNY.generateId(RLeaderEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
@@ -95,6 +97,10 @@ bool RLeaderEntity::setProperty(RPropertyTypeId propertyTypeId,
         if (value.toBool()==false || data.canHaveArrowHead()) {
             ret = ret || RObject::setMember(data.arrowHead, value);
         }
+    }
+
+    if (PropertySplineShaped == propertyTypeId) {
+        ret = ret || RObject::setMember(data.splineShaped, value);
     }
 
     if (propertyTypeId == PropertyDimLeaderBlock) {
@@ -133,6 +139,9 @@ QPair<QVariant, RPropertyAttributes> RLeaderEntity::getProperty(
 
     if (propertyTypeId == PropertyArrowHead) {
         return qMakePair(QVariant(data.arrowHead), RPropertyAttributes());
+    }
+    else if (propertyTypeId == PropertySplineShaped) {
+        return qMakePair(QVariant(data.splineShaped), RPropertyAttributes());
     }
     else if (propertyTypeId == PropertyDimLeaderBlock) {
         if (humanReadable) {

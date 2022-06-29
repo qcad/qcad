@@ -37,7 +37,7 @@ PageSettings.getPreferencesCategory = function(appPreferences) {
  */
 PageSettings.paperSizes = new Array(
         [ qsTr("Custom"), new QSizeF(), QPrinter.Custom ],
-        
+
         [ "ISO A0",  new QSizeF(841, 1189), QPrinter.A0 ],
         [ "ISO A1",  new QSizeF(594,  841), QPrinter.A1 ],
         [ "ISO A2",  new QSizeF(420,  594), QPrinter.A2 ],

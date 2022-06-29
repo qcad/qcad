@@ -56,7 +56,7 @@
         <location filename="../src/entity/RImageEntity.cpp" line="+94"/>
         <location line="+4"/>
         <location line="+3"/>
-        <location filename="../src/entity/RLeaderEntity.cpp" line="+80"/>
+        <location filename="../src/entity/RLeaderEntity.cpp" line="+82"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+84"/>
         <location line="+3"/>
         <location filename="../src/entity/RPointEntity.cpp" line="+72"/>
@@ -697,9 +697,14 @@
         <translation type="unfinished">Išblukimas</translation>
     </message>
     <message>
-        <location filename="../src/entity/RLeaderEntity.cpp" line="-4"/>
+        <location filename="../src/entity/RLeaderEntity.cpp" line="-5"/>
         <source>Arrow</source>
         <translation type="unfinished">Strėlė</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Spline</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
