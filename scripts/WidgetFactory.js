@@ -114,9 +114,7 @@ WidgetFactory.createWidget = function(basePath, uiFile, parent) {
 
     var formWidget = loader.load(buf, parent);
     buf.close();
-    if (!RSettings.isQt(6)) {
-        loader.destroy();
-    }
+    destr(loader);
 
     if (isNull(formWidget)) {
         qDebug("WidgetFactory.createWidget: widget is NULL");

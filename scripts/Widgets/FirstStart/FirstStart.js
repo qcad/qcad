@@ -17,6 +17,8 @@
  * along with QCAD.
  */
 
+include("scripts/library.js");
+include("scripts/EAction.js");
 include("scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js");
 include("scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js");
 include("scripts/Edit/DrawingPreferences/UnitSettings/UnitSettings.js");
@@ -85,7 +87,7 @@ FirstStart.prototype.showDialog = function() {
     if (index!==-1) {
         langCombo.setCurrentIndex(index);
     }
-    code = langCombo.itemData(langCombo.currentIndex());
+    code = langCombo.itemData(langCombo.currentIndex);
     langCombo.model().sort(0);
     var self = this;
     langCombo.currentIndexChanged.connect(function(index) {
@@ -100,10 +102,10 @@ FirstStart.prototype.showDialog = function() {
         // save settings
 
         // language:
-        RSettings.setValue("Language/UiLanguage", langCombo.itemData(langCombo.currentIndex()));
+        RSettings.setValue("Language/UiLanguage", langCombo.itemData(langCombo.currentIndex));
 
         // drawing unit and related settings:
-        var drawingUnit = this.widgets["Unit"].currentIndex();
+        var drawingUnit = this.widgets["Unit"].currentIndex;
         RSettings.setValue("UnitSettings/Unit", drawingUnit);
 
         // adjust default dimension settings:
@@ -178,7 +180,7 @@ FirstStart.prototype.showDialog = function() {
         settings.sync();
     }
 
-    this.dialog.destroy();
+    destr(this.dialog);
     EAction.activateMainWindow();
 };
 
@@ -246,9 +248,7 @@ FirstStart.prototype.changeLanguage = function(code) {
             paperSize = pageSize.id();
         }
 
-        if (!RSettings.isQt(6)) {
-            defaultPrinter.destroy();
-        }
+        destr(defaultPrinter);
         index = paperSizeCombo.findData(paperSize, Qt.UserRole + 1);
         if (index===-1) {
             index = paperSizeCombo.findText("ISO A4");
