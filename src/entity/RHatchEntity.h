@@ -67,6 +67,11 @@ public:
     static RPropertyTypeId PropertyVertexNY;
     static RPropertyTypeId PropertyVertexNZ;
 
+    static RPropertyTypeId PropertyLength;
+    static RPropertyTypeId PropertyTotalLength;
+    static RPropertyTypeId PropertyArea;
+    static RPropertyTypeId PropertyTotalArea;
+
 public:
     RHatchEntity(RDocument* document, const RHatchData& data);
     virtual ~RHatchEntity();

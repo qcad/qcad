@@ -6,6 +6,8 @@ fi
 
 echo "Generating script bindings for the QCAD Application Framework..."
 
+if [ $? -ne 0 ]; then exit $?; fi
+
 VER=`uname -r`
 if [ $VER = "20.6.0" ]
 then

@@ -157,6 +157,9 @@ public:
         transparency = t;
     }
 
+    double getLength() const;
+    double getArea() const;
+
     void clearCustomPattern();
 
     void newLoop();

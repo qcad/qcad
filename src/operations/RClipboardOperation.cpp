@@ -427,7 +427,7 @@ void RClipboardOperation::copyEntity(
         // make sure the top level block ref uses the top draw order,
         // when pasting from a part library document which contains
         // a block reference:
-        if (blockRef->getBlockId()==src.getModelSpaceBlockId()) {
+        if (blockRef->getBlockId()==src.getModelSpaceBlockId() && !toModelSpaceBlock) {
             blockRef->setDrawOrder(REntityData::getDefaultDrawOrder());
         }
 
@@ -537,6 +537,7 @@ void RClipboardOperation::copyEntity(
     destEntity->setLinetypeId(destLinetype->getId());
 
     if (toModelSpaceBlock) {
+        // copy to clipboard (always copy to model space block of clipboard):
         destEntity->setBlockId(dest.getModelSpaceBlockId());
     }
     else {

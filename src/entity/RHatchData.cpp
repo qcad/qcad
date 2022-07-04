@@ -491,6 +491,68 @@ QList<QSharedPointer<RShape> > RHatchData::getExploded() const {
     return getShapes();
 }
 
+double RHatchData::getLength() const {
+    QList<RPolyline> pls = getBoundaryAsPolylines(0.1);
+
+    double ret = 0.0;
+    for (int i=0; i<pls.length(); i++) {
+        ret += pls[i].getLength();
+    }
+    return ret;
+}
+
+double RHatchData::getArea() const {
+    QList<RPolyline> pls = getBoundaryAsPolylines(0.1);
+
+    double ret = 0.0;
+    for (int i=0; i<pls.length(); i++) {
+        RPolyline pl = pls[i];
+
+        // check if polyline is inside odd number of other polylines (-)
+        // or even number of other polylines (+) of this hatch:
+        int counter = 0;
+        for (int k=0; k<pls.length(); k++) {
+            // don't check against polyline self:
+            if (i==k) {
+                continue;
+            }
+            RPolyline other = pls[k];
+
+            // define contains as 'must contain every vertex':
+            bool contains = true;
+            if (!other.getBoundingBox().contains(pl.getBoundingBox())) {
+                // bounding box of other does not contain polyline:
+                contains = false;
+            }
+            else {
+                RVector pInside = pl.getPointInside();
+                if (!pInside.isValid()) {
+                    pInside = pl.getStartPoint();
+                }
+                if (!other.contains(pInside, true, 1.0e-3)) {
+                    // point inside polyline is not inside other:
+                    contains = false;
+                }
+            }
+
+            if (contains) {
+                counter++;
+            }
+        }
+
+        if (counter%2==0) {
+            // island:
+            ret += pl.getArea();
+        }
+        else {
+            // hole:
+            ret -= pl.getArea();
+        }
+    }
+
+    return ret;
+}
+
 void RHatchData::clearCustomPattern() {
     pattern.clear();
     update();
