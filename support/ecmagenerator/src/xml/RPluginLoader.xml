@@ -39,7 +39,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
       <variant returnType="void" isPureVirtual="false">
         <arg type="QObject *" typeName="QObject *" name="plugin"
-        isConst="true" />
+        isConst="false" />
         <arg type="bool" typeName="bool" name="remove"
         hasDefault="true" default="false" isConst="false" />
       </variant>

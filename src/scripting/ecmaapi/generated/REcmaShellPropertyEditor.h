@@ -170,6 +170,12 @@
         
     
     
+      QStringList getAppProperties(
+                
+            );
+        
+    
+    
       bool checkType(
                 RS::EntityType type, RS::EntityType filter
             );

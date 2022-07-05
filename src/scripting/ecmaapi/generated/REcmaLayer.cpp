@@ -135,6 +135,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isChildLayerOf, "isChildLayerOf");
             
+            REcmaHelper::registerFunction(&engine, proto, print, "print");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RLayer*>(), *proto);
 
@@ -4141,6 +4143,71 @@
             //REcmaHelper::functionEnd("REcmaLayer::hasProxy", context, engine);
             return result;
         }
+         QScriptValue
+        REcmaLayer::print
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayer::print", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayer::print";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayer* self = 
+                        getSelf("print", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QDebug */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    QDebug*
+                    ap0 =
+                    qscriptvalue_cast<
+                    QDebug*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RLayer: Argument 0 is not of type QDebug*.",
+                               context);                    
+                    }
+                    QDebug& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->print(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.print().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayer::print", context, engine);
+            return result;
+        }
          QScriptValue REcmaLayer::toString
     (QScriptContext *context, QScriptEngine *engine)
     
@@ -4150,13 +4217,7 @@
     
     QString result;
     
-            QDebug d(&result);
-            if (self!=NULL) {
-                d << *self;
-            }
-            else {
-                d << "NULL";
-            }
+            result = QString("RLayer(0x%1)").arg((unsigned long int)self, 0, 16);
         
     return QScriptValue(result);
     }

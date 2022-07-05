@@ -779,6 +779,9 @@
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
     }</block></function></template>
 
+    <function_decl><type><name>static</name> <name>int</name></type> <name>getPageSizeId</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>name</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QSizeF</name></type> <name>getPageSize</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>name</name></decl></param>)</parameter_list>;</function_decl>
+
     <comment type="line">// workarounds for Qt 6 QRegExp changes:</comment>
     <comment type="block">/**
      * \nonscriptable

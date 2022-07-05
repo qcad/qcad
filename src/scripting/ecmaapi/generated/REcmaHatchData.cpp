@@ -146,6 +146,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setTransparency, "setTransparency");
             
+            REcmaHelper::registerFunction(&engine, proto, getLength, "getLength");
+            
+            REcmaHelper::registerFunction(&engine, proto, getArea, "getArea");
+            
             REcmaHelper::registerFunction(&engine, proto, clearCustomPattern, "clearCustomPattern");
             
             REcmaHelper::registerFunction(&engine, proto, newLoop, "newLoop");
@@ -3260,6 +3264,104 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaHatchData::setTransparency", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchData::getLength
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::getLength", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::getLength";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchData* self = 
+                        getSelf("getLength", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getLength();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.getLength().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::getLength", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchData::getArea
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::getArea", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::getArea";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchData* self = 
+                        getSelf("getArea", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getArea();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.getArea().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::getArea", context, engine);
             return result;
         }
          QScriptValue

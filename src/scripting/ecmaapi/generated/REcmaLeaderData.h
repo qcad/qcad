@@ -518,6 +518,12 @@
         appendVertex
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isSplineShaped
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setSplineShaped
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getReferencePoints
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -255,6 +255,22 @@
                 qScriptValueFromValue(&engine, RHatchEntity::PropertyVertexNZ),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyLength",
+                qScriptValueFromValue(&engine, RHatchEntity::PropertyLength),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyTotalLength",
+                qScriptValueFromValue(&engine, RHatchEntity::PropertyTotalLength),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyArea",
+                qScriptValueFromValue(&engine, RHatchEntity::PropertyArea),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyTotalArea",
+                qScriptValueFromValue(&engine, RHatchEntity::PropertyTotalArea),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
 
     // enum values:
     

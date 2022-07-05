@@ -95,6 +95,10 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, lessThanAlphanumerical, "lessThanAlphanumerical");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getPageSizeId, "getPageSizeId");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getPageSize, "getPageSize");
+            
 
     // static properties:
     
@@ -3322,6 +3326,106 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaS::lessThanAlphanumerical", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaS::getPageSizeId
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaS::getPageSizeId", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaS::getPageSizeId";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        RS::
+       getPageSizeId(a0);
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RS.getPageSizeId().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaS::getPageSizeId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaS::getPageSize
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaS::getPageSize", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaS::getPageSize";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSizeF'
+    QSizeF cppResult =
+        RS::
+       getPageSize(a0);
+        // return type: QSizeF
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RS.getPageSize().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaS::getPageSize", context, engine);
             return result;
         }
          QScriptValue REcmaS::toString

@@ -267,6 +267,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="int" typeName="int" name="t" isConst="false" />
       </variant>
     </method>
+    <method name="getLength" cppName="getLength" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getArea" cppName="getArea" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
     <method name="clearCustomPattern" cppName="clearCustomPattern"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

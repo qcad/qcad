@@ -50,6 +50,8 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, operator_assign, "operator_assign");
+            
             REcmaHelper::registerFunction(&engine, proto, getId, "getId");
             
             REcmaHelper::registerFunction(&engine, proto, setId, "setId");
@@ -361,6 +363,79 @@
 
     // public methods:
      QScriptValue
+        REcmaPropertyTypeId::operator_assign
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyTypeId::operator=", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyTypeId::operator=";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPropertyTypeId* self = 
+                        getSelf("operator=", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RPropertyTypeId */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RPropertyTypeId*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RPropertyTypeId*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RPropertyTypeId: Argument 0 is not of type RPropertyTypeId.",
+                               context);                    
+                    }
+                    RPropertyTypeId 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RPropertyTypeId &'
+    RPropertyTypeId & cppResult =
+        
+               self->operator=(a0);
+        // return type: RPropertyTypeId &
+                // reference
+                result = engine->newVariant(
+                QVariant::fromValue(&cppResult));
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyTypeId.operator_assign().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyTypeId::operator=", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaPropertyTypeId::getId
         (QScriptContext* context, QScriptEngine* engine) 
         

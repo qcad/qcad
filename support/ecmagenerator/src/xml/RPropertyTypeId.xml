@@ -25,6 +25,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         default="INVALID_ID" isConst="false" />
       </variant>
     </constructor>
+    <method name="operator=" cppName="operator=" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RPropertyTypeId &amp;"
+      isPureVirtual="false">
+        <arg type="RPropertyTypeId &amp;"
+        typeName="RPropertyTypeId" name="other" isConst="true" />
+      </variant>
+    </method>
     <method name="getId" cppName="getId" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="int" isPureVirtual="false" />

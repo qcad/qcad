@@ -179,6 +179,9 @@
         ;static  QScriptValue
         hasProxy
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        print
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

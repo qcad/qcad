@@ -82,6 +82,12 @@
         hasArrowHead
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setSplineShaped
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isSplineShaped
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         clear
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

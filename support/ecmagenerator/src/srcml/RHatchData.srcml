@@ -158,6 +158,9 @@
         <expr_stmt><expr><name>transparency</name> = <name>t</name></expr>;</expr_stmt>
     }</block></function>
 
+    <function_decl><type><name>double</name></type> <name>getLength</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>double</name></type> <name>getArea</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
     <function_decl><type><name>void</name></type> <name>clearCustomPattern</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>newLoop</name><parameter_list>()</parameter_list>;</function_decl>

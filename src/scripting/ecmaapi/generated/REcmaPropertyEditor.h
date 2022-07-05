@@ -112,6 +112,9 @@
         getEntityTypeFilter
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getAppProperties
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         checkType
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

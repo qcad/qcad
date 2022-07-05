@@ -113,6 +113,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getEntityTypeFilter, "getEntityTypeFilter");
             
+            REcmaHelper::registerFunction(&engine, proto, getAppProperties, "getAppProperties");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RPropertyEditor*>(), *proto);
 
@@ -1924,6 +1926,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPropertyEditor::getEntityTypeFilter", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPropertyEditor::getAppProperties
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyEditor::getAppProperties", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyEditor::getAppProperties";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPropertyEditor* self = 
+                        getSelf("getAppProperties", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QStringList'
+    QStringList cppResult =
+        
+               self->getAppProperties();
+        // return type: QStringList
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyEditor.getAppProperties().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyEditor::getAppProperties", context, engine);
             return result;
         }
          QScriptValue

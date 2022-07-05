@@ -86,6 +86,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, hasArrowHead, "hasArrowHead");
             
+            REcmaHelper::registerFunction(&engine, proto, setSplineShaped, "setSplineShaped");
+            
+            REcmaHelper::registerFunction(&engine, proto, isSplineShaped, "isSplineShaped");
+            
             REcmaHelper::registerFunction(&engine, proto, clear, "clear");
             
             REcmaHelper::registerFunction(&engine, proto, normalize, "normalize");
@@ -217,6 +221,10 @@
             
             ctor.setProperty("PropertyArrowHead",
                 qScriptValueFromValue(&engine, RLeaderEntity::PropertyArrowHead),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertySplineShaped",
+                qScriptValueFromValue(&engine, RLeaderEntity::PropertySplineShaped),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyDimLeaderBlock",
@@ -1408,6 +1416,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLeaderEntity::hasArrowHead", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLeaderEntity::setSplineShaped
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLeaderEntity::setSplineShaped", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLeaderEntity::setSplineShaped";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLeaderEntity* self = 
+                        getSelf("setSplineShaped", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setSplineShaped(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLeaderEntity.setSplineShaped().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLeaderEntity::setSplineShaped", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLeaderEntity::isSplineShaped
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLeaderEntity::isSplineShaped", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLeaderEntity::isSplineShaped";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLeaderEntity* self = 
+                        getSelf("isSplineShaped", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isSplineShaped();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLeaderEntity.isSplineShaped().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLeaderEntity::isSplineShaped", context, engine);
             return result;
         }
          QScriptValue

@@ -572,6 +572,22 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="getPageSizeId" cppName="getPageSizeId"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="name"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getPageSize" cppName="getPageSize"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QSizeF" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="name"
+        isConst="true" />
+      </variant>
+    </method>
     <property name="PointTolerance" type="double" isConst="true"
     isStatic="true" />
     <property name="AngleTolerance" type="double" isConst="true"

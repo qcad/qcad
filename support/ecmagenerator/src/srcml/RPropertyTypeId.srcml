@@ -75,6 +75,8 @@
     <constructor_decl><name>RPropertyTypeId</name><parameter_list>(<param><decl><type><name>const</name> <name>RPropertyTypeId</name>&amp;</type> <name>other</name></decl></param>)</parameter_list>;</constructor_decl>
     <constructor_decl><name>RPropertyTypeId</name><parameter_list>(<param><decl><type><name>long</name> <name>int</name></type> <name>id</name> =<init> <expr><name>INVALID_ID</name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
 
+    <function_decl><type><name>RPropertyTypeId</name>&amp;</type> <name>operator=</name><parameter_list>(<param><decl><type><name>const</name> <name>RPropertyTypeId</name>&amp;</type> <name>other</name></decl></param>)</parameter_list>;</function_decl>
+
     <function_decl><type><name>long</name> <name>int</name></type> <name>getId</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setId</name><parameter_list>(<param><decl><type><name>long</name> <name>int</name></type> <name>id</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>QString</name></type> <name>getCustomPropertyTitle</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>

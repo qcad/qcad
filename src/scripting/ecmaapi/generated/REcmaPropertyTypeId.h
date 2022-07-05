@@ -46,6 +46,9 @@
 
     // public methods:
     static  QScriptValue
+        operator_assign
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
