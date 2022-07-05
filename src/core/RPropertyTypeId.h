@@ -91,9 +91,6 @@ public:
 //    QString getBlockAttributePrompt() const;
 //    QString getBlockAttributeId() const;
 
-    /**
-     * \nonscriptable
-     */
     void generateId(RS::EntityType type,
         const QString& groupTitle, const QString& title, bool forceNew = false,
         RPropertyAttributes::Options options = RPropertyAttributes::NoOptions);
