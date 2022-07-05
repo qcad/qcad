@@ -37,6 +37,9 @@ RPropertyTypeId RLineEntity::PropertyDrawOrder;
 RPropertyTypeId RLineEntity::PropertyStartPointX;
 RPropertyTypeId RLineEntity::PropertyStartPointY;
 RPropertyTypeId RLineEntity::PropertyStartPointZ;
+RPropertyTypeId RLineEntity::PropertyMiddlePointX;
+RPropertyTypeId RLineEntity::PropertyMiddlePointY;
+RPropertyTypeId RLineEntity::PropertyMiddlePointZ;
 RPropertyTypeId RLineEntity::PropertyEndPointX;
 RPropertyTypeId RLineEntity::PropertyEndPointY;
 RPropertyTypeId RLineEntity::PropertyEndPointZ;
@@ -84,6 +87,9 @@ void RLineEntity::init() {
     RLineEntity::PropertyStartPointX.generateId(RLineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Start Point"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
     RLineEntity::PropertyStartPointY.generateId(RLineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Start Point"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
     RLineEntity::PropertyStartPointZ.generateId(RLineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Start Point"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
+    RLineEntity::PropertyMiddlePointX.generateId(RLineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Middle Point"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
+    RLineEntity::PropertyMiddlePointY.generateId(RLineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Middle Point"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
+    RLineEntity::PropertyMiddlePointZ.generateId(RLineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Middle Point"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
     RLineEntity::PropertyEndPointX.generateId(RLineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "End Point"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
     RLineEntity::PropertyEndPointY.generateId(RLineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "End Point"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
     RLineEntity::PropertyEndPointZ.generateId(RLineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "End Point"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
@@ -126,6 +132,12 @@ QPair<QVariant, RPropertyAttributes> RLineEntity::getProperty(
         return qMakePair(QVariant(data.startPoint.y), RPropertyAttributes());
     } else if (propertyTypeId == PropertyStartPointZ) {
         return qMakePair(QVariant(data.startPoint.z), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyMiddlePointX) {
+        return qMakePair(QVariant(data.getMiddlePoint().x), RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::ReadOnly));
+    } else if (propertyTypeId == PropertyMiddlePointY) {
+        return qMakePair(QVariant(data.getMiddlePoint().y), RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::ReadOnly));
+    } else if (propertyTypeId == PropertyMiddlePointZ) {
+        return qMakePair(QVariant(data.getMiddlePoint().z), RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::ReadOnly));
     } else if (propertyTypeId == PropertyEndPointX) {
         return qMakePair(QVariant(data.endPoint.x), RPropertyAttributes());
     } else if (propertyTypeId == PropertyEndPointY) {

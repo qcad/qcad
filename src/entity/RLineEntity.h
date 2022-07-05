@@ -55,6 +55,9 @@ public:
     static RPropertyTypeId PropertyStartPointX;
     static RPropertyTypeId PropertyStartPointY;
     static RPropertyTypeId PropertyStartPointZ;
+    static RPropertyTypeId PropertyMiddlePointX;
+    static RPropertyTypeId PropertyMiddlePointY;
+    static RPropertyTypeId PropertyMiddlePointZ;
     static RPropertyTypeId PropertyEndPointX;
     static RPropertyTypeId PropertyEndPointY;
     static RPropertyTypeId PropertyEndPointZ;
