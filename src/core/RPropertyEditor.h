@@ -91,6 +91,8 @@ public:
         return entityTypeFilter;
     }
 
+    virtual QStringList getAppProperties() { return QStringList(); }
+
     static bool checkType(RS::EntityType type, RS::EntityType filter);
 
 protected:
