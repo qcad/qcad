@@ -145,6 +145,7 @@
     }</block></function>
     <function_decl><type><name>QImage</name></type> <name>getImage</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <function_decl><type><name>QString</name></type> <name>getFullFilePath</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>void</name></type> <name>load</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>void</name></type> <name>reload</name><parameter_list>()</parameter_list>;</function_decl>
 

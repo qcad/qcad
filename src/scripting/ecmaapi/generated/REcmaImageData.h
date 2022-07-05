@@ -159,6 +159,9 @@
         getImage
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getFullFilePath
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         load
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

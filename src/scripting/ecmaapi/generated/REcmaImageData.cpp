@@ -142,6 +142,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getImage, "getImage");
             
+            REcmaHelper::registerFunction(&engine, proto, getFullFilePath, "getFullFilePath");
+            
             REcmaHelper::registerFunction(&engine, proto, load, "load");
             
             REcmaHelper::registerFunction(&engine, proto, reload, "reload");
@@ -3542,6 +3544,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaImageData::getImage", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaImageData::getFullFilePath
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaImageData::getFullFilePath", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaImageData::getFullFilePath";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RImageData* self = 
+                        getSelf("getFullFilePath", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getFullFilePath();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RImageData.getFullFilePath().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaImageData::getFullFilePath", context, engine);
             return result;
         }
          QScriptValue

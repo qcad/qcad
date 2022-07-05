@@ -239,6 +239,12 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyStartPointZ" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
+    <property name="PropertyMiddlePointX" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyMiddlePointY" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyMiddlePointZ" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
     <property name="PropertyEndPointX" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyEndPointY" type="RPropertyTypeId"

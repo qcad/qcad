@@ -197,6 +197,18 @@
                 qScriptValueFromValue(&engine, RLineEntity::PropertyStartPointZ),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyMiddlePointX",
+                qScriptValueFromValue(&engine, RLineEntity::PropertyMiddlePointX),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyMiddlePointY",
+                qScriptValueFromValue(&engine, RLineEntity::PropertyMiddlePointY),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyMiddlePointZ",
+                qScriptValueFromValue(&engine, RLineEntity::PropertyMiddlePointZ),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyEndPointX",
                 qScriptValueFromValue(&engine, RLineEntity::PropertyEndPointX),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
