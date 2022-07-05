@@ -236,14 +236,10 @@ void RImageData::reload() {
     load();
 }
 
-void RImageData::load() const {
-    if (!image.isNull()) {
-        return;
-    }
-
+QString RImageData::getFullFilePath() const {
     // file name might be empty during import:
     if (fileName.isEmpty()) {
-        return;
+        return "";
     }
 
     // QFileInfo does not correctly handle paths with mixed slash / backslash notation:
@@ -251,10 +247,7 @@ void RImageData::load() const {
 
     // load image from absolute path:
     if (QFileInfo(fileName).exists()) {
-        if (!image.load(fileName)) {
-            qWarning() << "RImageData::load: failed: " << fileName;
-        }
-        return;
+        return fileName;
     }
 
     QString docPath;
@@ -270,23 +263,36 @@ void RImageData::load() const {
     if (QFileInfo(fileName).isRelative()) {
         QString absPath = docPath + QDir::separator() + fileName;
         if (QFileInfo(absPath).exists()) {
-            if (!image.load(absPath)) {
-                qWarning() << "RImageData::load: failed: " << absPath;
-            }
-            fileName = absPath;
-            return;
+            return absPath;
         }
     }
 
     // load image from same path as drawing file:
     QString absPath = docPath + QDir::separator() + QFileInfo(fileName).fileName();
     if (QFileInfo(absPath).exists()) {
-        if (!image.load(absPath)) {
-            qWarning() << "RImageData::load: failed: " << absPath;
-        }
-        fileName = absPath;
+        return absPath;
+    }
+
+    return "";
+}
+
+void RImageData::load() const {
+    if (!image.isNull()) {
         return;
     }
+
+    QString fullFilePath = getFullFilePath();
+
+    // file name might be empty during import:
+    if (fullFilePath.isEmpty()) {
+        return;
+    }
+
+    if (!image.load(fullFilePath)) {
+        qWarning() << "RImageData::load: failed: " << fullFilePath;
+    }
+
+    fileName = fullFilePath;
 }
 
 RVector RImageData::getScaleVector() const {

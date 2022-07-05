@@ -144,6 +144,7 @@ public:
     }
     QImage getImage() const;
 
+    QString getFullFilePath() const;
     void load() const;
     void reload();
 
