@@ -196,6 +196,12 @@
         
     
     
+      bool showCustomAppProperties(
+                RPropertyAttributes::Option opt
+            );
+        
+    
+    
       void computePropertyValue(
                 RProperty & property
             );
@@ -213,6 +219,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         updateProperty
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        showCustomAppProperties
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         computePropertyValue

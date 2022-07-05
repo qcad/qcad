@@ -37,6 +37,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="Area" />
       <value name="UnitLess" />
       <value name="DimStyleOverride" />
+      <value name="CustomApp001" />
     </enum>
     <constructor>
       <variant />
@@ -344,6 +345,19 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="isCustomApp001" cppName="isCustomApp001"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setCustomApp001" cppName="setCustomApp001"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="v"
+        isConst="false" />
+      </variant>
     </method>
     <method name="getLabel" cppName="getLabel" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

@@ -113,6 +113,8 @@
 
     <function_decl><type><name>void</name></type> <name>updateProperty</name><parameter_list>(<param><decl><type><name>const</name> <name>RPropertyTypeId</name>&amp;</type> <name>propertyTypeId</name></decl></param>, <param><decl><type><name>RObject</name>&amp;</type> <name>object</name></decl></param>, <param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>bool</name></type> <name>showOnRequest</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>showCustomAppProperties</name><parameter_list>(<param><decl><type><name><name>RPropertyAttributes</name>::<name>Option</name></name></type> <name>opt</name></decl></param>)</parameter_list>;</function_decl>
+
     <function_decl><type><name>static</name> <name>void</name></type> <name>computePropertyValue</name><parameter_list>(<param><decl><type><name>RProperty</name>&amp;</type> <name>property</name></decl></param>)</parameter_list>;</function_decl>
 
 </protected><protected>protected:

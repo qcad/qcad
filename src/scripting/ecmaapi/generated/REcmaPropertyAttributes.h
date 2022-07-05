@@ -190,6 +190,12 @@
         isPercentage
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isCustomApp001
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setCustomApp001
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLabel
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

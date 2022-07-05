@@ -78,7 +78,8 @@
         <expr><name>Scale</name> = 0x2000000</expr>,               <comment type="line">//!&lt; Property is scale (1:2, 5"=1", ...)</comment>
         <expr><name>Area</name> = 0x4000000</expr>,                <comment type="line">//!&lt; Property is area (relevant for formatting of value)</comment>
         <expr><name>UnitLess</name> = 0x8000000</expr>,            <comment type="line">//!&lt; Property has no unit (linetype scale, draw order, ...)</comment>
-        <expr><name>DimStyleOverride</name> = 0x10000000</expr>    <comment type="line">//!&lt; Property is advanced dimension style override (can be hidden)</comment>
+        <expr><name>DimStyleOverride</name> = 0x10000000</expr>,   <comment type="line">//!&lt; Property is advanced dimension style override (can be hidden)</comment>
+        <expr><name>CustomApp001</name> = 0x20000000</expr>        <comment type="line">//!&lt; Property attribute for custom application</comment>
     }</block>;</enum>
     <macro><name>Q_DECLARE_FLAGS</name><argument_list>(<argument>Options</argument>, <argument>Option</argument>)</argument_list></macro>
 
@@ -287,6 +288,14 @@
 
     <function><type><name>bool</name></type> <name>isPercentage</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>options</name>.<call><name>testFlag</name><argument_list>(<argument><expr><name>Percentage</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isCustomApp001</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>options</name>.<call><name>testFlag</name><argument_list>(<argument><expr><name>CustomApp001</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setCustomApp001</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setOption</name><parameter_list>(<param><decl><type><name>CustomApp001</name></type></decl></param>, <param><decl><type><name>v</name></type></decl></param>)</parameter_list>;</constructor_decl>
     }</block></function>
 
     <function><type><name>QString</name></type> <name>getLabel</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{

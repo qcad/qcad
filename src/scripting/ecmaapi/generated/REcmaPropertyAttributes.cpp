@@ -146,6 +146,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, isPercentage, "isPercentage");
             
+            REcmaHelper::registerFunction(&engine, proto, isCustomApp001, "isCustomApp001");
+            
+            REcmaHelper::registerFunction(&engine, proto, setCustomApp001, "setCustomApp001");
+            
             REcmaHelper::registerFunction(&engine, proto, getLabel, "getLabel");
             
             REcmaHelper::registerFunction(&engine, proto, setLabel, "setLabel");
@@ -327,6 +331,11 @@
 
     ctor.setProperty("DimStyleOverride",
     QScriptValue(RPropertyAttributes::DimStyleOverride),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("CustomApp001",
+    QScriptValue(RPropertyAttributes::CustomApp001),
     QScriptValue::ReadOnly);
 
 
@@ -2989,6 +2998,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPropertyAttributes::isPercentage", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPropertyAttributes::isCustomApp001
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyAttributes::isCustomApp001", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyAttributes::isCustomApp001";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPropertyAttributes* self = 
+                        getSelf("isCustomApp001", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isCustomApp001();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyAttributes.isCustomApp001().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyAttributes::isCustomApp001", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPropertyAttributes::setCustomApp001
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyAttributes::setCustomApp001", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyAttributes::setCustomApp001";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPropertyAttributes* self = 
+                        getSelf("setCustomApp001", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setCustomApp001(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyAttributes.setCustomApp001().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyAttributes::setCustomApp001", context, engine);
             return result;
         }
          QScriptValue

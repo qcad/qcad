@@ -235,6 +235,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
+    <method name="showCustomAppProperties"
+    cppName="showCustomAppProperties" specifier="protected"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RPropertyAttributes::Option"
+        typeName="RPropertyAttributes::Option" name="opt"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="computePropertyValue"
     cppName="computePropertyValue" specifier="protected"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
