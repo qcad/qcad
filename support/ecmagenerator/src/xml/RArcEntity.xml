@@ -308,11 +308,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyCenterZ" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
-    <property name="PropertyMiddleX" type="RPropertyTypeId"
+    <property name="PropertyMiddlePointX" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
-    <property name="PropertyMiddleY" type="RPropertyTypeId"
+    <property name="PropertyMiddlePointY" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
-    <property name="PropertyMiddleZ" type="RPropertyTypeId"
+    <property name="PropertyMiddlePointZ" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyRadius" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
