@@ -306,7 +306,6 @@ int main(int argc, char *argv[]) {
 
     REllipseEntity::init();
     RImageEntity::init();
-    RHatchEntity::init();
     RLineEntity::init();
     RPointEntity::init();
     RSolidEntity::init();
@@ -336,6 +335,7 @@ int main(int argc, char *argv[]) {
 
     // initialization of entities whos properties may depend on available plugins:
     RPolylineEntity::init();
+    RHatchEntity::init();
     RDimensionEntity::init();
     RDimLinearEntity::init();
     RDimAlignedEntity::init();
