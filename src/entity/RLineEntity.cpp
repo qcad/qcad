@@ -133,11 +133,11 @@ QPair<QVariant, RPropertyAttributes> RLineEntity::getProperty(
     } else if (propertyTypeId == PropertyStartPointZ) {
         return qMakePair(QVariant(data.startPoint.z), RPropertyAttributes());
     } else if (propertyTypeId == PropertyMiddlePointX) {
-        return qMakePair(QVariant(data.getMiddlePoint().x), RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::ReadOnly));
+        return qMakePair(QVariant(data.getMiddlePoint().x), RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::ReadOnly|RPropertyAttributes::CustomApp001));
     } else if (propertyTypeId == PropertyMiddlePointY) {
-        return qMakePair(QVariant(data.getMiddlePoint().y), RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::ReadOnly));
+        return qMakePair(QVariant(data.getMiddlePoint().y), RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::ReadOnly|RPropertyAttributes::CustomApp001));
     } else if (propertyTypeId == PropertyMiddlePointZ) {
-        return qMakePair(QVariant(data.getMiddlePoint().z), RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::ReadOnly));
+        return qMakePair(QVariant(data.getMiddlePoint().z), RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::ReadOnly|RPropertyAttributes::CustomApp001));
     } else if (propertyTypeId == PropertyEndPointX) {
         return qMakePair(QVariant(data.endPoint.x), RPropertyAttributes());
     } else if (propertyTypeId == PropertyEndPointY) {
