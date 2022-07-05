@@ -90,7 +90,7 @@ FirstStart.prototype.showDialog = function() {
     code = langCombo.itemData(langCombo.currentIndex);
     langCombo.model().sort(0);
     var self = this;
-    langCombo.currentIndexChanged.connect(function(index) {
+    langCombo["currentIndexChanged(int)"].connect(function(index) {
         var code = langCombo.itemData(index);
         self.changeLanguage(code);
     });
