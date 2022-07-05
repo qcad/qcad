@@ -56,6 +56,9 @@ public:
     static RPropertyTypeId PropertyCenterX;
     static RPropertyTypeId PropertyCenterY;
     static RPropertyTypeId PropertyCenterZ;
+    static RPropertyTypeId PropertyMiddleX;
+    static RPropertyTypeId PropertyMiddleY;
+    static RPropertyTypeId PropertyMiddleZ;
     static RPropertyTypeId PropertyRadius;
     static RPropertyTypeId PropertyStartAngle;
     static RPropertyTypeId PropertyEndAngle;

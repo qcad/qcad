@@ -39,6 +39,9 @@ RPropertyTypeId RArcEntity::PropertyDrawOrder;
 RPropertyTypeId RArcEntity::PropertyCenterX;
 RPropertyTypeId RArcEntity::PropertyCenterY;
 RPropertyTypeId RArcEntity::PropertyCenterZ;
+RPropertyTypeId RArcEntity::PropertyMiddleX;
+RPropertyTypeId RArcEntity::PropertyMiddleY;
+RPropertyTypeId RArcEntity::PropertyMiddleZ;
 RPropertyTypeId RArcEntity::PropertyRadius;
 RPropertyTypeId RArcEntity::PropertyStartAngle;
 RPropertyTypeId RArcEntity::PropertyEndAngle;
@@ -92,6 +95,9 @@ void RArcEntity::init() {
     RArcEntity::PropertyCenterX.generateId(RArcEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
     RArcEntity::PropertyCenterY.generateId(RArcEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
     RArcEntity::PropertyCenterZ.generateId(RArcEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
+    RArcEntity::PropertyMiddleX.generateId(RArcEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Middle"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
+    RArcEntity::PropertyMiddleY.generateId(RArcEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Middle"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
+    RArcEntity::PropertyMiddleZ.generateId(RArcEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Middle"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
     RArcEntity::PropertyRadius.generateId(RArcEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Radius"), false, RPropertyAttributes::Geometry);
     RArcEntity::PropertyStartAngle.generateId(RArcEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Start Angle"), false, RPropertyAttributes::Geometry);
     RArcEntity::PropertyEndAngle.generateId(RArcEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "End Angle"), false, RPropertyAttributes::Geometry);
@@ -152,6 +158,12 @@ QPair<QVariant, RPropertyAttributes> RArcEntity::getProperty(
         return qMakePair(QVariant(data.center.y), RPropertyAttributes());
     } else if (propertyTypeId == PropertyCenterZ) {
         return qMakePair(QVariant(data.center.z), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyMiddleX) {
+        return qMakePair(QVariant(data.getMiddlePoint().x), RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::ReadOnly|RPropertyAttributes::CustomApp001));
+    } else if (propertyTypeId == PropertyMiddleY) {
+        return qMakePair(QVariant(data.getMiddlePoint().y), RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::ReadOnly|RPropertyAttributes::CustomApp001));
+    } else if (propertyTypeId == PropertyMiddleZ) {
+        return qMakePair(QVariant(data.getMiddlePoint().z), RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::ReadOnly|RPropertyAttributes::CustomApp001));
     } else if (propertyTypeId == PropertyRadius) {
         return qMakePair(QVariant(data.radius), RPropertyAttributes());
     } else if (propertyTypeId == PropertyStartAngle) {
