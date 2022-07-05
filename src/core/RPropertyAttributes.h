@@ -77,7 +77,8 @@ public:
         Scale = 0x2000000,               //!< Property is scale (1:2, 5"=1", ...)
         Area = 0x4000000,                //!< Property is area (relevant for formatting of value)
         UnitLess = 0x8000000,            //!< Property has no unit (linetype scale, draw order, ...)
-        DimStyleOverride = 0x10000000    //!< Property is advanced dimension style override (can be hidden)
+        DimStyleOverride = 0x10000000,   //!< Property is advanced dimension style override (can be hidden)
+        CustomApp001 = 0x20000000        //!< Property attribute for custom application
     };
     Q_DECLARE_FLAGS(Options, Option)
 
@@ -286,6 +287,14 @@ public:
 
     bool isPercentage() const {
         return options.testFlag(Percentage);
+    }
+
+    bool isCustomApp001() const {
+        return options.testFlag(CustomApp001);
+    }
+
+    void setCustomApp001(bool v) {
+        setOption(CustomApp001, v);
     }
 
     QString getLabel() const {

@@ -497,6 +497,11 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
         QVariant& val = p.value;
         RPropertyAttributes& attr = p.attributes;
 
+        // ignore custom app properties if not explicitely allowed:
+        if (attr.isCustomApp001() && !showCustomAppProperties(RPropertyAttributes::CustomApp001)) {
+            continue;
+        }
+
         // group title (e.g. "Center", "QCAD" for custom propertie, "" for group less):
         QString propertyGroupTitle = pid.getPropertyGroupTitle();
         // proerty title (e.g. "X", "myProp", "Text height", etc.):
@@ -552,6 +557,13 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
 
     updatesDisabled = false;
 
+}
+
+/**
+ * Can be re-implemented to show custom app properties of the given type(s).
+ */
+bool RPropertyEditor::showCustomAppProperties(RPropertyAttributes::Option opt) {
+    return false;
 }
 
 void RPropertyEditor::computePropertyValue(RProperty& ccProp) {

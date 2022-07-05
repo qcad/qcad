@@ -112,6 +112,8 @@ protected:
 
     void updateProperty(const RPropertyTypeId& propertyTypeId, RObject& object, RDocument* document, bool showOnRequest = false);
 
+    virtual bool showCustomAppProperties(RPropertyAttributes::Option opt);
+
     static void computePropertyValue(RProperty& property);
 
 protected:
