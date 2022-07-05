@@ -120,6 +120,20 @@ function isOfType(obj, type) {
 }
 
 /**
+ * Destroys the given object with C++ ownership.
+ */
+function destr(obj) {
+    if (!RSettings.isQt(6)) {
+        obj.destroy();
+    }
+    else {
+        // destroy does not work in Qt 6 / QJSEngine:
+        // ("Invalid attempt to destroy() an indestructible object")
+        obj.destr();
+    }
+}
+
+/**
  * Checks if the given object is undefined or null.
  *
  * \return true if the given object is defined and not null.

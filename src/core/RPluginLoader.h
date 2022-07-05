@@ -45,7 +45,7 @@ public:
     static void unloadPlugins();
     static void loadPlugin(QObject* plugin, bool init, const QString& fileName = QString(), const QString& errorString = QString());
     static void unloadPlugin(const QString& fileName, bool remove = false);
-    static void unloadPlugin(const QObject* plugin, bool remove = false);
+    static void unloadPlugin(QObject* plugin, bool remove = false);
 
     static void postInitPlugins(RPluginInterface::InitStatus status);
 

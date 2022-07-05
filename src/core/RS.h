@@ -778,6 +778,9 @@ public:
 #endif
     }
 
+    static int getPageSizeId(const QString& name);
+    static QSizeF getPageSize(const QString& name);
+
     // workarounds for Qt 6 QRegExp changes:
     /**
      * \nonscriptable

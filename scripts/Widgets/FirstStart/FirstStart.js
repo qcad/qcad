@@ -17,6 +17,8 @@
  * along with QCAD.
  */
 
+include("scripts/library.js");
+include("scripts/EAction.js");
 include("scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js");
 include("scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js");
 include("scripts/Edit/DrawingPreferences/UnitSettings/UnitSettings.js");
@@ -45,28 +47,32 @@ FirstStart.prototype.showDialog = function() {
 
     }
     else {
-        this.dialog.findChild("LanguageBackground").styleSheet = "";
-        this.dialog.findChild("Background").styleSheet = "";
-        this.dialog.findChild("Left").minimumSize = 0;
+        this.dialog.findChild("LanguageBackground").setStyleSheet("");
+        this.dialog.findChild("Background").setStyleSheet("");
+        if (!isNull(this.dialog.findChild("Left"))) {
+            this.dialog.findChild("Left").setMinimumSize(0);
+        }
     }
 
     this.widgets = getWidgets(this.dialog);
 
     // language combo
     var langCombo = this.widgets["Language"];
+    langCombo.blockSignals(true);
     langCombo.addItem("English", "en");
     var codes = LanguagePreferences.getLanguages();
     for ( var i = 0; i < codes.length; ++i) {
         code = codes[i];
         langCombo.addItem(LanguagePreferences.codeToString(code), code);
     }
+    langCombo.blockSignals(false);
 
     // try to set the locale from system
     var sysLocale = QLocale.system();
     var systemLocale = getQLocaleName(sysLocale);
     var flags = makeQtMatchFlags(Qt.MatchExactly);
     var index = langCombo.findData(systemLocale, Qt.UserRole, flags);
-    if (index == -1) {
+    if (index===-1) {
         var re = new RegExp("(.+)_(.+)", "i");
         var found = systemLocale.match(re);
         var lang;
@@ -78,20 +84,21 @@ FirstStart.prototype.showDialog = function() {
         flags = makeQtMatchFlags(Qt.MatchContains);
         index = langCombo.findData(lang, Qt.UserRole, flags);
     }
-    if (index != -1) {
+    if (index!==-1) {
         langCombo.setCurrentIndex(index);
     }
     code = langCombo.itemData(langCombo.currentIndex);
     langCombo.model().sort(0);
-    langCombo["currentIndexChanged(int)"].connect(this, function(index) {
+    var self = this;
+    langCombo.currentIndexChanged.connect(function(index) {
         var code = langCombo.itemData(index);
-        this.changeLanguage(code);
+        self.changeLanguage(code);
     });
 
     this.translators = [];
     this.changeLanguage(code);
 
-    if (QCoreApplication.arguments().contains("-no-initial-dialog") || this.dialog.exec()) {
+    if (RSettings.getOriginalArguments().contains("-no-initial-dialog") || this.dialog.exec()) {
         // save settings
 
         // language:
@@ -173,13 +180,13 @@ FirstStart.prototype.showDialog = function() {
         settings.sync();
     }
 
-    this.dialog.destroy();
+    destr(this.dialog);
     EAction.activateMainWindow();
 };
 
 FirstStart.prototype.changeLanguage = function(code) {
     var i;
-    for (i = 0; i < this.translators.length; ++i) {
+    for (i=0; i<this.translators.length; ++i) {
         QCoreApplication.removeTranslator(this.translators[i]);
     }
     
@@ -223,11 +230,25 @@ FirstStart.prototype.changeLanguage = function(code) {
 
     // default paper size
     var paperSizeOverride = qApp.property("FirstStartPaperSizeOverride");
+    if (isNull(paperSizeOverride)) {
+        paperSizeOverride = "";
+    }
     var index = paperSizeCombo.findText(paperSizeOverride);
     if (index===-1) {
         var defaultPrinter = new QPrinter();
-        var paperSize = defaultPrinter.paperSize(QPrinter.Millimeter);
-        defaultPrinter.destroy();
+        var paperSize;
+        if (isFunction(defaultPrinter.paperSize)) {
+            /// Qt 4, 5:
+            paperSize = defaultPrinter.paperSize(QPrinter.Millimeter);
+        }
+        else {
+            // Qt 6:
+            var pageLayout = defaultPrinter.pageLayout();
+            var pageSize = pageLayout.pageSize();
+            paperSize = pageSize.id();
+        }
+
+        destr(defaultPrinter);
         index = paperSizeCombo.findData(paperSize, Qt.UserRole + 1);
         if (index===-1) {
             index = paperSizeCombo.findText("ISO A4");

@@ -81,6 +81,7 @@ uint RDebug::stopTimer(int id, const QString& msg, uint msThreshold) {
     Nanoseconds elapsedNano;
     uint64_t end = mach_absolute_time();
     uint64_t elapsed = end - timerMac[id];
+    // TODO: deprecated:
     elapsedNano = AbsoluteToNanoseconds( *(AbsoluteTime *) &elapsed );
     uint64_t t = (* (uint64_t *) &elapsedNano);
     timerMac.remove(id);

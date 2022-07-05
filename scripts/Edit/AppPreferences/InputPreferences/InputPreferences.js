@@ -17,8 +17,8 @@
  * along with QCAD.
  */
 
-include("../../EAction.js");
-include("../../WidgetFactory.js");
+include("scripts/EAction.js");
+include("scripts/WidgetFactory.js");
 
 // TODO: use QLocale::decimalPoint
 
