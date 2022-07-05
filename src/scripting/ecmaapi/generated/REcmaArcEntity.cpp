@@ -217,6 +217,18 @@
                 qScriptValueFromValue(&engine, RArcEntity::PropertyCenterZ),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyMiddleX",
+                qScriptValueFromValue(&engine, RArcEntity::PropertyMiddleX),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyMiddleY",
+                qScriptValueFromValue(&engine, RArcEntity::PropertyMiddleY),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyMiddleZ",
+                qScriptValueFromValue(&engine, RArcEntity::PropertyMiddleZ),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyRadius",
                 qScriptValueFromValue(&engine, RArcEntity::PropertyRadius),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
