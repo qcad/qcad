@@ -68,6 +68,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isCustom, "isCustom");
             
+            REcmaHelper::registerFunction(&engine, proto, generateId, "generateId");
+            
             REcmaHelper::registerFunction(&engine, proto, getPropertyGroupTitle, "getPropertyGroupTitle");
             
             REcmaHelper::registerFunction(&engine, proto, getPropertyTitle, "getPropertyTitle");
@@ -843,6 +845,242 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPropertyTypeId::isCustom", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPropertyTypeId::generateId
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyTypeId::generateId", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyTypeId::generateId";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPropertyTypeId* self = 
+                        getSelf("generateId", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::EntityType */
+     && (
+            context->argument(1).isString()
+        ) /* type: QString */
+     && (
+            context->argument(2).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::EntityType
+                    a0 =
+                    (RS::EntityType)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
+                    // argument isStandardType
+                    QString
+                    a2 =
+                    (QString)
+                    
+                    context->argument( 2 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->generateId(a0
+        ,
+    a1
+        ,
+    a2);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    4 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::EntityType */
+     && (
+            context->argument(1).isString()
+        ) /* type: QString */
+     && (
+            context->argument(2).isString()
+        ) /* type: QString */
+     && (
+            context->argument(3).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::EntityType
+                    a0 =
+                    (RS::EntityType)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
+                    // argument isStandardType
+                    QString
+                    a2 =
+                    (QString)
+                    
+                    context->argument( 2 ).
+                    toString();
+                
+                    // argument isStandardType
+                    bool
+                    a3 =
+                    (bool)
+                    
+                    context->argument( 3 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->generateId(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    5 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::EntityType */
+     && (
+            context->argument(1).isString()
+        ) /* type: QString */
+     && (
+            context->argument(2).isString()
+        ) /* type: QString */
+     && (
+            context->argument(3).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(4).isVariant() || 
+            context->argument(4).isQObject() || 
+            context->argument(4).isNull()
+        ) /* type: RPropertyAttributes::Options */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::EntityType
+                    a0 =
+                    (RS::EntityType)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
+                    // argument isStandardType
+                    QString
+                    a2 =
+                    (QString)
+                    
+                    context->argument( 2 ).
+                    toString();
+                
+                    // argument isStandardType
+                    bool
+                    a3 =
+                    (bool)
+                    
+                    context->argument( 3 ).
+                    toBool();
+                
+                    // argument is reference
+                    RPropertyAttributes::Options*
+                    ap4 =
+                    qscriptvalue_cast<
+                    RPropertyAttributes::Options*
+                        >(
+                        context->argument(
+                        4
+                        )
+                    );
+                    if( ap4 == NULL ){
+                           return REcmaHelper::throwError("RPropertyTypeId: Argument 4 is not of type RPropertyAttributes::Options*.",
+                               context);                    
+                    }
+                    RPropertyAttributes::Options& a4 = *ap4;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->generateId(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3
+        ,
+    a4);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyTypeId.generateId().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyTypeId::generateId", context, engine);
             return result;
         }
          QScriptValue

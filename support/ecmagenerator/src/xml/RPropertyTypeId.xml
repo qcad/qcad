@@ -77,6 +77,25 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="generateId" cppName="generateId"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RS::EntityType" typeName="RS::EntityType"
+        name="type" isConst="false" />
+        <arg type="QString &amp;" typeName="QString"
+        name="groupTitle" isConst="true" />
+        <arg type="QString &amp;" typeName="QString" name="title"
+        isConst="true" />
+        <arg type="bool" typeName="bool" name="forceNew"
+        hasDefault="true" default="false" isConst="false" />
+        <arg type="RPropertyAttributes::Options"
+        typeName="RPropertyAttributes::Options" name="options"
+        hasDefault="true"
+        default="RPropertyAttributes :: NoOptions"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getPropertyGroupTitle"
     cppName="getPropertyGroupTitle" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

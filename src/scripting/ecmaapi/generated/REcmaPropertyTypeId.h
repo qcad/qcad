@@ -73,6 +73,9 @@
         isCustom
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        generateId
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getPropertyGroupTitle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

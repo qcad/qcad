@@ -92,9 +92,6 @@
 <comment type="line">//    QString getBlockAttributePrompt() const;</comment>
 <comment type="line">//    QString getBlockAttributeId() const;</comment>
 
-    <comment type="block">/**
-     * \nonscriptable
-     */</comment>
     <function_decl><type><name>void</name></type> <name>generateId</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>type</name></decl></param>,
         <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>groupTitle</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>title</name></decl></param>, <param><decl><type><name>bool</name></type> <name>forceNew</name> =<init> <expr><name>false</name></expr></init></decl></param>,
         <param><decl><type><name><name>RPropertyAttributes</name>::<name>Options</name></name></type> <name>options</name> =<init> <expr><name><name>RPropertyAttributes</name>::<name>NoOptions</name></name></expr></init></decl></param>)</parameter_list>;</function_decl>
