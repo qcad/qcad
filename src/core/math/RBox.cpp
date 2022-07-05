@@ -83,11 +83,11 @@ bool RBox::isSane() const {
 }
 
 bool RBox::equalsFuzzy(const RBox& b, double tol) const {
-    return c1.equalsFuzzy(b.c1) && c2.equalsFuzzy(b.c2);
+    return c1.equalsFuzzy(b.c1, tol) && c2.equalsFuzzy(b.c2, tol);
 }
 
 bool RBox::equalsFuzzy2D(const RBox& b, double tol) const {
-    return c1.equalsFuzzy2D(b.c1) && c2.equalsFuzzy2D(b.c2);
+    return c1.equalsFuzzy2D(b.c1, tol) && c2.equalsFuzzy2D(b.c2, tol);
 }
 
 /**
