@@ -2008,12 +2008,15 @@
     <file alias="scripts/Modify/Reverse/Tests/ReverseTest00.js">../../scripts/Modify/Reverse/Tests/ReverseTest00.js</file>
     <file alias="scripts/Modify/Reverse/Tests/ReverseTest01.js">../../scripts/Modify/Reverse/Tests/ReverseTest01.js</file>
     <file alias="scripts/Modify/Reverse/Tests/ReverseTest02.js">../../scripts/Modify/Reverse/Tests/ReverseTest02.js</file>
+    <file alias="scripts/Modify/Reverse/Tests/ReverseTest03.js">../../scripts/Modify/Reverse/Tests/ReverseTest03.js</file>
     <file alias="scripts/Modify/Reverse/Tests/data/entities.dxf">../../scripts/Modify/Reverse/Tests/data/entities.dxf</file>
     <file alias="scripts/Modify/Reverse/Tests/data/polyline01.dxf">../../scripts/Modify/Reverse/Tests/data/polyline01.dxf</file>
     <file alias="scripts/Modify/Reverse/Tests/data/polyline02.dxf">../../scripts/Modify/Reverse/Tests/data/polyline02.dxf</file>
+    <file alias="scripts/Modify/Reverse/Tests/data/polyline03.dxf">../../scripts/Modify/Reverse/Tests/data/polyline03.dxf</file>
     <file alias="scripts/Modify/Reverse/Tests/required/ReverseTest00_000.dxf">../../scripts/Modify/Reverse/Tests/required/ReverseTest00_000.dxf</file>
     <file alias="scripts/Modify/Reverse/Tests/required/ReverseTest01_000.dxf">../../scripts/Modify/Reverse/Tests/required/ReverseTest01_000.dxf</file>
     <file alias="scripts/Modify/Reverse/Tests/required/ReverseTest02_000.dxf">../../scripts/Modify/Reverse/Tests/required/ReverseTest02_000.dxf</file>
+    <file alias="scripts/Modify/Reverse/Tests/required/ReverseTest03_000.dxf">../../scripts/Modify/Reverse/Tests/required/ReverseTest03_000.dxf</file>
     <file alias="scripts/Modify/Rotate/ByMouse-inverse.svg">../../scripts/Modify/Rotate/ByMouse-inverse.svg</file>
     <file alias="scripts/Modify/Rotate/ByMouse.svg">../../scripts/Modify/Rotate/ByMouse.svg</file>
     <file alias="scripts/Modify/Rotate/PreferencesPage.ui">../../scripts/Modify/Rotate/PreferencesPage.ui</file>
