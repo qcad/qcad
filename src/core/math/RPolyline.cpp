@@ -1936,29 +1936,28 @@ bool RPolyline::mirror(const RLine& axis) {
 }
 
 bool RPolyline::reverse() {
-    QList<double> nStartWidths = startWidths;
-    QList<double> nEndWidths = endWidths;
-    double swl = nStartWidths.takeLast();
-    double ewl = nEndWidths.takeLast();
-    std::reverse(nStartWidths.begin(), nStartWidths.end());
-    std::reverse(nEndWidths.begin(), nEndWidths.end());
-    nStartWidths.append(swl);
-    nEndWidths.append(ewl);
+    QList<RVector> vs = vertices;
+    if (closed) {
+        vs.append(vs.first());
+    }
 
     RPolyline nPolyline;
-    QList<QSharedPointer<RShape> > segments = getExploded();
 
-    for (int i=segments.count()-1; i>=0; i--) {
-        QSharedPointer<RShape> seg = segments.at(i);
-        seg->reverse();
-        nPolyline.appendShape(*seg);
+    for (int i=vs.count()-1, k=0; i>=0; i--, k++) {
+        nPolyline.appendVertex(vs[i]);
+        if (i>0) {
+            nPolyline.setBulgeAt(k, -bulges[i-1]);
+
+            nPolyline.setStartWidthAt(k, endWidths[i-1]);
+            nPolyline.setEndWidthAt(k, startWidths[i-1]);
+        }
+
     }
     if (closed) {
         nPolyline.convertToClosed();
     }
+
     *this = nPolyline;
-    startWidths = nEndWidths;
-    endWidths = nStartWidths;
 
     Q_ASSERT(vertices.length()==bulges.length());
     Q_ASSERT(vertices.length()==startWidths.length());
