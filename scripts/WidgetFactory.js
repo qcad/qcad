@@ -76,10 +76,14 @@ WidgetFactory.createWidget = function(basePath, uiFile, parent) {
     if (!new QFileInfo(uiFile).isAbsolute()) {
         candidates = [
             uiFile,
-            basePath + "/" + uiFile,
-            ":" + uiFile,
-            ":" + basePath + "/" + uiFile
+            basePath + "/" + uiFile
         ];
+        if (!uiFile.startsWith(":")) {
+            candidates.push(":" + uiFile);
+        }
+        if (!basePath.startsWith(":")) {
+            candidates.push(":" + basePath + "/" + uiFile);
+        }
     }
     else {
         candidates = [
