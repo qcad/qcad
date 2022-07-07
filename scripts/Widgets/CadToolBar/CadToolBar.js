@@ -42,7 +42,8 @@ function CadToolBar(parent) {
     stackedLayout.setContentsMargins(0,0,0,0);
     this.setLayout(stackedLayout);
 
-    RMainWindowQt.getMainWindow().escape.connect(CadToolBar, "back");
+    var appWin = RMainWindowQt.getMainWindow();
+    appWin.escape.connect(CadToolBar, "back");
 }
 
 CadToolBar.prototype = new QWidget();
