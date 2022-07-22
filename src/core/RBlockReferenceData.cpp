@@ -595,16 +595,20 @@ bool RBlockReferenceData::isPixelUnit() const {
     return block->isPixelUnit();
 }
 
-QList<RRefPoint> RBlockReferenceData::getInternalReferencePoints(RS::ProjectionRenderingHint hint) const {
+QList<RRefPoint> RBlockReferenceData::getInternalReferencePoints(RS::ProjectionRenderingHint hint, QList<REntity::Id>* subEntityIds) const {
     QList<RRefPoint> ret;
 
-    QList<QSharedPointer<RShape> > shapes = getShapes();
-    for (int i=0; i<shapes.size(); i++) {
+    QList<REntity::Id> entityIds;
+    QList<QSharedPointer<RShape> > shapes = getShapes(RDEFAULT_RBOX, false, false, &entityIds);
+
+    for (int i=0; i<shapes.length() && i<entityIds.length(); i++) {
         QSharedPointer<RShape> shape = shapes[i];
+        REntity::Id entityId = entityIds[i];
 
         QList<RVector> ps = shape->getArcReferencePoints();
         for (int k=0; k<ps.length(); k++) {
             ret.append(RRefPoint(ps[k], RRefPoint::Tertiary));
+            subEntityIds->append(entityId);
         }
     }
 
