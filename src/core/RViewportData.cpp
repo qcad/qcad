@@ -73,7 +73,7 @@ RVector RViewportData::getViewOffset() const {
     return position + offset;
 }
 
-QList<RRefPoint> RViewportData::getInternalReferencePoints(RS::ProjectionRenderingHint hint) const {
+QList<RRefPoint> RViewportData::getInternalReferencePoints(RS::ProjectionRenderingHint hint, QList<REntity::Id>* subEntityIds) const {
     QList<RRefPoint> ret;
 
     QList<QSharedPointer<RShape> > shapes = getShapes();
