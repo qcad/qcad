@@ -386,7 +386,8 @@ QList<RTextData> RToleranceData::getTextLabels() const {
                 textData.move(RVector(0, -dimtxt));
             }
 
-            cursorX += textData.getBoundingBox().getWidth();
+            //cursorX += textData.getBoundingBox().getWidth();
+            cursorX += textData.getWidth();
             cursorX += dimtxt;
             divisions.last().append(cursorX - dimtxt/2);
 
