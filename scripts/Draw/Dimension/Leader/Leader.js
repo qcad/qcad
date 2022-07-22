@@ -238,9 +238,6 @@ Leader.prototype.applyOperation = function(op) {
     this.postOperation(transaction);
 };
 
-Leader.prototype.postOperation = function(transaction) {
-};
-
 /**
  * Called when user clicks the 'Undo' button to remove the last added vertex.
  */
