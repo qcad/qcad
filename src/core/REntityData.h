@@ -329,7 +329,9 @@ public:
      * snap to reference points.
      * Default implementation returns same as getReferencePoints().
      */
-    virtual QList<RRefPoint> getInternalReferencePoints(RS::ProjectionRenderingHint hint=RS::RenderTop) const {
+    virtual QList<RRefPoint> getInternalReferencePoints(RS::ProjectionRenderingHint hint=RS::RenderTop, QList<RObject::Id>* subEntityIds = NULL) const {
+        Q_UNUSED(subEntityIds)
+
         return getReferencePoints(hint);
     }
 
