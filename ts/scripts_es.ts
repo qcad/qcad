@@ -1761,7 +1761,7 @@ Do you wish to recover it?</source>
         <translation>Columnas:</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+51"/>
+        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+52"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -5045,12 +5045,12 @@ ya está en la lista.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2123"/>
+        <location line="+2131"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location line="-2122"/>
+        <location line="-2130"/>
         <source>Done</source>
         <translation>Terminar</translation>
     </message>
@@ -5081,7 +5081,7 @@ ya está en la lista.</translation>
         <translation>Herramientas CAD</translation>
     </message>
     <message>
-        <location line="+576"/>
+        <location line="+584"/>
         <source>Invalid position</source>
         <translation>Posición no válida</translation>
     </message>
@@ -6137,7 +6137,7 @@ ya está en la lista.</translation>
 <context>
     <name>FirstStart</name>
     <message>
-        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+254"/>
+        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+276"/>
         <source>Black</source>
         <translation>Negro</translation>
     </message>
@@ -6147,18 +6147,18 @@ ya está en la lista.</translation>
         <translation>Blanco</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Language:</source>
         <translation>Idioma:</translation>
     </message>
     <message>
-        <location line="-224"/>
-        <location line="+223"/>
+        <location line="-245"/>
+        <location line="+243"/>
         <source>%1 First Start</source>
         <translation>Primera puesta en %1</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+3"/>
         <source>Welcome to %1</source>
         <translation>Bienvenido a %1</translation>
     </message>
@@ -6168,7 +6168,7 @@ ya está en la lista.</translation>
         <translation>Por favor, elija la configuración utilizada para los nuevos dibujos. Todos estos ajustes se pueden cambiar más tarde en el diálogo de preferencias.</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+15"/>
         <source>Unit:</source>
         <translation>Unidades:</translation>
     </message>
@@ -12076,7 +12076,7 @@ en los resultados de búsqueda:</translation>
         <translation type="obsolete">Mostrar cuadro delimitador</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+31"/>
+        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+33"/>
         <source>Printing</source>
         <translation>Imprimiendo</translation>
     </message>
@@ -16794,7 +16794,7 @@ en los resultados de búsqueda:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1094"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1098"/>
         <source>Restore defaults</source>
         <translation>Restaurar los valores predeterminados</translation>
     </message>
@@ -17360,7 +17360,7 @@ en los resultados de búsqueda:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+982"/>
+        <location filename="../scripts/library.js" line="+996"/>
         <source>Objects</source>
         <translation>Objetos</translation>
     </message>

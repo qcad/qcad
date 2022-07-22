@@ -1490,7 +1490,7 @@ Do you wish to recover it?</source>
 <context>
     <name>CadToolBar</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+51"/>
+        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+52"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -4449,12 +4449,12 @@ er allerede på listen.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2123"/>
+        <location line="+2131"/>
         <source>Cancel</source>
         <translation>Annuller</translation>
     </message>
     <message>
-        <location line="-2122"/>
+        <location line="-2130"/>
         <source>Done</source>
         <translation>Udført</translation>
     </message>
@@ -4485,7 +4485,7 @@ er allerede på listen.</translation>
         <translation>CAD-værktøjer</translation>
     </message>
     <message>
-        <location line="+576"/>
+        <location line="+584"/>
         <source>Invalid position</source>
         <translation>Ugyldig position</translation>
     </message>
@@ -5444,8 +5444,8 @@ er allerede på listen.</translation>
 <context>
     <name>FirstStart</name>
     <message>
-        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+36"/>
-        <location line="+223"/>
+        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
+        <location line="+243"/>
         <source>%1 First Start</source>
         <translation>%1 Første start</translation>
     </message>
@@ -5460,7 +5460,7 @@ er allerede på listen.</translation>
         <translation>Hvid</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Language:</source>
         <translation>Sprog:</translation>
     </message>
@@ -5475,7 +5475,7 @@ er allerede på listen.</translation>
         <translation>Vælg de indstillinger, der skal bruges til nye tegninger. Alle disse indstillinger kan ændres senere i dialogboksen Indstillinger.</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+15"/>
         <source>Unit:</source>
         <translation>Enhed:</translation>
     </message>
@@ -10146,7 +10146,7 @@ vist i søgeresultaterne:</translation>
 <context>
     <name>PageSettings</name>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+29"/>
+        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+31"/>
         <source>Defaults for New Drawings</source>
         <translation>Standardindstillinger for nye tegninger</translation>
     </message>
@@ -10671,7 +10671,7 @@ vist i søgeresultaterne:</translation>
     <message>
         <location line="+1"/>
         <source>The paper size is set to a custom size (%1x%2mm). Do you want to change it to the default paper size of your printer (%3)?</source>
-        <translation type="unfinished">Papirstørrelsen er indstillet til en brugerdefineret størrelse (%1x%2mm). Ønsker du at ændre den til printerens standardpapirstørrelse (%3)?</translation>
+        <translation>Papirstørrelsen er indstillet til en brugerdefineret størrelse (%1x%2mm). Ønsker du at ændre den til printerens standardpapirstørrelse (%3)?</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -14196,7 +14196,7 @@ vist i søgeresultaterne:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1094"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1098"/>
         <source>Restore defaults</source>
         <translation>Gendan standardindstillinger</translation>
     </message>
@@ -14674,7 +14674,7 @@ vist i søgeresultaterne:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+982"/>
+        <location filename="../scripts/library.js" line="+996"/>
         <source>Objects</source>
         <translation>Genstande</translation>
     </message>

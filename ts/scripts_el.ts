@@ -293,6 +293,7 @@
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+86"/>
@@ -917,6 +918,7 @@ Do you wish to recover it/them?</source>
         <location line="+1"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+25"/>
@@ -1484,7 +1486,7 @@ Do you wish to recover it?</source>
 <context>
     <name>CadToolBar</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+51"/>
+        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+52"/>
         <source>Widgets</source>
         <translation type="unfinished">Widgets</translation>
     </message>
@@ -3247,6 +3249,7 @@ Do you wish to recover it?</source>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4156,12 +4159,12 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2123"/>
+        <location line="+2131"/>
         <source>Cancel</source>
         <translation type="unfinished">Ακύρωση</translation>
     </message>
     <message>
-        <location line="-2122"/>
+        <location line="-2130"/>
         <source>Done</source>
         <translation type="unfinished">Έγινε</translation>
     </message>
@@ -4192,7 +4195,7 @@ is already in the list.</source>
         <translation type="unfinished">Εργαλεία CAD</translation>
     </message>
     <message>
-        <location line="+576"/>
+        <location line="+584"/>
         <source>Invalid position</source>
         <translation type="unfinished">Μη έγκυρη θέση</translation>
     </message>
@@ -5151,8 +5154,8 @@ is already in the list.</source>
 <context>
     <name>FirstStart</name>
     <message>
-        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+36"/>
-        <location line="+223"/>
+        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
+        <location line="+243"/>
         <source>%1 First Start</source>
         <translation type="unfinished">%1 Πρώτη εκκίνηση</translation>
     </message>
@@ -5167,7 +5170,7 @@ is already in the list.</source>
         <translation type="unfinished">Λευκό</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Language:</source>
         <translation type="unfinished">Γλώσσα:</translation>
     </message>
@@ -5182,7 +5185,7 @@ is already in the list.</source>
         <translation type="unfinished">Επιλέξτε τις ρυθμίσεις που χρησιμοποιούνται για τα νέα σχέδια. Όλες αυτές οι ρυθμίσεις μπορούν να αλλάξουν αργότερα στο παράθυρο διαλόγου προτιμήσεων.</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+15"/>
         <source>Unit:</source>
         <translation type="unfinished">Μονάδα:</translation>
     </message>
@@ -6986,7 +6989,7 @@ is already in the list.</source>
         <location line="+40"/>
         <location line="+5"/>
         <source>Syntax error: &apos;%1&apos; parse error</source>
-        <translation type="unfinished">Συντακτικό σφάλμα: σφάλμα ανάλυσης &apos;%1&apos</translation>
+        <translation type="unfinished">Συντακτικό σφάλμα: σφάλμα ανάλυσης &apos;%1&apos;</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListenerInit.js" line="+19"/>
@@ -8332,6 +8335,7 @@ is already in the list.</source>
         <location line="+10"/>
         <source>Number of items
 shown in search results:</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+18"/>
@@ -9543,7 +9547,7 @@ shown in search results:</source>
     <message>
         <location line="+63"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
-        <translation type="unfinished">Θέλετε να αποθηκεύσετε τις αλλαγές που κάνατε στο έγγραφο "%1"</translation>
+        <translation type="unfinished">Θέλετε να αποθηκεύσετε τις αλλαγές που κάνατε στο έγγραφο &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9670,7 +9674,7 @@ shown in search results:</source>
 <context>
     <name>PageSettings</name>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+29"/>
+        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+31"/>
         <source>Defaults for New Drawings</source>
         <translation type="unfinished">Προεπιλογές για νέα σχέδια</translation>
     </message>
@@ -11640,6 +11644,7 @@ shown in search results:</source>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
@@ -12852,6 +12857,7 @@ shown in search results:</source>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+21"/>
@@ -13712,7 +13718,7 @@ shown in search results:</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1094"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1098"/>
         <source>Restore defaults</source>
         <translation type="unfinished">Επαναφορά προεπιλογών</translation>
     </message>
@@ -14174,7 +14180,7 @@ shown in search results:</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+982"/>
+        <location filename="../scripts/library.js" line="+996"/>
         <source>Objects</source>
         <translation type="unfinished">Αντικείμενα</translation>
     </message>
@@ -14737,4 +14743,3 @@ shown in search results:</source>
     </message>
 </context>
 </TS>
-

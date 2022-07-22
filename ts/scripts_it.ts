@@ -1775,7 +1775,7 @@ Vuoi recuperarlo?</translation>
         <translation>Colonne:</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+51"/>
+        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+52"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -5083,12 +5083,12 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2123"/>
+        <location line="+2131"/>
         <source>Cancel</source>
         <translation>Annulla</translation>
     </message>
     <message>
-        <location line="-2122"/>
+        <location line="-2130"/>
         <source>Done</source>
         <translation>Fatto</translation>
     </message>
@@ -5123,7 +5123,7 @@ is already in the list.</source>
         <translation>Strumenti CAD</translation>
     </message>
     <message>
-        <location line="+576"/>
+        <location line="+584"/>
         <source>Invalid position</source>
         <translation>Posizione non valida</translation>
     </message>
@@ -6183,7 +6183,7 @@ is already in the list.</source>
 <context>
     <name>FirstStart</name>
     <message>
-        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+254"/>
+        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+276"/>
         <source>Black</source>
         <translation>Nero</translation>
     </message>
@@ -6193,7 +6193,7 @@ is already in the list.</source>
         <translation>Bianco</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Language:</source>
         <translation>Lingua:</translation>
     </message>
@@ -6202,13 +6202,13 @@ is already in the list.</source>
         <translation type="obsolete">Benvenuti a QCAD</translation>
     </message>
     <message>
-        <location line="-224"/>
-        <location line="+223"/>
+        <location line="-245"/>
+        <location line="+243"/>
         <source>%1 First Start</source>
         <translation>%1 primo avvio</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+3"/>
         <source>Welcome to %1</source>
         <translation>Benvenuti a %1</translation>
     </message>
@@ -6218,7 +6218,7 @@ is already in the list.</source>
         <translation>Si prega di scegliere le impostazioni utilizzate per i nuovi disegni. Tutte queste impostazioni possono essere modificate in seguito nella finestra di dialogo delle preferenze.</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+15"/>
         <source>Unit:</source>
         <translation>Unità:</translation>
     </message>
@@ -12195,7 +12195,7 @@ mostrati nei risultati di ricerca:</translation>
         <translation type="obsolete">Mostra riquadro di delimitazione</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+31"/>
+        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+33"/>
         <source>Printing</source>
         <translation>Stampa</translation>
     </message>
@@ -17013,7 +17013,7 @@ mostrati nei risultati di ricerca:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1094"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1098"/>
         <source>Restore defaults</source>
         <translation>Ripristina predefiniti</translation>
     </message>
@@ -17591,7 +17591,7 @@ mostrati nei risultati di ricerca:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+982"/>
+        <location filename="../scripts/library.js" line="+996"/>
         <source>Objects</source>
         <translation>Oggetti</translation>
     </message>

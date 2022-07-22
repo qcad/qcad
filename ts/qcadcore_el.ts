@@ -315,7 +315,7 @@
         <translation type="unfinished">Διάταξη</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+858"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+862"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation type="unfinished">Εντοπίστηκε κυκλική (αναδρομική) αναφορά σε μπλοκ:</translation>
     </message>
@@ -680,7 +680,7 @@
     </message>
     <message>
         <location filename="../src/core/RObject.cpp" line="-1"/>
-        <location filename="../src/core/RPropertyTypeId.cpp" line="+155"/>
+        <location filename="../src/core/RPropertyTypeId.cpp" line="+161"/>
         <source>Custom</source>
         <translation type="unfinished">Προσαρμοσμένο</translation>
     </message>
