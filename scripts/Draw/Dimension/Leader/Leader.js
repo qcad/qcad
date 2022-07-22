@@ -234,6 +234,11 @@ Leader.prototype.applyOperation = function(op) {
             break;
         }
     }
+
+    this.postOperation(transaction);
+};
+
+Leader.prototype.postOperation = function(transaction) {
 };
 
 /**
