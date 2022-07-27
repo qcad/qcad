@@ -98,6 +98,8 @@ public:
         return true;
     }
 
+    virtual QSize sizeHint() const;
+
 signals:
     void drop(QDropEvent* event);
     void dragEnter(QDragEnterEvent* event);
@@ -108,7 +110,6 @@ signals:
     void updateTextLabel(QPainter* painter, const RTextLabel& textLabel);
 
 protected:
-    virtual QSize sizeHint() const;
 
     bool event(QEvent* e);
 
