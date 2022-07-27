@@ -145,12 +145,12 @@ SaveAs.prototype.beginEvent = function() {
         }
 
         if (fileName.length!==0) {
+            fileDialog.setDirectory(fileInfo.absolutePath());
             fileDialog.selectFile(fileInfo.absoluteFilePath());
         }
         else {
             fileDialog.setDirectory(lastSaveAsFileDir);
         }
-
 
         fileDialog.setLabelText(QFileDialog.FileType, qsTr("Format:"));
 
