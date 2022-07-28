@@ -77,7 +77,7 @@ function RBlockListQt(parent, addListener, showHeader) {
     this.itemSelectionChanged.connect(function() { self.blockActivated(); });
     this.basePath = includeBasePath;
 
-    this.currentItem = undefined;
+    this.currentBlockItem = undefined;
 
 }
 
@@ -180,23 +180,23 @@ RBlockListQt.prototype.updateCurrentBlock = function(documentInterface) {
     var doc = documentInterface.getDocument();
 
     // find item which was representing the current block before:
-    if (!isNull(this.currentItem)) {
+    if (!isNull(this.currentBlockItem)) {
         // clear pen icon from item:
-        //var blockName = this.currentItem.data(BlockList.colName, Qt.UserRole);
+        //var blockName = this.currentBlockItem.data(BlockList.colName, Qt.UserRole);
         //var block = doc.queryBlock(blockName);
-        //this.updateItemIcons(this.currentItem, block);
-        this.currentItem.setIcon(BlockList.colEdit, BlockList.iconEdit[0]);
+        //this.updateItemIcons(this.currentBlockItem, block);
+        this.currentBlockItem.setIcon(BlockList.colEdit, BlockList.iconEdit[0]);
     }
 
     // find item of current block:
-    this.currentItem = RBlockListQt.getItem(this, doc.getCurrentBlockName());
+    this.currentBlockItem = RBlockListQt.getItem(this, doc.getCurrentBlockName());
     //for (var i=0; i<this.topLevelItemCount; i++) {
     //    var item = this.topLevelItem(i);
     //}
 
     // add pen icon to item:
-    if (!isNull(this.currentItem)) {
-        this.currentItem.setIcon(BlockList.colEdit, BlockList.iconEdit[1]);
+    if (!isNull(this.currentBlockItem)) {
+        this.currentBlockItem.setIcon(BlockList.colEdit, BlockList.iconEdit[1]);
     }
 };
 
@@ -204,7 +204,7 @@ RBlockListQt.prototype.updateCurrentBlock = function(documentInterface) {
  * Called when blocks are added, edited or deleted. Updates the block list.
  */
 RBlockListQt.prototype.updateBlocks = function(documentInterface) {
-    this.currentItem = undefined;
+    this.currentBlockItem = undefined;
 
     this.di = documentInterface;
 
@@ -262,7 +262,7 @@ RBlockListQt.prototype.updateBlocks = function(documentInterface) {
         }
 
         if (currentBlockId===block.getId()) {
-            this.currentItem = item;
+            this.currentBlockItem = item;
         }
     }
 
