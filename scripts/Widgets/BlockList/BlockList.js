@@ -554,7 +554,7 @@ BlockList.init = function(basePath) {
 
     var formWidget = WidgetFactory.createWidget(basePath, "BlockList.ui");
     var layout = formWidget.findChild("verticalLayout");
-    var blockList = new RBlockListQt(layout);
+    var blockList = new RBlockListQt(formWidget);
     blockList.objectName = "BlockList";
     layout.addWidget(blockList, 1, 0);
 
