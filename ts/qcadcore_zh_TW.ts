@@ -510,7 +510,7 @@
     </message>
     <message>
         <location filename="../src/core/RObject.cpp" line="-1"/>
-        <location filename="../src/core/RPropertyTypeId.cpp" line="+155"/>
+        <location filename="../src/core/RPropertyTypeId.cpp" line="+161"/>
         <source>Custom</source>
         <translation>自訂</translation>
     </message>
@@ -696,7 +696,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+858"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+862"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation type="unfinished"></translation>
     </message>

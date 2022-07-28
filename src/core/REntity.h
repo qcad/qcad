@@ -461,8 +461,8 @@ public:
     /**
      * \copydoc REntityData::getInternalReferencePoints
      */
-    virtual QList<RRefPoint> getInternalReferencePoints(RS::ProjectionRenderingHint hint=RS::RenderTop) const {
-        return getData().getInternalReferencePoints(hint);
+    virtual QList<RRefPoint> getInternalReferencePoints(RS::ProjectionRenderingHint hint=RS::RenderTop, QList<REntity::Id>* subEntityIds = NULL) const {
+        return getData().getInternalReferencePoints(hint, subEntityIds);
     }
 
     /**

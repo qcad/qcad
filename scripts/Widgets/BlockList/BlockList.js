@@ -62,18 +62,19 @@ function RBlockListQt(parent, addListener, showHeader) {
     this.setColumnWidth(BlockList.colVisible, 22);
     this.setColumnWidth(BlockList.colEdit, 22);
 
+    var self = this;
     if (addListener) {
         var appWin = EAction.getMainWindow();
         var adapter = new RBlockListenerAdapter();
         appWin.addBlockListener(adapter);
-        adapter.blocksUpdated.connect(this, "updateBlocks");
-        adapter.currentBlockSet.connect(this, "updateCurrentBlock");
-        adapter.blocksCleared.connect(this, "clearBlocks");
+        adapter.blocksUpdated.connect(function(di) { self.updateBlocks(di); });
+        adapter.currentBlockSet.connect(function(di) { self.updateCurrentBlock(di); });
+        adapter.blocksCleared.connect(function() { self.clearBlocks(); });
     }
 
-    this.itemDoubleClicked.connect(this, "editBlock");
-    this.itemColumnClicked.connect(this, "itemColumnClickedSlot");
-    this.itemSelectionChanged.connect(this, "blockActivated");
+    this.itemDoubleClicked.connect(function(item, col) { self.editBlock(item, col); });
+    this.itemColumnClicked.connect(function(item, col) { self.itemColumnClickedSlot(item, col); });
+    this.itemSelectionChanged.connect(function() { self.blockActivated(); });
     this.basePath = includeBasePath;
 
     this.currentItem = undefined;

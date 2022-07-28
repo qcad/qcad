@@ -6,7 +6,7 @@
     <message>
         <location filename="../scripts/Help/About/About.js" line="+68"/>
         <source>About %1</source>
-        <translation type="unfinished">A %1-ről</translation>
+        <translation>A %1-ről</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -1520,7 +1520,7 @@ Szeretné visszaállítani?</translation>
 <context>
     <name>CadToolBar</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+51"/>
+        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+52"/>
         <source>Widgets</source>
         <translation type="unfinished">Widgetek</translation>
     </message>
@@ -4217,12 +4217,12 @@ már szerepel a listában.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2123"/>
+        <location line="+2131"/>
         <source>Cancel</source>
         <translation type="unfinished">Törölje</translation>
     </message>
     <message>
-        <location line="-2122"/>
+        <location line="-2130"/>
         <source>Done</source>
         <translation type="unfinished">Kész</translation>
     </message>
@@ -4253,7 +4253,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">CAD eszközök</translation>
     </message>
     <message>
-        <location line="+576"/>
+        <location line="+584"/>
         <source>Invalid position</source>
         <translation type="unfinished">Érvénytelen pozíció</translation>
     </message>
@@ -5233,8 +5233,8 @@ már szerepel a listában.</translation>
 <context>
     <name>FirstStart</name>
     <message>
-        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+36"/>
-        <location line="+223"/>
+        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
+        <location line="+243"/>
         <source>%1 First Start</source>
         <translation type="unfinished">%1 Első indítás</translation>
     </message>
@@ -5249,7 +5249,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Fehér</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Language:</source>
         <translation type="unfinished">Nyelv:</translation>
     </message>
@@ -5264,7 +5264,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Kérjük, válassza ki az új rajzokhoz használt beállításokat. Mindezek a beállítások később a Beállítások párbeszédpanelben módosíthatók.</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+15"/>
         <source>Unit:</source>
         <translation type="unfinished">Egység:</translation>
     </message>
@@ -9771,7 +9771,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
 <context>
     <name>PageSettings</name>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+29"/>
+        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+31"/>
         <source>Defaults for New Drawings</source>
         <translation type="unfinished">Új rajzok alapértelmezései</translation>
     </message>
@@ -13837,7 +13837,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1094"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1098"/>
         <source>Restore defaults</source>
         <translation type="unfinished">Alapértelmezett beállítások visszaállítása</translation>
     </message>
@@ -14299,7 +14299,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+982"/>
+        <location filename="../scripts/library.js" line="+996"/>
         <source>Objects</source>
         <translation type="unfinished">Tárgyak</translation>
     </message>

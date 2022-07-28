@@ -1486,7 +1486,7 @@ Do you wish to recover it?</source>
 <context>
     <name>CadToolBar</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+51"/>
+        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+52"/>
         <source>Widgets</source>
         <translation type="unfinished">Vidinad</translation>
     </message>
@@ -4159,12 +4159,12 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2123"/>
+        <location line="+2131"/>
         <source>Cancel</source>
         <translation type="unfinished">Tühista</translation>
     </message>
     <message>
-        <location line="-2122"/>
+        <location line="-2130"/>
         <source>Done</source>
         <translation type="unfinished">Valmis</translation>
     </message>
@@ -4195,7 +4195,7 @@ is already in the list.</source>
         <translation type="unfinished">CAD tööriistad</translation>
     </message>
     <message>
-        <location line="+576"/>
+        <location line="+584"/>
         <source>Invalid position</source>
         <translation type="unfinished">Vale asend</translation>
     </message>
@@ -5154,8 +5154,8 @@ is already in the list.</source>
 <context>
     <name>FirstStart</name>
     <message>
-        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+36"/>
-        <location line="+223"/>
+        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
+        <location line="+243"/>
         <source>%1 First Start</source>
         <translation type="unfinished">%1 Esimene algus</translation>
     </message>
@@ -5170,7 +5170,7 @@ is already in the list.</source>
         <translation type="unfinished">Valge</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Language:</source>
         <translation type="unfinished">Keel:</translation>
     </message>
@@ -5185,7 +5185,7 @@ is already in the list.</source>
         <translation type="unfinished">Palun valige uute jooniste jaoks kasutatavad seaded. Kõiki neid seadeid saab hiljem muuta eelistuste dialoogis.</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+15"/>
         <source>Unit:</source>
         <translation type="unfinished">Üksus:</translation>
     </message>
@@ -9674,7 +9674,7 @@ shown in search results:</source>
 <context>
     <name>PageSettings</name>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+29"/>
+        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+31"/>
         <source>Defaults for New Drawings</source>
         <translation type="unfinished">Uute jooniste vaikeväärtused</translation>
     </message>
@@ -13718,7 +13718,7 @@ shown in search results:</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1094"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1098"/>
         <source>Restore defaults</source>
         <translation type="unfinished">Taastada vaikimisi seadistused</translation>
     </message>
@@ -14180,7 +14180,7 @@ shown in search results:</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+982"/>
+        <location filename="../scripts/library.js" line="+996"/>
         <source>Objects</source>
         <translation type="unfinished">Objektid</translation>
     </message>

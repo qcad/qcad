@@ -6,7 +6,7 @@
     <message>
         <location filename="../scripts/Help/About/About.js" line="+68"/>
         <source>About %1</source>
-        <translation type="unfinished">Apie %1</translation>
+        <translation>Apie %1</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -1489,7 +1489,7 @@ Ar norite jį atkurti?</translation>
 <context>
     <name>CadToolBar</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+51"/>
+        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+52"/>
         <source>Widgets</source>
         <translation type="unfinished">Valdikliai</translation>
     </message>
@@ -4166,12 +4166,12 @@ jau yra sąraše.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2123"/>
+        <location line="+2131"/>
         <source>Cancel</source>
         <translation type="unfinished">Atšaukti</translation>
     </message>
     <message>
-        <location line="-2122"/>
+        <location line="-2130"/>
         <source>Done</source>
         <translation type="unfinished">Atlikta</translation>
     </message>
@@ -4202,7 +4202,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">CAD įrankiai</translation>
     </message>
     <message>
-        <location line="+576"/>
+        <location line="+584"/>
         <source>Invalid position</source>
         <translation type="unfinished">Neteisinga padėtis</translation>
     </message>
@@ -5162,8 +5162,8 @@ jau yra sąraše.</translation>
 <context>
     <name>FirstStart</name>
     <message>
-        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+36"/>
-        <location line="+223"/>
+        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
+        <location line="+243"/>
         <source>%1 First Start</source>
         <translation type="unfinished">%1 Pirmasis paleidimas</translation>
     </message>
@@ -5178,7 +5178,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Balta</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Language:</source>
         <translation type="unfinished">Kalba:</translation>
     </message>
@@ -5193,7 +5193,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Pasirinkite naujiems brėžiniams naudojamus nustatymus. Vėliau visus šiuos nustatymus galėsite pakeisti pasirinkčių dialogo lange.</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+15"/>
         <source>Unit:</source>
         <translation type="unfinished">Vienetas:</translation>
     </message>
@@ -9685,7 +9685,7 @@ rodomas paieškos rezultatuose:</translation>
 <context>
     <name>PageSettings</name>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+29"/>
+        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+31"/>
         <source>Defaults for New Drawings</source>
         <translation type="unfinished">Naujų brėžinių numatytosios reikšmės</translation>
     </message>
@@ -13734,7 +13734,7 @@ rodomas paieškos rezultatuose:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1094"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1098"/>
         <source>Restore defaults</source>
         <translation type="unfinished">Atkurti numatytąsias nuostatas</translation>
     </message>
@@ -14196,7 +14196,7 @@ rodomas paieškos rezultatuose:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+982"/>
+        <location filename="../scripts/library.js" line="+996"/>
         <source>Objects</source>
         <translation type="unfinished">Objektai</translation>
     </message>

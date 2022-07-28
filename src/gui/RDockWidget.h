@@ -58,7 +58,7 @@ protected:
     virtual bool event(QEvent* e);
 
 private:
-    RFlowLayout* layout;
+    RFlowLayout* flowLayout;
 };
 
 Q_DECLARE_METATYPE(RDockWidget*)

@@ -27,7 +27,7 @@ ShowToolDialog.prototype = new EAction();
 
 ShowToolDialog.init = function(basePath) {
     var appWin = EAction.getMainWindow();
-    appWin.enterPressed.connect(ShowToolDialog, "triggerEnterEvent");
+    appWin.enterPressed.connect(ShowToolDialog.triggerEnterEvent);
 };
 
 ShowToolDialog.triggerEnterEvent = function() {

@@ -41,7 +41,8 @@ function CadToolBarPanel(parent, hasBackButton) {
         backAction.checkable = false;
         backAction.setIcon(autoPath("scripts/Widgets/CadToolBar/Back.svg"));
         this.addAction(backAction);
-        backAction.triggered.connect(CadToolBar, "back");
+        //backAction.triggered.connect(CadToolBar, "back");
+        backAction.triggered.connect(CadToolBar.back);
     }
 }
 

@@ -72,7 +72,7 @@ public:
 
     virtual RVector getPointOnEntity() const;
 
-    virtual QList<RRefPoint> getInternalReferencePoints(RS::ProjectionRenderingHint hint = RS::RenderTop) const;
+    virtual QList<RRefPoint> getInternalReferencePoints(RS::ProjectionRenderingHint hint = RS::RenderTop, QList<REntity::Id>* subEntityIds = NULL) const;
     virtual QList<RRefPoint> getReferencePoints(RS::ProjectionRenderingHint hint = RS::RenderTop) const;
     virtual RVector getVectorTo(const RVector& point,  bool limited = true, double strictRange = RMAXDOUBLE) const;
     virtual double getDistanceTo(const RVector& point, bool limited = true, double range = 0.0,

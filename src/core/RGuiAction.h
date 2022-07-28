@@ -411,7 +411,7 @@ protected:
     QList<QKeySequence> defaultShortcuts;
     QList<QKeySequence> multiKeyShortcuts;
     QString shortcutText;
-    QString toolTip;
+    QString oriToolTip;
     bool iconDisabled;
     int enabledOverride;
     //RDocumentInterface* documentInterface;

@@ -25,7 +25,7 @@
 
 
 RDockWidget::RDockWidget(const QString& title, QWidget* parent, Qt::WindowFlags flags) :
-    QDockWidget(title, parent, flags), layout(NULL) {
+    QDockWidget(title, parent, flags), flowLayout(NULL) {
 
     // avoid document drag error when dragging icon under macOS:
     setWindowIcon(QIcon());
@@ -70,36 +70,36 @@ void RDockWidget::closeEvent(QCloseEvent* event) {
 void RDockWidget::actionEvent(QActionEvent* event) {
     QAction* action = event->action();
 
-    if (layout==NULL) {
+    if (flowLayout==NULL) {
         // first action added: add widget with flow layout to dock:
         QWidget* w = new QWidget();
-        layout = new RFlowLayout(2,2,2);
-        w->setLayout(layout);
+        flowLayout = new RFlowLayout(2,2,2);
+        w->setLayout(flowLayout);
         setWidget(w);
     }
 
     switch (event->type()) {
         case QEvent::ActionAdded: {
-            Q_ASSERT_X(qobject_cast<QWidgetAction*>(action) == 0 || layout->indexOf(qobject_cast<QWidgetAction*>(action)) == -1,
+            Q_ASSERT_X(qobject_cast<QWidgetAction*>(action) == 0 || flowLayout->indexOf(qobject_cast<QWidgetAction*>(action)) == -1,
                         "RDockWidget", "widgets cannot be inserted multiple times");
 
-            int index = layout->count();
+            int index = flowLayout->count();
             if (event->before()) {
-                index = layout->indexOf(event->before());
+                index = flowLayout->indexOf(event->before());
                 Q_ASSERT_X(index != -1, "RDockWidget::insertAction", "internal error");
             }
-            layout->insertAction(index, action);
+            flowLayout->insertAction(index, action);
             break;
         }
 
         case QEvent::ActionChanged:
-            layout->invalidate();
+            flowLayout->invalidate();
             break;
 
         case QEvent::ActionRemoved: {
-            int index = layout->indexOf(action);
+            int index = flowLayout->indexOf(action);
             if (index != -1) {
-                delete layout->takeAt(index);
+                delete flowLayout->takeAt(index);
             }
             break;
         }

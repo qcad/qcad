@@ -1633,7 +1633,7 @@ Wilt u het herstellen?</translation>
 <context>
     <name>CadToolBar</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+51"/>
+        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+52"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -4787,12 +4787,12 @@ is al in de lijst.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2123"/>
+        <location line="+2131"/>
         <source>Cancel</source>
         <translation>Annuleer</translation>
     </message>
     <message>
-        <location line="-2122"/>
+        <location line="-2130"/>
         <source>Done</source>
         <translation>Klaar</translation>
     </message>
@@ -4823,7 +4823,7 @@ is al in de lijst.</translation>
         <translation>CAD-gereedschappen</translation>
     </message>
     <message>
-        <location line="+576"/>
+        <location line="+584"/>
         <source>Invalid position</source>
         <translation>Ongeldige positie</translation>
     </message>
@@ -5838,8 +5838,8 @@ is al in de lijst.</translation>
 <context>
     <name>FirstStart</name>
     <message>
-        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+36"/>
-        <location line="+223"/>
+        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
+        <location line="+243"/>
         <source>%1 First Start</source>
         <translation>%1 eerste start</translation>
     </message>
@@ -5854,7 +5854,7 @@ is al in de lijst.</translation>
         <translation>Wit</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Language:</source>
         <translation>Taal:</translation>
     </message>
@@ -5869,7 +5869,7 @@ is al in de lijst.</translation>
         <translation>Kies de instellingen voor nieuwe tekeningen. Al deze instellingen kunnen later worden gewijzigd in de toepassingsvoorkeuren.</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+15"/>
         <source>Unit:</source>
         <translation>Eenheid:</translation>
     </message>
@@ -11018,7 +11018,7 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>PageSettings</name>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+29"/>
+        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+31"/>
         <source>Defaults for New Drawings</source>
         <translation>Standaardinstellingen voor nieuwe tekeningen</translation>
     </message>
@@ -15526,7 +15526,7 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1094"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1098"/>
         <source>Restore defaults</source>
         <translation>Standaardinstellingen herstellen</translation>
     </message>
@@ -16064,7 +16064,7 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+982"/>
+        <location filename="../scripts/library.js" line="+996"/>
         <source>Objects</source>
         <translation>Objecten</translation>
     </message>

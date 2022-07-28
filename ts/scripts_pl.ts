@@ -1561,7 +1561,7 @@ Odzyskać ją?</translation>
 <context>
     <name>CadToolBar</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+51"/>
+        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+52"/>
         <source>Widgets</source>
         <translation type="unfinished">Widżety</translation>
     </message>
@@ -4593,12 +4593,12 @@ jest już na liście.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2123"/>
+        <location line="+2131"/>
         <source>Cancel</source>
         <translation type="unfinished">Anuluj</translation>
     </message>
     <message>
-        <location line="-2122"/>
+        <location line="-2130"/>
         <source>Done</source>
         <translation type="unfinished">Gotowe</translation>
     </message>
@@ -4629,7 +4629,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Narzędzia CAD</translation>
     </message>
     <message>
-        <location line="+576"/>
+        <location line="+584"/>
         <source>Invalid position</source>
         <translation type="unfinished">Nieprawidłowa pozycja</translation>
     </message>
@@ -5615,8 +5615,8 @@ jest już na liście.</translation>
 <context>
     <name>FirstStart</name>
     <message>
-        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+36"/>
-        <location line="+223"/>
+        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
+        <location line="+243"/>
         <source>%1 First Start</source>
         <translation type="unfinished">%1 Pierwszy start</translation>
     </message>
@@ -5631,7 +5631,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Biała</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Language:</source>
         <translation type="unfinished">Język:</translation>
     </message>
@@ -5646,7 +5646,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Proszę wybrać ustawienia używane dla nowych rysunków. Wszystkie te ustawienia mogą być zmienione później w oknie dialogowym Preferencje.</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+15"/>
         <source>Unit:</source>
         <translation type="unfinished">Jednostka:</translation>
     </message>
@@ -10271,7 +10271,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
 <context>
     <name>PageSettings</name>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+29"/>
+        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+31"/>
         <source>Defaults for New Drawings</source>
         <translation type="unfinished">Domyślne wartości dla nowych rysunków</translation>
     </message>
@@ -14555,7 +14555,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1094"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1098"/>
         <source>Restore defaults</source>
         <translation type="unfinished">Przywróć ustawienia domyślne</translation>
     </message>
@@ -15069,7 +15069,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+982"/>
+        <location filename="../scripts/library.js" line="+996"/>
         <source>Objects</source>
         <translation type="unfinished">Obiekty</translation>
     </message>

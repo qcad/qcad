@@ -87,7 +87,6 @@ AutoSave.getTimestamp = function() {
 
 AutoSave.init = function(basePath) {
     AutoSave.autoSaveTimer = new QTimer(this);
-    //AutoSave.autoSaveTimer.timeout.connect(AutoSave, "autoSave");
     AutoSave.autoSaveTimer.timeout.connect(AutoSave.autoSave);
 
     // start autosave timer for the first time:

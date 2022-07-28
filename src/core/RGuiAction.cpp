@@ -162,7 +162,7 @@ void RGuiAction::initTexts() {
 
     QAction::setText(textAndKeycode);
 
-    QString tip = toolTip;
+    QString tip = oriToolTip;
     if (tip.isNull()) {
         tip = textOnly;
     }
@@ -438,7 +438,7 @@ QList<QKeySequence> RGuiAction::getShortcuts() const {
 }
 
 void RGuiAction::setToolTip(const QString& tip) {
-    toolTip = tip;
+    oriToolTip = tip;
     initTexts();
 }
 

@@ -1752,7 +1752,8 @@ EAction.prototype.applyOperation = function() {
         return false;
     }
     this.complementOperation(op);
-    di.applyOperation(op);
+    var t = di.applyOperation(op);
+    this.postOperation(t);
     return true;
 };
 
@@ -1760,6 +1761,13 @@ EAction.prototype.applyOperation = function() {
  * Can be reimplemented to complement the operation of an action.
  */
 EAction.prototype.complementOperation = function(op) {
+    return;
+};
+
+/**
+ * Can be reimplemented to work with the transaction returned by the operation.
+ */
+EAction.prototype.postOperation = function(transaction) {
     return;
 };
 
