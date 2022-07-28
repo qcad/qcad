@@ -136,6 +136,7 @@ else {
                 imageformats\\qtiff.dll \
                 imageformats\\qwbmp.dll \
                 sqldrivers\\qsqlite.dll \
+                sqldrivers\\qsqlodbc.dll \\
                 printsupport\\windowsprintersupport.dll
         }
 
