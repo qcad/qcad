@@ -43,5 +43,5 @@ done
 
 rm -rf allfiles.qrc
 
-#qmake
-/usr/local/Qt-6.3.1/bin/qmake
+qmake
+#/usr/local/Qt-6.3.1/bin/qmake

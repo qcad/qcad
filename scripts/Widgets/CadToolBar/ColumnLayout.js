@@ -34,7 +34,6 @@ ColumnLayout.prototype.toString = function() {
 };
 
 ColumnLayout.prototype.removeAction = function(a) {
-    qDebug("ColumnLayout.prototype.removeAction...");
     var itemList = this.property("ItemList");
 
     if (isNull(itemList)) {
@@ -58,7 +57,6 @@ ColumnLayout.prototype.removeAction = function(a) {
     }
 
     this.setProperty("ItemList", itemList);
-    qDebug("ColumnLayout.prototype.removeAction: DONE");
 };
 
 /**
@@ -67,15 +65,10 @@ ColumnLayout.prototype.removeAction = function(a) {
  *    set.
  */
 ColumnLayout.prototype.addItem = function(item) {
-    qDebug("ColumnLayout.prototype.addItem...");
-
     var itemList = this.property("ItemList");
 
     if (typeof(itemList)=="undefined" || itemList.length===0) {
-        qDebug("item: " + item);
-        qDebug("item array: " + new Array(item));
         this.setProperty("ItemList", new Array(item));
-        qDebug("ColumnLayout.prototype.addItem: DONE");
         return;
     }
 
@@ -101,8 +94,6 @@ ColumnLayout.prototype.addItem = function(item) {
 
     itemList.push(item);
     this.setProperty("ItemList", itemList);
-
-    qDebug("ColumnLayout.prototype.addItem: DONE");
 };
 
 ColumnLayout.getAccumulatedSortOrder = function(item, objectName) {
@@ -132,24 +123,19 @@ ColumnLayout.getGroupSortOrder = function(item, objectName) {
 };
 
 ColumnLayout.prototype.minimumSize = function() {
-    qDebug("ColumnLayout.prototype.minimumSize");
     return this.sizeHint();
 };
 
 ColumnLayout.prototype.sizeHint = function() {
-    qDebug("ColumnLayout.prototype.sizeHint");
     if (isNull(this.sHint)) {
-        qDebug("ColumnLayout.prototype.sizeHint: DONE");
         return new QSize(0,0);
     }
 
     this.setGeometry();
-    qDebug("ColumnLayout.prototype.sizeHint: DONE");
     return this.sHint;
 };
 
 ColumnLayout.prototype.setGeometry = function(rect) {
-    qDebug("ColumnLayout.prototype.setGeometry...");
 
     var dbg = false;
     if (this.parent().objectName==="MainToolsPanel") {
@@ -291,8 +277,6 @@ ColumnLayout.prototype.setGeometry = function(rect) {
     this.setProperty("sHintVerticalWhenFloating", verticalWhenFloating);
     this.setProperty("sHintHorizontal", horizontal);
     this.setProperty("sHintIconSize", iconSize);
-
-    qDebug("ColumnLayout.prototype.setGeometry: DONE");
 };
 
 //ColumnLayout.prototype.count = function(index) {
@@ -304,14 +288,10 @@ ColumnLayout.prototype.setGeometry = function(rect) {
 //};
 
 ColumnLayout.prototype.itemAt = function(index) {
-    qDebug("ColumnLayout.prototype.itemAt...");
 
     var itemList = this.property("ItemList");
     if (typeof(itemList)=="undefined" || index>=itemList.length) {
-        qDebug("undef");
         return undefined;
     }
-    qDebug("ColumnLayout.prototype.itemAt: " + itemList[index]);
-    qDebug("ColumnLayout.prototype.itemAt: DONE");
     return itemList[index];
 };

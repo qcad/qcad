@@ -139,8 +139,12 @@ function RCadToolMatrixTree(parent) {
     this.itemPressed.connect(this, RCadToolMatrixTree.prototype.handleItemPress);
 
     this.minimumWidth = 120;
-    //this.sizeIncrement = new QSize(32,0);
-    this.setSizeIncrement(new QSize(32,0));
+    if (RSettings.getQtVersion()>0x060000) {
+        this.setSizeIncrement(new QSize(32,0));
+    }
+    else {
+        this.sizeIncrement = new QSize(32,0);
+    }
 
     var p = this.palette;
     p.setColor(QPalette.Base, new QColor("#dddddd"));
@@ -457,13 +461,16 @@ CadToolMatrix.getToolMatrix = function() {
         var formWidget = WidgetFactory.createWidget(CadToolMatrix.includeBasePath, "CadToolMatrix.ui");
 
         var layout = formWidget.findChild("VerticalLayout");
-        qDebug("layout:" + layout);
 
         // add tool matrix:
         toolMatrix = new RCadToolMatrixTree(appWin);
         toolMatrix.objectName = "ToolMatrix";
-        //layout.addWidget(toolMatrix, 1, 0);
-        layout.addWidget(toolMatrix);
+        if (RSettings.getQtVersion()>0x060000) {
+            layout.addWidget(toolMatrix);
+        }
+        else {
+            layout.addWidget(toolMatrix, 1, 0);
+        }
 
         // init filter widget:
         var filterEdit = formWidget.findChild("FilterEdit");
@@ -534,7 +541,6 @@ CadToolMatrix.getToolMatrixPanel = function(title, objectName, order) {
         }
 
         if (!found) {
-            qDebug("item:" + item);
             tm.addTopLevelItem(item);
         }
     }
@@ -550,8 +556,6 @@ CadToolMatrix.getToolMatrixPanel = function(title, objectName, order) {
 
     return dw;
 };
-
-qDebug("CadmToolMatrix: 050");
 
 /**
  * Restore state of collapsed categories.
