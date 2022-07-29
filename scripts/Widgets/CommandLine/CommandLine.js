@@ -229,7 +229,7 @@ CommandLine.init = function(basePath) {
         di.repaintViews();
         di.setCursorPosition(sp);
     });
-    
+
     // user pressed enter, enter command or coordinate:
     leCommand.commandConfirmed.connect(function(command) {
         // enter with empty input: repeat last command:
@@ -392,7 +392,7 @@ CommandLine.init = function(basePath) {
         }
     });
     
-    leCommand.clearHistory.connect(teHistory, "clear");
+    leCommand.clearHistory.connect(function() { teHistory.clear(); });
 
     // show message to user:
     appWin.userMessage.connect(function(message, escape) {
