@@ -26,7 +26,7 @@ PenToolBar.init = function(basePath) {
     var penToolBar = EAction.getToolBar(qsTr("Pen"), "Pen");
     var w = WidgetFactory.createWidget(includeBasePath, "PenToolBar.ui", RMainWindowQt.getMainWindow());
     WidgetFactory.moveChildren(w, penToolBar, w.objectName);
-    w.destroy();
+    destr(w);
     //penToolBar.addWidget(w);
     penToolBar.visible = false;
 
