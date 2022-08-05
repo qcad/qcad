@@ -299,7 +299,7 @@ CommandLine.init = function(basePath) {
                 if (!pos.isValid()) {
                     appWin.handleUserWarning(
                         qsTr("Invalid coordinate or distance \"%1\".")
-                            .arg(Qt.escape(cmd))
+                            .arg(RS.escape(cmd))
                     );
                     return;
                 }
@@ -397,7 +397,7 @@ CommandLine.init = function(basePath) {
     // show message to user:
     appWin.userMessage.connect(function(message, escape) {
         if (escape) {
-            message = Qt.escape(message);
+            message = RS.escape(message);
         }
 
         appendAndScroll("<span>" + message + "</span>");
@@ -411,7 +411,7 @@ CommandLine.init = function(basePath) {
         }
 
         if (escape) {
-            message = Qt.escape(message);
+            message = RS.escape(message);
             // workaround for Qt showing &quot; in label:
             message = message.replace(/&quot;/g, "\"");
         }
@@ -425,7 +425,7 @@ CommandLine.init = function(basePath) {
     // show info to user:
     appWin.userInfo.connect(function(message, escape) {
         if (escape) {
-            message = Qt.escape(message);
+            message = RS.escape(message);
         }
 
         appendAndScroll("<span style='color:" + infoBlue + ";'>" + message + "</span>");
@@ -443,7 +443,7 @@ CommandLine.init = function(basePath) {
 
         var msgEsc = message;
         if (escape) {
-            msgEsc = Qt.escape(message);
+            msgEsc = RS.escape(message);
         }
 
         var cartCoordSep = RSettings.getStringValue("Input/CartesianCoordinateSeparator", ',');
