@@ -557,7 +557,12 @@ BlockList.init = function(basePath) {
     var layout = formWidget.findChild("verticalLayout");
     var blockList = new RBlockListQt(formWidget);
     blockList.objectName = "BlockList";
-    layout.addWidget(blockList, 1, 0);
+    if (RSettings.getQtVersion()>0x060000) {
+        layout.addWidget(blockList);
+    }
+    else {
+        layout.addWidget(blockList, 1, 0);
+    }
 
     RSettings.setValue("BlockList/AlternatingRowColor", new RColor(230, 235, 250), false);
     WidgetFactory.initList(blockList, "BlockList");
