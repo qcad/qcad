@@ -810,21 +810,13 @@ public:
      * \nonscriptable
      */
     static QRegularExpression createRegEpCI(const QString& str, bool regExp2 = false);
-    /**
-     * \nonscriptable
-     */
+
     static void setUtf8Codec(QTextStream& ts);
-    /**
-     * \nonscriptable
-     */
+
     static QString escape(const QString& plain);
-    /**
-     * \nonscriptable
-     */
+
     static int getScreenCount();
-    /**
-     * \nonscriptable
-     */
+
     static QSize getAvailableGeometry(int screen);
     /**
      * \nonscriptable
