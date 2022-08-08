@@ -1097,7 +1097,9 @@ EAction.getToolBar = function(title, objectName, toolBarArea, category, before) 
     }
 
     if (!isNull(tb) && !isOfType(tb, QToolBar)) {
-        qWarning("Not a toolbar: ", tb);
+        qWarning("Not a toolbar: " + tb);
+        qWarning("tb type: " + tb.getType());
+        qWarning("QToolBar type: " + QToolBar.getType());
         return undefined;
     }
 
@@ -1152,7 +1154,7 @@ EAction.getOptionsToolBar = function() {
     }
 
     if (!isNull(EAction.optionsToolBar)) {
-        if (!QCoreApplication.arguments().contains("-no-show")) {
+        if (!RSettings.getOriginalArguments().contains("-no-show")) {
             EAction.optionsToolBar.visible = true;
         }
     }
@@ -1394,8 +1396,6 @@ EAction.addGuiActionTo = function(action, iface, addToMenu, addToToolBar,
     if (isNull(iface)) {
         qWarning("EAction.js:", "addGuiActionTo(): iface not defined");
     }
-
-
 
     if (action.icon.isNull() && !action.isIconDisabled()) {
         action.setIcon(autoPath("scripts/Empty.svg"));
