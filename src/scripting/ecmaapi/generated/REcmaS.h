@@ -103,9 +103,6 @@
         getPageSize
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        setUtf8Codec
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         escape
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

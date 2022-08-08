@@ -588,14 +588,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
-    <method name="setUtf8Codec" cppName="setUtf8Codec"
-    specifier="public" isStatic="true" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="QTextStream &amp;" typeName="QTextStream"
-        name="ts" isConst="false" />
-      </variant>
-    </method>
     <method name="escape" cppName="escape" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false">
