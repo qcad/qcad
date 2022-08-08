@@ -117,5 +117,5 @@ ToolBarContextMenu.createMenu = function(menu) {
 
 ToolBarContextMenu.init = function(basePath) {
     var appWin = RMainWindowQt.getMainWindow();
-    appWin.toolBarContextMenu.connect(ToolBarContextMenu, "createMenu");
+    appWin.toolBarContextMenu.connect(ToolBarContextMenu.createMenu);
 };
