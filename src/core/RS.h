@@ -810,7 +810,9 @@ public:
      * \nonscriptable
      */
     static QRegularExpression createRegEpCI(const QString& str, bool regExp2 = false);
-
+    /**
+     * \nonscriptable
+     */
     static void setUtf8Codec(QTextStream& ts);
 
     static QString escape(const QString& plain);
