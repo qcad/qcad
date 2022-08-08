@@ -357,7 +357,7 @@ EcmaScriptShell.init = function(basePath) {
         }
     });
 
-    leCommand.clearHistory.connect(teHistory, "clear");
+    leCommand.clearHistory.connect(teHistory.clear);
 };
 
 EcmaScriptShell.eval = function(expression) {
