@@ -4981,6 +4981,56 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::ProjectionRenderingHint */
+     && (
+            context->argument(1).isArray()
+        ) /* type: QList < REntity::Id > * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::ProjectionRenderingHint
+                    a0 =
+                    (RS::ProjectionRenderingHint)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument is pointer
+                    QList < REntity::Id > * a1 = NULL;
+
+                    a1 = 
+                        REcmaHelper::scriptValueTo<QList < REntity::Id > >(
+                            context->argument(1)
+                        );
+                    
+                    if (a1==NULL && 
+                        !context->argument(1).isNull()) {
+                        return REcmaHelper::throwError("RViewportData: Argument 1 is not of type QList < REntity::Id > *QList < REntity::Id > *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RRefPoint >'
+    QList < RRefPoint > cppResult =
+        
+               self->getInternalReferencePoints(a0
+        ,
+    a1);
+        // return type: QList < RRefPoint >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RViewportData.getInternalReferencePoints().",
                    context);

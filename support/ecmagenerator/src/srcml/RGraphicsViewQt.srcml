@@ -99,6 +99,8 @@
         <return>return <expr><name>true</name></expr>;</return>
     }</block></function>
 
+    <function_decl><type><name>virtual</name> <name>QSize</name></type> <name>sizeHint</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
 <label><name>signals</name>:</label>
     <function_decl><type><name>void</name></type> <name>drop</name><parameter_list>(<param><decl><type><name>QDropEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>dragEnter</name><parameter_list>(<param><decl><type><name>QDragEnterEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
@@ -109,7 +111,6 @@
     <function_decl><type><name>void</name></type> <name>updateTextLabel</name><parameter_list>(<param><decl><type><name>QPainter</name>*</type> <name>painter</name></decl></param>, <param><decl><type><name>const</name> <name>RTextLabel</name>&amp;</type> <name>textLabel</name></decl></param>)</parameter_list>;</function_decl>
 
 </public><protected>protected:
-    <function_decl><type><name>virtual</name> <name>QSize</name></type> <name>sizeHint</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>bool</name></type> <name>event</name><parameter_list>(<param><decl><type><name>QEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>
 

@@ -485,6 +485,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         typeName="RS::ProjectionRenderingHint" name="hint"
         hasDefault="true" default="RS :: RenderTop"
         isConst="false" />
+        <arg type="QList &lt; REntity::Id &gt; *"
+        typeName="QList &lt; REntity::Id &gt; *"
+        name="subEntityIds" hasDefault="true" default="NULL"
+        isConst="false" />
       </variant>
     </method>
     <method name="getReferencePoints" cppName="getReferencePoints"

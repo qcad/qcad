@@ -296,6 +296,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, registerForFocus, "registerForFocus");
             
+            REcmaHelper::registerFunction(&engine, proto, sizeHint, "sizeHint");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RGraphicsViewQt*>(), *proto);
 
@@ -6826,6 +6828,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsViewQt::registerForFocus", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewQt::sizeHint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewQt::sizeHint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewQt::sizeHint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewQt* self = 
+                        getSelf("sizeHint", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSize'
+    QSize cppResult =
+        
+               self->sizeHint();
+        // return type: QSize
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewQt.sizeHint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewQt::sizeHint", context, engine);
             return result;
         }
          QScriptValue REcmaGraphicsViewQt::toString
