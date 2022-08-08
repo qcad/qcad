@@ -99,6 +99,14 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getPageSize, "getPageSize");
             
+            REcmaHelper::registerFunction(&engine, &ctor, setUtf8Codec, "setUtf8Codec");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, escape, "escape");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getScreenCount, "getScreenCount");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getAvailableGeometry, "getAvailableGeometry");
+            
 
     // static properties:
     
@@ -3426,6 +3434,200 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaS::getPageSize", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaS::setUtf8Codec
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaS::setUtf8Codec", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaS::setUtf8Codec";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QTextStream */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    QTextStream*
+                    ap0 =
+                    qscriptvalue_cast<
+                    QTextStream*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RS: Argument 0 is not of type QTextStream*.",
+                               context);                    
+                    }
+                    QTextStream& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RS::
+       setUtf8Codec(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RS.setUtf8Codec().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaS::setUtf8Codec", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaS::escape
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaS::escape", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaS::escape";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RS::
+       escape(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RS.escape().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaS::escape", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaS::getScreenCount
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaS::getScreenCount", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaS::getScreenCount";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        RS::
+       getScreenCount();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RS.getScreenCount().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaS::getScreenCount", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaS::getAvailableGeometry
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaS::getAvailableGeometry", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaS::getAvailableGeometry";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSize'
+    QSize cppResult =
+        RS::
+       getAvailableGeometry(a0);
+        // return type: QSize
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RS.getAvailableGeometry().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaS::getAvailableGeometry", context, engine);
             return result;
         }
          QScriptValue REcmaS::toString

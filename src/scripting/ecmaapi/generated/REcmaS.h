@@ -102,6 +102,18 @@
         ;static  QScriptValue
         getPageSize
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setUtf8Codec
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        escape
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getScreenCount
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getAvailableGeometry
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
