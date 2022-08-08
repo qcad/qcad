@@ -116,7 +116,12 @@ function getTypeOf(v) {
  * derived from QWidget.
  */
 function isOfType(obj, type) {
-    return !isNull(obj) && obj.constructor===type;
+    if (!RSettings.isQt(6)) {
+        return !isNull(obj) && obj.constructor===type;
+    }
+    else {
+        return !isNull(obj) && (obj.constructor===type || obj.getType()===type.getType());
+    }
 }
 
 /**
@@ -145,7 +150,8 @@ function isNull(obj) {
     }
 
     return (obj==null ||
-            (typeof(obj.isNull)==="function" && obj.isNull()===true));
+            // shared pointer is NULL:
+            (typeof(obj.data)==="function" && typeof(obj.isNull)==="function" && obj.isNull()===true));
 }
 
 /**
