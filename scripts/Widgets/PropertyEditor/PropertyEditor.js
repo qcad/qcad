@@ -222,36 +222,66 @@ function PropertyEditorImpl(basePath) {
     this.widget.findChild("LabelProtected").text = RSettings.translate("REntity", "Protected") + this.colon;
 
     var selectionCombo = this.widget.findChild("Selection");
-    selectionCombo["activated(int)"].connect(this, "filterChanged");
+    if (RSettings.isQt(6)) {
+        selectionCombo["activated(int)"].connect(this.filterChanged);
+    }
+    else {
+        selectionCombo["activated(int)"].connect(this, "filterChanged");
+    }
     selectionCombo.installEventFilter(new REventFilter(QEvent.Wheel.valueOf(), true));
     selectionCombo.focusPolicy = Qt.ClickFocus;
 
     // initialize fixed general properties at the top:
     var layerCombo = this.widget.findChild("Layer");
-    layerCombo['activated(QString)'].connect(
-                new PropertyWatcher(this, layerCombo, REntity.PropertyLayer),
-                'propertyChanged');
+    if (RSettings.isQt(6)) {
+        layerCombo.textActivated.connect(
+                    new PropertyWatcher(this, layerCombo, REntity.PropertyLayer).propertyChanged);
+    }
+    else {
+        layerCombo['activated(QString)'].connect(
+                    new PropertyWatcher(this, layerCombo, REntity.PropertyLayer),
+                    'propertyChanged');
+    }
+
     layerCombo.installEventFilter(new REventFilter(QEvent.Wheel.valueOf(), true));
     layerCombo.focusPolicy = Qt.ClickFocus;
 
     var colorCombo = this.widget.findChild("Color");
-    colorCombo['activated(int)'].connect(
-                new PropertyWatcher(this, colorCombo, REntity.PropertyColor),
-                'propertyChanged');
+    if (RSettings.isQt(6)) {
+        colorCombo['activated(int)'].connect(
+                    new PropertyWatcher(this, colorCombo, REntity.PropertyColor).propertyChanged);
+    }
+    else {
+        colorCombo['activated(int)'].connect(
+                    new PropertyWatcher(this, colorCombo, REntity.PropertyColor),
+                    'propertyChanged');
+    }
     colorCombo.installEventFilter(new REventFilter(QEvent.Wheel.valueOf(), true));
     colorCombo.focusPolicy = Qt.ClickFocus;
 
     var lineweightCombo = this.widget.findChild("Lineweight");
-    lineweightCombo['activated(int)'].connect(
-                new PropertyWatcher(this, lineweightCombo, REntity.PropertyLineweight),
-                'propertyChanged');
+    if (RSettings.isQt(6)) {
+        lineweightCombo['activated(int)'].connect(
+                    new PropertyWatcher(this, lineweightCombo, REntity.PropertyLineweight).propertyChanged);
+    }
+    else {
+        lineweightCombo['activated(int)'].connect(
+                    new PropertyWatcher(this, lineweightCombo, REntity.PropertyLineweight),
+                    'propertyChanged');
+    }
     lineweightCombo.installEventFilter(new REventFilter(QEvent.Wheel.valueOf(), true));
     lineweightCombo.focusPolicy = Qt.ClickFocus;
 
     var linetypeCombo = this.widget.findChild("Linetype");
-    linetypeCombo['activated(int)'].connect(
-                new PropertyWatcher(this, linetypeCombo, REntity.PropertyLinetype),
-                'propertyChanged');
+    if (RSettings.isQt(6)) {
+        linetypeCombo['activated(int)'].connect(
+                    new PropertyWatcher(this, linetypeCombo, REntity.PropertyLinetype).propertyChanged);
+    }
+    else {
+        linetypeCombo['activated(int)'].connect(
+                    new PropertyWatcher(this, linetypeCombo, REntity.PropertyLinetype),
+                    'propertyChanged');
+    }
     linetypeCombo.installEventFilter(new REventFilter(QEvent.Wheel.valueOf(), true));
     linetypeCombo.focusPolicy = Qt.ClickFocus;
 
@@ -273,14 +303,27 @@ function PropertyEditorImpl(basePath) {
 
 
     var linetypeScaleEdit = this.widget.findChild("LinetypeScale");
-    linetypeScaleEdit.editingFinished.connect(
-                new PropertyWatcher(this, linetypeScaleEdit, REntity.PropertyLinetypeScale),
-                'propertyChanged');
+    if (RSettings.isQt(6)) {
+        linetypeScaleEdit.editingFinished.connect(
+                    new PropertyWatcher(this, linetypeScaleEdit, REntity.PropertyLinetypeScale).propertyChanged);
+    }
+    else {
+        linetypeScaleEdit.editingFinished.connect(
+                    new PropertyWatcher(this, linetypeScaleEdit, REntity.PropertyLinetypeScale),
+                    'propertyChanged');
+    }
+
 
     var drawOrderEdit = this.widget.findChild("DrawOrder");
-    drawOrderEdit.editingFinished.connect(
-                new PropertyWatcher(this, drawOrderEdit, REntity.PropertyDrawOrder),
-                'propertyChanged');
+    if (RSettings.isQt(6)) {
+        drawOrderEdit.editingFinished.connect(
+                    new PropertyWatcher(this, drawOrderEdit, REntity.PropertyDrawOrder).propertyChanged);
+    }
+    else {
+        drawOrderEdit.editingFinished.connect(
+                    new PropertyWatcher(this, drawOrderEdit, REntity.PropertyDrawOrder),
+                    'propertyChanged');
+    }
 
     this.geometryGroup = undefined;
     this.childGroup = undefined;
@@ -1663,7 +1706,12 @@ PropertyEditor.init = function(basePath) {
     dock.objectName = "PropertyEditorDock";
     dock.setWidget(pe.widget);
     appWin.addPropertyListener(pe);
-    appWin.addLayerListener(pe.getRLayerListener());
+    if (RSettings.isQt(6)) {
+        appWin.addLayerListener(pe);
+    }
+    else {
+        appWin.addLayerListener(pe.getRLayerListener());
+    }
     appWin.addDockWidget(Qt.RightDockWidgetArea, dock);
     PropertyEditor.instance = pe;
 
