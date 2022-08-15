@@ -106,11 +106,11 @@ public:
     void setGuiAction(RGuiAction* guiAction);
 
     QList<RGraphicsScene*> getGraphicsScenes();
-    RDocument* getDocument();
-    RDocumentInterface* getDocumentInterface();
+    virtual RDocument* getDocument();
+    virtual RDocumentInterface* getDocumentInterface();
     RStorage* getStorage();
 
-    void setDocumentInterface(RDocumentInterface* di) {
+    virtual void setDocumentInterface(RDocumentInterface* di) {
         documentInterface = di;
     }
 
