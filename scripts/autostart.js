@@ -320,7 +320,7 @@ function loadTranslations(addOns, splash) {
 
     // load C++ translations:
     var modules = ["qt", "assistant", "qt_help", "qcadcore", "qcadentity", "qcadgui"];
-    if (RSettings.isQt(5)) {
+    if (RSettings.isQt(5) || RSettings.isQt(6)) {
         modules.unshift("qtbase");
     }
 
@@ -702,6 +702,9 @@ function main() {
     // create application window:
     var appWin = new RMainWindowQt();
 
+    // temp:
+    appWin.show();
+
     // Note: animated MUST be true for Qt 5.7:
     // Qt 5.7.0 will not allow tabifying dock widgets if animations are turned off:
     if (RSettings.getQtVersion()<0x050600) {
@@ -729,7 +732,14 @@ function main() {
     //RDebug.stopTimer(0, "initializing add-ons");
 
     // auto load scripts in AutoLoad folders for global script engine:
-    var files = RAutoLoadEcma.getAutoLoadFiles();
+
+    var files;
+    if (RSettings.isQt(6)) {
+        files = RAutoLoadJs.getAutoLoadFiles();
+    }
+    else {
+        files = RAutoLoadEcma.getAutoLoadFiles();
+    }
     for (i=0; i<files.length; i++) {
         include(files[i]);
     }
@@ -767,7 +777,7 @@ function main() {
 
     if (!isNull(splash)) {
         splash.close();
-        splash.destroy();
+        destr(splash);
     }
 
     postInitAddOns(addOns);
@@ -844,7 +854,7 @@ function main() {
     // don't use RSettings below this point
 
     // and we're done:
-    appWin.destroy();
+    destr(appWin);
     qDebug("done");
 }
 

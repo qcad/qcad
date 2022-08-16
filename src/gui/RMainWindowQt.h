@@ -190,7 +190,7 @@ protected:
 
     virtual bool event(QEvent* e);
 
-protected slots:
+public slots:
     void updateGuiActions(QMdiSubWindow* mdiChild = NULL);
     void initGuiActions();
     void updateScenes(QMdiSubWindow* mdiChild);

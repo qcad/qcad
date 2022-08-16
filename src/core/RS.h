@@ -180,6 +180,7 @@ public:
 
         EntityAll,          /**< All entities (for filters) */
         EntityUnknown,      /**< Unknown entity */
+
         EntityAttribute,    /**< Block attribute */
         EntityAttributeDefinition,     /**< Block attribute definition */
         EntityBlockRef,     /**< Block reference */
@@ -215,6 +216,7 @@ public:
         EntitySpline,       /**< Spline */
         EntityViewport,     /**< Viewport */
         EntityTolerance,    /**< Tolerance */
+
         EntityUser          /**< User defined entity. Use this to identify
                                  entities that are added in a separate library
                                  and resort to C++ RTTI for RTTI. */
