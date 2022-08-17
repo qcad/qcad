@@ -126,7 +126,7 @@ OptionsToolBar.postInit = function(basePath) {
         optionsToolBar.setFixedHeight(Math.min(ftb.sizeHint.height(), ftb.sizeHint.width()));
     }
 
-    var flags = new Qt.ToolBarAreas(Qt.TopToolBarArea | Qt.BottomToolBarArea);
+    var flags = makeQtToolBarAreas(Qt.TopToolBarArea, Qt.BottomToolBarArea);
     optionsToolBar.setAllowedAreas(flags);
 
     // floatable tool bar does not resize properly: prevent floating of tool bar here:

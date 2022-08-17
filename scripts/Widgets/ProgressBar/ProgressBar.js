@@ -39,9 +39,10 @@ ProgressBar.postInit = function(basePath) {
     }
 
     var appWin = EAction.getMainWindow();
-    appWin.progressText.connect(this, "setProgressText");
-    appWin.progress.connect(this, "progress");
-    appWin.progressEnd.connect(this, "progressEnd");
+    var self = this;
+    appWin.progressText.connect(function() { self.setProgressText(); });
+    appWin.progress.connect(function() { self.progress(); });
+    appWin.progressEnd.connect(function() { self.progressEnd(); });
 };
 
 ProgressBar.prepare = function() {

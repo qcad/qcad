@@ -32,7 +32,7 @@ SelectionDisplay.postInit = function(basePath) {
     var appWin = EAction.getMainWindow();
     var adapter = new RSelectionListenerAdapter();
     appWin.addSelectionListener(adapter);
-    adapter.selectionChanged.connect(SelectionDisplay, "selectionChanged");
+    adapter.selectionChanged.connect(SelectionDisplay.selectionChanged);
 };
 
 SelectionDisplay.selectionChanged = function(documentInterface) {
