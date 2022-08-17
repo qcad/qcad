@@ -18,7 +18,7 @@
  */
 
 include("scripts/Block/Block.js");
-include("../InsertBlockItem/InsertBlockItem.js");
+include("scripts/Block/InsertBlockItem/InsertBlockItem.js");
 
 /**
  * \class InsertScriptItem
@@ -44,6 +44,8 @@ InsertScriptItem.prototype.beginEvent = function() {
     var ms = new RMemoryStorage();
     var si = createSpatialIndex();
     this.docItem = new RDocument(ms, si);
+    // avoid unit conversion:
+    this.docItem.setUnit(RS.None);
     this.diItem = new RDocumentInterface(this.docItem);
     // this document does never update the layer list, block list, etc:
     this.diItem.setNotifyListeners(false);
