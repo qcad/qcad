@@ -120,7 +120,7 @@ function isOfType(obj, type) {
         return !isNull(obj) && obj.constructor===type;
     }
     else {
-        return !isNull(obj) && (obj.constructor===type || obj.getType()===type.getType());
+        return !isNull(obj) && (obj.constructor===type || (isFunction(obj.getType) && obj.getType()===type.getType()));
     }
 }
 
@@ -2909,6 +2909,12 @@ function makeQDirSortFlags() {
 function makeQtMatchFlags() {
     var argumentsNew = [].slice.call(arguments, 0);
     argumentsNew.unshift(Qt.MatchFlags);
+    return makeFlags.apply(this, argumentsNew);
+}
+
+function makeQtToolBarAreas() {
+    var argumentsNew = [].slice.call(arguments, 0);
+    argumentsNew.unshift(Qt.ToolBarAreas);
     return makeFlags.apply(this, argumentsNew);
 }
 
