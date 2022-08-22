@@ -65,6 +65,8 @@ public:
         return closeEventAccepted;
     }
 
+    virtual QSize sizeHint() const;
+
 signals:
     void closeRequested(RMdiChildQt* mdiChild);
     void closeAccepted(RMdiChildQt* mdiChild);
@@ -72,7 +74,6 @@ signals:
 
 protected:
     virtual void closeEvent(QCloseEvent* closeEvent);
-    virtual QSize sizeHint() const;
 
 private:
     RDocumentInterface* documentInterface;
