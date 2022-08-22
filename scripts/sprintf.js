@@ -6,6 +6,7 @@ function sprintf() {
     var str = arguments[0];
     var re = /([^%]*)%('.|0|\x20)?(-)?(\d+)?(\.\d+)?(%|b|c|d|u|f|o|s|x|X)(.*)/;
     var a = b = [], numSubstitutions = 0, numMatches = 0;
+    var subst;
     while (a = re.exec(str)) {
         var leftpart = a[1], pPad = a[2], pJustify = a[3], pMinLength = a[4];
         var pPrecision = a[5], pType = a[6], rightPart = a[7];
@@ -37,7 +38,7 @@ function sprintf() {
             var precision = -1;
             if (pPrecision && pType == 'f')
                 precision = parseInt(pPrecision.substring(1));
-            var subst = param;
+            subst = param;
             switch (pType) {
             case 'b':
                 subst = parseInt(param).toString(2);
