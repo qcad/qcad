@@ -149,9 +149,13 @@ function isNull(obj) {
         return true;
     }
 
-    return (obj==null ||
-            // shared pointer is NULL:
-            (typeof(obj.data)==="function" && typeof(obj.isNull)==="function" && obj.isNull()===true));
+    return (
+        obj==null ||
+        // wrapped object is NULL:
+        (typeof(obj.isNullWrapper)==="function" && obj.isNullWrapper()===true) ||
+        // shared pointer is NULL:
+        (typeof(obj.data)==="function" && typeof(obj.isNull)==="function" && obj.isNull()===true)
+    );
 }
 
 /**
