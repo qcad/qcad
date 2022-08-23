@@ -133,7 +133,7 @@ ViewportWidget.prototype.init = function(uiFile, graphicsSceneClass) {
     var chs = this.vpWidget.children();
     for (var i = 0; i < chs.length; ++i) {
         var ch = chs[i];
-        ch.destroy();
+        destr(ch);
     }
 
     if (isNull(uiFile)) {
