@@ -1364,8 +1364,8 @@ function copyDirectory(sourceDirPath, destDirPath) {
     var files;
     var srcName;
     var destName;
-    var filterFlags = new QDir.Filters(QDir.Files);
-    var sortFlags = new QDir.SortFlags(QDir.NoSort);
+    var filterFlags = makeQDirFilters(QDir.Files);
+    var sortFlags = makeQDirSortFlags(QDir.NoSort);
     files = sourceDir.entryList(filterFlags, sortFlags);
     for(i = 0; i< files.length; i++) {
         srcName = sourceDirPath + QDir.separator + files[i];
@@ -1375,7 +1375,7 @@ function copyDirectory(sourceDirPath, destDirPath) {
         }
     }
 
-    var flags = new QDir.Filters(QDir.AllDirs, QDir.NoDotAndDotDot);
+    var flags = makeQDirFilters(QDir.AllDirs, QDir.NoDotAndDotDot);
     files = sourceDir.entryList(flags);
     for(i = 0; i< files.length; i++) {
         srcName = sourceDirPath + QDir.separator + files[i];
@@ -1394,8 +1394,7 @@ function removeDirectory(dirPath) {
     var dir = new QDir(dirPath);
     var hasErr = false;
     if (dir.exists()) {
-        var flags = new QDir.Filters(QDir.NoDotAndDotDot, 
-                QDir.Dirs, QDir.Files, QDir.Hidden);
+        var flags = makeQDirFilters(QDir.NoDotAndDotDot, QDir.Dirs, QDir.Files, QDir.Hidden);
         var entries = dir.entryInfoList(flags);
         for (var i = 0; i <  entries.length; i++) {
             var entryInfo = entries[i];
@@ -1440,14 +1439,14 @@ function findFile(dirPath, fileName, ignoreDirs) {
     var i;
     var files;
     var name;
-    var filterFlags = new QDir.Filters(QDir.Files);
-    var sortFlags = new QDir.SortFlags(QDir.NoSort);
+    var filterFlags = makeQDirFilters(QDir.Files);
+    var sortFlags = makeQDirSortFlags(QDir.NoSort);
     files = dir.entryList([fileName], filterFlags, sortFlags);
     for (i=0; i<files.length; i++) {
         res = res.concat(dirPath + QDir.separator + files[i]);
     }
 
-    var flags = new QDir.Filters(QDir.AllDirs, QDir.NoDotAndDotDot);
+    var flags = makeQDirFilters(QDir.AllDirs, QDir.NoDotAndDotDot);
     files = dir.entryList(flags);
     for (i = 0; i< files.length; i++) {
         var nextDir = dirPath + QDir.separator + files[i];
@@ -1869,7 +1868,7 @@ String.prototype.trim = function() {
 String.prototype.elidedText = function(font, pixel) {
     var fm = new QFontMetrics(font);
     var t = fm.elidedText(this, Qt.ElideMiddle, pixel);
-    fm.destroy();
+    destr(fm);
     // replace HORIZONTAL ELLIPSIS (not every GUI font has those):
     t = t.replace(/\u2026/g, '...');
     return t;
@@ -2919,6 +2918,12 @@ function makeQtMatchFlags() {
 function makeQtToolBarAreas() {
     var argumentsNew = [].slice.call(arguments, 0);
     argumentsNew.unshift(Qt.ToolBarAreas);
+    return makeFlags.apply(this, argumentsNew);
+}
+
+function makeQtWindowFlags() {
+    var argumentsNew = [].slice.call(arguments, 0);
+    argumentsNew.unshift(Qt.WindowFlags);
     return makeFlags.apply(this, argumentsNew);
 }
 
