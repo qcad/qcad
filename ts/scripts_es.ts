@@ -12629,7 +12629,7 @@ en los resultados de búsqueda:</translation>
     <message>
         <location line="+3"/>
         <source>Export failed (cannot open file for writing): %1</source>
-        <translation>Cascó la exportación (No se puede abrir el archivo): %1</translation>
+        <translation>Exportación fallida (No se puede abrir el archivo): %1</translation>
     </message>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreviewInit.js" line="+2"/>
