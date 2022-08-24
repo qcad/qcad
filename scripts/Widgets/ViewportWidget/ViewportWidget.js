@@ -149,7 +149,7 @@ ViewportWidget.prototype.init = function(uiFile, graphicsSceneClass) {
     layout.setContentsMargins(0,0,0,0);
     if (!isNull(this.vpWidget.layout())) {
         // destroy existing layout manager
-        this.vpWidget.layout().destroy();
+        destr(this.vpWidget.layout());
     }
     this.vpWidget.setLayout(layout);
     // clear style sheet
