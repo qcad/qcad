@@ -142,11 +142,17 @@ ViewportWidget.prototype.init = function(uiFile, graphicsSceneClass) {
         uiFile = "scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui";
     }
 
-    // use ViewportWidgetQt.ui or
+    // use ViewportWidgetQt.ui or given UI file:
     var vpw = WidgetFactory.createWidget("", uiFile, this.vpWidget);
 
     var layout = new QVBoxLayout();
-    layout.addWidget(vpw, 0, Qt.AlignTop | Qt.AlignLeft);
+    if (RSettings.isQt(6)) {
+        layout.addWidget(vpw);
+    }
+    else {
+        layout.addWidget(vpw, 0, Qt.AlignTop | Qt.AlignLeft);
+    }
+
     layout.setStretch(0, 1);
     layout.setContentsMargins(0,0,0,0);
     if (!isNull(this.vpWidget.layout())) {
