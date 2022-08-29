@@ -107,18 +107,20 @@ ViewportWidget.initMdiChild = function(mdiChild, uiFileName) {
 };
 
 ViewportWidget.prototype.initEventHandler = function() {
+    var self = this;
+
     this.eventHandler = new EventHandler(this, this.documentInterface);
     if (isOfType(this.graphicsView, RGraphicsViewQt)) {
-        this.graphicsView.drop.connect(this.eventHandler, "drop");
-        this.graphicsView.dragEnter.connect(this.eventHandler, "dragEnter");
-        this.graphicsView.viewportChanged.connect(this.eventHandler, "viewportChanged");
-        this.graphicsView.updateSnapInfo.connect(this.eventHandler, "updateSnapInfo");
-        this.graphicsView.updateTextLabel.connect(this.eventHandler, "updateTextLabel");
+        this.graphicsView.drop.connect(function(e) { self.eventHandler.drop(e); });
+        this.graphicsView.dragEnter.connect(function(e) { self.eventHandler.dragEnter(e); });
+        this.graphicsView.viewportChanged.connect(function() { self.eventHandler.viewportChanged(); });
+        this.graphicsView.updateSnapInfo.connect(function(painter, snap, restriction) { self.eventHandler.updateSnapInfo(painter, snap, restriction); });
+        this.graphicsView.updateTextLabel.connect(function(painter, textLabel) { self.eventHandler.updateTextLabel(painter, textLabel); });
     }
 
     if (!isNull(this.hsb)) {
-        this.hsb.valueChanged.connect(this.eventHandler, "horizontalScrolled");
-        this.vsb.valueChanged.connect(this.eventHandler, "verticalScrolled");
+        this.hsb.valueChanged.connect(function(value) { self.eventHandler.horizontalScrolled(value); } );
+        this.vsb.valueChanged.connect(function(value) { self.eventHandler.verticalScrolled(value); } );
     }
 };
 
@@ -198,10 +200,22 @@ ViewportWidget.prototype.init = function(uiFile, graphicsSceneClass) {
         this.graphicsView.setNavigationAction(navigationAction);
     }
 
-    var grid = new ROrthoGrid(this.graphicsView.getRGraphicsView());
+    var grid;
+    if (isFunction(this.graphicsView.getRGraphicsView)) {
+        grid = new ROrthoGrid(this.graphicsView.getRGraphicsView());
+    }
+    else {
+        grid = new ROrthoGrid(this.graphicsView);
+    }
+
     this.graphicsView.setGrid(grid);
 
-    this.graphicsView.setFocus();
+    if (RSettings.isQt(6)) {
+        this.graphicsView.setFocus(Qt.OtherFocusReason);
+    }
+    else {
+        this.graphicsView.setFocus();
+    }
 
     this.hsb = this.vpWidget.findChild("HorizontalScrollBar");
     if (!isNull(this.hsb)) {
