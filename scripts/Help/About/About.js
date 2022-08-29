@@ -62,7 +62,7 @@ About.prototype.beginEvent = function() {
 
     // init plugin view:
     var textBrowser = dialog.findChild("PluginsText");
-    WidgetFactory.initTextBrowser(textBrowser, this, "openUrl");
+    WidgetFactory.initTextBrowser(textBrowser, QDesktopServices.openUrl);
     this.initAboutPlugins(textBrowser);
 
     dialog.windowTitle = qsTr("About %1").arg(this.applicationName);
@@ -72,16 +72,16 @@ About.prototype.beginEvent = function() {
 
     // init about view:
     textBrowser = dialog.findChild("AppText");
-    WidgetFactory.initTextBrowser(textBrowser, this, "openUrl");
+    WidgetFactory.initTextBrowser(textBrowser, QDesktopServices.openUrl);
     this.initAboutApp(textBrowser);
 
     // init scripts view:
     textBrowser = dialog.findChild("ScriptsText");
-    WidgetFactory.initTextBrowser(textBrowser, this, "openUrl");
+    WidgetFactory.initTextBrowser(textBrowser, QDesktopServices.openUrl);
     this.initAboutScripts(textBrowser);
 
     textBrowser = dialog.findChild("CreditsText");
-    WidgetFactory.initTextBrowser(textBrowser, this, "openUrl");
+    WidgetFactory.initTextBrowser(textBrowser, QDesktopServices.openUrl);
     this.initCredits(textBrowser);
 
     // init system view:
@@ -635,10 +635,5 @@ About.prototype.initAboutLicenses = function(textBrowser) {
     html += "</body>";
     html += "</html>";
     textBrowser.setHtml(html);
-    WidgetFactory.initTextBrowser(textBrowser, this, "openUrl");
+    WidgetFactory.initTextBrowser(textBrowser, QDesktopServices.openUrl);
 };
-
-About.prototype.openUrl = function(url) {
-    QDesktopServices.openUrl(url);
-};
-

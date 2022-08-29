@@ -1228,9 +1228,9 @@ WidgetFactory.initLineEdit = function(lineEdit, dimension) {
     });
 };
 
-WidgetFactory.initTextBrowser = function(textBrowser, linkHandler, slot) {
+WidgetFactory.initTextBrowser = function(textBrowser, slot) {
     textBrowser.openLinks = false;
-    textBrowser.anchorClicked.connect(linkHandler, slot);
+    textBrowser.anchorClicked.connect(slot);
 };
 
 //WidgetFactory.initWebView = function(webView, linkHandler, slot) {
