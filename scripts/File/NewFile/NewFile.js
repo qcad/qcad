@@ -18,9 +18,9 @@
  */
 
 include("scripts/File/File.js");
-include("../Save/Save.js");
+include("scripts/File/Save/Save.js");
 include("scripts/Widgets/ViewportWidget/ViewportWidget.js");
-include("../AutoSave/AutoSave.js");
+include("scripts/File/AutoSave/AutoSave.js");
 include("scripts/Reset/Reset.js");
 
 if (exists("scripts/DefaultAction.js")) {
@@ -198,7 +198,7 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
             if (!isNull(dialog)) {
                 dialog.text = text;
                 dialog.exec();
-                dialog.destroy();
+                destr(dialog);
                 EAction.activateMainWindow();
             }
 
@@ -242,7 +242,7 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
     var mdiChild = new RMdiChildQt();
     mdiChild.windowIcon = new QIcon(autoPath("scripts/qcad_icon.png"));
     mdiChild.setDocumentInterface(documentInterface);
-    var flags = new Qt.WindowFlags(Qt.FramelessWindowHint);
+    var flags = makeQtWindowFlags(Qt.FramelessWindowHint);
     mdiChild.setWindowFlags(flags);
     mdiArea.addSubWindow(mdiChild);
     mdiChild.updatesEnabled = false;
@@ -265,9 +265,9 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
 
     RGuiAction.triggerGroupDefaults();
 
-    mdiChild.closeRequested.connect(NewFile, "closeRequested");
-    mdiChild.modifiedStatusChanged.connect(NewFile, "updateTitle");
-    appWin.resumedTab.connect(NewFile, "updateTitle");
+    mdiChild.closeRequested.connect(NewFile.closeRequested);
+    mdiChild.modifiedStatusChanged.connect(NewFile.updateTitle);
+    appWin.resumedTab.connect(NewFile.updateTitle);
 
     // make sure the MDI widget is maximized before performing an auto zoom:
 
@@ -484,7 +484,7 @@ NewFile.closeRequested = function(mdiChild) {
     else {
         mdiChild.setCloseEventRejected();
     }
-    dialog.destroy();
+    destr(dialog);
     EAction.activateMainWindow();
 };
 

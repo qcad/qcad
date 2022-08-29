@@ -19,7 +19,7 @@
 
  
 include("scripts/File/File.js");
-include("../AutoSave/AutoSave.js");
+include("scripts/File/AutoSave/AutoSave.js");
 
 /**
  * This action handles all user interaction to save the current drawing. If the current

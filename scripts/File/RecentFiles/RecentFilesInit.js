@@ -53,7 +53,7 @@ RecentFilesMenu.prototype.refresh = function() {
 
         action = this.addAction(text);
         var h = new RecentFilesHandler(files[i]);
-        action.triggered.connect(h, "open");
+        action.triggered.connect(function() { h.open(); });
     }
 
     action = new RGuiAction(qsTranslate("RecentFiles", "&Clear List"), this);
@@ -69,7 +69,7 @@ function init(basePath) {
     var action = new RGuiAction(qsTranslate("RecentFiles", "Open &Recent"), RMainWindowQt.getMainWindow());
     var submenu = new RecentFilesMenu(basePath);
     submenu.objectName = "RecentFilesSubMenu";
-    File.getMenu().aboutToShow.connect(submenu, "refresh");
+    File.getMenu().aboutToShow.connect(function() { submenu.refresh(); });
     
     action.setRequiresDocument(false);
     action.checkable = false;

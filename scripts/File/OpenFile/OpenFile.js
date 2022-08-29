@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 
-include("../NewFile/NewFile.js");
+include("scripts/File/NewFile/NewFile.js");
 
 if (exists("scripts/File/AutoSave/AutoSave.js")) {
     include("scripts/File/AutoSave/AutoSave.js");

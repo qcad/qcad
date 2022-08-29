@@ -21,5 +21,5 @@ function init(basePath) {
     action.setWidgetNames(["FileMenu"]);
 
     var appWin = EAction.getMainWindow();
-    action.triggered.connect(appWin, "quit");
+    action.triggered.connect(function() { appWin.quit(); });
 }
