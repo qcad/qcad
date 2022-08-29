@@ -35,19 +35,18 @@ ShowReadme.prototype.beginEvent = function() {
 
     var dontShow = formWidget.findChild("DontShowOnStartup");
     dontShow.checked = !RSettings.getBoolValue("Start/ShowReadme", true);
-    dontShow.clicked.connect(this, function(checked) {
+    dontShow.clicked.connect(function(checked) {
         RSettings.setValue("Start/ShowReadme", !checked);
     });
     
     var text = formWidget.findChild("Text");
     var file = new QFile(ShowReadme.readmeFile);
-    var flags = new QIODevice.OpenMode(QIODevice.ReadOnly | QIODevice.Text);
+    var flags = makeQIODeviceOpenMode(QIODevice.ReadOnly, QIODevice.Text);
     if (!file.open(flags)) {
-        text.toPlainText() = qsTr("File \"%1\" doesn't exist.").arg(
-                ShowReadme.readmeFile);
+        text.plainText = qsTr("File \"%1\" doesn't exist.").arg(ShowReadme.readmeFile);
     } else {
         var textStream = new QTextStream(file);
-        textStream.setCodec("UTF-8");
+        RS.setUtf8Codec(textStream);
         var allLines = textStream.readAll();
         file.close();
         text.plainText = allLines;

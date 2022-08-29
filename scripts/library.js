@@ -2933,6 +2933,12 @@ function makeQtAlignment() {
     return makeFlags.apply(this, argumentsNew);
 }
 
+function makeQIODeviceOpenMode() {
+    var argumentsNew = [].slice.call(arguments, 0);
+    argumentsNew.unshift(QIODevice.OpenMode);
+    return makeFlags.apply(this, argumentsNew);
+}
+
 function makeFlags() {
     if (RSettings.isQt(6)) {
         var ret = 0;
