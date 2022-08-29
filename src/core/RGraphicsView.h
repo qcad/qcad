@@ -220,18 +220,7 @@ public:
         return grid;
     }
 
-    /**
-     * Sets the current grid. This graphics view takes ownership
-     * of the grid. The previous grid is deleted. Setting the grid
-     * to NULL disables the grid.
-     */
-    void setGrid(RGrid* g) {
-        if (grid!=NULL) {
-            delete grid;
-            grid = NULL;
-        }
-        grid = g;
-    }
+    void setGrid(RGrid* g);
 
     void setGridVisible(bool on);
     bool isGridVisible() const;

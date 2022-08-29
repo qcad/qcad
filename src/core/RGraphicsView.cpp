@@ -90,6 +90,19 @@ void RGraphicsView::setViewportNumber(int n) {
     clearCaches();
 }
 
+/**
+ * Sets the current grid. This graphics view takes ownership
+ * of the grid. The previous grid is deleted. Setting the grid
+ * to NULL disables the grid.
+ */
+void RGraphicsView::setGrid(RGrid* g) {
+    if (grid!=NULL) {
+        delete grid;
+        grid = NULL;
+    }
+    grid = g;
+}
+
 void RGraphicsView::setGridVisible(bool on) {
     gridVisible = (int)on;
 
