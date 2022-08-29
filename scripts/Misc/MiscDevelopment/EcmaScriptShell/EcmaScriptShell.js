@@ -159,7 +159,7 @@ EcmaScriptShell.init = function(basePath) {
     if (!isNull(warning)) {
         // initialize simple API warning handler:
         warning.handler = function(msg) {
-            appendAndScroll("<span style='color:"+EcmaScriptShell.colWarning+"'>WARNING: " +  Qt.escape(msg) + "</span>");
+            appendAndScroll("<span style='color:"+EcmaScriptShell.colWarning+"'>WARNING: " +  RS.escape(msg) + "</span>");
         };
     }
 
@@ -253,8 +253,8 @@ EcmaScriptShell.init = function(basePath) {
             teHistory.setPlainText(buf.slice(-historySize).join("\n"));
         }
 
-        appendAndScroll("<span style='font-style:italic;color:"+EcmaScriptShell.colPrompt+";'>" + Qt.escape("ecma> ") + "</span>"
-                        + "<span style='color:"+EcmaScriptShell.col+"'>" + Qt.escape(command) + "</span>");
+        appendAndScroll("<span style='font-style:italic;color:"+EcmaScriptShell.colPrompt+";'>" + RS.escape("ecma> ") + "</span>"
+                        + "<span style='color:"+EcmaScriptShell.col+"'>" + RS.escape(command) + "</span>");
         leCommand.appendCommand(command);
 
         // if we have open brackets: continue entering:
@@ -276,10 +276,10 @@ EcmaScriptShell.init = function(basePath) {
                     enableInput();
                 }
 
-                appendAndScroll("<span style='color:"+EcmaScriptShell.col+";'>" + Qt.escape(res) + "</span>");
+                appendAndScroll("<span style='color:"+EcmaScriptShell.col+";'>" + RS.escape(res) + "</span>");
             }
             catch(e) {
-                appendAndScroll("<span style='color:"+EcmaScriptShell.colWarning+";'>" + Qt.escape(e) + "</span>");
+                appendAndScroll("<span style='color:"+EcmaScriptShell.colWarning+";'>" + RS.escape(e) + "</span>");
                 //qDebug("error: ", e);
                 //qDebug("error: res:", res);
             }

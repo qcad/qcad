@@ -205,7 +205,7 @@ About.prototype.initAboutPlugins = function(textBrowser) {
 
             // plugin about info:
             text = pluginInfo.get("Name", qsTr("No information available"));
-            html += this.getTableRow(qsTr("Plugin:"), "<b>" + Qt.escape(text) + "</b>", false);
+            html += this.getTableRow(qsTr("Plugin:"), "<b>" + RS.escape(text) + "</b>", false);
 
             // overrides:
             if (isNull(maxPri) || pri>maxPri) {
@@ -415,7 +415,7 @@ About.prototype.initCredits = function(textBrowser) {
 
 About.prototype.getTableRow = function(text1, text2, escape) {
     if (isNull(escape) || escape!==false) {
-        text2 = Qt.escape(text2);
+        text2 = RS.escape(text2);
     }
 
     return "<tr><td width='25%' valign='top'>%1 </td><td width='75%'>%2</td></tr>".arg(text1).arg(text2);
