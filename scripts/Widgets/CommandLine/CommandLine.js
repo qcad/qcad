@@ -40,7 +40,7 @@ CommandLine.prototype.beginEvent = function() {
 
     var appWin = RMainWindowQt.getMainWindow();
     var dock = appWin.findChild("CommandLineDock");
-    if (!QCoreApplication.arguments().contains("-no-show")) {
+    if (!RSettings.getOriginalArguments().contains("-no-show")) {
         dock.visible = !dock.visible;
         if (dock.visible) dock.raise();
     }
