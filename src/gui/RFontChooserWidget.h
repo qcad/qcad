@@ -36,13 +36,13 @@ class QCADGUI_EXPORT RFontChooserWidget: public QWidget {
 
 Q_OBJECT
 Q_PROPERTY(QString label READ getLabel WRITE setLabel);
-Q_PROPERTY(QFont font READ getFont WRITE setFont);
+Q_PROPERTY(QFont chosenFont READ getChosenFont WRITE setChosenFont);
 
 public:
     RFontChooserWidget(QWidget *parent = 0);
 
-    QFont getFont() const;
-    void setFont(const QFont& font);
+    QFont getChosenFont() const;
+    void setChosenFont(const QFont& font);
     int getSize() const;
     void setSize(int size);
     QString getLabel() const;
@@ -52,7 +52,7 @@ signals:
     void valueChanged(const QFont& font);
 
 public slots:
-    void fontChanged(const QFont& font);
+    void chosenFontChanged(const QFont& font);
     void sizeChanged(int index);
 
 protected:
@@ -62,9 +62,9 @@ private:
     void updateSizeCombo();
 
 private:
-    QFont font;
+    QFont chosenFont;
     QComboBox* cbSize;
-    QFontComboBox* cbFont;
+    QFontComboBox* cbChosenFont;
     QLabel* lbSampleText;
     QLabel* lbLabel;
 };
