@@ -52,5 +52,6 @@ ShowReadme.prototype.beginEvent = function() {
         text.plainText = allLines;
     }
     formWidget.exec();
+    destr(formWidget);
 };
 

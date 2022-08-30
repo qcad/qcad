@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 
+include("scripts/WidgetFactory.js");
 include("scripts/Help/Help.js");
 
 function CheckForUpdates(guiAction) {
@@ -42,8 +43,13 @@ CheckForUpdates.getBaseName = function() {
 
 CheckForUpdates.getUrl = function() {
     // compile update info URL:
-    var url = "https://www.qcad.org/qcad/version/" + CheckForUpdates.getBaseName() + ".html";
-    return url;
+    if (RSettings.isQt(6)) {
+        // TODO: use https:
+        return "http://www.qcad.org/qcad/version/" + CheckForUpdates.getBaseName() + ".html";
+    }
+    else {
+        return "https://www.qcad.org/qcad/version/" + CheckForUpdates.getBaseName() + ".html";
+    }
 };
 
 CheckForUpdates.prototype.beginEvent = function() {
@@ -80,6 +86,6 @@ CheckForUpdates.prototype.beginEvent = function() {
     dialog.exec();
 
     WidgetFactory.saveState(dialog);
-    dialog.destroy();
+    destr(dialog);
     EAction.activateMainWindow();
 };
