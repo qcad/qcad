@@ -141,7 +141,7 @@ WidgetFactory.createDialog = function(basePath, uiFile, parent) {
     var dialog = WidgetFactory.createWidget(basePath, uiFile, parent);
 
     var flags = dialog.windowFlags();
-    flags = new Qt.WindowFlags(flags & ~(Qt.WindowContextHelpButtonHint));
+    flags = makeQtWindowFlags(flags & ~(Qt.WindowContextHelpButtonHint));
     dialog.setWindowFlags(flags);
 
     // a global function might be defined to do additional
@@ -656,7 +656,12 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
         }
         if (isOfType(c, QCheckBox)) {
             WidgetFactory.connect(c.toggled, signalReceiver, c.objectName);
-            c.stateChanged.connect(WidgetFactory.topLevelWidget, "slotSettingChanged");
+            //c.stateChanged.connect(WidgetFactory.topLevelWidget, "slotSettingChanged");
+            c.stateChanged.connect(function() {
+                if (!isNull(WidgetFactory.topLevelWidget)) {
+                    WidgetFactory.topLevelWidget.slotSettingChanged();
+                }
+            });
             if (isNull(c.defaultValue)) {
                 c.defaultValue = c.checked;
                 if (!isNull(signalReceiver)) {
