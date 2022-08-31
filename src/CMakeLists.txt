@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.16)
+project(qcadcore VERSION 1.0 LANGUAGES CXX)
+
+add_subdirectory(3rdparty)
+add_subdirectory(core)
+add_subdirectory(entity)
+add_subdirectory(grid)
+add_subdirectory(snap)
+add_subdirectory(operations)
+add_subdirectory(stemmer)
+add_subdirectory(spatialindex)
+add_subdirectory(gui)
+add_subdirectory(io)

@@ -42,6 +42,7 @@ CMakeFiles
 CMakeCache.txt
 cmake_install.cmake
 build.ninja
+*.depends
 
 # Mac:
 .DS_Store
