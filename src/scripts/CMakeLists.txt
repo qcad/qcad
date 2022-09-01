@@ -22,7 +22,7 @@ target_compile_definitions(qcadscripts PRIVATE
     QCAD_DLL
 )
 
-set_target_properties(qcadscripts PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../debug)
+set_target_properties(qcadscripts PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../plugin)
 
 find_library(
     core

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(qcadcore VERSION 1.0 LANGUAGES CXX)
+project(src VERSION 1.0 LANGUAGES CXX)
 
 add_subdirectory(3rdparty)
 add_subdirectory(core)

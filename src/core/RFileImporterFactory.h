@@ -40,6 +40,7 @@ class RProgressHandler;
  */
 class QCADCORE_EXPORT RFileImporterFactory {
 public:
+    virtual ~RFileImporterFactory() {}
     virtual QStringList getFilterStrings() = 0;
     virtual int canImport(const QString& fileName, const QString& nameFilter = "") = 0;
     virtual RFileImporter* instantiate(RDocument& document, RMessageHandler* messageHandler = NULL, RProgressHandler* progressHandler = NULL) = 0;

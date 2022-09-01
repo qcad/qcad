@@ -137,6 +137,8 @@
 
 #include "RSingleApplication.h"
 
+#if QT_VERSION <= 0x060000
+
 Q_DECLARE_METATYPE(int*)
 #ifdef _LP64
 Q_DECLARE_METATYPE(unsigned int*)
@@ -352,9 +354,10 @@ Q_DECLARE_METATYPE(Qt::ItemDataRole)
 Q_DECLARE_METATYPE(Qt::WindowFlags)
 Q_DECLARE_METATYPE(Qt::WidgetAttribute)
 Q_DECLARE_METATYPE(Qt::WidgetAttribute*)
-Q_DECLARE_METATYPE(QVariant::Type)
+//Q_DECLARE_METATYPE(QVariant::Type)
 Q_DECLARE_METATYPE(QAbstractItemView::ScrollHint)
 Q_DECLARE_METATYPE(QEasingCurve::Type)
+Q_DECLARE_METATYPE(QMetaType::Type)
 
 Q_DECLARE_METATYPE(QtMsgType*)
 Q_DECLARE_METATYPE(QtMsgType)
@@ -383,6 +386,8 @@ Q_DECLARE_METATYPE(QXmlResultItems*)
 Q_DECLARE_METATYPE(QPrinter::PaperSize)
 #endif
 #endif
+
+#endif // Qt < 6
 
 
 #endif

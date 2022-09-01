@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 project(qcadcore VERSION 1.0 LANGUAGES CXX)
 
-add_library(spatialindexnavel
+add_library(spatialindexnavel SHARED
     src/rtree/BulkLoader.cc src/rtree/BulkLoader.h
     src/rtree/Index.cc src/rtree/Index.h
     src/rtree/Leaf.cc src/rtree/Leaf.h
@@ -25,7 +25,7 @@ add_library(spatialindexnavel
     src/tools/rand48.cc
 )
 
-set_target_properties(spatialindexnavel PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ../../../debug)
+set_target_properties(spatialindexnavel PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../../debug)
 
 target_include_directories(spatialindexnavel PUBLIC
     include

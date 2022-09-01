@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(Qt6 REQUIRED COMPONENTS Core)
 qt_standard_project_setup()
 
-qt_add_plugin(qcadstemmer
+qt_add_library(qcadstemmer
     RStemmer.cpp RStemmer.h
 )
 

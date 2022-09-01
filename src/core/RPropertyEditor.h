@@ -69,7 +69,7 @@ public:
     virtual void clearLayers();
 
     void propertyChanged(RPropertyTypeId propertyTypeId, QVariant propertyValue,
-                         QVariant::Type typeHint = QVariant::Invalid);
+                         QMetaType::Type typeHint = QMetaType::UnknownType);
     void listPropertyChanged(RPropertyTypeId propertyTypeId,
                          int index, QVariant propertyValue);
 
