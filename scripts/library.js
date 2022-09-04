@@ -1867,7 +1867,11 @@ String.prototype.trim = function() {
  */
 String.prototype.elidedText = function(font, pixel) {
     var fm = new QFontMetrics(font);
-    var t = fm.elidedText(this, Qt.ElideMiddle, pixel);
+    var s = this;
+    if (!isString(s)) {
+        s = s.toString();
+    }
+    var t = fm.elidedText(s, Qt.ElideMiddle, pixel);
     destr(fm);
     // replace HORIZONTAL ELLIPSIS (not every GUI font has those):
     t = t.replace(/\u2026/g, '...');
