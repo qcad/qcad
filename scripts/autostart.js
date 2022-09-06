@@ -702,9 +702,6 @@ function main() {
     // create application window:
     var appWin = new RMainWindowQt();
 
-    // temp:
-    appWin.show();
-
     // Note: animated MUST be true for Qt 5.7:
     // Qt 5.7.0 will not allow tabifying dock widgets if animations are turned off:
     if (RSettings.getQtVersion()<0x050600) {
