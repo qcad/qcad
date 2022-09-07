@@ -1,6 +1,11 @@
 function init(basePath) {
     var action = new RGuiAction(qsTranslate("CloseFile", "&Close"), RMainWindowQt.getMainWindow());
-    action.setRequiresDocument(true);
+    if (RSettings.getQtVersion() > 0x060000) {
+        action.setRequiresDocument(false);
+    }
+    else {
+        action.setRequiresDocument(true);
+    }
     action.setScriptFile(basePath + "/CloseFile.js");
     action.setIcon(basePath + "/CloseFile.svg");
     if (RS.getSystemId()!=="linux" || RSettings.isQt(5)) {
