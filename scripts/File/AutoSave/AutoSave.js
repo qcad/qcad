@@ -183,7 +183,7 @@ AutoSave.recoverUntitled = function() {
     var msg = qsTr("%n autosave backup file(s) for (an) untitled drawing(s) was/were found.\n" +
             "Do you wish to recover it/them?", "", list.length);
 
-    var buttons = new QMessageBox.StandardButtons(QMessageBox.Yes, QMessageBox.No, QMessageBox.Cancel);
+    var buttons = makeQMessageBoxStandardButtons(QMessageBox.Yes, QMessageBox.No, QMessageBox.Cancel);
     var ret = QMessageBox.warning(null,
         qsTr("Recover Files?"),
         msg,

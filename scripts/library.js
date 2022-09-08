@@ -2943,6 +2943,12 @@ function makeQIODeviceOpenMode() {
     return makeFlags.apply(this, argumentsNew);
 }
 
+function makeQMessageBoxStandardButtons() {
+    var argumentsNew = [].slice.call(arguments, 0);
+    argumentsNew.unshift(QMessageBox.StandardButtons);
+    return makeFlags.apply(this, argumentsNew);
+}
+
 function makeFlags() {
     if (RSettings.isQt(6)) {
         var ret = 0;

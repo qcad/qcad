@@ -495,8 +495,12 @@ About.prototype.initAboutSystem = function(textEdit) {
     text += "\nNegative sign: " + sysloc.negativeSign();
     text += "\nPositive sign: " + sysloc.positiveSign();
     text += "\nText direction: " + sysloc.textDirection();
-    text += "\nSystem codec: " + QTextCodec.codecForLocale().name();
-
+    if (RSettings.getQtVersion() > 0x060000) {
+        text += "\nSystem codec: " + QStringConverter.nameForEncoding(QStringConverter.System);
+    }
+    else {
+        text += "\nSystem codec: " + QTextCodec.codecForLocale().name();
+    }
     text += "\n";
     text += "\nArguments: " + RSettings.getOriginalArguments();
 
