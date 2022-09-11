@@ -93,7 +93,7 @@ About.prototype.beginEvent = function() {
     this.initAboutLicenses(textBrowser);
 
     dialog.exec();
-    dialog.destroy();
+    destr(dialog);
     EAction.activateMainWindow();
 };
 
@@ -496,6 +496,7 @@ About.prototype.initAboutSystem = function(textEdit) {
     text += "\nPositive sign: " + sysloc.positiveSign();
     text += "\nText direction: " + sysloc.textDirection();
     if (RSettings.getQtVersion() > 0x060000) {
+        // TODO #qt6: prints number not name
         text += "\nSystem codec: " + QStringConverter.nameForEncoding(QStringConverter.System);
     }
     else {
