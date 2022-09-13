@@ -90,7 +90,7 @@ OpenFile.prototype.beginEvent = function() {
     }
 
     if (!fileDialog.exec()) {
-        fileDialog.destroy();
+        destr(fileDialog);
         EAction.activateMainWindow();
         return;
     }

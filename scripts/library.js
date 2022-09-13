@@ -666,7 +666,12 @@ function isSimpleTextEntity(obj) {
  * \return true if the given object is a block reference entity (RBlockReferenceEntity).
  */
 function isBlockReferenceEntity(obj) {
-    return isOfType(obj, RBlockReferenceEntity) || isOfType(obj, RBlockReferenceEntityPointer);
+    if (RSettings.getQtVersion()>=0x060000) {
+        return isOfType(obj, RBlockReferenceEntity);
+    }
+    else {
+        return isOfType(obj, RBlockReferenceEntity) || isOfType(obj, RBlockReferenceEntityPointer);
+    }
 }
 
 /**

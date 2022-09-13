@@ -193,8 +193,7 @@ CadToolBar.getCurrentPanel = function() {
     }
 
     var stackedLayout = cadToolBar.layout();
-
-    if (stackedLayout.currentIndex<0 || stackedLayout.currentIndex >= stackedLayout.count()) {
+    if (stackedLayout.currentIndex<0 || stackedLayout.currentIndex>=stackedLayout.count()) {
         return undefined;
     }
 
