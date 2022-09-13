@@ -1141,7 +1141,7 @@ QString RSettings::getQtVersionString() {
 }
 
 /**
- * \return True if application was compiled against the given major Qt version.
+ * \return True if application was compiled against at least the given major Qt version.
  */
 bool RSettings::isQt(int majorVersion) {
     return QT_VERSION >= majorVersion<<16;
