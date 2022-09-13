@@ -203,12 +203,12 @@ bool RBlockReferenceEntity::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMember(data.rowSpacing, value, PropertyRowSpacing == propertyTypeId);
 
     if (propertyTypeId == PropertyReferencedBlock) {
-        if (value.type() == QVariant::Int ||
-            value.type() == QVariant::LongLong) {
+        if (RS::getMetaType(value) == RS::Int ||
+            RS::getMetaType(value) == RS::LongLong) {
 
             ret = ret || RObject::setMember(
                 getData().referencedBlockId, value.toInt(), true);
-        } else if (value.type() == QVariant::String) {
+        } else if (RS::getMetaType(value) == RS::String) {
             RDocument* document = getData().getDocument();
             if (document != NULL) {
                 ret = ret || RObject::setMember(getData().referencedBlockId,

@@ -56,8 +56,14 @@ RTabletEvent::RTabletEvent(
 
 RTabletEvent::RTabletEvent(const QTabletEvent& tabletEvent, RGraphicsScene& s,
         RGraphicsView& v) :
-    QTabletEvent(tabletEvent), screenPosition(tabletEvent.pos().x(),
-            tabletEvent.pos().y()), scene(s), view(v) {
+    QTabletEvent(tabletEvent),
+#if QT_VERSION >= 0x060000
+    screenPosition(tabletEvent.position().x(), tabletEvent.position().y()),
+#else
+    screenPosition(tabletEvent.pos().x(), tabletEvent.pos().y()),
+#endif
+    scene(s),
+    view(v) {
 
 }
 

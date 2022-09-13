@@ -387,33 +387,33 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
                 QString key = variables[i];
                 QVariant value = document->getVariable(key);
                 if (handles.contains(key)) {
-                    switch (value.type()) {
-                    case QVariant::Int:
+                    switch (RS::getMetaType(value)) {
+                    case RS::Int:
                         dxf.writeXRecord(*dw, handles.value(key), value.toInt());
                         break;
-                    case QVariant::Double:
+                    case RS::Double:
                         dxf.writeXRecord(*dw, handles.value(key), value.toDouble());
                         break;
-                    case QVariant::Bool:
+                    case RS::Bool:
                         dxf.writeXRecord(*dw, handles.value(key), value.toBool());
                         break;
-                    case QVariant::String:
+                    case RS::String:
                         dxf.writeXRecord(*dw, handles.value(key), std::string((const char*)RDxfExporter::escapeUnicode(value.toString())));
                         break;
-                    case QVariant::Font:
+                    case RS::Font:
                         if (value.canConvert<QFont>()) {
                             QFont f = value.value<QFont>();
                             dxf.writeXRecord(*dw, handles.value(key), std::string((const char*)RDxfExporter::escapeUnicode(f.toString())));
                         }
                         break;
-                    case QVariant::UserType:
+                    case RS::UserType:
                         if (value.canConvert<RColor>()) {
                             RColor c = value.value<RColor>();
                             dxf.writeXRecord(*dw, handles.value(key), std::string((const char*)RDxfExporter::escapeUnicode(c.getName())));
                         }
                         break;
                     default:
-                        qWarning() << "RDxfExporter::exportFile: unsupported extension data type: " << value.type();
+                        qWarning() << "RDxfExporter::exportFile: unsupported extension data type: " << RS::getMetaType(value);
                         qWarning() << value;
                         //Q_ASSERT(false);
                         break;
@@ -499,21 +499,21 @@ void RDxfExporter::writeVariables() {
 
         name = "$" + name;
 
-        switch (value.type()) {
-        case QVariant::Int:
-        case QVariant::Bool:
+        switch (RS::getMetaType(value)) {
+        case RS::Int:
+        case RS::Bool:
             dw->dxfString(9, (const char*)RDxfExporter::escapeUnicode(name));
             dw->dxfInt(code, value.toInt());
             break;
-        case QVariant::Double:
+        case RS::Double:
             dw->dxfString(9, (const char*)RDxfExporter::escapeUnicode(name));
             dw->dxfReal(code, value.toDouble());
             break;
-        case QVariant::String:
+        case RS::String:
             dw->dxfString(9, (const char*)RDxfExporter::escapeUnicode(name));
             dw->dxfString(code, (const char*)RDxfExporter::escapeUnicode(value.toString()));
             break;
-        case QVariant::UserType:
+        case RS::UserType:
             if (value.canConvert<RVector>()) {
                 RVector v = value.value<RVector>();
                 dw->dxfString(9, (const char*)RDxfExporter::escapeUnicode(name));

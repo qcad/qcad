@@ -50,8 +50,7 @@ void RCharacterWidget::updateSize(const QString &fontSize) {
 void RCharacterWidget::updateStyle(const QString &fontStyle) {
     QFontDatabase fontDatabase;
     const QFont::StyleStrategy oldStrategy = displayFont.styleStrategy();
-    displayFont = fontDatabase.font(displayFont.family(), fontStyle,
-            displayFont.pointSize());
+    displayFont = fontDatabase.font(displayFont.family(), fontStyle, displayFont.pointSize());
     displayFont.setStyleStrategy(oldStrategy);
     squareSize = qMax(24, QFontMetrics(displayFont).xHeight() * 3);
     adjustSize();
