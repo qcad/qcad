@@ -25,14 +25,6 @@ target_compile_definitions(qcadgrid PUBLIC
 
 set_target_properties(qcadgrid PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../debug)
 
-find_library(
-    core
-    NAMES qcadcore libqcadcore
-    HINTS "../../debug"
-    NO_DEFAULT_PATH
-)
-message(STATUS "QCADCORE: [${core}]")
-
 target_link_libraries(qcadgrid PUBLIC
     # Remove: L${CMAKE_CURRENT_SOURCE_DIR}/
     Qt::Core
@@ -43,7 +35,8 @@ target_link_libraries(qcadgrid PUBLIC
     Qt::Sql
     Qt::Svg
     Qt::Xml
-    ${core}
+    -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug
+    qcadcore
 )
 
 if(win32-msvc2010)

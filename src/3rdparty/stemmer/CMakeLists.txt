@@ -31,9 +31,3 @@ set_target_properties(stemmer PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ../../../debug
 target_compile_definitions(stemmer PUBLIC
     QCAD_DLL
 )
-
-if(win32-msvc2010)
-    target_compile_definitions(stemmer PUBLIC
-        _CRT_SECURE_NO_WARNINGS
-    )
-endif()

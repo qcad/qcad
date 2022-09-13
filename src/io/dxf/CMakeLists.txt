@@ -31,38 +31,6 @@ target_compile_definitions(qcaddxf PRIVATE
 
 set_target_properties(qcaddxf PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../../plugins)
 
-find_library(
-    core
-    NAMES qcadcore libqcadcore
-    HINTS "../../../debug"
-    NO_DEFAULT_PATH
-)
-message(STATUS "QCADCORE: [${core}]")
-
-find_library(
-    entity
-    NAMES qcadentity libqcadentity
-    HINTS "../../../debug"
-    NO_DEFAULT_PATH
-)
-message(STATUS "QCADENTITY: [${entity}]")
-
-find_library(
-    dxflib
-    NAMES dxflib libdxflib
-    HINTS "../../../debug"
-    NO_DEFAULT_PATH
-)
-message(STATUS "DXFLIB: [${dxflib}]")
-
-find_library(
-    operations
-    NAMES qcadoperations libqcadoperations
-    HINTS "../../../debug"
-    NO_DEFAULT_PATH
-)
-message(STATUS "QCADOPERATIONS: [${operations}]")
-
 target_link_libraries(qcaddxf PRIVATE
     Qt::Core
     Qt::Gui
@@ -72,9 +40,10 @@ target_link_libraries(qcaddxf PRIVATE
     Qt::Sql
     Qt::Svg
     Qt::Xml
-    ${core}
-    ${entity}
-    ${operations}
-    ${dxflib}
+    -L${CMAKE_CURRENT_SOURCE_DIR}/../../../debug
+    qcadcore
+    qcadentity
+    qcadoperations
+    dxflib
 )
 

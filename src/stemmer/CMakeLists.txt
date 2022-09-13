@@ -16,7 +16,7 @@ target_include_directories(qcadstemmer PRIVATE
     ../../src/core
     ../../src/core/math
     ../../src/entity
-    ../../src/stemmer
+    .
 )
 
 target_compile_definitions(qcadstemmer PRIVATE
@@ -24,19 +24,11 @@ target_compile_definitions(qcadstemmer PRIVATE
     QCAD_DLL
 )
 
-find_library(
-    stemmer
-    NAMES stemmer libstemmer
-    HINTS "../../debug"
-    NO_DEFAULT_PATH
-)
-message(STATUS "STEMMER: [${stemmer}]")
-
 set_target_properties(qcadstemmer PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../debug)
 
 target_link_libraries(qcadstemmer PRIVATE
-    # Remove: L${CMAKE_CURRENT_SOURCE_DIR}/
     Qt::Core
-    ${stemmer}
+    -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug
+    stemmer
 )
 

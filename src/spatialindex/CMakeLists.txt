@@ -25,27 +25,12 @@ target_compile_definitions(qcadspatialindex PUBLIC
 
 set_target_properties(qcadspatialindex PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../debug)
 
-find_library(
-    core
-    NAMES qcadcore libqcadcore
-    HINTS "../../debug"
-    NO_DEFAULT_PATH
-)
-message(STATUS "QCADCORE: [${core}]")
-
-find_library(
-    spatialindexnavel
-    NAMES spatialindexnavel libspatialindexnavel
-    HINTS "../../debug"
-    NO_DEFAULT_PATH
-)
-message(STATUS "SPATIALINDEXNAVEL: [${spatialindexnavel}]")
-
 target_link_libraries(qcadspatialindex PUBLIC
     Qt::Core
     Qt::Gui
     Qt::Widgets
-    ${core}
-    ${spatialindexnavel}
+    -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug
+    qcadcore
+    spatialindexnavel
 )
 

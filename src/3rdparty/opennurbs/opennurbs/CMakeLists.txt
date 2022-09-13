@@ -127,16 +127,9 @@ add_library(opennurbs
 
 set_target_properties(opennurbs PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ../../../../debug)
 
-find_library(
-    zlib
-    NAMES zlib libzlib
-    HINTS "../../../../debug"
-    NO_DEFAULT_PATH
-)
-message(STATUS "ZLIB: [${zlib}]")
-
 target_link_libraries(opennurbs PUBLIC
-    {$zlib}
+    -L${CMAKE_CURRENT_SOURCE_DIR}/../../../../debug
+    zlib
 )
 
 if(WIN32)

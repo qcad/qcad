@@ -198,22 +198,6 @@ target_compile_definitions(qcadcore PUBLIC
     QCAD_DLL
 )
 
-find_library(
-    zlib
-    NAMES zlib libzlib
-    HINTS "../../debug"
-    NO_DEFAULT_PATH
-)
-message(STATUS "ZLIB: [${zlib}]")
-
-find_library(
-    opennurbs
-    NAMES opennurbs libopennurbs
-    HINTS "../../debug"
-    NO_DEFAULT_PATH
-)
-message(STATUS "OPENNURBS: [${opennurbs}]")
-
 set_target_properties(qcadcore PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../debug)
 
 target_link_libraries(qcadcore PUBLIC
@@ -228,8 +212,9 @@ target_link_libraries(qcadcore PUBLIC
     Qt::Svg
     Qt::Xml
     Qt::Qml
-    ${zlib}
-    ${opennurbs}
+    -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug
+    zlib
+    opennurbs
 )
 
 

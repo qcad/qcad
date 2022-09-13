@@ -56,22 +56,6 @@ target_compile_definitions(qcadgui PUBLIC
 
 set_target_properties(qcadgui PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../debug)
 
-find_library(
-    core
-    NAMES qcadcore libqcadcore
-    HINTS "../../debug"
-    NO_DEFAULT_PATH
-)
-message(STATUS "QCADCORE: [${core}]")
-
-find_library(
-    entity
-    NAMES qcadentity libqcadentity
-    HINTS "../../debug"
-    NO_DEFAULT_PATH
-)
-message(STATUS "QCADENTITY: [${entity}]")
-
 target_link_libraries(qcadgui PUBLIC
     Qt::Concurrent
     Qt::Core
@@ -82,6 +66,7 @@ target_link_libraries(qcadgui PUBLIC
     Qt::Sql
     Qt::Svg
     Qt::Xml
-    ${core}
-    ${entity}
+    -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug
+    qcadcore
+    qcadentity
 )

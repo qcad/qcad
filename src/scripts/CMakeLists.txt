@@ -24,14 +24,6 @@ target_compile_definitions(qcadscripts PRIVATE
 
 set_target_properties(qcadscripts PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../plugin)
 
-find_library(
-    core
-    NAMES qcadcore libqcadcore
-    HINTS "../../debug"
-    NO_DEFAULT_PATH
-)
-message(STATUS "QCADCORE: [${core}]")
-
 target_link_libraries(qcadscripts PRIVATE
     Qt::Core
     Qt::Gui
@@ -41,7 +33,8 @@ target_link_libraries(qcadscripts PRIVATE
     Qt::Sql
     Qt::Svg
     Qt::Xml
-    ${core}
+    -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug
+    qcadcore
 )
 
 

@@ -86,22 +86,6 @@ target_compile_definitions(qcadentity PUBLIC
 
 set_target_properties(qcadentity PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../debug)
 
-find_library(
-    core
-    NAMES qcadcore libqcadcore
-    HINTS "../../debug"
-    NO_DEFAULT_PATH
-)
-message(STATUS "QCADCORE: [${core}]")
-
-find_library(
-    opennurbs
-    NAMES opennurbs libopennurbs
-    HINTS "../../debug"
-    NO_DEFAULT_PATH
-)
-message(STATUS "OPENNURBS: [${opennurbs}]")
-
 target_link_libraries(qcadentity PUBLIC
     Qt::Core
     Qt::Gui
@@ -112,8 +96,9 @@ target_link_libraries(qcadentity PUBLIC
     Qt::Sql
     Qt::Svg
     Qt::Xml
-    ${core}
-    ${opennurbs}
+    -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug
+    qcadcore
+    opennurbs
 )
 
 if(win32-msvc2010)

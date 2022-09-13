@@ -46,22 +46,6 @@ target_compile_definitions(qcadoperations PUBLIC
 
 set_target_properties(qcadoperations PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../debug)
 
-find_library(
-    core
-    NAMES qcadcore libqcadcore
-    HINTS "../../debug"
-    NO_DEFAULT_PATH
-)
-message(STATUS "QCADCORE: [${core}]")
-
-find_library(
-    entity
-    NAMES qcadentity libqcadentity
-    HINTS "../../debug"
-    NO_DEFAULT_PATH
-)
-message(STATUS "QCADENTITY: [${entity}]")
-
 target_link_libraries(qcadoperations PUBLIC
     # Remove: L${CMAKE_CURRENT_SOURCE_DIR}/
     Qt::Core
@@ -72,7 +56,8 @@ target_link_libraries(qcadoperations PUBLIC
     Qt::Sql
     Qt::Svg
     Qt::Xml
-    ${core}
-    ${entity}
+    -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug
+    qcadcore
+    qcadentity
 )
 

@@ -44,30 +44,6 @@ target_compile_definitions(qcadsnap PUBLIC
 
 set_target_properties(qcadsnap PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../debug)
 
-find_library(
-    core
-    NAMES qcadcore libqcadcore
-    HINTS "../../debug"
-    NO_DEFAULT_PATH
-)
-message(STATUS "QCADCORE: [${core}]")
-
-find_library(
-    grid
-    NAMES qcadgrid libqcadgrid
-    HINTS "../../debug"
-    NO_DEFAULT_PATH
-)
-message(STATUS "QCADGRID: [${grid}]")
-
-find_library(
-    entity
-    NAMES qcadentity libqcadentity
-    HINTS "../../debug"
-    NO_DEFAULT_PATH
-)
-message(STATUS "QCADENTITY: [${entity}]")
-
 target_link_libraries(qcadsnap PUBLIC
     Qt::Core
     Qt::Gui
@@ -77,8 +53,9 @@ target_link_libraries(qcadsnap PUBLIC
     Qt::Sql
     Qt::Svg
     Qt::Xml
-    ${core}
-    ${entity}
-    ${grid}
+    -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug
+    qcadcore
+    qcadentity
+    qcadgrid
 )
 
