@@ -490,8 +490,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
 
         // skip children from other groups in this widget (for options toolbar):
         // but not if used from a test [map != undefined]
-        if (isNull(map) && typeof (c["SettingsGroup"]) != "undefined"
-                && c["SettingsGroup"] !== group) {
+        if (isNull(map) && typeof (c["SettingsGroup"]) != "undefined" && c["SettingsGroup"] !== group) {
             continue;
         }
 
@@ -514,9 +513,8 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
         
         var key = WidgetFactory.getKeyString(group, c);
         var value;
-        if (reset && !isNull(c.defaultValue) && (typeof(c["SettingsGroup"])=="undefined" ||
-                c["SettingsGroup"]===group)) {
-            value = c.defaultValue;
+        if (reset && !isNull(c.property("defaultValue")) && (typeof(c["SettingsGroup"])=="undefined" || c["SettingsGroup"]===group)) {
+            value = c.property("defaultValue");
         } else {
             if (!isNull(map)) {
                 value = map.get(key);                
@@ -569,9 +567,11 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
 //        qDebug("  value: ", value);
 
         if (isOfType(c, QPlainTextEdit)) {
-            WidgetFactory.connect(c.textChanged, signalReceiver, c.objectName);
-            WidgetFactory.connect(c.textChanged, WidgetFactory.topLevelWidget, "Setting");
-            if (isNull(c.defaultValue)) {
+            if (!reset) {
+                WidgetFactory.connect(c.textChanged, signalReceiver, c.objectName);
+                WidgetFactory.connect(c.textChanged, WidgetFactory.topLevelWidget, "Setting");
+            }
+            if (isNull(c.property("defaultValue"))) {
                 c.setProperty("defaultValue", c.toPlainText());
             }
             if (!isNull(value)) {
@@ -580,11 +580,13 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             continue;
         }
         if (isOfType(c, RMathLineEdit)) {
-            WidgetFactory.connect(c.valueChanged, signalReceiver, c.objectName);
-            WidgetFactory.connect(c.valueChanged, WidgetFactory.topLevelWidget, "Setting");
-            if (isNull(c.defaultValue)) {
+            if (!reset) {
+                WidgetFactory.connect(c.valueChanged, signalReceiver, c.objectName);
+                WidgetFactory.connect(c.valueChanged, WidgetFactory.topLevelWidget, "Setting");
+            }
+            if (isNull(c.property("defaultValue"))) {
                 //c.defaultValue = [c.text, c.getDefaultUnit()];
-                c.defaultValue = c.text;
+                c.setProperty("defaultValue", c.text);
                 c.slotTextChanged(c.text);
             }
             if (!isNull(value)) {
@@ -604,11 +606,13 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             continue;
         }
         if (isOfType(c, RMathComboBox)) {
-            WidgetFactory.connect(c.valueChanged, signalReceiver, c.objectName);
-            WidgetFactory.connect(c.valueChanged, WidgetFactory.topLevelWidget, "Setting");
-            if (isNull(c.defaultValue)) {
+            if (!reset) {
+                WidgetFactory.connect(c.valueChanged, signalReceiver, c.objectName);
+                WidgetFactory.connect(c.valueChanged, WidgetFactory.topLevelWidget, "Setting");
+            }
+            if (isNull(c.property("defaultValue"))) {
                 //c.defaultValue = [c.text, c.getDefaultUnit()];
-                c.defaultValue = c.currentText;
+                c.setProperty("defaultValue", c.currentText);
                 c.slotTextChanged(c.currentText);
             }
             if (!isNull(value)) {
@@ -622,10 +626,12 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             continue;
         }
         if (isOfType(c, QLineEdit)) {
-            WidgetFactory.connect(c.textChanged, signalReceiver, c.objectName);
-            WidgetFactory.connect(c.textChanged, WidgetFactory.topLevelWidget, "Setting");
+            if (!reset) {
+                WidgetFactory.connect(c.textChanged, signalReceiver, c.objectName);
+                WidgetFactory.connect(c.textChanged, WidgetFactory.topLevelWidget, "Setting");
+            }
 
-            if (isNull(c.defaultValue)) {
+            if (isNull(c.property("defaultValue"))) {
                 c.setProperty("defaultValue", c.text);
             }
             if (!isNull(value)) {
@@ -635,37 +641,45 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
         }
         if (isOfType(c, QToolButton) || isOfType(c, QPushButton)) {
 
-            if (!c.group() && !c.autoExclusive) {
+            if (isNull(c.group()) && !c.autoExclusive) {
                 if (c.checkable) {
-                    WidgetFactory.connect(c.toggled, signalReceiver, c.objectName);
-                    WidgetFactory.connect(c.toggled, WidgetFactory.topLevelWidget, "Setting");
-                    if (isNull(c.defaultValue)) {
-                        c.defaultValue = c.checked;
+                    if (!reset) {
+                        WidgetFactory.connect(c.toggled, signalReceiver, c.objectName);
+                        WidgetFactory.connect(c.toggled, WidgetFactory.topLevelWidget, "Setting");
+                    }
+                    if (isNull(c.property("defaultValue"))) {
+                        c.setProperty("defaultValue", c.checked);
                     }
                     if (!isNull(value)) {
                         c.checked = (value === true || value === "true");
                     }
                 }
                 else {
-                    WidgetFactory.connect(c.clicked, signalReceiver, c.objectName, false);
+                    if (!reset) {
+                        WidgetFactory.connect(c.clicked, signalReceiver, c.objectName, false);
+                    }
                 }
             }
             else {
-                WidgetFactory.connect(c.toggled, signalReceiver, c.objectName);
+                if (!reset) {
+                    WidgetFactory.connect(c.toggled, signalReceiver, c.objectName);
+                }
             }
             continue;
         }
         if (isOfType(c, QCheckBox)) {
-            WidgetFactory.connect(c.toggled, signalReceiver, c.objectName);
-            //WidgetFactory.connect(c.stateChanged, WidgetFactory.topLevelWidget, "Setting");
-            //c.stateChanged.connect(WidgetFactory.topLevelWidget, "slotSettingChanged");
-            c.stateChanged.connect(function() {
-                if (!isNull(WidgetFactory.topLevelWidget)) {
-                    WidgetFactory.topLevelWidget.slotSettingChanged();
-                }
-            });
-            if (isNull(c.defaultValue)) {
-                c.defaultValue = c.checked;
+            if (!reset) {
+                WidgetFactory.connect(c.toggled, signalReceiver, c.objectName);
+                //WidgetFactory.connect(c.stateChanged, WidgetFactory.topLevelWidget, "Setting");
+                //c.stateChanged.connect(WidgetFactory.topLevelWidget, "slotSettingChanged");
+                c.stateChanged.connect(function() {
+                    if (!isNull(WidgetFactory.topLevelWidget)) {
+                        WidgetFactory.topLevelWidget.slotSettingChanged();
+                    }
+                });
+            }
+            if (isNull(c.property("defaultValue"))) {
+                c.setProperty("defaultValue", c.checked);
                 if (!isNull(signalReceiver)) {
                     f = signalReceiver["slot"+c.objectName+"Changed"];
                     if (isFunction(f)) {
@@ -682,8 +696,8 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             if (!c.group() && !c.autoExclusive) {
                 WidgetFactory.connect(c.toggled, signalReceiver, c.objectName);
                 WidgetFactory.connect(c.toggled, WidgetFactory.topLevelWidget, "Setting");
-                if (isNull(c.defaultValue)) {
-                    c.defaultValue = c.checked;
+                if (isNull(c.property("defaultValue"))) {
+                    c.setProperty("defaultValue", c.checked);
                 }
                 if (!isNull(value)) {
                     c.checked = (value === true || value == "true");
@@ -702,12 +716,14 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             continue;
         }
         if (isOfType(c, QButtonGroup)) {
-            WidgetFactory.connect(c["buttonClicked(QAbstractButton*)"], signalReceiver, c.objectName);
-            WidgetFactory.connect(c["buttonClicked(QAbstractButton*)"], WidgetFactory.topLevelWidget, "Setting");
-            if (isNull(c.defaultValue)) {
+            if (!reset) {
+                WidgetFactory.connect(c["buttonClicked(QAbstractButton*)"], signalReceiver, c.objectName);
+                WidgetFactory.connect(c["buttonClicked(QAbstractButton*)"], WidgetFactory.topLevelWidget, "Setting");
+            }
+            if (isNull(c.property("defaultValue"))) {
                 var button = c.checkedButton();
                 if (button) {
-                    c.defaultValue = button.objectName;
+                    c.setProperty("defaultValue", button.objectName);
                     if (!isNull(signalReceiver)) {
                         f = signalReceiver["slot"+c.objectName+"Changed"];
                         if (isFunction(f)) {
@@ -733,10 +749,12 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             }
         }
         if (isOfType(c, QComboBox) && c.editable) {
-            WidgetFactory.connect(c.editTextChanged, signalReceiver, c.objectName);
-            WidgetFactory.connect(c.editTextChanged, WidgetFactory.topLevelWidget, "Setting");
-            if (isNull(c.defaultValue)) {
-                c.defaultValue = c.currentText;
+            if (!reset) {
+                WidgetFactory.connect(c.editTextChanged, signalReceiver, c.objectName);
+                WidgetFactory.connect(c.editTextChanged, WidgetFactory.topLevelWidget, "Setting");
+            }
+            if (isNull(c.property("defaultValue"))) {
+                c.setProperty("defaultValue", c.currentText);
                 if (!isNull(signalReceiver)) {
                     f = signalReceiver["slot" + c.objectName + "Changed"];
                     if (isFunction(f)) {
@@ -755,17 +773,19 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             continue;
         }
         if ((isOfType(c, QComboBox) && !c.editable) || isOfType(c, QFontComboBox)) {
-            WidgetFactory.connect(c['currentIndexChanged(int)'], signalReceiver, c.objectName);
-            WidgetFactory.connect(c['currentIndexChanged(int)'], WidgetFactory.topLevelWidget, "Setting");
+            if (!reset) {
+                WidgetFactory.connect(c['currentIndexChanged(int)'], signalReceiver, c.objectName);
+                WidgetFactory.connect(c['currentIndexChanged(int)'], WidgetFactory.topLevelWidget, "Setting");
+            }
             hasData = false;
             if (c.itemData(c.currentIndex)!=undefined) {
                 hasData = true;
             }
-            if (isNull(c.defaultValue)) {
+            if (isNull(c.property("defaultValue"))) {
                 if (hasData) {
-                    c.defaultValue = c.itemData(c.currentIndex);
+                    c.setProperty("defaultValue", c.itemData(c.currentIndex));
                 } else {
-                    c.defaultValue = c.currentText;
+                    c.setProperty("defaultValue", c.currentText);
                 }
                 if (signalReceiver!=undefined) {
                     f = signalReceiver["slot" + c.objectName + "Changed"];
@@ -801,10 +821,12 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             continue;
         }
         if (isOfType(c, RColorCombo)) {
-            WidgetFactory.connect(c.editTextChanged, signalReceiver, c.objectName);
-            WidgetFactory.connect(c["currentIndexChanged(int)"], WidgetFactory.topLevelWidget, "Setting");
-            if (isNull(c.defaultValue)) {
-                c.defaultValue = c.getColor();
+            if (!reset) {
+                WidgetFactory.connect(c.editTextChanged, signalReceiver, c.objectName);
+                WidgetFactory.connect(c["currentIndexChanged(int)"], WidgetFactory.topLevelWidget, "Setting");
+            }
+            if (isNull(c.property("defaultValue"))) {
+                c.setProperty("defaultValue", c.getColor());
             }
             if (!isNull(value)) {
                 // color name given:
@@ -825,10 +847,12 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             continue;
         }
         if (isOfType(c, RLineweightCombo)) {
-            WidgetFactory.connect(c.editTextChanged, signalReceiver, c.objectName);
-            WidgetFactory.connect(c["currentIndexChanged(int)"], WidgetFactory.topLevelWidget, "Setting");
-            if (isNull(c.defaultValue)) {
-                c.defaultValue = c.getLineweight();
+            if (!reset) {
+                WidgetFactory.connect(c.editTextChanged, signalReceiver, c.objectName);
+                WidgetFactory.connect(c["currentIndexChanged(int)"], WidgetFactory.topLevelWidget, "Setting");
+            }
+            if (isNull(c.property("defaultValue"))) {
+                c.setProperty("defaultValue", c.getLineweight());
             }
             if (!isNull(value)) {
                 if (isString(value)) {
@@ -839,10 +863,12 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             continue;
         }
         if (isOfType(c, RLinetypeCombo)) {
-            WidgetFactory.connect(c.editTextChanged, signalReceiver, c.objectName);
-            WidgetFactory.connect(c["currentIndexChanged(int)"], WidgetFactory.topLevelWidget, "Setting");
-            if (isNull(c.defaultValue)) {
-                c.defaultValue = c.getLinetypePattern();
+            if (!reset) {
+                WidgetFactory.connect(c.editTextChanged, signalReceiver, c.objectName);
+                WidgetFactory.connect(c["currentIndexChanged(int)"], WidgetFactory.topLevelWidget, "Setting");
+            }
+            if (isNull(c.property("defaultValue"))) {
+                c.setProperty("defaultValue", c.getLinetypePattern());
             }
             if (!isNull(value)) {
                 c.setLinetypePattern(value);
@@ -850,16 +876,18 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             continue;
         }
         if (isOfType(c, QSpinBox) || isOfType(c, QDoubleSpinBox)) {
-            if (isOfType(c, QSpinBox)) {
-                WidgetFactory.connect(c["valueChanged(int)"], signalReceiver, c.objectName);
-                WidgetFactory.connect(c["valueChanged(int)"], WidgetFactory.topLevelWidget, "Setting");
+            if (!reset) {
+                if (isOfType(c, QSpinBox)) {
+                    WidgetFactory.connect(c["valueChanged(int)"], signalReceiver, c.objectName);
+                    WidgetFactory.connect(c["valueChanged(int)"], WidgetFactory.topLevelWidget, "Setting");
+                }
+                else {
+                    WidgetFactory.connect(c["valueChanged(double)"], signalReceiver, c.objectName);
+                    WidgetFactory.connect(c["valueChanged(double)"], WidgetFactory.topLevelWidget, "Setting");
+                }
             }
-            else {
-                WidgetFactory.connect(c["valueChanged(double)"], signalReceiver, c.objectName);
-                WidgetFactory.connect(c["valueChanged(double)"], WidgetFactory.topLevelWidget, "Setting");
-            }
-            if (isNull(c.defaultValue)) {
-                c.defaultValue = c.value;
+            if (isNull(c.property("defaultValue"))) {
+                c.setProperty("defaultValue", c.value);
                 if (signalReceiver!=undefined) {
                     f = signalReceiver["slot" + c.objectName + "Changed"];
                     if (isFunction(f)) {
@@ -873,10 +901,12 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             continue;
         }
         if (isOfType(c, QSlider)) {
-            WidgetFactory.connect(c["valueChanged(int)"], signalReceiver, c.objectName);
-            WidgetFactory.connect(c["valueChanged(int)"], WidgetFactory.topLevelWidget, "Setting");
-            if (isNull(c.defaultValue)) {
-                c.defaultValue = c.value;
+            if (!reset) {
+                WidgetFactory.connect(c["valueChanged(int)"], signalReceiver, c.objectName);
+                WidgetFactory.connect(c["valueChanged(int)"], WidgetFactory.topLevelWidget, "Setting");
+            }
+            if (isNull(c.property("defaultValue"))) {
+                c.setProperty("defaultValue", c.value);
                 if (signalReceiver!=undefined) {
                     f = signalReceiver["slot" + c.objectName + "Changed"];
                     if (isFunction(f)) {
@@ -900,19 +930,19 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             }
 
             if (saveContents) {
-                if (isNull(c.defaultValue)) {
+                if (isNull(c.property("defaultValue"))) {
                     var items = [];
                     for (j = 0; j < c.count; ++j) {
                         items.push(c.item(j).text());
                     }
-                    c.defaultValue = items;
+                    c.setProperty("defaultValue", items);
                 }
                 if (!isNull(value)) {
                     c.addItems(value);
                 }
             } else {
-                if (isNull(c.defaultValue) && !isNull(c.currentItem())) {
-                    c.defaultValue = c.currentItem().data(Qt.UserRole);
+                if (isNull(c.property("defaultValue")) && !isNull(c.currentItem())) {
+                    c.setProperty("defaultValue", c.currentItem().data(Qt.UserRole));
                 }
                 if (!isNull(value)) {
                     for (j=0; j<c.count; ++j) {
@@ -957,17 +987,21 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
                 }
             }
 
-            WidgetFactory.connect(c.itemChanged, signalReceiver, c.objectName);
-            c.itemSelectionChanged.connect(WidgetFactory.topLevelWidget, "slotSettingChanged");
-            c.model().rowsInserted.connect(WidgetFactory.topLevelWidget, "slotSettingChanged");            
+            if (!reset) {
+                WidgetFactory.connect(c.itemChanged, signalReceiver, c.objectName);
+                c.itemSelectionChanged.connect(WidgetFactory.topLevelWidget, "slotSettingChanged");
+                c.model().rowsInserted.connect(WidgetFactory.topLevelWidget, "slotSettingChanged");
+            }
             
             continue;
         }
         if (isOfType(c, RFontChooserWidget)) {
-            WidgetFactory.connect(c.valueChanged, signalReceiver, c.objectName);
-            c.valueChanged.connect(WidgetFactory.topLevelWidget, "slotSettingChanged");
-            if (isNull(c.defaultValue)) {
-                c.defaultValue = c.getFont();
+            if (!reset) {
+                WidgetFactory.connect(c.valueChanged, signalReceiver, c.objectName);
+                c.valueChanged.connect(WidgetFactory.topLevelWidget, "slotSettingChanged");
+            }
+            if (isNull(c.property("defaultValue"))) {
+                c.setProperty("defaultValue", c.getFont());
             }
             if (!isNull(value)) {
                 if (isString(value)) {
