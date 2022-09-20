@@ -2950,7 +2950,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location line="+8"/>
         <source>Hatches</source>
-        <translation>Escotilhas</translation>
+        <translation>Hachuras</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -16602,7 +16602,7 @@ nos resultados de busca:</translation>
     <message>
         <location line="+2"/>
         <source>Hatches</source>
-        <translation>Escotilhas</translation>
+        <translation>Hachuras</translation>
     </message>
     <message>
         <location line="+0"/>
