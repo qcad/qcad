@@ -82,7 +82,7 @@ AutoSave.initPreferences = function(pageWidget, calledByPrefDialog, document) {
 */
 
 AutoSave.getTimestamp = function() {
-    return QTime.currentTime().toString("hh:mm:ss");
+    return new Date().toLocaleTimeString();
 };
 
 AutoSave.init = function(basePath) {
@@ -183,7 +183,7 @@ AutoSave.recoverUntitled = function() {
     var msg = qsTr("%n autosave backup file(s) for (an) untitled drawing(s) was/were found.\n" +
             "Do you wish to recover it/them?", "", list.length);
 
-    var buttons = new QMessageBox.StandardButtons(QMessageBox.Yes, QMessageBox.No, QMessageBox.Cancel);
+    var buttons = makeQMessageBoxStandardButtons(QMessageBox.Yes, QMessageBox.No, QMessageBox.Cancel);
     var ret = QMessageBox.warning(null,
         qsTr("Recover Files?"),
         msg,
@@ -246,7 +246,7 @@ AutoSave.recover = function(fileName) {
     }
 
     // backup file found: ask user what to do:
-    var buttons = new QMessageBox.StandardButtons(QMessageBox.Yes, QMessageBox.No, QMessageBox.Cancel);
+    var buttons = makeQMessageBoxStandardButtons(QMessageBox.Yes, QMessageBox.No, QMessageBox.Cancel);
     var ret = QMessageBox.warning(null,
             qsTr("Recover File?"),
             qsTr("An autosave backup file for \"%1\" exists.\n" +

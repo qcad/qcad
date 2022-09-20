@@ -52,7 +52,7 @@ RTransaction RChangePropertyOperation::apply(RDocument& document, bool preview) 
     QVariant val = value;
 
     // optimization: change layer ID instead of changing layer name:
-    if (propertyTypeId==REntity::PropertyLayer && value.type() == QVariant::String) {
+    if (propertyTypeId==REntity::PropertyLayer && RS::getMetaType(value) == RS::String) {
         val = QVariant(document.getLayerId(value.toString()));
     }
 

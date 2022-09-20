@@ -43,6 +43,12 @@ RMdiChildQt::RMdiChildQt(QWidget* parent) :
 }
 
 RMdiChildQt::~RMdiChildQt() {
+#if QT_VERSION >= 0x060000
+    RDocumentInterface* di = documentInterface;
+    documentInterface=NULL;
+    delete di;
+    di = NULL;
+#endif
 }
 
 void RMdiChildQt::setDocumentInterface(RDocumentInterface* di) {
@@ -124,10 +130,12 @@ void RMdiChildQt::closeEvent(QCloseEvent* closeEvent) {
 
         emit closeAccepted(this);
 
+#if QT_VERSION < 0x060000
         RDocumentInterface* di = documentInterface;
         documentInterface=NULL;
         delete di;
         di = NULL;
+#endif
     }
     closeEvent->accept();
 

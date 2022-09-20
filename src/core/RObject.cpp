@@ -163,7 +163,7 @@ QPair<QVariant, RPropertyAttributes> RObject::getProperty(RPropertyTypeId& prope
             // don't use [] here for thread safety:
             QVariantMap vm = customProperties.value(appId);
             if (vm.contains(name)) {
-                if  (vm.value(name).type()==QVariant::Int) {
+                if  (RS::getMetaType(vm.value(name))==RS::Int) {
                     return qMakePair(vm.value(name), RPropertyAttributes(RPropertyAttributes::Custom|RPropertyAttributes::Integer));
                 }
                 else {
@@ -515,13 +515,13 @@ QVariant RObject::getCustomProperty(const QString& title, const QString& key, co
 
 double RObject::getCustomDoubleProperty(const QString& title, const QString& key, double defaultValue) const {
     QVariant ret = getCustomProperty(title, key, defaultValue);
-    if (ret.type()==QVariant::Double ||
-        ret.type()==QVariant::Int || ret.type()==QVariant::UInt ||
-        ret.type()==QVariant::LongLong || ret.type()==QVariant::ULongLong) {
+    if (RS::getMetaType(ret)==RS::Double ||
+        RS::getMetaType(ret)==RS::Int || RS::getMetaType(ret)==RS::UInt ||
+        RS::getMetaType(ret)==RS::LongLong || RS::getMetaType(ret)==RS::ULongLong) {
 
         return ret.toDouble();
     }
-    if (ret.type()==QVariant::String) {
+    if (RS::getMetaType(ret)==RS::String) {
         QString s = ret.toString();
         bool ok;
         double d = s.toDouble(&ok);
@@ -534,10 +534,10 @@ double RObject::getCustomDoubleProperty(const QString& title, const QString& key
 
 int RObject::getCustomIntProperty(const QString& title, const QString& key, int defaultValue) const {
     QVariant ret = getCustomProperty(title, key, defaultValue);
-    if (ret.type()==QVariant::Int) {
+    if (RS::getMetaType(ret)==RS::Int) {
         return ret.toInt();
     }
-    if (ret.type()==QVariant::String) {
+    if (RS::getMetaType(ret)==RS::String) {
         QString s = ret.toString();
         bool ok;
         int i = s.toInt(&ok);
@@ -550,10 +550,10 @@ int RObject::getCustomIntProperty(const QString& title, const QString& key, int 
 
 bool RObject::getCustomBoolProperty(const QString& title, const QString& key, bool defaultValue) const {
     QVariant ret = getCustomProperty(title, key, defaultValue);
-    if (ret.type()==QVariant::Bool) {
+    if (RS::getMetaType(ret)==RS::Bool) {
         return ret.toBool();
     }
-    if (ret.type()==QVariant::String) {
+    if (RS::getMetaType(ret)==RS::String) {
         QString s = ret.toString().toLower();
         return s=="true" || s=="1";
     }

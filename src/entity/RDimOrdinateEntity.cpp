@@ -126,10 +126,10 @@ bool RDimOrdinateEntity::setProperty(RPropertyTypeId propertyTypeId,
     bool ret = RDimensionEntity::setProperty(propertyTypeId, value, transaction);
 
     if (PropertyOrdinate == propertyTypeId) {
-        if (value.type() == QVariant::Bool) {
+        if (RS::getMetaType(value) == RS::Bool) {
             ret = ret || RObject::setMember(getData().xType, value.toBool(), true);
             data.autoTextPos = true;
-        } else if (value.type() == QVariant::String) {
+        } else if (RS::getMetaType(value) == RS::String) {
             ret = ret || RObject::setMember(getData().xType, value.toString()=="X", true);
             data.autoTextPos = true;
         }

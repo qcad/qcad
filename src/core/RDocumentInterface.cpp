@@ -1501,7 +1501,11 @@ RVector RDocumentInterface::snap(RMouseEvent& event, bool preview) {
         // only allow interruption by mouse move if this is a preview and no buttons are pressed:
         //if (preview && (!RSettings::getPositionByMousePress() || event.buttons()==Qt::NoButton)) {
         if (preview) {
+#if QT_VERSION >= 0x060000
+            RMouseEvent::setOriginalMousePos(event.globalPosition().toPoint());
+#else
             RMouseEvent::setOriginalMousePos(event.globalPos());
+#endif
         }
         RVector ret = currentSnap->snap(event);
         if (preview) {

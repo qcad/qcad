@@ -17,6 +17,8 @@
  * along with QCAD.
  */
 
+include("scripts/Widgets/Widgets.js");
+
 /**
  * Represents a panel in the tool matrix. Panels are embedded as child items under
  * the root item of the appropriate category in the tool matrix tree.

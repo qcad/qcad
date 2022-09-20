@@ -63,7 +63,7 @@ ImportFile.prototype.beginEvent = function() {
     }
 
     if (isNull(fileDialogInfo)) {
-        this.sourceDi.destroy();
+        destr(this.sourceDi);
         this.sourceDi = undefined;
         this.terminate();
         return;
@@ -72,7 +72,7 @@ ImportFile.prototype.beginEvent = function() {
     if (this.sourceDi.importFile(fileDialogInfo[0], fileDialogInfo[1], false)!==RDocumentInterface.IoErrorNoError) {
         EAction.handleUserWarning(qsTr("Error while importing file %1").arg(fileDialogInfo[0]));
         if (!isNull(this.sourceDi)) {
-            this.sourceDi.destroy();
+            destr(this.sourceDi);
             this.sourceDi = undefined;
         }
         this.terminate();
@@ -82,7 +82,7 @@ ImportFile.prototype.beginEvent = function() {
 
 ImportFile.prototype.finishEvent = function() {
     if (!isNull(this.sourceDi)) {
-        this.sourceDi.destroy();
+        destr(this.sourceDi);
     }
     Paste.prototype.finishEvent.call(this);
 };
@@ -119,14 +119,14 @@ ImportFile.prototype.getFileName = function() {
     fileDialog.fileMode = QFileDialog.ExistingFiles;
     fileDialog.setLabelText(QFileDialog.FileType, qsTr("Format:"));
     if (!fileDialog.exec()) {
-        fileDialog.destroy();
+        destr(fileDialog);
         EAction.activateMainWindow();
         return undefined;
     }
 
     var fileNames = fileDialog.selectedFiles();
     if (fileNames.length===0) {
-        fileDialog.destroy();
+        destr(fileDialog);
         EAction.activateMainWindow();
         return undefined;
     }
@@ -154,7 +154,7 @@ ImportFile.prototype.getFileName = function() {
 
     var nameFilter = fileDialog.selectedNameFilter();
 
-    fileDialog.destroy();
+    destr(fileDialog);
     EAction.activateMainWindow();
 
     //this.blockName = new QFileInfo(fileNames[0]).baseName();

@@ -32,7 +32,7 @@ RecentFilesMenu.prototype.refresh = function() {
     }
     
     this.setEnabled(true);
-    
+
     for (var i=files.length-1; i>=0 ; --i) {
         var fi = new QFileInfo(files[i]);
         var text = "";
@@ -53,7 +53,7 @@ RecentFilesMenu.prototype.refresh = function() {
 
         action = this.addAction(text);
         var h = new RecentFilesHandler(files[i]);
-        action.triggered.connect(function() { h.open(); });
+        action.triggered.connect(h, h.open);
     }
 
     action = new RGuiAction(qsTranslate("RecentFiles", "&Clear List"), this);

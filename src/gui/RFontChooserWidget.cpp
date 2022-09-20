@@ -33,8 +33,7 @@
 // TODO test case for saving / loading fonts with RSettings
 
 RFontChooserWidget::RFontChooserWidget(QWidget *parent) :
-    QWidget(parent), font(QFont()), cbSize(NULL), cbFont(NULL), lbSampleText(
-            NULL) {
+    QWidget(parent), chosenFont(QFont()), cbSize(NULL), cbChosenFont(NULL), lbSampleText(NULL) {
 
     QGridLayout* layout = new QGridLayout;
     layout->setContentsMargins(0,0,0,0);
@@ -42,15 +41,15 @@ RFontChooserWidget::RFontChooserWidget(QWidget *parent) :
     lbLabel = new QLabel("");
     layout->addWidget(lbLabel, 0,0);
 
-    cbFont = new QFontComboBox();
-    cbFont->setObjectName("FontFamily");
-    cbFont->setFontFilters(QFontComboBox::ScalableFonts);
+    cbChosenFont = new QFontComboBox();
+    cbChosenFont->setObjectName("FontFamily");
+    cbChosenFont->setFontFilters(QFontComboBox::ScalableFonts);
 //  cbFont->setFontFilters(QFontComboBox::ProportionalFonts);
 //  cbFont->setFontFilters(QFontComboBox::NonScalableFonts);
 
-    connect(cbFont, SIGNAL(currentFontChanged(const QFont&)), this,
-            SLOT(fontChanged(const QFont &)));
-    layout->addWidget(cbFont, 0, 1);
+    connect(cbChosenFont, SIGNAL(currentFontChanged(const QFont&)), this,
+            SLOT(chosenFontChanged(const QFont &)));
+    layout->addWidget(cbChosenFont, 0, 1);
 
     cbSize = new QComboBox();
     cbSize->setObjectName("FontSize");
@@ -78,37 +77,37 @@ void RFontChooserWidget::updateSizeCombo() {
     QFontDatabase fontDb;
 //    qDebug() << "font: " << font.family();
 //    qDebug() << "font sizes: " << fontDb.pointSizes(font.family());
-    QListIterator<int> i(fontDb.pointSizes(font.family()));
+    QListIterator<int> i(fontDb.pointSizes(chosenFont.family()));
     while (i.hasNext()) {
         int s = i.next();
         cbSize->addItem(QString("%1").arg(s), s);
     }
-    int s = font.pointSize();
+    int s = chosenFont.pointSize();
     if (cbSize->findData(s)==-1) {
         cbSize->addItem(QString("%1").arg(s), s);
     }
     cbSize->setCurrentIndex(cbSize->findData(s));
 }
 
-void RFontChooserWidget::fontChanged(const QFont& font) {
+void RFontChooserWidget::chosenFontChanged(const QFont& font) {
     QFont f = font;
     int currentIndex = cbSize->currentIndex();
     if (currentIndex!=-1) {
         f.setPointSize(cbSize->itemData(currentIndex).toInt());
     }
     setFont(f);
-    emit valueChanged(this->font);
+    emit valueChanged(chosenFont);
 }
 
-QFont RFontChooserWidget::getFont() const {
-    return font;
+QFont RFontChooserWidget::getChosenFont() const {
+    return chosenFont;
 }
 
-void RFontChooserWidget::setFont(const QFont &font) {
-    this->font = font;
-    cbFont->blockSignals(true);
-    cbFont->setCurrentFont(font);
-    cbFont->blockSignals(false);
+void RFontChooserWidget::setChosenFont(const QFont& font) {
+    chosenFont = font;
+    cbChosenFont->blockSignals(true);
+    cbChosenFont->setCurrentFont(font);
+    cbChosenFont->blockSignals(false);
     updateSizeCombo();
     lbSampleText->setFont(font);
 }
@@ -122,7 +121,7 @@ void RFontChooserWidget::setLabel(const QString& l) {
 }
 
 void RFontChooserWidget::sizeChanged(int index) {
-    if (cbFont == NULL || cbSize == NULL || index < 0) {
+    if (cbChosenFont == NULL || cbSize == NULL || index < 0) {
         return;
     }
     if (!cbSize->itemData(index).isValid()) {
@@ -134,21 +133,20 @@ void RFontChooserWidget::sizeChanged(int index) {
 
     int size = cbSize->itemData(index).toInt();
     setSize(size);
-    emit valueChanged(this->font);
+    emit valueChanged(chosenFont);
 }
 
 int RFontChooserWidget::getSize() const {
-    return font.pointSize();
+    return chosenFont.pointSize();
 }
 
 void RFontChooserWidget::setSize(int size) {
     if (size <= 0) {
-        qWarning() <<
-                QString("RFontChooserWidget::setSize: size <= 0 (size = %1)").arg(size);
+        qWarning() << QString("RFontChooserWidget::setSize: size <= 0 (size = %1)").arg(size);
         return;
     }
-    this->font.setPointSize(size);
-    lbSampleText->setFont(font);
+    chosenFont.setPointSize(size);
+    lbSampleText->setFont(chosenFont);
 }
 
 void RFontChooserWidget::resizeEvent(QResizeEvent* event) {

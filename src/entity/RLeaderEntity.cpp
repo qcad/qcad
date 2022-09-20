@@ -104,12 +104,12 @@ bool RLeaderEntity::setProperty(RPropertyTypeId propertyTypeId,
     }
 
     if (propertyTypeId == PropertyDimLeaderBlock) {
-        if (value.type() == QVariant::Int ||
-            value.type() == QVariant::LongLong) {
+        if (RS::getMetaType(value) == RS::Int ||
+            RS::getMetaType(value) == RS::LongLong) {
 
             ret = ret || RObject::setMember(
                 getData().dimLeaderBlockId, value.toInt(), true);
-        } else if (value.type() == QVariant::String) {
+        } else if (RS::getMetaType(value) == RS::String) {
             RDocument* document = getData().getDocument();
             if (document != NULL) {
                 ret = ret || RObject::setMember(getData().dimLeaderBlockId,

@@ -666,7 +666,12 @@ function isSimpleTextEntity(obj) {
  * \return true if the given object is a block reference entity (RBlockReferenceEntity).
  */
 function isBlockReferenceEntity(obj) {
-    return isOfType(obj, RBlockReferenceEntity) || isOfType(obj, RBlockReferenceEntityPointer);
+    if (RSettings.getQtVersion()>=0x060000) {
+        return isOfType(obj, RBlockReferenceEntity);
+    }
+    else {
+        return isOfType(obj, RBlockReferenceEntity) || isOfType(obj, RBlockReferenceEntityPointer);
+    }
 }
 
 /**
@@ -1867,7 +1872,11 @@ String.prototype.trim = function() {
  */
 String.prototype.elidedText = function(font, pixel) {
     var fm = new QFontMetrics(font);
-    var t = fm.elidedText(this, Qt.ElideMiddle, pixel);
+    var s = this;
+    if (!isString(s)) {
+        s = s.toString();
+    }
+    var t = fm.elidedText(s, Qt.ElideMiddle, pixel);
     destr(fm);
     // replace HORIZONTAL ELLIPSIS (not every GUI font has those):
     t = t.replace(/\u2026/g, '...');
@@ -2949,6 +2958,12 @@ function makeQtAlignment() {
 function makeQIODeviceOpenMode() {
     var argumentsNew = [].slice.call(arguments, 0);
     argumentsNew.unshift(QIODevice.OpenMode);
+    return makeFlags.apply(this, argumentsNew);
+}
+
+function makeQMessageBoxStandardButtons() {
+    var argumentsNew = [].slice.call(arguments, 0);
+    argumentsNew.unshift(QMessageBox.StandardButtons);
     return makeFlags.apply(this, argumentsNew);
 }
 

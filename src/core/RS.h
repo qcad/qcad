@@ -30,6 +30,7 @@
 #include <QStringList>
 //#include <QTextCodec>
 #include <QVariant>
+#include <QMetaType>
 
 #if QT_VERSION >= 0x060000
 #include <QScreen>
@@ -148,6 +149,152 @@ class QRegularExpressionMatch {
  */
 class QCADCORE_EXPORT RS {
 public:
+
+#if QT_VERSION >= 0x060000
+    enum MetaType {
+        Bool = QMetaType::Bool,
+        Char = QMetaType::Char,
+        Char16 = QMetaType::Char16,
+        Char32 = QMetaType::Char32,
+        Double = QMetaType::Double,
+        Float = QMetaType::Float,
+        Int = QMetaType::Int,
+        Long = QMetaType::Long,
+        LongLong = QMetaType::LongLong,
+        Nullptr = QMetaType::Nullptr,
+        BitArray = QMetaType::QBitArray,
+        Bitmap = QMetaType::QBitmap,
+        Brush = QMetaType::QBrush,
+        ByteArray = QMetaType::QByteArray,
+        ByteArrayList = QMetaType::QByteArrayList,
+        CborArray = QMetaType::QCborArray,
+        CborMap = QMetaType::QCborMap,
+        CborSimpleType = QMetaType::QCborSimpleType,
+        CborValue = QMetaType::QCborValue,
+        //Char = QMetaType::QChar,
+        Color = QMetaType::QColor,
+        ColorSpace = QMetaType::QColorSpace,
+        Cursor = QMetaType::QCursor,
+        Date = QMetaType::QDate,
+        DateTime = QMetaType::QDateTime,
+        EasingCurve = QMetaType::QEasingCurve,
+        Font = QMetaType::QFont,
+        Icon = QMetaType::QIcon,
+        Image = QMetaType::QImage,
+        JsonArray = QMetaType::QJsonArray,
+        JsonDocument = QMetaType::QJsonDocument,
+        JsonObject = QMetaType::QJsonObject,
+        JsonValue = QMetaType::QJsonValue,
+        KeySequence = QMetaType::QKeySequence,
+        Line = QMetaType::QLine,
+        LineF = QMetaType::QLineF,
+        Locale = QMetaType::QLocale,
+        Matrix4x4 = QMetaType::QMatrix4x4,
+        ModelIndex = QMetaType::QModelIndex,
+        ObjectStar = QMetaType::QObjectStar,
+        Palette = QMetaType::QPalette,
+        Pen = QMetaType::QPen,
+        PersistentModelIndex = QMetaType::QPersistentModelIndex,
+        Pixmap = QMetaType::QPixmap,
+        Point = QMetaType::QPoint,
+        PointF = QMetaType::QPointF,
+        Polygon = QMetaType::QPolygon,
+        PolygonF = QMetaType::QPolygonF,
+        Quaternion = QMetaType::QQuaternion,
+        Rect = QMetaType::QRect,
+        RectF = QMetaType::QRectF,
+        Region = QMetaType::QRegion,
+        RegularExpression = QMetaType::QRegularExpression,
+        Size = QMetaType::QSize,
+        SizeF = QMetaType::QSizeF,
+        SizePolicy = QMetaType::QSizePolicy,
+        String = QMetaType::QString,
+        StringList = QMetaType::QStringList,
+        TextFormat = QMetaType::QTextFormat,
+        TextLength = QMetaType::QTextLength,
+        Time = QMetaType::QTime,
+        Transform = QMetaType::QTransform,
+        Url = QMetaType::QUrl,
+        Uuid = QMetaType::QUuid,
+        Variant = QMetaType::QVariant,
+        VariantHash = QMetaType::QVariantHash,
+        VariantList = QMetaType::QVariantList,
+        VariantMap = QMetaType::QVariantMap,
+        Vector2D = QMetaType::QVector2D,
+        Vector3D = QMetaType::QVector3D,
+        Vector4D = QMetaType::QVector4D,
+        SChar = QMetaType::SChar,
+        Short = QMetaType::Short,
+        UChar = QMetaType::UChar,
+        UInt = QMetaType::UInt,
+        ULong = QMetaType::ULong,
+        ULongLong = QMetaType::ULongLong,
+        UShort = QMetaType::UShort,
+        UnknownType = QMetaType::UnknownType,
+        UserType = QMetaType::User,
+        VoidStar = QMetaType::VoidStar
+    };
+#else
+    enum MetaType {
+        Bool = QVariant::Bool,
+        Char = QVariant::Char,
+        Double = QVariant::Double,
+        Int = QVariant::Int,
+        Invalid = QVariant::Invalid,
+        LongLong = QVariant::LongLong,
+        BitArray = QVariant::BitArray,
+        Bitmap = QVariant::Bitmap,
+        Brush = QVariant::Brush,
+        ByteArray = QVariant::ByteArray,
+        Color = QVariant::Color,
+        Cursor = QVariant::Cursor,
+        Date = QVariant::Date,
+        DateTime = QVariant::DateTime,
+        EasingCurve = QVariant::EasingCurve,
+        Font = QVariant::Font,
+        Hash = QVariant::Hash,
+        Icon = QVariant::Icon,
+        Image = QVariant::Image,
+        KeySequence = QVariant::KeySequence,
+        Line = QVariant::Line,
+        LineF = QVariant::LineF,
+        List = QVariant::List,
+        Locale = QVariant::Locale,
+        Map = QVariant::Map,
+        Matrix4x4 = QVariant::Matrix4x4,
+        ModelIndex = QVariant::ModelIndex,
+        Palette = QVariant::Palette,
+        Pen = QVariant::Pen,
+        PersistentModelIndex = QVariant::PersistentModelIndex,
+        Pixmap = QVariant::Pixmap,
+        Point = QVariant::Point,
+        PointF = QVariant::PointF,
+        Polygon = QVariant::Polygon,
+        PolygonF = QVariant::PolygonF,
+        Rect = QVariant::Rect,
+        RectF = QVariant::RectF,
+        Region = QVariant::Region,
+        RegularExpression = QVariant::RegularExpression,
+        Size = QVariant::Size,
+        SizeF = QVariant::SizeF,
+        SizePolicy = QVariant::SizePolicy,
+        String = QVariant::String,
+        StringList = QVariant::StringList,
+        TextFormat = QVariant::TextFormat,
+        TextLength = QVariant::TextLength,
+        Time = QVariant::Time,
+        Transform = QVariant::Transform,
+        Url = QVariant::Url,
+        Uuid = QVariant::Uuid,
+        Vector2D = QVariant::Vector2D,
+        Vector3D = QVariant::Vector3D,
+        Vector4D = QVariant::Vector4D,
+        Quaternion = QVariant::Quaternion,
+        UInt = QVariant::UInt,
+        ULongLong = QVariant::ULongLong,
+        UserType = QVariant::UserType
+    };
+#endif
 
     /**
      * Message type for debugging and displaying user messages.
@@ -822,10 +969,19 @@ public:
     static int getScreenCount();
 
     static QSize getAvailableGeometry(int screen);
+
     /**
      * \nonscriptable
      */
     static QString convert(const QByteArray& str, const QString& codecName);
+
+    static int getMetaType(const QVariant& v) {
+#if QT_VERSION >= 0x060000
+        return v.metaType().id();
+#else
+        return v.type();
+#endif
+    }
 
     static const double PointTolerance;
     static const double AngleTolerance;

@@ -393,7 +393,7 @@ EAction.prototype.showUiOptions = function(resume, restoreFromSettings) {
         if (optionsToolBar.floating) {
             optionsToolBar.resize(optionsToolBar.sizeHint.width(), optionsToolBar.height);
         }
-        wOptions.destroy();
+        destr(wOptions);
 
         // automatically add separator to toolbar:
         var a = optionsToolBar.addSeparator();
@@ -498,7 +498,7 @@ EAction.prototype.hideUiOptions = function(saveToSettings) {
         if (!isNull(optionsToolBar)) {
             optionsToolBar.removeAction(a);
         }
-        a.destroy();
+        destr(a);
     }
 
     // delete additional toolbars of this tool if available:
@@ -508,7 +508,7 @@ EAction.prototype.hideUiOptions = function(saveToSettings) {
             if (isDeleted(tb)) {
                 continue;
             }
-            tb.destroy();
+            destr(tb);
         }
     }
 
@@ -545,7 +545,7 @@ EAction.prototype.hideOptionsToolBarWidgets = function(widgets, noSyncWidgets) {
     for (i = 0; i < children.length; ++i) {
         c = children[i];
         if (c["HideInDialogMode"]===true) {
-            c.destroy();
+            destr(c);
         }
         else if (c["MoveToDialog"]===true) {
             widgets.push(c);
@@ -665,7 +665,7 @@ EAction.prototype.showDialog = function() {
         noSyncWidgets[i].setProperty("Loaded", false);
     }
 
-    this.dialog.destroy();
+    destr(this.dialog);
     this.dialog = undefined;
 
 //    var view = EAction.getGraphicsView();

@@ -142,10 +142,10 @@ bool RSplineEntity::setProperty(RPropertyTypeId propertyTypeId,
 //    }
 
     if (PropertyDegree == propertyTypeId) {
-        if (value.type()==QVariant::Int) {
+        if (RS::getMetaType(value)==RS::Int) {
             ret = ret || RObject::setMember(data.degree, value);
         }
-        else if (value.type()==QVariant::String) {
+        else if (RS::getMetaType(value)==RS::String) {
             ret = ret || RObject::setMember(data.degree, value.toString().toInt());
         }
     }
