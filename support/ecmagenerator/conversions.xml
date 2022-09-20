@@ -95,6 +95,7 @@
 	<entry key="QFontDatabase::WritingSystem" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="QAbstractItemView::ScrollHint" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="QEasingCurve::Type" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="QMetaType::Type" value="toNumber()" testFunction="isNumber()" cast="int" />
 
 	<entry key="QString" value="toString()" testFunction="isString()" />
 	<entry key="QChar" value="toString().at(0)" testFunction="isString()" />
