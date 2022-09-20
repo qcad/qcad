@@ -121,8 +121,6 @@
     ;static RS* getSelfShell(const QString& fName, QScriptContext* context)
     ;static  QScriptValue toScriptValueEnumMetaType(QScriptEngine* engine, const RS::MetaType& value)
     ;static  void fromScriptValueEnumMetaType(const QScriptValue& value, RS::MetaType& out)
-    ;static  QScriptValue toScriptValueEnumMetaType(QScriptEngine* engine, const RS::MetaType& value)
-    ;static  void fromScriptValueEnumMetaType(const QScriptValue& value, RS::MetaType& out)
     ;static  QScriptValue toScriptValueEnumMessageType(QScriptEngine* engine, const RS::MessageType& value)
     ;static  void fromScriptValueEnumMessageType(const QScriptValue& value, RS::MessageType& out)
     ;static  QScriptValue toScriptValueEnumEntityType(QScriptEngine* engine, const RS::EntityType& value)
