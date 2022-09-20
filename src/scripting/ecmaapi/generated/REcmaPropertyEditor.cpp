@@ -1132,9 +1132,7 @@
             context->argument(1).isUndefined()
         ) /* type: QVariant */
      && (
-            context->argument(2).isVariant() || 
-            context->argument(2).isQObject() || 
-            context->argument(2).isNull()
+            context->argument(2).isNumber()
         ) /* type: QMetaType::Type */
     
     ){
@@ -1169,21 +1167,13 @@
                         )
                     );
                 
-                    // argument is reference
-                    QMetaType::Type*
-                    ap2 =
-                    qscriptvalue_cast<
-                    QMetaType::Type*
-                        >(
-                        context->argument(
-                        2
-                        )
-                    );
-                    if( ap2 == NULL ){
-                           return REcmaHelper::throwError("RPropertyEditor: Argument 2 is not of type QMetaType::Type*.",
-                               context);                    
-                    }
-                    QMetaType::Type& a2 = *ap2;
+                    // argument isStandardType
+                    QMetaType::Type
+                    a2 =
+                    (QMetaType::Type)
+                    (int)
+                    context->argument( 2 ).
+                    toNumber();
                 
     // end of arguments
 
