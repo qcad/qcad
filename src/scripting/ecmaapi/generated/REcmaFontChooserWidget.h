@@ -48,10 +48,10 @@
 
     // public methods:
     static  QScriptValue
-        getFont
+        getChosenFont
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        setFont
+        setChosenFont
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getSize
@@ -66,7 +66,7 @@
         setLabel
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        fontChanged
+        chosenFontChanged
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         sizeChanged

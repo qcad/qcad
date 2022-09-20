@@ -138,6 +138,8 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RSingleApplication.h"</cpp:file></cpp:include>
 
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &lt;= 0x060000</expr></cpp:if>
+
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>int*</argument>)</argument_list></macro>
 <cpp:ifdef>#<cpp:directive>ifdef</cpp:directive> <name>_LP64</name></cpp:ifdef>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>unsigned int*</argument>)</argument_list></macro>
@@ -353,9 +355,10 @@
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>Qt::WindowFlags</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>Qt::WidgetAttribute</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>Qt::WidgetAttribute*</argument>)</argument_list></macro>
-<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QVariant::Type</argument>)</argument_list></macro>
+<comment type="line">//Q_DECLARE_METATYPE(QVariant::Type)</comment>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QAbstractItemView::ScrollHint</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QEasingCurve::Type</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QMetaType::Type</argument>)</argument_list></macro>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QtMsgType*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QtMsgType</argument>)</argument_list></macro>
@@ -384,6 +387,8 @@
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QPrinter::PaperSize</argument>)</argument_list></macro>
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif> <comment type="line">// Qt &lt; 6</comment>
 
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>

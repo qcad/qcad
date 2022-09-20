@@ -105,6 +105,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getAvailableGeometry, "getAvailableGeometry");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getMetaType, "getMetaType");
+            
 
     // static properties:
     
@@ -123,6 +125,691 @@
 
     // enum values:
     
+
+    ctor.setProperty("Bool",
+    QScriptValue(RS::Bool),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Char",
+    QScriptValue(RS::Char),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Char16",
+    QScriptValue(RS::Char16),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Char32",
+    QScriptValue(RS::Char32),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Double",
+    QScriptValue(RS::Double),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Float",
+    QScriptValue(RS::Float),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Int",
+    QScriptValue(RS::Int),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Long",
+    QScriptValue(RS::Long),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("LongLong",
+    QScriptValue(RS::LongLong),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Nullptr",
+    QScriptValue(RS::Nullptr),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("BitArray",
+    QScriptValue(RS::BitArray),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Bitmap",
+    QScriptValue(RS::Bitmap),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Brush",
+    QScriptValue(RS::Brush),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("ByteArray",
+    QScriptValue(RS::ByteArray),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("ByteArrayList",
+    QScriptValue(RS::ByteArrayList),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("CborArray",
+    QScriptValue(RS::CborArray),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("CborMap",
+    QScriptValue(RS::CborMap),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("CborSimpleType",
+    QScriptValue(RS::CborSimpleType),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("CborValue",
+    QScriptValue(RS::CborValue),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Color",
+    QScriptValue(RS::Color),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("ColorSpace",
+    QScriptValue(RS::ColorSpace),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Cursor",
+    QScriptValue(RS::Cursor),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Date",
+    QScriptValue(RS::Date),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("DateTime",
+    QScriptValue(RS::DateTime),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("EasingCurve",
+    QScriptValue(RS::EasingCurve),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Font",
+    QScriptValue(RS::Font),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Icon",
+    QScriptValue(RS::Icon),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Image",
+    QScriptValue(RS::Image),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("JsonArray",
+    QScriptValue(RS::JsonArray),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("JsonDocument",
+    QScriptValue(RS::JsonDocument),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("JsonObject",
+    QScriptValue(RS::JsonObject),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("JsonValue",
+    QScriptValue(RS::JsonValue),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("KeySequence",
+    QScriptValue(RS::KeySequence),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Line",
+    QScriptValue(RS::Line),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("LineF",
+    QScriptValue(RS::LineF),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Locale",
+    QScriptValue(RS::Locale),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Matrix4x4",
+    QScriptValue(RS::Matrix4x4),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("ModelIndex",
+    QScriptValue(RS::ModelIndex),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("ObjectStar",
+    QScriptValue(RS::ObjectStar),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Palette",
+    QScriptValue(RS::Palette),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Pen",
+    QScriptValue(RS::Pen),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("PersistentModelIndex",
+    QScriptValue(RS::PersistentModelIndex),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Pixmap",
+    QScriptValue(RS::Pixmap),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Point",
+    QScriptValue(RS::Point),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("PointF",
+    QScriptValue(RS::PointF),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Polygon",
+    QScriptValue(RS::Polygon),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("PolygonF",
+    QScriptValue(RS::PolygonF),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Quaternion",
+    QScriptValue(RS::Quaternion),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Rect",
+    QScriptValue(RS::Rect),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("RectF",
+    QScriptValue(RS::RectF),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Region",
+    QScriptValue(RS::Region),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("RegularExpression",
+    QScriptValue(RS::RegularExpression),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Size",
+    QScriptValue(RS::Size),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("SizeF",
+    QScriptValue(RS::SizeF),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("SizePolicy",
+    QScriptValue(RS::SizePolicy),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("String",
+    QScriptValue(RS::String),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("StringList",
+    QScriptValue(RS::StringList),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("TextFormat",
+    QScriptValue(RS::TextFormat),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("TextLength",
+    QScriptValue(RS::TextLength),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Time",
+    QScriptValue(RS::Time),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Transform",
+    QScriptValue(RS::Transform),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Url",
+    QScriptValue(RS::Url),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Uuid",
+    QScriptValue(RS::Uuid),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Variant",
+    QScriptValue(RS::Variant),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("VariantHash",
+    QScriptValue(RS::VariantHash),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("VariantList",
+    QScriptValue(RS::VariantList),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("VariantMap",
+    QScriptValue(RS::VariantMap),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Vector2D",
+    QScriptValue(RS::Vector2D),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Vector3D",
+    QScriptValue(RS::Vector3D),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Vector4D",
+    QScriptValue(RS::Vector4D),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("SChar",
+    QScriptValue(RS::SChar),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Short",
+    QScriptValue(RS::Short),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("UChar",
+    QScriptValue(RS::UChar),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("UInt",
+    QScriptValue(RS::UInt),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("ULong",
+    QScriptValue(RS::ULong),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("ULongLong",
+    QScriptValue(RS::ULongLong),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("UShort",
+    QScriptValue(RS::UShort),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("UnknownType",
+    QScriptValue(RS::UnknownType),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("UserType",
+    QScriptValue(RS::UserType),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("VoidStar",
+    QScriptValue(RS::VoidStar),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Bool",
+    QScriptValue(RS::Bool),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Char",
+    QScriptValue(RS::Char),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Double",
+    QScriptValue(RS::Double),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Int",
+    QScriptValue(RS::Int),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Invalid",
+    QScriptValue(RS::Invalid),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("LongLong",
+    QScriptValue(RS::LongLong),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("BitArray",
+    QScriptValue(RS::BitArray),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Bitmap",
+    QScriptValue(RS::Bitmap),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Brush",
+    QScriptValue(RS::Brush),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("ByteArray",
+    QScriptValue(RS::ByteArray),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Color",
+    QScriptValue(RS::Color),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Cursor",
+    QScriptValue(RS::Cursor),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Date",
+    QScriptValue(RS::Date),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("DateTime",
+    QScriptValue(RS::DateTime),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("EasingCurve",
+    QScriptValue(RS::EasingCurve),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Font",
+    QScriptValue(RS::Font),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Hash",
+    QScriptValue(RS::Hash),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Icon",
+    QScriptValue(RS::Icon),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Image",
+    QScriptValue(RS::Image),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("KeySequence",
+    QScriptValue(RS::KeySequence),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Line",
+    QScriptValue(RS::Line),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("LineF",
+    QScriptValue(RS::LineF),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("List",
+    QScriptValue(RS::List),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Locale",
+    QScriptValue(RS::Locale),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Map",
+    QScriptValue(RS::Map),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Matrix4x4",
+    QScriptValue(RS::Matrix4x4),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("ModelIndex",
+    QScriptValue(RS::ModelIndex),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Palette",
+    QScriptValue(RS::Palette),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Pen",
+    QScriptValue(RS::Pen),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("PersistentModelIndex",
+    QScriptValue(RS::PersistentModelIndex),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Pixmap",
+    QScriptValue(RS::Pixmap),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Point",
+    QScriptValue(RS::Point),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("PointF",
+    QScriptValue(RS::PointF),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Polygon",
+    QScriptValue(RS::Polygon),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("PolygonF",
+    QScriptValue(RS::PolygonF),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Rect",
+    QScriptValue(RS::Rect),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("RectF",
+    QScriptValue(RS::RectF),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Region",
+    QScriptValue(RS::Region),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("RegularExpression",
+    QScriptValue(RS::RegularExpression),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Size",
+    QScriptValue(RS::Size),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("SizeF",
+    QScriptValue(RS::SizeF),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("SizePolicy",
+    QScriptValue(RS::SizePolicy),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("String",
+    QScriptValue(RS::String),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("StringList",
+    QScriptValue(RS::StringList),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("TextFormat",
+    QScriptValue(RS::TextFormat),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("TextLength",
+    QScriptValue(RS::TextLength),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Time",
+    QScriptValue(RS::Time),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Transform",
+    QScriptValue(RS::Transform),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Url",
+    QScriptValue(RS::Url),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Uuid",
+    QScriptValue(RS::Uuid),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Vector2D",
+    QScriptValue(RS::Vector2D),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Vector3D",
+    QScriptValue(RS::Vector3D),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Vector4D",
+    QScriptValue(RS::Vector4D),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Quaternion",
+    QScriptValue(RS::Quaternion),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("UInt",
+    QScriptValue(RS::UInt),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("ULongLong",
+    QScriptValue(RS::ULongLong),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("UserType",
+    QScriptValue(RS::UserType),
+    QScriptValue::ReadOnly);
+
 
     ctor.setProperty("Print",
     QScriptValue(RS::Print),
@@ -2011,6 +2698,20 @@
 
     // enum conversions:
     
+    qScriptRegisterMetaType<RS::MetaType>(
+        &engine,
+        toScriptValueEnumMetaType,
+        fromScriptValueEnumMetaType,
+        ctor.property(QString::fromLatin1("prototype"))
+    );
+
+    qScriptRegisterMetaType<RS::MetaType>(
+        &engine,
+        toScriptValueEnumMetaType,
+        fromScriptValueEnumMetaType,
+        ctor.property(QString::fromLatin1("prototype"))
+    );
+
     qScriptRegisterMetaType<RS::MessageType>(
         &engine,
         toScriptValueEnumMessageType,
@@ -3573,6 +4274,66 @@
             //REcmaHelper::functionEnd("REcmaS::getAvailableGeometry", context, engine);
             return result;
         }
+         QScriptValue
+        REcmaS::getMetaType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaS::getMetaType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaS::getMetaType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNumber() || 
+            context->argument(0).isString() || 
+            context->argument(0).isBool() || 
+            context->argument(0).isArray() || 
+            context->argument(0).isNull() || 
+            context->argument(0).isUndefined()
+        ) /* type: QVariant */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable or pointer
+                    QVariant
+                    a0 =
+                    qscriptvalue_cast<
+                    QVariant
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        RS::
+       getMetaType(a0);
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RS.getMetaType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaS::getMetaType", context, engine);
+            return result;
+        }
          QScriptValue REcmaS::toString
     (QScriptContext *context, QScriptEngine *engine)
     
@@ -3649,6 +4410,26 @@
             
 
 
+        }
+         QScriptValue REcmaS::toScriptValueEnumMetaType(QScriptEngine* engine, const RS::MetaType& value)
+    
+        {
+            return QScriptValue(engine, (int)value);
+        }
+         void REcmaS::fromScriptValueEnumMetaType(const QScriptValue& value, RS::MetaType& out)
+    
+        {
+            out = qvariant_cast<RS::MetaType>(value.toVariant());
+        }
+         QScriptValue REcmaS::toScriptValueEnumMetaType(QScriptEngine* engine, const RS::MetaType& value)
+    
+        {
+            return QScriptValue(engine, (int)value);
+        }
+         void REcmaS::fromScriptValueEnumMetaType(const QScriptValue& value, RS::MetaType& out)
+    
+        {
+            out = qvariant_cast<RS::MetaType>(value.toVariant());
         }
          QScriptValue REcmaS::toScriptValueEnumMessageType(QScriptEngine* engine, const RS::MessageType& value)
     

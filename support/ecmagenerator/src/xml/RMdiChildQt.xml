@@ -65,6 +65,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="sizeHint" cppName="sizeHint" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QSize" isPureVirtual="false" />
+    </method>
     <method name="closeEvent" cppName="closeEvent"
     specifier="protected" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
@@ -72,11 +76,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QCloseEvent *" typeName="QCloseEvent *"
         name="closeEvent" isConst="false" />
       </variant>
-    </method>
-    <method name="sizeHint" cppName="sizeHint"
-    specifier="protected" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="QSize" isPureVirtual="false" />
     </method>
   </class>
 </unit>
