@@ -403,6 +403,21 @@
         ;static  QScriptValue
         subWindowActivated
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        updateGuiActions
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        initGuiActions
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        updateScenes
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        notifyListenersSlot
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        suspendAndResume
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

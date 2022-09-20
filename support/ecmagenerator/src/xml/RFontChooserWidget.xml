@@ -13,12 +13,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="0" isConst="false" />
       </variant>
     </constructor>
-    <method name="getFont" cppName="getFont" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+    <method name="getChosenFont" cppName="getChosenFont"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
       <variant returnType="QFont" isPureVirtual="false" />
     </method>
-    <method name="setFont" cppName="setFont" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+    <method name="setChosenFont" cppName="setChosenFont"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QFont &amp;" typeName="QFont" name="font"
         isConst="true" />
@@ -46,7 +48,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
-    <method name="fontChanged" cppName="fontChanged"
+    <method name="chosenFontChanged" cppName="chosenFontChanged"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">

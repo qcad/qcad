@@ -65,9 +65,9 @@
 
     // methods:
     
-            REcmaHelper::registerFunction(&engine, proto, getFont, "getFont");
+            REcmaHelper::registerFunction(&engine, proto, getChosenFont, "getChosenFont");
             
-            REcmaHelper::registerFunction(&engine, proto, setFont, "setFont");
+            REcmaHelper::registerFunction(&engine, proto, setChosenFont, "setChosenFont");
             
             REcmaHelper::registerFunction(&engine, proto, getSize, "getSize");
             
@@ -77,7 +77,7 @@
             
             REcmaHelper::registerFunction(&engine, proto, setLabel, "setLabel");
             
-            REcmaHelper::registerFunction(&engine, proto, fontChanged, "fontChanged");
+            REcmaHelper::registerFunction(&engine, proto, chosenFontChanged, "chosenFontChanged");
             
             REcmaHelper::registerFunction(&engine, proto, sizeChanged, "sizeChanged");
             
@@ -241,19 +241,19 @@
 
     // public methods:
      QScriptValue
-        REcmaFontChooserWidget::getFont
+        REcmaFontChooserWidget::getChosenFont
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFontChooserWidget::getFont", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaFontChooserWidget::getFont";
+            //REcmaHelper::functionStart("REcmaFontChooserWidget::getChosenFont", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaFontChooserWidget::getChosenFont";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RFontChooserWidget* self = 
-                        getSelf("getFont", context);
+                        getSelf("getChosenFont", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -273,7 +273,7 @@
     // return type 'QFont'
     QFont cppResult =
         
-               self->getFont();
+               self->getChosenFont();
         // return type: QFont
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
@@ -283,26 +283,26 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RFontChooserWidget.getFont().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RFontChooserWidget.getChosenFont().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFontChooserWidget::getFont", context, engine);
+            //REcmaHelper::functionEnd("REcmaFontChooserWidget::getChosenFont", context, engine);
             return result;
         }
          QScriptValue
-        REcmaFontChooserWidget::setFont
+        REcmaFontChooserWidget::setChosenFont
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFontChooserWidget::setFont", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaFontChooserWidget::setFont";
+            //REcmaHelper::functionStart("REcmaFontChooserWidget::setChosenFont", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaFontChooserWidget::setChosenFont";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RFontChooserWidget* self = 
-                        getSelf("setFont", context);
+                        getSelf("setChosenFont", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -342,16 +342,16 @@
     // call C++ function:
     // return type 'void'
     
-               self->setFont(a0);
+               self->setChosenFont(a0);
     } else
 
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RFontChooserWidget.setFont().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RFontChooserWidget.setChosenFont().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFontChooserWidget::setFont", context, engine);
+            //REcmaHelper::functionEnd("REcmaFontChooserWidget::setChosenFont", context, engine);
             return result;
         }
          QScriptValue
@@ -563,19 +563,19 @@
             return result;
         }
          QScriptValue
-        REcmaFontChooserWidget::fontChanged
+        REcmaFontChooserWidget::chosenFontChanged
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFontChooserWidget::fontChanged", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaFontChooserWidget::fontChanged";
+            //REcmaHelper::functionStart("REcmaFontChooserWidget::chosenFontChanged", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaFontChooserWidget::chosenFontChanged";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RFontChooserWidget* self = 
-                        getSelf("fontChanged", context);
+                        getSelf("chosenFontChanged", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -615,16 +615,16 @@
     // call C++ function:
     // return type 'void'
     
-               self->fontChanged(a0);
+               self->chosenFontChanged(a0);
     } else
 
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RFontChooserWidget.fontChanged().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RFontChooserWidget.chosenFontChanged().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFontChooserWidget::fontChanged", context, engine);
+            //REcmaHelper::functionEnd("REcmaFontChooserWidget::chosenFontChanged", context, engine);
             return result;
         }
          QScriptValue

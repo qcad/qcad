@@ -357,7 +357,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="updateGuiActions" cppName="updateGuiActions"
-    specifier="protected" isStatic="false" isVirtual="false"
+    specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QMdiSubWindow *" typeName="QMdiSubWindow *"
@@ -366,12 +366,12 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="initGuiActions" cppName="initGuiActions"
-    specifier="protected" isStatic="false" isVirtual="false"
+    specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
     <method name="updateScenes" cppName="updateScenes"
-    specifier="protected" isStatic="false" isVirtual="false"
+    specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QMdiSubWindow *" typeName="QMdiSubWindow *"
@@ -379,7 +379,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="notifyListenersSlot"
-    cppName="notifyListenersSlot" specifier="protected"
+    cppName="notifyListenersSlot" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QMdiSubWindow *" typeName="QMdiSubWindow *"
@@ -387,7 +387,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="suspendAndResume" cppName="suspendAndResume"
-    specifier="protected" isStatic="false" isVirtual="false"
+    specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QMdiSubWindow *" typeName="QMdiSubWindow *"

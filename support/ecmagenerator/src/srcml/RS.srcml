@@ -31,6 +31,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QStringList&gt;</cpp:file></cpp:include>
 <comment type="line">//#include &lt;QTextCodec&gt;</comment>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QVariant&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
 
 <cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x060000</expr></cpp:if>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QScreen&gt;</cpp:file></cpp:include>
@@ -150,6 +151,152 @@
 <class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RS</name> <block>{<private type="default">
 </private><public>public:
 
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x060000</expr></cpp:if>
+    <enum>enum <name>MetaType</name> <block>{
+        <expr><name>Bool</name> = <name><name>QMetaType</name>::<name>Bool</name></name></expr>,
+        <expr><name>Char</name> = <name><name>QMetaType</name>::<name>Char</name></name></expr>,
+        <expr><name>Char16</name> = <name><name>QMetaType</name>::<name>Char16</name></name></expr>,
+        <expr><name>Char32</name> = <name><name>QMetaType</name>::<name>Char32</name></name></expr>,
+        <expr><name>Double</name> = <name><name>QMetaType</name>::<name>Double</name></name></expr>,
+        <expr><name>Float</name> = <name><name>QMetaType</name>::<name>Float</name></name></expr>,
+        <expr><name>Int</name> = <name><name>QMetaType</name>::<name>Int</name></name></expr>,
+        <expr><name>Long</name> = <name><name>QMetaType</name>::<name>Long</name></name></expr>,
+        <expr><name>LongLong</name> = <name><name>QMetaType</name>::<name>LongLong</name></name></expr>,
+        <expr><name>Nullptr</name> = <name><name>QMetaType</name>::<name>Nullptr</name></name></expr>,
+        <expr><name>BitArray</name> = <name><name>QMetaType</name>::<name>QBitArray</name></name></expr>,
+        <expr><name>Bitmap</name> = <name><name>QMetaType</name>::<name>QBitmap</name></name></expr>,
+        <expr><name>Brush</name> = <name><name>QMetaType</name>::<name>QBrush</name></name></expr>,
+        <expr><name>ByteArray</name> = <name><name>QMetaType</name>::<name>QByteArray</name></name></expr>,
+        <expr><name>ByteArrayList</name> = <name><name>QMetaType</name>::<name>QByteArrayList</name></name></expr>,
+        <expr><name>CborArray</name> = <name><name>QMetaType</name>::<name>QCborArray</name></name></expr>,
+        <expr><name>CborMap</name> = <name><name>QMetaType</name>::<name>QCborMap</name></name></expr>,
+        <expr><name>CborSimpleType</name> = <name><name>QMetaType</name>::<name>QCborSimpleType</name></name></expr>,
+        <expr><name>CborValue</name> = <name><name>QMetaType</name>::<name>QCborValue</name></name></expr>,
+        <comment type="line">//Char = QMetaType::QChar,</comment>
+        <expr><name>Color</name> = <name><name>QMetaType</name>::<name>QColor</name></name></expr>,
+        <expr><name>ColorSpace</name> = <name><name>QMetaType</name>::<name>QColorSpace</name></name></expr>,
+        <expr><name>Cursor</name> = <name><name>QMetaType</name>::<name>QCursor</name></name></expr>,
+        <expr><name>Date</name> = <name><name>QMetaType</name>::<name>QDate</name></name></expr>,
+        <expr><name>DateTime</name> = <name><name>QMetaType</name>::<name>QDateTime</name></name></expr>,
+        <expr><name>EasingCurve</name> = <name><name>QMetaType</name>::<name>QEasingCurve</name></name></expr>,
+        <expr><name>Font</name> = <name><name>QMetaType</name>::<name>QFont</name></name></expr>,
+        <expr><name>Icon</name> = <name><name>QMetaType</name>::<name>QIcon</name></name></expr>,
+        <expr><name>Image</name> = <name><name>QMetaType</name>::<name>QImage</name></name></expr>,
+        <expr><name>JsonArray</name> = <name><name>QMetaType</name>::<name>QJsonArray</name></name></expr>,
+        <expr><name>JsonDocument</name> = <name><name>QMetaType</name>::<name>QJsonDocument</name></name></expr>,
+        <expr><name>JsonObject</name> = <name><name>QMetaType</name>::<name>QJsonObject</name></name></expr>,
+        <expr><name>JsonValue</name> = <name><name>QMetaType</name>::<name>QJsonValue</name></name></expr>,
+        <expr><name>KeySequence</name> = <name><name>QMetaType</name>::<name>QKeySequence</name></name></expr>,
+        <expr><name>Line</name> = <name><name>QMetaType</name>::<name>QLine</name></name></expr>,
+        <expr><name>LineF</name> = <name><name>QMetaType</name>::<name>QLineF</name></name></expr>,
+        <expr><name>Locale</name> = <name><name>QMetaType</name>::<name>QLocale</name></name></expr>,
+        <expr><name>Matrix4x4</name> = <name><name>QMetaType</name>::<name>QMatrix4x4</name></name></expr>,
+        <expr><name>ModelIndex</name> = <name><name>QMetaType</name>::<name>QModelIndex</name></name></expr>,
+        <expr><name>ObjectStar</name> = <name><name>QMetaType</name>::<name>QObjectStar</name></name></expr>,
+        <expr><name>Palette</name> = <name><name>QMetaType</name>::<name>QPalette</name></name></expr>,
+        <expr><name>Pen</name> = <name><name>QMetaType</name>::<name>QPen</name></name></expr>,
+        <expr><name>PersistentModelIndex</name> = <name><name>QMetaType</name>::<name>QPersistentModelIndex</name></name></expr>,
+        <expr><name>Pixmap</name> = <name><name>QMetaType</name>::<name>QPixmap</name></name></expr>,
+        <expr><name>Point</name> = <name><name>QMetaType</name>::<name>QPoint</name></name></expr>,
+        <expr><name>PointF</name> = <name><name>QMetaType</name>::<name>QPointF</name></name></expr>,
+        <expr><name>Polygon</name> = <name><name>QMetaType</name>::<name>QPolygon</name></name></expr>,
+        <expr><name>PolygonF</name> = <name><name>QMetaType</name>::<name>QPolygonF</name></name></expr>,
+        <expr><name>Quaternion</name> = <name><name>QMetaType</name>::<name>QQuaternion</name></name></expr>,
+        <expr><name>Rect</name> = <name><name>QMetaType</name>::<name>QRect</name></name></expr>,
+        <expr><name>RectF</name> = <name><name>QMetaType</name>::<name>QRectF</name></name></expr>,
+        <expr><name>Region</name> = <name><name>QMetaType</name>::<name>QRegion</name></name></expr>,
+        <expr><name>RegularExpression</name> = <name><name>QMetaType</name>::<name>QRegularExpression</name></name></expr>,
+        <expr><name>Size</name> = <name><name>QMetaType</name>::<name>QSize</name></name></expr>,
+        <expr><name>SizeF</name> = <name><name>QMetaType</name>::<name>QSizeF</name></name></expr>,
+        <expr><name>SizePolicy</name> = <name><name>QMetaType</name>::<name>QSizePolicy</name></name></expr>,
+        <expr><name>String</name> = <name><name>QMetaType</name>::<name>QString</name></name></expr>,
+        <expr><name>StringList</name> = <name><name>QMetaType</name>::<name>QStringList</name></name></expr>,
+        <expr><name>TextFormat</name> = <name><name>QMetaType</name>::<name>QTextFormat</name></name></expr>,
+        <expr><name>TextLength</name> = <name><name>QMetaType</name>::<name>QTextLength</name></name></expr>,
+        <expr><name>Time</name> = <name><name>QMetaType</name>::<name>QTime</name></name></expr>,
+        <expr><name>Transform</name> = <name><name>QMetaType</name>::<name>QTransform</name></name></expr>,
+        <expr><name>Url</name> = <name><name>QMetaType</name>::<name>QUrl</name></name></expr>,
+        <expr><name>Uuid</name> = <name><name>QMetaType</name>::<name>QUuid</name></name></expr>,
+        <expr><name>Variant</name> = <name><name>QMetaType</name>::<name>QVariant</name></name></expr>,
+        <expr><name>VariantHash</name> = <name><name>QMetaType</name>::<name>QVariantHash</name></name></expr>,
+        <expr><name>VariantList</name> = <name><name>QMetaType</name>::<name>QVariantList</name></name></expr>,
+        <expr><name>VariantMap</name> = <name><name>QMetaType</name>::<name>QVariantMap</name></name></expr>,
+        <expr><name>Vector2D</name> = <name><name>QMetaType</name>::<name>QVector2D</name></name></expr>,
+        <expr><name>Vector3D</name> = <name><name>QMetaType</name>::<name>QVector3D</name></name></expr>,
+        <expr><name>Vector4D</name> = <name><name>QMetaType</name>::<name>QVector4D</name></name></expr>,
+        <expr><name>SChar</name> = <name><name>QMetaType</name>::<name>SChar</name></name></expr>,
+        <expr><name>Short</name> = <name><name>QMetaType</name>::<name>Short</name></name></expr>,
+        <expr><name>UChar</name> = <name><name>QMetaType</name>::<name>UChar</name></name></expr>,
+        <expr><name>UInt</name> = <name><name>QMetaType</name>::<name>UInt</name></name></expr>,
+        <expr><name>ULong</name> = <name><name>QMetaType</name>::<name>ULong</name></name></expr>,
+        <expr><name>ULongLong</name> = <name><name>QMetaType</name>::<name>ULongLong</name></name></expr>,
+        <expr><name>UShort</name> = <name><name>QMetaType</name>::<name>UShort</name></name></expr>,
+        <expr><name>UnknownType</name> = <name><name>QMetaType</name>::<name>UnknownType</name></name></expr>,
+        <expr><name>UserType</name> = <name><name>QMetaType</name>::<name>User</name></name></expr>,
+        <expr><name>VoidStar</name> = <name><name>QMetaType</name>::<name>VoidStar</name></name></expr>
+    }</block>;</enum>
+<cpp:else>#<cpp:directive>else</cpp:directive></cpp:else>
+    <enum>enum <name>MetaType</name> <block>{
+        <expr><name>Bool</name> = <name><name>QVariant</name>::<name>Bool</name></name></expr>,
+        <expr><name>Char</name> = <name><name>QVariant</name>::<name>Char</name></name></expr>,
+        <expr><name>Double</name> = <name><name>QVariant</name>::<name>Double</name></name></expr>,
+        <expr><name>Int</name> = <name><name>QVariant</name>::<name>Int</name></name></expr>,
+        <expr><name>Invalid</name> = <name><name>QVariant</name>::<name>Invalid</name></name></expr>,
+        <expr><name>LongLong</name> = <name><name>QVariant</name>::<name>LongLong</name></name></expr>,
+        <expr><name>BitArray</name> = <name><name>QVariant</name>::<name>BitArray</name></name></expr>,
+        <expr><name>Bitmap</name> = <name><name>QVariant</name>::<name>Bitmap</name></name></expr>,
+        <expr><name>Brush</name> = <name><name>QVariant</name>::<name>Brush</name></name></expr>,
+        <expr><name>ByteArray</name> = <name><name>QVariant</name>::<name>ByteArray</name></name></expr>,
+        <expr><name>Color</name> = <name><name>QVariant</name>::<name>Color</name></name></expr>,
+        <expr><name>Cursor</name> = <name><name>QVariant</name>::<name>Cursor</name></name></expr>,
+        <expr><name>Date</name> = <name><name>QVariant</name>::<name>Date</name></name></expr>,
+        <expr><name>DateTime</name> = <name><name>QVariant</name>::<name>DateTime</name></name></expr>,
+        <expr><name>EasingCurve</name> = <name><name>QVariant</name>::<name>EasingCurve</name></name></expr>,
+        <expr><name>Font</name> = <name><name>QVariant</name>::<name>Font</name></name></expr>,
+        <expr><name>Hash</name> = <name><name>QVariant</name>::<name>Hash</name></name></expr>,
+        <expr><name>Icon</name> = <name><name>QVariant</name>::<name>Icon</name></name></expr>,
+        <expr><name>Image</name> = <name><name>QVariant</name>::<name>Image</name></name></expr>,
+        <expr><name>KeySequence</name> = <name><name>QVariant</name>::<name>KeySequence</name></name></expr>,
+        <expr><name>Line</name> = <name><name>QVariant</name>::<name>Line</name></name></expr>,
+        <expr><name>LineF</name> = <name><name>QVariant</name>::<name>LineF</name></name></expr>,
+        <expr><name>List</name> = <name><name>QVariant</name>::<name>List</name></name></expr>,
+        <expr><name>Locale</name> = <name><name>QVariant</name>::<name>Locale</name></name></expr>,
+        <expr><name>Map</name> = <name><name>QVariant</name>::<name>Map</name></name></expr>,
+        <expr><name>Matrix4x4</name> = <name><name>QVariant</name>::<name>Matrix4x4</name></name></expr>,
+        <expr><name>ModelIndex</name> = <name><name>QVariant</name>::<name>ModelIndex</name></name></expr>,
+        <expr><name>Palette</name> = <name><name>QVariant</name>::<name>Palette</name></name></expr>,
+        <expr><name>Pen</name> = <name><name>QVariant</name>::<name>Pen</name></name></expr>,
+        <expr><name>PersistentModelIndex</name> = <name><name>QVariant</name>::<name>PersistentModelIndex</name></name></expr>,
+        <expr><name>Pixmap</name> = <name><name>QVariant</name>::<name>Pixmap</name></name></expr>,
+        <expr><name>Point</name> = <name><name>QVariant</name>::<name>Point</name></name></expr>,
+        <expr><name>PointF</name> = <name><name>QVariant</name>::<name>PointF</name></name></expr>,
+        <expr><name>Polygon</name> = <name><name>QVariant</name>::<name>Polygon</name></name></expr>,
+        <expr><name>PolygonF</name> = <name><name>QVariant</name>::<name>PolygonF</name></name></expr>,
+        <expr><name>Rect</name> = <name><name>QVariant</name>::<name>Rect</name></name></expr>,
+        <expr><name>RectF</name> = <name><name>QVariant</name>::<name>RectF</name></name></expr>,
+        <expr><name>Region</name> = <name><name>QVariant</name>::<name>Region</name></name></expr>,
+        <expr><name>RegularExpression</name> = <name><name>QVariant</name>::<name>RegularExpression</name></name></expr>,
+        <expr><name>Size</name> = <name><name>QVariant</name>::<name>Size</name></name></expr>,
+        <expr><name>SizeF</name> = <name><name>QVariant</name>::<name>SizeF</name></name></expr>,
+        <expr><name>SizePolicy</name> = <name><name>QVariant</name>::<name>SizePolicy</name></name></expr>,
+        <expr><name>String</name> = <name><name>QVariant</name>::<name>String</name></name></expr>,
+        <expr><name>StringList</name> = <name><name>QVariant</name>::<name>StringList</name></name></expr>,
+        <expr><name>TextFormat</name> = <name><name>QVariant</name>::<name>TextFormat</name></name></expr>,
+        <expr><name>TextLength</name> = <name><name>QVariant</name>::<name>TextLength</name></name></expr>,
+        <expr><name>Time</name> = <name><name>QVariant</name>::<name>Time</name></name></expr>,
+        <expr><name>Transform</name> = <name><name>QVariant</name>::<name>Transform</name></name></expr>,
+        <expr><name>Url</name> = <name><name>QVariant</name>::<name>Url</name></name></expr>,
+        <expr><name>Uuid</name> = <name><name>QVariant</name>::<name>Uuid</name></name></expr>,
+        <expr><name>Vector2D</name> = <name><name>QVariant</name>::<name>Vector2D</name></name></expr>,
+        <expr><name>Vector3D</name> = <name><name>QVariant</name>::<name>Vector3D</name></name></expr>,
+        <expr><name>Vector4D</name> = <name><name>QVariant</name>::<name>Vector4D</name></name></expr>,
+        <expr><name>Quaternion</name> = <name><name>QVariant</name>::<name>Quaternion</name></name></expr>,
+        <expr><name>UInt</name> = <name><name>QVariant</name>::<name>UInt</name></name></expr>,
+        <expr><name>ULongLong</name> = <name><name>QVariant</name>::<name>ULongLong</name></name></expr>,
+        <expr><name>UserType</name> = <name><name>QVariant</name>::<name>UserType</name></name></expr>
+    }</block>;</enum>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
     <comment type="block">/**
      * Message type for debugging and displaying user messages.
      */</comment>
@@ -181,6 +328,7 @@
 
         <expr><name>EntityAll</name></expr>,          <comment type="block">/**&lt; All entities (for filters) */</comment>
         <expr><name>EntityUnknown</name></expr>,      <comment type="block">/**&lt; Unknown entity */</comment>
+
         <expr><name>EntityAttribute</name></expr>,    <comment type="block">/**&lt; Block attribute */</comment>
         <expr><name>EntityAttributeDefinition</name></expr>,     <comment type="block">/**&lt; Block attribute definition */</comment>
         <expr><name>EntityBlockRef</name></expr>,     <comment type="block">/**&lt; Block reference */</comment>
@@ -216,6 +364,7 @@
         <expr><name>EntitySpline</name></expr>,       <comment type="block">/**&lt; Spline */</comment>
         <expr><name>EntityViewport</name></expr>,     <comment type="block">/**&lt; Viewport */</comment>
         <expr><name>EntityTolerance</name></expr>,    <comment type="block">/**&lt; Tolerance */</comment>
+
         <expr><name>EntityUser</name></expr>          <comment type="block">/**&lt; User defined entity. Use this to identify
                                  entities that are added in a separate library
                                  and resort to C++ RTTI for RTTI. */</comment>
@@ -821,10 +970,19 @@
     <function_decl><type><name>static</name> <name>int</name></type> <name>getScreenCount</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>static</name> <name>QSize</name></type> <name>getAvailableGeometry</name><parameter_list>(<param><decl><type><name>int</name></type> <name>screen</name></decl></param>)</parameter_list>;</function_decl>
+
     <comment type="block">/**
      * \nonscriptable
      */</comment>
     <function_decl><type><name>static</name> <name>QString</name></type> <name>convert</name><parameter_list>(<param><decl><type><name>const</name> <name>QByteArray</name>&amp;</type> <name>str</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>codecName</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function><type><name>static</name> <name>int</name></type> <name>getMetaType</name><parameter_list>(<param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <block>{
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x060000</expr></cpp:if>
+        <return>return <expr><name>v</name>.<call><name>metaType</name><argument_list>()</argument_list></call>.<call><name>id</name><argument_list>()</argument_list></call></expr>;</return>
+<cpp:else>#<cpp:directive>else</cpp:directive></cpp:else>
+        <return>return <expr><name>v</name>.<call><name>type</name><argument_list>()</argument_list></call></expr>;</return>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+    }</block></function>
 
     <decl_stmt><decl><type><name>static</name> <name>const</name> <name>double</name></type> <name>PointTolerance</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>const</name> <name>double</name></type> <name>AngleTolerance</name></decl>;</decl_stmt>

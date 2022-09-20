@@ -66,6 +66,8 @@
         <return>return <expr><name>closeEventAccepted</name></expr>;</return>
     }</block></function>
 
+    <function_decl><type><name>virtual</name> <name>QSize</name></type> <name>sizeHint</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
 <label><name>signals</name>:</label>
     <function_decl><type><name>void</name></type> <name>closeRequested</name><parameter_list>(<param><decl><type><name>RMdiChildQt</name>*</type> <name>mdiChild</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>closeAccepted</name><parameter_list>(<param><decl><type><name>RMdiChildQt</name>*</type> <name>mdiChild</name></decl></param>)</parameter_list>;</function_decl>
@@ -73,7 +75,6 @@
 
 </public><protected>protected:
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>closeEvent</name><parameter_list>(<param><decl><type><name>QCloseEvent</name>*</type> <name>closeEvent</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>virtual</name> <name>QSize</name></type> <name>sizeHint</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
 </protected><private>private:
     <decl_stmt><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name></decl>;</decl_stmt>
