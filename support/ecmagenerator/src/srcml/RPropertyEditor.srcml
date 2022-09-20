@@ -70,7 +70,7 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>clearLayers</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>propertyChanged</name><parameter_list>(<param><decl><type><name>RPropertyTypeId</name></type> <name>propertyTypeId</name></decl></param>, <param><decl><type><name>QVariant</name></type> <name>propertyValue</name></decl></param>,
-                         <param><decl><type><name><name>QVariant</name>::<name>Type</name></name></type> <name>typeHint</name> =<init> <expr><name><name>QVariant</name>::<name>Invalid</name></name></expr></init></decl></param>)</parameter_list>;</function_decl>
+                         <param><decl><type><name><name>QMetaType</name>::<name>Type</name></name></type> <name>typeHint</name> =<init> <expr><name><name>QMetaType</name>::<name>UnknownType</name></name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>listPropertyChanged</name><parameter_list>(<param><decl><type><name>RPropertyTypeId</name></type> <name>propertyTypeId</name></decl></param>,
                          <param><decl><type><name>int</name></type> <name>index</name></decl></param>, <param><decl><type><name>QVariant</name></type> <name>propertyValue</name></decl></param>)</parameter_list>;</function_decl>
 

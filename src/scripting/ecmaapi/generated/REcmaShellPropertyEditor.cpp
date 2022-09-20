@@ -742,7 +742,7 @@
     
     
       void REcmaShellPropertyEditor::propertyChanged(
-                RPropertyTypeId propertyTypeId, QVariant propertyValue, QVariant::Type typeHint
+                RPropertyTypeId propertyTypeId, QVariant propertyValue, QMetaType::Type typeHint
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellPropertyEditor::propertyChanged", engine);
@@ -809,7 +809,7 @@
 
 
 
-    // type: QVariant::Type, copyable: true
+    // type: QMetaType::Type, copyable: false
         << qScriptValueFromValue(engine, 
 
         typeHint

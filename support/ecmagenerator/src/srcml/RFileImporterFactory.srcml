@@ -41,6 +41,7 @@
  */</comment>
 <class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RFileImporterFactory</name> <block>{<private type="default">
 </private><public>public:
+    <destructor><specifier>virtual</specifier> <name>~RFileImporterFactory</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
     <function_decl><type><name>virtual</name> <name>QStringList</name></type> <name>getFilterStrings</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>int</name></type> <name>canImport</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>nameFilter</name> =<init> <expr>""</expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>RFileImporter</name>*</type> <name>instantiate</name><parameter_list>(<param><decl><type><name>RDocument</name>&amp;</type> <name>document</name></decl></param>, <param><decl><type><name>RMessageHandler</name>*</type> <name>messageHandler</name> =<init> <expr><name>NULL</name></expr></init></decl></param>, <param><decl><type><name>RProgressHandler</name>*</type> <name>progressHandler</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>

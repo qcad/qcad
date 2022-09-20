@@ -97,6 +97,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isCloseEventAccepted, "isCloseEventAccepted");
             
+            REcmaHelper::registerFunction(&engine, proto, sizeHint, "sizeHint");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RMdiChildQt*>(), *proto);
 
@@ -678,6 +680,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMdiChildQt::isCloseEventAccepted", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMdiChildQt::sizeHint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMdiChildQt::sizeHint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMdiChildQt::sizeHint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMdiChildQt* self = 
+                        getSelf("sizeHint", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSize'
+    QSize cppResult =
+        
+               self->sizeHint();
+        // return type: QSize
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMdiChildQt.sizeHint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMdiChildQt::sizeHint", context, engine);
             return result;
         }
          QScriptValue REcmaMdiChildQt::toString

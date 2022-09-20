@@ -2824,6 +2824,16 @@ function applyTheme() {
     }
 }
 
+function setUtf8Codec(ts) {
+    if (RSettings.getQtVersion() >= 0x060000) {
+        ts.setEncoding(QStringConverter.Utf8);
+    }
+    else {
+        ts.setCodec("UTF-8");
+    }
+}
+
+
 function readTextFile(fileName) {
     var file = new QFile(fileName);
     var flags = new QIODevice.OpenMode(QIODevice.ReadOnly | QIODevice.Text);
@@ -2894,7 +2904,8 @@ function createSpatialIndex() {
 
 // Qt 4 API workaround:
 function qsTranslate2(context, sourceText, disambiguation, n) {
-    if (RSettings.isQt(4)) {
+    // Qt 4:
+    if (RSettings.getQtVersion() < 0x050000) {
         if (isNull(disambiguation)) {
             return qsTranslate(context, sourceText);
         }
@@ -2903,6 +2914,8 @@ function qsTranslate2(context, sourceText, disambiguation, n) {
         }
         return qsTranslate(context, sourceText, disambiguation, "UnicodeUTF8", n);
     }
+
+    // Qt > 5
     return qsTranslate(context, sourceText, disambiguation, n);
 }
 

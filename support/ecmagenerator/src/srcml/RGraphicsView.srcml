@@ -221,18 +221,7 @@
         <return>return <expr><name>grid</name></expr>;</return>
     }</block></function>
 
-    <comment type="block">/**
-     * Sets the current grid. This graphics view takes ownership
-     * of the grid. The previous grid is deleted. Setting the grid
-     * to NULL disables the grid.
-     */</comment>
-    <function><type><name>void</name></type> <name>setGrid</name><parameter_list>(<param><decl><type><name>RGrid</name>*</type> <name>g</name></decl></param>)</parameter_list> <block>{
-        <if>if <condition>(<expr><name>grid</name>!=<name>NULL</name></expr>)</condition><then> <block>{
-            <expr_stmt><expr>delete <name>grid</name></expr>;</expr_stmt>
-            <expr_stmt><expr><name>grid</name> = <name>NULL</name></expr>;</expr_stmt>
-        }</block></then></if>
-        <expr_stmt><expr><name>grid</name> = <name>g</name></expr>;</expr_stmt>
-    }</block></function>
+    <function_decl><type><name>void</name></type> <name>setGrid</name><parameter_list>(<param><decl><type><name>RGrid</name>*</type> <name>g</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>setGridVisible</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>isGridVisible</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>

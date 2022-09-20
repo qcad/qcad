@@ -46,7 +46,7 @@ ShowReadme.prototype.beginEvent = function() {
         text.plainText = qsTr("File \"%1\" doesn't exist.").arg(ShowReadme.readmeFile);
     } else {
         var textStream = new QTextStream(file);
-        RS.setUtf8Codec(textStream);
+        setUtf8Codec(textStream);
         var allLines = textStream.readAll();
         file.close();
         text.plainText = allLines;
