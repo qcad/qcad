@@ -276,10 +276,14 @@ EcmaScriptShell.init = function(basePath) {
                     enableInput();
                 }
 
-                appendAndScroll("<span style='color:"+EcmaScriptShell.col+";'>" + RS.escape(res) + "</span>");
+                if (res==undefined) {
+                    res = "undefined";
+                }
+
+                appendAndScroll("<span style='color:"+EcmaScriptShell.col+";'>" + RS.escape(res.toString()) + "</span>");
             }
             catch(e) {
-                appendAndScroll("<span style='color:"+EcmaScriptShell.colWarning+";'>" + RS.escape(e) + "</span>");
+                appendAndScroll("<span style='color:"+EcmaScriptShell.colWarning+";'>" + RS.escape(e.toString()) + "</span>");
                 //qDebug("error: ", e);
                 //qDebug("error: res:", res);
             }
