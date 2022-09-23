@@ -119,12 +119,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+422"/>
+        <location line="+427"/>
         <source>Plugin:</source>
         <translation type="unfinished">Plugin:</translation>
     </message>
     <message>
-        <location line="-397"/>
+        <location line="-402"/>
         <source>ID:</source>
         <translation type="unfinished">ID:</translation>
     </message>
@@ -186,7 +186,7 @@
         <translation type="unfinished">Hitelek</translation>
     </message>
     <message>
-        <location line="+164"/>
+        <location line="+169"/>
         <source>Licenses</source>
         <translation type="unfinished">Licencek</translation>
     </message>
@@ -438,10 +438,6 @@ a beállítások módosításai hatályba lépjenek.</translation>
         <translation>Ív eszköztár</translation>
     </message>
     <message>
-        <source>Show arc tools</source>
-        <translation type="vanished">Ív eszköztár megjelenítése</translation>
-    </message>
-    <message>
         <location line="+23"/>
         <source>&amp;Arc</source>
         <translation>Körív</translation>
@@ -483,10 +479,6 @@ a beállítások módosításai hatályba lépjenek.</translation>
         <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
         <translation>Balra (Pozitív)</translation>
-    </message>
-    <message>
-        <source>Direction</source>
-        <translation type="vanished">Irány</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -653,10 +645,6 @@ a beállítások módosításai hatályba lépjenek.</translation>
         <translation>Balra (Pozitív)</translation>
     </message>
     <message>
-        <source>Direction</source>
-        <translation type="vanished">Irány</translation>
-    </message>
-    <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Jobbra (Negatív)</translation>
@@ -670,10 +658,6 @@ a beállítások módosításai hatályba lépjenek.</translation>
         <location line="+7"/>
         <source>Shorter Arc</source>
         <translation>Rövidebb ív</translation>
-    </message>
-    <message>
-        <source>Solution</source>
-        <translation type="vanished">Megoldás</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -755,10 +739,6 @@ a beállítások módosításai hatályba lépjenek.</translation>
         <location line="+7"/>
         <source>Counter Clockwise (positive)</source>
         <translation>Balra (pozitív)</translation>
-    </message>
-    <message>
-        <source>Direction</source>
-        <translation type="vanished">Irány</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -872,10 +852,6 @@ a beállítások módosításai hatályba lépjenek.</translation>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.ui" line="+17"/>
         <source>Radius:</source>
         <translation>Sugár:</translation>
-    </message>
-    <message>
-        <source>&amp;Tangentially connected</source>
-        <translation type="vanished">Érintők</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangentialInit.js" line="+2"/>
@@ -1307,10 +1283,6 @@ Szeretné visszaállítani?</translation>
         <translation>A blokk már létezik.</translation>
     </message>
     <message>
-        <source>Block Data</source>
-        <translation type="vanished">Blokk adatok</translation>
-    </message>
-    <message>
         <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
         <source>Block</source>
         <translation type="unfinished">Blokk</translation>
@@ -1319,10 +1291,6 @@ Szeretné visszaállítani?</translation>
         <location line="+8"/>
         <source>Block name:</source>
         <translation>Blokk neve:</translation>
-    </message>
-    <message>
-        <source>block 1</source>
-        <translation type="vanished">blokk 1</translation>
     </message>
 </context>
 <context>
@@ -1344,14 +1312,14 @@ Szeretné visszaállítani?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+492"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
         <source>Widgets</source>
         <translation type="unfinished">Widgetek</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+53"/>
-        <location line="+39"/>
+        <location line="+44"/>
         <source>Block List</source>
         <translation type="unfinished">Blokk lista</translation>
     </message>
@@ -1520,7 +1488,7 @@ Szeretné visszaállítani?</translation>
 <context>
     <name>CadToolBar</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+52"/>
+        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+53"/>
         <source>Widgets</source>
         <translation type="unfinished">Widgetek</translation>
     </message>
@@ -1559,7 +1527,7 @@ Szeretné visszaállítani?</translation>
     <name>CadToolBarPanel</name>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/CadToolBarPanel.js" line="+39"/>
-        <location line="+71"/>
+        <location line="+72"/>
         <source>Back</source>
         <translation type="unfinished">Vissza</translation>
     </message>
@@ -1567,7 +1535,7 @@ Szeretné visszaállítani?</translation>
 <context>
     <name>CadToolMatrix</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+373"/>
+        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+383"/>
         <source>Expand all</source>
         <translation type="unfinished">Minden bővítése</translation>
     </message>
@@ -1587,13 +1555,13 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">Ikon nézet</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+34"/>
         <source>Widgets</source>
         <translation type="unfinished">Widgetek</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+47"/>
+        <location line="+53"/>
         <source>Tool Matrix</source>
         <translation type="unfinished">Eszköz mátrix</translation>
     </message>
@@ -1629,7 +1597,7 @@ Szeretné visszaállítani?</translation>
 <context>
     <name>CheckForUpdates</name>
     <message>
-        <location filename="../scripts/Help/CheckForUpdates/CheckForUpdates.js" line="+62"/>
+        <location filename="../scripts/Help/CheckForUpdates/CheckForUpdates.js" line="+68"/>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesDialog.ui" line="+14"/>
         <source>Checking for Updates...</source>
         <translation type="unfinished">Frissítések keresése...</translation>
@@ -1661,10 +1629,6 @@ Szeretné visszaállítani?</translation>
         <location filename="../scripts/Draw/Circle/Circle.js" line="+71"/>
         <source>Circle Tools</source>
         <translation>Kör eszköztár</translation>
-    </message>
-    <message>
-        <source>Show circle tools</source>
-        <translation type="vanished">Kör eszköztár megmutatása</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -1738,10 +1702,6 @@ Szeretné visszaállítani?</translation>
         <translation>P1 - P2 vonal bal közép</translation>
     </message>
     <message>
-        <source>Solution</source>
-        <translation type="vanished">Megoldás</translation>
-    </message>
-    <message>
         <location line="+20"/>
         <source>Center Right of Line P1 - P2</source>
         <translation>P1 - P2 vonal jobb közép</translation>
@@ -1786,10 +1746,6 @@ Szeretné visszaállítani?</translation>
         <translation>Nincs megoldás</translation>
     </message>
     <message>
-        <source>Point, 2 Tan&amp;gents</source>
-        <translation type="vanished">Pont, 2 érintő</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Circle/Circle2TP/Circle2TPInit.js" line="+2"/>
         <source>2 Tan&amp;gents and Point</source>
         <translation type="unfinished">2 Tangensek és pont</translation>
@@ -1821,10 +1777,6 @@ Szeretné visszaállítani?</translation>
         <location line="+103"/>
         <source>No solution</source>
         <translation>Nincs megoldás</translation>
-    </message>
-    <message>
-        <source>Invalid radius</source>
-        <translation type="vanished">Érvénytelen sugár</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TR.ui" line="+17"/>
@@ -2060,10 +2012,6 @@ Szeretné visszaállítani?</translation>
         <location line="+48"/>
         <source>No solution</source>
         <translation>Nincs megoldás</translation>
-    </message>
-    <message>
-        <source>2 Poin&amp;ts and Tangent</source>
-        <translation type="vanished">2 pont és érintő</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleT2P/CircleT2PInit.js" line="+2"/>
@@ -2772,10 +2720,6 @@ Szeretné visszaállítani?</translation>
         <location line="+7"/>
         <source>Cancel</source>
         <translation type="unfinished">Törölje</translation>
-    </message>
-    <message>
-        <source>Scale:</source>
-        <translation type="obsolete">Arány:</translation>
     </message>
 </context>
 <context>
@@ -4238,7 +4182,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Nincs</translation>
     </message>
     <message>
-        <location line="+662"/>
+        <location line="+664"/>
         <source>Options</source>
         <translation type="unfinished">Opciók</translation>
     </message>
@@ -4253,7 +4197,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">CAD eszközök</translation>
     </message>
     <message>
-        <location line="+584"/>
+        <location line="+582"/>
         <source>Invalid position</source>
         <translation type="unfinished">Érvénytelen pozíció</translation>
     </message>
@@ -4584,10 +4528,6 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Balra (pozitív)</translation>
     </message>
     <message>
-        <source>Direction</source>
-        <translation type="obsolete">Irány</translation>
-    </message>
-    <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation type="unfinished">Az óramutató járásával megegyezően (negatív)</translation>
@@ -4604,24 +4544,6 @@ már szerepel a listában.</translation>
         <location line="+4"/>
         <source>Draw full ellipse from center, major point and ratio</source>
         <translation type="unfinished">Teljes ellipszis rajzolása középpontból, főpontból és arányból</translation>
-    </message>
-</context>
-<context>
-    <name>EllipseConcentric</name>
-    <message>
-        <source>Distance:</source>
-        <translation type="obsolete">Távolság:</translation>
-    </message>
-    <message>
-        <source>Number:</source>
-        <translation type="obsolete">Szám:</translation>
-    </message>
-</context>
-<context>
-    <name>EllipseConcentricThrough</name>
-    <message>
-        <source>Number:</source>
-        <translation type="obsolete">Szám:</translation>
     </message>
 </context>
 <context>
@@ -6401,10 +6323,6 @@ már szerepel a listában.</translation>
 <context>
     <name>HideAllBlocks</name>
     <message>
-        <source>&amp;Hide All</source>
-        <translation type="vanished">Mindent elrejt</translation>
-    </message>
-    <message>
         <location filename="../scripts/Block/HideAllBlocks/HideAllBlocksInit.js" line="+2"/>
         <source>&amp;Hide All Blocks</source>
         <translation type="unfinished">Minden blokk elrejtése</translation>
@@ -7668,10 +7586,6 @@ már szerepel a listában.</translation>
 <context>
     <name>InsertBlockItem</name>
     <message>
-        <source>Adjusted invalid block name to &apos;%1&apos;</source>
-        <translation type="vanished">Hibásan beállított blokk név &apos;%1&apos;</translation>
-    </message>
-    <message>
         <location filename="../scripts/Block/InsertBlockItem/InsertBlockItem.js" line="+102"/>
         <source>Cannot import file from URL: </source>
         <translation type="unfinished">Nem lehet fájlt importálni az URL-címről:</translation>
@@ -7744,10 +7658,6 @@ már szerepel a listában.</translation>
 </context>
 <context>
     <name>InsertScriptItem</name>
-    <message>
-        <source>Position</source>
-        <translation type="vanished">Pozíció</translation>
-    </message>
     <message>
         <location filename="../scripts/Block/InsertScriptItem/InsertScriptItemInit.js" line="+2"/>
         <source>Insert &amp;Script</source>
@@ -8121,13 +8031,6 @@ már szerepel a listában.</translation>
         <location filename="../scripts/Widgets/LayerList/PreferencesPage.ui" line="+19"/>
         <source>Enable alternating row colors</source>
         <translation type="unfinished">Váltakozó sorszínek engedélyezése</translation>
-    </message>
-</context>
-<context>
-    <name>LayoutDialog</name>
-    <message>
-        <source>Leading or trailing spaces.</source>
-        <translation type="obsolete">Bevezető és követő margó</translation>
     </message>
 </context>
 <context>
@@ -9907,17 +9810,9 @@ a keresési eredményekben megjelenő elemek száma:</translation>
         <translation type="unfinished">Forgatás:</translation>
     </message>
     <message>
-        <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation type="obsolete">Beillesztett elemek forgatása&lt;br&gt;ezzel a szöggel</translation>
-    </message>
-    <message>
         <location line="+126"/>
         <source>Scale:</source>
         <translation type="unfinished">Arány:</translation>
-    </message>
-    <message>
-        <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation type="obsolete">Beillesztett elemek nagyítása&lt;br&gt;ezzel az aránnyal</translation>
     </message>
     <message>
         <location line="+88"/>
@@ -10469,7 +10364,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
         <translation type="unfinished">:</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+194"/>
         <source>No Selection</source>
         <translation type="unfinished">Nincs kiválasztás</translation>
     </message>
@@ -11029,10 +10924,6 @@ a keresési eredményekben megjelenő elemek száma:</translation>
         <location line="+17"/>
         <source>&amp;Radius:</source>
         <translation type="unfinished">Sugár:</translation>
-    </message>
-    <message>
-        <source>Radius:</source>
-        <translation type="obsolete">Sugár:</translation>
     </message>
 </context>
 <context>
@@ -11704,13 +11595,6 @@ a keresési eredményekben megjelenő elemek száma:</translation>
     </message>
 </context>
 <context>
-    <name>SelectWidget</name>
-    <message>
-        <source>Center</source>
-        <translation type="obsolete">Közép</translation>
-    </message>
-</context>
-<context>
     <name>SelectionDisplay</name>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.js" line="+58"/>
@@ -12032,10 +11916,6 @@ a keresési eredményekben megjelenő elemek száma:</translation>
 </context>
 <context>
     <name>ShowAllBlocks</name>
-    <message>
-        <source>&amp;Show all</source>
-        <translation type="vanished">Összes megjelenítése</translation>
-    </message>
     <message>
         <location filename="../scripts/Block/ShowAllBlocks/ShowAllBlocksInit.js" line="+2"/>
         <source>&amp;Show All Blocks</source>
@@ -13811,7 +13691,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+295"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+322"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished">A megszakadt adatok nem támogatottak</translation>
     </message>
@@ -13837,7 +13717,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1098"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1144"/>
         <source>Restore defaults</source>
         <translation type="unfinished">Alapértelmezett beállítások visszaállítása</translation>
     </message>
@@ -14299,7 +14179,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+996"/>
+        <location filename="../scripts/library.js" line="+1011"/>
         <source>Objects</source>
         <translation type="unfinished">Tárgyak</translation>
     </message>

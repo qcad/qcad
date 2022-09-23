@@ -482,10 +482,6 @@
         <translation>Mätvärde</translation>
     </message>
     <message>
-        <source>Linear Factor</source>
-        <translation type="vanished">Linjär faktor</translation>
-    </message>
-    <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="-3"/>
         <source>Scale</source>
         <translation>Skala</translation>

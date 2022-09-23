@@ -482,10 +482,6 @@
         <translation>测量值</translation>
     </message>
     <message>
-        <source>Linear Factor</source>
-        <translation type="vanished">线性因子</translation>
-    </message>
-    <message>
         <location line="+3"/>
         <source>Block Name</source>
         <translation>块名称</translation>
@@ -883,10 +879,6 @@
         <translation>末尾相切</translation>
     </message>
     <message>
-        <source>Simple</source>
-        <translation type="vanished">简单</translation>
-    </message>
-    <message>
         <location filename="../src/entity/RToleranceEntity.cpp" line="-5"/>
         <location line="+1"/>
         <location line="+1"/>
@@ -904,46 +896,6 @@
         <location line="+1"/>
         <source>Text</source>
         <translation>文字</translation>
-    </message>
-    <message>
-        <source>Plain Text</source>
-        <translation type="vanished">纯文本</translation>
-    </message>
-    <message>
-        <source>Font Name</source>
-        <translation type="vanished">字体名</translation>
-    </message>
-    <message>
-        <source>Text Height</source>
-        <translation type="vanished">文本高度</translation>
-    </message>
-    <message>
-        <source>Text Angle</source>
-        <translation type="vanished">文本角度</translation>
-    </message>
-    <message>
-        <source>Bold</source>
-        <translation type="vanished">粗体</translation>
-    </message>
-    <message>
-        <source>Italic</source>
-        <translation type="vanished">斜体</translation>
-    </message>
-    <message>
-        <source>Line Spacing</source>
-        <translation type="vanished">行间隔</translation>
-    </message>
-    <message>
-        <source>Alignment</source>
-        <translation type="vanished">对齐</translation>
-    </message>
-    <message>
-        <source>Horizontal</source>
-        <translation type="vanished">水平</translation>
-    </message>
-    <message>
-        <source>Vertical</source>
-        <translation type="vanished">垂直</translation>
     </message>
     <message>
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="-3"/>

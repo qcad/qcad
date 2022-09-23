@@ -488,10 +488,6 @@
         <translation>Naměřená hodnota</translation>
     </message>
     <message>
-        <source>Linear Factor</source>
-        <translation type="vanished">Lineární faktor</translation>
-    </message>
-    <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="-3"/>
         <source>Scale</source>
         <translation>Měřítko</translation>

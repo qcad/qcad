@@ -482,10 +482,6 @@
         <translation>Mitattu arvo</translation>
     </message>
     <message>
-        <source>Linear Factor</source>
-        <translation type="vanished">Lineaarinen kerroin</translation>
-    </message>
-    <message>
         <location line="+3"/>
         <source>Block Name</source>
         <translation>Lohkon nimi</translation>
@@ -883,10 +879,6 @@
         <translation>Lopputangentti</translation>
     </message>
     <message>
-        <source>Simple</source>
-        <translation type="vanished">Yksinkertainen</translation>
-    </message>
-    <message>
         <location filename="../src/entity/RToleranceEntity.cpp" line="-5"/>
         <location line="+1"/>
         <location line="+1"/>
@@ -904,46 +896,6 @@
         <location line="+1"/>
         <source>Text</source>
         <translation>Teksti</translation>
-    </message>
-    <message>
-        <source>Font Name</source>
-        <translation type="vanished">Kirjasimen nimi</translation>
-    </message>
-    <message>
-        <source>Text Height</source>
-        <translation type="vanished">Tekstin korkeus</translation>
-    </message>
-    <message>
-        <source>Text Angle</source>
-        <translation type="vanished">Tekstin kulma</translation>
-    </message>
-    <message>
-        <source>X Scale</source>
-        <translation type="vanished">X mittakaava</translation>
-    </message>
-    <message>
-        <source>Bold</source>
-        <translation type="vanished">Lihavoitu</translation>
-    </message>
-    <message>
-        <source>Italic</source>
-        <translation type="vanished">Kursiivi</translation>
-    </message>
-    <message>
-        <source>Line Spacing</source>
-        <translation type="vanished">Riviväli</translation>
-    </message>
-    <message>
-        <source>Alignment</source>
-        <translation type="vanished">Tasaus</translation>
-    </message>
-    <message>
-        <source>Horizontal</source>
-        <translation type="vanished">Vaakasuunta</translation>
-    </message>
-    <message>
-        <source>Vertical</source>
-        <translation type="vanished">Pystysuunta</translation>
     </message>
     <message>
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="-3"/>

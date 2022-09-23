@@ -213,29 +213,6 @@
     </message>
 </context>
 <context>
-    <name>RDimStyle</name>
-    <message>
-        <source>Overall dimension scale</source>
-        <translation type="vanished">Échelle de cote globale</translation>
-    </message>
-    <message>
-        <source>Text height</source>
-        <translation type="vanished">Hauteur du texte</translation>
-    </message>
-    <message>
-        <source>Dimension line gap</source>
-        <translation type="vanished">Espacement du texte / ligne de cote</translation>
-    </message>
-    <message>
-        <source>Text above dimension line</source>
-        <translation type="vanished">Texte au-dessus de la ligne de cote</translation>
-    </message>
-    <message>
-        <source>Text inside horizontal</source>
-        <translation type="vanished">Texte intérieur horizontale</translation>
-    </message>
-</context>
-<context>
     <name>RDocumentVariables</name>
     <message>
         <location filename="../src/core/RDocumentVariables.cpp" line="+48"/>
@@ -389,10 +366,6 @@
         <translation>Type</translation>
     </message>
     <message>
-        <source>Block ID</source>
-        <translation type="vanished">Bloc ID</translation>
-    </message>
-    <message>
         <location line="+2"/>
         <source>Layer</source>
         <translation>Calque</translation>
@@ -492,10 +465,6 @@
         <location line="+1"/>
         <source>Object Invisible</source>
         <translation>Objet invisible</translation>
-    </message>
-    <message>
-        <source>Invisible</source>
-        <translation type="vanished">Invisible</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -727,10 +696,6 @@
         <translation>Max extents</translation>
     </message>
     <message>
-        <source>Plot Margins</source>
-        <translation type="vanished">Marges des tracés</translation>
-    </message>
-    <message>
         <location filename="../src/core/RBlockReferenceData.cpp" line="+862"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Une référence de bloc circulaire (récursive) a été détectée :</translation>
@@ -744,10 +709,6 @@
         <location filename="../src/core/RDimStyle.cpp" line="+72"/>
         <source>Style</source>
         <translation>Style</translation>
-    </message>
-    <message>
-        <source>Overall dimension scale</source>
-        <translation type="vanished">Échelle de cote globale</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -785,17 +746,9 @@
         <translation>Distance de la ligne d&apos;attache / objet</translation>
     </message>
     <message>
-        <source>Text above dimension line</source>
-        <translation type="vanished">Texte au-dessus de la ligne de dimension</translation>
-    </message>
-    <message>
         <location line="+1"/>
         <source>Text position vertical</source>
         <translation>Position verticale du texte</translation>
-    </message>
-    <message>
-        <source>Text inside horizontal</source>
-        <translation type="vanished">Texte à l&apos;intérieur de l&apos;horizontale</translation>
     </message>
     <message>
         <location line="-8"/>
@@ -882,122 +835,7 @@
     </message>
 </context>
 <context>
-    <name>RLayer</name>
-    <message>
-        <source>Name</source>
-        <translation type="vanished">Nom</translation>
-    </message>
-    <message>
-        <source>Frozen</source>
-        <translation type="vanished">Gelé</translation>
-    </message>
-    <message>
-        <source>Hidden</source>
-        <translation type="vanished">Caché</translation>
-    </message>
-    <message>
-        <source>Locked</source>
-        <translation type="vanished">Verrouillée</translation>
-    </message>
-    <message>
-        <source>Color</source>
-        <translation type="vanished">Couleur</translation>
-    </message>
-    <message>
-        <source>Linetype</source>
-        <translation type="vanished">Type de ligne</translation>
-    </message>
-    <message>
-        <source>Lineweight</source>
-        <translation type="vanished">Épaisseur de ligne</translation>
-    </message>
-</context>
-<context>
     <name>RLinetype</name>
-    <message>
-        <source>By Layer</source>
-        <translation type="vanished">Par calque</translation>
-    </message>
-    <message>
-        <source>By Block</source>
-        <translation type="vanished">Par bloc</translation>
-    </message>
-    <message>
-        <source>Continuous</source>
-        <translation type="vanished">Continu</translation>
-    </message>
-    <message>
-        <source>Dot</source>
-        <translation type="vanished">Point</translation>
-    </message>
-    <message>
-        <source>Dot (small)</source>
-        <translation type="vanished">Point (petit)</translation>
-    </message>
-    <message>
-        <source>Dot (large)</source>
-        <translation type="vanished">Point (grand)</translation>
-    </message>
-    <message>
-        <source>Dash</source>
-        <translation type="vanished">Tiret</translation>
-    </message>
-    <message>
-        <source>Dash (small)</source>
-        <translation type="vanished">Tiret (petit)</translation>
-    </message>
-    <message>
-        <source>Dash (large)</source>
-        <translation type="vanished">Tiret (grand)</translation>
-    </message>
-    <message>
-        <source>Dash Dot</source>
-        <translation type="vanished">Tiret-point</translation>
-    </message>
-    <message>
-        <source>Dash Dot (small)</source>
-        <translation type="vanished">Tiret-point (petit)</translation>
-    </message>
-    <message>
-        <source>Dash Dot (large)</source>
-        <translation type="vanished">Tiret-point (grand)</translation>
-    </message>
-    <message>
-        <source>Divide</source>
-        <translation type="vanished">Division</translation>
-    </message>
-    <message>
-        <source>Divide (small)</source>
-        <translation type="vanished">Division (petite)</translation>
-    </message>
-    <message>
-        <source>Divide (large)</source>
-        <translation type="vanished">Division (grande)</translation>
-    </message>
-    <message>
-        <source>Center</source>
-        <translation type="vanished">Centré</translation>
-    </message>
-    <message>
-        <source>Center (small)</source>
-        <translation type="vanished">Centre (petit)</translation>
-    </message>
-    <message>
-        <source>Center (large)</source>
-        <translation type="vanished">Centre (grand)</translation>
-    </message>
-    <message>
-        <source>Border</source>
-        <translation type="vanished">Bordure</translation>
-    </message>
-    <message>
-        <source>Border (small)</source>
-        <translation type="vanished">Bordure (petite)</translation>
-    </message>
-    <message>
-        <source>Border (large)</source>
-        <translation type="vanished">Bordure (grande)</translation>
-    </message>
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+54"/>
         <source>Name</source>
@@ -1044,19 +882,11 @@
         <translation>Bordure</translation>
     </message>
     <message>
-        <source>Border (2x)</source>
-        <translation type="vanished">Bordure (2x)</translation>
-    </message>
-    <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Center</source>
         <translation>Centre</translation>
-    </message>
-    <message>
-        <source>Center (2x)</source>
-        <translation type="vanished">Centre (2x)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1220,10 +1050,6 @@
         <source>Drainage Reversed</source>
         <translation>Drainage inverse</translation>
     </message>
-    <message>
-        <source>Drainage Reverse</source>
-        <translation type="vanished">Drainage inverse</translation>
-    </message>
 </context>
 <context>
     <name>RLineweight</name>
@@ -1361,25 +1187,6 @@
         <location line="+1"/>
         <source>2.11mm</source>
         <translation>1.58mm {2.11m?}</translation>
-    </message>
-</context>
-<context>
-    <name>RObject</name>
-    <message>
-        <source>Custom</source>
-        <translation type="vanished">Personnalisé</translation>
-    </message>
-    <message>
-        <source>Type</source>
-        <translation type="vanished">Type</translation>
-    </message>
-    <message>
-        <source>Handle</source>
-        <translation type="vanished">Poignée</translation>
-    </message>
-    <message>
-        <source>Protected</source>
-        <translation type="vanished">Protégé</translation>
     </message>
 </context>
 </TS>

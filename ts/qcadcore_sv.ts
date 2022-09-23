@@ -366,10 +366,6 @@
         <translation>Typ</translation>
     </message>
     <message>
-        <source>Block ID</source>
-        <translation type="vanished">Block ID</translation>
-    </message>
-    <message>
         <location line="+2"/>
         <source>Layer</source>
         <translation>Lager</translation>
@@ -489,10 +485,6 @@
         <location line="+1"/>
         <source>Object Invisible</source>
         <translation>Objekt osynligt</translation>
-    </message>
-    <message>
-        <source>Invisible</source>
-        <translation type="vanished">Osynlig</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -719,10 +711,6 @@
         <translation>Stil</translation>
     </message>
     <message>
-        <source>Overall dimension scale</source>
-        <translation type="vanished">Övergripande dimensionsskala</translation>
-    </message>
-    <message>
         <location line="+2"/>
         <source>Linear measurement factor</source>
         <translation>Faktor för linjär mätning</translation>
@@ -761,10 +749,6 @@
         <location line="+1"/>
         <source>Text position vertical</source>
         <translation>Textens position vertikalt</translation>
-    </message>
-    <message>
-        <source>Text inside horizontal</source>
-        <translation type="vanished">Text inuti horisontell</translation>
     </message>
     <message>
         <location line="-8"/>
@@ -848,33 +832,6 @@
         <location filename="../src/core/RGuiAction.cpp" line="+202"/>
         <source>Requires selection</source>
         <translation>Kräver markering</translation>
-    </message>
-</context>
-<context>
-    <name>RLayer</name>
-    <message>
-        <source>Name</source>
-        <translation type="vanished">Namn</translation>
-    </message>
-    <message>
-        <source>Hidden</source>
-        <translation type="vanished">Dold</translation>
-    </message>
-    <message>
-        <source>Locked</source>
-        <translation type="vanished">Låst</translation>
-    </message>
-    <message>
-        <source>Color</source>
-        <translation type="vanished">Färg</translation>
-    </message>
-    <message>
-        <source>Linetype</source>
-        <translation type="vanished">Linjetyp</translation>
-    </message>
-    <message>
-        <source>Lineweight</source>
-        <translation type="vanished">Linjetjocklek</translation>
     </message>
 </context>
 <context>
@@ -1230,25 +1187,6 @@
         <location line="+1"/>
         <source>2.11mm</source>
         <translation>2.11mm</translation>
-    </message>
-</context>
-<context>
-    <name>RObject</name>
-    <message>
-        <source>Custom</source>
-        <translation type="vanished">Anpassad</translation>
-    </message>
-    <message>
-        <source>Type</source>
-        <translation type="vanished">Typ</translation>
-    </message>
-    <message>
-        <source>Handle</source>
-        <translation type="vanished">Alias</translation>
-    </message>
-    <message>
-        <source>Protected</source>
-        <translation type="vanished">Skyddad</translation>
     </message>
 </context>
 </TS>

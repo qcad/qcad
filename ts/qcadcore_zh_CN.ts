@@ -366,10 +366,6 @@
         <translation>类型</translation>
     </message>
     <message>
-        <source>Block ID</source>
-        <translation type="vanished">块ID</translation>
-    </message>
-    <message>
         <location line="+2"/>
         <source>Layer</source>
         <translation>图层</translation>
@@ -469,10 +465,6 @@
         <location line="+1"/>
         <source>Object Invisible</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Invisible</source>
-        <translation type="vanished">不可见</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -843,122 +835,7 @@
     </message>
 </context>
 <context>
-    <name>RLayer</name>
-    <message>
-        <source>Name</source>
-        <translation type="vanished">名字</translation>
-    </message>
-    <message>
-        <source>Frozen</source>
-        <translation type="vanished">冻结的</translation>
-    </message>
-    <message>
-        <source>Hidden</source>
-        <translation type="obsolete">隐藏</translation>
-    </message>
-    <message>
-        <source>Locked</source>
-        <translation type="vanished">锁定的</translation>
-    </message>
-    <message>
-        <source>Color</source>
-        <translation type="vanished">颜色</translation>
-    </message>
-    <message>
-        <source>Linetype</source>
-        <translation type="vanished">线型</translation>
-    </message>
-    <message>
-        <source>Lineweight</source>
-        <translation type="vanished">线宽</translation>
-    </message>
-</context>
-<context>
     <name>RLinetype</name>
-    <message>
-        <source>By Layer</source>
-        <translation type="vanished">按图层</translation>
-    </message>
-    <message>
-        <source>By Block</source>
-        <translation type="vanished">按块</translation>
-    </message>
-    <message>
-        <source>Continuous</source>
-        <translation type="vanished">连续的</translation>
-    </message>
-    <message>
-        <source>Dot</source>
-        <translation type="vanished">点</translation>
-    </message>
-    <message>
-        <source>Dot (small)</source>
-        <translation type="vanished">点（小）</translation>
-    </message>
-    <message>
-        <source>Dot (large)</source>
-        <translation type="vanished">点（大）</translation>
-    </message>
-    <message>
-        <source>Dash</source>
-        <translation type="vanished">破折号</translation>
-    </message>
-    <message>
-        <source>Dash (small)</source>
-        <translation type="vanished">破折号（小）</translation>
-    </message>
-    <message>
-        <source>Dash (large)</source>
-        <translation type="vanished">破折号（大）</translation>
-    </message>
-    <message>
-        <source>Dash Dot</source>
-        <translation type="vanished">点划线</translation>
-    </message>
-    <message>
-        <source>Dash Dot (small)</source>
-        <translation type="vanished">点划线（小）</translation>
-    </message>
-    <message>
-        <source>Dash Dot (large)</source>
-        <translation type="vanished">点划线（大）</translation>
-    </message>
-    <message>
-        <source>Divide</source>
-        <translation type="vanished">分割线</translation>
-    </message>
-    <message>
-        <source>Divide (small)</source>
-        <translation type="vanished">分割线（小）</translation>
-    </message>
-    <message>
-        <source>Divide (large)</source>
-        <translation type="vanished">分割线（大）</translation>
-    </message>
-    <message>
-        <source>Center</source>
-        <translation type="vanished">居中</translation>
-    </message>
-    <message>
-        <source>Center (small)</source>
-        <translation type="vanished">居中（小）</translation>
-    </message>
-    <message>
-        <source>Center (large)</source>
-        <translation type="vanished">居中（大）</translation>
-    </message>
-    <message>
-        <source>Border</source>
-        <translation type="vanished">边界</translation>
-    </message>
-    <message>
-        <source>Border (small)</source>
-        <translation type="vanished">边界（小）</translation>
-    </message>
-    <message>
-        <source>Border (large)</source>
-        <translation type="vanished">边界（大）</translation>
-    </message>
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+54"/>
         <source>Name</source>
@@ -1310,25 +1187,6 @@
         <location line="+1"/>
         <source>2.11mm</source>
         <translation>2.11mm</translation>
-    </message>
-</context>
-<context>
-    <name>RObject</name>
-    <message>
-        <source>Custom</source>
-        <translation type="vanished">自定义</translation>
-    </message>
-    <message>
-        <source>Type</source>
-        <translation type="obsolete">类型</translation>
-    </message>
-    <message>
-        <source>Handle</source>
-        <translation type="vanished">处理</translation>
-    </message>
-    <message>
-        <source>Protected</source>
-        <translation type="vanished">受保护的</translation>
     </message>
 </context>
 </TS>

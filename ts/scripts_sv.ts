@@ -119,12 +119,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+422"/>
+        <location line="+427"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="-397"/>
+        <location line="-402"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -186,7 +186,7 @@
         <translation>Credits</translation>
     </message>
     <message>
-        <location line="+164"/>
+        <location line="+169"/>
         <source>Licenses</source>
         <translation>Licenser</translation>
     </message>
@@ -300,10 +300,6 @@ the preference changes to take effect.</source>
         <location line="+86"/>
         <source>Defaults for</source>
         <translation>Standard för</translation>
-    </message>
-    <message>
-        <source>Defaults for </source>
-        <translation type="vanished">Standard för </translation>
     </message>
     <message>
         <location line="+2"/>
@@ -442,10 +438,6 @@ the preference changes to take effect.</source>
         <translation>Bågverktyg</translation>
     </message>
     <message>
-        <source>Show arc tools</source>
-        <translation type="vanished">Visa bågverktyg</translation>
-    </message>
-    <message>
         <location line="+23"/>
         <source>&amp;Arc</source>
         <translation>&amp;Båge</translation>
@@ -487,10 +479,6 @@ the preference changes to take effect.</source>
         <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
         <translation>Motsols (positiv)</translation>
-    </message>
-    <message>
-        <source>Direction</source>
-        <translation type="vanished">Riktning</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -657,10 +645,6 @@ the preference changes to take effect.</source>
         <translation>Motsols (positiv)</translation>
     </message>
     <message>
-        <source>Direction</source>
-        <translation type="vanished">Riktning</translation>
-    </message>
-    <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Medsols (negativ)</translation>
@@ -674,10 +658,6 @@ the preference changes to take effect.</source>
         <location line="+7"/>
         <source>Shorter Arc</source>
         <translation>Kortare båge</translation>
-    </message>
-    <message>
-        <source>Solution</source>
-        <translation type="vanished">Lösning</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -759,10 +739,6 @@ the preference changes to take effect.</source>
         <location line="+7"/>
         <source>Counter Clockwise (positive)</source>
         <translation>Motsols (positiv)</translation>
-    </message>
-    <message>
-        <source>Direction</source>
-        <translation type="vanished">Riktning</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -1122,14 +1098,6 @@ Vill du återställa den?</translation>
         <source>Length &amp;2:</source>
         <translation>Längd 2:</translation>
     </message>
-    <message>
-        <source>Length 1:</source>
-        <translation type="vanished">Längd 1:</translation>
-    </message>
-    <message>
-        <source>Length 2:</source>
-        <translation type="vanished">Längd 2:</translation>
-    </message>
 </context>
 <context>
     <name>BitmapExport</name>
@@ -1276,10 +1244,6 @@ Vill du återställa den?</translation>
         <translation>Det går inte att redigera block när ett block redigeras på plats</translation>
     </message>
     <message>
-        <source>Show block tools</source>
-        <translation type="vanished">Visa blockverktyg</translation>
-    </message>
-    <message>
         <location line="-82"/>
         <source>&amp;Block</source>
         <translation>&amp;Block</translation>
@@ -1319,10 +1283,6 @@ Vill du återställa den?</translation>
         <translation>Blocket finns redan.</translation>
     </message>
     <message>
-        <source>Block Data</source>
-        <translation type="vanished">Blockdata</translation>
-    </message>
-    <message>
         <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
         <source>Block</source>
         <translation>Block</translation>
@@ -1331,10 +1291,6 @@ Vill du återställa den?</translation>
         <location line="+8"/>
         <source>Block name:</source>
         <translation>Blocknamn:</translation>
-    </message>
-    <message>
-        <source>block 1</source>
-        <translation type="vanished">block 1</translation>
     </message>
 </context>
 <context>
@@ -1356,14 +1312,14 @@ Vill du återställa den?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+492"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+53"/>
-        <location line="+39"/>
+        <location line="+44"/>
         <source>Block List</source>
         <translation>Lista över block</translation>
     </message>
@@ -1501,10 +1457,6 @@ Vill du återställa den?</translation>
         <translation>Första brytpunkten</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="obsolete">Klar</translation>
-    </message>
-    <message>
         <location line="+8"/>
         <source>Second break point</source>
         <translation>Andra brytpunkten</translation>
@@ -1536,7 +1488,7 @@ Vill du återställa den?</translation>
 <context>
     <name>CadToolBar</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+52"/>
+        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+53"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -1575,7 +1527,7 @@ Vill du återställa den?</translation>
     <name>CadToolBarPanel</name>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/CadToolBarPanel.js" line="+39"/>
-        <location line="+71"/>
+        <location line="+72"/>
         <source>Back</source>
         <translation>Tillbaka</translation>
     </message>
@@ -1583,7 +1535,7 @@ Vill du återställa den?</translation>
 <context>
     <name>CadToolMatrix</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+373"/>
+        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+383"/>
         <source>Expand all</source>
         <translation>Expandera alla</translation>
     </message>
@@ -1603,13 +1555,13 @@ Vill du återställa den?</translation>
         <translation>Ikonvy</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+34"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+47"/>
+        <location line="+53"/>
         <source>Tool Matrix</source>
         <translation>Verktygsmatris</translation>
     </message>
@@ -1645,7 +1597,7 @@ Vill du återställa den?</translation>
 <context>
     <name>CheckForUpdates</name>
     <message>
-        <location filename="../scripts/Help/CheckForUpdates/CheckForUpdates.js" line="+62"/>
+        <location filename="../scripts/Help/CheckForUpdates/CheckForUpdates.js" line="+68"/>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesDialog.ui" line="+14"/>
         <source>Checking for Updates...</source>
         <translation>Kontrollerar om det finns uppdateringar...</translation>
@@ -1750,10 +1702,6 @@ Vill du återställa den?</translation>
         <translation>Centrera vänster om linje P1 - P2</translation>
     </message>
     <message>
-        <source>Solution</source>
-        <translation type="vanished">Lösning</translation>
-    </message>
-    <message>
         <location line="+20"/>
         <source>Center Right of Line P1 - P2</source>
         <translation>Centrera höger om linje P1 - P2</translation>
@@ -1829,10 +1777,6 @@ Vill du återställa den?</translation>
         <location line="+103"/>
         <source>No solution</source>
         <translation>Ingen lösning</translation>
-    </message>
-    <message>
-        <source>Invalid radius</source>
-        <translation type="vanished">Ogiltig radie</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TR.ui" line="+17"/>
@@ -2455,10 +2399,6 @@ Vill du återställa den?</translation>
         <translation>Nummer Format:</translation>
     </message>
     <message>
-        <source>Width:</source>
-        <translation type="obsolete">Bredd:</translation>
-    </message>
-    <message>
         <location line="+79"/>
         <source>Prefix:</source>
         <translation>Prefix:</translation>
@@ -2781,10 +2721,6 @@ Vill du återställa den?</translation>
         <source>Cancel</source>
         <translation>Avbryt</translation>
     </message>
-    <message>
-        <source>Scale:</source>
-        <translation type="obsolete">Skala:</translation>
-    </message>
 </context>
 <context>
     <name>DimAligned</name>
@@ -2943,10 +2879,6 @@ Vill du återställa den?</translation>
             <numerusform>Etikettpositionen för %1 dimension har återställts.</numerusform>
             <numerusform>Etikettpositionen för %2 dimensioner har återställts.</numerusform>
         </translation>
-    </message>
-    <message>
-        <source>Reset label position of %1 dimension(s).</source>
-        <translation type="vanished">Återställ etikettsposition av %1 dimension(er).</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRegen/DimRegenInit.js" line="+2"/>
@@ -3494,19 +3426,11 @@ finns redan i listan.</translation>
 <context>
     <name>DrawFromCSV</name>
     <message>
-        <source>No import file selected !</source>
-        <translation type="vanished">Ingen importfil har valts!</translation>
-    </message>
-    <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV.js" line="+145"/>
         <location line="+15"/>
         <location line="+1275"/>
         <source>Command ended.</source>
         <translation>Kommandot avslutades.</translation>
-    </message>
-    <message>
-        <source>No file opened!</source>
-        <translation type="vanished">Ingen fil har öppnats!</translation>
     </message>
     <message>
         <location line="-1293"/>
@@ -4070,225 +3994,9 @@ finns redan i listan.</translation>
         <translation>Ett nytt lager har lagts till: %1</translation>
     </message>
     <message>
-        <source>Unsupported or invalid CSV style, ignored ! Text line %1</source>
-        <translation type="vanished">Otillämpad eller ogiltig CSV-stil, ignoreras ! Textrad %1</translation>
-    </message>
-    <message>
-        <source>Setting new relative origin failed, ignored ! Text line %1</source>
-        <translation type="vanished">Det gick inte att ställa in ett nytt relativt ursprung, ignorerades! Textrad %1</translation>
-    </message>
-    <message>
-        <source>Can not switch to layer, ignored ! Text line %1 layer: %2</source>
-        <translation type="vanished">Kan inte byta till lager, ignoreras! Textrad %1 lager: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct  layer switch, ignored ! Text line %1</source>
-        <translation type="vanished">Inte en korrekt lageromkopplare, ignoreras ! Textrad %1</translation>
-    </message>
-    <message>
-        <source>Not a correct  new layer switch, ignored ! Text line %1</source>
-        <translation type="vanished">Inte en korrekt ny lagerväxel, ignoreras ! Textrad %1</translation>
-    </message>
-    <message>
-        <source>Can not hide layer, ignored ! Text line %1 layer: %2</source>
-        <translation type="vanished">Kan inte dölja lagret, ignoreras! Textrad %1 lager: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct  hide layer switch, ignored ! Text line %1</source>
-        <translation type="vanished">Det är inte en korrekt växel för att dölja lagret, den ignoreras! Textrad %1</translation>
-    </message>
-    <message>
-        <source>Can not freeze layer, ignored ! Text line %1 layer: %2</source>
-        <translation type="vanished">Kan inte frysa lagret, ignoreras ! Textrad %1 lager: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct  freeze layer switch, ignored ! Text line %1</source>
-        <translation type="vanished">Inte en korrekt byte av fryslager, ignoreras! Textrad %1</translation>
-    </message>
-    <message>
-        <source>Can not lock layer, ignored ! Text line %1 layer: %2</source>
-        <translation type="vanished">Kan inte låsa lagret, ignoreras! Textrad %1 lager: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct  lock layer switch, ignored ! Text line %1</source>
-        <translation type="vanished">Inte en korrekt låsskiktsomkoppling, ignoreras! Textrad %1</translation>
-    </message>
-    <message>
-        <source>Can not allow layer, ignored ! Text line %1 layer: %2</source>
-        <translation type="vanished">Kan inte tillåta lager, ignoreras! Textrad %1 lager: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct  allow layer switch, ignored ! Text line %1</source>
-        <translation type="vanished">Inte en korrekt allow layer switch, ignoreras ! Textrad %1</translation>
-    </message>
-    <message>
-        <source>Low field count !</source>
-        <translation type="vanished">Lågt antal fält !</translation>
-    </message>
-    <message>
-        <source>Odd field count !</source>
-        <translation type="vanished">Udda antal fält !</translation>
-    </message>
-    <message>
-        <source>Rv Invalid !</source>
-        <translation type="vanished">Rv Ogiltig !</translation>
-    </message>
-    <message>
-        <source>Rv1 Invalid !</source>
-        <translation type="vanished">Rv1 Ogiltig !</translation>
-    </message>
-    <message>
-        <source>Rv2 Invalid !</source>
-        <translation type="vanished">Rv2 Ogiltig !</translation>
-    </message>
-    <message>
-        <source>Radius Invalid !</source>
-        <translation type="vanished">Radien är ogiltig !</translation>
-    </message>
-    <message>
-        <source>Angle Invalid !</source>
-        <translation type="vanished">Vinkeln är ogiltig!</translation>
-    </message>
-    <message>
-        <source>Angle1 Invalid !</source>
-        <translation type="vanished">Vinkel1 ogiltig !</translation>
-    </message>
-    <message>
-        <source>Angle2 Invalid !</source>
-        <translation type="vanished">Angle2 ogiltig !</translation>
-    </message>
-    <message>
-        <source>Equal angles !</source>
-        <translation type="vanished">Lika vinklar !</translation>
-    </message>
-    <message>
-        <source>Rv3 Invalid !</source>
-        <translation type="vanished">Rv3 ogiltig !</translation>
-    </message>
-    <message>
-        <source>Arc Invalid !</source>
-        <translation type="vanished">Arc ogiltig !</translation>
-    </message>
-    <message>
-        <source>Center Invalid !</source>
-        <translation type="vanished">Centrum ogiltigt !</translation>
-    </message>
-    <message>
-        <source>Radius too small !</source>
-        <translation type="vanished">Radien är för liten!</translation>
-    </message>
-    <message>
-        <source>Circle Invalid !</source>
-        <translation type="vanished">Cirkeln är ogiltig!</translation>
-    </message>
-    <message>
-        <source>Rv4 Invalid !</source>
-        <translation type="vanished">Rv4 ogiltig !</translation>
-    </message>
-    <message>
-        <source>Size Invalid !</source>
-        <translation type="vanished">Storleken är ogiltig!</translation>
-    </message>
-    <message>
-        <source>Size in X Invalid !</source>
-        <translation type="vanished">Storlek i X ogiltig !</translation>
-    </message>
-    <message>
-        <source>Size in Y Invalid !</source>
-        <translation type="vanished">Storlek i Y Ogiltig !</translation>
-    </message>
-    <message>
-        <source>Polygon, less than 5 references !</source>
-        <translation type="vanished">Polygon, mindre än 5 referenser !</translation>
-    </message>
-    <message>
-        <source>Rv %1 Invalid !</source>
-        <translation type="vanished">Rv %1 ogiltig !</translation>
-    </message>
-    <message>
-        <source>Polyline, less than 2 references !</source>
-        <translation type="vanished">Polylinje, mindre än 2 referenser !</translation>
-    </message>
-    <message>
-        <source>Bulge %1 Invalid !</source>
-        <translation type="vanished">Bulge %1 ogiltig!</translation>
-    </message>
-    <message>
-        <source>Unsupported PRO feature !</source>
-        <translation type="vanished">PRO-funktion som inte stöds !</translation>
-    </message>
-    <message>
-        <source>Fit point Spline, less than 3 references !</source>
-        <translation type="vanished">Anpassningspunkt Spline, mindre än 3 referenser !</translation>
-    </message>
-    <message>
-        <source>Control point Spline, less than 4 references !</source>
-        <translation type="vanished">Kontrollpunkt Spline, mindre än 4 referenser !</translation>
-    </message>
-    <message>
-        <source>Text, low field count !</source>
-        <translation type="vanished">Text, lågt antal fält !</translation>
-    </message>
-    <message>
-        <source>Text, odd field count !</source>
-        <translation type="vanished">Text, udda antal fält !</translation>
-    </message>
-    <message>
-        <source>Height Invalid !</source>
-        <translation type="vanished">Höjden är ogiltig!</translation>
-    </message>
-    <message>
-        <source>Width Invalid !</source>
-        <translation type="vanished">Bredden är ogiltig!</translation>
-    </message>
-    <message>
-        <source>Vert. alignment Invalid !</source>
-        <translation type="vanished">Vert. anpassning ogiltig !</translation>
-    </message>
-    <message>
-        <source>Horz. alignment Invalid !</source>
-        <translation type="vanished">Horz. anpassning Ogiltig !</translation>
-    </message>
-    <message>
-        <source>Drawing direction Invalid !</source>
-        <translation type="vanished">Ritningsriktning ogiltig !</translation>
-    </message>
-    <message>
-        <source>Line spacing style Invalid !</source>
-        <translation type="vanished">Stil för radavstånd ogiltig !</translation>
-    </message>
-    <message>
-        <source>Line spacing Invalid !</source>
-        <translation type="vanished">Radavstånd ogiltigt !</translation>
-    </message>
-    <message>
-        <source>Unsupported entry ! Text line %1</source>
-        <translation type="vanished">Uppgift som inte stöds ! Textrad %1</translation>
-    </message>
-    <message>
-        <source>Error with first optional list !</source>
-        <translation type="vanished">Fel i den första valfria listan !</translation>
-    </message>
-    <message>
-        <source>Error with second optional list !</source>
-        <translation type="vanished">Fel med den andra valfria listan !</translation>
-    </message>
-    <message>
-        <source>Not a correct entry ! Text line %1 : %2</source>
-        <translation type="vanished">Det är inte en korrekt uppgift! Textrad %1 : %2</translation>
-    </message>
-    <message>
-        <source>Casted entries : %1 with %2 text lines</source>
-        <translation type="vanished">Gjutna poster : %1 med %2 textrader</translation>
-    </message>
-    <message>
         <location line="-447"/>
         <source>Importing CSV complete. Command ended.</source>
         <translation>Import av CSV är klar. Kommando avslutat.</translation>
-    </message>
-    <message>
-        <source>Nothing casted !</source>
-        <translation type="vanished">Ingenting kastat!</translation>
     </message>
     <message>
         <location line="+46"/>
@@ -4304,66 +4012,6 @@ finns redan i listan.</translation>
         <location line="+0"/>
         <source>All Files</source>
         <translation>Alla filer</translation>
-    </message>
-    <message>
-        <source>Attributes empty ! Text line %1</source>
-        <translation type="vanished">Attributen är tomma ! Textrad %1</translation>
-    </message>
-    <message>
-        <source>Not a correct layer name ! Text line %1 name: %2</source>
-        <translation type="vanished">Det är inte ett korrekt namn på lagret! Textrad %1 namn: %2</translation>
-    </message>
-    <message>
-        <source>Layer doesn&apos;t exist, ignored ! Text line %1 layer: %2</source>
-        <translation type="vanished">Lagret existerar inte, ignoreras! Textrad %1 lager: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct color, ignored ! Text line %1 color: %2</source>
-        <translation type="vanished">Inte en korrekt färg, ignorerad ! Textrad %1 färg: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct Lineweight, ignored ! Text line %1 weight: %2</source>
-        <translation type="vanished">Inte en korrekt linjvikt, ignoreras! Textrad %1 vikt: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct Linetype, ignored ! Text line %1 type: %2</source>
-        <translation type="vanished">Inte en korrekt Linetype, ignoreras! Textrad %1 typ: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct Linetype scale, ignored ! Text line %1 scale: %2</source>
-        <translation type="vanished">Inte en korrekt Linetype-skala, ignoreras! Textrad %1 skala: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct attribute, ignored ! Text line %1 &gt; %2</source>
-        <translation type="vanished">Inte ett korrekt attribut, ignoreras! Textrad %1 &gt; %2</translation>
-    </message>
-    <message>
-        <source>Parent layer doesn&apos;t exist ! Text line %1 layer: %2</source>
-        <translation type="vanished">Det överordnade lagret finns inte! Textrad %1 lager: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct color ! Text line %1 color: %2</source>
-        <translation type="vanished">Inte en korrekt färg! Textrad %1 färg: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct Lineweight ! Text line %1 weight: %2</source>
-        <translation type="vanished">Det är inte en korrekt linjvikt! Textrad %1 vikt: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct Linetype ! Text line %1 type: %2</source>
-        <translation type="vanished">Inte en korrekt Linetype! Textrad %1 typ: %2</translation>
-    </message>
-    <message>
-        <source>Add/Update layer ignored !</source>
-        <translation type="vanished">Lägg till/uppdatera lagret ignoreras !</translation>
-    </message>
-    <message>
-        <source>Updated layer : %1</source>
-        <translation type="vanished">Uppdaterat lager : %1</translation>
-    </message>
-    <message>
-        <source>Added new layer : %1</source>
-        <translation type="vanished">Ett nytt lager har lagts till: %1</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
@@ -4400,10 +4048,6 @@ finns redan i listan.</translation>
         <location line="+10"/>
         <source>Next vertex</source>
         <translation>Nästa topp</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="obsolete">Klar</translation>
     </message>
     <message>
         <location line="+421"/>
@@ -4540,7 +4184,7 @@ finns redan i listan.</translation>
         <translation>Ingen</translation>
     </message>
     <message>
-        <location line="+662"/>
+        <location line="+664"/>
         <source>Options</source>
         <translation>Alternativ</translation>
     </message>
@@ -4555,7 +4199,7 @@ finns redan i listan.</translation>
         <translation>CAD-verktyg</translation>
     </message>
     <message>
-        <location line="+584"/>
+        <location line="+582"/>
         <source>Invalid position</source>
         <translation>Ogiltig position</translation>
     </message>
@@ -4788,10 +4432,6 @@ finns redan i listan.</translation>
         <translation>Ellipsverktyg</translation>
     </message>
     <message>
-        <source>Show ellipse tools</source>
-        <translation type="vanished">Visa ellipsverktyg</translation>
-    </message>
-    <message>
         <location line="+23"/>
         <source>&amp;Ellipse</source>
         <translation>&amp;Ellips</translation>
@@ -4878,10 +4518,6 @@ finns redan i listan.</translation>
         <location line="+7"/>
         <source>Counter Clockwise (positive)</source>
         <translation>Motsols (positiv)</translation>
-    </message>
-    <message>
-        <source>Direction</source>
-        <translation type="vanished">Riktning</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -5649,12 +5285,6 @@ finns redan i listan.</translation>
         <translation>Gruppera alla gjutningar till en operation.</translation>
     </message>
     <message>
-        <source>Cast on newly sub-layer &apos;Painted&apos;.
-BUG: Interferes with group castings.</source>
-        <translation type="vanished">Gjutet på ett nytt underlag &apos;Painted&apos;.
-BUG: Störningar vid gruppgjutningar.</translation>
-    </message>
-    <message>
         <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
         <translation>Börja med att gjuta en början av en spets på öppna former.</translation>
@@ -6303,10 +5933,6 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <translation>Urval</translation>
     </message>
     <message>
-        <source>Text height display threshold (px):</source>
-        <translation type="vanished">Texthöjd visningströskel (px):</translation>
-    </message>
-    <message>
         <location line="-559"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation>Visa bågar som linjer under denna vinkel (grader):</translation>
@@ -6498,10 +6124,6 @@ BUG: Störningar vid gruppgjutningar.</translation>
 <context>
     <name>GraphicsViewFonts</name>
     <message>
-        <source>Ruler Font:</source>
-        <translation type="vanished">Teckensnitt, linjaler:</translation>
-    </message>
-    <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+41"/>
         <source>Ruler font:</source>
         <translation>Typsnitt för linjal:</translation>
@@ -6612,18 +6234,6 @@ BUG: Störningar vid gruppgjutningar.</translation>
 <context>
     <name>Hatch</name>
     <message>
-        <source>No boundary selected.</source>
-        <translation type="vanished">Ingen yttre gräns vald.</translation>
-    </message>
-    <message>
-        <source>Loop not closed at point %1/%2.</source>
-        <translation type="vanished">Slingan är inte sluten vid punkt %1/%2.</translation>
-    </message>
-    <message>
-        <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
-        <translation type="vanished">Varje gränsobjekt måste vara en linje, båge, cirkel, ellipsbåge, ellips, polylinje eller list. Found:</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Hatch/Hatch.js" line="+72"/>
         <source>Hatch Tools</source>
         <translation>Verktyg för luckor</translation>
@@ -6632,10 +6242,6 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <location line="+27"/>
         <source>&amp;Hatch</source>
         <translation>&amp;Lucka</translation>
-    </message>
-    <message>
-        <source>Draw hatch or solid fill</source>
-        <translation type="vanished">Rita lucka eller helfyll</translation>
     </message>
 </context>
 <context>
@@ -6966,10 +6572,6 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <translation>Ange den andra raden</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="obsolete">Klar</translation>
-    </message>
-    <message>
         <location line="+96"/>
         <source>Angle:</source>
         <translation>Vinkel:</translation>
@@ -6986,10 +6588,6 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+70"/>
         <source>Choose arc, circle, ellipse or elliptical arc</source>
         <translation>Välj båge, cirkel, ellips eller elliptisk båge</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="obsolete">Klar</translation>
     </message>
     <message>
         <location line="+236"/>
@@ -7134,10 +6732,6 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <translation>Ställ in nästa polygonhörn</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="obsolete">Klar</translation>
-    </message>
-    <message>
         <location line="+121"/>
         <source>Polygon area:</source>
         <translation>Polygonområdet:</translation>
@@ -7176,17 +6770,9 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <translation>Gör ett val först. Kommando avslutat.</translation>
     </message>
     <message>
-        <source>Multiple selection.</source>
-        <translation type="vanished">Flera val.</translation>
-    </message>
-    <message>
         <location line="+9"/>
         <source>Not implemented. Command terminated.</source>
         <translation>Inte genomfört. Kommandot avslutas.</translation>
-    </message>
-    <message>
-        <source>Centroid &amp; area script by CVH</source>
-        <translation type="vanished">Centroid area script av CVH</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -7197,14 +6783,6 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <location line="+46"/>
         <source>Approximated enclosed area:</source>
         <translation>Ungefärlig inhägnad yta:</translation>
-    </message>
-    <message>
-        <source>Ellipse arc sector area (closed format): %1</source>
-        <translation type="vanished">Ellipsbågens sektorområde (slutet format): %1</translation>
-    </message>
-    <message>
-        <source>Ellipse arc segment area (closed format): %1</source>
-        <translation type="vanished">Ellipsens bågsegmentområde (slutet format): %1</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -7222,21 +6800,9 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <translation>Differentiellt skrafferat område:</translation>
     </message>
     <message>
-        <source>Unsupported entity type.</source>
-        <translation type="vanished">Enhetstyp som inte stöds.</translation>
-    </message>
-    <message>
         <location line="-68"/>
         <source>Multiple entities in selection.</source>
         <translation>Flera enheter i urvalet.</translation>
-    </message>
-    <message>
-        <source>Area centroid script (v0.31) by CVH</source>
-        <translation type="vanished">Skript för områdescentroid (v0.31) av CVH</translation>
-    </message>
-    <message>
-        <source>2D Centroid</source>
-        <translation type="vanished">2D-centroid</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -7252,10 +6818,6 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <location line="+8"/>
         <source>No results.</source>
         <translation>Inga resultat.</translation>
-    </message>
-    <message>
-        <source>Centroid point</source>
-        <translation type="vanished">Centroidpunkt</translation>
     </message>
     <message>
         <location line="-74"/>
@@ -7312,10 +6874,6 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <translation>Självskärande form nära (%1). Inga resultat.</translation>
     </message>
     <message>
-        <source>Add centroid for a selected entity.</source>
-        <translation type="vanished">Lägg till centroid för en vald enhet.</translation>
-    </message>
-    <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+19"/>
         <source>&amp;Area Centroid</source>
         <translation>&amp;Område centroid</translation>
@@ -7329,14 +6887,6 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <location line="+1"/>
         <source>Creates a new uniform areal density 2D Centroid marker and value labels for a selected entity</source>
         <translation>Skapar en ny enhetlig arealdensitet 2D Centroid-markör och värdeetiketter för en vald enhet</translation>
-    </message>
-    <message>
-        <source>Add 2D area centroid for a selected entity.</source>
-        <translation type="vanished">Lägg till 2D-områdescentroid för en vald enhet.</translation>
-    </message>
-    <message>
-        <source>Add 2D uniform density area centroid marker and values for a selected entity.</source>
-        <translation type="vanished">Lägg till centroidmarkörer och värden för 2D-områden med enhetlig täthet för en vald enhet.</translation>
     </message>
 </context>
 <context>
@@ -7474,10 +7024,6 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <translation>Ange den andra enheten</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="obsolete">Klar</translation>
-    </message>
-    <message>
         <location line="+95"/>
         <source>Distance:</source>
         <translation>Avstånd:</translation>
@@ -7499,10 +7045,6 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <location line="+8"/>
         <source>Specify point</source>
         <translation>Ange punkt</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="obsolete">Klar</translation>
     </message>
     <message>
         <location line="+81"/>
@@ -7528,10 +7070,6 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <translation>Andra punkten</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="obsolete">Klar</translation>
-    </message>
-    <message>
         <location line="+53"/>
         <source>Distance:</source>
         <translation>Avstånd:</translation>
@@ -7555,37 +7093,6 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <location filename="../scripts/Information/InfoDistancePP/InfoDistancePPInit.js" line="+2"/>
         <source>Distance &amp;Point to Point</source>
         <translation>Avstånd punkt till punkt</translation>
-    </message>
-</context>
-<context>
-    <name>InfoPolylineArea</name>
-    <message>
-        <source>Choose polyline</source>
-        <translation type="vanished">Välj polylinje</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="obsolete">Klar</translation>
-    </message>
-    <message>
-        <source>Area</source>
-        <translation type="vanished">Område</translation>
-    </message>
-    <message>
-        <source>Circumference</source>
-        <translation type="vanished">Omkrets</translation>
-    </message>
-    <message>
-        <source>Polyline area:</source>
-        <translation type="vanished">Polylinjeområde:</translation>
-    </message>
-    <message>
-        <source>circumference:</source>
-        <translation type="vanished">omkrets:</translation>
-    </message>
-    <message>
-        <source>Polyl&amp;ine Area</source>
-        <translation type="vanished">Polylinjeområde</translation>
     </message>
 </context>
 <context>
@@ -7742,66 +7249,6 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <translation>Kombinerad centroid:</translation>
     </message>
     <message>
-        <source>Centroids weighted sum script (v0.10b) by CVH</source>
-        <translation type="vanished">Skript för vägd summa av Centroider (v0.10b) av CVH</translation>
-    </message>
-    <message>
-        <source>2D Centroid</source>
-        <translation type="vanished">2D-centroid</translation>
-    </message>
-    <message>
-        <source>Density</source>
-        <translation type="vanished">Densitet</translation>
-    </message>
-    <message>
-        <source>X position</source>
-        <translation type="vanished">X-position</translation>
-    </message>
-    <message>
-        <source>Y position</source>
-        <translation type="vanished">Y-position</translation>
-    </message>
-    <message>
-        <source>Weighted</source>
-        <translation type="vanished">Vägd</translation>
-    </message>
-    <message>
-        <source>No centroid markers in selection.</source>
-        <translation type="vanished">Inga centroidmarkörer i urvalet.</translation>
-    </message>
-    <message>
-        <source>One marker selected, nothing to sum. Please verify selection.</source>
-        <translation type="vanished">En markör vald, inget att summera. Kontrollera valet.</translation>
-    </message>
-    <message>
-        <source>Results in Zero.</source>
-        <translation type="vanished">Resultat i noll.</translation>
-    </message>
-    <message>
-        <source>Total sum(%1):</source>
-        <translation type="vanished">Total summa(%1):</translation>
-    </message>
-    <message>
-        <source>Weighted sum(%1):</source>
-        <translation type="vanished">Vägd summa(%1):</translation>
-    </message>
-    <message>
-        <source>Summed centroid position:</source>
-        <translation type="vanished">Summerad centroidposition:</translation>
-    </message>
-    <message>
-        <source>&amp;Sum Centroids Weighted</source>
-        <translation type="vanished">&amp;Summa centroider viktade</translation>
-    </message>
-    <message>
-        <source>Sum selected 2D centroid markers weighted.</source>
-        <translation type="vanished">Summan av valda 2D-centroidmarkörer viktade.</translation>
-    </message>
-    <message>
-        <source>Sum selected 2D centroid markers weighted by their individual custom density.</source>
-        <translation type="vanished">Summera utvalda 2D-centroidmarkörer viktade med deras individuella anpassade täthet.</translation>
-    </message>
-    <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+19"/>
         <source>&amp;Sum 2D Centroids weighted</source>
         <translation>Summa 2D Centroids viktad</translation>
@@ -7830,21 +7277,9 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <translation>Gör ett val först. Kommando avslutat.</translation>
     </message>
     <message>
-        <source>Wire centroid script (v0.31) by CVH</source>
-        <translation type="vanished">Script för trådcentroid (v0.31) av CVH</translation>
-    </message>
-    <message>
         <location line="+12"/>
         <source>Length:</source>
         <translation>Längd:</translation>
-    </message>
-    <message>
-        <source>2D Centroid</source>
-        <translation type="vanished">2D-centroid</translation>
-    </message>
-    <message>
-        <source>Centroid markers circle in selection. No results.</source>
-        <translation type="vanished">Centroidmarkeringar i cirkeln i urvalet. Inga resultat.</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -7861,14 +7296,6 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <location line="+15"/>
         <source>No results.</source>
         <translation>Inga resultat.</translation>
-    </message>
-    <message>
-        <source>Results in Zero.</source>
-        <translation type="vanished">Resultat i noll.</translation>
-    </message>
-    <message>
-        <source>Centroid point</source>
-        <translation type="vanished">Centroidpunkt</translation>
     </message>
     <message>
         <location line="-71"/>
@@ -7935,14 +7362,6 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <location line="+1"/>
         <source>Creates a new uniform linear density 2D Centroid marker and value labels for a selection of entities</source>
         <translation>Skapar en ny enhetlig linjär täthet 2D Centroid-markör och värdeetiketter för ett urval av enheter</translation>
-    </message>
-    <message>
-        <source>Add 2D wire centroid for a selection.</source>
-        <translation type="vanished">Lägg till 2D-trådcentroid för ett urval.</translation>
-    </message>
-    <message>
-        <source>Add 2D uniform density wire centroid marker and values for a selection of entities.</source>
-        <translation type="vanished">Lägg till 2D-markörer och värden för centroiden för tråd med enhetlig densitet för ett urval av enheter.</translation>
     </message>
 </context>
 <context>
@@ -8180,10 +7599,6 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <translation>Justerat ogiltigt blocknamn till &quot;%1&quot;</translation>
     </message>
     <message>
-        <source>Adjusted invalid block name to &apos;%1&apos;</source>
-        <translation type="vanished">Ändrade ogiltigt blocknamn till &apos;%1&apos;</translation>
-    </message>
-    <message>
         <location line="+69"/>
         <source>Position</source>
         <translation>Position</translation>
@@ -8246,10 +7661,6 @@ BUG: Störningar vid gruppgjutningar.</translation>
 </context>
 <context>
     <name>InsertScriptItem</name>
-    <message>
-        <source>Position</source>
-        <translation type="vanished">Position</translation>
-    </message>
     <message>
         <location filename="../scripts/Block/InsertScriptItem/InsertScriptItemInit.js" line="+2"/>
         <source>Insert &amp;Script</source>
@@ -8638,14 +8049,6 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <translation>nästa spets</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">Klar</translation>
-    </message>
-    <message>
-        <source>Undo Last Segement</source>
-        <translation type="vanished">Ångra senaste segment</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
         <source>Undo Last Segment</source>
         <translation>Ångra det senaste segmentet</translation>
@@ -8672,10 +8075,6 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
         <translation>&amp;Ledarlinje från markerad text</translation>
-    </message>
-    <message>
-        <source>&amp;Leader from selected text</source>
-        <translation type="vanished">&amp;Ledarlinje från utvald text</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
@@ -8835,18 +8234,6 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <location line="+30"/>
         <source>DB error</source>
         <translation>DB-fel</translation>
-    </message>
-    <message>
-        <source>Plugin LibraryBrowser: cannot connect to DB.
-Driver error: %1
-Database error: %2
-Database file: %3
-Library browser will not be available.</source>
-        <translation type="vanished">Plugin LibraryBrowser: kan inte ansluta till DB.
-Fel i drivrutinen: %1
-Fel i databasen: %2
-Databasfil: %3
-Bibliotekswebbläsaren kommer inte att vara tillgänglig.</translation>
     </message>
     <message>
         <location line="+44"/>
@@ -9032,10 +8419,6 @@ som visas i sökresultaten:</translation>
         <translation>Linjeverktyg</translation>
     </message>
     <message>
-        <source>Show line tools</source>
-        <translation type="vanished">Visa linjeverktyg</translation>
-    </message>
-    <message>
         <location line="+23"/>
         <source>&amp;Line</source>
         <translation>&amp;Linje</translation>
@@ -9072,10 +8455,6 @@ som visas i sökresultaten:</translation>
         <location line="+10"/>
         <source>Next point</source>
         <translation>Nästa punkt</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="obsolete">Klar</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.ui" line="+23"/>
@@ -9227,10 +8606,6 @@ som visas i sökresultaten:</translation>
         <translation>Andra punkten</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="obsolete">Klar</translation>
-    </message>
-    <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js" line="+2"/>
         <source>Box &amp;Joint from 2 Points</source>
         <translation>Box Joint från 2 punkter</translation>
@@ -9287,10 +8662,6 @@ som visas i sökresultaten:</translation>
         <location line="+7"/>
         <source>Second point</source>
         <translation>Andra punkten</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="obsolete">Klar</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
@@ -9452,10 +8823,6 @@ som visas i sökresultaten:</translation>
 </context>
 <context>
     <name>LineParallel</name>
-    <message>
-        <source>&amp;Distance:</source>
-        <translation type="vanished">&amp;Avstånd:</translation>
-    </message>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>Dist&amp;ance:</source>
@@ -10310,33 +9677,6 @@ som visas i sökresultaten:</translation>
     </message>
 </context>
 <context>
-    <name>OrthogonalProjections</name>
-    <message>
-        <source>Next vertex</source>
-        <translation type="obsolete">nästa spets</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="obsolete">Klar</translation>
-    </message>
-    <message>
-        <source>close</source>
-        <translation type="obsolete">stäng</translation>
-    </message>
-    <message>
-        <source>undo</source>
-        <translation type="obsolete">ångra</translation>
-    </message>
-    <message>
-        <source>redo</source>
-        <translation type="obsolete">gör om</translation>
-    </message>
-    <message>
-        <source>arc</source>
-        <translation type="obsolete">båge</translation>
-    </message>
-</context>
-<context>
     <name>PageSettings</name>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+31"/>
@@ -10475,17 +9815,9 @@ som visas i sökresultaten:</translation>
         <translation>Rotation:</translation>
     </message>
     <message>
-        <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation type="obsolete">Rotera klistrade objekt&lt;br&gt;med denna vinkel</translation>
-    </message>
-    <message>
         <location line="+126"/>
         <source>Scale:</source>
         <translation>Skala:</translation>
-    </message>
-    <message>
-        <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation type="obsolete">Skala klistrade objekt&lt;br&gt;med faktor</translation>
     </message>
     <message>
         <location line="+88"/>
@@ -10615,10 +9947,6 @@ som visas i sökresultaten:</translation>
         <location line="+0"/>
         <source>General</source>
         <translation>Allmänt</translation>
-    </message>
-    <message>
-        <source>Mode: </source>
-        <translation type="obsolete">Läge:</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
@@ -11041,7 +10369,7 @@ som visas i sökresultaten:</translation>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+194"/>
         <source>No Selection</source>
         <translation>Inget urval</translation>
     </message>
@@ -11601,10 +10929,6 @@ som visas i sökresultaten:</translation>
         <location line="+17"/>
         <source>&amp;Radius:</source>
         <translation>Radie:</translation>
-    </message>
-    <message>
-        <source>Radius:</source>
-        <translation type="obsolete">Radie:</translation>
     </message>
 </context>
 <context>
@@ -12235,10 +11559,6 @@ som visas i sökresultaten:</translation>
         <translation>Andra hörnet</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="obsolete">Klar</translation>
-    </message>
-    <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangleInit.js" line="+2"/>
         <source>(De-)Select &amp;Rectangular Area</source>
         <translation>(De-)Välj rektangulärt område</translation>
@@ -12277,21 +11597,6 @@ som visas i sökresultaten:</translation>
         <location line="+27"/>
         <source>Cross Selection</source>
         <translation>Korsval</translation>
-    </message>
-</context>
-<context>
-    <name>SelectWidget</name>
-    <message>
-        <source>Center</source>
-        <translation type="obsolete">Mittpunkt</translation>
-    </message>
-    <message>
-        <source>Middle</source>
-        <translation type="obsolete">Mitten</translation>
-    </message>
-    <message>
-        <source>Top</source>
-        <translation type="obsolete">Överst</translation>
     </message>
 </context>
 <context>
@@ -12374,10 +11679,6 @@ som visas i sökresultaten:</translation>
         <translation>Figurverktyg</translation>
     </message>
     <message>
-        <source>Show shape tools</source>
-        <translation type="vanished">Visa figurverktyg</translation>
-    </message>
-    <message>
         <location line="+27"/>
         <source>&amp;Shape</source>
         <translation>&amp;Form</translation>
@@ -12440,10 +11741,6 @@ som visas i sökresultaten:</translation>
         <translation>Mitten av sida</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">Klar</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.ui" line="+17"/>
         <source>Corners:</source>
         <translation>Hörn:</translation>
@@ -12482,10 +11779,6 @@ som visas i sökresultaten:</translation>
         <translation>Andra hörnet</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="obsolete">Klar</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
         <source>Polygo&amp;n (Side, Side)</source>
         <translation>Polygon (sida, sida)</translation>
@@ -12519,10 +11812,6 @@ som visas i sökresultaten:</translation>
         <translation>Hörnpunkt</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">Klar</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.ui" line="+17"/>
         <source>Corners:</source>
         <translation>Hörn:</translation>
@@ -12549,10 +11838,6 @@ som visas i sökresultaten:</translation>
         <location line="+7"/>
         <source>Corner point</source>
         <translation>Hörnpunkt</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="vanished">Klar</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.ui" line="+17"/>
@@ -13016,10 +12301,6 @@ som visas i sökresultaten:</translation>
         <location line="+9"/>
         <source>Next control point</source>
         <translation>Nästa kontrollpunkt</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="vanished">Klar</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPointsInit.js" line="+2"/>
@@ -14418,7 +13699,7 @@ som visas i sökresultaten:</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+295"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+322"/>
         <source>Dropped data not supported</source>
         <translation>Uppgifter som tappats bort stöds inte</translation>
     </message>
@@ -14444,7 +13725,7 @@ som visas i sökresultaten:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1098"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1144"/>
         <source>Restore defaults</source>
         <translation>Återställa standardvärden</translation>
     </message>
@@ -14464,30 +13745,14 @@ som visas i sökresultaten:</translation>
         <translation>Arc</translation>
     </message>
     <message>
-        <source>Degree</source>
-        <translation type="vanished">Examen</translation>
-    </message>
-    <message>
         <location line="-5"/>
         <source>Plus/Minus</source>
         <translation>Plus/Minus</translation>
     </message>
     <message>
-        <source>Almost equal to</source>
-        <translation type="vanished">Nästan lika med</translation>
-    </message>
-    <message>
-        <source>Asymptotically equal to</source>
-        <translation type="vanished">Asymptotiskt lika med</translation>
-    </message>
-    <message>
         <location line="+23"/>
         <source>Pi</source>
         <translation>Pi</translation>
-    </message>
-    <message>
-        <source>Square root</source>
-        <translation type="vanished">Kvadratrot</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -14922,7 +14187,7 @@ som visas i sökresultaten:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+996"/>
+        <location filename="../scripts/library.js" line="+1011"/>
         <source>Objects</source>
         <translation>Objekt</translation>
     </message>

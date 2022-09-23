@@ -366,10 +366,6 @@
         <translation>ブロック</translation>
     </message>
     <message>
-        <source>Block ID</source>
-        <translation type="vanished">Block ID</translation>
-    </message>
-    <message>
         <location line="+1"/>
         <source>Layer</source>
         <translation>画層</translation>
@@ -839,118 +835,7 @@
     </message>
 </context>
 <context>
-    <name>RLayer</name>
-    <message>
-        <source>Name</source>
-        <translation type="vanished">画層名</translation>
-    </message>
-    <message>
-        <source>Frozen</source>
-        <translation type="vanished">凍結</translation>
-    </message>
-    <message>
-        <source>Locked</source>
-        <translation type="vanished">ロック</translation>
-    </message>
-    <message>
-        <source>Color</source>
-        <translation type="vanished">色</translation>
-    </message>
-    <message>
-        <source>Linetype</source>
-        <translation type="vanished">ラインタイプ</translation>
-    </message>
-    <message>
-        <source>Lineweight</source>
-        <translation type="vanished">ラインの太さ</translation>
-    </message>
-</context>
-<context>
     <name>RLinetype</name>
-    <message>
-        <source>By Layer</source>
-        <translation type="vanished">画層による</translation>
-    </message>
-    <message>
-        <source>By Block</source>
-        <translation type="vanished">ブロックによる</translation>
-    </message>
-    <message>
-        <source>Continuous</source>
-        <translation type="vanished">連続</translation>
-    </message>
-    <message>
-        <source>Dot</source>
-        <translation type="vanished">点</translation>
-    </message>
-    <message>
-        <source>Dot (small)</source>
-        <translation type="vanished">点（小）</translation>
-    </message>
-    <message>
-        <source>Dot (large)</source>
-        <translation type="vanished">点（大）</translation>
-    </message>
-    <message>
-        <source>Dash</source>
-        <translation type="vanished">ダッシュ</translation>
-    </message>
-    <message>
-        <source>Dash (small)</source>
-        <translation type="vanished">ダッシュ（小）</translation>
-    </message>
-    <message>
-        <source>Dash (large)</source>
-        <translation type="vanished">ダッシュ（大）</translation>
-    </message>
-    <message>
-        <source>Dash Dot</source>
-        <translation type="vanished">ダッシュドット</translation>
-    </message>
-    <message>
-        <source>Dash Dot (small)</source>
-        <translation type="vanished">ダッシュドット（小）</translation>
-    </message>
-    <message>
-        <source>Dash Dot (large)</source>
-        <translation type="vanished">ダッシュドット（大）</translation>
-    </message>
-    <message>
-        <source>Divide</source>
-        <translation type="vanished">分割</translation>
-    </message>
-    <message>
-        <source>Divide (small)</source>
-        <translation type="vanished">分割（小）</translation>
-    </message>
-    <message>
-        <source>Divide (large)</source>
-        <translation type="vanished">分割（大）</translation>
-    </message>
-    <message>
-        <source>Center</source>
-        <translation type="vanished">センター</translation>
-    </message>
-    <message>
-        <source>Center (small)</source>
-        <translation type="vanished">センター（小）</translation>
-    </message>
-    <message>
-        <source>Center (large)</source>
-        <translation type="vanished">センター（大）</translation>
-    </message>
-    <message>
-        <source>Border</source>
-        <translation type="vanished">ボーダー</translation>
-    </message>
-    <message>
-        <source>Border (small)</source>
-        <translation type="vanished">ボーダー（小）</translation>
-    </message>
-    <message>
-        <source>Border (large)</source>
-        <translation type="vanished">ボーダー（大）</translation>
-    </message>
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+54"/>
         <source>Name</source>
@@ -1302,21 +1187,6 @@
         <location line="+1"/>
         <source>2.11mm</source>
         <translation>2.11mm</translation>
-    </message>
-</context>
-<context>
-    <name>RObject</name>
-    <message>
-        <source>Custom</source>
-        <translation type="vanished">カスタム</translation>
-    </message>
-    <message>
-        <source>Type</source>
-        <translation type="obsolete">タイプ</translation>
-    </message>
-    <message>
-        <source>Handle</source>
-        <translation type="vanished">ハンドル</translation>
     </message>
 </context>
 </TS>

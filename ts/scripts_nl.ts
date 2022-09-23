@@ -24,10 +24,6 @@
         <translation>Dit betekent dat iedereen kan &lt;a href=&apos;%1&apos;&gt;meedoen&lt;/a&gt;!</translation>
     </message>
     <message>
-        <source>Portions of this software © 2008-2016 The Qt Company Ltd.</source>
-        <translation type="vanished">Delen van deze software © 2008-2016 The Qt Company Ltd.</translation>
-    </message>
-    <message>
         <location line="+11"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
         <translation>De software wordt verspreid in de hoop dat deze nuttig is maar ZONDER ENIGE GARANTIE, zelfs zonder impliciete garantie van VERKOOPBAARHEID of GESCHIKTHEID VOOR EEN BEPAALD DOEL.</translation>
@@ -44,12 +40,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+422"/>
+        <location line="+427"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="-397"/>
+        <location line="-402"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -76,10 +72,6 @@
         <location line="+117"/>
         <source>Qt Version:</source>
         <translation>Qt Versie:</translation>
-    </message>
-    <message>
-        <source>Portions of this software © 2008-2017 The Qt Company Ltd.</source>
-        <translation type="vanished">Delen van deze software © 2008-2017 The Qt Company Ltd.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -124,25 +116,9 @@
         <translation>%1 is gratis (open source) software.</translation>
     </message>
     <message>
-        <source>Plugins and script add-ons are subject to their respective license (see &apos;Plugins&apos; tab).</source>
-        <translation type="vanished">Plugins en script add-ons zijn beschikbaar onder hun respectieve licentie (zie tabblad &apos;Plugins&apos;).</translation>
-    </message>
-    <message>
         <location line="+7"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
         <translation>Alle merk- en productnamen zijn handelsmerken of geregistreerde handelsmerken van hun respectievelijke eigenaren.</translation>
-    </message>
-    <message>
-        <source>Portions of this software © 2013 Digia Plc.</source>
-        <translation type="vanished">Delen van deze software © 2013 Digia Plc.</translation>
-    </message>
-    <message>
-        <source>Portions of this software © 2012 Nokia Corporation and/or its subsidiary(-ies).</source>
-        <translation type="vanished">Delen van deze software © 2012 Nokia Corporation en / of haar dochterondernemingen (of organen).</translation>
-    </message>
-    <message>
-        <source>Portions of this software © 2008-2018 The Qt Company Ltd.</source>
-        <translation type="obsolete">Delen van deze software © 2008-2017 The Qt Company Ltd. {2008-2018 ?}</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -153,10 +129,6 @@
         <location line="+5"/>
         <source>Portions of this software © %1 The Qt Company Ltd.</source>
         <translation>Delen van deze software © %1 The Qt Company Ltd.</translation>
-    </message>
-    <message>
-        <source>Qt ships with QCAD under the &lt;a href=&apos;%1&apos;&gt;LGPL Open Source license&lt;/a&gt; which confers various rights to you as the user, including the right to recompile the Qt libraries for your platform. To do that follow the &lt;a href=&apos;%2&apos;&gt;documentation shown on the Qt website.&lt;/a&gt;</source>
-        <translation type="vanished">Qt wordt geleverd met QCAD onder de &lt;a href=&apos;%1&apos;&gt;LGPL Open Source licentie&lt;/a&gt; die u als gebruiker verschillende rechten geeft, waaronder het recht om de Qt libraries voor uw platform te hercompileren. Om dat te doen volgt u de &lt;a href=&apos;%2&apos;&gt;documentatie op de Qt website&lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="-8"/>
@@ -214,7 +186,7 @@
         <translation>Meewerkende</translation>
     </message>
     <message>
-        <location line="+164"/>
+        <location line="+169"/>
         <source>Licenses</source>
         <translation>Licenties</translation>
     </message>
@@ -330,10 +302,6 @@ de wijzigingen door te voeren.</translation>
         <translation>Standaardinstellingen voor</translation>
     </message>
     <message>
-        <source>Defaults for </source>
-        <translation type="vanished">Standaardinstellingen voor </translation>
-    </message>
-    <message>
         <location line="+2"/>
         <source>These are default preferences for new drawings.</source>
         <translation>Dit zijn standaard voorkeuren voor nieuwe tekeningen.</translation>
@@ -342,10 +310,6 @@ de wijzigingen door te voeren.</translation>
         <location line="+2"/>
         <source>Preferences of the current drawing can be changed under&lt;br/&gt;&lt;i&gt;Edit &amp;gt; Drawing Preferences&lt;/i&gt;.</source>
         <translation>Voorkeuren van de huidige tekening kunnen worden gewijzigd onder&lt;br/&gt;&lt;i&gt;Bewerken &amp;gt; Tekeningsvoorkeuren&lt;/i&gt;.</translation>
-    </message>
-    <message>
-        <source>You are changing default preferences for new drawings.</source>
-        <translation type="vanished">U bent aan het wijzigen van standaardvoorkeuren voor nieuwe tekeningen.</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -474,10 +438,6 @@ de wijzigingen door te voeren.</translation>
         <translation>Booggereedschappen</translation>
     </message>
     <message>
-        <source>Show arc tools</source>
-        <translation type="vanished">Toon booggereedschappen</translation>
-    </message>
-    <message>
         <location line="+23"/>
         <source>&amp;Arc</source>
         <translation>&amp;Boog</translation>
@@ -519,10 +479,6 @@ de wijzigingen door te voeren.</translation>
         <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
         <translation>Tegen de klok in (positief)</translation>
-    </message>
-    <message>
-        <source>Direction</source>
-        <translation type="vanished">Richting</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -689,10 +645,6 @@ de wijzigingen door te voeren.</translation>
         <translation>Tegen de klok in (positief)</translation>
     </message>
     <message>
-        <source>Direction</source>
-        <translation type="vanished">Richting</translation>
-    </message>
-    <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Met de klok mee (negatief)</translation>
@@ -706,10 +658,6 @@ de wijzigingen door te voeren.</translation>
         <location line="+7"/>
         <source>Shorter Arc</source>
         <translation>Kortere boog</translation>
-    </message>
-    <message>
-        <source>Solution</source>
-        <translation type="vanished">Oplossing</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -791,10 +739,6 @@ de wijzigingen door te voeren.</translation>
         <location line="+7"/>
         <source>Counter Clockwise (positive)</source>
         <translation>Tegen de klok in (positief)</translation>
-    </message>
-    <message>
-        <source>Direction</source>
-        <translation type="vanished">Richting</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -923,17 +867,9 @@ de wijzigingen door te voeren.</translation>
 <context>
     <name>AutoSave</name>
     <message>
-        <source>Load/Save</source>
-        <translation type="vanished">Laden/opslaan</translation>
-    </message>
-    <message>
         <location filename="../scripts/File/AutoSave/AutoSave.js" line="+35"/>
         <source>Autosave</source>
         <translation>Auto-opslaan</translation>
-    </message>
-    <message>
-        <source>Open/Save</source>
-        <translation type="vanished">Laden/opslaan</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -974,28 +910,6 @@ Do you wish to recover it?</source>
 Wilt u deze herstellen?</translation>
     </message>
     <message>
-        <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
-Do you wish to recover it?</source>
-        <translation type="vanished">Een &apos;auto-opslaan&apos; bestand voor een naamloos tekening werd gevonden.
-Wilt u de tekening herstellen?</translation>
-    </message>
-    <message>
-        <source>%1 &apos;autosave&apos; backup files for untitled drawings were found.
-Do you wish to recover them?</source>
-        <translation type="vanished">%1 &apos;auto-opslaan&apos; bestanden voor naamloose tekeningen gevonden.
-Wilt u deze herstellen?</translation>
-    </message>
-    <message numerus="yes">
-        <source>%n &apos;autosave&apos; backup file(s) for (an) untitled drawing(s) was/were found.
-Do you wish to recover it/them?</source>
-        <translation type="vanished">
-            <numerusform>Een &apos;auto-opslaan&apos; bestand voor een naamloos tekening werd gevonden.
-Wilt u de tekening herstellen?</numerusform>
-            <numerusform>%n &apos;auto-opslaan&apos; bestanden voor naamloose tekeningen gevonden.
-Wilt u deze herstellen?</numerusform>
-        </translation>
-    </message>
-    <message>
         <location line="-64"/>
         <source>Recover Files?</source>
         <translation>Bestanden herstellen?</translation>
@@ -1009,12 +923,6 @@ Wilt u deze herstellen?</numerusform>
         <location line="+47"/>
         <source>Recover File?</source>
         <translation>Bestand herstellen?</translation>
-    </message>
-    <message>
-        <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
-Do you wish to recover it?</source>
-        <translation type="vanished">Een &apos;auto-opslaan&apos; bestand voor &apos;%1&apos; bestaat.
-Wilt u het herstellen?</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -1188,14 +1096,6 @@ Wilt u het herstellen?</translation>
         <translation>Lengte &amp;2:</translation>
     </message>
     <message>
-        <source>Length 1:</source>
-        <translation type="vanished">Lengte 1:</translation>
-    </message>
-    <message>
-        <source>Length 2:</source>
-        <translation type="vanished">Lengte 2:</translation>
-    </message>
-    <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
         <source>&amp;Chamfer / Bevel</source>
         <translation>&amp;Afschuining</translation>
@@ -1222,14 +1122,6 @@ Wilt u het herstellen?</translation>
         <location line="+10"/>
         <source>Export as Bitmap</source>
         <translation>Exporteren als bitmap</translation>
-    </message>
-    <message>
-        <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
-        <translation type="vanished">Fout bij het genereren van het bitmap bestand &quot;%1&quot;:%2</translation>
-    </message>
-    <message>
-        <source>Bitmap file has been exported to &apos;%1&apos;</source>
-        <translation type="vanished">Bitmap bestand is aangemaakt als &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportDialog.ui" line="+14"/>
@@ -1334,21 +1226,6 @@ Wilt u het herstellen?</translation>
     </message>
 </context>
 <context>
-    <name>BitmapExport2</name>
-    <message>
-        <source>Bitmap file has been exported to &quot;%1&quot;</source>
-        <translation type="obsolete">Bitmap bestand is aangemaakt als &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Files</source>
-        <translation type="obsolete">Bestanden</translation>
-    </message>
-    <message>
-        <source>Export as Bitmap</source>
-        <translation type="obsolete">Exporteren als bitmap</translation>
-    </message>
-</context>
-<context>
     <name>BitmapExportWorker</name>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
@@ -1367,10 +1244,6 @@ Wilt u het herstellen?</translation>
         <location line="+110"/>
         <source>Cannot edit block while editing a block in-place</source>
         <translation>Kan blok niet bewerken tijdens het bewerken van een blok ter plaatse</translation>
-    </message>
-    <message>
-        <source>Show block tools</source>
-        <translation type="vanished">Blokgereedschap tonen</translation>
     </message>
     <message>
         <location line="-82"/>
@@ -1407,17 +1280,9 @@ Wilt u het herstellen?</translation>
         <translation>Block &quot;%1&quot; bestaat al&lt;br&gt;en zal worden overschreven.</translation>
     </message>
     <message>
-        <source>Block &apos;%1&apos; already exists&lt;br&gt;and will be overwritten.</source>
-        <translation type="vanished">Block &quot;%1&quot; bestaat al&lt;br&gt;en zal worden overschreven.</translation>
-    </message>
-    <message>
         <location line="+5"/>
         <source>Block already exists.</source>
         <translation>Blok bestaat al.</translation>
-    </message>
-    <message>
-        <source>Block Data</source>
-        <translation type="vanished">Blok gegevens</translation>
     </message>
     <message>
         <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
@@ -1428,10 +1293,6 @@ Wilt u het herstellen?</translation>
         <location line="+8"/>
         <source>Block name:</source>
         <translation>Bloknaam:</translation>
-    </message>
-    <message>
-        <source>block 1</source>
-        <translation type="vanished">blok 1</translation>
     </message>
 </context>
 <context>
@@ -1453,14 +1314,14 @@ Wilt u het herstellen?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+492"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
         <location line="+53"/>
-        <location line="+39"/>
+        <location line="+44"/>
         <source>Block List</source>
         <translation>Bloklijst</translation>
     </message>
     <message>
-        <location line="-92"/>
+        <location line="-97"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -1598,10 +1459,6 @@ Wilt u het herstellen?</translation>
         <translation>Eerste breekpunt</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">Klaar</translation>
-    </message>
-    <message>
         <location line="+8"/>
         <source>Second break point</source>
         <translation>Tweede breekpunt</translation>
@@ -1633,7 +1490,7 @@ Wilt u het herstellen?</translation>
 <context>
     <name>CadToolBar</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+52"/>
+        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+53"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -1646,10 +1503,6 @@ Wilt u het herstellen?</translation>
         <location line="+35"/>
         <source>Vertical/Horizontal</source>
         <translation>Verticaal / horizontaal</translation>
-    </message>
-    <message>
-        <source>Icon Size:</source>
-        <translation type="vanished">Pictogramgrootte:</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+17"/>
@@ -1676,7 +1529,7 @@ Wilt u het herstellen?</translation>
     <name>CadToolBarPanel</name>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/CadToolBarPanel.js" line="+39"/>
-        <location line="+71"/>
+        <location line="+72"/>
         <source>Back</source>
         <translation>Terug</translation>
     </message>
@@ -1684,7 +1537,7 @@ Wilt u het herstellen?</translation>
 <context>
     <name>CadToolMatrix</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+373"/>
+        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+383"/>
         <source>Expand all</source>
         <translation>Alles uitvouwen</translation>
     </message>
@@ -1704,19 +1557,15 @@ Wilt u het herstellen?</translation>
         <translation>Pictogramaanzicht</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+34"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+47"/>
+        <location line="+53"/>
         <source>Tool Matrix</source>
         <translation>Gereedschap matrix</translation>
-    </message>
-    <message>
-        <source>Icon Size:</source>
-        <translation type="vanished">Pictogramgrootte:</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CadToolMatrix/PreferencesPage.ui" line="+17"/>
@@ -1750,7 +1599,7 @@ Wilt u het herstellen?</translation>
 <context>
     <name>CheckForUpdates</name>
     <message>
-        <location filename="../scripts/Help/CheckForUpdates/CheckForUpdates.js" line="+62"/>
+        <location filename="../scripts/Help/CheckForUpdates/CheckForUpdates.js" line="+68"/>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesDialog.ui" line="+14"/>
         <source>Checking for Updates...</source>
         <translation>Controleren op updates...</translation>
@@ -1782,10 +1631,6 @@ Wilt u het herstellen?</translation>
         <location filename="../scripts/Draw/Circle/Circle.js" line="+71"/>
         <source>Circle Tools</source>
         <translation>Cirkelgereedschappen</translation>
-    </message>
-    <message>
-        <source>Show circle tools</source>
-        <translation type="vanished">Toon cirkelgereedschappen</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -1859,10 +1704,6 @@ Wilt u het herstellen?</translation>
         <translation>Middelpunt links van lijn P1-P2</translation>
     </message>
     <message>
-        <source>Solution</source>
-        <translation type="vanished">Oplossing</translation>
-    </message>
-    <message>
         <location line="+20"/>
         <source>Center Right of Line P1 - P2</source>
         <translation>Middelpunt rechts van lijn P1-P2</translation>
@@ -1907,10 +1748,6 @@ Wilt u het herstellen?</translation>
         <translation>Geen oplossing</translation>
     </message>
     <message>
-        <source>Point, 2 Tan&amp;gents</source>
-        <translation type="vanished">Punt, 2 tan&amp;genten</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Circle/Circle2TP/Circle2TPInit.js" line="+6"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation>Cirkel tangentieel aan twee objecten, door punt</translation>
@@ -1942,10 +1779,6 @@ Wilt u het herstellen?</translation>
         <location line="+103"/>
         <source>No solution</source>
         <translation>Geen oplossing</translation>
-    </message>
-    <message>
-        <source>Invalid radius</source>
-        <translation type="vanished">Ongeldig straal</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TR.ui" line="+17"/>
@@ -2183,10 +2016,6 @@ Wilt u het herstellen?</translation>
         <translation>Geen oplossing</translation>
     </message>
     <message>
-        <source>2 Poin&amp;ts and Tangent</source>
-        <translation type="vanished">2 Pun&amp;ten en tangent</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Circle/CircleT2P/CircleT2PInit.js" line="+2"/>
         <source>&amp;Tangent and 2 Points</source>
         <translation>Tangent en 2 punten</translation>
@@ -2403,10 +2232,6 @@ Wilt u het herstellen?</translation>
         <translation>: </translation>
     </message>
     <message>
-        <source>History Size:</source>
-        <translation type="vanished">Geschiedenis grootte:</translation>
-    </message>
-    <message>
         <location filename="../scripts/Widgets/CommandLine/PreferencesPage.ui" line="+17"/>
         <source>History size:</source>
         <translation>Geschiedenis grootte:</translation>
@@ -2459,17 +2284,9 @@ Wilt u het herstellen?</translation>
         <translation>Eenheid &quot;%1&quot; geselecteerd. Niets om te doen</translation>
     </message>
     <message>
-        <source>Unit &apos;%1&apos; selected - Nothing to be done</source>
-        <translation type="vanished">Eenheid &apos;%1&apos; geselecteerd - niets te doen</translation>
-    </message>
-    <message>
         <location line="+144"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Tekening omgezet van %1 naar %2</translation>
-    </message>
-    <message>
-        <source>Convert Drawing Units</source>
-        <translation type="vanished">Tekening eenheid omzetten</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnitInit.js" line="+2"/>
@@ -2495,10 +2312,6 @@ Wilt u het herstellen?</translation>
         <location line="+30"/>
         <source>Convert:</source>
         <translation>Converteren:</translation>
-    </message>
-    <message>
-        <source>...</source>
-        <translation type="vanished">...</translation>
     </message>
 </context>
 <context>
@@ -2576,18 +2389,6 @@ Wilt u het herstellen?</translation>
         <location line="+14"/>
         <source>Number Format:</source>
         <translation>Nummerweergave:</translation>
-    </message>
-    <message>
-        <source>Precision:</source>
-        <translation type="vanished">Precisie:</translation>
-    </message>
-    <message>
-        <source>Number of decimal digits</source>
-        <translation type="vanished">Aantal decimale cijfers</translation>
-    </message>
-    <message>
-        <source>Width:</source>
-        <translation type="vanished">Breedte:</translation>
     </message>
     <message>
         <location line="+79"/>
@@ -2696,14 +2497,6 @@ Wilt u het herstellen?</translation>
         <source>Angle:</source>
         <translation>Hoek:</translation>
     </message>
-    <message>
-        <source>Line</source>
-        <translation type="obsolete">Lijn</translation>
-    </message>
-    <message>
-        <source>Face</source>
-        <translation type="obsolete">Oppervlak</translation>
-    </message>
 </context>
 <context>
     <name>Cut</name>
@@ -2732,18 +2525,6 @@ Wilt u het herstellen?</translation>
         <location line="+2"/>
         <source>Move entity or reference</source>
         <translation>Object of referentiepunt verplaatsen</translation>
-    </message>
-    <message>
-        <source>Set second corner</source>
-        <translation type="vanished">Tweede hoekpunt kiezen</translation>
-    </message>
-    <message>
-        <source>Specify target point of reference point</source>
-        <translation type="vanished">Bestemmingspunt voor referentiepunt kiezen</translation>
-    </message>
-    <message>
-        <source>Specify target point of selection</source>
-        <translation type="vanished">Bestemmingspunt voor selectie kiezen</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -2784,10 +2565,6 @@ Wilt u het herstellen?</translation>
         <location line="+127"/>
         <source>Editing block &quot;%1&quot;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
         <translation>Bewerken van blok &quot;%1&quot;&lt;br&gt;Kies &lt;i&gt;Blok &gt; Terug naar hoofdtekening&lt;/i&gt; als u klaar bent</translation>
-    </message>
-    <message>
-        <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
-        <translation type="vanished">Bewerken van blok &apos;%1&apos;&lt;br&gt;Kies &lt;i&gt;Blok &gt; Terug naar hoofdtekening&lt;/i&gt; als u klaar bent</translation>
     </message>
 </context>
 <context>
@@ -2844,10 +2621,6 @@ Wilt u het herstellen?</translation>
 </context>
 <context>
     <name>DeselectLayer</name>
-    <message>
-        <source>&amp;Deselect Layer</source>
-        <translation type="vanished">Laag &amp;deselecteren</translation>
-    </message>
     <message>
         <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer Entities</source>
@@ -2949,22 +2722,6 @@ Wilt u het herstellen?</translation>
         <location line="+7"/>
         <source>Cancel</source>
         <translation>Annuleer</translation>
-    </message>
-    <message>
-        <source>Scale:</source>
-        <translation type="obsolete">Schaal:</translation>
-    </message>
-    <message>
-        <source>0.01</source>
-        <translation type="obsolete">0.01</translation>
-    </message>
-    <message>
-        <source>297</source>
-        <translation type="obsolete">297</translation>
-    </message>
-    <message>
-        <source>210</source>
-        <translation type="obsolete">210</translation>
     </message>
 </context>
 <context>
@@ -3126,10 +2883,6 @@ Wilt u het herstellen?</translation>
         </translation>
     </message>
     <message>
-        <source>Reset label position of %1 dimension(s).</source>
-        <translation type="vanished">Label positie van %1 bemating(en) teruggezet.</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Dimension/DimRegen/DimRegenInit.js" line="+2"/>
         <source>&amp;Reset Label Position</source>
         <translation>Label positie &amp;terugzetten</translation>
@@ -3239,10 +2992,6 @@ Wilt u het herstellen?</translation>
         <translation>Bematinggereedschappen</translation>
     </message>
     <message>
-        <source>Show dimension tools</source>
-        <translation type="vanished">Bematinggereedschappen tonen</translation>
-    </message>
-    <message>
         <location line="+27"/>
         <source>D&amp;imension</source>
         <translation>&amp;Bemating</translation>
@@ -3340,46 +3089,6 @@ Wilt u het herstellen?</translation>
         <translation>Spatie</translation>
     </message>
     <message>
-        <source>Scientific</source>
-        <translation type="vanished">Wetenschappelijk</translation>
-    </message>
-    <message>
-        <source>Decimal</source>
-        <translation type="vanished">Decimaal</translation>
-    </message>
-    <message>
-        <source>Engineering</source>
-        <translation type="vanished">Technisch</translation>
-    </message>
-    <message>
-        <source>Architectural</source>
-        <translation type="vanished">Bouwkunde</translation>
-    </message>
-    <message>
-        <source>Fractional</source>
-        <translation type="vanished">Breuken</translation>
-    </message>
-    <message>
-        <source>Decimal Degrees</source>
-        <translation type="vanished">Decimale Graden</translation>
-    </message>
-    <message>
-        <source>Deg/min/sec</source>
-        <translation type="vanished">Deg/min/sec</translation>
-    </message>
-    <message>
-        <source>Gradians</source>
-        <translation type="vanished">Graden</translation>
-    </message>
-    <message>
-        <source>Radians</source>
-        <translation type="vanished">Radialen</translation>
-    </message>
-    <message>
-        <source>Surveyor&apos;s units</source>
-        <translation type="vanished">Te meten eenheid</translation>
-    </message>
-    <message>
         <location line="+309"/>
         <source>Unit / Format</source>
         <translation>Eenheid / Formaat</translation>
@@ -3388,14 +3097,6 @@ Wilt u het herstellen?</translation>
         <location line="+1"/>
         <source>The drawing unit must be &quot;Inch&quot; to display dimension labels in formats &quot;Architectural&quot; or &quot;Engineering&quot;. Format changed to &quot;Decimal&quot;.</source>
         <translation>De tekening eenheid moet &quot;Inch&quot; zijn dat bematingen in het format &quot;Architectuur&quot; of &quot;Technisch&quot; kunnen worden weergegeven. Format teruggezet op &quot;Decimaal&quot;.</translation>
-    </message>
-    <message>
-        <source>The drawing unit must be &quot;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
-        <translation type="vanished">De tekening eenheid moet &apos;Inch&apos; zijn dat bematingen in het format &apos;Architectuur&apos; of &apos;Technisch&apos; kunnen worden weergegeven. Format teruggezet op &apos;Decimaal&apos;.</translation>
-    </message>
-    <message>
-        <source>The drawing unit must be &apos;Inch&apos; or &apos;Foot&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
-        <translation type="vanished">De tekening eenheid moet &apos;Inch&apos; of &apos;Foot&apos; zijn dat bematingen in het format &apos;Architectuur&apos; of &apos;Technisch&apos; kunnen worden weergegeven. Format teruggezet op &apos;Decimaal&apos;.</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+55"/>
@@ -3466,18 +3167,6 @@ Wilt u het herstellen?</translation>
         <location line="+12"/>
         <source>Arrow</source>
         <translation>Pijl</translation>
-    </message>
-    <message>
-        <source>Architectural Tick</source>
-        <translation type="vanished">Bouwkunde tick</translation>
-    </message>
-    <message>
-        <source>Font</source>
-        <translation type="vanished">Lettertype</translation>
-    </message>
-    <message>
-        <source>Dimension label font:</source>
-        <translation type="vanished">Lettertype voor bematingstekst :</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -3576,10 +3265,6 @@ is al in de lijst.</translation>
 </context>
 <context>
     <name>DisplayDistanceAngle</name>
-    <message>
-        <source>Display Distance/Angle</source>
-        <translation type="vanished">Toon afstand/hoek</translation>
-    </message>
     <message>
         <location filename="../scripts/View/DisplayDistanceAngle/DisplayDistanceAngleInit.js" line="+2"/>
         <source>Display &amp;Distance/Angle</source>
@@ -3743,19 +3428,11 @@ is al in de lijst.</translation>
 <context>
     <name>DrawFromCSV</name>
     <message>
-        <source>No import file selected !</source>
-        <translation type="vanished">Geen importbestand geselecteerd.</translation>
-    </message>
-    <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV.js" line="+145"/>
         <location line="+15"/>
         <location line="+1275"/>
         <source>Command ended.</source>
         <translation>Commando beëindigd.</translation>
-    </message>
-    <message>
-        <source>No file opened!</source>
-        <translation type="vanished">Geen bestand geopend.</translation>
     </message>
     <message>
         <location line="-1293"/>
@@ -4319,225 +3996,9 @@ is al in de lijst.</translation>
         <translation>Nieuwe laag toegevoegd: %1</translation>
     </message>
     <message>
-        <source>Unsupported or invalid CSV style, ignored ! Text line %1</source>
-        <translation type="vanished">Niet-ondersteunde of ongeldige CSV-stijl, genegeerd. Tekstblok %1</translation>
-    </message>
-    <message>
-        <source>Setting new relative origin failed, ignored ! Text line %1</source>
-        <translation type="vanished">Instellen nieuwe relatieve oorsprong mislukt, genegeerd. Tekst blok %1</translation>
-    </message>
-    <message>
-        <source>Can not switch to layer, ignored ! Text line %1 layer: %2</source>
-        <translation type="vanished">Kan niet naar laag schakelen, genegeerd. Tekstblok %1 laag: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct  layer switch, ignored ! Text line %1</source>
-        <translation type="vanished">Geen correcte laagschakelaar, genegeerd. Tekst blok %1</translation>
-    </message>
-    <message>
-        <source>Not a correct  new layer switch, ignored ! Text line %1</source>
-        <translation type="vanished">Geen correcte nieuwe laagschakelaar, genegeerd. Tekst blok %1</translation>
-    </message>
-    <message>
-        <source>Can not hide layer, ignored ! Text line %1 layer: %2</source>
-        <translation type="vanished">Kan laag niet verbergen, genegeerd. Tekstblok %1 laag: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct  hide layer switch, ignored ! Text line %1</source>
-        <translation type="vanished">Geen correcte verberg laag schakelaar, genegeerd. Tekst blok %1</translation>
-    </message>
-    <message>
-        <source>Can not freeze layer, ignored ! Text line %1 layer: %2</source>
-        <translation type="vanished">Kan laag niet bevriezen, genegeerd. Tekstblok %1 laag: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct  freeze layer switch, ignored ! Text line %1</source>
-        <translation type="vanished">Geen correcte vrieslaagschakelaar, genegeerd. Tekst blok %1</translation>
-    </message>
-    <message>
-        <source>Can not lock layer, ignored ! Text line %1 layer: %2</source>
-        <translation type="vanished">Kan laag niet vergrendelen, genegeerd. Tekstblok %1 laag: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct  lock layer switch, ignored ! Text line %1</source>
-        <translation type="vanished">Geen correcte slotlaagschakelaar, genegeerd. Tekst blok %1</translation>
-    </message>
-    <message>
-        <source>Can not allow layer, ignored ! Text line %1 layer: %2</source>
-        <translation type="vanished">Kan laag niet toestaan, genegeerd. Tekstblok %1 laag: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct  allow layer switch, ignored ! Text line %1</source>
-        <translation type="vanished">Niet een correcte toestaan laag schakelaar, genegeerd. Tekst blok %1</translation>
-    </message>
-    <message>
-        <source>Low field count !</source>
-        <translation type="vanished">Laag veld aantal.</translation>
-    </message>
-    <message>
-        <source>Odd field count !</source>
-        <translation type="vanished">Oneven veldtelling.</translation>
-    </message>
-    <message>
-        <source>Rv Invalid !</source>
-        <translation type="vanished">Rv Ongeldig.</translation>
-    </message>
-    <message>
-        <source>Rv1 Invalid !</source>
-        <translation type="vanished">Rv1 Ongeldig.</translation>
-    </message>
-    <message>
-        <source>Rv2 Invalid !</source>
-        <translation type="vanished">Rv2 Ongeldig.</translation>
-    </message>
-    <message>
-        <source>Radius Invalid !</source>
-        <translation type="vanished">Straal ongeldig.</translation>
-    </message>
-    <message>
-        <source>Angle Invalid !</source>
-        <translation type="vanished">Hoek ongeldig.</translation>
-    </message>
-    <message>
-        <source>Angle1 Invalid !</source>
-        <translation type="vanished">Hoek1 ongeldig.</translation>
-    </message>
-    <message>
-        <source>Angle2 Invalid !</source>
-        <translation type="vanished">Hoek2 ongeldig.</translation>
-    </message>
-    <message>
-        <source>Equal angles !</source>
-        <translation type="vanished">Gelijke hoeken.</translation>
-    </message>
-    <message>
-        <source>Rv3 Invalid !</source>
-        <translation type="vanished">Rv3 ongeldig.</translation>
-    </message>
-    <message>
-        <source>Arc Invalid !</source>
-        <translation type="vanished">Boog ongeldig.</translation>
-    </message>
-    <message>
-        <source>Center Invalid !</source>
-        <translation type="vanished">Centrum Ongeldig.</translation>
-    </message>
-    <message>
-        <source>Radius too small !</source>
-        <translation type="vanished">Straal te klein.</translation>
-    </message>
-    <message>
-        <source>Circle Invalid !</source>
-        <translation type="vanished">Cirkel ongeldig.</translation>
-    </message>
-    <message>
-        <source>Rv4 Invalid !</source>
-        <translation type="vanished">Rv4 ongeldig.</translation>
-    </message>
-    <message>
-        <source>Size Invalid !</source>
-        <translation type="vanished">Grootte ongeldig.</translation>
-    </message>
-    <message>
-        <source>Size in X Invalid !</source>
-        <translation type="vanished">Grootte in X Ongeldig.</translation>
-    </message>
-    <message>
-        <source>Size in Y Invalid !</source>
-        <translation type="vanished">Grootte in Y Ongeldig.</translation>
-    </message>
-    <message>
-        <source>Polygon, less than 5 references !</source>
-        <translation type="vanished">Polygoon, minder dan 5 referenties.</translation>
-    </message>
-    <message>
-        <source>Rv %1 Invalid !</source>
-        <translation type="vanished">Rv %1 Ongeldig.</translation>
-    </message>
-    <message>
-        <source>Polyline, less than 2 references !</source>
-        <translation type="vanished">Polylijn, minder dan 2 referenties.</translation>
-    </message>
-    <message>
-        <source>Bulge %1 Invalid !</source>
-        <translation type="vanished">Uitsteeksel %1 Ongeldig.</translation>
-    </message>
-    <message>
-        <source>Unsupported PRO feature !</source>
-        <translation type="vanished">Niet ondersteunde PRO functie.</translation>
-    </message>
-    <message>
-        <source>Fit point Spline, less than 3 references !</source>
-        <translation type="vanished">Paspunt Spline, minder dan 3 referenties.</translation>
-    </message>
-    <message>
-        <source>Control point Spline, less than 4 references !</source>
-        <translation type="vanished">Controlepunt Spline, minder dan 4 referenties.</translation>
-    </message>
-    <message>
-        <source>Text, low field count !</source>
-        <translation type="vanished">Tekst, laag veld aantal.</translation>
-    </message>
-    <message>
-        <source>Text, odd field count !</source>
-        <translation type="vanished">Tekst, oneven veldtelling.</translation>
-    </message>
-    <message>
-        <source>Height Invalid !</source>
-        <translation type="vanished">Hoogte Ongeldig.</translation>
-    </message>
-    <message>
-        <source>Width Invalid !</source>
-        <translation type="vanished">Breedte ongeldig.</translation>
-    </message>
-    <message>
-        <source>Vert. alignment Invalid !</source>
-        <translation type="vanished">Vert. uitlijning Ongeldig.</translation>
-    </message>
-    <message>
-        <source>Horz. alignment Invalid !</source>
-        <translation type="vanished">Horz. Uitlijning Ongeldig.</translation>
-    </message>
-    <message>
-        <source>Drawing direction Invalid !</source>
-        <translation type="vanished">Tekenrichting ongeldig.</translation>
-    </message>
-    <message>
-        <source>Line spacing style Invalid !</source>
-        <translation type="vanished">Blokafstand ongeldig.</translation>
-    </message>
-    <message>
-        <source>Line spacing Invalid !</source>
-        <translation type="vanished">Blokafstand Ongeldig.</translation>
-    </message>
-    <message>
-        <source>Unsupported entry ! Text line %1</source>
-        <translation type="vanished">Niet-ondersteunde invoer. Tekst blok %1</translation>
-    </message>
-    <message>
-        <source>Error with first optional list !</source>
-        <translation type="vanished">Fout met eerste optionele lijst.</translation>
-    </message>
-    <message>
-        <source>Error with second optional list !</source>
-        <translation type="vanished">Fout met tweede optionele lijst.</translation>
-    </message>
-    <message>
-        <source>Not a correct entry ! Text line %1 : %2</source>
-        <translation type="vanished">Geen correcte invoer. Tekst blok %1 : %2</translation>
-    </message>
-    <message>
-        <source>Casted entries : %1 with %2 text lines</source>
-        <translation type="vanished">Gegoten vermeldingen : %1 met %2 tekstblokken</translation>
-    </message>
-    <message>
         <location line="-447"/>
         <source>Importing CSV complete. Command ended.</source>
         <translation>Importeren CSV voltooid. Commando beëindigd.</translation>
-    </message>
-    <message>
-        <source>Nothing casted !</source>
-        <translation type="vanished">Niets gegoten.</translation>
     </message>
     <message>
         <location line="+46"/>
@@ -4555,66 +4016,6 @@ is al in de lijst.</translation>
         <translation>Alle bestanden</translation>
     </message>
     <message>
-        <source>Attributes empty ! Text line %1</source>
-        <translation type="vanished">Attributen leeg. Tekst blok %1</translation>
-    </message>
-    <message>
-        <source>Not a correct layer name ! Text line %1 name: %2</source>
-        <translation type="vanished">Geen correcte laagnaam. Naam tekstblok %1: %2</translation>
-    </message>
-    <message>
-        <source>Layer doesn&apos;t exist, ignored ! Text line %1 layer: %2</source>
-        <translation type="vanished">Laag bestaat niet, genegeerd. Tekstblok %1 laag: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct color, ignored ! Text line %1 color: %2</source>
-        <translation type="vanished">Geen correcte kleur, genegeerd. Tekst blok %1 kleur: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct Lineweight, ignored ! Text line %1 weight: %2</source>
-        <translation type="vanished">Geen correct Lijngewicht, genegeerd. Gewicht tekstblok %1: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct Linetype, ignored ! Text line %1 type: %2</source>
-        <translation type="vanished">Geen correct Linetype, genegeerd. Tekst blok %1 type: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct Linetype scale, ignored ! Text line %1 scale: %2</source>
-        <translation type="vanished">Geen correcte Linetype schaal, genegeerd. Tekst lijn %1 schaal: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct attribute, ignored ! Text line %1 &gt; %2</source>
-        <translation type="vanished">Geen correct attribuut, genegeerd. Tekstblok %1 &gt; %2</translation>
-    </message>
-    <message>
-        <source>Parent layer doesn&apos;t exist ! Text line %1 layer: %2</source>
-        <translation type="vanished">Moederlaag bestaat niet. Tekstblok %1 laag: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct color ! Text line %1 color: %2</source>
-        <translation type="vanished">Geen correcte kleur. Tekst blok %1 kleur: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct Lineweight ! Text line %1 weight: %2</source>
-        <translation type="vanished">Geen correct Lijngewicht. Gewicht tekstblok %1: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct Linetype ! Text line %1 type: %2</source>
-        <translation type="vanished">Geen correct Linetype. Tekst blok %1 type: %2</translation>
-    </message>
-    <message>
-        <source>Add/Update layer ignored !</source>
-        <translation type="vanished">Toevoegen/bijwerken laag genegeerd.</translation>
-    </message>
-    <message>
-        <source>Updated layer : %1</source>
-        <translation type="vanished">Bijgewerkte laag : %1</translation>
-    </message>
-    <message>
-        <source>Added new layer : %1</source>
-        <translation type="vanished">Nieuwe laag toegevoegd : %1</translation>
-    </message>
-    <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
         <source>&amp;Draw from CSV</source>
         <translation>&amp;Tekenen van CSV</translation>
@@ -4623,17 +4024,6 @@ is al in de lijst.</translation>
         <location line="+7"/>
         <source>Draws entities based on textual entries in a CSV file</source>
         <translation>Tekent objecten gebaseerd op tekstuele gegevens in een CSV-bestand</translation>
-    </message>
-</context>
-<context>
-    <name>DrawFromCSVInit</name>
-    <message>
-        <source>&amp;Draw from CSV</source>
-        <translation type="vanished">&amp;Tekenen uit CSV</translation>
-    </message>
-    <message>
-        <source>Draws entities based on textual entries in a CSV file</source>
-        <translation type="vanished">Tekent objecten gebaseerd op tekstuele gegevens in een CSV-bestand</translation>
     </message>
 </context>
 <context>
@@ -4660,10 +4050,6 @@ is al in de lijst.</translation>
         <location line="+10"/>
         <source>Next vertex</source>
         <translation>Volgende hoekpunt</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="vanished">Klaar</translation>
     </message>
     <message>
         <location line="+421"/>
@@ -4761,14 +4147,6 @@ is al in de lijst.</translation>
         <source>&amp;Duplicate</source>
         <translation>&amp;Dupliceren</translation>
     </message>
-    <message>
-        <source>1 entity duplicated</source>
-        <translation type="vanished">Een object is gedupliceerd</translation>
-    </message>
-    <message>
-        <source>%1 entities duplicated</source>
-        <translation type="vanished">%1 objecten werden gedupliceerd</translation>
-    </message>
     <message numerus="yes">
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+54"/>
         <source>%n entity/ies duplicated</source>
@@ -4808,7 +4186,7 @@ is al in de lijst.</translation>
         <translation>Geen</translation>
     </message>
     <message>
-        <location line="+662"/>
+        <location line="+664"/>
         <source>Options</source>
         <translation>Opties</translation>
     </message>
@@ -4823,7 +4201,7 @@ is al in de lijst.</translation>
         <translation>CAD-gereedschappen</translation>
     </message>
     <message>
-        <location line="+584"/>
+        <location line="+582"/>
         <source>Invalid position</source>
         <translation>Ongeldige positie</translation>
     </message>
@@ -4952,10 +4330,6 @@ is al in de lijst.</translation>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;U staat op het punt de ECMAScript Shell in te schakelen.&lt;/p&gt;&lt;p&gt;Door de ECMAScript Shell kunt u &lt;span stijl=&quot; kleur:#ff0000;&quot;&gt; uw tekeningen wijzigen&lt;/span&gt; maar ook &lt;span stijl=&quot; kleur:#ff0000;&quot;&gt;bestanden verwijderen&lt;/span&gt; of &lt;span style=&quot; kleur: #ff0000;&quot;&gt;de toepassing crashen&lt;/span&gt; wat kan leiden tot &lt;span style=&quot; kleur: #ff0000;&quot;&gt;gegevensverlies&lt;/span&gt;.&lt;/p&gt;&lt;p&gt; Voor onervaren programmeurs wordt aanbevolen het gebruik van de ECMAScript Shell te beperken tot de &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group_ecma__simple.html&quot;&gt;&lt;span style=&quot; tekstdecoratie: onderstrepen; kleur:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; die als &quot;veilig&quot; wordt beschouwd om te gebruiken.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You are about to enable the ECMAScript Shell.&lt;/p&gt;&lt;p&gt;Through the ECMAScript Shell you can &lt;span style=&quot; color:#ff0000;&quot;&gt;modify your drawings&lt;/span&gt; but also &lt;span style=&quot; color:#ff0000;&quot;&gt;delete files&lt;/span&gt; or &lt;span style=&quot; color:#ff0000;&quot;&gt;crash the application&lt;/span&gt; which can lead to &lt;span style=&quot; color:#ff0000;&quot;&gt;data loss&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;For inexperienced programmers, it is recommended to limit the use of the ECMAScript shell to the &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; which is considered to be &apos;safe&apos; to use.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;U staat op het punt de ECMAScript Shell in te schakelen.&lt;/p&gt;&lt;p&gt;Door de ECMAScript Shell kunt u &lt;span stijl=&quot; kleur:#ff0000;&quot;&gt; uw tekeningen wijzigen&lt;/span&gt; maar ook &lt;span stijl=&quot; kleur:#ff0000;&quot;&gt;bestanden verwijderen&lt;/span&gt; of &lt;span style=&quot; kleur: #ff0000;&quot;&gt;de toepassing crashen&lt;/span&gt; wat kan leiden tot &lt;span style=&quot; kleur: #ff0000;&quot;&gt;gegevensverlies&lt;/span&gt;.&lt;/p&gt;&lt;p&gt; Voor onervaren programmeurs wordt aanbevolen het gebruik van de ECMAScript Shell te beperken tot de &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group_ecma__simple.html&quot;&gt;&lt;span style=&quot; tekstdecoratie: onderstrepen; kleur:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; die als &quot;veilig&quot; wordt beschouwd om te gebruiken.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Don&apos;t show this dialog again</source>
         <translation>Deze dialoog niet meer tonen</translation>
@@ -4967,10 +4341,6 @@ is al in de lijst.</translation>
         <location filename="../scripts/Edit/Edit.js" line="+65"/>
         <source>Edit Tools</source>
         <translation>Bewerkgereedschappen</translation>
-    </message>
-    <message>
-        <source>Show edit tools</source>
-        <translation type="vanished">Bewerkgereedschappen tonen</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -5064,10 +4434,6 @@ is al in de lijst.</translation>
         <translation>Ellipsgereedschappen</translation>
     </message>
     <message>
-        <source>Show ellipse tools</source>
-        <translation type="vanished">Ellipsgereedschap tonen</translation>
-    </message>
-    <message>
         <location line="+23"/>
         <source>&amp;Ellipse</source>
         <translation>&amp;Ellips</translation>
@@ -5156,10 +4522,6 @@ is al in de lijst.</translation>
         <translation>Tegen de klok in (positief)</translation>
     </message>
     <message>
-        <source>Direction</source>
-        <translation type="vanished">Richting</translation>
-    </message>
-    <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Met de klok mee (negatief)</translation>
@@ -5177,10 +4539,6 @@ is al in de lijst.</translation>
 </context>
 <context>
     <name>EllipseCPP</name>
-    <message>
-        <source>&amp;Full Ellipse with Center, Point, Ratio</source>
-        <translation type="vanished">&amp;Ellips van middelpunt, punt, verhouding van assen</translation>
-    </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseCPP/EllipseCPPInit.js" line="+2"/>
         <source>&amp;Ellipse (Center, Point, Ratio)</source>
@@ -5357,10 +4715,6 @@ is al in de lijst.</translation>
 <context>
     <name>ExAddLayer</name>
     <message>
-        <source>Added layer &apos;MyLayer&apos;</source>
-        <translation type="vanished">Laag &apos;MyLayer&apos; toegevoegd</translation>
-    </message>
-    <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/ExAddLayer/ExAddLayer.js" line="+44"/>
         <source>Added layer &quot;MyLayer&quot;</source>
         <translation>Laag &quot;MyLayer&quot; toegevoegd</translation>
@@ -5434,10 +4788,6 @@ is al in de lijst.</translation>
 <context>
     <name>ExLayerCustomProperty</name>
     <message>
-        <source>Added custom property &apos;MyCustomProperty&apos; to layer &apos;0&apos;.</source>
-        <translation type="vanished">Gebruiker gedefinieerde eigenschap &apos;MyCustomProperty&apos; toegevoegd aan laag &apos;0&apos;.</translation>
-    </message>
-    <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/ExLayerCustomProperty/ExLayerCustomProperty.js" line="+43"/>
         <source>Added custom property &quot;MyCustomProperty&quot; to layer &quot;0&quot;.</source>
         <translation>Gebruiker gedefinieerde eigenschap &quot;MyCustomProperty&quot; toegevoegd aan laag &quot;0&quot;.</translation>
@@ -5482,10 +4832,6 @@ is al in de lijst.</translation>
 <context>
     <name>ExMandelbrot</name>
     <message>
-        <source>&amp;Mandelbrot</source>
-        <translation type="vanished">&amp;Mandelbrot</translation>
-    </message>
-    <message>
         <location filename="../scripts/Misc/Examples/MathExamples/ExMandelbrot/ExMandelbrot.js" line="+48"/>
         <source>&amp;Mandelbrot Example</source>
         <translation>&amp;Mandelbrot</translation>
@@ -5501,10 +4847,6 @@ is al in de lijst.</translation>
 </context>
 <context>
     <name>ExMinimal</name>
-    <message>
-        <source>Hello World!</source>
-        <translation type="vanished">Hallo wereld!</translation>
-    </message>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal/ExMinimal.js" line="+12"/>
         <source>Hello World.</source>
@@ -5555,10 +4897,6 @@ is al in de lijst.</translation>
         <translation>Bestandsexporteur voor bestandstype &quot;.example&quot; geregistreerd. Gebruik Bestand &gt; Opslaan als om het filter in actie te zien.</translation>
     </message>
     <message>
-        <source>Registered a file exporter for file type &apos;.example&apos;. Use File &gt; Save As to see the filter in action.</source>
-        <translation type="vanished">Bestandsexporteur voor bestandstype &quot;.example&quot; geregistreerd. Gebruik Bestand &gt; Opslaan als om het filter in actie te zien.</translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>&amp;Register File Exporter</source>
         <translation>Bestandexporteur &amp;registreren</translation>
@@ -5582,17 +4920,9 @@ is al in de lijst.</translation>
         <translation>Bestandsimporteur voor bestandstype &quot;.example&quot; geregistreerd. Gebruik Bestand &gt; Openen om het filter in actie te zien.</translation>
     </message>
     <message>
-        <source>Read from file: &apos;%1&apos;</source>
-        <translation type="vanished">Uit bestand gelezen: &quot;%1&quot;;</translation>
-    </message>
-    <message>
         <location line="-1"/>
         <source>Info</source>
         <translation>Info</translation>
-    </message>
-    <message>
-        <source>Registered a file importer for file type &apos;.example&apos;. Use File &gt; Open to see the filter in action.</source>
-        <translation type="vanished">Bestandsimporteur voor bestandstype &quot;.example&quot; geregistreerd. Gebruik Bestand &gt; Openen om het filter in actie te zien.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -5801,10 +5131,6 @@ is al in de lijst.</translation>
         <translation>Bestandgereedschappen</translation>
     </message>
     <message>
-        <source>Show file tools</source>
-        <translation type="vanished">Bestandgereedschappen tonen</translation>
-    </message>
-    <message>
         <location line="+27"/>
         <source>&amp;File</source>
         <translation>&amp;Bestand</translation>
@@ -5824,10 +5150,6 @@ is al in de lijst.</translation>
         <location line="+1"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
         <translation>Het bestand &quot;%1&quot; bestaat al. Wilt u het overschrijven?</translation>
-    </message>
-    <message>
-        <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
-        <translation type="vanished">Het bestand &apos;%1&apos; bestaat al. Wilt u het overschrijven?</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -5902,10 +5224,6 @@ is al in de lijst.</translation>
         <translation>FP toegevoegde laag:</translation>
     </message>
     <message>
-        <source>&amp;FlexPainter</source>
-        <translation type="vanished">&amp;FlexPainter</translation>
-    </message>
-    <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
         <source>Paints over selection mimicking a roller stamp</source>
         <translation>Verven over de selectie, nabootsen van een rolstempel</translation>
@@ -5924,17 +5242,9 @@ is al in de lijst.</translation>
         <translation>Painter-casting opties</translation>
     </message>
     <message>
-        <source>Mirror painters over baseline</source>
-        <translation type="vanished">Spiegel de painters aan de basislijn</translation>
-    </message>
-    <message>
         <location line="+21"/>
         <source>Flip Painters</source>
         <translation>Keer de painters om</translation>
-    </message>
-    <message>
-        <source>Group all castings to one operation</source>
-        <translation type="vanished">Groepeer alle castings in één bewerking</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5942,17 +5252,9 @@ is al in de lijst.</translation>
         <translation>Casting in groep</translation>
     </message>
     <message>
-        <source>Cast on newly sub-layer &apos;Painted&apos; if applicable</source>
-        <translation type="vanished">Casting op de nieuwe onderlaag &apos;Painted&apos;, indien van toepassing</translation>
-    </message>
-    <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
         <translation>Casting op onderlaag</translation>
-    </message>
-    <message>
-        <source>Start with casting a begin apex on open forms</source>
-        <translation type="vanished">Beginnen met het casten van een beginpunt op open vormen</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5960,17 +5262,9 @@ is al in de lijst.</translation>
         <translation>Begin apex toevoegen</translation>
     </message>
     <message>
-        <source>End with casting an end apex on open forms</source>
-        <translation type="vanished">Eindigen met het casten van een eindpunt op open vormen</translation>
-    </message>
-    <message>
         <location line="+16"/>
         <source>Add End Apex</source>
         <translation>Eind apex toevoegen</translation>
-    </message>
-    <message>
-        <source>Add insertions in between eg. spacers, knots</source>
-        <translation type="vanished">Voeg tussenvoegsels toe, bijv. afstandhouders, knopen</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5981,14 +5275,6 @@ is al in de lijst.</translation>
         <location line="+26"/>
         <source>Painter set</source>
         <translation>Patroon</translation>
-    </message>
-    <message>
-        <source>Preview of painters</source>
-        <translation type="vanished">Voorbeeld</translation>
-    </message>
-    <message>
-        <source>Select painter set</source>
-        <translation type="vanished">Selecteer patroon</translation>
     </message>
     <message>
         <location line="-101"/>
@@ -6161,14 +5447,6 @@ is al in de lijst.</translation>
         <translation>Verwijderd geschilderd over basis objecten. (persistent uit)</translation>
     </message>
     <message>
-        <source>Preview of insertion</source>
-        <translation type="vanished">Voorbeeld van invoegen</translation>
-    </message>
-    <message>
-        <source>Select Insertion or Enter void space</source>
-        <translation type="vanished">Selecteer toevoeging of voer een lege ruimte in</translation>
-    </message>
-    <message>
         <location line="-933"/>
         <source>&lt;Enter space size&gt;</source>
         <translation>&lt;Voer ruimtegrootte in&gt;</translation>
@@ -6179,17 +5457,9 @@ is al in de lijst.</translation>
         <translation>Gordijn touw knoop</translation>
     </message>
     <message>
-        <source>Document Units</source>
-        <translation type="vanished">Document eenheden</translation>
-    </message>
-    <message>
         <location line="+543"/>
         <source>#Undefined#</source>
         <translation>#Onbepaald#</translation>
-    </message>
-    <message>
-        <source>Enter painter width (+0)</source>
-        <translation type="vanished">Painterbreedte invoeren (+0)</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -6207,30 +5477,14 @@ is al in de lijst.</translation>
         <translation>Repetitieve painter opties</translation>
     </message>
     <message>
-        <source>Enter main painter stepsize (+0)</source>
-        <translation type="vanished">Voer de belangrijkste painter stapgrootte in (+0)</translation>
-    </message>
-    <message>
         <location line="+65"/>
         <source>Stepsize :</source>
         <translation>Stapgrootte:</translation>
     </message>
     <message>
-        <source>Enter main painter length (+)</source>
-        <translation type="vanished">Vul de lengte van de hoofdpainter in (+)</translation>
-    </message>
-    <message>
         <location line="+16"/>
         <source>Length :</source>
         <translation>Lengte:</translation>
-    </message>
-    <message>
-        <source>Keep painters proportional</source>
-        <translation type="vanished">Houd painters proportioneel</translation>
-    </message>
-    <message>
-        <source>Select percentage of Stepsize</source>
-        <translation type="vanished">Selecteer percentage van stapgrootte</translation>
     </message>
     <message>
         <location line="+52"/>
@@ -6241,10 +5495,6 @@ is al in de lijst.</translation>
         <location line="+62"/>
         <source>Open forms scaling options</source>
         <translation>Schaleringsopties voor open vormen</translation>
-    </message>
-    <message>
-        <source>Adapt scaling f 1.00-0.90 to fit the whole form</source>
-        <translation type="vanished">Schaalverdeling f 1.00-0.90 aanpassen om aan de hele vorm aan te passen</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -6267,17 +5517,9 @@ is al in de lijst.</translation>
         <translation>Afstemmen met einde</translation>
     </message>
     <message>
-        <source>Verbose info (persistent on)</source>
-        <translation type="vanished">Uitgebreide informatie (blijft aanhouden)</translation>
-    </message>
-    <message>
         <location line="+39"/>
         <source>Verbose *</source>
         <translation>Uitgebreid *</translation>
-    </message>
-    <message>
-        <source>Deleted painted over base entities (persistent off)</source>
-        <translation type="vanished">Verwijder geschilderd over de basisobjecten (persistent uit)</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -6291,21 +5533,6 @@ is al in de lijst.</translation>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
         <source>&amp;FlexPainter</source>
         <translation>&amp;FlexPainter</translation>
-    </message>
-</context>
-<context>
-    <name>FlexPainterOptions</name>
-    <message>
-        <source>Painter Options</source>
-        <translation type="vanished">Painter opties</translation>
-    </message>
-    <message>
-        <source>Painters casting options</source>
-        <translation type="vanished">Painter opties voor het casten</translation>
-    </message>
-    <message>
-        <source>Preview</source>
-        <translation type="obsolete">Voorbeeld</translation>
     </message>
 </context>
 <context>
@@ -6363,10 +5590,6 @@ is al in de lijst.</translation>
 <context>
     <name>Form</name>
     <message>
-        <source>Untitled</source>
-        <translation type="vanished">Naamloos</translation>
-    </message>
-    <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/20_ThreeRight.ui" line="+14"/>
         <source>Three: Right</source>
         <translation>Drie: Rechts</translation>
@@ -6390,10 +5613,6 @@ is al in de lijst.</translation>
         <location line="+6"/>
         <source>Cube size:</source>
         <translation>Kubusgrootte:</translation>
-    </message>
-    <message>
-        <source>10</source>
-        <translation type="vanished">10</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -6466,10 +5685,6 @@ is al in de lijst.</translation>
         <translation>Tolerantie:</translation>
     </message>
     <message>
-        <source>0.001</source>
-        <translation type="obsolete">0.001</translation>
-    </message>
-    <message>
         <location line="+16"/>
         <source>Right double-click to reset</source>
         <translation>Rechts dubbelklikken om te resetten</translation>
@@ -6495,14 +5710,6 @@ is al in de lijst.</translation>
         <translation>Highlight object binnen bereik</translation>
     </message>
     <message>
-        <source>Keyboard Operations</source>
-        <translation type="vanished">Toetsenbord Operaties</translation>
-    </message>
-    <message>
-        <source>Angle step for rotating:</source>
-        <translation type="vanished">Hoekstap bij rotatie:</translation>
-    </message>
-    <message>
         <location line="-259"/>
         <source>Right-Click</source>
         <translation>Rechtsklik</translation>
@@ -6513,17 +5720,9 @@ is al in de lijst.</translation>
         <translation>Rechtsklik om objecten te deselecteren</translation>
     </message>
     <message>
-        <source>Right-click on entity shows context menu</source>
-        <translation type="vanished">Klik met rechtermuisknop op object toont contextmenu</translation>
-    </message>
-    <message>
         <location line="+73"/>
         <source>Double-click to select contour</source>
         <translation>Dubbelklik selecteert contour</translation>
-    </message>
-    <message>
-        <source>Block Selection</source>
-        <translation type="vanished">Blok selectie</translation>
     </message>
     <message>
         <location line="+64"/>
@@ -6656,26 +5855,14 @@ is al in de lijst.</translation>
         <translation>Maximaal geselecteerde objecten met referentiepunten:</translation>
     </message>
     <message>
-        <source>1000</source>
-        <translation type="obsolete">1000</translation>
-    </message>
-    <message>
         <location line="+219"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation>Maximaal geselecteerde objecten met weergegeven referentiepunten:</translation>
     </message>
     <message>
-        <source>100000</source>
-        <translation type="obsolete">100000</translation>
-    </message>
-    <message>
         <location line="-656"/>
         <source>Number of threads:</source>
         <translation>Aantal threads:</translation>
-    </message>
-    <message>
-        <source>Text height threshold:</source>
-        <translation type="vanished">Drempel voor teksthoogte:</translation>
     </message>
     <message>
         <location line="+507"/>
@@ -6703,10 +5890,6 @@ is al in de lijst.</translation>
         <translation>Uitschakelen voor afdrukken</translation>
     </message>
     <message>
-        <source>Linetypes</source>
-        <translation type="vanished">Lijntypen</translation>
-    </message>
-    <message>
         <location line="+56"/>
         <source>Auto switch to screen based linetypes in model view</source>
         <translation>Automatisch scherm gebaseerde lijntypen gebruiken in model weergave</translation>
@@ -6730,10 +5913,6 @@ is al in de lijst.</translation>
         <location line="+347"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>Objecten met meer dan N streepjes als doorlopend weergeven:</translation>
-    </message>
-    <message>
-        <source>Use full resolution for Retina display</source>
-        <translation type="vanished">Gebruik volledige resolutie voor Retina-display</translation>
     </message>
     <message>
         <location line="-473"/>
@@ -6761,10 +5940,6 @@ is al in de lijst.</translation>
         <translation>Aantal voorbeeld objecten:</translation>
     </message>
     <message>
-        <source>Text height display threshold (px):</source>
-        <translation type="vanished">Drempel voor weergave van tekst (px):</translation>
-    </message>
-    <message>
         <location line="+61"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation>Weergave van bogen als lijnen onder deze hoek (graden):</translation>
@@ -6780,21 +5955,9 @@ is al in de lijst.</translation>
         <translation>Time-out voor weergave van arcering:</translation>
     </message>
     <message>
-        <source>Maximum number of reference points displayed:</source>
-        <translation type="vanished">Maximum aantal weergeven referentiepunten:</translation>
-    </message>
-    <message>
-        <source>Use multithreading</source>
-        <translation type="vanished">Multithreading gebruiken</translation>
-    </message>
-    <message>
         <location line="+357"/>
         <source>Selection</source>
         <translation>Selectie</translation>
-    </message>
-    <message>
-        <source>Persistent Selection</source>
-        <translation type="vanished">Blijvende selectie</translation>
     </message>
 </context>
 <context>
@@ -6863,10 +6026,6 @@ is al in de lijst.</translation>
         <location line="+16"/>
         <source>Secondary selection color:</source>
         <translation>Secundaire selectie kleur:</translation>
-    </message>
-    <message>
-        <source>Draggable reference points:</source>
-        <translation type="vanished">Versleepbare referentiepunten:</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -6966,18 +6125,6 @@ is al in de lijst.</translation>
 </context>
 <context>
     <name>GraphicsViewFonts</name>
-    <message>
-        <source>Ruler Font:</source>
-        <translation type="vanished">Liniaal:</translation>
-    </message>
-    <message>
-        <source>Snap Label Font:</source>
-        <translation type="vanished">Vang label:</translation>
-    </message>
-    <message>
-        <source>Info Label Font:</source>
-        <translation type="vanished">Info label:</translation>
-    </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+41"/>
         <source>Ruler font:</source>
@@ -7089,34 +6236,14 @@ is al in de lijst.</translation>
 <context>
     <name>Hatch</name>
     <message>
-        <source>No boundary selected.</source>
-        <translation type="vanished">Geen begrenzing geselecteerd</translation>
-    </message>
-    <message>
-        <source>Loop not closed at point %1/%2.</source>
-        <translation type="vanished">Loop niet gesloten op punt %1/%2.</translation>
-    </message>
-    <message>
-        <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
-        <translation type="vanished">Elk rand objekt moet een lijn, boog, cirkel, ellips boog, ellips, polylijn of spline zijn. Gevonden:</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Hatch/Hatch.js" line="+99"/>
         <source>&amp;Hatch</source>
         <translation>&amp;Arcering</translation>
     </message>
     <message>
-        <source>Draw hatch or solid fill</source>
-        <translation type="vanished">Teken arceringen of opvullingen</translation>
-    </message>
-    <message>
         <location line="-27"/>
         <source>Hatch Tools</source>
         <translation>Arceringgereedschappen</translation>
-    </message>
-    <message>
-        <source>Show hatch tools</source>
-        <translation type="vanished">Toon arceringgereedschappen</translation>
     </message>
 </context>
 <context>
@@ -7201,10 +6328,6 @@ is al in de lijst.</translation>
 <context>
     <name>HideAllBlocks</name>
     <message>
-        <source>&amp;Hide All</source>
-        <translation type="vanished">&amp;Verberg alle</translation>
-    </message>
-    <message>
         <location filename="../scripts/Block/HideAllBlocks/HideAllBlocksInit.js" line="+2"/>
         <source>&amp;Hide All Blocks</source>
         <translation>&amp;Verberg alle Blokken</translation>
@@ -7277,10 +6400,6 @@ is al in de lijst.</translation>
         <location line="+27"/>
         <source>Angle:</source>
         <translation>Hoek:</translation>
-    </message>
-    <message>
-        <source>Insert Bitmap</source>
-        <translation type="vanished">Bitmap invoegen</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Image/ImageInit.js" line="+2"/>
@@ -7455,10 +6574,6 @@ is al in de lijst.</translation>
         <translation>Tweede lijn kiezen</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">Klaar</translation>
-    </message>
-    <message>
         <location line="+96"/>
         <source>Angle:</source>
         <translation>Hoek:</translation>
@@ -7471,10 +6586,6 @@ is al in de lijst.</translation>
 </context>
 <context>
     <name>InfoArcCircleArea</name>
-    <message>
-        <source>Done</source>
-        <translation type="vanished">Klaar</translation>
-    </message>
     <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+306"/>
         <location line="+21"/>
@@ -7623,10 +6734,6 @@ is al in de lijst.</translation>
         <translation>Set volgende polygoon hoek</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">Klaar</translation>
-    </message>
-    <message>
         <location line="+121"/>
         <source>Polygon area:</source>
         <translation>Polygoonoppervlakte:</translation>
@@ -7665,17 +6772,9 @@ is al in de lijst.</translation>
         <translation>Alsjeblieft, maak eerst een selectie. Bevel beëindigd.</translation>
     </message>
     <message>
-        <source>Multiple selection.</source>
-        <translation type="vanished">Meervoudige selectie.</translation>
-    </message>
-    <message>
         <location line="+9"/>
         <source>Not implemented. Command terminated.</source>
         <translation>Niet geïmplementeerd. Commando beëindigd.</translation>
-    </message>
-    <message>
-        <source>Centroid &amp; area script by CVH</source>
-        <translation type="vanished">Centroïde gebied script door CVH</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -7686,14 +6785,6 @@ is al in de lijst.</translation>
         <location line="+46"/>
         <source>Approximated enclosed area:</source>
         <translation>Geschatte ingesloten oppervlakte:</translation>
-    </message>
-    <message>
-        <source>Ellipse arc sector area (closed format): %1</source>
-        <translation type="vanished">Ellips boog sector gebied (gesloten formaat): %1</translation>
-    </message>
-    <message>
-        <source>Ellipse arc segment area (closed format): %1</source>
-        <translation type="vanished">Ellips boogsegment gebied (gesloten formaat): %1</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -7711,21 +6802,9 @@ is al in de lijst.</translation>
         <translation>Verschillend gearceerd gebied:</translation>
     </message>
     <message>
-        <source>Unsupported entity type.</source>
-        <translation type="vanished">Niet-ondersteund objectstype.</translation>
-    </message>
-    <message>
         <location line="-68"/>
         <source>Multiple entities in selection.</source>
         <translation>Meerdere objecten in selectie.</translation>
-    </message>
-    <message>
-        <source>Area centroid script (v0.31) by CVH</source>
-        <translation type="vanished">Gebiedscentroïde script (v0.31) door CVH</translation>
-    </message>
-    <message>
-        <source>2D Centroid</source>
-        <translation type="vanished">2D Centroïde</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -7741,10 +6820,6 @@ is al in de lijst.</translation>
         <location line="+8"/>
         <source>No results.</source>
         <translation>Geen resultaten.</translation>
-    </message>
-    <message>
-        <source>Centroid point</source>
-        <translation type="vanished">Centroïde punt</translation>
     </message>
     <message>
         <location line="-74"/>
@@ -7801,10 +6876,6 @@ is al in de lijst.</translation>
         <translation>Zelfdoorsnijdende vorm nabij (%1). Geen resultaten.</translation>
     </message>
     <message>
-        <source>Add centroid for a selected entity.</source>
-        <translation type="vanished">Voeg centroïde toe voor een geselecteerde object.</translation>
-    </message>
-    <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+19"/>
         <source>&amp;Area Centroid</source>
         <translation>&amp;Centroïde van oppervlakte</translation>
@@ -7818,14 +6889,6 @@ is al in de lijst.</translation>
         <location line="+1"/>
         <source>Creates a new uniform areal density 2D Centroid marker and value labels for a selected entity</source>
         <translation>Creëert een nieuwe 2D-centroïdemarkering met uniforme oppervlaktedichtheid en waarde-etiketten voor een geselecteerde object</translation>
-    </message>
-    <message>
-        <source>Add 2D area centroid for a selected entity.</source>
-        <translation type="vanished">2D-gebiedszwaartepunt toevoegen voor een geselecteerde object.</translation>
-    </message>
-    <message>
-        <source>Add 2D uniform density area centroid marker and values for a selected entity.</source>
-        <translation type="vanished">2D uniforme dichtheid gebied centroïde marker en waarden toevoegen voor een geselecteerde object.</translation>
     </message>
 </context>
 <context>
@@ -7963,10 +7026,6 @@ is al in de lijst.</translation>
         <translation>Tweede object kiezen</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">Klaar</translation>
-    </message>
-    <message>
         <location line="+95"/>
         <source>Distance:</source>
         <translation>Afstand:</translation>
@@ -7988,10 +7047,6 @@ is al in de lijst.</translation>
         <location line="+8"/>
         <source>Specify point</source>
         <translation>Punt kiezen</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="vanished">Klaar</translation>
     </message>
     <message>
         <location line="+81"/>
@@ -8017,10 +7072,6 @@ is al in de lijst.</translation>
         <translation>Tweede punt</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">Klaar</translation>
-    </message>
-    <message>
         <location line="+53"/>
         <source>Distance:</source>
         <translation>Afstand:</translation>
@@ -8044,37 +7095,6 @@ is al in de lijst.</translation>
         <location filename="../scripts/Information/InfoDistancePP/InfoDistancePPInit.js" line="+2"/>
         <source>Distance &amp;Point to Point</source>
         <translation>Afstand &amp;punt tot punt</translation>
-    </message>
-</context>
-<context>
-    <name>InfoPolylineArea</name>
-    <message>
-        <source>Choose polyline</source>
-        <translation type="vanished">Polylijn kiesen</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="vanished">Klaar</translation>
-    </message>
-    <message>
-        <source>Area</source>
-        <translation type="vanished">Oppervlakte</translation>
-    </message>
-    <message>
-        <source>Circumference</source>
-        <translation type="vanished">Omtrek</translation>
-    </message>
-    <message>
-        <source>Polyline area:</source>
-        <translation type="vanished">Oppervlakte:</translation>
-    </message>
-    <message>
-        <source>circumference:</source>
-        <translation type="vanished">Omtrek:</translation>
-    </message>
-    <message>
-        <source>Polyl&amp;ine Area</source>
-        <translation type="vanished">Polylijn&amp;oppervlakte</translation>
     </message>
 </context>
 <context>
@@ -8231,66 +7251,6 @@ is al in de lijst.</translation>
         <translation>Gecombineerde centroïde:</translation>
     </message>
     <message>
-        <source>Centroids weighted sum script (v0.10b) by CVH</source>
-        <translation type="vanished">Centroïde gewogen som script (v0.10b) door CVH</translation>
-    </message>
-    <message>
-        <source>2D Centroid</source>
-        <translation type="vanished">2D Centroïde</translation>
-    </message>
-    <message>
-        <source>Density</source>
-        <translation type="vanished">Dichtheid</translation>
-    </message>
-    <message>
-        <source>X position</source>
-        <translation type="vanished">X positie</translation>
-    </message>
-    <message>
-        <source>Y position</source>
-        <translation type="vanished">Y-positie</translation>
-    </message>
-    <message>
-        <source>Weighted</source>
-        <translation type="vanished">Gewogen</translation>
-    </message>
-    <message>
-        <source>No centroid markers in selection.</source>
-        <translation type="vanished">Geen centroïde markers in selectie.</translation>
-    </message>
-    <message>
-        <source>One marker selected, nothing to sum. Please verify selection.</source>
-        <translation type="vanished">Eén marker geselecteerd, niets om op te sommen. Controleer de selectie.</translation>
-    </message>
-    <message>
-        <source>Results in Zero.</source>
-        <translation type="vanished">Resultaten in nul.</translation>
-    </message>
-    <message>
-        <source>Total sum(%1):</source>
-        <translation type="vanished">Totaal som(%1):</translation>
-    </message>
-    <message>
-        <source>Weighted sum(%1):</source>
-        <translation type="vanished">Gewogen som(%1):</translation>
-    </message>
-    <message>
-        <source>Summed centroid position:</source>
-        <translation type="vanished">Gesommeerde centroïde positie:</translation>
-    </message>
-    <message>
-        <source>&amp;Sum Centroids Weighted</source>
-        <translation type="vanished">&amp;Som centroïden gewogen</translation>
-    </message>
-    <message>
-        <source>Sum selected 2D centroid markers weighted.</source>
-        <translation type="vanished">Som geselecteerde 2D-centroïde markers gewogen.</translation>
-    </message>
-    <message>
-        <source>Sum selected 2D centroid markers weighted by their individual custom density.</source>
-        <translation type="vanished">Som geselecteerde 2D-centroïde markers gewogen naar hun individuele aangepaste dichtheid.</translation>
-    </message>
-    <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+19"/>
         <source>&amp;Sum 2D Centroids weighted</source>
         <translation>Som 2D Centroïden gewogen</translation>
@@ -8319,21 +7279,9 @@ is al in de lijst.</translation>
         <translation>Alsjeblieft, maak eerst een selectie. Bevel beëindigd.</translation>
     </message>
     <message>
-        <source>Wire centroid script (v0.31) by CVH</source>
-        <translation type="vanished">Draad centroïde script (v0.31) door CVH</translation>
-    </message>
-    <message>
         <location line="+12"/>
         <source>Length:</source>
         <translation>Lengte:</translation>
-    </message>
-    <message>
-        <source>2D Centroid</source>
-        <translation type="vanished">2D Centroïde</translation>
-    </message>
-    <message>
-        <source>Centroid markers circle in selection. No results.</source>
-        <translation type="vanished">Centroïde markers cirkel in selectie. Geen resultaten.</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -8350,14 +7298,6 @@ is al in de lijst.</translation>
         <location line="+15"/>
         <source>No results.</source>
         <translation>Geen resultaten.</translation>
-    </message>
-    <message>
-        <source>Results in Zero.</source>
-        <translation type="vanished">Resultaten in nul.</translation>
-    </message>
-    <message>
-        <source>Centroid point</source>
-        <translation type="vanished">Centroïde punt</translation>
     </message>
     <message>
         <location line="-71"/>
@@ -8425,14 +7365,6 @@ is al in de lijst.</translation>
         <source>Creates a new uniform linear density 2D Centroid marker and value labels for a selection of entities</source>
         <translation>Creëert een nieuwe 2D-centroïdemarkering met uniforme lineaire dichtheid en waarde-etiketten voor een selectie van objecten</translation>
     </message>
-    <message>
-        <source>Add 2D wire centroid for a selection.</source>
-        <translation type="vanished">Voeg 2D draad centroïde toe voor een selectie.</translation>
-    </message>
-    <message>
-        <source>Add 2D uniform density wire centroid marker and values for a selection of entities.</source>
-        <translation type="vanished">Voeg 2D uniforme dichtheid draad centroïde marker en waarden toe voor een selectie van objecten.</translation>
-    </message>
 </context>
 <context>
     <name>Information</name>
@@ -8440,10 +7372,6 @@ is al in de lijst.</translation>
         <location filename="../scripts/Information/Information.js" line="+334"/>
         <source>Information Tools</source>
         <translation>Infogereedschappen</translation>
-    </message>
-    <message>
-        <source>Show information tools</source>
-        <translation type="vanished">Infogereedschappen tonen</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -8460,29 +7388,9 @@ is al in de lijst.</translation>
         <source>Text height:</source>
         <translation>Teksthoogte:</translation>
     </message>
-    <message>
-        <source>Text Height:</source>
-        <translation type="vanished">Teksthoogte:</translation>
-    </message>
 </context>
 <context>
     <name>Input</name>
-    <message>
-        <source>Decimal Point:</source>
-        <translation type="vanished">Decimale punt:</translation>
-    </message>
-    <message>
-        <source>Cartesian Coordinate Separator:</source>
-        <translation type="vanished">Scheidingsteken voor Cartesiaanse coördinaten:</translation>
-    </message>
-    <message>
-        <source>Polar Coordinate Separator:</source>
-        <translation type="vanished">Scheidingsteken voor polaire coördinaten:</translation>
-    </message>
-    <message>
-        <source>Relative Coordinate Prefix:</source>
-        <translation type="vanished">Prefix voor relatieve coördinaten:</translation>
-    </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/InputPreferences/PreferencesPage.ui" line="+19"/>
         <source>Decimal point:</source>
@@ -8527,22 +7435,6 @@ is al in de lijst.</translation>
         <location line="+21"/>
         <source>Relative polar coordinate:</source>
         <translation>Relatief polaire coördinaat:</translation>
-    </message>
-    <message>
-        <source>Absolute Cartesian Coordinate:</source>
-        <translation type="vanished">Absolute Cartesische coördinaat:</translation>
-    </message>
-    <message>
-        <source>Absolute Polar Coordinate:</source>
-        <translation type="vanished">Absolute polaire coördinaat:</translation>
-    </message>
-    <message>
-        <source>Relative Cartesian Coordinate:</source>
-        <translation type="vanished">Relatief Cartesische coördinaat:</translation>
-    </message>
-    <message>
-        <source>Relative Polar Coordinate:</source>
-        <translation type="vanished">Relatief polaire coördinaat:</translation>
     </message>
 </context>
 <context>
@@ -8709,10 +7601,6 @@ is al in de lijst.</translation>
         <translation>Ongeldig blok naam gecorrigeerd in &quot;%1&quot;</translation>
     </message>
     <message>
-        <source>Adjusted invalid block name to &apos;%1&apos;</source>
-        <translation type="vanished">Ongeldig blok naam gecorrigeerd in &apos;%1&apos;</translation>
-    </message>
-    <message>
         <location line="+69"/>
         <source>Position</source>
         <translation>Positie</translation>
@@ -8776,10 +7664,6 @@ is al in de lijst.</translation>
 <context>
     <name>InsertScriptItem</name>
     <message>
-        <source>Position</source>
-        <translation type="vanished">Positie</translation>
-    </message>
-    <message>
         <location filename="../scripts/Block/InsertScriptItem/InsertScriptItemInit.js" line="+2"/>
         <source>Insert &amp;Script</source>
         <translation>&amp;Script invoegen</translation>
@@ -8839,14 +7723,6 @@ is al in de lijst.</translation>
         <location line="+11"/>
         <source>Rotate selection clockwise before projection</source>
         <translation>Draai selectie met de klok voor projectie</translation>
-    </message>
-    <message>
-        <source>Scale projection to original size (&apos;isometric drawing&apos;)</source>
-        <translation type="vanished">Schaal projectie op oorspronkelijke grootte (&quot;isometrische tekening&quot;)</translation>
-    </message>
-    <message>
-        <source>True scale</source>
-        <translation type="vanished">Ware grootte</translation>
     </message>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProjectInit.js" line="+2"/>
@@ -8962,10 +7838,6 @@ is al in de lijst.</translation>
 <context>
     <name>Language</name>
     <message>
-        <source>Language of User Interface:</source>
-        <translation type="vanished">Taal van de gebruikersinterface:</translation>
-    </message>
-    <message>
         <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/PreferencesPage.ui" line="+20"/>
         <source>Language of user interface:</source>
         <translation>Taal van de gebruikersinterface:</translation>
@@ -9010,10 +7882,6 @@ is al in de lijst.</translation>
         <location filename="../scripts/Layer/Layer.js" line="+97"/>
         <source>Layer Tools</source>
         <translation>Laaggereedschappen</translation>
-    </message>
-    <message>
-        <source>Show layer tools</source>
-        <translation type="vanished">Laaggereedschappen tonen</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -9083,10 +7951,6 @@ is al in de lijst.</translation>
         <source>Entities in blocks on layer 0 take on attributes and visibility of block reference.</source>
         <translation>Objecten in blokken op laag 0 nemen attributen en zichtbaarheid van blok referentie aan.</translation>
     </message>
-    <message>
-        <source>Entities in blocks on layer 0 take on attributes of block reference (compatibility)</source>
-        <translation type="vanished">Objecten in blokken op laag 0 nemen attributen van blok referentie aan (compatibiliteit)</translation>
-    </message>
 </context>
 <context>
     <name>LayerDialog</name>
@@ -9110,10 +7974,6 @@ is al in de lijst.</translation>
         <location line="+13"/>
         <source>Layer already exists.</source>
         <translation>Laag bestaat al.</translation>
-    </message>
-    <message>
-        <source>Layer Data</source>
-        <translation type="vanished">Laag</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/LayerDialog.ui" line="+17"/>
@@ -9179,41 +8039,6 @@ is al in de lijst.</translation>
     </message>
 </context>
 <context>
-    <name>LayoutDialog</name>
-    <message>
-        <source>Layout</source>
-        <translation type="vanished">Layout</translation>
-    </message>
-    <message>
-        <source>Leading or trailing spaces.</source>
-        <translation type="vanished">Spaties voor of na.</translation>
-    </message>
-    <message>
-        <source>Layout name is empty.</source>
-        <translation type="vanished">De layoutnaam is leeg.</translation>
-    </message>
-    <message>
-        <source>Layout name is invalid.</source>
-        <translation type="vanished">De layoutnaam is onjuist.</translation>
-    </message>
-    <message>
-        <source>Layout &apos;%1&apos; already exists&lt;br&gt;and will be overwritten.</source>
-        <translation type="vanished">Layout &quot;%1&quot; bestaat al&lt;br&gt;en zal worden overschreven.</translation>
-    </message>
-    <message>
-        <source>Layout already exists.</source>
-        <translation type="vanished">Layout bestaat al.</translation>
-    </message>
-    <message>
-        <source>Layout Data</source>
-        <translation type="vanished">Layout gegevens</translation>
-    </message>
-    <message>
-        <source>Layout name:</source>
-        <translation type="vanished">Layoutnaam:</translation>
-    </message>
-</context>
-<context>
     <name>Leader</name>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+62"/>
@@ -9226,10 +8051,6 @@ is al in de lijst.</translation>
         <translation>Volgende hoekpunt</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">Klaar</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
         <source>&amp;Leader</source>
         <translation>&amp;Verwijslijn</translation>
@@ -9238,10 +8059,6 @@ is al in de lijst.</translation>
         <location line="+5"/>
         <source>Draw leader (line sequence with arrow)</source>
         <translation>Verwijslijn (polylijn met pijl)</translation>
-    </message>
-    <message>
-        <source>Undo Last Segement</source>
-        <translation type="vanished">Laatste hoekpunt ongedaan maaken</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
@@ -9260,14 +8077,6 @@ is al in de lijst.</translation>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
         <translation>&amp;Aanhaling van geselecteerde tekst</translation>
-    </message>
-    <message>
-        <source>&amp;Leader from selected text</source>
-        <translation type="vanished">&amp;Aanhaling uit geselecteerde tekst</translation>
-    </message>
-    <message>
-        <source>Leader from text was created successfully</source>
-        <translation type="vanished">Aanhaling uit tekst werd met succes aangemaakt</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
@@ -9429,18 +8238,6 @@ is al in de lijst.</translation>
         <translation>DB fout</translation>
     </message>
     <message>
-        <source>Plugin LibraryBrowser: cannot connect to DB.
-Driver error: %1
-Database error: %2
-Database file: %3
-Library browser will not be available.</source>
-        <translation type="vanished">Plugin LibraryBrowser: cannot connect to DB.
-Driver error: %1
-Database error: %2
-Database file: %3
-Library browser will not be available.</translation>
-    </message>
-    <message>
         <location line="+44"/>
         <source>Source removed from part library: %1</source>
         <translation>Bron verwijderd uit bibliotheek: %1</translation>
@@ -9526,17 +8323,9 @@ Library browser will not be available.</translation>
         <translation>Weergaveopties</translation>
     </message>
     <message>
-        <source>Icon Size:</source>
-        <translation type="vanished">Pictogramgrootte:</translation>
-    </message>
-    <message>
         <location line="+53"/>
         <source>Dark icon background</source>
         <translation>Donkere icon achtergrond</translation>
-    </message>
-    <message>
-        <source>View Mode:</source>
-        <translation type="vanished">Weergave:</translation>
     </message>
     <message>
         <location line="-44"/>
@@ -9609,10 +8398,6 @@ getoond in zoekresultaten:</translation>
         <translation>Zoeken</translation>
     </message>
     <message>
-        <source>Reset tag selection</source>
-        <translation type="vanished">Tag selectie herstellen</translation>
-    </message>
-    <message>
         <location line="+129"/>
         <source>Favorites</source>
         <translation>Favorieten</translation>
@@ -9627,10 +8412,6 @@ getoond in zoekresultaten:</translation>
         <source>Update DB from file system</source>
         <translation>Bijwerken van bestandssysteem</translation>
     </message>
-    <message>
-        <source>0</source>
-        <translation type="vanished">0</translation>
-    </message>
 </context>
 <context>
     <name>Line</name>
@@ -9638,10 +8419,6 @@ getoond in zoekresultaten:</translation>
         <location filename="../scripts/Draw/Line/Line.js" line="+81"/>
         <source>Line Tools</source>
         <translation>Lijngereedschappen</translation>
-    </message>
-    <message>
-        <source>Show line tools</source>
-        <translation type="vanished">Lijnhulpmiddelen tonen</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -9680,10 +8457,6 @@ getoond in zoekresultaten:</translation>
         <location line="+10"/>
         <source>Next point</source>
         <translation>Volgende punt</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="vanished">Klaar</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.ui" line="+23"/>
@@ -9835,10 +8608,6 @@ getoond in zoekresultaten:</translation>
         <translation>Tweede punt</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">Gedaan</translation>
-    </message>
-    <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui" line="+17"/>
         <source>Depth:</source>
         <translation>Diepte:</translation>
@@ -9885,25 +8654,6 @@ getoond in zoekresultaten:</translation>
     </message>
 </context>
 <context>
-    <name>LineBreakSymbol</name>
-    <message>
-        <source>Pick the first point</source>
-        <translation type="vanished">Kies het eerste punt</translation>
-    </message>
-    <message>
-        <source>Pick the second point</source>
-        <translation type="vanished">Kies het tweede punt</translation>
-    </message>
-    <message>
-        <source>&amp;Line break symbol from 2 points</source>
-        <translation type="vanished">&amp;Lijnbreuksymbool van 2 punten</translation>
-    </message>
-    <message>
-        <source>Draw a line break symbol from 2 points</source>
-        <translation type="vanished">Teken een lijn onderbreking symbool van 2 punten</translation>
-    </message>
-</context>
-<context>
     <name>LineDove</name>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.js" line="+63"/>
@@ -9914,10 +8664,6 @@ getoond in zoekresultaten:</translation>
         <location line="+7"/>
         <source>Second point</source>
         <translation>Tweede punt</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="vanished">Klaar</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
@@ -10080,10 +8826,6 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>LineParallel</name>
     <message>
-        <source>&amp;Distance:</source>
-        <translation type="vanished">&amp;Afstand:</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>Dist&amp;ance:</source>
         <translation>&amp;Afstand:</translation>
@@ -10147,10 +8889,6 @@ getoond in zoekresultaten:</translation>
 </context>
 <context>
     <name>LineRelativeAngle</name>
-    <message>
-        <source>Choose base entity</source>
-        <translation type="vanished">Kies basis object</translation>
-    </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="+71"/>
         <source>Choose base line, arc, circle, ellipse or polyline</source>
@@ -10310,10 +9048,6 @@ getoond in zoekresultaten:</translation>
         <location line="+0"/>
         <source>General</source>
         <translation>Algemeen</translation>
-    </message>
-    <message>
-        <source>Global Linetype Scale:</source>
-        <translation type="vanished">Globale lijntypeschaal:</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/PreferencesPage.ui" line="+19"/>
@@ -10476,10 +9210,6 @@ getoond in zoekresultaten:</translation>
         <translation>Diverse gereedschappen</translation>
     </message>
     <message>
-        <source>Show misc tools</source>
-        <translation type="vanished">Diverse gereedschappen tonen</translation>
-    </message>
-    <message>
         <location line="+22"/>
         <source>Misc</source>
         <translation>Diverse</translation>
@@ -10503,10 +9233,6 @@ getoond in zoekresultaten:</translation>
         <translation>Diverse blokgereedschappen</translation>
     </message>
     <message>
-        <source>Show misc block tools</source>
-        <translation type="vanished">Toon diverse blokfuncties</translation>
-    </message>
-    <message>
         <location line="+22"/>
         <source>&amp;Block</source>
         <translation>&amp;Blok</translation>
@@ -10523,10 +9249,6 @@ getoond in zoekresultaten:</translation>
         <location line="+9"/>
         <source>Misc Development Tools</source>
         <translation>Diverse ontwikkelingstools</translation>
-    </message>
-    <message>
-        <source>Show misc development tools</source>
-        <translation type="vanished">Toon diverse ontwikkelingstools</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -10552,10 +9274,6 @@ getoond in zoekresultaten:</translation>
         <translation>Diverse Tekenen</translation>
     </message>
     <message>
-        <source>Show misc drawing tools</source>
-        <translation type="vanished">Toon diverse tekenfuncties</translation>
-    </message>
-    <message>
         <location line="+4"/>
         <source>&amp;Draw</source>
         <translation>&amp;Tekenen</translation>
@@ -10572,10 +9290,6 @@ getoond in zoekresultaten:</translation>
         <location line="+9"/>
         <source>Misc Import / Export Tools</source>
         <translation>Diverse import- / exportfuncties</translation>
-    </message>
-    <message>
-        <source>Show misc import / export tools</source>
-        <translation type="vanished">Diverse import- / exportfuncties tonen</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -10614,10 +9328,6 @@ getoond in zoekresultaten:</translation>
         <translation>Diverse modificatiegereedschappen</translation>
     </message>
     <message>
-        <source>Show misc modification tools</source>
-        <translation type="vanished">Diverse modificatiegereedschappen tonen</translation>
-    </message>
-    <message>
         <location line="+23"/>
         <source>&amp;Modify</source>
         <translation>&amp;Modificeren</translation>
@@ -10636,10 +9346,6 @@ getoond in zoekresultaten:</translation>
         <translation>Diverse selectiegereedschappen</translation>
     </message>
     <message>
-        <source>Show misc selection tools</source>
-        <translation type="vanished">Diverse selectiegereedschappen tonen</translation>
-    </message>
-    <message>
         <location line="+23"/>
         <source>&amp;Select</source>
         <translation>&amp;Selecteer</translation>
@@ -10651,10 +9357,6 @@ getoond in zoekresultaten:</translation>
         <location filename="../scripts/Modify/Modify.js" line="+99"/>
         <source>Modification Tools</source>
         <translation>Modificatiegereedschappen</translation>
-    </message>
-    <message>
-        <source>Show modification tools</source>
-        <translation type="vanished">Modificatiegereedschappen tonen</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -10683,10 +9385,6 @@ getoond in zoekresultaten:</translation>
         <location line="+10"/>
         <source>Set point</source>
         <translation>Punt kiezen</translation>
-    </message>
-    <message>
-        <source>Choose solution</source>
-        <translation type="vanished">Oplossing kiezen</translation>
     </message>
 </context>
 <context>
@@ -10920,14 +9618,6 @@ getoond in zoekresultaten:</translation>
             <numerusform>Radius gedaald tot onder 0 na %n concentrische boogen.</numerusform>
         </translation>
     </message>
-    <message>
-        <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
-        <translation type="vanished">Radius gedaald tot onder 0 na %1 concentrische cirkel(s).</translation>
-    </message>
-    <message>
-        <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
-        <translation type="vanished">Radius gedaald tot onder 0 na %1 concentrische boog(en).</translation>
-    </message>
 </context>
 <context>
     <name>OffsetThrough</name>
@@ -10986,33 +9676,6 @@ getoond in zoekresultaten:</translation>
         <location filename="../scripts/View/OptionsToolBarFocus/OptionsToolBarFocusInit.js" line="+2"/>
         <source>&amp;Focus on Options Toolbar</source>
         <translation>&amp;Focus op opties werkbalk</translation>
-    </message>
-</context>
-<context>
-    <name>OrthogonalProjections</name>
-    <message>
-        <source>First vertex</source>
-        <translation type="obsolete">Eerste hoekpunt</translation>
-    </message>
-    <message>
-        <source>Next vertex</source>
-        <translation type="obsolete">Volgende hoekpunt</translation>
-    </message>
-    <message>
-        <source>close</source>
-        <translation type="obsolete">close</translation>
-    </message>
-    <message>
-        <source>undo</source>
-        <translation type="obsolete">undo</translation>
-    </message>
-    <message>
-        <source>redo</source>
-        <translation type="obsolete">Opnieuw toepassen</translation>
-    </message>
-    <message>
-        <source>arc</source>
-        <translation type="obsolete">arc</translation>
     </message>
 </context>
 <context>
@@ -11149,17 +9812,9 @@ getoond in zoekresultaten:</translation>
         <translation>Rotatie:</translation>
     </message>
     <message>
-        <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation type="vanished">Draai ingevoegde objecten&lt;br&gt;over deze hoek</translation>
-    </message>
-    <message>
         <location line="+126"/>
         <source>Scale:</source>
         <translation>Schaal:</translation>
-    </message>
-    <message>
-        <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation type="vanished">Schaal ingevoegde objecten&lt;br&gt;met deze factor</translation>
     </message>
     <message>
         <location line="+88"/>
@@ -11254,10 +9909,6 @@ getoond in zoekresultaten:</translation>
         <translation>Puntgereedschappen</translation>
     </message>
     <message>
-        <source>Show point tools</source>
-        <translation type="vanished">Puntgereedschappen tonen</translation>
-    </message>
-    <message>
         <location line="+27"/>
         <source>&amp;Point</source>
         <translation>&amp;Punt</translation>
@@ -11298,10 +9949,6 @@ getoond in zoekresultaten:</translation>
         <location line="+0"/>
         <source>General</source>
         <translation>Algemeen</translation>
-    </message>
-    <message>
-        <source>Mode: </source>
-        <translation type="vanished">Modus: </translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
@@ -11346,106 +9993,11 @@ getoond in zoekresultaten:</translation>
     </message>
 </context>
 <context>
-    <name>PolyLineBreakSymbol</name>
-    <message>
-        <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation type="vanished">Kies lijn, boog, cirkel, ellips, spline of polylijn</translation>
-    </message>
-    <message>
-        <source>Choose line, arc, circle or ellipse to break up</source>
-        <translation type="vanished">Kies lijn, boog, cirkel of ellips</translation>
-    </message>
-    <message>
-        <source>Pick the first point</source>
-        <translation type="vanished">Kies het eerste punt</translation>
-    </message>
-    <message>
-        <source>Pick the first break point</source>
-        <translation type="vanished">Kies het eerste breekpunt</translation>
-    </message>
-    <message>
-        <source>Pick the second point</source>
-        <translation type="vanished">Kies het tweede punt</translation>
-    </message>
-    <message>
-        <source>Pick the second break point</source>
-        <translation type="vanished">Kies het tweede breekpunt</translation>
-    </message>
-    <message>
-        <source>Break Out Segment</source>
-        <translation type="vanished">Segment uitbreken</translation>
-    </message>
-    <message>
-        <source>Remove line break segment</source>
-        <translation type="vanished">Verwijder segment bij lijnbreuk</translation>
-    </message>
-    <message>
-        <source>Remove the line segment between the break symbol</source>
-        <translation type="vanished">Verwijder het lijnstuk tussen het breuksymbool</translation>
-    </message>
-    <message>
-        <source>Remove Segment</source>
-        <translation type="vanished">Segment verwijderen</translation>
-    </message>
-    <message>
-        <source>Inherit entity properties</source>
-        <translation type="vanished">Entiteitseigenschappen overerven</translation>
-    </message>
-    <message>
-        <source>Inherit all properties from the chosen entity</source>
-        <translation type="vanished">Erft alle eigenschappen van de gekozen entiteit</translation>
-    </message>
-    <message>
-        <source>Inherit</source>
-        <translation type="vanished">Erven</translation>
-    </message>
-    <message>
-        <source>Peak ratio</source>
-        <translation type="vanished">Piekverhouding</translation>
-    </message>
-    <message>
-        <source>The ratio of the peak height to the break width</source>
-        <translation type="vanished">De verhouding van de piekhoogte tot de breukbreedte</translation>
-    </message>
-    <message>
-        <source>Peak Ratio:</source>
-        <translation type="vanished">Piekverhouding:</translation>
-    </message>
-    <message>
-        <source>First/Last segment inclined</source>
-        <translation type="vanished">Eerste/laatste segment hellend</translation>
-    </message>
-    <message>
-        <source>The first and last segment of the break symbol is inclined</source>
-        <translation type="vanished">Het eerste en laatste segment van het breuksymbool zijn schuin</translation>
-    </message>
-    <message>
-        <source>First/Last segment vertical</source>
-        <translation type="vanished">Eerste/laatste segment verticaal</translation>
-    </message>
-    <message>
-        <source>The first and last segment of the break symbol is vertical</source>
-        <translation type="vanished">Het eerste en laatste segment van het breuksymbool is verticaal</translation>
-    </message>
-    <message>
-        <source>&amp;PolyLine break symbol from 2 points</source>
-        <translation type="vanished">&amp;Polylijn breeksymbool van 2 punten</translation>
-    </message>
-    <message>
-        <source>Draw a polyline break symbol from 2 points</source>
-        <translation type="vanished">Teken een polylijn breuksymbool vanuit 2 punten</translation>
-    </message>
-</context>
-<context>
     <name>Polyline</name>
     <message>
         <location filename="../scripts/Draw/Polyline/Polyline.js" line="+73"/>
         <source>Polyline Tools</source>
         <translation>Polylijngereedschappen</translation>
-    </message>
-    <message>
-        <source>Show polyline tools</source>
-        <translation type="vanished">Polylijngereedschappen tonen</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -11581,10 +10133,6 @@ getoond in zoekresultaten:</translation>
         <location line="-74"/>
         <source>Filter</source>
         <translation>Filter</translation>
-    </message>
-    <message>
-        <source>Clear Search</source>
-        <translation type="vanished">Zoekopdracht terugzetten</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11800,10 +10348,6 @@ getoond in zoekresultaten:</translation>
         <translation>Projectiegereedschappen</translation>
     </message>
     <message>
-        <source>Show projection tools</source>
-        <translation type="vanished">Projectiegereedschappen tonen</translation>
-    </message>
-    <message>
         <location line="+23"/>
         <source>&amp;Projection</source>
         <translation>&amp;Projectie</translation>
@@ -11822,17 +10366,17 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1591"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1634"/>
         <source>*VARIES*</source>
         <translation>*VARIEERT*</translation>
     </message>
     <message>
-        <location line="-1378"/>
+        <location line="-1421"/>
         <source>:</source>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+194"/>
         <source>No Selection</source>
         <translation>Geen selectie</translation>
     </message>
@@ -12011,10 +10555,6 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>RecentFiles</name>
     <message>
-        <source>Load/Save</source>
-        <translation type="vanished">Laden/opslaan</translation>
-    </message>
-    <message>
         <location filename="../scripts/File/RecentFiles/RecentFiles.js" line="+35"/>
         <source>Recent Files</source>
         <translation>Recente bestanden</translation>
@@ -12023,10 +10563,6 @@ getoond in zoekresultaten:</translation>
         <location line="+0"/>
         <source>File</source>
         <translation>Bestand</translation>
-    </message>
-    <message>
-        <source>Open/Save</source>
-        <translation type="vanished">Laden/opslaan</translation>
     </message>
     <message>
         <location filename="../scripts/File/RecentFiles/RecentFilesInit.js" line="+59"/>
@@ -12075,10 +10611,6 @@ getoond in zoekresultaten:</translation>
 </context>
 <context>
     <name>RemoveLayer</name>
-    <message>
-        <source>&amp;Remove Layer</source>
-        <translation type="vanished">Laag &amp;verwijderen</translation>
-    </message>
     <message>
         <location filename="../scripts/Layer/RemoveLayer/RemoveLayerInit.js" line="+2"/>
         <source>&amp;Delete Layer</source>
@@ -12320,14 +10852,6 @@ getoond in zoekresultaten:</translation>
         <translation>Hoek &amp;b:</translation>
     </message>
     <message>
-        <source>Angle (&amp;a):</source>
-        <translation type="vanished">Hoek (&amp;a):</translation>
-    </message>
-    <message>
-        <source>Angle (&amp;b):</source>
-        <translation type="vanished">Hoek (&amp;b):</translation>
-    </message>
-    <message>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Huidige laag en &amp;attributen gebruiken</translation>
@@ -12404,10 +10928,6 @@ getoond in zoekresultaten:</translation>
         <translation>&amp;Straal:</translation>
     </message>
     <message>
-        <source>Radius:</source>
-        <translation type="vanished">Straal:</translation>
-    </message>
-    <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
         <source>&amp;Round</source>
         <translation>&amp;Afronden</translation>
@@ -12469,17 +10989,9 @@ getoond in zoekresultaten:</translation>
         <translation>Bestand overschrijven?</translation>
     </message>
     <message>
-        <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
-        <translation type="vanished">Het bestand &apos;%1&apos; bestaat al. Wilt u het overschrijven?</translation>
-    </message>
-    <message>
         <location line="+18"/>
         <source>File Format Version Not Recommended</source>
         <translation>Bestandsformaat versie niet aanbevolen</translation>
-    </message>
-    <message>
-        <source>The file format version you are using is not recommended: &apos;%1&apos;.</source>
-        <translation type="vanished">Het bestandsformaat versie die u gebruikt wordt niet aangeraden: &apos;%1&apos;.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -12492,10 +11004,6 @@ getoond in zoekresultaten:</translation>
         <translation>Alle zwarte objecten en lagen wordt opgeslagen als wit.</translation>
     </message>
     <message>
-        <source>All custom colors will be &apos;rounded&apos; to the nearest fixed color.</source>
-        <translation type="vanished">Alle gebruiker gedefinieerde kleuren worden &apos;gerond&apos; op de dichtstbijzijnde beschikbare kleur.</translation>
-    </message>
-    <message>
         <location line="+1"/>
         <source>Proceed?</source>
         <translation>Voortgaan?</translation>
@@ -12506,33 +11014,9 @@ getoond in zoekresultaten:</translation>
         <translation>Opslaan...</translation>
     </message>
     <message>
-        <source>Saving to file format version &apos;%1&apos;.</source>
-        <translation type="vanished">Opslaan naar bestandsformaat versie &apos;%1&apos;.</translation>
-    </message>
-    <message>
         <location line="+4"/>
         <source>Black entities and layers are saved as white.</source>
         <translation>Zwarte objecten en lagen wordt opgeslagen als wit.</translation>
-    </message>
-    <message>
-        <source>Custom colors are &apos;rounded&apos; to the nearest fixed color.</source>
-        <translation type="vanished">Gebruiker gedefinieerde kleuren worden &apos;gerond&apos; op de dichtstbijzijnde beschikbare kleur.</translation>
-    </message>
-    <message>
-        <source>Block editing in progress</source>
-        <translation type="vanished">Bezig met bewerken van blok</translation>
-    </message>
-    <message>
-        <source>A block is currently exploded and being edited. Please save the block before saving your drawing.</source>
-        <translation type="vanished">Een blok is momenteel geëxplodeerd en wordt bewerkt. Sla het blok op voordat u uw tekening opslaat.</translation>
-    </message>
-    <message>
-        <source>Saving will save the block contents exploded.</source>
-        <translation type="vanished">Door op te slaan wordt de geëxplodeerde inhoud van het blok opgeslagen.</translation>
-    </message>
-    <message>
-        <source>Save anyway?</source>
-        <translation type="vanished">Toch opslaan?</translation>
     </message>
     <message>
         <location line="-41"/>
@@ -12568,10 +11052,6 @@ getoond in zoekresultaten:</translation>
         <location line="+21"/>
         <source>Saved file:</source>
         <translation>Opgeslagen bestand:</translation>
-    </message>
-    <message>
-        <source>Saved drawing:</source>
-        <translation type="vanished">Opgeslagen tekening:</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -12635,14 +11115,6 @@ getoond in zoekresultaten:</translation>
         <location line="+14"/>
         <source>(empty for username)</source>
         <translation>(leeg voor gebruikersnaam)</translation>
-    </message>
-    <message>
-        <source>Load/Save</source>
-        <translation type="vanished">Laden/opslaan</translation>
-    </message>
-    <message>
-        <source>Save as</source>
-        <translation type="vanished">Opslaan als</translation>
     </message>
     <message>
         <location filename="../scripts/File/SaveAs/SaveAs.js" line="+38"/>
@@ -12787,17 +11259,9 @@ getoond in zoekresultaten:</translation>
         <translation>Factor y:</translation>
     </message>
     <message>
-        <source>Factor &amp;x:</source>
-        <translation type="vanished">Factor &amp;x:</translation>
-    </message>
-    <message>
         <location line="-26"/>
         <source>Proportional</source>
         <translation>Proportioneel</translation>
-    </message>
-    <message>
-        <source>Factor &amp;y:</source>
-        <translation type="vanished">Factor &amp;y:</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -12834,10 +11298,6 @@ getoond in zoekresultaten:</translation>
         <translation>Selectiegereedschappen</translation>
     </message>
     <message>
-        <source>Show selection tools</source>
-        <translation type="vanished">Selectiegereedschappen tonen</translation>
-    </message>
-    <message>
         <location line="+14"/>
         <source>Selection Tools Panel</source>
         <translation>Selectiegereedschappen</translation>
@@ -12871,10 +11331,6 @@ getoond in zoekresultaten:</translation>
 </context>
 <context>
     <name>SelectByColor</name>
-    <message>
-        <source>Select one or more objects of the desired color first</source>
-        <translation type="vanished">Selecteer eerst een of meerdere objecten van de gewenste kleur</translation>
-    </message>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByColor/SelectByColor.js" line="+64"/>
         <source>Select one or more objects only of the desired color</source>
@@ -12912,10 +11368,6 @@ getoond in zoekresultaten:</translation>
         <translation>Object is geen tekenelement:</translation>
     </message>
     <message>
-        <source>Object is not an entity:</source>
-        <translation type="vanished">Object is geen tekenelement:</translation>
-    </message>
-    <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js" line="+2"/>
         <source>By Handle</source>
         <translation>Door handle</translation>
@@ -12950,10 +11402,6 @@ getoond in zoekresultaten:</translation>
         <location line="+7"/>
         <source>Replace the current selection</source>
         <translation>Vervang huidige selectie</translation>
-    </message>
-    <message>
-        <source>SelectionMode</source>
-        <translation type="vanished">SelectionMode</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -13014,10 +11462,6 @@ getoond in zoekresultaten:</translation>
         <translation>Vervang huidige selectie</translation>
     </message>
     <message>
-        <source>SelectionMode</source>
-        <translation type="vanished">SelectionMode</translation>
-    </message>
-    <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Toevoegen aan huidige selectie</translation>
@@ -13045,10 +11489,6 @@ getoond in zoekresultaten:</translation>
 </context>
 <context>
     <name>SelectLayer</name>
-    <message>
-        <source>&amp;Select Layer</source>
-        <translation type="vanished">Laag &amp;selecteren</translation>
-    </message>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
         <source>%1 entities added to selection.</source>
@@ -13081,10 +11521,6 @@ getoond in zoekresultaten:</translation>
         <location line="+7"/>
         <source>Replace the current selection</source>
         <translation>Vervang huidige selectie</translation>
-    </message>
-    <message>
-        <source>SelectionMode</source>
-        <translation type="vanished">SelectionMode</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -13125,10 +11561,6 @@ getoond in zoekresultaten:</translation>
         <translation>Tweede hoekpunt</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">Klaar</translation>
-    </message>
-    <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.ui" line="+17"/>
         <source>Mode:</source>
         <translation>Modus:</translation>
@@ -13137,10 +11569,6 @@ getoond in zoekresultaten:</translation>
         <location line="+7"/>
         <source>Replace the current selection</source>
         <translation>Vervang huidige selectie</translation>
-    </message>
-    <message>
-        <source>SelectionMode</source>
-        <translation type="vanished">SelectionMode</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -13171,69 +11599,6 @@ getoond in zoekresultaten:</translation>
         <location line="+4"/>
         <source>(De-)Select all entities inside a rectangle</source>
         <translation>Alle objecten in een rechthoekig gebied (de-)selecteren</translation>
-    </message>
-</context>
-<context>
-    <name>SelectWidget</name>
-    <message>
-        <source>*VARIES*</source>
-        <translation type="obsolete">*VARIEERT*</translation>
-    </message>
-    <message>
-        <source>:</source>
-        <translation type="obsolete">:</translation>
-    </message>
-    <message>
-        <source>No Selection</source>
-        <translation type="obsolete">Geen selectie</translation>
-    </message>
-    <message>
-        <source>Custom</source>
-        <translation type="obsolete">Gebruiker gedefinieerd</translation>
-    </message>
-    <message>
-        <source>All</source>
-        <translation type="obsolete">Alle</translation>
-    </message>
-    <message>
-        <source>Left</source>
-        <translation type="obsolete">Links</translation>
-    </message>
-    <message>
-        <source>Center</source>
-        <translation type="obsolete">Middelpunt</translation>
-    </message>
-    <message>
-        <source>Right</source>
-        <translation type="obsolete">Rechts</translation>
-    </message>
-    <message>
-        <source>Aligned</source>
-        <translation type="obsolete">Uitgelijnd</translation>
-    </message>
-    <message>
-        <source>Fit</source>
-        <translation type="obsolete">Passen</translation>
-    </message>
-    <message>
-        <source>Base</source>
-        <translation type="obsolete">Basis</translation>
-    </message>
-    <message>
-        <source>Bottom</source>
-        <translation type="obsolete">Onderkant</translation>
-    </message>
-    <message>
-        <source>Yes</source>
-        <translation type="obsolete">Ja</translation>
-    </message>
-    <message>
-        <source>No</source>
-        <translation type="obsolete">Nee</translation>
-    </message>
-    <message>
-        <source>General</source>
-        <translation type="obsolete">Algemeen</translation>
     </message>
 </context>
 <context>
@@ -13283,14 +11648,6 @@ getoond in zoekresultaten:</translation>
         </translation>
     </message>
     <message>
-        <source>%1 Entities on Layer &quot;%2&quot;</source>
-        <translation type="vanished">%1 objecten op laag &quot;%2&quot;</translation>
-    </message>
-    <message>
-        <source>%1 Entities on %2 Layers</source>
-        <translation type="vanished">%1 objecten op %2 laagen</translation>
-    </message>
-    <message>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
@@ -13324,10 +11681,6 @@ getoond in zoekresultaten:</translation>
         <translation>Vormgereedschappen</translation>
     </message>
     <message>
-        <source>Show shape tools</source>
-        <translation type="vanished">Vormgereedschappen tonen</translation>
-    </message>
-    <message>
         <location line="+27"/>
         <source>&amp;Shape</source>
         <translation>&amp;Vorm</translation>
@@ -13347,25 +11700,9 @@ getoond in zoekresultaten:</translation>
         <source>Radius:</source>
         <translation>Straal:</translation>
     </message>
-    <message>
-        <source>1</source>
-        <translation type="vanished">1</translation>
-    </message>
-    <message>
-        <source>Rotate:</source>
-        <translation type="vanished">Roteren:</translation>
-    </message>
 </context>
 <context>
     <name>ShapeAlgorithms</name>
-    <message>
-        <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
-        <translation type="vanished">Radius gedaald tot onder 0 na %1 concentrische cirkel(s).</translation>
-    </message>
-    <message>
-        <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
-        <translation type="vanished">Radius gedaald tot onder 0 na %1 concentrische boog(en).</translation>
-    </message>
     <message>
         <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
         <location line="+29"/>
@@ -13406,10 +11743,6 @@ getoond in zoekresultaten:</translation>
         <translation>Midden van zijkant</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">Klaar</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Side)</source>
         <translation>Pol&amp;ygoon (middelpunt, zijkant)</translation>
@@ -13448,10 +11781,6 @@ getoond in zoekresultaten:</translation>
         <translation>Tweede hoek</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">Klaar</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
         <source>Polygo&amp;n (Side, Side)</source>
         <translation>Polygoo&amp;n (zijkant, zijkant)</translation>
@@ -13485,10 +11814,6 @@ getoond in zoekresultaten:</translation>
         <translation>Hoekpunt</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">Klaar</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.ui" line="+17"/>
         <source>Corners:</source>
         <translation>Hoeken:</translation>
@@ -13515,10 +11840,6 @@ getoond in zoekresultaten:</translation>
         <location line="+7"/>
         <source>Corner point</source>
         <translation>Hoekpunt</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="vanished">Klaar</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.ui" line="+17"/>
@@ -13606,10 +11927,6 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>ShowAllBlocks</name>
     <message>
-        <source>&amp;Show all</source>
-        <translation type="vanished">Alle &amp;tonen</translation>
-    </message>
-    <message>
         <location filename="../scripts/Block/ShowAllBlocks/ShowAllBlocksInit.js" line="+2"/>
         <source>&amp;Show All Blocks</source>
         <translation>Laat alle Blokken &amp;zien</translation>
@@ -13625,10 +11942,6 @@ getoond in zoekresultaten:</translation>
 </context>
 <context>
     <name>ShowReadme</name>
-    <message>
-        <source>File &apos;%1&apos; doesn&apos;t exist.</source>
-        <translation type="vanished">Bestand &quot;%1&quot; bestaat niet.</translation>
-    </message>
     <message>
         <location filename="../scripts/Help/ShowReadme/ShowReadmeInit.js" line="+2"/>
         <source>Show &amp;Readme</source>
@@ -13654,10 +11967,6 @@ getoond in zoekresultaten:</translation>
         <location filename="../scripts/Snap/Snap.js" line="+57"/>
         <source>Snap Tools</source>
         <translation>Vangfuncties</translation>
-    </message>
-    <message>
-        <source>Show snap tools</source>
-        <translation type="vanished">Vangfuncties tonen</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -13978,10 +12287,6 @@ getoond in zoekresultaten:</translation>
         <translation>Splinegereedschappen</translation>
     </message>
     <message>
-        <source>Show spline tools</source>
-        <translation type="vanished">Splinegereedschappen tonen</translation>
-    </message>
-    <message>
         <location line="+27"/>
         <source>&amp;Spline</source>
         <translation>&amp;Spline</translation>
@@ -13998,10 +12303,6 @@ getoond in zoekresultaten:</translation>
         <location line="+9"/>
         <source>Next control point</source>
         <translation>Volgende controlepunt</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="vanished">Klaar</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.ui" line="+23"/>
@@ -14048,25 +12349,7 @@ getoond in zoekresultaten:</translation>
     </message>
 </context>
 <context>
-    <name>Startup</name>
-    <message>
-        <source>Enable Splash Screen</source>
-        <translation type="vanished">Splash Screen toonen</translation>
-    </message>
-</context>
-<context>
-    <name>StartupPreferences</name>
-    <message>
-        <source>Startup</source>
-        <translation type="vanished">Start</translation>
-    </message>
-</context>
-<context>
     <name>StatusBar</name>
-    <message>
-        <source>Status Bar Font:</source>
-        <translation type="vanished">Lettertype van de statusbalk:</translation>
-    </message>
     <message>
         <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+53"/>
         <source>Status bar font:</source>
@@ -14762,10 +13045,6 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>Theme</name>
     <message>
-        <source>User Interface Theme:</source>
-        <translation type="vanished">Gebruikersinterface theme:</translation>
-    </message>
-    <message>
         <location filename="../scripts/Edit/AppPreferences/ThemePreferences/PreferencesPage.ui" line="+20"/>
         <source>User interface theme:</source>
         <translation>Gebruikersinterface theme:</translation>
@@ -14841,13 +13120,6 @@ getoond in zoekresultaten:</translation>
     </message>
 </context>
 <context>
-    <name>ToggleLayerFrozen</name>
-    <message>
-        <source>&amp;Toggle Frozen Status</source>
-        <translation type="vanished">&amp;Bevroren schakelen</translation>
-    </message>
-</context>
-<context>
     <name>ToggleLayerLock</name>
     <message>
         <location filename="../scripts/Layer/ToggleLayerLock/ToggleLayerLockInit.js" line="+2"/>
@@ -14865,10 +13137,6 @@ getoond in zoekresultaten:</translation>
 </context>
 <context>
     <name>ToolBar</name>
-    <message>
-        <source>Icon Size:</source>
-        <translation type="vanished">Pictogramgrootte:</translation>
-    </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ToolBarPreferences/PreferencesPage.ui" line="+19"/>
         <source>Icon size:</source>
@@ -14893,10 +13161,6 @@ getoond in zoekresultaten:</translation>
         <location line="+6"/>
         <source>Shortcut prefix character:</source>
         <translation>Sneltoets prefix karakter:</translation>
-    </message>
-    <message>
-        <source>Shortcut Prefix Character:</source>
-        <translation type="vanished">Sneltoets prefix karakter:</translation>
     </message>
 </context>
 <context>
@@ -15203,18 +13467,6 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>UnitSettings</name>
     <message>
-        <source>Drawing Unit:</source>
-        <translation type="vanished">Tekening eenheid:</translation>
-    </message>
-    <message>
-        <source>Paper Unit:</source>
-        <translation type="vanished">Papier eenheid:</translation>
-    </message>
-    <message>
-        <source>Measurement System (for line types and hatch patterns):</source>
-        <translation type="vanished">Meetsysteem (voor lijn types en arceerpatronen):</translation>
-    </message>
-    <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/UnitSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
         <translation>Standaardinstellingen voor nieuwe tekeningen</translation>
@@ -15377,10 +13629,6 @@ getoond in zoekresultaten:</translation>
         <translation>Aanzichtgereedschappen</translation>
     </message>
     <message>
-        <source>Show view tools</source>
-        <translation type="vanished">Aanzichtgereedschappen tonen</translation>
-    </message>
-    <message>
         <location line="+28"/>
         <source>View</source>
         <translation>Beeld</translation>
@@ -15453,7 +13701,7 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+295"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+322"/>
         <source>Dropped data not supported</source>
         <translation>Ingevoegd bestand niet ondersteund</translation>
     </message>
@@ -15467,53 +13715,6 @@ getoond in zoekresultaten:</translation>
         <source>Importing URL: </source>
         <translation>Importeren URL: </translation>
     </message>
-    <message>
-        <source>Grid</source>
-        <translation type="vanished">Raster</translation>
-    </message>
-    <message>
-        <source>End</source>
-        <translation type="vanished">Eind</translation>
-    </message>
-    <message>
-        <source>On Entity</source>
-        <translation type="vanished">Op Element</translation>
-    </message>
-    <message>
-        <source>Perpendicular</source>
-        <translation type="vanished">Loodrecht</translation>
-    </message>
-    <message>
-        <source>Tangential</source>
-        <translation type="vanished">Tangentieel</translation>
-    </message>
-    <message>
-        <source>Center</source>
-        <translation type="vanished">Middelpunt</translation>
-    </message>
-    <message>
-        <source>Middle</source>
-        <translation type="vanished">Midden</translation>
-    </message>
-    <message>
-        <source>Intersection</source>
-        <translation type="vanished">Intersectie</translation>
-    </message>
-    <message>
-        <source>Reference</source>
-        <translation type="vanished">Referentie</translation>
-    </message>
-    <message>
-        <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="vanished">Raster tussenafstand &lt; Meta raster tussenafstand</translation>
-    </message>
-</context>
-<context>
-    <name>ViewportWidgetGl</name>
-    <message>
-        <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="vanished">Raster tussenafstand &lt; Meta raster tussenafstand</translation>
-    </message>
 </context>
 <context>
     <name>Website</name>
@@ -15526,7 +13727,7 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1098"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1144"/>
         <source>Restore defaults</source>
         <translation>Standaardinstellingen herstellen</translation>
     </message>
@@ -15546,30 +13747,14 @@ getoond in zoekresultaten:</translation>
         <translation>Boog</translation>
     </message>
     <message>
-        <source>Degree</source>
-        <translation type="vanished">Graad</translation>
-    </message>
-    <message>
         <location line="-5"/>
         <source>Plus/Minus</source>
         <translation>Plus/Minus</translation>
     </message>
     <message>
-        <source>Almost equal to</source>
-        <translation type="vanished">Bijna gelijk aan</translation>
-    </message>
-    <message>
-        <source>Asymptotically equal to</source>
-        <translation type="vanished">Asymptotisch gelijk aan</translation>
-    </message>
-    <message>
         <location line="+23"/>
         <source>Pi</source>
         <translation>Pi</translation>
-    </message>
-    <message>
-        <source>Square root</source>
-        <translation type="vanished">Vierkantswortel</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -15773,54 +13958,10 @@ getoond in zoekresultaten:</translation>
         <translation>Gecentreerd</translation>
     </message>
     <message>
-        <source>.</source>
-        <translation type="obsolete">.</translation>
-    </message>
-    <message>
         <location line="+13"/>
         <location line="+38"/>
         <source>Show trailing zeroes</source>
         <translation>Toon afsluitende nullen</translation>
-    </message>
-    <message>
-        <source>Suppress trailing zeros</source>
-        <translation type="vanished">Nullen achteraan onderdrukken</translation>
-    </message>
-    <message>
-        <source>0</source>
-        <translation type="obsolete">0</translation>
-    </message>
-    <message>
-        <source>1</source>
-        <translation type="obsolete">1</translation>
-    </message>
-    <message>
-        <source>2</source>
-        <translation type="obsolete">2</translation>
-    </message>
-    <message>
-        <source>3</source>
-        <translation type="obsolete">3</translation>
-    </message>
-    <message>
-        <source>4</source>
-        <translation type="obsolete">4</translation>
-    </message>
-    <message>
-        <source>5</source>
-        <translation type="obsolete">5</translation>
-    </message>
-    <message>
-        <source>6</source>
-        <translation type="obsolete">6</translation>
-    </message>
-    <message>
-        <source>7</source>
-        <translation type="obsolete">7</translation>
-    </message>
-    <message>
-        <source>8</source>
-        <translation type="obsolete">8</translation>
     </message>
     <message>
         <location line="-9"/>
@@ -15901,14 +14042,6 @@ getoond in zoekresultaten:</translation>
         <location line="+1"/>
         <source>Include 0&quot;, suppress 0&apos;</source>
         <translation>0&quot; omvatten, 0&apos; onderdrukken</translation>
-    </message>
-    <message>
-        <source>Suppress leading zeros</source>
-        <translation type="vanished">Voorloopnullen onderdrukken</translation>
-    </message>
-    <message>
-        <source>Suppress leading / trailing zeros</source>
-        <translation type="vanished">Onderdruk voorloopnullen / naloopnullen</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15996,10 +14129,6 @@ getoond in zoekresultaten:</translation>
         <translation>Zoomgereedschappen</translation>
     </message>
     <message>
-        <source>Show zoom tools</source>
-        <translation type="vanished">Zoomgereedschappen tonen</translation>
-    </message>
-    <message>
         <location line="+28"/>
         <source>&amp;Zoom</source>
         <translation>&amp;Zoomen</translation>
@@ -16056,15 +14185,11 @@ getoond in zoekresultaten:</translation>
         <source>Initializing add-ons:</source>
         <translation>Initialiseren van add-ons:</translation>
     </message>
-    <message>
-        <source>Post-initializing add-ons...</source>
-        <translation type="vanished">Post-initialiseren van add-ons...</translation>
-    </message>
 </context>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+996"/>
+        <location filename="../scripts/library.js" line="+1011"/>
         <source>Objects</source>
         <translation>Objecten</translation>
     </message>
@@ -16252,22 +14377,6 @@ getoond in zoekresultaten:</translation>
         <location line="+0"/>
         <source>Angular Dimension</source>
         <translation>Hoekbemating</translation>
-    </message>
-    <message>
-        <source>2 Line Angular Dimensions</source>
-        <translation type="vanished">2 lijnen hoekbematingen</translation>
-    </message>
-    <message>
-        <source>2 Line Angular Dimension</source>
-        <translation type="vanished">2 lijnen hoekbemating</translation>
-    </message>
-    <message>
-        <source>3 Point Angular Dimensions</source>
-        <translation type="vanished">3 punt hoekbematingen</translation>
-    </message>
-    <message>
-        <source>3 Point Angular Dimension</source>
-        <translation type="vanished">3 punt hoekbemating</translation>
     </message>
     <message>
         <location line="+2"/>

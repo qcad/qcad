@@ -119,12 +119,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+422"/>
+        <location line="+427"/>
         <source>Plugin:</source>
         <translation>插件：</translation>
     </message>
     <message>
-        <location line="-397"/>
+        <location line="-402"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -186,7 +186,7 @@
         <translation>信誉</translation>
     </message>
     <message>
-        <location line="+164"/>
+        <location line="+169"/>
         <source>Licenses</source>
         <translation>授权</translation>
     </message>
@@ -437,10 +437,6 @@ the preference changes to take effect.</source>
         <translation>弧线工具</translation>
     </message>
     <message>
-        <source>Show arc tools</source>
-        <translation type="vanished">显示弧线工具</translation>
-    </message>
-    <message>
         <location line="+23"/>
         <source>&amp;Arc</source>
         <translation>弧线(&amp;A)</translation>
@@ -482,10 +478,6 @@ the preference changes to take effect.</source>
         <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
         <translation>逆时针（正向）</translation>
-    </message>
-    <message>
-        <source>Direction</source>
-        <translation type="vanished">方向</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -652,10 +644,6 @@ the preference changes to take effect.</source>
         <translation>逆时针（正向）</translation>
     </message>
     <message>
-        <source>Direction</source>
-        <translation type="vanished">方向</translation>
-    </message>
-    <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>顺时针（负向）</translation>
@@ -669,10 +657,6 @@ the preference changes to take effect.</source>
         <location line="+7"/>
         <source>Shorter Arc</source>
         <translation>短弧</translation>
-    </message>
-    <message>
-        <source>Solution</source>
-        <translation type="vanished">方案</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -754,10 +738,6 @@ the preference changes to take effect.</source>
         <location line="+7"/>
         <source>Counter Clockwise (positive)</source>
         <translation>逆时针（正向）</translation>
-    </message>
-    <message>
-        <source>Direction</source>
-        <translation type="vanished">方向</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -871,10 +851,6 @@ the preference changes to take effect.</source>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.ui" line="+17"/>
         <source>Radius:</source>
         <translation>半径：</translation>
-    </message>
-    <message>
-        <source>&amp;Tangentially connected</source>
-        <translation type="vanished">相切连接(&amp;T)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangentialInit.js" line="+2"/>
@@ -1245,13 +1221,6 @@ Do you wish to recover it?</source>
     </message>
 </context>
 <context>
-    <name>BitmapExport2</name>
-    <message>
-        <source>Files</source>
-        <translation type="obsolete">文件</translation>
-    </message>
-</context>
-<context>
     <name>BitmapExportWorker</name>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
@@ -1270,10 +1239,6 @@ Do you wish to recover it?</source>
         <location line="+110"/>
         <source>Cannot edit block while editing a block in-place</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Show block tools</source>
-        <translation type="vanished">显示块工具</translation>
     </message>
     <message>
         <location line="-82"/>
@@ -1310,17 +1275,9 @@ Do you wish to recover it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Block &apos;%1&apos; already exists&lt;br&gt;and will be overwritten.</source>
-        <translation type="vanished">&apos;%1&apos; 块已经存在，并将被覆盖。</translation>
-    </message>
-    <message>
         <location line="+5"/>
         <source>Block already exists.</source>
         <translation>块名已经存在。</translation>
-    </message>
-    <message>
-        <source>Block Data</source>
-        <translation type="vanished">块数据</translation>
     </message>
     <message>
         <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
@@ -1331,10 +1288,6 @@ Do you wish to recover it?</source>
         <location line="+8"/>
         <source>Block name:</source>
         <translation>块名：</translation>
-    </message>
-    <message>
-        <source>block 1</source>
-        <translation type="vanished">块1</translation>
     </message>
 </context>
 <context>
@@ -1356,14 +1309,14 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+492"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
         <source>Widgets</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+53"/>
-        <location line="+39"/>
+        <location line="+44"/>
         <source>Block List</source>
         <translation>块列表</translation>
     </message>
@@ -1501,10 +1454,6 @@ Do you wish to recover it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="obsolete">完成</translation>
-    </message>
-    <message>
         <location line="+8"/>
         <source>Second break point</source>
         <translation type="unfinished"></translation>
@@ -1536,7 +1485,7 @@ Do you wish to recover it?</source>
 <context>
     <name>CadToolBar</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+52"/>
+        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+53"/>
         <source>Widgets</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1575,7 +1524,7 @@ Do you wish to recover it?</source>
     <name>CadToolBarPanel</name>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/CadToolBarPanel.js" line="+39"/>
-        <location line="+71"/>
+        <location line="+72"/>
         <source>Back</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1583,7 +1532,7 @@ Do you wish to recover it?</source>
 <context>
     <name>CadToolMatrix</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+373"/>
+        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+383"/>
         <source>Expand all</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1603,13 +1552,13 @@ Do you wish to recover it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+34"/>
         <source>Widgets</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+47"/>
+        <location line="+53"/>
         <source>Tool Matrix</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1645,7 +1594,7 @@ Do you wish to recover it?</source>
 <context>
     <name>CheckForUpdates</name>
     <message>
-        <location filename="../scripts/Help/CheckForUpdates/CheckForUpdates.js" line="+62"/>
+        <location filename="../scripts/Help/CheckForUpdates/CheckForUpdates.js" line="+68"/>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesDialog.ui" line="+14"/>
         <source>Checking for Updates...</source>
         <translation type="unfinished"></translation>
@@ -1677,10 +1626,6 @@ Do you wish to recover it?</source>
         <location filename="../scripts/Draw/Circle/Circle.js" line="+71"/>
         <source>Circle Tools</source>
         <translation>画圆工具</translation>
-    </message>
-    <message>
-        <source>Show circle tools</source>
-        <translation type="vanished">显示画圆工具</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -1754,10 +1699,6 @@ Do you wish to recover it?</source>
         <translation>线P1-P2的中间偏左</translation>
     </message>
     <message>
-        <source>Solution</source>
-        <translation type="vanished">方案</translation>
-    </message>
-    <message>
         <location line="+20"/>
         <source>Center Right of Line P1 - P2</source>
         <translation>线P1-P2的中间偏右</translation>
@@ -1802,10 +1743,6 @@ Do you wish to recover it?</source>
         <translation>无方案</translation>
     </message>
     <message>
-        <source>Point, 2 Tan&amp;gents</source>
-        <translation type="vanished">点、双切线(&amp;g)</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Circle/Circle2TP/Circle2TPInit.js" line="+6"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation>过点向2个实体画相切弧</translation>
@@ -1837,10 +1774,6 @@ Do you wish to recover it?</source>
         <location line="+103"/>
         <source>No solution</source>
         <translation>无方案</translation>
-    </message>
-    <message>
-        <source>Invalid radius</source>
-        <translation type="vanished">无效的半径</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TR.ui" line="+17"/>
@@ -2076,10 +2009,6 @@ Do you wish to recover it?</source>
         <location line="+48"/>
         <source>No solution</source>
         <translation>无方案</translation>
-    </message>
-    <message>
-        <source>2 Poin&amp;ts and Tangent</source>
-        <translation type="vanished">两点和相切(&amp;t)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleT2P/CircleT2PInit.js" line="+2"/>
@@ -2948,10 +2877,6 @@ Do you wish to recover it?</source>
         </translation>
     </message>
     <message>
-        <source>Reset label position of %1 dimension(s).</source>
-        <translation type="vanished">重置标签位置的 %1 个尺寸</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Dimension/DimRegen/DimRegenInit.js" line="+2"/>
         <source>&amp;Reset Label Position</source>
         <translation>重置标签位置(&amp;R)</translation>
@@ -3059,10 +2984,6 @@ Do you wish to recover it?</source>
         <location line="+122"/>
         <source>Dimension Tools</source>
         <translation>标注工具</translation>
-    </message>
-    <message>
-        <source>Show dimension tools</source>
-        <translation type="vanished">显示标注工具</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -4123,10 +4044,6 @@ is already in the list.</source>
         <translation type="unfinished">下一顶点</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="obsolete">完成</translation>
-    </message>
-    <message>
         <location line="+421"/>
         <source>close</source>
         <translation type="unfinished"></translation>
@@ -4260,7 +4177,7 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+662"/>
+        <location line="+664"/>
         <source>Options</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4275,7 +4192,7 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+584"/>
+        <location line="+582"/>
         <source>Invalid position</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4508,10 +4425,6 @@ is already in the list.</source>
         <translation>椭圆工具</translation>
     </message>
     <message>
-        <source>Show ellipse tools</source>
-        <translation type="vanished">显示椭圆工具</translation>
-    </message>
-    <message>
         <location line="+23"/>
         <source>&amp;Ellipse</source>
         <translation>椭圆(&amp;E)</translation>
@@ -4600,10 +4513,6 @@ is already in the list.</source>
         <translation>逆时针（正向）</translation>
     </message>
     <message>
-        <source>Direction</source>
-        <translation type="vanished">方向</translation>
-    </message>
-    <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>顺时针（负向）</translation>
@@ -4622,10 +4531,6 @@ is already in the list.</source>
 <context>
     <name>EllipseCPP</name>
     <message>
-        <source>&amp;Full Ellipse with Center, Point, Ratio</source>
-        <translation type="vanished">由中心、长轴点、短轴点绘制椭圆(&amp;F)</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Ellipse/EllipseCPP/EllipseCPPInit.js" line="+2"/>
         <source>&amp;Ellipse (Center, Point, Ratio)</source>
         <translation>椭圆(中心点，长轴，短轴)</translation>
@@ -4634,24 +4539,6 @@ is already in the list.</source>
         <location line="+4"/>
         <source>Draw full ellipse from center, major point and ratio</source>
         <translation>由中心、长轴点和短轴点绘制椭圆</translation>
-    </message>
-</context>
-<context>
-    <name>EllipseConcentric</name>
-    <message>
-        <source>Distance:</source>
-        <translation type="obsolete">距离：</translation>
-    </message>
-    <message>
-        <source>Number:</source>
-        <translation type="obsolete">数字：</translation>
-    </message>
-</context>
-<context>
-    <name>EllipseConcentricThrough</name>
-    <message>
-        <source>Number:</source>
-        <translation type="obsolete">数字：</translation>
     </message>
 </context>
 <context>
@@ -5639,13 +5526,6 @@ is already in the list.</source>
     </message>
 </context>
 <context>
-    <name>FlexPainterOptions</name>
-    <message>
-        <source>Preview</source>
-        <translation type="obsolete">预览</translation>
-    </message>
-</context>
-<context>
     <name>FlipHorizontal</name>
     <message>
         <location filename="../scripts/Modify/FlipHorizontal/FlipHorizontalInit.js" line="+2"/>
@@ -6346,18 +6226,6 @@ is already in the list.</source>
 <context>
     <name>Hatch</name>
     <message>
-        <source>No boundary selected.</source>
-        <translation type="vanished">未选中边界.</translation>
-    </message>
-    <message>
-        <source>Loop not closed at point %1/%2.</source>
-        <translation type="vanished">边界在点 %1/%2 未闭合.</translation>
-    </message>
-    <message>
-        <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
-        <translation type="vanished">每个边界实体必须是直线，弧，圆，椭圆弧，椭圆，折线或样条曲线。 发现：</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Hatch/Hatch.js" line="+72"/>
         <source>Hatch Tools</source>
         <translation type="unfinished"></translation>
@@ -6366,10 +6234,6 @@ is already in the list.</source>
         <location line="+27"/>
         <source>&amp;Hatch</source>
         <translation>图案填充(&amp;H)</translation>
-    </message>
-    <message>
-        <source>Draw hatch or solid fill</source>
-        <translation type="vanished">图案或实心填充</translation>
     </message>
 </context>
 <context>
@@ -6453,10 +6317,6 @@ is already in the list.</source>
 </context>
 <context>
     <name>HideAllBlocks</name>
-    <message>
-        <source>&amp;Hide All</source>
-        <translation type="vanished">全部隐藏(&amp;H)</translation>
-    </message>
     <message>
         <location filename="../scripts/Block/HideAllBlocks/HideAllBlocksInit.js" line="+2"/>
         <source>&amp;Hide All Blocks</source>
@@ -6704,10 +6564,6 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="obsolete">完成</translation>
-    </message>
-    <message>
         <location line="+96"/>
         <source>Angle:</source>
         <translation type="unfinished">角度：</translation>
@@ -6724,10 +6580,6 @@ is already in the list.</source>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+70"/>
         <source>Choose arc, circle, ellipse or elliptical arc</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="obsolete">完成</translation>
     </message>
     <message>
         <location line="+236"/>
@@ -6870,10 +6722,6 @@ is already in the list.</source>
         <location filename="../scripts/Information/InfoArea/InfoArea.js" line="+70"/>
         <source>Set next polygon corner</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="obsolete">完成</translation>
     </message>
     <message>
         <location line="+121"/>
@@ -7168,10 +7016,6 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="obsolete">完成</translation>
-    </message>
-    <message>
         <location line="+95"/>
         <source>Distance:</source>
         <translation type="unfinished">距离：</translation>
@@ -7193,10 +7037,6 @@ is already in the list.</source>
         <location line="+8"/>
         <source>Specify point</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="obsolete">完成</translation>
     </message>
     <message>
         <location line="+81"/>
@@ -7222,10 +7062,6 @@ is already in the list.</source>
         <translation type="unfinished">第二点</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="obsolete">完成</translation>
-    </message>
-    <message>
         <location line="+53"/>
         <source>Distance:</source>
         <translation type="unfinished">距离：</translation>
@@ -7249,13 +7085,6 @@ is already in the list.</source>
         <location filename="../scripts/Information/InfoDistancePP/InfoDistancePPInit.js" line="+2"/>
         <source>Distance &amp;Point to Point</source>
         <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>InfoPolylineArea</name>
-    <message>
-        <source>Done</source>
-        <translation type="obsolete">完成</translation>
     </message>
 </context>
 <context>
@@ -7762,10 +7591,6 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Adjusted invalid block name to &apos;%1&apos;</source>
-        <translation type="vanished">将无效块的名称设为 &apos;%1&apos;</translation>
-    </message>
-    <message>
         <location line="+69"/>
         <source>Position</source>
         <translation>位置</translation>
@@ -7828,10 +7653,6 @@ is already in the list.</source>
 </context>
 <context>
     <name>InsertScriptItem</name>
-    <message>
-        <source>Position</source>
-        <translation type="vanished">位置</translation>
-    </message>
     <message>
         <location filename="../scripts/Block/InsertScriptItem/InsertScriptItemInit.js" line="+2"/>
         <source>Insert &amp;Script</source>
@@ -8208,13 +8029,6 @@ is already in the list.</source>
     </message>
 </context>
 <context>
-    <name>LayoutDialog</name>
-    <message>
-        <source>Leading or trailing spaces.</source>
-        <translation type="obsolete">前导或尾随空格。</translation>
-    </message>
-</context>
-<context>
     <name>Leader</name>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+62"/>
@@ -8225,14 +8039,6 @@ is already in the list.</source>
         <location line="+10"/>
         <source>Next vertex</source>
         <translation>下一顶点</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="vanished">完成</translation>
-    </message>
-    <message>
-        <source>Undo Last Segement</source>
-        <translation type="vanished">取消上一步</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
@@ -8642,10 +8448,6 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="obsolete">完成</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.ui" line="+23"/>
         <source>Close Sequence</source>
         <translation type="unfinished"></translation>
@@ -8795,10 +8597,6 @@ shown in search results:</source>
         <translation type="unfinished">第二点</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="obsolete">完成</translation>
-    </message>
-    <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js" line="+2"/>
         <source>Box &amp;Joint from 2 Points</source>
         <translation type="unfinished"></translation>
@@ -8855,10 +8653,6 @@ shown in search results:</source>
         <location line="+7"/>
         <source>Second point</source>
         <translation type="unfinished">第二点</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="obsolete">完成</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
@@ -9020,10 +8814,6 @@ shown in search results:</source>
 </context>
 <context>
     <name>LineParallel</name>
-    <message>
-        <source>&amp;Distance:</source>
-        <translation type="vanished">距离(&amp;D)：</translation>
-    </message>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>Dist&amp;ance:</source>
@@ -9876,17 +9666,6 @@ shown in search results:</source>
     </message>
 </context>
 <context>
-    <name>OrthogonalProjections</name>
-    <message>
-        <source>Next vertex</source>
-        <translation type="obsolete">下一顶点</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="obsolete">完成</translation>
-    </message>
-</context>
-<context>
     <name>PageSettings</name>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+31"/>
@@ -10025,17 +9804,9 @@ shown in search results:</source>
         <translation type="unfinished">旋转：</translation>
     </message>
     <message>
-        <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation type="obsolete">根据这个角度&lt;br&gt;旋转粘贴的实体</translation>
-    </message>
-    <message>
         <location line="+126"/>
         <source>Scale:</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation type="obsolete">根据此比例&lt;br&gt;缩放粘贴的实体</translation>
     </message>
     <message>
         <location line="+88"/>
@@ -10587,7 +10358,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+194"/>
         <source>No Selection</source>
         <translation type="unfinished"></translation>
     </message>
@@ -11147,10 +10918,6 @@ shown in search results:</source>
         <location line="+17"/>
         <source>&amp;Radius:</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Radius:</source>
-        <translation type="obsolete">半径：</translation>
     </message>
 </context>
 <context>
@@ -11781,10 +11548,6 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="obsolete">完成</translation>
-    </message>
-    <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangleInit.js" line="+2"/>
         <source>(De-)Select &amp;Rectangular Area</source>
         <translation type="unfinished"></translation>
@@ -11823,21 +11586,6 @@ shown in search results:</source>
         <location line="+27"/>
         <source>Cross Selection</source>
         <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>SelectWidget</name>
-    <message>
-        <source>Center</source>
-        <translation type="obsolete">中心</translation>
-    </message>
-    <message>
-        <source>Middle</source>
-        <translation type="obsolete">中点</translation>
-    </message>
-    <message>
-        <source>Auto</source>
-        <translation type="obsolete">自动</translation>
     </message>
 </context>
 <context>
@@ -11978,10 +11726,6 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="obsolete">完成</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Side)</source>
         <translation type="unfinished"></translation>
@@ -12020,10 +11764,6 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="obsolete">完成</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
         <source>Polygo&amp;n (Side, Side)</source>
         <translation type="unfinished"></translation>
@@ -12057,10 +11797,6 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="obsolete">完成</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Corner)</source>
         <translation type="unfinished"></translation>
@@ -12087,10 +11823,6 @@ shown in search results:</source>
         <location line="+7"/>
         <source>Corner point</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="obsolete">完成</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPPInit.js" line="+2"/>
@@ -12177,10 +11909,6 @@ shown in search results:</source>
 </context>
 <context>
     <name>ShowAllBlocks</name>
-    <message>
-        <source>&amp;Show all</source>
-        <translation type="vanished">全部显示(&amp;S)</translation>
-    </message>
     <message>
         <location filename="../scripts/Block/ShowAllBlocks/ShowAllBlocksInit.js" line="+2"/>
         <source>&amp;Show All Blocks</source>
@@ -12558,10 +12286,6 @@ shown in search results:</source>
         <location line="+9"/>
         <source>Next control point</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="obsolete">完成</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPointsInit.js" line="+2"/>
@@ -13959,7 +13683,7 @@ shown in search results:</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+295"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+322"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished"></translation>
     </message>
@@ -13985,7 +13709,7 @@ shown in search results:</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1098"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1144"/>
         <source>Restore defaults</source>
         <translation type="unfinished"></translation>
     </message>
@@ -14008,14 +13732,6 @@ shown in search results:</source>
         <location line="-5"/>
         <source>Plus/Minus</source>
         <translation type="unfinished">正/负</translation>
-    </message>
-    <message>
-        <source>Almost equal to</source>
-        <translation type="obsolete">约等于</translation>
-    </message>
-    <message>
-        <source>Asymptotically equal to</source>
-        <translation type="obsolete">渐进等于</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -14455,7 +14171,7 @@ shown in search results:</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+996"/>
+        <location filename="../scripts/library.js" line="+1011"/>
         <source>Objects</source>
         <translation type="unfinished"></translation>
     </message>

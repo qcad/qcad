@@ -366,10 +366,6 @@
         <translation>Тип</translation>
     </message>
     <message>
-        <source>Block ID</source>
-        <translation type="vanished">Идентификатор блока</translation>
-    </message>
-    <message>
         <location line="+2"/>
         <source>Layer</source>
         <translation>Слой</translation>
@@ -469,10 +465,6 @@
         <location line="+1"/>
         <source>Object Invisible</source>
         <translation>Объект невидим</translation>
-    </message>
-    <message>
-        <source>Invisible</source>
-        <translation type="vanished">Невидимый</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -843,33 +835,6 @@
     </message>
 </context>
 <context>
-    <name>RLayer</name>
-    <message>
-        <source>Name</source>
-        <translation type="vanished">Имя</translation>
-    </message>
-    <message>
-        <source>Hidden</source>
-        <translation type="vanished">Скрыт</translation>
-    </message>
-    <message>
-        <source>Locked</source>
-        <translation type="vanished">Заперт</translation>
-    </message>
-    <message>
-        <source>Color</source>
-        <translation type="vanished">Цвет</translation>
-    </message>
-    <message>
-        <source>Linetype</source>
-        <translation type="vanished">Тип линии</translation>
-    </message>
-    <message>
-        <source>Lineweight</source>
-        <translation type="vanished">Толщина линий</translation>
-    </message>
-</context>
-<context>
     <name>RLinetype</name>
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+54"/>
@@ -1222,25 +1187,6 @@
         <location line="+1"/>
         <source>2.11mm</source>
         <translation>2.11мм</translation>
-    </message>
-</context>
-<context>
-    <name>RObject</name>
-    <message>
-        <source>Custom</source>
-        <translation type="vanished">Пользовательский</translation>
-    </message>
-    <message>
-        <source>Type</source>
-        <translation type="vanished">Тип</translation>
-    </message>
-    <message>
-        <source>Handle</source>
-        <translation type="vanished">Обработчик</translation>
-    </message>
-    <message>
-        <source>Protected</source>
-        <translation type="vanished">Защищённый</translation>
     </message>
 </context>
 </TS>

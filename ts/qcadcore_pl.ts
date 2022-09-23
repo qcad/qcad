@@ -366,10 +366,6 @@
         <translation>Blok</translation>
     </message>
     <message>
-        <source>Block ID</source>
-        <translation type="vanished">Identyfikator bloku</translation>
-    </message>
-    <message>
         <location line="+1"/>
         <source>Layer</source>
         <translation>Warstwa</translation>
@@ -469,10 +465,6 @@
         <location line="+1"/>
         <source>Object Invisible</source>
         <translation>Obiekt niewidzialny</translation>
-    </message>
-    <message>
-        <source>Invisible</source>
-        <translation type="obsolete">Niewidzialny</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -843,118 +835,7 @@
     </message>
 </context>
 <context>
-    <name>RLayer</name>
-    <message>
-        <source>Name</source>
-        <translation type="vanished">Nazwa</translation>
-    </message>
-    <message>
-        <source>Frozen</source>
-        <translation type="obsolete">Zamrożony</translation>
-    </message>
-    <message>
-        <source>Locked</source>
-        <translation type="vanished">Zablokowany</translation>
-    </message>
-    <message>
-        <source>Color</source>
-        <translation type="vanished">Kolor</translation>
-    </message>
-    <message>
-        <source>Linetype</source>
-        <translation type="vanished">Rodzaj linii</translation>
-    </message>
-    <message>
-        <source>Lineweight</source>
-        <translation type="vanished">Szerokość linii</translation>
-    </message>
-</context>
-<context>
     <name>RLinetype</name>
-    <message>
-        <source>By Layer</source>
-        <translation type="vanished">Według warstwy</translation>
-    </message>
-    <message>
-        <source>By Block</source>
-        <translation type="vanished">Według bloku</translation>
-    </message>
-    <message>
-        <source>Continuous</source>
-        <translation type="vanished">Ciągła</translation>
-    </message>
-    <message>
-        <source>Dot</source>
-        <translation type="vanished">Wielopunktowa</translation>
-    </message>
-    <message>
-        <source>Dot (small)</source>
-        <translation type="vanished">Wielopunktowa (mała)</translation>
-    </message>
-    <message>
-        <source>Dot (large)</source>
-        <translation type="vanished">Wielopunktowa (wielka)</translation>
-    </message>
-    <message>
-        <source>Dash</source>
-        <translation type="vanished">Kreskowa</translation>
-    </message>
-    <message>
-        <source>Dash (small)</source>
-        <translation type="vanished">Kreskowa (mała)</translation>
-    </message>
-    <message>
-        <source>Dash (large)</source>
-        <translation type="vanished">Kreskowa (wielka)</translation>
-    </message>
-    <message>
-        <source>Dash Dot</source>
-        <translation type="vanished">Punktowa</translation>
-    </message>
-    <message>
-        <source>Dash Dot (small)</source>
-        <translation type="vanished">Punktowa (mała)</translation>
-    </message>
-    <message>
-        <source>Dash Dot (large)</source>
-        <translation type="vanished">Punktowa (wielka)</translation>
-    </message>
-    <message>
-        <source>Divide</source>
-        <translation type="vanished">Dwupunktowa</translation>
-    </message>
-    <message>
-        <source>Divide (small)</source>
-        <translation type="vanished">Dwupunktowa (mała)</translation>
-    </message>
-    <message>
-        <source>Divide (large)</source>
-        <translation type="vanished">Dwupunktowa (wielka)</translation>
-    </message>
-    <message>
-        <source>Center</source>
-        <translation type="vanished">Środkowa</translation>
-    </message>
-    <message>
-        <source>Center (small)</source>
-        <translation type="vanished">Środkowa (mała)</translation>
-    </message>
-    <message>
-        <source>Center (large)</source>
-        <translation type="vanished">Środkowa (wielka)</translation>
-    </message>
-    <message>
-        <source>Border</source>
-        <translation type="vanished">Obramowanie</translation>
-    </message>
-    <message>
-        <source>Border (small)</source>
-        <translation type="vanished">Obramowanie (mała)</translation>
-    </message>
-    <message>
-        <source>Border (large)</source>
-        <translation type="vanished">Obramowanie (wielka)</translation>
-    </message>
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+54"/>
         <source>Name</source>
@@ -1306,21 +1187,6 @@
         <location line="+1"/>
         <source>2.11mm</source>
         <translation>2,11 mm</translation>
-    </message>
-</context>
-<context>
-    <name>RObject</name>
-    <message>
-        <source>Custom</source>
-        <translation type="vanished">Dostosowany</translation>
-    </message>
-    <message>
-        <source>Type</source>
-        <translation type="obsolete">Typ</translation>
-    </message>
-    <message>
-        <source>Handle</source>
-        <translation type="vanished">Uchwyt</translation>
     </message>
 </context>
 </TS>

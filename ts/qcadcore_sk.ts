@@ -366,10 +366,6 @@
         <translation>Typ</translation>
     </message>
     <message>
-        <source>Block ID</source>
-        <translation type="vanished">ID bloku</translation>
-    </message>
-    <message>
         <location line="+2"/>
         <source>Layer</source>
         <translation>Vrstva</translation>
@@ -489,10 +485,6 @@
         <location line="+1"/>
         <source>Object Invisible</source>
         <translation type="unfinished">Objekt neviditeľný</translation>
-    </message>
-    <message>
-        <source>Invisible</source>
-        <translation type="vanished">Neviditeľné</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -840,37 +832,6 @@
         <location filename="../src/core/RGuiAction.cpp" line="+202"/>
         <source>Requires selection</source>
         <translation>Vyžaduje výber</translation>
-    </message>
-</context>
-<context>
-    <name>RLayer</name>
-    <message>
-        <source>Name</source>
-        <translation type="vanished">Názov</translation>
-    </message>
-    <message>
-        <source>Frozen</source>
-        <translation type="vanished">Zmrazená</translation>
-    </message>
-    <message>
-        <source>Hidden</source>
-        <translation type="vanished">Skryté</translation>
-    </message>
-    <message>
-        <source>Locked</source>
-        <translation type="vanished">Zamknutá</translation>
-    </message>
-    <message>
-        <source>Color</source>
-        <translation type="vanished">Farba</translation>
-    </message>
-    <message>
-        <source>Linetype</source>
-        <translation type="vanished">Typ čiary</translation>
-    </message>
-    <message>
-        <source>Lineweight</source>
-        <translation type="vanished">Hrúbka čiary</translation>
     </message>
 </context>
 <context>
@@ -1226,25 +1187,6 @@
         <location line="+1"/>
         <source>2.11mm</source>
         <translation>2.11mm</translation>
-    </message>
-</context>
-<context>
-    <name>RObject</name>
-    <message>
-        <source>Custom</source>
-        <translation type="vanished">Vlastné</translation>
-    </message>
-    <message>
-        <source>Type</source>
-        <translation type="vanished">Typ</translation>
-    </message>
-    <message>
-        <source>Handle</source>
-        <translation type="vanished">Identifikátor</translation>
-    </message>
-    <message>
-        <source>Protected</source>
-        <translation type="vanished">Chránené</translation>
     </message>
 </context>
 </TS>

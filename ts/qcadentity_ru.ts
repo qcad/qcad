@@ -482,10 +482,6 @@
         <translation>Измеренное значение</translation>
     </message>
     <message>
-        <source>Linear Factor</source>
-        <translation type="vanished">Линейный коэффициент</translation>
-    </message>
-    <message>
         <location line="+3"/>
         <source>Block Name</source>
         <translation>Имя блока</translation>

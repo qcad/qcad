@@ -28,6 +28,6 @@ TRANSLATIONS = \
     $$PWD/ts/$${NAME}_sv.ts \
     $$PWD/ts/$${NAME}_th.ts \
     $$PWD/ts/$${NAME}_tr.ts \
-    $$PWD/ts/$${NAME}_tr.ts \
+    $$PWD/ts/$${NAME}_uk.ts \
     $$PWD/ts/$${NAME}_zh_CN.ts \
     $$PWD/ts/$${NAME}_zh_TW.ts
