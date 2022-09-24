@@ -718,7 +718,7 @@ void RPropertyEditor::clearLayers() {
 
 void RPropertyEditor::propertyChanged(RPropertyTypeId propertyTypeId,
                                       QVariant propertyValue,
-                                      QMetaType::Type typeHint) {
+                                      RS::MetaType typeHint) {
 
     RMainWindow* appWin = RMainWindow::getMainWindow();
     if (appWin == NULL) {
@@ -726,10 +726,10 @@ void RPropertyEditor::propertyChanged(RPropertyTypeId propertyTypeId,
         return;
     }
 
-    if (typeHint!=QMetaType::UnknownType) {
+    if (typeHint!=RS::UnknownType) {
         // broken for double to int conversion:
         //propertyValue = propertyValue.convert(typeHint);
-        if (typeHint==QMetaType::Int && propertyValue.type()==QMetaType::Double) {
+        if (typeHint==RS::Int && RS::getMetaType(propertyValue)==RS::Double) {
             propertyValue = QVariant(RMath::mround(propertyValue.toDouble()));
         }
     }
