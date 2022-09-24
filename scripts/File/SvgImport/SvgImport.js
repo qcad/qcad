@@ -57,10 +57,12 @@ SvgImport.prototype.beginEvent = function() {
         }
     }
     
+    var appWin = EAction.getMainWindow();
+
     if (isNull(fileName)) {
         var lastDir = RSettings.getStringValue( "SvgImport/Path", RSettings.getDocumentsLocation());
         fileName = QFileDialog.getOpenFileName(
-            this, qsTr("Import SVG"), lastDir,
+            appWin, qsTr("Import SVG"), lastDir,
             qsTr("SVG Files") + " (*.svg);;" + qsTr("All Files") + " (*)");
         if (fileName.length===0) {
             this.terminate();
@@ -69,12 +71,11 @@ SvgImport.prototype.beginEvent = function() {
         RSettings.setValue("SvgImport/Path", new QFileInfo(fileName).absolutePath());
     }
 
-    var appWin = EAction.getMainWindow();
     var dialog = WidgetFactory.createDialog(SvgImport.includeBasePath, "SvgImportDialog.ui", appWin);
     var resolutionCombo = dialog.findChild("Resolution");
 
     if (!dialog.exec()) {
-        dialog.destroy();
+        destr(dialog);
         EAction.activateMainWindow();
         this.terminate();
         return;
@@ -86,7 +87,7 @@ SvgImport.prototype.beginEvent = function() {
     }
 
     var svgImporter = new SvgImporter(this.getDocument(), resolution);
-    svgImporter.importFile(fileName);
+    svgImporter.importFile(fileName, "");
 
     var di = this.getDocumentInterface();
     if (!isNull(di)) {
@@ -98,7 +99,7 @@ SvgImport.prototype.beginEvent = function() {
         appWin.notifyListeners();
     }
     
-    dialog.destroy();
+    destr(dialog);
     EAction.activateMainWindow();
     this.terminate();
 };
