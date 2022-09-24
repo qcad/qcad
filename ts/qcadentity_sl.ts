@@ -482,10 +482,6 @@
         <translation>Izmerjena vrednost</translation>
     </message>
     <message>
-        <source>Linear Factor</source>
-        <translation type="vanished">Količnik povečave</translation>
-    </message>
-    <message>
         <location line="+3"/>
         <source>Block Name</source>
         <translation>Ime zbira</translation>
@@ -847,14 +843,6 @@
         <translation>Končna dotikalnica</translation>
     </message>
     <message>
-        <source>Simple</source>
-        <translation type="vanished">Preprosto</translation>
-    </message>
-    <message>
-        <source>Contents</source>
-        <translation type="obsolete">Vsebina</translation>
-    </message>
-    <message>
         <location filename="../src/entity/RToleranceEntity.cpp" line="-5"/>
         <location line="+1"/>
         <location line="+1"/>
@@ -872,50 +860,6 @@
         <location line="+1"/>
         <source>Text</source>
         <translation>Besedilo</translation>
-    </message>
-    <message>
-        <source>Plain Text</source>
-        <translation type="vanished">Golo besedilo</translation>
-    </message>
-    <message>
-        <source>Font Name</source>
-        <translation type="vanished">Ime pisave</translation>
-    </message>
-    <message>
-        <source>Text Height</source>
-        <translation type="vanished">Višina besedila</translation>
-    </message>
-    <message>
-        <source>Text Angle</source>
-        <translation type="vanished">Kot besedila</translation>
-    </message>
-    <message>
-        <source>X Scale</source>
-        <translation type="vanished">X Razmerje</translation>
-    </message>
-    <message>
-        <source>Bold</source>
-        <translation type="vanished">Krepko</translation>
-    </message>
-    <message>
-        <source>Italic</source>
-        <translation type="vanished">Ležeče</translation>
-    </message>
-    <message>
-        <source>Line Spacing</source>
-        <translation type="vanished">Razmik med vrsticami</translation>
-    </message>
-    <message>
-        <source>Alignment</source>
-        <translation type="vanished">Poravnava</translation>
-    </message>
-    <message>
-        <source>Horizontal</source>
-        <translation type="vanished">Vodoravno</translation>
-    </message>
-    <message>
-        <source>Vertical</source>
-        <translation type="vanished">Navpično</translation>
     </message>
     <message>
         <location filename="../src/entity/RRayEntity.cpp" line="-11"/>

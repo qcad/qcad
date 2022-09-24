@@ -19,10 +19,6 @@
         <translation>これは、誰でも&lt;a href=&apos;%1&apos;&gt;参加&lt;/a&gt;できることを意味します!</translation>
     </message>
     <message>
-        <source>Portions of this software © 2008-2018 The Qt Company Ltd.</source>
-        <translation type="obsolete">このソフトウェアの一部にQtを使用しています。© 2008-2017 The Qt Company Ltd. {2008-2018 ?}</translation>
-    </message>
-    <message>
         <location line="+11"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
         <translation>プログラムは現状のまま提供され、設計、商品性、および特定の目的への適合性を含む、いかなる保証もありません。</translation>
@@ -39,12 +35,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+422"/>
+        <location line="+427"/>
         <source>Plugin:</source>
         <translation>プラグイン:</translation>
     </message>
     <message>
-        <location line="-397"/>
+        <location line="-402"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -140,17 +136,9 @@
         <translation>%1は自由で（オープンソースな）ソフトウェアです。</translation>
     </message>
     <message>
-        <source>Plugins and script add-ons are subject to their respective license (see &apos;Plugins&apos; tab).</source>
-        <translation type="vanished">プラグインとスクリプト拡張機能は個別のライセンスが適用されます（&apos;プラグイン&apos;タブ参照）</translation>
-    </message>
-    <message>
         <location line="+7"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
         <translation>すべてのブランドまたは製品名は、それぞれの所有者の商標または登録商標です。</translation>
-    </message>
-    <message>
-        <source>Portions of this software © 2008-2017 The Qt Company Ltd.</source>
-        <translation type="vanished">このソフトウェアの一部にQtを使用しています。© 2008-2017 The Qt Company Ltd.</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -198,7 +186,7 @@
         <translation>クレジット</translation>
     </message>
     <message>
-        <location line="+164"/>
+        <location line="+169"/>
         <source>Licenses</source>
         <translation type="unfinished">ライセンス</translation>
     </message>
@@ -249,17 +237,9 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <source>About QCAD</source>
-        <translation type="obsolete">QCADについて</translation>
-    </message>
-    <message>
         <location filename="../scripts/Help/About/AboutDialog.ui" line="+101"/>
         <source>About</source>
         <translation>ソフトウェアについて</translation>
-    </message>
-    <message>
-        <source>about:blank</source>
-        <translation type="vanished">about:blank</translation>
     </message>
     <message>
         <location line="+134"/>
@@ -285,14 +265,6 @@
         <location line="-224"/>
         <source>Credits</source>
         <translation>クレジット</translation>
-    </message>
-    <message>
-        <source>About Plugins</source>
-        <translation type="obsolete">プラグインについて</translation>
-    </message>
-    <message>
-        <source>About Script Add-Ons</source>
-        <translation type="obsolete">スクリプトアドオンについて</translation>
     </message>
 </context>
 <context>
@@ -330,10 +302,6 @@ QCADを再起動してください。</translation>
         <translation>デフォルト</translation>
     </message>
     <message>
-        <source>Defaults for </source>
-        <translation type="vanished">デフォルト</translation>
-    </message>
-    <message>
         <location line="+2"/>
         <source>These are default preferences for new drawings.</source>
         <translation>新規図面のためのデフォルト設定あり</translation>
@@ -351,10 +319,6 @@ QCADを再起動してください。</translation>
 </context>
 <context>
     <name>AddBlock</name>
-    <message>
-        <source>&amp;Add Block</source>
-        <translation type="obsolete">&amp;A ブロック追加</translation>
-    </message>
     <message>
         <location filename="../scripts/Block/AddBlock/AddBlockInit.js" line="+2"/>
         <source>&amp;Add Empty Block</source>
@@ -474,10 +438,6 @@ QCADを再起動してください。</translation>
         <translation>弧ツール</translation>
     </message>
     <message>
-        <source>Show arc tools</source>
-        <translation type="vanished">弧ツールを表示</translation>
-    </message>
-    <message>
         <location line="+23"/>
         <source>&amp;Arc</source>
         <translation>&amp;A 弧</translation>
@@ -519,10 +479,6 @@ QCADを再起動してください。</translation>
         <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
         <translation>反時計回り（正）</translation>
-    </message>
-    <message>
-        <source>Direction</source>
-        <translation type="vanished">向き</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -689,10 +645,6 @@ QCADを再起動してください。</translation>
         <translation>反時計回り（正）</translation>
     </message>
     <message>
-        <source>Direction</source>
-        <translation type="vanished">向き</translation>
-    </message>
-    <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>時計回り（負）</translation>
@@ -706,10 +658,6 @@ QCADを再起動してください。</translation>
         <location line="+7"/>
         <source>Shorter Arc</source>
         <translation>短い弧</translation>
-    </message>
-    <message>
-        <source>Solution</source>
-        <translation type="vanished">ソリューション</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -791,10 +739,6 @@ QCADを再起動してください。</translation>
         <location line="+7"/>
         <source>Counter Clockwise (positive)</source>
         <translation>反時計回り（正）</translation>
-    </message>
-    <message>
-        <source>Direction</source>
-        <translation type="vanished">向き</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -910,10 +854,6 @@ QCADを再起動してください。</translation>
         <translation>半径:</translation>
     </message>
     <message>
-        <source>&amp;Tangentially connected</source>
-        <translation type="vanished">&amp;T 接線的接続</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangentialInit.js" line="+2"/>
         <source>&amp;Tangentially Connected</source>
         <translation>&amp;T 接線的接続</translation>
@@ -926,10 +866,6 @@ QCADを再起動してください。</translation>
 </context>
 <context>
     <name>AutoSave</name>
-    <message>
-        <source>Load/Save</source>
-        <translation type="vanished">ロード/セーブ</translation>
-    </message>
     <message>
         <location filename="../scripts/File/AutoSave/AutoSave.js" line="+35"/>
         <source>Autosave</source>
@@ -972,18 +908,6 @@ Do you wish to recover it?</source>
 これを復元しますか？</translation>
     </message>
     <message>
-        <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
-Do you wish to recover it?</source>
-        <translation type="vanished">無題の図面のオートセーブバックアップファイルが見つかりました。
-これを回復しますか？</translation>
-    </message>
-    <message>
-        <source>%1 &apos;autosave&apos; backup files for untitled drawings were found.
-Do you wish to recover them?</source>
-        <translation type="vanished">%1 図面のオートセーブバックアップファイルが見つかりました。
-これを回復しますか？</translation>
-    </message>
-    <message>
         <location line="-64"/>
         <source>Recover Files?</source>
         <translation>ファイルを回復しますか？</translation>
@@ -997,12 +921,6 @@ Do you wish to recover them?</source>
         <location line="+47"/>
         <source>Recover File?</source>
         <translation>ファイルを回復しますか？</translation>
-    </message>
-    <message>
-        <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
-Do you wish to recover it?</source>
-        <translation type="vanished">%1 オートセーブバックアップファイルは存在します。
-これを回復しますか？</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -1176,14 +1094,6 @@ Do you wish to recover it?</source>
         <translation type="unfinished">長さ 2:</translation>
     </message>
     <message>
-        <source>Length 1:</source>
-        <translation type="vanished">長さ１:</translation>
-    </message>
-    <message>
-        <source>Length 2:</source>
-        <translation type="vanished">長さ２:</translation>
-    </message>
-    <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
         <source>&amp;Chamfer / Bevel</source>
         <translation>&amp;C 面取り</translation>
@@ -1210,14 +1120,6 @@ Do you wish to recover it?</source>
         <location line="+10"/>
         <source>Export as Bitmap</source>
         <translation>ビットマップとしてエクスポート</translation>
-    </message>
-    <message>
-        <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
-        <translation type="vanished">ビットマップファイルの生成中にエラー &apos;%1&apos;: %2</translation>
-    </message>
-    <message>
-        <source>Bitmap file has been exported to &apos;%1&apos;</source>
-        <translation type="vanished">ビットマップファイルはエクスポートされました &apos;%1&apos;</translation>
     </message>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportDialog.ui" line="+14"/>
@@ -1322,17 +1224,6 @@ Do you wish to recover it?</source>
     </message>
 </context>
 <context>
-    <name>BitmapExport2</name>
-    <message>
-        <source>Files</source>
-        <translation type="obsolete">ファイル</translation>
-    </message>
-    <message>
-        <source>Export as Bitmap</source>
-        <translation type="obsolete">ビットマップとしてエクスポート</translation>
-    </message>
-</context>
-<context>
     <name>BitmapExportWorker</name>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
@@ -1351,10 +1242,6 @@ Do you wish to recover it?</source>
         <location line="+110"/>
         <source>Cannot edit block while editing a block in-place</source>
         <translation type="unfinished">ブロックのインプレース編集中にブロックの編集ができない</translation>
-    </message>
-    <message>
-        <source>Show block tools</source>
-        <translation type="vanished">表示ブロックツール</translation>
     </message>
     <message>
         <location line="-82"/>
@@ -1391,17 +1278,9 @@ Do you wish to recover it?</source>
         <translation type="unfinished">ブロック &quot;%1&quot; は既に存在します&lt;br&gt;そして上書きされます。</translation>
     </message>
     <message>
-        <source>Block &apos;%1&apos; already exists&lt;br&gt;and will be overwritten.</source>
-        <translation type="vanished">ブロック &apos;%1&apos;は既に存在します。&lt;br&gt;そのため上書きされます。</translation>
-    </message>
-    <message>
         <location line="+5"/>
         <source>Block already exists.</source>
         <translation>ブロックは既に存在します。</translation>
-    </message>
-    <message>
-        <source>Block Data</source>
-        <translation type="vanished">ブロックデータ</translation>
     </message>
     <message>
         <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
@@ -1412,10 +1291,6 @@ Do you wish to recover it?</source>
         <location line="+8"/>
         <source>Block name:</source>
         <translation>ブロック名:</translation>
-    </message>
-    <message>
-        <source>block 1</source>
-        <translation type="vanished">ブロック１</translation>
     </message>
 </context>
 <context>
@@ -1437,14 +1312,14 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+492"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
         <location line="+53"/>
-        <location line="+39"/>
+        <location line="+44"/>
         <source>Block List</source>
         <translation>ブロックリスト</translation>
     </message>
     <message>
-        <location line="-92"/>
+        <location line="-97"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
@@ -1521,17 +1396,9 @@ Do you wish to recover it?</source>
 <context>
     <name>BreakOut</name>
     <message>
-        <source>Choose line, arc, circle or ellipse to auto trim</source>
-        <translation type="vanished">オートトリムのための線分、弧、円または楕円を選択してください</translation>
-    </message>
-    <message>
         <location filename="../scripts/Modify/BreakOut/BreakOut.js" line="+59"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline segment</source>
         <translation>線分、弧、円、楕円、スプラインまたはポリラインの断片を選択して下さい</translation>
-    </message>
-    <message>
-        <source>Choose line, arc, circle, ellipse or spline segment</source>
-        <translation type="vanished">線分,弧,円,楕円またはスプラインを選択してください</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1590,10 +1457,6 @@ Do you wish to recover it?</source>
         <translation>最初のブレークポイント</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">完了</translation>
-    </message>
-    <message>
         <location line="+8"/>
         <source>Second break point</source>
         <translation>第2のブレークポイント</translation>
@@ -1625,7 +1488,7 @@ Do you wish to recover it?</source>
 <context>
     <name>CadToolBar</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+52"/>
+        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+53"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
@@ -1638,14 +1501,6 @@ Do you wish to recover it?</source>
         <location line="+35"/>
         <source>Vertical/Horizontal</source>
         <translation>垂直/水平</translation>
-    </message>
-    <message>
-        <source>Toggle Title Bar</source>
-        <translation type="vanished">タイトルバー切り替え</translation>
-    </message>
-    <message>
-        <source>Icon Size:</source>
-        <translation type="vanished">アイコンサイズ:</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+17"/>
@@ -1672,7 +1527,7 @@ Do you wish to recover it?</source>
     <name>CadToolBarPanel</name>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/CadToolBarPanel.js" line="+39"/>
-        <location line="+71"/>
+        <location line="+72"/>
         <source>Back</source>
         <translation>戻る</translation>
     </message>
@@ -1680,7 +1535,7 @@ Do you wish to recover it?</source>
 <context>
     <name>CadToolMatrix</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+373"/>
+        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+383"/>
         <source>Expand all</source>
         <translation>全て広げる</translation>
     </message>
@@ -1700,19 +1555,15 @@ Do you wish to recover it?</source>
         <translation>アイコンビュー</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+34"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+47"/>
+        <location line="+53"/>
         <source>Tool Matrix</source>
         <translation>ツールマトリクス</translation>
-    </message>
-    <message>
-        <source>Icon Size:</source>
-        <translation type="vanished">アイコンのサイズ:</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CadToolMatrix/PreferencesPage.ui" line="+17"/>
@@ -1746,7 +1597,7 @@ Do you wish to recover it?</source>
 <context>
     <name>CheckForUpdates</name>
     <message>
-        <location filename="../scripts/Help/CheckForUpdates/CheckForUpdates.js" line="+62"/>
+        <location filename="../scripts/Help/CheckForUpdates/CheckForUpdates.js" line="+68"/>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesDialog.ui" line="+14"/>
         <source>Checking for Updates...</source>
         <translation>アップデートを確認しています...</translation>
@@ -1760,10 +1611,6 @@ Do you wish to recover it?</source>
         <location line="+4"/>
         <source>No connection to server or file not found. Please try again later.</source>
         <translation>サーバへの接続が無いか、ファイルが見つかりません。後ほど、再度お試し下さい。</translation>
-    </message>
-    <message>
-        <source>about:blank</source>
-        <translation type="vanished">about:blank</translation>
     </message>
     <message>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesDialog.ui" line="+53"/>
@@ -1782,10 +1629,6 @@ Do you wish to recover it?</source>
         <location filename="../scripts/Draw/Circle/Circle.js" line="+71"/>
         <source>Circle Tools</source>
         <translation>円ツール</translation>
-    </message>
-    <message>
-        <source>Show circle tools</source>
-        <translation type="vanished">円ツールを表示</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -1859,10 +1702,6 @@ Do you wish to recover it?</source>
         <translation>１−２点の線分の左に中心を置く</translation>
     </message>
     <message>
-        <source>Solution</source>
-        <translation type="vanished">ソリューション</translation>
-    </message>
-    <message>
         <location line="+20"/>
         <source>Center Right of Line P1 - P2</source>
         <translation>１−２点の線分の右に中心を置く</translation>
@@ -1907,10 +1746,6 @@ Do you wish to recover it?</source>
         <translation>解決法がありません</translation>
     </message>
     <message>
-        <source>Point, 2 Tan&amp;gents</source>
-        <translation type="vanished">&amp;g 1点と2接線</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Circle/Circle2TP/Circle2TPInit.js" line="+6"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation>２つのエンティティに接し１点を通る円を描画</translation>
@@ -1942,10 +1777,6 @@ Do you wish to recover it?</source>
         <location line="+103"/>
         <source>No solution</source>
         <translation>解がありません</translation>
-    </message>
-    <message>
-        <source>Invalid radius</source>
-        <translation type="vanished">無効な角度</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TR.ui" line="+17"/>
@@ -2033,26 +1864,6 @@ Do you wish to recover it?</source>
 <context>
     <name>CircleCD</name>
     <message>
-        <source>Center or radius</source>
-        <translation type="vanished">中心または半径</translation>
-    </message>
-    <message>
-        <source>Center</source>
-        <translation type="vanished">中心</translation>
-    </message>
-    <message>
-        <source>Radius:</source>
-        <translation type="vanished">半径:</translation>
-    </message>
-    <message>
-        <source>Center, &amp;Radius</source>
-        <translation type="vanished">&amp;R 中心、半径</translation>
-    </message>
-    <message>
-        <source>Draw circle from center and radius</source>
-        <translation type="vanished">中心及び半径半径から円を描画</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Circle/CircleCD/CircleCD.ui" line="+17"/>
         <location filename="../scripts/Draw/Circle/CircleCD/CircleCDDialog.ui" line="+89"/>
         <source>Diameter:</source>
@@ -2105,14 +1916,6 @@ Do you wish to recover it?</source>
 </context>
 <context>
     <name>CircleCR</name>
-    <message>
-        <source>Center or radius</source>
-        <translation type="vanished">中心または半径</translation>
-    </message>
-    <message>
-        <source>Center</source>
-        <translation type="vanished">中心</translation>
-    </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCR/CircleCR.ui" line="+17"/>
         <location filename="../scripts/Draw/Circle/CircleCR/CircleCRDialog.ui" line="+89"/>
@@ -2209,10 +2012,6 @@ Do you wish to recover it?</source>
         <location line="+48"/>
         <source>No solution</source>
         <translation>解がありません</translation>
-    </message>
-    <message>
-        <source>2 Poin&amp;ts and Tangent</source>
-        <translation type="vanished">&amp;t ２点と接線</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleT2P/CircleT2PInit.js" line="+2"/>
@@ -2356,10 +2155,6 @@ Do you wish to recover it?</source>
         <translation>コマンドライン</translation>
     </message>
     <message>
-        <source>Invalid coordinate &quot;%1&quot;.</source>
-        <translation type="obsolete">無効な座標 &quot;%1&quot;.</translation>
-    </message>
-    <message>
         <location line="+222"/>
         <source>Unknown command or invalid coordinate or value: &quot;%1&quot;</source>
         <translation>不明なコマンドまたは無効な座標もしくは値: &quot;%1&quot;</translation>
@@ -2383,10 +2178,6 @@ Do you wish to recover it?</source>
         <location line="+69"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation>ロックされたまたは不可視な画層のエンティティを描画、修正しようとしています。</translation>
-    </message>
-    <message>
-        <source>Trying to draw on or modify entities on a locked or invisible layer.</source>
-        <translation type="obsolete">ロックされたまたは不可視な画層のエンティティを描画、修正しようとしています。</translation>
     </message>
     <message>
         <location line="-380"/>
@@ -2437,10 +2228,6 @@ Do you wish to recover it?</source>
         <location line="+3"/>
         <source>: </source>
         <translation>:</translation>
-    </message>
-    <message>
-        <source>History Size:</source>
-        <translation type="vanished">ヒストリサイズ:</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CommandLine/PreferencesPage.ui" line="+17"/>
@@ -2495,10 +2282,6 @@ Do you wish to recover it?</source>
         <translation type="unfinished">ユニット &quot;%1&quot; が選択されました。何もしていない</translation>
     </message>
     <message>
-        <source>Unit &apos;%1&apos; selected - Nothing to be done</source>
-        <translation type="vanished">単位&apos;%1&apos;が選択されました-何もされませんでした</translation>
-    </message>
-    <message>
         <location line="+144"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>%1 から %2 にコンバートされた図面</translation>
@@ -2527,10 +2310,6 @@ Do you wish to recover it?</source>
         <location line="+30"/>
         <source>Convert:</source>
         <translation>変換:</translation>
-    </message>
-    <message>
-        <source>...</source>
-        <translation type="vanished">...</translation>
     </message>
 </context>
 <context>
@@ -2618,10 +2397,6 @@ Do you wish to recover it?</source>
         <location line="+14"/>
         <source>Number Format:</source>
         <translation type="unfinished">番号形式。</translation>
-    </message>
-    <message>
-        <source>Width:</source>
-        <translation type="obsolete">幅:</translation>
     </message>
     <message>
         <location line="+79"/>
@@ -2720,14 +2495,6 @@ Do you wish to recover it?</source>
         <source>Angle:</source>
         <translation type="unfinished">アングルです。</translation>
     </message>
-    <message>
-        <source>Line</source>
-        <translation type="obsolete">線分</translation>
-    </message>
-    <message>
-        <source>Face</source>
-        <translation type="obsolete">フェイス</translation>
-    </message>
 </context>
 <context>
     <name>Cut</name>
@@ -2756,18 +2523,6 @@ Do you wish to recover it?</source>
         <location line="+2"/>
         <source>Move entity or reference</source>
         <translation>エンティティまたは参照を移動</translation>
-    </message>
-    <message>
-        <source>Set second corner</source>
-        <translation type="vanished">第2角を設定</translation>
-    </message>
-    <message>
-        <source>Specify target point of reference point</source>
-        <translation type="vanished">基準点としてターゲット点を指定</translation>
-    </message>
-    <message>
-        <source>Specify target point of selection</source>
-        <translation type="vanished">選択のターゲット点を指定</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -2808,10 +2563,6 @@ Do you wish to recover it?</source>
         <location line="+127"/>
         <source>Editing block &quot;%1&quot;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
         <translation type="unfinished">ブロック &quot;%1&quot; を編集中&lt;br&gt;終了したら &lt;i&gt;Block &gt; [Return to Main Drawing&lt;/i&gt; を選択。</translation>
-    </message>
-    <message>
-        <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
-        <translation type="vanished">ブロック&apos;%1&apos;を編集中。&lt;br&gt;終了するには&lt;i&gt;ブロック&gt;メイン図面に戻る&lt;/i&gt;を選択して下さい</translation>
     </message>
 </context>
 <context>
@@ -2868,10 +2619,6 @@ Do you wish to recover it?</source>
 </context>
 <context>
     <name>DeselectLayer</name>
-    <message>
-        <source>&amp;Deselect Layer</source>
-        <translation type="vanished">&amp;D レイヤーを選択解除</translation>
-    </message>
     <message>
         <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer Entities</source>
@@ -2973,22 +2720,6 @@ Do you wish to recover it?</source>
         <location line="+7"/>
         <source>Cancel</source>
         <translation>キャンセル</translation>
-    </message>
-    <message>
-        <source>Scale:</source>
-        <translation type="obsolete">縮尺:</translation>
-    </message>
-    <message>
-        <source>0.01</source>
-        <translation type="obsolete">0.01</translation>
-    </message>
-    <message>
-        <source>297</source>
-        <translation type="obsolete">297</translation>
-    </message>
-    <message>
-        <source>210</source>
-        <translation type="obsolete">210</translation>
     </message>
 </context>
 <context>
@@ -3149,10 +2880,6 @@ Do you wish to recover it?</source>
         </translation>
     </message>
     <message>
-        <source>Reset label position of %1 dimension(s).</source>
-        <translation type="vanished">%1個の寸法のラベル位置をリセット。</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Dimension/DimRegen/DimRegenInit.js" line="+2"/>
         <source>&amp;Reset Label Position</source>
         <translation>&amp;R ラベル位置リセット</translation>
@@ -3262,10 +2989,6 @@ Do you wish to recover it?</source>
         <translation>寸法ツール</translation>
     </message>
     <message>
-        <source>Show dimension tools</source>
-        <translation type="vanished">寸法ツールを表示</translation>
-    </message>
-    <message>
         <location line="+27"/>
         <source>D&amp;imension</source>
         <translation>&amp;i 寸法</translation>
@@ -3363,46 +3086,6 @@ Do you wish to recover it?</source>
         <translation>スペース</translation>
     </message>
     <message>
-        <source>Scientific</source>
-        <translation type="vanished">科学</translation>
-    </message>
-    <message>
-        <source>Decimal</source>
-        <translation type="vanished">小数</translation>
-    </message>
-    <message>
-        <source>Engineering</source>
-        <translation type="vanished">エンジニアリング</translation>
-    </message>
-    <message>
-        <source>Architectural</source>
-        <translation type="vanished">建築</translation>
-    </message>
-    <message>
-        <source>Fractional</source>
-        <translation type="vanished">分数</translation>
-    </message>
-    <message>
-        <source>Decimal Degrees</source>
-        <translation type="vanished">小数角度</translation>
-    </message>
-    <message>
-        <source>Deg/min/sec</source>
-        <translation type="vanished">度/分/秒</translation>
-    </message>
-    <message>
-        <source>Gradians</source>
-        <translation type="vanished">グラード</translation>
-    </message>
-    <message>
-        <source>Radians</source>
-        <translation type="vanished">ラジアン</translation>
-    </message>
-    <message>
-        <source>Surveyor&apos;s units</source>
-        <translation type="vanished">測量</translation>
-    </message>
-    <message>
         <location line="+309"/>
         <source>Unit / Format</source>
         <translation>ユニット/フォーマット</translation>
@@ -3411,14 +3094,6 @@ Do you wish to recover it?</source>
         <location line="+1"/>
         <source>The drawing unit must be &quot;Inch&quot; to display dimension labels in formats &quot;Architectural&quot; or &quot;Engineering&quot;. Format changed to &quot;Decimal&quot;.</source>
         <translation type="unfinished">フォーマット「Architectural」または「Engineering」で寸法ラベルを表示するには、図面単位が「Inch」でなければならない。形式を &quot;Decimal &quot;に変更しました。</translation>
-    </message>
-    <message>
-        <source>The drawing unit must be &apos;Inch&apos; or &apos;Foot&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
-        <translation type="vanished">寸法ラベルを’建築’または’エンジニアリング’フォーマットで表示するには、図面単位は’インチ’でなければなりません。フォーマットは’小数’に変更されました。</translation>
-    </message>
-    <message>
-        <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
-        <translation type="vanished">寸法ラベルを’建築’または’エンジニアリング’フォーマットで表示するには、図面単位は’インチ’でなければなりません。フォーマットは’小数’に変更されました。</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+55"/>
@@ -3489,18 +3164,6 @@ Do you wish to recover it?</source>
         <location line="+12"/>
         <source>Arrow</source>
         <translation>矢印</translation>
-    </message>
-    <message>
-        <source>Architectural Tick</source>
-        <translation type="vanished">建築チェック</translation>
-    </message>
-    <message>
-        <source>Font</source>
-        <translation type="vanished">フォント</translation>
-    </message>
-    <message>
-        <source>Dimension label font:</source>
-        <translation type="vanished">フォント:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -3608,14 +3271,6 @@ is already in the list.</source>
 <context>
     <name>Divide</name>
     <message>
-        <source>Choose line, arc or circle</source>
-        <translation type="obsolete">線分、弧、円を選択してください</translation>
-    </message>
-    <message>
-        <source>Choose line, arc, circle, ellipse or spline</source>
-        <translation type="vanished">線分,弧,円,楕円またはスプラインを選択してください</translation>
-    </message>
-    <message>
         <location filename="../scripts/Modify/Divide/Divide.js" line="+68"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline</source>
         <translation>線分、弧、円、楕円、スプラインまたはポリラインを選択して下さい</translation>
@@ -3634,10 +3289,6 @@ is already in the list.</source>
         <location line="+10"/>
         <source>Specify second point</source>
         <translation>第２点を指定</translation>
-    </message>
-    <message>
-        <source>Cutting point is not on entity.</source>
-        <translation type="obsolete">切り取り点はエンティティ上にありません。</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Divide/DivideInit.js" line="+2"/>
@@ -3669,49 +3320,6 @@ is already in the list.</source>
         <location line="+15"/>
         <source>Drawing Tools</source>
         <translation type="unfinished">ドローイングツール</translation>
-    </message>
-</context>
-<context>
-    <name>DrawBasedOnRectangle</name>
-    <message>
-        <source>Top Left</source>
-        <translation type="vanished">左上</translation>
-    </message>
-    <message>
-        <source>Top</source>
-        <translation type="vanished">上</translation>
-    </message>
-    <message>
-        <source>Top Right</source>
-        <translation type="vanished">右上</translation>
-    </message>
-    <message>
-        <source>Left</source>
-        <translation type="vanished">左</translation>
-    </message>
-    <message>
-        <source>Middle</source>
-        <translation type="vanished">中点</translation>
-    </message>
-    <message>
-        <source>Right</source>
-        <translation type="vanished">右</translation>
-    </message>
-    <message>
-        <source>Bottom Left</source>
-        <translation type="vanished">左下</translation>
-    </message>
-    <message>
-        <source>Bottom</source>
-        <translation type="vanished">下</translation>
-    </message>
-    <message>
-        <source>Bottom Right</source>
-        <translation type="vanished">右下</translation>
-    </message>
-    <message>
-        <source>Position</source>
-        <translation type="vanished">位置</translation>
     </message>
 </context>
 <context>
@@ -4441,10 +4049,6 @@ is already in the list.</source>
         <translation>次の頂点</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">完了</translation>
-    </message>
-    <message>
         <location line="+421"/>
         <source>close</source>
         <translation>close</translation>
@@ -4515,10 +4119,6 @@ is already in the list.</source>
         <translation>長さや角度を制限</translation>
     </message>
     <message>
-        <source>Arc segment with radius:</source>
-        <translation type="vanished">半径を指定の弧:</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolylineInit.js" line="+2"/>
         <source>&amp;Draw Polyline</source>
         <translation>&amp;D ポリライン描画</translation>
@@ -4543,14 +4143,6 @@ is already in the list.</source>
         <location filename="../scripts/Edit/Duplicate/DuplicateInit.js" line="+2"/>
         <source>&amp;Duplicate</source>
         <translation>複製</translation>
-    </message>
-    <message>
-        <source>1 entity duplicated</source>
-        <translation type="vanished">１つのエンティティが複製されました</translation>
-    </message>
-    <message>
-        <source>%1 entities duplicated</source>
-        <translation type="vanished">%1個のエンティティが複製されました</translation>
     </message>
     <message numerus="yes">
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+54"/>
@@ -4590,13 +4182,9 @@ is already in the list.</source>
         <translation>なし</translation>
     </message>
     <message>
-        <location line="+662"/>
+        <location line="+664"/>
         <source>Options</source>
         <translation>オプション</translation>
-    </message>
-    <message>
-        <source>Block Options</source>
-        <translation type="vanished">ブロックオプション</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -4609,7 +4197,7 @@ is already in the list.</source>
         <translation>CADツール</translation>
     </message>
     <message>
-        <location line="+584"/>
+        <location line="+582"/>
         <source>Invalid position</source>
         <translation type="unfinished">無効な位置</translation>
     </message>
@@ -4751,10 +4339,6 @@ is already in the list.</source>
         <translation>編集ツール</translation>
     </message>
     <message>
-        <source>Show edit tools</source>
-        <translation type="vanished">編集ツールの表示</translation>
-    </message>
-    <message>
         <location line="+27"/>
         <source>&amp;Edit</source>
         <translation>&amp;E 編集</translation>
@@ -4846,10 +4430,6 @@ is already in the list.</source>
         <translation>楕円ツール</translation>
     </message>
     <message>
-        <source>Show ellipse tools</source>
-        <translation type="vanished">楕円ツールを表示</translation>
-    </message>
-    <message>
         <location line="+23"/>
         <source>&amp;Ellipse</source>
         <translation>&amp;E 楕円</translation>
@@ -4938,10 +4518,6 @@ is already in the list.</source>
         <translation>反時計回り（正）</translation>
     </message>
     <message>
-        <source>Direction</source>
-        <translation type="vanished">向き</translation>
-    </message>
-    <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>時計回り（負）</translation>
@@ -4960,14 +4536,6 @@ is already in the list.</source>
 <context>
     <name>EllipseCPP</name>
     <message>
-        <source>&amp;Full Ellipse</source>
-        <translation type="vanished">&amp;F 楕円弧</translation>
-    </message>
-    <message>
-        <source>&amp;Full Ellipse with Center, Point, Ratio</source>
-        <translation type="vanished">&amp;F 楕円弧</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Ellipse/EllipseCPP/EllipseCPPInit.js" line="+2"/>
         <source>&amp;Ellipse (Center, Point, Ratio)</source>
         <translation>楕円（中心,点,比率）</translation>
@@ -4976,24 +4544,6 @@ is already in the list.</source>
         <location line="+4"/>
         <source>Draw full ellipse from center, major point and ratio</source>
         <translation>中心、長軸点と比率から楕円を描画</translation>
-    </message>
-</context>
-<context>
-    <name>EllipseConcentric</name>
-    <message>
-        <source>Distance:</source>
-        <translation type="obsolete">距離:</translation>
-    </message>
-    <message>
-        <source>Number:</source>
-        <translation type="obsolete">数:</translation>
-    </message>
-</context>
-<context>
-    <name>EllipseConcentricThrough</name>
-    <message>
-        <source>Number:</source>
-        <translation type="obsolete">数:</translation>
     </message>
 </context>
 <context>
@@ -5576,10 +5126,6 @@ is already in the list.</source>
         <translation>ファイルツール</translation>
     </message>
     <message>
-        <source>Show file tools</source>
-        <translation type="vanished">表示ファイルツール</translation>
-    </message>
-    <message>
         <location line="+27"/>
         <source>&amp;File</source>
         <translation>&amp;F ファイル</translation>
@@ -5599,10 +5145,6 @@ is already in the list.</source>
         <location line="+1"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
         <translation type="unfinished">ファイル&quot;%1 &quot;はすでに存在します。上書きしますか？</translation>
-    </message>
-    <message>
-        <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
-        <translation type="vanished">ファイル&apos;%1&apos;は既に存在します。 上書きしますか?</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -5738,11 +5280,6 @@ is already in the list.</source>
         <location line="+10"/>
         <source>Group all castings to one operation.</source>
         <translation type="unfinished">すべての鋳物を1つの操作にまとめる。</translation>
-    </message>
-    <message>
-        <source>Cast on newly sub-layer &apos;Painted&apos;.
-BUG: Interferes with group castings.</source>
-        <translation type="vanished">新たにサブレイヤー Paintedにキャストする。</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -5994,13 +5531,6 @@ BUG: Interferes with group castings.</source>
     </message>
 </context>
 <context>
-    <name>FlexPainterOptions</name>
-    <message>
-        <source>Preview</source>
-        <translation type="obsolete">プレビュー</translation>
-    </message>
-</context>
-<context>
     <name>FlipHorizontal</name>
     <message>
         <location filename="../scripts/Modify/FlipHorizontal/FlipHorizontalInit.js" line="+2"/>
@@ -6055,22 +5585,6 @@ BUG: Interferes with group castings.</source>
 <context>
     <name>Form</name>
     <message>
-        <source>Untitled</source>
-        <translation type="vanished">無題</translation>
-    </message>
-    <message>
-        <source>Single</source>
-        <translation type="obsolete">シングル</translation>
-    </message>
-    <message>
-        <source>Two: Vertical</source>
-        <translation type="obsolete">２:垂直</translation>
-    </message>
-    <message>
-        <source>Two: Horizontal</source>
-        <translation type="obsolete">２:水平</translation>
-    </message>
-    <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/20_ThreeRight.ui" line="+14"/>
         <source>Three: Right</source>
         <translation>３:右</translation>
@@ -6086,34 +5600,6 @@ BUG: Interferes with group castings.</source>
         <translation>３:上</translation>
     </message>
     <message>
-        <source>Three: Below</source>
-        <translation type="obsolete">３:下</translation>
-    </message>
-    <message>
-        <source>Three: Vertical</source>
-        <translation type="obsolete">３:垂直</translation>
-    </message>
-    <message>
-        <source>Three: Horizontal</source>
-        <translation type="obsolete">２:垂直</translation>
-    </message>
-    <message>
-        <source>Four: Equal</source>
-        <translation type="obsolete">４:イコール</translation>
-    </message>
-    <message>
-        <source>Four: Right</source>
-        <translation type="obsolete">４:右</translation>
-    </message>
-    <message>
-        <source>Four: Left</source>
-        <translation type="obsolete">４:左</translation>
-    </message>
-    <message>
-        <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="obsolete">グリッド間隔＜メタグリッド間隔</translation>
-    </message>
-    <message>
         <location filename="../scripts/Misc/Tutorials/LibraryBrowserScripts/CubeCuttingOut.ui" line="+14"/>
         <source>Form</source>
         <translation type="unfinished">フォーム</translation>
@@ -6122,10 +5608,6 @@ BUG: Interferes with group castings.</source>
         <location line="+6"/>
         <source>Cube size:</source>
         <translation type="unfinished">キューブサイズ。</translation>
-    </message>
-    <message>
-        <source>10</source>
-        <translation type="obsolete">10</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -6196,10 +5678,6 @@ BUG: Interferes with group castings.</source>
         <location line="+24"/>
         <source>Tolerance:</source>
         <translation type="unfinished">公差がある。</translation>
-    </message>
-    <message>
-        <source>0.001</source>
-        <translation type="obsolete">0.001</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -6307,10 +5785,6 @@ BUG: Interferes with group castings.</source>
         <translation>大きな十字線を表示</translation>
     </message>
     <message>
-        <source>Grid</source>
-        <translation type="obsolete">グリッド</translation>
-    </message>
-    <message>
         <location line="-64"/>
         <source>Origin</source>
         <translation>原点</translation>
@@ -6376,10 +5850,6 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">参照点を持つエンティティの最大選択。</translation>
     </message>
     <message>
-        <source>1000</source>
-        <translation type="obsolete">1000</translation>
-    </message>
-    <message>
         <location line="+219"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation type="unfinished">表示されている参照点での最大選択実体。</translation>
@@ -6388,10 +5858,6 @@ BUG: Interferes with group castings.</source>
         <location line="-656"/>
         <source>Number of threads:</source>
         <translation type="unfinished">スレッドの数</translation>
-    </message>
-    <message>
-        <source>100000</source>
-        <translation type="obsolete">100000</translation>
     </message>
     <message>
         <location line="+507"/>
@@ -6417,10 +5883,6 @@ BUG: Interferes with group castings.</source>
         <location line="+39"/>
         <source>Disable for printing</source>
         <translation type="unfinished">プリント禁止</translation>
-    </message>
-    <message>
-        <source>Linetypes</source>
-        <translation type="vanished">ラインタイプ</translation>
     </message>
     <message>
         <location line="+56"/>
@@ -6463,17 +5925,9 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">デフォルトのlineweight。</translation>
     </message>
     <message>
-        <source>Use full resolution for Retina display</source>
-        <translation type="vanished">Retinaディスプレイでフル解像度を用いる</translation>
-    </message>
-    <message>
         <location line="+124"/>
         <source>Anti-aliasing on by default</source>
         <translation>デフォルトでアンチエイリアスする</translation>
-    </message>
-    <message>
-        <source>Maximum number of reference points displayed:</source>
-        <translation type="vanished">表示される参照点の最大数</translation>
     </message>
     <message>
         <location line="+386"/>
@@ -6486,21 +5940,9 @@ BUG: Interferes with group castings.</source>
         <translation>自動的にモデルビューの基本線種を使用</translation>
     </message>
     <message>
-        <source>Auto switch linetypes</source>
-        <translation type="obsolete">ラインタイプの自動切り替え</translation>
-    </message>
-    <message>
-        <source>Performance</source>
-        <translation type="vanished">パフォーマンス</translation>
-    </message>
-    <message>
         <location line="+212"/>
         <source>Number of preview entities:</source>
         <translation>プレビューエンティティの数:</translation>
-    </message>
-    <message>
-        <source>Text height display threshold (px):</source>
-        <translation type="vanished">テキスト高さの表示しきい値 (px):</translation>
     </message>
     <message>
         <location line="+61"/>
@@ -6508,17 +5950,9 @@ BUG: Interferes with group castings.</source>
         <translation>この角度以下の弧を直線で表示 (度):</translation>
     </message>
     <message>
-        <source>Text height display threshold:</source>
-        <translation type="obsolete">テキスト高さの表示閾値:</translation>
-    </message>
-    <message>
         <location line="+559"/>
         <source>Selection</source>
         <translation>選択</translation>
-    </message>
-    <message>
-        <source>Persistent Selection</source>
-        <translation type="vanished">選択を持続</translation>
     </message>
 </context>
 <context>
@@ -6587,10 +6021,6 @@ BUG: Interferes with group castings.</source>
         <location line="+16"/>
         <source>Secondary selection color:</source>
         <translation>2番目の選択色:</translation>
-    </message>
-    <message>
-        <source>Draggable reference points:</source>
-        <translation type="vanished">ドラッグ可能な基準点:</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -6678,82 +6108,18 @@ BUG: Interferes with group castings.</source>
         <translation>ズームボックス:</translation>
     </message>
     <message>
-        <source>Inactive Crosshairs:</source>
-        <translation type="obsolete">非アクティブな十字線:</translation>
-    </message>
-    <message>
         <location line="-712"/>
         <source>Origin:</source>
         <translation>原点:</translation>
-    </message>
-    <message>
-        <source>Relative Zero:</source>
-        <translation type="obsolete">相対ゼロ:</translation>
-    </message>
-    <message>
-        <source>Reference Point:</source>
-        <translation type="obsolete">基準点:</translation>
     </message>
     <message>
         <location line="+81"/>
         <source>Grid:</source>
         <translation>グリッド:</translation>
     </message>
-    <message>
-        <source>Meta Grid:</source>
-        <translation type="obsolete">メタグリッド:</translation>
-    </message>
-    <message>
-        <source>Zoom Box:</source>
-        <translation type="obsolete">ズームボックス:</translation>
-    </message>
-    <message>
-        <source>Selection:</source>
-        <translation type="obsolete">選択:</translation>
-    </message>
-    <message>
-        <source>Selection Box Border:</source>
-        <translation type="obsolete">選択ボックスの境界:</translation>
-    </message>
-    <message>
-        <source>Selection Box:</source>
-        <translation type="obsolete">選択ボックス:</translation>
-    </message>
-    <message>
-        <source>Cross Selection Box:</source>
-        <translation type="obsolete">クロスセレクションボックス:</translation>
-    </message>
-    <message>
-        <source>Auxiliary Shapes:</source>
-        <translation type="obsolete">補助輪郭:</translation>
-    </message>
-    <message>
-        <source>Info Label Background:</source>
-        <translation type="obsolete">情報ラベル背景:</translation>
-    </message>
-    <message>
-        <source>Info Label Font:</source>
-        <translation type="obsolete">情報ラベルフォント:</translation>
-    </message>
-    <message>
-        <source>Measurement Tools:</source>
-        <translation type="obsolete">計測ツール:</translation>
-    </message>
 </context>
 <context>
     <name>GraphicsViewFonts</name>
-    <message>
-        <source>Ruler Font:</source>
-        <translation type="vanished">定規フォント:</translation>
-    </message>
-    <message>
-        <source>Snap Label Font:</source>
-        <translation type="vanished">スナップラベルフォント:</translation>
-    </message>
-    <message>
-        <source>Info Label Font:</source>
-        <translation type="vanished">情報ラベルフォント:</translation>
-    </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+41"/>
         <source>Ruler font:</source>
@@ -6865,34 +6231,14 @@ BUG: Interferes with group castings.</source>
 <context>
     <name>Hatch</name>
     <message>
-        <source>No boundary selected.</source>
-        <translation type="vanished">輪郭が選択されていません。</translation>
-    </message>
-    <message>
-        <source>Loop not closed at point %1/%2.</source>
-        <translation type="vanished">ループは点 %1/%2 で閉じていません。</translation>
-    </message>
-    <message>
-        <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
-        <translation type="vanished">各輪郭は線分、弧、円、楕円弧、楕円、ポリラインまたはスプラインでなければなりません。 発見:</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Hatch/Hatch.js" line="+99"/>
         <source>&amp;Hatch</source>
         <translation>&amp;H ハッチング</translation>
     </message>
     <message>
-        <source>Draw hatch or solid fill</source>
-        <translation type="vanished">ハッチングまたは全面色を描画</translation>
-    </message>
-    <message>
         <location line="-27"/>
         <source>Hatch Tools</source>
         <translation>ハッチングツール</translation>
-    </message>
-    <message>
-        <source>Show hatch tools</source>
-        <translation type="vanished">ハッチングツールを表示</translation>
     </message>
 </context>
 <context>
@@ -6977,10 +6323,6 @@ BUG: Interferes with group castings.</source>
 <context>
     <name>HideAllBlocks</name>
     <message>
-        <source>&amp;Hide All</source>
-        <translation type="vanished">&amp;H 全て非表示</translation>
-    </message>
-    <message>
         <location filename="../scripts/Block/HideAllBlocks/HideAllBlocksInit.js" line="+2"/>
         <source>&amp;Hide All Blocks</source>
         <translation>&amp;H 全て非表示</translation>
@@ -6988,10 +6330,6 @@ BUG: Interferes with group castings.</source>
 </context>
 <context>
     <name>HideAllLayers</name>
-    <message>
-        <source>&amp;Hide all Layers</source>
-        <translation type="vanished">&amp;H 全ての画層を非表示</translation>
-    </message>
     <message>
         <location filename="../scripts/Layer/HideAllLayers/HideAllLayersInit.js" line="+2"/>
         <source>&amp;Hide All Layers</source>
@@ -7059,10 +6397,6 @@ BUG: Interferes with group castings.</source>
         <translation>角度:</translation>
     </message>
     <message>
-        <source>Insert Bitmap</source>
-        <translation type="vanished">ビットマップを挿入</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Image/ImageInit.js" line="+2"/>
         <source>&amp;Insert Bitmap</source>
         <translation type="unfinished">ビットマップの挿入</translation>
@@ -7074,10 +6408,6 @@ BUG: Interferes with group castings.</source>
         <location filename="../scripts/File/ImportFile/ImportFile.js" line="+73"/>
         <source>Error while importing file %1</source>
         <translation>ファイルインポート中のエラー %1</translation>
-    </message>
-    <message>
-        <source>No import filters</source>
-        <translation type="vanished">インポートフィルタがありません</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -7239,10 +6569,6 @@ BUG: Interferes with group castings.</source>
         <translation>第２線を指定</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">完了</translation>
-    </message>
-    <message>
         <location line="+96"/>
         <source>Angle:</source>
         <translation>角度:</translation>
@@ -7255,10 +6581,6 @@ BUG: Interferes with group castings.</source>
 </context>
 <context>
     <name>InfoArcCircleArea</name>
-    <message>
-        <source>Done</source>
-        <translation type="vanished">完了</translation>
-    </message>
     <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+306"/>
         <location line="+21"/>
@@ -7405,10 +6727,6 @@ BUG: Interferes with group castings.</source>
         <location filename="../scripts/Information/InfoArea/InfoArea.js" line="+70"/>
         <source>Set next polygon corner</source>
         <translation>次のポリゴン頂点を設定</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="vanished">完了</translation>
     </message>
     <message>
         <location line="+121"/>
@@ -7703,10 +7021,6 @@ BUG: Interferes with group castings.</source>
         <translation>2つ目のエンティティを指定して下さい</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">完了</translation>
-    </message>
-    <message>
         <location line="+95"/>
         <source>Distance:</source>
         <translation>距離:</translation>
@@ -7728,10 +7042,6 @@ BUG: Interferes with group castings.</source>
         <location line="+8"/>
         <source>Specify point</source>
         <translation>点を指定</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="vanished">完了</translation>
     </message>
     <message>
         <location line="+81"/>
@@ -7757,10 +7067,6 @@ BUG: Interferes with group castings.</source>
         <translation>第２点</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">完了</translation>
-    </message>
-    <message>
         <location line="+53"/>
         <source>Distance:</source>
         <translation>距離:</translation>
@@ -7784,37 +7090,6 @@ BUG: Interferes with group castings.</source>
         <location filename="../scripts/Information/InfoDistancePP/InfoDistancePPInit.js" line="+2"/>
         <source>Distance &amp;Point to Point</source>
         <translation>&amp;P ２点間の距離</translation>
-    </message>
-</context>
-<context>
-    <name>InfoPolylineArea</name>
-    <message>
-        <source>Choose polyline</source>
-        <translation type="vanished">ポリラインを選択</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="vanished">完了</translation>
-    </message>
-    <message>
-        <source>Area</source>
-        <translation type="vanished">面積</translation>
-    </message>
-    <message>
-        <source>Circumference</source>
-        <translation type="vanished">外周</translation>
-    </message>
-    <message>
-        <source>Polyline area:</source>
-        <translation type="vanished">ポリライン面積:</translation>
-    </message>
-    <message>
-        <source>circumference:</source>
-        <translation type="vanished">外周:</translation>
-    </message>
-    <message>
-        <source>Polyl&amp;ine Area</source>
-        <translation type="vanished">ポリラインの面積</translation>
     </message>
 </context>
 <context>
@@ -7848,10 +7123,6 @@ BUG: Interferes with group castings.</source>
 </context>
 <context>
     <name>InfoPositionRel</name>
-    <message>
-        <source>Point</source>
-        <translation type="obsolete">点</translation>
-    </message>
     <message>
         <location filename="../scripts/Information/InfoPositionRel/InfoPositionRelInit.js" line="+2"/>
         <source>&amp;Relative Position</source>
@@ -8098,10 +7369,6 @@ BUG: Interferes with group castings.</source>
         <translation>情報ツール</translation>
     </message>
     <message>
-        <source>Show information tools</source>
-        <translation type="vanished">情報ツールを表示</translation>
-    </message>
-    <message>
         <location line="+27"/>
         <source>&amp;Info</source>
         <translation>&amp;I 情報</translation>
@@ -8116,29 +7383,9 @@ BUG: Interferes with group castings.</source>
         <source>Text height:</source>
         <translation>テキストの高さ:</translation>
     </message>
-    <message>
-        <source>Text Height:</source>
-        <translation type="vanished">テキストの高さ:</translation>
-    </message>
 </context>
 <context>
     <name>Input</name>
-    <message>
-        <source>Decimal Point:</source>
-        <translation type="vanished">小数点:</translation>
-    </message>
-    <message>
-        <source>Cartesian Coordinate Separator:</source>
-        <translation type="vanished">デカルト座標セパレータ:</translation>
-    </message>
-    <message>
-        <source>Polar Coordinate Separator:</source>
-        <translation type="vanished">極座標セパレータ:</translation>
-    </message>
-    <message>
-        <source>Relative Coordinate Prefix:</source>
-        <translation type="vanished">相対座標プレフィクス:</translation>
-    </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/InputPreferences/PreferencesPage.ui" line="+19"/>
         <source>Decimal point:</source>
@@ -8183,22 +7430,6 @@ BUG: Interferes with group castings.</source>
         <location line="+21"/>
         <source>Relative polar coordinate:</source>
         <translation type="unfinished">相対極座標。</translation>
-    </message>
-    <message>
-        <source>Absolute Cartesian Coordinate:</source>
-        <translation type="vanished">絶対デカルト座標:</translation>
-    </message>
-    <message>
-        <source>Absolute Polar Coordinate:</source>
-        <translation type="vanished">絶対極座標:</translation>
-    </message>
-    <message>
-        <source>Relative Cartesian Coordinate:</source>
-        <translation type="vanished">相対デカルト座標:</translation>
-    </message>
-    <message>
-        <source>Relative Polar Coordinate:</source>
-        <translation type="vanished">相対極座標:</translation>
     </message>
 </context>
 <context>
@@ -8365,10 +7596,6 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">無効なブロック名を &quot;%1&quot; に調整しました。</translation>
     </message>
     <message>
-        <source>Adjusted invalid block name to &apos;%1&apos;</source>
-        <translation type="vanished">無効なブロック名は&apos;%1&apos;に調整されました</translation>
-    </message>
-    <message>
         <location line="+69"/>
         <source>Position</source>
         <translation>位置</translation>
@@ -8432,10 +7659,6 @@ BUG: Interferes with group castings.</source>
 <context>
     <name>InsertScriptItem</name>
     <message>
-        <source>Position</source>
-        <translation type="vanished">位置</translation>
-    </message>
-    <message>
         <location filename="../scripts/Block/InsertScriptItem/InsertScriptItemInit.js" line="+2"/>
         <source>Insert &amp;Script</source>
         <translation>&amp;S スクリプト挿入</translation>
@@ -8495,14 +7718,6 @@ BUG: Interferes with group castings.</source>
         <location line="+11"/>
         <source>Rotate selection clockwise before projection</source>
         <translation>投影前に選択を時計回りに回転</translation>
-    </message>
-    <message>
-        <source>Scale projection to original size (&apos;isometric drawing&apos;)</source>
-        <translation type="vanished">オリジナルサイズに対する拡縮投影（等角投影図面）</translation>
-    </message>
-    <message>
-        <source>True scale</source>
-        <translation type="vanished">本来の縮尺</translation>
     </message>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProjectInit.js" line="+2"/>
@@ -8618,10 +7833,6 @@ BUG: Interferes with group castings.</source>
 <context>
     <name>Language</name>
     <message>
-        <source>Language of User Interface:</source>
-        <translation type="vanished">ユーザインターフェースの言語:</translation>
-    </message>
-    <message>
         <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/PreferencesPage.ui" line="+20"/>
         <source>Language of user interface:</source>
         <translation type="unfinished">ユーザーインターフェースの言語。</translation>
@@ -8666,10 +7877,6 @@ BUG: Interferes with group castings.</source>
         <location filename="../scripts/Layer/Layer.js" line="+97"/>
         <source>Layer Tools</source>
         <translation>レイヤツール</translation>
-    </message>
-    <message>
-        <source>Show layer tools</source>
-        <translation type="vanished">表示レイヤツール</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -8764,17 +7971,9 @@ BUG: Interferes with group castings.</source>
         <translation>画層は既に存在します。</translation>
     </message>
     <message>
-        <source>Layer Data</source>
-        <translation type="vanished">画層データ</translation>
-    </message>
-    <message>
         <location filename="../scripts/Layer/LayerDialog.ui" line="+28"/>
         <source>Layer name:</source>
         <translation>画層名:</translation>
-    </message>
-    <message>
-        <source>Pen</source>
-        <translation type="vanished">ペン</translation>
     </message>
     <message>
         <location line="-11"/>
@@ -8835,13 +8034,6 @@ BUG: Interferes with group castings.</source>
     </message>
 </context>
 <context>
-    <name>LayoutDialog</name>
-    <message>
-        <source>Leading or trailing spaces.</source>
-        <translation type="obsolete">上部または下部の余白。</translation>
-    </message>
-</context>
-<context>
     <name>Leader</name>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+62"/>
@@ -8854,10 +8046,6 @@ BUG: Interferes with group castings.</source>
         <translation>次の頂点</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">完了</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
         <source>&amp;Leader</source>
         <translation>&amp;L 引出線</translation>
@@ -8866,10 +8054,6 @@ BUG: Interferes with group castings.</source>
         <location line="+5"/>
         <source>Draw leader (line sequence with arrow)</source>
         <translation>引出線（矢つきの連続線分）</translation>
-    </message>
-    <message>
-        <source>Undo Last Segement</source>
-        <translation type="vanished">最後の処理をアンドゥ</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
@@ -9049,18 +8233,6 @@ BUG: Interferes with group castings.</source>
         <translation>DBエラー</translation>
     </message>
     <message>
-        <source>Plugin LibraryBrowser: cannot connect to DB.
-Driver error: %1
-Database error: %2
-Database file: %3
-Library browser will not be available.</source>
-        <translation type="vanished">Plugin ライブラリブラウザ: DBに接続できません。
-Driver error: %1
-Database error: %2
-Database file: %3
-ライブラリブラウザは利用できません。</translation>
-    </message>
-    <message>
         <location line="+44"/>
         <source>Source removed from part library: %1</source>
         <translation>一部のライブラリからソースが削除されました: %1</translation>
@@ -9146,17 +8318,9 @@ Database file: %3
         <translation>ディスプレイオプション</translation>
     </message>
     <message>
-        <source>Icon Size:</source>
-        <translation type="vanished">アイコンサイズ:</translation>
-    </message>
-    <message>
         <location line="+53"/>
         <source>Dark icon background</source>
         <translation type="unfinished">ダークアイコンの背景</translation>
-    </message>
-    <message>
-        <source>View Mode:</source>
-        <translation type="vanished">ビューモード:</translation>
     </message>
     <message>
         <location line="-44"/>
@@ -9209,10 +8373,6 @@ shown in search results:</source>
         <translation>ファイルシステム</translation>
     </message>
     <message>
-        <source>Tags</source>
-        <translation type="vanished">タグ</translation>
-    </message>
-    <message>
         <location line="+60"/>
         <source>Search</source>
         <translation>検索</translation>
@@ -9233,14 +8393,6 @@ shown in search results:</source>
         <translation>検索</translation>
     </message>
     <message>
-        <source>Reset tag selection</source>
-        <translation type="vanished">タグ選択をリセット</translation>
-    </message>
-    <message>
-        <source>about:blank</source>
-        <translation type="vanished">about:blank</translation>
-    </message>
-    <message>
         <location line="+129"/>
         <source>Favorites</source>
         <translation>お気に入り</translation>
@@ -9255,10 +8407,6 @@ shown in search results:</source>
         <source>Update DB from file system</source>
         <translation>ファイルシステムからDBをアップデート</translation>
     </message>
-    <message>
-        <source>0</source>
-        <translation type="vanished">0</translation>
-    </message>
 </context>
 <context>
     <name>Line</name>
@@ -9266,10 +8414,6 @@ shown in search results:</source>
         <location filename="../scripts/Draw/Line/Line.js" line="+81"/>
         <source>Line Tools</source>
         <translation>線分ツール</translation>
-    </message>
-    <message>
-        <source>Show line tools</source>
-        <translation type="vanished">線分ツールを表示</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -9308,10 +8452,6 @@ shown in search results:</source>
         <location line="+10"/>
         <source>Next point</source>
         <translation>次の点</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="vanished">完了</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.ui" line="+23"/>
@@ -9463,10 +8603,6 @@ shown in search results:</source>
         <translation type="unfinished">2点目</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="obsolete">完了</translation>
-    </message>
-    <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js" line="+2"/>
         <source>Box &amp;Joint from 2 Points</source>
         <translation type="unfinished">2ポイントからのボックスジョイント</translation>
@@ -9523,10 +8659,6 @@ shown in search results:</source>
         <location line="+7"/>
         <source>Second point</source>
         <translation type="unfinished">2点目</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="obsolete">完了</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
@@ -9689,14 +8821,6 @@ shown in search results:</source>
 <context>
     <name>LineParallel</name>
     <message>
-        <source>Choose line, arc or circle</source>
-        <translation type="vanished">線分、弧、円を選択</translation>
-    </message>
-    <message>
-        <source>&amp;Distance:</source>
-        <translation type="vanished">&amp;D 距離:</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>Dist&amp;ance:</source>
         <translation type="unfinished">距離です。</translation>
@@ -9720,14 +8844,6 @@ shown in search results:</source>
 <context>
     <name>LineParallelThrough</name>
     <message>
-        <source>Choose line, arc or circle</source>
-        <translation type="vanished">線分、弧、円を選択</translation>
-    </message>
-    <message>
-        <source>Specify point</source>
-        <translation type="vanished">点を指定</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThrough.ui" line="+17"/>
         <source>Number:</source>
         <translation>数:</translation>
@@ -9741,56 +8857,6 @@ shown in search results:</source>
         <location line="+4"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
         <translation>通過点を指定して平行線または同心弧、同心円を描画</translation>
-    </message>
-</context>
-<context>
-    <name>LinePolygonCP</name>
-    <message>
-        <source>Center</source>
-        <translation type="vanished">中心</translation>
-    </message>
-    <message>
-        <source>Corner point</source>
-        <translation type="vanished">頂点</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="vanished">完了</translation>
-    </message>
-    <message>
-        <source>Corners:</source>
-        <translation type="vanished">頂点:</translation>
-    </message>
-    <message>
-        <source>Pol&amp;ygon (Center, Point)</source>
-        <translation type="vanished">&amp;y 多角形（中心、頂点）</translation>
-    </message>
-    <message>
-        <source>Draw regular polygon from center and corner point</source>
-        <translation type="vanished">中心と頂点から正多角形を描画</translation>
-    </message>
-</context>
-<context>
-    <name>LinePolygonPP</name>
-    <message>
-        <source>First corner</source>
-        <translation type="vanished">第１の頂点</translation>
-    </message>
-    <message>
-        <source>Corner point</source>
-        <translation type="vanished">頂点</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="vanished">完了</translation>
-    </message>
-    <message>
-        <source>Polygo&amp;n (Two Corners)</source>
-        <translation type="vanished">&amp;n 多角形（２頂点）</translation>
-    </message>
-    <message>
-        <source>Draw regular polygon from two corner points</source>
-        <translation type="vanished">２頂点から正多角形を描画</translation>
     </message>
 </context>
 <context>
@@ -9817,93 +8883,7 @@ shown in search results:</source>
     </message>
 </context>
 <context>
-    <name>LineRectangle</name>
-    <message>
-        <source>First corner</source>
-        <translation type="vanished">第１の頂点</translation>
-    </message>
-    <message>
-        <source>Second corner</source>
-        <translation type="vanished">第２の頂点</translation>
-    </message>
-    <message>
-        <source>&amp;Rectangle</source>
-        <translation type="vanished">&amp;R 長方形</translation>
-    </message>
-    <message>
-        <source>Draw rectangle from two corners</source>
-        <translation type="vanished">２頂点から四角形を描画</translation>
-    </message>
-</context>
-<context>
-    <name>LineRectangleSize</name>
-    <message>
-        <source>Top Left</source>
-        <translation type="vanished">左上</translation>
-    </message>
-    <message>
-        <source>Top</source>
-        <translation type="vanished">上</translation>
-    </message>
-    <message>
-        <source>Top Right</source>
-        <translation type="vanished">右上</translation>
-    </message>
-    <message>
-        <source>Left</source>
-        <translation type="vanished">左</translation>
-    </message>
-    <message>
-        <source>Middle</source>
-        <translation type="vanished">中央</translation>
-    </message>
-    <message>
-        <source>Right</source>
-        <translation type="vanished">右</translation>
-    </message>
-    <message>
-        <source>Bottom Left</source>
-        <translation type="vanished">左下</translation>
-    </message>
-    <message>
-        <source>Bottom</source>
-        <translation type="vanished">下</translation>
-    </message>
-    <message>
-        <source>Bottom Right</source>
-        <translation type="vanished">右下</translation>
-    </message>
-    <message>
-        <source>Position</source>
-        <translation type="vanished">位置</translation>
-    </message>
-    <message>
-        <source>&amp;Width:</source>
-        <translation type="vanished">&amp;W 幅:</translation>
-    </message>
-    <message>
-        <source>&amp;Height:</source>
-        <translation type="vanished">&amp;H 高さ:</translation>
-    </message>
-    <message>
-        <source>Reference Point:</source>
-        <translation type="vanished">基準点:</translation>
-    </message>
-    <message>
-        <source>Rectangle with &amp;Size</source>
-        <translation type="vanished">&amp;S サイズ指定の四角形</translation>
-    </message>
-    <message>
-        <source>Draw rectangle with position and size</source>
-        <translation type="vanished">位置とサイズを指定して四角形を描画</translation>
-    </message>
-</context>
-<context>
     <name>LineRelativeAngle</name>
-    <message>
-        <source>Choose base entity</source>
-        <translation type="vanished">基礎エントリーを選択</translation>
-    </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="+71"/>
         <source>Choose base line, arc, circle, ellipse or polyline</source>
@@ -10063,10 +9043,6 @@ shown in search results:</source>
         <location line="+0"/>
         <source>General</source>
         <translation>一般</translation>
-    </message>
-    <message>
-        <source>Global Linetype Scale:</source>
-        <translation type="vanished">グローバルラインタイプの縮尺:</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/PreferencesPage.ui" line="+19"/>
@@ -10229,10 +9205,6 @@ shown in search results:</source>
         <translation>その他ツール</translation>
     </message>
     <message>
-        <source>Show misc tools</source>
-        <translation type="vanished">表示その他ツール</translation>
-    </message>
-    <message>
         <location line="+22"/>
         <source>Misc</source>
         <translation>その他</translation>
@@ -10382,10 +9354,6 @@ shown in search results:</source>
         <translation>修正ツール</translation>
     </message>
     <message>
-        <source>Show modification tools</source>
-        <translation type="vanished">修正ツールを表示</translation>
-    </message>
-    <message>
         <location line="+27"/>
         <source>&amp;Modify</source>
         <translation>&amp;M 修正</translation>
@@ -10524,10 +9492,6 @@ shown in search results:</source>
         <translation>オープンされた図面:</translation>
     </message>
     <message>
-        <source>Loading...</source>
-        <translation type="vanished">読込中...</translation>
-    </message>
-    <message>
         <location line="+26"/>
         <source>Import Error</source>
         <translation>インポートエラー</translation>
@@ -10566,10 +9530,6 @@ shown in search results:</source>
         <location line="+16"/>
         <source>Drawing loaded successfully:</source>
         <translation>ロード済み:</translation>
-    </message>
-    <message>
-        <source>Opened drawing:</source>
-        <translation type="vanished">オープンされた図面:</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -10613,10 +9573,6 @@ shown in search results:</source>
 <context>
     <name>Offset</name>
     <message>
-        <source>Choose line, arc or circle</source>
-        <translation type="obsolete">線分、弧、円を選択</translation>
-    </message>
-    <message>
         <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
         <source>&amp;Distance:</source>
         <translation>&amp;D 距離:</translation>
@@ -10627,10 +9583,6 @@ shown in search results:</source>
         <translation>&amp;N 数:</translation>
     </message>
     <message>
-        <source>Para&amp;llel (with Distance)</source>
-        <translation type="obsolete">&amp;l 平行線（距離指定）</translation>
-    </message>
-    <message>
         <location filename="../scripts/Modify/Offset/OffsetInit.js" line="+2"/>
         <source>Offset (with Distance)</source>
         <translation>オフセット（距離）</translation>
@@ -10639,10 +9591,6 @@ shown in search results:</source>
         <location line="+4"/>
         <source>Offset line, arc, circle or ellipse</source>
         <translation>オフセット 線分、弧、円または楕円</translation>
-    </message>
-    <message>
-        <source>Draw parallel to existing line or concentric arc, circle</source>
-        <translation type="vanished">既存の線分または弧、円との平行線を描画</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Offset/Offset.js" line="+77"/>
@@ -10662,14 +9610,6 @@ shown in search results:</source>
         <translation type="unfinished">
             <numerusform>%n 回の同心円の後、半径が 0.0 より小さくなりました。</numerusform>
         </translation>
-    </message>
-    <message>
-        <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
-        <translation type="vanished">同心円の半径が%1から0.0を下回りました。</translation>
-    </message>
-    <message>
-        <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
-        <translation type="vanished">同心弧の半径が%1から0.0を下回りました。 </translation>
     </message>
 </context>
 <context>
@@ -10697,10 +9637,6 @@ shown in search results:</source>
 </context>
 <context>
     <name>OpenFile</name>
-    <message>
-        <source>No import filters</source>
-        <translation type="vanished">インポートフィルタがありません</translation>
-    </message>
     <message>
         <location filename="../scripts/File/OpenFile/OpenFile.js" line="+47"/>
         <source>No import filters have been found. Aborting...</source>
@@ -10733,37 +9669,6 @@ shown in search results:</source>
         <location filename="../scripts/View/OptionsToolBarFocus/OptionsToolBarFocusInit.js" line="+2"/>
         <source>&amp;Focus on Options Toolbar</source>
         <translation>&amp;F オプションツールバーへフォーカス</translation>
-    </message>
-</context>
-<context>
-    <name>OrthogonalProjections</name>
-    <message>
-        <source>First vertex</source>
-        <translation type="obsolete">最初の頂点</translation>
-    </message>
-    <message>
-        <source>Next vertex</source>
-        <translation type="obsolete">次の頂点</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="obsolete">完了</translation>
-    </message>
-    <message>
-        <source>close</source>
-        <translation type="obsolete">close</translation>
-    </message>
-    <message>
-        <source>undo</source>
-        <translation type="obsolete">undo</translation>
-    </message>
-    <message>
-        <source>redo</source>
-        <translation type="obsolete">redo</translation>
-    </message>
-    <message>
-        <source>arc</source>
-        <translation type="obsolete">arc</translation>
     </message>
 </context>
 <context>
@@ -10885,38 +9790,6 @@ shown in search results:</source>
         <translation type="unfinished">回転させる。</translation>
     </message>
     <message>
-        <source>Rotate block&lt;br&gt;by this angle</source>
-        <translation type="obsolete">ブロック回転&lt;br&gt;この角度で</translation>
-    </message>
-    <message>
-        <source>Scale X:</source>
-        <translation type="obsolete">スケールX:</translation>
-    </message>
-    <message>
-        <source>Scale block in X&lt;br&gt;by this factor</source>
-        <translation type="obsolete">X軸ブロック拡縮&lt;br&gt;この係数で</translation>
-    </message>
-    <message>
-        <source>Keep Proportions</source>
-        <translation type="obsolete">比率保持</translation>
-    </message>
-    <message>
-        <source>Scale Y:</source>
-        <translation type="obsolete">スケールY:</translation>
-    </message>
-    <message>
-        <source>Scale block in Y&lt;br&gt;by this factor</source>
-        <translation type="obsolete">Y軸ブロック拡縮&lt;br&gt;この係数で</translation>
-    </message>
-    <message>
-        <source>Flip block&lt;br&gt;horizontally</source>
-        <translation type="obsolete">ブロック反転&lt;br&gt;水平</translation>
-    </message>
-    <message>
-        <source>Flip block&lt;br&gt;vertically</source>
-        <translation type="obsolete">ブロック反転&lt;br&gt;垂直</translation>
-    </message>
-    <message>
         <location filename="../scripts/Edit/Paste/Paste.js" line="+52"/>
         <source>Edit</source>
         <translation>編集</translation>
@@ -10932,17 +9805,9 @@ shown in search results:</source>
         <translation>位置</translation>
     </message>
     <message>
-        <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation type="vanished">貼り付けエンティティを回転&lt;br&gt;この角度で</translation>
-    </message>
-    <message>
         <location filename="../scripts/Edit/Paste/Paste.ui" line="+126"/>
         <source>Scale:</source>
         <translation>縮尺:</translation>
-    </message>
-    <message>
-        <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation type="vanished">貼り付けエンティティを拡縮&lt;br&gt;この係数で</translation>
     </message>
     <message>
         <location line="+88"/>
@@ -11037,10 +9902,6 @@ shown in search results:</source>
         <translation>点ツール</translation>
     </message>
     <message>
-        <source>Show point tools</source>
-        <translation type="vanished">点ツールを表示</translation>
-    </message>
-    <message>
         <location line="+27"/>
         <source>&amp;Point</source>
         <translation>&amp;P 点</translation>
@@ -11081,10 +9942,6 @@ shown in search results:</source>
         <location line="+0"/>
         <source>General</source>
         <translation>一般</translation>
-    </message>
-    <message>
-        <source>Mode: </source>
-        <translation type="vanished">モード: </translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
@@ -11129,30 +9986,11 @@ shown in search results:</source>
     </message>
 </context>
 <context>
-    <name>PolyLineBreakSymbol</name>
-    <message>
-        <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation type="obsolete">分解のために線分、弧、円、楕円、スプラインまたはポリラインを選択して下さい。</translation>
-    </message>
-    <message>
-        <source>Choose line, arc, circle or ellipse to break up</source>
-        <translation type="obsolete">線分、弧、円または楕円の切片を選択してください</translation>
-    </message>
-    <message>
-        <source>Remove Segment</source>
-        <translation type="obsolete">セグメントを削除</translation>
-    </message>
-</context>
-<context>
     <name>Polyline</name>
     <message>
         <location filename="../scripts/Draw/Polyline/Polyline.js" line="+73"/>
         <source>Polyline Tools</source>
         <translation>ポリラインツール</translation>
-    </message>
-    <message>
-        <source>Show polyline tools</source>
-        <translation type="vanished">ポリラインツールを表示</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -11288,10 +10126,6 @@ shown in search results:</source>
         <location line="-74"/>
         <source>Filter</source>
         <translation>フィルタ</translation>
-    </message>
-    <message>
-        <source>Clear Search</source>
-        <translation type="vanished">検索結果をクリア</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11507,10 +10341,6 @@ shown in search results:</source>
         <translation>投影ツール</translation>
     </message>
     <message>
-        <source>Show projection tools</source>
-        <translation type="vanished">投影ツールを表示</translation>
-    </message>
-    <message>
         <location line="+23"/>
         <source>&amp;Projection</source>
         <translation>&amp;P 投影</translation>
@@ -11529,23 +10359,19 @@ shown in search results:</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1591"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1634"/>
         <source>*VARIES*</source>
         <translation>*VARIES*</translation>
     </message>
     <message>
-        <location line="-1378"/>
+        <location line="-1421"/>
         <source>:</source>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+194"/>
         <source>No Selection</source>
         <translation>選択なし</translation>
-    </message>
-    <message>
-        <source>Geometry</source>
-        <translation type="vanished">ジオメトリ</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -11593,10 +10419,6 @@ shown in search results:</source>
         <translation>ウィジェット</translation>
     </message>
     <message>
-        <source>Add Custom Property</source>
-        <translation type="obsolete">カスタムプロパティを追加</translation>
-    </message>
-    <message>
         <location line="-804"/>
         <source>Add custom property to selected objects</source>
         <translation>選択したオブジェクトにカスタムプロパティを追加</translation>
@@ -11634,10 +10456,6 @@ shown in search results:</source>
         <translation>選択:</translation>
     </message>
     <message>
-        <source>General</source>
-        <translation type="vanished">全般</translation>
-    </message>
-    <message>
         <location line="+31"/>
         <source>General Properties</source>
         <translation>一般プロパティ</translation>
@@ -11646,10 +10464,6 @@ shown in search results:</source>
         <location line="+25"/>
         <source>Color:</source>
         <translation>色:</translation>
-    </message>
-    <message>
-        <source>Move Selection to a New Layer</source>
-        <translation type="vanished">選択内容を新規画層に移動</translation>
     </message>
     <message>
         <location line="+104"/>
@@ -11734,10 +10548,6 @@ shown in search results:</source>
 <context>
     <name>RecentFiles</name>
     <message>
-        <source>Load/Save</source>
-        <translation type="vanished">ロード/セーブ</translation>
-    </message>
-    <message>
         <location filename="../scripts/File/RecentFiles/RecentFiles.js" line="+35"/>
         <source>Recent Files</source>
         <translation>最近使ったファイル</translation>
@@ -11794,10 +10604,6 @@ shown in search results:</source>
 </context>
 <context>
     <name>RemoveLayer</name>
-    <message>
-        <source>&amp;Remove Layer</source>
-        <translation type="vanished">&amp;R 画層削除</translation>
-    </message>
     <message>
         <location filename="../scripts/Layer/RemoveLayer/RemoveLayerInit.js" line="+2"/>
         <source>&amp;Delete Layer</source>
@@ -12039,14 +10845,6 @@ shown in search results:</source>
         <translation type="unfinished">アングルb。</translation>
     </message>
     <message>
-        <source>Angle (&amp;a):</source>
-        <translation type="vanished">角度(&amp;a):</translation>
-    </message>
-    <message>
-        <source>Angle (&amp;b):</source>
-        <translation type="vanished">角度(&amp;b):</translation>
-    </message>
-    <message>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>&amp;a 現在の画層と属性を利用</translation>
@@ -12123,10 +10921,6 @@ shown in search results:</source>
         <translation type="unfinished">半径</translation>
     </message>
     <message>
-        <source>Radius:</source>
-        <translation type="vanished">半径:</translation>
-    </message>
-    <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
         <source>&amp;Round</source>
         <translation>&amp;R フィレット</translation>
@@ -12188,26 +10982,14 @@ shown in search results:</source>
         <translation>ファイルを上書きしますか?</translation>
     </message>
     <message>
-        <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
-        <translation type="vanished">ファイル&apos;%1&apos;は既に存在します。上書きしますか？</translation>
-    </message>
-    <message>
         <location line="+18"/>
         <source>File Format Version Not Recommended</source>
         <translation>ファイルのフォーマットバージョンは推奨されていません</translation>
     </message>
     <message>
-        <source>The file format version you are using is not recommended: &apos;%1&apos;.</source>
-        <translation type="vanished">使用しているファイルのフォーマットバージョンは推奨されていません：&apos;%1&apos;.</translation>
-    </message>
-    <message>
         <location line="+3"/>
         <source>All black entities and layers will be saved as white.</source>
         <translation>全ての黒いエンティティ及び画層は白色で保存されます。</translation>
-    </message>
-    <message>
-        <source>All custom colors will be &apos;rounded&apos; to the nearest fixed color.</source>
-        <translation type="vanished">全てのカスタム色は最も近い固定色に変換されます。</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12220,17 +11002,9 @@ shown in search results:</source>
         <translation>保存中...</translation>
     </message>
     <message>
-        <source>Saving to file format version &apos;%1&apos;.</source>
-        <translation type="vanished">ファイルフォーマットバージョン&apos;%1&apos;で保存中です。</translation>
-    </message>
-    <message>
         <location line="+4"/>
         <source>Black entities and layers are saved as white.</source>
         <translation>黒いエンティティ及び画層は白色で保存されます。</translation>
-    </message>
-    <message>
-        <source>Custom colors are &apos;rounded&apos; to the nearest fixed color.</source>
-        <translation type="vanished">カスタム色は最も近い固定色に変換されます。</translation>
     </message>
     <message>
         <location line="-41"/>
@@ -12271,10 +11045,6 @@ shown in search results:</source>
         <location line="+21"/>
         <source>Saved file:</source>
         <translation type="unfinished">保存されたファイルです。</translation>
-    </message>
-    <message>
-        <source>Saved drawing:</source>
-        <translation type="vanished">図面が保存されました：</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -12338,18 +11108,6 @@ shown in search results:</source>
         <location line="+14"/>
         <source>(empty for username)</source>
         <translation type="unfinished">(ユーザー名の場合は空欄)</translation>
-    </message>
-    <message>
-        <source>Load/Save</source>
-        <translation type="vanished">ロード/セーブ</translation>
-    </message>
-    <message>
-        <source>Save as</source>
-        <translation type="vanished">形式を指定して保存</translation>
-    </message>
-    <message>
-        <source>No export filters</source>
-        <translation type="vanished">エクスポートフィルタがありません</translation>
     </message>
     <message>
         <location filename="../scripts/File/SaveAs/SaveAs.js" line="+38"/>
@@ -12494,17 +11252,9 @@ shown in search results:</source>
         <translation type="unfinished">因子y。</translation>
     </message>
     <message>
-        <source>Factor &amp;x:</source>
-        <translation type="vanished">係数&amp;x:</translation>
-    </message>
-    <message>
         <location line="-26"/>
         <source>Proportional</source>
         <translation>比例</translation>
-    </message>
-    <message>
-        <source>Factor &amp;y:</source>
-        <translation type="vanished">係数&amp;y:</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -12539,10 +11289,6 @@ shown in search results:</source>
         <location filename="../scripts/Select/Select.js" line="+216"/>
         <source>Selection Tools</source>
         <translation>選択ツール</translation>
-    </message>
-    <message>
-        <source>Show selection tools</source>
-        <translation type="vanished">選択ツールを表示</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -12651,10 +11397,6 @@ shown in search results:</source>
         <translation>現在の選択を置き換え</translation>
     </message>
     <message>
-        <source>SelectionMode</source>
-        <translation type="vanished">選択モード</translation>
-    </message>
-    <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>現在の選択に追加</translation>
@@ -12713,10 +11455,6 @@ shown in search results:</source>
         <translation>現在の選択を置き換え</translation>
     </message>
     <message>
-        <source>SelectionMode</source>
-        <translation type="vanished">選択モード</translation>
-    </message>
-    <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>現在の選択に追加</translation>
@@ -12744,46 +11482,6 @@ shown in search results:</source>
 </context>
 <context>
     <name>SelectLayer</name>
-    <message>
-        <source>&amp;Select Layer</source>
-        <translation type="vanished">&amp;S レイヤーを選択</translation>
-    </message>
-    <message>
-        <source>Choose entity on layer</source>
-        <translation type="obsolete">画層のエンティティを選択</translation>
-    </message>
-    <message>
-        <source>Mode:</source>
-        <translation type="obsolete">モード:</translation>
-    </message>
-    <message>
-        <source>Replace the current selection</source>
-        <translation type="obsolete">現在の選択を置き換え</translation>
-    </message>
-    <message>
-        <source>SelectionMode</source>
-        <translation type="obsolete">選択モード</translation>
-    </message>
-    <message>
-        <source>Add to the current selection</source>
-        <translation type="obsolete">現在の選択に追加</translation>
-    </message>
-    <message>
-        <source>Subtract from the current selection</source>
-        <translation type="obsolete">現在の選択から差し引く</translation>
-    </message>
-    <message>
-        <source>Intersect with the current selection</source>
-        <translation type="obsolete">現在の選択と交差</translation>
-    </message>
-    <message>
-        <source>(De-)Select La&amp;yer</source>
-        <translation type="obsolete">&amp;y 画層選択（選択解除）</translation>
-    </message>
-    <message>
-        <source>(De-)Select all entities on the same layer</source>
-        <translation type="obsolete">同じ画層の全てのエンティティを選択（選択解除）</translation>
-    </message>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
         <source>%1 entities added to selection.</source>
@@ -12816,10 +11514,6 @@ shown in search results:</source>
         <location line="+7"/>
         <source>Replace the current selection</source>
         <translation>現在の選択を置き換え</translation>
-    </message>
-    <message>
-        <source>SelectionMode</source>
-        <translation type="vanished">選択モード</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -12860,10 +11554,6 @@ shown in search results:</source>
         <translation>第2角</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">完了</translation>
-    </message>
-    <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.ui" line="+17"/>
         <source>Mode:</source>
         <translation>モード:</translation>
@@ -12872,10 +11562,6 @@ shown in search results:</source>
         <location line="+7"/>
         <source>Replace the current selection</source>
         <translation>現在の選択を置き換え</translation>
-    </message>
-    <message>
-        <source>SelectionMode</source>
-        <translation type="vanished">選択モード</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -12909,78 +11595,7 @@ shown in search results:</source>
     </message>
 </context>
 <context>
-    <name>SelectWidget</name>
-    <message>
-        <source>*VARIES*</source>
-        <translation type="obsolete">*VARIES*</translation>
-    </message>
-    <message>
-        <source>:</source>
-        <translation type="obsolete">:</translation>
-    </message>
-    <message>
-        <source>No Selection</source>
-        <translation type="obsolete">選択なし</translation>
-    </message>
-    <message>
-        <source>Geometry</source>
-        <translation type="obsolete">ジオメトリ</translation>
-    </message>
-    <message>
-        <source>Custom</source>
-        <translation type="obsolete">カスタム</translation>
-    </message>
-    <message>
-        <source>All</source>
-        <translation type="obsolete">全て</translation>
-    </message>
-    <message>
-        <source>Left</source>
-        <translation type="obsolete">左</translation>
-    </message>
-    <message>
-        <source>Right</source>
-        <translation type="obsolete">右</translation>
-    </message>
-    <message>
-        <source>Aligned</source>
-        <translation type="obsolete">揃える</translation>
-    </message>
-    <message>
-        <source>Fit</source>
-        <translation type="obsolete">フィット</translation>
-    </message>
-    <message>
-        <source>Top</source>
-        <translation type="obsolete">上</translation>
-    </message>
-    <message>
-        <source>Base</source>
-        <translation type="obsolete">ベース</translation>
-    </message>
-    <message>
-        <source>Bottom</source>
-        <translation type="obsolete">下</translation>
-    </message>
-    <message>
-        <source>Auto</source>
-        <translation type="obsolete">自動</translation>
-    </message>
-    <message>
-        <source>Yes</source>
-        <translation type="obsolete">はい</translation>
-    </message>
-    <message>
-        <source>No</source>
-        <translation type="obsolete">いいえ</translation>
-    </message>
-</context>
-<context>
     <name>SelectionDisplay</name>
-    <message>
-        <source>No selected entities.</source>
-        <translation type="vanished">エンティティが選択されていません。</translation>
-    </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.js" line="+58"/>
         <source>No entities selected.</source>
@@ -13023,26 +11638,6 @@ shown in search results:</source>
         </translation>
     </message>
     <message>
-        <source>%1 Entities on Layer &quot;%2&quot;</source>
-        <translation type="vanished">%1 エンティティ on 画層 &quot;%2&quot;</translation>
-    </message>
-    <message>
-        <source>%1 Entities on %2 Layers</source>
-        <translation type="vanished">%1 エンティティ on %2 画層</translation>
-    </message>
-    <message>
-        <source>Entities</source>
-        <translation type="vanished">エンティティ</translation>
-    </message>
-    <message>
-        <source>Layer &quot;%1&quot;</source>
-        <translation type="vanished">画層 &quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>%1 Layers</source>
-        <translation type="vanished">%1 画層</translation>
-    </message>
-    <message>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
@@ -13076,14 +11671,6 @@ shown in search results:</source>
         <translation>成形ツール</translation>
     </message>
     <message>
-        <source>Show shape tools</source>
-        <translation type="vanished">表示成形ツール</translation>
-    </message>
-    <message>
-        <source>Show line tools</source>
-        <translation type="obsolete">線ツールの表示</translation>
-    </message>
-    <message>
         <location line="+27"/>
         <source>&amp;Shape</source>
         <translation>&amp;S 成形</translation>
@@ -13103,21 +11690,9 @@ shown in search results:</source>
         <source>Radius:</source>
         <translation type="unfinished">半径</translation>
     </message>
-    <message>
-        <source>1</source>
-        <translation type="obsolete">1</translation>
-    </message>
 </context>
 <context>
     <name>ShapeAlgorithms</name>
-    <message>
-        <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
-        <translation type="vanished">%1同心円の半径が0.0を下回りました。</translation>
-    </message>
-    <message>
-        <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
-        <translation type="vanished">%1同心弧の半径が0.0を下回りました。</translation>
-    </message>
     <message>
         <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
         <location line="+29"/>
@@ -13158,10 +11733,6 @@ shown in search results:</source>
         <translation>辺の中央</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">完了</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Side)</source>
         <translation>多角形（中心、辺）</translation>
@@ -13200,10 +11771,6 @@ shown in search results:</source>
         <translation>第２の頂点</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">完了</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
         <source>Polygo&amp;n (Side, Side)</source>
         <translation>多角形（辺、辺）</translation>
@@ -13237,17 +11804,9 @@ shown in search results:</source>
         <translation>頂点</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">完了</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.ui" line="+17"/>
         <source>Corners:</source>
         <translation>頂点:</translation>
-    </message>
-    <message>
-        <source>Pol&amp;ygon (Center, Point)</source>
-        <translation type="vanished">&amp;y 多角形（中心、頂点）</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCPInit.js" line="+2"/>
@@ -13273,21 +11832,9 @@ shown in search results:</source>
         <translation>頂点</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">完了</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.ui" line="+17"/>
         <source>Corners:</source>
         <translation>頂点の数:</translation>
-    </message>
-    <message>
-        <source>Polygo&amp;n (Two Corners)</source>
-        <translation type="vanished">&amp;n 多角形（２頂点）</translation>
-    </message>
-    <message>
-        <source>Draw regular polygon from two corner points</source>
-        <translation type="vanished">２頂点から正多角形を描画</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPPInit.js" line="+2"/>
@@ -13301,34 +11848,7 @@ shown in search results:</source>
     </message>
 </context>
 <context>
-    <name>ShapeRectangle</name>
-    <message>
-        <source>First corner</source>
-        <translation type="obsolete">第１の頂点</translation>
-    </message>
-    <message>
-        <source>Second corner</source>
-        <translation type="obsolete">第２の頂点</translation>
-    </message>
-    <message>
-        <source>&amp;Rectangle</source>
-        <translation type="obsolete">&amp;R 長方形</translation>
-    </message>
-    <message>
-        <source>Draw rectangle from two corners</source>
-        <translation type="obsolete">２頂点から四角形を描画</translation>
-    </message>
-</context>
-<context>
     <name>ShapeRectanglePP</name>
-    <message>
-        <source>First corner</source>
-        <translation type="vanished">第１の頂点</translation>
-    </message>
-    <message>
-        <source>Second corner</source>
-        <translation type="vanished">第２の頂点</translation>
-    </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePPInit.js" line="+2"/>
         <source>&amp;Rectangle</source>
@@ -13347,46 +11867,6 @@ shown in search results:</source>
 </context>
 <context>
     <name>ShapeRectangleSize</name>
-    <message>
-        <source>Top Left</source>
-        <translation type="obsolete">左上</translation>
-    </message>
-    <message>
-        <source>Top</source>
-        <translation type="obsolete">上</translation>
-    </message>
-    <message>
-        <source>Top Right</source>
-        <translation type="obsolete">右上</translation>
-    </message>
-    <message>
-        <source>Left</source>
-        <translation type="obsolete">左</translation>
-    </message>
-    <message>
-        <source>Middle</source>
-        <translation type="obsolete">中央</translation>
-    </message>
-    <message>
-        <source>Right</source>
-        <translation type="obsolete">右</translation>
-    </message>
-    <message>
-        <source>Bottom Left</source>
-        <translation type="obsolete">左下</translation>
-    </message>
-    <message>
-        <source>Bottom</source>
-        <translation type="obsolete">下</translation>
-    </message>
-    <message>
-        <source>Bottom Right</source>
-        <translation type="obsolete">右下</translation>
-    </message>
-    <message>
-        <source>Position</source>
-        <translation type="obsolete">位置</translation>
-    </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeInit.js" line="+2"/>
         <source>Rectangle with &amp;Size</source>
@@ -13437,10 +11917,6 @@ shown in search results:</source>
 <context>
     <name>ShowAllBlocks</name>
     <message>
-        <source>&amp;Show all</source>
-        <translation type="vanished">&amp;S 全て表示</translation>
-    </message>
-    <message>
         <location filename="../scripts/Block/ShowAllBlocks/ShowAllBlocksInit.js" line="+2"/>
         <source>&amp;Show All Blocks</source>
         <translation>すべて表示(&amp;S)</translation>
@@ -13449,10 +11925,6 @@ shown in search results:</source>
 <context>
     <name>ShowAllLayers</name>
     <message>
-        <source>&amp;Show all Layers</source>
-        <translation type="vanished">&amp;S 全ての画層を表示</translation>
-    </message>
-    <message>
         <location filename="../scripts/Layer/ShowAllLayers/ShowAllLayersInit.js" line="+2"/>
         <source>&amp;Show All Layers</source>
         <translation>&amp;S 全ての画層を表示</translation>
@@ -13460,10 +11932,6 @@ shown in search results:</source>
 </context>
 <context>
     <name>ShowReadme</name>
-    <message>
-        <source>File &apos;%1&apos; doesn&apos;t exist.</source>
-        <translation type="vanished">ファイル&apos;%1&apos;は存在しません。</translation>
-    </message>
     <message>
         <location filename="../scripts/Help/ShowReadme/ShowReadmeInit.js" line="+2"/>
         <source>Show &amp;Readme</source>
@@ -13489,10 +11957,6 @@ shown in search results:</source>
         <location filename="../scripts/Snap/Snap.js" line="+57"/>
         <source>Snap Tools</source>
         <translation>スナップツール</translation>
-    </message>
-    <message>
-        <source>Show snap tools</source>
-        <translation type="vanished">表示スナップツール</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -13813,10 +12277,6 @@ shown in search results:</source>
         <translation>スプラインツール</translation>
     </message>
     <message>
-        <source>Show spline tools</source>
-        <translation type="vanished">スプラインツールを表示</translation>
-    </message>
-    <message>
         <location line="+27"/>
         <source>&amp;Spline</source>
         <translation>&amp;S スプライン</translation>
@@ -13833,10 +12293,6 @@ shown in search results:</source>
         <location line="+9"/>
         <source>Next control point</source>
         <translation>次の制御点</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="vanished">完了</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.ui" line="+23"/>
@@ -13883,25 +12339,7 @@ shown in search results:</source>
     </message>
 </context>
 <context>
-    <name>Startup</name>
-    <message>
-        <source>Enable Splash Screen</source>
-        <translation type="vanished">スプラッシュスクリーンを表示</translation>
-    </message>
-</context>
-<context>
-    <name>StartupPreferences</name>
-    <message>
-        <source>Startup</source>
-        <translation type="vanished">スタートアップ</translation>
-    </message>
-</context>
-<context>
     <name>StatusBar</name>
-    <message>
-        <source>Status Bar Font:</source>
-        <translation type="vanished">ステータスバーフォント:</translation>
-    </message>
     <message>
         <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+53"/>
         <source>Status bar font:</source>
@@ -14597,10 +13035,6 @@ shown in search results:</source>
 <context>
     <name>Theme</name>
     <message>
-        <source>User Interface Theme:</source>
-        <translation type="vanished">ユーザインターフェーステーマ:</translation>
-    </message>
-    <message>
         <location filename="../scripts/Edit/AppPreferences/ThemePreferences/PreferencesPage.ui" line="+20"/>
         <source>User interface theme:</source>
         <translation type="unfinished">ユーザーインターフェースのテーマです。</translation>
@@ -14676,13 +13110,6 @@ shown in search results:</source>
     </message>
 </context>
 <context>
-    <name>ToggleLayerFrozen</name>
-    <message>
-        <source>&amp;Toggle Frozen Status</source>
-        <translation type="vanished">凍結ステータスの切り替え</translation>
-    </message>
-</context>
-<context>
     <name>ToggleLayerLock</name>
     <message>
         <location filename="../scripts/Layer/ToggleLayerLock/ToggleLayerLockInit.js" line="+2"/>
@@ -14700,10 +13127,6 @@ shown in search results:</source>
 </context>
 <context>
     <name>ToolBar</name>
-    <message>
-        <source>Icon Size:</source>
-        <translation type="vanished">アイコンサイズ:</translation>
-    </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ToolBarPreferences/PreferencesPage.ui" line="+19"/>
         <source>Icon size:</source>
@@ -14728,10 +13151,6 @@ shown in search results:</source>
         <location line="+6"/>
         <source>Shortcut prefix character:</source>
         <translation type="unfinished">ショートカットのプレフィックス文字。</translation>
-    </message>
-    <message>
-        <source>Shortcut Prefix Character:</source>
-        <translation type="vanished">ショートカット前置文字:</translation>
     </message>
 </context>
 <context>
@@ -14872,18 +13291,6 @@ shown in search results:</source>
 </context>
 <context>
     <name>TranslateRotate</name>
-    <message>
-        <source>Primary Angle:</source>
-        <translation type="vanished">主要な角度:</translation>
-    </message>
-    <message>
-        <source>Secondary Angle:</source>
-        <translation type="vanished">２つ目の角度:</translation>
-    </message>
-    <message>
-        <source>Copies:</source>
-        <translation type="vanished">コピー:</translation>
-    </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.ui" line="+17"/>
         <source>Angle:</source>
@@ -15050,18 +13457,6 @@ shown in search results:</source>
 <context>
     <name>UnitSettings</name>
     <message>
-        <source>Drawing Unit:</source>
-        <translation type="vanished">図面単位:</translation>
-    </message>
-    <message>
-        <source>Paper Unit:</source>
-        <translation type="vanished">用紙単位:</translation>
-    </message>
-    <message>
-        <source>Measurement System (for line types and hatch patterns):</source>
-        <translation type="vanished">測定系（ラインタイプとハッチパターンのため）</translation>
-    </message>
-    <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/UnitSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
         <translation>新規図面へのデフォルト</translation>
@@ -15224,10 +13619,6 @@ shown in search results:</source>
         <translation>表示ツール</translation>
     </message>
     <message>
-        <source>Show view tools</source>
-        <translation type="vanished">表示表示ツール</translation>
-    </message>
-    <message>
         <location line="+28"/>
         <source>View</source>
         <translation type="unfinished">表示</translation>
@@ -15240,10 +13631,6 @@ shown in search results:</source>
 </context>
 <context>
     <name>ViewToolBars</name>
-    <message>
-        <source>&amp;Toolbars</source>
-        <translation type="vanished">ツールバー(&amp;T)</translation>
-    </message>
     <message>
         <location filename="../scripts/View/ViewToolBars/ViewToolBarsPostInit.js" line="+6"/>
         <source>&amp;Toolbars and Widgets</source>
@@ -15304,7 +13691,7 @@ shown in search results:</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+295"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+322"/>
         <source>Dropped data not supported</source>
         <translation>ドロップされたデータはサポートされていません</translation>
     </message>
@@ -15318,49 +13705,6 @@ shown in search results:</source>
         <source>Importing URL: </source>
         <translation>インポートURL:</translation>
     </message>
-    <message>
-        <source>Grid</source>
-        <translation type="vanished">グリッド</translation>
-    </message>
-    <message>
-        <source>End</source>
-        <translation type="vanished">終端</translation>
-    </message>
-    <message>
-        <source>On Entity</source>
-        <translation type="vanished">エンティティ</translation>
-    </message>
-    <message>
-        <source>Perpendicular</source>
-        <translation type="vanished">垂線</translation>
-    </message>
-    <message>
-        <source>Center</source>
-        <translation type="vanished">中心</translation>
-    </message>
-    <message>
-        <source>Middle</source>
-        <translation type="vanished">中央</translation>
-    </message>
-    <message>
-        <source>Intersection</source>
-        <translation type="vanished">交点</translation>
-    </message>
-    <message>
-        <source>Reference</source>
-        <translation type="vanished">基準点</translation>
-    </message>
-    <message>
-        <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="vanished">グリッド間隔＜メタグリッド間隔</translation>
-    </message>
-</context>
-<context>
-    <name>ViewportWidgetGl</name>
-    <message>
-        <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="vanished">グリッド間隔＜メタグリッド間隔</translation>
-    </message>
 </context>
 <context>
     <name>Website</name>
@@ -15373,7 +13717,7 @@ shown in search results:</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1098"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1144"/>
         <source>Restore defaults</source>
         <translation>デフォルトを置き換え</translation>
     </message>
@@ -15393,30 +13737,14 @@ shown in search results:</source>
         <translation>円弧</translation>
     </message>
     <message>
-        <source>Degree</source>
-        <translation type="vanished">度</translation>
-    </message>
-    <message>
         <location line="-5"/>
         <source>Plus/Minus</source>
         <translation>プラス/マイナス</translation>
     </message>
     <message>
-        <source>Almost equal to</source>
-        <translation type="vanished">ほぼ同一</translation>
-    </message>
-    <message>
-        <source>Asymptotically equal to</source>
-        <translation type="vanished">漸近的に同一</translation>
-    </message>
-    <message>
         <location line="+23"/>
         <source>Pi</source>
         <translation>パイ</translation>
-    </message>
-    <message>
-        <source>Square root</source>
-        <translation type="vanished">平方根</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -15626,42 +13954,6 @@ shown in search results:</source>
         <translation type="unfinished">末尾のゼロを表示する</translation>
     </message>
     <message>
-        <source>0</source>
-        <translation type="obsolete">0</translation>
-    </message>
-    <message>
-        <source>1</source>
-        <translation type="obsolete">1</translation>
-    </message>
-    <message>
-        <source>2</source>
-        <translation type="obsolete">2</translation>
-    </message>
-    <message>
-        <source>3</source>
-        <translation type="obsolete">3</translation>
-    </message>
-    <message>
-        <source>4</source>
-        <translation type="obsolete">4</translation>
-    </message>
-    <message>
-        <source>5</source>
-        <translation type="obsolete">5</translation>
-    </message>
-    <message>
-        <source>6</source>
-        <translation type="obsolete">6</translation>
-    </message>
-    <message>
-        <source>7</source>
-        <translation type="obsolete">7</translation>
-    </message>
-    <message>
-        <source>8</source>
-        <translation type="obsolete">8</translation>
-    </message>
-    <message>
         <location line="-9"/>
         <source>Decimal Degrees</source>
         <translation type="unfinished">十進の度数</translation>
@@ -15827,10 +14119,6 @@ shown in search results:</source>
         <translation>拡大ツール </translation>
     </message>
     <message>
-        <source>Show zoom tools</source>
-        <translation type="vanished">拡大ツールを表示</translation>
-    </message>
-    <message>
         <location line="+28"/>
         <source>&amp;Zoom</source>
         <translation>拡大 (&amp;Z)</translation>
@@ -15887,15 +14175,11 @@ shown in search results:</source>
         <source>Initializing add-ons:</source>
         <translation>初期化中のアドオン:</translation>
     </message>
-    <message>
-        <source>Post-initializing add-ons...</source>
-        <translation type="vanished">アドオンの初期化後処理...</translation>
-    </message>
 </context>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+996"/>
+        <location filename="../scripts/library.js" line="+1011"/>
         <source>Objects</source>
         <translation>オブジェクト</translation>
     </message>

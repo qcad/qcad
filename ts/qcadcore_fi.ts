@@ -366,10 +366,6 @@
         <translation>Tyyppi</translation>
     </message>
     <message>
-        <source>Block ID</source>
-        <translation type="vanished">Lohkotunniste</translation>
-    </message>
-    <message>
         <location line="+2"/>
         <source>Layer</source>
         <translation>Taso</translation>
@@ -469,10 +465,6 @@
         <location line="+1"/>
         <source>Object Invisible</source>
         <translation type="unfinished">Näkymätön esine</translation>
-    </message>
-    <message>
-        <source>Invisible</source>
-        <translation type="vanished">Näkymätön</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -843,122 +835,7 @@
     </message>
 </context>
 <context>
-    <name>RLayer</name>
-    <message>
-        <source>Name</source>
-        <translation type="vanished">Nimi</translation>
-    </message>
-    <message>
-        <source>Frozen</source>
-        <translation type="vanished">Jäädytetty</translation>
-    </message>
-    <message>
-        <source>Hidden</source>
-        <translation type="vanished">Piilotettu</translation>
-    </message>
-    <message>
-        <source>Locked</source>
-        <translation type="vanished">Lukittu</translation>
-    </message>
-    <message>
-        <source>Color</source>
-        <translation type="vanished">Väri</translation>
-    </message>
-    <message>
-        <source>Linetype</source>
-        <translation type="vanished">Viivatyyppi</translation>
-    </message>
-    <message>
-        <source>Lineweight</source>
-        <translation type="vanished">Viivapaksuus</translation>
-    </message>
-</context>
-<context>
     <name>RLinetype</name>
-    <message>
-        <source>By Layer</source>
-        <translation type="vanished">Tason mukaan</translation>
-    </message>
-    <message>
-        <source>By Block</source>
-        <translation type="vanished">Lohkon mukaan</translation>
-    </message>
-    <message>
-        <source>Continuous</source>
-        <translation type="vanished">Jatkuva</translation>
-    </message>
-    <message>
-        <source>Dot</source>
-        <translation type="vanished">Piste</translation>
-    </message>
-    <message>
-        <source>Dot (small)</source>
-        <translation type="vanished">Piste (pieni)</translation>
-    </message>
-    <message>
-        <source>Dot (large)</source>
-        <translation type="vanished">Piste (suuri)</translation>
-    </message>
-    <message>
-        <source>Dash</source>
-        <translation type="vanished">Katkoviiva</translation>
-    </message>
-    <message>
-        <source>Dash (small)</source>
-        <translation type="vanished">Katkoviiva (pieni)</translation>
-    </message>
-    <message>
-        <source>Dash (large)</source>
-        <translation type="vanished">Katkoviiva (suuri)</translation>
-    </message>
-    <message>
-        <source>Dash Dot</source>
-        <translation type="vanished">Katkoviiva - piste</translation>
-    </message>
-    <message>
-        <source>Dash Dot (small)</source>
-        <translation type="vanished">Katkoviiva - piste (pieni)</translation>
-    </message>
-    <message>
-        <source>Dash Dot (large)</source>
-        <translation type="vanished">Katkoviiva - piste (suuri)</translation>
-    </message>
-    <message>
-        <source>Divide</source>
-        <translation type="vanished">Jaa</translation>
-    </message>
-    <message>
-        <source>Divide (small)</source>
-        <translation type="vanished">Jaa (pieni)</translation>
-    </message>
-    <message>
-        <source>Divide (large)</source>
-        <translation type="vanished">Jaa (suuri)</translation>
-    </message>
-    <message>
-        <source>Center</source>
-        <translation type="vanished">Keskipiste</translation>
-    </message>
-    <message>
-        <source>Center (small)</source>
-        <translation type="vanished">Keskipiste (pieni)</translation>
-    </message>
-    <message>
-        <source>Center (large)</source>
-        <translation type="vanished">Keskipiste (suuri)</translation>
-    </message>
-    <message>
-        <source>Border</source>
-        <translation type="vanished">Reuna</translation>
-    </message>
-    <message>
-        <source>Border (small)</source>
-        <translation type="vanished">Reuna (pieni)</translation>
-    </message>
-    <message>
-        <source>Border (large)</source>
-        <translation type="vanished">Reuna (suuri)</translation>
-    </message>
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+54"/>
         <source>Name</source>
@@ -1173,10 +1050,6 @@
         <source>Drainage Reversed</source>
         <translation>Salaojitus käänteinen</translation>
     </message>
-    <message>
-        <source>Drainage Reverse</source>
-        <translation type="vanished">Viemäri käänteinen</translation>
-    </message>
 </context>
 <context>
     <name>RLineweight</name>
@@ -1314,25 +1187,6 @@
         <location line="+1"/>
         <source>2.11mm</source>
         <translation>2.11 mm</translation>
-    </message>
-</context>
-<context>
-    <name>RObject</name>
-    <message>
-        <source>Custom</source>
-        <translation type="vanished">Mukautettu</translation>
-    </message>
-    <message>
-        <source>Type</source>
-        <translation type="vanished">Tyyppi</translation>
-    </message>
-    <message>
-        <source>Handle</source>
-        <translation type="vanished">Kahva</translation>
-    </message>
-    <message>
-        <source>Protected</source>
-        <translation type="vanished">Suojattu</translation>
     </message>
 </context>
 </TS>

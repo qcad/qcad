@@ -333,17 +333,9 @@
         <translation>Gesamtfläche</translation>
     </message>
     <message>
-        <source>Contents</source>
-        <translation type="obsolete">Inhalt</translation>
-    </message>
-    <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="-19"/>
         <source>Solid</source>
         <translation>Gefüllt</translation>
-    </message>
-    <message>
-        <source>Transparency</source>
-        <translation type="vanished">Transparenz</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -394,10 +386,6 @@
         <translation>Skalierung</translation>
     </message>
     <message>
-        <source>Simple</source>
-        <translation type="vanished">Einfach</translation>
-    </message>
-    <message>
         <location filename="../src/entity/RToleranceEntity.cpp" line="-5"/>
         <location line="+1"/>
         <location line="+1"/>
@@ -415,50 +403,6 @@
         <location line="+1"/>
         <source>Text</source>
         <translation>Text</translation>
-    </message>
-    <message>
-        <source>Plain Text</source>
-        <translation type="vanished">Klartext</translation>
-    </message>
-    <message>
-        <source>Font Name</source>
-        <translation type="vanished">Schrift Name</translation>
-    </message>
-    <message>
-        <source>Text Height</source>
-        <translation type="vanished">Text Höhe</translation>
-    </message>
-    <message>
-        <source>Text Angle</source>
-        <translation type="vanished">Textwinkel</translation>
-    </message>
-    <message>
-        <source>X Scale</source>
-        <translation type="vanished">X Skalierung</translation>
-    </message>
-    <message>
-        <source>Bold</source>
-        <translation type="vanished">Fett</translation>
-    </message>
-    <message>
-        <source>Italic</source>
-        <translation type="vanished">Kursiv</translation>
-    </message>
-    <message>
-        <source>Line Spacing</source>
-        <translation type="vanished">Linienabstand</translation>
-    </message>
-    <message>
-        <source>Alignment</source>
-        <translation type="vanished">Ausrichtung</translation>
-    </message>
-    <message>
-        <source>Horizontal</source>
-        <translation type="vanished">Horizontal</translation>
-    </message>
-    <message>
-        <source>Vertical</source>
-        <translation type="vanished">Vertikal</translation>
     </message>
     <message>
         <location filename="../src/entity/RArcEntity.cpp" line="-5"/>
@@ -500,14 +444,6 @@
         <location line="+1"/>
         <source>End Parameter</source>
         <translation>End Parameter</translation>
-    </message>
-    <message>
-        <source>Clockwise</source>
-        <translation type="vanished">Uhrzeigersinn</translation>
-    </message>
-    <message>
-        <source>Counterclockwise</source>
-        <translation type="vanished">Gegenuhrzeigersinn</translation>
     </message>
     <message>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-18"/>
@@ -723,10 +659,6 @@
         <translation>Bemassungsbogen</translation>
     </message>
     <message>
-        <source>Dimenion Arc</source>
-        <translation type="obsolete">Bemassungsbogen</translation>
-    </message>
-    <message>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="-6"/>
         <location line="+1"/>
         <location line="+1"/>
@@ -830,90 +762,6 @@
         <translation>Auto Beschriftung</translation>
     </message>
     <message>
-        <source>Style</source>
-        <translation type="vanished">Stil</translation>
-    </message>
-    <message>
-        <source>Overall dimension scale</source>
-        <translation type="vanished">Gesamtskalierung Bemassung</translation>
-    </message>
-    <message>
-        <source>Linear measurement factor</source>
-        <translation type="vanished">Linearfaktor</translation>
-    </message>
-    <message>
-        <source>Text height</source>
-        <translation type="vanished">Höhe des Textes</translation>
-    </message>
-    <message>
-        <source>Dimension line gap</source>
-        <translation type="vanished">Bemassungslinien Abstand</translation>
-    </message>
-    <message>
-        <source>Arrow size</source>
-        <translation type="vanished">Pfeilgrösse</translation>
-    </message>
-    <message>
-        <source>Extension line extension</source>
-        <translation type="vanished">Verlängerung der Begrenzungslinie</translation>
-    </message>
-    <message>
-        <source>Extension line offset</source>
-        <translation type="vanished">Begrenzungslinien Abstand</translation>
-    </message>
-    <message>
-        <source>Text position vertical</source>
-        <translation type="vanished">Textposition vertikal</translation>
-    </message>
-    <message>
-        <source>Text inside horizontal</source>
-        <translation type="vanished">Text innen horizontal</translation>
-    </message>
-    <message>
-        <source>Tick size</source>
-        <translation type="vanished">Tick-Grösse</translation>
-    </message>
-    <message>
-        <source>Linear format</source>
-        <translation type="vanished">Linearformat</translation>
-    </message>
-    <message>
-        <source>Decimal places</source>
-        <translation type="vanished">Dezimalstellen</translation>
-    </message>
-    <message>
-        <source>Decimal separator</source>
-        <translation type="vanished">Dezimaltrennzeichen</translation>
-    </message>
-    <message>
-        <source>Zero suppression</source>
-        <translation type="vanished">Null Unterdrückung</translation>
-    </message>
-    <message>
-        <source>Angular format</source>
-        <translation type="vanished">Winkelformat</translation>
-    </message>
-    <message>
-        <source>Angular decimal places</source>
-        <translation type="vanished">Nachkommastellen Winkelmass</translation>
-    </message>
-    <message>
-        <source>Angular zero suppression</source>
-        <translation type="vanished">Unterdrückung von Nullen Winkelmass</translation>
-    </message>
-    <message>
-        <source>Architectur tick</source>
-        <translation type="vanished">Architektur-Tick</translation>
-    </message>
-    <message>
-        <source>Text color</source>
-        <translation type="vanished">Textfarbe</translation>
-    </message>
-    <message>
-        <source>Linear Factor</source>
-        <translation type="vanished">Linearfaktor</translation>
-    </message>
-    <message>
         <location line="+4"/>
         <source>Block Name</source>
         <translation>Blockname</translation>
@@ -922,10 +770,6 @@
         <location line="+1"/>
         <source>Auto Label Position</source>
         <translation>Auto Label Position</translation>
-    </message>
-    <message>
-        <source>Definitionpoint</source>
-        <translation type="obsolete">Definitionspunkt</translation>
     </message>
     <message>
         <location line="-22"/>

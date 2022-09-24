@@ -389,10 +389,6 @@
         <translation>Tip</translation>
     </message>
     <message>
-        <source>Block ID</source>
-        <translation type="vanished">Blok ID</translation>
-    </message>
-    <message>
         <location line="+2"/>
         <source>Layer</source>
         <translation>Sloj</translation>
@@ -589,10 +585,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Invisible</source>
-        <translation type="vanished">Nevidljiv</translation>
-    </message>
-    <message>
         <location line="+1"/>
         <source>Working Set</source>
         <translation>Radni skup</translation>
@@ -717,10 +709,6 @@
         <location filename="../src/core/RDimStyle.cpp" line="+72"/>
         <source>Style</source>
         <translation>Stil</translation>
-    </message>
-    <message>
-        <source>Overall dimension scale</source>
-        <translation type="vanished">Sveobuhvatno mjerilo kotiranja</translation>
     </message>
     <message>
         <location line="+1"/>

@@ -213,29 +213,6 @@
     </message>
 </context>
 <context>
-    <name>RDimStyle</name>
-    <message>
-        <source>Overall dimension scale</source>
-        <translation type="vanished">Algemene bematingsschaal</translation>
-    </message>
-    <message>
-        <source>Text height</source>
-        <translation type="vanished">Teksthoogte</translation>
-    </message>
-    <message>
-        <source>Dimension line gap</source>
-        <translation type="vanished">Maatlijn uitsparing</translation>
-    </message>
-    <message>
-        <source>Text above dimension line</source>
-        <translation type="vanished">Tekst boven de bematingslijn</translation>
-    </message>
-    <message>
-        <source>Text inside horizontal</source>
-        <translation type="vanished">Tekst binnen horizontaal</translation>
-    </message>
-</context>
-<context>
     <name>RDocumentVariables</name>
     <message>
         <location filename="../src/core/RDocumentVariables.cpp" line="+48"/>
@@ -389,10 +366,6 @@
         <translation>Type</translation>
     </message>
     <message>
-        <source>Block ID</source>
-        <translation type="vanished">Blok ID</translation>
-    </message>
-    <message>
         <location line="+2"/>
         <source>Layer</source>
         <translation>Laag</translation>
@@ -492,10 +465,6 @@
         <location line="+1"/>
         <source>Object Invisible</source>
         <translation>Object onzichtbaar</translation>
-    </message>
-    <message>
-        <source>Invisible</source>
-        <translation type="vanished">Onzichtbaar</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -727,10 +696,6 @@
         <translation>Max afmetingen</translation>
     </message>
     <message>
-        <source>Plot Margins</source>
-        <translation type="vanished">Plotranden</translation>
-    </message>
-    <message>
         <location filename="../src/core/RBlockReferenceData.cpp" line="+862"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Circulaire (recursieve) blokverwijzingen gedetecteerd:</translation>
@@ -744,10 +709,6 @@
         <location filename="../src/core/RDimStyle.cpp" line="+72"/>
         <source>Style</source>
         <translation>Stijl</translation>
-    </message>
-    <message>
-        <source>Overall dimension scale</source>
-        <translation type="vanished">Algemene bematingsschaal</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -785,17 +746,9 @@
         <translation>Hulplijn afzet</translation>
     </message>
     <message>
-        <source>Text above dimension line</source>
-        <translation type="vanished">Tekst boven de maatlijn</translation>
-    </message>
-    <message>
         <location line="+1"/>
         <source>Text position vertical</source>
         <translation>Tekstpositie verticaal</translation>
-    </message>
-    <message>
-        <source>Text inside horizontal</source>
-        <translation type="vanished">Tekst binnen horizontaal</translation>
     </message>
     <message>
         <location line="-8"/>
@@ -879,37 +832,6 @@
         <location filename="../src/core/RGuiAction.cpp" line="+202"/>
         <source>Requires selection</source>
         <translation>Selectie vereist</translation>
-    </message>
-</context>
-<context>
-    <name>RLayer</name>
-    <message>
-        <source>Name</source>
-        <translation type="vanished">Naam</translation>
-    </message>
-    <message>
-        <source>Frozen</source>
-        <translation type="vanished">Verborgen</translation>
-    </message>
-    <message>
-        <source>Hidden</source>
-        <translation type="vanished">Verborgen</translation>
-    </message>
-    <message>
-        <source>Locked</source>
-        <translation type="vanished">Vergrendeld</translation>
-    </message>
-    <message>
-        <source>Color</source>
-        <translation type="vanished">Kleur</translation>
-    </message>
-    <message>
-        <source>Linetype</source>
-        <translation type="vanished">Lijntype</translation>
-    </message>
-    <message>
-        <source>Lineweight</source>
-        <translation type="vanished">Lijndikte</translation>
     </message>
 </context>
 <context>
@@ -1128,10 +1050,6 @@
         <source>Drainage Reversed</source>
         <translation>Riolering omgekeerd</translation>
     </message>
-    <message>
-        <source>Drainage Reverse</source>
-        <translation type="vanished">Riolering omgekeerd</translation>
-    </message>
 </context>
 <context>
     <name>RLineweight</name>
@@ -1269,25 +1187,6 @@
         <location line="+1"/>
         <source>2.11mm</source>
         <translation>2.11mm</translation>
-    </message>
-</context>
-<context>
-    <name>RObject</name>
-    <message>
-        <source>Custom</source>
-        <translation type="vanished">Gebruikergedefinieerd</translation>
-    </message>
-    <message>
-        <source>Type</source>
-        <translation type="vanished">Type</translation>
-    </message>
-    <message>
-        <source>Handle</source>
-        <translation type="vanished">Handle</translation>
-    </message>
-    <message>
-        <source>Protected</source>
-        <translation type="vanished">Beschermd</translation>
     </message>
 </context>
 </TS>

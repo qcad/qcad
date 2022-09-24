@@ -471,10 +471,6 @@
         <translation>Zmierzona wartość</translation>
     </message>
     <message>
-        <source>Linear Factor</source>
-        <translation type="vanished">Współczynnik liniowy</translation>
-    </message>
-    <message>
         <location line="+3"/>
         <source>Block Name</source>
         <translation>Nazwa bloku</translation>
@@ -664,14 +660,6 @@
         <translation>Blok strzałki</translation>
     </message>
     <message>
-        <source>Clockwise</source>
-        <translation type="vanished">W prawo</translation>
-    </message>
-    <message>
-        <source>Counterclockwise</source>
-        <translation type="vanished">W lewo</translation>
-    </message>
-    <message>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>
         <source>Polyline Pattern</source>
         <translation type="unfinished">Wzór polilinii</translation>
@@ -844,14 +832,6 @@
         <translation type="unfinished">Styczna końcowa</translation>
     </message>
     <message>
-        <source>Simple</source>
-        <translation type="vanished">Prosta</translation>
-    </message>
-    <message>
-        <source>Contents</source>
-        <translation type="obsolete">Spis treści</translation>
-    </message>
-    <message>
         <location filename="../src/entity/RToleranceEntity.cpp" line="-5"/>
         <location line="+1"/>
         <location line="+1"/>
@@ -869,46 +849,6 @@
         <location line="+1"/>
         <source>Text</source>
         <translation>Tekst</translation>
-    </message>
-    <message>
-        <source>Plain Text</source>
-        <translation type="vanished">Zwykły tekst</translation>
-    </message>
-    <message>
-        <source>Text Height</source>
-        <translation type="vanished">Wysokość tekstu</translation>
-    </message>
-    <message>
-        <source>Text Angle</source>
-        <translation type="vanished">Kąt tekstu</translation>
-    </message>
-    <message>
-        <source>X Scale</source>
-        <translation type="vanished">Skala X</translation>
-    </message>
-    <message>
-        <source>Bold</source>
-        <translation type="vanished">Pogrubienie</translation>
-    </message>
-    <message>
-        <source>Italic</source>
-        <translation type="vanished">Kursywa</translation>
-    </message>
-    <message>
-        <source>Line Spacing</source>
-        <translation type="vanished">Odstęp między wierszami</translation>
-    </message>
-    <message>
-        <source>Alignment</source>
-        <translation type="vanished">Wyrównanie</translation>
-    </message>
-    <message>
-        <source>Horizontal</source>
-        <translation type="vanished">Poziomo</translation>
-    </message>
-    <message>
-        <source>Vertical</source>
-        <translation type="vanished">Pionowo</translation>
     </message>
     <message>
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+96"/>

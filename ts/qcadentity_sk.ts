@@ -482,10 +482,6 @@
         <translation>Nameraná hodnota</translation>
     </message>
     <message>
-        <source>Linear Factor</source>
-        <translation type="vanished">Faktor zväčšenia</translation>
-    </message>
-    <message>
         <location line="+3"/>
         <source>Block Name</source>
         <translation>Názov bloku</translation>
@@ -673,14 +669,6 @@
         <location line="+1"/>
         <source>Arrow Block</source>
         <translation>Šípka bloku</translation>
-    </message>
-    <message>
-        <source>Clockwise</source>
-        <translation type="vanished">V smere hodinových ručičiek</translation>
-    </message>
-    <message>
-        <source>Counterclockwise</source>
-        <translation type="vanished">Proti smeru hodinových ručičiek</translation>
     </message>
     <message>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>

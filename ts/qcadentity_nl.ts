@@ -482,90 +482,6 @@
         <translation>Gemeten waarde</translation>
     </message>
     <message>
-        <source>Style</source>
-        <translation type="vanished">Stijl</translation>
-    </message>
-    <message>
-        <source>Overall dimension scale</source>
-        <translation type="vanished">Algemene dimensieschaal</translation>
-    </message>
-    <message>
-        <source>Linear measurement factor</source>
-        <translation type="vanished">Lineaire meetfactor</translation>
-    </message>
-    <message>
-        <source>Text height</source>
-        <translation type="vanished">Hoogte van de tekst</translation>
-    </message>
-    <message>
-        <source>Dimension line gap</source>
-        <translation type="vanished">Maat lijn uitsparing</translation>
-    </message>
-    <message>
-        <source>Arrow size</source>
-        <translation type="vanished">Pijlgrootte</translation>
-    </message>
-    <message>
-        <source>Extension line extension</source>
-        <translation type="vanished">Hulplijn extentie</translation>
-    </message>
-    <message>
-        <source>Extension line offset</source>
-        <translation type="vanished">Hulplijn afzet</translation>
-    </message>
-    <message>
-        <source>Text position vertical</source>
-        <translation type="vanished">Tekstpositie verticaal</translation>
-    </message>
-    <message>
-        <source>Text inside horizontal</source>
-        <translation type="vanished">Tekst binnen horizontaal</translation>
-    </message>
-    <message>
-        <source>Tick size</source>
-        <translation type="vanished">Tickgrootte</translation>
-    </message>
-    <message>
-        <source>Linear format</source>
-        <translation type="vanished">Lineair formaat</translation>
-    </message>
-    <message>
-        <source>Decimal places</source>
-        <translation type="vanished">Decimale plaatsen</translation>
-    </message>
-    <message>
-        <source>Decimal separator</source>
-        <translation type="vanished">Decimaal scheidingsteken</translation>
-    </message>
-    <message>
-        <source>Zero suppression</source>
-        <translation type="vanished">Nul onderdrukking</translation>
-    </message>
-    <message>
-        <source>Angular format</source>
-        <translation type="vanished">Hoekformaat</translation>
-    </message>
-    <message>
-        <source>Angular decimal places</source>
-        <translation type="vanished">Decimale plaatsen hoekmaat</translation>
-    </message>
-    <message>
-        <source>Angular zero suppression</source>
-        <translation type="vanished">Onderdrukking van nul hoekmaat</translation>
-    </message>
-    <message>
-        <source>Architectur tick</source>
-        <translation type="vanished">Architectur tick</translation>
-    </message>
-    <message>
-        <source>Text color</source>
-        <translation type="vanished">Tekst kleur</translation>
-    </message>
-    <message>
-        <source>Linear Factor</source>
-        <translation type="vanished">Lineaire factor</translation>
-    </message>
-    <message>
         <location line="+3"/>
         <source>Block Name</source>
         <translation>Bloknaam</translation>
@@ -621,10 +537,6 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="-9"/>
         <source>Solid</source>
         <translation>Gevuld</translation>
-    </message>
-    <message>
-        <source>Transparency</source>
-        <translation type="vanished">Transparantie</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -757,14 +669,6 @@
         <location line="+1"/>
         <source>Arrow Block</source>
         <translation>Pijlblock</translation>
-    </message>
-    <message>
-        <source>Clockwise</source>
-        <translation type="vanished">Rechtsom</translation>
-    </message>
-    <message>
-        <source>Counterclockwise</source>
-        <translation type="vanished">Linksom</translation>
     </message>
     <message>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>
@@ -939,10 +843,6 @@
         <translation>Eindtangent</translation>
     </message>
     <message>
-        <source>Simple</source>
-        <translation type="vanished">Eenvoudig</translation>
-    </message>
-    <message>
         <location filename="../src/entity/RToleranceEntity.cpp" line="-5"/>
         <location line="+1"/>
         <location line="+1"/>
@@ -960,50 +860,6 @@
         <location line="+1"/>
         <source>Text</source>
         <translation>Tekst</translation>
-    </message>
-    <message>
-        <source>Plain Text</source>
-        <translation type="vanished">Platte tekst</translation>
-    </message>
-    <message>
-        <source>Font Name</source>
-        <translation type="vanished">Lettertype</translation>
-    </message>
-    <message>
-        <source>Text Height</source>
-        <translation type="vanished">Teksthoogte</translation>
-    </message>
-    <message>
-        <source>Text Angle</source>
-        <translation type="vanished">Teksthoek</translation>
-    </message>
-    <message>
-        <source>X Scale</source>
-        <translation type="vanished">X schaal</translation>
-    </message>
-    <message>
-        <source>Bold</source>
-        <translation type="vanished">Vetgedrukt</translation>
-    </message>
-    <message>
-        <source>Italic</source>
-        <translation type="vanished">Cursief</translation>
-    </message>
-    <message>
-        <source>Line Spacing</source>
-        <translation type="vanished">Regelafstand</translation>
-    </message>
-    <message>
-        <source>Alignment</source>
-        <translation type="vanished">Opstelling</translation>
-    </message>
-    <message>
-        <source>Horizontal</source>
-        <translation type="vanished">Horizontaal</translation>
-    </message>
-    <message>
-        <source>Vertical</source>
-        <translation type="vanished">Vertikaal</translation>
     </message>
     <message>
         <location filename="../src/entity/RRayEntity.cpp" line="-11"/>

@@ -379,10 +379,6 @@
         <translation>Typ</translation>
     </message>
     <message>
-        <source>Block ID</source>
-        <translation type="vanished">ID bloku</translation>
-    </message>
-    <message>
         <location line="+2"/>
         <source>Layer</source>
         <translation>Vrstva</translation>
@@ -577,10 +573,6 @@
         <location line="+1"/>
         <source>Object Invisible</source>
         <translation type="unfinished">Objekt neviditelný</translation>
-    </message>
-    <message>
-        <source>Invisible</source>
-        <translation type="obsolete">Neviditelný</translation>
     </message>
     <message>
         <location line="+1"/>

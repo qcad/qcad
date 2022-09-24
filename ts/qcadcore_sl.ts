@@ -366,10 +366,6 @@
         <translation>Vrsta</translation>
     </message>
     <message>
-        <source>Block ID</source>
-        <translation type="vanished">ID zbira</translation>
-    </message>
-    <message>
         <location line="+2"/>
         <source>Layer</source>
         <translation>Plast</translation>
@@ -469,10 +465,6 @@
         <location line="+1"/>
         <source>Object Invisible</source>
         <translation type="unfinished">Nevidni predmet</translation>
-    </message>
-    <message>
-        <source>Invisible</source>
-        <translation type="vanished">Nevidno</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -843,122 +835,7 @@
     </message>
 </context>
 <context>
-    <name>RLayer</name>
-    <message>
-        <source>Name</source>
-        <translation type="vanished">Ime</translation>
-    </message>
-    <message>
-        <source>Frozen</source>
-        <translation type="vanished">Zamrznjeno</translation>
-    </message>
-    <message>
-        <source>Hidden</source>
-        <translation type="obsolete">Nevidna</translation>
-    </message>
-    <message>
-        <source>Locked</source>
-        <translation type="vanished">Zaklenjeno</translation>
-    </message>
-    <message>
-        <source>Color</source>
-        <translation type="vanished">Barva</translation>
-    </message>
-    <message>
-        <source>Linetype</source>
-        <translation type="vanished">Vrsta črte</translation>
-    </message>
-    <message>
-        <source>Lineweight</source>
-        <translation type="vanished">Debelina črte</translation>
-    </message>
-</context>
-<context>
     <name>RLinetype</name>
-    <message>
-        <source>By Layer</source>
-        <translation type="vanished">Po plasti</translation>
-    </message>
-    <message>
-        <source>By Block</source>
-        <translation type="vanished">Po zbiru</translation>
-    </message>
-    <message>
-        <source>Continuous</source>
-        <translation type="vanished">Neprekinjeno</translation>
-    </message>
-    <message>
-        <source>Dot</source>
-        <translation type="vanished">Pikčasto</translation>
-    </message>
-    <message>
-        <source>Dot (small)</source>
-        <translation type="vanished">Pikčasto (gosto)</translation>
-    </message>
-    <message>
-        <source>Dot (large)</source>
-        <translation type="vanished">Pikčasto (redko)</translation>
-    </message>
-    <message>
-        <source>Dash</source>
-        <translation type="vanished">Črtkano</translation>
-    </message>
-    <message>
-        <source>Dash (small)</source>
-        <translation type="vanished">Črtkano (gosto)</translation>
-    </message>
-    <message>
-        <source>Dash (large)</source>
-        <translation type="vanished">Črtkano (redko)</translation>
-    </message>
-    <message>
-        <source>Dash Dot</source>
-        <translation type="vanished">Črtopično</translation>
-    </message>
-    <message>
-        <source>Dash Dot (small)</source>
-        <translation type="vanished">Črtopično (gosto)</translation>
-    </message>
-    <message>
-        <source>Dash Dot (large)</source>
-        <translation type="vanished">Črtopično (redko)</translation>
-    </message>
-    <message>
-        <source>Divide</source>
-        <translation type="vanished">Delilna</translation>
-    </message>
-    <message>
-        <source>Divide (small)</source>
-        <translation type="vanished">Delilna (majhna)</translation>
-    </message>
-    <message>
-        <source>Divide (large)</source>
-        <translation type="vanished">Delilna (velika)</translation>
-    </message>
-    <message>
-        <source>Center</source>
-        <translation type="vanished">Srednjica</translation>
-    </message>
-    <message>
-        <source>Center (small)</source>
-        <translation type="vanished">Srednjica (gosta)</translation>
-    </message>
-    <message>
-        <source>Center (large)</source>
-        <translation type="vanished">Srednjica (redka)</translation>
-    </message>
-    <message>
-        <source>Border</source>
-        <translation type="vanished">Rob</translation>
-    </message>
-    <message>
-        <source>Border (small)</source>
-        <translation type="vanished">Rob (gosto)</translation>
-    </message>
-    <message>
-        <source>Border (large)</source>
-        <translation type="vanished">Rob (redko)</translation>
-    </message>
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+54"/>
         <source>Name</source>
@@ -1310,25 +1187,6 @@
         <location line="+1"/>
         <source>2.11mm</source>
         <translation>2.11mm</translation>
-    </message>
-</context>
-<context>
-    <name>RObject</name>
-    <message>
-        <source>Custom</source>
-        <translation type="vanished">Po meri</translation>
-    </message>
-    <message>
-        <source>Type</source>
-        <translation type="obsolete">Tip</translation>
-    </message>
-    <message>
-        <source>Handle</source>
-        <translation type="vanished">Ročica</translation>
-    </message>
-    <message>
-        <source>Protected</source>
-        <translation type="vanished">Zaščiteno</translation>
     </message>
 </context>
 </TS>

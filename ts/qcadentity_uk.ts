@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt">
+<TS version="2.1" language="uk_UA">
 <context>
     <name>REntity</name>
     <message>
@@ -20,7 +20,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Center</source>
-        <translation>Centro</translation>
+        <translation type="unfinished">Центр</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -84,7 +84,7 @@
         <location line="+3"/>
         <location line="+4"/>
         <source>X</source>
-        <translation>X</translation>
+        <translation type="unfinished">X</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -148,7 +148,7 @@
         <location line="+3"/>
         <location line="+4"/>
         <source>Y</source>
-        <translation>Y</translation>
+        <translation type="unfinished">Y</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -209,44 +209,44 @@
         <location line="+3"/>
         <location line="+4"/>
         <source>Z</source>
-        <translation>Z</translation>
+        <translation type="unfinished">Z</translation>
     </message>
     <message>
         <location line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle</source>
-        <translation>Meio</translation>
+        <translation type="unfinished">Середній</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+1"/>
         <source>Radius</source>
-        <translation>Raio</translation>
+        <translation type="unfinished">Радіус</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="-9"/>
         <source>Start Angle</source>
-        <translation>Ângulo de Início</translation>
+        <translation type="unfinished">Початковий кут</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+1"/>
         <source>End Angle</source>
-        <translation>Ângulo Final</translation>
+        <translation type="unfinished">Кінцевий кут</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+1"/>
         <source>Reversed</source>
-        <translation>Invertido</translation>
+        <translation type="unfinished">Змінено на протилежне</translation>
     </message>
     <message>
         <location line="+2"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+2"/>
         <source>Diameter</source>
-        <translation>Diâmetro</translation>
+        <translation type="unfinished">Діаметр</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -259,7 +259,7 @@
         <location filename="../src/entity/RSplineEntity.cpp" line="-11"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+2"/>
         <source>Length</source>
-        <translation>Comprimento</translation>
+        <translation type="unfinished">Довжина</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -271,12 +271,12 @@
         <location filename="../src/entity/RSplineEntity.cpp" line="+1"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+1"/>
         <source>Total Length</source>
-        <translation>Comprimento total</translation>
+        <translation type="unfinished">Загальна довжина</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Sweep Angle</source>
-        <translation>Ângulo de Varredura</translation>
+        <translation type="unfinished">Кут розгортки</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -284,7 +284,7 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+3"/>
         <source>Area</source>
-        <translation>Área</translation>
+        <translation type="unfinished">Площа</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -292,68 +292,69 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
         <source>Total Area</source>
-        <translation>Área total</translation>
+        <translation type="unfinished">Загальна площа</translation>
+    </message>
+    <message>
+        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+94"/>
+        <location filename="../src/entity/RAttributeEntity.cpp" line="+102"/>
+        <source>Invisible</source>
+        <translation type="unfinished">Невидимий</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location filename="../src/entity/RAttributeEntity.cpp" line="-1"/>
+        <source>Tag</source>
+        <translation type="unfinished">Тег</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Prompt</source>
+        <translation type="unfinished">Оперативність</translation>
     </message>
     <message>
         <location filename="../src/entity/RCircleEntity.cpp" line="-2"/>
         <source>Circumference</source>
-        <translation>Circunferência</translation>
-    </message>
-    <message>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="-10"/>
-        <location line="+1"/>
-        <location line="+1"/>
-        <source>Dimension Line</source>
-        <translation>Linha de cota</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <location line="+1"/>
-        <location line="+1"/>
-        <source>Extension Point 1</source>
-        <translation>Ponto de Extensão 1</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <location line="+1"/>
-        <location line="+1"/>
-        <source>Extension Point 2</source>
-        <translation>Ponto de Extensão 2</translation>
+        <translation type="unfinished">Окружність</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngular2LEntity.cpp" line="-14"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 Start</source>
-        <translation>Início da Linha 1</translation>
+        <translation type="unfinished">Лінія 1 Старт</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Line 2 Start</source>
+        <translation type="unfinished">Лінія 2 Старт</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="-10"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 End</source>
-        <translation>Final da Linha 1</translation>
+        <translation type="unfinished">Рядок 1 Кінець</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimAngular2LEntity.cpp" line="+10"/>
-        <location line="+1"/>
-        <location line="+1"/>
-        <source>Line 2 Start</source>
-        <translation>Início da Linha 2</translation>
-    </message>
-    <message>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="+2"/>
+        <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 2 End</source>
-        <translation>Final da Linha 2</translation>
+        <translation type="unfinished">Рядок 2 Кінець</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Arc</source>
-        <translation>Arco de Dimensionamento</translation>
+        <translation type="unfinished">Розмір Дуга</translation>
+    </message>
+    <message>
+        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+185"/>
+        <source>Arc Symbol Type</source>
+        <translation type="unfinished">Тип символу дуги</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="-6"/>
@@ -363,14 +364,35 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Chord Point</source>
-        <translation>Ponto de Corda</translation>
+        <translation type="unfinished">Chord Point</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Far Chord Point</source>
-        <translation>Ponto de Corda Distante</translation>
+        <translation type="unfinished">Дальня точка акорду</translation>
+    </message>
+    <message>
+        <location filename="../src/entity/RDimLinearEntity.cpp" line="-10"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Dimension Line</source>
+        <translation type="unfinished">Розмірна лінія</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Extension Point 1</source>
+        <translation type="unfinished">Точка розширення 1</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Extension Point 2</source>
+        <translation type="unfinished">Пункт продовження 2</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimOrdinateEntity.cpp" line="-10"/>
@@ -379,128 +401,128 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="-11"/>
         <location line="+1"/>
         <source>Origin</source>
-        <translation>Origem</translation>
+        <translation type="unfinished">Походження</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Ordinate</source>
-        <translation>Ordenada</translation>
+        <translation type="unfinished">Наказую</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Defining Point</source>
-        <translation>Definindo o Ponto</translation>
+        <translation type="unfinished">Визначальний момент</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Leader End Point</source>
-        <translation>Ponto Final Condutor</translation>
+        <translation type="unfinished">Leader End Point</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+167"/>
         <source>Dimension Angle</source>
-        <translation>Ângulo de cota</translation>
+        <translation type="unfinished">Розмірний кут</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="-8"/>
         <source>Label</source>
-        <translation>Rótulo</translation>
+        <translation type="unfinished">Етикетка</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>Tolerance</source>
-        <translation>Tolerância</translation>
+        <translation type="unfinished">Толерантність</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Upper Limit</source>
-        <translation>Limite Superior</translation>
+        <translation type="unfinished">Верхня межа</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Lower Limit</source>
-        <translation>Limite Inferior</translation>
+        <translation type="unfinished">Нижня межа</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Definition Point</source>
-        <translation>Ponto de Definição</translation>
+        <translation type="unfinished">Точка відліку</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Text Position</source>
+        <translation type="unfinished">Позиція тексту</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Flip First Arrow</source>
-        <translation>Virar a primeira seta</translation>
+        <translation type="unfinished">Перекинути першу стрілку</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Flip Second Arrow</source>
-        <translation>Virar a segunda seta</translation>
+        <translation type="unfinished">Перевернути другу стрілку</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Fixed Extension Line</source>
-        <translation>Linha de extensão fixa</translation>
+        <translation type="unfinished">Стаціонарний телефонний зв&apos;язок</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension Line Length</source>
-        <translation>Comprimento linha de extensão</translation>
+        <translation type="unfinished">Довжина лінії розширення</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Auto Label</source>
-        <translation>Rótulo Automático</translation>
+        <translation type="unfinished">Автоматична етикетка</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+1"/>
+        <source>Measured Value</source>
+        <translation type="unfinished">Виміряне значення</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Block Name</source>
-        <translation>Nome do bloco</translation>
+        <translation type="unfinished">Назва блоку</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Auto Label Position</source>
-        <translation>Posição do Rótulo Automático</translation>
-    </message>
-    <message>
-        <location line="-22"/>
-        <location line="+1"/>
-        <location line="+1"/>
-        <source>Text Position</source>
-        <translation>Posição do Texto</translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Measured Value</source>
-        <translation>Valor Medido</translation>
+        <translation type="unfinished">Автоматичне положення етикетки</translation>
     </message>
     <message>
         <location filename="../src/entity/REllipseEntity.cpp" line="-17"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Major Point</source>
-        <translation>Ponto Maior</translation>
+        <translation type="unfinished">Основний пункт</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Ratio</source>
-        <translation>Razão</translation>
+        <translation type="unfinished">Співвідношення</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Start Parameter</source>
-        <translation>Parâmetro Inicial</translation>
+        <translation type="unfinished">Стартовий параметр</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>End Parameter</source>
-        <translation>Parâmetro Final</translation>
+        <translation type="unfinished">Кінцевий параметр</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -510,7 +532,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Start Point</source>
-        <translation>Ponto Inicial</translation>
+        <translation type="unfinished">Точка відліку</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -520,17 +542,69 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>End Point</source>
-        <translation>Ponto Final</translation>
+        <translation type="unfinished">Кінцева точка</translation>
+    </message>
+    <message>
+        <location filename="../src/entity/RFaceEntity.cpp" line="-14"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RSolidEntity.cpp" line="-14"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RTraceEntity.cpp" line="-14"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Point 1</source>
+        <translation type="unfinished">Пункт 1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RSolidEntity.cpp" line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RTraceEntity.cpp" line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Point 2</source>
+        <translation type="unfinished">Пункт 2</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RSolidEntity.cpp" line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RTraceEntity.cpp" line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Point 3</source>
+        <translation type="unfinished">Пункт 3</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RSolidEntity.cpp" line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RTraceEntity.cpp" line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Point 4</source>
+        <translation type="unfinished">Пункт 4</translation>
     </message>
     <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="-9"/>
         <source>Solid</source>
-        <translation>Sólido</translation>
+        <translation type="unfinished">Солідний</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Alpha</source>
-        <translation>Alpha</translation>
+        <translation type="unfinished">Альфа</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -538,17 +612,17 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Pattern</source>
-        <translation>Textura</translation>
+        <translation type="unfinished">Візерунок</translation>
     </message>
     <message>
         <location line="-3"/>
         <source>Name</source>
-        <translation>Nome</translation>
+        <translation type="unfinished">Ім&apos;я та прізвище</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>From Entity</source>
-        <translation>De entidade</translation>
+        <translation type="unfinished">Від суб&apos;єкта господарювання</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -558,22 +632,12 @@
         <location filename="../src/entity/RRayEntity.cpp" line="+2"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="+2"/>
         <source>Angle</source>
-        <translation>Ângulo</translation>
+        <translation type="unfinished">Кут</translation>
     </message>
     <message>
-        <location line="+204"/>
-        <source>Yes</source>
-        <translation>Sim</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>No</source>
-        <translation>Não</translation>
-    </message>
-    <message>
-        <location line="-203"/>
+        <location line="+1"/>
         <source>Scale</source>
-        <translation>Escala</translation>
+        <translation type="unfinished">Масштаб</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -590,12 +654,22 @@
         <location line="+2"/>
         <location line="+1"/>
         <source>Vertex</source>
-        <translation>Vértice</translation>
+        <translation type="unfinished">Vertex</translation>
+    </message>
+    <message>
+        <location line="+196"/>
+        <source>Yes</source>
+        <translation type="unfinished">Так</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>No</source>
+        <translation type="unfinished">Ні</translation>
     </message>
     <message>
         <location filename="../src/entity/RImageEntity.cpp" line="-18"/>
         <source>File</source>
-        <translation>Arquivo</translation>
+        <translation type="unfinished">Файл</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -605,261 +679,128 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
-        <translation>Posição</translation>
+        <translation type="unfinished">Посада</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <source>U</source>
-        <translation>U</translation>
+        <translation type="unfinished">U</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <source>V</source>
-        <translation>V</translation>
+        <translation type="unfinished">V</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Width Factor</source>
-        <translation>Fator de Largura</translation>
+        <translation type="unfinished">Коефіцієнт ширини</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Height Factor</source>
-        <translation>Fator de Altura</translation>
+        <translation type="unfinished">Коефіцієнт росту</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Width</source>
-        <translation>Largura</translation>
+        <translation type="unfinished">Ширина</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Height</source>
-        <translation>Altura</translation>
+        <translation type="unfinished">Висота</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Fade</source>
-        <translation>Esmaecimento</translation>
+        <translation type="unfinished">Згасання</translation>
     </message>
     <message>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-5"/>
         <source>Arrow</source>
-        <translation>Seta</translation>
+        <translation type="unfinished">Стріла</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Spline</source>
-        <translation>Chaveta</translation>
+        <translation type="unfinished">Сплайн</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow Block</source>
-        <translation>Seta bloco</translation>
+        <translation type="unfinished">Стрілочний блок</translation>
+    </message>
+    <message>
+        <location filename="../src/entity/RLineEntity.cpp" line="-7"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Middle Point</source>
+        <translation type="unfinished">Middle Point</translation>
     </message>
     <message>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>
         <source>Polyline Pattern</source>
-        <translation>Padrão para Polilinha</translation>
+        <translation type="unfinished">Полілінійний візерунок</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Closed</source>
-        <translation>Fechado</translation>
+        <translation type="unfinished">Закрито</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Bulge</source>
-        <translation>Bojo</translation>
+        <translation type="unfinished">Опуклість</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Start Width</source>
-        <translation>Largura Inicial</translation>
+        <translation type="unfinished">Стартова ширина</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>End Width</source>
-        <translation>Largura Final</translation>
+        <translation type="unfinished">Ширина торця</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Global Width</source>
-        <translation>Largura global</translation>
+        <translation type="unfinished">Глобальна ширина</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Orientation</source>
-        <translation>Orientação</translation>
+        <translation type="unfinished">Орієнтація</translation>
     </message>
     <message>
         <location line="+9"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Size</source>
-        <translation>Tamanho</translation>
+        <translation type="unfinished">Розмір</translation>
     </message>
     <message>
         <location line="-2"/>
         <source>Base Angle</source>
-        <translation>Ângulo base</translation>
+        <translation type="unfinished">Базовий кут</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Size 1</source>
-        <translation>Tamanho 1</translation>
+        <translation type="unfinished">Розмір 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Size 2</source>
-        <translation>Tamanho 2</translation>
+        <translation type="unfinished">Розмір 2</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Global Z</source>
-        <translation>Z global</translation>
-    </message>
-    <message>
-        <location filename="../src/entity/RFaceEntity.cpp" line="-14"/>
-        <location line="+1"/>
-        <location line="+1"/>
-        <location filename="../src/entity/RSolidEntity.cpp" line="-14"/>
-        <location line="+1"/>
-        <location line="+1"/>
-        <location filename="../src/entity/RTraceEntity.cpp" line="-14"/>
-        <location line="+1"/>
-        <location line="+1"/>
-        <source>Point 1</source>
-        <translation>Ponto 1</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+1"/>
-        <location line="+1"/>
-        <location filename="../src/entity/RSolidEntity.cpp" line="+1"/>
-        <location line="+1"/>
-        <location line="+1"/>
-        <location filename="../src/entity/RTraceEntity.cpp" line="+1"/>
-        <location line="+1"/>
-        <location line="+1"/>
-        <source>Point 2</source>
-        <translation>Ponto 2</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+1"/>
-        <location line="+1"/>
-        <location filename="../src/entity/RSolidEntity.cpp" line="+1"/>
-        <location line="+1"/>
-        <location line="+1"/>
-        <location filename="../src/entity/RTraceEntity.cpp" line="+1"/>
-        <location line="+1"/>
-        <location line="+1"/>
-        <source>Point 3</source>
-        <translation>Ponto 3</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+1"/>
-        <location line="+1"/>
-        <location filename="../src/entity/RSolidEntity.cpp" line="+1"/>
-        <location line="+1"/>
-        <location line="+1"/>
-        <location filename="../src/entity/RTraceEntity.cpp" line="+1"/>
-        <location line="+1"/>
-        <location line="+1"/>
-        <source>Point 4</source>
-        <translation>Ponto 4</translation>
-    </message>
-    <message>
-        <location filename="../src/entity/RSplineEntity.cpp" line="-12"/>
-        <source>Closed Periodic</source>
-        <translation>Fechado Periódico</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Degree</source>
-        <translation>Grau</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <location line="+1"/>
-        <location line="+1"/>
-        <source>Control Point</source>
-        <translation>Ponto de Controle</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+1"/>
-        <location line="+1"/>
-        <source>Fit Point</source>
-        <translation>Ponto de Ajuste</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Knot Vector</source>
-        <translation>Vetor de Nó</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Knot</source>
-        <translation>Nó</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Use Start Tangent</source>
-        <translation>Use a tangente inicial</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+1"/>
-        <location line="+1"/>
-        <source>Start Tangent</source>
-        <translation>Tangente Inicial</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Use End Tangent</source>
-        <translation>Use a tangente final</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+1"/>
-        <location line="+1"/>
-        <source>End Tangent</source>
-        <translation>Tangente Final</translation>
-    </message>
-    <message>
-        <location filename="../src/entity/RToleranceEntity.cpp" line="-5"/>
-        <location line="+1"/>
-        <location line="+1"/>
-        <source>Location</source>
-        <translation>Posição</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+1"/>
-        <location line="+1"/>
-        <source>Direction</source>
-        <translation>Direção</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Text</source>
-        <translation>Texto</translation>
-    </message>
-    <message>
-        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+96"/>
-        <location filename="../src/entity/RAttributeEntity.cpp" line="+101"/>
-        <source>Tag</source>
-        <translation>Rótulo</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Prompt</source>
-        <translation>Mensagem</translation>
+        <translation type="unfinished">Global Z</translation>
     </message>
     <message>
         <location filename="../src/entity/RRayEntity.cpp" line="-11"/>
@@ -869,7 +810,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Base Point</source>
-        <translation>Ponto de Base</translation>
+        <translation type="unfinished">Базова точка</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -879,7 +820,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Second Point</source>
-        <translation>Segundo Ponto</translation>
+        <translation type="unfinished">Другий пункт</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -889,31 +830,90 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Direction Vector</source>
-        <translation>Vetor de Direção</translation>
+        <translation type="unfinished">Вектор напрямку</translation>
     </message>
     <message>
         <location line="+3"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="+3"/>
         <source>Fixed Angle</source>
-        <translation>Ângulo Fixo</translation>
+        <translation type="unfinished">Фіксований кут</translation>
     </message>
     <message>
-        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="-3"/>
-        <location filename="../src/entity/RAttributeEntity.cpp" line="+1"/>
-        <source>Invisible</source>
-        <translation>Invisível</translation>
+        <location filename="../src/entity/RSplineEntity.cpp" line="-12"/>
+        <source>Closed Periodic</source>
+        <translation type="unfinished">Закрите Періодичне</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+185"/>
-        <source>Arc Symbol Type</source>
-        <translation>Símbolo de arco</translation>
+        <location line="+1"/>
+        <source>Degree</source>
+        <translation type="unfinished">Ступінь</translation>
     </message>
     <message>
-        <location filename="../src/entity/RLineEntity.cpp" line="-7"/>
+        <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
-        <source>Middle Point</source>
-        <translation>Ponto médio</translation>
+        <source>Control Point</source>
+        <translation type="unfinished">Контрольний пункт</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Fit Point</source>
+        <translation type="unfinished">Fit Point</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Knot Vector</source>
+        <translation type="unfinished">Knot Vector</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Knot</source>
+        <translation type="unfinished">Вузол</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Use Start Tangent</source>
+        <translation type="unfinished">Використовуйте Початковий тангенс</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Start Tangent</source>
+        <translation type="unfinished">Стартовий тангенс</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Use End Tangent</source>
+        <translation type="unfinished">Використовуйте кінцеву дотичну</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>End Tangent</source>
+        <translation type="unfinished">Кінцева дотична</translation>
+    </message>
+    <message>
+        <location filename="../src/entity/RToleranceEntity.cpp" line="-5"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Location</source>
+        <translation type="unfinished">Місцезнаходження</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Direction</source>
+        <translation type="unfinished">Напрямок</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text</source>
+        <translation type="unfinished">Текст</translation>
     </message>
 </context>
 </TS>

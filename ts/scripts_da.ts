@@ -119,12 +119,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+422"/>
+        <location line="+427"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="-397"/>
+        <location line="-402"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -186,7 +186,7 @@
         <translation>Kreditter</translation>
     </message>
     <message>
-        <location line="+164"/>
+        <location line="+169"/>
         <source>Licenses</source>
         <translation>Licenser</translation>
     </message>
@@ -1314,14 +1314,14 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+492"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+53"/>
-        <location line="+39"/>
+        <location line="+44"/>
         <source>Block List</source>
         <translation>Blokliste</translation>
     </message>
@@ -1490,7 +1490,7 @@ Do you wish to recover it?</source>
 <context>
     <name>CadToolBar</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+52"/>
+        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+53"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -1529,7 +1529,7 @@ Do you wish to recover it?</source>
     <name>CadToolBarPanel</name>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/CadToolBarPanel.js" line="+39"/>
-        <location line="+71"/>
+        <location line="+72"/>
         <source>Back</source>
         <translation>Tilbage</translation>
     </message>
@@ -1537,7 +1537,7 @@ Do you wish to recover it?</source>
 <context>
     <name>CadToolMatrix</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+373"/>
+        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+383"/>
         <source>Expand all</source>
         <translation>Udvid alle</translation>
     </message>
@@ -1557,13 +1557,13 @@ Do you wish to recover it?</source>
         <translation>Ikonvisning</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+34"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+47"/>
+        <location line="+53"/>
         <source>Tool Matrix</source>
         <translation>Værktøjsmatrix</translation>
     </message>
@@ -1599,7 +1599,7 @@ Do you wish to recover it?</source>
 <context>
     <name>CheckForUpdates</name>
     <message>
-        <location filename="../scripts/Help/CheckForUpdates/CheckForUpdates.js" line="+62"/>
+        <location filename="../scripts/Help/CheckForUpdates/CheckForUpdates.js" line="+68"/>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesDialog.ui" line="+14"/>
         <source>Checking for Updates...</source>
         <translation>Tjekker for opdateringer...</translation>
@@ -3428,19 +3428,11 @@ er allerede på listen.</translation>
 <context>
     <name>DrawFromCSV</name>
     <message>
-        <source>No import file selected !</source>
-        <translation type="vanished">Der er ikke valgt nogen importfil !</translation>
-    </message>
-    <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV.js" line="+145"/>
         <location line="+15"/>
         <location line="+1275"/>
         <source>Command ended.</source>
         <translation>Kommandoen er afsluttet.</translation>
-    </message>
-    <message>
-        <source>No file opened!</source>
-        <translation type="vanished">Ingen fil åbnet!</translation>
     </message>
     <message>
         <location line="-1293"/>
@@ -4004,225 +3996,9 @@ er allerede på listen.</translation>
         <translation>Tilføjet nyt lag: %1</translation>
     </message>
     <message>
-        <source>Unsupported or invalid CSV style, ignored ! Text line %1</source>
-        <translation type="vanished">Ikke understøttet eller ugyldig CSV-stil, ignoreres ! Tekstlinje %1</translation>
-    </message>
-    <message>
-        <source>Setting new relative origin failed, ignored ! Text line %1</source>
-        <translation type="vanished">Indstilling af ny relativ oprindelse mislykkedes, blev ignoreret ! Tekstlinje %1</translation>
-    </message>
-    <message>
-        <source>Can not switch to layer, ignored ! Text line %1 layer: %2</source>
-        <translation type="vanished">Kan ikke skifte til lag, ignoreres ! Tekstlinje %1 lag: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct  layer switch, ignored ! Text line %1</source>
-        <translation type="vanished">Ikke en korrekt lagskifte, ignoreres ! Tekstlinje %1</translation>
-    </message>
-    <message>
-        <source>Not a correct  new layer switch, ignored ! Text line %1</source>
-        <translation type="vanished">Ikke et korrekt nyt lagskifte, ignoreres ! Tekstlinje %1</translation>
-    </message>
-    <message>
-        <source>Can not hide layer, ignored ! Text line %1 layer: %2</source>
-        <translation type="vanished">Kan ikke skjule lag, ignoreres ! Tekstlinje %1 lag: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct  hide layer switch, ignored ! Text line %1</source>
-        <translation type="vanished">Ikke en korrekt skjulelagsomskifter, ignoreres ! Tekstlinje %1</translation>
-    </message>
-    <message>
-        <source>Can not freeze layer, ignored ! Text line %1 layer: %2</source>
-        <translation type="vanished">Kan ikke fryse lag, ignoreres ! Tekstlinje %1 lag: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct  freeze layer switch, ignored ! Text line %1</source>
-        <translation type="vanished">Ikke en korrekt fryse lagskifte, ignoreres ! Tekstlinje %1</translation>
-    </message>
-    <message>
-        <source>Can not lock layer, ignored ! Text line %1 layer: %2</source>
-        <translation type="vanished">Kan ikke låse lag, ignoreres ! Tekstlinje %1 lag: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct  lock layer switch, ignored ! Text line %1</source>
-        <translation type="vanished">Ikke en korrekt låselagsomskifter, ignoreres ! Tekstlinje %1</translation>
-    </message>
-    <message>
-        <source>Can not allow layer, ignored ! Text line %1 layer: %2</source>
-        <translation type="vanished">Kan ikke tillade lag, ignoreres ! Tekstlinje %1 lag: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct  allow layer switch, ignored ! Text line %1</source>
-        <translation type="vanished">Ikke en korrekt allow lag switch, ignoreres ! Tekstlinje %1</translation>
-    </message>
-    <message>
-        <source>Low field count !</source>
-        <translation type="vanished">Lavt antal felter !</translation>
-    </message>
-    <message>
-        <source>Odd field count !</source>
-        <translation type="vanished">Ulige antal felter !</translation>
-    </message>
-    <message>
-        <source>Rv Invalid !</source>
-        <translation type="vanished">Rv Ugyldig !</translation>
-    </message>
-    <message>
-        <source>Rv1 Invalid !</source>
-        <translation type="vanished">Rv1 Ugyldig !</translation>
-    </message>
-    <message>
-        <source>Rv2 Invalid !</source>
-        <translation type="vanished">Rv2 Ugyldig !</translation>
-    </message>
-    <message>
-        <source>Radius Invalid !</source>
-        <translation type="vanished">Radius ugyldig !</translation>
-    </message>
-    <message>
-        <source>Angle Invalid !</source>
-        <translation type="vanished">Vinkel ugyldig !</translation>
-    </message>
-    <message>
-        <source>Angle1 Invalid !</source>
-        <translation type="vanished">Vinkel1 ugyldig !</translation>
-    </message>
-    <message>
-        <source>Angle2 Invalid !</source>
-        <translation type="vanished">Angle2 ugyldig !</translation>
-    </message>
-    <message>
-        <source>Equal angles !</source>
-        <translation type="vanished">Lige store vinkler !</translation>
-    </message>
-    <message>
-        <source>Rv3 Invalid !</source>
-        <translation type="vanished">Rv3 ugyldig !</translation>
-    </message>
-    <message>
-        <source>Arc Invalid !</source>
-        <translation type="vanished">Bue ugyldig !</translation>
-    </message>
-    <message>
-        <source>Center Invalid !</source>
-        <translation type="vanished">Centrum ugyldig !</translation>
-    </message>
-    <message>
-        <source>Radius too small !</source>
-        <translation type="vanished">Radius for lille !</translation>
-    </message>
-    <message>
-        <source>Circle Invalid !</source>
-        <translation type="vanished">Cirkel ugyldig !</translation>
-    </message>
-    <message>
-        <source>Rv4 Invalid !</source>
-        <translation type="vanished">Rv4 ugyldig !</translation>
-    </message>
-    <message>
-        <source>Size Invalid !</source>
-        <translation type="vanished">Størrelse ugyldig !</translation>
-    </message>
-    <message>
-        <source>Size in X Invalid !</source>
-        <translation type="vanished">Størrelse i X ugyldig !</translation>
-    </message>
-    <message>
-        <source>Size in Y Invalid !</source>
-        <translation type="vanished">Størrelse i Y Ugyldig !</translation>
-    </message>
-    <message>
-        <source>Polygon, less than 5 references !</source>
-        <translation type="vanished">Polygon, mindre end 5 referencer !</translation>
-    </message>
-    <message>
-        <source>Rv %1 Invalid !</source>
-        <translation type="vanished">Rv %1 ugyldig !</translation>
-    </message>
-    <message>
-        <source>Polyline, less than 2 references !</source>
-        <translation type="vanished">Polylinje, mindre end 2 referencer !</translation>
-    </message>
-    <message>
-        <source>Bulge %1 Invalid !</source>
-        <translation type="vanished">Bulge %1 ugyldig !</translation>
-    </message>
-    <message>
-        <source>Unsupported PRO feature !</source>
-        <translation type="vanished">Ikke understøttet PRO-funktion !</translation>
-    </message>
-    <message>
-        <source>Fit point Spline, less than 3 references !</source>
-        <translation type="vanished">Paspunkt Spline, mindre end 3 referencer !</translation>
-    </message>
-    <message>
-        <source>Control point Spline, less than 4 references !</source>
-        <translation type="vanished">Kontrolpunkt Spline, mindre end 4 referencer !</translation>
-    </message>
-    <message>
-        <source>Text, low field count !</source>
-        <translation type="vanished">Tekst, lavt antal felter !</translation>
-    </message>
-    <message>
-        <source>Text, odd field count !</source>
-        <translation type="vanished">Tekst, ulige antal felter !</translation>
-    </message>
-    <message>
-        <source>Height Invalid !</source>
-        <translation type="vanished">Højde ugyldig !</translation>
-    </message>
-    <message>
-        <source>Width Invalid !</source>
-        <translation type="vanished">Bredde ugyldig !</translation>
-    </message>
-    <message>
-        <source>Vert. alignment Invalid !</source>
-        <translation type="vanished">Vert. tilpasning ugyldig !</translation>
-    </message>
-    <message>
-        <source>Horz. alignment Invalid !</source>
-        <translation type="vanished">Horz. tilpasning ugyldig !</translation>
-    </message>
-    <message>
-        <source>Drawing direction Invalid !</source>
-        <translation type="vanished">Tegningsretning ugyldig !</translation>
-    </message>
-    <message>
-        <source>Line spacing style Invalid !</source>
-        <translation type="vanished">Stil for linjeafstand ugyldig !</translation>
-    </message>
-    <message>
-        <source>Line spacing Invalid !</source>
-        <translation type="vanished">Linjeafstand Ugyldig !</translation>
-    </message>
-    <message>
-        <source>Unsupported entry ! Text line %1</source>
-        <translation type="vanished">Ikke understøttet post ! Tekstlinje %1</translation>
-    </message>
-    <message>
-        <source>Error with first optional list !</source>
-        <translation type="vanished">Fejl med den første valgfrie liste !</translation>
-    </message>
-    <message>
-        <source>Error with second optional list !</source>
-        <translation type="vanished">Fejl med den anden valgfri liste !</translation>
-    </message>
-    <message>
-        <source>Not a correct entry ! Text line %1 : %2</source>
-        <translation type="vanished">Ikke en korrekt angivelse ! Tekstlinje %1 : %2</translation>
-    </message>
-    <message>
-        <source>Casted entries : %1 with %2 text lines</source>
-        <translation type="vanished">Casted poster : %1 med %2 tekstlinjer</translation>
-    </message>
-    <message>
         <location line="-447"/>
         <source>Importing CSV complete. Command ended.</source>
         <translation>Import af CSV er færdig. Kommando afsluttet.</translation>
-    </message>
-    <message>
-        <source>Nothing casted !</source>
-        <translation type="vanished">Intet er kastet !</translation>
     </message>
     <message>
         <location line="+46"/>
@@ -4238,66 +4014,6 @@ er allerede på listen.</translation>
         <location line="+0"/>
         <source>All Files</source>
         <translation>Alle filer</translation>
-    </message>
-    <message>
-        <source>Attributes empty ! Text line %1</source>
-        <translation type="vanished">Attributter tomme ! Tekstlinje %1</translation>
-    </message>
-    <message>
-        <source>Not a correct layer name ! Text line %1 name: %2</source>
-        <translation type="vanished">Ikke et korrekt lagnavn ! Tekstlinje %1 navn: %2</translation>
-    </message>
-    <message>
-        <source>Layer doesn&apos;t exist, ignored ! Text line %1 layer: %2</source>
-        <translation type="vanished">Laget findes ikke, ignoreres ! Tekstlinje %1 lag: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct color, ignored ! Text line %1 color: %2</source>
-        <translation type="vanished">Ikke en korrekt farve, ignoreret ! Tekstlinje %1 farve: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct Lineweight, ignored ! Text line %1 weight: %2</source>
-        <translation type="vanished">Ikke en korrekt linjevægt, ignoreret ! Tekstlinje %1 vægt: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct Linetype, ignored ! Text line %1 type: %2</source>
-        <translation type="vanished">Ikke en korrekt linjetype, ignoreres ! Tekstlinje %1 type: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct Linetype scale, ignored ! Text line %1 scale: %2</source>
-        <translation type="vanished">Ikke en korrekt linjetype-skala, ignoreres ! Tekstlinje %1 skala: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct attribute, ignored ! Text line %1 &gt; %2</source>
-        <translation type="vanished">Ikke en korrekt attribut, ignoreres ! Tekstlinje %1 &gt; %2</translation>
-    </message>
-    <message>
-        <source>Parent layer doesn&apos;t exist ! Text line %1 layer: %2</source>
-        <translation type="vanished">Overordnet lag findes ikke ! Tekstlinje %1 lag: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct color ! Text line %1 color: %2</source>
-        <translation type="vanished">Ikke en korrekt farve ! Tekstlinje %1 farve: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct Lineweight ! Text line %1 weight: %2</source>
-        <translation type="vanished">Ikke en korrekt linjevægt ! Tekstlinje %1 vægt: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct Linetype ! Text line %1 type: %2</source>
-        <translation type="vanished">Ikke en korrekt linjetype ! Tekstlinje %1 type: %2</translation>
-    </message>
-    <message>
-        <source>Add/Update layer ignored !</source>
-        <translation type="vanished">Tilføj/opdatere lag ignoreres !</translation>
-    </message>
-    <message>
-        <source>Updated layer : %1</source>
-        <translation type="vanished">Opdateret lag : %1</translation>
-    </message>
-    <message>
-        <source>Added new layer : %1</source>
-        <translation type="vanished">Tilføjet nyt lag : %1</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
@@ -4470,7 +4186,7 @@ er allerede på listen.</translation>
         <translation>Ingen</translation>
     </message>
     <message>
-        <location line="+662"/>
+        <location line="+664"/>
         <source>Options</source>
         <translation>Indstillinger</translation>
     </message>
@@ -4485,7 +4201,7 @@ er allerede på listen.</translation>
         <translation>CAD-værktøjer</translation>
     </message>
     <message>
-        <location line="+584"/>
+        <location line="+582"/>
         <source>Invalid position</source>
         <translation>Ugyldig position</translation>
     </message>
@@ -5569,12 +5285,6 @@ er allerede på listen.</translation>
         <location line="+10"/>
         <source>Group all castings to one operation.</source>
         <translation>Saml alle støbegods til én arbejdsgang.</translation>
-    </message>
-    <message>
-        <source>Cast on newly sub-layer &apos;Painted&apos;.
-BUG: Interferes with group castings.</source>
-        <translation type="vanished">Støbt på nyligt underlag &apos;Malet&apos;.
-BUG: Forstyrrer gruppegodstøbninger.</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -7062,17 +6772,9 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
         <translation>Vær venlig at foretage et valg først. Kommando afsluttet.</translation>
     </message>
     <message>
-        <source>Multiple selection.</source>
-        <translation type="vanished">Flere valg.</translation>
-    </message>
-    <message>
         <location line="+9"/>
         <source>Not implemented. Command terminated.</source>
         <translation>Ikke gennemført. Kommandoen er afsluttet.</translation>
-    </message>
-    <message>
-        <source>Centroid &amp; area script by CVH</source>
-        <translation type="vanished">Centroid area script af CVH</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -7083,14 +6785,6 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
         <location line="+46"/>
         <source>Approximated enclosed area:</source>
         <translation>Omtrentlig indhegnet areal:</translation>
-    </message>
-    <message>
-        <source>Ellipse arc sector area (closed format): %1</source>
-        <translation type="vanished">Ellipsebuesektorområde (lukket format): %1</translation>
-    </message>
-    <message>
-        <source>Ellipse arc segment area (closed format): %1</source>
-        <translation type="vanished">Område for ellipsebuesegment (lukket format): %1</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -7108,21 +6802,9 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
         <translation>Differentielt skraveret område:</translation>
     </message>
     <message>
-        <source>Unsupported entity type.</source>
-        <translation type="vanished">Enhedstype, der ikke understøttes.</translation>
-    </message>
-    <message>
         <location line="-68"/>
         <source>Multiple entities in selection.</source>
         <translation>Flere enheder i udvælgelsen.</translation>
-    </message>
-    <message>
-        <source>Area centroid script (v0.31) by CVH</source>
-        <translation type="vanished">Områdecentroid script (v0.31) af CVH</translation>
-    </message>
-    <message>
-        <source>2D Centroid</source>
-        <translation type="vanished">2D Centroid</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -7138,10 +6820,6 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
         <location line="+8"/>
         <source>No results.</source>
         <translation>Ingen resultater.</translation>
-    </message>
-    <message>
-        <source>Centroid point</source>
-        <translation type="vanished">Centroidpunkt</translation>
     </message>
     <message>
         <location line="-74"/>
@@ -7198,10 +6876,6 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
         <translation>Selvskærende form i nærheden af (%1). Ingen resultater.</translation>
     </message>
     <message>
-        <source>Add centroid for a selected entity.</source>
-        <translation type="vanished">Tilføjer centroid for en valgt enhed.</translation>
-    </message>
-    <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+19"/>
         <source>&amp;Area Centroid</source>
         <translation>&amp;Område centroid</translation>
@@ -7215,14 +6889,6 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
         <location line="+1"/>
         <source>Creates a new uniform areal density 2D Centroid marker and value labels for a selected entity</source>
         <translation>Opretter en ny 2D Centroid-markør med ensartet arealtæthed og værdimærkater for en valgt enhed</translation>
-    </message>
-    <message>
-        <source>Add 2D area centroid for a selected entity.</source>
-        <translation type="vanished">Tilføj 2D-områdecentroid for en valgt enhed.</translation>
-    </message>
-    <message>
-        <source>Add 2D uniform density area centroid marker and values for a selected entity.</source>
-        <translation type="vanished">Tilføj 2D-centroid-markør og værdier for et område med ensartet tæthed for en valgt enhed.</translation>
     </message>
 </context>
 <context>
@@ -7432,33 +7098,6 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
     </message>
 </context>
 <context>
-    <name>InfoPolylineArea</name>
-    <message>
-        <source>Choose polyline</source>
-        <translation type="vanished">Vælg polylinje</translation>
-    </message>
-    <message>
-        <source>Area</source>
-        <translation type="vanished">Område</translation>
-    </message>
-    <message>
-        <source>Circumference</source>
-        <translation type="vanished">Omkreds</translation>
-    </message>
-    <message>
-        <source>Polyline area:</source>
-        <translation type="vanished">Polylineområde:</translation>
-    </message>
-    <message>
-        <source>circumference:</source>
-        <translation type="vanished">omkreds:</translation>
-    </message>
-    <message>
-        <source>Polyl&amp;ine Area</source>
-        <translation type="vanished">Polyl&amp;ine område</translation>
-    </message>
-</context>
-<context>
     <name>InfoPosition</name>
     <message>
         <location filename="../scripts/Information/InfoPosition/InfoPosition.js" line="+55"/>
@@ -7612,66 +7251,6 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
         <translation>Kombineret centroid:</translation>
     </message>
     <message>
-        <source>Centroids weighted sum script (v0.10b) by CVH</source>
-        <translation type="vanished">Script til vægtet sum af Centroids (v0.10b) af CVH</translation>
-    </message>
-    <message>
-        <source>2D Centroid</source>
-        <translation type="vanished">2D Centroid</translation>
-    </message>
-    <message>
-        <source>Density</source>
-        <translation type="vanished">Densitet</translation>
-    </message>
-    <message>
-        <source>X position</source>
-        <translation type="vanished">X-position</translation>
-    </message>
-    <message>
-        <source>Y position</source>
-        <translation type="vanished">Y-position</translation>
-    </message>
-    <message>
-        <source>Weighted</source>
-        <translation type="vanished">Vægtet</translation>
-    </message>
-    <message>
-        <source>No centroid markers in selection.</source>
-        <translation type="vanished">Ingen centroid-markører i udvælgelsen.</translation>
-    </message>
-    <message>
-        <source>One marker selected, nothing to sum. Please verify selection.</source>
-        <translation type="vanished">En markør er valgt, intet at summere. Kontroller venligst valget.</translation>
-    </message>
-    <message>
-        <source>Results in Zero.</source>
-        <translation type="vanished">Resultater i nul.</translation>
-    </message>
-    <message>
-        <source>Total sum(%1):</source>
-        <translation type="vanished">Samlet sum(%1):</translation>
-    </message>
-    <message>
-        <source>Weighted sum(%1):</source>
-        <translation type="vanished">Vægtet sum(%1):</translation>
-    </message>
-    <message>
-        <source>Summed centroid position:</source>
-        <translation type="vanished">Summen af centroidpositioner:</translation>
-    </message>
-    <message>
-        <source>&amp;Sum Centroids Weighted</source>
-        <translation type="vanished">&amp;Sum centroider vægtet</translation>
-    </message>
-    <message>
-        <source>Sum selected 2D centroid markers weighted.</source>
-        <translation type="vanished">Summen af udvalgte 2D centroid-markører vægtet.</translation>
-    </message>
-    <message>
-        <source>Sum selected 2D centroid markers weighted by their individual custom density.</source>
-        <translation type="vanished">Summen af udvalgte 2D-centroid-markører vægtet efter deres individuelle tilpassede tæthed.</translation>
-    </message>
-    <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+19"/>
         <source>&amp;Sum 2D Centroids weighted</source>
         <translation>Sum 2D centroider vægtet</translation>
@@ -7700,21 +7279,9 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
         <translation>Vær venlig at foretage et valg først. Kommando afsluttet.</translation>
     </message>
     <message>
-        <source>Wire centroid script (v0.31) by CVH</source>
-        <translation type="vanished">Script til trådcentroid (v0.31) af CVH</translation>
-    </message>
-    <message>
         <location line="+12"/>
         <source>Length:</source>
         <translation>Længde:</translation>
-    </message>
-    <message>
-        <source>2D Centroid</source>
-        <translation type="vanished">2D Centroid</translation>
-    </message>
-    <message>
-        <source>Centroid markers circle in selection. No results.</source>
-        <translation type="vanished">Centroid markeringer cirkel i udvælgelsen. Ingen resultater.</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -7731,14 +7298,6 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
         <location line="+15"/>
         <source>No results.</source>
         <translation>Ingen resultater.</translation>
-    </message>
-    <message>
-        <source>Results in Zero.</source>
-        <translation type="vanished">Resultater i nul.</translation>
-    </message>
-    <message>
-        <source>Centroid point</source>
-        <translation type="vanished">Centroidpunkt</translation>
     </message>
     <message>
         <location line="-71"/>
@@ -7805,14 +7364,6 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
         <location line="+1"/>
         <source>Creates a new uniform linear density 2D Centroid marker and value labels for a selection of entities</source>
         <translation>Opretter en ny 2D Centroid-markør med ensartet lineær tæthed og værdimærkater for et udvalg af enheder</translation>
-    </message>
-    <message>
-        <source>Add 2D wire centroid for a selection.</source>
-        <translation type="vanished">Tilføj en 2D-tråds centroid til et valg.</translation>
-    </message>
-    <message>
-        <source>Add 2D uniform density wire centroid marker and values for a selection of entities.</source>
-        <translation type="vanished">Tilføj 2D-markør og værdier for en tråd med ensartet tæthed for et udvalg af enheder.</translation>
     </message>
 </context>
 <context>
@@ -8528,10 +8079,6 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
         <translation>&amp;Lederlinje fra markeret tekst</translation>
     </message>
     <message>
-        <source>&amp;Leader from selected text</source>
-        <translation type="vanished">&amp;Lederlinje fra udvalgt tekst</translation>
-    </message>
-    <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
         <source>Leader was created successfully</source>
         <translation>Lederlinje blev oprettet med succes</translation>
@@ -8689,18 +8236,6 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
         <location line="+30"/>
         <source>DB error</source>
         <translation>DB-fejl</translation>
-    </message>
-    <message>
-        <source>Plugin LibraryBrowser: cannot connect to DB.
-Driver error: %1
-Database error: %2
-Database file: %3
-Library browser will not be available.</source>
-        <translation type="vanished">Plugin LibraryBrowser: kan ikke oprette forbindelse til DB.
-Driverfejl: %1
-Databasefejl: %2
-Databasefil: %3
-Biblioteksbrowser vil ikke være tilgængelig.</translation>
     </message>
     <message>
         <location line="+44"/>
@@ -10416,10 +9951,6 @@ vist i søgeresultaterne:</translation>
         <translation>Generelt</translation>
     </message>
     <message>
-        <source>Mode: </source>
-        <translation type="obsolete">Tilstand: </translation>
-    </message>
-    <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
         <source>Mode:</source>
         <translation>Tilstand:</translation>
@@ -10875,7 +10406,7 @@ vist i søgeresultaterne:</translation>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+194"/>
         <source>No Selection</source>
         <translation>Intet valg</translation>
     </message>
@@ -14170,7 +13701,7 @@ vist i søgeresultaterne:</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+295"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+322"/>
         <source>Dropped data not supported</source>
         <translation>Tabte data ikke understøttet</translation>
     </message>
@@ -14196,7 +13727,7 @@ vist i søgeresultaterne:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1098"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1144"/>
         <source>Restore defaults</source>
         <translation>Gendan standardindstillinger</translation>
     </message>
@@ -14216,30 +13747,14 @@ vist i søgeresultaterne:</translation>
         <translation>Arc</translation>
     </message>
     <message>
-        <source>Degree</source>
-        <translation type="vanished">Uddannelse</translation>
-    </message>
-    <message>
         <location line="-5"/>
         <source>Plus/Minus</source>
         <translation>Plus/Minus</translation>
     </message>
     <message>
-        <source>Almost equal to</source>
-        <translation type="vanished">Næsten lig med</translation>
-    </message>
-    <message>
-        <source>Asymptotically equal to</source>
-        <translation type="vanished">Asymptotisk lig med</translation>
-    </message>
-    <message>
         <location line="+23"/>
         <source>Pi</source>
         <translation>Pi</translation>
-    </message>
-    <message>
-        <source>Square root</source>
-        <translation type="vanished">Kvadratrod</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -14674,7 +14189,7 @@ vist i søgeresultaterne:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+996"/>
+        <location filename="../scripts/library.js" line="+1011"/>
         <source>Objects</source>
         <translation>Genstande</translation>
     </message>

@@ -73,10 +73,6 @@
         <translation>Bu, herkesin &lt;a href=&apos;%1&apos;&gt; dahil olabileceği anlamına gelir &lt;/a&gt;!</translation>
     </message>
     <message>
-        <source>Plugins and script add-ons are subject to their respective license (see &apos;Plugins&apos; tab).</source>
-        <translation type="vanished">Eklentiler ve komut dosyası eklentileri, ilgili lisanslarına tabidir (bkz. &apos;Eklentiler&apos; sekmesi).</translation>
-    </message>
-    <message>
         <location line="+1"/>
         <source>Additional tools, features and file formats including DWG are available in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; or &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</source>
         <translation type="unfinished"></translation>
@@ -123,12 +119,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+422"/>
+        <location line="+427"/>
         <source>Plugin:</source>
         <translation>Eklenti:</translation>
     </message>
     <message>
-        <location line="-397"/>
+        <location line="-402"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -190,7 +186,7 @@
         <translation>Krediler</translation>
     </message>
     <message>
-        <location line="+164"/>
+        <location line="+169"/>
         <source>Licenses</source>
         <translation type="unfinished"></translation>
     </message>
@@ -304,10 +300,6 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <location line="+86"/>
         <source>Defaults for</source>
         <translation>Varsayılanlar için</translation>
-    </message>
-    <message>
-        <source>Defaults for </source>
-        <translation type="vanished">Varsayılanlar için</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -446,10 +438,6 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <translation>Yay Araçları</translation>
     </message>
     <message>
-        <source>Show arc tools</source>
-        <translation type="vanished">Yay araçlarını göster</translation>
-    </message>
-    <message>
         <location line="+23"/>
         <source>&amp;Arc</source>
         <translation>&amp;Yay</translation>
@@ -491,10 +479,6 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
         <translation>Saat Yönünün Tersi (Pozitif)</translation>
-    </message>
-    <message>
-        <source>Direction</source>
-        <translation type="vanished">Yön</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -661,10 +645,6 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <translation>Saat Yönünün Tersine (Pozitif)</translation>
     </message>
     <message>
-        <source>Direction</source>
-        <translation type="vanished">Yön</translation>
-    </message>
-    <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Saat Yönünde (Negatif)</translation>
@@ -678,10 +658,6 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <location line="+7"/>
         <source>Shorter Arc</source>
         <translation>Daha kısa Yay</translation>
-    </message>
-    <message>
-        <source>Solution</source>
-        <translation type="vanished">Çözüm</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -763,10 +739,6 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <location line="+7"/>
         <source>Counter Clockwise (positive)</source>
         <translation>Saat yönünün tersine (pozitif)</translation>
-    </message>
-    <message>
-        <source>Direction</source>
-        <translation type="vanished">Yön</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -934,13 +906,6 @@ Do you wish to recover it?</source>
         <translation>&quot;%1&quot; için bir otomatik kaydetme yedekleme dosyası var.
 Kurtarmak ister misiniz?</translation>
     </message>
-    <message numerus="yes">
-        <source>%n &apos;autosave&apos; backup file(s) for (an) untitled drawing(s) was/were found.
-Do you wish to recover it/them?</source>
-        <translation type="vanished">
-            <numerusform>İsimsiz çizim için %n &apos;otomatik kaydetme&apos; yedekleme dosyası bulundu.\ nOnları kurtarmak ister misiniz?</numerusform>
-        </translation>
-    </message>
     <message>
         <location line="-64"/>
         <source>Recover Files?</source>
@@ -955,12 +920,6 @@ Do you wish to recover it/them?</source>
         <location line="+47"/>
         <source>Recover File?</source>
         <translation>Dosya Kurtarılsın mı? </translation>
-    </message>
-    <message>
-        <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
-Do you wish to recover it?</source>
-        <translation type="vanished">&apos;%1&apos; için bir &apos;otomatik kaydetme&apos; yedekleme dosyası var.
-Onu kurtarmak ister misiniz?</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -1142,14 +1101,6 @@ Onu kurtarmak ister misiniz?</translation>
 <context>
     <name>BitmapExport</name>
     <message>
-        <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
-        <translation type="vanished">&apos;%1&apos; bitmap dosyası oluşturulurken hata oluştu: %2</translation>
-    </message>
-    <message>
-        <source>Bitmap file has been exported to &apos;%1&apos;</source>
-        <translation type="vanished">Bitmap dosyası &apos;%1&apos; öğesine aktarıldı</translation>
-    </message>
-    <message>
         <location filename="../scripts/File/BitmapExport/BitmapExport.js" line="+78"/>
         <source>Error while generating bitmap file &quot;%1&quot;: %2</source>
         <translation type="unfinished"></translation>
@@ -1272,17 +1223,6 @@ Onu kurtarmak ister misiniz?</translation>
     </message>
 </context>
 <context>
-    <name>BitmapExport2</name>
-    <message>
-        <source>Files</source>
-        <translation type="obsolete">Dosyalar</translation>
-    </message>
-    <message>
-        <source>Export as Bitmap</source>
-        <translation type="obsolete">Bitmap olarak dışa aktar</translation>
-    </message>
-</context>
-<context>
     <name>BitmapExportWorker</name>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
@@ -1301,10 +1241,6 @@ Onu kurtarmak ister misiniz?</translation>
         <location line="+110"/>
         <source>Cannot edit block while editing a block in-place</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Show block tools</source>
-        <translation type="vanished">Blok araçlarını göster</translation>
     </message>
     <message>
         <location line="-82"/>
@@ -1341,17 +1277,9 @@ Onu kurtarmak ister misiniz?</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Block &apos;%1&apos; already exists&lt;br&gt;and will be overwritten.</source>
-        <translation type="vanished">&apos;%1&apos; bloğu zaten var&lt;br&gt;ve üzerine yazılacak.</translation>
-    </message>
-    <message>
         <location line="+5"/>
         <source>Block already exists.</source>
         <translation>Blok zaten var.</translation>
-    </message>
-    <message>
-        <source>Block Data</source>
-        <translation type="vanished">Blok Verisi</translation>
     </message>
     <message>
         <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
@@ -1362,10 +1290,6 @@ Onu kurtarmak ister misiniz?</translation>
         <location line="+8"/>
         <source>Block name:</source>
         <translation>Blok adı:</translation>
-    </message>
-    <message>
-        <source>block 1</source>
-        <translation type="vanished">blok 1</translation>
     </message>
 </context>
 <context>
@@ -1387,14 +1311,14 @@ Onu kurtarmak ister misiniz?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+492"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
         <source>Widgets</source>
         <translation type="unfinished">Widgetler</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+53"/>
-        <location line="+39"/>
+        <location line="+44"/>
         <source>Block List</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1563,7 +1487,7 @@ Onu kurtarmak ister misiniz?</translation>
 <context>
     <name>CadToolBar</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+52"/>
+        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+53"/>
         <source>Widgets</source>
         <translation type="unfinished">Widgetler</translation>
     </message>
@@ -1576,10 +1500,6 @@ Onu kurtarmak ister misiniz?</translation>
         <location line="+35"/>
         <source>Vertical/Horizontal</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Icon Size:</source>
-        <translation type="vanished">Simge Boyutu:</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+17"/>
@@ -1606,7 +1526,7 @@ Onu kurtarmak ister misiniz?</translation>
     <name>CadToolBarPanel</name>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/CadToolBarPanel.js" line="+39"/>
-        <location line="+71"/>
+        <location line="+72"/>
         <source>Back</source>
         <translation>Geri</translation>
     </message>
@@ -1614,7 +1534,7 @@ Onu kurtarmak ister misiniz?</translation>
 <context>
     <name>CadToolMatrix</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+373"/>
+        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+383"/>
         <source>Expand all</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1634,19 +1554,15 @@ Onu kurtarmak ister misiniz?</translation>
         <translation>Simge Görünümü</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+34"/>
         <source>Widgets</source>
         <translation type="unfinished">Widgetler</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+47"/>
+        <location line="+53"/>
         <source>Tool Matrix</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Icon Size:</source>
-        <translation type="obsolete">Simge Boyutu:</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CadToolMatrix/PreferencesPage.ui" line="+17"/>
@@ -1680,7 +1596,7 @@ Onu kurtarmak ister misiniz?</translation>
 <context>
     <name>CheckForUpdates</name>
     <message>
-        <location filename="../scripts/Help/CheckForUpdates/CheckForUpdates.js" line="+62"/>
+        <location filename="../scripts/Help/CheckForUpdates/CheckForUpdates.js" line="+68"/>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesDialog.ui" line="+14"/>
         <source>Checking for Updates...</source>
         <translation>Güncellemeler kontrol ediliyor...</translation>
@@ -1712,10 +1628,6 @@ Onu kurtarmak ister misiniz?</translation>
         <location filename="../scripts/Draw/Circle/Circle.js" line="+71"/>
         <source>Circle Tools</source>
         <translation>Daire Araçları</translation>
-    </message>
-    <message>
-        <source>Show circle tools</source>
-        <translation type="vanished">Daire araçlarını göster</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -1787,10 +1699,6 @@ Onu kurtarmak ister misiniz?</translation>
         <location line="+7"/>
         <source>Center Left of Line P1 - P2</source>
         <translation>P1 - P2 Hattının Merkez Solu</translation>
-    </message>
-    <message>
-        <source>Solution</source>
-        <translation type="vanished">Çözüm</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -2251,18 +2159,6 @@ Onu kurtarmak ister misiniz?</translation>
         <translation>&amp;Komut Satırı</translation>
     </message>
     <message>
-        <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
-        <translation type="vanished">Bilinmeyen komut veya geçersiz koordinat veya değer: &apos;%1&apos;</translation>
-    </message>
-    <message>
-        <source>Numbers may be entered as: &apos;%1&apos;</source>
-        <translation type="vanished">Sayılar şöyle girilebilir: &apos;%1&apos;</translation>
-    </message>
-    <message>
-        <source>Coordinates may be entered as: &apos;%1&apos; (absolute) or &apos;%2&apos; (relative) or &apos;%3&apos; (polar) or &apos;%4&apos; (relative polar)</source>
-        <translation type="vanished">Koordinatlar şu şekilde girilebilir: &apos;%1&apos; (mutlak) veya &apos;%2&apos; (göreceli) veya &apos;%3&apos; (polar) veya &apos;%4&apos; (göreceli polar)</translation>
-    </message>
-    <message>
         <location line="+208"/>
         <source>Invalid value:</source>
         <translation type="unfinished"></translation>
@@ -2333,10 +2229,6 @@ Onu kurtarmak ister misiniz?</translation>
         <translation>:</translation>
     </message>
     <message>
-        <source>History Size:</source>
-        <translation type="vanished">Tarih Boyutu:</translation>
-    </message>
-    <message>
         <location filename="../scripts/Widgets/CommandLine/PreferencesPage.ui" line="+17"/>
         <source>History size:</source>
         <translation type="unfinished"></translation>
@@ -2389,10 +2281,6 @@ Onu kurtarmak ister misiniz?</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Unit &apos;%1&apos; selected - Nothing to be done</source>
-        <translation type="vanished">&apos;%1&apos; birimi seçildi - Yapılacak bir şey yok</translation>
-    </message>
-    <message>
         <location line="+144"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>%1&apos;den %2&apos;ye dönüştürülen çizim</translation>
@@ -2411,10 +2299,6 @@ Onu kurtarmak ister misiniz?</translation>
         <location line="+30"/>
         <source>Convert:</source>
         <translation>Dönüştür:</translation>
-    </message>
-    <message>
-        <source>...</source>
-        <translation type="vanished">...</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnitInit.js" line="+2"/>
@@ -2836,10 +2720,6 @@ Onu kurtarmak ister misiniz?</translation>
         <source>Character Map</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Scale:</source>
-        <translation type="obsolete">Ölçek:</translation>
-    </message>
 </context>
 <context>
     <name>DimAligned</name>
@@ -3108,10 +2988,6 @@ Onu kurtarmak ister misiniz?</translation>
         <translation>Boyut Araçları</translation>
     </message>
     <message>
-        <source>Show dimension tools</source>
-        <translation type="vanished">Boyut araçlarını göster</translation>
-    </message>
-    <message>
         <location line="+27"/>
         <source>D&amp;imension</source>
         <translation>Ö&amp;lçü</translation>
@@ -3209,26 +3085,6 @@ Onu kurtarmak ister misiniz?</translation>
         <translation>boşluk</translation>
     </message>
     <message>
-        <source>Scientific</source>
-        <translation type="vanished">Bilimsel</translation>
-    </message>
-    <message>
-        <source>Decimal</source>
-        <translation type="vanished">Ondalık</translation>
-    </message>
-    <message>
-        <source>Engineering</source>
-        <translation type="vanished">Mühendislik</translation>
-    </message>
-    <message>
-        <source>Architectural</source>
-        <translation type="vanished">Mimari</translation>
-    </message>
-    <message>
-        <source>Fractional</source>
-        <translation type="vanished">Kesirli</translation>
-    </message>
-    <message>
         <location line="+309"/>
         <source>Unit / Format</source>
         <translation type="unfinished"></translation>
@@ -3237,10 +3093,6 @@ Onu kurtarmak ister misiniz?</translation>
         <location line="+1"/>
         <source>The drawing unit must be &quot;Inch&quot; to display dimension labels in formats &quot;Architectural&quot; or &quot;Engineering&quot;. Format changed to &quot;Decimal&quot;.</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
-        <translation type="vanished">Ölçü birimi, &apos;Mimari&apos; veya &apos;Mühendislik&apos; formatlarında boyut etiketleri görüntülemek için &apos;İnç&apos; olmalıdır. Biçim &apos;Ondalık&apos; olarak değiştirildi.</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+55"/>
@@ -3311,14 +3163,6 @@ Onu kurtarmak ister misiniz?</translation>
         <location line="+12"/>
         <source>Arrow</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Font</source>
-        <translation type="vanished">Font</translation>
-    </message>
-    <message>
-        <source>Dimension label font:</source>
-        <translation type="vanished">Boyut etiketi yazı tipi:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -3400,14 +3244,6 @@ Onu kurtarmak ister misiniz?</translation>
 </context>
 <context>
     <name>DirectoryList</name>
-    <message>
-        <source>The folder
-&apos;%1&apos;
-is already in the list.</source>
-        <translation type="vanished">&apos;%1&apos; 
-klasörü 
-zaten listede.</translation>
-    </message>
     <message>
         <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+57"/>
         <source>The folder
@@ -4210,10 +4046,6 @@ is already in the list.</source>
         <translation type="unfinished">Sonraki tepe</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">Bitti</translation>
-    </message>
-    <message>
         <location line="+421"/>
         <source>close</source>
         <translation>kapat</translation>
@@ -4333,7 +4165,7 @@ is already in the list.</source>
     <message>
         <location line="-2130"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bitti</translation>
     </message>
     <message>
         <location line="+277"/>
@@ -4347,7 +4179,7 @@ is already in the list.</source>
         <translation type="unfinished">Yok</translation>
     </message>
     <message>
-        <location line="+662"/>
+        <location line="+664"/>
         <source>Options</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4362,7 +4194,7 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+584"/>
+        <location line="+582"/>
         <source>Invalid position</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4504,10 +4336,6 @@ is already in the list.</source>
         <translation>Düzenleme Araçları</translation>
     </message>
     <message>
-        <source>Show edit tools</source>
-        <translation type="vanished">Düzenleme araçlarını göster</translation>
-    </message>
-    <message>
         <location line="+27"/>
         <source>&amp;Edit</source>
         <translation>&amp;Düzen</translation>
@@ -4599,10 +4427,6 @@ is already in the list.</source>
         <translation>Elips Araçları</translation>
     </message>
     <message>
-        <source>Show ellipse tools</source>
-        <translation type="vanished">Elips araçlarını göster</translation>
-    </message>
-    <message>
         <location line="+23"/>
         <source>&amp;Ellipse</source>
         <translation>&amp;Elips</translation>
@@ -4689,10 +4513,6 @@ is already in the list.</source>
         <location line="+7"/>
         <source>Counter Clockwise (positive)</source>
         <translation>Saat Yönünün Tersi (pozitif)</translation>
-    </message>
-    <message>
-        <source>Direction</source>
-        <translation type="vanished">Yön</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -5303,10 +5123,6 @@ is already in the list.</source>
         <translation>Dosya Araçları</translation>
     </message>
     <message>
-        <source>Show file tools</source>
-        <translation type="vanished">Dosya araçlarını göster</translation>
-    </message>
-    <message>
         <location line="+27"/>
         <source>&amp;File</source>
         <translation>&amp;Dosya</translation>
@@ -5326,10 +5142,6 @@ is already in the list.</source>
         <location line="+1"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
-        <translation type="vanished">&apos;%1&apos; dosyası zaten var. Üzerine yazmak istiyor musun?</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -5716,13 +5528,6 @@ is already in the list.</source>
     </message>
 </context>
 <context>
-    <name>FlexPainterOptions</name>
-    <message>
-        <source>Preview</source>
-        <translation type="obsolete">Önizleme</translation>
-    </message>
-</context>
-<context>
     <name>FlipHorizontal</name>
     <message>
         <location filename="../scripts/Modify/FlipHorizontal/FlipHorizontalInit.js" line="+2"/>
@@ -5776,10 +5581,6 @@ is already in the list.</source>
 </context>
 <context>
     <name>Form</name>
-    <message>
-        <source>Untitled</source>
-        <translation type="vanished">İsimsiz</translation>
-    </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/20_ThreeRight.ui" line="+14"/>
         <source>Three: Right</source>
@@ -6432,10 +6233,6 @@ is already in the list.</source>
         <translation>Kapak Araçları</translation>
     </message>
     <message>
-        <source>Show hatch tools</source>
-        <translation type="vanished">Kapak araçlarını göster</translation>
-    </message>
-    <message>
         <location line="+27"/>
         <source>&amp;Hatch</source>
         <translation>&amp;Kapak</translation>
@@ -6595,10 +6392,6 @@ is already in the list.</source>
         <location line="+27"/>
         <source>Angle:</source>
         <translation>Açı:</translation>
-    </message>
-    <message>
-        <source>Insert Bitmap</source>
-        <translation type="vanished">Bitmap İçe Aktar</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Image/ImageInit.js" line="+2"/>
@@ -6773,10 +6566,6 @@ is already in the list.</source>
         <translation>İkinci satırı belirt</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">Bitti</translation>
-    </message>
-    <message>
         <location line="+96"/>
         <source>Angle:</source>
         <translation>Açı:</translation>
@@ -6793,10 +6582,6 @@ is already in the list.</source>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+70"/>
         <source>Choose arc, circle, ellipse or elliptical arc</source>
         <translation>Ark, daire, elips veya eliptik yayı seç</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="vanished">Bitti</translation>
     </message>
     <message>
         <location line="+236"/>
@@ -6939,10 +6724,6 @@ is already in the list.</source>
         <location filename="../scripts/Information/InfoArea/InfoArea.js" line="+70"/>
         <source>Set next polygon corner</source>
         <translation>Bir sonraki çokgen köşeyi ayarla</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="vanished">Bitti</translation>
     </message>
     <message>
         <location line="+121"/>
@@ -7237,10 +7018,6 @@ is already in the list.</source>
         <translation>İikinci varlığı belirt</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">Bitti</translation>
-    </message>
-    <message>
         <location line="+95"/>
         <source>Distance:</source>
         <translation>Ara:</translation>
@@ -7262,10 +7039,6 @@ is already in the list.</source>
         <location line="+8"/>
         <source>Specify point</source>
         <translation>Noktayı belirtin</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="vanished">Bitti</translation>
     </message>
     <message>
         <location line="+81"/>
@@ -7291,10 +7064,6 @@ is already in the list.</source>
         <translation>İkinci nokta</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">Bitti</translation>
-    </message>
-    <message>
         <location line="+53"/>
         <source>Distance:</source>
         <translation>Mesafe:</translation>
@@ -7318,25 +7087,6 @@ is already in the list.</source>
         <location filename="../scripts/Information/InfoDistancePP/InfoDistancePPInit.js" line="+2"/>
         <source>Distance &amp;Point to Point</source>
         <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>InfoPolylineArea</name>
-    <message>
-        <source>Done</source>
-        <translation type="vanished">Bitti</translation>
-    </message>
-    <message>
-        <source>Area</source>
-        <translation type="obsolete">Alan</translation>
-    </message>
-    <message>
-        <source>Circumference</source>
-        <translation type="vanished">Çevre</translation>
-    </message>
-    <message>
-        <source>circumference:</source>
-        <translation type="vanished">çevre:</translation>
     </message>
 </context>
 <context>
@@ -7616,10 +7366,6 @@ is already in the list.</source>
         <translation>Bilgi Araçları</translation>
     </message>
     <message>
-        <source>Show information tools</source>
-        <translation type="vanished">Bilgi araçlarını göster</translation>
-    </message>
-    <message>
         <location line="+27"/>
         <source>&amp;Info</source>
         <translation>&amp;Bilgi</translation>
@@ -7637,10 +7383,6 @@ is already in the list.</source>
 </context>
 <context>
     <name>Input</name>
-    <message>
-        <source>Decimal Point:</source>
-        <translation type="obsolete">Ondalık Nokta:</translation>
-    </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/InputPreferences/PreferencesPage.ui" line="+19"/>
         <source>Decimal point:</source>
@@ -7849,10 +7591,6 @@ is already in the list.</source>
         <location line="+26"/>
         <source>Adjusted invalid block name to &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Adjusted invalid block name to &apos;%1&apos;</source>
-        <translation type="vanished">&apos;%1&apos; için düzeltilmiş geçersiz blok adı</translation>
     </message>
     <message>
         <location line="+69"/>
@@ -8092,10 +7830,6 @@ is already in the list.</source>
 <context>
     <name>Language</name>
     <message>
-        <source>Language of User Interface:</source>
-        <translation type="vanished">Kullanıcı Arayüzü Dili:</translation>
-    </message>
-    <message>
         <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/PreferencesPage.ui" line="+20"/>
         <source>Language of user interface:</source>
         <translation type="unfinished"></translation>
@@ -8307,14 +8041,6 @@ is already in the list.</source>
         <location line="+10"/>
         <source>Next vertex</source>
         <translation>Sonraki tepe</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="vanished">Oldu</translation>
-    </message>
-    <message>
-        <source>Undo Last Segement</source>
-        <translation type="vanished">Son Bölümü Geri Al</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
@@ -8584,17 +8310,9 @@ is already in the list.</source>
         <translation>Görüntüleme Seçenekleri</translation>
     </message>
     <message>
-        <source>Icon Size:</source>
-        <translation type="vanished">Simge Boyutu:</translation>
-    </message>
-    <message>
         <location line="+53"/>
         <source>Dark icon background</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>View Mode:</source>
-        <translation type="vanished">Görünüm Modu:</translation>
     </message>
     <message>
         <location line="-44"/>
@@ -8694,10 +8412,6 @@ shown in search results:</source>
         <translation>Çizgi Araçları</translation>
     </message>
     <message>
-        <source>Show line tools</source>
-        <translation type="vanished">Çizgi araçlarını göster</translation>
-    </message>
-    <message>
         <location line="+23"/>
         <source>&amp;Line</source>
         <translation>&amp;Çizgi</translation>
@@ -8734,10 +8448,6 @@ shown in search results:</source>
         <location line="+10"/>
         <source>Next point</source>
         <translation>Sonraki nokta</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="vanished">Bitti</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.ui" line="+23"/>
@@ -9106,10 +8816,6 @@ shown in search results:</source>
 </context>
 <context>
     <name>LineParallel</name>
-    <message>
-        <source>&amp;Distance:</source>
-        <translation type="vanished">&amp;Ara</translation>
-    </message>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>Dist&amp;ance:</source>
@@ -9493,10 +9199,6 @@ shown in search results:</source>
         <location filename="../scripts/Misc/Misc.js" line="+60"/>
         <source>Misc Tools</source>
         <translation>Çeşitli Araçlar</translation>
-    </message>
-    <message>
-        <source>Show misc tools</source>
-        <translation type="vanished">Çeşitli araçları göster</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -9966,29 +9668,6 @@ shown in search results:</source>
     </message>
 </context>
 <context>
-    <name>OrthogonalProjections</name>
-    <message>
-        <source>Next vertex</source>
-        <translation type="obsolete">Sonraki tepe</translation>
-    </message>
-    <message>
-        <source>close</source>
-        <translation type="obsolete">kapat</translation>
-    </message>
-    <message>
-        <source>undo</source>
-        <translation type="obsolete">geri</translation>
-    </message>
-    <message>
-        <source>redo</source>
-        <translation type="obsolete">ileri</translation>
-    </message>
-    <message>
-        <source>arc</source>
-        <translation type="obsolete">yay</translation>
-    </message>
-</context>
-<context>
     <name>PageSettings</name>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+31"/>
@@ -10122,17 +9801,9 @@ shown in search results:</source>
         <translation>Döndürme:</translation>
     </message>
     <message>
-        <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation type="obsolete">Bu açıdan yapıştırılmış&lt;br&gt;varlıkları döndür</translation>
-    </message>
-    <message>
         <location line="+126"/>
         <source>Scale:</source>
         <translation>Ölçek:</translation>
-    </message>
-    <message>
-        <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation type="obsolete">Bu etkenle yapıştırılan&lt;br&gt;varlıkları ölçeklendir</translation>
     </message>
     <message>
         <location line="+88"/>
@@ -10308,13 +9979,6 @@ shown in search results:</source>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
         <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>PolyLineBreakSymbol</name>
-    <message>
-        <source>Remove Segment</source>
-        <translation type="obsolete">Segmenti Kaldır</translation>
     </message>
 </context>
 <context>
@@ -10673,10 +10337,6 @@ shown in search results:</source>
         <translation>Projeksiyon Araçları</translation>
     </message>
     <message>
-        <source>Show projection tools</source>
-        <translation type="vanished">Projeksiyon araçlarını göster</translation>
-    </message>
-    <message>
         <location line="+23"/>
         <source>&amp;Projection</source>
         <translation>&amp;Projeksiyon</translation>
@@ -10735,7 +10395,7 @@ shown in search results:</source>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+194"/>
         <source>No Selection</source>
         <translation>Seçim Yok</translation>
     </message>
@@ -11261,10 +10921,6 @@ shown in search results:</source>
         <source>&amp;Radius:</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Radius:</source>
-        <translation type="obsolete">Yarıçap:</translation>
-    </message>
 </context>
 <context>
     <name>RunScript</name>
@@ -11322,17 +10978,9 @@ shown in search results:</source>
         <translation>Dosya Üzerine Yazılsın mı?</translation>
     </message>
     <message>
-        <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
-        <translation type="vanished">&apos;%1&apos; dosyası zaten var. Üzerine yazmak ister misiniz?</translation>
-    </message>
-    <message>
         <location line="+18"/>
         <source>File Format Version Not Recommended</source>
         <translation>Dosya Biçimi Sürümü Tavsiye Edilmiyor</translation>
-    </message>
-    <message>
-        <source>The file format version you are using is not recommended: &apos;%1&apos;.</source>
-        <translation type="vanished">Kullandığınız dosya formatı sürümü: &apos;%1&apos;.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -11345,10 +10993,6 @@ shown in search results:</source>
         <translation>Tüm siyah varlıklar ve katmanlar beyaz olarak kaydedilir.</translation>
     </message>
     <message>
-        <source>All custom colors will be &apos;rounded&apos; to the nearest fixed color.</source>
-        <translation type="vanished">Tüm özel renkler en yakın sabit renge yuvarlanır.</translation>
-    </message>
-    <message>
         <location line="+1"/>
         <source>Proceed?</source>
         <translation>Devam etsin mi?</translation>
@@ -11359,17 +11003,9 @@ shown in search results:</source>
         <translation>Kaydediliyor...</translation>
     </message>
     <message>
-        <source>Saving to file format version &apos;%1&apos;.</source>
-        <translation type="vanished">&apos;%1&apos; dosya formatı sürümüne kaydediliyor.</translation>
-    </message>
-    <message>
         <location line="+4"/>
         <source>Black entities and layers are saved as white.</source>
         <translation>Siyah varlıklar ve katmanlar beyaz olarak kaydedilir.</translation>
-    </message>
-    <message>
-        <source>Custom colors are &apos;rounded&apos; to the nearest fixed color.</source>
-        <translation type="vanished">Özel renkler en yakın sabit renge yuvarlanır.</translation>
     </message>
     <message>
         <location line="-41"/>
@@ -11405,10 +11041,6 @@ shown in search results:</source>
         <location line="+21"/>
         <source>Saved file:</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Saved drawing:</source>
-        <translation type="vanished">Kaydedilen çizim:</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -11653,10 +11285,6 @@ shown in search results:</source>
         <location filename="../scripts/Select/Select.js" line="+216"/>
         <source>Selection Tools</source>
         <translation>Seçim Araçları</translation>
-    </message>
-    <message>
-        <source>Show selection tools</source>
-        <translation type="vanished">Seçim araçlarını göster</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11963,61 +11591,6 @@ shown in search results:</source>
     </message>
 </context>
 <context>
-    <name>SelectWidget</name>
-    <message>
-        <source>:</source>
-        <translation type="obsolete">:</translation>
-    </message>
-    <message>
-        <source>No Selection</source>
-        <translation type="obsolete">Seçim Yok</translation>
-    </message>
-    <message>
-        <source>All</source>
-        <translation type="obsolete">Tümü</translation>
-    </message>
-    <message>
-        <source>Left</source>
-        <translation type="obsolete">Sol</translation>
-    </message>
-    <message>
-        <source>Center</source>
-        <translation type="obsolete">Merkez</translation>
-    </message>
-    <message>
-        <source>Right</source>
-        <translation type="obsolete">Sağ</translation>
-    </message>
-    <message>
-        <source>Middle</source>
-        <translation type="obsolete">Orta</translation>
-    </message>
-    <message>
-        <source>Top</source>
-        <translation type="obsolete">Üst</translation>
-    </message>
-    <message>
-        <source>Bottom</source>
-        <translation type="obsolete">Alt</translation>
-    </message>
-    <message>
-        <source>Auto</source>
-        <translation type="obsolete">Oto</translation>
-    </message>
-    <message>
-        <source>Yes</source>
-        <translation type="obsolete">Evet</translation>
-    </message>
-    <message>
-        <source>No</source>
-        <translation type="obsolete">Hayır</translation>
-    </message>
-    <message>
-        <source>General</source>
-        <translation type="obsolete">Genel</translation>
-    </message>
-</context>
-<context>
     <name>SelectionDisplay</name>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.js" line="+58"/>
@@ -12155,10 +11728,6 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">Bitti</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.ui" line="+17"/>
         <source>Corners:</source>
         <translation>Köşeler:</translation>
@@ -12230,10 +11799,6 @@ shown in search results:</source>
         <translation type="unfinished">Köşe noktası</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">Bitti</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.ui" line="+17"/>
         <source>Corners:</source>
         <translation>Köşeler:</translation>
@@ -12260,10 +11825,6 @@ shown in search results:</source>
         <location line="+7"/>
         <source>Corner point</source>
         <translation>Köşe noktası</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="vanished">Bitti</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.ui" line="+17"/>
@@ -12366,10 +11927,6 @@ shown in search results:</source>
 </context>
 <context>
     <name>ShowReadme</name>
-    <message>
-        <source>File &apos;%1&apos; doesn&apos;t exist.</source>
-        <translation type="vanished">&apos;%1&apos; dosyası mevcut değil.</translation>
-    </message>
     <message>
         <location filename="../scripts/Help/ShowReadme/ShowReadmeInit.js" line="+2"/>
         <source>Show &amp;Readme</source>
@@ -12777,25 +12334,7 @@ shown in search results:</source>
     </message>
 </context>
 <context>
-    <name>Startup</name>
-    <message>
-        <source>Enable Splash Screen</source>
-        <translation type="vanished">Açılış Ekranı Etkinleştir</translation>
-    </message>
-</context>
-<context>
-    <name>StartupPreferences</name>
-    <message>
-        <source>Startup</source>
-        <translation type="vanished">Başlangıç</translation>
-    </message>
-</context>
-<context>
     <name>StatusBar</name>
-    <message>
-        <source>Status Bar Font:</source>
-        <translation type="vanished">Durum Çubuğu Fontu:</translation>
-    </message>
     <message>
         <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+53"/>
         <source>Status bar font:</source>
@@ -13490,10 +13029,6 @@ shown in search results:</source>
 <context>
     <name>Theme</name>
     <message>
-        <source>User Interface Theme:</source>
-        <translation type="vanished">Kullanıcı Arayüz Teması:</translation>
-    </message>
-    <message>
         <location filename="../scripts/Edit/AppPreferences/ThemePreferences/PreferencesPage.ui" line="+20"/>
         <source>User interface theme:</source>
         <translation type="unfinished"></translation>
@@ -13587,10 +13122,6 @@ shown in search results:</source>
 <context>
     <name>ToolBar</name>
     <message>
-        <source>Icon Size:</source>
-        <translation type="vanished">Simge Boyutu:</translation>
-    </message>
-    <message>
         <location filename="../scripts/Edit/AppPreferences/ToolBarPreferences/PreferencesPage.ui" line="+19"/>
         <source>Icon size:</source>
         <translation type="unfinished"></translation>
@@ -13614,10 +13145,6 @@ shown in search results:</source>
         <location line="+6"/>
         <source>Shortcut prefix character:</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Shortcut Prefix Character:</source>
-        <translation type="vanished">Karakter Öneki Kısayolu:</translation>
     </message>
 </context>
 <context>
@@ -14086,10 +13613,6 @@ shown in search results:</source>
         <translation>Görünüm Araçları</translation>
     </message>
     <message>
-        <source>Show view tools</source>
-        <translation type="vanished">Görünüm araçlarını göster</translation>
-    </message>
-    <message>
         <location line="+28"/>
         <source>View</source>
         <translation>Görünüm</translation>
@@ -14162,7 +13685,7 @@ shown in search results:</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+295"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+322"/>
         <source>Dropped data not supported</source>
         <translation>Bırakılan veriler desteklenmiyor</translation>
     </message>
@@ -14188,7 +13711,7 @@ shown in search results:</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1098"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1144"/>
         <source>Restore defaults</source>
         <translation type="unfinished"></translation>
     </message>
@@ -14211,14 +13734,6 @@ shown in search results:</source>
         <location line="-5"/>
         <source>Plus/Minus</source>
         <translation type="unfinished">Artı/Eksi</translation>
-    </message>
-    <message>
-        <source>Almost equal to</source>
-        <translation type="obsolete">Neredeyse eşit</translation>
-    </message>
-    <message>
-        <source>Asymptotically equal to</source>
-        <translation type="obsolete">Asimptotik olarak eşit</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -14598,10 +14113,6 @@ shown in search results:</source>
         <translation>Yakınlaştırma Araçları</translation>
     </message>
     <message>
-        <source>Show zoom tools</source>
-        <translation type="vanished">Yakınlaştırma araçlarını göster</translation>
-    </message>
-    <message>
         <location line="+28"/>
         <source>&amp;Zoom</source>
         <translation>&amp;Yakınlaştır</translation>
@@ -14662,7 +14173,7 @@ shown in search results:</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+996"/>
+        <location filename="../scripts/library.js" line="+1011"/>
         <source>Objects</source>
         <translation>Nesneler</translation>
     </message>
@@ -14870,22 +14381,6 @@ shown in search results:</source>
         <location line="+0"/>
         <source>Angular Dimension (3 Point)</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>2 Line Angular Dimensions</source>
-        <translation type="vanished">2 Çizgi Açısal Boyutlar</translation>
-    </message>
-    <message>
-        <source>2 Line Angular Dimension</source>
-        <translation type="vanished">2 Çizgi Açısal Boyut</translation>
-    </message>
-    <message>
-        <source>3 Point Angular Dimensions</source>
-        <translation type="vanished">3 Nokta Açısal Boyutlar</translation>
-    </message>
-    <message>
-        <source>3 Point Angular Dimension</source>
-        <translation type="vanished">3 Nokta Açısal Boyut</translation>
     </message>
     <message>
         <location line="+2"/>

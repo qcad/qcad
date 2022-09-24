@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.1" language="uk_UA">
 <context>
     <name>RColorCombo</name>
     <message>
         <location filename="../src/gui/RColorCombo.cpp" line="+157"/>
         <source>Custom</source>
-        <translation>Benutzerdefiniert</translation>
+        <translation type="unfinished">Нестандартний</translation>
     </message>
 </context>
 <context>
@@ -14,47 +14,47 @@
     <message>
         <location filename="../src/gui/REventHandler.cpp" line="+201"/>
         <source>Grid</source>
-        <translation>Raster</translation>
+        <translation type="unfinished">Сітка</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>End</source>
-        <translation>Ende</translation>
+        <translation type="unfinished">Кінець</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>On Entity</source>
-        <translation>Auf Objekt</translation>
+        <translation type="unfinished">Про суб&apos;єкта господарювання</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Perpendicular</source>
-        <translation>Lotrechte</translation>
+        <translation type="unfinished">Перпендикулярний</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Tangential</source>
-        <translation>Tangential</translation>
+        <translation type="unfinished">Тангенціальний</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Center</source>
-        <translation>Zentrum</translation>
+        <translation type="unfinished">Центр</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Middle</source>
-        <translation>Mittelpunkt</translation>
+        <translation type="unfinished">Середній</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Intersection</source>
-        <translation>Schnittpunkt</translation>
+        <translation type="unfinished">Перехрестя</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Reference</source>
-        <translation>Referenz</translation>
+        <translation type="unfinished">Посилання</translation>
     </message>
 </context>
 <context>
@@ -62,7 +62,7 @@
     <message>
         <location filename="../src/gui/RMathLineEdit.cpp" line="+186"/>
         <source>Invalid</source>
-        <translation>Ungültig</translation>
+        <translation type="unfinished">Недійсний</translation>
     </message>
 </context>
 </TS>

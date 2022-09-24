@@ -488,90 +488,6 @@
         <translation>Measured Value</translation>
     </message>
     <message>
-        <source>Style</source>
-        <translation type="vanished">Style</translation>
-    </message>
-    <message>
-        <source>Overall dimension scale</source>
-        <translation type="vanished">Overall dimension scale</translation>
-    </message>
-    <message>
-        <source>Linear measurement factor</source>
-        <translation type="vanished">Linear measurement factor</translation>
-    </message>
-    <message>
-        <source>Text height</source>
-        <translation type="vanished">Text height</translation>
-    </message>
-    <message>
-        <source>Dimension line gap</source>
-        <translation type="vanished">Dimension line gap</translation>
-    </message>
-    <message>
-        <source>Arrow size</source>
-        <translation type="vanished">Arrow size</translation>
-    </message>
-    <message>
-        <source>Extension line extension</source>
-        <translation type="vanished">Extension line extension</translation>
-    </message>
-    <message>
-        <source>Extension line offset</source>
-        <translation type="vanished">Extension line offset</translation>
-    </message>
-    <message>
-        <source>Text position vertical</source>
-        <translation type="vanished">Text position vertical</translation>
-    </message>
-    <message>
-        <source>Text inside horizontal</source>
-        <translation type="vanished">Text inside horizontal</translation>
-    </message>
-    <message>
-        <source>Tick size</source>
-        <translation type="vanished">Tick size</translation>
-    </message>
-    <message>
-        <source>Linear format</source>
-        <translation type="vanished">Linear format</translation>
-    </message>
-    <message>
-        <source>Decimal places</source>
-        <translation type="vanished">Decimal places</translation>
-    </message>
-    <message>
-        <source>Decimal separator</source>
-        <translation type="vanished">Decimal separator</translation>
-    </message>
-    <message>
-        <source>Zero suppression</source>
-        <translation type="vanished">Zero suppression</translation>
-    </message>
-    <message>
-        <source>Angular format</source>
-        <translation type="vanished">Angular format</translation>
-    </message>
-    <message>
-        <source>Angular decimal places</source>
-        <translation type="vanished">Angular decimal places</translation>
-    </message>
-    <message>
-        <source>Angular zero suppression</source>
-        <translation type="vanished">Angular zero suppression</translation>
-    </message>
-    <message>
-        <source>Architectur tick</source>
-        <translation type="vanished">Architectur tick</translation>
-    </message>
-    <message>
-        <source>Text color</source>
-        <translation type="vanished">Text color</translation>
-    </message>
-    <message>
-        <source>Linear Factor</source>
-        <translation type="vanished">Linear Factor</translation>
-    </message>
-    <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="-3"/>
         <source>Scale</source>
         <translation>Scale</translation>
@@ -684,10 +600,6 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="-6"/>
         <source>Solid</source>
         <translation>Solid</translation>
-    </message>
-    <message>
-        <source>Transparency</source>
-        <translation type="vanished">Transparency</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -815,14 +727,6 @@
         <location line="+1"/>
         <source>Arrow Block</source>
         <translation>Arrow Block</translation>
-    </message>
-    <message>
-        <source>Clockwise</source>
-        <translation type="vanished">Clockwise</translation>
-    </message>
-    <message>
-        <source>Counterclockwise</source>
-        <translation type="vanished">Counterclockwise</translation>
     </message>
     <message>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>

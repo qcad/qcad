@@ -128,7 +128,7 @@ double RUnit::getFactorToM(RS::Unit unit) {
         return 149600000000000.0 / 1000;
         break;
     case RS::Lightyear:
-        return 9460730472580800.0 / 1000;
+        return 9460730472580800000.0 / 1000;
         break;
     case RS::Parsec:
         return 30857000000000000000.0 / 1000;

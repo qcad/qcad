@@ -471,10 +471,6 @@
         <translation>測定値</translation>
     </message>
     <message>
-        <source>Linear Factor</source>
-        <translation type="vanished">倍率</translation>
-    </message>
-    <message>
         <location line="+3"/>
         <source>Block Name</source>
         <translation>ブロック名</translation>
@@ -836,14 +832,6 @@
         <translation type="unfinished">エンドタンジェント</translation>
     </message>
     <message>
-        <source>Simple</source>
-        <translation type="vanished">シンプル</translation>
-    </message>
-    <message>
-        <source>Contents</source>
-        <translation type="obsolete">内容</translation>
-    </message>
-    <message>
         <location filename="../src/entity/RToleranceEntity.cpp" line="-5"/>
         <location line="+1"/>
         <location line="+1"/>
@@ -861,50 +849,6 @@
         <location line="+1"/>
         <source>Text</source>
         <translation>テキスト</translation>
-    </message>
-    <message>
-        <source>Plain Text</source>
-        <translation type="vanished">プレーンテキスト</translation>
-    </message>
-    <message>
-        <source>Font Name</source>
-        <translation type="vanished">フォント名</translation>
-    </message>
-    <message>
-        <source>Text Height</source>
-        <translation type="vanished">テキストの高さ</translation>
-    </message>
-    <message>
-        <source>Text Angle</source>
-        <translation type="vanished">テキスト角度</translation>
-    </message>
-    <message>
-        <source>X Scale</source>
-        <translation type="vanished">拡大縮小 X</translation>
-    </message>
-    <message>
-        <source>Bold</source>
-        <translation type="vanished">太字</translation>
-    </message>
-    <message>
-        <source>Italic</source>
-        <translation type="vanished">斜体</translation>
-    </message>
-    <message>
-        <source>Line Spacing</source>
-        <translation type="vanished">行間隔</translation>
-    </message>
-    <message>
-        <source>Alignment</source>
-        <translation type="vanished">位置合わせ</translation>
-    </message>
-    <message>
-        <source>Horizontal</source>
-        <translation type="vanished">水平</translation>
-    </message>
-    <message>
-        <source>Vertical</source>
-        <translation type="vanished">垂直</translation>
     </message>
     <message>
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+96"/>

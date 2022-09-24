@@ -19,10 +19,6 @@
         <translation>Oznacza to, że każdy może &lt;a href=&apos;%1&apos;&gt;uczestniczyć w tworzeniu programu&lt;/a&gt;!</translation>
     </message>
     <message>
-        <source>Portions of this software © 2008-2018 The Qt Company Ltd.</source>
-        <translation type="obsolete">Fragmenty tego oprogramowania © 2008-2017 The Qt Company Ltd. {2008-2018 ?}</translation>
-    </message>
-    <message>
         <location line="+11"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
         <translation>Program jest udostępniony w stanie takim, JAKIM JEST, BEZ JAKICHKOLWIEK GWARANCJI, WŁĄCZAJĄC W TO GWARANCJĘ ZAPROJEKTOWANIA, ZGODNOŚCI Z PRZEZNACZENIEM I PRZYDATNOŚCI DO OKREŚLONEGO CELU.</translation>
@@ -39,12 +35,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+422"/>
+        <location line="+427"/>
         <source>Plugin:</source>
         <translation>Wtyczka:</translation>
     </message>
     <message>
-        <location line="-397"/>
+        <location line="-402"/>
         <source>ID:</source>
         <translation>Identyfikator:</translation>
     </message>
@@ -140,17 +136,9 @@
         <translation>%1 jest wolnym (otwarto-źródłowym) oprogramowaniem.</translation>
     </message>
     <message>
-        <source>Plugins and script add-ons are subject to their respective license (see &apos;Plugins&apos; tab).</source>
-        <translation type="vanished">Wtyczki i dodatki skryptów są przedmiotem odpowiednich im licencji (proszę sprawdzić kartę „Wtyczki”)</translation>
-    </message>
-    <message>
         <location line="+7"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
         <translation>Wszystkie marki lub nazwy produktów są znakami towarowymi lub zarejestrowanymi znakami towarowymi i należą do ich właścicieli.</translation>
-    </message>
-    <message>
-        <source>Portions of this software © 2008-2017 The Qt Company Ltd.</source>
-        <translation type="vanished">Fragmenty tego oprogramowania © 2008-2017 The Qt Company Ltd.</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -198,7 +186,7 @@
         <translation>Twórcy</translation>
     </message>
     <message>
-        <location line="+164"/>
+        <location line="+169"/>
         <source>Licenses</source>
         <translation type="unfinished">Licencje</translation>
     </message>
@@ -312,10 +300,6 @@ aby wprowadzić zmiany preferencji.</translation>
         <location line="+86"/>
         <source>Defaults for</source>
         <translation>Domyślne dla</translation>
-    </message>
-    <message>
-        <source>Defaults for </source>
-        <translation type="vanished">Domyślne dla</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -928,30 +912,6 @@ Do you wish to recover it?</source>
 Czy chcesz go odzyskać?</translation>
     </message>
     <message>
-        <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
-Do you wish to recover it?</source>
-        <translation type="vanished">Odnaleziono plik automatycznej kopii zapasowej dla rysunku bez nazwy.
-Odzyskać go?</translation>
-    </message>
-    <message>
-        <source>%1 &apos;autosave&apos; backup files for untitled drawings were found.
-Do you wish to recover them?</source>
-        <translation type="vanished">Odnaleziono %1 pliki automatycznej kopii zapasowej dla rysunków bez nazwy.
-Odzyskać je?</translation>
-    </message>
-    <message numerus="yes">
-        <source>%n &apos;autosave&apos; backup file(s) for (an) untitled drawing(s) was/were found.
-Do you wish to recover it/them?</source>
-        <translation type="vanished">
-            <numerusform>Odnaleziono %n plik automatycznej kopii zapasowej rysunku bez nazwy.
-Odzyskać ją?</numerusform>
-            <numerusform>Odnaleziono %n pliki automatycznej kopii zapasowej rysunków bez nazwy.
-Odzyskać je?</numerusform>
-            <numerusform>Odnaleziono %n plików automatycznej kopii zapasowej rysunków bez nazwy.
-Odzyskać je?</numerusform>
-        </translation>
-    </message>
-    <message>
         <location line="-64"/>
         <source>Recover Files?</source>
         <translation type="unfinished">Odzyskać pliki?</translation>
@@ -965,12 +925,6 @@ Odzyskać je?</numerusform>
         <location line="+47"/>
         <source>Recover File?</source>
         <translation type="unfinished">Odzyskać plik?</translation>
-    </message>
-    <message>
-        <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
-Do you wish to recover it?</source>
-        <translation type="vanished">Istnieje automatyczna kopia zapasowa pliku „%1”.
-Odzyskać ją?</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -1274,17 +1228,6 @@ Odzyskać ją?</translation>
     </message>
 </context>
 <context>
-    <name>BitmapExport2</name>
-    <message>
-        <source>Files</source>
-        <translation type="obsolete">Pliki</translation>
-    </message>
-    <message>
-        <source>Export as Bitmap</source>
-        <translation type="obsolete">Eksportuj bitmapę</translation>
-    </message>
-</context>
-<context>
     <name>BitmapExportWorker</name>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
@@ -1303,10 +1246,6 @@ Odzyskać ją?</translation>
         <location line="+110"/>
         <source>Cannot edit block while editing a block in-place</source>
         <translation type="unfinished">Nie można edytować bloku podczas edycji bloku in-place</translation>
-    </message>
-    <message>
-        <source>Show block tools</source>
-        <translation type="vanished">Wyświetla narzędzia bloku</translation>
     </message>
     <message>
         <location line="-82"/>
@@ -1343,10 +1282,6 @@ Odzyskać ją?</translation>
         <translation type="unfinished">Blok &quot;%1&quot; już istnieje&lt;br&gt;i zostanie nadpisany.</translation>
     </message>
     <message>
-        <source>Block &apos;%1&apos; already exists&lt;br&gt;and will be overwritten.</source>
-        <translation type="vanished">Blok „%1” już istnieje&lt;br&gt;i zostanie zastąpiony.</translation>
-    </message>
-    <message>
         <location line="+5"/>
         <source>Block already exists.</source>
         <translation type="unfinished">Blok już istnieje.</translation>
@@ -1381,14 +1316,14 @@ Odzyskać ją?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+492"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
         <location line="+53"/>
-        <location line="+39"/>
+        <location line="+44"/>
         <source>Block List</source>
         <translation type="unfinished">Lista bloków</translation>
     </message>
     <message>
-        <location line="-92"/>
+        <location line="-97"/>
         <source>Widgets</source>
         <translation>Widżety</translation>
     </message>
@@ -1526,10 +1461,6 @@ Odzyskać ją?</translation>
         <translation>Pierwszy punkt podziału</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">Zrobione</translation>
-    </message>
-    <message>
         <location line="+8"/>
         <source>Second break point</source>
         <translation>Drugi punkt podziału</translation>
@@ -1561,7 +1492,7 @@ Odzyskać ją?</translation>
 <context>
     <name>CadToolBar</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+52"/>
+        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+53"/>
         <source>Widgets</source>
         <translation type="unfinished">Widżety</translation>
     </message>
@@ -1600,7 +1531,7 @@ Odzyskać ją?</translation>
     <name>CadToolBarPanel</name>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/CadToolBarPanel.js" line="+39"/>
-        <location line="+71"/>
+        <location line="+72"/>
         <source>Back</source>
         <translation type="unfinished">Powrót</translation>
     </message>
@@ -1608,7 +1539,7 @@ Odzyskać ją?</translation>
 <context>
     <name>CadToolMatrix</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+373"/>
+        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+383"/>
         <source>Expand all</source>
         <translation>Rozwiń wszystko</translation>
     </message>
@@ -1628,19 +1559,15 @@ Odzyskać ją?</translation>
         <translation>Widok ikon</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+34"/>
         <source>Widgets</source>
         <translation>Widżety</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+47"/>
+        <location line="+53"/>
         <source>Tool Matrix</source>
         <translation>Tabela narzędzi</translation>
-    </message>
-    <message>
-        <source>Icon Size:</source>
-        <translation type="vanished">Rozmiar ikon:</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CadToolMatrix/PreferencesPage.ui" line="+17"/>
@@ -1674,7 +1601,7 @@ Odzyskać ją?</translation>
 <context>
     <name>CheckForUpdates</name>
     <message>
-        <location filename="../scripts/Help/CheckForUpdates/CheckForUpdates.js" line="+62"/>
+        <location filename="../scripts/Help/CheckForUpdates/CheckForUpdates.js" line="+68"/>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesDialog.ui" line="+14"/>
         <source>Checking for Updates...</source>
         <translation type="unfinished">Sprawdzanie aktualizacji...</translation>
@@ -2359,10 +2286,6 @@ Odzyskać ją?</translation>
         <translation type="unfinished">Wybrano jednostkę &quot;%1&quot;. Nie ma nic do zrobienia</translation>
     </message>
     <message>
-        <source>Unit &apos;%1&apos; selected - Nothing to be done</source>
-        <translation type="vanished">Wybrano jednostkę „%1” - brak czynności do wykonania</translation>
-    </message>
-    <message>
         <location line="+144"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Skonwertowano jednostki rysunku z %1 na %2</translation>
@@ -2391,10 +2314,6 @@ Odzyskać ją?</translation>
         <location line="+30"/>
         <source>Convert:</source>
         <translation>Skonwertuj:</translation>
-    </message>
-    <message>
-        <source>...</source>
-        <translation type="vanished">...</translation>
     </message>
 </context>
 <context>
@@ -2482,10 +2401,6 @@ Odzyskać ją?</translation>
         <location line="+14"/>
         <source>Number Format:</source>
         <translation type="unfinished">Format liczbowy:</translation>
-    </message>
-    <message>
-        <source>Width:</source>
-        <translation type="obsolete">Szerokość:</translation>
     </message>
     <message>
         <location line="+79"/>
@@ -2584,14 +2499,6 @@ Odzyskać ją?</translation>
         <source>Angle:</source>
         <translation type="unfinished">Kąt:</translation>
     </message>
-    <message>
-        <source>Line</source>
-        <translation type="obsolete">Linia</translation>
-    </message>
-    <message>
-        <source>Face</source>
-        <translation type="obsolete">Powierzchnia</translation>
-    </message>
 </context>
 <context>
     <name>Cut</name>
@@ -2661,10 +2568,6 @@ Odzyskać ją?</translation>
         <source>Editing block &quot;%1&quot;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
         <translation type="unfinished">Edycja bloku &quot;%1&quot;&lt;br&gt;Wybierz &lt;i&gt;Blok &gt;Powróć do głównego rysunku&lt;/i&gt; po zakończeniu</translation>
     </message>
-    <message>
-        <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
-        <translation type="vanished">Edytowanie bloku „%1”&lt;br&gt;Proszę użyć polecenia&lt;i&gt;Blok &gt; Wróć do rysunku&lt;/i&gt; po zakończeniu.</translation>
-    </message>
 </context>
 <context>
     <name>DefaultNavigation</name>
@@ -2720,10 +2623,6 @@ Odzyskać ją?</translation>
 </context>
 <context>
     <name>DeselectLayer</name>
-    <message>
-        <source>&amp;Deselect Layer</source>
-        <translation type="vanished">&amp;Odznacz warstwę</translation>
-    </message>
     <message>
         <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer Entities</source>
@@ -2825,22 +2724,6 @@ Odzyskać ją?</translation>
         <location line="+7"/>
         <source>Cancel</source>
         <translation type="unfinished">Anuluj</translation>
-    </message>
-    <message>
-        <source>Scale:</source>
-        <translation type="obsolete">Skala:</translation>
-    </message>
-    <message>
-        <source>0.01</source>
-        <translation type="obsolete">0.01</translation>
-    </message>
-    <message>
-        <source>297</source>
-        <translation type="obsolete">297</translation>
-    </message>
-    <message>
-        <source>210</source>
-        <translation type="obsolete">210</translation>
     </message>
 </context>
 <context>
@@ -3219,10 +3102,6 @@ Odzyskać ją?</translation>
         <translation>Aby wyświetlać etykiety wymiarów w formacie „architektonicznym” lub „inżynierskim”, jednostką rysunku musi być „cal” lub „stopa”. Zmieniono format na „dziesiętny”.</translation>
     </message>
     <message>
-        <source>The drawing unit must be &apos;Inch&apos; or &apos;Foot&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
-        <translation type="vanished">Aby wyświetlać etykiety wymiarów w formacie „architektonicznym” lub „inżynierskim”, jednostką rysunku musi być „cal” lub „stopa”. Zmieniono format na „dziesiętny”.</translation>
-    </message>
-    <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+55"/>
         <source>Sizes</source>
         <translation type="unfinished">Rozmiary</translation>
@@ -3291,14 +3170,6 @@ Odzyskać ją?</translation>
         <location line="+12"/>
         <source>Arrow</source>
         <translation type="unfinished">Strzałka</translation>
-    </message>
-    <message>
-        <source>Font</source>
-        <translation type="vanished">Czcionka</translation>
-    </message>
-    <message>
-        <source>Dimension label font:</source>
-        <translation type="vanished">Czcionka etykiet wymiarów</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -3560,19 +3431,11 @@ jest już na liście.</translation>
 <context>
     <name>DrawFromCSV</name>
     <message>
-        <source>No import file selected !</source>
-        <translation type="obsolete">Nie wybrano pliku importowego !</translation>
-    </message>
-    <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV.js" line="+145"/>
         <location line="+15"/>
         <location line="+1275"/>
         <source>Command ended.</source>
         <translation type="unfinished">Komenda zakończona.</translation>
-    </message>
-    <message>
-        <source>No file opened!</source>
-        <translation type="obsolete">Nie otwarto żadnego pliku!</translation>
     </message>
     <message>
         <location line="-1293"/>
@@ -4136,225 +3999,9 @@ jest już na liście.</translation>
         <translation type="unfinished">Dodano nową warstwę: %1</translation>
     </message>
     <message>
-        <source>Unsupported or invalid CSV style, ignored ! Text line %1</source>
-        <translation type="obsolete">Nieobsługiwany lub nieprawidłowy styl CSV, ignorowane ! Wiersz tekstu %1</translation>
-    </message>
-    <message>
-        <source>Setting new relative origin failed, ignored ! Text line %1</source>
-        <translation type="obsolete">Ustawianie nowego pochodzenia względnego nie powiodło się, zignorowane ! Linia tekstu %1</translation>
-    </message>
-    <message>
-        <source>Can not switch to layer, ignored ! Text line %1 layer: %2</source>
-        <translation type="obsolete">Nie można przełączyć na warstwę, ignorowane ! Linia tekstu %1 warstwa: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct  layer switch, ignored ! Text line %1</source>
-        <translation type="obsolete">Nieprawidłowy przełącznik warstw, zignorowany ! Linia tekstu %1</translation>
-    </message>
-    <message>
-        <source>Not a correct  new layer switch, ignored ! Text line %1</source>
-        <translation type="obsolete">Nieprawidłowy nowy przełącznik warstw, zignorowany ! Linia tekstu %1</translation>
-    </message>
-    <message>
-        <source>Can not hide layer, ignored ! Text line %1 layer: %2</source>
-        <translation type="obsolete">Nie można ukryć warstwy, ignorowane ! Linia tekstu %1 warstwa: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct  hide layer switch, ignored ! Text line %1</source>
-        <translation type="obsolete">Nieprawidłowy przełącznik warstwy ukrycia, zignorowany ! Linia tekstu %1</translation>
-    </message>
-    <message>
-        <source>Can not freeze layer, ignored ! Text line %1 layer: %2</source>
-        <translation type="obsolete">Nie można zamrozić warstwy, ignorowane ! Linia tekstu %1 warstwa: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct  freeze layer switch, ignored ! Text line %1</source>
-        <translation type="obsolete">Nieprawidłowy przełącznik warstwy zamrożenia, zignorowany ! Linia tekstu %1</translation>
-    </message>
-    <message>
-        <source>Can not lock layer, ignored ! Text line %1 layer: %2</source>
-        <translation type="obsolete">Nie można zablokować warstwy, ignorowane ! Linia tekstu %1 warstwa: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct  lock layer switch, ignored ! Text line %1</source>
-        <translation type="obsolete">Nieprawidłowy przełącznik warstwy zamka, zignorowany ! Linia tekstu %1</translation>
-    </message>
-    <message>
-        <source>Can not allow layer, ignored ! Text line %1 layer: %2</source>
-        <translation type="obsolete">Nie można zezwolić na warstwę, ignorowane ! Linia tekstu %1 warstwa: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct  allow layer switch, ignored ! Text line %1</source>
-        <translation type="obsolete">Nieprawidłowy allow layer switch, zignorowany ! Linia tekstu %1</translation>
-    </message>
-    <message>
-        <source>Low field count !</source>
-        <translation type="obsolete">Niska liczba pól !</translation>
-    </message>
-    <message>
-        <source>Odd field count !</source>
-        <translation type="obsolete">Nieparzysta liczba pól!</translation>
-    </message>
-    <message>
-        <source>Rv Invalid !</source>
-        <translation type="obsolete">Rv Nieważne!</translation>
-    </message>
-    <message>
-        <source>Rv1 Invalid !</source>
-        <translation type="obsolete">Rv1 Nieważne !</translation>
-    </message>
-    <message>
-        <source>Rv2 Invalid !</source>
-        <translation type="obsolete">Rv2 Nieważne!</translation>
-    </message>
-    <message>
-        <source>Radius Invalid !</source>
-        <translation type="obsolete">Nieprawidłowy promień!</translation>
-    </message>
-    <message>
-        <source>Angle Invalid !</source>
-        <translation type="obsolete">Nieprawidłowy kąt!</translation>
-    </message>
-    <message>
-        <source>Angle1 Invalid !</source>
-        <translation type="obsolete">Kąt1 Nieważne!</translation>
-    </message>
-    <message>
-        <source>Angle2 Invalid !</source>
-        <translation type="obsolete">Kąt2 Nieważne!</translation>
-    </message>
-    <message>
-        <source>Equal angles !</source>
-        <translation type="obsolete">Kąty równe !</translation>
-    </message>
-    <message>
-        <source>Rv3 Invalid !</source>
-        <translation type="obsolete">Rv3 Nieważne !</translation>
-    </message>
-    <message>
-        <source>Arc Invalid !</source>
-        <translation type="obsolete">Łuk nieważny!</translation>
-    </message>
-    <message>
-        <source>Center Invalid !</source>
-        <translation type="obsolete">Centrum nieważne!</translation>
-    </message>
-    <message>
-        <source>Radius too small !</source>
-        <translation type="obsolete">Za mały promień !</translation>
-    </message>
-    <message>
-        <source>Circle Invalid !</source>
-        <translation type="obsolete">Koło jest nieprawidłowe!</translation>
-    </message>
-    <message>
-        <source>Rv4 Invalid !</source>
-        <translation type="obsolete">Rv4 Nieważne !</translation>
-    </message>
-    <message>
-        <source>Size Invalid !</source>
-        <translation type="obsolete">Nieprawidłowy rozmiar!</translation>
-    </message>
-    <message>
-        <source>Size in X Invalid !</source>
-        <translation type="obsolete">Wielkość w X nieprawidłowa!</translation>
-    </message>
-    <message>
-        <source>Size in Y Invalid !</source>
-        <translation type="obsolete">Wielkość w Y Nieważne!</translation>
-    </message>
-    <message>
-        <source>Polygon, less than 5 references !</source>
-        <translation type="obsolete">Polygon, mniej niż 5 referencji !</translation>
-    </message>
-    <message>
-        <source>Rv %1 Invalid !</source>
-        <translation type="obsolete">Rv %1 Nieprawidłowe!</translation>
-    </message>
-    <message>
-        <source>Polyline, less than 2 references !</source>
-        <translation type="obsolete">Polilinia, mniej niż 2 odniesienia !</translation>
-    </message>
-    <message>
-        <source>Bulge %1 Invalid !</source>
-        <translation type="obsolete">Wypukłość %1 Nieważne!</translation>
-    </message>
-    <message>
-        <source>Unsupported PRO feature !</source>
-        <translation type="obsolete">Nieobsługiwana funkcja PRO !</translation>
-    </message>
-    <message>
-        <source>Fit point Spline, less than 3 references !</source>
-        <translation type="obsolete">Punkt dopasowania Spline, mniej niż 3 referencje !</translation>
-    </message>
-    <message>
-        <source>Control point Spline, less than 4 references !</source>
-        <translation type="obsolete">Punkt kontrolny Spline, mniej niż 4 referencje !</translation>
-    </message>
-    <message>
-        <source>Text, low field count !</source>
-        <translation type="obsolete">Tekst, mała liczba pól!</translation>
-    </message>
-    <message>
-        <source>Text, odd field count !</source>
-        <translation type="obsolete">Tekst, nieparzysta liczba pól !</translation>
-    </message>
-    <message>
-        <source>Height Invalid !</source>
-        <translation type="obsolete">Nieprawidłowa wysokość!</translation>
-    </message>
-    <message>
-        <source>Width Invalid !</source>
-        <translation type="obsolete">Nieprawidłowa szerokość!</translation>
-    </message>
-    <message>
-        <source>Vert. alignment Invalid !</source>
-        <translation type="obsolete">Ustawienie pionowe Nieważne!</translation>
-    </message>
-    <message>
-        <source>Horz. alignment Invalid !</source>
-        <translation type="obsolete">Horz. wyrównanie Nieważne !</translation>
-    </message>
-    <message>
-        <source>Drawing direction Invalid !</source>
-        <translation type="obsolete">Nieprawidłowy kierunek rysowania!</translation>
-    </message>
-    <message>
-        <source>Line spacing style Invalid !</source>
-        <translation type="obsolete">Styl odstępu między wierszami Nieprawidłowy !</translation>
-    </message>
-    <message>
-        <source>Line spacing Invalid !</source>
-        <translation type="obsolete">Odstępy między wierszami Nieprawidłowe !</translation>
-    </message>
-    <message>
-        <source>Unsupported entry ! Text line %1</source>
-        <translation type="obsolete">Nieobsługiwany wpis! Wiersz tekstowy %1</translation>
-    </message>
-    <message>
-        <source>Error with first optional list !</source>
-        <translation type="obsolete">Błąd z pierwszą listą opcjonalną !</translation>
-    </message>
-    <message>
-        <source>Error with second optional list !</source>
-        <translation type="obsolete">Błąd z drugą listą opcjonalną !</translation>
-    </message>
-    <message>
-        <source>Not a correct entry ! Text line %1 : %2</source>
-        <translation type="obsolete">Nieprawidłowy wpis! Wiersz tekstowy %1 : %2</translation>
-    </message>
-    <message>
-        <source>Casted entries : %1 with %2 text lines</source>
-        <translation type="obsolete">Wpisy obsadzone: %1 z %2 wierszami tekstu</translation>
-    </message>
-    <message>
         <location line="-447"/>
         <source>Importing CSV complete. Command ended.</source>
         <translation type="unfinished">Importowanie CSV zakończone. Polecenie zakończone.</translation>
-    </message>
-    <message>
-        <source>Nothing casted !</source>
-        <translation type="obsolete">Nic nie zostało rzucone!</translation>
     </message>
     <message>
         <location line="+46"/>
@@ -4372,66 +4019,6 @@ jest już na liście.</translation>
         <translation type="unfinished">Wszystkie pliki</translation>
     </message>
     <message>
-        <source>Attributes empty ! Text line %1</source>
-        <translation type="obsolete">Atrybuty puste! Wiersz tekstowy %1</translation>
-    </message>
-    <message>
-        <source>Not a correct layer name ! Text line %1 name: %2</source>
-        <translation type="obsolete">Nieprawidłowa nazwa warstwy! Linia tekstowa %1 nazwa: %2</translation>
-    </message>
-    <message>
-        <source>Layer doesn&apos;t exist, ignored ! Text line %1 layer: %2</source>
-        <translation type="obsolete">Warstwa nie istnieje, ignorowane ! Linia tekstu %1 warstwa: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct color, ignored ! Text line %1 color: %2</source>
-        <translation type="obsolete">Nieprawidłowy kolor, ignorowane ! Linia tekstu %1 kolor: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct Lineweight, ignored ! Text line %1 weight: %2</source>
-        <translation type="obsolete">Nieprawidłowy Lineweight, ignorowane ! Waga linii tekstu %1: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct Linetype, ignored ! Text line %1 type: %2</source>
-        <translation type="obsolete">Nieprawidłowy typ linii, ignorowane! Typ linii tekstowej %1: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct Linetype scale, ignored ! Text line %1 scale: %2</source>
-        <translation type="obsolete">Nieprawidłowa skala Linetype, ignorowane ! Skala linii tekstowej %1: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct attribute, ignored ! Text line %1 &gt; %2</source>
-        <translation type="obsolete">Nieprawidłowy atrybut, ignorowany ! Linia tekstu %1 &gt; %2</translation>
-    </message>
-    <message>
-        <source>Parent layer doesn&apos;t exist ! Text line %1 layer: %2</source>
-        <translation type="obsolete">Warstwa nadrzędna nie istnieje ! Linia tekstu %1 warstwa: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct color ! Text line %1 color: %2</source>
-        <translation type="obsolete">Niewłaściwy kolor! Linia tekstu %1 kolor: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct Lineweight ! Text line %1 weight: %2</source>
-        <translation type="obsolete">Nieprawidłowy Lineweight ! Waga linii tekstu %1: %2</translation>
-    </message>
-    <message>
-        <source>Not a correct Linetype ! Text line %1 type: %2</source>
-        <translation type="obsolete">Niewłaściwy typ linii! Typ linii tekstowej %1: %2</translation>
-    </message>
-    <message>
-        <source>Add/Update layer ignored !</source>
-        <translation type="obsolete">Dodawanie/aktualizowanie warstwy ignorowane !</translation>
-    </message>
-    <message>
-        <source>Updated layer : %1</source>
-        <translation type="obsolete">Zaktualizowana warstwa : %1</translation>
-    </message>
-    <message>
-        <source>Added new layer : %1</source>
-        <translation type="obsolete">Dodano nową warstwę : %1</translation>
-    </message>
-    <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
         <source>&amp;Draw from CSV</source>
         <translation type="unfinished">Rysuj z CSV</translation>
@@ -4440,17 +4027,6 @@ jest już na liście.</translation>
         <location line="+7"/>
         <source>Draws entities based on textual entries in a CSV file</source>
         <translation type="unfinished">Rysuje elementy na podstawie wpisów tekstowych w pliku CSV</translation>
-    </message>
-</context>
-<context>
-    <name>DrawFromCSVInit</name>
-    <message>
-        <source>&amp;Draw from CSV</source>
-        <translation type="obsolete">&amp;Rysuj z CSV</translation>
-    </message>
-    <message>
-        <source>Draws entities based on textual entries in a CSV file</source>
-        <translation type="obsolete">Rysuje elementy na podstawie wpisów tekstowych w pliku CSV</translation>
     </message>
 </context>
 <context>
@@ -4614,7 +4190,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Brak</translation>
     </message>
     <message>
-        <location line="+662"/>
+        <location line="+664"/>
         <source>Options</source>
         <translation type="unfinished">Opcje</translation>
     </message>
@@ -4629,7 +4205,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Narzędzia CAD</translation>
     </message>
     <message>
-        <location line="+584"/>
+        <location line="+582"/>
         <source>Invalid position</source>
         <translation type="unfinished">Nieprawidłowa pozycja</translation>
     </message>
@@ -4769,10 +4345,6 @@ jest już na liście.</translation>
         <location filename="../scripts/Edit/Edit.js" line="+65"/>
         <source>Edit Tools</source>
         <translation>Narzędzia edycji</translation>
-    </message>
-    <message>
-        <source>Show edit tools</source>
-        <translation type="vanished">Wyświetla narzędzia edycji</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -4980,24 +4552,6 @@ jest już na liście.</translation>
         <location line="+4"/>
         <source>Draw full ellipse from center, major point and ratio</source>
         <translation type="unfinished">Narysuj pełną elipsę od środka, punktu głównego i proporcji</translation>
-    </message>
-</context>
-<context>
-    <name>EllipseConcentric</name>
-    <message>
-        <source>Distance:</source>
-        <translation type="obsolete">Odległość:</translation>
-    </message>
-    <message>
-        <source>Number:</source>
-        <translation type="obsolete">Liczba:</translation>
-    </message>
-</context>
-<context>
-    <name>EllipseConcentricThrough</name>
-    <message>
-        <source>Number:</source>
-        <translation type="obsolete">Liczba:</translation>
     </message>
 </context>
 <context>
@@ -5582,10 +5136,6 @@ jest już na liście.</translation>
         <translation>Narzędzia pliku</translation>
     </message>
     <message>
-        <source>Show file tools</source>
-        <translation type="vanished">Wyświetla narzędzia pliku</translation>
-    </message>
-    <message>
         <location line="+27"/>
         <source>&amp;File</source>
         <translation type="unfinished">Plik</translation>
@@ -5991,13 +5541,6 @@ jest już na liście.</translation>
     </message>
 </context>
 <context>
-    <name>FlexPainterOptions</name>
-    <message>
-        <source>Preview</source>
-        <translation type="obsolete">Podgląd</translation>
-    </message>
-</context>
-<context>
     <name>FlipHorizontal</name>
     <message>
         <location filename="../scripts/Modify/FlipHorizontal/FlipHorizontalInit.js" line="+2"/>
@@ -6077,10 +5620,6 @@ jest już na liście.</translation>
         <translation type="unfinished">Wielkość kostki:</translation>
     </message>
     <message>
-        <source>10</source>
-        <translation type="obsolete">10</translation>
-    </message>
-    <message>
         <location line="+14"/>
         <source>Draw glue lap</source>
         <translation type="unfinished">Narysuj okrążenie klejem</translation>
@@ -6149,10 +5688,6 @@ jest już na liście.</translation>
         <location line="+24"/>
         <source>Tolerance:</source>
         <translation type="unfinished">Tolerancja:</translation>
-    </message>
-    <message>
-        <source>0.001</source>
-        <translation type="obsolete">0.001</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -6325,10 +5860,6 @@ jest już na liście.</translation>
         <translation type="unfinished">Liczba wątków:</translation>
     </message>
     <message>
-        <source>100000</source>
-        <translation type="obsolete">100000</translation>
-    </message>
-    <message>
         <location line="+507"/>
         <source>Reference point size (px):</source>
         <translation type="unfinished">Rozmiar punktu odniesienia (px):</translation>
@@ -6352,10 +5883,6 @@ jest już na liście.</translation>
         <location line="+39"/>
         <source>Disable for printing</source>
         <translation>Wyłączenie drukowania</translation>
-    </message>
-    <message>
-        <source>Linetypes</source>
-        <translation type="vanished">Rodzaje linii</translation>
     </message>
     <message>
         <location line="+56"/>
@@ -6398,17 +5925,9 @@ jest już na liście.</translation>
         <translation type="unfinished">Domyślny lineweight:</translation>
     </message>
     <message>
-        <source>Use full resolution for Retina display</source>
-        <translation type="vanished">Użycie pełnej rozdzielczości dla wyświetlaczy Retina</translation>
-    </message>
-    <message>
         <location line="+124"/>
         <source>Anti-aliasing on by default</source>
         <translation>Domyślnie włączony antyaliasing</translation>
-    </message>
-    <message>
-        <source>Maximum number of reference points displayed:</source>
-        <translation type="vanished">Maksymalna liczba wyświetlanych punktów referencyjnych:</translation>
     </message>
     <message>
         <location line="+386"/>
@@ -6434,10 +5953,6 @@ jest już na liście.</translation>
         <location line="+267"/>
         <source>Maximum selected entities with reference points:</source>
         <translation type="unfinished">Maksymalnie wybrane jednostki z punktami odniesienia:</translation>
-    </message>
-    <message>
-        <source>1000</source>
-        <translation type="obsolete">1000</translation>
     </message>
     <message>
         <location line="+219"/>
@@ -6516,10 +6031,6 @@ jest już na liście.</translation>
         <location line="+16"/>
         <source>Secondary selection color:</source>
         <translation>Drugorzędny kolor zaznaczenia:</translation>
-    </message>
-    <message>
-        <source>Draggable reference points:</source>
-        <translation type="vanished">Przesuwane punkty odniesienia:</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -6738,10 +6249,6 @@ jest już na liście.</translation>
         <location line="-27"/>
         <source>Hatch Tools</source>
         <translation>Narzędzia kreskowania</translation>
-    </message>
-    <message>
-        <source>Show hatch tools</source>
-        <translation type="vanished">Wyświetla narzędzia kreskowania</translation>
     </message>
 </context>
 <context>
@@ -7084,10 +6591,6 @@ jest już na liście.</translation>
 </context>
 <context>
     <name>InfoArcCircleArea</name>
-    <message>
-        <source>Done</source>
-        <translation type="vanished">Zrobione</translation>
-    </message>
     <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+306"/>
         <location line="+21"/>
@@ -7528,10 +7031,6 @@ jest już na liście.</translation>
         <translation>Proszę wskazać drugi obiekt</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">Zrobione</translation>
-    </message>
-    <message>
         <location line="+95"/>
         <source>Distance:</source>
         <translation>Odległość:</translation>
@@ -7601,37 +7100,6 @@ jest już na liście.</translation>
         <location filename="../scripts/Information/InfoDistancePP/InfoDistancePPInit.js" line="+2"/>
         <source>Distance &amp;Point to Point</source>
         <translation type="unfinished">Odległość od punktu do punktu</translation>
-    </message>
-</context>
-<context>
-    <name>InfoPolylineArea</name>
-    <message>
-        <source>Choose polyline</source>
-        <translation type="vanished">Proszę wskazać linię łamaną</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="vanished">Zrobione</translation>
-    </message>
-    <message>
-        <source>Area</source>
-        <translation type="vanished">Pole powierzchni</translation>
-    </message>
-    <message>
-        <source>Circumference</source>
-        <translation type="vanished">Obwód</translation>
-    </message>
-    <message>
-        <source>Polyline area:</source>
-        <translation type="vanished">Pole powierzchni linii łamanej:</translation>
-    </message>
-    <message>
-        <source>circumference:</source>
-        <translation type="vanished">obwód:</translation>
-    </message>
-    <message>
-        <source>Polyl&amp;ine Area</source>
-        <translation type="vanished">Pole powierzchni &amp;linii łamanej</translation>
     </message>
 </context>
 <context>
@@ -8421,10 +7889,6 @@ jest już na liście.</translation>
         <translation>Narzędzia warstwy</translation>
     </message>
     <message>
-        <source>Show layer tools</source>
-        <translation type="vanished">Wyświetla narzędzia warstw</translation>
-    </message>
-    <message>
         <location line="+28"/>
         <source>&amp;Layer</source>
         <translation type="unfinished">Warstwa</translation>
@@ -8602,10 +8066,6 @@ jest już na liście.</translation>
         <translation type="unfinished">Narysuj lidera (sekwencja linii ze strzałką)</translation>
     </message>
     <message>
-        <source>Undo Last Segement</source>
-        <translation type="vanished">Cofnij ostatni segment</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
         <source>Undo Last Segment</source>
         <translation type="unfinished">Cofnij ostatni segment</translation>
@@ -8781,18 +8241,6 @@ jest już na liście.</translation>
         <location line="+30"/>
         <source>DB error</source>
         <translation type="unfinished">Błąd DB</translation>
-    </message>
-    <message>
-        <source>Plugin LibraryBrowser: cannot connect to DB.
-Driver error: %1
-Database error: %2
-Database file: %3
-Library browser will not be available.</source>
-        <translation type="vanished">Wtyczka LibraryBrowser: nie można połączyć się z bazą danych.
-Błąd sterownika: %1
-Błąd bazy danych: %2
-Plik bazy danych: %3
-Przeglądarka kolekcji nie będzie dostępna.</translation>
     </message>
     <message>
         <location line="+44"/>
@@ -9165,10 +8613,6 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation type="unfinished">Punkt drugi</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="obsolete">Zrobione</translation>
-    </message>
-    <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js" line="+2"/>
         <source>Box &amp;Joint from 2 Points</source>
         <translation type="unfinished">Box Joint z 2 punktów</translation>
@@ -9225,10 +8669,6 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <location line="+7"/>
         <source>Second point</source>
         <translation type="unfinished">Punkt drugi</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="obsolete">Zrobione</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
@@ -9775,10 +9215,6 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation>Różne narzędzia</translation>
     </message>
     <message>
-        <source>Show misc tools</source>
-        <translation type="vanished">Wyświetla różne narzędzia</translation>
-    </message>
-    <message>
         <location line="+22"/>
         <source>Misc</source>
         <translation>Różne</translation>
@@ -10250,25 +9686,6 @@ wyświetlanych w wynikach wyszukiwania:</translation>
     </message>
 </context>
 <context>
-    <name>OrthogonalProjections</name>
-    <message>
-        <source>close</source>
-        <translation type="obsolete">zamknij</translation>
-    </message>
-    <message>
-        <source>undo</source>
-        <translation type="obsolete">cofnij</translation>
-    </message>
-    <message>
-        <source>redo</source>
-        <translation type="obsolete">ponów</translation>
-    </message>
-    <message>
-        <source>arc</source>
-        <translation type="obsolete">łuk</translation>
-    </message>
-</context>
-<context>
     <name>PageSettings</name>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+31"/>
@@ -10541,10 +9958,6 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation>Ogólne</translation>
     </message>
     <message>
-        <source>Mode: </source>
-        <translation type="vanished">Tryb:</translation>
-    </message>
-    <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
         <source>Mode:</source>
         <translation type="unfinished">Tryb:</translation>
@@ -10584,21 +9997,6 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
         <translation type="unfinished">Centrum mocy trzech okręgów</translation>
-    </message>
-</context>
-<context>
-    <name>PolyLineBreakSymbol</name>
-    <message>
-        <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation type="obsolete">Proszę wskazać linię, łuk, okrąg, elipsę, splajn lub linię łamaną do podzielenia</translation>
-    </message>
-    <message>
-        <source>Choose line, arc, circle or ellipse to break up</source>
-        <translation type="obsolete">Proszę wskazać linię, łuk, okrąg lub elipsę do podzielenia</translation>
-    </message>
-    <message>
-        <source>Remove Segment</source>
-        <translation type="obsolete">Usunięcie segmentu</translation>
     </message>
 </context>
 <context>
@@ -10975,17 +10373,17 @@ wyświetlanych w wynikach wyszukiwania:</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1591"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1634"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*VARIES*</translation>
     </message>
     <message>
-        <location line="-1378"/>
+        <location line="-1421"/>
         <source>:</source>
         <translation type="unfinished">:</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+194"/>
         <source>No Selection</source>
         <translation type="unfinished">Brak wyboru</translation>
     </message>
@@ -11598,10 +10996,6 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation type="unfinished">Nadpisać plik?</translation>
     </message>
     <message>
-        <source>All custom colors will be &apos;rounded&apos; to the nearest fixed color.</source>
-        <translation type="vanished">Wszystkie dostosowane kolory zostaną przybliżone najbliższymi ustalonymi kolorami.</translation>
-    </message>
-    <message>
         <location line="+18"/>
         <source>File Format Version Not Recommended</source>
         <translation type="unfinished">Format pliku Wersja niezalecana</translation>
@@ -11650,10 +11044,6 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <location line="+27"/>
         <source>Saved file:</source>
         <translation type="unfinished">Zapisany plik:</translation>
-    </message>
-    <message>
-        <source>Saved drawing:</source>
-        <translation type="vanished">Zapisany rysunek:</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -11949,10 +11339,6 @@ wyświetlanych w wynikach wyszukiwania:</translation>
 <context>
     <name>SelectByColor</name>
     <message>
-        <source>Select one or more objects of the desired color first</source>
-        <translation type="obsolete">Najpierw wybierz jeden lub więcej obiektów w żądanym kolorze</translation>
-    </message>
-    <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByColor/SelectByColor.js" line="+64"/>
         <source>Select one or more objects only of the desired color</source>
         <translation type="unfinished">Wybierz jeden lub więcej obiektów tylko o pożądanym kolorze</translation>
@@ -12111,10 +11497,6 @@ wyświetlanych w wynikach wyszukiwania:</translation>
 <context>
     <name>SelectLayer</name>
     <message>
-        <source>&amp;Select Layer</source>
-        <translation type="vanished">&amp;Zaznacz warstwę</translation>
-    </message>
-    <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
         <source>%1 entities added to selection.</source>
         <translation type="unfinished">%1 podmiotów dodanych do selekcji.</translation>
@@ -12146,10 +11528,6 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <location line="+7"/>
         <source>Replace the current selection</source>
         <translation>Zamień aktualne zaznaczenie</translation>
-    </message>
-    <message>
-        <source>SelectionMode</source>
-        <translation type="vanished">TrybZaznaczania</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -12228,53 +11606,6 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <location line="+4"/>
         <source>(De-)Select all entities inside a rectangle</source>
         <translation type="unfinished">Zaznacz wszystkie obiekty znajdujące się wewnątrz prostokąta</translation>
-    </message>
-</context>
-<context>
-    <name>SelectWidget</name>
-    <message>
-        <source>*VARIES*</source>
-        <translation type="obsolete">*RÓŻNE*</translation>
-    </message>
-    <message>
-        <source>:</source>
-        <translation type="obsolete">:</translation>
-    </message>
-    <message>
-        <source>No Selection</source>
-        <translation type="obsolete">Brak zaznaczenia</translation>
-    </message>
-    <message>
-        <source>Geometry</source>
-        <translation type="obsolete">Geometria</translation>
-    </message>
-    <message>
-        <source>Custom</source>
-        <translation type="obsolete">Dostosowany</translation>
-    </message>
-    <message>
-        <source>All</source>
-        <translation type="obsolete">Wszystkie</translation>
-    </message>
-    <message>
-        <source>Base</source>
-        <translation type="obsolete">Podstawa</translation>
-    </message>
-    <message>
-        <source>Auto</source>
-        <translation type="obsolete">Automatycznie</translation>
-    </message>
-    <message>
-        <source>Yes</source>
-        <translation type="obsolete">Tak</translation>
-    </message>
-    <message>
-        <source>No</source>
-        <translation type="obsolete">Nie</translation>
-    </message>
-    <message>
-        <source>Type:</source>
-        <translation type="obsolete">Typ:</translation>
     </message>
 </context>
 <context>
@@ -12360,14 +11691,6 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation>Narzędzia figur</translation>
     </message>
     <message>
-        <source>Show shape tools</source>
-        <translation type="vanished">Wyświetla narzędzia figur</translation>
-    </message>
-    <message>
-        <source>Show line tools</source>
-        <translation type="obsolete">Pokaż menu &quot;Linie&quot;</translation>
-    </message>
-    <message>
         <location line="+27"/>
         <source>&amp;Shape</source>
         <translation>&amp;Figura</translation>
@@ -12386,10 +11709,6 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <location line="+14"/>
         <source>Radius:</source>
         <translation type="unfinished">Promień:</translation>
-    </message>
-    <message>
-        <source>1</source>
-        <translation type="obsolete">1</translation>
     </message>
 </context>
 <context>
@@ -12434,10 +11753,6 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation>Środek boku</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">Zrobione</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Side)</source>
         <translation>&amp;Wielokąt (środek, bok)</translation>
@@ -12476,10 +11791,6 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation>Drugi narożnik</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">Zrobione</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
         <source>Polygo&amp;n (Side, Side)</source>
         <translation>W&amp;ielokąt (bok, bok)</translation>
@@ -12513,17 +11824,9 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation>Punkt narożnika</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">Zrobione</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.ui" line="+17"/>
         <source>Corners:</source>
         <translation>Liczba narożników:</translation>
-    </message>
-    <message>
-        <source>Pol&amp;ygon (Center, Point)</source>
-        <translation type="obsolete">Polygon (Center Point)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCPInit.js" line="+2"/>
@@ -12549,21 +11852,9 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation>Punkt narożnika</translation>
     </message>
     <message>
-        <source>Done</source>
-        <translation type="vanished">Zrobione</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.ui" line="+17"/>
         <source>Corners:</source>
         <translation>Liczba narożników:</translation>
-    </message>
-    <message>
-        <source>Polygo&amp;n (Two Corners)</source>
-        <translation type="obsolete">Polygon (narożniki)</translation>
-    </message>
-    <message>
-        <source>Draw regular polygon from two corner points</source>
-        <translation type="obsolete">Narysuj wielokąt foremny z dwóch narożnych punktów</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPPInit.js" line="+2"/>
@@ -12577,34 +11868,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
     </message>
 </context>
 <context>
-    <name>ShapeRectangle</name>
-    <message>
-        <source>First corner</source>
-        <translation type="obsolete">Pierwszy zakręt</translation>
-    </message>
-    <message>
-        <source>Second corner</source>
-        <translation type="obsolete">Drugi narożnik</translation>
-    </message>
-    <message>
-        <source>&amp;Rectangle</source>
-        <translation type="obsolete">&amp;Prostokąt</translation>
-    </message>
-    <message>
-        <source>Draw rectangle from two corners</source>
-        <translation type="obsolete">Narysuj prostokąt od dwóch rogach</translation>
-    </message>
-</context>
-<context>
     <name>ShapeRectanglePP</name>
-    <message>
-        <source>First corner</source>
-        <translation type="obsolete">Pierwszy zakręt</translation>
-    </message>
-    <message>
-        <source>Second corner</source>
-        <translation type="obsolete">Drugi narożnik</translation>
-    </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePPInit.js" line="+2"/>
         <source>&amp;Rectangle</source>
@@ -12623,46 +11887,6 @@ wyświetlanych w wynikach wyszukiwania:</translation>
 </context>
 <context>
     <name>ShapeRectangleSize</name>
-    <message>
-        <source>Top Left</source>
-        <translation type="obsolete">Góra - lewo</translation>
-    </message>
-    <message>
-        <source>Top</source>
-        <translation type="obsolete">Do góry</translation>
-    </message>
-    <message>
-        <source>Top Right</source>
-        <translation type="obsolete">Góra - prawo</translation>
-    </message>
-    <message>
-        <source>Left</source>
-        <translation type="obsolete">Lewo</translation>
-    </message>
-    <message>
-        <source>Middle</source>
-        <translation type="obsolete">Środek</translation>
-    </message>
-    <message>
-        <source>Right</source>
-        <translation type="obsolete">Prawo</translation>
-    </message>
-    <message>
-        <source>Bottom Left</source>
-        <translation type="obsolete">Dół - lewo</translation>
-    </message>
-    <message>
-        <source>Bottom</source>
-        <translation type="obsolete">W dół</translation>
-    </message>
-    <message>
-        <source>Bottom Right</source>
-        <translation type="obsolete">Dół - prawo</translation>
-    </message>
-    <message>
-        <source>Position</source>
-        <translation type="obsolete">Położenie</translation>
-    </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeInit.js" line="+2"/>
         <source>Rectangle with &amp;Size</source>
@@ -12753,10 +11977,6 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <location filename="../scripts/Snap/Snap.js" line="+57"/>
         <source>Snap Tools</source>
         <translation type="unfinished">Snap Tools</translation>
-    </message>
-    <message>
-        <source>Show snap tools</source>
-        <translation type="vanished">Wyświetla narzędzia przyciągania</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -13835,10 +13055,6 @@ wyświetlanych w wynikach wyszukiwania:</translation>
 <context>
     <name>Theme</name>
     <message>
-        <source>User Interface Theme:</source>
-        <translation type="vanished">Styl interfejsu użytkownika:</translation>
-    </message>
-    <message>
         <location filename="../scripts/Edit/AppPreferences/ThemePreferences/PreferencesPage.ui" line="+20"/>
         <source>User interface theme:</source>
         <translation type="unfinished">Temat interfejsu użytkownika:</translation>
@@ -13914,13 +13130,6 @@ wyświetlanych w wynikach wyszukiwania:</translation>
     </message>
 </context>
 <context>
-    <name>ToggleLayerFrozen</name>
-    <message>
-        <source>&amp;Toggle Frozen Status</source>
-        <translation type="vanished">&amp;Przełącz stan zamrożenia</translation>
-    </message>
-</context>
-<context>
     <name>ToggleLayerLock</name>
     <message>
         <location filename="../scripts/Layer/ToggleLayerLock/ToggleLayerLockInit.js" line="+2"/>
@@ -13938,10 +13147,6 @@ wyświetlanych w wynikach wyszukiwania:</translation>
 </context>
 <context>
     <name>ToolBar</name>
-    <message>
-        <source>Icon Size:</source>
-        <translation type="vanished">Rozmiar ikon:</translation>
-    </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ToolBarPreferences/PreferencesPage.ui" line="+19"/>
         <source>Icon size:</source>
@@ -13966,10 +13171,6 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <location line="+6"/>
         <source>Shortcut prefix character:</source>
         <translation type="unfinished">Znak prefiksu skrótu:</translation>
-    </message>
-    <message>
-        <source>Shortcut Prefix Character:</source>
-        <translation type="vanished">Znak poprzedzający skrót:</translation>
     </message>
 </context>
 <context>
@@ -14276,10 +13477,6 @@ wyświetlanych w wynikach wyszukiwania:</translation>
 <context>
     <name>UnitSettings</name>
     <message>
-        <source>Measurement System (for line types and hatch patterns):</source>
-        <translation type="vanished">System miar (dla rodzajów linii i wzorów kreskowania):</translation>
-    </message>
-    <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/UnitSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
         <translation type="unfinished">Domyślne wartości dla nowych rysunków</translation>
@@ -14442,10 +13639,6 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation>Narzędzia widoku</translation>
     </message>
     <message>
-        <source>Show view tools</source>
-        <translation type="vanished">Wyświetla narzędzia widoku</translation>
-    </message>
-    <message>
         <location line="+28"/>
         <source>View</source>
         <translation>Widok</translation>
@@ -14518,7 +13711,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+295"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+322"/>
         <source>Dropped data not supported</source>
         <translation>Nie obsługiwane przeciągnięte dane </translation>
     </message>
@@ -14532,17 +13725,6 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <source>Importing URL: </source>
         <translation>Importowanie adresu URL:</translation>
     </message>
-    <message>
-        <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="obsolete">Odstępy siatki &amp;lt;odstęp siatki Meta</translation>
-    </message>
-</context>
-<context>
-    <name>ViewportWidgetGl</name>
-    <message>
-        <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="obsolete">Odstępy siatki &amp;lt;odstęp siatki Meta</translation>
-    </message>
 </context>
 <context>
     <name>Website</name>
@@ -14555,7 +13737,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1098"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1144"/>
         <source>Restore defaults</source>
         <translation type="unfinished">Przywróć ustawienia domyślne</translation>
     </message>
@@ -14580,21 +13762,9 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation type="unfinished">Plus/Minus</translation>
     </message>
     <message>
-        <source>Almost equal to</source>
-        <translation type="vanished">Prawie równe</translation>
-    </message>
-    <message>
-        <source>Asymptotically equal to</source>
-        <translation type="vanished">Asymptotycznie równe</translation>
-    </message>
-    <message>
         <location line="+23"/>
         <source>Pi</source>
         <translation type="unfinished">Pi</translation>
-    </message>
-    <message>
-        <source>Square root</source>
-        <translation type="vanished">Pierwiastek kwadratowy</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -14804,42 +13974,6 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation type="unfinished">Pokaż końcowe zera</translation>
     </message>
     <message>
-        <source>0</source>
-        <translation type="obsolete">0</translation>
-    </message>
-    <message>
-        <source>1</source>
-        <translation type="obsolete">1</translation>
-    </message>
-    <message>
-        <source>2</source>
-        <translation type="obsolete">2</translation>
-    </message>
-    <message>
-        <source>3</source>
-        <translation type="obsolete">3</translation>
-    </message>
-    <message>
-        <source>4</source>
-        <translation type="obsolete">4</translation>
-    </message>
-    <message>
-        <source>5</source>
-        <translation type="obsolete">5</translation>
-    </message>
-    <message>
-        <source>6</source>
-        <translation type="obsolete">6</translation>
-    </message>
-    <message>
-        <source>7</source>
-        <translation type="obsolete">7</translation>
-    </message>
-    <message>
-        <source>8</source>
-        <translation type="obsolete">8</translation>
-    </message>
-    <message>
         <location line="-9"/>
         <source>Decimal Degrees</source>
         <translation type="unfinished">Stopnie dziesiętne</translation>
@@ -15005,10 +14139,6 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation>Narzędzia przybliżania</translation>
     </message>
     <message>
-        <source>Show zoom tools</source>
-        <translation type="vanished">Wyświetla narzędzia przybliżania</translation>
-    </message>
-    <message>
         <location line="+28"/>
         <source>&amp;Zoom</source>
         <translation>&amp;Przybliż</translation>
@@ -15069,7 +14199,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+996"/>
+        <location filename="../scripts/library.js" line="+1011"/>
         <source>Objects</source>
         <translation type="unfinished">Obiekty</translation>
     </message>
@@ -15537,10 +14667,6 @@ wyświetlanych w wynikach wyszukiwania:</translation>
 <context>
     <name>scrollArea</name>
     <message>
-        <source>View 1</source>
-        <translation type="obsolete">Zobacz 1</translation>
-    </message>
-    <message>
         <location filename="../scripts/Edit/DrawingPreferences/GridSettings/PreferencesPage.ui" line="+29"/>
         <source>Viewport 1</source>
         <translation>Rzutnia 1</translation>
@@ -15615,18 +14741,6 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <location line="+152"/>
         <source>Viewport 4</source>
         <translation>Rzutnia 4</translation>
-    </message>
-    <message>
-        <source>View 2</source>
-        <translation type="obsolete">Zobacz 2</translation>
-    </message>
-    <message>
-        <source>View 3</source>
-        <translation type="obsolete">Zobacz 3</translation>
-    </message>
-    <message>
-        <source>View 4</source>
-        <translation type="obsolete">Zobacz 4</translation>
     </message>
 </context>
 <context>

@@ -585,10 +585,6 @@
         <translation>Objekt usynlig</translation>
     </message>
     <message>
-        <source>Invisible</source>
-        <translation type="vanished">Usynlig</translation>
-    </message>
-    <message>
         <location line="+1"/>
         <source>Working Set</source>
         <translation>Arbejdssæt</translation>
@@ -715,10 +711,6 @@
         <translation>Stil</translation>
     </message>
     <message>
-        <source>Overall dimension scale</source>
-        <translation type="vanished">Samlet dimensionsskala</translation>
-    </message>
-    <message>
         <location line="+2"/>
         <source>Linear measurement factor</source>
         <translation>Lineær målefaktor</translation>
@@ -754,17 +746,9 @@
         <translation>Forlængelseslinje offset</translation>
     </message>
     <message>
-        <source>Text above dimension line</source>
-        <translation type="obsolete">Tekst over dimensionslinje</translation>
-    </message>
-    <message>
         <location line="+1"/>
         <source>Text position vertical</source>
         <translation>Tekstposition vertikalt</translation>
-    </message>
-    <message>
-        <source>Text inside horizontal</source>
-        <translation type="vanished">Tekst inden for vandret</translation>
     </message>
     <message>
         <location line="-8"/>
