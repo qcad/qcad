@@ -337,7 +337,7 @@ DefaultNavigation.prototype.pinchGestureEvent = function(gesture) {
     }
     if (typeof(QPinchGesture)!=="undefined" && (changeFlags & QPinchGesture.ScaleFactorChanged)) {
         var value;
-        if (RSettings.isQt(5)) {
+        if (RSettings.getQtVersion() >= 0x050000) {
             // Qt 5:
             value = gesture.totalScaleFactor;
         }
