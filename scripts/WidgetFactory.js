@@ -670,13 +670,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
         if (isOfType(c, QCheckBox)) {
             if (!reset) {
                 WidgetFactory.connect(c.toggled, signalReceiver, c.objectName);
-                //WidgetFactory.connect(c.stateChanged, WidgetFactory.topLevelWidget, "Setting");
-                //c.stateChanged.connect(WidgetFactory.topLevelWidget, "slotSettingChanged");
-                c.stateChanged.connect(function() {
-                    if (!isNull(WidgetFactory.topLevelWidget)) {
-                        WidgetFactory.topLevelWidget.slotSettingChanged();
-                    }
-                });
+                WidgetFactory.connect(c.stateChanged, WidgetFactory.topLevelWidget, "Setting");
             }
             if (isNull(c.property("defaultValue"))) {
                 c.setProperty("defaultValue", c.checked);
