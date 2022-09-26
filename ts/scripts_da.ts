@@ -427,7 +427,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/AppPreferences.js" line="+65"/>
         <source>Application &amp;Preferences</source>
-        <translation>Ansøgning &amp;præferencer</translation>
+        <translation>Program &amp;præference</translation>
     </message>
 </context>
 <context>
