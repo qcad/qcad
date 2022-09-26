@@ -294,6 +294,10 @@ RCadToolMatrixTree.prototype.filter = function(text) {
                 continue;
             }
 
+            if (!isFunction(child.defaultAction)) {
+                continue;
+            }
+
             var action = child.defaultAction();
             if (isNull(action)) {
                 continue;
@@ -613,5 +617,9 @@ CadToolMatrix.uninit = function() {
         }
     }
     RSettings.setValue("CadToolMatrix/ClosedCategories", closedCategories.join(","));
-    RSettings.setValue("CadToolMatrix/ListViewMode", toolMatrix.listViewMode);
+
+    // TODO #qt6:
+    if (RSettings.getQtVersion()<0x060000) {
+        RSettings.setValue("CadToolMatrix/ListViewMode", toolMatrix.listViewMode);
+    }
 };
