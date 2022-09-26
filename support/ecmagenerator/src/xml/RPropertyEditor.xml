@@ -99,9 +99,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="propertyTypeId" isConst="false" />
         <arg type="QVariant" typeName="QVariant"
         name="propertyValue" isConst="false" />
-        <arg type="QMetaType::Type" typeName="QMetaType::Type"
+        <arg type="RS::MetaType" typeName="RS::MetaType"
         name="typeHint" hasDefault="true"
-        default="QMetaType :: UnknownType" isConst="false" />
+        default="RS :: UnknownType" isConst="false" />
       </variant>
     </method>
     <method name="listPropertyChanged"

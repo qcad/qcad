@@ -96,8 +96,8 @@
     
     
       void propertyChanged(
-                RPropertyTypeId propertyTypeId, QVariant propertyValue, QMetaType::Type typeHint
-        = QMetaType :: UnknownType
+                RPropertyTypeId propertyTypeId, QVariant propertyValue, RS::MetaType typeHint
+        = RS :: UnknownType
             );
         
     

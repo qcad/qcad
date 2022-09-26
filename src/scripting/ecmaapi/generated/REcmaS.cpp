@@ -125,6 +125,7 @@
 
     // enum values:
     
+
     ctor.setProperty("Bool",
     QScriptValue(RS::Bool),
     QScriptValue::ReadOnly);
@@ -145,8 +146,8 @@
     QScriptValue::ReadOnly);
 
 
-    ctor.setProperty("Invalid",
-    QScriptValue(RS::Invalid),
+    ctor.setProperty("UnknownType",
+    QScriptValue(RS::UnknownType),
     QScriptValue::ReadOnly);
 
 
@@ -2297,13 +2298,6 @@
 
     // enum conversions:
     
-    qScriptRegisterMetaType<RS::MetaType>(
-        &engine,
-        toScriptValueEnumMetaType,
-        fromScriptValueEnumMetaType,
-        ctor.property(QString::fromLatin1("prototype"))
-    );
-
     qScriptRegisterMetaType<RS::MetaType>(
         &engine,
         toScriptValueEnumMetaType,

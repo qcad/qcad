@@ -359,6 +359,7 @@
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QAbstractItemView::ScrollHint</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QEasingCurve::Type</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QMetaType::Type</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QMetaType::Type*</argument>)</argument_list></macro>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QtMsgType*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QtMsgType</argument>)</argument_list></macro>

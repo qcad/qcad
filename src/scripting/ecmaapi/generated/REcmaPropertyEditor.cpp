@@ -1132,8 +1132,10 @@
             context->argument(1).isUndefined()
         ) /* type: QVariant */
      && (
-            context->argument(2).isNumber()
-        ) /* type: QMetaType::Type */
+            context->argument(2).isVariant() || 
+            context->argument(2).isQObject() || 
+            context->argument(2).isNull()
+        ) /* type: RS::MetaType */
     
     ){
     // prepare arguments:
@@ -1167,13 +1169,21 @@
                         )
                     );
                 
-                    // argument isStandardType
-                    QMetaType::Type
-                    a2 =
-                    (QMetaType::Type)
-                    (int)
-                    context->argument( 2 ).
-                    toNumber();
+                    // argument is reference
+                    RS::MetaType*
+                    ap2 =
+                    qscriptvalue_cast<
+                    RS::MetaType*
+                        >(
+                        context->argument(
+                        2
+                        )
+                    );
+                    if( ap2 == NULL ){
+                           return REcmaHelper::throwError("RPropertyEditor: Argument 2 is not of type RS::MetaType*.",
+                               context);                    
+                    }
+                    RS::MetaType& a2 = *ap2;
                 
     // end of arguments
 

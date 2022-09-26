@@ -34,6 +34,7 @@
 <class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RProgressHandler</name> <block>{<private type="default">
 </private><public>public:
     <constructor><name>RProgressHandler</name><parameter_list>()</parameter_list> <member_list>: <call><name>progressEnabled</name><argument_list>(<argument><expr><name>true</name></expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
+    <expr_stmt><expr>virtual ~<call><name>RProgressHandler</name><argument_list>()</argument_list></call> = default</expr>;</expr_stmt>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setProgress</name><parameter_list>(<param><decl><type><name>int</name></type> <name>value</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setProgressEnd</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
