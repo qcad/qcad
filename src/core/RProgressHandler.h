@@ -33,7 +33,7 @@
 class QCADCORE_EXPORT RProgressHandler {
 public:
     RProgressHandler() : progressEnabled(true) {}
-    virtual ~RProgressHandler() = default;
+    virtual ~RProgressHandler() {}
 
     virtual void setProgress(int value) = 0;
     virtual void setProgressEnd() = 0;

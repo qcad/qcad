@@ -32,7 +32,7 @@
  */
 class QCADCORE_EXPORT RMessageHandler {
 public:
-    virtual ~RMessageHandler() = default;
+    virtual ~RMessageHandler() {}
 
     virtual void handleUserMessage(const QString& message, bool escape=true) = 0;
     virtual void handleUserInfo(const QString& message, bool escape=true) = 0;
