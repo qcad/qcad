@@ -809,7 +809,7 @@
 
 
 
-    // type: RS::MetaType, copyable: false
+    // type: RS::MetaType, copyable: true
         << qScriptValueFromValue(engine, 
 
         typeHint

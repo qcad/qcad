@@ -911,6 +911,7 @@
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::MetaType</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::MetaType*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::AngleFormat</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::AngleFormat*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::AngleUnit</argument>)</argument_list></macro>

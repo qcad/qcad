@@ -33,7 +33,7 @@
  */</comment>
 <class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RMessageHandler</name> <block>{<private type="default">
 </private><public>public:
-    <expr_stmt><expr>virtual ~<call><name>RMessageHandler</name><argument_list>()</argument_list></call> = default</expr>;</expr_stmt>
+    <destructor><specifier>virtual</specifier> <name>~RMessageHandler</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>handleUserMessage</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>, <param><decl><type><name>bool</name></type> <name>escape</name>=<init><expr><name>true</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>handleUserInfo</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>, <param><decl><type><name>bool</name></type> <name>escape</name>=<init><expr><name>true</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
