@@ -377,7 +377,7 @@ WidgetFactory.saveState = function(widget, group, document, map) {
             }
         }
         else if (c.toString().startsWith("RFontChooserWidget")) {
-            value = c.getFont();
+            value = c.getChosenFont();
         }
 
         if (isNull(value)) {
@@ -1001,7 +1001,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
                 c.valueChanged.connect(WidgetFactory.topLevelWidget, "slotSettingChanged");
             }
             if (isNull(c.property("defaultValue"))) {
-                c.setProperty("defaultValue", c.getFont());
+                c.setProperty("defaultValue", c.getChosenFont());
             }
             if (!isNull(value)) {
                 if (isString(value)) {
