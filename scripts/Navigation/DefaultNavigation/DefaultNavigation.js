@@ -152,7 +152,7 @@ DefaultNavigation.prototype.handleMiddleMouseButtonZoom = function(event) {
             this.view.zoomIn(position, DefaultNavigation.middleMouseButtonZoomFactor);
         }
     }
-}
+};
 
 DefaultNavigation.prototype.mouseMoveEvent = function(event) {
     if (isNull(this.view)) {
@@ -189,7 +189,15 @@ DefaultNavigation.prototype.wheelEvent = function(event) {
         return;
     }
 
-    var wheelDelta = event.delta();
+    var wheelDelta;
+
+    if (isFunction(event.delta)) {
+        wheelDelta = event.delta();
+    }
+    else {
+        // Qt 6:
+        wheelDelta = event.pixelDelta.y();
+    }
 
     switch (event.modifiers().valueOf()) {
     

@@ -240,7 +240,7 @@ public:
         Char = QVariant::Char,
         Double = QVariant::Double,
         Int = QVariant::Int,
-        Invalid = QVariant::Invalid,
+        UnknownType = QVariant::Invalid,
         LongLong = QVariant::LongLong,
         BitArray = QVariant::BitArray,
         Bitmap = QVariant::Bitmap,

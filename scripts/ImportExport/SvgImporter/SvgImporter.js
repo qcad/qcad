@@ -362,7 +362,19 @@ SvgImporter.prototype.importFile = function(fileName) {
     }
 
     var handler = new SvgHandler(this);
-    parseXml(fileName, handler);
+
+    if (RSettings.getQtVersion()<0x060000) {
+        parseXml(fileName, handler);
+    }
+    else {
+        var fi = new QFileInfo(fileName);
+        var file = new QFile(fi.absoluteFilePath());
+        var xmlReader = new QXmlSimpleReader();
+        var source = new QXmlInputSource(file);
+        xmlReader.setContentHandler(handler);
+        var ret = xmlReader.parse(source, false);
+        file.close();
+    }
 
     /*
     var fi = new QFileInfo(fileName);
@@ -375,7 +387,7 @@ SvgImporter.prototype.importFile = function(fileName) {
     var ok = xmlReader.parse(source, false);
     file.close();
     */
-    
+
     this.endImport();
 
     return true;
@@ -394,7 +406,12 @@ SvgImporter.prototype.importShape = function(shape) {
     }
     else {
         shapeP = shape.getTransformed(this.transform);
-        shape = shapeP.data();
+        if (isFunction(shapeP.data)) {
+            shape = shapeP.data();
+        }
+        else {
+            shape = shapeP;
+        }
     }
 
     shape.scale(new RVector(1.0, -1.0));
@@ -502,7 +519,14 @@ SvgImporter.prototype.createBezier2 = function(x1, y1, px, py, x2, y2) {
  * from the path.
  */
 SvgImporter.prototype.importPath = function(dData) {
-    var segs = dData.split(/(?=[mlhvcsqtaz])/i);
+    var segs;
+    if (RSettings.getQtVersion()<0x060000) {
+        segs = dData.split(/(?=[mlhvcsqtaz])/i);
+    }
+    else {
+        segs = dData.split(/([mlhvcsqtaz][^mlhvcsqtaz]*)/i);
+    }
+
     var x = 0;
     var y = 0;
     var x0, y0;  // start point of sub path for z command

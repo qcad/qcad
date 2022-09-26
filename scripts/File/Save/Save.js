@@ -86,7 +86,7 @@ Save.prototype.save = function(fileName, fileVersion, overwriteWarning) {
 
     if (overwriteWarning) {
         if (new QFileInfo(fileName).exists()) {
-            buttons = new QMessageBox.StandardButtons(QMessageBox.Yes, QMessageBox.No);
+            buttons = makeQMessageBoxStandardButtons(QMessageBox.Yes, QMessageBox.No);
             ret = QMessageBox.warning(
                         appWin,
                         qsTr("Overwrite File?"),
