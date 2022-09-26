@@ -18,7 +18,6 @@
  */
 
 include("scripts/EAction.js");
-include("scripts/Edit/Edit.js");
 
 /**
  * \class Reset

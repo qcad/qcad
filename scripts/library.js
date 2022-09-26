@@ -116,11 +116,12 @@ function getTypeOf(v) {
  * derived from QWidget.
  */
 function isOfType(obj, type) {
-    if (!RSettings.isQt(6)) {
+    if (RSettings.getQtVersion() < 0x060000) {
         return !isNull(obj) && obj.constructor===type;
     }
     else {
-        return !isNull(obj) && (obj.constructor===type || (isFunction(obj.getType) && obj.getType()===type.getType()));
+        //return !isNull(obj) && (obj.constructor===type || (isFunction(obj.getType) && obj.getType()===type.getType()));
+        return !isNull(obj) && isFunction(obj.getType) && obj.getType()===type.getType();
     }
 }
 
@@ -270,7 +271,12 @@ function isSeparator(obj) {
  * \return true if the given object is a layer.
  */
 function isLayer(obj) {
-    return isOfType(obj, RLayer) || isOfType(obj, RLayerPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RLayer) || isOfType(obj, RLayerPointer);
+    }
+    else {
+        return isOfType(obj, RLayer);
+    }
 }
 
 /**
@@ -279,7 +285,12 @@ function isLayer(obj) {
  * \return true if the given object is a block.
  */
 function isBlock(obj) {
-    return isOfType(obj, RBlock) || isOfType(obj, RBlockPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RBlock) || isOfType(obj, RBlockPointer);
+    }
+    else {
+        return isOfType(obj, RBlock);
+    }
 }
 
 /**
@@ -288,7 +299,12 @@ function isBlock(obj) {
  * \return true if the given object is a layout.
  */
 function isLayout(obj) {
-    return isOfType(obj, RLayout) || isOfType(obj, RLayoutPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RLayout) || isOfType(obj, RLayoutPointer);
+    }
+    else {
+        return isOfType(obj, RLayout);
+    }
 }
 
 /**
@@ -338,7 +354,12 @@ function isDimensionEntity(obj) {
  * (RDimDiametricEntity).
  */
 function isDimDiametricEntity(obj) {
-    return isOfType(obj, RDimDiametricEntity) || isOfType(obj, RDimDiametricEntityPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RDimDiametricEntity) || isOfType(obj, RDimDiametricEntityPointer);
+    }
+    else {
+        return isOfType(obj, RDimDiametricEntity);
+    }
 }
 
 /**
@@ -348,7 +369,12 @@ function isDimDiametricEntity(obj) {
  * (RDimAlignedEntity).
  */
 function isDimAlignedEntity(obj) {
-    return isOfType(obj, RDimAlignedEntity) || isOfType(obj, RDimAlignedEntityPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RDimAlignedEntity) || isOfType(obj, RDimAlignedEntityPointer);
+    }
+    else {
+        return isOfType(obj, RDimAlignedEntity);
+    }
 }
 
 /**
@@ -358,7 +384,12 @@ function isDimAlignedEntity(obj) {
  * (RDimRotatedEntity).
  */
 function isDimRotatedEntity(obj) {
-    return isOfType(obj, RDimRotatedEntity) || isOfType(obj, RDimRotatedEntityPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RDimRotatedEntity) || isOfType(obj, RDimRotatedEntityPointer);
+    }
+    else {
+        return isOfType(obj, RDimRotatedEntity);
+    }
 }
 
 /**
@@ -368,7 +399,12 @@ function isDimRotatedEntity(obj) {
  * (RDimOrdinateEntity).
  */
 function isDimOrdinateEntity(obj) {
-    return isOfType(obj, RDimOrdinateEntity) || isOfType(obj, RDimOrdinateEntityPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RDimOrdinateEntity) || isOfType(obj, RDimOrdinateEntityPointer);
+    }
+    else {
+        return isOfType(obj, RDimOrdinateEntity);
+    }
 }
 
 /**
@@ -378,7 +414,12 @@ function isDimOrdinateEntity(obj) {
  * (RDimRadialEntity).
  */
 function isDimRadialEntity(obj) {
-    return isOfType(obj, RDimRadialEntity) || isOfType(obj, RDimRadialEntityPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RDimRadialEntity) || isOfType(obj, RDimRadialEntityPointer);
+    }
+    else {
+        return isOfType(obj, RDimRadialEntity);
+    }
 }
 
 /**
@@ -398,7 +439,12 @@ function isDimAngularEntity(obj) {
  * (RDimAngular2LEntity).
  */
 function isDimAngular2LEntity(obj) {
-    return isOfType(obj, RDimAngular2LEntity) || isOfType(obj, RDimAngular2LEntityPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RDimAngular2LEntity) || isOfType(obj, RDimAngular2LEntityPointer);
+    }
+    else {
+        return isOfType(obj, RDimAngular2LEntity);
+    }
 }
 
 /**
@@ -408,7 +454,12 @@ function isDimAngular2LEntity(obj) {
  * (RDimAngular3PEntity).
  */
 function isDimAngular3PEntity(obj) {
-    return isOfType(obj, RDimAngular3PEntity) || isOfType(obj, RDimAngular3PEntityPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RDimAngular3PEntity) || isOfType(obj, RDimAngular3PEntityPointer);
+    }
+    else {
+        return isOfType(obj, RDimAngular3PEntity);
+    }
 }
 
 /**
@@ -418,7 +469,12 @@ function isDimAngular3PEntity(obj) {
  * (RDimArcLengthEntity).
  */
 function isDimArcLengthEntity(obj) {
-    return isOfType(obj, RDimArcLengthEntity) || isOfType(obj, RDimArcLengthEntityPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RDimArcLengthEntity) || isOfType(obj, RDimArcLengthEntityPointer);
+    }
+    else {
+        return isOfType(obj, RDimArcLengthEntity);
+    }
 }
 
 /**
@@ -428,7 +484,12 @@ function isDimArcLengthEntity(obj) {
  * (RDimLinearEntity).
  */
 function isDimLinearEntity(obj) {
-    return isOfType(obj, RDimLinearEntity) || isOfType(obj, RDimLinearEntityPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RDimLinearEntity) || isOfType(obj, RDimLinearEntityPointer);
+    }
+    else {
+        return isOfType(obj, RDimLinearEntity);
+    }
 }
 
 /**
@@ -437,7 +498,12 @@ function isDimLinearEntity(obj) {
  * \return true if the given object is an arc entity (RHatchEntity).
  */
 function isHatchEntity(obj) {
-    return isOfType(obj, RHatchEntity) || isOfType(obj, RHatchEntityPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RHatchEntity) || isOfType(obj, RHatchEntityPointer);
+    }
+    else {
+        return isOfType(obj, RHatchEntity);
+    }
 }
 
 /**
@@ -446,7 +512,12 @@ function isHatchEntity(obj) {
  * \return true if the given object is an arc entity (RArcEntity).
  */
 function isArcEntity(obj) {
-    return isOfType(obj, RArcEntity) || isOfType(obj, RArcEntityPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RArcEntity) || isOfType(obj, RArcEntityPointer);
+    }
+    else {
+        return isOfType(obj, RArcEntity);
+    }
 }
 
 /**
@@ -455,7 +526,12 @@ function isArcEntity(obj) {
  * \return true if the given object is a line entity (RCircleEntity).
  */
 function isCircleEntity(obj) {
-    return isOfType(obj, RCircleEntity) || isOfType(obj, RCircleEntityPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RCircleEntity) || isOfType(obj, RCircleEntityPointer);
+    }
+    else {
+        return isOfType(obj, RCircleEntity);
+    }
 }
 
 /**
@@ -464,7 +540,12 @@ function isCircleEntity(obj) {
  * \return true if the given object is an ellipse entity (REllipseEntity).
  */
 function isEllipseEntity(obj) {
-    return isOfType(obj, REllipseEntity) || isOfType(obj, REllipseEntityPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, REllipseEntity) || isOfType(obj, REllipseEntityPointer);
+    }
+    else {
+        return isOfType(obj, REllipseEntity);
+    }
 }
 
 /**
@@ -491,7 +572,12 @@ function isFullEllipseEntity(obj) {
  * \return true if the given object is a line entity (RLineEntity).
  */
 function isLineEntity(obj) {
-    return isOfType(obj, RLineEntity) || isOfType(obj, RLineEntityPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RLineEntity) || isOfType(obj, RLineEntityPointer);
+    }
+    else {
+        return isOfType(obj, RLineEntity);
+    }
 }
 
 /**
@@ -509,7 +595,12 @@ function isLineBasedEntity(obj) {
  * \return true if the given object is an xline entity (RXLineEntity).
  */
 function isXLineEntity(obj) {
-    return isOfType(obj, RXLineEntity) || isOfType(obj, RXLineEntityPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RXLineEntity) || isOfType(obj, RXLineEntityPointer);
+    }
+    else {
+        return isOfType(obj, RXLineEntity);
+    }
 }
 
 /**
@@ -518,7 +609,12 @@ function isXLineEntity(obj) {
  * \return true if the given object is a ray entity (RRayEntity).
  */
 function isRayEntity(obj) {
-    return isOfType(obj, RRayEntity) || isOfType(obj, RRayEntityPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RRayEntity) || isOfType(obj, RRayEntityPointer);
+    }
+    else {
+        return isOfType(obj, RRayEntity);
+    }
 }
 
 /**
@@ -527,7 +623,12 @@ function isRayEntity(obj) {
  * \return true if the given object is a point entity (RPointEntity).
  */
 function isPointEntity(obj) {
-    return isOfType(obj, RPointEntity) || isOfType(obj, RPointEntityPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RPointEntity) || isOfType(obj, RPointEntityPointer);
+    }
+    else {
+        return isOfType(obj, RPointEntity);
+    }
 }
 
 /**
@@ -536,14 +637,24 @@ function isPointEntity(obj) {
  * \return true if the given object is an image entity (RImageEntity).
  */
 function isImageEntity(obj) {
-    return isOfType(obj, RImageEntity) || isOfType(obj, RImageEntityPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RImageEntity) || isOfType(obj, RImageEntityPointer);
+    }
+    else {
+        return isOfType(obj, RImageEntity);
+    }
 }
 
 /**
  * \return true if the given object is a polyline entity (RPolylineEntity).
  */
 function isPolylineEntity(obj) {
-    return isOfType(obj, RPolylineEntity) || isOfType(obj, RPolylineEntityPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RPolylineEntity) || isOfType(obj, RPolylineEntityPointer);
+    }
+    else {
+        return isOfType(obj, RPolylineEntity);
+    }
 }
 
 /**
@@ -576,7 +687,12 @@ function isOpenPolylineEntity(obj, tolerance) {
  * \return true if the given object is a solid entity (RSolidEntity).
  */
 function isSolidEntity(obj) {
-    return isOfType(obj, RSolidEntity) || isOfType(obj, RSolidEntityPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RSolidEntity) || isOfType(obj, RSolidEntityPointer);
+    }
+    else {
+        return isOfType(obj, RSolidEntity);
+    }
 }
 
 /**
@@ -585,7 +701,12 @@ function isSolidEntity(obj) {
  * \return true if the given object is a trace entity (RTraceEntity).
  */
 function isTraceEntity(obj) {
-    return isOfType(obj, RTraceEntity) || isOfType(obj, RTraceEntityPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RTraceEntity) || isOfType(obj, RTraceEntityPointer);
+    }
+    else {
+        return isOfType(obj, RTraceEntity);
+    }
 }
 
 /**
@@ -594,7 +715,12 @@ function isTraceEntity(obj) {
  * \return true if the given object is a face entity (RFaceEntity).
  */
 function isFaceEntity(obj) {
-    return isOfType(obj, RFaceEntity) || isOfType(obj, RFaceEntityPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RFaceEntity) || isOfType(obj, RFaceEntityPointer);
+    }
+    else {
+        return isOfType(obj, RFaceEntity);
+    }
 }
 
 /**
@@ -603,7 +729,12 @@ function isFaceEntity(obj) {
  * \return true if the given object is a viewport entity (RViewportEntity).
  */
 function isViewportEntity(obj) {
-    return isOfType(obj, RViewportEntity) || isOfType(obj, RViewportEntityPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RViewportEntity) || isOfType(obj, RViewportEntityPointer);
+    }
+    else {
+        return isOfType(obj, RViewportEntity);
+    }
 }
 
 /**
@@ -612,7 +743,12 @@ function isViewportEntity(obj) {
  * \return true if the given object is a spline entity (RSplineEntity).
  */
 function isSplineEntity(obj) {
-    return isOfType(obj, RSplineEntity) || isOfType(obj, RSplineEntityPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RSplineEntity) || isOfType(obj, RSplineEntityPointer);
+    }
+    else {
+        return isOfType(obj, RSplineEntity);
+    }
 }
 
 /**
@@ -648,7 +784,12 @@ function isTextBasedEntity(obj) {
  * \return true if the given object is a text entity (RTextEntity).
  */
 function isTextEntity(obj) {
-    return isOfType(obj, RTextEntity) || isOfType(obj, RTextEntityPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RTextEntity) || isOfType(obj, RTextEntityPointer);
+    }
+    else {
+        return isOfType(obj, RTextEntity);
+    }
 }
 
 /**
@@ -666,11 +807,11 @@ function isSimpleTextEntity(obj) {
  * \return true if the given object is a block reference entity (RBlockReferenceEntity).
  */
 function isBlockReferenceEntity(obj) {
-    if (RSettings.getQtVersion()>=0x060000) {
-        return isOfType(obj, RBlockReferenceEntity);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RBlockReferenceEntity) || isOfType(obj, RBlockReferenceEntityPointer);
     }
     else {
-        return isOfType(obj, RBlockReferenceEntity) || isOfType(obj, RBlockReferenceEntityPointer);
+        return isOfType(obj, RBlockReferenceEntity);
     }
 }
 
@@ -680,7 +821,12 @@ function isBlockReferenceEntity(obj) {
  * \return true if the given object is an attribute definition entity (RAttributeDefinitionEntity).
  */
 function isAttributeDefinitionEntity(obj) {
-    return isOfType(obj, RAttributeDefinitionEntity) || isOfType(obj, RAttributeDefinitionEntityPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RAttributeDefinitionEntity) || isOfType(obj, RAttributeDefinitionEntityPointer);
+    }
+    else {
+        return isOfType(obj, RAttributeDefinitionEntity);
+    }
 }
 
 /**
@@ -689,7 +835,12 @@ function isAttributeDefinitionEntity(obj) {
  * \return true if the given object is an attribute entity (RAttributeEntity).
  */
 function isAttributeEntity(obj) {
-    return isOfType(obj, RAttributeEntity) || isOfType(obj, RAttributeEntityPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RAttributeEntity) || isOfType(obj, RAttributeEntityPointer);
+    }
+    else {
+        return isOfType(obj, RAttributeEntity);
+    }
 }
 
 /**
@@ -699,7 +850,12 @@ function isAttributeEntity(obj) {
  * (RLeaderEntity).
  */
 function isLeaderEntity(obj) {
-    return isOfType(obj, RLeaderEntity) || isOfType(obj, RLeaderEntityPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RLeaderEntity) || isOfType(obj, RLeaderEntityPointer);
+    }
+    else {
+        return isOfType(obj, RLeaderEntity);
+    }
 }
 
 /**
@@ -708,7 +864,12 @@ function isLeaderEntity(obj) {
  * \return true if the given object is a tolerance entity (RToleranceEntity).
  */
 function isToleranceEntity(obj) {
-    return isOfType(obj, RToleranceEntity) || isOfType(obj, RToleranceEntityPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RToleranceEntity) || isOfType(obj, RToleranceEntityPointer);
+    }
+    else {
+        return isOfType(obj, RToleranceEntity);
+    }
 }
 
 /**
@@ -763,7 +924,12 @@ function isDirectedShape(obj) {
  * \return true if the given object is an arc shape (RArc).
  */
 function isArcShape(obj) {
-    return isOfType(obj, RArc) || isOfType(obj, RArcPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RArc) || isOfType(obj, RArcPointer);
+    }
+    else {
+        return isOfType(obj, RArc);
+    }
 }
 
 /**
@@ -772,7 +938,12 @@ function isArcShape(obj) {
  * \return true if the given object is a circle shape (RCircle).
  */
 function isCircleShape(obj) {
-    return isOfType(obj, RCircle) || isOfType(obj, RCirclePointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RCircle) || isOfType(obj, RCirclePointer);
+    }
+    else {
+        return isOfType(obj, RCircle);
+    }
 }
 
 /**
@@ -781,7 +952,12 @@ function isCircleShape(obj) {
  * \return true if the given object is an ellipse shape (REllipse).
  */
 function isEllipseShape(obj) {
-    return isOfType(obj, REllipse) || isOfType(obj, REllipsePointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, REllipse) || isOfType(obj, REllipsePointer);
+    }
+    else {
+        return isOfType(obj, REllipse);
+    }
 }
 
 /**
@@ -817,7 +993,12 @@ function isLineBasedShape(obj) {
  * \return true if the given object is a line shape (RLine).
  */
 function isLineShape(obj) {
-    return isOfType(obj, RLine) || isOfType(obj, RLinePointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RLine) || isOfType(obj, RLinePointer);
+    }
+    else {
+        return isOfType(obj, RLine);
+    }
 }
 
 /**
@@ -826,7 +1007,12 @@ function isLineShape(obj) {
  * \return true if the given object is an xline shape (RXLine).
  */
 function isXLineShape(obj) {
-    return isOfType(obj, RXLine) || isOfType(obj, RXLinePointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RXLine) || isOfType(obj, RXLinePointer);
+    }
+    else {
+        return isOfType(obj, RXLine);
+    }
 }
 
 /**
@@ -835,7 +1021,12 @@ function isXLineShape(obj) {
  * \return true if the given object is a ray shape (RRay).
  */
 function isRayShape(obj) {
-    return isOfType(obj, RRay) || isOfType(obj, RRayPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RRay) || isOfType(obj, RRayPointer);
+    }
+    else {
+        return isOfType(obj, RRay);
+    }
 }
 
 /**
@@ -844,7 +1035,12 @@ function isRayShape(obj) {
  * \return true if the given object is a point shape (RPoint).
  */
 function isPointShape(obj) {
-    return isOfType(obj, RPoint) || isOfType(obj, RPointPointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RPoint) || isOfType(obj, RPointPointer);
+    }
+    else {
+        return isOfType(obj, RPoint);
+    }
 }
 
 /**
@@ -853,7 +1049,12 @@ function isPointShape(obj) {
  * \return true if the given object is a polyline shape (RPolyline).
  */
 function isPolylineShape(obj) {
-    return isOfType(obj, RPolyline) || isOfType(obj, RPolylinePointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RPolyline) || isOfType(obj, RPolylinePointer);
+    }
+    else {
+        return isOfType(obj, RPolyline);
+    }
 }
 
 /**
@@ -869,7 +1070,12 @@ function isClosedPolylineShape(obj) {
  * \return true if the given object is a spline shape (RSpline).
  */
 function isSplineShape(obj) {
-    return isOfType(obj, RSpline) || isOfType(obj, RSplinePointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RSpline) || isOfType(obj, RSplinePointer);
+    }
+    else {
+        return isOfType(obj, RSpline);
+    }
 }
 
 /**
@@ -892,7 +1098,12 @@ function isClosedSplineShape(obj, tolerance) {
  * \return true if the given object is a triangle shape (RTriangle).
  */
 function isTriangleShape(obj) {
-    return isOfType(obj, RTriangle) || isOfType(obj, RTrianglePointer);
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RTriangle) || isOfType(obj, RTrianglePointer);
+    }
+    else {
+        return isOfType(obj, RTriangle);
+    }
 }
 
 /**
