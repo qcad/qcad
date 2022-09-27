@@ -1537,7 +1537,7 @@ Ali jo želite obnoviti?</translation>
 <context>
     <name>CadToolMatrix</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+383"/>
+        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+387"/>
         <source>Expand all</source>
         <translation>Razširi vse</translation>
     </message>
@@ -12463,7 +12463,7 @@ shown in search results:</source>
         <translation>Datoteka</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+35"/>
         <source>Import SVG</source>
         <translation>Uvozi SVG</translation>
     </message>
@@ -12478,7 +12478,7 @@ shown in search results:</source>
         <translation>Vse datoteke</translation>
     </message>
     <message>
-        <location line="-34"/>
+        <location line="-36"/>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+14"/>
         <source>SVG Import</source>
         <translation>Uvozi SVG</translation>
@@ -13743,7 +13743,7 @@ shown in search results:</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1144"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1138"/>
         <source>Restore defaults</source>
         <translation>Obnovi privzeto</translation>
     </message>
@@ -14205,7 +14205,7 @@ shown in search results:</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1011"/>
+        <location filename="../scripts/library.js" line="+1222"/>
         <source>Objects</source>
         <translation>Objekti</translation>
     </message>

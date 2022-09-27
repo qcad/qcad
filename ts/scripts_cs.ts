@@ -1537,7 +1537,7 @@ Přejete si ho obnovit?</translation>
 <context>
     <name>CadToolMatrix</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+383"/>
+        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+387"/>
         <source>Expand all</source>
         <translation>Rozbalit vše</translation>
     </message>
@@ -12455,7 +12455,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Soubor</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+35"/>
         <source>Import SVG</source>
         <translation>Importovat SVG</translation>
     </message>
@@ -12470,7 +12470,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Všechny soubory</translation>
     </message>
     <message>
-        <location line="-34"/>
+        <location line="-36"/>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+14"/>
         <source>SVG Import</source>
         <translation>SVG Import</translation>
@@ -13735,7 +13735,7 @@ ve výsledcích vyhledávání:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1144"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1138"/>
         <source>Restore defaults</source>
         <translation>Obnovit výchozí nastavení</translation>
     </message>
@@ -14197,7 +14197,7 @@ ve výsledcích vyhledávání:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1011"/>
+        <location filename="../scripts/library.js" line="+1222"/>
         <source>Objects</source>
         <translation>Objektů</translation>
     </message>

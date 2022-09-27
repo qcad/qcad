@@ -1537,7 +1537,7 @@ Wilt u deze herstellen?</translation>
 <context>
     <name>CadToolMatrix</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+383"/>
+        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+387"/>
         <source>Expand all</source>
         <translation>Alles uitvouwen</translation>
     </message>
@@ -12447,7 +12447,7 @@ getoond in zoekresultaten:</translation>
         <translation>Bestand</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+35"/>
         <source>Import SVG</source>
         <translation>SVG Importeren</translation>
     </message>
@@ -12462,7 +12462,7 @@ getoond in zoekresultaten:</translation>
         <translation>Alle bestanden</translation>
     </message>
     <message>
-        <location line="-34"/>
+        <location line="-36"/>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+14"/>
         <source>SVG Import</source>
         <translation>SVG Importeren</translation>
@@ -13727,7 +13727,7 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1144"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1138"/>
         <source>Restore defaults</source>
         <translation>Standaardinstellingen herstellen</translation>
     </message>
@@ -14189,7 +14189,7 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1011"/>
+        <location filename="../scripts/library.js" line="+1222"/>
         <source>Objects</source>
         <translation>Objecten</translation>
     </message>
