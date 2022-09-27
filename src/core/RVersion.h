@@ -25,11 +25,11 @@
  * x.x.x   for releases
  * x.x.x.x for snapshots only
  */
-#define R_QCAD_VERSION_STRING "3.27.6.11"
+#define R_QCAD_VERSION_STRING "3.27.7"
 
 #define R_QCAD_VERSION_MAJOR    3
 #define R_QCAD_VERSION_MINOR    27
-#define R_QCAD_VERSION_REV      6
-#define R_QCAD_VERSION_BUILD    11
+#define R_QCAD_VERSION_REV      7
+#define R_QCAD_VERSION_BUILD    0
 
 #endif
