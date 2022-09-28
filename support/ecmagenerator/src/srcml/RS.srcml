@@ -182,19 +182,15 @@
         <expr><name>Locale</name> = <name><name>QVariant</name>::<name>Locale</name></name></expr>,
         <expr><name>Map</name> = <name><name>QVariant</name>::<name>Map</name></name></expr>,
         <expr><name>Matrix4x4</name> = <name><name>QVariant</name>::<name>Matrix4x4</name></name></expr>,
-        <expr><name>ModelIndex</name> = <name><name>QVariant</name>::<name>ModelIndex</name></name></expr>,
         <expr><name>Palette</name> = <name><name>QVariant</name>::<name>Palette</name></name></expr>,
         <expr><name>Pen</name> = <name><name>QVariant</name>::<name>Pen</name></name></expr>,
-        <expr><name>PersistentModelIndex</name> = <name><name>QVariant</name>::<name>PersistentModelIndex</name></name></expr>,
         <expr><name>Pixmap</name> = <name><name>QVariant</name>::<name>Pixmap</name></name></expr>,
         <expr><name>Point</name> = <name><name>QVariant</name>::<name>Point</name></name></expr>,
         <expr><name>PointF</name> = <name><name>QVariant</name>::<name>PointF</name></name></expr>,
         <expr><name>Polygon</name> = <name><name>QVariant</name>::<name>Polygon</name></name></expr>,
-        <expr><name>PolygonF</name> = <name><name>QVariant</name>::<name>PolygonF</name></name></expr>,
         <expr><name>Rect</name> = <name><name>QVariant</name>::<name>Rect</name></name></expr>,
         <expr><name>RectF</name> = <name><name>QVariant</name>::<name>RectF</name></name></expr>,
         <expr><name>Region</name> = <name><name>QVariant</name>::<name>Region</name></name></expr>,
-        <expr><name>RegularExpression</name> = <name><name>QVariant</name>::<name>RegularExpression</name></name></expr>,
         <expr><name>Size</name> = <name><name>QVariant</name>::<name>Size</name></name></expr>,
         <expr><name>SizeF</name> = <name><name>QVariant</name>::<name>SizeF</name></name></expr>,
         <expr><name>SizePolicy</name> = <name><name>QVariant</name>::<name>SizePolicy</name></name></expr>,
@@ -205,7 +201,6 @@
         <expr><name>Time</name> = <name><name>QVariant</name>::<name>Time</name></name></expr>,
         <expr><name>Transform</name> = <name><name>QVariant</name>::<name>Transform</name></name></expr>,
         <expr><name>Url</name> = <name><name>QVariant</name>::<name>Url</name></name></expr>,
-        <expr><name>Uuid</name> = <name><name>QVariant</name>::<name>Uuid</name></name></expr>,
         <expr><name>Vector2D</name> = <name><name>QVariant</name>::<name>Vector2D</name></name></expr>,
         <expr><name>Vector3D</name> = <name><name>QVariant</name>::<name>Vector3D</name></name></expr>,
         <expr><name>Vector4D</name> = <name><name>QVariant</name>::<name>Vector4D</name></name></expr>,
@@ -847,7 +842,9 @@
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
     }</block></function></template>
 
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x050300</expr></cpp:if>
     <function_decl><type><name>static</name> <name>int</name></type> <name>getPageSizeId</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>name</name></decl></param>)</parameter_list>;</function_decl>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
     <function_decl><type><name>static</name> <name>QSizeF</name></type> <name>getPageSize</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>name</name></decl></param>)</parameter_list>;</function_decl>
 
     <comment type="line">// workarounds for Qt 6 QRegExp changes:</comment>

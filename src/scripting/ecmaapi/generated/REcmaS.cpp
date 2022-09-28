@@ -256,11 +256,6 @@
     QScriptValue::ReadOnly);
 
 
-    ctor.setProperty("ModelIndex",
-    QScriptValue(RS::ModelIndex),
-    QScriptValue::ReadOnly);
-
-
     ctor.setProperty("Palette",
     QScriptValue(RS::Palette),
     QScriptValue::ReadOnly);
@@ -268,11 +263,6 @@
 
     ctor.setProperty("Pen",
     QScriptValue(RS::Pen),
-    QScriptValue::ReadOnly);
-
-
-    ctor.setProperty("PersistentModelIndex",
-    QScriptValue(RS::PersistentModelIndex),
     QScriptValue::ReadOnly);
 
 
@@ -296,11 +286,6 @@
     QScriptValue::ReadOnly);
 
 
-    ctor.setProperty("PolygonF",
-    QScriptValue(RS::PolygonF),
-    QScriptValue::ReadOnly);
-
-
     ctor.setProperty("Rect",
     QScriptValue(RS::Rect),
     QScriptValue::ReadOnly);
@@ -313,11 +298,6 @@
 
     ctor.setProperty("Region",
     QScriptValue(RS::Region),
-    QScriptValue::ReadOnly);
-
-
-    ctor.setProperty("RegularExpression",
-    QScriptValue(RS::RegularExpression),
     QScriptValue::ReadOnly);
 
 
@@ -368,11 +348,6 @@
 
     ctor.setProperty("Url",
     QScriptValue(RS::Url),
-    QScriptValue::ReadOnly);
-
-
-    ctor.setProperty("Uuid",
-    QScriptValue(RS::Uuid),
     QScriptValue::ReadOnly);
 
 
