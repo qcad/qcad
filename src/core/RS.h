@@ -181,19 +181,15 @@ public:
         Locale = QVariant::Locale,
         Map = QVariant::Map,
         Matrix4x4 = QVariant::Matrix4x4,
-        ModelIndex = QVariant::ModelIndex,
         Palette = QVariant::Palette,
         Pen = QVariant::Pen,
-        PersistentModelIndex = QVariant::PersistentModelIndex,
         Pixmap = QVariant::Pixmap,
         Point = QVariant::Point,
         PointF = QVariant::PointF,
         Polygon = QVariant::Polygon,
-        PolygonF = QVariant::PolygonF,
         Rect = QVariant::Rect,
         RectF = QVariant::RectF,
         Region = QVariant::Region,
-        RegularExpression = QVariant::RegularExpression,
         Size = QVariant::Size,
         SizeF = QVariant::SizeF,
         SizePolicy = QVariant::SizePolicy,
@@ -204,7 +200,6 @@ public:
         Time = QVariant::Time,
         Transform = QVariant::Transform,
         Url = QVariant::Url,
-        Uuid = QVariant::Uuid,
         Vector2D = QVariant::Vector2D,
         Vector3D = QVariant::Vector3D,
         Vector4D = QVariant::Vector4D,
@@ -846,7 +841,9 @@ public:
 #endif
     }
 
+#if QT_VERSION >= 0x050300
     static int getPageSizeId(const QString& name);
+#endif
     static QSizeF getPageSize(const QString& name);
 
     // workarounds for Qt 6 QRegExp changes:
