@@ -372,9 +372,8 @@ bool RS::lessThanAlphanumerical(const QString& s1, const QString& s2) {
     return RS::compareAlphanumerical(s1, s2)<0;
 }
 
-#if QT_VERSION >= 0x050300
 int RS::getPageSizeId(const QString& name) {
-
+#if QT_VERSION >= 0x050300
     if (name=="A0" || name=="ISO A0") {
         return QPageSize::A0;
     }
@@ -609,8 +608,10 @@ int RS::getPageSizeId(const QString& name) {
     else {
         return QPageSize::Custom;
     }
-}
+#else
+    return -1;
 #endif
+}
 
 QSizeF RS::getPageSize(const QString& name) {
     if (name=="A4" || name=="ISO A4") {

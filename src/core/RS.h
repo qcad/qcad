@@ -841,9 +841,7 @@ public:
 #endif
     }
 
-#if QT_VERSION >= 0x050300
     static int getPageSizeId(const QString& name);
-#endif
     static QSizeF getPageSize(const QString& name);
 
     // workarounds for Qt 6 QRegExp changes:
