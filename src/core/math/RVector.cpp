@@ -56,6 +56,9 @@ RVector::RVector(const QList<double>& tuples) {
     valid = true;
 }
 
+RVector::~RVector() {
+}
+
 bool RVector::isValid() const {
     return valid;
 }

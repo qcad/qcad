@@ -69,6 +69,8 @@ public:
 
     RVector(const QList<double>& tuples);
 
+    ~RVector();
+
     /**
      * Sets new values for the vector and makes the vector valid.
      */

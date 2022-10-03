@@ -37,6 +37,7 @@ class QCADCORE_EXPORT RDimStyleData {
 
 public:
     RDimStyleData(bool override = false);
+    virtual ~RDimStyleData();
 
     static void init();
     static void initDefaults();

@@ -51,7 +51,8 @@ RRulerQt::RRulerQt(QWidget* parent) :
 /**
  * Destructor
  */
-RRulerQt::~RRulerQt() {}
+RRulerQt::~RRulerQt() {
+}
 
 
 QSize RRulerQt::sizeHint() const {
