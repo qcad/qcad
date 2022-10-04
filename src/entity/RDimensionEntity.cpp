@@ -388,7 +388,7 @@ QPair<QVariant, RPropertyAttributes> RDimensionEntity::getProperty(
                 return qMakePair(QVariant(str), attr);
             }
 
-            if (RDimStyleData::getType(pv.second)==RS::VarTypeInt) {
+            if (RDimStyleData::getVariableType(pv.second)==RS::VarTypeInt) {
                 attr.setInteger(true);
             }
 

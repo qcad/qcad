@@ -791,7 +791,7 @@
     // return type 'RS::KnownVariableType'
     RS::KnownVariableType cppResult =
         RDimStyleData::
-       getType(a0);
+       getVariableType(a0);
         // return type: RS::KnownVariableType
                 // standard Type
                 result = QScriptValue(cppResult);

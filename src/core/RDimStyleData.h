@@ -63,7 +63,7 @@ public:
         mapColor.clear();
     }
 
-    static RS::KnownVariableType getType(RS::KnownVariable key) {
+    static RS::KnownVariableType getVariableType(RS::KnownVariable key) {
         if (dimXTypes.contains(key)) {
             return dimXTypes[key];
         }
