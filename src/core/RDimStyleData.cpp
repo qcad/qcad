@@ -30,6 +30,9 @@ RDimStyleData::RDimStyleData(bool override) {
     }
 }
 
+RDimStyleData::~RDimStyleData() {
+}
+
 void RDimStyleData::init() {
 
 }

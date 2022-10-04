@@ -23,6 +23,8 @@ include("scripts/View/View.js");
 function WindowZoom(guiAction) {
     View.call(this, guiAction);
 
+    this.view = undefined;
+
     this.v1 = RVector.invalid;
     this.v2 = RVector.invalid;
     this.s1 = RVector.invalid;
@@ -54,6 +56,15 @@ WindowZoom.State = {
     SettingCorner2 : 1
 };
 
+WindowZoom.viewEquals = function(v1, v2) {
+    if (RSettings.getQtVersion() >= 0x060000) {
+        return v1.getAddress() == v2.getAddress();
+    }
+    else {
+        return v1 == v2;
+    }
+};
+
 WindowZoom.prototype.beginEvent = function() {
     View.prototype.beginEvent.call(this);
     this.setState(WindowZoom.State.SettingCorner1);
@@ -79,7 +90,7 @@ WindowZoom.prototype.mousePressEvent = function(event) {
 };
 
 WindowZoom.prototype.mouseReleaseEvent = function(event) {
-    if (this.view != event.getGraphicsView()) {
+    if (!WindowZoom.viewEquals(this.view, event.getGraphicsView())) {
         return;
     }
     if (event.button() == Qt.LeftButton) {
@@ -102,7 +113,7 @@ WindowZoom.prototype.mouseReleaseEvent = function(event) {
 
 WindowZoom.prototype.mouseMoveEvent = function(event) {
     if (this.state == WindowZoom.State.SettingCorner2 && this.v1.isValid()) {
-        if (this.view == event.getGraphicsView()) {
+        if (WindowZoom.viewEquals(this.view, event.getGraphicsView())) {
             this.v2 = event.getModelPosition();
         }
         this.getDocumentInterface().addZoomBoxToPreview(
@@ -114,4 +125,3 @@ WindowZoom.prototype.finishEvent = function(event) {
     View.prototype.finishEvent.call(this);
     this.setCursor(new QCursor(Qt.ArrowCursor));
 };
-

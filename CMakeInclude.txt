@@ -1,0 +1,1 @@
+add_definitions(-DQT_SHAREDPOINTER_TRACK_POINTERS)
