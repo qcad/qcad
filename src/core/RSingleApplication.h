@@ -70,7 +70,7 @@ private:
     QWidget* actWin;
     QMutex mutexEvents;
     QThread* mutexEventsLocker;
-    static RSingleApplication* instance;
+    static RSingleApplication* singleInstance;
 };
 
 Q_DECLARE_METATYPE(RSingleApplication*)

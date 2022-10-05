@@ -31,30 +31,30 @@
 #include "RSettings.h"
 #include "RSingleApplication.h"
 
-RSingleApplication* RSingleApplication::instance = NULL;
+RSingleApplication* RSingleApplication::singleInstance = NULL;
 
-void RSingleApplication::sysInit(const QString &appId) {
+void RSingleApplication::sysInit(const QString& appId) {
     mutexEventsLocker = NULL;
-    instance = this;
+    singleInstance = this;
     actWin = 0;
     peer = new RLocalPeer(this, appId);
     connect(peer, SIGNAL(messageReceived(const QString&)), SIGNAL(messageReceived(const QString&)));
     //setStartDragDistance(10);
 }
 
-RSingleApplication::RSingleApplication(int &argc, char **argv, bool GUIenabled)
+RSingleApplication::RSingleApplication(int& argc, char** argv, bool GUIenabled)
     : QApplication(argc, argv, GUIenabled) {
     sysInit();
 }
 
-RSingleApplication::RSingleApplication(const QString &appId, int &argc, char **argv, bool GUIenabled)
+RSingleApplication::RSingleApplication(const QString& appId, int& argc, char** argv, bool GUIenabled)
     : QApplication(argc, argv, GUIenabled)
 {
     sysInit(appId);
 }
 
 /*
-RSingleApplication::RSingleApplication(int &argc, char **argv, Type type)
+RSingleApplication::RSingleApplication(int& argc, char** argv, Type type)
     : QApplication(argc, argv, type) {
     sysInit();
 }
@@ -67,12 +67,12 @@ RSingleApplication::RSingleApplication(Display* dpy, Qt::HANDLE visual, Qt::HAND
     sysInit();
 }
 
-RSingleApplication::RSingleApplication(Display *dpy, int &argc, char **argv, Qt::HANDLE visual, Qt::HANDLE cmap)
+RSingleApplication::RSingleApplication(Display* dpy, int& argc, char** argv, Qt::HANDLE visual, Qt::HANDLE cmap)
     : QApplication(dpy, argc, argv, visual, cmap) {
     sysInit();
 }
 
-RSingleApplication::RSingleApplication(Display* dpy, const QString &appId, int argc, char **argv, Qt::HANDLE visual, Qt::HANDLE cmap)
+RSingleApplication::RSingleApplication(Display* dpy, const QString &appId, int argc, char** argv, Qt::HANDLE visual, Qt::HANDLE cmap)
     : QApplication(dpy, argc, argv, visual, cmap) {
     sysInit(appId);
 }
@@ -82,14 +82,14 @@ RSingleApplication::~RSingleApplication() {
 }
 
 RSingleApplication* RSingleApplication::getInstance() {
-    return instance;
+    return singleInstance;
 }
 
 bool RSingleApplication::isRunning() {
     return peer->isClient();
 }
 
-bool RSingleApplication::sendMessage(const QString &message, int timeout) {
+bool RSingleApplication::sendMessage(const QString& message, int timeout) {
     return peer->sendMessage(message, timeout);
 }
 
