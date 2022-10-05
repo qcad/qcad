@@ -895,6 +895,10 @@ function isEntityType(obj, type) {
         }
     }
 
+    if (type===RS.EntityAll) {
+        return true;
+    }
+
     return false;
 }
 
