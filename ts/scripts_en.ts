@@ -1392,7 +1392,7 @@ Do you wish to recover it?</translation>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block References List</source>
-        <translation>&amp;Export Blockreferenzliste</translation>
+        <translation>&amp;Export Block References List</translation>
     </message>
 </context>
 <context>
