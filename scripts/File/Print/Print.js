@@ -115,9 +115,8 @@ Print.prototype.createPrinter = function(pdfFile, printerName, pdfVersion) {
         }
     }
 
-    var paperSizeEnum = Print.getPaperSizeEnum(this.document);
-
     // QPrinter.Custom is deprecated / undefined:
+//    var paperSizeEnum = Print.getPaperSizeEnum(this.document);
 //    if (paperSizeEnum!==QPrinter.Custom) {
 //        printer.setPaperSize(paperSizeEnum);
 //    }
@@ -1253,7 +1252,7 @@ Print.getPaperSizeEnum = function(document) {
         }
     }
 
-    return QPrinter.Custom;
+    return undefined;
 };
 
 /**
