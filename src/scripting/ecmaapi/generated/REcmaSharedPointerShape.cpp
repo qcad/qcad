@@ -11811,7 +11811,7 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RShape.roundAllCorners().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RShape.roundCorners().",
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerShape::roundAllCorners", context, engine);

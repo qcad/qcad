@@ -11806,7 +11806,7 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RShape.roundAllCorners().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RShape.roundCorners().",
                    context);
             }
             //REcmaHelper::functionEnd("REcmaShape::roundAllCorners", context, engine);
