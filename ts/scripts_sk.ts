@@ -14199,7 +14199,7 @@ vo výsledku vyhľadania:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1222"/>
+        <location filename="../scripts/library.js" line="+1226"/>
         <source>Objects</source>
         <translation>Objekty</translation>
     </message>
