@@ -2423,7 +2423,7 @@ QList<QSharedPointer<RShape> > RShape::trim(
 /**
  * Round every corner of the list of given (connected) shapes with the given radius.
  */
-QList<QSharedPointer<RShape> > RShape::roundAllCorners(const QList<QSharedPointer<RShape> >& shapes, double radius) {
+QList<QSharedPointer<RShape> > RShape::roundCorners(const QList<QSharedPointer<RShape> >& shapes, double radius) {
     if (RShape::hasProxy()) {
         return RShape::getShapeProxy()->roundAllCorners(shapes, radius);
     }

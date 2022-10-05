@@ -11794,7 +11794,7 @@
     // return type 'QList < QSharedPointer < RShape > >'
     QList < QSharedPointer < RShape > > cppResult =
         RShape::
-       roundAllCorners(a0
+       roundCorners(a0
         ,
     a1);
         // return type: QList < QSharedPointer < RShape > >

@@ -478,7 +478,7 @@ public:
             const RShape& limitingShape, const RVector& limitingClickPos,
             bool trimBoth, bool samePolyline);
 
-    static QList<QSharedPointer<RShape> > roundAllCorners(const QList<QSharedPointer<RShape> >& shapes, double radius);
+    static QList<QSharedPointer<RShape> > roundCorners(const QList<QSharedPointer<RShape> >& shapes, double radius);
 
     static QList<QSharedPointer<RShape> > roundShapes(
             const QSharedPointer<RShape> shape1, const RVector& clickPos1,
