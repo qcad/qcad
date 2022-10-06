@@ -265,7 +265,8 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
     QSet<RObject::Id> objectIds = document->queryPropertyEditorObjects();
 
     if (objectIds.size()==1) {
-        showOnRequest = true;
+        // some properties might be slow even for one single entity:
+        //showOnRequest = true;
     }
 
     QSet<RObject::Id>::iterator it;
