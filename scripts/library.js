@@ -120,8 +120,8 @@ function isOfType(obj, type) {
         return !isNull(obj) && obj.constructor===type;
     }
     else {
-        //return !isNull(obj) && (obj.constructor===type || (isFunction(obj.getType) && obj.getType()===type.getType()));
-        return !isNull(obj) && isFunction(obj.getType) && obj.getType()===type.getType();
+        //return !isNull(obj) && (obj.constructor===type || (isFunction(obj.getObjectType) && obj.getObjectType()===type.getObjectType()));
+        return !isNull(obj) && isFunction(obj.getObjectType) && obj.getObjectType()===type.getObjectType();
     }
 }
 
@@ -1876,7 +1876,7 @@ Array.prototype.removeIgnoreCase = function(val) {
 
 /**
  * Remove the given parameter from an array (by default 'undefined').
- * 
+ *
  * test = new Array("","One","Two","", "Three","","Four").clean("");
  *
  * test2 = [1,2,,3,,3,,,,,,4,,4,,5,,6,,,,];
@@ -1887,7 +1887,7 @@ Array.prototype.removeIgnoreCase = function(val) {
  */
 Array.prototype.clean = function(deleteValue) {
     for (var i = 0; i < this.length; i++) {
-        if (this[i] == deleteValue) {         
+        if (this[i] == deleteValue) {
             this.splice(i, 1);
             i--;
         }
@@ -1897,7 +1897,7 @@ Array.prototype.clean = function(deleteValue) {
 
 /**
  * Clones (copies) the array.
- * 
+ *
  * \returns the cloned array
  */
 Array.prototype.clone = function() {

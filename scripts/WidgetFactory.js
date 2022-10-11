@@ -17,8 +17,8 @@
  * along with QCAD.
  */
 
-include("library.js");
-include("map.js");
+include("scripts/library.js");
+include("scripts/map.js");
 
 function WidgetFactory() {
 }
