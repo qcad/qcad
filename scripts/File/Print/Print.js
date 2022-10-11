@@ -115,15 +115,18 @@ Print.prototype.createPrinter = function(pdfFile, printerName, pdfVersion) {
         }
     }
 
-    var paperSizeEnum = Print.getPaperSizeEnum(this.document);
-    if (paperSizeEnum!==QPrinter.Custom) {
-        printer.setPaperSize(paperSizeEnum);
-    }
-    else {
+    // QPrinter.Custom is deprecated / undefined:
+//    var paperSizeEnum = Print.getPaperSizeEnum(this.document);
+//    if (paperSizeEnum!==QPrinter.Custom) {
+//        printer.setPaperSize(paperSizeEnum);
+//    }
+//    else {
         //printer.setPaperSize(QPrinter.Custom);
+
+        // always use custom page size to work around Qt page size limitations:
         var paperSizeMM = Print.getPaperSizeMM(this.document);
         printer.setPaperSize(paperSizeMM, QPrinter.Millimeter);
-    }
+//    }
     printer.setFullPage(true);
     printer.setOrientation(Print.getPageOrientationEnum(this.document));
 
@@ -1249,7 +1252,7 @@ Print.getPaperSizeEnum = function(document) {
         }
     }
 
-    return QPrinter.Custom;
+    return undefined;
 };
 
 /**

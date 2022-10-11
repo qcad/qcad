@@ -492,13 +492,21 @@ QList<QSharedPointer<RShape> > RHatchData::getExploded() const {
 }
 
 double RHatchData::getLength() const {
-    QList<RPolyline> pls = getBoundaryAsPolylines(0.1);
-
     double ret = 0.0;
-    for (int i=0; i<pls.length(); i++) {
-        ret += pls[i].getLength();
+    QList<QSharedPointer<RShape> > shapes = getShapes();
+
+    for (int i=0; i<shapes.length(); i++) {
+        ret += shapes[i]->getLength();
     }
+
     return ret;
+
+//    QList<RPolyline> pls = getBoundaryAsPolylines(0.1);
+
+//    for (int i=0; i<pls.length(); i++) {
+//        ret += pls[i].getLength();
+//    }
+//    return ret;
 }
 
 double RHatchData::getArea() const {
