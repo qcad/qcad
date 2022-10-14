@@ -292,7 +292,9 @@ void RImageData::load() const {
         qWarning() << "RImageData::load: failed: " << fullFilePath;
     }
 
-    fileName = fullFilePath;
+    // 20221014: allow relative paths in DXF/DWG files:
+    // partially supported by other applications:
+    //fileName = fullFilePath;
 }
 
 RVector RImageData::getScaleVector() const {
