@@ -512,7 +512,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
         }
         
         var key = WidgetFactory.getKeyString(group, c);
-        var value;
+        var value = undefined;
         if (reset && !isNull(c.property("defaultValue")) && (typeof(c["SettingsGroup"])=="undefined" || c["SettingsGroup"]===group)) {
             value = c.property("defaultValue");
         } else {
@@ -1004,7 +1004,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
                     value = fnt;
                 }
 
-                c.setFont(value);
+                c.setChosenFont(value);
             }
             continue;
         }
