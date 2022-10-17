@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 
+include("scripts/library.js");
 include("scripts/WidgetFactory.js");
 include("scripts/Widgets/OptionsToolBar/OptionsToolBar.js");
 
@@ -1091,15 +1092,13 @@ EAction.getToolBar = function(title, objectName, toolBarArea, category, before) 
         return undefined;
     }
 
-    var tb;
+    var tb = undefined;
     if (objectName.length !== 0) {
         tb = appWin.findChild(objectName);
     }
 
     if (!isNull(tb) && !isOfType(tb, QToolBar)) {
         qWarning("Not a toolbar: " + tb);
-        qWarning("tb type: " + tb.getType());
-        qWarning("QToolBar type: " + QToolBar.getType());
         return undefined;
     }
 
