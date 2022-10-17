@@ -39,7 +39,7 @@ Q_PROPERTY(QString label READ getLabel WRITE setLabel);
 Q_PROPERTY(QFont chosenFont READ getChosenFont WRITE setChosenFont);
 
 public:
-    RFontChooserWidget(QWidget *parent = 0);
+    RFontChooserWidget(QWidget* parent = 0);
 
     QFont getChosenFont() const;
     void setChosenFont(const QFont& font);

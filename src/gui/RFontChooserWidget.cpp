@@ -76,7 +76,7 @@ void RFontChooserWidget::updateSizeCombo() {
     cbSize->clear();
     QFontDatabase fontDb;
 //    qDebug() << "font: " << font.family();
-//    qDebug() << "font sizes: " << fontDb.pointSizes(font.family());
+//    qDebug() << "font sizes: " << fontDb.pointSizes(chosenFont.family());
     QListIterator<int> i(fontDb.pointSizes(chosenFont.family()));
     while (i.hasNext()) {
         int s = i.next();
@@ -95,7 +95,7 @@ void RFontChooserWidget::chosenFontChanged(const QFont& font) {
     if (currentIndex!=-1) {
         f.setPointSize(cbSize->itemData(currentIndex).toInt());
     }
-    setFont(f);
+    setChosenFont(f);
     emit valueChanged(chosenFont);
 }
 
@@ -109,7 +109,7 @@ void RFontChooserWidget::setChosenFont(const QFont& font) {
     cbChosenFont->setCurrentFont(font);
     cbChosenFont->blockSignals(false);
     updateSizeCombo();
-    lbSampleText->setFont(font);
+    lbSampleText->setFont(chosenFont);
 }
 
 QString RFontChooserWidget::getLabel() const {

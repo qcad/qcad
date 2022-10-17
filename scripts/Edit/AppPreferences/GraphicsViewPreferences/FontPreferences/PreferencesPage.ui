@@ -36,10 +36,7 @@
    </property>
    <layout class="QVBoxLayout">
     <item>
-     <widget class="RFontChooserWidget" name="Ruler">
-      <property name="label">
-       <string>Ruler font:</string>
-      </property>
+     <widget class="RFontChooserWidget" name="Ruler" native="true">
       <property name="font">
        <font>
         <family>Helvetica</family>
@@ -49,14 +46,10 @@
         <kerning>false</kerning>
        </font>
       </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="RFontChooserWidget" name="SnapLabel">
-      <property name="label">
-       <string>Snap label font:</string>
+      <property name="label" stdset="0">
+       <string>Ruler font:</string>
       </property>
-      <property name="font">
+      <property name="chosenFont" stdset="0">
        <font>
         <family>Helvetica</family>
         <pointsize>9</pointsize>
@@ -65,11 +58,30 @@
      </widget>
     </item>
     <item>
-     <widget class="RFontChooserWidget" name="InfoLabel">
-      <property name="label">
+     <widget class="RFontChooserWidget" name="SnapLabel" native="true">
+      <property name="font">
+       <font>
+        <family>Helvetica</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="label" stdset="0">
+       <string>Snap label font:</string>
+      </property>
+      <property name="chosenFont" stdset="0">
+       <font>
+        <family>Helvetica</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="RFontChooserWidget" name="InfoLabel" native="true">
+      <property name="label" stdset="0">
        <string>Info label font:</string>
       </property>
-      <property name="font">
+      <property name="chosenFont" stdset="0">
        <font>
         <family>Helvetica</family>
         <pointsize>11</pointsize>

@@ -191,7 +191,7 @@ public:
 
     QList<QSharedPointer<RShape> > getLoopBoundary(int index) const;
 
-    QList<RPolyline> getBoundaryAsPolylines(double segmentLength) const;
+    QList<RPolyline> getBoundaryAsPolylines(double segmentLength = -1.0) const;
 
     void autoCloseLoops() {
         if (hatchProxy!=NULL) {

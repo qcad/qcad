@@ -199,7 +199,7 @@ public:
         return data.getLoopBoundary(index);
     }
 
-    QList<RPolyline> getBoundaryAsPolylines(double segmentLength) const {
+    QList<RPolyline> getBoundaryAsPolylines(double segmentLength = -1.0) const {
         return data.getBoundaryAsPolylines(segmentLength);
     }
 
