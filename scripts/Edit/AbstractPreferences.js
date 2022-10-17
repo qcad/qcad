@@ -552,8 +552,13 @@ AbstractPreferences.prototype.showPageFor = function(className) {
 AbstractPreferences.prototype.reset = function() {
     var widget = this.pageWidget.currentWidget();
     //qDebug("AbstractPreferences.js:", "reset(): widget.objectName:", widget.objectName);
-//    debugger;
     WidgetFactory.resetState(widget);
+
+    var treeWidget = this.treeWidget;
+    var font = treeWidget.currentItem().font(0);
+    font.setBold(true);
+    treeWidget.currentItem().setFont(0, font);
+    widget.setProperty("hasChanged", true);
 };
 
 /**
