@@ -230,7 +230,7 @@ File.getSaveFileName = function(parentWidget, caption, path, filterStrings, defa
         // file with suffix:
         fi = new QFileInfo(fileToSave);
         if (fi.exists()) {
-            var buttons = new QMessageBox.StandardButtons(QMessageBox.Yes, QMessageBox.No);
+            var buttons = makeQMessageBoxStandardButtons(QMessageBox.Yes, QMessageBox.No);
             var ret = QMessageBox.warning(parentWidget, 
                 qsTr("Overwrite File?"), 
                 qsTr("The file \"%1\" already exists. Do you wish to overwrite it?").arg(fileToSave),

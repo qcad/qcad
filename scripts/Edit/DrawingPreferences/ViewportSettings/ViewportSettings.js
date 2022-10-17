@@ -50,7 +50,7 @@ ViewportSettings.initPreferences = function(pageWidget, calledByPrefDialog, docu
         if (fi.fileName() == "00_Single.ui") {
             defaultRow = j;
         }
-        w.destroy();
+        destr(w);
     }
     if (defaultRow != -1) {
         vpList.currentRow = defaultRow;
@@ -66,7 +66,7 @@ ViewportSettings.initPreferences = function(pageWidget, calledByPrefDialog, docu
 ViewportSettings.updatePreview = function(previewWidget, item) {
     var chs = previewWidget.children();
     for (i = 0; i < chs.length; ++i) {
-        chs[i].destroy();
+        destr(chs[i]);
     }
     var fileName = item.data(Qt.UserRole);
     if (fileName == undefined) {
