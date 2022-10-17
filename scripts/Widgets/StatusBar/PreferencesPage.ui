@@ -43,14 +43,14 @@
         <height>20</height>
        </size>
       </property>
-      <property name="font">
+      <property name="label" stdset="0">
+       <string>Status bar font:</string>
+      </property>
+      <property name="chosenFont" stdset="0">
        <font>
         <family>Helvetica</family>
         <pointsize>9</pointsize>
        </font>
-      </property>
-      <property name="label" stdset="0">
-       <string>Status bar font:</string>
       </property>
      </widget>
     </item>
