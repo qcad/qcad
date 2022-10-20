@@ -164,6 +164,13 @@ public:
 
     bool isPixelUnit() const;
 
+#if QT_VERSION >= 0x060000
+    // copy function for Qt 6 scripts:
+    RBlockReferenceData copy() const {
+        return *this;
+    }
+#endif
+
 private:
     mutable RBlock::Id referencedBlockId;
     RVector position;
