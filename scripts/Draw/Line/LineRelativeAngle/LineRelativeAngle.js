@@ -31,7 +31,7 @@ function LineRelativeAngle(guiAction) {
     this.shape = undefined;
     this.pos = undefined;
     this.angle = Math.PI/2.0;
-    this.length = 100.0;
+    this.len = 100.0;
     this.referencePoint = undefined;
 
     if (!isNull(guiAction)) {
@@ -210,7 +210,7 @@ LineRelativeAngle.prototype.getLine = function() {
     // for rays / xlines, always use start point as reference
     // with length = 1.0:
     var referencePoint = this.referencePoint;
-    var length = this.length;
+    var length = this.len;
     if (this.isRayOrXLine()) {
         referencePoint = LineRelativeAngle.ReferencePoint.Start;
         length = 1.0;
@@ -270,7 +270,7 @@ LineRelativeAngle.prototype.slotAngleChanged = function(value) {
 };
 
 LineRelativeAngle.prototype.slotLengthChanged  = function(value) {
-    this.length = value;
+    this.len = value;
     this.updatePreview(true);
 };
 
