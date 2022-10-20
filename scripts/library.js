@@ -3182,6 +3182,12 @@ function makeQMessageBoxStandardButtons() {
     return makeFlags.apply(this, argumentsNew);
 }
 
+function makeQtItemFlags() {
+    var argumentsNew = [].slice.call(arguments, 0);
+    argumentsNew.unshift(Qt.ItemFlags);
+    return makeFlags.apply(this, argumentsNew);
+}
+
 function makeFlags() {
     if (RSettings.isQt(6)) {
         var ret = 0;
