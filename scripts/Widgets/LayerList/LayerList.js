@@ -139,7 +139,7 @@ RLayerListQt.prototype.iconClickedSlot = function(x, item) {
 
     var doc = this.di.getDocument();
     var layer = doc.queryLayer(item.text());
-    if (layer.isNull()) {
+    if (isFunction(layer.isNull) && layer.isNull()) {
         return;
     }
 
