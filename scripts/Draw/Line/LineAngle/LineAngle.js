@@ -29,7 +29,7 @@ function LineAngle(guiAction) {
 
     this.pos = undefined;
     this.angle = undefined;
-    this.length = undefined;
+    this.len = undefined;
     this.referencePoint = undefined;
     this.fixedAngle = false;
 
@@ -106,13 +106,13 @@ LineAngle.prototype.getOperation = function(preview) {
         length = 1.0;
     }
     else {
-        if (isNull(this.length) ||
+        if (isNull(this.len) ||
             isNull(this.referencePoint)) {
 
             return undefined;
         }
         referencePoint = this.referencePoint;
-        length = this.length;
+        length = this.len;
     }
 
     switch (referencePoint) {
@@ -153,7 +153,7 @@ LineAngle.prototype.slotAngleChanged = function(value) {
 };
 
 LineAngle.prototype.slotLengthChanged = function(value) {
-    this.length = value;
+    this.len = value;
     this.updatePreview(true);
 };
 
