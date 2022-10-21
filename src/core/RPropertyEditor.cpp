@@ -360,12 +360,15 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
 
         RS::EntityType type = obj->getType();
 
-        if (first) {
-            customPropertyNames = RS::toSet<QString>(obj->getCustomPropertyKeys("QCAD"));
-        }
-        else {
-            if (!customPropertyNames.isEmpty()) {
-                customPropertyNames.intersect(RS::toSet<QString>(obj->getCustomPropertyKeys("QCAD")));
+        if (checkType(type, entityTypeFilter)) {
+            if (first) {
+                customPropertyNames = RS::toSet<QString>(obj->getCustomPropertyKeys("QCAD"));
+                first = false;
+            }
+            else {
+                if (!customPropertyNames.isEmpty()) {
+                    customPropertyNames.intersect(RS::toSet<QString>(obj->getCustomPropertyKeys("QCAD")));
+                }
             }
         }
 
@@ -387,7 +390,6 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
                 combinedTypes.insert(type, 1);
             }
         }
-        first = false;
 
         // combined types with selection filter applied:
         if (checkType(type, entityTypeFilter)) {
