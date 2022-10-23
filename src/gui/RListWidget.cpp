@@ -50,8 +50,8 @@ void RListWidget::contextMenuEvent(QContextMenuEvent* e) {
             setCurrentItem(item);
             emit itemClicked(item);
         }
+        e->ignore();
     }
-    e->ignore();
 }
 
 void RListWidget::mousePressEvent(QMouseEvent* e) {

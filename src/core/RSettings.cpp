@@ -1541,19 +1541,26 @@ double RSettings::getDoubleValue(const QString& key, double defaultValue) {
 
     // if the variant is a list or string list, return the first entry
     // used for example for stored RMathLineEdit values
-    if (ret.type()==QVariant::List || ret.canConvert<QStringList>()) {
+    if (ret.type()==QVariant::List
+#if QT_VERSION < 0x060000
+        // Qt 6: strings can always be converted to string lists.
+        // "1.02" is converted to a list of "1", ".", "0", "2":
+        || ret.canConvert<QStringList>()
+#endif
+        ) {
         if (ret.toList().count()>0) {
             ret = ret.toList().at(0);
         }
     }
 
     QString str = ret.toString();
+
     double d;
     if (str.isEmpty()) {
         return defaultValue;
     }
     else if (RS::exactMatch(QRegularExpression("^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?$"), str)) {
-        d = ret.toDouble();
+        d = str.toDouble();
     }
     else {
         d = RMath::eval(str);

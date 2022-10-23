@@ -296,7 +296,7 @@ InsertBlock.prototype.slotArray = function() {
 
     dialog.exec();
     WidgetFactory.saveState(dialog, this.settingsGroup);
-    dialog.destroy();
+    destr(dialog);
     EAction.activateMainWindow();
 };
 

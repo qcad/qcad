@@ -304,6 +304,8 @@ Line2P.prototype.getLineEntityId = function(trans) {
             return obj.getId();
         }
     }
+
+    return RObject.INVALID_ID;
 };
 
 /**

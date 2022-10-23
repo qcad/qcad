@@ -969,8 +969,18 @@ void RLinetypePattern::initNameMap() {
     nameMap.insert("FENCELINE1", tr("Fenceline 1"));
     nameMap.insert("FENCELINE2", tr("Fenceline 2"));
 
+    nameMap.insert("WATER", tr("Water"));
     nameMap.insert("DRAINAGE", tr("Drainage"));
     nameMap.insert("DRAINAGE2", tr("Drainage Reversed"));
+
+    nameMap.insert("COMMUNICATION", tr("Communication"));
+    nameMap.insert("ELECTRIC", tr("Electric"));
+    nameMap.insert("LOW_VOLTAGE", tr("Low Voltage"));
+    nameMap.insert("HIGH_VOLTAGE", tr("High Voltage"));
+    nameMap.insert("OVERHEAD_POWER", tr("Overhead Power"));
+
+    nameMap.insert("FOUL", tr("Foul"));
+    nameMap.insert("FOUL_RISING", tr("Foul Rising"));
 }
 
 /**

@@ -116,7 +116,7 @@ BitmapExport.prototype.getFilename = function() {
         //    filters += ";;";
         //}
 
-        var filter = format.toUpper() + " " + qsTr("Files") + " (";
+        var filter = format.toUpperCase() + " " + qsTr("Files") + " (";
         if (formatAlt.length!==0) {
             filter += "*." + formatAlt + " ";
         }
@@ -126,7 +126,8 @@ BitmapExport.prototype.getFilename = function() {
         filters.push(filter);
     }
 
-    var ret = File.getSaveFileName(this, qsTr("Export as Bitmap"), initialPath, filters);
+    var appWin = EAction.getMainWindow();
+    var ret = File.getSaveFileName(appWin, qsTr("Export as Bitmap"), initialPath, filters);
 
     if (isNull(ret)) {
         return undefined;
@@ -164,7 +165,7 @@ BitmapExport.prototype.getProperties = function() {
     var antiAliasingCheckbox = this.dialog.findChild("AntiAliasing");
 
     var selectionCheckbox = this.dialog.findChild("Selection");
-    selectionCheckbox.toggled.connect(this, "selectionChanged");
+    selectionCheckbox.toggled.connect(this, this.selectionChanged);
     var weightMarginCheckbox = this.dialog.findChild("WeightMargin");
 
     widthEdit.valueChanged.connect(
@@ -175,7 +176,7 @@ BitmapExport.prototype.getProperties = function() {
                 function() {
                     resolutionCombo.index = 0;
                 });
-    resolutionCombo.editTextChanged.connect(this, "resolutionChanged");
+    resolutionCombo.editTextChanged.connect(this, this.resolutionChanged);
     this.resolutionChanged(resolutionCombo.currentText);
 
     if (!this.dialog.exec()) {
@@ -221,7 +222,7 @@ BitmapExport.prototype.getProperties = function() {
         ret["entityIds"] = doc.querySelectedEntities();
     }
 
-    this.dialog.destroy();
+    destr(this.dialog);
     EAction.activateMainWindow();
     return ret;
 };

@@ -71,7 +71,7 @@ ConvertUnit.prototype.doConvert = function() {
     mdiChild.setFocus();
 
     this.terminate();
-}
+};
 
 ConvertUnit.convert = function(di, fromUnit, toUnit) {
     if (isNull(di)) {
@@ -244,12 +244,12 @@ ConvertUnit.initUnitCombo = function(unitCombo) {
 
 ConvertUnit.prototype.slotFromChanged = function(value) {
     this.fromUnit = value;
-}
+};
 
 ConvertUnit.prototype.slotToChanged = function(value) {
     this.toUnit = value;
-}
+};
 
 ConvertUnit.prototype.slotConvert = function() {
     this.doConvert();
-}
+};

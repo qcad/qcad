@@ -18,6 +18,7 @@
  */
 
 include("scripts/EAction.js");
+include("scripts/sprintf.js");
 include("scripts/WidgetFactory.js");
 include("scripts/Widgets/StatusBar/StatusBar.js");
 

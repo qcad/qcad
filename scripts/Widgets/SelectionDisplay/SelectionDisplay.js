@@ -67,7 +67,7 @@ SelectionDisplay.selectionChanged = function(documentInterface) {
         if (entityId == undefined || entityId == "") {
             continue;
         }
-        var entity = doc.queryEntity(entityId);
+        var entity = doc.queryEntityDirect(entityId);
         typesSingular.push(entity.getType());
         layers.push(entity.getLayerName());
     }

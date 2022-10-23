@@ -231,7 +231,7 @@ RBlockListQt.prototype.updateBlocks = function(documentInterface) {
     for (i=0; i<blockCandidateIds.length; i++) {
         var blockCandidateId = blockCandidateIds[i];
         var blockCandidate = doc.queryBlockDirect(blockCandidateId);
-        if (blockCandidate.isNull()) {
+        if (isFunction(blockCandidate.isNull) && blockCandidate.isNull()) {
             continue;
         }
 
@@ -249,7 +249,7 @@ RBlockListQt.prototype.updateBlocks = function(documentInterface) {
     for (i=0; i<blockIds.length; ++i) {
         var blockId = blockIds[i];
         var block = doc.queryBlockDirect(blockId);
-        if (block.isNull()) {
+        if (isFunction(block.isNull) && block.isNull()) {
             continue;
         }
 
@@ -294,7 +294,7 @@ RBlockListQt.prototype.createBlockItem = function(block) {
     var item = new QTreeWidgetItem();
     var name = block.getName();
 
-    var flags = new Qt.ItemFlags(Qt.ItemIsSelectable|Qt.ItemIsEnabled);
+    var flags = makeQtItemFlags(Qt.ItemIsSelectable, Qt.ItemIsEnabled);
     item.setFlags(flags);
 
     var title = RBlockListQt.getBlockTitle(block);
@@ -336,7 +336,7 @@ RBlockListQt.prototype.itemColumnClickedSlot = function(item, column) {
 
     var doc = this.di.getDocument();
     var block = doc.queryBlock(this.getBlockName(item));
-    if (block.isNull()) {
+    if (isFunction(block.isNull) && block.isNull()) {
         return;
     }
 

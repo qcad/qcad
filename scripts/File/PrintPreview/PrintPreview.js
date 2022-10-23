@@ -77,7 +77,7 @@ PrintPreview.start = function(initialAction, instance) {
 
     // auto setup:
     var appWin = RMainWindowQt.getMainWindow();
-    var buttons = new QMessageBox.StandardButtons(QMessageBox.Yes, QMessageBox.No);
+    var buttons = makeQMessageBoxStandardButtons(QMessageBox.Yes, QMessageBox.No);
 
     var paperSizeMM = Print.getPaperSizeMM(doc);
     var paperSizeName = Print.getPaperSizeNameFromSize(paperSizeMM);

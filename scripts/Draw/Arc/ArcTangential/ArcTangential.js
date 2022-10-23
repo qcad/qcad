@@ -128,7 +128,7 @@ ArcTangential.prototype.pickEntity = function(event, preview) {
         }
         else {
             if (!preview) {
-                EAction.warnNotLineOrArc();
+                EAction.warnNotLineArc();
             }
             this.entity = undefined;
         }

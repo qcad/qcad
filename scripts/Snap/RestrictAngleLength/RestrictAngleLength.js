@@ -26,6 +26,7 @@ include("scripts/Snap/Snap.js");
 function RRestrictAngleLengthExtension(di) {
     RRestrictAngleLength.call(this, di);
 
+    // create action to show options for the restriction and handle user interface events:
     this.action = new EAction(
          RGuiAction.getByScriptFile(RRestrictAngleLengthExtension.includeBasePath + "/RestrictAngleLength.js")
     );
@@ -84,6 +85,7 @@ RestrictAngleLength.prototype.beginEvent = function() {
     var sr = di.getSnapRestriction();
     if (!isNull(sr)) {
         if (isOfType(sr, RRestrictAngleLength)) {
+            // already active: disable:
             di.setSnapRestriction(new RRestrictOff(di));
 
             var guiAction = RGuiAction.getByScriptFile("scripts/Snap/RestrictOff/RestrictOff.js");
@@ -96,7 +98,7 @@ RestrictAngleLength.prototype.beginEvent = function() {
         }
     }
 
+    // activate restriction:
     di.setSnapRestriction(new RRestrictAngleLengthExtension(di));
     this.terminate();
 };
-

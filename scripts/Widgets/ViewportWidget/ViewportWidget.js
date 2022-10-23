@@ -136,7 +136,7 @@ ViewportWidget.prototype.init = function(uiFile, graphicsSceneClass) {
     for (var i = 0; i < chs.length; ++i) {
         var ch = chs[i];
         if (RSettings.getQtVersion()>=0x060000) {
-            if (ch.isOfType(RJSType.QLayout_Type) || ch.isOfType(RJSType.QWidget_Type)) {
+            if (ch.isOfObjectType(RJSType.QLayout_Type) || ch.isOfObjectType(RJSType.QWidget_Type)) {
                 destr(ch);
             }
         }

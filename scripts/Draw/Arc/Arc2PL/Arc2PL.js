@@ -30,7 +30,7 @@ function Arc2PL(guiAction) {
     this.point1 = undefined;
     this.point2 = undefined;
     this.center = undefined;
-    this.length = undefined;
+    this.len = undefined;
     this.radius = undefined;
     this.reversed = false;
 
@@ -108,6 +108,10 @@ Arc2PL.prototype.pickCoordinate = function(event, preview) {
 
     case Arc2PL.State.SettingPoint2:
         this.point2 = event.getModelPosition();
+        if (this.point1.getDistanceTo(this.point2) > this.len) {
+            this.point2 = undefined;
+        }
+
         if (preview) {
             this.updatePreview();
         }
@@ -146,11 +150,11 @@ Arc2PL.prototype.getOperation = function(preview) {
 };
 
 Arc2PL.prototype.getArc2PL = function(preview) {
-    if (isNull(this.point1) || isNull(this.point2) || !isNumber(this.length)) {
+    if (isNull(this.point1) || isNull(this.point2) || !isNumber(this.len)) {
         return undefined;
     }
 
-    if (this.length <= 0.0 || this.length > 1.0e6) {
+    if (this.len <= 0.0 || this.len > 1.0e6) {
         if (!preview) {
             this.error = qsTr("Invalid length");
         }
@@ -165,7 +169,7 @@ Arc2PL.prototype.getArc2PL = function(preview) {
     }
 
     var chordlen = this.point1.getDistanceTo(this.point2);
-    var arclen = this.length;
+    var arclen = this.len;
 
     if (chordlen >= arclen) {
         if (!preview) {
@@ -220,7 +224,7 @@ Arc2PL.prototype.getArc2PL = function(preview) {
 };
 
 Arc2PL.prototype.slotLengthChanged = function(value) {
-    this.length = value;
+    this.len = value;
     this.updatePreview(true);
 };
 

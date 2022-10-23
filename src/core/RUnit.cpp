@@ -430,7 +430,7 @@ QString RUnit::formatScientific(double length, RS::Unit unit,
     char format[128];
     sprintf(format, "%%.%dE%%s", prec);
 #if QT_VERSION >= 0x060000
-    ret.asprintf(format, length, (const char*)unitString.toLatin1());
+    ret = QString::asprintf(format, length, (const char*)unitString.toLatin1());
 #else
     ret.sprintf(format, length, (const char*)unitString.toLatin1());
 #endif
@@ -459,7 +459,7 @@ QString RUnit::formatDecimal(double length, RS::Unit unit,
     ret = doubleToString(length, prec,
             showLeadingZeroes, showTrailingZeroes, decimalSeparator);
 
-    if(showUnit) {
+    if (showUnit) {
         ret+=unitToSymbol(unit);
     }
     
@@ -664,19 +664,19 @@ QString RUnit::formatFractional(double length, RS::Unit /*unit*/,
 
 #if QT_VERSION >= 0x060000
     if (num!=0 && nominator!=0 ) {
-        ret.asprintf("%s%d %d/%d",
+        ret = QString::asprintf("%s%d %d/%d",
                     (const char*)neg.toLatin1(), num,
                     nominator, denominator);
     } else if(nominator!=0) {
-        ret.asprintf("%s%d/%d",
+        ret = QString::asprintf("%s%d/%d",
                     (const char*)neg.toLatin1(),
                     nominator, denominator);
     } else if(num!=0) {
-        ret.asprintf("%s%d",
+        ret = QString::asprintf("%s%d",
                     (const char*)neg.toLatin1(),
                     num);
     } else {
-        ret.asprintf("0");
+        ret = QString::asprintf("0");
     }
 #else
     if (num!=0 && nominator!=0 ) {
@@ -828,7 +828,7 @@ QString RUnit::doubleToString(double value, double prec,
 
     if (dotPos==-1) {
 #if QT_VERSION >= 0x060000
-        ret.asprintf("%d", RMath::mround(num*prec));
+        ret = QString::asprintf("%d", RMath::mround(num*prec));
 #else
         ret.sprintf("%d", RMath::mround(num*prec));
 #endif
@@ -871,7 +871,7 @@ QString RUnit::doubleToString(double value, int prec,
     }
 
 #if QT_VERSION >= 0x060000
-    ret.asprintf(formatString.toLatin1(), value + fuzz);
+    ret = QString::asprintf(formatString.toLatin1(), value + fuzz);
 #else
     ret.sprintf(formatString.toLatin1(), value + fuzz);
 #endif
