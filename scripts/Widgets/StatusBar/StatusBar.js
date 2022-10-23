@@ -161,7 +161,7 @@ StatusBar.applyFont = function(widget) {
 StatusBar.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
-    if (QCoreApplication.arguments().contains("-no-show")) {
+    if (RSettings.getOriginalArguments().contains("-no-show")) {
         return;
     }
 

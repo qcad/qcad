@@ -139,7 +139,8 @@ DrawBasedOnRectangleSize.prototype.initUiOptions = function(resume, restoreFromS
         );
         if (isNull(this.shortcuts[i])) {
             this.shortcuts[i] = new QShortcut(new QKeySequence(shortcut), refPointCombo, 0, 0, Qt.WindowShortcut);
-            this.shortcuts[i].activated.connect(new KeyReactor(i), "activated");
+            var keyReactor = new KeyReactor(i);
+            this.shortcuts[i].activated.connect(keyReactor, keyReactor.activated);
         }
     }
 
