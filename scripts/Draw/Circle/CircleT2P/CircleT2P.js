@@ -284,15 +284,14 @@ CircleT2P.prototype.getShapes = function(preview) {
         var point1 = new RPoint(this.pos2);
         var point2 = new RPoint(this.pos3);
 
-        var s;
+        var s1;
         if (isFunction(this.shape1.data)) {
-            s = this.shape1.data();
+            s1 = this.shape1.data();
         }
         else {
-            s = this.shape1;
+            s1 = this.shape1;
         }
-
-        this.candidates = Apollonius.getSolutions(s, point1, point2);
+        this.candidates = Apollonius.getSolutions(s1, point1, point2);
 
         // filter out lines:
         this.candidates = ShapeAlgorithms.getCircleShapes(this.candidates);

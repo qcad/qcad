@@ -287,7 +287,21 @@ Circle2TP.prototype.getShapes = function(preview) {
 
     if (isNull(this.candidates)) {
         var shape3 = new RPoint(this.pos3);
-        this.candidates = Apollonius.getSolutions(this.shape1.data(), this.shape2.data(), shape3);
+        var s1 = this.shape1;
+        if (isFunction(this.shape1.data)) {
+            s1 = this.shape1.data();
+        }
+        else {
+            s1 = this.shape1;
+        }
+        var s2 = this.shape2;
+        if (isFunction(this.shape2.data)) {
+            s2 = this.shape2.data();
+        }
+        else {
+            s2 = this.shape2;
+        }
+        this.candidates = Apollonius.getSolutions(s1, s2, shape3);
 
         // filter out lines:
         this.candidates = ShapeAlgorithms.getCircleShapes(this.candidates);
