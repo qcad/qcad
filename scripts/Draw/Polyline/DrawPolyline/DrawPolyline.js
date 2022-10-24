@@ -301,7 +301,14 @@ DrawPolyline.prototype.getOperation = function(preview) {
         if (!isEntity(entity)) {
             return undefined;
         }
-        entity.copyAttributesFrom(this.polylineEntity.data());
+        var e;
+        if (isFunction(this.polylineEntity.data)) {
+            e = this.polylineEntity.data();
+        }
+        else {
+            e = this.polylineEntity;
+        }
+        entity.copyAttributesFrom(e);
         return new RAddObjectOperation(entity, false);
     }
     else {

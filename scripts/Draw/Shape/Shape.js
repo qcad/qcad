@@ -211,7 +211,12 @@ Shape.getShapes = function(action, vertices) {
             var s2 = shapes[(i+1)%shapes.length];
             var clickPos2 = s2.getPointWithDistanceToStart(s2.getLength()/3);
             var pos = RVector.getAverage(clickPos1, clickPos2);
-            var res = RShape.roundShapes(s1, clickPos1, s2, clickPos2, true, false, action.radius, pos);
+            var res;
+            if (RSettings.getQtVersion()>=0x060000) {
+                s1 = s1.clone();
+                s2 = s2.clone();
+            }
+            res = RShape.roundShapes(s1, clickPos1, s2, clickPos2, true, false, action.radius, pos);
             if (res.length>2) {
                 if (!isNull(cursor)) {
                     newShapes.push(new RLine(cursor, res[1].getStartPoint()));
@@ -253,7 +258,12 @@ Shape.complementOperation = function(action, doc, op, shapes) {
         hatchData.setPatternName("SOLID");
         hatchData.newLoop();
         for (var k=0; k<shapes.length; ++k) {
-            hatchData.addBoundary(shapes[k]);
+            if (RSettings.getQtVersion()>=0x060000) {
+                hatchData.addBoundary(shapes[k].clone());
+            }
+            else {
+                hatchData.addBoundary(shapes[k]);
+            }
         }
         op.addObject(new RHatchEntity(doc, hatchData));
     }
