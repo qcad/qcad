@@ -249,6 +249,9 @@ Circle2TR.prototype.getCircles2TR = function(preview) {
 
 Circle2TR.prototype.slotRadiusChanged = function(value) {
     this.radius = value;
+    // update candidates in case we are already choosing a solution:
+    this.candidates = [];
+    this.getCircles2TR(true);
     this.updatePreview(true);
 };
 
