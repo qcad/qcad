@@ -33,9 +33,6 @@ RColumnLayout::RColumnLayout(QWidget* parent, QToolBar* toolBar, int buttonSize)
     sHintIconSize(0) {
 
     setContentsMargins(2,2,2,2);
-
-    //setProperty("toolBar", toolBar);
-    //setProperty("sHint", QSize());
 }
 
 //void RColumnLayout::removeAction(QAction* a) {
@@ -72,65 +69,26 @@ RColumnLayout::RColumnLayout(QWidget* parent, QToolBar* toolBar, int buttonSize)
  *    set.
  */
 void RColumnLayout::addItem(QLayoutItem* item) {
-    //qDebug("ColumnLayout.prototype.addItem...");
-
-    //var itemList = this.property("ItemList");
-
-//    if (typeof(itemList)=="undefined" || itemList.length===0) {
-//        qDebug("item: " + item);
-//        qDebug("item array: " + new Array(item));
-//        this.setProperty("ItemList", new Array(item));
-//        qDebug("ColumnLayout.prototype.addItem: DONE");
-//        return;
-//    }
-
     QObject* par = parent();
     if (par==NULL) {
         return;
     }
 
-//    QObject* w = item->widget();
-//    if (w==NULL) {
-//        qWarning() << "item not a widget";
-//        return;
-//    }
-
     int so = getAccumulatedSortOrder(item->widget(), par->objectName());
-    //qDebug() << "so:" << so;
 
     if (so!=0) {
         for (int i=0; i<itemList.length(); ++i) {
-//            if (typeof(itemList[i]->property("SortOrder"))!="number") {
-//                continue;
-//            }
-
             QObject* other = itemList[i].first->widget();
             int so2 = getAccumulatedSortOrder(other, par->objectName());
-            //qDebug() << "so2:" << so2;
-//            if (isNull(so2)) {
-//                continue;
-//            }
             if (so2>so) {
-                //itemList.splice(i, 0, item);
                 itemList.insert(i, QPair<QLayoutItem*, int>(item, so));
-                //this.setProperty("ItemList", itemList);
                 return;
             }
         }
     }
 
     itemList.append(QPair<QLayoutItem*, int>(item, so));
-    //this.setProperty("ItemList", itemList);
-
-    ///qDebug("ColumnLayout.prototype.addItem: DONE");
-
-    //qDebug() << "itemList:" << itemList;
 };
-
-//void RColumnLayout::addSeparator(int sortOrder, int groupSortOrder) {
-//    qDebug() << "RColumnLayout::addSeparator";
-//    // TODO
-//}
 
 int RColumnLayout::getAccumulatedSortOrder(QObject* item, const QString& objectName) {
     return getSortOrder(item, objectName) + getGroupSortOrder(item, objectName)*100000;
@@ -177,36 +135,17 @@ int RColumnLayout::getGroupSortOrder(QObject* item, const QString& objectName) {
 };
 
 QSize RColumnLayout::minimumSize() const {
-    //qDebug("ColumnLayout.prototype.minimumSize");
     return sizeHint();
 };
 
 QSize RColumnLayout::sizeHint() const {
-    //qDebug("ColumnLayout.prototype.sizeHint");
     if (!sHint.isValid()) {
-        //qDebug("ColumnLayout.prototype.sizeHint: DONE");
         return QSize(0,0);
     }
-
-    //QRect r;
-    //setGeometry(r);
-
-    //qDebug("ColumnLayout.prototype.sizeHint: DONE");
     return sHint;
 };
 
 void RColumnLayout::setGeometry(const QRect& rect) {
-    qDebug("ColumnLayout.prototype.setGeometry...");
-//    var dbg = false;
-//    if (this.parent().objectName==="MainToolsPanel") {
-//        dbg = true;
-//    }
-
-//    var itemList = this.property("ItemList");
-//    if (typeof(itemList)=="undefined") {
-//        return;
-//    }
-
     if (parentWidget()==NULL || toolBar==NULL) {
         return;
     }
@@ -240,9 +179,6 @@ void RColumnLayout::setGeometry(const QRect& rect) {
     int buttonSize = (int)(iconSize * 1.25);
     int c=0;
     int groupOrder=-1;
-
-    //if (dbg) qDebug("===============");
-    //if (dbg) qDebug(itemList);
 
     std::sort(itemList.begin(), itemList.end(), itemLessThan);
 
@@ -283,9 +219,6 @@ void RColumnLayout::setGeometry(const QRect& rect) {
         }
 
         // separator:
-//        QAction* a = qobject_cast<QAction*>(itemList[i].first->widget());
-//        if (a!=NULL && a->isSeparator()) {
-//            if (dbg) qDebug("Separator");
         if (previousSo!=-1 && so-previousSo>=100000) {
             if (horizontal) {
                 if (h==0) {
@@ -307,10 +240,8 @@ void RColumnLayout::setGeometry(const QRect& rect) {
                     c = 0;
                 }
             }
-            //continue;
         }
 
-//        if (dbg) qDebug("Button");
         QWidget* wd = qobject_cast<QWidget*>(itemList[i].first->widget());
         wd->setGeometry(w,h, buttonSize,buttonSize);
 
@@ -376,17 +307,8 @@ QLayoutItem* RColumnLayout::takeAt(int index) {
 
 QLayoutItem* RColumnLayout::itemAt(int index) const {
     if (index>=itemList.length() || index<0) {
-        //qWarning() << "RColumnLayout::itemAt: index out of range: " << index;
-        //qWarning() << "RColumnLayout::itemAt: itemList.length:" << itemList.length();
         return NULL;
     }
-    //qDebug("ColumnLayout.prototype.itemAt...");
-    //var itemList = this.property("ItemList");
-//    if (typeof(itemList)=="undefined" || index>=itemList.length) {
-//        return undefined;
-//    }
-    //qDebug("ColumnLayout.prototype.itemAt: " + itemList[index]);
-    //qDebug("ColumnLayout.prototype.itemAt: DONE");
     return itemList[index].first;
 };
 

@@ -39,7 +39,6 @@ class QCADGUI_EXPORT RColumnLayout: public QLayout {
 
 public:
     RColumnLayout(QWidget* parent, QToolBar* toolBar, int buttonSize);
-    //RColumnLayout(QWidget* parent = NULL): QLayout(parent) {}
 
 //    void removeAction(QAction* a);
 
@@ -48,8 +47,6 @@ public:
     virtual int	count() const;
     virtual QLayoutItem* itemAt(int index) const;
     virtual QLayoutItem* takeAt(int index);
-
-    //void addSeparator(int sortOrder, int groupSortOrder);
 
     static int getAccumulatedSortOrder(QObject* item, const QString& objectName);
     static int getSortOrder(QObject* item, const QString& objectName);
