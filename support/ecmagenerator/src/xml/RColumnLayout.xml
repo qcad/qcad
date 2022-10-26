@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="QToolButton" />
+  <class_decl name="RGuiAction" />
+  <class name="RColumnLayout"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="true"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="QLayout" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="QWidget *" typeName="QWidget *" name="parent"
+        isConst="false" />
+        <arg type="QToolBar *" typeName="QToolBar *" name="toolBar"
+        isConst="false" />
+        <arg type="int" typeName="int" name="buttonSize"
+        isConst="false" />
+      </variant>
+    </constructor>
+    <method name="addItem" cppName="addItem" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QLayoutItem *" typeName="QLayoutItem *"
+        name="item" isConst="false" />
+      </variant>
+    </method>
+    <method name="count" cppName="count" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="itemAt" cppName="itemAt" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QLayoutItem *" isPureVirtual="false">
+        <arg type="int" typeName="int" name="index"
+        isConst="false" />
+      </variant>
+      <variant returnType="QLayoutItem *" isPureVirtual="false">
+        <arg type="int" typeName="int" name="index"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="takeAt" cppName="takeAt" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QLayoutItem *" isPureVirtual="false">
+        <arg type="int" typeName="int" name="index"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getAccumulatedSortOrder"
+    cppName="getAccumulatedSortOrder" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="QObject *" typeName="QObject *" name="item"
+        isConst="false" />
+        <arg type="QString &amp;" typeName="QString"
+        name="objectName" isConst="true" />
+      </variant>
+    </method>
+    <method name="getSortOrder" cppName="getSortOrder"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="QObject *" typeName="QObject *" name="item"
+        isConst="false" />
+        <arg type="QString &amp;" typeName="QString"
+        name="objectName" isConst="true" />
+      </variant>
+    </method>
+    <method name="getGroupSortOrder" cppName="getGroupSortOrder"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="QObject *" typeName="QObject *" name="item"
+        isConst="false" />
+        <arg type="QString &amp;" typeName="QString"
+        name="objectName" isConst="true" />
+      </variant>
+    </method>
+    <method name="minimumSize" cppName="minimumSize"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QSize" isPureVirtual="false" />
+    </method>
+    <method name="sizeHint" cppName="sizeHint" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QSize" isPureVirtual="false" />
+    </method>
+    <method name="setGeometry" cppName="setGeometry"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QRect &amp;" typeName="QRect" name="rect"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="itemLessThan" cppName="itemLessThan"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QPair &lt; QLayoutItem * , int &gt; &amp;"
+        typeName="QPair &lt; QLayoutItem * , int &gt;" name="v1"
+        isConst="true" />
+        <arg type="QPair &lt; QLayoutItem * , int &gt; &amp;"
+        typeName="QPair &lt; QLayoutItem * , int &gt;" name="v2"
+        isConst="true" />
+      </variant>
+    </method>
+  </class>
+</unit>

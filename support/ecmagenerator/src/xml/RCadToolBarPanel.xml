@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RCadToolBar" />
+  <class_decl name="RGuiAction" />
+  <class_decl name="RColumnLayout" />
+  <class name="RCadToolBarPanel"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="true"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="RWidget" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="RCadToolBar *" typeName="RCadToolBar *"
+        name="parent" hasDefault="true" default="0"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="hasBackButton"
+        hasDefault="true" default="true" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="setBackMenuName" cppName="setBackMenuName"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="n"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getBackMenuName" cppName="getBackMenuName"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="getButtonName" cppName="getButtonName"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="QAction *" typeName="QAction *" name="action"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="removeAction" cppName="removeAction"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QAction *" typeName="QAction *" name="action"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="insertAction" cppName="insertAction"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QAction *" typeName="QAction *" name="before"
+        isConst="false" />
+        <arg type="QAction *" typeName="QAction *" name="action"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="addAction" cppName="addAction" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QAction *" typeName="QAction *" name="action"
+        isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

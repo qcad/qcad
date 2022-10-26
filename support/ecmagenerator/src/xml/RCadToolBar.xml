@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RCadToolBarPanel" />
+  <class_decl name="QStackedLayout" />
+  <class name="RCadToolBar"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="true"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="QToolBar" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="QString &amp;" typeName="QString" name="title"
+        isConst="true" />
+        <arg type="QWidget *" typeName="QWidget *" name="parent"
+        hasDefault="true" default="0" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="getPanel" cppName="getPanel" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RCadToolBarPanel *"
+      isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="title"
+        isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="objectName" isConst="true" />
+        <arg type="bool" typeName="bool" name="hasBackButton"
+        hasDefault="true" default="true" isConst="false" />
+      </variant>
+    </method>
+    <method name="getCurrentPanel" cppName="getCurrentPanel"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RCadToolBarPanel *"
+      isPureVirtual="false" />
+    </method>
+    <method name="getCurrentPanelName"
+    cppName="getCurrentPanelName" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="showPanel" cppName="showPanel" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="name"
+        isConst="true" />
+        <arg type="bool" typeName="bool" name="isBack"
+        hasDefault="true" default="false" isConst="false" />
+      </variant>
+    </method>
+    <method name="back" cppName="back" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+  </class>
+</unit>
