@@ -298,6 +298,8 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
         return;
     }
 
+    var appWin = EAction.getMainWindow();
+
     var persistentSelection = RSettings.getBoolValue("GraphicsView/PersistentSelection", false);
     var entityId;
 
@@ -379,7 +381,6 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
         }
 
         else if (this.state===DefaultAction.State.Neutral) {
-            var appWin = EAction.getMainWindow();
             var rightClickRange = RSettings.getIntValue("GraphicsView/RightClickRange", 10);
             entityId = EAction.getEntityIdUnderCursor(this.di, event, rightClickRange, true);
 
@@ -415,7 +416,8 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
         }
 
         if (!handled) {
-            if (CadToolBar.back()===true) {
+            var cadToolBar = appWin.findChild("CadQToolBar");
+            if (cadToolBar.back()===true) {
                 handled = true;
             }
         }
@@ -472,7 +474,9 @@ DefaultAction.prototype.emptySpaceDoubleClicked = function() {
 DefaultAction.prototype.escapeEvent = function(event) {
     this.di.clearPreview();
     this.di.repaintViews();
-    CadToolBar.back();
+    var appWin = EAction.getMainWindow();
+    var cadToolBar = appWin.findChild("CadQToolBar");
+    cadToolBar.back();
     this.setState(DefaultAction.State.Neutral);
 };
 

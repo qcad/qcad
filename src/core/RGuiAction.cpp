@@ -680,6 +680,12 @@ void RGuiAction::addToWidget(QAction* action, QWidget* w) {
 
     RWidget* rw = dynamic_cast<RWidget*>(w);
 
+    if (action->isSeparator() && rw!=NULL) {
+        // don't add separator to CAD toolbar (handled differently, by RColumnLayout):
+        delete action;
+        return;
+    }
+
     // find existing groups:
     QSet<int> groupSortOrders;
     QList<QAction*> actions = w->actions();

@@ -11,6 +11,9 @@ qt_standard_project_setup()
 
 qt_add_library(qcadgui
     RCharacterWidget.cpp RCharacterWidget.h
+    RCadToolBar.cpp RCadToolBar.h
+    RCadToolBarPanel.cpp RCadToolBarPanel.h
+    RColumnLayout.cpp RColumnLayout.h
     RCloseCurrentEvent.h
     RColorCombo.cpp RColorCombo.h
     RCommandLine.cpp RCommandLine.h

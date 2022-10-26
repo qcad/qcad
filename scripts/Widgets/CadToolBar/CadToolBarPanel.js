@@ -21,97 +21,98 @@
 // include before CadToolBarPanel.js instead
 //include("ColumnLayout.js");
 
-function CadToolBarPanel(parent, hasBackButton) {
-    RWidget.call(this, parent);
+//function CadToolBarPanel(parent, hasBackButton) {
+//    RWidget.call(this, parent);
 
-    var layout = new ColumnLayout(
-        this, parent.parentWidget(), RSettings.getIntValue("CadToolBar/IconSize", 32) * 1.25
-    );
-    this.setLayout(layout);
-    this.sizePolicy = new QSizePolicy(
-        QSizePolicy.MinimumExpanding,
-        QSizePolicy.MinimumExpanding
-    );
+//    this.lay = new ColumnLayout(
+//        this, parent.parentWidget(), RSettings.getIntValue("CadToolBar/IconSize", 32) * 1.25
+//    );
+//    //var layout = new QVBoxLayout();
+//    this.setLayout(this.lay);
+//    this.sizePolicy = new QSizePolicy(
+//        QSizePolicy.MinimumExpanding,
+//        QSizePolicy.MinimumExpanding
+//    );
 
-    this.backMenuName = "MainToolsPanel";
+//    this.backMenuName = "MainToolsPanel";
 
-    if (hasBackButton) {
-        var backAction = new RGuiAction(qsTr("Back"), this);
-        backAction.objectName = "Back";
-        backAction.checkable = false;
-        backAction.setIcon(autoPath("scripts/Widgets/CadToolBar/Back.svg"));
-        this.addAction(backAction);
-        //backAction.triggered.connect(CadToolBar, "back");
-        backAction.triggered.connect(CadToolBar.back);
-    }
-}
+//    if (hasBackButton) {
+//        var backAction = new RGuiAction(qsTr("Back"), this);
+//        backAction.objectName = "Back";
+//        backAction.checkable = false;
+//        backAction.setIcon(autoPath("scripts/Widgets/CadToolBar/Back.svg"));
+//        this.addAction(backAction);
+//        //backAction.triggered.connect(CadToolBar, "back");
+//        backAction.triggered.connect(CadToolBar.back);
+//    }
+//}
 
-CadToolBarPanel.prototype = new RWidget();
+//CadToolBarPanel.prototype = new RWidget();
 
-CadToolBarPanel.setBackMenuName = function(panel, name) {
-    panel.setProperty("backMenuName", name);
-};
+//CadToolBarPanel.setBackMenuName = function(panel, name) {
+//    panel.setProperty("backMenuName", name);
+//};
 
-CadToolBarPanel.prototype.toString = function() {
-    return "CadToolBarPanel";
-};
+//CadToolBarPanel.prototype.toString = function() {
+//    return "CadToolBarPanel";
+//};
 
-CadToolBarPanel.getButtonName = function(action) {
-    var buttonName = action.objectName;
-    if (buttonName.endsWith("Action")) {
-        buttonName = buttonName.left(buttonName.length-"Action".length);
-    }
-    buttonName+="Button";
-    return buttonName;
-};
+//CadToolBarPanel.getButtonName = function(action) {
+//    var buttonName = action.objectName;
+//    if (buttonName.endsWith("Action")) {
+//        buttonName = buttonName.left(buttonName.length-"Action".length);
+//    }
+//    buttonName+="Button";
+//    return buttonName;
+//};
 
-CadToolBarPanel.prototype.removeAction = function(action) {
-    ColumnLayout.prototype.removeAction.call(this.layout(), action);
-    QWidget.prototype.removeAction.call(this, action);
+//CadToolBarPanel.prototype.removeAction = function(action) {
+//    ColumnLayout.prototype.removeAction.call(this.layout(), action);
+//    QWidget.prototype.removeAction.call(this, action);
 
-    var buttonName = CadToolBarPanel.getButtonName(action);
-    var w = this.findChild(buttonName);
-    if (!isNull(w)) {
-        w.visible = false;
-    }
-};
+//    var buttonName = CadToolBarPanel.getButtonName(action);
+//    var w = this.findChild(buttonName);
+//    if (!isNull(w)) {
+//        w.visible = false;
+//    }
+//};
 
-CadToolBarPanel.prototype.insertAction = function(before, action) {
-    this.addAction(action);
-//    QWidget.prototype.insertAction.call(this, before, action);
-};
+//CadToolBarPanel.prototype.insertAction = function(before, action) {
+//    this.addAction(action);
+////    QWidget.prototype.insertAction.call(this, before, action);
+//};
 
-CadToolBarPanel.prototype.addAction = function(action) {
-    if (action.isSeparator()) {
-        action.setProperty("SortOrder", action.getSortOrder());
-        action.setProperty("GroupSortOrder", action.getGroupSortOrder());
-        ColumnLayout.prototype.addItem.call(this.layout(), action);
-        return;
-    }
+//CadToolBarPanel.prototype.addAction = function(action) {
+//    if (action.isSeparator()) {
+//        action.setProperty("SortOrder", action.getSortOrder());
+//        action.setProperty("GroupSortOrder", action.getGroupSortOrder());
+//        ColumnLayout.prototype.addItem.call(this.layout(), action);
+//        return;
+//    }
 
-    var buttonName = CadToolBarPanel.getButtonName(action);
+//    var buttonName = CadToolBarPanel.getButtonName(action);
 
-    // check if button already exists for this action:
-    var button = this.findChild(buttonName);
-    if (isNull(button)) {
-        button = new QToolButton(this);
-    }
-    button.visible = true;
-    button.setDefaultAction(action);
-    button.objectName = buttonName;
-    var s = RSettings.getIntValue("CadToolBar/IconSize", 32);
-    button.iconSize = new QSize(s, s);
-    if (isNumber(action.property("GroupSortOrder"))) {
-        button.setProperty("GroupSortOrder", ColumnLayout.getGroupSortOrder(action, this.objectName));
-    }
-    if (isNumber(action.property("SortOrder"))) {
-        button.setProperty("SortOrder", ColumnLayout.getSortOrder(action, this.objectName));
-    }
-    if (button.objectName==="BackButton") {
-        button.toolTip = qsTr("Back");
-        button.sizePolicy = new QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Minimum);
-    }
+//    // check if button already exists for this action:
+//    var button = this.findChild(buttonName);
+//    if (isNull(button)) {
+//        button = new QToolButton(this);
+//    }
+//    button.visible = true;
+//    button.setDefaultAction(action);
+//    button.objectName = buttonName;
+//    var s = RSettings.getIntValue("CadToolBar/IconSize", 32);
+//    button.iconSize = new QSize(s, s);
+//    if (isNumber(action.property("GroupSortOrder"))) {
+//        button.setProperty("GroupSortOrder", ColumnLayout.getGroupSortOrder(action, this.objectName));
+//    }
+//    if (isNumber(action.property("SortOrder"))) {
+//        button.setProperty("SortOrder", ColumnLayout.getSortOrder(action, this.objectName));
+//    }
+//    if (button.objectName==="BackButton") {
+//        button.toolTip = qsTr("Back");
+//        button.sizePolicy = new QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Minimum);
+//    }
 
-    ColumnLayout.prototype.addItem.call(this.layout(), button);
-    QWidget.prototype.addAction.call(this, action);
-};
+//    ColumnLayout.prototype.addItem.call(this.layout(), button);
+//    QWidget.prototype.addAction.call(this, action);
+//};

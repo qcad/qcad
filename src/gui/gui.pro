@@ -4,6 +4,7 @@ QT += concurrent
 
 SOURCES += \
     RShortcutLineEdit.cpp \
+    RCadToolBar.cpp \
     RCharacterWidget.cpp \
     RColorCombo.cpp \
     RCommandLine.cpp \
@@ -36,6 +37,7 @@ SOURCES += \
 
 HEADERS += \
     RShortcutLineEdit.h \
+    RCadToolBar.h \
     RCharacterWidget.h \
     RCloseCurrentEvent.h \
     RColorCombo.h \

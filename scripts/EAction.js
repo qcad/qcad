@@ -21,13 +21,6 @@ include("scripts/library.js");
 include("scripts/WidgetFactory.js");
 include("scripts/Widgets/OptionsToolBar/OptionsToolBar.js");
 
-if (RSettings.isGuiEnabled()) {
-    if (exists("scripts/Widgets/CadToolBar/CadToolBar.js")) {
-        include("scripts/Widgets/CadToolBar/ColumnLayout.js");
-        include("scripts/Widgets/CadToolBar/CadToolBar.js");
-    }
-}
-
 /**
  * Base class for all ECMAScript based actions.
  */
@@ -154,10 +147,10 @@ EAction.prototype.finishEvent = function() {
 
     // reset CAD tool bar:
     if (!isNull(guiAction) && guiAction.getGroup() === "") {
-        if (typeof(CadToolBar) !== "undefined") {
-            if (CadToolBar.getCurrentPanelName()==="SnapToolsPanel") {
-                CadToolBar.back();
-            }
+        var appWin = EAction.getMainWindow();
+        var cadToolBar = appWin.findChild("CadQToolBar");
+        if (!isNull(cadToolBar) && cadToolBar.getCurrentPanelName()==="SnapToolsPanel") {
+            cadToolBar.back();
         }
     }
 
@@ -1193,46 +1186,37 @@ EAction.getMainCadToolBarPanel = function() {
  * back to the main CAD toolbar panel.
  */
 EAction.getCadToolBarPanel = function(title, objectName, hasBackButton) {
-    if (typeof(CadToolBar) === "undefined") {
-        return undefined;
-    }
-
     var appWin = EAction.getMainWindow();
     var cadToolBar = appWin.findChild("CadQToolBar");
 
     // create CAD toolbar if it does not exist already:
     if (isNull(cadToolBar)) {
-        var toolBar = new QToolBar(qsTr("CAD Tools"), appWin);
-        toolBar.objectName = "CadQToolBar";
-        cadToolBar = new CadToolBar(toolBar);
-        toolBar.addWidget(cadToolBar);
-        cadToolBar.updateIconSize();
+        cadToolBar = new RCadToolBar(qsTr("CAD Tools"), appWin);
+        cadToolBar.objectName = "CadQToolBar";
+//        cadToolBar.updateIconSize();
 
-        toolBar.topLevelChanged.connect(function(onOff) {
+        cadToolBar.topLevelChanged.connect(function(onOff) {
             RSettings.setValue("CadToolBar/VerticalWhenFloating", false);
         });
-        toolBar.orientationChanged.connect(function(orientation) {
+        cadToolBar.orientationChanged.connect(function(orientation) {
             RSettings.setValue("CadToolBar/VerticalWhenFloating", false);
         });
     }
 
-    return CadToolBar.getPanel(title, objectName, hasBackButton);
+    return cadToolBar.getPanel(title, objectName, hasBackButton);
 };
 
 /**
  * Shows the CAD toolbar panel with the given objectName.
  */
 EAction.showCadToolBarPanel = function(objectName) {
-    if (typeof (CadToolBar) == "undefined") {
-        return;
-    }
-
     var appWin = EAction.getMainWindow();
     if (isNull(appWin)) {
         return;
     }
 
-    CadToolBar.showPanel(objectName);
+    var toolBar = appWin.findChild("CadQToolBar");
+    toolBar.showPanel(objectName);
 };
 
 /**
