@@ -38,6 +38,7 @@
 
 </private><public>public:
     <constructor_decl><name>RDimStyleData</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>override</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
+    <destructor_decl><specifier>virtual</specifier> <name>~RDimStyleData</name><parameter_list>()</parameter_list>;</destructor_decl>
 
     <function_decl><type><name>static</name> <name>void</name></type> <name>init</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>void</name></type> <name>initDefaults</name><parameter_list>()</parameter_list>;</function_decl>
@@ -64,7 +65,7 @@
         <expr_stmt><expr><name>mapColor</name>.<call><name>clear</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
     }</block></function>
 
-    <function><type><name>static</name> <name><name>RS</name>::<name>KnownVariableType</name></name></type> <name>getType</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <block>{
+    <function><type><name>static</name> <name><name>RS</name>::<name>KnownVariableType</name></name></type> <name>getVariableType</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <block>{
         <if>if <condition>(<expr><name>dimXTypes</name>.<call><name>contains</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
             <return>return <expr><name><name>dimXTypes</name><index>[<expr><name>key</name></expr>]</index></name></expr>;</return>
         }</block></then>

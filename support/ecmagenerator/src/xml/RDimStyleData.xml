@@ -81,8 +81,9 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
-    <method name="getType" cppName="getType" specifier="public"
-    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+    <method name="getVariableType" cppName="getVariableType"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
       <variant returnType="RS::KnownVariableType"
       isPureVirtual="false">
         <arg type="RS::KnownVariable" typeName="RS::KnownVariable"

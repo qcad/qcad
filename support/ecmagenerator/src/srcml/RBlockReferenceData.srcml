@@ -165,6 +165,13 @@
 
     <function_decl><type><name>bool</name></type> <name>isPixelUnit</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x060000</expr></cpp:if>
+    <comment type="line">// copy function for Qt 6 scripts:</comment>
+    <function><type><name>RBlockReferenceData</name></type> <name>copy</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr>*<name>this</name></expr>;</return>
+    }</block></function>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
 </public><private>private:
     <decl_stmt><decl><type><name>mutable</name> <name><name>RBlock</name>::<name>Id</name></name></type> <name>referencedBlockId</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RVector</name></type> <name>position</name></decl>;</decl_stmt>

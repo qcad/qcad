@@ -40,7 +40,7 @@
 <constructor_decl><name>Q_PROPERTY</name><parameter_list>(<param><decl><type><name>QFont</name> <name>chosenFont</name> <name>READ</name> <name>getChosenFont</name> <name>WRITE</name></type> <name>setChosenFont</name></decl></param>)</parameter_list>;</constructor_decl>
 
 </private><public>public:
-    <constructor_decl><name>RFontChooserWidget</name><parameter_list>(<param><decl><type><name>QWidget</name> *</type><name>parent</name> =<init> <expr>0</expr></init></decl></param>)</parameter_list>;</constructor_decl>
+    <constructor_decl><name>RFontChooserWidget</name><parameter_list>(<param><decl><type><name>QWidget</name>*</type> <name>parent</name> =<init> <expr>0</expr></init></decl></param>)</parameter_list>;</constructor_decl>
 
     <function_decl><type><name>QFont</name></type> <name>getChosenFont</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setChosenFont</name><parameter_list>(<param><decl><type><name>const</name> <name>QFont</name>&amp;</type> <name>font</name></decl></param>)</parameter_list>;</function_decl>

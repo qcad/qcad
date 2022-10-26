@@ -397,5 +397,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="copy" cppName="copy" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RBlockReferenceData"
+      isPureVirtual="false" />
+    </method>
   </class>
 </unit>

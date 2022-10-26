@@ -192,7 +192,7 @@
 
     <function_decl><type><name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>getLoopBoundary</name><parameter_list>(<param><decl><type><name>int</name></type> <name>index</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
-    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RPolyline</name></argument>&gt;</argument_list></name></type> <name>getBoundaryAsPolylines</name><parameter_list>(<param><decl><type><name>double</name></type> <name>segmentLength</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RPolyline</name></argument>&gt;</argument_list></name></type> <name>getBoundaryAsPolylines</name><argument_list>(<argument><expr><name>double</name> <name>segmentLength</name> = -1.0</expr></argument>)</argument_list> <name>const</name></decl>;</decl_stmt>
 
     <function><type><name>void</name></type> <name>autoCloseLoops</name><parameter_list>()</parameter_list> <block>{
         <if>if <condition>(<expr><name>hatchProxy</name>!=<name>NULL</name></expr>)</condition><then> <block>{

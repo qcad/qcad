@@ -71,7 +71,7 @@
     <decl_stmt><decl><type><name>QWidget</name>*</type> <name>actWin</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QMutex</name></type> <name>mutexEvents</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QThread</name>*</type> <name>mutexEventsLocker</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>static</name> <name>RSingleApplication</name>*</type> <name>instance</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RSingleApplication</name>*</type> <name>singleInstance</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RSingleApplication*</argument>)</argument_list></macro>
