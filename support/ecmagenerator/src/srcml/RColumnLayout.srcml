@@ -60,6 +60,9 @@
     <function_decl><type><name>QSize</name></type> <name>sizeHint</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setGeometry</name><parameter_list>(<param><decl><type><name>const</name> <name>QRect</name>&amp;</type> <name>rect</name></decl></param>)</parameter_list>;</function_decl>
 
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
     <function_decl><type><name>QLayoutItem</name>*</type> <name>itemAt</name><parameter_list>(<param><decl><type><name>int</name></type> <name>index</name></decl></param>)</parameter_list>;</function_decl>
 
     <comment type="block">/**
