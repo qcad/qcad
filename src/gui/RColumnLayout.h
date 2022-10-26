@@ -59,6 +59,9 @@ public:
     QSize sizeHint() const;
     virtual void setGeometry(const QRect& rect);
 
+    /**
+     * \nonscriptable
+     */
     QLayoutItem* itemAt(int index);
 
     /**
