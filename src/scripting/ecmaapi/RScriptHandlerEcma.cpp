@@ -383,6 +383,8 @@
 #include "REcmaXLine.h"
 #include "REcmaXLineData.h"
 #include "REcmaXLineEntity.h"
+#include "REcmaCadToolBar.h"
+#include "REcmaCadToolBarPanel.h"
 
 //#if QT_VERSION < 0x050600
 //#  if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
@@ -1029,6 +1031,8 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaTextRenderer::initEcma(*engine);
 
     REcmaDxfServices::initEcma(*engine);
+    REcmaCadToolBar::initEcma(*engine);
+    REcmaCadToolBarPanel::initEcma(*engine);
 
     REcmaAutoLoadEcma::initEcma(*engine);
 
