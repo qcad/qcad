@@ -61,6 +61,9 @@ public:
 
     QLayoutItem* itemAt(int index);
 
+    /**
+     * \nonscriptable
+     */
     static bool itemLessThan(const QPair<QLayoutItem*, int>& v1, const QPair<QLayoutItem*, int>& v2) {
         return v1.second < v2.second;
     }
