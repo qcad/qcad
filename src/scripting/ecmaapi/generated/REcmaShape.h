@@ -346,7 +346,7 @@
         trim
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        roundAllCorners
+        roundCorners
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         roundShapes

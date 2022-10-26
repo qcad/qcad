@@ -162,6 +162,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isPixelUnit, "isPixelUnit");
             
+            REcmaHelper::registerFunction(&engine, proto, copy, "copy");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RBlockReferenceData*>(), *proto);
 
@@ -5258,6 +5260,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaBlockReferenceData::isPixelUnit", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaBlockReferenceData::copy
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaBlockReferenceData::copy", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBlockReferenceData::copy";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceData* self = 
+                        getSelf("copy", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RBlockReferenceData'
+    RBlockReferenceData cppResult =
+        
+               self->copy();
+        // return type: RBlockReferenceData
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceData.copy().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaBlockReferenceData::copy", context, engine);
             return result;
         }
          QScriptValue REcmaBlockReferenceData::toString

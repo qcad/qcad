@@ -81,6 +81,9 @@
         clear
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getVariableType
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getVariant
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

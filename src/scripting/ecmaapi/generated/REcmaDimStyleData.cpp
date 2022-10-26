@@ -114,7 +114,7 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getColorDefault, "getColorDefault");
             
-            REcmaHelper::registerFunction(&engine, &ctor, getType, "getType");
+            REcmaHelper::registerFunction(&engine, &ctor, getVariableType, "getVariableType");
             
 
     // static properties:
@@ -758,12 +758,12 @@
             return result;
         }
          QScriptValue
-        REcmaDimStyleData::getType
+        REcmaDimStyleData::getVariableType
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimStyleData::getType", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyleData::getType";
+            //REcmaHelper::functionStart("REcmaDimStyleData::getVariableType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyleData::getVariableType";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
@@ -801,10 +801,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyleData.getType().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyleData.getVariableType().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimStyleData::getType", context, engine);
+            //REcmaHelper::functionEnd("REcmaDimStyleData::getVariableType", context, engine);
             return result;
         }
          QScriptValue

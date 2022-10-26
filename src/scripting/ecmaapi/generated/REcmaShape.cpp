@@ -277,7 +277,7 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, trim, "trim");
             
-            REcmaHelper::registerFunction(&engine, &ctor, roundAllCorners, "roundAllCorners");
+            REcmaHelper::registerFunction(&engine, &ctor, roundCorners, "roundCorners");
             
             REcmaHelper::registerFunction(&engine, &ctor, roundShapes, "roundShapes");
             
@@ -11749,12 +11749,12 @@
             return result;
         }
          QScriptValue
-        REcmaShape::roundAllCorners
+        REcmaShape::roundCorners
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaShape::roundAllCorners", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaShape::roundAllCorners";
+            //REcmaHelper::functionStart("REcmaShape::roundCorners", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaShape::roundCorners";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
@@ -11809,7 +11809,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RShape.roundCorners().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaShape::roundAllCorners", context, engine);
+            //REcmaHelper::functionEnd("REcmaShape::roundCorners", context, engine);
             return result;
         }
          QScriptValue

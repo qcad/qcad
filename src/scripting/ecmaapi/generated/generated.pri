@@ -17,6 +17,8 @@ HEADERS += \
     $$PWD/REcmaBlockReferenceData.h \
     $$PWD/REcmaBlockReferenceEntity.h \
     $$PWD/REcmaBox.h \
+    $$PWD/REcmaCadToolBar.h \
+    $$PWD/REcmaCadToolBarPanel.h \
     $$PWD/REcmaChangePropertyOperation.h \
     $$PWD/REcmaCharacterWidget.h \
     $$PWD/REcmaCircle.h \
@@ -27,6 +29,7 @@ HEADERS += \
     $$PWD/REcmaCloseCurrentEvent.h \
     $$PWD/REcmaColor.h \
     $$PWD/REcmaColorCombo.h \
+    $$PWD/REcmaColumnLayout.h \
     $$PWD/REcmaCommandEvent.h \
     $$PWD/REcmaCommandLine.h \
     $$PWD/REcmaCoordinateEvent.h \
@@ -402,6 +405,8 @@ SOURCES += \
     $$PWD/REcmaBlockReferenceData.cpp \
     $$PWD/REcmaBlockReferenceEntity.cpp \
     $$PWD/REcmaBox.cpp \
+    $$PWD/REcmaCadToolBar.cpp \
+    $$PWD/REcmaCadToolBarPanel.cpp \
     $$PWD/REcmaChangePropertyOperation.cpp \
     $$PWD/REcmaCharacterWidget.cpp \
     $$PWD/REcmaCircle.cpp \
@@ -412,6 +417,7 @@ SOURCES += \
     $$PWD/REcmaCloseCurrentEvent.cpp \
     $$PWD/REcmaColor.cpp \
     $$PWD/REcmaColorCombo.cpp \
+    $$PWD/REcmaColumnLayout.cpp \
     $$PWD/REcmaCommandEvent.cpp \
     $$PWD/REcmaCommandLine.cpp \
     $$PWD/REcmaCoordinateEvent.cpp \

@@ -196,9 +196,6 @@
         getLoopBoundary
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getBoundaryAsPolylines
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         autoCloseLoops
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

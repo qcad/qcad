@@ -903,6 +903,56 @@
             return result;
         }
          QScriptValue
+        REcmaDimStyle::getVariableType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimStyle::getVariableType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::getVariableType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::KnownVariableType'
+    RS::KnownVariableType cppResult =
+        RDimStyleData::
+       getVariableType(a0);
+        // return type: RS::KnownVariableType
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.getVariableType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimStyle::getVariableType", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaDimStyle::getVariant
         (QScriptContext* context, QScriptEngine* engine) 
         
