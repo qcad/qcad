@@ -94,17 +94,5 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
-    <method name="itemLessThan" cppName="itemLessThan"
-    specifier="public" isStatic="true" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="false">
-        <arg type="QPair &lt; QLayoutItem * , int &gt; &amp;"
-        typeName="QPair &lt; QLayoutItem * , int &gt;" name="v1"
-        isConst="true" />
-        <arg type="QPair &lt; QLayoutItem * , int &gt; &amp;"
-        typeName="QPair &lt; QLayoutItem * , int &gt;" name="v2"
-        isConst="true" />
-      </variant>
-    </method>
   </class>
 </unit>

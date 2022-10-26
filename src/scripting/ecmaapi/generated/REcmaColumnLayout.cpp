@@ -101,8 +101,6 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getGroupSortOrder, "getGroupSortOrder");
             
-            REcmaHelper::registerFunction(&engine, &ctor, itemLessThan, "itemLessThan");
-            
 
     // static properties:
     
@@ -887,89 +885,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaColumnLayout::setGeometry", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaColumnLayout::itemLessThan
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaColumnLayout::itemLessThan", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaColumnLayout::itemLessThan";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-    
-    if( context->argumentCount() ==
-    2 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: QPair < QLayoutItem * , int > */
-     && (
-            context->argument(1).isVariant() || 
-            context->argument(1).isQObject() || 
-            context->argument(1).isNull()
-        ) /* type: QPair < QLayoutItem * , int > */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument is reference
-                    QPair < QLayoutItem * , int >*
-                    ap0 =
-                    qscriptvalue_cast<
-                    QPair < QLayoutItem * , int >*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RColumnLayout: Argument 0 is not of type QPair < QLayoutItem * , int >*.",
-                               context);                    
-                    }
-                    QPair < QLayoutItem * , int >& a0 = *ap0;
-                
-                    // argument is reference
-                    QPair < QLayoutItem * , int >*
-                    ap1 =
-                    qscriptvalue_cast<
-                    QPair < QLayoutItem * , int >*
-                        >(
-                        context->argument(
-                        1
-                        )
-                    );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RColumnLayout: Argument 1 is not of type QPair < QLayoutItem * , int >*.",
-                               context);                    
-                    }
-                    QPair < QLayoutItem * , int >& a1 = *ap1;
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'bool'
-    bool cppResult =
-        RColumnLayout::
-       itemLessThan(a0
-        ,
-    a1);
-        // return type: bool
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RColumnLayout.itemLessThan().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaColumnLayout::itemLessThan", context, engine);
             return result;
         }
          QScriptValue REcmaColumnLayout::toString

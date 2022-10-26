@@ -77,9 +77,6 @@
         ;static  QScriptValue
         setGeometry
         (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        itemLessThan
-        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
