@@ -63,11 +63,6 @@
     <comment type="block">/**
      * \nonscriptable
      */</comment>
-    <function_decl><type><name>QLayoutItem</name>*</type> <name>itemAt</name><parameter_list>(<param><decl><type><name>int</name></type> <name>index</name></decl></param>)</parameter_list>;</function_decl>
-
-    <comment type="block">/**
-     * \nonscriptable
-     */</comment>
     <function><type><name>static</name> <name>bool</name></type> <name>itemLessThan</name><parameter_list>(<param><decl><type><name>const</name> <name>QPair<argument_list>&lt;<argument><name>QLayoutItem</name>*</argument>, <argument><name>int</name></argument>&gt;</argument_list></name>&amp;</type> <name>v1</name></decl></param>, <param><decl><type><name>const</name> <name>QPair<argument_list>&lt;<argument><name>QLayoutItem</name>*</argument>, <argument><name>int</name></argument>&gt;</argument_list></name>&amp;</type> <name>v2</name></decl></param>)</parameter_list> <block>{
         <return>return <expr><name>v1</name>.<name>second</name> &lt; <name>v2</name>.<name>second</name></expr>;</return>
     }</block></function>
