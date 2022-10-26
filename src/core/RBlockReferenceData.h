@@ -165,7 +165,10 @@ public:
     bool isPixelUnit() const;
 
 #if QT_VERSION >= 0x060000
-    // copy function for Qt 6 scripts:
+    /**
+     * copy function for Qt 6 scripts:
+     * \nonscriptable
+     */
     RBlockReferenceData copy() const {
         return *this;
     }
