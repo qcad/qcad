@@ -562,7 +562,7 @@ aby wprowadzić zmiany preferencji.</translation>
         <translation>Punkt końcowy</translation>
     </message>
     <message>
-        <location line="+81"/>
+        <location line="+85"/>
         <source>Invalid length</source>
         <translation>Nieprawidłowa wysokość</translation>
     </message>
@@ -1121,7 +1121,7 @@ Czy chcesz go odzyskać?</translation>
         <translation type="unfinished">Pliki</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+11"/>
         <source>Export as Bitmap</source>
         <translation type="unfinished">Eksportuj jako bitmapę</translation>
     </message>
@@ -1492,7 +1492,7 @@ Czy chcesz go odzyskać?</translation>
 <context>
     <name>CadToolBar</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+53"/>
+        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+56"/>
         <source>Widgets</source>
         <translation type="unfinished">Widżety</translation>
     </message>
@@ -1502,12 +1502,7 @@ Czy chcesz go odzyskać?</translation>
         <translation type="unfinished">Pasek narzędzi CAD</translation>
     </message>
     <message>
-        <location line="+35"/>
-        <source>Vertical/Horizontal</source>
-        <translation>Pionowo/poziomo</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+17"/>
+        <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+20"/>
         <source>Icon size:</source>
         <translation type="unfinished">Rozmiar ikony:</translation>
     </message>
@@ -1525,15 +1520,6 @@ Czy chcesz go odzyskać?</translation>
         <location line="+9"/>
         <source>Columns:</source>
         <translation type="unfinished">Kolumny:</translation>
-    </message>
-</context>
-<context>
-    <name>CadToolBarPanel</name>
-    <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBarPanel.js" line="+39"/>
-        <location line="+72"/>
-        <source>Back</source>
-        <translation type="unfinished">Powrót</translation>
     </message>
 </context>
 <context>
@@ -1745,7 +1731,7 @@ Czy chcesz go odzyskać?</translation>
     </message>
     <message>
         <location line="+144"/>
-        <location line="+45"/>
+        <location line="+59"/>
         <source>No solution</source>
         <translation>Brak rozwiązania</translation>
     </message>
@@ -1850,7 +1836,7 @@ Czy chcesz go odzyskać?</translation>
     </message>
     <message>
         <location line="+120"/>
-        <location line="+65"/>
+        <location line="+86"/>
         <source>No solution</source>
         <translation>Brak rozwiązania</translation>
     </message>
@@ -2013,7 +1999,7 @@ Czy chcesz go odzyskać?</translation>
     </message>
     <message>
         <location line="+138"/>
-        <location line="+48"/>
+        <location line="+55"/>
         <source>No solution</source>
         <translation>Brak rozwiązania</translation>
     </message>
@@ -2339,7 +2325,7 @@ Czy chcesz go odzyskać?</translation>
         <translation type="unfinished">Względna współrzędna biegunowa</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+28"/>
+        <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+29"/>
         <source>Widgets</source>
         <translation type="unfinished">Widżety</translation>
     </message>
@@ -2549,7 +2535,7 @@ Czy chcesz go odzyskać?</translation>
         <translation>Przenieś obiekt do określonego położenia</translation>
     </message>
     <message>
-        <location line="+405"/>
+        <location line="+409"/>
         <source>Move Reference Point</source>
         <translation>Przenieś punkt odniesienia</translation>
     </message>
@@ -4055,7 +4041,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Następny wierzchołek</translation>
     </message>
     <message>
-        <location line="+421"/>
+        <location line="+428"/>
         <source>close</source>
         <translation>zamknij</translation>
     </message>
@@ -4163,18 +4149,18 @@ jest już na liście.</translation>
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../scripts/EAction.js" line="+70"/>
+        <location filename="../scripts/EAction.js" line="+64"/>
         <source>Back</source>
         <translation type="unfinished">Powrót</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2131"/>
+        <location line="+2120"/>
         <source>Cancel</source>
         <translation type="unfinished">Anuluj</translation>
     </message>
     <message>
-        <location line="-2130"/>
+        <location line="-2119"/>
         <source>Done</source>
         <translation type="unfinished">Gotowe</translation>
     </message>
@@ -4190,7 +4176,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Brak</translation>
     </message>
     <message>
-        <location line="+664"/>
+        <location line="+662"/>
         <source>Options</source>
         <translation type="unfinished">Opcje</translation>
     </message>
@@ -4200,12 +4186,12 @@ jest już na liście.</translation>
         <translation type="unfinished">Narzędzia główne</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+21"/>
         <source>CAD Tools</source>
         <translation type="unfinished">Narzędzia CAD</translation>
     </message>
     <message>
-        <location line="+582"/>
+        <location line="+577"/>
         <source>Invalid position</source>
         <translation type="unfinished">Nieprawidłowa pozycja</translation>
     </message>
@@ -6131,12 +6117,12 @@ jest już na liście.</translation>
 <context>
     <name>GraphicsViewFonts</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+41"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+50"/>
         <source>Ruler font:</source>
         <translation type="unfinished">Czcionka linijki:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+19"/>
         <source>Snap label font:</source>
         <translation type="unfinished">Czcionka etykiety Snap:</translation>
     </message>
@@ -7966,7 +7952,7 @@ jest już na liście.</translation>
         <translation type="unfinished">warstwa</translation>
     </message>
     <message>
-        <location line="+150"/>
+        <location line="+156"/>
         <source>Leading or trailing spaces.</source>
         <translation>Poprzedzające lub końcowe odstępy.</translation>
     </message>
@@ -8022,7 +8008,7 @@ jest już na liście.</translation>
 <context>
     <name>LayerList</name>
     <message>
-        <location filename="../scripts/Widgets/LayerList/LayerList.js" line="+197"/>
+        <location filename="../scripts/Widgets/LayerList/LayerList.js" line="+213"/>
         <source>Widgets</source>
         <translation>Widżety</translation>
     </message>
@@ -12361,12 +12347,12 @@ wyświetlanych w wynikach wyszukiwania:</translation>
 <context>
     <name>StatusBar</name>
     <message>
-        <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+53"/>
+        <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+47"/>
         <source>Status bar font:</source>
         <translation type="unfinished">Czcionka paska stanu:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+13"/>
         <source>Status Bar Widgets</source>
         <translation>Widżety paska stanu</translation>
     </message>
@@ -14762,3 +14748,4 @@ wyświetlanych w wynikach wyszukiwania:</translation>
     </message>
 </context>
 </TS>
+

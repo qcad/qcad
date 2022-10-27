@@ -562,7 +562,7 @@ pour appliquer les modifications.</translation>
         <translation>Point final</translation>
     </message>
     <message>
-        <location line="+81"/>
+        <location line="+85"/>
         <source>Invalid length</source>
         <translation>Longueur invalide</translation>
     </message>
@@ -1114,12 +1114,12 @@ Voulez-vous le récupérer ?</translation>
         <translation>Fichiers</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+11"/>
         <source>Export as Bitmap</source>
         <translation>Exporter en bitmap</translation>
     </message>
     <message>
-        <location line="-46"/>
+        <location line="-47"/>
         <source>Bitmap file has been exported to &quot;%1&quot;</source>
         <translation>Fichier Bitmap a été exportée vers &quot;%1&quot;</translation>
     </message>
@@ -1490,7 +1490,7 @@ Voulez-vous le récupérer ?</translation>
 <context>
     <name>CadToolBar</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+53"/>
+        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+56"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -1500,12 +1500,7 @@ Voulez-vous le récupérer ?</translation>
         <translation>Barre d&apos;outils de CAO</translation>
     </message>
     <message>
-        <location line="+35"/>
-        <source>Vertical/Horizontal</source>
-        <translation>Vertical / Horizontal</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+17"/>
+        <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+20"/>
         <source>Icon size:</source>
         <translation>Taille des icônes :</translation>
     </message>
@@ -1523,15 +1518,6 @@ Voulez-vous le récupérer ?</translation>
         <location line="+9"/>
         <source>Columns:</source>
         <translation>Colonnes :</translation>
-    </message>
-</context>
-<context>
-    <name>CadToolBarPanel</name>
-    <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBarPanel.js" line="+39"/>
-        <location line="+72"/>
-        <source>Back</source>
-        <translation>Précédent</translation>
     </message>
 </context>
 <context>
@@ -1743,7 +1729,7 @@ Voulez-vous le récupérer ?</translation>
     </message>
     <message>
         <location line="+144"/>
-        <location line="+45"/>
+        <location line="+59"/>
         <source>No solution</source>
         <translation>Aucune solution</translation>
     </message>
@@ -1848,7 +1834,7 @@ Voulez-vous le récupérer ?</translation>
     </message>
     <message>
         <location line="+120"/>
-        <location line="+65"/>
+        <location line="+86"/>
         <source>No solution</source>
         <translation>Aucune solution</translation>
     </message>
@@ -2011,7 +1997,7 @@ Voulez-vous le récupérer ?</translation>
     </message>
     <message>
         <location line="+138"/>
-        <location line="+48"/>
+        <location line="+55"/>
         <source>No solution</source>
         <translation>Aucune solution</translation>
     </message>
@@ -2337,7 +2323,7 @@ Voulez-vous le récupérer ?</translation>
         <translation>Cordonnées polaires relatives</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+28"/>
+        <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+29"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -2547,7 +2533,7 @@ Voulez-vous le récupérer ?</translation>
         <translation>Déplacer entité</translation>
     </message>
     <message>
-        <location line="+405"/>
+        <location line="+409"/>
         <source>Move Reference Point</source>
         <translation>Déplacer référence</translation>
     </message>
@@ -4047,7 +4033,7 @@ est déjà dans la liste.</translation>
         <translation>Vertex suivant</translation>
     </message>
     <message>
-        <location line="+421"/>
+        <location line="+428"/>
         <source>close</source>
         <translation>fermer</translation>
     </message>
@@ -4067,7 +4053,7 @@ est déjà dans la liste.</translation>
         <translation>arc</translation>
     </message>
     <message>
-        <location line="-449"/>
+        <location line="-456"/>
         <source>First vertex</source>
         <translation>Premier vertex</translation>
     </message>
@@ -4159,18 +4145,18 @@ est déjà dans la liste.</translation>
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../scripts/EAction.js" line="+70"/>
+        <location filename="../scripts/EAction.js" line="+64"/>
         <source>Back</source>
         <translation>Précédent</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2131"/>
+        <location line="+2120"/>
         <source>Cancel</source>
         <translation>Annuler</translation>
     </message>
     <message>
-        <location line="-2130"/>
+        <location line="-2119"/>
         <source>Done</source>
         <translation>Terminer</translation>
     </message>
@@ -4186,7 +4172,7 @@ est déjà dans la liste.</translation>
         <translation>Aucun</translation>
     </message>
     <message>
-        <location line="+664"/>
+        <location line="+662"/>
         <source>Options</source>
         <translation>Options</translation>
     </message>
@@ -4196,12 +4182,12 @@ est déjà dans la liste.</translation>
         <translation>Outils Principaux</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+21"/>
         <source>CAD Tools</source>
         <translation>Outils de CAO</translation>
     </message>
     <message>
-        <location line="+582"/>
+        <location line="+577"/>
         <source>Invalid position</source>
         <translation>Position non valide</translation>
     </message>
@@ -6126,12 +6112,12 @@ est déjà dans la liste.</translation>
 <context>
     <name>GraphicsViewFonts</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+41"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+50"/>
         <source>Ruler font:</source>
         <translation>Police de la règle :</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+19"/>
         <source>Snap label font:</source>
         <translation>Police d&apos;étiquettes accrocheuses :</translation>
     </message>
@@ -7991,7 +7977,7 @@ est déjà dans la liste.</translation>
         <translation>calque</translation>
     </message>
     <message>
-        <location line="+150"/>
+        <location line="+156"/>
         <source>Leading or trailing spaces.</source>
         <translation>Espaces avant ou après.</translation>
     </message>
@@ -8017,7 +8003,7 @@ est déjà dans la liste.</translation>
 <context>
     <name>LayerList</name>
     <message>
-        <location filename="../scripts/Widgets/LayerList/LayerList.js" line="+197"/>
+        <location filename="../scripts/Widgets/LayerList/LayerList.js" line="+213"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -12351,12 +12337,12 @@ dans les résultats de recherche :</translation>
 <context>
     <name>StatusBar</name>
     <message>
-        <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+53"/>
+        <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+47"/>
         <source>Status bar font:</source>
         <translation>Police barre d&apos;état:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+13"/>
         <source>Status Bar Widgets</source>
         <translation>Widgets dans la barre d&apos;état</translation>
     </message>
@@ -14752,3 +14738,4 @@ dans les résultats de recherche :</translation>
     </message>
 </context>
 </TS>
+

@@ -562,7 +562,7 @@ nuostatos pakeitimai įsigaliotų.</translation>
         <translation type="unfinished">Galutinis taškas</translation>
     </message>
     <message>
-        <location line="+81"/>
+        <location line="+85"/>
         <source>Invalid length</source>
         <translation type="unfinished">Netinkamas ilgis</translation>
     </message>
@@ -1118,7 +1118,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">Failai</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+11"/>
         <source>Export as Bitmap</source>
         <translation type="unfinished">Eksportuoti kaip bitų žemėlapį</translation>
     </message>
@@ -1489,7 +1489,7 @@ Ar norite jį atkurti?</translation>
 <context>
     <name>CadToolBar</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+53"/>
+        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+56"/>
         <source>Widgets</source>
         <translation type="unfinished">Valdikliai</translation>
     </message>
@@ -1499,12 +1499,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">CAD įrankių juosta</translation>
     </message>
     <message>
-        <location line="+35"/>
-        <source>Vertical/Horizontal</source>
-        <translation type="unfinished">Vertikalus / horizontalus</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+17"/>
+        <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+20"/>
         <source>Icon size:</source>
         <translation type="unfinished">Ikonos dydis:</translation>
     </message>
@@ -1522,15 +1517,6 @@ Ar norite jį atkurti?</translation>
         <location line="+9"/>
         <source>Columns:</source>
         <translation type="unfinished">Stulpeliai:</translation>
-    </message>
-</context>
-<context>
-    <name>CadToolBarPanel</name>
-    <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBarPanel.js" line="+39"/>
-        <location line="+72"/>
-        <source>Back</source>
-        <translation type="unfinished">Atgal</translation>
     </message>
 </context>
 <context>
@@ -1742,7 +1728,7 @@ Ar norite jį atkurti?</translation>
     </message>
     <message>
         <location line="+144"/>
-        <location line="+45"/>
+        <location line="+59"/>
         <source>No solution</source>
         <translation type="unfinished">Nėra sprendimo</translation>
     </message>
@@ -1847,7 +1833,7 @@ Ar norite jį atkurti?</translation>
     </message>
     <message>
         <location line="+120"/>
-        <location line="+65"/>
+        <location line="+86"/>
         <source>No solution</source>
         <translation type="unfinished">Nėra sprendimo</translation>
     </message>
@@ -2010,7 +1996,7 @@ Ar norite jį atkurti?</translation>
     </message>
     <message>
         <location line="+138"/>
-        <location line="+48"/>
+        <location line="+55"/>
         <source>No solution</source>
         <translation type="unfinished">Nėra sprendimo</translation>
     </message>
@@ -2316,7 +2302,7 @@ Ar norite jį atkurti?</translation>
 <context>
     <name>CoordinateDisplay</name>
     <message>
-        <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+28"/>
+        <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+29"/>
         <source>Widgets</source>
         <translation type="unfinished">Valdikliai</translation>
     </message>
@@ -2546,7 +2532,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">Perkelti subjektą į norimą vietą</translation>
     </message>
     <message>
-        <location line="+405"/>
+        <location line="+409"/>
         <source>Move Reference Point</source>
         <translation type="unfinished">Perkelti atskaitos tašką</translation>
     </message>
@@ -4052,7 +4038,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Kita viršūnė</translation>
     </message>
     <message>
-        <location line="+421"/>
+        <location line="+428"/>
         <source>close</source>
         <translation type="unfinished">uždaryti</translation>
     </message>
@@ -4160,18 +4146,18 @@ jau yra sąraše.</translation>
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../scripts/EAction.js" line="+70"/>
+        <location filename="../scripts/EAction.js" line="+64"/>
         <source>Back</source>
         <translation type="unfinished">Atgal</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2131"/>
+        <location line="+2120"/>
         <source>Cancel</source>
         <translation type="unfinished">Atšaukti</translation>
     </message>
     <message>
-        <location line="-2130"/>
+        <location line="-2119"/>
         <source>Done</source>
         <translation type="unfinished">Atlikta</translation>
     </message>
@@ -4187,7 +4173,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Nėra</translation>
     </message>
     <message>
-        <location line="+664"/>
+        <location line="+662"/>
         <source>Options</source>
         <translation type="unfinished">Parinktys</translation>
     </message>
@@ -4197,12 +4183,12 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Pagrindiniai įrankiai</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+21"/>
         <source>CAD Tools</source>
         <translation type="unfinished">CAD įrankiai</translation>
     </message>
     <message>
-        <location line="+582"/>
+        <location line="+577"/>
         <source>Invalid position</source>
         <translation type="unfinished">Neteisinga padėtis</translation>
     </message>
@@ -6128,12 +6114,12 @@ jau yra sąraše.</translation>
 <context>
     <name>GraphicsViewFonts</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+41"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+50"/>
         <source>Ruler font:</source>
         <translation type="unfinished">Liniuotės šriftas:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+19"/>
         <source>Snap label font:</source>
         <translation type="unfinished">Snap etiketės šriftas:</translation>
     </message>
@@ -7963,7 +7949,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">sluoksnis</translation>
     </message>
     <message>
-        <location line="+150"/>
+        <location line="+156"/>
         <source>Leading or trailing spaces.</source>
         <translation type="unfinished">Pradiniai arba galiniai tarpai.</translation>
     </message>
@@ -8019,7 +8005,7 @@ jau yra sąraše.</translation>
 <context>
     <name>LayerList</name>
     <message>
-        <location filename="../scripts/Widgets/LayerList/LayerList.js" line="+197"/>
+        <location filename="../scripts/Widgets/LayerList/LayerList.js" line="+213"/>
         <source>Widgets</source>
         <translation type="unfinished">Valdikliai</translation>
     </message>
@@ -12373,12 +12359,12 @@ rodomas paieškos rezultatuose:</translation>
         <translation type="unfinished">Būsenos juosta</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+53"/>
+        <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+47"/>
         <source>Status bar font:</source>
         <translation type="unfinished">Būsenos juostos šriftas:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+13"/>
         <source>Status Bar Widgets</source>
         <translation type="unfinished">Būsenos juostos valdikliai</translation>
     </message>
@@ -14759,3 +14745,4 @@ rodomas paieškos rezultatuose:</translation>
     </message>
 </context>
 </TS>
+

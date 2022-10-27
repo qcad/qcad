@@ -562,7 +562,7 @@ a beállítások módosításai hatályba lépjenek.</translation>
         <translation type="unfinished">Végpont</translation>
     </message>
     <message>
-        <location line="+81"/>
+        <location line="+85"/>
         <source>Invalid length</source>
         <translation type="unfinished">Érvénytelen hosszúság</translation>
     </message>
@@ -1117,7 +1117,7 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">Fájlok</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+11"/>
         <source>Export as Bitmap</source>
         <translation type="unfinished">Exportálás bitképként</translation>
     </message>
@@ -1488,7 +1488,7 @@ Szeretné visszaállítani?</translation>
 <context>
     <name>CadToolBar</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+53"/>
+        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+56"/>
         <source>Widgets</source>
         <translation type="unfinished">Widgetek</translation>
     </message>
@@ -1498,12 +1498,7 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">CAD eszköztár</translation>
     </message>
     <message>
-        <location line="+35"/>
-        <source>Vertical/Horizontal</source>
-        <translation type="unfinished">Függőleges/horizontális</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+17"/>
+        <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+20"/>
         <source>Icon size:</source>
         <translation type="unfinished">Ikon mérete:</translation>
     </message>
@@ -1521,15 +1516,6 @@ Szeretné visszaállítani?</translation>
         <location line="+9"/>
         <source>Columns:</source>
         <translation type="unfinished">Oszlopok:</translation>
-    </message>
-</context>
-<context>
-    <name>CadToolBarPanel</name>
-    <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBarPanel.js" line="+39"/>
-        <location line="+72"/>
-        <source>Back</source>
-        <translation type="unfinished">Vissza</translation>
     </message>
 </context>
 <context>
@@ -1741,7 +1727,7 @@ Szeretné visszaállítani?</translation>
     </message>
     <message>
         <location line="+144"/>
-        <location line="+45"/>
+        <location line="+59"/>
         <source>No solution</source>
         <translation>Nincs megoldás</translation>
     </message>
@@ -1846,7 +1832,7 @@ Szeretné visszaállítani?</translation>
     </message>
     <message>
         <location line="+120"/>
-        <location line="+65"/>
+        <location line="+86"/>
         <source>No solution</source>
         <translation>Nincs megoldás</translation>
     </message>
@@ -2009,7 +1995,7 @@ Szeretné visszaállítani?</translation>
     </message>
     <message>
         <location line="+138"/>
-        <location line="+48"/>
+        <location line="+55"/>
         <source>No solution</source>
         <translation>Nincs megoldás</translation>
     </message>
@@ -2315,7 +2301,7 @@ Szeretné visszaállítani?</translation>
 <context>
     <name>CoordinateDisplay</name>
     <message>
-        <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+28"/>
+        <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+29"/>
         <source>Widgets</source>
         <translation type="unfinished">Widgetek</translation>
     </message>
@@ -2545,7 +2531,7 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">Az entitás áthelyezése a kívánt helyre</translation>
     </message>
     <message>
-        <location line="+405"/>
+        <location line="+409"/>
         <source>Move Reference Point</source>
         <translation type="unfinished">Referenciapont áthelyezése</translation>
     </message>
@@ -4049,7 +4035,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Következő csúcs</translation>
     </message>
     <message>
-        <location line="+421"/>
+        <location line="+428"/>
         <source>close</source>
         <translation type="unfinished">close</translation>
     </message>
@@ -4155,18 +4141,18 @@ már szerepel a listában.</translation>
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../scripts/EAction.js" line="+70"/>
+        <location filename="../scripts/EAction.js" line="+64"/>
         <source>Back</source>
         <translation type="unfinished">Vissza</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2131"/>
+        <location line="+2120"/>
         <source>Cancel</source>
         <translation type="unfinished">Törölje</translation>
     </message>
     <message>
-        <location line="-2130"/>
+        <location line="-2119"/>
         <source>Done</source>
         <translation type="unfinished">Kész</translation>
     </message>
@@ -4182,7 +4168,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Nincs</translation>
     </message>
     <message>
-        <location line="+664"/>
+        <location line="+662"/>
         <source>Options</source>
         <translation type="unfinished">Opciók</translation>
     </message>
@@ -4192,12 +4178,12 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Főbb eszközök</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+21"/>
         <source>CAD Tools</source>
         <translation type="unfinished">CAD eszközök</translation>
     </message>
     <message>
-        <location line="+582"/>
+        <location line="+577"/>
         <source>Invalid position</source>
         <translation type="unfinished">Érvénytelen pozíció</translation>
     </message>
@@ -6121,12 +6107,12 @@ már szerepel a listában.</translation>
 <context>
     <name>GraphicsViewFonts</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+41"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+50"/>
         <source>Ruler font:</source>
         <translation type="unfinished">Ruler betűtípus:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+19"/>
         <source>Snap label font:</source>
         <translation type="unfinished">Snap címke betűtípus:</translation>
     </message>
@@ -7956,7 +7942,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">réteg</translation>
     </message>
     <message>
-        <location line="+150"/>
+        <location line="+156"/>
         <source>Leading or trailing spaces.</source>
         <translation type="unfinished">Bevezető és követő margó</translation>
     </message>
@@ -8012,7 +7998,7 @@ már szerepel a listában.</translation>
 <context>
     <name>LayerList</name>
     <message>
-        <location filename="../scripts/Widgets/LayerList/LayerList.js" line="+197"/>
+        <location filename="../scripts/Widgets/LayerList/LayerList.js" line="+213"/>
         <source>Widgets</source>
         <translation type="unfinished">Widgetek</translation>
     </message>
@@ -12356,12 +12342,12 @@ a keresési eredményekben megjelenő elemek száma:</translation>
         <translation type="unfinished">Állapotsor</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+53"/>
+        <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+47"/>
         <source>Status bar font:</source>
         <translation type="unfinished">Állapotsor betűtípusa:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+13"/>
         <source>Status Bar Widgets</source>
         <translation type="unfinished">Állapotsor Widgetek</translation>
     </message>
@@ -14742,3 +14728,4 @@ a keresési eredményekben megjelenő elemek száma:</translation>
     </message>
 </context>
 </TS>
+

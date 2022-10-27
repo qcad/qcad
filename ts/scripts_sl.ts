@@ -562,7 +562,7 @@ da bodo spremembe začele delovat.</translation>
         <translation>Končna točka</translation>
     </message>
     <message>
-        <location line="+81"/>
+        <location line="+85"/>
         <source>Invalid length</source>
         <translation>Neveljavna dolžina</translation>
     </message>
@@ -1119,7 +1119,7 @@ Ali jo želite obnoviti?</translation>
         <translation>Datoteke</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+11"/>
         <source>Export as Bitmap</source>
         <translation>Izvozi kot bitno sliko</translation>
     </message>
@@ -1490,7 +1490,7 @@ Ali jo želite obnoviti?</translation>
 <context>
     <name>CadToolBar</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+53"/>
+        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+56"/>
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>
@@ -1500,12 +1500,7 @@ Ali jo želite obnoviti?</translation>
         <translation>CAD vrstica</translation>
     </message>
     <message>
-        <location line="+35"/>
-        <source>Vertical/Horizontal</source>
-        <translation>Navpično/Vodoravno</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+17"/>
+        <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+20"/>
         <source>Icon size:</source>
         <translation type="unfinished">Velikost ikone:</translation>
     </message>
@@ -1523,15 +1518,6 @@ Ali jo želite obnoviti?</translation>
         <location line="+9"/>
         <source>Columns:</source>
         <translation>Stolpci:</translation>
-    </message>
-</context>
-<context>
-    <name>CadToolBarPanel</name>
-    <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBarPanel.js" line="+39"/>
-        <location line="+72"/>
-        <source>Back</source>
-        <translation>Nazaj</translation>
     </message>
 </context>
 <context>
@@ -1743,7 +1729,7 @@ Ali jo želite obnoviti?</translation>
     </message>
     <message>
         <location line="+144"/>
-        <location line="+45"/>
+        <location line="+59"/>
         <source>No solution</source>
         <translation>Ni rešitve</translation>
     </message>
@@ -1848,7 +1834,7 @@ Ali jo želite obnoviti?</translation>
     </message>
     <message>
         <location line="+120"/>
-        <location line="+65"/>
+        <location line="+86"/>
         <source>No solution</source>
         <translation>Ni rešitve</translation>
     </message>
@@ -2011,7 +1997,7 @@ Ali jo želite obnoviti?</translation>
     </message>
     <message>
         <location line="+138"/>
-        <location line="+48"/>
+        <location line="+55"/>
         <source>No solution</source>
         <translation>Ni rešitve</translation>
     </message>
@@ -2337,7 +2323,7 @@ Ali jo želite obnoviti?</translation>
         <translation>Relativne polarne koordinate</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+28"/>
+        <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+29"/>
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>
@@ -2547,7 +2533,7 @@ Ali jo želite obnoviti?</translation>
         <translation>Premakni entiteto na željeno lokacijo</translation>
     </message>
     <message>
-        <location line="+405"/>
+        <location line="+409"/>
         <source>Move Reference Point</source>
         <translation>Premakni referenčno točko</translation>
     </message>
@@ -4054,7 +4040,7 @@ je že na seznamu.</translation>
         <translation>Naslednji lom</translation>
     </message>
     <message>
-        <location line="+421"/>
+        <location line="+428"/>
         <source>close</source>
         <translation>zapri</translation>
     </message>
@@ -4163,18 +4149,18 @@ je že na seznamu.</translation>
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../scripts/EAction.js" line="+70"/>
+        <location filename="../scripts/EAction.js" line="+64"/>
         <source>Back</source>
         <translation>Nazaj</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2131"/>
+        <location line="+2120"/>
         <source>Cancel</source>
         <translation>Prekliči</translation>
     </message>
     <message>
-        <location line="-2130"/>
+        <location line="-2119"/>
         <source>Done</source>
         <translation>Končano</translation>
     </message>
@@ -4190,7 +4176,7 @@ je že na seznamu.</translation>
         <translation>Brez</translation>
     </message>
     <message>
-        <location line="+664"/>
+        <location line="+662"/>
         <source>Options</source>
         <translation>Nastavitve</translation>
     </message>
@@ -4200,12 +4186,12 @@ je že na seznamu.</translation>
         <translation>Glavna orodja</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+21"/>
         <source>CAD Tools</source>
         <translation>CAD orodja</translation>
     </message>
     <message>
-        <location line="+582"/>
+        <location line="+577"/>
         <source>Invalid position</source>
         <translation type="unfinished">Nepravilen položaj</translation>
     </message>
@@ -6132,12 +6118,12 @@ je že na seznamu.</translation>
 <context>
     <name>GraphicsViewFonts</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+41"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+50"/>
         <source>Ruler font:</source>
         <translation type="unfinished">Pisava za pravilo:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+19"/>
         <source>Snap label font:</source>
         <translation type="unfinished">Pisava nalepke Snap:</translation>
     </message>
@@ -7967,7 +7953,7 @@ je že na seznamu.</translation>
         <translation>plast</translation>
     </message>
     <message>
-        <location line="+150"/>
+        <location line="+156"/>
         <source>Leading or trailing spaces.</source>
         <translation>Presledki spredaj ali zadaj.</translation>
     </message>
@@ -8023,7 +8009,7 @@ je že na seznamu.</translation>
 <context>
     <name>LayerList</name>
     <message>
-        <location filename="../scripts/Widgets/LayerList/LayerList.js" line="+197"/>
+        <location filename="../scripts/Widgets/LayerList/LayerList.js" line="+213"/>
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>
@@ -12367,12 +12353,12 @@ shown in search results:</source>
 <context>
     <name>StatusBar</name>
     <message>
-        <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+53"/>
+        <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+47"/>
         <source>Status bar font:</source>
         <translation type="unfinished">Pisava v vrstici stanja:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+13"/>
         <source>Status Bar Widgets</source>
         <translation>Gradniki statusne vrstice</translation>
     </message>
@@ -14768,3 +14754,4 @@ shown in search results:</source>
     </message>
 </context>
 </TS>
+

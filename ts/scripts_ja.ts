@@ -562,7 +562,7 @@ QCADを再起動してください。</translation>
         <translation>終了点</translation>
     </message>
     <message>
-        <location line="+81"/>
+        <location line="+85"/>
         <source>Invalid length</source>
         <translation>無効な長さ</translation>
     </message>
@@ -1117,7 +1117,7 @@ Do you wish to recover it?</source>
         <translation>ファイル</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+11"/>
         <source>Export as Bitmap</source>
         <translation>ビットマップとしてエクスポート</translation>
     </message>
@@ -1488,7 +1488,7 @@ Do you wish to recover it?</source>
 <context>
     <name>CadToolBar</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+53"/>
+        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+56"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
@@ -1498,12 +1498,7 @@ Do you wish to recover it?</source>
         <translation>CADツールバー</translation>
     </message>
     <message>
-        <location line="+35"/>
-        <source>Vertical/Horizontal</source>
-        <translation>垂直/水平</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+17"/>
+        <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+20"/>
         <source>Icon size:</source>
         <translation type="unfinished">アイコンのサイズです。</translation>
     </message>
@@ -1521,15 +1516,6 @@ Do you wish to recover it?</source>
         <location line="+9"/>
         <source>Columns:</source>
         <translation>列:</translation>
-    </message>
-</context>
-<context>
-    <name>CadToolBarPanel</name>
-    <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBarPanel.js" line="+39"/>
-        <location line="+72"/>
-        <source>Back</source>
-        <translation>戻る</translation>
     </message>
 </context>
 <context>
@@ -1741,7 +1727,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+144"/>
-        <location line="+45"/>
+        <location line="+59"/>
         <source>No solution</source>
         <translation>解決法がありません</translation>
     </message>
@@ -1846,7 +1832,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+120"/>
-        <location line="+65"/>
+        <location line="+86"/>
         <source>No solution</source>
         <translation>解がありません</translation>
     </message>
@@ -2009,7 +1995,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+138"/>
-        <location line="+48"/>
+        <location line="+55"/>
         <source>No solution</source>
         <translation>解がありません</translation>
     </message>
@@ -2335,7 +2321,7 @@ Do you wish to recover it?</source>
         <translation>相対極座標</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+28"/>
+        <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+29"/>
         <source>Widgets</source>
         <translation type="unfinished">ウィジェット</translation>
     </message>
@@ -2545,7 +2531,7 @@ Do you wish to recover it?</source>
         <translation>希望の位置にエンティティを移動</translation>
     </message>
     <message>
-        <location line="+405"/>
+        <location line="+409"/>
         <source>Move Reference Point</source>
         <translation>参照点の移動</translation>
     </message>
@@ -4049,7 +4035,7 @@ is already in the list.</source>
         <translation>次の頂点</translation>
     </message>
     <message>
-        <location line="+421"/>
+        <location line="+428"/>
         <source>close</source>
         <translation>close</translation>
     </message>
@@ -4155,18 +4141,18 @@ is already in the list.</source>
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../scripts/EAction.js" line="+70"/>
+        <location filename="../scripts/EAction.js" line="+64"/>
         <source>Back</source>
         <translation>戻る</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2131"/>
+        <location line="+2120"/>
         <source>Cancel</source>
         <translation>キャンセル</translation>
     </message>
     <message>
-        <location line="-2130"/>
+        <location line="-2119"/>
         <source>Done</source>
         <translation type="unfinished">完了</translation>
     </message>
@@ -4182,7 +4168,7 @@ is already in the list.</source>
         <translation>なし</translation>
     </message>
     <message>
-        <location line="+664"/>
+        <location line="+662"/>
         <source>Options</source>
         <translation>オプション</translation>
     </message>
@@ -4192,12 +4178,12 @@ is already in the list.</source>
         <translation>メインツール</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+21"/>
         <source>CAD Tools</source>
         <translation>CADツール</translation>
     </message>
     <message>
-        <location line="+582"/>
+        <location line="+577"/>
         <source>Invalid position</source>
         <translation type="unfinished">無効な位置</translation>
     </message>
@@ -6121,12 +6107,12 @@ is already in the list.</source>
 <context>
     <name>GraphicsViewFonts</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+41"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+50"/>
         <source>Ruler font:</source>
         <translation type="unfinished">定規のフォント。</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+19"/>
         <source>Snap label font:</source>
         <translation type="unfinished">スナップラベルのフォントです。</translation>
     </message>
@@ -7956,7 +7942,7 @@ is already in the list.</source>
         <translation type="unfinished">層</translation>
     </message>
     <message>
-        <location line="+150"/>
+        <location line="+156"/>
         <source>Leading or trailing spaces.</source>
         <translation>上部または下部の余白</translation>
     </message>
@@ -8012,7 +7998,7 @@ is already in the list.</source>
 <context>
     <name>LayerList</name>
     <message>
-        <location filename="../scripts/Widgets/LayerList/LayerList.js" line="+197"/>
+        <location filename="../scripts/Widgets/LayerList/LayerList.js" line="+213"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
@@ -12341,12 +12327,12 @@ shown in search results:</source>
 <context>
     <name>StatusBar</name>
     <message>
-        <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+53"/>
+        <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+47"/>
         <source>Status bar font:</source>
         <translation type="unfinished">ステータスバーのフォント。</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+13"/>
         <source>Status Bar Widgets</source>
         <translation>ステータスバー</translation>
     </message>

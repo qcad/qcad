@@ -562,7 +562,7 @@ musíte znovu spustiť QCAD.</translation>
         <translation>Koncový bod</translation>
     </message>
     <message>
-        <location line="+81"/>
+        <location line="+85"/>
         <source>Invalid length</source>
         <translation>Neplatná dĺžka</translation>
     </message>
@@ -1121,7 +1121,7 @@ Prajete si ho obnoviť?</translation>
         <translation>Súbory</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+11"/>
         <source>Export as Bitmap</source>
         <translation>Exportovať ako obrázok (BMP, JPG,...)</translation>
     </message>
@@ -1492,7 +1492,7 @@ Prajete si ho obnoviť?</translation>
 <context>
     <name>CadToolBar</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+53"/>
+        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+56"/>
         <source>Widgets</source>
         <translation>Pomôcky</translation>
     </message>
@@ -1502,12 +1502,7 @@ Prajete si ho obnoviť?</translation>
         <translation>Panel s nástrojmi CAD</translation>
     </message>
     <message>
-        <location line="+35"/>
-        <source>Vertical/Horizontal</source>
-        <translation>Zvisle / Vodorovne</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+17"/>
+        <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+20"/>
         <source>Icon size:</source>
         <translation type="unfinished">Veľkosť ikony:</translation>
     </message>
@@ -1525,15 +1520,6 @@ Prajete si ho obnoviť?</translation>
         <location line="+9"/>
         <source>Columns:</source>
         <translation>Stĺpce:</translation>
-    </message>
-</context>
-<context>
-    <name>CadToolBarPanel</name>
-    <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBarPanel.js" line="+39"/>
-        <location line="+72"/>
-        <source>Back</source>
-        <translation>Späť</translation>
     </message>
 </context>
 <context>
@@ -1745,7 +1731,7 @@ Prajete si ho obnoviť?</translation>
     </message>
     <message>
         <location line="+144"/>
-        <location line="+45"/>
+        <location line="+59"/>
         <source>No solution</source>
         <translation>Žiadne riešenie</translation>
     </message>
@@ -1850,7 +1836,7 @@ Prajete si ho obnoviť?</translation>
     </message>
     <message>
         <location line="+120"/>
-        <location line="+65"/>
+        <location line="+86"/>
         <source>No solution</source>
         <translation>Žiadne riešenie</translation>
     </message>
@@ -2013,7 +1999,7 @@ Prajete si ho obnoviť?</translation>
     </message>
     <message>
         <location line="+138"/>
-        <location line="+48"/>
+        <location line="+55"/>
         <source>No solution</source>
         <translation>Žiadne riešenie</translation>
     </message>
@@ -2339,7 +2325,7 @@ Prajete si ho obnoviť?</translation>
         <translation>Relatívne polárne súradnice</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+28"/>
+        <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+29"/>
         <source>Widgets</source>
         <translation>Pomôcky</translation>
     </message>
@@ -2549,7 +2535,7 @@ Prajete si ho obnoviť?</translation>
         <translation>Presunúť prvok na požadované miesto</translation>
     </message>
     <message>
-        <location line="+405"/>
+        <location line="+409"/>
         <source>Move Reference Point</source>
         <translation>Presunúť referenčný bod</translation>
     </message>
@@ -4055,7 +4041,7 @@ už existuje v zozname.</translation>
         <translation>Ďalší bod</translation>
     </message>
     <message>
-        <location line="+421"/>
+        <location line="+428"/>
         <source>close</source>
         <translation>zavrieť</translation>
     </message>
@@ -4163,18 +4149,18 @@ už existuje v zozname.</translation>
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../scripts/EAction.js" line="+70"/>
+        <location filename="../scripts/EAction.js" line="+64"/>
         <source>Back</source>
         <translation>Späť</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2131"/>
+        <location line="+2120"/>
         <source>Cancel</source>
         <translation>Zrušiť</translation>
     </message>
     <message>
-        <location line="-2130"/>
+        <location line="-2119"/>
         <source>Done</source>
         <translation>Hotovo</translation>
     </message>
@@ -4190,7 +4176,7 @@ už existuje v zozname.</translation>
         <translation>Žiadne</translation>
     </message>
     <message>
-        <location line="+664"/>
+        <location line="+662"/>
         <source>Options</source>
         <translation>Možnosti</translation>
     </message>
@@ -4200,12 +4186,12 @@ už existuje v zozname.</translation>
         <translation>Hlavné Nástroje</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+21"/>
         <source>CAD Tools</source>
         <translation>CAD Nástroje</translation>
     </message>
     <message>
-        <location line="+582"/>
+        <location line="+577"/>
         <source>Invalid position</source>
         <translation type="unfinished">Neplatná pozícia</translation>
     </message>
@@ -6131,12 +6117,12 @@ už existuje v zozname.</translation>
 <context>
     <name>GraphicsViewFonts</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+41"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+50"/>
         <source>Ruler font:</source>
         <translation type="unfinished">Pravítkové písmo:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+19"/>
         <source>Snap label font:</source>
         <translation type="unfinished">Písmo štítku Snap:</translation>
     </message>
@@ -7966,7 +7952,7 @@ už existuje v zozname.</translation>
         <translation>vrstva</translation>
     </message>
     <message>
-        <location line="+150"/>
+        <location line="+156"/>
         <source>Leading or trailing spaces.</source>
         <translation>Na začiatku alebo na konci nesmie byť medzera.</translation>
     </message>
@@ -8022,7 +8008,7 @@ už existuje v zozname.</translation>
 <context>
     <name>LayerList</name>
     <message>
-        <location filename="../scripts/Widgets/LayerList/LayerList.js" line="+197"/>
+        <location filename="../scripts/Widgets/LayerList/LayerList.js" line="+213"/>
         <source>Widgets</source>
         <translation>Pomôcky</translation>
     </message>
@@ -12361,12 +12347,12 @@ vo výsledku vyhľadania:</translation>
 <context>
     <name>StatusBar</name>
     <message>
-        <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+53"/>
+        <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+47"/>
         <source>Status bar font:</source>
         <translation type="unfinished">Písmo stavového riadku:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+13"/>
         <source>Status Bar Widgets</source>
         <translation>Nástroje Stavového riadku</translation>
     </message>
@@ -14762,3 +14748,4 @@ vo výsledku vyhľadania:</translation>
     </message>
 </context>
 </TS>
+
