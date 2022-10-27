@@ -848,6 +848,22 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setGeometry();
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RColumnLayout.setGeometry().",
                    context);

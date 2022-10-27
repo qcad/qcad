@@ -89,6 +89,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QRect &amp;" typeName="QRect" name="rect"
         isConst="true" />
       </variant>
+      <variant returnType="void" isPureVirtual="false" />
     </method>
   </class>
 </unit>
