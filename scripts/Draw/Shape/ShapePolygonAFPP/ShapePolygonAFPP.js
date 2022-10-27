@@ -56,6 +56,8 @@ ShapePolygonAFPP.prototype.setState = function(state) {
     var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
     case ShapePolygonAFPP.State.SettingCorner1:
+        this.corner1 = undefined;
+        this.corner2 = undefined;
         var trCorner1 = qsTr("First side");
         if (this.cornerToCorner) {
             trCorner1 = qsTr("First Corner");
