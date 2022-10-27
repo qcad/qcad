@@ -890,7 +890,12 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
                 }
             }
             if (!isNull(value)) {
-                c.value = value;
+                if (isOfType(c, QSpinBox)) {
+                    c.value = parseInt(value);
+                }
+                else {
+                    c.value = parseFloat(value);
+                }
             }
             continue;
         }
@@ -1063,7 +1068,7 @@ WidgetFactory.connect = function(sig, signalReceiver, objectName, isValue) {
 
     //if (eval("signalReceiver." + slot) != undefined) {
     if (!isNull(signalReceiver[slot])) {
-        if (RSettings.getQtVersion() > 0x060000) {
+        if (RSettings.getQtVersion() >= 0x060000) {
             sig.connect(signalReceiver, signalReceiver[slot]);
         }
         else {
