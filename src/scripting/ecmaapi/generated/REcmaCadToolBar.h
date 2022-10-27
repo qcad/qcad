@@ -60,7 +60,13 @@
         showPanel
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        updateIconSize
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         back
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        toggleVerticalWhenFloating
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

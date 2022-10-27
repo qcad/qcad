@@ -75,7 +75,11 @@
             
             REcmaHelper::registerFunction(&engine, proto, showPanel, "showPanel");
             
+            REcmaHelper::registerFunction(&engine, proto, updateIconSize, "updateIconSize");
+            
             REcmaHelper::registerFunction(&engine, proto, back, "back");
+            
+            REcmaHelper::registerFunction(&engine, proto, toggleVerticalWhenFloating, "toggleVerticalWhenFloating");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RCadToolBar*>(), *proto);
@@ -595,6 +599,50 @@
             return result;
         }
          QScriptValue
+        REcmaCadToolBar::updateIconSize
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCadToolBar::updateIconSize", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCadToolBar::updateIconSize";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCadToolBar* self = 
+                        getSelf("updateIconSize", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->updateIconSize();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCadToolBar.updateIconSize().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCadToolBar::updateIconSize", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaCadToolBar::back
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -641,6 +689,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaCadToolBar::back", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCadToolBar::toggleVerticalWhenFloating
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCadToolBar::toggleVerticalWhenFloating", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCadToolBar::toggleVerticalWhenFloating";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCadToolBar* self = 
+                        getSelf("toggleVerticalWhenFloating", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->toggleVerticalWhenFloating(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCadToolBar.toggleVerticalWhenFloating().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCadToolBar::toggleVerticalWhenFloating", context, engine);
             return result;
         }
          QScriptValue REcmaCadToolBar::toString

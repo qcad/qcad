@@ -45,8 +45,15 @@ public:
 
     void showPanel(const QString& name, bool isBack = false);
 
+    void updateIconSize();
+
 public slots:
     bool back();
+    void toggleVerticalWhenFloating(bool on);
+
+protected:
+    virtual void contextMenuEvent(QContextMenuEvent* event);
+
 
 private:
     QWidget* widget;

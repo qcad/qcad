@@ -46,10 +46,17 @@
 
     <function_decl><type><name>void</name></type> <name>showPanel</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>name</name></decl></param>, <param><decl><type><name>bool</name></type> <name>isBack</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
+    <function_decl><type><name>void</name></type> <name>updateIconSize</name><parameter_list>()</parameter_list>;</function_decl>
+
 </public><public>public slots:
     <function_decl><type><name>bool</name></type> <name>back</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>toggleVerticalWhenFloating</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
 
-</public><private>private:
+</public><protected>protected:
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>contextMenuEvent</name><parameter_list>(<param><decl><type><name>QContextMenuEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
+
+
+</protected><private>private:
     <decl_stmt><decl><type><name>QWidget</name>*</type> <name>widget</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QStackedLayout</name>*</type> <name>stackedLayout</name></decl>;</decl_stmt>
 </private>}</block>;</class>

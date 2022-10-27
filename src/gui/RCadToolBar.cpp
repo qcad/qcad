@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include <QStackedLayout>
+#include <QMenu>
 
 #include "RCadToolBar.h"
 #include "RCadToolBarPanel.h"
@@ -123,3 +124,36 @@ void RCadToolBar::showPanel(const QString& name, bool isBack) {
     }
 };
 
+void RCadToolBar::contextMenuEvent(QContextMenuEvent* event) {
+    QString panelName = getCurrentPanelName();
+    if (panelName!="MainToolsPanel") {
+        showPanel("MainToolsPanel");
+    }
+    else {
+        // workaround for Qt 4:
+        if (isFloating() && RSettings::getQtVersion()<0x050000) {
+            QMenu* menu = new QMenu(this);
+            menu->setObjectName("ContextMenu");
+            // force tool bar to be vertical:
+            QAction* action = menu->addAction(tr("Vertical/Horizontal"));
+            connect(action, SIGNAL(triggered(bool)), this, SLOT(toggleVerticalWhenFloating(bool)));
+
+
+            menu->exec(QCursor::pos());
+        }
+    }
+};
+
+void RCadToolBar::toggleVerticalWhenFloating(bool on) {
+    bool verticalWhenFloating = RSettings::getBoolValue("CadToolBar/VerticalWhenFloating", false);
+    RSettings::setValue("CadToolBar/VerticalWhenFloating", !verticalWhenFloating);
+
+    updateIconSize();
+}
+
+void RCadToolBar::updateIconSize() {
+    // workaround for QToolBar bug (not resizing when layout changes):
+    if (isFloating()) {
+        resize(sizeHint().width(), sizeHint().height());
+    }
+};

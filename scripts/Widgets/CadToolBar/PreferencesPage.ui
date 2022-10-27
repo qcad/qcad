@@ -10,6 +10,9 @@
     <height>298</height>
    </rect>
   </property>
+  <property name="RequiresRestart" stdset="0">
+   <bool>true</bool>
+  </property>
   <layout class="QFormLayout" name="formLayout">
    <item row="0" column="0">
     <widget class="QLabel" name="label">
@@ -111,6 +114,9 @@
      </property>
      <property name="value">
       <number>2</number>
+     </property>
+     <property name="RequiresRestart" stdset="0">
+      <bool>true</bool>
      </property>
     </widget>
    </item>

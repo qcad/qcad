@@ -40,7 +40,6 @@
 
 </private><public>public:
     <constructor_decl><name>RColumnLayout</name><parameter_list>(<param><decl><type><name>QWidget</name>*</type> <name>parent</name></decl></param>, <param><decl><type><name>QToolBar</name>*</type> <name>toolBar</name></decl></param>, <param><decl><type><name>int</name></type> <name>buttonSize</name></decl></param>)</parameter_list>;</constructor_decl>
-    <comment type="line">//RColumnLayout(QWidget* parent = NULL): QLayout(parent) {}</comment>
 
 <comment type="line">//    void removeAction(QAction* a);</comment>
 
@@ -50,8 +49,6 @@
     <function_decl><type><name>virtual</name> <name>QLayoutItem</name>*</type> <name>itemAt</name><parameter_list>(<param><decl><type><name>int</name></type> <name>index</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>QLayoutItem</name>*</type> <name>takeAt</name><parameter_list>(<param><decl><type><name>int</name></type> <name>index</name></decl></param>)</parameter_list>;</function_decl>
 
-    <comment type="line">//void addSeparator(int sortOrder, int groupSortOrder);</comment>
-
     <function_decl><type><name>static</name> <name>int</name></type> <name>getAccumulatedSortOrder</name><parameter_list>(<param><decl><type><name>QObject</name>*</type> <name>item</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>objectName</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>int</name></type> <name>getSortOrder</name><parameter_list>(<param><decl><type><name>QObject</name>*</type> <name>item</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>objectName</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>int</name></type> <name>getGroupSortOrder</name><parameter_list>(<param><decl><type><name>QObject</name>*</type> <name>item</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>objectName</name></decl></param>)</parameter_list>;</function_decl>
@@ -59,6 +56,8 @@
     <function_decl><type><name>QSize</name></type> <name>minimumSize</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>QSize</name></type> <name>sizeHint</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setGeometry</name><parameter_list>(<param><decl><type><name>const</name> <name>QRect</name>&amp;</type> <name>rect</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setGeometry</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <comment type="block">/**
      * \nonscriptable
@@ -69,7 +68,7 @@
 
 </public><private>private:
     <comment type="line">// map existing layout items to accumulated sort order:</comment>
-    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>QPair<argument_list>&lt;<argument><name>QLayoutItem</name>*</argument>, <argument><name>int</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>itemList</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>mutable</name> <name>QList<argument_list>&lt;<argument><name>QPair<argument_list>&lt;<argument><name>QLayoutItem</name>*</argument>, <argument><name>int</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>itemList</name></decl>;</decl_stmt>
 
     <comment type="line">// tool bar that hosts the layout:</comment>
     <decl_stmt><decl><type><name>QToolBar</name>*</type> <name>toolBar</name></decl>;</decl_stmt>
