@@ -49,10 +49,10 @@ HatchDialog.prototype.show =  function(hatchDataIn) {
         groupPattern.enabled = false;
     }
 
-    editAngle.valueChanged.connect(this, "patternChanged");
-    radioSolid.toggled.connect(this, "patternChanged");
+    editAngle.valueChanged.connect(this, this.patternChanged);
+    radioSolid.toggled.connect(this, this.patternChanged);
     //comboPattern["activated(QString)"].connect(this, "patternChanged");
-    comboPattern["currentIndexChanged(QString)"].connect(this, "patternChanged");
+    comboPattern["currentIndexChanged(int)"].connect(this, this.patternChanged);
 
     var previewDoc = new RDocument(new RMemoryStorage(), new RSpatialIndexSimple());
     //previewDoc.setMeasurement(doc.getMeasurement());
@@ -118,9 +118,9 @@ HatchDialog.prototype.show =  function(hatchDataIn) {
     this.patternChanged();
 
     var res = this.dialog.exec();
-    this.previewDi.destroy();
+    destr(this.previewDi);
     if (!res) {
-        this.dialog.destroy();
+        destr(this.dialog);
         EAction.activateMainWindow();
         return undefined;
     }
@@ -135,7 +135,7 @@ HatchDialog.prototype.show =  function(hatchDataIn) {
     hatchDataOut.setSolid(radioSolid.checked);
     hatchDataOut.setPatternName(radioSolid.checked ? "SOLID" : comboPattern.currentText);
 
-    this.dialog.destroy();
+    destr(this.dialog);
     EAction.activateMainWindow();
     return hatchDataOut;
 };
@@ -207,10 +207,20 @@ HatchDialog.prototype.patternChanged = function() {
         data.setColor(new RColor("white"));
     }
     data.newLoop();
-    data.addBoundary(new RLine(new RVector(0,0), new RVector(size,0)));
-    data.addBoundary(new RLine(new RVector(size,0), new RVector(size,size)));
-    data.addBoundary(new RLine(new RVector(size,size), new RVector(0,size)));
-    data.addBoundary(new RLine(new RVector(0,size), new RVector(0,0)));
+    var lines = [
+        new RLine(new RVector(0,0), new RVector(size,0)),
+        new RLine(new RVector(size,0), new RVector(size,size)),
+        new RLine(new RVector(size,size), new RVector(0,size)),
+        new RLine(new RVector(0,size), new RVector(0,0)),
+    ];
+    for (var i=0; i<lines.length; i++) {
+        if (RSettings.getQtVersion() >= 0x060000) {
+            data.addBoundary(lines[i].clone());
+        }
+        else {
+            data.addBoundary(lines[i]);
+        }
+    }
     var hatch = new RHatchEntity(previewDoc, data);
     var op = new RAddObjectOperation(hatch, false, false);
     this.previewDi.applyOperation(op);
