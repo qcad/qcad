@@ -216,7 +216,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sredina</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -663,7 +663,7 @@
     <message>
         <location line="+1"/>
         <source>Spline</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spline</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -913,7 +913,8 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle Point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Srednja točka</translation>
     </message>
 </context>
 </TS>
+

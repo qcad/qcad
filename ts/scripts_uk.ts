@@ -1,199 +1,199 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi">
+<TS version="2.1" language="uk_UA">
 <context>
     <name>About</name>
     <message>
         <location filename="../scripts/Help/About/About.js" line="+68"/>
         <source>About %1</source>
-        <translation>Tietoja %1</translation>
+        <translation type="unfinished">Близько %1</translation>
     </message>
     <message>
-        <location line="+108"/>
+        <location line="+53"/>
+        <location line="+123"/>
+        <source>Version:</source>
+        <translation type="unfinished">Версія:</translation>
+    </message>
+    <message>
+        <location line="-119"/>
+        <location line="+136"/>
+        <location line="+11"/>
+        <source>Internet:</source>
+        <translation type="unfinished">Інтернет:</translation>
+    </message>
+    <message>
+        <location line="-145"/>
+        <source>Build Date:</source>
+        <translation type="unfinished">Дата побудови:</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Revision:</source>
+        <translation type="unfinished">Ревізія:</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+117"/>
+        <source>Qt Version:</source>
+        <translation type="unfinished">Версія Qt:</translation>
+    </message>
+    <message>
+        <location line="-113"/>
+        <source>Architecture:</source>
+        <translation type="unfinished">Архітектура:</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Compiler:</source>
+        <translation type="unfinished">Упорядник:</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>License Key:</source>
+        <translation type="unfinished">Ліцензійний ключ:</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>%1 is an application for computer-aided design (CAD).</source>
+        <translation type="unfinished">%1 - програма для автоматизованого проектування (САПР).</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>%1 is based on QCAD, a free (open source) software.</source>
+        <translation type="unfinished">%1 базується на вільному (з відкритим кодом) програмному забезпеченні QCAD.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>%1 is free (open source) software.</source>
+        <translation type="unfinished">%1 є вільним (з відкритим кодом) програмним забезпеченням.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>This means that everyone can &lt;a href=&apos;%1&apos;&gt;get involved&lt;/a&gt;!</source>
+        <translation type="unfinished">Це означає, що кожен може &lt;a href=&apos;%1&apos;&gt;долучитися&lt;/a&gt;!</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Additional tools, features and file formats including DWG are available in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; or &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</source>
+        <translation type="unfinished">Додаткові інструменти, функції та формати файлів, включаючи DWG, доступні в &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; або &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Plugins and script add-ons are subject to their respective license (see &quot;Plugins&quot; tab).</source>
+        <translation type="unfinished">Плагіни та скриптові доповнення підпадають під дію відповідної ліцензії (див. вкладку &quot;Плагіни&quot;).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
+        <translation type="unfinished">Усі назви брендів або продуктів є товарними знаками або зареєстрованими товарними знаками відповідних власників.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Portions of this software © %1 The Qt Company Ltd.</source>
+        <translation type="unfinished">Частини цього програмного забезпечення © %1 The Qt Company Ltd.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Qt ships with QCAD under the &lt;a href=&apos;%1&apos;&gt;LGPL Open Source license&lt;/a&gt; which confers various rights to you as the user, including the right to recompile the Qt libraries for your platform. To do that follow the &lt;a href=&apos;%2&apos;&gt;documentation shown on the Qt website&lt;/a&gt;.</source>
+        <translation type="unfinished">Qt постачається разом з QCAD під &lt;a href=&apos;%1&apos;&gt;ліцензією з відкритим вихідним кодом LGPL&lt;/a&gt;, яка надає вам як користувачеві різні права, в тому числі право перекомпілювати бібліотеки Qt для вашої платформи. Для цього скористайтеся &lt;a href=&apos;%2&apos;&gt;документацією, наведеною на сайті Qt&lt;/a&gt;.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
+        <translation type="unfinished">Програма надається &quot;ЯК Є&quot; БЕЗ ЖОДНИХ ГАРАНТІЙ, У ТОМУ ЧИСЛІ ГАРАНТІЙ ПРОЕКТУ, ТОВАРНОСТІ ТА ПРИДАТНОСТІ ДЛЯ КОНКРЕТНОЇ ЦІЛІ.</translation>
+    </message>
+    <message>
+        <location line="+12"/>
         <source>Plugins</source>
-        <translation>Laajennusosat</translation>
+        <translation type="unfinished">Плагіни</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+6"/>
+        <source>No plugins found.</source>
+        <translation type="unfinished">Плагінів не знайдено.</translation>
+    </message>
+    <message>
+        <location line="+25"/>
         <source>No information available</source>
-        <translation>Tietoja ei ole saatavilla</translation>
+        <translation type="unfinished">Інформація відсутня</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+427"/>
         <source>Plugin:</source>
-        <translation>Laajennusosa:</translation>
+        <translation type="unfinished">Плагін:</translation>
     </message>
     <message>
         <location line="-402"/>
         <source>ID:</source>
-        <translation>ID:</translation>
+        <translation type="unfinished">ПОСВІДЧЕННЯ ОСОБИ:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Description:</source>
-        <translation>Kuvaus:</translation>
+        <translation type="unfinished">Опис:</translation>
     </message>
     <message>
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
         <source>Unknown</source>
-        <translation>Tuntematon</translation>
+        <translation type="unfinished">Невідомо</translation>
     </message>
     <message>
-        <location line="-130"/>
-        <location line="+123"/>
-        <source>Version:</source>
-        <translation>Versio:</translation>
-    </message>
-    <message>
-        <location line="-113"/>
-        <location line="+117"/>
-        <source>Qt Version:</source>
-        <translation>Qt-versio:</translation>
-    </message>
-    <message>
-        <location line="+4"/>
+        <location line="+1"/>
         <source>License:</source>
-        <translation>Lisenssi:</translation>
+        <translation type="unfinished">Права:</translation>
     </message>
     <message>
-        <location line="-127"/>
-        <location line="+136"/>
-        <location line="+11"/>
-        <source>Internet:</source>
-        <translation>Internet:</translation>
-    </message>
-    <message>
-        <location line="-145"/>
-        <source>Build Date:</source>
-        <translation>Tekopäivä:</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Revision:</source>
-        <translation>Versio:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Architecture:</source>
-        <translation>Arkkitehtuuri:</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Compiler:</source>
-        <translation>Kääntäjä:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>License Key:</source>
-        <translation>Lisenssiavain:</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>%1 is an application for computer-aided design (CAD).</source>
-        <translation>%1 on sovellus tietokoneavusteiseen suunnitteluun (CAD).</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>%1 is based on QCAD, a free (open source) software.</source>
-        <translation>%1 perustuu QCADiin, vapaa (avoimen lähdekoodin) sovellus.</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>%1 is free (open source) software.</source>
-        <translation>%1 on vapaa (avoimen lähdekoodin) sovellus.</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>This means that everyone can &lt;a href=&apos;%1&apos;&gt;get involved&lt;/a&gt;!</source>
-        <translation>Tämä tarkoittaa sitä, että jokainen voi &lt;a href=&apos;%1&apos;&gt;osallistua&lt;/a&gt;!</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Additional tools, features and file formats including DWG are available in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; or &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</source>
-        <translation>Lisää työkaluja, ominaisuuksia ja tiedostomuotoja kuten DWG löytyvät &lt;a href=&apos;%1&apos;&gt; QCAD Professional&lt;/a&gt; tai &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Plugins and script add-ons are subject to their respective license (see &quot;Plugins&quot; tab).</source>
-        <translation>Laajennukset ja skriptatut lisäosat ovat tekijöidensä lisenssien alaisia (kts. &quot;Laajennukset&quot; välilehti).</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
-        <translation>Kaikki tuotemerkit tai tuotenimet ovat omistajiensa tavaramerkkejä tai rekisteröityjä tavaramerkkejä.</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Portions of this software © %1 The Qt Company Ltd.</source>
-        <translation>Tämän sovelluksen osien © %1 The Qt Company Ltd.</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Qt ships with QCAD under the &lt;a href=&apos;%1&apos;&gt;LGPL Open Source license&lt;/a&gt; which confers various rights to you as the user, including the right to recompile the Qt libraries for your platform. To do that follow the &lt;a href=&apos;%2&apos;&gt;documentation shown on the Qt website&lt;/a&gt;.</source>
-        <translation>Qt toimitetaan QCAD&lt;a href=&apos;%1&apos;&gt; LGPL Open Source -lisenssin alla&lt;/a&gt;, joka antaa käyttäjälle erilaisia oikeuksia, mukaan lukien oikeus kääntää alustan Qt-kirjastot uudelleen. Voit tehdä tämän noudattamalla &lt;a href=&apos;%2&apos;&gt;Qt-verkkosivuston ohjeita&lt;/a&gt;.</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
-        <translation>Sovellus tarjotaat sellaisenaan KUIN SE ON ilman MINKÄÄNLAISTA TAKUUTA, SISÄLTÄEN SUUNNITTELUN, SOPIVUUDEN JA ERITYSOMINAISUUDET TIETTYYN TARKOITUKSEEN.</translation>
-    </message>
-    <message>
-        <location line="+18"/>
-        <source>No plugins found.</source>
-        <translation>Laajennuksia ei löytynyt.</translation>
-    </message>
-    <message>
-        <location line="+99"/>
+        <location line="+29"/>
         <source>Active</source>
-        <translation>Aktiivinen</translation>
+        <translation type="unfinished">Активний</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inactive (restart)</source>
-        <translation>Ei käytössä (käynnistä uudelleen)</translation>
+        <translation type="unfinished">Неактивний (перезапуск)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Trial Version:</source>
-        <translation>Kokeiluversio:</translation>
+        <translation type="unfinished">Пробна версія:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>File:</source>
-        <translation>Tiedosto:</translation>
+        <translation type="unfinished">Папка:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Error:</source>
-        <translation>Virhe:</translation>
+        <translation type="unfinished">Помилка:</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Script Add-Ons</source>
-        <translation>Skriptilisäosat</translation>
+        <translation type="unfinished">Надбудови до скриптів</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>No script add-ons found.</source>
-        <translation>Skriptien lisäosia ei löytynyt.</translation>
+        <translation type="unfinished">Доповнень до сценарію не знайдено.</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Credits</source>
-        <translation>Tekijät</translation>
+        <translation type="unfinished">Кредити</translation>
     </message>
     <message>
         <location line="+169"/>
         <source>Licenses</source>
-        <translation type="unfinished">Lisenssit</translation>
+        <translation type="unfinished">Ліцензії</translation>
     </message>
     <message>
         <location filename="../scripts/Help/About/AboutInit.js" line="+2"/>
         <source>&amp;About...</source>
-        <translation>&amp;Tietoja ...</translation>
+        <translation type="unfinished">Про...</translation>
     </message>
 </context>
 <context>
@@ -201,37 +201,37 @@
     <message>
         <location filename="../scripts/Help/About/AboutCredits.js" line="+4"/>
         <source>Programming</source>
-        <translation>Ohjelmointi</translation>
+        <translation type="unfinished">Програмування</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Hatch Patterns</source>
-        <translation>Peittokuviot</translation>
+        <translation type="unfinished">Шаблони люків</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Themes</source>
-        <translation type="unfinished">Teemat</translation>
+        <translation type="unfinished">Теми</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Translations</source>
-        <translation>Käännökset</translation>
+        <translation type="unfinished">Переклади</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Templates</source>
-        <translation>Mallit</translation>
+        <translation type="unfinished">Шаблони</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Icons</source>
-        <translation>Ikonit</translation>
+        <translation type="unfinished">Піктограми</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Testing, Feedback and Minor Fixes</source>
-        <translation>Testaus, palaute ja pienet korjaukset</translation>
+        <translation type="unfinished">Тестування, зворотній зв&apos;язок та незначні виправлення</translation>
     </message>
 </context>
 <context>
@@ -239,32 +239,32 @@
     <message>
         <location filename="../scripts/Help/About/AboutDialog.ui" line="+101"/>
         <source>About</source>
-        <translation>Tietoja</translation>
+        <translation type="unfinished">Про</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>Credits</source>
-        <translation>Tekijät</translation>
+        <translation type="unfinished">Кредити</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>Plugins</source>
-        <translation>Laajennukset</translation>
+        <translation type="unfinished">Плагіни</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>Scripts</source>
-        <translation>Skriptit</translation>
+        <translation type="unfinished">Сценарії</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>System</source>
-        <translation>Järjestelmä</translation>
+        <translation type="unfinished">Система</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Licenses</source>
-        <translation type="unfinished">Lisenssit</translation>
+        <translation type="unfinished">Ліцензії</translation>
     </message>
 </context>
 <context>
@@ -272,49 +272,48 @@
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.js" line="+46"/>
         <source>Application Preferences</source>
-        <translation>Sovelluksen asetukset</translation>
+        <translation type="unfinished">Налаштування програми</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Drawing Preferences</source>
-        <translation>Piirroksen asetukset</translation>
+        <translation type="unfinished">Налаштування малювання</translation>
     </message>
     <message>
         <location line="+300"/>
         <source>Apply preferences</source>
-        <translation>Käytä asetuksia</translation>
+        <translation type="unfinished">Застосувати преференції</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Restart required</source>
-        <translation>Uudelleenkäynnistys tarvitaan</translation>
+        <translation type="unfinished">Потрібне перезавантаження</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
-        <translation>Käynnistä uudelleen QCAD, jotta
-asetuksien muutokset astuvat voimaan.</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Defaults for</source>
-        <translation>Oletusarvot</translation>
+        <translation type="unfinished">Значення за замовчуванням для</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>These are default preferences for new drawings.</source>
-        <translation>Nämä ovat oletusarvot uusille piirroksille.</translation>
+        <translation type="unfinished">Це налаштування за замовчуванням для нових креслень.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Changes will affect new drawings but NOT the current drawing.</source>
-        <translation>Muutokset vaikuttavat uusiin piirustuksiin, mutta EIVÄT nykyiseen piirustukseen.</translation>
+        <translation type="unfinished">Зміни торкнуться нових креслень, але НЕ поточного креслення.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Preferences of the current drawing can be changed under&lt;br/&gt;&lt;i&gt;Edit &amp;gt; Drawing Preferences&lt;/i&gt;.</source>
-        <translation>Nykyisen piirustuksen asetuksia voidaan muuttaa &lt;br/&gt;&lt;i&gt;Muokkaa &amp;gt; piirustusasetuksia&lt;/i&gt; -kohdassa.</translation>
+        <translation type="unfinished">Параметри поточного креслення можна змінити в розділі &lt;br/&gt;&lt;i&gt;Редагування параметрів&lt;/i&gt;.</translation>
     </message>
 </context>
 <context>
@@ -322,12 +321,12 @@ asetuksien muutokset astuvat voimaan.</translation>
     <message>
         <location filename="../scripts/Block/AddBlock/AddBlockInit.js" line="+2"/>
         <source>&amp;Add Empty Block</source>
-        <translation>&amp;Lisää tyhjä lohko</translation>
+        <translation type="unfinished">Додати порожній блок</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Add new empty block</source>
-        <translation>Lisää uusi tyhjä lohko</translation>
+        <translation type="unfinished">Додати новий порожній блок</translation>
     </message>
 </context>
 <context>
@@ -335,12 +334,12 @@ asetuksien muutokset astuvat voimaan.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/AddCentroidDialog.ui" line="+14"/>
         <source>Add  point mass 2D Centroid</source>
-        <translation type="unfinished">Pistemassan lisääminen 2D Centroid</translation>
+        <translation type="unfinished">Додати масу точки 2D Центроїд</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Position Y:</source>
-        <translation type="unfinished">Asento Y:</translation>
+        <translation type="unfinished">Позиція Y:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -352,17 +351,17 @@ asetuksien muutokset astuvat voimaan.</translation>
     <message>
         <location line="-42"/>
         <source>Position X:</source>
-        <translation type="unfinished">Asema X:</translation>
+        <translation type="unfinished">Позиція Х:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Point mass:</source>
-        <translation type="unfinished">Pistemassa:</translation>
+        <translation type="unfinished">Точкова маса:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Reset to &apos;Undefined&apos;</source>
-        <translation type="unfinished">Nollaus &apos;Undefined&apos;</translation>
+        <translation type="unfinished">Скинути на &quot;Невизначено</translation>
     </message>
 </context>
 <context>
@@ -370,35 +369,35 @@ asetuksien muutokset astuvat voimaan.</translation>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/AddCustomPropertyDialog.ui" line="+14"/>
         <source>Add Custom Property</source>
-        <translation>Lisää muokattu ominaisuus</translation>
+        <translation type="unfinished">Додати користувацьку властивість</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Name:</source>
-        <translation>Nimi:</translation>
+        <translation type="unfinished">Ім&apos;я:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Value:</source>
-        <translation>Arvo:</translation>
+        <translation type="unfinished">Цінність:</translation>
     </message>
 </context>
 <context>
     <name>AddLayer</name>
     <message>
-        <location filename="../scripts/Layer/AddLayer/AddLayerInit.js" line="+2"/>
-        <source>&amp;Add Layer</source>
-        <translation>&amp;Lisää taso</translation>
-    </message>
-    <message>
         <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+35"/>
         <source>Layer</source>
-        <translation>Taso</translation>
+        <translation type="unfinished">Шар</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Add Layer</source>
-        <translation>Lisää taso</translation>
+        <translation type="unfinished">Додати шар</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Layer/AddLayer/AddLayerInit.js" line="+2"/>
+        <source>&amp;Add Layer</source>
+        <translation type="unfinished">Додати шар</translation>
     </message>
 </context>
 <context>
@@ -406,7 +405,7 @@ asetuksien muutokset astuvat voimaan.</translation>
     <message>
         <location filename="../scripts/View/AntialiasingMode/AntialiasingMode.js" line="+74"/>
         <source>&amp;Anti-aliasing</source>
-        <translation>&amp;Pehmennys</translation>
+        <translation type="unfinished">Згладжування</translation>
     </message>
 </context>
 <context>
@@ -414,12 +413,12 @@ asetuksien muutokset astuvat voimaan.</translation>
     <message>
         <location filename="../scripts/Apollonius.js" line="+1932"/>
         <source>Invalid radius</source>
-        <translation>Virheellinen säde</translation>
+        <translation type="unfinished">Неправильний радіус</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>No solution</source>
-        <translation>Ei ratkaisua</translation>
+        <translation type="unfinished">Немає рішення</translation>
     </message>
 </context>
 <context>
@@ -427,7 +426,7 @@ asetuksien muutokset astuvat voimaan.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/AppPreferences.js" line="+65"/>
         <source>Application &amp;Preferences</source>
-        <translation>Ohjelman &amp;asetukset</translation>
+        <translation type="unfinished">Налаштування програми</translation>
     </message>
 </context>
 <context>
@@ -435,12 +434,12 @@ asetuksien muutokset astuvat voimaan.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/Arc.js" line="+71"/>
         <source>Arc Tools</source>
-        <translation>Kaarityökalut</translation>
+        <translation type="unfinished">Дугові інструменти</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Arc</source>
-        <translation>Kaari</translation>
+        <translation type="unfinished">Дуга</translation>
     </message>
 </context>
 <context>
@@ -448,52 +447,52 @@ asetuksien muutokset astuvat voimaan.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PA/Arc2PA.js" line="+65"/>
         <source>Start point</source>
-        <translation>Alkupiste</translation>
+        <translation type="unfinished">Точка відліку</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>End point</source>
-        <translation>Päätepiste</translation>
+        <translation type="unfinished">Кінцева точка</translation>
     </message>
     <message>
         <location line="+85"/>
         <source>Invalid angle</source>
-        <translation>Virheellinen kulma</translation>
+        <translation type="unfinished">Неправильний кут</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation>Kaksi pistettä ovat identtisiä</translation>
+        <translation type="unfinished">Ці два пункти ідентичні</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PA/Arc2PA.ui" line="+17"/>
         <source>Angle:</source>
-        <translation>Kulma:</translation>
+        <translation type="unfinished">Кут:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Direction:</source>
-        <translation>Suunta:</translation>
+        <translation type="unfinished">Напрямок:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation>Vastapäivään (Positiivinen)</translation>
+        <translation type="unfinished">Проти годинникової стрілки (позитивний)</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation>Myötäpäivään (Negatiivinen)</translation>
+        <translation type="unfinished">За годинниковою стрілкою (негативний)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PA/Arc2PAInit.js" line="+2"/>
         <source>&amp;2 Points and Angle</source>
-        <translation>&amp;2 Pistettä ja kulma</translation>
+        <translation type="unfinished">2 Точки і кут</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc from 2 points and angle</source>
-        <translation>Piirrä kaari 2 pisteellä ja kulmalla</translation>
+        <translation type="unfinished">Побудувати дугу з 2 точок і кута</translation>
     </message>
 </context>
 <context>
@@ -501,52 +500,52 @@ asetuksien muutokset astuvat voimaan.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PH.js" line="+65"/>
         <source>Start point</source>
-        <translation>Alkupiste</translation>
+        <translation type="unfinished">Точка відліку</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>End point</source>
-        <translation>Päätepiste</translation>
+        <translation type="unfinished">Кінцева точка</translation>
     </message>
     <message>
         <location line="+81"/>
         <source>Invalid height</source>
-        <translation>Väärä korkeusmitta</translation>
+        <translation type="unfinished">Неправильна висота</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation>Kaksi pistettä ovat identtisiä</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PHInit.js" line="+2"/>
-        <source>2 Points and &amp;Height</source>
-        <translation>2 pistettä ja &amp;korkeus</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Draw arc from 2 points and height</source>
-        <translation>Piirrä kaari 2 pisteestä ja korkeus</translation>
+        <translation type="unfinished">Ці два пункти ідентичні</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PH.ui" line="+17"/>
         <source>Height:</source>
-        <translation>Korkeus:</translation>
+        <translation type="unfinished">Зростання:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Direction:</source>
-        <translation>Suunta:</translation>
+        <translation type="unfinished">Напрямок:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation>Vastapäivään (Positiivinen)</translation>
+        <translation type="unfinished">Проти годинникової стрілки (позитивний)</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation>Myötäpäivään (Negatiivinen)</translation>
+        <translation type="unfinished">За годинниковою стрілкою (негативний)</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PHInit.js" line="+2"/>
+        <source>2 Points and &amp;Height</source>
+        <translation type="unfinished">2 Точки і висота</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw arc from 2 points and height</source>
+        <translation type="unfinished">Намалюйте дугу з 2 точок і висоту</translation>
     </message>
 </context>
 <context>
@@ -554,57 +553,57 @@ asetuksien muutokset astuvat voimaan.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PL.js" line="+65"/>
         <source>Start point</source>
-        <translation>Alkupiste</translation>
+        <translation type="unfinished">Точка відліку</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>End point</source>
-        <translation>Päätepiste</translation>
+        <translation type="unfinished">Кінцева точка</translation>
     </message>
     <message>
         <location line="+85"/>
         <source>Invalid length</source>
-        <translation>Väärä pituus</translation>
+        <translation type="unfinished">Неправильна довжина</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation>Kaksi pistettä ovat identtisiä</translation>
+        <translation type="unfinished">Ці два пункти ідентичні</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>The distance between the two points must be less than the arc length</source>
-        <translation>Kahden pisteen välisen etäisyyden on oltava pienempi kuin kaaren pituuden</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PLInit.js" line="+2"/>
-        <source>&amp;2 Points and Length</source>
-        <translation>&amp;2 Pistettä ja pituus</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Draw arc from 2 points and length</source>
-        <translation>Piirrä kaari 2 pisteestä ja pituudesta</translation>
+        <translation type="unfinished">Відстань між двома точками повинна бути менше довжини дуги</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PL.ui" line="+17"/>
         <source>Length:</source>
-        <translation>Pituus:</translation>
+        <translation type="unfinished">Довжина:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Direction:</source>
-        <translation>Suunta:</translation>
+        <translation type="unfinished">Напрямок:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation>Vastapäivään (Positiivinen)</translation>
+        <translation type="unfinished">Проти годинникової стрілки (позитивний)</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation>Myötäpäivään (Negatiivinen)</translation>
+        <translation type="unfinished">За годинниковою стрілкою (негативний)</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PLInit.js" line="+2"/>
+        <source>&amp;2 Points and Length</source>
+        <translation type="unfinished">2 Бали та довжина</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw arc from 2 points and length</source>
+        <translation type="unfinished">Намалюйте дугу з 2 точок і довжину</translation>
     </message>
 </context>
 <context>
@@ -612,67 +611,67 @@ asetuksien muutokset astuvat voimaan.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PR/Arc2PR.js" line="+67"/>
         <source>Start point</source>
-        <translation>Alkupiste</translation>
+        <translation type="unfinished">Точка відліку</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>End point</source>
-        <translation>Päätepiste</translation>
+        <translation type="unfinished">Кінцева точка</translation>
     </message>
     <message>
         <location line="+81"/>
         <source>Invalid radius</source>
-        <translation>Virheellinen säde</translation>
+        <translation type="unfinished">Неправильний радіус</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation>Kaksi pistettä ovat identtisiä</translation>
+        <translation type="unfinished">Ці два пункти ідентичні</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PR/Arc2PR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation>Säde:</translation>
+        <translation type="unfinished">Радіус:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Direction:</source>
-        <translation>Suunta:</translation>
+        <translation type="unfinished">Напрямок:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation>Vastapäivään (Positiivinen)</translation>
+        <translation type="unfinished">Проти годинникової стрілки (позитивний)</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation>Myötäpäivään (Negatiivinen)</translation>
+        <translation type="unfinished">За годинниковою стрілкою (негативний)</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Solution:</source>
-        <translation>Ratkaisu:</translation>
+        <translation type="unfinished">Рішення:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Shorter Arc</source>
-        <translation>Lyhyempi kaari</translation>
+        <translation type="unfinished">Більш коротка дуга</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Longer Arc</source>
-        <translation>Pidempi kaari</translation>
+        <translation type="unfinished">Довша дуга</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PR/Arc2PRInit.js" line="+2"/>
         <source>&amp;2 Points and Radius</source>
-        <translation>&amp;2 pistettä ja säde</translation>
+        <translation type="unfinished">2 Точки і радіус</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc from 2 points and radius</source>
-        <translation>Piirrä kaari 2:lla pisteellä ja säteellä</translation>
+        <translation type="unfinished">Намалюйте дугу з 2 точок і радіуса</translation>
     </message>
 </context>
 <context>
@@ -680,27 +679,27 @@ asetuksien muutokset astuvat voimaan.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/Arc3P/Arc3P.js" line="+62"/>
         <source>Start point</source>
-        <translation>Alkupiste</translation>
+        <translation type="unfinished">Точка відліку</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Point on arc</source>
-        <translation>Piste kaarella</translation>
+        <translation type="unfinished">Точка на дузі</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>End point</source>
-        <translation>Päätepiste</translation>
+        <translation type="unfinished">Кінцева точка</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc3P/Arc3PInit.js" line="+2"/>
         <source>&amp;3 Points</source>
-        <translation>&amp;3 pistettä</translation>
+        <translation type="unfinished">3 бали</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc from 3 points</source>
-        <translation>Piirrä kaari 3. pisteestä</translation>
+        <translation type="unfinished">Намалюйте дугу з 3 точок</translation>
     </message>
 </context>
 <context>
@@ -708,52 +707,52 @@ asetuksien muutokset astuvat voimaan.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.js" line="+66"/>
         <source>Center</source>
-        <translation>Keskipiste</translation>
+        <translation type="unfinished">Центр</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Point on arc or radius</source>
-        <translation>Piste on kaarella tai säteellä</translation>
+        <translation type="unfinished">Точка на дузі або радіусі</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Point on arc</source>
-        <translation>Piste kaarella</translation>
+        <translation type="unfinished">Точка на дузі</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Start angle</source>
-        <translation>Alkukulma</translation>
+        <translation type="unfinished">Початковий кут</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>End angle</source>
-        <translation>Loppukulma</translation>
+        <translation type="unfinished">Торцевий кут</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.ui" line="+17"/>
         <source>Direction:</source>
-        <translation>Suunta:</translation>
+        <translation type="unfinished">Напрямок:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (positive)</source>
-        <translation>Vastapäivään (Positiivinen)</translation>
+        <translation type="unfinished">Проти годинникової стрілки (позитивний)</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation>Myötäpäivään (Negatiivinen)</translation>
+        <translation type="unfinished">За годинниковою стрілкою (негативний)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPAInit.js" line="+2"/>
         <source>&amp;Center, Point, Angles</source>
-        <translation>&amp;Keskipiste, piste, kulmat</translation>
+        <translation type="unfinished">Центр, точка, кути</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc from center, point on arc and angles</source>
-        <translation>Piirtää kaaren keskipisteellä, pisteellä kaaressa ja kulmilla</translation>
+        <translation type="unfinished">Намалюйте дугу з центру, точки на дузі та кути</translation>
     </message>
 </context>
 <context>
@@ -761,22 +760,22 @@ asetuksien muutokset astuvat voimaan.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentric/ArcConcentric.ui" line="+17"/>
         <source>Distance:</source>
-        <translation>Etäisyys:</translation>
+        <translation type="unfinished">Відстань:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Number:</source>
-        <translation>Numero:</translation>
+        <translation type="unfinished">Номер:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentric/ArcConcentricInit.js" line="+2"/>
         <source>&amp;Concentric (with Distance)</source>
-        <translation>&amp;Samankeskinen (etäisyyden kanssa)</translation>
+        <translation type="unfinished">Концентричний (з відстанню)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw concentric arc</source>
-        <translation>Piirrä samankeskinen kaari</translation>
+        <translation type="unfinished">Намалювати концентричну дугу</translation>
     </message>
 </context>
 <context>
@@ -784,17 +783,17 @@ asetuksien muutokset astuvat voimaan.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentricThrough/ArcConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation>Numero:</translation>
+        <translation type="unfinished">Номер:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentricThrough/ArcConcentricThroughInit.js" line="+2"/>
         <source>Concentric (&amp;through Point)</source>
-        <translation>Samankeskinen (&amp;pisteen kautta)</translation>
+        <translation type="unfinished">Концентричний (наскрізний)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw concentric arc through point</source>
-        <translation>Piirrä samankeskinen kaari pisteen kautta</translation>
+        <translation type="unfinished">Проведіть концентричну дугу через точку</translation>
     </message>
 </context>
 <context>
@@ -802,38 +801,38 @@ asetuksien muutokset astuvat voimaan.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTPR/ArcTPR.js" line="+79"/>
         <source>Choose line, arc, circle or ellipse</source>
-        <translation>Valitse viiva, kaari, ympyrä tai ellipsi</translation>
+        <translation type="unfinished">Виберіть лінію, дугу, коло або еліпс</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Point on arc</source>
-        <translation>Piste kaarella</translation>
+        <translation type="unfinished">Точка на дузі</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Choose solution</source>
-        <translation>Valitse ratkaisu</translation>
+        <translation type="unfinished">Обираємо рішення</translation>
     </message>
     <message>
         <location line="+128"/>
         <location line="+65"/>
         <source>No solution</source>
-        <translation>Ei ratkaisua</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Draw/Arc/ArcTPR/ArcTPRInit.js" line="+2"/>
-        <source>&amp;Tangent, Point, Radius</source>
-        <translation>&amp;Tangentti, piste, säde</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Draw arc tangential to entity, through point with radius</source>
-        <translation>Piirrä kaari tangentiaalisesti kohteeseen, säteen pisteen läpi</translation>
+        <translation type="unfinished">Немає рішення</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTPR/ArcTPR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation>Säde:</translation>
+        <translation type="unfinished">Радіус:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Arc/ArcTPR/ArcTPRInit.js" line="+2"/>
+        <source>&amp;Tangent, Point, Radius</source>
+        <translation type="unfinished">Дотична, Точка, Радіус</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw arc tangential to entity, through point with radius</source>
+        <translation type="unfinished">Проведіть дугу, дотичну до сутності, через точку з радіусом</translation>
     </message>
 </context>
 <context>
@@ -841,125 +840,123 @@ asetuksien muutokset astuvat voimaan.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+64"/>
         <source>Choose base line or base arc</source>
-        <translation>Valitse perusviiva tai peruskaari</translation>
+        <translation type="unfinished">Виберіть базову лінію або базову дугу</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Choose end point of arc</source>
-        <translation>Valitse kaaren päätepiste</translation>
+        <translation type="unfinished">Вибір кінцевої точки дуги</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.ui" line="+17"/>
         <source>Radius:</source>
-        <translation>Säde:</translation>
+        <translation type="unfinished">Радіус:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangentialInit.js" line="+2"/>
         <source>&amp;Tangentially Connected</source>
-        <translation>&amp;Tangentiaalisesti kytkettynä</translation>
+        <translation type="unfinished">Дотично з&apos;єднані</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc tangential to base entity</source>
-        <translation>Piirrä kaari tangentiaalisesti peruskohteeseen</translation>
+        <translation type="unfinished">Накреслити дугу по дотичній до базового елемента</translation>
     </message>
 </context>
 <context>
     <name>AutoSave</name>
     <message>
         <location filename="../scripts/File/AutoSave/AutoSave.js" line="+35"/>
-        <source>Autosave</source>
-        <translation>Automaattitallennus</translation>
+        <source>File</source>
+        <translation type="unfinished">Файл</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>File</source>
-        <translation>Tiedosto</translation>
+        <source>Autosave</source>
+        <translation type="unfinished">Автозбереження</translation>
     </message>
     <message>
         <location line="+100"/>
         <source>Autosaving to:</source>
-        <translation>Tallennetaan automaattisesti:</translation>
+        <translation type="unfinished">Автозбереження в:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Autosave failed:</source>
-        <translation>Automaattinen tallennus epäonnistui:</translation>
+        <translation type="unfinished">Автозбереження не вдалося:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Autosave complete.</source>
-        <translation>Automaattinen tallennus valmis.</translation>
+        <translation type="unfinished">Автозбереження завершено.</translation>
     </message>
     <message numerus="yes">
         <location line="+19"/>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-        <translation>
-            <numerusform>%n automaattisen tallennuksen varmuuskopiotiedosto nimettömälle piirustukselle löydettiin.
-Haluatko palauttaa sen?</numerusform>
-            <numerusform>%n automaattisen tallennuksen varmuuskopiotiedostot nimettömille piirustuksille löydettiin.
-Haluatko palauttaa ne?</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
-        <location line="+69"/>
-        <source>An autosave backup file for &quot;%1&quot; exists.
-Do you wish to recover it?</source>
-        <translation>Automaattisen tallennuksen varmistustiedosto &quot;%1&quot; löydettiin.
-Haluatko palauttaa sen?</translation>
-    </message>
-    <message>
-        <location line="-64"/>
+        <location line="+5"/>
         <source>Recover Files?</source>
-        <translation>Palautetaanko tiedostot?</translation>
+        <translation type="unfinished">Відновити файли?</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Recovered</source>
-        <translation>Palautettu</translation>
+        <translation type="unfinished">Відновлено</translation>
     </message>
     <message>
         <location line="+47"/>
         <source>Recover File?</source>
-        <translation>Palauta tiedosto?</translation>
+        <translation type="unfinished">Відновити файл?</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+1"/>
+        <source>An autosave backup file for &quot;%1&quot; exists.
+Do you wish to recover it?</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+25"/>
         <location line="+11"/>
         <location line="+5"/>
         <source>Cannot rename file:</source>
-        <translation>Tiedostoa ei voi nimetä uudelleen:</translation>
+        <translation type="unfinished">Не вдається перейменувати файл:</translation>
     </message>
     <message>
         <location line="-13"/>
         <source>Moved autosave backup file to:</source>
-        <translation>Siirretty automaattisesti tallennettu tiedosto:</translation>
+        <translation type="unfinished">Перенесено файл автозбереження резервної копії в:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Moved original file to:</source>
-        <translation>Siirretty alkuperäinen tiedosto:</translation>
+        <translation type="unfinished">Перемістив оригінальний файл на:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Cannot remove file:</source>
-        <translation>Tiedostoa ei voi poistaa:</translation>
+        <translation type="unfinished">Не вдається видалити файл:</translation>
     </message>
     <message>
         <location filename="../scripts/File/AutoSave/PreferencesPage.ui" line="+17"/>
         <source>Enable Autosave</source>
-        <translation>Automaattinen tallennus päälle</translation>
+        <translation type="unfinished">Увімкнути автозбереження</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Autosave Interval:</source>
-        <translation>Automaattisen tallennuksen väli:</translation>
+        <translation type="unfinished">Інтервал автозбереження:</translation>
     </message>
     <message>
         <location line="+54"/>
         <source>min</source>
-        <translation>min</translation>
+        <translation type="unfinished">хв</translation>
     </message>
 </context>
 <context>
@@ -967,57 +964,57 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Snap/SnapAuto/PreferencesPage.ui" line="+17"/>
         <source>Auto Snap</source>
-        <translation>Automaattinen tartunta</translation>
+        <translation type="unfinished">Автоматична фіксація</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Intersections</source>
-        <translation>Leikkauspisteet</translation>
+        <translation type="unfinished">Перехрестя</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>End points</source>
-        <translation>Päätepisteet</translation>
+        <translation type="unfinished">Кінцеві точки</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Middle points</source>
-        <translation>Keskimmäiset pisteet</translation>
+        <translation type="unfinished">Середні точки</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Center points</source>
-        <translation>Keskipisteet</translation>
+        <translation type="unfinished">Центральні точки</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Perpendicular</source>
-        <translation>Kohtisuora</translation>
+        <translation type="unfinished">Перпендикулярний</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Tangential</source>
-        <translation>Tangentiaalinen</translation>
+        <translation type="unfinished">Тангенціальний</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Reference points</source>
-        <translation>Viitepisteet</translation>
+        <translation type="unfinished">Орієнтири</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Grid points</source>
-        <translation>Ruudukon pisteet</translation>
+        <translation type="unfinished">Точки сітки</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Points on entity</source>
-        <translation>Pisteet kohteessa</translation>
+        <translation type="unfinished">Бали по суб&apos;єкту господарювання</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Free positioning</source>
-        <translation>Vapaa paikoitus</translation>
+        <translation type="unfinished">Вільне позиціонування</translation>
     </message>
 </context>
 <context>
@@ -1025,7 +1022,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Modify/AutoTrim/AutoTrimInit.js" line="+2"/>
         <source>Auto &amp;Trim</source>
-        <translation>Automaattinen &amp;hienosäätö</translation>
+        <translation type="unfinished">Автоматичне обрізання</translation>
     </message>
 </context>
 <context>
@@ -1033,7 +1030,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/View/Zoom/AutoZoom/AutoZoomInit.js" line="+2"/>
         <source>&amp;Auto Zoom</source>
-        <translation>&amp;Automaattinen mittakaava</translation>
+        <translation type="unfinished">Автоматичне масштабування</translation>
     </message>
 </context>
 <context>
@@ -1041,13 +1038,13 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2Pdf.js" line="+30"/>
         <source>Export to PDF</source>
-        <translation type="unfinished">Vie PDF-tiedostoksi</translation>
+        <translation type="unfinished">Експорт в PDF</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
         <location line="+4"/>
         <source>&amp;Batch2Pdf visible layout blocks</source>
-        <translation type="unfinished">Batch2Pdf näkyvät ulkoasulohkot</translation>
+        <translation type="unfinished">Видимі блоки верстки Batch2Pdf</translation>
     </message>
 </context>
 <context>
@@ -1055,12 +1052,12 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/BehaviorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation>Graafinen näkymä</translation>
+        <translation type="unfinished">Графічний вигляд</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Behavior</source>
-        <translation>Toiminta</translation>
+        <translation type="unfinished">Поведінка</translation>
     </message>
 </context>
 <context>
@@ -1068,37 +1065,37 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Modify/Bevel/Bevel.js" line="+55"/>
         <source>The two entities cannot be bevelled.</source>
-        <translation>Näitä kahta kohdetta ei voida viistää.</translation>
+        <translation type="unfinished">Ці дві сутності не можуть бути зведені нанівець.</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>First entity cannot be trimmed.</source>
-        <translation>Ensimmäistä kohdetta ei voida hienosäätää.</translation>
+        <translation type="unfinished">Першу сутність не можна обрізати.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation>Ensimmäistä kohdetta ei voida hienosäätää.</translation>
+        <translation type="unfinished">Другий суб&apos;єкт не може бути обрізаний.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/Bevel.ui" line="+17"/>
         <source>Trim</source>
-        <translation>Rajaa</translation>
+        <translation type="unfinished">Обрізка</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Length &amp;1:</source>
-        <translation type="unfinished">Pituus 1:</translation>
+        <translation type="unfinished">Довжина 1:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Length &amp;2:</source>
-        <translation type="unfinished">Pituus 2:</translation>
+        <translation type="unfinished">Довжина 2:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
         <source>&amp;Chamfer / Bevel</source>
-        <translation>&amp;Särmä/viisto</translation>
+        <translation type="unfinished">Фаска / скіс</translation>
     </message>
 </context>
 <context>
@@ -1106,123 +1103,123 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExport.js" line="+78"/>
         <source>Error while generating bitmap file &quot;%1&quot;: %2</source>
-        <translation>Virhe bittikarttatiedostoa luotaessa &quot;%1&quot;: %2</translation>
+        <translation type="unfinished">Помилка під час генерації растрового файлу &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Bitmap file has been exported to &quot;%1&quot;</source>
-        <translation>Bittikarttatiedosto on viety &quot;%1&quot;</translation>
+        <translation type="unfinished">Растровий файл експортовано до &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Files</source>
-        <translation>Tiedostot</translation>
+        <translation type="unfinished">Файли</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Export as Bitmap</source>
-        <translation>Vie bittikartta-muodossa</translation>
+        <translation type="unfinished">Експорт у формат Bitmap</translation>
     </message>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportDialog.ui" line="+14"/>
         <source>Bitmap Export</source>
-        <translation>Bittikarttana vieminen</translation>
+        <translation type="unfinished">Експорт растрових зображень</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Size</source>
-        <translation>Koko</translation>
+        <translation type="unfinished">Розмір</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Width:</source>
-        <translation>Leveys:</translation>
+        <translation type="unfinished">Ширина:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Height:</source>
-        <translation>Korkeus:</translation>
+        <translation type="unfinished">Зростання:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Pixels per drawing unit:</source>
-        <translation>Pikseleitä piirtoyksikköä kohden:</translation>
+        <translation type="unfinished">Пікселі на одиницю малювання:</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Export bounding box of selection</source>
-        <translation>Vie valintaruutu</translation>
+        <translation type="unfinished">Експортувати обмежувальну рамку виділення</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+10"/>
+        <source>Background</source>
+        <translation type="unfinished">Передумови</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>White</source>
+        <translation type="unfinished">Білий</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Black</source>
+        <translation type="unfinished">Чорний</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Transparent</source>
-        <translation>Läpinäkyvä</translation>
+        <translation type="unfinished">Прозорий</translation>
     </message>
     <message>
         <location line="+10"/>
         <location line="+23"/>
         <source>Color</source>
-        <translation>Väri</translation>
+        <translation type="unfinished">Колір</translation>
     </message>
     <message>
         <location line="-17"/>
         <source>Monochrome</source>
-        <translation>Yksivärinen</translation>
+        <translation type="unfinished">Монохромний</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Grayscale</source>
-        <translation>Harmaasävy</translation>
+        <translation type="unfinished">Відтінки сірого</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Anti-aliasing</source>
-        <translation>Pehmennys</translation>
+        <translation type="unfinished">Згладжування</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Use anti-aliasing</source>
-        <translation>Käytä pehmennystä</translation>
+        <translation type="unfinished">Використовуйте згладжування</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Margin</source>
-        <translation>Marginaali</translation>
+        <translation type="unfinished">Маржа</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Margin:</source>
-        <translation>Reunus:</translation>
+        <translation type="unfinished">Маржа:</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>px</source>
-        <translation>px</translation>
+        <translation type="unfinished">px</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Add extra margin to compensate for line weight</source>
-        <translation>Lisää ylimääräistä marginaalia viivapaksuuden kompensoimiseksi</translation>
-    </message>
-    <message>
-        <location line="-170"/>
-        <source>Background</source>
-        <translation>Tausta</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>White</source>
-        <translation>Valkoinen</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Black</source>
-        <translation>Musta</translation>
+        <translation type="unfinished">Додайте додатковий запас для компенсації ваги волосіні</translation>
     </message>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportInit.js" line="+2"/>
         <source>Bit&amp;map Export...</source>
-        <translation>Bitti&amp;kartan vienti ...</translation>
+        <translation type="unfinished">Експорт растрового зображення...</translation>
     </message>
 </context>
 <context>
@@ -1230,7 +1227,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
         <source>Invalid image size (width x height must be less than %1)</source>
-        <translation>Väärä kuvan koko (leveys x korkeus on oltava pienempi kuin %1)</translation>
+        <translation type="unfinished">Неправильний розмір зображення (ширина x висота повинна бути менше %1)</translation>
     </message>
 </context>
 <context>
@@ -1238,17 +1235,17 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Block/Block.js" line="+67"/>
         <source>Block Tools</source>
-        <translation>Lohkotyökalut</translation>
+        <translation type="unfinished">Інструменти для блокування</translation>
     </message>
     <message>
-        <location line="+110"/>
-        <source>Cannot edit block while editing a block in-place</source>
-        <translation type="unfinished">Lohkoa ei voi muokata, kun lohkoa muokataan paikan päällä</translation>
-    </message>
-    <message>
-        <location line="-82"/>
+        <location line="+28"/>
         <source>&amp;Block</source>
-        <translation>&amp;Lohko</translation>
+        <translation type="unfinished">Блок</translation>
+    </message>
+    <message>
+        <location line="+82"/>
+        <source>Cannot edit block while editing a block in-place</source>
+        <translation type="unfinished">Неможливо редагувати блок під час редагування блоку на місці</translation>
     </message>
 </context>
 <context>
@@ -1257,42 +1254,42 @@ Haluatko palauttaa sen?</translation>
         <location filename="../scripts/Block/BlockDialog.js" line="+81"/>
         <source>block</source>
         <comment>default block name prefix</comment>
-        <translation>lohko</translation>
+        <translation type="unfinished">блок</translation>
     </message>
     <message>
         <location line="+53"/>
         <source>Leading or trailing spaces.</source>
-        <translation>Välit alussa tai lopussa.</translation>
+        <translation type="unfinished">Початкові або кінцеві пробіли.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Block name is empty.</source>
-        <translation>Lohkon nimi on tyhjä.</translation>
+        <translation type="unfinished">Ім&apos;я блоку пусте.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Block name is invalid.</source>
-        <translation>Lohkon nimi on virheellinen.</translation>
+        <translation type="unfinished">Ім&apos;я блоку невірне.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Block &quot;%1&quot; already exists&lt;br&gt;and will be overwritten.</source>
-        <translation>Lohko &quot;%1&quot; on jo olemassa&lt;br&gt;ja se korvataan.</translation>
+        <translation type="unfinished">Блок &quot;%1&quot; вже існує і буде перезаписаний.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Block already exists.</source>
-        <translation>Lohko on jo olemassa.</translation>
+        <translation type="unfinished">Блок вже існує.</translation>
     </message>
     <message>
         <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
         <source>Block</source>
-        <translation>Lohko</translation>
+        <translation type="unfinished">Блок</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Block name:</source>
-        <translation>Lohkon nimi:</translation>
+        <translation type="unfinished">Ім&apos;я блоку:</translation>
     </message>
 </context>
 <context>
@@ -1300,7 +1297,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Misc/Examples/BlockExamples/BlockExamples.js" line="+51"/>
         <source>&amp;Block</source>
-        <translation>&amp;Lohko</translation>
+        <translation type="unfinished">Блок</translation>
     </message>
 </context>
 <context>
@@ -1308,7 +1305,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockFixNames/BlockFixNames.js" line="+80"/>
         <source>&amp;Fix Block Names</source>
-        <translation>&amp;Korjaa lohkon nimet</translation>
+        <translation type="unfinished">Виправити назви блоків</translation>
     </message>
 </context>
 <context>
@@ -1316,24 +1313,24 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
         <source>Widgets</source>
-        <translation>Pienoisohjelmat</translation>
+        <translation type="unfinished">Віджети</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+53"/>
         <location line="+44"/>
         <source>Block List</source>
-        <translation>Lohkoluettelo</translation>
+        <translation type="unfinished">Список блокування</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/BlockList/PreferencesPage.ui" line="+17"/>
         <source>Hide internal blocks</source>
-        <translation>Piilota sisäiset lohkot</translation>
+        <translation type="unfinished">Приховати внутрішні блоки</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Enable alternating row colors</source>
-        <translation>Salli vaihtelevat rivien värit</translation>
+        <translation type="unfinished">Увімкнути чергування кольорів рядків</translation>
     </message>
 </context>
 <context>
@@ -1341,22 +1338,22 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockListAttributes/BlockListAttributes.js" line="+47"/>
         <source>Block:</source>
-        <translation>Lohko:</translation>
+        <translation type="unfinished">Блок:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Block reference ID:</source>
-        <translation>Lohkon viitenro:</translation>
+        <translation type="unfinished">Ідентифікатор блоку:</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Block attribute:</source>
-        <translation>Lohkon ominaisuudet:</translation>
+        <translation type="unfinished">Атрибут блоку:</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>&amp;List Block Attributes</source>
-        <translation>&amp;Luetteloi lohkon ominaisuudet</translation>
+        <translation type="unfinished">Перелік атрибутів блоку</translation>
     </message>
 </context>
 <context>
@@ -1364,17 +1361,17 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+93"/>
         <source>Export Block List (CSV)</source>
-        <translation>Vie lohkoluettelo (CSV)</translation>
+        <translation type="unfinished">Список блокування експорту (CSV)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>CSV</source>
-        <translation>CSV</translation>
+        <translation type="unfinished">CSV</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block List</source>
-        <translation>&amp;Vie lohkoluettelo</translation>
+        <translation type="unfinished">Список блокування експорту</translation>
     </message>
 </context>
 <context>
@@ -1382,7 +1379,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockRefExport/BlockRefExport.js" line="+97"/>
         <source>Export Block References List (CSV)</source>
-        <translation type="unfinished">Vienti lohkoviittausluettelo (CSV)</translation>
+        <translation type="unfinished">Список посилань на експортні блоки (CSV)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1392,7 +1389,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block References List</source>
-        <translation type="unfinished">Vie lohkon viiteluettelo</translation>
+        <translation type="unfinished">Список посилань на експортний блок</translation>
     </message>
 </context>
 <context>
@@ -1400,22 +1397,22 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOut.js" line="+59"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline segment</source>
-        <translation>Valitse viiva, kaari, ympyrä, ellipsi, käyrä tai moniviiva segmentti</translation>
+        <translation type="unfinished">Виберіть пряму, дугу, коло, еліпс, сплайн або відрізок ламаної</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Choose line, arc, circle or ellipse segment</source>
-        <translation>Valitse viiva, kaari, ympyrä tai ellipsi segmentti</translation>
+        <translation type="unfinished">Виберіть пряму, дугу, коло або відрізок еліпса</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOut.ui" line="+17"/>
         <source>Remove Segment</source>
-        <translation>Poista segmentti</translation>
+        <translation type="unfinished">Видалити сегмент</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOutInit.js" line="+2"/>
         <source>&amp;Break out Segment</source>
-        <translation>&amp;Katkaise segmentti</translation>
+        <translation type="unfinished">Виокремлений сегмент</translation>
     </message>
 </context>
 <context>
@@ -1423,22 +1420,22 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.js" line="+54"/>
         <source>Choose line, arc or circle</source>
-        <translation>Valitse viiva, kaari tai ympyrä</translation>
+        <translation type="unfinished">Виберіть лінію, дугу або коло</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Specify point</source>
-        <translation>Määritä piste</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Modify/BreakOutGap/BreakOutGapInit.js" line="+2"/>
-        <source>&amp;Break out Gap</source>
-        <translation>&amp;Katkaisuväli</translation>
+        <translation type="unfinished">Вкажіть точку</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.ui" line="+17"/>
         <source>Gap:</source>
-        <translation>Väli:</translation>
+        <translation type="unfinished">Розрив:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/BreakOutGap/BreakOutGapInit.js" line="+2"/>
+        <source>&amp;Break out Gap</source>
+        <translation type="unfinished">Розрив розриву</translation>
     </message>
 </context>
 <context>
@@ -1446,37 +1443,37 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.js" line="+79"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation>Valitse viiva, kaari, ympyrä, ellipsi, käyrä tai moniviiva</translation>
+        <translation type="unfinished">Виберіть лінію, дугу, коло, еліпс, сплайн або полілінію для розбиття</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Choose line, arc, circle or ellipse to break up</source>
-        <translation>Valitse katkaistava viiva, kaari tai ellipsi segmentti</translation>
+        <translation type="unfinished">Виберіть лінію, дугу, коло або еліпс для розбиття</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>First break point</source>
-        <translation>Ensimmäinen katkaisukohta</translation>
+        <translation type="unfinished">Перший брейк-пойнт</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Second break point</source>
-        <translation>Toinen katkaisukohta</translation>
+        <translation type="unfinished">Другий брейк-пойнт</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Click the part of the circle or ellipse to remove</source>
-        <translation>Napsauta poistettavan ympyrän tai ellipsin osaa</translation>
+        <translation type="unfinished">Натисніть на частину кола або еліпса, щоб видалити</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.ui" line="+17"/>
         <source>Remove Segment</source>
-        <translation>Poista segmentti</translation>
+        <translation type="unfinished">Видалити сегмент</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManualInit.js" line="+2"/>
         <source>&amp;Break out Manual</source>
-        <translation>&amp;Keskeytä itse</translation>
+        <translation type="unfinished">Посібник з розриву зв&apos;язку</translation>
     </message>
 </context>
 <context>
@@ -1484,7 +1481,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Help/BrowseUserManual/BrowseUserManualInit.js" line="+2"/>
         <source>Browse User Manual</source>
-        <translation>Selaa käyttöopasta</translation>
+        <translation type="unfinished">Переглянути посібник користувача</translation>
     </message>
 </context>
 <context>
@@ -1492,32 +1489,32 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+56"/>
         <source>Widgets</source>
-        <translation>Pienoisohjelmat</translation>
+        <translation type="unfinished">Віджети</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>CAD Toolbar</source>
-        <translation>CAD työkalurivi</translation>
+        <translation type="unfinished">Панель інструментів CAD</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+20"/>
         <source>Icon size:</source>
-        <translation type="unfinished">Kuvakkeen koko:</translation>
+        <translation type="unfinished">Розмір іконки:</translation>
     </message>
     <message>
         <location line="+71"/>
         <source>Pixel</source>
-        <translation>Pikseli</translation>
+        <translation type="unfinished">Піксель</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>px</source>
-        <translation>px</translation>
+        <translation type="unfinished">px</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Columns:</source>
-        <translation>Sarakkeet:</translation>
+        <translation type="unfinished">Колони:</translation>
     </message>
 </context>
 <context>
@@ -1525,53 +1522,53 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+387"/>
         <source>Expand all</source>
-        <translation>Laajenna kaikki</translation>
+        <translation type="unfinished">Розгорнути все</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Collapse all</source>
-        <translation>Supista kaikki</translation>
+        <translation type="unfinished">Згорнути всі</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>List View</source>
-        <translation>Luettelonäyttö</translation>
+        <translation type="unfinished">Перегляд списку</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Icon View</source>
-        <translation>Ikoninäyttö</translation>
+        <translation type="unfinished">Перегляд іконок</translation>
     </message>
     <message>
         <location line="+34"/>
         <source>Widgets</source>
-        <translation>Pienoisohjelmat</translation>
+        <translation type="unfinished">Віджети</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+53"/>
         <source>Tool Matrix</source>
-        <translation>Työkalumatriisi</translation>
+        <translation type="unfinished">Інструментальна матриця</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CadToolMatrix/PreferencesPage.ui" line="+17"/>
         <source>Icon size:</source>
-        <translation type="unfinished">Kuvakkeen koko:</translation>
+        <translation type="unfinished">Розмір іконки:</translation>
     </message>
     <message>
         <location line="+96"/>
         <source>Pixel</source>
-        <translation>Pikseli</translation>
+        <translation type="unfinished">Піксель</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>px</source>
-        <translation>px</translation>
+        <translation type="unfinished">px</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>List view</source>
-        <translation>Luettelonäyttö</translation>
+        <translation type="unfinished">Перегляд списку</translation>
     </message>
 </context>
 <context>
@@ -1579,7 +1576,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Misc/MiscModify/ChangeFontToArial/ChangeFontToArial.js" line="+65"/>
         <source>Set Font to Arial</source>
-        <translation>Muuta kirjasin Arialiksi</translation>
+        <translation type="unfinished">Встановити шрифт Arial</translation>
     </message>
 </context>
 <context>
@@ -1588,27 +1585,27 @@ Haluatko palauttaa sen?</translation>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdates.js" line="+68"/>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesDialog.ui" line="+14"/>
         <source>Checking for Updates...</source>
-        <translation>Tarkistetaan päivityksiä ...</translation>
+        <translation type="unfinished">Перевірка оновлень...</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Version information not found.</source>
-        <translation>Versiotietoa ei löytynyt.</translation>
+        <translation type="unfinished">Інформація про версію не знайдена.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>No connection to server or file not found. Please try again later.</source>
-        <translation>Yhteyttä palvelimeen tai tiedostoon ei löytynyt. Yritä myöhemmin uudelleen.</translation>
+        <translation type="unfinished">Немає з&apos;єднання з сервером або файл не знайдено. Будь ласка, спробуйте пізніше.</translation>
     </message>
     <message>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesDialog.ui" line="+53"/>
         <source>Automatically check for updates</source>
-        <translation>Tarkista päivitykset automaattisesti</translation>
+        <translation type="unfinished">Автоматична перевірка оновлень</translation>
     </message>
     <message>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesInit.js" line="+6"/>
         <source>Check for &amp;Updates...</source>
-        <translation>Tarkista &amp;päivitykset ...</translation>
+        <translation type="unfinished">Перевірте наявність оновлень...</translation>
     </message>
 </context>
 <context>
@@ -1616,12 +1613,12 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle.js" line="+71"/>
         <source>Circle Tools</source>
-        <translation>Ympyrätyökalut</translation>
+        <translation type="unfinished">Кругові інструменти</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Circle</source>
-        <translation>&amp;Ympyrä</translation>
+        <translation type="unfinished">Коло</translation>
     </message>
 </context>
 <context>
@@ -1629,27 +1626,27 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2P/Circle2P.js" line="+58"/>
         <source>First point</source>
-        <translation>Ensimmäinen piste</translation>
+        <translation type="unfinished">Перший пункт</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation>Toinen piste</translation>
+        <translation type="unfinished">Другий момент</translation>
     </message>
     <message>
         <location line="+83"/>
         <source>The two points are identical</source>
-        <translation>Kaksi pistettä ovat identtisiä</translation>
+        <translation type="unfinished">Ці два пункти ідентичні</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2P/Circle2PInit.js" line="+2"/>
         <source>&amp;2 Points</source>
-        <translation>&amp;2 Pistettä</translation>
+        <translation type="unfinished">2 Бали</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw circle from 2 diametrically opposite points</source>
-        <translation>Piirrä ympyrä 2 pistellä halkaisijaltaan vastakkaisilta puolilta</translation>
+        <translation type="unfinished">Намалюйте коло з 2 діаметрально протилежних точок</translation>
     </message>
 </context>
 <context>
@@ -1657,52 +1654,52 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PR.js" line="+65"/>
         <source>First point</source>
-        <translation>Ensimmäinen piste</translation>
+        <translation type="unfinished">Перший пункт</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation>Toinen piste</translation>
+        <translation type="unfinished">Другий момент</translation>
     </message>
     <message>
         <location line="+107"/>
         <source>Invalid radius</source>
-        <translation>Virheellinen säde</translation>
+        <translation type="unfinished">Неправильний радіус</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation>Kaksi pistettä ovat identtisiä</translation>
+        <translation type="unfinished">Ці два пункти ідентичні</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation>Säde:</translation>
+        <translation type="unfinished">Радіус:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Solution:</source>
-        <translation>Ratkaisu:</translation>
+        <translation type="unfinished">Рішення:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Center Left of Line P1 - P2</source>
-        <translation>Keskitä vasemmalle linjasta P1 - P2</translation>
+        <translation type="unfinished">По центру зліва від лінії P1 - P2</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Center Right of Line P1 - P2</source>
-        <translation>Keskitä oikealle linjasta P1 - P2</translation>
+        <translation type="unfinished">Центр праворуч від лінії P1 - P2</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PRInit.js" line="+2"/>
         <source>&amp;2 Points and Radius</source>
-        <translation>&amp;2 Pistettä ja Säde</translation>
+        <translation type="unfinished">2 Точки і радіус</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw circle from 2 points and radius</source>
-        <translation>Piirrä ympyrä 2:sta pisteestä ja säteestä</translation>
+        <translation type="unfinished">Побудувати коло з 2 точок і радіуса</translation>
     </message>
 </context>
 <context>
@@ -1710,38 +1707,38 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TP/Circle2TP.js" line="+76"/>
         <source>First line, arc or circle</source>
-        <translation>Ensimmäinen viiva, kaari tai ympyrä</translation>
+        <translation type="unfinished">Перша лінія, дуга або коло</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Second line, arc or circle</source>
-        <translation>Toinen viiva, kaari tai ympyrä</translation>
+        <translation type="unfinished">Друга лінія, дуга або коло</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Point on circle line</source>
-        <translation>Piste ympyrän viivalla</translation>
+        <translation type="unfinished">Точка на лінії кола</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Choose solution</source>
-        <translation>Valitse ratkaisu</translation>
+        <translation type="unfinished">Обираємо рішення</translation>
     </message>
     <message>
         <location line="+144"/>
         <location line="+59"/>
         <source>No solution</source>
-        <translation>Ei ratkaisua</translation>
+        <translation type="unfinished">Немає рішення</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TP/Circle2TPInit.js" line="+2"/>
         <source>2 Tan&amp;gents and Point</source>
-        <translation>2 Tan&amp;genttia ja piste</translation>
+        <translation type="unfinished">2 Дотичні та точка</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw circle tangential to two entities, through point</source>
-        <translation>Piirrä ympyrä tangentiaalisesti kahteen kohteeseen, pisteen kautta</translation>
+        <translation type="unfinished">Проведіть коло, дотичне до двох сутностей, через точку</translation>
     </message>
 </context>
 <context>
@@ -1749,37 +1746,37 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TR.js" line="+77"/>
         <source>First line, arc or circle</source>
-        <translation>Ensimmäinen viiva, kaari tai ympyrä</translation>
+        <translation type="unfinished">Перша лінія, дуга або коло</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Second line, arc or circle</source>
-        <translation>Toinen viiva, kaari tai ympyrä</translation>
+        <translation type="unfinished">Друга лінія, дуга або коло</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Choose solution</source>
-        <translation>Valitse ratkaisu</translation>
+        <translation type="unfinished">Обираємо рішення</translation>
     </message>
     <message>
         <location line="+103"/>
         <source>No solution</source>
-        <translation>Ei ratkaisua</translation>
+        <translation type="unfinished">Немає рішення</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation>Säde:</translation>
+        <translation type="unfinished">Радіус:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TRInit.js" line="+2"/>
         <source>2 &amp;Tangents and Radius</source>
-        <translation>2 &amp;Tangenttia ja säde</translation>
+        <translation type="unfinished">2 Дотичні та радіус</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw circle tangential to two entities with given radius</source>
-        <translation>Piirrä ympyrä tangentiaalisesti kahteen kohteeseen annetulla säteellä</translation>
+        <translation type="unfinished">Побудувати коло по дотичній до двох об&apos;єктів із заданим радіусом</translation>
     </message>
 </context>
 <context>
@@ -1787,27 +1784,27 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle3P/Circle3P.js" line="+63"/>
         <source>First point</source>
-        <translation>Ensimmäinen piste</translation>
+        <translation type="unfinished">Перший пункт</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second point</source>
-        <translation>Toinen piste</translation>
+        <translation type="unfinished">Другий момент</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Third point</source>
-        <translation>Kolmas piste</translation>
+        <translation type="unfinished">Третій пункт</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle3P/Circle3PInit.js" line="+2"/>
         <source>&amp;3 Points</source>
-        <translation>&amp;3 pistettä</translation>
+        <translation type="unfinished">3 бали</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw circle from 3 points</source>
-        <translation>Piirrä ympyrä 3 pisteellä</translation>
+        <translation type="unfinished">Намалюйте коло з 3 точок</translation>
     </message>
 </context>
 <context>
@@ -1815,38 +1812,38 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle3T/Circle3T.js" line="+84"/>
         <source>First line, arc or circle</source>
-        <translation>Ensimmäinen viiva, kaari tai ympyrä</translation>
+        <translation type="unfinished">Перша лінія, дуга або коло</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Second line, arc or circle</source>
-        <translation>Toinen viiva, kaari tai ympyrä</translation>
+        <translation type="unfinished">Друга лінія, дуга або коло</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Third line, arc or circle</source>
-        <translation>Kolmas viiva, kaari tai ympyrä</translation>
+        <translation type="unfinished">Третя лінія, дуга або коло</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Choose solution</source>
-        <translation>Valitse ratkaisu</translation>
+        <translation type="unfinished">Обираємо рішення</translation>
     </message>
     <message>
         <location line="+120"/>
         <location line="+86"/>
         <source>No solution</source>
-        <translation>Ei ratkaisua</translation>
+        <translation type="unfinished">Немає рішення</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle3T/Circle3TInit.js" line="+2"/>
         <source>3 T&amp;angents</source>
-        <translation>3 T&amp;angenttia</translation>
+        <translation type="unfinished">3 Тангенси</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw circle tangential to three entities</source>
-        <translation>Piirrä ympyrä tangentiaalisesti kolmeen kohteeseen</translation>
+        <translation type="unfinished">Проведіть коло по дотичній до трьох об&apos;єктів</translation>
     </message>
 </context>
 <context>
@@ -1855,28 +1852,28 @@ Haluatko palauttaa sen?</translation>
         <location filename="../scripts/Draw/Circle/CircleCD/CircleCD.ui" line="+17"/>
         <location filename="../scripts/Draw/Circle/CircleCD/CircleCDDialog.ui" line="+89"/>
         <source>Diameter:</source>
-        <translation>Halkaisija:</translation>
+        <translation type="unfinished">Діаметр:</translation>
     </message>
     <message>
         <location line="+33"/>
         <location filename="../scripts/Draw/Circle/CircleCD/CircleCDDialog.ui" line="-60"/>
         <source>Angle:</source>
-        <translation>Kulma:</translation>
+        <translation type="unfinished">Кут:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Reference Point:</source>
-        <translation>Viitepiste:</translation>
+        <translation type="unfinished">Точка відліку:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCD/CircleCDInit.js" line="+2"/>
         <source>Center, &amp;Diameter</source>
-        <translation>Keskipiste, &amp;halkaisija</translation>
+        <translation type="unfinished">Центр, діаметр</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw circle from center and diameter</source>
-        <translation>Piirrä ympyrä keskipisteestä ja halkaisijalla</translation>
+        <translation type="unfinished">Накресліть коло з центру та діаметру</translation>
     </message>
 </context>
 <context>
@@ -1884,22 +1881,22 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCP/CircleCP.js" line="+56"/>
         <source>Center</source>
-        <translation>Keskipiste</translation>
+        <translation type="unfinished">Центр</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Point on circle or radius</source>
-        <translation>Piste ympyrässä tai säteessä</translation>
+        <translation type="unfinished">Точка на колі або радіусі</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCP/CircleCPInit.js" line="+2"/>
         <source>&amp;Center, Point</source>
-        <translation>&amp;Keskipiste, piste</translation>
+        <translation type="unfinished">Центр, точка</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw circle from center and point on circle</source>
-        <translation>Piirrä ympyrä keskipisteestä ja osoita ympyrälle</translation>
+        <translation type="unfinished">Намалюйте коло з центру і поставте точку на колі</translation>
     </message>
 </context>
 <context>
@@ -1908,28 +1905,28 @@ Haluatko palauttaa sen?</translation>
         <location filename="../scripts/Draw/Circle/CircleCR/CircleCR.ui" line="+17"/>
         <location filename="../scripts/Draw/Circle/CircleCR/CircleCRDialog.ui" line="+89"/>
         <source>Radius:</source>
-        <translation>Säde:</translation>
+        <translation type="unfinished">Радіус:</translation>
     </message>
     <message>
         <location line="+33"/>
         <location filename="../scripts/Draw/Circle/CircleCR/CircleCRDialog.ui" line="-60"/>
         <source>Angle:</source>
-        <translation>Kulma:</translation>
+        <translation type="unfinished">Кут:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Reference Point:</source>
-        <translation>Viitepiste:</translation>
+        <translation type="unfinished">Точка відліку:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCR/CircleCRInit.js" line="+2"/>
         <source>Center, &amp;Radius</source>
-        <translation>Keskipiste, &amp;säde</translation>
+        <translation type="unfinished">Центр, радіус</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw circle from center and radius</source>
-        <translation>Piirrä ympyrä keskipisteellä ja säteellä</translation>
+        <translation type="unfinished">Накресліть коло з центру та радіусу</translation>
     </message>
 </context>
 <context>
@@ -1937,22 +1934,22 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentric/CircleConcentric.ui" line="+17"/>
         <source>Distance:</source>
-        <translation>Etäisyys:</translation>
+        <translation type="unfinished">Відстань:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Number:</source>
-        <translation>Numero:</translation>
+        <translation type="unfinished">Номер:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentric/CircleConcentricInit.js" line="+2"/>
         <source>&amp;Concentric (with Distance)</source>
-        <translation>&amp;Samankeskinen (etäisyydellä)</translation>
+        <translation type="unfinished">Концентричний (з відстанню)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw concentric circle</source>
-        <translation>Piirrä samankeskeinen ympyrä</translation>
+        <translation type="unfinished">Намалюйте концентричне коло</translation>
     </message>
 </context>
 <context>
@@ -1960,17 +1957,17 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentricThrough/CircleConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation>Numero:</translation>
+        <translation type="unfinished">Номер:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentricThrough/CircleConcentricThroughInit.js" line="+2"/>
         <source>Concentric (&amp;through Point)</source>
-        <translation>Samankeskinen (&amp;pisteen kautta)</translation>
+        <translation type="unfinished">Концентричний (наскрізний)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw concentric circle through point</source>
-        <translation>Piirrä samankeskinen ympyrä pisteen kautta</translation>
+        <translation type="unfinished">Проведіть концентричне коло через точку</translation>
     </message>
 </context>
 <context>
@@ -1978,38 +1975,38 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/CircleT2P/CircleT2P.js" line="+75"/>
         <source>Line, arc or circle</source>
-        <translation>Viiva, kaari tai ympyrä</translation>
+        <translation type="unfinished">Лінія, дуга або коло</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>First point on circle line</source>
-        <translation>Ensimmäinen piste ympyrän viivalla</translation>
+        <translation type="unfinished">Перша точка на лінії кола</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Second point on circle line</source>
-        <translation>Toinen piste ympyrän viivalla</translation>
+        <translation type="unfinished">Друга точка на лінії кола</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Choose solution</source>
-        <translation>Valitse ratkaisu</translation>
+        <translation type="unfinished">Обираємо рішення</translation>
     </message>
     <message>
         <location line="+138"/>
         <location line="+55"/>
         <source>No solution</source>
-        <translation>Ei ratkaisua</translation>
+        <translation type="unfinished">Немає рішення</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleT2P/CircleT2PInit.js" line="+2"/>
         <source>&amp;Tangent and 2 Points</source>
-        <translation>&amp;Tangentti ja 2 pistettä</translation>
+        <translation type="unfinished">Тангенс і 2 точки</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw circle through two points and tangential to one entity</source>
-        <translation>Piirrä samankeskinen ympyrä kahden pisteen kautta ja yhteen kohteeseen tangentiaalisesti</translation>
+        <translation type="unfinished">Проведіть коло через дві точки і дотичну до одного об&apos;єкта</translation>
     </message>
 </context>
 <context>
@@ -2017,22 +2014,22 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPR.js" line="+39"/>
         <source>Point on circle</source>
-        <translation>Piste ympyrällä</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPRInit.js" line="+2"/>
-        <source>&amp;Tangent, Point, Radius</source>
-        <translation>&amp;Tangentti, piste, ja säde</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Draw circle tangential to entity, through point with radius</source>
-        <translation>Piirrä ympyrä tangentiaalisesti kohteeseen, läpi säteen pisteen</translation>
+        <translation type="unfinished">Точка на колі</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation>Säde:</translation>
+        <translation type="unfinished">Радіус:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPRInit.js" line="+2"/>
+        <source>&amp;Tangent, Point, Radius</source>
+        <translation type="unfinished">Дотична, Точка, Радіус</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw circle tangential to entity, through point with radius</source>
+        <translation type="unfinished">Побудувати коло, дотичне до сутності, через точку з радіусом</translation>
     </message>
 </context>
 <context>
@@ -2040,7 +2037,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Edit/ClipboardOperation.js" line="+54"/>
         <source>Reference point</source>
-        <translation>Viitepiste</translation>
+        <translation type="unfinished">Точка відліку</translation>
     </message>
 </context>
 <context>
@@ -2048,7 +2045,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Window/CloseAll/CloseAllInit.js" line="+2"/>
         <source>&amp;Close All</source>
-        <translation>&amp;Sulje kaikki</translation>
+        <translation type="unfinished">Закрити всі</translation>
     </message>
 </context>
 <context>
@@ -2056,7 +2053,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/File/NewFile/CloseDialog.ui" line="+14"/>
         <source>Closing Drawing...</source>
-        <translation>Suljetaan piirrosta ...</translation>
+        <translation type="unfinished">Заключний розіграш...</translation>
     </message>
 </context>
 <context>
@@ -2064,7 +2061,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/File/CloseFile/CloseFileInit.js" line="+2"/>
         <source>&amp;Close</source>
-        <translation>&amp;Sulje</translation>
+        <translation type="unfinished">Закрити</translation>
     </message>
 </context>
 <context>
@@ -2072,12 +2069,12 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/ColorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation>Graafinen näkymä</translation>
+        <translation type="unfinished">Графічний вигляд</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Colors</source>
-        <translation>Värit</translation>
+        <translation type="unfinished">Кольори</translation>
     </message>
 </context>
 <context>
@@ -2085,47 +2082,47 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ColorSettings/ColorSettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
-        <translation>Oletusarvot uusille piirroksille</translation>
+        <translation type="unfinished">Значення за замовчуванням для нових креслень</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Printing - Colors</source>
-        <translation>Tulostus - värit</translation>
+        <translation type="unfinished">Друк - Кольори</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Printing</source>
-        <translation>Tulostus</translation>
+        <translation type="unfinished">Друк</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Colors</source>
-        <translation>Värit</translation>
+        <translation type="unfinished">Кольори</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ColorSettings/PreferencesPage.ui" line="+19"/>
         <source>Background color:</source>
-        <translation>Taustaväri:</translation>
+        <translation type="unfinished">Колір фону:</translation>
     </message>
     <message>
         <location line="+44"/>
         <source>Color Mode</source>
-        <translation>Väritila</translation>
+        <translation type="unfinished">Колірний режим</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Full color</source>
-        <translation>Täysväri</translation>
+        <translation type="unfinished">Повнокольоровий</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Grayscale</source>
-        <translation>Harmaasävy</translation>
+        <translation type="unfinished">Відтінки сірого</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Black / white</source>
-        <translation>Musta/valko</translation>
+        <translation type="unfinished">Чорний / білий</translation>
     </message>
 </context>
 <context>
@@ -2133,104 +2130,104 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.js" line="+30"/>
         <source>Widgets</source>
-        <translation>Pienoisohjelmat</translation>
+        <translation type="unfinished">Віджети</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+68"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
-        <translation>Komentorivi</translation>
+        <translation type="unfinished">Командний рядок</translation>
     </message>
     <message>
         <location line="-21"/>
         <source>&amp;Command Line</source>
-        <translation>&amp;Komentorivi</translation>
+        <translation type="unfinished">Командний рядок</translation>
     </message>
     <message>
         <location line="+208"/>
         <source>Invalid value:</source>
-        <translation>Virheellinen arvo:</translation>
+        <translation type="unfinished">Невірне значення:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Invalid coordinate or distance &quot;%1&quot;.</source>
-        <translation>Puutteellinen koordinaatti tai etäisyys &quot;%1&quot;.</translation>
+        <translation type="unfinished">Невірна координата або відстань &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Unknown command or invalid coordinate or value: &quot;%1&quot;</source>
-        <translation>Tuntematon komento tai puutteellinen koordinaatti tai arvo &quot;%1&quot;</translation>
+        <translation type="unfinished">Невідома команда або невірна координата чи значення: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Numbers may be entered as: &quot;%1&quot;</source>
-        <translation>Numeroita voidaan syöttää kuten &quot;%1&quot;</translation>
+        <translation type="unfinished">Числа можуть вводитися у вигляді: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Coordinates may be entered as: &quot;%1&quot; (absolute) or &quot;%2&quot; (relative) or &quot;%3&quot; (polar) or &quot;%4&quot; (relative polar)</source>
-        <translation>Koordinaatteja voidaan syöttää kuten: &quot;%1&quot; (absoluuttinen) tai &quot;%2&quot; (suhteellinen) tai &quot;%3&quot; (napa) tai &quot;%4&quot; (suhteellinen napa)</translation>
+        <translation type="unfinished">Координати можуть бути введені у вигляді: &quot;%1&quot; (абсолютні) або &quot;%2&quot; (відносні) або &quot;%3&quot; (полярні) або &quot;%4&quot; (відносно полярні)</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>You may change the number / coordinate format in the application preferences.</source>
-        <translation>Voit vaihtaa numeroiden/koordinaattien muotoa sovelluksen ominaisuuksista.</translation>
+        <translation type="unfinished">Ви можете змінити формат числа/координат у налаштуваннях програми.</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
-        <translation>Toiminto keskeytetty. Tarkista lohkojen rekursio/määrittely sekä lukitut tai näkymättömät tasot tai lohkot.</translation>
+        <translation type="unfinished">Не вдалося виконати транзакцію. Будь ласка, перевірте наявність рекурсій блоків, заблокованих або невидимих шарів або блоків.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Warning</source>
-        <translation>Varoitus</translation>
+        <translation type="unfinished">Попередження</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Info</source>
-        <translation>Tiedot</translation>
+        <translation type="unfinished">Інформація</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Expression</source>
-        <translation>Lauseke</translation>
+        <translation type="unfinished">Вираження</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Coordinate</source>
-        <translation>Koordinaatti</translation>
+        <translation type="unfinished">Координати</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Command</source>
-        <translation>Komento</translation>
+        <translation type="unfinished">Командування</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Command:</source>
-        <translation>Komento:</translation>
+        <translation type="unfinished">Командир:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>: </source>
-        <translation>: </translation>
+        <translation type="unfinished">:</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CommandLine/PreferencesPage.ui" line="+17"/>
         <source>History size:</source>
-        <translation type="unfinished">Historian koko:</translation>
+        <translation type="unfinished">Розмір історії:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Show warnings as dialog</source>
-        <translation>Näytä varoitukset viesti-ikkunassa</translation>
+        <translation type="unfinished">Показувати попередження у вигляді діалогу</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Show information as dialog</source>
-        <translation>Näytä tiedot viesti-ikkunassa</translation>
+        <translation type="unfinished">Показати інформацію у вигляді діалогу</translation>
     </message>
 </context>
 <context>
@@ -2238,7 +2235,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Misc/Examples/CommandLineExamples/CommandLineExamples.js" line="+50"/>
         <source>&amp;Command Line</source>
-        <translation>&amp;Komentorivi</translation>
+        <translation type="unfinished">Командний рядок</translation>
     </message>
 </context>
 <context>
@@ -2246,7 +2243,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/View/CommandLineFocus/CommandLineFocusInit.js" line="+2"/>
         <source>&amp;Focus on Command Line</source>
-        <translation>&amp;Kohdistus komentorivillä</translation>
+        <translation type="unfinished">Фокус на командну лінію</translation>
     </message>
 </context>
 <context>
@@ -2254,7 +2251,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/CommandLineTools/CommandLineTools.js" line="+50"/>
         <source>&amp;Command Line Tools</source>
-        <translation>&amp;Komentorivin viivatyökalut</translation>
+        <translation type="unfinished">Інструменти командного рядка</translation>
     </message>
 </context>
 <context>
@@ -2262,80 +2259,80 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnit.js" line="+86"/>
         <source>Nothing to be done.</source>
-        <translation>Ei ole tehtävää.</translation>
+        <translation type="unfinished">Нічого не поробиш.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Unit &quot;%1&quot; selected. Nothing to be done</source>
-        <translation>Yksikkö &quot;%1&quot; valittu. Ei tehtävää</translation>
+        <translation type="unfinished">Вибрано блок &quot;%1&quot;. Нічого не потрібно робити</translation>
     </message>
     <message>
         <location line="+144"/>
         <source>Converted drawing from %1 to %2</source>
-        <translation>Muunnettu piirros %1 %2</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Edit/ConvertUnit/ConvertUnitInit.js" line="+2"/>
-        <source>Convert Drawing &amp;Unit</source>
-        <translation>Muunna piirros &amp;yksikkö</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Convert drawing to a different drawing unit</source>
-        <translation>Muunna piirustus eri piirustusyksikköön</translation>
+        <translation type="unfinished">Перетворено креслення з %1 на %2</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnit.ui" line="+20"/>
         <source>From:</source>
-        <translation>Alkaen:</translation>
+        <translation type="unfinished">Звідки?</translation>
     </message>
     <message>
         <location line="+53"/>
         <source>To:</source>
-        <translation>Saakka:</translation>
+        <translation type="unfinished">До:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Convert:</source>
-        <translation>Muunna:</translation>
+        <translation type="unfinished">Навернись:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Edit/ConvertUnit/ConvertUnitInit.js" line="+2"/>
+        <source>Convert Drawing &amp;Unit</source>
+        <translation type="unfinished">Переобладнати волочильний агрегат</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Convert drawing to a different drawing unit</source>
+        <translation type="unfinished">Конвертувати креслення в іншу одиницю креслення</translation>
     </message>
 </context>
 <context>
     <name>CoordinateDisplay</name>
     <message>
-        <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.ui" line="+72"/>
-        <source>Absolute Cartesian Coordinate</source>
-        <translation>Absoluuttinen suorakulmainen koodinaatti</translation>
-    </message>
-    <message>
-        <location line="+21"/>
-        <source>Absolute Polar Coordinate</source>
-        <translation>Absoluuttinen napakoordinaatti</translation>
-    </message>
-    <message>
-        <location line="+21"/>
-        <source>Relative Cartesian Coordinate</source>
-        <translation>Suhteellinen suorakulmainen koodinaatti</translation>
-    </message>
-    <message>
-        <location line="+21"/>
-        <source>Relative Polar Coordinate</source>
-        <translation>Suhteellinen napakoordinaatti</translation>
-    </message>
-    <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+29"/>
         <source>Widgets</source>
-        <translation>Pienoisohjelmat</translation>
+        <translation type="unfinished">Віджети</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Coordinate Display</source>
-        <translation>Koordinaatiston näyttö</translation>
+        <translation type="unfinished">Відображення координат</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.ui" line="+72"/>
+        <source>Absolute Cartesian Coordinate</source>
+        <translation type="unfinished">Абсолютна декартова координата</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Absolute Polar Coordinate</source>
+        <translation type="unfinished">Абсолютна полярна координата</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Relative Cartesian Coordinate</source>
+        <translation type="unfinished">Відносна декартова координата</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Relative Polar Coordinate</source>
+        <translation type="unfinished">Відносна полярна координата</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/PreferencesPage.ui" line="+17"/>
         <source>Forced update every N mouse moves:</source>
-        <translation>Pakotettu päivitys jokaisella hiiren N liikkeellä:</translation>
+        <translation type="unfinished">Примусове оновлення через кожні N рухів миші:</translation>
     </message>
 </context>
 <context>
@@ -2343,7 +2340,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Edit/Copy/CopyInit.js" line="+2"/>
         <source>&amp;Copy</source>
-        <translation>&amp;Kopioi</translation>
+        <translation type="unfinished">Прийом</translation>
     </message>
 </context>
 <context>
@@ -2351,7 +2348,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Edit/CopyWithReference/CopyWithReferenceInit.js" line="+2"/>
         <source>&amp;Copy with Reference</source>
-        <translation>&amp;Kopioi viitteen kanssa</translation>
+        <translation type="unfinished">Копія з посиланням</translation>
     </message>
 </context>
 <context>
@@ -2359,42 +2356,42 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+67"/>
         <source>Position</source>
-        <translation>Sijainti</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Misc/MiscDraw/Counter/CounterInit.js" line="+2"/>
-        <source>&amp;Counter</source>
-        <translation>&amp;Laskuri</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Auto increment number</source>
-        <translation>Automaattinen numeron lisäys</translation>
+        <translation type="unfinished">Посада</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Counter/Counter.ui" line="+17"/>
         <source>Start:</source>
-        <translation>Aloitus:</translation>
+        <translation type="unfinished">Починай:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Increment:</source>
-        <translation>Lisäys:</translation>
+        <translation type="unfinished">Приріст:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number Format:</source>
-        <translation type="unfinished">Numeromuoto:</translation>
+        <translation type="unfinished">Числовий формат:</translation>
     </message>
     <message>
         <location line="+79"/>
         <source>Prefix:</source>
-        <translation>Etuliite:</translation>
+        <translation type="unfinished">Префікс:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Suffix:</source>
-        <translation>Jälkiliite:</translation>
+        <translation type="unfinished">Суфікс:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/Counter/CounterInit.js" line="+2"/>
+        <source>&amp;Counter</source>
+        <translation type="unfinished">Лічильник</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Auto increment number</source>
+        <translation type="unfinished">Автоматичне збільшення числа</translation>
     </message>
 </context>
 <context>
@@ -2402,12 +2399,12 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Block/CreateBlock/CreateBlock.js" line="+51"/>
         <source>Reference Point</source>
-        <translation>Viitepiste</translation>
+        <translation type="unfinished">Точка відліку</translation>
     </message>
     <message>
         <location filename="../scripts/Block/CreateBlock/CreateBlockInit.js" line="+2"/>
         <source>&amp;Create Block from Selection</source>
-        <translation>&amp;Luo lohko valinnasta</translation>
+        <translation type="unfinished">Створити блок з виділення</translation>
     </message>
 </context>
 <context>
@@ -2415,22 +2412,22 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Block/CreateLibraryItem/CreateLibraryItem.js" line="+49"/>
         <source>Reference Point</source>
-        <translation>Viitepiste</translation>
+        <translation type="unfinished">Точка відліку</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Save library item as...</source>
-        <translation>Tallenna kirjastokohde nimellä ...</translation>
+        <translation type="unfinished">Зберегти елемент бібліотеки як...</translation>
     </message>
     <message>
         <location filename="../scripts/Block/CreateLibraryItem/CreateLibraryItemInit.js" line="+2"/>
         <source>&amp;Create Library Item</source>
-        <translation>&amp;Luo kirjastokohde</translation>
+        <translation type="unfinished">Створити елемент бібліотеки</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Create library item from selection</source>
-        <translation>Luo kirjastokohde valinnasta</translation>
+        <translation type="unfinished">Створити елемент бібліотеки з виділеного</translation>
     </message>
 </context>
 <context>
@@ -2438,17 +2435,17 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Cross/Cross.js" line="+56"/>
         <source>Select arc, circle, ellipse or elliptical arc</source>
-        <translation>Valitse kaari, ympyrä, ellipsi tai elliptinen kaari</translation>
+        <translation type="unfinished">Вибір дуги, кола, еліпса або еліптичної дуги</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Cross/CrossInit.js" line="+2"/>
         <source>Centerline Cross</source>
-        <translation>Keskiviivan risti</translation>
+        <translation type="unfinished">Центральний хрест</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
-        <translation>Piirrä keskiviivan risti kaariin, ympyröihin tai ellipseihin</translation>
+        <translation type="unfinished">Намалюйте центральну лінію хреста дугами, колами або еліпсами</translation>
     </message>
 </context>
 <context>
@@ -2456,32 +2453,32 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Cross/Cross.ui" line="+17"/>
         <source>X:</source>
-        <translation>X:</translation>
+        <translation type="unfinished">X:</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Y:</source>
-        <translation>Y:</translation>
+        <translation type="unfinished">Y:</translation>
     </message>
     <message>
         <location line="+57"/>
         <source>Extension</source>
-        <translation>Laajennus</translation>
+        <translation type="unfinished">Розширення</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Total length</source>
-        <translation>Kokonaispituus</translation>
+        <translation type="unfinished">Загальна довжина</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Percent</source>
-        <translation>Prosentti</translation>
+        <translation type="unfinished">У відсотках</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Angle:</source>
-        <translation>Kulma:</translation>
+        <translation type="unfinished">Кут:</translation>
     </message>
 </context>
 <context>
@@ -2489,7 +2486,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Edit/Cut/CutInit.js" line="+2"/>
         <source>&amp;Cut</source>
-        <translation>&amp;Leikkaa</translation>
+        <translation type="unfinished">Вирізати</translation>
     </message>
 </context>
 <context>
@@ -2497,7 +2494,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Edit/CutWithReference/CutWithReferenceInit.js" line="+2"/>
         <source>&amp;Cut with Reference</source>
-        <translation>&amp;Leikkaa viitteen kanssa</translation>
+        <translation type="unfinished">Вирізати з посиланням</translation>
     </message>
 </context>
 <context>
@@ -2505,52 +2502,52 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/DefaultAction.js" line="+92"/>
         <source>Select entity or region</source>
-        <translation>Valitse kohde tai alue</translation>
+        <translation type="unfinished">Виберіть організацію або регіон</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Move entity or reference</source>
-        <translation>Siirrä kohde tai viite</translation>
+        <translation type="unfinished">Перемістити об&apos;єкт або посилання</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second corner</source>
-        <translation>Toinen kulma</translation>
+        <translation type="unfinished">Другий поворот</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Target point of reference point</source>
-        <translation>Kohteena oleva vertailupiste</translation>
+        <translation type="unfinished">Цільова точка відліку</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Target point of selection</source>
-        <translation>Valinnan tavoitepiste</translation>
+        <translation type="unfinished">Цільова точка відбору</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Move entity to desired location</source>
-        <translation>Siirrä kokonaisuus haluttuun sijaintiin</translation>
+        <translation type="unfinished">Перемістити підприємство в потрібне місце</translation>
     </message>
     <message>
         <location line="+409"/>
         <source>Move Reference Point</source>
-        <translation>Siirrä viitepiste</translation>
+        <translation type="unfinished">Перемістити точку відліку</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Move Selection</source>
-        <translation>Siirrä valinta</translation>
+        <translation type="unfinished">Вибір переміщення</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Move Entity</source>
-        <translation>Siirrä kohde</translation>
+        <translation type="unfinished">Перемістити об&apos;єкт</translation>
     </message>
     <message>
         <location line="+127"/>
         <source>Editing block &quot;%1&quot;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
-        <translation>Muokataan lohkoa &quot;%1&quot;&lt;br&gt;Valitse &lt;i&gt;Lohko &gt; Palaa pääpiirustukseen&lt;/i&gt; kun olet valmis</translation>
+        <translation type="unfinished">Редагування блоку &quot;%1&quot;&lt;br&gt;Виберіть &lt;i&gt;Блок &gt; Повернутися до основного креслення&lt;/i&gt; після завершення</translation>
     </message>
 </context>
 <context>
@@ -2558,22 +2555,22 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Navigation/DefaultNavigation/DefaultNavigation.js" line="+47"/>
         <source>Graphics View</source>
-        <translation>Kuvanäkymä</translation>
+        <translation type="unfinished">Графічний вигляд</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Navigation</source>
-        <translation>Selaaminen</translation>
+        <translation type="unfinished">Навігація</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Zoom (Wheel Mouse)</source>
-        <translation>Zoomaus (rullahiiri)</translation>
+        <translation type="unfinished">Масштаб (коліщатко миші)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Scroll (Trackpad, Multi-Touch Mouse)</source>
-        <translation>Vieritä (kosketuslevy, multi-touch hiiri)</translation>
+        <translation type="unfinished">Прокрутка (трекпад, миша Multi-Touch)</translation>
     </message>
 </context>
 <context>
@@ -2581,7 +2578,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Edit/Delete/DeleteInit.js" line="+2"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Poista</translation>
+        <translation type="unfinished">Видалити</translation>
     </message>
 </context>
 <context>
@@ -2589,12 +2586,12 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Select/DeselectAll/DeselectAllInit.js" line="+2"/>
         <source>&amp;Deselect All</source>
-        <translation>&amp;Poista kaikki valinnat</translation>
+        <translation type="unfinished">Зніміть позначку з усіх пунктів</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Deselect all entities</source>
-        <translation>Poista valinta kaikista kohteista</translation>
+        <translation type="unfinished">Зніміть позначку з усіх об&apos;єктів</translation>
     </message>
 </context>
 <context>
@@ -2602,7 +2599,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Block/DeselectBlockReferences/DeselectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Deselect Block References</source>
-        <translation>&amp;Poista valinta lohkoviitteistä</translation>
+        <translation type="unfinished">Зніміть позначку з пункту Блокувати посилання</translation>
     </message>
 </context>
 <context>
@@ -2610,7 +2607,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer Entities</source>
-        <translation>&amp;Poista tasokokonaisuuksien valinta</translation>
+        <translation type="unfinished">Зніміть позначку з об&apos;єктів шару</translation>
     </message>
 </context>
 <context>
@@ -2618,7 +2615,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/DevDebug/DevDebug.js" line="+45"/>
         <source>&amp;Debug Mode</source>
-        <translation>&amp;Vianmääritystila</translation>
+        <translation type="unfinished">Режим налагодження</translation>
     </message>
 </context>
 <context>
@@ -2626,88 +2623,88 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/CharacterMapDialog.ui" line="+14"/>
         <source>Character Map</source>
-        <translation>Merkkikartta</translation>
+        <translation type="unfinished">Карта персонажів</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeDialog.ui" line="+14"/>
         <source>Dialog</source>
-        <translation>Kyselyikkuna</translation>
+        <translation type="unfinished">Діалог</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Arcs and Circles</source>
-        <translation>Kaaret ja ympyrät</translation>
+        <translation type="unfinished">Дуги та кола</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into line segments (fixed length)</source>
-        <translation>viivan segmentteihin (kiinteä pituus)</translation>
+        <translation type="unfinished">на відрізки ліній (фіксованої довжини)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>into line segments (fixed angle)</source>
-        <translation>viivan segmentteihin (kiinteä kulma)</translation>
+        <translation type="unfinished">на відрізки ліній (фіксований кут)</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Ellipses</source>
-        <translation>Ellipsit</translation>
+        <translation type="unfinished">Еліпси</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into polyline with arc segments</source>
-        <translation>murtoviivaan kaarisegmenteillä</translation>
+        <translation type="unfinished">в полілінію з дуговими відрізками</translation>
     </message>
     <message>
         <location line="+5"/>
         <location line="+16"/>
         <source>into polyline with line segments</source>
-        <translation>murtoviivaan viivasegmenteillä</translation>
+        <translation type="unfinished">в полілінію з відрізками</translation>
     </message>
     <message>
         <location line="-8"/>
         <source>Splines</source>
-        <translation>Käyrät</translation>
+        <translation type="unfinished">Сплайни</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Dimensions</source>
-        <translation>Mitat</translation>
+        <translation type="unfinished">Розміри</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into lines, solids and texts</source>
-        <translation>viivoihin, kiinteisiin ja teksteihin</translation>
+        <translation type="unfinished">на лінії, об&apos;єкти та тексти</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Hatches</source>
-        <translation>Kuvioinnit</translation>
+        <translation type="unfinished">Люки</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into lines</source>
-        <translation>viivoihin</translation>
+        <translation type="unfinished">в рядки</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Blocks</source>
-        <translation>Lohkot</translation>
+        <translation type="unfinished">Блоки</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into entities</source>
-        <translation>kohteisiin</translation>
+        <translation type="unfinished">на суб&apos;єкти господарювання</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/Dialog.ui" line="+94"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation type="unfinished">ГАРАЗД</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Cancel</source>
-        <translation>Peruuta</translation>
+        <translation type="unfinished">Скасувати</translation>
     </message>
 </context>
 <context>
@@ -2715,27 +2712,27 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAligned/DimAligned.js" line="+60"/>
         <source>First extension line origin</source>
-        <translation>Ensimmäinen jatke viivasta</translation>
+        <translation type="unfinished">Початок першої додаткової лінії</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second extension line origin</source>
-        <translation>Toinen jatke viivasta</translation>
+        <translation type="unfinished">Початок другої додаткової лінії</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Dimension line location</source>
-        <translation>Mitoitusviivan sijainti</translation>
+        <translation type="unfinished">Розташування розмірної лінії</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAligned/DimAlignedInit.js" line="+2"/>
         <source>&amp;Aligned</source>
-        <translation>&amp;Kohdistettu</translation>
+        <translation type="unfinished">Вирівняно</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw aligned dimension</source>
-        <translation>Piirrä kohdistettu mitta</translation>
+        <translation type="unfinished">Вирівняний розмір на кресленні</translation>
     </message>
 </context>
 <context>
@@ -2743,32 +2740,32 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.js" line="+80"/>
         <source>Arc or first of two lines</source>
-        <translation>Kaari tai toinen kahdesta viivasta</translation>
+        <translation type="unfinished">Дуга або перша з двох ліній</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Second line</source>
-        <translation>Toinen viiva</translation>
+        <translation type="unfinished">Друга лінія</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Dimension arc location</source>
-        <translation>Mittakaaren sijainti</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Draw/Dimension/DimAngular/DimAngularInit.js" line="+2"/>
-        <source>&amp;Angular</source>
-        <translation>&amp;Kulmikas</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Draw angular dimension</source>
-        <translation>Piirrä kulmamitta</translation>
+        <translation type="unfinished">Розташування розмірної дуги</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
         <source>Use maximum angle</source>
-        <translation>Käytä suurinta kulmaa</translation>
+        <translation type="unfinished">Використовуйте максимальний кут</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Dimension/DimAngular/DimAngularInit.js" line="+2"/>
+        <source>&amp;Angular</source>
+        <translation type="unfinished">Кутовий</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw angular dimension</source>
+        <translation type="unfinished">Накреслити кутовий розмір</translation>
     </message>
 </context>
 <context>
@@ -2776,22 +2773,22 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimDiametric/DimDiametric.js" line="+57"/>
         <source>Choose arc or circle entity</source>
-        <translation>Valitse kaari tai ympyrämäinen kohde</translation>
+        <translation type="unfinished">Виберіть об&apos;єкт дуги або кола</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Dimension line location or angle</source>
-        <translation>Mittaviivan sijainti tai kulma</translation>
+        <translation type="unfinished">Розташування розмірної лінії або кут</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimDiametric/DimDiametricInit.js" line="+2"/>
         <source>&amp;Diametric</source>
-        <translation>&amp;Vastakkaiset</translation>
+        <translation type="unfinished">Діаметральний</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw diametric dimension</source>
-        <translation>Piirrä vastakkainen mitta</translation>
+        <translation type="unfinished">Намалювати діаметральний розмір</translation>
     </message>
 </context>
 <context>
@@ -2799,12 +2796,12 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimHorizontal/DimHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal</source>
-        <translation>&amp;Vaakasuuntainen</translation>
+        <translation type="unfinished">Горизонтальні</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw horizontal dimension</source>
-        <translation>Piirrä vaakasuuntainen mitoitus</translation>
+        <translation type="unfinished">Накреслити горизонтальний розмір</translation>
     </message>
 </context>
 <context>
@@ -2812,22 +2809,22 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinate.js" line="+61"/>
         <source>Feature location</source>
-        <translation>Ominaisuuden sijainti</translation>
+        <translation type="unfinished">Розташування функції</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Endpoint of leader</source>
-        <translation>Perusviivan päätepiste</translation>
+        <translation type="unfinished">Кінцева точка лідера</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinateInit.js" line="+2"/>
         <source>&amp;Ordinate (X/Y)</source>
-        <translation>&amp;Ordinaatta (X/Y)</translation>
+        <translation type="unfinished">Ордината (X/Y)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw ordinate dimension</source>
-        <translation>Piirrä koordinaatin mittasuhde</translation>
+        <translation type="unfinished">Розмір ординат креслення</translation>
     </message>
 </context>
 <context>
@@ -2835,22 +2832,22 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRadial/DimRadial.js" line="+57"/>
         <source>Choose arc or circle entity</source>
-        <translation>Valitse kaari tai ympyrämäinen kohde</translation>
+        <translation type="unfinished">Виберіть об&apos;єкт дуги або кола</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Dimension line location or angle</source>
-        <translation>Mitoitusviivan sijainti tai kulma</translation>
+        <translation type="unfinished">Розташування розмірної лінії або кут</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRadial/DimRadialInit.js" line="+2"/>
         <source>&amp;Radial</source>
-        <translation>&amp;Säteittäinen</translation>
+        <translation type="unfinished">Радіальний</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw radial dimension</source>
-        <translation>Piirrä säteittäinen mitoitus</translation>
+        <translation type="unfinished">Накреслити радіальний розмір</translation>
     </message>
 </context>
 <context>
@@ -2858,20 +2855,21 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
         <source>No dimension entities with custom label positions selected.</source>
-        <translation>Ei ole valittu mittatietoja mukautetun selitteen sijainnille.</translation>
+        <translation type="unfinished">Не вибрано жодного розмірного об&apos;єкта з нестандартними позиціями мітки.</translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
-        <translation>
-            <numerusform>Merkin paikka %n mitassa palautettiin.</numerusform>
-            <numerusform>Merkkien paikat %n mitoissa palautettiin.</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRegen/DimRegenInit.js" line="+2"/>
         <source>&amp;Reset Label Position</source>
-        <translation>&amp;Nollaa selitteen sijainti</translation>
+        <translation type="unfinished">Скинути позицію етикетки</translation>
     </message>
 </context>
 <context>
@@ -2879,32 +2877,32 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotated.js" line="+60"/>
         <source>First extension line origin</source>
-        <translation>Ensimmäisen laajennuslinjan alkupiste</translation>
+        <translation type="unfinished">Початок першої додаткової лінії</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second extension line origin</source>
-        <translation>Toisen laajennuslinjan alkupiste</translation>
+        <translation type="unfinished">Початок другої додаткової лінії</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Dimension line location</source>
-        <translation>Mittaviivan sijainti</translation>
+        <translation type="unfinished">Розташування розмірної лінії</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotated.ui" line="+17"/>
         <source>Angle:</source>
-        <translation>Kulma:</translation>
+        <translation type="unfinished">Кут:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotatedInit.js" line="+2"/>
         <source>&amp;Rotated (Linear)</source>
-        <translation>&amp;Kieretty (lineaarinen)</translation>
+        <translation type="unfinished">Поворотний (лінійний)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw linear dimension at a fixed angle</source>
-        <translation>Piirrä lineaarinen mitoitus kiinteällä kulmalla</translation>
+        <translation type="unfinished">Нанесення лінійного розміру під фіксованим кутом</translation>
     </message>
 </context>
 <context>
@@ -2912,12 +2910,12 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimVertical/DimVerticalInit.js" line="+2"/>
         <source>&amp;Vertical</source>
-        <translation>&amp;Pystysuuntainen</translation>
+        <translation type="unfinished">Вертикальний</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw vertical dimension</source>
-        <translation>Piirrä pystysuuntainen mitoitus</translation>
+        <translation type="unfinished">Накреслити вертикальний розмір</translation>
     </message>
 </context>
 <context>
@@ -2925,102 +2923,102 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/Dimension.js" line="+60"/>
         <source>No prefix</source>
-        <translation>Ei etuliitettä</translation>
+        <translation type="unfinished">Без приставки</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Radius</source>
-        <translation>Säde</translation>
+        <translation type="unfinished">Радіус</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Metric screw</source>
-        <translation>Metrinen ruuvi</translation>
+        <translation type="unfinished">Метричний гвинт</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Diameter</source>
-        <translation>Halkaisija</translation>
+        <translation type="unfinished">Діаметр</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arc</source>
-        <translation>Kaari</translation>
+        <translation type="unfinished">Дуга</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plus/Minus</source>
-        <translation>Plus/miinus</translation>
+        <translation type="unfinished">Плюс/мінус</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Almost equal to</source>
-        <translation>Lähes yhtäsuuri kuin</translation>
+        <translation type="unfinished">Майже дорівнює</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Asymptotically equal to</source>
-        <translation>Asymptoottisesti yhtä suuri</translation>
+        <translation type="unfinished">Асимптотично дорівнює</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Square</source>
-        <translation>Neliö</translation>
+        <translation type="unfinished">Площа</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delta</source>
-        <translation>Delta</translation>
+        <translation type="unfinished">Дельта</translation>
     </message>
     <message>
         <location line="+122"/>
         <source>Dimension Tools</source>
-        <translation>Mittatyökalut</translation>
+        <translation type="unfinished">Вимірювальні інструменти</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>D&amp;imension</source>
-        <translation>M&amp;ittasuhde</translation>
+        <translation type="unfinished">Вимір</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Dimension.ui" line="+29"/>
         <source>Label:</source>
-        <translation>Selite:</translation>
+        <translation type="unfinished">Етикетка:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Prefix</source>
-        <translation>Etuliite</translation>
+        <translation type="unfinished">Префікс</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Enter fixed label or leave empty for automatic label</source>
-        <translation>Lisää kiinteä selite tai jätä tyhjäksi automaattiselle selitteelle</translation>
+        <translation type="unfinished">Введіть фіксовану етикетку або залиште порожнім для автоматичного маркування</translation>
     </message>
     <message>
         <location line="+61"/>
         <source>Upper tolerance</source>
-        <translation>Ylätoleranssi</translation>
+        <translation type="unfinished">Верхній допуск</translation>
     </message>
     <message>
         <location line="+54"/>
         <source>Lower tolerance</source>
-        <translation>Alatoleranssi</translation>
+        <translation type="unfinished">Менша толерантність</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Scale</source>
-        <translation>Mittakaava</translation>
+        <translation type="unfinished">Масштаб</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Drawing Scale</source>
-        <translation>Piirroksen mittakaava</translation>
+        <translation type="unfinished">Масштаб для креслення</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Auto</source>
-        <translation>Automaattinen</translation>
+        <translation type="unfinished">Авто</translation>
     </message>
 </context>
 <context>
@@ -3028,17 +3026,17 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
         <source>Dimension Scale</source>
-        <translation type="unfinished">Mitta-asteikko</translation>
+        <translation type="unfinished">Шкала розмірів</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>The scale for new dimensions is not 1:1. Dimension labels will show values that differ from the measured value in the drawing. You can correct the scale factor in the options toolbar at the top.</source>
-        <translation type="unfinished">Uusien ulottuvuuksien mittakaava ei ole 1:1. Mittaesimerkit näyttävät arvot, jotka poikkeavat piirustuksen mitatusta arvosta. Voit korjata mittakaavakerrointa yläreunan asetustyökalurivillä.</translation>
+        <translation type="unfinished">Масштаб для нових розмірів не 1:1. Розмірні позначення будуть показувати значення, які відрізняються від виміряного значення на кресленні. Масштабний коефіцієнт можна відкоригувати на панелі параметрів у верхній частині.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Don&apos;t show this warning again</source>
-        <translation type="unfinished">Älä näytä tätä varoitusta uudelleen</translation>
+        <translation type="unfinished">Не показуйте це попередження більше</translation>
     </message>
 </context>
 <context>
@@ -3046,190 +3044,190 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/DimensionSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
-        <translation>Oletusarvot uusille piirroksille</translation>
+        <translation type="unfinished">Значення за замовчуванням для нових креслень</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+2"/>
         <source>Dimension Settings</source>
-        <translation>Mitta-asetukset</translation>
+        <translation type="unfinished">Налаштування розмірів</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Dimension</source>
-        <translation>Mitta</translation>
+        <translation type="unfinished">Вимір</translation>
     </message>
     <message>
         <location line="+112"/>
         <source>point</source>
-        <translation>piste</translation>
+        <translation type="unfinished">точка</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>comma</source>
-        <translation>pilkku</translation>
+        <translation type="unfinished">кома</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>space</source>
-        <translation>välilyönti</translation>
+        <translation type="unfinished">простір</translation>
     </message>
     <message>
         <location line="+309"/>
         <source>Unit / Format</source>
-        <translation>Yksikkö/muoto</translation>
+        <translation type="unfinished">Одиниця виміру / Формат</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The drawing unit must be &quot;Inch&quot; to display dimension labels in formats &quot;Architectural&quot; or &quot;Engineering&quot;. Format changed to &quot;Decimal&quot;.</source>
-        <translation>Piirroksen yksikön pitää olla &quot;tuuma&quot; tai &quot;jalka&quot; jotta näytetään mittaselitteet muodossa &quot;arkkitehtoninen&quot; tai &quot;tekninen&quot;. Muoto vaihdettu &quot;desimaaliseksi&quot;.</translation>
+        <translation type="unfinished">Для відображення розмірних позначень у форматах &quot;Архітектурний&quot; або &quot;Інженерний&quot; одиниця виміру повинна бути &quot;Дюйм&quot;. Формат змінено на &quot;Десятковий&quot;.</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+55"/>
-        <source>Sizes</source>
-        <translation>Koot</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Keep proportions</source>
-        <translation>Pidä mittasuhteet</translation>
-    </message>
-    <message>
-        <location line="+147"/>
-        <source>Text height:</source>
-        <translation>Tekstin korkeus:</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Extension line offset:</source>
-        <translation>Jatkolinjan alkukohta:</translation>
-    </message>
-    <message>
-        <location line="-74"/>
-        <source>Extension line extension:</source>
-        <translation>Jatkolinjan pidennys:</translation>
-    </message>
-    <message>
-        <location line="-115"/>
+        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+29"/>
         <source>Dimension Style</source>
-        <translation type="unfinished">Mitta Tyyli</translation>
+        <translation type="unfinished">Розмірний стиль</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Horizontal text labels</source>
-        <translation type="unfinished">Vaakasuorat tekstitarrat</translation>
+        <translation type="unfinished">Горизонтальні текстові етикетки</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Text above dimension line</source>
-        <translation type="unfinished">Teksti mittariviivan yläpuolella</translation>
+        <translation type="unfinished">Текст над розмірною лінією</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+13"/>
+        <source>Sizes</source>
+        <translation type="unfinished">Розміри</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Keep proportions</source>
+        <translation type="unfinished">Дотримуйтесь пропорцій</translation>
+    </message>
+    <message>
+        <location line="+31"/>
         <source>Dimension line gap:</source>
-        <translation>Mittaviivan väli:</translation>
+        <translation type="unfinished">Зазор між габаритними лініями:</translation>
     </message>
     <message>
         <location line="+42"/>
         <source>Arrow size:</source>
-        <translation>Nuolen koko:</translation>
+        <translation type="unfinished">Розмір стрілки:</translation>
     </message>
     <message>
-        <location line="+108"/>
+        <location line="+10"/>
+        <source>Extension line extension:</source>
+        <translation type="unfinished">Подовження лінії зв&apos;язку:</translation>
+    </message>
+    <message>
+        <location line="+64"/>
+        <source>Text height:</source>
+        <translation type="unfinished">Висота тексту:</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Extension line offset:</source>
+        <translation type="unfinished">Зсув лінії розширення:</translation>
+    </message>
+    <message>
+        <location line="+24"/>
         <source>Dimension line increment:</source>
-        <translation>Mittaviivan lisäys:</translation>
+        <translation type="unfinished">Приріст розмірної лінії:</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Size scale factor:</source>
-        <translation>Kokoasteikon kerroin:</translation>
+        <translation type="unfinished">Масштабний коефіцієнт розміру:</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Arrow Style</source>
-        <translation>Nuolen tyyli</translation>
+        <translation type="unfinished">Стиль стрілки</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Arrow</source>
-        <translation>Nuoli</translation>
+        <translation type="unfinished">Стріла</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Architectural tick</source>
-        <translation type="unfinished">Arkkitehtoninen rasti</translation>
+        <translation type="unfinished">Архітектурна галочка</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Label</source>
-        <translation type="unfinished">Tarra</translation>
+        <translation type="unfinished">Етикетка</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Label font:</source>
-        <translation type="unfinished">Etiketin fontti:</translation>
+        <translation type="unfinished">Шрифт етикетки:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Label color:</source>
-        <translation type="unfinished">Etiketin väri:</translation>
+        <translation type="unfinished">Колір етикетки:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Number Format</source>
-        <translation>Numeron muoto</translation>
+        <translation type="unfinished">Формат номера</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Decimal separator:</source>
-        <translation>Desimaalierotin:</translation>
+        <translation type="unfinished">Десятковий роздільник:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Label Format</source>
-        <translation>Selitteen muoto</translation>
+        <translation type="unfinished">Формат етикетки</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Linear Dimensions</source>
-        <translation>Lineaariset mitat</translation>
+        <translation type="unfinished">Лінійні розміри</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Format:</source>
-        <translation>&amp;Muotoile:</translation>
+        <translation type="unfinished">Формат:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>P&amp;recision:</source>
-        <translation>Tarkkuus:</translation>
+        <translation type="unfinished">Точність:</translation>
     </message>
     <message>
         <location line="+32"/>
         <location line="+60"/>
         <source>Show trailing zeros</source>
-        <translation>Näytä etunollat</translation>
+        <translation type="unfinished">Показати кінцеві нулі</translation>
     </message>
     <message>
         <location line="-50"/>
         <source>Angular Dimensions</source>
-        <translation>Kulmamitat</translation>
+        <translation type="unfinished">Кутові розміри</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>F&amp;ormat:</source>
-        <translation>M&amp;uotoile:</translation>
+        <translation type="unfinished">Формат:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Pre&amp;cision:</source>
-        <translation>Tark&amp;kuus:</translation>
+        <translation type="unfinished">Точність:</translation>
     </message>
     <message>
         <location line="+32"/>
         <location line="+19"/>
         <source>Preview</source>
-        <translation>Esikatselu</translation>
+        <translation type="unfinished">Попередній перегляд</translation>
     </message>
 </context>
 <context>
@@ -3239,14 +3237,12 @@ Haluatko palauttaa sen?</translation>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
-        <translation>Hakemisto
-&quot;%1&quot;
-on jo luettelossa.</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Folder not added</source>
-        <translation>Hakemistoa ei lisätty</translation>
+        <translation type="unfinished">Папка не додана</translation>
     </message>
 </context>
 <context>
@@ -3254,7 +3250,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/View/DisplayDistanceAngle/DisplayDistanceAngleInit.js" line="+2"/>
         <source>Display &amp;Distance/Angle</source>
-        <translation>Näytä &amp;etäisyys/kulma</translation>
+        <translation type="unfinished">Відображення відстані/кута</translation>
     </message>
 </context>
 <context>
@@ -3262,27 +3258,27 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Modify/Divide/Divide.js" line="+68"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline</source>
-        <translation>Valitse viiva, kaari, ympyrä, ellipsi, käyrä tai murtoviiva</translation>
+        <translation type="unfinished">Виберіть пряму, дугу, коло, еліпс, сплайн або полілінію</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Choose line, arc, circle or ellipse</source>
-        <translation>Valitse viiva, kaari, ympyrä tai ellipsi</translation>
+        <translation type="unfinished">Виберіть лінію, дугу, коло або еліпс</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Specify point</source>
-        <translation>Määrittele piste</translation>
+        <translation type="unfinished">Вкажіть точку</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Specify second point</source>
-        <translation>Määrittele toinen piste</translation>
+        <translation type="unfinished">Вкажіть другий пункт</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Divide/DivideInit.js" line="+2"/>
         <source>&amp;Divide</source>
-        <translation>&amp;Jaa</translation>
+        <translation type="unfinished">Поділ</translation>
     </message>
 </context>
 <context>
@@ -3290,7 +3286,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/View/DraftMode/DraftMode.js" line="+86"/>
         <source>&amp;Draft Mode</source>
-        <translation>&amp;Vedostila</translation>
+        <translation type="unfinished">Черновий режим</translation>
     </message>
 </context>
 <context>
@@ -3298,17 +3294,17 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Draw/Draw.js" line="+61"/>
         <source>Draw</source>
-        <translation>Piirrä</translation>
+        <translation type="unfinished">Жеребкування</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Draw</source>
-        <translation>&amp;Piirrä</translation>
+        <translation type="unfinished">Жеребкування</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Drawing Tools</source>
-        <translation>Piirtotyökalut</translation>
+        <translation type="unfinished">Креслярські інструменти</translation>
     </message>
 </context>
 <context>
@@ -3316,12 +3312,12 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Draw/DrawBasedOnRectanglePP.js" line="+73"/>
         <source>First corner</source>
-        <translation>Ensimmäinen kulma</translation>
+        <translation type="unfinished">Перший поворот</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Second corner</source>
-        <translation>Toinen kulma</translation>
+        <translation type="unfinished">Другий поворот</translation>
     </message>
 </context>
 <context>
@@ -3329,52 +3325,52 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Draw/DrawBasedOnRectangleSize.js" line="+46"/>
         <source>Top Left</source>
-        <translation>Ylävasemmalla</translation>
+        <translation type="unfinished">Вгорі зліва</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Top</source>
-        <translation>Ylhäällä</translation>
+        <translation type="unfinished">Топ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Top Right</source>
-        <translation>Yläoikealla</translation>
+        <translation type="unfinished">Вгорі праворуч</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Left</source>
-        <translation>Vasemmalla</translation>
+        <translation type="unfinished">Ліворуч</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation>Keskellä</translation>
+        <translation type="unfinished">Середній</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation>Oikealla</translation>
+        <translation type="unfinished">Так</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom Left</source>
-        <translation>Alavasen</translation>
+        <translation type="unfinished">Внизу зліва</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation>Alhaalla</translation>
+        <translation type="unfinished">Дно</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom Right</source>
-        <translation>Alaoikealle</translation>
+        <translation type="unfinished">Внизу праворуч</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>Position</source>
-        <translation>Sijainti</translation>
+        <translation type="unfinished">Посада</translation>
     </message>
 </context>
 <context>
@@ -3382,17 +3378,17 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Draw/DrawBasedOnThreeCircles.js" line="+72"/>
         <source>First arc or circle</source>
-        <translation>Ensimmäinen kaari tai ympyrä</translation>
+        <translation type="unfinished">Перша дуга або коло</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Second arc or circle</source>
-        <translation>Toinen kaari tai ympyrä</translation>
+        <translation type="unfinished">Друга дуга або коло</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Third arc or circle</source>
-        <translation>Kolmas kaari tai ympyrä</translation>
+        <translation type="unfinished">Третя дуга або коло</translation>
     </message>
 </context>
 <context>
@@ -3400,7 +3396,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawBoundingBox/DrawBoundingBox.js" line="+71"/>
         <source>Draw &amp;Bounding Box</source>
-        <translation>Piirrä &amp;Rajauskehykseen</translation>
+        <translation type="unfinished">Draw Bounding Box</translation>
     </message>
 </context>
 <context>
@@ -3408,132 +3404,132 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/DrawExamples.js" line="+51"/>
         <source>&amp;Draw</source>
-        <translation>&amp;Piirrä</translation>
+        <translation type="unfinished">Жеребкування</translation>
     </message>
 </context>
 <context>
     <name>DrawFromCSV</name>
     <message>
-        <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV.js" line="+145"/>
+        <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV.js" line="+142"/>
+        <source>No import file selected.</source>
+        <translation type="unfinished">Файл імпорту не вибрано.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <location line="+15"/>
         <location line="+1275"/>
         <source>Command ended.</source>
-        <translation type="unfinished">Komento päättyi.</translation>
+        <translation type="unfinished">Командування закінчилося.</translation>
     </message>
     <message>
-        <location line="-1293"/>
-        <source>No import file selected.</source>
-        <translation type="unfinished">Tuontitiedostoa ei ole valittu.</translation>
-    </message>
-    <message>
-        <location line="+15"/>
+        <location line="-1278"/>
         <source>No file opened.</source>
-        <translation type="unfinished">Tiedostoa ei ole avattu.</translation>
+        <translation type="unfinished">Файл не відкрито.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>DrawFromCSV script (v3.03) by CVH</source>
-        <translation type="unfinished">DrawFromCSV-skripti (v3.03) CVH:n toimesta</translation>
+        <translation type="unfinished">Скрипт DrawFromCSV (v3.03) від CVH</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Cast CSV</source>
-        <translation type="unfinished">Cast CSV</translation>
+        <translation type="unfinished">Литий CSV</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Reading from file: %1</source>
-        <translation type="unfinished">Lukeminen tiedostosta: %1</translation>
+        <translation type="unfinished">Читання з файлу: %1</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Switched to comma/dot CSV style.</source>
-        <translation type="unfinished">Vaihdettu pilkku/piste CSV-tyyliin.</translation>
+        <translation type="unfinished">Переключено на стиль CSV з комами/крапками.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Switched to semicolon/dot CSV style.</source>
-        <translation type="unfinished">Siirryttiin puolipiste/piste CSV-tyyliin.</translation>
+        <translation type="unfinished">Переключено на стиль CSV з крапкою з комою/крапкою.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Switched to semicolon/comma CSV style.</source>
-        <translation type="unfinished">Vaihdettu puolipiste/pilkku CSV-tyyliin.</translation>
+        <translation type="unfinished">Переключено на стиль CSV з крапкою з комою.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Unsupported or invalid CSV style, ignored. Text line: %1</source>
-        <translation type="unfinished">Ei tuettu tai virheellinen CSV-tyyli, jätetään huomiotta. Tekstirivi: %1</translation>
+        <translation type="unfinished">Непідтримуваний або невірний стиль CSV ігнорується. Текстовий рядок: %1</translation>
     </message>
     <message>
         <location line="+82"/>
         <source>Setting new relative origin failed, ignored. Text line: %1</source>
-        <translation type="unfinished">Uuden suhteellisen alkuperän asettaminen epäonnistui, ei huomioitu. Tekstirivi: %1</translation>
+        <translation type="unfinished">Встановлення нового відносного початку координат не вдалося, ігнорується. Текстовий рядок: %1</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Setting new rounding radius failed, ignored. Text line: %1</source>
-        <translation type="unfinished">Uuden pyöristyssäteen asettaminen epäonnistui, ei huomioitu. Tekstirivi: %1</translation>
+        <translation type="unfinished">Не вдалося встановити новий радіус округлення, ігнорується. Текстовий рядок: %1</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Rounding polylines requires QCAD Professional, ignored. Text line: %1</source>
-        <translation type="unfinished">Moniviivojen pyöristäminen vaatii QCAD Professionalin, jota ei ole huomioitu. Tekstirivi: %1</translation>
+        <translation type="unfinished">Округлення поліліній вимагає QCAD Professional, ігнорується. Текстовий рядок: %1</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Can not switch to non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished">Ei voi vaihtaa olemassa oleviin kerroksiin, ei huomioitu. Tekstirivi: %1%2 Kerros: %3</translation>
+        <translation type="unfinished">Неможливо перейти на неіснуючі шари, ігнорується. Текстовий рядок: %1%2 Шар: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct set active &apos;Layer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished">Ei oikein asetettu aktiivinen &apos;Layer&apos;-kytkin, ei huomioitu. Tekstirivi: %1</translation>
+        <translation type="unfinished">Неправильно встановлений активний перемикач &quot;Шар&quot;, ігнорується. Текстовий рядок: %1</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Not a correct &apos;New layer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished">Ei oikea &apos;Uusi kerros&apos; -kytkin, ei huomioitu. Tekstirivi: %1</translation>
+        <translation type="unfinished">Неправильний перемикач &quot;Новий шар&quot;, ігнорується. Текстовий рядок: %1</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Can not hide non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished">Ei voi piilottaa olemattomia kerroksia, ei huomioitu. Tekstirivi: %1%2 Kerros: %3</translation>
+        <translation type="unfinished">Не можна приховати неіснуючі шари, ігноруються. Текстовий рядок: %1%2 Шар: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;HideLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished">Ei oikea &apos;HideLayer&apos;-kytkin, ei huomioitu. Tekstirivi: %1</translation>
+        <translation type="unfinished">Не коректний перемикач &apos;HideLayer&apos;, ігнорується. Текстовий рядок: %1</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Can not freeze non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished">Ei voi jäädyttää olemassa olevia kerroksia, ei huomioitu. Tekstirivi: %1%2 Kerros: %3</translation>
+        <translation type="unfinished">Не можна заморожувати неіснуючі шари, ігнорується. Текстовий рядок: %1%2 Шар: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;FreezeLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished">Ei oikea &apos;FreezeLayer&apos;-kytkin, ei huomioitu. Tekstirivi: %1</translation>
+        <translation type="unfinished">Неправильний перемикач &apos;FreezeLayer&apos;, ігнорується. Текстовий рядок: %1</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Can not lock non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished">Ei voi lukita ei-olevia kerroksia, ei huomioitu. Tekstirivi: %1%2 Kerros: %3</translation>
+        <translation type="unfinished">Неможливо заблокувати неіснуючі шари, ігнорується. Текстовий рядок: %1%2 Шар: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;LockLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished">Ei oikea &apos;LockLayer&apos;-kytkin, ei huomioitu. Tekstirivi: %1</translation>
+        <translation type="unfinished">Не коректний перемикач &apos;LockLayer&apos;, ігнорується. Текстовий рядок: %1</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Can not allow non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished">Ei voi sallia ei-olevia kerroksia, ei huomioitu. Tekstirivi: %1%2 Kerros: %3</translation>
+        <translation type="unfinished">Не можна допускати неіснуючі шари, ігноруються. Текстовий рядок: %1%2 Шар: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;AllowLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished">Ei oikea &apos;AllowLayer&apos;-kytkin, ei huomioitu. Tekstirivi: %1</translation>
+        <translation type="unfinished">Не коректний перемикач &apos;AllowLayer&apos;, ігнорується. Текстовий рядок: %1</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -3558,7 +3554,7 @@ on jo luettelossa.</translation>
         <location line="+33"/>
         <location line="+135"/>
         <source>Low field count.</source>
-        <translation type="unfinished">Alhainen kenttien määrä.</translation>
+        <translation type="unfinished">Низька кількість полів.</translation>
     </message>
     <message>
         <location line="-656"/>
@@ -3587,7 +3583,7 @@ on jo luettelossa.</translation>
         <location line="+25"/>
         <location line="+23"/>
         <source>Odd field count.</source>
-        <translation type="unfinished">Pariton kenttien lukumäärä.</translation>
+        <translation type="unfinished">Непарна кількість полів.</translation>
     </message>
     <message>
         <location line="-655"/>
@@ -3599,7 +3595,7 @@ on jo luettelossa.</translation>
         <location line="+188"/>
         <location line="+168"/>
         <source>Rv Invalid.</source>
-        <translation type="unfinished">Rv Virheellinen.</translation>
+        <translation type="unfinished">Rv Недійсний.</translation>
     </message>
     <message>
         <location line="-640"/>
@@ -3615,7 +3611,7 @@ on jo luettelossa.</translation>
         <location line="+33"/>
         <location line="+62"/>
         <source>Rv1 Invalid.</source>
-        <translation type="unfinished">Rv1 Virheellinen.</translation>
+        <translation type="unfinished">Rv1 Недійсний.</translation>
     </message>
     <message>
         <location line="-503"/>
@@ -3633,7 +3629,7 @@ on jo luettelossa.</translation>
         <location line="+33"/>
         <location line="+35"/>
         <source>Rv2 Invalid.</source>
-        <translation type="unfinished">Rv2 Invalid.</translation>
+        <translation type="unfinished">Rv2 Недійсний.</translation>
     </message>
     <message>
         <location line="-510"/>
@@ -3646,7 +3642,7 @@ on jo luettelossa.</translation>
         <location line="+49"/>
         <location line="+67"/>
         <source>Equal positions.</source>
-        <translation type="unfinished">Tasa-arvoiset asemat.</translation>
+        <translation type="unfinished">Рівні позиції.</translation>
     </message>
     <message>
         <location line="-265"/>
@@ -3659,7 +3655,7 @@ on jo luettelossa.</translation>
         <location line="+22"/>
         <location line="+33"/>
         <source>Radius Invalid.</source>
-        <translation type="unfinished">Säde virheellinen.</translation>
+        <translation type="unfinished">Радіус недійсний.</translation>
     </message>
     <message>
         <location line="-298"/>
@@ -3669,22 +3665,22 @@ on jo luettelossa.</translation>
         <location line="+35"/>
         <location line="+150"/>
         <source>Angle Invalid.</source>
-        <translation type="unfinished">Kulma Virheellinen.</translation>
+        <translation type="unfinished">Кут невірний.</translation>
     </message>
     <message>
         <location line="-527"/>
         <source>Angle1 Invalid.</source>
-        <translation type="unfinished">Kulma1 Virheellinen.</translation>
+        <translation type="unfinished">Кут1 Недійсний.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angle2 Invalid.</source>
-        <translation type="unfinished">Kulma2 Virheellinen.</translation>
+        <translation type="unfinished">Кут 2 Недійсний.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Equal angles.</source>
-        <translation type="unfinished">Yhtä suuret kulmat.</translation>
+        <translation type="unfinished">Рівні кути.</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -3694,7 +3690,7 @@ on jo luettelossa.</translation>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 1-2.</source>
-        <translation type="unfinished">Tasa-arvoiset paikat 1-2.</translation>
+        <translation type="unfinished">Рівні позиції 1-2.</translation>
     </message>
     <message>
         <location line="-286"/>
@@ -3706,7 +3702,7 @@ on jo luettelossa.</translation>
         <location line="+32"/>
         <location line="+35"/>
         <source>Rv3 Invalid.</source>
-        <translation type="unfinished">Rv3 Invalid.</translation>
+        <translation type="unfinished">Rv3 Недійсний.</translation>
     </message>
     <message>
         <location line="-354"/>
@@ -3716,7 +3712,7 @@ on jo luettelossa.</translation>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 1-3.</source>
-        <translation type="unfinished">Tasa-arvoiset paikat 1-3.</translation>
+        <translation type="unfinished">Рівні позиції 1-3.</translation>
     </message>
     <message>
         <location line="-287"/>
@@ -3726,7 +3722,7 @@ on jo luettelossa.</translation>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 2-3.</source>
-        <translation type="unfinished">Tasa-arvoiset asemat 2-3.</translation>
+        <translation type="unfinished">Рівні позиції 2-3.</translation>
     </message>
     <message>
         <location line="-284"/>
@@ -3734,28 +3730,28 @@ on jo luettelossa.</translation>
         <location line="+168"/>
         <location line="+2"/>
         <source>Near co-linear positions.</source>
-        <translation type="unfinished">Lähellä yhteismitallisia kantoja.</translation>
+        <translation type="unfinished">Поблизу співвісних позицій.</translation>
     </message>
     <message>
         <location line="-168"/>
         <source>Arc Invalid.</source>
-        <translation type="unfinished">Arc Invalid.</translation>
+        <translation type="unfinished">Дуга недійсна.</translation>
     </message>
     <message>
         <location line="+46"/>
         <location line="+47"/>
         <source>Center Invalid.</source>
-        <translation type="unfinished">Keskusta Virheellinen.</translation>
+        <translation type="unfinished">Центр недійсний.</translation>
     </message>
     <message>
         <location line="-21"/>
         <source>Radius too small.</source>
-        <translation type="unfinished">Säde liian pieni.</translation>
+        <translation type="unfinished">Занадто малий радіус.</translation>
     </message>
     <message>
         <location line="+98"/>
         <source>Circle Invalid.</source>
-        <translation type="unfinished">Circle Invalid.</translation>
+        <translation type="unfinished">Обведіть кружечком &quot;Недійсний&quot;.</translation>
     </message>
     <message>
         <location line="+79"/>
@@ -3763,45 +3759,45 @@ on jo luettelossa.</translation>
         <location line="+30"/>
         <location line="+35"/>
         <source>Rv4 Invalid.</source>
-        <translation type="unfinished">Rv4 Invalid.</translation>
+        <translation type="unfinished">Rv4 Недійсний.</translation>
     </message>
     <message>
         <location line="-97"/>
         <location line="+33"/>
         <source>Equal positions 1-4.</source>
-        <translation type="unfinished">Tasa-arvoiset paikat 1-4.</translation>
+        <translation type="unfinished">Рівноправні позиції 1-4.</translation>
     </message>
     <message>
         <location line="-32"/>
         <location line="+33"/>
         <source>Equal positions 2-4.</source>
-        <translation type="unfinished">Tasa-arvoiset asemat 2-4.</translation>
+        <translation type="unfinished">Рівноправні позиції 2-4.</translation>
     </message>
     <message>
         <location line="-32"/>
         <location line="+33"/>
         <source>Equal positions 3-4.</source>
-        <translation type="unfinished">Tasa-arvoiset asemat 3-4.</translation>
+        <translation type="unfinished">Рівні позиції 3-4.</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Size Invalid.</source>
-        <translation type="unfinished">Koko virheellinen.</translation>
+        <translation type="unfinished">Розмір невірний.</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Size in X Invalid.</source>
-        <translation type="unfinished">Koko X:nä Väärin.</translation>
+        <translation type="unfinished">Розмір в X Невірно.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Size in Y Invalid.</source>
-        <translation type="unfinished">Koko Y:ssä Virheellinen.</translation>
+        <translation type="unfinished">Розмір в Y Невірно.</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Polygon: less than 5 references.</source>
-        <translation type="unfinished">Monikulmio: alle 5 viitettä.</translation>
+        <translation type="unfinished">Полігон: менше 5 посилань.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3809,187 +3805,107 @@ on jo luettelossa.</translation>
         <location line="+26"/>
         <location line="+28"/>
         <source>Rv%1 Invalid.</source>
-        <translation type="unfinished">Rv%1 Virheellinen.</translation>
+        <translation type="unfinished">Rv%1 Недійсний.</translation>
     </message>
     <message>
         <location line="-61"/>
         <source>Polyline, less than 2 references.</source>
-        <translation type="unfinished">Polylinja, alle 2 viitettä.</translation>
+        <translation type="unfinished">Полілінія, менше 2 посилань.</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Bulge%1 Invalid.</source>
-        <translation type="unfinished">Bulge%1 Virheellinen.</translation>
+        <translation type="unfinished">Опуклість%1 Невірно.</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Unsupported QCAD Professional feature.</source>
-        <translation type="unfinished">QCAD Professionalin tukematon ominaisuus.</translation>
+        <translation type="unfinished">Непідтримувана функція QCAD Professional.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>3th degree fit point Spline, less than 3 references.</source>
-        <translation type="unfinished">3. asteen sovituspiste Spline, alle 3 viitettä.</translation>
+        <translation type="unfinished">точка посадки 3-го ступеня Сплайн, менше 3 посилань.</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>3th degree control point Spline, less than 4 references.</source>
-        <translation type="unfinished">3. asteen ohjauspiste Spline, alle 4 viitettä.</translation>
+        <translation type="unfinished">контрольна точка 3-го ступеня Сплайн, менше 4-х посилань.</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Height Invalid.</source>
-        <translation type="unfinished">Korkeus virheellinen.</translation>
+        <translation type="unfinished">Зростання не відповідає нормі.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Width Invalid.</source>
-        <translation type="unfinished">Leveys virheellinen.</translation>
+        <translation type="unfinished">Width Invalid.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Vert. alignment Invalid.</source>
-        <translation type="unfinished">Vert. kohdistus Virheellinen.</translation>
+        <translation type="unfinished">Вирівнювання по вертикалі Невірно.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Horz. alignment Invalid.</source>
-        <translation type="unfinished">Horz. kohdistus Virheellinen.</translation>
+        <translation type="unfinished">Вирівнювання по горизонталі Невірно.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Drawing direction Invalid.</source>
-        <translation type="unfinished">Piirustussuunta Virheellinen.</translation>
+        <translation type="unfinished">Напрямок малювання Неправильний.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Line spacing style Invalid.</source>
-        <translation type="unfinished">Rivivälin tyyli Virheellinen.</translation>
+        <translation type="unfinished">Стиль міжрядкового інтервалу Invalid.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Line spacing Invalid.</source>
-        <translation type="unfinished">Riviväli Virheellinen.</translation>
+        <translation type="unfinished">Міжрядковий інтервал Неправильний.</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Unsupported method. Text line: %1</source>
-        <translation type="unfinished">Ei tuettu menetelmä. Tekstirivi: %1</translation>
+        <translation type="unfinished">Непідтримуваний метод. Текстовий рядок: %1</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Error with first optional list.</source>
-        <translation type="unfinished">Virhe ensimmäisessä valinnaisessa luettelossa.</translation>
+        <translation type="unfinished">Помилка з першим необов&apos;язковим списком.</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Error with second optional list.</source>
-        <translation type="unfinished">Virhe toisen valinnaisen luettelon kanssa.</translation>
+        <translation type="unfinished">Помилка з другим необов&apos;язковим списком.</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Not a correct entry, ignored. Text line: %1 &gt; %2</source>
-        <translation type="unfinished">Ei oikea merkintä, ei huomioitu. Tekstirivi: %1 &gt; %2</translation>
+        <translation type="unfinished">Неправильний запис, ігнорується. Текстовий рядок: %1 &gt; %2</translation>
     </message>
     <message>
         <location line="+80"/>
         <source>Casted entries: %1 out of %2 text lines</source>
-        <translation type="unfinished">Valetut merkinnät: %1 %2 tekstirivistä %2 tekstiriviä</translation>
+        <translation type="unfinished">Закинуті записи: %1 з %2 текстових рядків</translation>
     </message>
     <message>
-        <location line="+5"/>
-        <source>Nothing casted.</source>
-        <translation type="unfinished">Mitään ei ole heitetty.</translation>
-    </message>
-    <message>
-        <location line="+227"/>
-        <source>Attributes empty. Text line: %1</source>
-        <translation type="unfinished">Attribuutit tyhjiä. Tekstirivi: %1</translation>
-    </message>
-    <message>
-        <location line="+24"/>
-        <source>Not a correct layer name, ignored. Text line: %1%2 Name: %3</source>
-        <translation type="unfinished">Ei oikea tason nimi, ei huomioitu. Tekstirivi: %1%2 Nimi: %3</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Layer doesn&apos;t exist, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished">Kerros ei ole olemassa, ei huomioitu. Tekstirivi: %1%2 Kerros: %3</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Not a correct color, ignored. Text line: %1%2 Color: %3</source>
-        <translation type="unfinished">Ei oikea väri, ei huomioitu. Tekstirivi: %1%2 Väri: %3</translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</source>
-        <translation type="unfinished">Ei oikea Lineweight, ei huomioitu. Tekstirivi: %1%2 Paino: %3</translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>Not a correct Linetype, ignored. Text line: %1%2 Type: %3</source>
-        <translation type="unfinished">Ei oikea linjatyyppi, ei huomioitu. Tekstirivi: %1%2 Tyyppi: %3</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Not a correct Linetype scale, ignored. Text line: %1%2 Scale: %3</source>
-        <translation type="unfinished">Ei oikea Linetype-asteikko, ei huomioitu. Tekstirivi: %1%2 Mittakaava: %3</translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>Unsupported attribute, ignored. Text line: %1 &gt; %2</source>
-        <translation type="unfinished">Ei tuettu määrite, jätetään huomiotta. Tekstirivi: %1 &gt; %2</translation>
-    </message>
-    <message>
-        <location line="+48"/>
-        <source>Not a correct layer name. Text line: %1%2 Name: %3</source>
-        <translation type="unfinished">Ei oikea tason nimi. Tekstirivi: %1%2 Nimi: %3</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Parent layer doesn&apos;t exist. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished">Vanhempaa kerrosta ei ole olemassa. Tekstirivi: %1%2 Kerros: %3</translation>
-    </message>
-    <message>
-        <location line="+31"/>
-        <source>Not a correct color. Text line: %1%2 Color: %3</source>
-        <translation type="unfinished">Ei oikea väri. Tekstirivi: %1%2 Väri: %3</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Not a correct Lineweight. Text line: %1%2 Weight: %3</source>
-        <translation type="unfinished">Ei oikea Lineweight. Tekstirivi: %1%2 Paino: %3</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Not a correct Linetype. Text line: %1%2 Type: %3</source>
-        <translation type="unfinished">Ei oikea linjatyyppi. Tekstirivi: %1%2 Tyyppi: %3</translation>
-    </message>
-    <message>
-        <location line="+18"/>
-        <source>Add/Update layer ignored.</source>
-        <translation type="unfinished">Lisää/päivitä kerros huomioimatta.</translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>Updated layer: %1</source>
-        <translation type="unfinished">Päivitetty kerros: %1</translation>
+        <location line="+2"/>
+        <source>Importing CSV complete. Command ended.</source>
+        <translation type="unfinished">Імпорт CSV завершено. Команду завершено.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Added new layer: %1</source>
-        <translation type="unfinished">Lisätty uusi kerros: %1</translation>
+        <source>Nothing casted.</source>
+        <translation type="unfinished">Нічого литого.</translation>
     </message>
     <message>
-        <location line="-447"/>
-        <source>Importing CSV complete. Command ended.</source>
-        <translation type="unfinished">CSV-tuonti valmis. Komento päättyi.</translation>
-    </message>
-    <message>
-        <location line="+46"/>
+        <location line="+43"/>
         <source>Draw from CSV</source>
-        <translation type="unfinished">Piirrä CSV:stä</translation>
+        <translation type="unfinished">Отримати з CSV</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -3999,17 +3915,97 @@ on jo luettelossa.</translation>
     <message>
         <location line="+0"/>
         <source>All Files</source>
-        <translation type="unfinished">Kaikki tiedostot</translation>
+        <translation type="unfinished">Всі файли</translation>
+    </message>
+    <message>
+        <location line="+182"/>
+        <source>Attributes empty. Text line: %1</source>
+        <translation type="unfinished">Атрибути порожні. Текстовий рядок: %1</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Not a correct layer name, ignored. Text line: %1%2 Name: %3</source>
+        <translation type="unfinished">Неправильна назва шару, ігнорується. Текстовий рядок: %1%2 Назва: %3</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Layer doesn&apos;t exist, ignored. Text line: %1%2 Layer: %3</source>
+        <translation type="unfinished">Шар не існує, ігнорується. Текстовий рядок: %1%2 Шар: %3</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Not a correct color, ignored. Text line: %1%2 Color: %3</source>
+        <translation type="unfinished">Неправильний колір ігнорується. Текстовий рядок: %1%2 Колір: %3</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</source>
+        <translation type="unfinished">Неправильна вага рядка, ігнорується. Текстовий рядок: %1%2 Вага: %3</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Not a correct Linetype, ignored. Text line: %1%2 Type: %3</source>
+        <translation type="unfinished">Неправильний тип лініатури, ігнорується. Текстовий рядок: %1%2 Тип: %3</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Not a correct Linetype scale, ignored. Text line: %1%2 Scale: %3</source>
+        <translation type="unfinished">Неправильний масштаб Linetype, ігнорується. Текстовий рядок: %1%2 Масштаб: %3</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Unsupported attribute, ignored. Text line: %1 &gt; %2</source>
+        <translation type="unfinished">Непідтримуваний атрибут, ігнорується. Текстовий рядок: %1 &gt; %2</translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Not a correct layer name. Text line: %1%2 Name: %3</source>
+        <translation type="unfinished">Неправильна назва шару. Текстовий рядок: %1%2 Назва: %3</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Parent layer doesn&apos;t exist. Text line: %1%2 Layer: %3</source>
+        <translation type="unfinished">Батьківський шар не існує. Текстовий рядок: %1%2 Шар: %3</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>Not a correct color. Text line: %1%2 Color: %3</source>
+        <translation type="unfinished">Неправильний колір. Текстовий рядок: %1%2 Колір: %3</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Not a correct Lineweight. Text line: %1%2 Weight: %3</source>
+        <translation type="unfinished">Неправильна вага рядка. Текстовий рядок: %1%2 Вага: %3</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Not a correct Linetype. Text line: %1%2 Type: %3</source>
+        <translation type="unfinished">Неправильний тип шрифту. Текстовий рядок: %1%2 Тип: %3</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Add/Update layer ignored.</source>
+        <translation type="unfinished">Додавання/оновлення шару ігнорується.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Updated layer: %1</source>
+        <translation type="unfinished">Оновлений шар: %1</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Added new layer: %1</source>
+        <translation type="unfinished">Додано новий шар: %1</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
         <source>&amp;Draw from CSV</source>
-        <translation type="unfinished">Piirrä CSV:stä</translation>
+        <translation type="unfinished">Отримати з CSV</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Draws entities based on textual entries in a CSV file</source>
-        <translation type="unfinished">Piirtää kokonaisuuksia CSV-tiedoston tekstimerkintöjen perusteella</translation>
+        <translation type="unfinished">Малює сутності на основі текстових записів у файлі CSV</translation>
     </message>
 </context>
 <context>
@@ -4017,12 +4013,12 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+92"/>
         <source>&amp;Draw Order</source>
-        <translation>&amp;Piirtojärjestys</translation>
+        <translation type="unfinished">Замовлення на проведення жеребкування</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Draw Order</source>
-        <translation>Piirtojärjestys</translation>
+        <translation type="unfinished">Замовлення на проведення жеребкування</translation>
     </message>
 </context>
 <context>
@@ -4030,92 +4026,92 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+70"/>
         <source>First vertex</source>
-        <translation>Ensimmäinen kärkipiste</translation>
+        <translation type="unfinished">Перша вершина</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Next vertex</source>
-        <translation>Seuraava kärkipiste</translation>
+        <translation type="unfinished">Наступна вершина</translation>
     </message>
     <message>
         <location line="+428"/>
         <source>close</source>
-        <translation>sulje</translation>
+        <translation type="unfinished">близький</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>undo</source>
-        <translation>kumoa</translation>
+        <translation type="unfinished">скасувати</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>redo</source>
-        <translation>tee uudelleen</translation>
+        <translation type="unfinished">переробити</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>arc</source>
-        <translation>kaari</translation>
+        <translation type="unfinished">дуга</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.ui" line="+23"/>
         <source>Close polyline</source>
-        <translation>Sulje murtoviiva</translation>
+        <translation type="unfinished">Замкнена ламана</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>,, C</source>
-        <translation>,, C</translation>
+        <translation type="unfinished">,, C</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Undo Previous Segment</source>
-        <translation>Kumoa edellinen segmentti</translation>
+        <translation type="unfinished">Скасувати попередній сегмент</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>,, U</source>
-        <translation>,, U</translation>
+        <translation type="unfinished">,, U</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Redo Segment</source>
-        <translation>Tee uudelleen segmentti</translation>
+        <translation type="unfinished">Повторний сегмент</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>,, R</source>
-        <translation>,, R</translation>
+        <translation type="unfinished">,, R</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Arc with radius:</source>
-        <translation>Kaari radiuksilla:</translation>
+        <translation type="unfinished">Дуга з радіусом:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>,, A</source>
-        <translation>,, A</translation>
+        <translation type="unfinished">,, A</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Sweep</source>
-        <translation>Pyyhintä</translation>
+        <translation type="unfinished">Зачистка</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Restrict length or angle</source>
-        <translation>Rajoita pituutta tai kulmaa</translation>
+        <translation type="unfinished">Обмеження довжини або кута</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolylineInit.js" line="+2"/>
         <source>&amp;Draw Polyline</source>
-        <translation>&amp;Piirrä murtoviiva</translation>
+        <translation type="unfinished">Намалювати полілінію</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw polyline with line and arc segments</source>
-        <translation>&amp;Piirrä murtoviiva linjan ja kaaren segmenteillä</translation>
+        <translation type="unfinished">Побудова ламаної з відрізками та дугами</translation>
     </message>
 </context>
 <context>
@@ -4123,7 +4119,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DrawingPreferences.js" line="+43"/>
         <source>Drawing &amp;Preferences</source>
-        <translation>Piirros &amp;omat asetukset</translation>
+        <translation type="unfinished">Налаштування малювання</translation>
     </message>
 </context>
 <context>
@@ -4131,15 +4127,16 @@ on jo luettelossa.</translation>
     <message numerus="yes">
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+54"/>
         <source>%n entity/ies duplicated</source>
-        <translation>
-            <numerusform>%n kohde monistettu</numerusform>
-            <numerusform>%n kohteet monistettu</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Duplicate/DuplicateInit.js" line="+2"/>
         <source>&amp;Duplicate</source>
-        <translation>&amp;Monista</translation>
+        <translation type="unfinished">Дублікат</translation>
     </message>
 </context>
 <context>
@@ -4147,144 +4144,144 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/EAction.js" line="+64"/>
         <source>Back</source>
-        <translation>Takaisin</translation>
+        <translation type="unfinished">Назад</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+2120"/>
         <source>Cancel</source>
-        <translation>Peruuta</translation>
+        <translation type="unfinished">Скасувати</translation>
     </message>
     <message>
         <location line="-2119"/>
         <source>Done</source>
-        <translation>Valmis</translation>
+        <translation type="unfinished">Зроблено</translation>
     </message>
     <message>
         <location line="+277"/>
         <location line="+140"/>
         <source>Active Tool:</source>
-        <translation>Aktiivinen työkalu:</translation>
+        <translation type="unfinished">Активний інструмент:</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>None</source>
-        <translation>Ei mitään</translation>
+        <translation type="unfinished">Немає</translation>
     </message>
     <message>
         <location line="+662"/>
         <source>Options</source>
-        <translation>Asetukset</translation>
+        <translation type="unfinished">Опції</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Main Tools</source>
-        <translation>Päätyökalut</translation>
+        <translation type="unfinished">Основні інструменти</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>CAD Tools</source>
-        <translation>CAD työkalut</translation>
+        <translation type="unfinished">Інструменти САПР</translation>
     </message>
     <message>
         <location line="+577"/>
         <source>Invalid position</source>
-        <translation type="unfinished">Virheellinen sijainti</translation>
+        <translation type="unfinished">Невірна позиція</translation>
     </message>
     <message>
         <location line="+177"/>
         <source>Entity is not in working set.</source>
-        <translation type="unfinished">Entiteetti ei ole työkokonaisuudessa.</translation>
+        <translation type="unfinished">Підприємство відсутнє в робочому наборі.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity is on a locked layer.</source>
-        <translation>Kohde on lukitussa tasossa.</translation>
+        <translation type="unfinished">Підприємство знаходиться на заблокованому шарі.</translation>
     </message>
     <message>
         <location line="+225"/>
         <source>Length:</source>
-        <translation>Pituus:</translation>
+        <translation type="unfinished">Довжина:</translation>
     </message>
     <message>
         <location line="+64"/>
         <source>Entity is not a block reference.</source>
-        <translation>Kohde ei ole lohkoviite.</translation>
+        <translation type="unfinished">Сутність не є блочним посиланням.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line or arc.</source>
-        <translation>Kohde ei ole viiva tai kaari.</translation>
+        <translation type="unfinished">Сутність не є лінією або дугою.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or polyline.</source>
-        <translation>Kohde ei ole viiva, kaari tai murtoviiva.</translation>
+        <translation type="unfinished">Сутність не є лінією, дугою або полілінією.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line.</source>
-        <translation>Kohde ei ole viiva.</translation>
+        <translation type="unfinished">Сутність - це не лінія.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc.</source>
-        <translation>Kohde ei ole kaari.</translation>
+        <translation type="unfinished">Сутність не є дугою.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc or circle.</source>
-        <translation>Kohde ei ole kaari tai ympyrä.</translation>
+        <translation type="unfinished">Сутність не є дугою або колом.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or circle.</source>
-        <translation>Kohde ei ole viiva, kaari tai ympyrä.</translation>
+        <translation type="unfinished">Сутність не є лінією, дугою або колом.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, spline, ellipse arc or polyline.</source>
-        <translation type="unfinished">Entiteetti ei ole viiva, kaari, spline, ellipsikaari tai polyline.</translation>
+        <translation type="unfinished">Сутність не є лінією, дугою, сплайном, дугою еліпса або полілінією.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc, circle or ellipse.</source>
-        <translation>Kohde ei ole kaari, ympyrä tai ellipsi.</translation>
+        <translation type="unfinished">Сутність не є дугою, колом або еліпсом.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle or ellipse.</source>
-        <translation>Kohde ei ole viiva, kaari, ympyrä tai ellipsi.</translation>
+        <translation type="unfinished">Сутність не є лінією, дугою, колом або еліпсом.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or polyline.</source>
-        <translation>Kohde ei ole viiva, kaari, ympyrä, ellipsi tai murtoviiva.</translation>
+        <translation type="unfinished">Сутність не є лінією, дугою, колом, еліпсом або ламаною.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or spline.</source>
-        <translation>Kohde ei ole viiva, kaari, ympyrä, ellipsi tai käyrä.</translation>
+        <translation type="unfinished">Сутність не є лінією, дугою, колом, еліпсом або сплайном.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, spline or polyline.</source>
-        <translation>Kohde ei ole viiva, kaari, ympyrä, käyrä tai murtoviiva.</translation>
+        <translation type="unfinished">Сутність не є лінією, дугою, колом, сплайном або полілінією.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
-        <translation>Kohde ei ole viiva, kaari, ympyrä, ellipsi, käyrä tai murtoviiva.</translation>
+        <translation type="unfinished">Сутність не є лінією, дугою, колом, еліпсом, сплайном або полілінією.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a polyline.</source>
-        <translation>Kohde ei ole murtoviiva.</translation>
+        <translation type="unfinished">Сутність не є полілінією.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a spline with fit points.</source>
-        <translation type="unfinished">Entiteetti ei ole spline, jossa on sovituspisteitä.</translation>
+        <translation type="unfinished">Сутність не є сплайном з точками прилягання.</translation>
     </message>
 </context>
 <context>
@@ -4292,33 +4289,33 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+58"/>
         <source>Show ECMAScript Shell</source>
-        <translation>Näytä ECMASkripin shell</translation>
+        <translation type="unfinished">Показати оболонку ECMAScript</translation>
     </message>
     <message>
         <location line="+56"/>
         <source>&amp;Script Shell</source>
-        <translation>&amp;Skripti shell</translation>
+        <translation type="unfinished">Скриптова оболонка</translation>
     </message>
     <message>
         <location line="+35"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
-        <translation>Skripti Shell</translation>
+        <translation type="unfinished">Скриптова оболонка</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShellDialog.ui" line="+20"/>
         <source>ECMAScript Shell</source>
-        <translation>ECMASkripti Shell</translation>
+        <translation type="unfinished">ECMAScript Shell</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You are about to enable the ECMAScript Shell.&lt;/p&gt;&lt;p&gt;Through the ECMAScript Shell you can &lt;span style=&quot; color:#ff0000;&quot;&gt;modify your drawings&lt;/span&gt; but also &lt;span style=&quot; color:#ff0000;&quot;&gt;delete files&lt;/span&gt; or &lt;span style=&quot; color:#ff0000;&quot;&gt;crash the application&lt;/span&gt; which can lead to &lt;span style=&quot; color:#ff0000;&quot;&gt;data loss&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;For inexperienced programmers, it is recommended to limit the use of the ECMAScript shell to the &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; which is considered to be &quot;safe&quot; to use.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Olet aikeissa sallia ECMASkripti shellin.&lt;/p&gt;&lt;p&gt;ECMAScript Shellin kautta voit&lt;span style=&quot; color:#ff0000;&quot;&gt;muokata piirrostasi&lt;/span&gt;mutta myös&lt;span style=&quot; color:#ff0000;&quot;&gt;poistaa tiedostoja&lt;/span&gt; tai &lt;span style=&quot; color:#ff0000;&quot;&gt;kaataa sovelluksen&lt;/span&gt;joka voi johtaa&lt;span style=&quot; color:#ff0000;&quot;&gt;tietojen menetykseen&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;Kokeneille ohjelmoijille suositellaan ECMASkriptine shellin rajoittamista&lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt;jota pidetään turvallisena käyttää.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ви збираєтеся увімкнути ECMAScript Shell.&lt;/p&gt;&lt;p&gt;За допомогою ECMAScript Shell ви можете &lt;span style=&quot; color:#ff0000;&quot;&gt;модифікувати свої креслення&lt;/span&gt;, а також &lt;span style=&quot; color:#ff0000;&quot;&gt;видаляти файли&lt;/span&gt; або &lt;span style=&quot; color:#ff0000;&quot;&gt;викликати збій програми&lt;/span&gt;, що може призвести до &lt;span style=&quot; color:#ff0000;&quot;&gt;втрати даних&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;Для недосвідчених програмістів рекомендується обмежити використання оболонки ECMAScript до &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt;, який вважається &quot;безпечним&quot; у використанні.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Don&apos;t show this dialog again</source>
-        <translation>Älä näytä tätä valintaikkunaa uudelleen</translation>
+        <translation type="unfinished">Більше не показувати це діалогове вікно</translation>
     </message>
 </context>
 <context>
@@ -4326,12 +4323,12 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Edit/Edit.js" line="+65"/>
         <source>Edit Tools</source>
-        <translation>Muokkaustyökalut</translation>
+        <translation type="unfinished">Інструменти редагування</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;Edit</source>
-        <translation>&amp;Muokkaa</translation>
+        <translation type="unfinished">Редагувати</translation>
     </message>
 </context>
 <context>
@@ -4339,12 +4336,12 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Block/EditBlock/EditBlockInit.js" line="+2"/>
         <source>&amp;Edit Block</source>
-        <translation>&amp;Muokkaa lohkoa</translation>
+        <translation type="unfinished">Блок редагування</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Edit contents of selected block</source>
-        <translation>Muokkaa valitun lohkon sisältöä</translation>
+        <translation type="unfinished">Редагування вмісту вибраного блоку</translation>
     </message>
 </context>
 <context>
@@ -4352,17 +4349,17 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Block/EditFromReference/EditFromReference.js" line="+55"/>
         <source>Choose block reference</source>
-        <translation>Valitse lohkon referenssipiste</translation>
+        <translation type="unfinished">Виберіть посилання на блок</translation>
     </message>
     <message>
         <location filename="../scripts/Block/EditFromReference/EditFromReferenceInit.js" line="+2"/>
         <source>E&amp;dit Block from Reference</source>
-        <translation>M&amp;uokkaa lohkoa viitteestä</translation>
+        <translation type="unfinished">Редагування блоку з довідника</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Edit block based on chosen block reference</source>
-        <translation>Muokkaa lohkoa, joka perustuu valittuun lohkoviitteeseen</translation>
+        <translation type="unfinished">Редагування блоку на основі обраного посилання на блок</translation>
     </message>
 </context>
 <context>
@@ -4370,12 +4367,12 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatch.js" line="+61"/>
         <source>Choose hatch</source>
-        <translation>Valitse kuviointi</translation>
+        <translation type="unfinished">Виберіть люк</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatchInit.js" line="+2"/>
         <source>Edit &amp;Hatch</source>
-        <translation>Muokkaa &amp;kuviointia</translation>
+        <translation type="unfinished">Редагувати люк</translation>
     </message>
 </context>
 <context>
@@ -4383,7 +4380,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Layer/EditLayer/EditLayerInit.js" line="+2"/>
         <source>&amp;Edit Layer</source>
-        <translation>&amp;Muokkaa tasoa</translation>
+        <translation type="unfinished">Редагування шару</translation>
     </message>
 </context>
 <context>
@@ -4391,7 +4388,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Block/EditMainDrawing/EditMainDrawingInit.js" line="+2"/>
         <source>&amp;Return to Main Drawing</source>
-        <translation>&amp;Palaa pääpiirustukseen</translation>
+        <translation type="unfinished">Повернутися до основного креслення</translation>
     </message>
 </context>
 <context>
@@ -4399,17 +4396,17 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Modify/EditText/EditText.js" line="+61"/>
         <source>Choose text</source>
-        <translation>Valitse teksti</translation>
+        <translation type="unfinished">Виберіть текст</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/EditText/EditTextInit.js" line="+2"/>
         <source>Edit Te&amp;xt</source>
-        <translation>Muokkaa te&amp;kstiä</translation>
+        <translation type="unfinished">Редагувати текст</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Edit text</source>
-        <translation>Muokkaa tekstiä</translation>
+        <translation type="unfinished">Редагувати текст</translation>
     </message>
 </context>
 <context>
@@ -4417,12 +4414,12 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/Ellipse.js" line="+85"/>
         <source>Ellipse Tools</source>
-        <translation>Ellipsityökalut</translation>
+        <translation type="unfinished">Ellipse Tools</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Ellipse</source>
-        <translation>&amp;Ellipsi</translation>
+        <translation type="unfinished">Еліпс</translation>
     </message>
 </context>
 <context>
@@ -4430,97 +4427,97 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPA.js" line="+74"/>
         <source>Center</source>
-        <translation>Keskipiste</translation>
+        <translation type="unfinished">Центр</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Major point of ellipse or major radius</source>
-        <translation>Ellipsin keskeinen piste tai keskeinen säde</translation>
+        <translation type="unfinished">Велика точка еліпса або великий радіус</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Major point of ellipse</source>
-        <translation>Ellipsin keskeinen piste</translation>
+        <translation type="unfinished">Велика точка еліпса</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Minor point of ellipse or minor radius</source>
-        <translation>Ellipsin toinen keskipiste tai toinen säde</translation>
+        <translation type="unfinished">Мала точка еліпса або малий радіус</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Minor point of ellipse</source>
-        <translation>Ellipsin toinen keskipiste</translation>
+        <translation type="unfinished">Мала точка еліпса</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Rotation angle</source>
-        <translation>Kiertokulma</translation>
+        <translation type="unfinished">Кут повороту</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Start parameter</source>
-        <translation>Aloitusparametri</translation>
+        <translation type="unfinished">Початковий параметр</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>End parameter</source>
-        <translation>Lopetusparametri</translation>
+        <translation type="unfinished">Кінцевий параметр</translation>
     </message>
     <message>
         <location line="+267"/>
         <source>Invalid major radius.</source>
-        <translation>Virheellinen pääsäde.</translation>
+        <translation type="unfinished">Неправильний головний радіус.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Major radius:</source>
-        <translation>Pääsäde:</translation>
+        <translation type="unfinished">Великий радіус:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Angle:</source>
-        <translation>Kulma:</translation>
+        <translation type="unfinished">Кут:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Minor radius:</source>
-        <translation>Toinen pääsäde:</translation>
+        <translation type="unfinished">Невеликий радіус:</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Start angle:</source>
-        <translation>Aloituskulma:</translation>
+        <translation type="unfinished">Початковий кут:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>End angle:</source>
-        <translation>Loppukulma:</translation>
+        <translation type="unfinished">Торцевий кут:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPA.ui" line="+17"/>
         <source>Direction:</source>
-        <translation>Suunta:</translation>
+        <translation type="unfinished">Напрямок:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (positive)</source>
-        <translation>Vastapäivään (positiivinen)</translation>
+        <translation type="unfinished">Проти годинникової стрілки (позитивний)</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation>Myötäpäivään (Negatiivinen)</translation>
+        <translation type="unfinished">За годинниковою стрілкою (негативний)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPAInit.js" line="+2"/>
         <source>&amp;Ellipse Arc</source>
-        <translation>&amp;Elliptinen kaari</translation>
+        <translation type="unfinished">Дуга еліпса</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw ellipse arc from center, major point, ratio and angles</source>
-        <translation>Piirrä elliptinen kaari keskeltä, pääpisteellä, suhteella ja kulmilla</translation>
+        <translation type="unfinished">Побудувати дугу еліпса з центру, основної точки, відношення та кутів</translation>
     </message>
 </context>
 <context>
@@ -4528,12 +4525,12 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseCPP/EllipseCPPInit.js" line="+2"/>
         <source>&amp;Ellipse (Center, Point, Ratio)</source>
-        <translation>&amp;Ellipsi (keskipiste, piste, suhde)</translation>
+        <translation type="unfinished">Еліпс (Центр, Точка, Відношення)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw full ellipse from center, major point and ratio</source>
-        <translation>Piirrä elliptinen kaari keskeltä, pääpisteellä ja suhteella</translation>
+        <translation type="unfinished">Накресліть повний еліпс з центру, головної точки та відношення</translation>
     </message>
 </context>
 <context>
@@ -4542,34 +4539,34 @@ on jo luettelossa.</translation>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDD.ui" line="+17"/>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDDialog.ui" line="+19"/>
         <source>X Diameter:</source>
-        <translation>X Halkaisija:</translation>
+        <translation type="unfinished">Х-образний діаметр:</translation>
     </message>
     <message>
         <location line="+23"/>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDDialog.ui" line="+80"/>
         <source>Y Diameter:</source>
-        <translation>Y Halkaisija:</translation>
+        <translation type="unfinished">Діаметр Y:</translation>
     </message>
     <message>
         <location line="+30"/>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDDialog.ui" line="-23"/>
         <source>Angle:</source>
-        <translation>Kulma:</translation>
+        <translation type="unfinished">Кут:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Reference Point:</source>
-        <translation>Viitepiste:</translation>
+        <translation type="unfinished">Точка відліку:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDInit.js" line="+2"/>
         <source>Ellipse with &amp;Diameters</source>
-        <translation>Ellipsi &amp;halkaisijoilla</translation>
+        <translation type="unfinished">Еліпс з діаметрами</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw ellipse with position and diameters</source>
-        <translation>Piirrä ellipsi sijainnilla ja halkaisijoilla</translation>
+        <translation type="unfinished">Накреслити еліпс з положенням та діаметрами</translation>
     </message>
 </context>
 <context>
@@ -4577,32 +4574,32 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuad.js" line="+82"/>
         <source>First line</source>
-        <translation>Ensimmäinen rivi</translation>
+        <translation type="unfinished">Перша лінія</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Second line</source>
-        <translation>Toinen linja</translation>
+        <translation type="unfinished">Друга лінія</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Third line</source>
-        <translation>Kolmas linja</translation>
+        <translation type="unfinished">Третя лінія</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Fourth line</source>
-        <translation>Neljäs linja</translation>
+        <translation type="unfinished">Четвертий рядок</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuadInit.js" line="+2"/>
         <source>Inscribed in Quadrilateral</source>
-        <translation>Merkitty nelikulmaisena</translation>
+        <translation type="unfinished">Укладено чотиристоронню угоду</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw ellipse inscribed in quadrilateral</source>
-        <translation>Piirrä ellipsi merkittynä nelikulmiossa</translation>
+        <translation type="unfinished">Накресліть еліпс, вписаний у чотирикутник</translation>
     </message>
 </context>
 <context>
@@ -4610,22 +4607,22 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffset/EllipseOffset.ui" line="+17"/>
         <source>Distance:</source>
-        <translation>Etäisyys:</translation>
+        <translation type="unfinished">Відстань:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Number:</source>
-        <translation>Numero:</translation>
+        <translation type="unfinished">Номер:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffset/EllipseOffsetInit.js" line="+2"/>
         <source>&amp;Parallel Curve (with Distance)</source>
-        <translation>&amp;Yhdensuuntainen käyrä (etäisyydellä)</translation>
+        <translation type="unfinished">Паралельна крива (з відстанню)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw parallel curve to ellipse</source>
-        <translation>Piirrä yhdensuuntainen käyrä ellipsiin</translation>
+        <translation type="unfinished">Побудувати паралельну криву до еліпса</translation>
     </message>
 </context>
 <context>
@@ -4633,17 +4630,17 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation>Numero:</translation>
+        <translation type="unfinished">Номер:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThroughInit.js" line="+2"/>
         <source>Parallel Curve (&amp;through Point)</source>
-        <translation>Yhdensuuntainen käyrä (&amp;pisteen kautta)</translation>
+        <translation type="unfinished">Паралельна крива (через точку)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw parallel curve to ellipse through point</source>
-        <translation>Piirrä yhdensuuntainen käyrä ellipsiin pisteen kautta</translation>
+        <translation type="unfinished">Провести паралельну криву до еліпса через точку</translation>
     </message>
 </context>
 <context>
@@ -4652,34 +4649,34 @@ on jo luettelossa.</translation>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRR.ui" line="+17"/>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRDialog.ui" line="+129"/>
         <source>X Radius:</source>
-        <translation>X säde:</translation>
+        <translation type="unfinished">Радіус Ікс:</translation>
     </message>
     <message>
         <location line="+23"/>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRDialog.ui" line="-10"/>
         <source>Y Radius:</source>
-        <translation>Y säde:</translation>
+        <translation type="unfinished">Радіус Y:</translation>
     </message>
     <message>
         <location line="+30"/>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRDialog.ui" line="-90"/>
         <source>Angle:</source>
-        <translation>Kulma:</translation>
+        <translation type="unfinished">Кут:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Reference Point:</source>
-        <translation>Viitepiste:</translation>
+        <translation type="unfinished">Точка відліку:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRInit.js" line="+2"/>
         <source>Ellipse with &amp;Radii</source>
-        <translation>Ellipsi &amp;säteellä</translation>
+        <translation type="unfinished">Еліпс з радіусами</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw ellipse with position and radii</source>
-        <translation>Piirrä ellipsi sijainnilla ja säteellä</translation>
+        <translation type="unfinished">Побудувати еліпс з позицією та радіусами</translation>
     </message>
 </context>
 <context>
@@ -4687,7 +4684,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Edit/Esc/EscInit.js" line="+2"/>
         <source>&amp;Escape</source>
-        <translation>&amp;Poistu</translation>
+        <translation type="unfinished">Втеча</translation>
     </message>
 </context>
 <context>
@@ -4695,7 +4692,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/BlockExamples/ExAddBlock/ExAddBlock.js" line="+85"/>
         <source>&amp;Create Block</source>
-        <translation>&amp;Luo lohko</translation>
+        <translation type="unfinished">Створити блок</translation>
     </message>
 </context>
 <context>
@@ -4703,12 +4700,12 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/ExAddLayer/ExAddLayer.js" line="+44"/>
         <source>Added layer &quot;MyLayer&quot;</source>
-        <translation>Lisätty taso &quot;Oma taso&quot;</translation>
+        <translation type="unfinished">Додано шар &quot;MyLayer&quot;</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Add Layer</source>
-        <translation>Lisää taso</translation>
+        <translation type="unfinished">Додати шар</translation>
     </message>
 </context>
 <context>
@@ -4716,17 +4713,17 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ExDeleteObject.js" line="+59"/>
         <source>Deleted line with ID %1</source>
-        <translation>Poistettu rivi tunnuksella % 1</translation>
+        <translation type="unfinished">Видалено рядок з ідентифікатором %1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>You can use &lt;i&gt;Edit &gt; Undo&lt;/i&gt; to restore the line entity.</source>
-        <translation>Voit &lt;i&gt; Muokkaa&gt; Kumoa&lt;/i&gt; palauttaaksesi viivakokonaisuuden.</translation>
+        <translation type="unfinished">Для відновлення сутності рядка можна скористатися командою &lt;i&gt;Редагування &gt; Відмінити&lt;/i&gt;.</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Add and Delete Line</source>
-        <translation>Lisää ja poista rivi</translation>
+        <translation type="unfinished">Додавання та видалення рядка</translation>
     </message>
 </context>
 <context>
@@ -4734,7 +4731,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExDirListing/ExDirListing.js" line="+66"/>
         <source>&amp;Directory Listing</source>
-        <translation>&amp;Hakemistolistaus</translation>
+        <translation type="unfinished">Внесення до каталогу</translation>
     </message>
 </context>
 <context>
@@ -4742,7 +4739,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExDrawColors/ExDrawColors.js" line="+66"/>
         <source>Draw &amp;Colors</source>
-        <translation>Piirrä &amp;Värit</translation>
+        <translation type="unfinished">Намалюй кольори</translation>
     </message>
 </context>
 <context>
@@ -4750,7 +4747,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExDrawFonts/ExDrawFonts.js" line="+85"/>
         <source>Draw &amp;Fonts</source>
-        <translation>Piirrä &amp;kirjasimet</translation>
+        <translation type="unfinished">Малювати шрифти</translation>
     </message>
 </context>
 <context>
@@ -4758,17 +4755,17 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExDumpPolyline/ExDumpPolyline.js" line="+48"/>
         <source>Clockwise polyline:</source>
-        <translation>Moniviiva myötäpäivään:</translation>
+        <translation type="unfinished">Полілінія за годинниковою стрілкою:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Counterclockwise polyline:</source>
-        <translation>Moniviiva astapäivään:</translation>
+        <translation type="unfinished">Полілінія проти годинникової стрілки:</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>&amp;Output Polyline Vertices</source>
-        <translation>&amp;Tulosta moniviivan kärkipisteet</translation>
+        <translation type="unfinished">Вивести вершини полілінії</translation>
     </message>
 </context>
 <context>
@@ -4776,12 +4773,12 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/ExLayerCustomProperty/ExLayerCustomProperty.js" line="+43"/>
         <source>Added custom property &quot;MyCustomProperty&quot; to layer &quot;0&quot;.</source>
-        <translation>Lisätty mukautettu ominaisuus &quot;MyCustomProperty&quot; tasoon &quot;0&quot;.</translation>
+        <translation type="unfinished">До шару &quot;0&quot; додано користувацьку властивість &quot;MyCustomProperty&quot;.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Add Custom Property to a Layer</source>
-        <translation>Lisää mukautettu ominaisuus tasoon</translation>
+        <translation type="unfinished">Додавання користувацької властивості до шару</translation>
     </message>
 </context>
 <context>
@@ -4789,22 +4786,22 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDove.js" line="+56"/>
         <source>First corner</source>
-        <translation>Ensimmäinen kulma</translation>
+        <translation type="unfinished">Перший поворот</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second corner</source>
-        <translation>Toinen kulma</translation>
+        <translation type="unfinished">Другий поворот</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint</source>
-        <translation>&amp;Yhdistävä liitos</translation>
+        <translation type="unfinished">З&apos;єднання типу &quot;ластівчин хвіст</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw a dovetail joint</source>
-        <translation>Piirrä sovitusliitos</translation>
+        <translation type="unfinished">Намалюйте з&apos;єднання &quot;ластівчин хвіст</translation>
     </message>
 </context>
 <context>
@@ -4812,7 +4809,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExMainWindow/ExMainWindow.js" line="+50"/>
         <source>&amp;Main Window</source>
-        <translation>&amp;Pääikkuna</translation>
+        <translation type="unfinished">Головне вікно</translation>
     </message>
 </context>
 <context>
@@ -4820,7 +4817,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/ExMandelbrot/ExMandelbrot.js" line="+48"/>
         <source>&amp;Mandelbrot Example</source>
-        <translation>&amp;Mandelbrot -esimerkki</translation>
+        <translation type="unfinished">Приклад Мандельброта</translation>
     </message>
 </context>
 <context>
@@ -4828,7 +4825,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/ExMathSpiral/ExMathSpiral.js" line="+73"/>
         <source>&amp;Spiral</source>
-        <translation>&amp;Spiraali</translation>
+        <translation type="unfinished">Спіраль</translation>
     </message>
 </context>
 <context>
@@ -4836,12 +4833,12 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal/ExMinimal.js" line="+12"/>
         <source>Hello World.</source>
-        <translation>Hei maailma.</translation>
+        <translation type="unfinished">Привіт, світе.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Minimal Example</source>
-        <translation>&amp;Pienin esimerkki</translation>
+        <translation type="unfinished">Мінімальний приклад</translation>
     </message>
 </context>
 <context>
@@ -4849,12 +4846,12 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.js" line="+51"/>
         <source>&amp;Minimal Example 2</source>
-        <translation>&amp;Pienin esimerkki 2</translation>
+        <translation type="unfinished">Мінімальний приклад 2</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+9"/>
         <source>&amp;Radius:</source>
-        <translation>&amp;Säde:</translation>
+        <translation type="unfinished">Радіус:</translation>
     </message>
 </context>
 <context>
@@ -4862,7 +4859,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExProcess/ExProcess.js" line="+81"/>
         <source>&amp;Run Process</source>
-        <translation>&amp;Suorita prosessi</translation>
+        <translation type="unfinished">Процес запуску</translation>
     </message>
 </context>
 <context>
@@ -4870,22 +4867,22 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExRegisterFileExporter/ExRegisterFileExporter.js" line="+37"/>
         <source>Example Files %1</source>
-        <translation>Esimerkkitiedostot %1</translation>
+        <translation type="unfinished">Приклади файлів %1</translation>
     </message>
     <message>
         <location line="+84"/>
         <source>Info</source>
-        <translation>Tiedot</translation>
+        <translation type="unfinished">Інформація</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Registered a file exporter for file type &quot;.example&quot;. Use File &gt; Save As to see the filter in action.</source>
-        <translation>Rekisteröity tiedoston vie tiedostotyypille &quot;.example&quot;. Näet suodattimen toiminnossa Tiedosto &gt; Tallenna nimellä nähdäksesi sudattimen käytössä.</translation>
+        <translation type="unfinished">Зареєстровано файловий експортер для файлів типу &quot;.example&quot;. Щоб побачити фільтр у дії, скористайтеся командою Файл &gt; Зберегти як.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Register File Exporter</source>
-        <translation>&amp;Rekisteröi tiedostojen viejä</translation>
+        <translation type="unfinished">Зареєструвати експортера файлів</translation>
     </message>
 </context>
 <context>
@@ -4893,27 +4890,27 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExRegisterFileImporter/ExRegisterFileImporter.js" line="+37"/>
         <source>Example Files %1</source>
-        <translation>Esimerkkitiedostot %1</translation>
+        <translation type="unfinished">Приклади файлів %1</translation>
     </message>
     <message>
         <location line="+54"/>
         <source>Read from file: &quot;%1&quot;</source>
-        <translation>Lue tiedostosta: &quot;%1&quot;</translation>
+        <translation type="unfinished">Зчитано з файлу: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Info</source>
-        <translation>Tiedot</translation>
+        <translation type="unfinished">Інформація</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Registered a file importer for file type &quot;.example&quot;. Use File &gt; Open to see the filter in action.</source>
-        <translation>Rekisteröity tuonnille  tiedostotyyppi &quot;.example&quot;. Näet suodattimen toiminnassa Tiedosto&gt; Avaa.</translation>
+        <translation type="unfinished">Зареєстровано імпортер файлів для типу файлів &quot;.example&quot;. Щоб побачити фільтр у дії, скористайтеся командою Файл &gt; Відкрити.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Register File Importer</source>
-        <translation>&amp;Rekisteröi tiedoston tuoja</translation>
+        <translation type="unfinished">Зареєструвати імпортер файлів</translation>
     </message>
 </context>
 <context>
@@ -4921,27 +4918,27 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExResizeWindow/ExResizeWindow.js" line="+60"/>
         <source>&amp;Resize Window</source>
-        <translation>&amp;Muuta ikkunan kokoa</translation>
+        <translation type="unfinished">Змінити розмір вікна</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExResizeWindow/ExResizeWindow.ui" line="+14"/>
         <source>Enter Size</source>
-        <translation>Anna koko</translation>
+        <translation type="unfinished">Введіть розмір</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Size:</source>
-        <translation>Koko:</translation>
+        <translation type="unfinished">Розмір:</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>1280x720 (720p) 16:9</source>
-        <translation>1280x720 (720 p) 16:9</translation>
+        <translation type="unfinished">1280x720 (720p) 16:9</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>1920x1080 (1080p, Full HD) 16:9</source>
-        <translation>1920x1080 (1080 p, Full HD) 16:9</translation>
+        <translation type="unfinished">1920x1080 (1080p, Full HD) 16:9</translation>
     </message>
 </context>
 <context>
@@ -4949,12 +4946,12 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExText/ExText.js" line="+69"/>
         <source>Text</source>
-        <translation>Teksti</translation>
+        <translation type="unfinished">Текст</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw text</source>
-        <translation>Piirrä teksti</translation>
+        <translation type="unfinished">Намалювати текст</translation>
     </message>
 </context>
 <context>
@@ -4962,17 +4959,17 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExThreePoints/ExThreePoints.js" line="+58"/>
         <source>Position</source>
-        <translation>Sijainti</translation>
+        <translation type="unfinished">Посада</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Three Points</source>
-        <translation>Kolme pistettä</translation>
+        <translation type="unfinished">Три точки</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw three points</source>
-        <translation>Piirrä kolme pistettä</translation>
+        <translation type="unfinished">Розіграш трьох очок</translation>
     </message>
 </context>
 <context>
@@ -4980,15 +4977,16 @@ on jo luettelossa.</translation>
     <message numerus="yes">
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
-        <translation>
-            <numerusform>Tapahtuma vaikutti %n kohteeseen.</numerusform>
-            <numerusform>Tapahtuma vaikutti %n kohteisiin.</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location line="+67"/>
         <source>&amp;Transaction Listener</source>
-        <translation>&amp;Tapahtuman kuuntelija</translation>
+        <translation type="unfinished">Слухач транзакцій</translation>
     </message>
 </context>
 <context>
@@ -4996,7 +4994,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExWidget/ExWidget.js" line="+28"/>
         <source>&amp;Widget</source>
-        <translation>&amp;Pienoisohjelma</translation>
+        <translation type="unfinished">Віджет</translation>
     </message>
 </context>
 <context>
@@ -5004,17 +5002,17 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlExport/ExXmlExport.js" line="+39"/>
         <source>All Files</source>
-        <translation>Kaikki tiedostot</translation>
+        <translation type="unfinished">Всі файли</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Export XML</source>
-        <translation>Vie XML</translation>
+        <translation type="unfinished">Експорт XML</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlExport/ExXmlExportInit.js" line="+2"/>
         <source>&amp;Export XML</source>
-        <translation>&amp;Vie XML</translation>
+        <translation type="unfinished">Експорт XML</translation>
     </message>
 </context>
 <context>
@@ -5022,17 +5020,17 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlImport/ExXmlImport.js" line="+73"/>
         <source>All Files</source>
-        <translation>Kaikki tiedostot</translation>
+        <translation type="unfinished">Всі файли</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Import XML</source>
-        <translation>Tuo XML</translation>
+        <translation type="unfinished">Імпорт XML</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlImport/ExXmlImportInit.js" line="+2"/>
         <source>&amp;Import XML</source>
-        <translation>&amp;Tuo XML</translation>
+        <translation type="unfinished">Імпорт XML</translation>
     </message>
 </context>
 <context>
@@ -5040,7 +5038,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/Examples.js" line="+55"/>
         <source>Script &amp;Examples</source>
-        <translation>Komentosarjan &amp;esimerkit</translation>
+        <translation type="unfinished">Приклади сценаріїв</translation>
     </message>
 </context>
 <context>
@@ -5048,57 +5046,57 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Modify/Explode/Explode.js" line="+30"/>
         <source>Modify</source>
-        <translation>Muokkaa</translation>
+        <translation type="unfinished">Змінити</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Explode</source>
-        <translation>Räjäytä</translation>
+        <translation type="unfinished">Вибух!</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
         <source>&amp;Explode</source>
-        <translation>&amp;Pura</translation>
+        <translation type="unfinished">Вибух!</translation>
     </message>
     <message>
-        <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+137"/>
-        <source>Spline approximation tolerance:</source>
-        <translation>Käyrän likiarvotoleranssi:</translation>
-    </message>
-    <message>
-        <location line="-118"/>
+        <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+19"/>
         <source>Explode splines to polylines with line segments</source>
-        <translation>Pura käyrät moniviivoiksi segmentteihin</translation>
+        <translation type="unfinished">Розбиття сплайнів на полілінії з відрізками</translation>
     </message>
     <message>
-        <location line="+125"/>
-        <source>Convert splines from texts to arcs or lines if appropriate</source>
-        <translation type="unfinished">Muunna splinit teksteistä tarvittaessa kaariksi tai viivoiksi</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Explode circles into polylines with two half circles</source>
-        <translation type="unfinished">Räjäytä ympyrät polyviivoiksi kahdella puolikkaalla ympyrällä</translation>
-    </message>
-    <message>
-        <location line="+90"/>
-        <source>Explode text glyphs to polylines</source>
-        <translation>Pura tekstit murtoviivoiksi</translation>
-    </message>
-    <message>
-        <location line="-80"/>
-        <source>Explode multiline texts into multiple simple text blocks</source>
-        <translation>Pura moniriviset tekstit useisiin yksinkertaisiin tekstilohkoihin</translation>
-    </message>
-    <message>
-        <location line="-41"/>
+        <location line="+104"/>
         <source>Spline segments:</source>
-        <translation>Käyrän segmentit:</translation>
+        <translation type="unfinished">Сплайн-сегменти:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Ellipse segments (per full ellipse):</source>
-        <translation>Ellipsin segmentit (koko ellipsissä):</translation>
+        <translation type="unfinished">Відрізки еліпса (за один повний еліпс):</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Spline approximation tolerance:</source>
+        <translation type="unfinished">Допуск апроксимації сплайна:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Convert splines from texts to arcs or lines if appropriate</source>
+        <translation type="unfinished">Перетворення сплайнів з текстів в дуги або лінії, якщо це необхідно</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Explode circles into polylines with two half circles</source>
+        <translation type="unfinished">Розбиття кіл на полілінії з двома півколами</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Explode multiline texts into multiple simple text blocks</source>
+        <translation type="unfinished">Розбиття багаторядкових текстів на кілька простих текстових блоків</translation>
+    </message>
+    <message>
+        <location line="+80"/>
+        <source>Explode text glyphs to polylines</source>
+        <translation type="unfinished">Розбиття текстових гліфів на полілінії</translation>
     </message>
 </context>
 <context>
@@ -5106,7 +5104,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Help/FAQ/FAQInit.js" line="+2"/>
         <source>FA&amp;Qs (online)</source>
-        <translation>UK&amp;K (online)</translation>
+        <translation type="unfinished">Поширені запитання (онлайн)</translation>
     </message>
 </context>
 <context>
@@ -5114,33 +5112,33 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/File/File.js" line="+65"/>
         <source>File Tools</source>
-        <translation>Tiedostotyökalut</translation>
+        <translation type="unfinished">Файлові інструменти</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;File</source>
-        <translation>&amp;Tiedosto</translation>
+        <translation type="unfinished">Файл</translation>
     </message>
     <message>
         <location line="+106"/>
         <location line="+76"/>
         <source>Format:</source>
-        <translation>Muoto:</translation>
+        <translation type="unfinished">Формат:</translation>
     </message>
     <message>
         <location line="-39"/>
         <source>Overwrite File?</source>
-        <translation>Korvataanko tiedosto?</translation>
+        <translation type="unfinished">Перезаписати файл?</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
-        <translation>Tiedosto &quot;%1&quot; on jo olemassa. Haluatko korvata sen?</translation>
+        <translation type="unfinished">Файл &quot;%1&quot; вже існує. Ви хочете його перезаписати?</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>All Files</source>
-        <translation>Kaikki tiedostot</translation>
+        <translation type="unfinished">Всі файли</translation>
     </message>
 </context>
 <context>
@@ -5149,52 +5147,52 @@ on jo luettelossa.</translation>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
         <location line="+243"/>
         <source>%1 First Start</source>
-        <translation>%1 Ensimmäinen aloitus</translation>
+        <translation type="unfinished">%1 Перший старт</translation>
     </message>
     <message>
         <location line="-5"/>
         <source>Black</source>
-        <translation>Musta</translation>
+        <translation type="unfinished">Чорний</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>White</source>
-        <translation>Valkoinen</translation>
+        <translation type="unfinished">Білий</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Language:</source>
-        <translation>Kieli:</translation>
+        <translation type="unfinished">Мова:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Welcome to %1</source>
-        <translation>Tervetuloa %1 :een</translation>
+        <translation type="unfinished">Ласкаво просимо до %1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please choose the settings used for new drawings. All these settings can be changed later in the Preference Dialog.</source>
-        <translation>Ole hyvä ja valitse asetukset uuteen piirrokseen. Kaikkia näitä asetuksia voidaan muuttaa myöhemmin ominaisuusvalikosta.</translation>
+        <translation type="unfinished">Будь ласка, виберіть налаштування, які будуть використовуватися для нових креслень. Всі ці налаштування можуть бути змінені пізніше в діалоговому вікні Параметри.</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Unit:</source>
-        <translation>Yksikkö:</translation>
+        <translation type="unfinished">Підрозділ:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Default Paper Size:</source>
-        <translation>Paperin oletuskoko:</translation>
+        <translation type="unfinished">Розмір паперу за замовчуванням:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal Point:</source>
-        <translation>Desimaalipilkku:</translation>
+        <translation type="unfinished">Десяткова крапка:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Background Color:</source>
-        <translation>Taustaväri:</translation>
+        <translation type="unfinished">Колір фону:</translation>
     </message>
 </context>
 <context>
@@ -5202,17 +5200,17 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1115"/>
         <source>Add Active SubLayer</source>
-        <translation type="unfinished">Lisää aktiivinen alikerros</translation>
+        <translation type="unfinished">Додати активний підрівень</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>FP added layer:</source>
-        <translation type="unfinished">FP lisäsi kerroksen:</translation>
+        <translation type="unfinished">Доданий шар FP:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
         <source>Paints over selection mimicking a roller stamp</source>
-        <translation type="unfinished">Maalaa valinnan yli jäljittelemällä telaleimaa</translation>
+        <translation type="unfinished">Зафарбовує виділення, імітуючи роликовий штамп</translation>
     </message>
 </context>
 <context>
@@ -5220,142 +5218,142 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation>Maalausasetukset</translation>
+        <translation type="unfinished">Варіанти фарбування</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation type="unfinished">Maalareiden valuvaihtoehdot</translation>
+        <translation type="unfinished">Варіанти кастингу малярів</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+18"/>
+        <source>Mirror painters over baseline.</source>
+        <translation type="unfinished">Дзеркальні фарби поверх базової лінії.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Flip Painters</source>
-        <translation>Käännä Painters</translation>
+        <translation type="unfinished">Flip Painters</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+7"/>
+        <source>Group all castings to one operation.</source>
+        <translation type="unfinished">Згрупувати всі виливки на одну операцію.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Cast in group</source>
-        <translation>Luo ryhmään</translation>
+        <translation type="unfinished">Кастинг в групі</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation>Luo alitaso</translation>
+        <translation type="unfinished">Литий на підкладці</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Start with casting a begin apex on open forms.</source>
+        <translation type="unfinished">Почніть з відливання початкової вершини на відкритих формах.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Add Begin Apex</source>
+        <translation type="unfinished">Add Begin Apex</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>Add Begin Apex</source>
-        <translation>Lisää aloituspiste</translation>
+        <source>End with casting an end apex on open forms.</source>
+        <translation type="unfinished">Закінчити литтям торцевої вершини на відкритих формах.</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+3"/>
         <source>Add End Apex</source>
-        <translation>Lisää loppupiste</translation>
+        <translation type="unfinished">Додати кінцеву вершину</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+13"/>
+        <source>Add insertions in between eg. spacers, knots. (Not implemented)</source>
+        <translation type="unfinished">Додати вставки між ними, наприклад, розпірки, вузли. (Не реалізовано)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Add Insertions</source>
-        <translation>Lisää lisäyksiä</translation>
+        <translation type="unfinished">Додати вставки</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation>Maalaussarja</translation>
+        <translation type="unfinished">Набір для малювання</translation>
     </message>
     <message>
-        <location line="-101"/>
-        <source>Mirror painters over baseline.</source>
-        <translation type="unfinished">Peilimaalarit perusviivan yläpuolella.</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Group all castings to one operation.</source>
-        <translation type="unfinished">Ryhmittele kaikki valukappaleet yhteen toimintoon.</translation>
-    </message>
-    <message>
-        <location line="+30"/>
-        <source>Start with casting a begin apex on open forms.</source>
-        <translation type="unfinished">Aloita valamalla alku apex avoimiin muotoihin.</translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>End with casting an end apex on open forms.</source>
-        <translation type="unfinished">Päätä valamalla avoimiin lomakkeisiin päätepiste.</translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Add insertions in between eg. spacers, knots. (Not implemented)</source>
-        <translation type="unfinished">Lisää väliin lisäyksiä, esim. välilevyjä, solmuja. (Ei toteutettu)</translation>
-    </message>
-    <message>
-        <location line="+65"/>
+        <location line="+36"/>
         <source>Preview of painters.</source>
-        <translation type="unfinished">Taidemaalareiden esikatselu.</translation>
+        <translation type="unfinished">Попередній перегляд робіт художників.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation type="unfinished">Valitse maalarijoukko.</translation>
+        <translation type="unfinished">Виберіть набір маляра.</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>CurtainRope</source>
-        <translation type="unfinished">CurtainRope</translation>
+        <translation type="unfinished">Мотузка для штор</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalBar</source>
-        <translation>Kohtisuora palkki</translation>
+        <translation type="unfinished">OrthogonalBar</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalPointsGlobal</source>
-        <translation>Yleiset kohtisuorat pisteet</translation>
+        <translation type="unfinished">OrthogonalPointsGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWave</source>
-        <translation>Siniaalto</translation>
+        <translation type="unfinished">Синусоїдальна хвиля</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWaveGlobal</source>
-        <translation>Yleinen siniaalto</translation>
+        <translation type="unfinished">SinusoidWaveGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>3PhaseWaveGlobal</source>
-        <translation>Yleinen 3-vaiheaalto</translation>
+        <translation type="unfinished">3PhaseWaveGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>TriangleWave</source>
-        <translation>Kolmioaalto</translation>
+        <translation type="unfinished">TriangleWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SawtoothWave</source>
-        <translation>Saha-aalto</translation>
+        <translation type="unfinished">SawtoothWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqaureWave</source>
-        <translation>Kanttiaalto</translation>
+        <translation type="unfinished">SqaureWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SteppedWave</source>
-        <translation>Porrasaalto</translation>
+        <translation type="unfinished">SteppedWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShape</source>
-        <translation>Ruudutettu muoto</translation>
+        <translation type="unfinished">SqauredShape</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShapeFlexing</source>
-        <translation>Ruudutettu muototaivutus</translation>
+        <translation type="unfinished">Згинання квадратної форми</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5365,22 +5363,32 @@ on jo luettelossa.</translation>
     <message>
         <location line="+16"/>
         <source>Insertion type</source>
-        <translation>Lisäyksen tyyppi</translation>
+        <translation type="unfinished">Тип вставки</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Preview of insertion.</source>
-        <translation type="unfinished">Esikatselu lisäyksestä.</translation>
+        <translation type="unfinished">Попередній перегляд вставки.</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Select Insertion or Enter void space. (Not implemented)</source>
-        <translation type="unfinished">Valitse Insertion tai Enter void space. (Ei toteutettu)</translation>
+        <translation type="unfinished">Виберіть Вставка або Введіть пробіл. (Не реалізовано)</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+10"/>
+        <source>&lt;Enter space size&gt;</source>
+        <translation type="unfinished">&lt;Введіть розмір пробілу</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Curtain Rope Knot</source>
+        <translation type="unfinished">Вузол для мотузки для штор</translation>
+    </message>
+    <message>
+        <location line="+262"/>
         <source>Version</source>
-        <translation type="unfinished">Versio</translation>
+        <translation type="unfinished">Версія</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5390,127 +5398,117 @@ on jo luettelossa.</translation>
     <message>
         <location line="+272"/>
         <source>Document Units.</source>
-        <translation type="unfinished">Asiakirjan yksiköt.</translation>
+        <translation type="unfinished">Документи.</translation>
     </message>
     <message>
-        <location line="+39"/>
-        <source>Enter painter width. (+0)</source>
-        <translation type="unfinished">Syötä maalarin leveys. (+0)</translation>
-    </message>
-    <message>
-        <location line="+90"/>
-        <source>Enter main painter stepsize. (+0)</source>
-        <translation type="unfinished">Syötä päämaalarin askelkoko. (+0)</translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Enter main painter length. (+)</source>
-        <translation type="unfinished">Syötä päämaalarin pituus. (+)</translation>
-    </message>
-    <message>
-        <location line="+22"/>
-        <source>Keep painters proportional.</source>
-        <translation type="unfinished">Pidä maalarit oikeasuhtaisina.</translation>
-    </message>
-    <message>
-        <location line="+30"/>
-        <source>Select percentage of Stepsize.</source>
-        <translation type="unfinished">Valitse Stepsize-prosenttiosuus.</translation>
-    </message>
-    <message>
-        <location line="+86"/>
-        <source>Adapt scaling f 1.00-0.90 to fit the whole form.</source>
-        <translation type="unfinished">Mukauta skaalaus f 1,00-0,90 koko lomakkeelle sopivaksi.</translation>
-    </message>
-    <message>
-        <location line="+92"/>
-        <source>Verbose info. (persistent on)</source>
-        <translation type="unfinished">Tarkka tieto. (pysyvä päällä)</translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Deleted painted over base entities. (persistent off)</source>
-        <translation type="unfinished">Poistettu maalattu pohjayksiköiden päälle. (Pysyvä pois päältä)</translation>
-    </message>
-    <message>
-        <location line="-933"/>
-        <source>&lt;Enter space size&gt;</source>
-        <translation>&lt;Syötä tilan koko&gt;</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Curtain Rope Knot</source>
-        <translation type="unfinished">Verho köysi solmu</translation>
-    </message>
-    <message>
-        <location line="+543"/>
+        <location line="+6"/>
         <source>#Undefined#</source>
-        <translation>#Määrittämätön#</translation>
+        <translation type="unfinished">#Не визначено</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+33"/>
+        <source>Enter painter width. (+0)</source>
+        <translation type="unfinished">Введіть ширину фарби. (+0)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Width : </source>
-        <translation>Leveys: </translation>
+        <translation type="unfinished">Ширина :</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>0</source>
-        <translation>0</translation>
+        <translation type="unfinished">0</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation>Toistuvat maalausasetukset</translation>
+        <translation type="unfinished">Повторювані опції Painter</translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+62"/>
+        <source>Enter main painter stepsize. (+0)</source>
+        <translation type="unfinished">Введіть основний розмір кроку маляра. (+0)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Stepsize :</source>
-        <translation>Askelkoko:</translation>
+        <translation type="unfinished">Розмір кроку :</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+13"/>
+        <source>Enter main painter length. (+)</source>
+        <translation type="unfinished">Введіть довжину головного художника. (+)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Length :</source>
-        <translation>Pituus:</translation>
+        <translation type="unfinished">Довжина :</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+19"/>
+        <source>Keep painters proportional.</source>
+        <translation type="unfinished">Зберігайте пропорційність фарб.</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Select percentage of Stepsize.</source>
+        <translation type="unfinished">Виберіть відсоток кроку.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Closed Forms shifting % :</source>
-        <translation>Suljettujen muotojen muutos %:</translation>
+        <translation type="unfinished">Зміщення закритих форм % :</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Open forms scaling options</source>
-        <translation>Avoimien muotojen suurennusvaihtoehdot</translation>
+        <translation type="unfinished">Відкриті опції масштабування форм</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+21"/>
+        <source>Adapt scaling f 1.00-0.90 to fit the whole form.</source>
+        <translation type="unfinished">Адаптуйте масштаб f 1.00-0.90, щоб він відповідав всій формі.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Dynamically scale to fit</source>
-        <translation>Muuta sopimaan dynaamisesti</translation>
+        <translation type="unfinished">Динамічно масштабується відповідно до потреб</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Align with begin</source>
-        <translation>Kohdista alkuun</translation>
+        <translation type="unfinished">Вирівняти з початком</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Centered</source>
-        <translation>Keskitetty</translation>
+        <translation type="unfinished">По центру</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Align with End</source>
-        <translation>Kohdista loppuun</translation>
+        <translation type="unfinished">Вирівняти з кінцем</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+36"/>
+        <source>Verbose info. (persistent on)</source>
+        <translation type="unfinished">Багатослівна інформація. (продовження)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Verbose *</source>
-        <translation>Sanallinen *</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+13"/>
+        <source>Deleted painted over base entities. (persistent off)</source>
+        <translation type="unfinished">Видалено зафарбовані базові сутності. (persistent off)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Delete Base Entities *</source>
-        <translation>Poista peruskokonaisuudet *</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5526,7 +5524,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Modify/FlipHorizontal/FlipHorizontalInit.js" line="+2"/>
         <source>Flip Hori&amp;zontal</source>
-        <translation>Käännä vaaka&amp;suoraan</translation>
+        <translation type="unfinished">Фліп Горизонтальний</translation>
     </message>
 </context>
 <context>
@@ -5534,7 +5532,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Modify/FlipVertical/FlipVerticalInit.js" line="+2"/>
         <source>Flip Verti&amp;cal</source>
-        <translation>Käännä pysty&amp;suoraan</translation>
+        <translation type="unfinished">Фліп вертикальний</translation>
     </message>
 </context>
 <context>
@@ -5542,22 +5540,22 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscModify/FlushBackLog/FlushBackLog.js" line="+38"/>
         <source>Flush Undo History</source>
-        <translation>Tyhjennä peruutushistoria</translation>
+        <translation type="unfinished">Відновити історію змиву</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Are you sure that you want to flush the undo / redo transaction history?</source>
-        <translation>Oletko varma, että haluat tyhjentää peruuttamisen / uudelleenjärjestämisen tapahtumahistorian?</translation>
+        <translation type="unfinished">Ви впевнені, що хочете очистити історію скасувань/повторних транзакцій?</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>This cannot be undone.</source>
-        <translation>Tätä ei voi peruuttaa.</translation>
+        <translation type="unfinished">Цього не можна скасувати.</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Flush &amp;Undo History</source>
-        <translation>Tyhjennä &amp;Peruuta Historia</translation>
+        <translation type="unfinished">Відновити історію змиву</translation>
     </message>
 </context>
 <context>
@@ -5565,45 +5563,45 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/FontPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation>Kuvanäkymä</translation>
+        <translation type="unfinished">Графічний вигляд</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Fonts</source>
-        <translation>Kirjasimet</translation>
+        <translation type="unfinished">Шрифти</translation>
     </message>
 </context>
 <context>
     <name>Form</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/Templates/20_ThreeRight.ui" line="+14"/>
-        <source>Three: Right</source>
-        <translation>Kolme: Oikea</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Widgets/ViewportWidget/Templates/21_ThreeLeft.ui" line="+14"/>
-        <source>Three: Left</source>
-        <translation>Kolme: Vasen</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Widgets/ViewportWidget/Templates/22_ThreeAbove.ui" line="+14"/>
-        <source>Three: Above</source>
-        <translation>Kolme: Yläpuolella</translation>
-    </message>
-    <message>
         <location filename="../scripts/Misc/Tutorials/LibraryBrowserScripts/CubeCuttingOut.ui" line="+14"/>
         <source>Form</source>
-        <translation>Muoto</translation>
+        <translation type="unfinished">Форма</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Cube size:</source>
-        <translation>Kuutiokoko:</translation>
+        <translation type="unfinished">Розмір куба:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Draw glue lap</source>
-        <translation>Piirrä liimakierros</translation>
+        <translation type="unfinished">Намалюйте клейовий круг</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Widgets/ViewportWidget/Templates/20_ThreeRight.ui" line="+14"/>
+        <source>Three: Right</source>
+        <translation type="unfinished">Три: Так</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Widgets/ViewportWidget/Templates/21_ThreeLeft.ui" line="+14"/>
+        <source>Three: Left</source>
+        <translation type="unfinished">Три: Ліворуч</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Widgets/ViewportWidget/Templates/22_ThreeAbove.ui" line="+14"/>
+        <source>Three: Above</source>
+        <translation type="unfinished">Три: Вище</translation>
     </message>
 </context>
 <context>
@@ -5611,7 +5609,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Help/Forum/ForumInit.js" line="+2"/>
         <source>&amp;Forum</source>
-        <translation>&amp;Foorumi</translation>
+        <translation type="unfinished">Форум</translation>
     </message>
 </context>
 <context>
@@ -5619,7 +5617,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/30_FourEqual.ui" line="+14"/>
         <source>Four: Equal</source>
-        <translation>Neljä: Tasan</translation>
+        <translation type="unfinished">Чотири: Рівні</translation>
     </message>
 </context>
 <context>
@@ -5627,7 +5625,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/32_FourLeft.ui" line="+14"/>
         <source>Four: Left</source>
-        <translation>Neljä: Vasen</translation>
+        <translation type="unfinished">Чотири: Ліворуч</translation>
     </message>
 </context>
 <context>
@@ -5635,315 +5633,315 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/31_FourRight.ui" line="+14"/>
         <source>Four: Right</source>
-        <translation>Neljä: Oikea</translation>
+        <translation type="unfinished">Чотири: Правильно</translation>
     </message>
 </context>
 <context>
     <name>GraphicsView</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+48"/>
-        <source>Double-Click</source>
-        <translation>Kaksoisnapsautus</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Double-click to edit text</source>
-        <translation>Muokkaa tekstiä kaksoisnapsauttamalla</translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>Double-click on block reference opens block</source>
-        <translation>Kaksoisnapsautus lohkoviitteessä avaa lohkon</translation>
-    </message>
-    <message>
-        <location line="-42"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+32"/>
         <source>Right-Click</source>
-        <translation>Oikea napsautus</translation>
+        <translation type="unfinished">Клацніть правою кнопкою миші</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Right-click to deselect entities</source>
-        <translation>Oikea napsautus poistaa valinnat</translation>
+        <translation type="unfinished">Клацніть правою кнопкою миші, щоб зняти виділення з об&apos;єктів</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+10"/>
+        <source>Double-Click</source>
+        <translation type="unfinished">Подвійний клік</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Double-click to edit text</source>
+        <translation type="unfinished">Подвійне клацання для редагування тексту</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Double-click to edit hatch</source>
-        <translation>Kaksoisnapauta muokataksesi kuviointia</translation>
+        <translation type="unfinished">Подвійне клацання для редагування штрихування</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+10"/>
+        <source>Double-click on block reference opens block</source>
+        <translation type="unfinished">Подвійний клік по посиланню блоку відкриває блок</translation>
+    </message>
+    <message>
+        <location line="+28"/>
         <source>Edit block reference in-place</source>
-        <translation type="unfinished">Muokkaa lohkoviittausta paikan päällä</translation>
+        <translation type="unfinished">Редагувати посилання на блок на місці</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Double-click to select contour</source>
-        <translation>Kaksoisnapsauta valitaksesi ääriviivat</translation>
+        <translation type="unfinished">Подвійне клацання для вибору контуру</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Tolerance:</source>
-        <translation type="unfinished">Suvaitsevaisuus:</translation>
+        <translation type="unfinished">Толерантність:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Right double-click to reset</source>
-        <translation>Kaksoisnapsauta oikealla palauttaaksesi</translation>
+        <translation type="unfinished">Подвійне клацання правою кнопкою миші для скидання</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Blocks</source>
-        <translation>Lohkot</translation>
+        <translation type="unfinished">Блоки</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Select block references together with attributes</source>
-        <translation>Valitse lohkoviitteet yhdessä määritysten kanssa</translation>
+        <translation type="unfinished">Вибирати блокові посилання разом з атрибутами</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Hide attributes when block references are hidden</source>
-        <translation>Piilota määritteet, kun lohkoviitteet on piilotettu</translation>
+        <translation type="unfinished">Приховувати атрибути при прихованих посиланнях на блоки</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cursor Range</source>
-        <translation>Kohdistimen alue</translation>
+        <translation type="unfinished">Діапазон курсору</translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+102"/>
+        <source>Cursor range for picking entities:</source>
+        <translation type="unfinished">Діапазон курсору для об&apos;єктів вибору:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Cursor range for snap:</source>
-        <translation>Kohdistimen alue poiminnalle:</translation>
+        <translation type="unfinished">Діапазон курсору для прив&apos;язки:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Highlight entity within range</source>
-        <translation>Korosta alueen sisällä oleva kokonaisuus</translation>
-    </message>
-    <message>
-        <location line="-14"/>
-        <source>Cursor range for picking entities:</source>
-        <translation>Kohdistimen alue kohteiden poimintaan:</translation>
+        <translation type="unfinished">Виділити об&apos;єкт в межах діапазону</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GridPreferences/PreferencesPage.ui" line="+34"/>
         <source>Automatically scale grid</source>
-        <translation>Automaattisesti säätyvä ruudukko</translation>
+        <translation type="unfinished">Автоматичне масштабування сітки</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Automatically scale meta grid</source>
-        <translation>Automaattisesti säätyvä aliruudukko</translation>
+        <translation type="unfinished">Автоматичне масштабування мета-сітки</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Solid grid lines</source>
-        <translation>Kiinteät ruudukkoviivat</translation>
+        <translation type="unfinished">Суцільні лінії сітки</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Minimal grid spacing (px):</source>
-        <translation>Pienin ruudukon väli (px):</translation>
+        <translation type="unfinished">Мінімальний крок сітки (px):</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+32"/>
         <source>Origin</source>
-        <translation>Alkuperä</translation>
+        <translation type="unfinished">Походження</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show large origin axis</source>
-        <translation>Näytä suuret alkuperäiset akselit</translation>
+        <translation type="unfinished">Показати велику вісь абсцис</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Rulers and Scrollbars</source>
-        <translation>Viivaimet ja vierityspalkit</translation>
+        <translation type="unfinished">Лінійки та смуги прокрутки</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show rulers</source>
-        <translation>Näytä viivaimet</translation>
+        <translation type="unfinished">Показати лінійки</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Show scrollbars</source>
-        <translation>Näytä vierityspalkit</translation>
+        <translation type="unfinished">Показати смуги прокрутки</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Cursor</source>
-        <translation>Kohdistin</translation>
+        <translation type="unfinished">Курсор</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show crosshairs</source>
-        <translation>Näytä ristikko</translation>
+        <translation type="unfinished">Показати перехрестя</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Show large crosshairs</source>
-        <translation>Näytä suuri ristikko</translation>
+        <translation type="unfinished">Показати велике перехрестя</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>This can be used if cursors are not visible on external monitors</source>
-        <translation type="unfinished">Tätä voidaan käyttää, jos kursorit eivät näy ulkoisissa näytöissä</translation>
+        <translation type="unfinished">Це можна використовувати, якщо на зовнішніх моніторах не видно курсорів</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use system cursors</source>
-        <translation type="unfinished">Käytä järjestelmän kursoreita</translation>
+        <translation type="unfinished">Використання системних курсорів</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Auto Zoom</source>
-        <translation>Automaattinen suurennus/zoomaus</translation>
+        <translation type="unfinished">Автоматичне масштабування</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Margin (px):</source>
-        <translation>Marginaali (px):</translation>
+        <translation type="unfinished">Відступ (px):</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>Auto zoom on load</source>
-        <translation>Automaattinen zoomaus kuormituksessa</translation>
+        <translation type="unfinished">Автоматичне збільшення при навантаженні</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Color Adjustment</source>
-        <translation>Värien säätö</translation>
+        <translation type="unfinished">Корекція кольору</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+29"/>
+        <source>Color lightness threshold:</source>
+        <translation type="unfinished">Поріг яскравості кольору:</translation>
+    </message>
+    <message>
+        <location line="+29"/>
         <source>Prevent white on white / black on black display</source>
-        <translation>Estä valkoinen valkoisella / musta mustalla näytössä</translation>
+        <translation type="unfinished">Запобігання відображенню білого на білому / чорного на чорному</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+10"/>
+        <source>Disable for printing</source>
+        <translation type="unfinished">Відключити для друку</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Linetypes and Lineweights</source>
-        <translation type="unfinished">Linjatyypit ja linjapainot</translation>
+        <translation type="unfinished">Типи ліній і лінійні ваги</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Default lineweight:</source>
-        <translation type="unfinished">Oletusviivapaino:</translation>
+        <translation type="unfinished">Лінійна вага за замовчуванням:</translation>
     </message>
     <message>
-        <location line="+108"/>
-        <source>Apply line weight to points</source>
-        <translation type="unfinished">Soveltaa viivapainoa pisteisiin</translation>
+        <location line="+35"/>
+        <source>Automatically use screen based linetypes in model view</source>
+        <translation type="unfinished">Автоматичне використання екранних лінійних типів у поданні моделі</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>Anti-aliasing on by default</source>
-        <translation>Pehmennys päällä on oletuksena</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Use full resolution for Retina / high resolution display</source>
-        <translation type="unfinished">Käytä täyttä resoluutiota Retina / korkean resoluution näyttöä varten</translation>
-    </message>
-    <message>
-        <location line="+444"/>
-        <source>Maximum selected entities with reference points:</source>
-        <translation type="unfinished">Valittujen kokonaisuuksien enimmäismäärä vertailupisteiden kanssa:</translation>
-    </message>
-    <message>
-        <location line="+219"/>
-        <source>Maximum selected entities with displayed reference points:</source>
-        <translation type="unfinished">Valittujen kohteiden enimmäismäärä näytetyillä vertailupisteillä:</translation>
-    </message>
-    <message>
-        <location line="-149"/>
-        <source>Reference point size (px):</source>
-        <translation type="unfinished">Viitepisteen koko (px):</translation>
-    </message>
-    <message>
-        <location line="+77"/>
-        <source>Text height threshold (px):</source>
-        <translation type="unfinished">Tekstin korkeuskynnys (px):</translation>
-    </message>
-    <message>
-        <location line="+151"/>
-        <source>Persistent selection</source>
-        <translation type="unfinished">Pysyvä valinta</translation>
-    </message>
-    <message>
-        <location line="-724"/>
-        <source>auto</source>
-        <translation type="unfinished">auto</translation>
-    </message>
-    <message>
-        <location line="-11"/>
-        <source>Number of threads:</source>
-        <translation type="unfinished">Kierteiden määrä:</translation>
-    </message>
-    <message>
-        <location line="-195"/>
-        <source>Color lightness threshold:</source>
-        <translation>Värivaaleuden kynnys:</translation>
-    </message>
-    <message>
-        <location line="+39"/>
-        <source>Disable for printing</source>
-        <translation>Poista käytöstä tulostusta varten</translation>
-    </message>
-    <message>
-        <location line="+56"/>
+        <location line="+3"/>
         <source>Auto switch to screen based linetypes in model view</source>
-        <translation>Automaattisesti vaihda kuvaruudun viivat muotoilunäkymässä</translation>
+        <translation type="unfinished">Автоматичне перемикання на екранні типи ліній у поданні моделі</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Scale linetype patterns by line weight</source>
-        <translation>Venytä viivatyypin kuvioita viivan paksuuden mukaan</translation>
+        <translation type="unfinished">Масштабування лекал лінійного типу за вагою лінії</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
-        <translation>Kuvion mitta viivapaksuudella 0.00 mm:</translation>
+        <translation type="unfinished">Масштаб лекал для лінійної ваги 0,00 мм:</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+35"/>
+        <source>Apply line weight to points</source>
+        <translation type="unfinished">Застосувати вагу лінії до точок</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Display and Performance</source>
-        <translation>Näyttötila ja suorituskyky</translation>
+        <translation type="unfinished">Дисплей і продуктивність</translation>
     </message>
     <message>
-        <location line="-83"/>
-        <source>Automatically use screen based linetypes in model view</source>
-        <translation>Automaattisesti käytä kuvaruudun viivoja muotoilunäkymässä</translation>
+        <location line="+6"/>
+        <source>Anti-aliasing on by default</source>
+        <translation type="unfinished">Згладжування ввімкнено за замовчуванням</translation>
     </message>
     <message>
-        <location line="+212"/>
+        <location line="+7"/>
+        <source>Use full resolution for Retina / high resolution display</source>
+        <translation type="unfinished">Використовуйте повну роздільну здатність для дисплея Retina / високої роздільної здатності</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Number of threads:</source>
+        <translation type="unfinished">Кількість ниток:</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>auto</source>
+        <translation type="unfinished">авто</translation>
+    </message>
+    <message>
+        <location line="+98"/>
         <source>Number of preview entities:</source>
-        <translation>Esikatseltavien kohteiden määrä:</translation>
+        <translation type="unfinished">Кількість об&apos;єктів попереднього перегляду:</translation>
     </message>
     <message>
         <location line="+61"/>
         <source>Display arcs as lines below this angle (degrees):</source>
-        <translation>Näytä kaaret viivoina alle tämänmittaisen kulman (astetta):</translation>
+        <translation type="unfinished">Відобразити дуги у вигляді ліній під цим кутом (градуси):</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
-        <translation>Pienin kulma-askel kaaria varten (astetta):</translation>
+        <translation type="unfinished">Мінімальний крок кута для промальовування дуг (градуси):</translation>
     </message>
     <message>
         <location line="+85"/>
         <source>Display entities with more than N dashes as continuous:</source>
-        <translation>Näytä sellaiset kohteet, joissa on enemmän kuin N viivaa, jatkuvina:</translation>
+        <translation type="unfinished">Відображати сутності з більш ніж N тире як безперервні:</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Timeout for hatch rendering:</source>
-        <translation>Aikakatkaisu kuvioinnin rendröintiin:</translation>
+        <translation type="unfinished">Тайм-аут рендерингу люка:</translation>
     </message>
     <message>
-        <location line="+357"/>
+        <location line="+65"/>
+        <source>Maximum selected entities with reference points:</source>
+        <translation type="unfinished">Максимально обрані об&apos;єкти з орієнтирами:</translation>
+    </message>
+    <message>
+        <location line="+70"/>
+        <source>Reference point size (px):</source>
+        <translation type="unfinished">Розмір опорної точки (px):</translation>
+    </message>
+    <message>
+        <location line="+77"/>
+        <source>Text height threshold (px):</source>
+        <translation type="unfinished">Поріг висоти тексту (px):</translation>
+    </message>
+    <message>
+        <location line="+72"/>
+        <source>Maximum selected entities with displayed reference points:</source>
+        <translation type="unfinished">Максимальна кількість обраних об&apos;єктів з відображеними опорними точками:</translation>
+    </message>
+    <message>
+        <location line="+73"/>
         <source>Selection</source>
-        <translation>Valinta</translation>
+        <translation type="unfinished">Відбір</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Persistent selection</source>
+        <translation type="unfinished">Наполегливий відбір</translation>
     </message>
 </context>
 <context>
@@ -5951,162 +5949,162 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/PreferencesPage.ui" line="+32"/>
         <source>Graphics View</source>
-        <translation>Graafinen näkymä</translation>
+        <translation type="unfinished">Графічний вигляд</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Background:</source>
-        <translation>Tausta:</translation>
+        <translation type="unfinished">Передісторія:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Cursor</source>
-        <translation>Kohdistin</translation>
+        <translation type="unfinished">Курсор</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Crosshairs:</source>
-        <translation>Ristikko:</translation>
+        <translation type="unfinished">Перехрестя:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Inactive crosshairs:</source>
-        <translation>Ei-aktiivinen ristikko:</translation>
+        <translation type="unfinished">Неактивне перехрестя:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Origin</source>
-        <translation>Alkupiste</translation>
+        <translation type="unfinished">Походження</translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+12"/>
+        <source>Origin:</source>
+        <translation type="unfinished">Походження:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
         <source>Relative zero:</source>
-        <translation>Suhteessa nollaan:</translation>
+        <translation type="unfinished">Відносний нуль:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Grid</source>
-        <translation>Ruudukko</translation>
+        <translation type="unfinished">Сітка</translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+12"/>
+        <source>Grid:</source>
+        <translation type="unfinished">Сітка:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
         <source>Meta grid:</source>
-        <translation>Aliruudukko:</translation>
+        <translation type="unfinished">Мета-сітка:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Selection</source>
-        <translation>Valinta</translation>
+        <translation type="unfinished">Відбір</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Primary selection color:</source>
-        <translation>Ensisijainen värivalinta:</translation>
+        <translation type="unfinished">Основний колір вибору:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use secondary selection color</source>
-        <translation>Käytä toissijaista värivalintaa</translation>
+        <translation type="unfinished">Використовувати вторинний колір виділення</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Secondary selection color:</source>
-        <translation>Toissijainen värivalinta:</translation>
+        <translation type="unfinished">Вторинний колір виділення:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Primary reference points:</source>
-        <translation>Ensisijaiset viitepisteet:</translation>
+        <translation type="unfinished">Первинні орієнтири:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Secondary reference points:</source>
-        <translation>Toissijaiset viitepisteet:</translation>
+        <translation type="unfinished">Вторинні орієнтири:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Selection box border:</source>
-        <translation>Valintalaatikon reuna:</translation>
+        <translation type="unfinished">Межа поля виділення:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Selection box fill:</source>
-        <translation>Valintalaatikon täyttö:</translation>
+        <translation type="unfinished">Заповнення поля вибору:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Cross-selection box fill:</source>
-        <translation>Ristivalintalaatikon täyttö:</translation>
+        <translation type="unfinished">Заповнення поля перехресного вибору:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Start points:</source>
-        <translation>Aloituspisteet:</translation>
+        <translation type="unfinished">На старт:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>End points:</source>
-        <translation>Loppupisteet:</translation>
+        <translation type="unfinished">Кінцеві точки:</translation>
     </message>
     <message>
         <location line="+47"/>
         <source>Tertiary reference points:</source>
-        <translation>Tertiaariset viitepisteet:</translation>
+        <translation type="unfinished">Третинні орієнтири:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Snap Tools</source>
-        <translation>Tartuntatyökalut</translation>
+        <translation type="unfinished">Snap Tools</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Snap label:</source>
-        <translation>Tartunnan selite:</translation>
+        <translation type="unfinished">Етикетка з застібкою:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Info Tools</source>
-        <translation>Tietotyökalut</translation>
+        <translation type="unfinished">Інформаційні інструменти</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Measurements and labels:</source>
-        <translation>Mitat ja selitteet:</translation>
+        <translation type="unfinished">Вимірювання та маркування:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Drawing Tools</source>
-        <translation>Piirrostyökalut</translation>
+        <translation type="unfinished">Креслярські інструменти</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Auxiliary shapes:</source>
-        <translation>Ylimääräiset muodot:</translation>
+        <translation type="unfinished">Допоміжні фігури:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Working set fading factor:</source>
-        <translation type="unfinished">Työskentelysarjan häipymiskerroin:</translation>
+        <translation type="unfinished">Робочий набір коефіцієнта згасання:</translation>
     </message>
     <message>
         <location line="+75"/>
         <source>Zoom Tools</source>
-        <translation>Suurennustyökalut</translation>
+        <translation type="unfinished">Інструменти масштабування</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Zoom box border:</source>
-        <translation>Suurenna/säädä laatikon reuna:</translation>
-    </message>
-    <message>
-        <location line="-712"/>
-        <source>Origin:</source>
-        <translation>Nollakohta:</translation>
-    </message>
-    <message>
-        <location line="+81"/>
-        <source>Grid:</source>
-        <translation>Ruudukko:</translation>
+        <translation type="unfinished">Межа вікна масштабування:</translation>
     </message>
 </context>
 <context>
@@ -6114,55 +6112,55 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+50"/>
         <source>Ruler font:</source>
-        <translation type="unfinished">Viivaimen fontti:</translation>
+        <translation type="unfinished">Лінійний шрифт:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Snap label font:</source>
-        <translation type="unfinished">Snap label fontti:</translation>
+        <translation type="unfinished">Шрифт етикетки Snap:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Info label font:</source>
-        <translation type="unfinished">Info label fontti:</translation>
+        <translation type="unfinished">Шрифт інформаційної етикетки:</translation>
     </message>
 </context>
 <context>
     <name>GraphicsViewNavigation</name>
     <message>
-        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+332"/>
-        <source>Mouse wheel / two finger swipe:</source>
-        <translation>Hiiren rulla/kahden sormen pyyhintä:</translation>
-    </message>
-    <message>
-        <location line="-231"/>
-        <source>Enable pan gesture</source>
-        <translation>Ota panorointi käyttöön</translation>
-    </message>
-    <message>
-        <location line="-17"/>
+        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+84"/>
         <source>Mouse wheel zoom factor:</source>
-        <translation>Hiiren pyörän suurennus/pienennyskerroin:</translation>
+        <translation type="unfinished">Коефіцієнт масштабування коліщатка миші:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Limit zoom and scroll to prevent overflows</source>
-        <translation>Rajoita zoomaus ja vieritys estääksesi ylivuodon</translation>
+        <translation type="unfinished">Обмеження масштабування і прокрутки для запобігання переповнення</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+10"/>
+        <source>Enable pan gesture</source>
+        <translation type="unfinished">Ввімкнути жест панорамування</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Reverse mouse wheel direction for zoom</source>
-        <translation>Käänteinen hiiren pyörimissuunta zoomausta varten</translation>
+        <translation type="unfinished">Зміна напрямку коліщатка миші для масштабування</translation>
     </message>
     <message>
         <location line="+217"/>
         <source>Panning threshold (px):</source>
-        <translation>Panoroinnin raja-arvo (px):</translation>
+        <translation type="unfinished">Поріг панорамування (px):</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+7"/>
+        <source>Mouse wheel / two finger swipe:</source>
+        <translation type="unfinished">Коліщатко миші / проведення двома пальцями:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Middle mouse button zoom factor:</source>
-        <translation>Keskimmäisen hiiren painikkeen zoomauskerroin:</translation>
+        <translation type="unfinished">Коефіцієнт масштабування середньої кнопки миші:</translation>
     </message>
 </context>
 <context>
@@ -6170,12 +6168,12 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GraphicsViewPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation>Kuvanäkymä</translation>
+        <translation type="unfinished">Графічний вигляд</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Appearance</source>
-        <translation>Ulkoasu</translation>
+        <translation type="unfinished">Зовнішній вигляд</translation>
     </message>
 </context>
 <context>
@@ -6183,12 +6181,12 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GridPreferences/GridPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation>Kuvanäkymä</translation>
+        <translation type="unfinished">Графічний вигляд</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Grid</source>
-        <translation>Ruudukko</translation>
+        <translation type="unfinished">Сітка</translation>
     </message>
 </context>
 <context>
@@ -6196,18 +6194,18 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/GridSettings/GridSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
-        <translation>Oletusarvot uusille piirroksille</translation>
+        <translation type="unfinished">Значення за замовчуванням для нових креслень</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+2"/>
         <source>Grid</source>
-        <translation>Ruudukko</translation>
+        <translation type="unfinished">Сітка</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation>Yleistä</translation>
+        <translation type="unfinished">Генеральний</translation>
     </message>
     <message>
         <location line="+84"/>
@@ -6216,7 +6214,7 @@ on jo luettelossa.</translation>
         <location line="+22"/>
         <location line="+1"/>
         <source>auto</source>
-        <translation>automaattinen</translation>
+        <translation type="unfinished">авто</translation>
     </message>
 </context>
 <context>
@@ -6224,12 +6222,12 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/Hatch.js" line="+72"/>
         <source>Hatch Tools</source>
-        <translation>Kuviointityökalut</translation>
+        <translation type="unfinished">Інструменти для люків</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;Hatch</source>
-        <translation>&amp;Kuvionti</translation>
+        <translation type="unfinished">Люк</translation>
     </message>
 </context>
 <context>
@@ -6237,42 +6235,42 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchDialog.ui" line="+17"/>
         <source>Hatch</source>
-        <translation>Kuviotäyttö</translation>
+        <translation type="unfinished">Люк</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Type</source>
-        <translation>Tyyppi</translation>
+        <translation type="unfinished">Тип</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Solid Fill</source>
-        <translation>Tasainen täyttö</translation>
+        <translation type="unfinished">Суцільна заливка</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Hatch Pattern</source>
-        <translation>Kuviomalli</translation>
+        <translation type="unfinished">Візерунок люка</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Preview</source>
-        <translation>Esikatselu</translation>
+        <translation type="unfinished">Попередній перегляд</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Pattern</source>
-        <translation>Kuviomalli</translation>
+        <translation type="unfinished">Візерунок</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Angle:</source>
-        <translation>Kulma:</translation>
+        <translation type="unfinished">Кут:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Scale:</source>
-        <translation>Mittakaava:</translation>
+        <translation type="unfinished">Масштаб:</translation>
     </message>
 </context>
 <context>
@@ -6280,27 +6278,27 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchFromSelection/HatchFromSelection.js" line="+56"/>
         <source>No boundary selected.</source>
-        <translation>Ei rajaa valittuna.</translation>
+        <translation type="unfinished">Межа не вибрана.</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Loop not closed at point %1/%2.</source>
-        <translation>Silmukkaa ei suljettu pisteessä %1/%2.</translation>
+        <translation type="unfinished">Петля не замкнута в точці %1/%2.</translation>
     </message>
     <message>
         <location line="+96"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
-        <translation>Jokaisen rajamuodon tulee olla viiva, kaari, ympyrä, elliptinen kaari, ellipsi, murtoviiva tai käyrä. Löydetty:</translation>
+        <translation type="unfinished">Кожен граничний об&apos;єкт повинен бути лінією, дугою, колом, дугою еліпса, еліпсом, полілінією або сплайном. Знайдено:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchFromSelection/HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation>&amp;Kuviointi valinnasta</translation>
+        <translation type="unfinished">Виділення з вибору</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Create hatch or solid fill from selected boundary</source>
-        <translation>Luo kuviointi tai kiinteä täyttö valitusta kehyksestä</translation>
+        <translation type="unfinished">Створити штрихування або суцільну заливку від виділеної межі</translation>
     </message>
 </context>
 <context>
@@ -6308,7 +6306,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Help/Help.js" line="+60"/>
         <source>&amp;Help</source>
-        <translation>&amp;Ohje</translation>
+        <translation type="unfinished">Допомога</translation>
     </message>
 </context>
 <context>
@@ -6316,7 +6314,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Block/HideAllBlocks/HideAllBlocksInit.js" line="+2"/>
         <source>&amp;Hide All Blocks</source>
-        <translation>&amp;Piilota kaikki lohkot</translation>
+        <translation type="unfinished">Приховати всі блоки</translation>
     </message>
 </context>
 <context>
@@ -6324,7 +6322,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Layer/HideAllLayers/HideAllLayersInit.js" line="+2"/>
         <source>&amp;Hide All Layers</source>
-        <translation>&amp;Piilota kaikki tasot</translation>
+        <translation type="unfinished">Приховати всі шари</translation>
     </message>
 </context>
 <context>
@@ -6332,7 +6330,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/IOExamples.js" line="+51"/>
         <source>&amp;Import/Export</source>
-        <translation>&amp;Tuonti/vienti</translation>
+        <translation type="unfinished">Імпорт/експорт</translation>
     </message>
 </context>
 <context>
@@ -6340,57 +6338,57 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Draw/Image/Image.js" line="+133"/>
         <source>Files</source>
-        <translation>Tiedostot</translation>
+        <translation type="unfinished">Файли</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>All Image Files (%1)</source>
-        <translation>Kaikki kuvatiedostot (%1)</translation>
+        <translation type="unfinished">Всі файли зображень (%1)</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>All Files</source>
-        <translation>Kaikki tiedostot</translation>
+        <translation type="unfinished">Всі файли</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Import Bitmap</source>
-        <translation>Tuo bittikartta</translation>
+        <translation type="unfinished">Імпорт растрового зображення</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Format:</source>
-        <translation>Muoto:</translation>
+        <translation type="unfinished">Формат:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Position</source>
-        <translation>Sijainti</translation>
+        <translation type="unfinished">Посада</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Image/Image.ui" line="+17"/>
         <source>Width:</source>
-        <translation>Leveys:</translation>
+        <translation type="unfinished">Ширина:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Keep proportions</source>
-        <translation>Pidä mittasuhde</translation>
+        <translation type="unfinished">Дотримуйтесь пропорцій</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Height:</source>
-        <translation>Korkeus:</translation>
+        <translation type="unfinished">Зростання:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Angle:</source>
-        <translation>Kulma:</translation>
+        <translation type="unfinished">Кут:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Image/ImageInit.js" line="+2"/>
         <source>&amp;Insert Bitmap</source>
-        <translation>&amp;Lisää bittikartta</translation>
+        <translation type="unfinished">Вставити бітове зображення</translation>
     </message>
 </context>
 <context>
@@ -6398,97 +6396,97 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.js" line="+73"/>
         <source>Error while importing file %1</source>
-        <translation>Virhe tuotaessa tiedostoa %1</translation>
+        <translation type="unfinished">Помилка при імпорті файлу %1</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>No import filters have been found. Aborting...</source>
-        <translation>Tuontisuodattimia ei löydetty. Keskeytetään ...</translation>
+        <translation type="unfinished">Фільтри імпорту не знайдено. Переривання...</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>All Files</source>
-        <translation>Kaikki tiedostot</translation>
+        <translation type="unfinished">Всі файли</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Import Drawing</source>
-        <translation>Tuo piirros</translation>
+        <translation type="unfinished">Імпортне креслення</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Format:</source>
-        <translation>Muoto:</translation>
-    </message>
-    <message>
-        <location filename="../scripts/File/ImportFile/ImportFileInit.js" line="+2"/>
-        <source>&amp;Import</source>
-        <translation>&amp;Tuo</translation>
+        <translation type="unfinished">Формат:</translation>
     </message>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As block:</source>
-        <translation>Lohkona:</translation>
+        <translation type="unfinished">Як блок:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Rotation:</source>
-        <translation>Kierto:</translation>
+        <translation type="unfinished">Ротація:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation>Kierrä liitettyjä kohteita&lt;br&gt;tähän kulmaan</translation>
+        <translation type="unfinished">Повернути вставлені об&apos;єкти на цей кут</translation>
     </message>
     <message>
         <location line="+110"/>
         <source>Scale:</source>
-        <translation>Asteikko:</translation>
+        <translation type="unfinished">Масштаб:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation>Muuta liitettyjen kohteiden&lt;br&gt;mittakaavaa tällä arvolla</translation>
+        <translation type="unfinished">Масштабування вставлених об&apos;єктів за цим фактором</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation>Käännä liitetyt kohteet&lt;br&gt;vaakasuoraan</translation>
+        <translation type="unfinished">Перевернути вставлені об&apos;єкти&lt;br&gt;по горизонталі</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation>Käännä liitetyt kohteet&lt;br&gt;pystysuoraan</translation>
+        <translation type="unfinished">Перевернути вставлені об&apos;єкти&lt;br&gt;вертикально</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation>Liitä kaikki kohteet&lt;br&gt;nykyiseen tasoon&lt;br&gt;alkuperäisen tason sijasta</translation>
+        <translation type="unfinished">Вставити всі об&apos;єкти в поточний шар замість вихідного шару</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>To current layer</source>
-        <translation>Nykyiseen tasoon</translation>
+        <translation type="unfinished">До поточного шару</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation>Korvaa olemassa olevat&lt;br&gt;tasot piirustuksissa&lt;br&gt;leikepöydältä</translation>
+        <translation type="unfinished">Замінити існуючі шари&lt;br&gt;на кресленні шарами з буфера обміну</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite layers</source>
-        <translation>Korvaa tasot</translation>
+        <translation type="unfinished">Перезапис шарів</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation>Korvaa olemassa olevat lohkot&lt;br&gt;piirustuksissa leikepöydältä</translation>
+        <translation type="unfinished">Замінити існуючі блоки&lt;br&gt;на кресленні блоками з буфера обміну</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite blocks</source>
-        <translation>Korvaa lohkot</translation>
+        <translation type="unfinished">Перезапис блоків</translation>
+    </message>
+    <message>
+        <location filename="../scripts/File/ImportFile/ImportFileInit.js" line="+2"/>
+        <source>&amp;Import</source>
+        <translation type="unfinished">Імпорт</translation>
     </message>
 </context>
 <context>
@@ -6496,17 +6494,17 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscIO/ImportPoints/ImportPoints.js" line="+39"/>
         <source>All Files</source>
-        <translation>Kaikki tiedostot</translation>
+        <translation type="unfinished">Всі файли</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Import Points</source>
-        <translation>Tuo pisteet</translation>
+        <translation type="unfinished">Пункти імпорту</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>&amp;Import Points</source>
-        <translation>&amp;Tuo pisteet</translation>
+        <translation type="unfinished">Пункти імпорту</translation>
     </message>
 </context>
 <context>
@@ -6514,37 +6512,37 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroid.js" line="+78"/>
         <source>Position</source>
-        <translation type="unfinished">Asema</translation>
+        <translation type="unfinished">Посада</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Specify position</source>
-        <translation type="unfinished">Määritä asema</translation>
+        <translation type="unfinished">Вкажіть посаду</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>2D point mass Centroid</source>
-        <translation type="unfinished">2D-pistemassa Centroid</translation>
+        <translation type="unfinished">2D точкова маса Центроїд</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Undefined</source>
-        <translation type="unfinished">Määrittelemätön</translation>
+        <translation type="unfinished">Не визначено</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroidInit.js" line="+19"/>
         <source>Add &amp;custom 2D centroid</source>
-        <translation type="unfinished">Lisää mukautettu 2D-keskipiste</translation>
+        <translation type="unfinished">Додайте власний 2D центроїд</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Create a customizable 2D Centroid marker</source>
-        <translation type="unfinished">Luo muokattava 2D Centroid -merkki</translation>
+        <translation type="unfinished">Створення настроюваного 2D маркера центроїда</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Creates a new point mass 2D Centroid marker customizable by dialog</source>
-        <translation type="unfinished">Luo uuden pistemassan 2D Centroid -merkki, jota voidaan muokata valintaikkunan avulla</translation>
+        <translation type="unfinished">Створює новий точковий масовий 2D маркер центроїда, що налаштовується в діалоговому вікні</translation>
     </message>
 </context>
 <context>
@@ -6552,47 +6550,79 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Information/InfoAngle/InfoAngle.js" line="+67"/>
         <source>Specify first line</source>
-        <translation>Määrittele ensimmäinen rivi</translation>
+        <translation type="unfinished">Вкажіть перший рядок</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Specify second line</source>
-        <translation>Määrittele toinen rivi</translation>
+        <translation type="unfinished">Вкажіть другий рядок</translation>
     </message>
     <message>
         <location line="+96"/>
         <source>Angle:</source>
-        <translation>Kulma:</translation>
+        <translation type="unfinished">Кут:</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoAngle/InfoAngleInit.js" line="+2"/>
         <source>&amp;Angle</source>
-        <translation>&amp;Kulma</translation>
+        <translation type="unfinished">Кут</translation>
     </message>
 </context>
 <context>
     <name>InfoArcCircleArea</name>
     <message>
-        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+306"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+70"/>
+        <source>Choose arc, circle, ellipse or elliptical arc</source>
+        <translation type="unfinished">Виберіть дугу, коло, еліпс або еліптичну дугу</translation>
+    </message>
+    <message>
+        <location line="+236"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
         <location line="+22"/>
         <location line="+22"/>
         <source>Area</source>
-        <translation>Ala</translation>
+        <translation type="unfinished">Площа</translation>
     </message>
     <message>
         <location line="-108"/>
         <location line="+66"/>
         <source>Circumference</source>
-        <translation>Ympärysmitta</translation>
+        <translation type="unfinished">Окружність</translation>
     </message>
     <message>
-        <location line="-37"/>
+        <location line="-59"/>
+        <source>Circle area:</source>
+        <translation type="unfinished">Площа кола:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+67"/>
+        <source>circumference:</source>
+        <translation type="unfinished">окружності:</translation>
+    </message>
+    <message>
+        <location line="-54"/>
+        <location line="+24"/>
+        <location line="+43"/>
+        <location line="+22"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="+119"/>
+        <source>Length</source>
+        <translation type="unfinished">Довжина</translation>
+    </message>
+    <message>
+        <location line="-88"/>
+        <location line="+67"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-16"/>
+        <source>Chord</source>
+        <translation type="unfinished">Акорд</translation>
+    </message>
+    <message>
+        <location line="-60"/>
         <location line="+24"/>
         <source>Ellipse arc area:</source>
-        <translation>Ellipsin kaaren alue:</translation>
+        <translation type="unfinished">Площа дуги еліпса:</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -6600,116 +6630,84 @@ on jo luettelossa.</translation>
         <location line="+43"/>
         <location line="+22"/>
         <source>arc length:</source>
-        <translation>kaaren pituus:</translation>
+        <translation type="unfinished">довжина дуги:</translation>
     </message>
     <message>
         <location line="-88"/>
         <location line="+67"/>
         <source>chord:</source>
-        <translation>jänne:</translation>
+        <translation type="unfinished">акорд:</translation>
     </message>
     <message>
         <location line="-52"/>
         <source>Distance</source>
-        <translation>Etäisyys</translation>
+        <translation type="unfinished">Відстань</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>distance:</source>
-        <translation>etäisyys:</translation>
+        <translation type="unfinished">відстань:</translation>
     </message>
     <message>
-        <location line="+65"/>
-        <source>radius:</source>
-        <translation>säde:</translation>
-    </message>
-    <message>
-        <location line="-9"/>
-        <source>Radius</source>
-        <translation>Säde</translation>
-    </message>
-    <message>
-        <location line="-104"/>
-        <source>Circle area:</source>
-        <translation>Ympyrän ala:</translation>
-    </message>
-    <message>
-        <location line="-245"/>
-        <source>Choose arc, circle, ellipse or elliptical arc</source>
-        <translation>Valitse kaari, ympyrä, ellipsi tai ellipsin kaari</translation>
-    </message>
-    <message>
-        <location line="+246"/>
-        <location line="+67"/>
-        <source>circumference:</source>
-        <translation>ympärysmitta:</translation>
-    </message>
-    <message>
-        <location line="-1"/>
+        <location line="+19"/>
         <source>Ellipse area:</source>
-        <translation>Ellipsin ala:</translation>
+        <translation type="unfinished">Площа еліпса:</translation>
     </message>
     <message>
         <location line="+22"/>
         <location line="+22"/>
         <source>Arc area:</source>
-        <translation>Kaaren ala:</translation>
+        <translation type="unfinished">Зона дуги:</translation>
     </message>
     <message>
-        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="+17"/>
+        <location line="-7"/>
+        <source>Radius</source>
+        <translation type="unfinished">Радіус</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>radius:</source>
+        <translation type="unfinished">радіус:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-86"/>
         <source>Mode:</source>
-        <translation>Tila:</translation>
+        <translation type="unfinished">Режим:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Calculate Area of Segment</source>
+        <translation type="unfinished">Розрахувати площу сегмента</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Calculate Area of Sector</source>
+        <translation type="unfinished">Розрахувати площу сектора</translation>
     </message>
     <message>
         <location line="+30"/>
-        <source>Calculate Area of Sector</source>
-        <translation>Laske sektorin ala</translation>
-    </message>
-    <message>
-        <location line="-23"/>
-        <source>Calculate Area of Segment</source>
-        <translation>Laske segmentin ala</translation>
-    </message>
-    <message>
-        <location line="+53"/>
         <source>Add:</source>
-        <translation>Lisää:</translation>
+        <translation type="unfinished">Додайте:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Add entities to drawing</source>
-        <translation>Lisää piirrokseen kohteita</translation>
+        <translation type="unfinished">Додавання об&apos;єктів на креслення</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity</source>
-        <translation>Kohde</translation>
+        <translation type="unfinished">Суб&apos;єкт господарювання</translation>
     </message>
     <message>
-        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="-96"/>
-        <location line="+67"/>
-        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="+13"/>
-        <source>Chord</source>
-        <translation>Jänne</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="+13"/>
+        <location line="+26"/>
         <source>Add lengths/circumference to drawing</source>
-        <translation>Lisää pituudet/piirroksen ympärysmitta</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="-68"/>
-        <location line="+24"/>
-        <location line="+43"/>
-        <location line="+22"/>
-        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="+3"/>
-        <source>Length</source>
-        <translation>Pituus</translation>
+        <translation type="unfinished">Додайте довжину/обхват до креслення</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleAreaInit.js" line="+2"/>
         <source>Arc/Circle/Ellipse Area</source>
-        <translation>Kaaren/ympyrän/ellipsin ala</translation>
+        <translation type="unfinished">Площа дуги/кола/еліпса</translation>
     </message>
 </context>
 <context>
@@ -6717,32 +6715,32 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoArea.js" line="+70"/>
         <source>Set next polygon corner</source>
-        <translation>Aseta seuraava monikulmion kulma</translation>
+        <translation type="unfinished">Встановити наступний кут багатокутника</translation>
     </message>
     <message>
         <location line="+121"/>
         <source>Polygon area:</source>
-        <translation>Monikulmion ala:</translation>
+        <translation type="unfinished">Площа полігону:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>circumference:</source>
-        <translation>ympärysmitta:</translation>
+        <translation type="unfinished">окружності:</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoArea.ui" line="+17"/>
         <source>Calculate length and close tool.</source>
-        <translation>Laske pituus ja sulje työkalu.</translation>
+        <translation type="unfinished">Розрахувати довжину і закрити інструмент.</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Close Tool.</source>
-        <translation>Sulje työkalu.</translation>
+        <translation type="unfinished">Закрити інструмент.</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoAreaInit.js" line="+2"/>
         <source>Pol&amp;ygonal Area</source>
-        <translation>Moni&amp;kulmion ala</translation>
+        <translation type="unfinished">Полігональна площа</translation>
     </message>
 </context>
 <context>
@@ -6750,131 +6748,131 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroid.js" line="+123"/>
         <source>No selection.</source>
-        <translation type="unfinished">Ei valintaa.</translation>
+        <translation type="unfinished">Без вибору.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please, make a selection first. Command terminated.</source>
-        <translation type="unfinished">Tee ensin valinta. Komento lopetettu.</translation>
+        <translation type="unfinished">Будь ласка, спочатку зробіть вибір. Командування припинено.</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+8"/>
+        <source>Multiple entities in selection.</source>
+        <translation type="unfinished">Кілька суб&apos;єктів у відборі.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Not implemented. Command terminated.</source>
-        <translation type="unfinished">Ei toteutettu. Komento lopetettu.</translation>
+        <translation type="unfinished">Не виконано. Командування припинено.</translation>
     </message>
     <message>
         <location line="+5"/>
         <location line="+2"/>
         <source>Area 2D Centroid script (v0.32) by CVH</source>
-        <translation type="unfinished">Alue 2D Centroid käsikirjoitus (v0.32) jonka CVH</translation>
+        <translation type="unfinished">Скрипт Area 2D Centroid (v0.32) від CVH</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Arc sector mode</source>
-        <translation type="unfinished">Kaarisektorin tila</translation>
+        <translation type="unfinished">Режим дугового сектора</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Enclosed area:</source>
-        <translation type="unfinished">Suljettu alue:</translation>
+        <translation type="unfinished">Закрита територія:</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+27"/>
+        <source>Centroid markers circle in selection. No results.</source>
+        <translation type="unfinished">Центроїдні маркери кружком у виділенні. Безрезультатно.</translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>Approximated enclosed area:</source>
-        <translation type="unfinished">Arvioitu suljettu alue:</translation>
+        <translation type="unfinished">Орієнтовна закрита територія:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Hatched area:</source>
-        <translation type="unfinished">Luukutettu alue:</translation>
+        <translation type="unfinished">Заштрихована область:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Total hatched area:</source>
-        <translation type="unfinished">Kokonaispinta-ala:</translation>
+        <translation type="unfinished">Загальна площа штрихування:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Differential hatched area:</source>
-        <translation type="unfinished">Eriytetty alue:</translation>
+        <translation type="unfinished">Диференціальна штрихована площа:</translation>
     </message>
     <message>
-        <location line="+21"/>
-        <source>2D area Centroid</source>
-        <translation type="unfinished">2D-alue Keskipiste</translation>
-    </message>
-    <message>
-        <location line="-89"/>
-        <source>Multiple entities in selection.</source>
-        <translation type="unfinished">Useita kokonaisuuksia valinnassa.</translation>
-    </message>
-    <message>
-        <location line="+43"/>
-        <source>Centroid markers circle in selection. No results.</source>
-        <translation type="unfinished">Keskipistemerkkien ympyrä valinnassa. Ei tuloksia.</translation>
-    </message>
-    <message>
-        <location line="+29"/>
+        <location line="+4"/>
         <source>Unsupported entity type. No results.</source>
-        <translation type="unfinished">Ei tuettu oliotyyppi. Ei tuloksia.</translation>
+        <translation type="unfinished">Непідтримуваний тип суб&apos;єкта. Немає результатів.</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>No results.</source>
-        <translation type="unfinished">Ei tuloksia.</translation>
+        <translation type="unfinished">Безрезультатно.</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+9"/>
+        <source>2D area Centroid</source>
+        <translation type="unfinished">2D область Центроїд</translation>
+    </message>
+    <message>
+        <location line="+40"/>
         <location line="+6"/>
         <source>(Incl. approximations)</source>
-        <translation type="unfinished">(Mukaan lukien likiarvot)</translation>
+        <translation type="unfinished">(В т.ч. приблизні дані)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Approximated centroid:</source>
-        <translation type="unfinished">Likimääräinen keskipiste:</translation>
+        <translation type="unfinished">Наближений центроїд:</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Centroid:</source>
-        <translation type="unfinished">Keskipiste:</translation>
+        <translation type="unfinished">Центроїд:</translation>
     </message>
     <message>
         <location line="+207"/>
         <location line="+578"/>
         <source>Encountered an unsupported polyline with custom widths</source>
-        <translation type="unfinished">Kohtasi tukemattoman polylinjan mukautetuilla leveyksillä</translation>
+        <translation type="unfinished">Зіткнулися з непідтримуваною полілінією з нестандартною шириною</translation>
     </message>
     <message>
         <location line="-488"/>
         <location line="+596"/>
         <source>Encountered an unsupported polygon with custom widths</source>
-        <translation type="unfinished">Kohtasi tukemattoman polygonin mukautetuilla leveyksillä</translation>
+        <translation type="unfinished">Зустрівся непідтримуваний полігон з нестандартною шириною</translation>
     </message>
     <message>
         <location line="+687"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation type="unfinished">Käsittelemätön muoto luukkusilmukasta.</translation>
+        <translation type="unfinished">Нерозбірна форма з петлі люка.</translation>
     </message>
     <message>
         <location line="+70"/>
         <source>Self-intersecting shape near (%1). No Results.</source>
-        <translation type="unfinished">Itsestään leikkaava muoto lähellä (%1). Ei tuloksia.</translation>
+        <translation type="unfinished">Форма, що самоперетинається, близька до (%1). Немає результатів.</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+19"/>
         <source>&amp;Area Centroid</source>
-        <translation type="unfinished">Alueen keskipiste</translation>
+        <translation type="unfinished">Центроїд області</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Create an area 2D Centroid for a selected entity</source>
-        <translation type="unfinished">Luo alueen 2D-keskipiste valitulle kohteelle</translation>
+        <translation type="unfinished">Створити 2D центроїд області для вибраного об&apos;єкта</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Creates a new uniform areal density 2D Centroid marker and value labels for a selected entity</source>
-        <translation type="unfinished">Luo uuden yhtenäisen pinta-alatiheyden 2D Centroid -merkinnän ja arvomerkinnät valitulle kohteelle</translation>
+        <translation type="unfinished">Створює новий рівномірний за площею 2D маркер центроїда та мітки значень для вибраного об&apos;єкта</translation>
     </message>
 </context>
 <context>
@@ -6882,32 +6880,32 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoBearing/InfoBearing.js" line="+41"/>
         <source>Reference</source>
-        <translation type="unfinished">Viite</translation>
+        <translation type="unfinished">Посилання</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Direction</source>
-        <translation type="unfinished">Suunta</translation>
+        <translation type="unfinished">Напрямок</translation>
     </message>
     <message>
         <location line="+42"/>
         <source>Distance:</source>
-        <translation type="unfinished">Etäisyys:</translation>
+        <translation type="unfinished">Відстань:</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Bearing:</source>
-        <translation type="unfinished">Laakeri:</translation>
+        <translation type="unfinished">Підшипник:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Azimuth:</source>
-        <translation type="unfinished">Asimuutti:</translation>
+        <translation type="unfinished">Азимут:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>&amp;Bearing / Azimuth</source>
-        <translation type="unfinished">Suuntima / atsimuutti</translation>
+        <translation type="unfinished">Пеленг / Азимут</translation>
     </message>
 </context>
 <context>
@@ -6915,52 +6913,52 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroids.js" line="+52"/>
         <source>2D Centroid</source>
-        <translation type="unfinished">2D-keskipiste</translation>
+        <translation type="unfinished">2D Centroid</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Point mass</source>
-        <translation type="unfinished">Pistemassa</translation>
+        <translation type="unfinished">Точкова маса</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Area</source>
-        <translation type="unfinished">Alue</translation>
+        <translation type="unfinished">Площа</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Wire</source>
-        <translation type="unfinished">Lanka</translation>
+        <translation type="unfinished">Дріт</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+1"/>
+        <source>Density</source>
+        <translation type="unfinished">Щільність</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Weighted</source>
+        <translation type="unfinished">Зважені</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>X position</source>
-        <translation type="unfinished">X-asento</translation>
+        <translation type="unfinished">X положення</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Y position</source>
-        <translation type="unfinished">Y-asento</translation>
+        <translation type="unfinished">Позиція Y</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Undefined</source>
-        <translation type="unfinished">Määrittelemätön</translation>
+        <translation type="unfinished">Не визначено</translation>
     </message>
     <message>
         <location line="+428"/>
         <source>2D &amp;Centroids</source>
-        <translation type="unfinished">2D-keskipisteet</translation>
-    </message>
-    <message>
-        <location line="-431"/>
-        <source>Weighted</source>
-        <translation type="unfinished">Painotettu</translation>
-    </message>
-    <message>
-        <location line="-1"/>
-        <source>Density</source>
-        <translation type="unfinished">Tiheys</translation>
+        <translation type="unfinished">2D центроїди</translation>
     </message>
 </context>
 <context>
@@ -6968,12 +6966,12 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListener.js" line="+191"/>
         <source>2D Centroids transaction listener active.</source>
-        <translation type="unfinished">2D Centroids -tapahtuman kuuntelija aktiivinen.</translation>
+        <translation type="unfinished">слухач транзакції 2D Centroids активний.</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Deactivated/removed the 2D Centroids transaction listener.</source>
-        <translation type="unfinished">2D Centroids -tapahtuman kuuntelija poistettu käytöstä/poistettu.</translation>
+        <translation type="unfinished">Деактивовано/видалено слухача транзакцій 2D Centroids.</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -6981,22 +6979,22 @@ on jo luettelossa.</translation>
         <location line="+40"/>
         <location line="+5"/>
         <source>Syntax error: &apos;%1&apos; parse error</source>
-        <translation type="unfinished">Syntaksivirhe: &apos;%1&apos; parseerausvirhe</translation>
+        <translation type="unfinished">Синтаксична помилка: помилка розбору &apos;%1&apos;</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListenerInit.js" line="+19"/>
         <source>Centroid &amp;Listener</source>
-        <translation type="unfinished">Centroid kuuntelija</translation>
+        <translation type="unfinished">Слухач Центроїда</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
-        <translation type="unfinished">(De-)aktivoi 2D-keskipisteiden tapahtumakuuntelija</translation>
+        <translation type="unfinished">(Де-)Активація слухача транзакцій для 2D центроїдів</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>(De-)Activate a transaction listener for binding changes applied to 2D Centroid markers</source>
-        <translation type="unfinished">(De-)aktivoi tapahtumakuuntelija 2D Centroid -merkkeihin tehtyjen sitovien muutosten kuuntelua varten</translation>
+        <translation type="unfinished">(Де)Активувати слухач транзакцій для прив&apos;язки змін, застосованих до 2D маркерів центроїдів</translation>
     </message>
 </context>
 <context>
@@ -7004,22 +7002,22 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Information/InfoDistanceEE/InfoDistanceEE.js" line="+62"/>
         <source>Specify first entity</source>
-        <translation>Määritä ensimmäinen kohde</translation>
+        <translation type="unfinished">Вкажіть першу організацію</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Specify second entity</source>
-        <translation>Määritä toinen kohde</translation>
+        <translation type="unfinished">Вкажіть другу організацію</translation>
     </message>
     <message>
         <location line="+95"/>
         <source>Distance:</source>
-        <translation>Etäisyys:</translation>
+        <translation type="unfinished">Відстань:</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoDistanceEE/InfoDistanceEEInit.js" line="+2"/>
         <source>Distance &amp;Entity to Entity</source>
-        <translation>Etäisyys &amp;kohteesta kohteeseen</translation>
+        <translation type="unfinished">Відстань між суб&apos;єктами господарювання</translation>
     </message>
 </context>
 <context>
@@ -7027,22 +7025,22 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Information/InfoDistanceEP/InfoDistanceEP.js" line="+59"/>
         <source>Specify entity</source>
-        <translation>Määrittele kohde</translation>
+        <translation type="unfinished">Вкажіть організацію</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Specify point</source>
-        <translation>Määrittele piste</translation>
+        <translation type="unfinished">Вкажіть точку</translation>
     </message>
     <message>
         <location line="+81"/>
         <source>Distance:</source>
-        <translation>Etäisyys:</translation>
+        <translation type="unfinished">Відстань:</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoDistanceEP/InfoDistanceEPInit.js" line="+2"/>
         <source>Distance &amp;Entity to Point</source>
-        <translation>Etäisyys &amp;kohteesta pisteeseen</translation>
+        <translation type="unfinished">Відстань від об&apos;єкта до точки</translation>
     </message>
 </context>
 <context>
@@ -7050,37 +7048,37 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Information/InfoDistancePP/InfoDistancePP.js" line="+59"/>
         <source>First point</source>
-        <translation>Ensimmäinen piste</translation>
+        <translation type="unfinished">Перший пункт</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation>Toinen piste</translation>
+        <translation type="unfinished">Другий момент</translation>
     </message>
     <message>
         <location line="+53"/>
         <source>Distance:</source>
-        <translation>Etäisyys:</translation>
+        <translation type="unfinished">Відстань:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Delta X:</source>
-        <translation>Delta X:</translation>
+        <translation type="unfinished">Дельта Ікс:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delta Y:</source>
-        <translation>Delta Y:</translation>
+        <translation type="unfinished">Дельта Y:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angle:</source>
-        <translation>Kulma:</translation>
+        <translation type="unfinished">Кут:</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoDistancePP/InfoDistancePPInit.js" line="+2"/>
         <source>Distance &amp;Point to Point</source>
-        <translation>Etäisyys &amp;pisteestä pisteeseen</translation>
+        <translation type="unfinished">Відстань від точки до точки</translation>
     </message>
 </context>
 <context>
@@ -7088,12 +7086,12 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Information/InfoPosition/InfoPosition.js" line="+55"/>
         <source>Point</source>
-        <translation>Piste</translation>
+        <translation type="unfinished">Точка</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoPosition/InfoPositionInit.js" line="+2"/>
         <source>&amp;Position</source>
-        <translation>&amp;Sijainti</translation>
+        <translation type="unfinished">Посада</translation>
     </message>
 </context>
 <context>
@@ -7101,7 +7099,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Information/InfoPositionPol/InfoPositionPolInit.js" line="+2"/>
         <source>&amp;Polar Position</source>
-        <translation>&amp;Napasijainti</translation>
+        <translation type="unfinished">Полярне положення</translation>
     </message>
 </context>
 <context>
@@ -7109,7 +7107,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Information/InfoPositionPolRel/InfoPositionPolRelInit.js" line="+2"/>
         <source>Relative P&amp;olar Position</source>
-        <translation>Suhteellinen n&amp;avan sijainti</translation>
+        <translation type="unfinished">Відносне полярне положення</translation>
     </message>
 </context>
 <context>
@@ -7117,7 +7115,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Information/InfoPositionRel/InfoPositionRelInit.js" line="+2"/>
         <source>&amp;Relative Position</source>
-        <translation>&amp;Suhteellinen sijainti</translation>
+        <translation type="unfinished">Відносне положення</translation>
     </message>
 </context>
 <context>
@@ -7125,131 +7123,131 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeighted.js" line="+105"/>
         <source>No selection.</source>
-        <translation type="unfinished">Ei valintaa.</translation>
+        <translation type="unfinished">Без вибору.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please, make a selection first. Command terminated.</source>
-        <translation type="unfinished">Tee ensin valinta. Komento lopetettu.</translation>
+        <translation type="unfinished">Будь ласка, спочатку зробіть вибір. Командування припинено.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>2D Centroids weighted sum script (v0.24) by CVH.</source>
-        <translation type="unfinished">cVH:n 2D Centroids-painotetun summan käsikirjoitus (v0.24).</translation>
+        <translation type="unfinished">сценарій зваженої суми 2D центроїдів (v0.24) від CVH.</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Encountered a missing coordinate value.</source>
-        <translation type="unfinished">Koordinaattiarvo puuttuu.</translation>
+        <translation type="unfinished">Виявлено відсутнє значення координати.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Encountered an invalid coordinate value.</source>
-        <translation type="unfinished">Kohtasi virheellisen koordinaattiarvon.</translation>
+        <translation type="unfinished">Виникло невірне значення координат.</translation>
     </message>
     <message>
         <location line="+8"/>
         <location line="+11"/>
         <location line="+10"/>
         <source>Encountered a missing &apos;%1&apos; value.</source>
-        <translation type="unfinished">Puuttuva &apos;%1&apos;-arvo on havaittu.</translation>
+        <translation type="unfinished">Виявлено відсутнє значення &apos;%1&apos;.</translation>
     </message>
     <message>
         <location line="-16"/>
         <location line="+11"/>
         <location line="+17"/>
         <source>Encountered an invalid &apos;%1&apos; value.</source>
-        <translation type="unfinished">Kohtasi virheellisen &apos;%1&apos;-arvon.</translation>
+        <translation type="unfinished">Виникла помилка, пов&apos;язана з невірним значенням &apos;%1&apos;.</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Encountered an unknown marker type.</source>
-        <translation type="unfinished">Tuntematon merkkityyppi.</translation>
+        <translation type="unfinished">Виявлено невідомий тип маркера.</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>No result.</source>
-        <translation type="unfinished">Ei tulosta.</translation>
+        <translation type="unfinished">Безрезультатно.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>No 2D Centroid markers found in the selection.</source>
-        <translation type="unfinished">Valikoimasta ei löytynyt 2D Centroid -merkkejä.</translation>
+        <translation type="unfinished">У вибірці не знайдено 2D центроїдних маркерів.</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Single marker selected, point mass = %1</source>
-        <translation type="unfinished">Yksittäinen merkki valittu, pisteen massa = %1</translation>
+        <translation type="unfinished">Вибрано один маркер, маса точки = %1</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Density is undefined</source>
-        <translation type="unfinished">Tiheys on määrittelemätön</translation>
+        <translation type="unfinished">Щільність не визначена</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Results in a division by zero.</source>
-        <translation type="unfinished">Tuloksena on jako nollalla.</translation>
+        <translation type="unfinished">Призводить до ділення на нуль.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Results in a NaN value.</source>
-        <translation type="unfinished">Tuloksena on NaN-arvo.</translation>
+        <translation type="unfinished">Призводить до значення NaN.</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Combined 2D Centroid</source>
-        <translation type="unfinished">Yhdistetty 2D-keskipiste</translation>
+        <translation type="unfinished">Комбінований 2D центроїд</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Combined uniform point mass (%1):</source>
-        <translation type="unfinished">Yhdistetty yhtenäinen pistemassa (%1):</translation>
+        <translation type="unfinished">Комбінована однорідна точкова маса (%1):</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Combined point mass (%1):</source>
-        <translation type="unfinished">Yhdistetty pistemassa (%1):</translation>
+        <translation type="unfinished">Комбінована точкова маса (%1):</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>All densities are undefined</source>
-        <translation type="unfinished">Kaikki tiheydet ovat määrittelemättömiä</translation>
+        <translation type="unfinished">Всі щільності не визначені</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Some densities are undefined</source>
-        <translation type="unfinished">Jotkin tiheydet ovat määrittelemättömiä</translation>
+        <translation type="unfinished">Деякі щільності не визначені</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>area (Informational):</source>
-        <translation type="unfinished">alue (informatiivinen):</translation>
+        <translation type="unfinished">(Інформаційний):</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>wire length (Informational):</source>
-        <translation type="unfinished">johtimen pituus (informatiivinen):</translation>
+        <translation type="unfinished">довжина проводу (інформаційна):</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Combined centroid:</source>
-        <translation type="unfinished">Yhdistetty keskipiste:</translation>
+        <translation type="unfinished">Комбінований центроїд:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+19"/>
         <source>&amp;Sum 2D Centroids weighted</source>
-        <translation type="unfinished">Summa 2D-keskipisteiden painotettu</translation>
+        <translation type="unfinished">Сума зважених 2D центроїдів</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Combine selected 2D Centroid markers weighted</source>
-        <translation type="unfinished">Yhdistää valitut 2D Centroid -merkinnät painotettuna</translation>
+        <translation type="unfinished">Об&apos;єднати вибрані 2D центроїдні маркери зваженими</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Combines selected 2D Centroid markers, summing all properties weighted</source>
-        <translation type="unfinished">Yhdistää valitut 2D Centroid -merkinnät ja laskee yhteen kaikki painotetut ominaisuudet</translation>
+        <translation type="unfinished">Об&apos;єднує вибрані 2D маркери центроїда, підсумовуючи всі властивості з урахуванням ваги</translation>
     </message>
 </context>
 <context>
@@ -7257,99 +7255,99 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroid.js" line="+121"/>
         <source>No selection.</source>
-        <translation type="unfinished">Ei valintaa.</translation>
+        <translation type="unfinished">Без вибору.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please, make a selection first. Command terminated.</source>
-        <translation type="unfinished">Tee ensin valinta. Komento lopetettu.</translation>
+        <translation type="unfinished">Будь ласка, спочатку зробіть вибір. Командування припинено.</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+5"/>
+        <source>Wire 2D Centroid script (v0.32) by CVH</source>
+        <translation type="unfinished">Скрипт Wire 2D Centroid (v0.32) від CVH</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Length:</source>
-        <translation type="unfinished">Pituus:</translation>
+        <translation type="unfinished">Довжина:</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+28"/>
+        <source>2D Centroid markers circle in selection. No results.</source>
+        <translation type="unfinished">2D Центроїдні маркери кружляють у виділенні. Немає результатів.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <location line="+7"/>
         <source>Approximated length:</source>
-        <translation type="unfinished">Arvioitu pituus:</translation>
+        <translation type="unfinished">Орієнтовна довжина:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Unsupported entity type. No results.</source>
-        <translation type="unfinished">Ei tuettu oliotyyppi. Ei tuloksia.</translation>
+        <translation type="unfinished">Непідтримуваний тип суб&apos;єкта. Немає результатів.</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>No results.</source>
-        <translation type="unfinished">Ei tuloksia.</translation>
+        <translation type="unfinished">Безрезультатно.</translation>
     </message>
     <message>
-        <location line="-71"/>
-        <source>Wire 2D Centroid script (v0.32) by CVH</source>
-        <translation type="unfinished">Lanka 2D Centroid käsikirjoitus (v0.32) by CVH</translation>
-    </message>
-    <message>
-        <location line="+35"/>
-        <source>2D Centroid markers circle in selection. No results.</source>
-        <translation type="unfinished">2D Centroid markkerien ympyrä valinnassa. Ei tuloksia.</translation>
-    </message>
-    <message>
-        <location line="+55"/>
+        <location line="+19"/>
         <source>Results in a division by zero.</source>
-        <translation type="unfinished">Tuloksena on jako nollalla.</translation>
+        <translation type="unfinished">Призводить до ділення на нуль.</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>2D wire Centroid</source>
-        <translation type="unfinished">2D-langan keskipiste</translation>
+        <translation type="unfinished">2D дротовий центроїд</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Total length:</source>
-        <translation type="unfinished">Kokonaispituus:</translation>
+        <translation type="unfinished">Загальна довжина:</translation>
     </message>
     <message>
         <location line="+4"/>
         <location line="+6"/>
         <source>(Incl. approximations)</source>
-        <translation type="unfinished">(Mukaan lukien likiarvot)</translation>
+        <translation type="unfinished">(В т.ч. приблизні дані)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Approximated centroid:</source>
-        <translation type="unfinished">Likimääräinen keskipiste:</translation>
+        <translation type="unfinished">Наближений центроїд:</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Centroid:</source>
-        <translation type="unfinished">Keskipiste:</translation>
+        <translation type="unfinished">Центроїд:</translation>
     </message>
     <message>
         <location line="+125"/>
         <source>Encountered an unsupported polyline with custom widths</source>
-        <translation type="unfinished">Kohtasi tukemattoman polylinjan mukautetuilla leveyksillä</translation>
+        <translation type="unfinished">Зіткнулися з непідтримуваною полілінією з нестандартною шириною</translation>
     </message>
     <message>
         <location line="+105"/>
         <source>Encountered an unsupported polygon with custom widths</source>
-        <translation type="unfinished">Kohtasi tukemattoman polygonin mukautetuilla leveyksillä</translation>
+        <translation type="unfinished">Зустрівся непідтримуваний полігон з нестандартною шириною</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+19"/>
         <source>&amp;Wire Centroid</source>
-        <translation type="unfinished">Langan keskipiste</translation>
+        <translation type="unfinished">Дротяний центроїд</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Create a wire 2D Centroid for a selection</source>
-        <translation type="unfinished">Luo langan 2D-keskipiste valinnalle</translation>
+        <translation type="unfinished">Створення дротяного 2D центроїда для виділення</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Creates a new uniform linear density 2D Centroid marker and value labels for a selection of entities</source>
-        <translation type="unfinished">Luo uuden yhtenäisen lineaarisen tiheyden 2D Centroid-merkinnän ja arvomerkinnät valituille olioille</translation>
+        <translation type="unfinished">Створює новий однорідний за лінійною щільністю 2D маркер центроїда та мітки значень для вибору об&apos;єктів</translation>
     </message>
 </context>
 <context>
@@ -7357,22 +7355,22 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Information/Information.js" line="+334"/>
         <source>Information Tools</source>
-        <translation>Tietotyökalut</translation>
+        <translation type="unfinished">Інформаційні інструменти</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;Info</source>
-        <translation>&amp;Tietoja</translation>
+        <translation type="unfinished">Інформація</translation>
     </message>
     <message>
         <location filename="../scripts/Information/Information.ui" line="+17"/>
         <source>Add measurement to drawing</source>
-        <translation>Lisää mittaus piirrokseen</translation>
+        <translation type="unfinished">Додати розмір до креслення</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Text height:</source>
-        <translation>Tekstin korkeus:</translation>
+        <translation type="unfinished">Висота тексту:</translation>
     </message>
 </context>
 <context>
@@ -7380,47 +7378,47 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/InputPreferences/PreferencesPage.ui" line="+19"/>
         <source>Decimal point:</source>
-        <translation type="unfinished">Desimaalipiste:</translation>
+        <translation type="unfinished">Десяткова крапка:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Cartesian coordinate separator:</source>
-        <translation type="unfinished">Kartesiankoordinaattien erotin:</translation>
+        <translation type="unfinished">Роздільник декартових координат:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Polar coordinate separator:</source>
-        <translation type="unfinished">Polaarikoordinaattien erotin:</translation>
+        <translation type="unfinished">Полярний роздільник координат:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Relative coordinate prefix:</source>
-        <translation type="unfinished">Suhteellisen koordinaatin etuliite:</translation>
+        <translation type="unfinished">Відносний префікс координат:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Examples</source>
-        <translation>Esimerkit</translation>
+        <translation type="unfinished">Приклади</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Absolute Cartesian coordinate:</source>
-        <translation type="unfinished">Absoluuttinen kartesiankoordinaatti:</translation>
+        <translation type="unfinished">Абсолютна декартова координата:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Absolute polar coordinate:</source>
-        <translation type="unfinished">Absoluuttinen napakoordinaatti:</translation>
+        <translation type="unfinished">Абсолютна полярна координата:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Relative Cartesian coordinate:</source>
-        <translation type="unfinished">Suhteellinen kartesiankoordinaatti:</translation>
+        <translation type="unfinished">Відносна декартова координата:</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Relative polar coordinate:</source>
-        <translation type="unfinished">Suhteellinen polaarikoordinaatti:</translation>
+        <translation type="unfinished">Відносна полярна координата:</translation>
     </message>
 </context>
 <context>
@@ -7428,18 +7426,18 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js" line="+32"/>
         <source>General</source>
-        <translation>Yleistä</translation>
+        <translation type="unfinished">Генеральний</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Coordinate Format</source>
-        <translation>Koordinaattimuoto</translation>
+        <translation type="unfinished">Формат координат</translation>
     </message>
     <message>
         <location line="+15"/>
         <location line="+27"/>
         <source>Comma</source>
-        <translation>Pilkku</translation>
+        <translation type="unfinished">Кома</translation>
     </message>
     <message>
         <location line="-27"/>
@@ -7447,42 +7445,42 @@ on jo luettelossa.</translation>
         <location line="+5"/>
         <location line="+15"/>
         <source>(Default)</source>
-        <translation>(Oletus)</translation>
+        <translation type="unfinished">(За замовчуванням)</translation>
     </message>
     <message>
         <location line="-25"/>
         <source>Semicolon</source>
-        <translation>Puolipiste</translation>
+        <translation type="unfinished">Крапка з комою</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Less Than</source>
-        <translation>Vähemmän kuin</translation>
+        <translation type="unfinished">Менше, ніж</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>At</source>
-        <translation>Ät</translation>
+        <translation type="unfinished">За адресою</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Percentage</source>
-        <translation>Prosentteina</translation>
+        <translation type="unfinished">У відсотках</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dollar</source>
-        <translation>Dollari</translation>
+        <translation type="unfinished">Долар</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hash</source>
-        <translation>Risuaita</translation>
+        <translation type="unfinished">Хеш</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Dot</source>
-        <translation>Piste</translation>
+        <translation type="unfinished">Точка</translation>
     </message>
 </context>
 <context>
@@ -7490,88 +7488,88 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlock.js" line="+117"/>
         <source>Position</source>
-        <translation>Sijainti</translation>
+        <translation type="unfinished">Посада</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlock.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation>Kierto:</translation>
+        <translation type="unfinished">Ротація:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Rotate block&lt;br&gt;by this angle</source>
-        <translation>Kierrä lohkoa&lt;br&gt;kulmaan</translation>
+        <translation type="unfinished">Повернути блок на цей кут</translation>
     </message>
     <message>
         <location line="+110"/>
         <source>Scale X:</source>
-        <translation>Asteikko X:</translation>
+        <translation type="unfinished">Шкала Х:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Scale block in X&lt;br&gt;by this factor</source>
-        <translation>Skaalaa lohko suunnassa X&lt;br&gt;arvoon</translation>
+        <translation type="unfinished">Масштабний блок в X&lt;br&gt;за цим коефіцієнтом</translation>
     </message>
     <message>
         <location line="+68"/>
         <source>Y:</source>
-        <translation>Y:</translation>
+        <translation type="unfinished">Y:</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Scale block in Y&lt;br&gt;by this factor</source>
-        <translation>Skaalaa lohko suunnassa Y&lt;br&gt;arvoon</translation>
+        <translation type="unfinished">Масштабування блоку по Y&lt;br&gt;за цим коефіцієнтом</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Keep Proportions</source>
-        <translation>Säilytä mittasuhteet</translation>
+        <translation type="unfinished">Дотримуйтесь пропорцій</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Flip block&lt;br&gt;horizontally</source>
-        <translation>Käännä lohko&lt;br&gt;vaakasuunnassa</translation>
+        <translation type="unfinished">Перекидний блок&lt;br&gt;горизонтально</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Flip block&lt;br&gt;vertically</source>
-        <translation>Käännä lohko&lt;br&gt;pystysuunnassa</translation>
+        <translation type="unfinished">Перекидний блок&lt;br&gt;вертикально</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Single Block</source>
-        <translation>Yksi lohko</translation>
+        <translation type="unfinished">Одиночний блок</translation>
     </message>
     <message>
         <location line="+17"/>
         <location filename="../scripts/Block/InsertBlock/InsertBlockDialog.ui" line="+14"/>
         <source>Array of Blocks</source>
-        <translation>Lohkojoukko</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Block/InsertBlock/InsertBlockInit.js" line="+2"/>
-        <source>&amp;Insert Block</source>
-        <translation>&amp;Lisää lohko</translation>
+        <translation type="unfinished">Масив блоків</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlockDialog.ui" line="+8"/>
         <source>Columns:</source>
-        <translation>Sarakkeet:</translation>
+        <translation type="unfinished">Колони:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Rows:</source>
-        <translation>Rivit:</translation>
+        <translation type="unfinished">Ряди:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Column Spacing:</source>
-        <translation>Sarakeväli:</translation>
+        <translation type="unfinished">Інтервал між стовпчиками:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Row Spacing:</source>
-        <translation>Riviväli:</translation>
+        <translation type="unfinished">Міжряддя:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Block/InsertBlock/InsertBlockInit.js" line="+2"/>
+        <source>&amp;Insert Block</source>
+        <translation type="unfinished">Вставний блок</translation>
     </message>
 </context>
 <context>
@@ -7579,72 +7577,72 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Block/InsertBlockItem/InsertBlockItem.js" line="+102"/>
         <source>Cannot import file from URL: </source>
-        <translation>Tiedostoa ei voi tuoda URL-osoitteesta: </translation>
+        <translation type="unfinished">Не вдається імпортувати файл з URL-адреси:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Adjusted invalid block name to &quot;%1&quot;</source>
-        <translation>Korjattu virheellinen lohkon nimi &quot;%1&quot;</translation>
+        <translation type="unfinished">Виправлено невірне ім&apos;я блоку на &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>Position</source>
-        <translation>Sijainti</translation>
+        <translation type="unfinished">Посада</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlockItem/InsertBlockItem.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation>Kierto:</translation>
+        <translation type="unfinished">Ротація:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation>Kierrä liitetyt kohteet&lt;br&gt;kulmaan</translation>
+        <translation type="unfinished">Повернути вставлені об&apos;єкти на цей кут</translation>
     </message>
     <message>
         <location line="+103"/>
         <source>Scale:</source>
-        <translation>Asteikko:</translation>
+        <translation type="unfinished">Масштаб:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation>Skaalaa liitetyt kohteet&lt;br&gt;arvoon</translation>
+        <translation type="unfinished">Масштабування вставлених об&apos;єктів&lt;br&gt;за цим фактором</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation>Käännä liitetyt kohteet&lt;br&gt;vaakasuunnassa</translation>
+        <translation type="unfinished">Перевернути вставлені об&apos;єкти&lt;br&gt;по горизонталі</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation>Käännä liitetyt kohteet&lt;br&gt;pystysuunnassa</translation>
+        <translation type="unfinished">Перевернути вставлені об&apos;єкти&lt;br&gt;вертикально</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation>Ylikirjoita nykyiset tasot&lt;br&gt;piirrustuksessa&lt;br&gt;tasoilla leikepöydältä</translation>
+        <translation type="unfinished">Замінити існуючі шари&lt;br&gt;на кресленні шарами з буфера обміну</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite layers</source>
-        <translation>Ylikirjoita tasot</translation>
+        <translation type="unfinished">Перезапис шарів</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation>Ylikirjoita nykyiset lohkot&lt;br&gt;piirrustuksessa&lt;br&gt;lohkoilla leikepöydältä</translation>
+        <translation type="unfinished">Замінити існуючі блоки&lt;br&gt;на кресленні блоками з буфера обміну</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite blocks</source>
-        <translation>Ylikirjoita lohkot</translation>
+        <translation type="unfinished">Перезапис блоків</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlockItem/InsertBlockItemInit.js" line="+2"/>
         <source>&amp;Insert Block</source>
-        <translation>&amp;Lisää lohko</translation>
+        <translation type="unfinished">Вставний блок</translation>
     </message>
 </context>
 <context>
@@ -7652,7 +7650,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Block/InsertScriptItem/InsertScriptItemInit.js" line="+2"/>
         <source>Insert &amp;Script</source>
-        <translation>Lisää &amp;komentojono</translation>
+        <translation type="unfinished">Вставка сценарію</translation>
     </message>
 </context>
 <context>
@@ -7660,91 +7658,91 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Select/InvertSelection/InvertSelectionInit.js" line="+2"/>
         <source>&amp;Invert Selection</source>
-        <translation>&amp;Käännä valinta</translation>
+        <translation type="unfinished">Інвертувати виділення</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Invert the current selection</source>
-        <translation>Käännä nykyinen valinta</translation>
+        <translation type="unfinished">Інвертувати поточний вибір</translation>
     </message>
 </context>
 <context>
     <name>IsoProject</name>
     <message>
-        <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProject.ui" line="+17"/>
-        <source>Top</source>
-        <translation>Ylä</translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>Bottom</source>
-        <translation>Ala</translation>
-    </message>
-    <message>
-        <location line="+24"/>
-        <source>Left</source>
-        <translation>Vasen</translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>Left back</source>
-        <translation>Vasen taka</translation>
-    </message>
-    <message>
-        <location line="+24"/>
-        <source>Right</source>
-        <translation>Oikea</translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>Right back</source>
-        <translation>Oikea taka</translation>
-    </message>
-    <message>
-        <location line="+24"/>
-        <source>Rotate selection counter-clockwise before projection</source>
-        <translation>Kierrä valintaa vastapäivään ennen projektiota</translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>Rotate selection clockwise before projection</source>
-        <translation>Kierrä valintaa myötäpäivään ennen projektiota</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProjectInit.js" line="+2"/>
-        <source>&amp;Isometric Projection</source>
-        <translation>&amp;Isometrinen projektio</translation>
-    </message>
-    <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProject.js" line="+50"/>
         <source>Isometric</source>
-        <translation>Isometrinen</translation>
+        <translation type="unfinished">Ізометричний</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Isometric True Scale</source>
-        <translation>Isometrinen tosimitta</translation>
+        <translation type="unfinished">Ізометрична справжня шкала</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Planometric</source>
-        <translation>Planometrinen</translation>
+        <translation type="unfinished">Планометричний</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimetric</source>
-        <translation>Dimetrinen</translation>
+        <translation type="unfinished">Диметричний</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>Cabinet</source>
-        <translation>Kaappi</translation>
+        <translation type="unfinished">Кабінет міністрів</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cavalier</source>
-        <translation>Omavalinta</translation>
+        <translation type="unfinished">Кавалер</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProject.ui" line="+17"/>
+        <source>Top</source>
+        <translation type="unfinished">Топ</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Bottom</source>
+        <translation type="unfinished">Дно</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Left</source>
+        <translation type="unfinished">Ліворуч</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Left back</source>
+        <translation type="unfinished">Лівий захисник</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Right</source>
+        <translation type="unfinished">Так</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Right back</source>
+        <translation type="unfinished">Зараз повернуся</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Rotate selection counter-clockwise before projection</source>
+        <translation type="unfinished">Перед проектуванням поверніть вибір проти годинникової стрілки</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Rotate selection clockwise before projection</source>
+        <translation type="unfinished">Поверніть вибір за годинниковою стрілкою перед проектуванням</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProjectInit.js" line="+2"/>
+        <source>&amp;Isometric Projection</source>
+        <translation type="unfinished">Ізометрична проекція</translation>
     </message>
 </context>
 <context>
@@ -7752,7 +7750,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridLeft/IsometricGridLeft.js" line="+35"/>
         <source>&amp;Left Projection</source>
-        <translation>&amp;Vasen projektio</translation>
+        <translation type="unfinished">Ліва проекція</translation>
     </message>
 </context>
 <context>
@@ -7760,7 +7758,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridOff/IsometricGridOff.js" line="+35"/>
         <source>Isometric Grid &amp;Off</source>
-        <translation>Isometrinen ristikko &amp;pois</translation>
+        <translation type="unfinished">Ізометрична сітка вимкнена</translation>
     </message>
 </context>
 <context>
@@ -7768,7 +7766,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridRight/IsometricGridRight.js" line="+35"/>
         <source>&amp;Right Projection</source>
-        <translation>&amp;Oikea projektio</translation>
+        <translation type="unfinished">Пряма проекція</translation>
     </message>
 </context>
 <context>
@@ -7776,7 +7774,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridTop/IsometricGridTop.js" line="+143"/>
         <source>&amp;Top Projection</source>
-        <translation>&amp;Yläprojektio</translation>
+        <translation type="unfinished">Верхня проекція</translation>
     </message>
 </context>
 <context>
@@ -7784,7 +7782,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsometricProjection.js" line="+49"/>
         <source>&amp;Isometric Projection</source>
-        <translation>&amp;Isometrinen projektio</translation>
+        <translation type="unfinished">Ізометрична проекція</translation>
     </message>
 </context>
 <context>
@@ -7792,7 +7790,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricView.js" line="+44"/>
         <source>&amp;Isometric View</source>
-        <translation>&amp;Isometrinen näkymä</translation>
+        <translation type="unfinished">Ізометричний вид</translation>
     </message>
 </context>
 <context>
@@ -7800,12 +7798,12 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/KeyboardPreferences/PreferencesPage.ui" line="+17"/>
         <source>Shortcut timeout:</source>
-        <translation>Pikakuvakkeen aikakatkaisu:</translation>
+        <translation type="unfinished">Короткий тайм-аут:</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Enable keyboard navigation in list widgets</source>
-        <translation>Ota näppäimistön navigointi käyttöön luetteloruuduissa</translation>
+        <translation type="unfinished">Увімкнути клавіатурну навігацію у віджетах списків</translation>
     </message>
 </context>
 <context>
@@ -7813,12 +7811,12 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/KeyboardPreferences/KeyboardPreferences.js" line="+24"/>
         <source>General</source>
-        <translation>Yleistä</translation>
+        <translation type="unfinished">Генеральний</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Keyboard</source>
-        <translation>Näppäimistö</translation>
+        <translation type="unfinished">Клавіатура</translation>
     </message>
 </context>
 <context>
@@ -7826,7 +7824,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/PreferencesPage.ui" line="+20"/>
         <source>Language of user interface:</source>
-        <translation type="unfinished">Käyttöliittymän kieli:</translation>
+        <translation type="unfinished">Мова інтерфейсу користувача:</translation>
     </message>
 </context>
 <context>
@@ -7834,75 +7832,75 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+57"/>
         <source>Language Settings</source>
-        <translation>Kieliasetukset</translation>
+        <translation type="unfinished">Налаштування мови</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Language</source>
-        <translation>Kieli</translation>
+        <translation type="unfinished">Мова</translation>
     </message>
 </context>
 <context>
     <name>Layer</name>
     <message>
-        <location filename="../scripts/Layer/Layer.js" line="+97"/>
-        <source>Layer Tools</source>
-        <translation>Tasotyökalut</translation>
+        <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+26"/>
+        <source>Default color for layer 0:</source>
+        <translation type="unfinished">Колір за замовчуванням для шару 0:</translation>
     </message>
     <message>
-        <location line="+71"/>
-        <source>Showing all layers</source>
-        <translation>Näytetään kaikki tasot</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Hiding all layers</source>
-        <translation>Piilotetaan kaikki tasot</translation>
-    </message>
-    <message>
-        <location line="+50"/>
-        <source>Thawing all layers</source>
-        <translation>Sulautetaan kaikki tasot</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Freezing all layers</source>
-        <translation>Kaikki tasot jäädytetään</translation>
-    </message>
-    <message>
-        <location line="+31"/>
-        <source>Locking all layers</source>
-        <translation>Kaikki tasot lukitaan</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Unlocking all layers</source>
-        <translation>Avataan kaikki tasot</translation>
-    </message>
-    <message>
-        <location line="-133"/>
-        <source>&amp;Layer</source>
-        <translation>&amp;Taso</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+33"/>
+        <location line="+7"/>
         <source>Default lineweight for new layers:</source>
-        <translation>Uusien tasojen viivapaksuuden oletusarvo:</translation>
+        <translation type="unfinished">Лінійна вага за замовчуванням для нових шарів:</translation>
     </message>
     <message>
         <location line="+34"/>
         <source>Default color for new layers:</source>
-        <translation>Uusien tasojen oletusväri:</translation>
+        <translation type="unfinished">Колір за замовчуванням для нових шарів:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Default lineweight for layer 0:</source>
-        <translation>Oletus viivapaksuus tasolle 0:</translation>
+        <translation type="unfinished">Лінійна вага за замовчуванням для шару 0:</translation>
     </message>
     <message>
-        <location line="-48"/>
-        <source>Default color for layer 0:</source>
-        <translation>Tason 0 oletusväri:</translation>
+        <location filename="../scripts/Layer/Layer.js" line="+97"/>
+        <source>Layer Tools</source>
+        <translation type="unfinished">Інструменти шарів</translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>&amp;Layer</source>
+        <translation type="unfinished">Шар</translation>
+    </message>
+    <message>
+        <location line="+43"/>
+        <source>Showing all layers</source>
+        <translation type="unfinished">Показати всі шари</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Hiding all layers</source>
+        <translation type="unfinished">Приховування всіх шарів</translation>
+    </message>
+    <message>
+        <location line="+50"/>
+        <source>Thawing all layers</source>
+        <translation type="unfinished">Розморожування всіх шарів</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Freezing all layers</source>
+        <translation type="unfinished">Заморожування всіх шарів</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>Locking all layers</source>
+        <translation type="unfinished">Блокування всіх шарів</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Unlocking all layers</source>
+        <translation type="unfinished">Розблокування всіх шарів</translation>
     </message>
 </context>
 <context>
@@ -7910,32 +7908,32 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LayerCompatibility/LayerCompatibility.js" line="+30"/>
         <source>Layer</source>
-        <translation>Taso</translation>
+        <translation type="unfinished">Шар</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Compatibility</source>
-        <translation>Yhteensopivuus</translation>
+        <translation type="unfinished">Сумісність</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LayerCompatibility/PreferencesPage.ui" line="+17"/>
         <source>Layer 0</source>
-        <translation>Taso 0</translation>
+        <translation type="unfinished">Рівень 0</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Layer 0 behaves like a regular layer (QCAD)</source>
-        <translation>Taso 0 toimii kuten tavallinen taso (QCAD)</translation>
+        <translation type="unfinished">Шар 0 поводиться як звичайний шар (QCAD)</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Layer 0 behaves differently (best compatibility)</source>
-        <translation>Taso 0 käyttäytyy eri tavalla (paras yhteensopivuus)</translation>
+        <translation type="unfinished">Рівень 0 поводиться інакше (найкраща сумісність)</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Entities in blocks on layer 0 take on attributes and visibility of block reference.</source>
-        <translation>Tason 0 lohkoissa olevat kohteet ottavat lohkoviitteen ominaisuuksia ja näkyvyyttä.</translation>
+        <translation type="unfinished">Сутності в блоках на рівні 0 отримують атрибути та видимість посилання на блок.</translation>
     </message>
 </context>
 <context>
@@ -7944,52 +7942,52 @@ on jo luettelossa.</translation>
         <location filename="../scripts/Layer/LayerDialog.js" line="+40"/>
         <source>layer</source>
         <comment>default layer name prefix</comment>
-        <translation>taso</translation>
+        <translation type="unfinished">шар</translation>
     </message>
     <message>
         <location line="+156"/>
         <source>Leading or trailing spaces.</source>
-        <translation>Edeltävät tai lopussa olevat välilyönnit.</translation>
+        <translation type="unfinished">Початкові або кінцеві пробіли.</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Layer name is empty.</source>
-        <translation>Tason nimi on tyhjä.</translation>
+        <translation type="unfinished">Ім&apos;я шару порожнє.</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Layer already exists.</source>
-        <translation>Taso on jo olemassa.</translation>
+        <translation type="unfinished">Прошарок вже існує.</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/LayerDialog.ui" line="+28"/>
-        <source>Layer name:</source>
-        <translation>Tason nimi:</translation>
-    </message>
-    <message>
-        <location line="-11"/>
+        <location filename="../scripts/Layer/LayerDialog.ui" line="+17"/>
         <source>Layer</source>
-        <translation>Taso</translation>
+        <translation type="unfinished">Шар</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+11"/>
+        <source>Layer name:</source>
+        <translation type="unfinished">Ім&apos;я шару:</translation>
+    </message>
+    <message>
+        <location line="+28"/>
         <source>Attributes</source>
-        <translation>Ominaisuudet</translation>
+        <translation type="unfinished">Атрибути</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Color:</source>
-        <translation>Väri:</translation>
+        <translation type="unfinished">Колір:</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Lineweight:</source>
-        <translation>Viivan paksuus:</translation>
+        <translation type="unfinished">Лінійна вага:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Linetype:</source>
-        <translation>Viivatyyppi:</translation>
+        <translation type="unfinished">Лінійний тип:</translation>
     </message>
 </context>
 <context>
@@ -7997,7 +7995,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/LayerExamples.js" line="+50"/>
         <source>&amp;Layer</source>
-        <translation>&amp;Taso</translation>
+        <translation type="unfinished">Шар</translation>
     </message>
 </context>
 <context>
@@ -8005,23 +8003,23 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Widgets/LayerList/LayerList.js" line="+213"/>
         <source>Widgets</source>
-        <translation>Pienoisohjelmat</translation>
+        <translation type="unfinished">Віджети</translation>
     </message>
     <message>
-        <location line="+54"/>
-        <source>&amp;Layer List</source>
-        <translation>&amp;Tasojen lista</translation>
-    </message>
-    <message>
-        <location line="-54"/>
+        <location line="+0"/>
         <location line="+109"/>
         <source>Layer List</source>
-        <translation>Tasojen lista</translation>
+        <translation type="unfinished">Список шарів</translation>
+    </message>
+    <message>
+        <location line="-55"/>
+        <source>&amp;Layer List</source>
+        <translation type="unfinished">Список шарів</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/LayerList/PreferencesPage.ui" line="+19"/>
         <source>Enable alternating row colors</source>
-        <translation>Ota käyttöön vuorottelevat rivien värit</translation>
+        <translation type="unfinished">Увімкнути чергування кольорів рядків</translation>
     </message>
 </context>
 <context>
@@ -8029,32 +8027,32 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+62"/>
         <source>Arrow position</source>
-        <translation>Nuolen sijainti</translation>
+        <translation type="unfinished">Положення стрілки</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Next vertex</source>
-        <translation>Seuraava verteksi</translation>
+        <translation type="unfinished">Наступна вершина</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
         <source>Undo Last Segment</source>
-        <translation type="unfinished">Viimeisen segmentin peruuttaminen</translation>
+        <translation type="unfinished">Скасувати останній сегмент</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Arrow head</source>
-        <translation>Nuolenpää</translation>
+        <translation type="unfinished">Наконечник стріли</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
         <source>&amp;Leader</source>
-        <translation>&amp;Perusviiva</translation>
+        <translation type="unfinished">Лідер</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw leader (line sequence with arrow)</source>
-        <translation>Piirrä perusviiva (viiva nuolella)</translation>
+        <translation type="unfinished">Лідер розіграшу (послідовність ліній зі стрілкою)</translation>
     </message>
 </context>
 <context>
@@ -8062,12 +8060,12 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
         <source>Leader was created successfully</source>
-        <translation type="unfinished">Leader luotiin onnistuneesti</translation>
+        <translation type="unfinished">Лідер створено успішно</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation type="unfinished">Leader valikoidusta tekstistä</translation>
+        <translation type="unfinished">Лідер з виділеного тексту</translation>
     </message>
 </context>
 <context>
@@ -8075,22 +8073,22 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Modify/Lengthen/Lengthen.js" line="+60"/>
         <source>Choose line or arc</source>
-        <translation>Valitse viiva tai kaari</translation>
+        <translation type="unfinished">Виберіть лінію або дугу</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Lengthen/Lengthen.ui" line="+17"/>
         <source>Amount:</source>
-        <translation>Määrä:</translation>
+        <translation type="unfinished">Сума:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Amount to lengthen or shorten (negative)</source>
-        <translation>Määrä pidennykseen tai lyhennykseen (negatiivinen)</translation>
+        <translation type="unfinished">Сума до подовження або скорочення (від&apos;ємне значення)</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Lengthen/LengthenInit.js" line="+2"/>
         <source>&amp;Lengthen / Shorten</source>
-        <translation>&amp;Pidennä/lyhennä</translation>
+        <translation type="unfinished">Подовжити / Скоротити</translation>
     </message>
 </context>
 <context>
@@ -8098,262 +8096,261 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowser.js" line="+72"/>
         <source>audience</source>
-        <translation>yleisö</translation>
+        <translation type="unfinished">аудиторія</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>creator</source>
-        <translation>tekijä</translation>
+        <translation type="unfinished">творець</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>dimension</source>
-        <translation>mitta</translation>
+        <translation type="unfinished">розмір</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>levelOfDetail</source>
-        <translation>Yksityiskohtien taso</translation>
+        <translation type="unfinished">рівень деталізації</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>license</source>
-        <translation>lisenssi</translation>
+        <translation type="unfinished">ліцензія</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>perspective</source>
-        <translation>perspektiivi</translation>
+        <translation type="unfinished">перспектива</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>presentation</source>
-        <translation>esitys</translation>
+        <translation type="unfinished">презентація</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>publisher</source>
-        <translation>julkaisija</translation>
+        <translation type="unfinished">видавець</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>subject</source>
-        <translation>aihe</translation>
+        <translation type="unfinished">тема</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>title</source>
-        <translation>otsikko</translation>
+        <translation type="unfinished">назва</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Widgets</source>
-        <translation>Pienoisohjelmat</translation>
+        <translation type="unfinished">Віджети</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+1157"/>
         <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowserInit.js" line="+19"/>
         <source>Library Browser</source>
-        <translation>Kirjastoselain</translation>
+        <translation type="unfinished">Браузер бібліотеки</translation>
     </message>
     <message>
         <location line="-1149"/>
         <source>Icon</source>
-        <translation>Kuvake</translation>
+        <translation type="unfinished">Значок</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>List</source>
-        <translation>Luettelo</translation>
+        <translation type="unfinished">Список</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Choose Source Folder</source>
-        <translation>Valitse lähdekansio</translation>
+        <translation type="unfinished">Виберіть вихідну папку</translation>
     </message>
     <message>
         <location line="+687"/>
         <source>Page %1 of %2</source>
-        <translation>Sivu %1 / %2</translation>
+        <translation type="unfinished">Сторінка %1 з %2</translation>
     </message>
     <message>
         <location line="+237"/>
         <source>Updating icons...</source>
-        <translation>Päivitetään kuvakkeita ...</translation>
+        <translation type="unfinished">Оновлення іконок...</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+219"/>
         <source>Abort</source>
-        <translation>Keskeytä</translation>
+        <translation type="unfinished">Перервати</translation>
     </message>
     <message>
         <location line="-27"/>
         <source>File:</source>
-        <translation>Tiedosto:</translation>
+        <translation type="unfinished">Папка:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Folder:</source>
-        <translation>Kansio:</translation>
+        <translation type="unfinished">Папка:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>License:</source>
-        <translation>Lisenssi:</translation>
+        <translation type="unfinished">Права:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Attribute as:</source>
-        <translation>Määrite on:</translation>
+        <translation type="unfinished">Присвоїти ім&apos;я:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Creator:</source>
-        <translation>Tekijä:</translation>
+        <translation type="unfinished">Творець:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Updating library index:</source>
-        <translation>Päivitetään kirjaston hakemistoa:</translation>
+        <translation type="unfinished">Оновлення бібліотечного покажчика:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>DB error</source>
-        <translation>Tietokantavirhe</translation>
+        <translation type="unfinished">Помилка БД</translation>
     </message>
     <message>
         <location line="+44"/>
         <source>Source removed from part library: %1</source>
-        <translation>Lähde poistettu osakirjastosta: %1</translation>
+        <translation type="unfinished">Джерело видалено з бібліотеки деталей: %1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Force database update.</source>
-        <translation>Pakota tietokannan päivitys.</translation>
+        <translation type="unfinished">Оновлення бази даних сил.</translation>
     </message>
     <message>
         <location line="+393"/>
         <source>&amp;Insert</source>
-        <translation>&amp;Lisää</translation>
+        <translation type="unfinished">Вставка</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Edit Script File...</source>
-        <translation>&amp;Muokkaa komentorivitiedostoa ...</translation>
+        <translation type="unfinished">Редагування файлу сценарію...</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Open &amp;SVG File...</source>
-        <translation>Avaa &amp;SVG -tiedosto ...</translation>
+        <translation type="unfinished">Відкрийте файл SVG...</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Open...</source>
-        <translation>&amp;Avaa ...</translation>
+        <translation type="unfinished">Відчини...</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Edit...</source>
-        <translation>&amp;Muokkaa ...</translation>
+        <translation type="unfinished">Редагувати...</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>File Browser</source>
-        <translation>Tiedostoselain</translation>
+        <translation type="unfinished">Файловий браузер</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>&amp;Show in %1...</source>
-        <translation>&amp;Näytä %1:ssä ...</translation>
+        <translation type="unfinished">Показати в %1...</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>&amp;Remove from Favorites</source>
-        <translation>&amp;Poista suosikeista</translation>
+        <translation type="unfinished">Видалити з обраного</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>&amp;Add to Favorites</source>
-        <translation>&amp;Lisää suosikkeihin</translation>
+        <translation type="unfinished">Додати в обране Обране</translation>
     </message>
     <message>
         <location line="+34"/>
         <source>&amp;Regenerate Icon</source>
-        <translation>&amp;Tee uudelleen kuvake</translation>
+        <translation type="unfinished">Відновити значок</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>&amp;Regenerate Icons</source>
-        <translation>&amp;Tee uudelleen kuvakkeet</translation>
+        <translation type="unfinished">Відновити іконки</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowserInit.js" line="-11"/>
         <source>&amp;Library Browser</source>
-        <translation>&amp;Kirjastoselain</translation>
+        <translation type="unfinished">Браузер бібліотеки</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/LibraryBrowser/PreferencesPage.ui" line="+17"/>
         <source>Synchronization</source>
-        <translation>Synkronointi</translation>
+        <translation type="unfinished">Синхронізація</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Update search index on startup</source>
-        <translation>Päivitä haun indeksointi käynnistyksen yhteydessä</translation>
+        <translation type="unfinished">Оновлення пошукового індексу при запуску</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Display Options</source>
-        <translation>Näyttöasetukset</translation>
+        <translation type="unfinished">Параметри відображення</translation>
     </message>
     <message>
-        <location line="+53"/>
-        <source>Dark icon background</source>
-        <translation>Tumma kuvake tausta</translation>
-    </message>
-    <message>
-        <location line="-44"/>
+        <location line="+9"/>
         <source>Icon size:</source>
-        <translation type="unfinished">Kuvakkeen koko:</translation>
+        <translation type="unfinished">Розмір іконки:</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+44"/>
+        <source>Dark icon background</source>
+        <translation type="unfinished">Темний фон іконки</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>View mode:</source>
-        <translation type="unfinished">Näytä tila:</translation>
+        <translation type="unfinished">Режим перегляду:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of items
 shown in search results:</source>
-        <translation>Kohteiden määrä
-näkyy hakutuloksissa:</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Library Sources</source>
-        <translation>Kirjastolähteet</translation>
+        <translation type="unfinished">Бібліотечні джерела</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Add...</source>
-        <translation>Lisää ...</translation>
+        <translation type="unfinished">Додати...</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Remove</source>
-        <translation>Poista</translation>
+        <translation type="unfinished">Видалити</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Up</source>
-        <translation>Ylös</translation>
+        <translation type="unfinished">Вгору</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Down</source>
-        <translation>Alas</translation>
+        <translation type="unfinished">Вниз</translation>
     </message>
 </context>
 <context>
@@ -8361,42 +8358,42 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowser.ui" line="+28"/>
         <source>File System</source>
-        <translation>Tiedostojärjestelmä</translation>
+        <translation type="unfinished">Файлова система</translation>
     </message>
     <message>
         <location line="+60"/>
         <source>Search</source>
-        <translation>Hae</translation>
+        <translation type="unfinished">Пошук</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Look for:</source>
-        <translation>Etsi:</translation>
+        <translation type="unfinished">Шукайте:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Clear</source>
-        <translation>Tyhjennä</translation>
+        <translation type="unfinished">Чисто</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Find</source>
-        <translation>Etsi</translation>
+        <translation type="unfinished">Знайти</translation>
     </message>
     <message>
         <location line="+129"/>
         <source>Favorites</source>
-        <translation>Suosikit</translation>
+        <translation type="unfinished">Вибране</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Insert selected item into drawing</source>
-        <translation>Lisää valittu kohde piirustukseen</translation>
+        <translation type="unfinished">Вставити вибраний елемент в креслення</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Update DB from file system</source>
-        <translation>Päivitä tietokanta tiedostojärjestelmästä</translation>
+        <translation type="unfinished">Оновлення БД з файлової системи</translation>
     </message>
 </context>
 <context>
@@ -8404,32 +8401,32 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Draw/Line/Line.js" line="+81"/>
         <source>Line Tools</source>
-        <translation>Viivatyökalut</translation>
+        <translation type="unfinished">Лінійні інструменти</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Line</source>
-        <translation>&amp;Viiva</translation>
+        <translation type="unfinished">Лінія</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line.ui" line="+17"/>
         <source>Same Entity Type as Original</source>
-        <translation>Sama kohdetyyppi kuin alkuperäinen</translation>
+        <translation type="unfinished">Той самий тип організації, що і в оригіналі</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Line Segment</source>
-        <translation>Viivalohko</translation>
+        <translation type="unfinished">Лінійний сегмент</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Infinite Line</source>
-        <translation>Ääretön viiva</translation>
+        <translation type="unfinished">Нескінченна лінія</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Ray</source>
-        <translation>Säde</translation>
+        <translation type="unfinished">Рей</translation>
     </message>
 </context>
 <context>
@@ -8437,57 +8434,57 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.js" line="+67"/>
         <source>First point</source>
-        <translation>Ensimmäinen piste</translation>
+        <translation type="unfinished">Перший пункт</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Next point</source>
-        <translation>Seuraava piste</translation>
+        <translation type="unfinished">Наступний пункт</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.ui" line="+23"/>
         <source>Close Sequence</source>
-        <translation>Sulje Sekvenssi</translation>
+        <translation type="unfinished">Закрита послідовність</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>,, C</source>
-        <translation>,, C</translation>
+        <translation type="unfinished">,, C</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Undo Previous Segment</source>
-        <translation>Peru edellinen segmentti</translation>
+        <translation type="unfinished">Скасувати попередній сегмент</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>,, U</source>
-        <translation>,, U</translation>
+        <translation type="unfinished">,, U</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Redo Segment</source>
-        <translation>Tee segmentti uudelleen</translation>
+        <translation type="unfinished">Повторний сегмент</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>,, R</source>
-        <translation>,, R</translation>
+        <translation type="unfinished">,, R</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Restrict length or angle</source>
-        <translation>Rajoita pituus tai kulma</translation>
+        <translation type="unfinished">Обмеження довжини або кута</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2PInit.js" line="+2"/>
         <source>Line from &amp;2 Points</source>
-        <translation>Viiva &amp;2 pisteestä</translation>
+        <translation type="unfinished">Лінія з 2 точок</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw single line or sequence of lines</source>
-        <translation>Piirrä yksittäinen viiva tai viivasarja</translation>
+        <translation type="unfinished">Намалюйте одну лінію або послідовність ліній</translation>
     </message>
 </context>
 <context>
@@ -8495,52 +8492,52 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngle.js" line="+65"/>
         <source>Position</source>
-        <translation>Sijainti</translation>
+        <translation type="unfinished">Посада</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Specify position</source>
-        <translation>Määritä sijainti</translation>
+        <translation type="unfinished">Вкажіть посаду</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngle.ui" line="+17"/>
         <source>&amp;Angle:</source>
-        <translation>&amp;Kulma:</translation>
+        <translation type="unfinished">Кут:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Length:</source>
-        <translation>&amp;Pituus:</translation>
+        <translation type="unfinished">Довжина:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Reference Point:</source>
-        <translation>&amp;Vertailupiste:</translation>
+        <translation type="unfinished">Точка відліку:</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Start</source>
-        <translation>Alkupiste</translation>
+        <translation type="unfinished">Старт</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Middle</source>
-        <translation>Keskipiste</translation>
+        <translation type="unfinished">Середній</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>End</source>
-        <translation>Päätepiste</translation>
+        <translation type="unfinished">Кінець</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngleInit.js" line="+2"/>
         <source>Line from &amp;Angle</source>
-        <translation>Viiva &amp;kulmasta</translation>
+        <translation type="unfinished">Лінія з кута</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw line at a given absolute angle</source>
-        <translation>Piirrä viiva annetulla absoluuttisella kulmalla</translation>
+        <translation type="unfinished">Проведення лінії під заданим абсолютним кутом</translation>
     </message>
 </context>
 <context>
@@ -8548,37 +8545,37 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisector.js" line="+67"/>
         <source>First line</source>
-        <translation>Ensimmäinen viiva</translation>
+        <translation type="unfinished">Перша лінія</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Second line</source>
-        <translation>Toinen viiva</translation>
+        <translation type="unfinished">Друга лінія</translation>
     </message>
     <message>
         <location line="+71"/>
         <source>Lines don&apos;t intersect.</source>
-        <translation>Viivat eivät kohtaa.</translation>
+        <translation type="unfinished">Лінії не перетинаються.</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisector.ui" line="+17"/>
         <source>Length:</source>
-        <translation>Pituus:</translation>
+        <translation type="unfinished">Довжина:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Number:</source>
-        <translation>Numero:</translation>
+        <translation type="unfinished">Номер:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisectorInit.js" line="+2"/>
         <source>Angle &amp;Bisector</source>
-        <translation>Kulman &amp;puolittaja</translation>
+        <translation type="unfinished">Бісектриса кута</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw angle bisector, trisector, ...</source>
-        <translation>Piirrä kulman puolittaja, kolmasosittaja, ...</translation>
+        <translation type="unfinished">Побудова бісектриси кута, трисектриси, ...</translation>
     </message>
 </context>
 <context>
@@ -8586,57 +8583,57 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.js" line="+63"/>
         <source>First point</source>
-        <translation>Ensimmäinen piste</translation>
+        <translation type="unfinished">Перший пункт</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation>Toinen piste</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js" line="+2"/>
-        <source>Box &amp;Joint from 2 Points</source>
-        <translation>Laatikko &amp;yhdistä 2 pisteestä</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Draw Box Joint Fingers, Slots and Tennons</source>
-        <translation>Piirrä laatikkoa yhdistävät sormet, aukot ja tapit</translation>
+        <translation type="unfinished">Другий момент</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui" line="+17"/>
         <source>Depth:</source>
-        <translation>Syvyys:</translation>
+        <translation type="unfinished">Глибина:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Finger Width:</source>
-        <translation>Sormileveys:</translation>
+        <translation type="unfinished">Ширина пальця:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Finger/Slot Ratio:</source>
-        <translation>Osoita/aukon suhde:</translation>
+        <translation type="unfinished">Співвідношення пальців і прорізів:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Style:</source>
-        <translation>&amp;Tyyli:</translation>
+        <translation type="unfinished">Стиль:</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Finger first</source>
-        <translation>Osoita ensin</translation>
+        <translation type="unfinished">Спочатку палець</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Slot first</source>
-        <translation>Paikka ensin</translation>
+        <translation type="unfinished">Слот перший</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Tenons</source>
-        <translation>Tapit</translation>
+        <translation type="unfinished">Шипи</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js" line="+2"/>
+        <source>Box &amp;Joint from 2 Points</source>
+        <translation type="unfinished">Коробкове з&apos;єднання з 2 точок</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw Box Joint Fingers, Slots and Tennons</source>
+        <translation type="unfinished">Суглобові пальці, прорізи та теніски Draw Box</translation>
     </message>
 </context>
 <context>
@@ -8644,42 +8641,42 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.js" line="+63"/>
         <source>First point</source>
-        <translation>Ensimmäinen piste</translation>
+        <translation type="unfinished">Перший пункт</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation>Toinen piste</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
-        <source>&amp;Dovetail Joint from 2 Points</source>
-        <translation>&amp;Sovitus yhdistä 2 pisteestä</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Draw a dovetail joint</source>
-        <translation>Piirrä yhdistämisliitos</translation>
+        <translation type="unfinished">Другий момент</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.ui" line="+18"/>
         <source>Number of Dovetails:</source>
-        <translation>Yhdistelmien lukumäärä:</translation>
+        <translation type="unfinished">Кількість голубів:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Dovetail Height:</source>
-        <translation>Yhdistelmän korkeus:</translation>
+        <translation type="unfinished">Висота &quot;ластівчин хвіст&quot;:</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Dovetail Gradient:</source>
-        <translation>Yhdistelmän kaltevuus:</translation>
+        <translation type="unfinished">Градієнт &quot;ластівчин хвіст&quot;:</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Dovetail/Pin Ratio:</source>
-        <translation>Yhdistelmä/napa suhde:</translation>
+        <translation type="unfinished">Співвідношення &quot;ластівчин хвіст&quot; / штифт:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
+        <source>&amp;Dovetail Joint from 2 Points</source>
+        <translation type="unfinished">З&apos;єднання &quot;ластівчин хвіст&quot; з 2 точок</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw a dovetail joint</source>
+        <translation type="unfinished">Намалюйте з&apos;єднання &quot;ластівчин хвіст</translation>
     </message>
 </context>
 <context>
@@ -8687,22 +8684,22 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineFreehand/LineFreehand.js" line="+55"/>
         <source>Press to start drawing</source>
-        <translation>Paina aloittaaksesi piirtämisen</translation>
+        <translation type="unfinished">Натисніть, щоб почати малювати</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Release to stop drawing</source>
-        <translation>Vapauta lopettaaksesi piirtämisen</translation>
+        <translation type="unfinished">Відпустіть, щоб зупинити малювання</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineFreehand/LineFreehandInit.js" line="+2"/>
         <source>&amp;Freehand Line</source>
-        <translation>&amp;Vapaamuotoinen viiva</translation>
+        <translation type="unfinished">Freehand Line</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw freehand line</source>
-        <translation>Piirrä vapaamuotoinen viiva</translation>
+        <translation type="unfinished">Намалюйте лінію від руки</translation>
     </message>
 </context>
 <context>
@@ -8710,37 +8707,37 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineHorizontal/LineHorizontal.ui" line="+17"/>
         <source>&amp;Length:</source>
-        <translation>&amp;Pituus:</translation>
+        <translation type="unfinished">Довжина:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>&amp;Reference Point:</source>
-        <translation>&amp;Viitepiste:</translation>
+        <translation type="unfinished">Точка відліку:</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Start</source>
-        <translation>Alkupiste</translation>
+        <translation type="unfinished">Старт</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Middle</source>
-        <translation>Keskipiste</translation>
+        <translation type="unfinished">Середній</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>End</source>
-        <translation>Päätepiste</translation>
+        <translation type="unfinished">Кінець</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineHorizontal/LineHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal Line</source>
-        <translation>&amp;Vaakaviiva</translation>
+        <translation type="unfinished">Горизонтальна лінія</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw horizontal line</source>
-        <translation>Piirrä vaakaviiva</translation>
+        <translation type="unfinished">Проведіть горизонтальну лінію</translation>
     </message>
 </context>
 <context>
@@ -8748,37 +8745,37 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonal/LineOrthogonal.ui" line="+17"/>
         <source>Length:</source>
-        <translation>Pituus:</translation>
+        <translation type="unfinished">Довжина:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>&amp;Reference Point:</source>
-        <translation>&amp;Viitepiste:</translation>
+        <translation type="unfinished">Точка відліку:</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Start</source>
-        <translation>Alkupiste</translation>
+        <translation type="unfinished">Старт</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Middle</source>
-        <translation>Keskipiste</translation>
+        <translation type="unfinished">Середній</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>End</source>
-        <translation>Päätepiste</translation>
+        <translation type="unfinished">Кінець</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonal/LineOrthogonalInit.js" line="+2"/>
         <source>&amp;Orthogonal</source>
-        <translation>Kohtisuora</translation>
+        <translation type="unfinished">Ортогональні</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw line orthogonal to base entity</source>
-        <translation>Piirrä viiva kohtisuorassa peruskohdasta</translation>
+        <translation type="unfinished">Проведіть лінію, ортогональну до базової сутності</translation>
     </message>
 </context>
 <context>
@@ -8786,27 +8783,27 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonalTangent/LineOrthogonalTangent.js" line="+71"/>
         <source>Choose line</source>
-        <translation>Valitse viiva</translation>
+        <translation type="unfinished">Виберіть рядок</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Choose circle, arc or ellipse</source>
-        <translation>Valitse viiva, kaari tai ellipsi</translation>
+        <translation type="unfinished">Виберіть коло, дугу або еліпс</translation>
     </message>
     <message>
         <location line="+141"/>
         <source>No tangent possible</source>
-        <translation>Tangetti ei mahdollinen</translation>
+        <translation type="unfinished">Дотична неможлива</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonalTangent/LineOrthogonalTangentInit.js" line="+2"/>
         <source>Orthogonal / Tange&amp;nt</source>
-        <translation>Kohtisuora / tange&amp;ntti</translation>
+        <translation type="unfinished">Ортогональна / дотична</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw line orthogonal to line and tangent to circle, arc or ellipse</source>
-        <translation>Piirrä viiva kohtisuoraan linjasta ja sivua ympyrää, kaarta tai ellipsiä</translation>
+        <translation type="unfinished">Провести пряму, ортогональну до прямої і дотичну до кола, дуги або еліпса</translation>
     </message>
 </context>
 <context>
@@ -8814,22 +8811,22 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>Dist&amp;ance:</source>
-        <translation type="unfinished">Etäisyys:</translation>
+        <translation type="unfinished">Відстань:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Number:</source>
-        <translation>&amp;Numero:</translation>
+        <translation type="unfinished">Номер:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallelInit.js" line="+2"/>
         <source>Para&amp;llel (with Distance)</source>
-        <translation>Yhden&amp;suuntainen (etäisyyden kanssa)</translation>
+        <translation type="unfinished">Паралельно (з відстанню)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
-        <translation>Piirrä samansuuntaisena olemassa olevan viivan tai samankeskisen kaaren tai ympyrän kanssa</translation>
+        <translation type="unfinished">Провести паралельну до існуючої лінію або концентричну дугу, коло</translation>
     </message>
 </context>
 <context>
@@ -8837,17 +8834,17 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation>Numero:</translation>
+        <translation type="unfinished">Номер:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThroughInit.js" line="+2"/>
         <source>Par&amp;allel (through Point)</source>
-        <translation>Yhden&amp;suuntainen (pisteen kautta)</translation>
+        <translation type="unfinished">Паралельно (через пункт)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
-        <translation>Piirrä yhdensuuntainen viiva tai samankeskinen kaari tai ympyrä annetun pisteen kautta</translation>
+        <translation type="unfinished">Провести паралельну пряму або концентричну дугу чи коло через задану точку</translation>
     </message>
 </context>
 <context>
@@ -8855,22 +8852,22 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.js" line="+68"/>
         <source>First arc or circle</source>
-        <translation>Ensimmäinen kaari tai ympyrä</translation>
+        <translation type="unfinished">Перша дуга або коло</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second arc or circle</source>
-        <translation>Toinen kaari tai ympyrä</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxisInit.js" line="+2"/>
-        <source>Radical Axis of 2 Circles</source>
-        <translation>Jyrkkä 2 ympyrän akseli</translation>
+        <translation type="unfinished">Друга дуга або коло</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.ui" line="+17"/>
         <source>Length:</source>
-        <translation>Pituus:</translation>
+        <translation type="unfinished">Довжина:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxisInit.js" line="+2"/>
+        <source>Radical Axis of 2 Circles</source>
+        <translation type="unfinished">Радикальна вісь 2-х кіл</translation>
     </message>
 </context>
 <context>
@@ -8878,52 +8875,52 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="+71"/>
         <source>Choose base line, arc, circle, ellipse or polyline</source>
-        <translation>Valitse perusviiva, kaari, ympyrä, ellipsi tai moniviiva</translation>
+        <translation type="unfinished">Виберіть базову лінію, дугу, коло, еліпс або полілінію</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Set position</source>
-        <translation>Valitse sijainti</translation>
+        <translation type="unfinished">Встановлене положення</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.ui" line="+17"/>
         <source>Relative Angle:</source>
-        <translation>Suhteellinen kulma:</translation>
+        <translation type="unfinished">Відносний кут:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Length:</source>
-        <translation>Pituus:</translation>
+        <translation type="unfinished">Довжина:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>&amp;Reference Point:</source>
-        <translation>&amp;Viitepiste:</translation>
+        <translation type="unfinished">Точка відліку:</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Start</source>
-        <translation>Alku</translation>
+        <translation type="unfinished">Старт</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Middle</source>
-        <translation>Keski</translation>
+        <translation type="unfinished">Середній</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>End</source>
-        <translation>Loppu</translation>
+        <translation type="unfinished">Кінець</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngleInit.js" line="+2"/>
         <source>R&amp;elative Angle</source>
-        <translation>S&amp;uhteellinen kulma</translation>
+        <translation type="unfinished">Відносний кут</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw line with relative angle to base entity</source>
-        <translation>Piirrä viiva suhteellisella kulmalla perustasoon nähden</translation>
+        <translation type="unfinished">Провести лінію з відносним кутом до базової сутності</translation>
     </message>
 </context>
 <context>
@@ -8931,7 +8928,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineSimilarityAxes/LineSimilarityAxesInit.js" line="+2"/>
         <source>Similarity Axes of 3 Circles</source>
-        <translation>Samankaltaiset 3:n ympyrän akselit</translation>
+        <translation type="unfinished">Осі подібності 3-х кіл</translation>
     </message>
 </context>
 <context>
@@ -8939,33 +8936,33 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent1/LineTangent1.js" line="+65"/>
         <source>Choose start point of tangent</source>
-        <translation>Valitse tangentin aloituskohta</translation>
+        <translation type="unfinished">Вибір початкової точки дотичної</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Choose circle, arc or ellipse</source>
-        <translation>Valitse ympyrä, kaari tai ellipsi</translation>
+        <translation type="unfinished">Виберіть коло, дугу або еліпс</translation>
     </message>
     <message>
         <location line="+85"/>
         <source>No tangent possible.</source>
-        <translation>Tangetti ei mahdollinen.</translation>
+        <translation type="unfinished">Дотична неможлива.</translation>
     </message>
     <message>
         <location line="+25"/>
         <location line="+33"/>
         <source>Cannot draw tangent from point inside circle to circle</source>
-        <translation>Tangenttia ei voi piirtää ympyrän sisäpuolelta ympyrälle</translation>
+        <translation type="unfinished">Неможливо провести дотичну з точки всередині кола до кола</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent1/LineTangent1Init.js" line="+2"/>
         <source>&amp;Tangent (Point, Circle)</source>
-        <translation>&amp;Tangentti (piste, ympyrä)</translation>
+        <translation type="unfinished">Дотична (точка, коло)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw tangent (point, circle)</source>
-        <translation>Piirrä tangentti (piste, ympyrä)</translation>
+        <translation type="unfinished">Побудувати дотичну (точку, коло)</translation>
     </message>
 </context>
 <context>
@@ -8973,27 +8970,27 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent2/LineTangent2.js" line="+71"/>
         <source>Choose first circle or arc</source>
-        <translation>Valitse ensimmäinen ympyrä tai kaari</translation>
+        <translation type="unfinished">Виберіть перше коло або дугу</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Choose second circle or arc</source>
-        <translation>Valitse toinen ympyrä tai kaari</translation>
+        <translation type="unfinished">Виберіть друге коло або дугу</translation>
     </message>
     <message>
         <location line="+142"/>
         <source>No tangent possible</source>
-        <translation>Tangentti ei mahdollinen</translation>
+        <translation type="unfinished">Дотична неможлива</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent2/LineTangent2Init.js" line="+2"/>
         <source>Tan&amp;gent (Two Circles)</source>
-        <translation>Tan&amp;gentti (kaksi ympyrää)</translation>
+        <translation type="unfinished">Дотична (два кола)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw tangent (circle, circle)</source>
-        <translation>Piirrä tangentti (ympyrä, ympyrä)</translation>
+        <translation type="unfinished">Провести дотичну (коло, окружність)</translation>
     </message>
 </context>
 <context>
@@ -9001,12 +8998,12 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineVertical/LineVerticalInit.js" line="+2"/>
         <source>&amp;Vertical Line</source>
-        <translation>&amp;Pystyviiva</translation>
+        <translation type="unfinished">Вертикальна лінія</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw vertical line</source>
-        <translation>Piirrä pystyviiva</translation>
+        <translation type="unfinished">Проведіть вертикальну лінію</translation>
     </message>
 </context>
 <context>
@@ -9014,7 +9011,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/View/LinetypeMode/LinetypeMode.js" line="+86"/>
         <source>Screen-based Line&amp;types</source>
-        <translation>Kuvaruutuun perustuvat viiva&amp;tyypit</translation>
+        <translation type="unfinished">Екранні шрифти Linetypes</translation>
     </message>
 </context>
 <context>
@@ -9022,28 +9019,28 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/LinetypeSettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
-        <translation>Oletusarvot uusille piirroksille</translation>
+        <translation type="unfinished">Значення за замовчуванням для нових креслень</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+2"/>
         <source>Linetype</source>
-        <translation>Viivatyyppi</translation>
+        <translation type="unfinished">Тип лінійки</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation>Yleistä</translation>
+        <translation type="unfinished">Генеральний</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/PreferencesPage.ui" line="+19"/>
         <source>Global linetype scale:</source>
-        <translation type="unfinished">Globaali linjatyypin asteikko:</translation>
+        <translation type="unfinished">Глобальна шкала лінійних типів:</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Scale of linetypes matches the scale of each viewport</source>
-        <translation>Viivatyyppien mittakaava vastaa kunkin katselualueen mittakaavaa</translation>
+        <translation type="unfinished">Масштаб лінійних типів відповідає масштабу кожного видового вікна</translation>
     </message>
 </context>
 <context>
@@ -9051,7 +9048,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/Examples/ListenerExamples/ListenerExamples.js" line="+50"/>
         <source>&amp;Listeners</source>
-        <translation>&amp;Kuuntelijat</translation>
+        <translation type="unfinished">Слухачі</translation>
     </message>
 </context>
 <context>
@@ -9059,7 +9056,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Layer/LockAllLayers/LockAllLayersInit.js" line="+2"/>
         <source>&amp;Lock All Layers</source>
-        <translation>&amp;Lukitse kaikki tasot</translation>
+        <translation type="unfinished">Блокування всіх шарів</translation>
     </message>
 </context>
 <context>
@@ -9067,7 +9064,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/LockRelativeZero/LockRelativeZeroInit.js" line="+2"/>
         <source>&amp;Lock Relative Zero</source>
-        <translation>&amp;Lukitse relatiivinen nolla</translation>
+        <translation type="unfinished">Блокування відносного нуля</translation>
     </message>
 </context>
 <context>
@@ -9075,7 +9072,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/MathExamples.js" line="+51"/>
         <source>&amp;Mathematics</source>
-        <translation>&amp;Matematiikka</translation>
+        <translation type="unfinished">Математика</translation>
     </message>
 </context>
 <context>
@@ -9083,7 +9080,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/File/NewFile/MdiChildEmpty.ui" line="+20"/>
         <source>Untitled</source>
-        <translation>Nimetön</translation>
+        <translation type="unfinished">Без назви</translation>
     </message>
 </context>
 <context>
@@ -9091,17 +9088,17 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Widgets/MenuBar/MenuBar.js" line="+24"/>
         <source>Widgets</source>
-        <translation>Pienoisohjelmat</translation>
+        <translation type="unfinished">Віджети</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Menu Bar</source>
-        <translation>Valikkopalkki</translation>
+        <translation type="unfinished">Рядок меню</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/MenuBar/PreferencesPage.ui" line="+17"/>
         <source>Use native menu bar</source>
-        <translation>Käytä alkuperäistä valikkopalkkia</translation>
+        <translation type="unfinished">Використовуйте рідний рядок меню</translation>
     </message>
 </context>
 <context>
@@ -9109,12 +9106,12 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/MenusAndToolBars/MenusAndToolBars.js" line="+32"/>
         <source>MenusAndToolBars() is running...</source>
-        <translation>MenusAndToolBars() on käynnissä ...</translation>
+        <translation type="unfinished">Функція MenusAndToolBars() виконується...</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Menus and Toolbars</source>
-        <translation>&amp;Valikot ja työkalurivit</translation>
+        <translation type="unfinished">Меню та панелі інструментів</translation>
     </message>
 </context>
 <context>
@@ -9122,42 +9119,42 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.js" line="+44"/>
         <source>Modify</source>
-        <translation>Muokkaa</translation>
+        <translation type="unfinished">Змінити</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Mirror</source>
-        <translation>Peilikuva</translation>
+        <translation type="unfinished">Дзеркало</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>First point of symmetry axis</source>
-        <translation>Symmetria-akselin ensimmäinen piste</translation>
+        <translation type="unfinished">Перша точка осі симетрії</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point of symmetry axis</source>
-        <translation>Symmetria-akselin toinen piste</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Modify/Mirror/MirrorInit.js" line="+2"/>
-        <source>&amp;Mirror</source>
-        <translation>&amp;Peilikuva</translation>
+        <translation type="unfinished">Друга точка осі симетрії</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.ui" line="+17"/>
         <source>Copy</source>
-        <translation>Kopioi</translation>
+        <translation type="unfinished">Прийом</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>Käytä nykyistä tasoa ja &amp;määrityksiä</translation>
+        <translation type="unfinished">Використовувати поточний шар та атрибути</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/Mirror/MirrorInit.js" line="+2"/>
+        <source>&amp;Mirror</source>
+        <translation type="unfinished">Дзеркало</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation>Käytä työkalun vaihtoehtojen valintaikkunaa</translation>
+        <translation type="unfinished">Діалогове вікно для вибору параметрів інструменту</translation>
     </message>
 </context>
 <context>
@@ -9165,27 +9162,27 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorDialog.ui" line="+14"/>
         <source>Mirror Options</source>
-        <translation>Peilisetukset</translation>
+        <translation type="unfinished">Параметри дзеркала</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation>Kopioiden määrä</translation>
+        <translation type="unfinished">Кількість примірників</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation>&amp;Poista alkuperäinen</translation>
+        <translation type="unfinished">Видалити оригінал</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation>&amp;Säilytä alkuperäinen</translation>
+        <translation type="unfinished">Зберігайте оригінал</translation>
     </message>
     <message>
         <location line="+85"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>Käytä nykyistä tasoa ja &amp;ominaisuuksia</translation>
+        <translation type="unfinished">Використовувати поточний шар та атрибути</translation>
     </message>
 </context>
 <context>
@@ -9193,17 +9190,17 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/Misc.js" line="+60"/>
         <source>Misc Tools</source>
-        <translation>Muut työkalut</translation>
+        <translation type="unfinished">Різні інструменти</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Misc</source>
-        <translation>Sekalaiset</translation>
+        <translation type="unfinished">Різне</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Misc</source>
-        <translation>&amp;Sekalaiset</translation>
+        <translation type="unfinished">Різне</translation>
     </message>
 </context>
 <context>
@@ -9211,17 +9208,17 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/MiscBlock/MiscBlock.js" line="+51"/>
         <source>Misc</source>
-        <translation>Sekalaiset</translation>
+        <translation type="unfinished">Різне</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Misc Block Tools</source>
-        <translation>Sekalaiset lohkotyökalut</translation>
+        <translation type="unfinished">Інші інструменти для блоків</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>&amp;Block</source>
-        <translation>&amp;Lohko</translation>
+        <translation type="unfinished">Блок</translation>
     </message>
 </context>
 <context>
@@ -9229,17 +9226,17 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/MiscDevelopment.js" line="+51"/>
         <source>Misc</source>
-        <translation>Sekalaiset</translation>
+        <translation type="unfinished">Різне</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Misc Development Tools</source>
-        <translation>Sekalaiset kehitystyökalut</translation>
+        <translation type="unfinished">Інші інструменти розробки</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>De&amp;velopment</source>
-        <translation>Ke&amp;hitys</translation>
+        <translation type="unfinished">Розвиток</translation>
     </message>
 </context>
 <context>
@@ -9247,22 +9244,22 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/MiscDraw.js" line="+52"/>
         <source>Misc</source>
-        <translation>Muut</translation>
+        <translation type="unfinished">Різне</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Misc Drawing Tools</source>
-        <translation>Muut piirustustyökalut</translation>
+        <translation type="unfinished">Інші інструменти для малювання</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Misc Draw</source>
-        <translation>Muu piirros</translation>
+        <translation type="unfinished">Жеребкування</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Draw</source>
-        <translation>&amp;Piirrä</translation>
+        <translation type="unfinished">Жеребкування</translation>
     </message>
 </context>
 <context>
@@ -9270,17 +9267,17 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/MiscIO/MiscIO.js" line="+51"/>
         <source>Misc</source>
-        <translation>Muut</translation>
+        <translation type="unfinished">Різне</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Misc Import / Export Tools</source>
-        <translation>Muut tuonti- ja vientityökalut</translation>
+        <translation type="unfinished">Інші інструменти імпорту/експорту</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>&amp;Import/Export</source>
-        <translation>&amp;Tuo/vie</translation>
+        <translation type="unfinished">Імпорт/експорт</translation>
     </message>
 </context>
 <context>
@@ -9288,17 +9285,17 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/MiscInformation.js" line="+41"/>
         <source>Misc</source>
-        <translation type="unfinished">Misc</translation>
+        <translation type="unfinished">Різне</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Misc Information Tools</source>
-        <translation type="unfinished">Muut tietotyökalut</translation>
+        <translation type="unfinished">Інші інформаційні інструменти</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Information</source>
-        <translation type="unfinished">Tiedot</translation>
+        <translation type="unfinished">Інформація</translation>
     </message>
 </context>
 <context>
@@ -9306,17 +9303,17 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/MiscModify/MiscModify.js" line="+44"/>
         <source>Misc</source>
-        <translation>Muut</translation>
+        <translation type="unfinished">Різне</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Misc Modification Tools</source>
-        <translation>Muut muokkaustyökalut</translation>
+        <translation type="unfinished">Інші інструменти модифікації</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Modify</source>
-        <translation>&amp;Muokkaa</translation>
+        <translation type="unfinished">Змінити</translation>
     </message>
 </context>
 <context>
@@ -9324,17 +9321,17 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/MiscSelect/MiscSelect.js" line="+52"/>
         <source>Misc</source>
-        <translation>Muut</translation>
+        <translation type="unfinished">Різне</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Misc Selection Tools</source>
-        <translation>Muut valintatyökalut</translation>
+        <translation type="unfinished">Інші інструменти вибору</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Select</source>
-        <translation>&amp;Valitse</translation>
+        <translation type="unfinished">Виберіть</translation>
     </message>
 </context>
 <context>
@@ -9342,12 +9339,12 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Modify/Modify.js" line="+99"/>
         <source>Modification Tools</source>
-        <translation>Muunnostyökalut</translation>
+        <translation type="unfinished">Інструменти модифікації</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;Modify</source>
-        <translation>&amp;Muokkaa</translation>
+        <translation type="unfinished">Змінити</translation>
     </message>
 </context>
 <context>
@@ -9355,22 +9352,22 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Modify/ModifyCorner.js" line="+86"/>
         <source>Choose corner</source>
-        <translation>Valitse kulma</translation>
+        <translation type="unfinished">Виберіть кут</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Choose first entity</source>
-        <translation>Valitse ensimmäinen kohde</translation>
+        <translation type="unfinished">Виберіть перший об&apos;єкт</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Choose second entity</source>
-        <translation>Valitse toinen kohde</translation>
+        <translation type="unfinished">Оберіть другий суб&apos;єкт</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Set point</source>
-        <translation>Asetuspiste</translation>
+        <translation type="unfinished">Заданне значення</translation>
     </message>
 </context>
 <context>
@@ -9378,7 +9375,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/Examples/ModifyExamples/ModifyExamples.js" line="+49"/>
         <source>&amp;Modify</source>
-        <translation>&amp;Muokkaa</translation>
+        <translation type="unfinished">Змінити</translation>
     </message>
 </context>
 <context>
@@ -9386,22 +9383,22 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+38"/>
         <source>Import MOL</source>
-        <translation>Tuo MOL</translation>
+        <translation type="unfinished">Імпортний МОЛ</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>All Files</source>
-        <translation>Kaikki tiedostot</translation>
+        <source>MOL Files</source>
+        <translation type="unfinished">Файли MOL</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>MOL Files</source>
-        <translation>MOL-tiedostot</translation>
+        <source>All Files</source>
+        <translation type="unfinished">Всі файли</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImportInit.js" line="+2"/>
         <source>Leetro MOL Import...</source>
-        <translation>Leetro MOL tuonti ...</translation>
+        <translation type="unfinished">Leetro MOL Import...</translation>
     </message>
 </context>
 <context>
@@ -9409,12 +9406,12 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImporter.js" line="+161"/>
         <source>Importing Leetro MOL file...</source>
-        <translation>Tuodaan Leetro MOL tiedostoa ...</translation>
+        <translation type="unfinished">Імпорт файлу Leetro MOL...</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Abort</source>
-        <translation>Keskeytä</translation>
+        <translation type="unfinished">Перервати</translation>
     </message>
 </context>
 <context>
@@ -9422,7 +9419,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Widgets/MouseDisplay/MouseDisplay.ui" line="+32"/>
         <source>Form</source>
-        <translation>Muoto</translation>
+        <translation type="unfinished">Форма</translation>
     </message>
 </context>
 <context>
@@ -9430,23 +9427,23 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/PersistentWidgets/PersistentWidgets.ui" line="+14"/>
         <source>Enter Position</source>
-        <translation>Anna sijainti</translation>
+        <translation type="unfinished">Ввести позицію</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Position X:</source>
-        <translation>Sijainti X:</translation>
+        <translation type="unfinished">Позиція Х:</translation>
     </message>
     <message>
         <location line="+7"/>
         <location line="+14"/>
         <source>0.00</source>
-        <translation>0.00</translation>
+        <translation type="unfinished">0.00</translation>
     </message>
     <message>
         <location line="-7"/>
         <source>Position Y:</source>
-        <translation>Sijainti Y:</translation>
+        <translation type="unfinished">Позиція Y:</translation>
     </message>
 </context>
 <context>
@@ -9454,7 +9451,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/MenusAndToolBars/MyScripts.js" line="+53"/>
         <source>My Scripts</source>
-        <translation>Omat komentosarjat</translation>
+        <translation type="unfinished">Мої сценарії</translation>
     </message>
 </context>
 <context>
@@ -9462,17 +9459,17 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExWidget/MyWidget.ui" line="+14"/>
         <source>Character Map</source>
-        <translation>Merkkikartta</translation>
+        <translation type="unfinished">Карта персонажів</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>MyLineEdit</source>
-        <translation>OmaViivaMuokkaus</translation>
+        <translation type="unfinished">MyLineEdit</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>MyButton</source>
-        <translation>OmaPainike</translation>
+        <translation type="unfinished">MyButton</translation>
     </message>
 </context>
 <context>
@@ -9480,77 +9477,77 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/File/NewFile/NewFile.js" line="+144"/>
         <source>Opening drawing:</source>
-        <translation>Avataan piirrosta:</translation>
+        <translation type="unfinished">Малюнок відкриття:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Import Error</source>
-        <translation>Tuontivirhe</translation>
+        <translation type="unfinished">Помилка імпорту</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Cannot open file</source>
-        <translation>Tiedostoa ei voida avata</translation>
+        <translation type="unfinished">Не вдається відкрити файл</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>No suitable Importer found. Please check file format and extension.</source>
-        <translation>Soveliasta tuontiohjelmaa ei löydy. Tarkista tiedoston muoto sekä tiedostopääte.</translation>
+        <translation type="unfinished">Відповідного імпортера не знайдено. Будь ласка, перевірте формат та розширення файлу.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>File not found.</source>
-        <translation>Tiedostoa ei löytynyt.</translation>
+        <translation type="unfinished">Файл не знайдено.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Please check your access rights, the file format and file extension.</source>
-        <translation>Tarkista käyttöoikeutesi, tiedoston muoto ja tiedostopääte.</translation>
+        <translation type="unfinished">Будь ласка, перевірте свої права доступу, формат та розширення файлу.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Import failed.</source>
-        <translation>Tuonti epäonnistui.</translation>
+        <translation type="unfinished">Імпорт не пройшов.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>File is empty.</source>
-        <translation>Tiedosto on tyhjä.</translation>
+        <translation type="unfinished">Файл порожній.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Drawing loaded successfully:</source>
-        <translation>Piirros ladattu onnistuneesti:</translation>
+        <translation type="unfinished">Креслення успішно завантажено:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Format:</source>
-        <translation>Muoto:</translation>
+        <translation type="unfinished">Формат:</translation>
     </message>
     <message>
         <location line="+138"/>
         <source>Untitled %1</source>
-        <translation>Nimetön %1</translation>
+        <translation type="unfinished">Без назви %1</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>read-only</source>
-        <translation>kirjoitussuojattu</translation>
+        <translation type="unfinished">тільки для читання</translation>
     </message>
     <message>
         <location line="+63"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
-        <translation>Haluatko säästää muutokset, jotka teit&lt;br&gt;dokumentissa &apos;%1&apos;?</translation>
+        <translation type="unfinished">Ви хочете зберегти зміни, які ви зробили в документі &apos;%1&apos;?</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Your changes will be lost if you don&apos;t save them.</source>
-        <translation>Muutokset katoavat, jos et tallenna niitä.</translation>
+        <translation type="unfinished">Ваші зміни будуть втрачені, якщо ви їх не збережете.</translation>
     </message>
     <message>
         <location filename="../scripts/File/NewFile/NewFileInit.js" line="+2"/>
         <source>&amp;New</source>
-        <translation>&amp;Uusi</translation>
+        <translation type="unfinished">Новий</translation>
     </message>
 </context>
 <context>
@@ -9558,51 +9555,53 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Window/NextWindow/NextWindowInit.js" line="+2"/>
         <source>&amp;Next</source>
-        <translation>&amp;Seuraava</translation>
+        <translation type="unfinished">Далі</translation>
     </message>
 </context>
 <context>
     <name>Offset</name>
     <message>
-        <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
-        <source>&amp;Distance:</source>
-        <translation>&amp;Etäisyys:</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>&amp;Number:</source>
-        <translation>&amp;Numero:</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Modify/Offset/OffsetInit.js" line="+2"/>
-        <source>Offset (with Distance)</source>
-        <translation>Poikkeama (etäisyydellä)</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Offset line, arc, circle or ellipse</source>
-        <translation>Poikkeama viivassa, kaaressa, ympyrässä tai ellipsissä</translation>
-    </message>
-    <message>
         <location filename="../scripts/Modify/Offset/Offset.js" line="+77"/>
         <source>Choose line, arc, circle or ellipse</source>
-        <translation>Valitse viiva, kaari, ympyrä tai ellipsi</translation>
+        <translation type="unfinished">Виберіть лінію, дугу, коло або еліпс</translation>
     </message>
     <message numerus="yes">
         <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
-        <translation>
-            <numerusform>Säde laski alle 0,0:n jälkeen, kun keskipiste oli %n.</numerusform>
-            <numerusform>Säde laski alle 0,0:n jälkeen, kun keskipisteet olivat %n.</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
-        <translation>
-            <numerusform>Säde pieneni alle 0,0 %n samankeskisessä kaaressa.</numerusform>
-            <numerusform>Säde pieneni alle 0,0 %n samankeskisissä kaarissa.</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
+        <source>&amp;Distance:</source>
+        <translation type="unfinished">Відстань:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>&amp;Number:</source>
+        <translation type="unfinished">Номер:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/Offset/OffsetInit.js" line="+2"/>
+        <source>Offset (with Distance)</source>
+        <translation type="unfinished">Зміщення (з відстанню)</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Offset line, arc, circle or ellipse</source>
+        <translation type="unfinished">Зміщення лінії, дуги, кола або еліпса</translation>
     </message>
 </context>
 <context>
@@ -9610,22 +9609,22 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+70"/>
         <source>Specify point</source>
-        <translation>Määrittele piste</translation>
+        <translation type="unfinished">Вкажіть точку</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation>Numero:</translation>
+        <translation type="unfinished">Номер:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThroughInit.js" line="+2"/>
         <source>Offset (through Point)</source>
-        <translation>Poikkeama (pisteen kautta)</translation>
+        <translation type="unfinished">Зміщення (через точку)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Offset line, arc, circle or ellipse through point</source>
-        <translation>Poikkeama viivassa, kaaressa, ympyrässä tai ellipsissä pisteen kautta</translation>
+        <translation type="unfinished">Зміщення лінії, дуги, кола або еліпса через точку</translation>
     </message>
 </context>
 <context>
@@ -9633,27 +9632,27 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/File/OpenFile/OpenFile.js" line="+47"/>
         <source>No import filters have been found. Aborting...</source>
-        <translation>Tuontisuodattimia ei löydetty. Keskeytetään...</translation>
+        <translation type="unfinished">Фільтри імпорту не знайдено. Переривання...</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Open Drawing</source>
-        <translation>Avaa piirros</translation>
+        <translation type="unfinished">Відкритий розіграш</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>All Files</source>
-        <translation>Kaikki tiedostot</translation>
+        <translation type="unfinished">Всі файли</translation>
     </message>
     <message>
         <location filename="../scripts/File/OpenFile/OpenFileInit.js" line="+2"/>
         <source>&amp;Open</source>
-        <translation>&amp;Avaa</translation>
+        <translation type="unfinished">Відкрито</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Open an existing drawing</source>
-        <translation>Avaa olemassa oleva piirros</translation>
+        <translation type="unfinished">Відкрити існуюче креслення</translation>
     </message>
 </context>
 <context>
@@ -9661,7 +9660,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/View/OptionsToolBarFocus/OptionsToolBarFocusInit.js" line="+2"/>
         <source>&amp;Focus on Options Toolbar</source>
-        <translation>&amp;Kohdista valinnaisten työkaluun</translation>
+        <translation type="unfinished">Зосередьтеся на панелі інструментів &quot;Параметри</translation>
     </message>
 </context>
 <context>
@@ -9669,102 +9668,102 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+31"/>
         <source>Defaults for New Drawings</source>
-        <translation>Oletusarvot uusille piirroksille</translation>
+        <translation type="unfinished">Значення за замовчуванням для нових креслень</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Printing - Page</source>
-        <translation>Tulostus - sivu</translation>
+        <translation type="unfinished">Друк - Сторінка</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Printing</source>
-        <translation>Tulostus</translation>
+        <translation type="unfinished">Друк</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Page</source>
-        <translation>Sivu</translation>
+        <translation type="unfinished">Сторінка</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Custom</source>
-        <translation>Muokattu</translation>
+        <translation type="unfinished">Нестандартний</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+19"/>
         <source>Page Orientation</source>
-        <translation>Sivun suunta</translation>
+        <translation type="unfinished">Орієнтація сторінки</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Portrait</source>
-        <translation>Pystysuunta</translation>
+        <translation type="unfinished">Портрет</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Landscape</source>
-        <translation>Vaakasuora</translation>
+        <translation type="unfinished">Ландшафт</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Paper</source>
-        <translation>Paperi</translation>
+        <translation type="unfinished">Папір</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Paper size:</source>
-        <translation>Paperikoko:</translation>
+        <translation type="unfinished">Розмір паперу:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Paper width:</source>
-        <translation>Paperin leveys:</translation>
+        <translation type="unfinished">Ширина паперу:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Paper height:</source>
-        <translation>Paperin korkeus:</translation>
+        <translation type="unfinished">Висота паперу:</translation>
     </message>
     <message>
         <location line="+74"/>
         <source>Viewport</source>
-        <translation>Näkymäalue</translation>
+        <translation type="unfinished">Вікно перегляду</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Scale:</source>
-        <translation>&amp;Mittakaava:</translation>
+        <translation type="unfinished">Масштаб:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Offset X:</source>
-        <translation>X-siirtymä:</translation>
+        <translation type="unfinished">Зміщення X:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Offset Y:</source>
-        <translation>Y-siirtymä:</translation>
+        <translation type="unfinished">Зміщення Y:</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Zero-Point</source>
-        <translation>Nollakohta</translation>
+        <translation type="unfinished">Нульова точка</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Miscellaneous</source>
-        <translation>Sekalaiset</translation>
+        <translation type="unfinished">Різне</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Point size (mm):</source>
-        <translation>Pisteen koko (mm):</translation>
+        <translation type="unfinished">Розмір точки (мм):</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Show paper borders</source>
-        <translation>Näytä paperin reunat</translation>
+        <translation type="unfinished">Показати паперові бордюри</translation>
     </message>
 </context>
 <context>
@@ -9772,85 +9771,85 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/View/Zoom/PanZoom/PanZoomInit.js" line="+2"/>
         <source>&amp;Pan Zoom</source>
-        <translation>&amp;Panoroinnin kokomuutos</translation>
+        <translation type="unfinished">Панорамний зум</translation>
     </message>
 </context>
 <context>
     <name>Paste</name>
     <message>
         <location filename="../scripts/Edit/Paste/Paste.js" line="+52"/>
-        <source>Paste</source>
-        <translation>Liitä</translation>
+        <source>Edit</source>
+        <translation type="unfinished">Редагувати</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Edit</source>
-        <translation>Muokkaa</translation>
+        <source>Paste</source>
+        <translation type="unfinished">Паста</translation>
     </message>
     <message>
         <location line="+40"/>
         <source>Position</source>
-        <translation>Sijainti</translation>
+        <translation type="unfinished">Посада</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/Paste.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation>Kiertäminen:</translation>
+        <translation type="unfinished">Ротація:</translation>
     </message>
     <message>
         <location line="+126"/>
         <source>Scale:</source>
-        <translation>Mittakaava:</translation>
+        <translation type="unfinished">Масштаб:</translation>
     </message>
     <message>
         <location line="+88"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation>Käännä liitetyt kohteet&lt;br&gt;vaakasuoraan</translation>
+        <translation type="unfinished">Перевернути вставлені об&apos;єкти&lt;br&gt;по горизонталі</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation>Käännä liitetyt kohteet&lt;br&gt;pystysuoraan</translation>
+        <translation type="unfinished">Перевернути вставлені об&apos;єкти&lt;br&gt;вертикально</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation>Liitä kaikki kohteet&lt;br&gt;nykyiseen tasoon&lt;br&gt;alkuperäisen tason sijasta</translation>
+        <translation type="unfinished">Вставити всі об&apos;єкти в поточний шар замість вихідного шару</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>To current layer</source>
-        <translation>Nykyiseen tasoon</translation>
+        <translation type="unfinished">До поточного шару</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation>Korvaa olemassa olevat tasot&lt;br&gt;nykyisessä piirroksessa&lt;br&gt;leikepöydän tasoilla</translation>
+        <translation type="unfinished">Замінити існуючі шари&lt;br&gt;на кресленні шарами з буфера обміну</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite layers</source>
-        <translation>Korvaa tasot</translation>
+        <translation type="unfinished">Перезапис шарів</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation>Korvaa olemassa olevat lohkot&lt;br&gt;nykyisessä piirroksessa&lt;br&gt;leikepöydän lohkoilla</translation>
+        <translation type="unfinished">Замінити існуючі блоки&lt;br&gt;на кресленні блоками з буфера обміну</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite blocks</source>
-        <translation>Korvaa lohkot</translation>
+        <translation type="unfinished">Перезапис блоків</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/PasteInit.js" line="+2"/>
         <source>&amp;Paste</source>
-        <translation>&amp;Liitä</translation>
+        <translation type="unfinished">Паста</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/PreferencesPage.ui" line="+17"/>
         <source>Reset to defaults every time tool is used</source>
-        <translation>Palauta oletusarvot aina, kun käytetään työkalua</translation>
+        <translation type="unfinished">Скидання налаштувань за замовчуванням при кожному використанні інструменту</translation>
     </message>
 </context>
 <context>
@@ -9858,12 +9857,12 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/File/PdfExport/PdfExportInit.js" line="+2"/>
         <source>P&amp;DF Export</source>
-        <translation>P&amp;DF vienti</translation>
+        <translation type="unfinished">Експорт PDF</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Exports the current drawing as PDF</source>
-        <translation>Tallentaa piirroksen PDF muodossa</translation>
+        <translation type="unfinished">Експорт поточного креслення в PDF</translation>
     </message>
 </context>
 <context>
@@ -9871,12 +9870,12 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Widgets/PenToolBar/PenToolBar.js" line="+26"/>
         <source>Pen</source>
-        <translation>Kynä</translation>
+        <translation type="unfinished">Ручка</translation>
     </message>
     <message>
         <location line="+64"/>
         <source>Reset to Defaults</source>
-        <translation>Palauta oletusasetukset</translation>
+        <translation type="unfinished">Скидання до налаштувань за замовчуванням</translation>
     </message>
 </context>
 <context>
@@ -9884,7 +9883,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/PersistentWidgets/PersistentWidgets.js" line="+74"/>
         <source>&amp;Persistent Widgets</source>
-        <translation>&amp;Pysyvät pienoisohjelmat</translation>
+        <translation type="unfinished">Постійні віджети</translation>
     </message>
 </context>
 <context>
@@ -9892,12 +9891,12 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Draw/Point/Point.js" line="+71"/>
         <source>Point Tools</source>
-        <translation>Pistetyökalut</translation>
+        <translation type="unfinished">Точкові інструменти</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;Point</source>
-        <translation>&amp;Piste</translation>
+        <translation type="unfinished">Точка</translation>
     </message>
 </context>
 <context>
@@ -9905,17 +9904,17 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Draw/Point/Point1P/Point1P.js" line="+51"/>
         <source>Position</source>
-        <translation>Sijainti</translation>
+        <translation type="unfinished">Посада</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Point/Point1P/Point1PInit.js" line="+2"/>
         <source>Single &amp;Point</source>
-        <translation>Yksittäinen &amp;piste</translation>
+        <translation type="unfinished">Single Point</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw single point</source>
-        <translation>Piirrä yksittäinen piste</translation>
+        <translation type="unfinished">Намалювати одну точку</translation>
     </message>
 </context>
 <context>
@@ -9923,28 +9922,28 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PointDisplaySettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
-        <translation>Oletusarvot uusille piirroksille</translation>
+        <translation type="unfinished">Значення за замовчуванням для нових креслень</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+2"/>
         <source>Point Display</source>
-        <translation>Pisteen näyttö</translation>
+        <translation type="unfinished">Точковий дисплей</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation>Yleistä</translation>
+        <translation type="unfinished">Генеральний</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
         <source>Mode:</source>
-        <translation type="unfinished">Tila:</translation>
+        <translation type="unfinished">Режим:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Size (pixel):</source>
-        <translation>Koko (pikseleissä):</translation>
+        <translation type="unfinished">Розмір (піксель):</translation>
     </message>
 </context>
 <context>
@@ -9952,17 +9951,17 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPole/PointPole.js" line="+67"/>
         <source>Arc or circle</source>
-        <translation>Kaari tai ympyrä</translation>
+        <translation type="unfinished">Дуга або коло</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Line</source>
-        <translation>Viiva</translation>
+        <translation type="unfinished">Лінія</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPole/PointPoleInit.js" line="+2"/>
         <source>Pole of Line and Circle</source>
-        <translation>Rivin ja ympyrän napa</translation>
+        <translation type="unfinished">Полюс Лінії і Кола</translation>
     </message>
 </context>
 <context>
@@ -9970,12 +9969,12 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenter.js" line="+45"/>
         <source>No solution</source>
-        <translation>Ei ratkaisua</translation>
+        <translation type="unfinished">Немає рішення</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation>Kolmen ympyrän tehokeskus</translation>
+        <translation type="unfinished">Енергетичний центр трьох кіл</translation>
     </message>
 </context>
 <context>
@@ -9983,12 +9982,12 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Draw/Polyline/Polyline.js" line="+73"/>
         <source>Polyline Tools</source>
-        <translation>Murtoviivan työkalut</translation>
+        <translation type="unfinished">Polyline Tools</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;Polyline</source>
-        <translation>&amp;Murtoviiva</translation>
+        <translation type="unfinished">Полілайн</translation>
     </message>
 </context>
 <context>
@@ -9996,114 +9995,114 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.js" line="+108"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation type="unfinished">Valitse viiva, kaari, ympyrä, ellipsi, spline tai polyline, jonka haluat jakaa</translation>
+        <translation type="unfinished">Виберіть лінію, дугу, коло, еліпс, сплайн або полілінію для розбиття</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Choose line, arc, circle or ellipse to break up</source>
-        <translation type="unfinished">Valitse viiva, kaari, ympyrä tai ellipsi hajottaaksesi</translation>
+        <translation type="unfinished">Виберіть лінію, дугу, коло або еліпс для розбиття</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Pick the first point</source>
-        <translation type="unfinished">Valitse ensimmäinen kohta</translation>
+        <translation type="unfinished">Виберіть перший пункт</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pick the first break point</source>
-        <translation type="unfinished">Valitse ensimmäinen taukopiste</translation>
+        <translation type="unfinished">Виберіть перший брейк-пойнт</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Pick the second point</source>
-        <translation type="unfinished">Valitse toinen kohta</translation>
+        <translation type="unfinished">Виберіть другий пункт</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pick the second break point</source>
-        <translation type="unfinished">Valitse toinen taukopiste</translation>
+        <translation type="unfinished">Виберіть другий брейк-пойнт</translation>
     </message>
     <message>
         <location line="+170"/>
         <source>Break Out Segment</source>
-        <translation type="unfinished">Break Out Segmentti</translation>
+        <translation type="unfinished">Сегмент &quot;Break Out</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
         <source>Remove line break segment</source>
-        <translation type="unfinished">Poista rivinvaihtosegmentti</translation>
+        <translation type="unfinished">Видалити сегмент розриву рядка</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Remove the line segment between the break symbol</source>
-        <translation type="unfinished">Poista katkosymbolin välinen viivasegmentti</translation>
+        <translation type="unfinished">Видалити відрізок рядка між символом розриву</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Remove Segment</source>
-        <translation type="unfinished">Poista segmentti</translation>
+        <translation type="unfinished">Видалити сегмент</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Inherit entity properties</source>
-        <translation type="unfinished">Periytyvät entiteetin ominaisuudet</translation>
+        <translation type="unfinished">Успадковувати майно підприємства</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inherit all properties from the chosen entity</source>
-        <translation type="unfinished">Perii kaikki ominaisuudet valitulta entiteetiltä</translation>
+        <translation type="unfinished">Успадкувати все майно від обраного суб&apos;єкта господарювання</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inherit</source>
-        <translation type="unfinished">Peritään</translation>
+        <translation type="unfinished">Успадковувати</translation>
     </message>
     <message>
         <location line="+17"/>
         <location line="+13"/>
         <source>Peak ratio</source>
-        <translation type="unfinished">Huippusuhde</translation>
+        <translation type="unfinished">Пікове співвідношення</translation>
     </message>
     <message>
         <location line="-10"/>
         <location line="+13"/>
         <source>The ratio of the peak height to the break width</source>
-        <translation type="unfinished">Huipun korkeuden suhde tauon leveyteen</translation>
+        <translation type="unfinished">Відношення висоти піку до ширини розриву</translation>
     </message>
     <message>
         <location line="-10"/>
         <source>Peak Ratio:</source>
-        <translation type="unfinished">Huippusuhde:</translation>
+        <translation type="unfinished">Піковий коефіцієнт:</translation>
     </message>
     <message>
         <location line="+78"/>
         <source>First/Last segment inclined</source>
-        <translation type="unfinished">Ensimmäinen/viimeinen segmentti kallistettu</translation>
+        <translation type="unfinished">Перший/останній сегмент нахилений</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>The first and last segment of the break symbol are inclined</source>
-        <translation type="unfinished">Taukosymbolin ensimmäinen ja viimeinen segmentti ovat kaltevia</translation>
+        <translation type="unfinished">Перший і останній відрізок символу розриву нахилені</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>First/Last segment vertical</source>
-        <translation type="unfinished">Ensimmäinen/viimeinen segmentti pystysuora</translation>
+        <translation type="unfinished">Перший/останній сегмент вертикальний</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>The first and last segment of the break symbol are vertical</source>
-        <translation type="unfinished">Taukosymbolin ensimmäinen ja viimeinen segmentti ovat pystysuorat</translation>
+        <translation type="unfinished">Перший і останній відрізок символу розриву вертикальні</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js" line="+2"/>
         <source>&amp;Polyline break symbol from 2 points</source>
-        <translation type="unfinished">Polylinjan katkaisusymboli 2 pisteestä</translation>
+        <translation type="unfinished">Символ розриву полілінії з 2 точок</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw a polyline break symbol from 2 points</source>
-        <translation type="unfinished">Piirrä polylinjan katkaisusymboli 2 pisteestä</translation>
+        <translation type="unfinished">Намалюйте символ розриву полілінії з 2 точок</translation>
     </message>
 </context>
 <context>
@@ -10113,27 +10112,27 @@ näkyy hakutuloksissa:</translation>
         <location line="+71"/>
         <location line="+21"/>
         <source>Preferences</source>
-        <translation>Asetukset</translation>
+        <translation type="unfinished">Уподобання</translation>
     </message>
     <message>
         <location line="-74"/>
         <source>Filter</source>
-        <translation>Suodatin</translation>
+        <translation type="unfinished">Фільтр</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Expand Tree</source>
-        <translation>Laajenna puu</translation>
+        <translation type="unfinished">Розгорнути дерево</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Collapse Tree</source>
-        <translation>Supista puu</translation>
+        <translation type="unfinished">Дерево обвалу</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>Restore to Default Values</source>
-        <translation>Palauta oletusarvoihin</translation>
+        <translation type="unfinished">Відновлення до значень за замовчуванням</translation>
     </message>
 </context>
 <context>
@@ -10141,7 +10140,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/View/Zoom/PreviousView/PreviousViewInit.js" line="+2"/>
         <source>&amp;Previous View</source>
-        <translation>&amp;Edellinen näyttö</translation>
+        <translation type="unfinished">Попередній перегляд</translation>
     </message>
 </context>
 <context>
@@ -10149,7 +10148,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Window/PreviousWindow/PreviousWindowInit.js" line="+2"/>
         <source>&amp;Previous</source>
-        <translation>&amp;Edellinen</translation>
+        <translation type="unfinished">Попередній</translation>
     </message>
 </context>
 <context>
@@ -10157,12 +10156,12 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/File/Print/PrintInit.js" line="+2"/>
         <source>&amp;Print</source>
-        <translation>&amp;Tulosta</translation>
+        <translation type="unfinished">Друк</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Print current drawing</source>
-        <translation>Tulosta nykyinen piirros</translation>
+        <translation type="unfinished">Друк поточного креслення</translation>
     </message>
 </context>
 <context>
@@ -10170,12 +10169,12 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/File/PrintCurrentView/PrintCurrentViewInit.js" line="+2"/>
         <source>Print &amp;Current View</source>
-        <translation>Tulosta &amp;Nykyinen näkymä</translation>
+        <translation type="unfinished">Роздрукувати поточний вигляд</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Print current view</source>
-        <translation>Tulosta nykyinen näkymä</translation>
+        <translation type="unfinished">Роздрукувати поточний вигляд</translation>
     </message>
 </context>
 <context>
@@ -10183,147 +10182,147 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+92"/>
         <source>Auto Paper Size</source>
-        <translation type="unfinished">Automaattinen paperikoko</translation>
+        <translation type="unfinished">Автоматичний розмір паперу</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The paper size is set to a custom size (%1x%2mm). Do you want to change it to the default paper size of your printer (%3)?</source>
-        <translation type="unfinished">Paperikoko on asetettu mukautettuun kokoon (%1x%2mm). Haluatko vaihtaa sen tulostimen oletuspaperikokoon (%3)?</translation>
+        <translation type="unfinished">Розмір паперу встановлено на користувацький розмір (%1x%2мм). Ви хочете змінити його на розмір паперу за замовчуванням вашого принтера (%3)?</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Auto fit</source>
-        <translation type="unfinished">Automaattinen sovitus</translation>
+        <translation type="unfinished">Автоматична підгонка</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Auto fit drawing to paper?</source>
-        <translation type="unfinished">Sovita piirustus automaattisesti paperille?</translation>
+        <translation type="unfinished">Автоматичне припасування креслення до паперу?</translation>
     </message>
     <message>
         <location line="+188"/>
         <source>Drag to move paper</source>
-        <translation>Siirrä paperia vetämällä</translation>
+        <translation type="unfinished">Перетягування для переміщення паперу</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Done</source>
-        <translation>Valmis</translation>
+        <translation type="unfinished">Зроблено</translation>
     </message>
     <message>
         <location line="+452"/>
         <source>Export to PDF</source>
-        <translation>Vie PDF:ksi</translation>
+        <translation type="unfinished">Експорт в PDF</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Exporting to %1...</source>
-        <translation>Viedään %1:een...</translation>
+        <translation type="unfinished">Експорт в %1...</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Export complete: %1</source>
-        <translation>Vienti valmis:%1</translation>
+        <translation type="unfinished">Експорт завершено: %1</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Export failed (cannot open file for writing): %1</source>
-        <translation>Vienti epäonnistui (ei voida avata tiedostoa kirjoitusta varten): %1</translation>
+        <translation type="unfinished">Помилка експорту (не вдається відкрити файл для запису): %1</translation>
     </message>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreview.ui" line="+17"/>
         <source>Close Print Preview</source>
-        <translation>Sulje tulostuksen esikatselu</translation>
+        <translation type="unfinished">Закрити попередній перегляд для друку</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Print...</source>
-        <translation>Tulosta ...</translation>
+        <translation type="unfinished">Друк...</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Export as PDF...</source>
-        <translation>Vie PDF-muotoon...</translation>
+        <translation type="unfinished">Експорт в PDF...</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Scale:</source>
-        <translation>Mittakaava:</translation>
+        <translation type="unfinished">Масштаб:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Drawing Scale</source>
-        <translation>Piirroksen mittakaava</translation>
+        <translation type="unfinished">Масштаб для креслення</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Move Paper Position</source>
-        <translation>Siirrä paperin sijaintia</translation>
+        <translation type="unfinished">Переміщення положення паперу</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Auto fit drawing to page(s)</source>
-        <translation>Sovita piirros automaattisesti sivulle(-ille)</translation>
+        <translation type="unfinished">Автоматичне припасування креслення до сторінки (сторінок)</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Auto Center</source>
-        <translation>Automaattinen keskitys</translation>
+        <translation type="unfinished">Автоцентр</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Portrait</source>
-        <translation>Pystysuunta</translation>
+        <translation type="unfinished">Портрет</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Landscape</source>
-        <translation>Vaakasuunta</translation>
+        <translation type="unfinished">Ландшафт</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Auto zoom to page</source>
-        <translation>Automaatinen zoomaus sivulle</translation>
+        <translation type="unfinished">Автоматичне масштабування сторінки</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Full Color Mode</source>
-        <translation>Täysi väritila</translation>
+        <translation type="unfinished">Повнокольоровий режим</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Grayscale Mode</source>
-        <translation>Harmaasävy tila</translation>
+        <translation type="unfinished">Відтінки сірого</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Black / White Mode</source>
-        <translation>Mustavalkoinen tila</translation>
+        <translation type="unfinished">Чорно-білий режим</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Show Paper Borders</source>
-        <translation>Näytä paperin reunat</translation>
+        <translation type="unfinished">Показати межі паперу</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Print Crop Marks</source>
-        <translation>Tulosta leikkausmerkit</translation>
+        <translation type="unfinished">Друк позначок обрізання</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Show More Options</source>
-        <translation>Näytä lisää valintoja</translation>
+        <translation type="unfinished">Показати більше опцій</translation>
     </message>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreviewInit.js" line="+2"/>
         <source>Print Pre&amp;view</source>
-        <translation>Tulostuksen esi&amp;katselu</translation>
+        <translation type="unfinished">Попередній перегляд для друку</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Preview how current drawing would be printed</source>
-        <translation>Esikatselu, miltä nykyinen piirros näyttäisi tulostettuna</translation>
+        <translation type="unfinished">Перегляд того, як буде надруковано поточне креслення</translation>
     </message>
 </context>
 <context>
@@ -10331,22 +10330,22 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Projection/Projection.js" line="+84"/>
         <source>Projection Tools</source>
-        <translation>Projektiotyökalut</translation>
+        <translation type="unfinished">Проекційні інструменти</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Projection</source>
-        <translation>&amp;Projektio</translation>
+        <translation type="unfinished">Прогнозування</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Reference point</source>
-        <translation>Viitepiste</translation>
+        <translation type="unfinished">Точка відліку</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Target point</source>
-        <translation>Kohdepiste</translation>
+        <translation type="unfinished">Цільова точка</translation>
     </message>
 </context>
 <context>
@@ -10354,159 +10353,159 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+17"/>
         <source>Display Z coordinates</source>
-        <translation>Näytä Z koordinaatit</translation>
+        <translation type="unfinished">Відображення координат Z</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Display properties of current block and current layer</source>
-        <translation>Näyttää nykyisen lohkon ja nykyisen tason ominaisuudet</translation>
+        <translation type="unfinished">Відображення властивостей поточного блоку і поточного шару</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Allow adding custom properties</source>
-        <translation>Salli mukautettujen ominaisuuksien lisääminen</translation>
+        <translation type="unfinished">Дозволити додавання користувацьких властивостей</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Always show all properties (this may slow down selection of entities)</source>
-        <translation>Näytä aina kaikki ominaisuudet (tämä voi hidastaa kohteiden valintaa)</translation>
+        <translation type="unfinished">Завжди показувати всі властивості (це може уповільнити відбір об&apos;єктів)</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+7"/>
+        <source>Display advanced dimension style overrides</source>
+        <translation type="unfinished">Відображення розширених перевизначень стилів розмірів</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Always format property values as decimal numbers</source>
-        <translation type="unfinished">Muotoile ominaisuuksien arvot aina desimaalilukuina</translation>
+        <translation type="unfinished">Завжди форматуйте значення властивостей у вигляді десяткових чисел</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Decimals / precision for displayed property values:</source>
-        <translation type="unfinished">Näytettävien ominaisuuksien arvojen desimaalit / tarkkuus:</translation>
+        <translation type="unfinished">Десяткові знаки / точність для відображуваних значень властивостей:</translation>
     </message>
     <message>
-        <location line="-19"/>
-        <source>Display advanced dimension style overrides</source>
-        <translation type="unfinished">Näytä laajennetun ulottuvuuden tyylin ohitukset</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1634"/>
-        <source>*VARIES*</source>
-        <translation>*VAIHTELEVA*</translation>
-    </message>
-    <message>
-        <location line="-1421"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+213"/>
         <source>:</source>
-        <translation>:</translation>
+        <translation type="unfinished">:</translation>
     </message>
     <message>
         <location line="+194"/>
         <source>No Selection</source>
-        <translation>Ei valintaa</translation>
+        <translation type="unfinished">Без вибору</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Specific Properties</source>
-        <translation>Erikoisominaisuudet</translation>
+        <translation type="unfinished">Специфічні властивості</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Dependent Entities</source>
-        <translation>Riippuvaiset kohteet</translation>
+        <translation type="unfinished">Залежні підприємства</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Custom</source>
-        <translation>Muokattu</translation>
+        <translation type="unfinished">Нестандартний</translation>
     </message>
     <message>
         <location line="+197"/>
         <source>Index</source>
-        <translation>Hakemisto</translation>
+        <translation type="unfinished">Індекс</translation>
     </message>
     <message>
         <location line="+79"/>
         <source>Remove this property from selected objects</source>
-        <translation>Poista tämä ominaisuus valituilta kohteilta</translation>
+        <translation type="unfinished">Видалити цю властивість у вибраних об&apos;єктів</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>All</source>
-        <translation>Kaikki</translation>
+        <translation type="unfinished">Всі</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Add custom property to selected objects</source>
-        <translation>Lisää säädetty ominaisuus valittuihin kohteisiin</translation>
+        <translation type="unfinished">Додавання користувацьких властивостей до вибраних об&apos;єктів</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Show</source>
-        <translation>Näytä</translation>
+        <translation type="unfinished">Показати</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Show all properties</source>
-        <translation>Näytä kaikki ominaisuudet</translation>
+        <translation type="unfinished">Показати всі властивості</translation>
     </message>
     <message>
         <location line="+134"/>
         <source>Auto</source>
-        <translation>Automaattinen</translation>
+        <translation type="unfinished">Авто</translation>
     </message>
     <message>
         <location line="+197"/>
         <source>Use auto measurement</source>
-        <translation>Käytä automaattista mittausta</translation>
+        <translation type="unfinished">Використовуйте автоматичне вимірювання</translation>
     </message>
     <message>
         <location line="+44"/>
         <source>Yes</source>
-        <translation>Kyllä</translation>
+        <translation type="unfinished">Так</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>No</source>
-        <translation>Ei</translation>
+        <translation type="unfinished">Ні</translation>
     </message>
     <message>
-        <location line="+382"/>
+        <location line="+379"/>
+        <source>*VARIES*</source>
+        <translation type="unfinished">*ВАРІАНТИ*</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Widgets</source>
-        <translation>Pienoisohjelmat</translation>
+        <translation type="unfinished">Віджети</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>
-        <translation>Ominaisuuksien muokkaaminen</translation>
+        <translation type="unfinished">Редактор властивостей</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.ui" line="+40"/>
         <source>Selection:</source>
-        <translation>Valinta:</translation>
+        <translation type="unfinished">Відбір:</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>General Properties</source>
-        <translation>Yleiset ominaisuudet</translation>
+        <translation type="unfinished">Загальні властивості</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Color:</source>
-        <translation>Väri:</translation>
+        <translation type="unfinished">Колір:</translation>
     </message>
     <message>
-        <location line="+156"/>
-        <source>Protected:</source>
-        <translation>Suojattu:</translation>
-    </message>
-    <message>
-        <location line="-52"/>
-        <source>Linetype Scale:</source>
-        <translation>Viivatyypin asteikko:</translation>
-    </message>
-    <message>
-        <location line="-94"/>
+        <location line="+10"/>
         <source>Handle:</source>
-        <translation>Käsittele:</translation>
+        <translation type="unfinished">Ручку:</translation>
+    </message>
+    <message>
+        <location line="+94"/>
+        <source>Linetype Scale:</source>
+        <translation type="unfinished">Шкала лінійного типу:</translation>
+    </message>
+    <message>
+        <location line="+52"/>
+        <source>Protected:</source>
+        <translation type="unfinished">Під захистом:</translation>
     </message>
 </context>
 <context>
@@ -10514,7 +10513,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/QtExamples.js" line="+50"/>
         <source>&amp;Qt</source>
-        <translation>&amp;Qt</translation>
+        <translation type="unfinished">Qt</translation>
     </message>
 </context>
 <context>
@@ -10522,7 +10521,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/File/Quit/QuitInit.js" line="+8"/>
         <source>&amp;Quit</source>
-        <translation>&amp;Lopeta</translation>
+        <translation type="unfinished">Звільнися</translation>
     </message>
 </context>
 <context>
@@ -10530,40 +10529,40 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Help/ShowReadme/ShowReadmeDialog.ui" line="+14"/>
         <source>Readme</source>
-        <translation>Lueminut-tiedosto</translation>
+        <translation type="unfinished">Readme</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Don&apos;t show this dialog at startup</source>
-        <translation>Älä näytä tätä ikkunaa käynnistettäessä</translation>
+        <translation type="unfinished">Не показувати цей діалог при запуску</translation>
     </message>
 </context>
 <context>
     <name>RecentFiles</name>
     <message>
+        <location filename="../scripts/File/RecentFiles/PreferencesPage.ui" line="+17"/>
+        <source>Recent files history size:</source>
+        <translation type="unfinished">Розмір історії останніх файлів:</translation>
+    </message>
+    <message>
         <location filename="../scripts/File/RecentFiles/RecentFiles.js" line="+35"/>
-        <source>Recent Files</source>
-        <translation>Viimeisimmät tiedostot</translation>
+        <source>File</source>
+        <translation type="unfinished">Файл</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>File</source>
-        <translation>Tiedosto</translation>
+        <source>Recent Files</source>
+        <translation type="unfinished">Останні файли</translation>
     </message>
     <message>
         <location filename="../scripts/File/RecentFiles/RecentFilesInit.js" line="+59"/>
         <source>&amp;Clear List</source>
-        <translation>&amp;Tyhjennä luettelo</translation>
+        <translation type="unfinished">Чистий список</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Open &amp;Recent</source>
-        <translation>Avaa &amp;edelliset</translation>
-    </message>
-    <message>
-        <location filename="../scripts/File/RecentFiles/PreferencesPage.ui" line="+17"/>
-        <source>Recent files history size:</source>
-        <translation>Viimeisimmät tiedostot:</translation>
+        <translation type="unfinished">Відкрити Останні</translation>
     </message>
 </context>
 <context>
@@ -10571,7 +10570,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Edit/Redo/RedoInit.js" line="+2"/>
         <source>&amp;Redo</source>
-        <translation>&amp;Tee uudelleen</translation>
+        <translation type="unfinished">Повторити</translation>
     </message>
 </context>
 <context>
@@ -10579,7 +10578,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/MiscModify/ReloadLinetypes/ReloadLinetypes.js" line="+48"/>
         <source>Reload Linetype Definitions</source>
-        <translation>Lataa viivamääritykset uudelleen</translation>
+        <translation type="unfinished">Перезавантажити визначення типів ліній</translation>
     </message>
 </context>
 <context>
@@ -10587,12 +10586,12 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Block/RemoveBlock/RemoveBlockInit.js" line="+2"/>
         <source>&amp;Remove Block</source>
-        <translation>&amp;Poista Lohko</translation>
+        <translation type="unfinished">Видалити блок</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delete selected block</source>
-        <translation>Poista valittu lohko</translation>
+        <translation type="unfinished">Видалити виділений блок</translation>
     </message>
 </context>
 <context>
@@ -10600,7 +10599,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Layer/RemoveLayer/RemoveLayerInit.js" line="+2"/>
         <source>&amp;Delete Layer</source>
-        <translation>&amp;Poista taso</translation>
+        <translation type="unfinished">Видалити шар</translation>
     </message>
 </context>
 <context>
@@ -10608,7 +10607,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Block/RenameBlock/RenameBlockInit.js" line="+2"/>
         <source>Re&amp;name Block</source>
-        <translation>Uu&amp;delleennimeä Lohko</translation>
+        <translation type="unfinished">Перейменувати блок</translation>
     </message>
 </context>
 <context>
@@ -10616,7 +10615,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Help/ReportBug/ReportBugInit.js" line="+2"/>
         <source>Report &amp;Bug</source>
-        <translation>Ilmoita ohjelmointivirheestä</translation>
+        <translation type="unfinished">Повідомити про помилку</translation>
     </message>
 </context>
 <context>
@@ -10624,7 +10623,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Help/ReportTranslationError/ReportTranslationErrorInit.js" line="+3"/>
         <source>Report &amp;Translation Error</source>
-        <translation>Ilmoita &amp;käännösvirheestä</translation>
+        <translation type="unfinished">Повідомити про помилку перекладу</translation>
     </message>
 </context>
 <context>
@@ -10632,12 +10631,12 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Reset/ResetInit.js" line="+5"/>
         <source>Reset</source>
-        <translation>Nollaa</translation>
+        <translation type="unfinished">Перезавантаження</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>&amp;Reset / Idle</source>
-        <translation>&amp;Nollaa/vapaa</translation>
+        <translation type="unfinished">Сброс / холостий хід</translation>
     </message>
 </context>
 <context>
@@ -10645,23 +10644,23 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLength.ui" line="+17"/>
         <source>Angle:</source>
-        <translation>Kulma:</translation>
+        <translation type="unfinished">Кут:</translation>
     </message>
     <message>
         <location line="+20"/>
         <location line="+47"/>
         <source>Base:</source>
-        <translation>Perus:</translation>
+        <translation type="unfinished">База:</translation>
     </message>
     <message>
         <location line="-20"/>
         <source>Distance:</source>
-        <translation>Etäisyys:</translation>
+        <translation type="unfinished">Відстань:</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLengthInit.js" line="+2"/>
         <source>Restrict &amp;Angle or Length</source>
-        <translation>Rajoita &amp;kulma tai pituus</translation>
+        <translation type="unfinished">Обмеження кута або довжини</translation>
     </message>
 </context>
 <context>
@@ -10669,7 +10668,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/RestrictHorizontal/RestrictHorizontalInit.js" line="+2"/>
         <source>Restrict &amp;Horizontally</source>
-        <translation>Rajoita &amp;vaakasuunnassa</translation>
+        <translation type="unfinished">Обмеження по горизонталі</translation>
     </message>
 </context>
 <context>
@@ -10677,7 +10676,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/RestrictOff/RestrictOffInit.js" line="+2"/>
         <source>Restrictions &amp;Off</source>
-        <translation>Rajoitukset &amp;pois</translation>
+        <translation type="unfinished">Обмеження вимкнено</translation>
     </message>
 </context>
 <context>
@@ -10685,7 +10684,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/RestrictOrthogonal/RestrictOrthogonalInit.js" line="+2"/>
         <source>Restrict &amp;Orthogonally</source>
-        <translation>Rajoita &amp;kohtisuoraan</translation>
+        <translation type="unfinished">Обмежити ортогонально</translation>
     </message>
 </context>
 <context>
@@ -10693,7 +10692,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/RestrictVertical/RestrictVerticalInit.js" line="+2"/>
         <source>Restrict &amp;Vertically</source>
-        <translation>Rajoita &amp;pystysuunnassa</translation>
+        <translation type="unfinished">Обмеження по вертикалі</translation>
     </message>
 </context>
 <context>
@@ -10701,70 +10700,70 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Modify/Reverse/ReverseInit.js" line="+2"/>
         <source>&amp;Reverse</source>
-        <translation>&amp;Käänteinen</translation>
+        <translation type="unfinished">Реверс</translation>
     </message>
 </context>
 <context>
     <name>Rotate</name>
     <message>
+        <location filename="../scripts/Modify/Rotate/PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation type="unfinished">Діалогове вікно для вибору параметрів інструменту</translation>
+    </message>
+    <message>
         <location filename="../scripts/Modify/Rotate/Rotate.js" line="+47"/>
         <source>Modify</source>
-        <translation>Muokkaa</translation>
+        <translation type="unfinished">Змінити</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Rotate</source>
-        <translation>Kierto</translation>
+        <translation type="unfinished">Поворот</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Center point</source>
-        <translation>Keskipiste</translation>
+        <translation type="unfinished">Центральна точка</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Reference point</source>
-        <translation>Viitepiste</translation>
+        <translation type="unfinished">Точка відліку</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Target point</source>
-        <translation>Kohdepiste</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
-        <source>&amp;Rotate</source>
-        <translation>&amp;Kierrä</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Modify/Rotate/PreferencesPage.ui" line="+17"/>
-        <source>Use dialog for tool options</source>
-        <translation>Käytä työkalun vaihtoehtojen valintaikkunaa</translation>
+        <translation type="unfinished">Цільова точка</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
         <source>Copy</source>
-        <translation>Kopioi</translation>
+        <translation type="unfinished">Прийом</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation>Kopioiden määrä:</translation>
+        <translation type="unfinished">Кількість примірників:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>Käytä nykyistä tasoa ja &amp;määrityksiä</translation>
+        <translation type="unfinished">Використовувати поточний шар та атрибути</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Angle:</source>
-        <translation>Kulma:</translation>
+        <translation type="unfinished">Кут:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Define angle using mouse cursor</source>
-        <translation>Määritä kulma hiiren kohdistimen avulla</translation>
+        <translation type="unfinished">Визначення кута за допомогою курсору миші</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
+        <source>&amp;Rotate</source>
+        <translation type="unfinished">Поворот</translation>
     </message>
 </context>
 <context>
@@ -10772,32 +10771,32 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2.js" line="+67"/>
         <source>Center of primary rotation</source>
-        <translation>Ensimmäisen kiertämisen keskipiste</translation>
+        <translation type="unfinished">Центр основного обертання</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Center of secondary rotation</source>
-        <translation>Toisen kiertämisen keskipiste</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Modify/Rotate2/Rotate2Init.js" line="+2"/>
-        <source>Rotate T&amp;wo</source>
-        <translation>Kierrä &amp;kaksi</translation>
+        <translation type="unfinished">Центр вторинного обертання</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2.ui" line="+17"/>
         <source>Primary Angle:</source>
-        <translation>Ensisijainen kulma:</translation>
+        <translation type="unfinished">Основний кут:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Secondary Angle:</source>
-        <translation>Toissijainen kulma:</translation>
+        <translation type="unfinished">Вторинний кут:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Copies:</source>
-        <translation>Kopioita:</translation>
+        <translation type="unfinished">Копії:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/Rotate2/Rotate2Init.js" line="+2"/>
+        <source>Rotate T&amp;wo</source>
+        <translation type="unfinished">Поворот два</translation>
     </message>
 </context>
 <context>
@@ -10805,42 +10804,42 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Dialog.ui" line="+14"/>
         <source>Rotate Two Options</source>
-        <translation>Kierrä kaksi ominaisuudet</translation>
+        <translation type="unfinished">Обертайте два варіанти</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation>Kopioiden määrä</translation>
+        <translation type="unfinished">Кількість примірників</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation>&amp;Poista alkuperäinen</translation>
+        <translation type="unfinished">Видалити оригінал</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation>&amp;Säilytä alkuperäinen</translation>
+        <translation type="unfinished">Зберігайте оригінал</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation>&amp;Useita kopioita</translation>
+        <translation type="unfinished">Кілька примірників</translation>
     </message>
     <message>
         <location line="+97"/>
         <source>Angle &amp;a:</source>
-        <translation>Kulma &amp;a:</translation>
+        <translation type="unfinished">Кут А:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Angle &amp;b:</source>
-        <translation>Kulma &amp;b:</translation>
+        <translation type="unfinished">Кут Б:</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>Käytä nykyistä tasoa ja &amp;ominaisuuksia</translation>
+        <translation type="unfinished">Використовувати поточний шар та атрибути</translation>
     </message>
 </context>
 <context>
@@ -10848,42 +10847,42 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateDialog.ui" line="+14"/>
         <source>Rotate Options</source>
-        <translation>Kiertovalinnat</translation>
+        <translation type="unfinished">Параметри обертання</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation>Kopioiden määrä</translation>
+        <translation type="unfinished">Кількість примірників</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation>&amp;Poista alkuperäinen</translation>
+        <translation type="unfinished">Видалити оригінал</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation>&amp;Säilytä alkuperäinen</translation>
+        <translation type="unfinished">Зберігайте оригінал</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation>&amp;Useita kopioita</translation>
+        <translation type="unfinished">Кілька примірників</translation>
     </message>
     <message>
         <location line="+97"/>
         <source>&amp;Angle (a):</source>
-        <translation>&amp;Kulma (a):</translation>
+        <translation type="unfinished">Кут (а):</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Define angle using mouse cursor</source>
-        <translation>Määritä kulma hiiren kohdistimen avulla</translation>
+        <translation type="unfinished">Визначення кута за допомогою курсору миші</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>Käytä nykyistä tasoa ja &amp;ominaisuuksia</translation>
+        <translation type="unfinished">Використовувати поточний шар та атрибути</translation>
     </message>
 </context>
 <context>
@@ -10891,32 +10890,32 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Modify/Round/Round.js" line="+60"/>
         <source>The two entities cannot be rounded.</source>
-        <translation>Näitä kahta kohdetta ei voida kiertää.</translation>
+        <translation type="unfinished">Ці дві величини не можуть бути округлені.</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>First entity cannot be trimmed.</source>
-        <translation>Enismmäistä kohdetta ei voida hienosäätää.</translation>
+        <translation type="unfinished">Першу сутність не можна обрізати.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation>Toista kohdetta ei voida hienosäätää.</translation>
+        <translation type="unfinished">Другий суб&apos;єкт не може бути обрізаний.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/Round.ui" line="+17"/>
         <source>Trim</source>
-        <translation>Tasaa</translation>
+        <translation type="unfinished">Обрізка</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>&amp;Radius:</source>
-        <translation type="unfinished">Säde:</translation>
+        <translation type="unfinished">Радіус:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
         <source>&amp;Round</source>
-        <translation>&amp;Pyöristä</translation>
+        <translation type="unfinished">Круглий</translation>
     </message>
 </context>
 <context>
@@ -10924,47 +10923,47 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScript.js" line="+60"/>
         <source>Open Script File</source>
-        <translation>Avaa Komentorivi-tiedosto</translation>
+        <translation type="unfinished">Відкрити файл сценарію</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>All Files</source>
-        <translation>Kaikki tiedostot</translation>
+        <translation type="unfinished">Всі файли</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>ECMAScript Files</source>
-        <translation>ECMAScript-tiedostot</translation>
+        <translation type="unfinished">Файли ECMAScript</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Run Script</source>
-        <translation>Suorita komentorivisarja</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptInit.js" line="+2"/>
-        <source>R&amp;un Script</source>
-        <translation>A&amp;ja komentorivisarja</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Open and run a script file</source>
-        <translation>Avaa ja suorita komentorivisarjatiedosto</translation>
+        <translation type="unfinished">Запустити скрипт</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptDialog.ui" line="+20"/>
         <source>Running Script</source>
-        <translation>Komentorivisarja käynnistetään</translation>
+        <translation type="unfinished">Запущений скрипт</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You are about to run the following script(s):&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt;This script could potentially modify your drawings, modify or delete your files or access your network connection.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;It is strongly recommended to only run scripts from trusted sources.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Olet aikeissa käyttää seuraavaa komentorivisarjaa:&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt;Tämä komentorivisarja voi mahdollisesti muuttaa piirustuksiasi, muokata tai poistaa tiedostosi tai avata verkkoyhteyden.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-weight:600;väri:#ff0000;&quot;&gt;On erittäin suositeltavaa käyttää vain luotettavista lähteistä tulevia komentorivisarjoja. &lt;/span &gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ви збираєтеся запустити наступний(і) скрипт(и):&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt;Цей скрипт може потенційно змінити ваші малюнки, змінити або видалити ваші файли або отримати доступ до вашого мережевого підключення.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;Наполегливо рекомендується запускати скрипти тільки з перевірених джерел.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Don&apos;t show this dialog again</source>
-        <translation>Älä näytä tätä valintaikkunaa uudelleen</translation>
+        <translation type="unfinished">Більше не показувати це діалогове вікно</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptInit.js" line="+2"/>
+        <source>R&amp;un Script</source>
+        <translation type="unfinished">Запустити скрипт</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Open and run a script file</source>
+        <translation type="unfinished">Відкрийте і запустіть файл скрипта</translation>
     </message>
 </context>
 <context>
@@ -10972,82 +10971,82 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/File/Save/Save.js" line="+92"/>
         <source>Overwrite File?</source>
-        <translation>Korvataanko tiedosto?</translation>
-    </message>
-    <message>
-        <location line="+18"/>
-        <source>File Format Version Not Recommended</source>
-        <translation>Tiedostomuodon versiota ei suositella</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>All black entities and layers will be saved as white.</source>
-        <translation>Kaikki mustat kohteet ja tasot tallennetaan valkoisina.</translation>
+        <translation type="unfinished">Перезаписати файл?</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Proceed?</source>
-        <translation>Jatka?</translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Saving...</source>
-        <translation>Tallennetaan ...</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Black entities and layers are saved as white.</source>
-        <translation>Mustat kohteet ja tasot tallennetaan valkoisina.</translation>
-    </message>
-    <message>
-        <location line="-41"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
-        <translation>Tiedosto &quot;%1&quot; on jo olemassa. Haluatko korvata sen?</translation>
+        <translation type="unfinished">Файл &quot;%1&quot; вже існує. Ви хочете його перезаписати?</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+17"/>
+        <source>File Format Version Not Recommended</source>
+        <translation type="unfinished">Версія формату файлу Не рекомендується</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>The file format version you are using is not recommended: &quot;%1&quot;.</source>
-        <translation>Käyttämääsi tiedostomuotoa ei suositella: &quot;%1&quot;.</translation>
+        <translation type="unfinished">Не рекомендується використовувати версію формату файлу: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Custom properties will not be saved.</source>
-        <translation>Mukautettuja ominaisuuksia ei tallenneta.</translation>
+        <translation type="unfinished">Користувацькі властивості не будуть збережені.</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
+        <source>All black entities and layers will be saved as white.</source>
+        <translation type="unfinished">Всі чорні об&apos;єкти та шари будуть збережені як білі.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>All custom colors will be adjusted to the nearest fixed color.</source>
-        <translation>Kaikki mukautetut värit säädetään lähimpään kiinteään väriin.</translation>
+        <translation type="unfinished">Всі користувацькі кольори будуть приведені у відповідність до найближчого фіксованого кольору.</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+0"/>
+        <source>Proceed?</source>
+        <translation type="unfinished">Приступимо?</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Saving...</source>
+        <translation type="unfinished">Врятувати...</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Saving to file format version &quot;%1&quot;.</source>
-        <translation>Tallennetaan tiedostomuotoon &quot;%1&quot;.</translation>
+        <translation type="unfinished">Збереження у файл формату версії &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
+        <source>Black entities and layers are saved as white.</source>
+        <translation type="unfinished">Чорні об&apos;єкти та шари зберігаються як білі.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Custom colors are adjusted to the nearest fixed color.</source>
-        <translation>Mukautetut värit säädetään lähimpään kiinteään väriin.</translation>
+        <translation type="unfinished">Користувацькі кольори підлаштовуються до найближчого фіксованого кольору.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>File %1 has not been saved.</source>
-        <translation>Tiedostoa %1 ei ole tallennettu.</translation>
+        <translation type="unfinished">Файл %1 не збережено.</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Saved file:</source>
-        <translation>Tallennettu tiedosto:</translation>
+        <translation type="unfinished">Збережений файл:</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Format:</source>
-        <translation>Muoto:</translation>
+        <translation type="unfinished">Формат:</translation>
     </message>
     <message>
         <location filename="../scripts/File/Save/SaveInit.js" line="+2"/>
         <source>&amp;Save</source>
-        <translation>&amp;Tallenna</translation>
+        <translation type="unfinished">Зберегти</translation>
     </message>
 </context>
 <context>
@@ -11055,135 +11054,130 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/File/SaveAs/PreferencesPage.ui" line="+17"/>
         <source>File Dialog</source>
-        <translation>Tiedoston valintaikkuna</translation>
+        <translation type="unfinished">Діалогове вікно &quot;Файл</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Use system file dialog</source>
-        <translation>Käytä järjestelmätiedostojen valintaikkunaa</translation>
+        <translation type="unfinished">Діалогове вікно використання системного файлу</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Opening</source>
-        <translation type="unfinished">Avaaminen</translation>
+        <translation type="unfinished">Відкриття</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Allow opening of zero size files (e.g. online files that are not synched to disk)</source>
-        <translation type="unfinished">Salli nollakokoisten tiedostojen avaaminen (esim. verkkotiedostot, joita ei synkronoida levylle)</translation>
+        <translation type="unfinished">Дозволяє відкривати файли нульового розміру (наприклад, онлайн-файли, які не синхронізовані з диском)</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Decode strings in DXF/DWG as UTF-8 (experimental)</source>
-        <translation type="unfinished">DXF/DWG:n merkkijonojen dekoodaus UTF-8:ksi (kokeellinen)</translation>
+        <translation type="unfinished">Декодування рядків в DXF/DWG в UTF-8 (експериментально)</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Saving</source>
-        <translation>Tallennetaan</translation>
+        <translation type="unfinished">Заощадження</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Default format:</source>
-        <translation>Oletusmuoto:</translation>
+        <translation type="unfinished">Формат за замовчуванням:</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Show warning when saving to a file format that does not support 24bit colors</source>
-        <translation>Näytä varoitus, kun tallennetaan tiedostomuotoon, joka ei tue 24bittisiä värejä</translation>
+        <translation type="unfinished">Показувати попередження при збереженні у формат файлу, який не підтримує 24-бітові кольори</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Store &quot;last saved by&quot; file information as:</source>
-        <translation>Tallenna &quot;viimeksi tallennettu&quot; tiedoston tiedot muodossa:</translation>
+        <translation type="unfinished">Зберігати інформацію про &quot;останній збережений файл&quot; як:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>(empty for username)</source>
-        <translation>(tyhjä käyttäjätunnukselle)</translation>
+        <translation type="unfinished">(пусто для імені користувача)</translation>
     </message>
     <message>
         <location filename="../scripts/File/SaveAs/SaveAs.js" line="+38"/>
         <source>File</source>
-        <translation>Tiedosto</translation>
+        <translation type="unfinished">Файл</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Open/Save</source>
-        <translation>Avaa/tallenna</translation>
+        <translation type="unfinished">Відкрити/Зберегти</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>No export filters have been found. Aborting...</source>
-        <translation>Vientisuodattimia ei löydetty. Keskeytetään ...</translation>
+        <translation type="unfinished">Фільтри для експорту не знайдено. Переривання...</translation>
     </message>
     <message>
         <location line="+84"/>
         <source>Format:</source>
-        <translation>Muoto:</translation>
+        <translation type="unfinished">Формат:</translation>
     </message>
     <message>
         <location filename="../scripts/File/SaveAs/SaveAsInit.js" line="+2"/>
         <source>Save &amp;As...</source>
-        <translation>Tallenna &amp;nimellä...</translation>
+        <translation type="unfinished">Зберегти як...</translation>
     </message>
 </context>
 <context>
     <name>Scale</name>
     <message>
+        <location filename="../scripts/Modify/Scale/PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation type="unfinished">Діалогове вікно для вибору параметрів інструменту</translation>
+    </message>
+    <message>
         <location filename="../scripts/Modify/Scale/Scale.js" line="+49"/>
         <source>Modify</source>
-        <translation>Muokkaa</translation>
+        <translation type="unfinished">Змінити</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Scale</source>
-        <translation>Asteikko</translation>
+        <translation type="unfinished">Масштаб</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Focus point</source>
-        <translation>Kohdistuspiste</translation>
+        <translation type="unfinished">Точка фокусу</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Reference point</source>
-        <translation>Viitepiste</translation>
+        <translation type="unfinished">Точка відліку</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Target point</source>
-        <translation>Kohdepiste</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
-        <source>&amp;Scale</source>
-        <translation>&amp;Asteikko</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Modify/Scale/PreferencesPage.ui" line="+17"/>
-        <source>Use dialog for tool options</source>
-        <translation>Käytä työkalun vaihtoehtojen valintaikkunaa</translation>
+        <translation type="unfinished">Цільова точка</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>
         <source>Copy</source>
-        <translation>Kopioi</translation>
+        <translation type="unfinished">Прийом</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation>Kopioiden määrä:</translation>
+        <translation type="unfinished">Кількість примірників:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>Käytä nykyistä tasoa ja &amp;määrityksiä</translation>
+        <translation type="unfinished">Використовувати поточний шар та атрибути</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Factor x:</source>
-        <translation>Kerroin x:</translation>
+        <translation type="unfinished">Фактор Ікс:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -11194,17 +11188,22 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location line="-7"/>
         <source>Factor y:</source>
-        <translation>Kerroin y:</translation>
+        <translation type="unfinished">Фактор Y:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Proportional</source>
-        <translation>Suhteellinen</translation>
+        <translation type="unfinished">Пропорційний</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Define factor using mouse cursor</source>
-        <translation>Määritä arvo hiiren kohdistimen avulla</translation>
+        <translation type="unfinished">Визначити коефіцієнт за допомогою курсору миші</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
+        <source>&amp;Scale</source>
+        <translation type="unfinished">Масштаб</translation>
     </message>
 </context>
 <context>
@@ -11212,52 +11211,52 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleDialog.ui" line="+14"/>
         <source>Scale Options</source>
-        <translation>Mittakaava-asetukset</translation>
+        <translation type="unfinished">Параметри шкали</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation>Kopioiden määrä</translation>
+        <translation type="unfinished">Кількість примірників</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation>&amp;Poista alkuperäinen</translation>
+        <translation type="unfinished">Видалити оригінал</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation>&amp;Säilytä alkuperäinen</translation>
+        <translation type="unfinished">Зберігайте оригінал</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation>&amp;Useita kopioita</translation>
+        <translation type="unfinished">Кілька примірників</translation>
     </message>
     <message>
         <location line="+115"/>
         <source>Factor x:</source>
-        <translation>Kerroin x:</translation>
+        <translation type="unfinished">Фактор Ікс:</translation>
     </message>
     <message>
-        <location line="+49"/>
-        <source>Factor y:</source>
-        <translation>Kerroin y:</translation>
-    </message>
-    <message>
-        <location line="-26"/>
+        <location line="+23"/>
         <source>Proportional</source>
-        <translation>Suhteellinen</translation>
+        <translation type="unfinished">Пропорційний</translation>
     </message>
     <message>
-        <location line="+70"/>
+        <location line="+26"/>
+        <source>Factor y:</source>
+        <translation type="unfinished">Фактор Y:</translation>
+    </message>
+    <message>
+        <location line="+44"/>
         <source>Define factor using mouse cursor</source>
-        <translation>Määritä arvo hiiren kohdistimen avulla</translation>
+        <translation type="unfinished">Визначити коефіцієнт за допомогою курсору миші</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>Käytä nykyistä tasoa ja &amp;ominaisuuksia</translation>
+        <translation type="unfinished">Використовувати поточний шар та атрибути</translation>
     </message>
 </context>
 <context>
@@ -11265,7 +11264,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ScriptingPreferences/PreferencesPage.ui" line="+17"/>
         <source>Rescan scripts folder on startup</source>
-        <translation>Skannaa uudelleen komentorivisarja-kansio käynnistyksessä</translation>
+        <translation type="unfinished">Перезавантажити папку скриптів при запуску</translation>
     </message>
 </context>
 <context>
@@ -11273,7 +11272,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ScriptingPreferences/ScriptingPreferences.js" line="+24"/>
         <source>Scripting</source>
-        <translation>Komentorivisarjan teko</translation>
+        <translation type="unfinished">Написання сценаріїв</translation>
     </message>
 </context>
 <context>
@@ -11281,17 +11280,17 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Select/Select.js" line="+216"/>
         <source>Selection Tools</source>
-        <translation>Valintatyökalut</translation>
+        <translation type="unfinished">Інструменти вибору</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Selection Tools Panel</source>
-        <translation>Valintatyökalujen paneeli</translation>
+        <translation type="unfinished">Панель інструментів вибору</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Select</source>
-        <translation>&amp;Valitse</translation>
+        <translation type="unfinished">Виберіть</translation>
     </message>
 </context>
 <context>
@@ -11299,12 +11298,12 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Select/SelectAll/SelectAllInit.js" line="+2"/>
         <source>Select &amp;All</source>
-        <translation>Valitse &amp;kaikki</translation>
+        <translation type="unfinished">Вибрати все</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Select all visible entities</source>
-        <translation>Valitse kaikki näkyvät kohteet</translation>
+        <translation type="unfinished">Виділити всі видимі об&apos;єкти</translation>
     </message>
 </context>
 <context>
@@ -11312,7 +11311,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Block/SelectBlockReferences/SelectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Select Block References</source>
-        <translation>&amp;Valitse lohkon referenssit</translation>
+        <translation type="unfinished">Виберіть Блокування посилань</translation>
     </message>
 </context>
 <context>
@@ -11320,17 +11319,17 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByColor/SelectByColor.js" line="+64"/>
         <source>Select one or more objects only of the desired color</source>
-        <translation>Valitse yksi tai useampi haluamasi väri</translation>
+        <translation type="unfinished">Виділіть один або декілька об&apos;єктів тільки потрібного кольору</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Selected all visible entities of color %1</source>
-        <translation>Valitut kaikki näkyvät värin %1 kohteet</translation>
+        <translation type="unfinished">Виділено всі видимі об&apos;єкти кольору %1</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByColor/SelectByColorInit.js" line="+2"/>
         <source>By Color</source>
-        <translation>Värin mukaan</translation>
+        <translation type="unfinished">За кольором</translation>
     </message>
 </context>
 <context>
@@ -11338,7 +11337,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location line="+3"/>
         <source>Select all objects of a color</source>
-        <translation>Valitse kaikki värin kohteet</translation>
+        <translation type="unfinished">Виділити всі об&apos;єкти певного кольору</translation>
     </message>
 </context>
 <context>
@@ -11346,17 +11345,17 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandle.js" line="+58"/>
         <source>Object selected:</source>
-        <translation>Kohde valittu:</translation>
+        <translation type="unfinished">Об&apos;єкт обрано:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Object is not a drawing entity:</source>
-        <translation>Objekti ei ole piirtokohde:</translation>
+        <translation type="unfinished">Об&apos;єкт не є об&apos;єктом креслення:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js" line="+2"/>
         <source>By Handle</source>
-        <translation>Kahvan mukaan</translation>
+        <translation type="unfinished">За ручку</translation>
     </message>
 </context>
 <context>
@@ -11364,12 +11363,12 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleDialog.ui" line="+17"/>
         <source>Selection by Handle</source>
-        <translation>Valinta kahvasta</translation>
+        <translation type="unfinished">Вибір ручкою</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Handle (hex):</source>
-        <translation>Kahva (hex):</translation>
+        <translation type="unfinished">Рукоятка (шестигранна):</translation>
     </message>
 </context>
 <context>
@@ -11377,52 +11376,52 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContour.js" line="+54"/>
         <source>Choose entity of contour</source>
-        <translation>Valitse kohteen ääriviiva</translation>
+        <translation type="unfinished">Вибрати об&apos;єкт контуру</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContour.ui" line="+17"/>
         <source>Mode:</source>
-        <translation>Tila:</translation>
+        <translation type="unfinished">Режим:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Replace the current selection</source>
-        <translation>Korvaa nykyinen valinta</translation>
+        <translation type="unfinished">Замінити поточне виділення</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
-        <translation>Lisää nykyiseen valintaan</translation>
+        <translation type="unfinished">Додати до поточного вибору</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation>Vähennä nykyisestä valinnasta</translation>
+        <translation type="unfinished">Відняти від поточного виділення</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation>Leikkaa nykyisen valinnan kanssa</translation>
+        <translation type="unfinished">Перетинається з поточним виділенням</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Tolerance:</source>
-        <translation>Toleranssi:</translation>
+        <translation type="unfinished">Толерантність:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Same Layer</source>
-        <translation type="unfinished">Sama kerros</translation>
+        <translation type="unfinished">Той самий рівень</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2"/>
         <source>(De-)Select &amp;Contour</source>
-        <translation>Valitse (peru) &amp;ääriviivat</translation>
+        <translation type="unfinished">(Вимкнення) виділення контуру</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select connected entities</source>
-        <translation>Valitse (peru) yhdistetyt kohteet</translation>
+        <translation type="unfinished">(Де-)Вибір пов&apos;язаних організацій</translation>
     </message>
 </context>
 <context>
@@ -11430,47 +11429,47 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.js" line="+90"/>
         <source>First point</source>
-        <translation>Ensimmäinen piste</translation>
+        <translation type="unfinished">Перший пункт</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation>Toinen piste</translation>
+        <translation type="unfinished">Другий момент</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.ui" line="+17"/>
         <source>Mode:</source>
-        <translation>Tila:</translation>
+        <translation type="unfinished">Режим:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Replace the current selection</source>
-        <translation>Korvaa nykyinen valinta</translation>
+        <translation type="unfinished">Замінити поточне виділення</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
-        <translation>Lisää nykyiseen valintaan</translation>
+        <translation type="unfinished">Додати до поточного вибору</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation>Vähennä nykyisestä valinnasta</translation>
+        <translation type="unfinished">Відняти від поточного виділення</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation>Leikkaa nykyisen valinnan kanssa</translation>
+        <translation type="unfinished">Перетинається з поточним виділенням</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntitiesInit.js" line="+2"/>
         <source>(De-)Select In&amp;tersected Entities</source>
-        <translation>Valitse (peru) &amp;leikatuista kohteista</translation>
+        <translation type="unfinished">(Виділення) перехресних сутностей</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select all entities intersected by a line</source>
-        <translation>Valitse (peru) kaikki kohteet, jotka ovat viivan leikkaamia</translation>
+        <translation type="unfinished">(Де-)Виділити всі об&apos;єкти, які перетинаються лінією</translation>
     </message>
 </context>
 <context>
@@ -11478,17 +11477,17 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
         <source>%1 entities added to selection.</source>
-        <translation>%1 kohdetta lisättiin valintaan.</translation>
+        <translation type="unfinished">%1 суб&apos;єктів господарювання додано до вибірки.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>%1 entities removed from selection.</source>
-        <translation>%1 kohdetta poistettu valinnasta.</translation>
+        <translation type="unfinished">%1 суб&apos;єктів господарювання знято з відбору.</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
         <source>&amp;Select Layer Entities</source>
-        <translation>&amp;Valitse tasokokonaisuus</translation>
+        <translation type="unfinished">Вибір об&apos;єктів шару</translation>
     </message>
 </context>
 <context>
@@ -11496,42 +11495,42 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntity.js" line="+68"/>
         <source>Choose entity on layer</source>
-        <translation>Valitse tasolla oleva kohde</translation>
+        <translation type="unfinished">Вибір об&apos;єкта на шарі</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntity.ui" line="+17"/>
         <source>Mode:</source>
-        <translation>Tila:</translation>
+        <translation type="unfinished">Режим:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Replace the current selection</source>
-        <translation>Korvaa nykyinen valinta</translation>
+        <translation type="unfinished">Замінити поточне виділення</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
-        <translation>Lisää nykyiseen valintaan</translation>
+        <translation type="unfinished">Додати до поточного вибору</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation>Vähennä nykyisestä valinnasta</translation>
+        <translation type="unfinished">Відняти від поточного виділення</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation>Leikkaa nykyisen valinnan kanssa</translation>
+        <translation type="unfinished">Перетинається з поточним виділенням</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntityInit.js" line="+2"/>
         <source>(De-)Select La&amp;yer</source>
-        <translation>Valitse (peru valinta) ta&amp;so</translation>
+        <translation type="unfinished">(Вимкнення) виділення шару</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select all entities on the same layer</source>
-        <translation>Valitse (peru valinnat) kaikki kohteet samasta tasosta</translation>
+        <translation type="unfinished">(Де-)Виділення всіх об&apos;єктів на одному шарі</translation>
     </message>
 </context>
 <context>
@@ -11539,52 +11538,52 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.js" line="+74"/>
         <source>First corner</source>
-        <translation>Ensimmäinen kulma</translation>
+        <translation type="unfinished">Перший поворот</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second corner</source>
-        <translation>Toinen kulma</translation>
+        <translation type="unfinished">Другий поворот</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.ui" line="+17"/>
         <source>Mode:</source>
-        <translation>Tila:</translation>
+        <translation type="unfinished">Режим:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Replace the current selection</source>
-        <translation>Korvaa nykyinen valinta</translation>
+        <translation type="unfinished">Замінити поточне виділення</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
-        <translation>Lisää nykyiseen valintaan</translation>
+        <translation type="unfinished">Додати до поточного вибору</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation>Vähennä nykyisestä valinnasta</translation>
+        <translation type="unfinished">Відняти від поточного виділення</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation>Leikkaa nykyisen valinnan kanssa</translation>
+        <translation type="unfinished">Перетинається з поточним виділенням</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Cross Selection</source>
-        <translation>Ristikkäisvalinta</translation>
+        <translation type="unfinished">Перехресний відбір</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangleInit.js" line="+2"/>
         <source>(De-)Select &amp;Rectangular Area</source>
-        <translation>Valitse (peru) suorakulmainen alue</translation>
+        <translation type="unfinished">(Вимкнення) виділення прямокутної області</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select all entities inside a rectangle</source>
-        <translation>Valitse (peru) kaikki kohteet suorakulmion sisältä</translation>
+        <translation type="unfinished">(Де-)Виділення всіх сутностей всередині прямокутника</translation>
     </message>
 </context>
 <context>
@@ -11592,58 +11591,60 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.js" line="+58"/>
         <source>No entities selected.</source>
-        <translation>Ei valittuja kohteita.</translation>
+        <translation type="unfinished">Не обрано жодного суб&apos;єкта господарювання.</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>%1 %2 on Layer &quot;%3&quot;</source>
-        <translation>%1 %2 on tasolla &quot;%3&quot;</translation>
+        <translation type="unfinished">%1 %2 на шарі &quot;%3&quot;</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>%1 %2 on %3 Layers</source>
-        <translation>%1 %2 on %3 tasoilla</translation>
+        <translation type="unfinished">%1 %2 на %3 Шари</translation>
     </message>
     <message numerus="yes">
         <location line="+4"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
-        <translation>
-            <numerusform>%n kohde tasolla &quot;%1&quot;</numerusform>
-            <numerusform>%n kohdetta tasolla &quot;%1&quot;</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
-        <translation>
-            <numerusform>%n kohde</numerusform>
-            <numerusform>%n kohdetta</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location line="+0"/>
         <source>on</source>
-        <translation> </translation>
+        <translation type="unfinished">на</translation>
     </message>
     <message numerus="yes">
         <location line="+0"/>
         <source>%n Layers</source>
-        <translation>
-            <numerusform>%n taso</numerusform>
-            <numerusform>%n tasoa</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
-        <translation>Valittuja kohteita:
-%1.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
         <source>Form</source>
-        <translation>Muoto</translation>
+        <translation type="unfinished">Форма</translation>
     </message>
 </context>
 <context>
@@ -11651,12 +11652,12 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/SetRelativeZero/SetRelativeZero.js" line="+50"/>
         <source>Position</source>
-        <translation>Sijainti</translation>
+        <translation type="unfinished">Посада</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SetRelativeZero/SetRelativeZeroInit.js" line="+2"/>
         <source>Set &amp;Relative Zero</source>
-        <translation>Aseta &amp;relatiivinen nolla</translation>
+        <translation type="unfinished">Встановити відносний нуль</translation>
     </message>
 </context>
 <context>
@@ -11664,27 +11665,27 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Draw/Shape/Shape.js" line="+78"/>
         <source>Shape Tools</source>
-        <translation>Muototyökalut</translation>
+        <translation type="unfinished">Формотворчі інструменти</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;Shape</source>
-        <translation>&amp;Muoto</translation>
+        <translation type="unfinished">Форма</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/Shape.ui" line="+17"/>
         <source>Create polyline</source>
-        <translation>Luo murtoviiva</translation>
+        <translation type="unfinished">Створити полілінію</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Fill</source>
-        <translation>Täyte</translation>
+        <translation type="unfinished">Заповнити</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Radius:</source>
-        <translation>Säde:</translation>
+        <translation type="unfinished">Радіус:</translation>
     </message>
 </context>
 <context>
@@ -11693,27 +11694,27 @@ näkyy hakutuloksissa:</translation>
         <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
-        <translation>Vähintään kaksi pistettä ovat samat.</translation>
+        <translation type="unfinished">Щонайменше два пункти збігаються.</translation>
     </message>
     <message>
         <location line="-22"/>
         <source>No circle possible.</source>
-        <translation>Ympyrä ei mahdollinen.</translation>
+        <translation type="unfinished">Ніякого кола не може бути.</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>No arc possible.</source>
-        <translation>Kaari ei mahdollinen.</translation>
+        <translation type="unfinished">Дуга неможлива.</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Invalid number of segments: %1.</source>
-        <translation>Virheellinen määrä segmenttejä %1.</translation>
+        <translation type="unfinished">Неправильна кількість сегментів: %1.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Invalid ellipse major / minor: %1 / %2.</source>
-        <translation>Puutteellinen ellipsi, suurempi/pienempi: %1 / %2.</translation>
+        <translation type="unfinished">Неправильний еліпс мажор / мінор: %1 / %2.</translation>
     </message>
 </context>
 <context>
@@ -11721,27 +11722,27 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.js" line="+61"/>
         <source>Center</source>
-        <translation>Keskusta</translation>
+        <translation type="unfinished">Центр</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Middle of Side</source>
-        <translation>Sivun keskellä</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js" line="+2"/>
-        <source>Pol&amp;ygon (Center, Side)</source>
-        <translation>Moni&amp;kulmio (Keskikohta, sivu)</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Draw regular polygon from center and middle point of side</source>
-        <translation>Piirrä säännöllinen monikulmio keskeltä ja sivun keskipisteestä</translation>
+        <translation type="unfinished">Середина міста Сіде</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation>Kulmat:</translation>
+        <translation type="unfinished">Кути:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js" line="+2"/>
+        <source>Pol&amp;ygon (Center, Side)</source>
+        <translation type="unfinished">Багатокутник (центр, сторона)</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw regular polygon from center and middle point of side</source>
+        <translation type="unfinished">Накресліть правильний багатокутник з центру і середньої точки сторони</translation>
     </message>
 </context>
 <context>
@@ -11749,42 +11750,42 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.js" line="+59"/>
         <source>First side</source>
-        <translation>Ensimmäinen sivu</translation>
+        <translation type="unfinished">Перша сторона</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>First Corner</source>
-        <translation>Ensimmäinen kulma</translation>
+        <translation type="unfinished">Перший кут</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Second side</source>
-        <translation>Toinen sivu</translation>
+        <translation type="unfinished">Друга сторона</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Second Corner</source>
-        <translation>Toinen kulma</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
-        <source>Polygo&amp;n (Side, Side)</source>
-        <translation>Moni&amp;kulmio (sivu, sivu)</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Draw regular polygon from middle points of two opposite sides or two opposite corners</source>
-        <translation>Piirrä säännöllinen monikulmio kahden pisteen vastakkaiselta puolelta tai kahdelta vastakkaiselta kulmalta</translation>
+        <translation type="unfinished">Другий кут</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation>Kulmat:</translation>
+        <translation type="unfinished">Кути:</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Corner to Corner</source>
-        <translation>Kulmasta kulmaan</translation>
+        <translation type="unfinished">Куток в куток</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
+        <source>Polygo&amp;n (Side, Side)</source>
+        <translation type="unfinished">Багатокутник (Сторона, сторона)</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw regular polygon from middle points of two opposite sides or two opposite corners</source>
+        <translation type="unfinished">Накресліть правильний багатокутник із середніх точок двох протилежних сторін або двох протилежних кутів</translation>
     </message>
 </context>
 <context>
@@ -11792,27 +11793,27 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.js" line="+59"/>
         <source>Center</source>
-        <translation>Keskipiste</translation>
+        <translation type="unfinished">Центр</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Corner point</source>
-        <translation>Kulmapiste</translation>
+        <translation type="unfinished">Кутова точка</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation>Kulmat:</translation>
+        <translation type="unfinished">Кути:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Corner)</source>
-        <translation>Moni&amp;kulmio (keskusta, kulma)</translation>
+        <translation type="unfinished">Багатокутник (Центр, Кут)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw regular polygon from center and corner point</source>
-        <translation>Piirrä säännöllinen monikulmio keskipisteestä ja kulmasta</translation>
+        <translation type="unfinished">Намалюйте правильний багатокутник з центру та кутової точки</translation>
     </message>
 </context>
 <context>
@@ -11820,86 +11821,86 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.js" line="+58"/>
         <source>First corner</source>
-        <translation>Ensimmäinen kulma</translation>
+        <translation type="unfinished">Перший поворот</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Corner point</source>
-        <translation>Kulmapiste</translation>
+        <translation type="unfinished">Кутова точка</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation>Kulmat:</translation>
+        <translation type="unfinished">Кути:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPPInit.js" line="+2"/>
         <source>Polygo&amp;n (2 Points of Side)</source>
-        <translation>Moni&amp;kulmio (2 pistettä sivulta)</translation>
+        <translation type="unfinished">Многокутник (2 сторони)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw regular polygon from end points of one side</source>
-        <translation>Piirrä säännöllinen monikulmio yhden sivun loppupisteistä</translation>
+        <translation type="unfinished">Побудуйте правильний многокутник з кінцевих точок однієї сторони</translation>
     </message>
 </context>
 <context>
     <name>ShapeRectanglePP</name>
     <message>
+        <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
+        <source>Rotate:</source>
+        <translation type="unfinished">Повернись:</translation>
+    </message>
+    <message>
         <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePPInit.js" line="+2"/>
         <source>&amp;Rectangle</source>
-        <translation>&amp;Suorakulmio</translation>
+        <translation type="unfinished">Прямокутник</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw rectangle from two corners</source>
-        <translation>Piirrä suorakulmio kahdesta kulmasta</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
-        <source>Rotate:</source>
-        <translation type="unfinished">Pyöritä:</translation>
+        <translation type="unfinished">Накресліть прямокутник з двох кутів</translation>
     </message>
 </context>
 <context>
     <name>ShapeRectangleSize</name>
     <message>
-        <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeInit.js" line="+2"/>
-        <source>Rectangle with &amp;Size</source>
-        <translation>Suorakulmio &amp;suuruudella</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Draw rectangle with position and size</source>
-        <translation>Piirrä suorakulmio sijainnin sekä koon perusteella</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSize.ui" line="+17"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+19"/>
         <source>&amp;Width:</source>
-        <translation>&amp;Leveys:</translation>
+        <translation type="unfinished">Ширина:</translation>
     </message>
     <message>
         <location line="+23"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+30"/>
         <source>&amp;Height:</source>
-        <translation>&amp;Korkeus:</translation>
+        <translation type="unfinished">Зростання:</translation>
     </message>
     <message>
         <location line="+30"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="-10"/>
         <source>Angle:</source>
-        <translation>Kulma:</translation>
+        <translation type="unfinished">Кут:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Reference Point:</source>
-        <translation>Viitepiste:</translation>
+        <translation type="unfinished">Точка відліку:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+101"/>
         <source>Create Polyline</source>
-        <translation>Luo murtoviiva</translation>
+        <translation type="unfinished">Створити полілінію</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeInit.js" line="+2"/>
+        <source>Rectangle with &amp;Size</source>
+        <translation type="unfinished">Прямокутник з розміром</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Draw rectangle with position and size</source>
+        <translation type="unfinished">Намалюйте прямокутник із зазначенням положення та розміру</translation>
     </message>
 </context>
 <context>
@@ -11907,7 +11908,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Layer/ShowActiveLayer/ShowActiveLayerInit.js" line="+2"/>
         <source>Show &amp;Only Active</source>
-        <translation>Näytä &amp;vain aktiivinen</translation>
+        <translation type="unfinished">Показати тільки активні</translation>
     </message>
 </context>
 <context>
@@ -11915,7 +11916,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Block/ShowAllBlocks/ShowAllBlocksInit.js" line="+2"/>
         <source>&amp;Show All Blocks</source>
-        <translation>&amp;Näytä kaikki lohkot</translation>
+        <translation type="unfinished">Показати всі блоки</translation>
     </message>
 </context>
 <context>
@@ -11923,20 +11924,20 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Layer/ShowAllLayers/ShowAllLayersInit.js" line="+2"/>
         <source>&amp;Show All Layers</source>
-        <translation>&amp;Näytä kaikki tasot</translation>
+        <translation type="unfinished">Показати всі шари</translation>
     </message>
 </context>
 <context>
     <name>ShowReadme</name>
     <message>
-        <location filename="../scripts/Help/ShowReadme/ShowReadmeInit.js" line="+2"/>
-        <source>Show &amp;Readme</source>
-        <translation>Näytä &amp;lueminut-tiedosto</translation>
-    </message>
-    <message>
         <location filename="../scripts/Help/ShowReadme/ShowReadme.js" line="+46"/>
         <source>File &quot;%1&quot; doesn&apos;t exist.</source>
-        <translation>Tiedostoa &quot;%1&quot; ei ole.</translation>
+        <translation type="unfinished">Файл &quot;%1&quot; не існує.</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Help/ShowReadme/ShowReadmeInit.js" line="+2"/>
+        <source>Show &amp;Readme</source>
+        <translation type="unfinished">Показати Readme</translation>
     </message>
 </context>
 <context>
@@ -11944,7 +11945,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/00_Single.ui" line="+14"/>
         <source>Single</source>
-        <translation>Yksittäinen</translation>
+        <translation type="unfinished">Єдиний</translation>
     </message>
 </context>
 <context>
@@ -11952,12 +11953,12 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/Snap.js" line="+57"/>
         <source>Snap Tools</source>
-        <translation>Tartuntatyökalut</translation>
+        <translation type="unfinished">Snap Tools</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Snap</source>
-        <translation>&amp;Tartunta</translation>
+        <translation type="unfinished">Snap</translation>
     </message>
 </context>
 <context>
@@ -11965,17 +11966,17 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAuto.js" line="+34"/>
         <source>Snap</source>
-        <translation>Tartunta</translation>
+        <translation type="unfinished">Snap</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Auto Snap</source>
-        <translation>Automaattinen tartunta</translation>
+        <translation type="unfinished">Автоматична фіксація</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAutoInit.js" line="+2"/>
         <source>&amp;Auto</source>
-        <translation>&amp;Automaattinen</translation>
+        <translation type="unfinished">Авто</translation>
     </message>
 </context>
 <context>
@@ -11983,7 +11984,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/SnapCenter/SnapCenterInit.js" line="+2"/>
         <source>&amp;Center</source>
-        <translation>&amp;Keskipiste</translation>
+        <translation type="unfinished">Центр</translation>
     </message>
 </context>
 <context>
@@ -11991,47 +11992,47 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.js" line="+88"/>
         <source>Set coordinate</source>
-        <translation>Aseta koordinaatti</translation>
+        <translation type="unfinished">Встановити координату</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Enter</source>
-        <translation type="unfinished">Kirjoita</translation>
+        <translation type="unfinished">Увійдіть</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+17"/>
         <source>&amp;x:</source>
-        <translation>&amp;x:</translation>
+        <translation type="unfinished">x:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>X Coordinate</source>
-        <translation>X Koordinaatti</translation>
+        <translation type="unfinished">Координата X</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;y:</source>
-        <translation>&amp;y:</translation>
+        <translation type="unfinished">y:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Y Coordinate</source>
-        <translation>Y Koordinaatti</translation>
+        <translation type="unfinished">Координата Y</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Tick for Relative Coordinate</source>
-        <translation>Ruksaa suhteellista koordinaattia varten</translation>
+        <translation type="unfinished">Галочка для відносної координати</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Relati&amp;ve</source>
-        <translation>Suhteelli&amp;nen</translation>
+        <translation type="unfinished">Відносний</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinateInit.js" line="+2"/>
         <source>&amp;Coordinate</source>
-        <translation>&amp;Koordinaatti</translation>
+        <translation type="unfinished">Координати</translation>
     </message>
 </context>
 <context>
@@ -12039,37 +12040,37 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+17"/>
         <source>&amp;r:</source>
-        <translation>&amp;r:</translation>
+        <translation type="unfinished">r:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Radius (Distance)</source>
-        <translation>Säde (etäisyys)</translation>
+        <translation type="unfinished">Радіус (відстань)</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;&lt;:</source>
-        <translation>&amp;&lt;:</translation>
+        <translation type="unfinished">&lt;:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Angle</source>
-        <translation>Kulma</translation>
+        <translation type="unfinished">Кут</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Tick for Relative Coordinate</source>
-        <translation>Ruksaa suhteellista koordinaattia varten</translation>
+        <translation type="unfinished">Галочка для відносної координати</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Relati&amp;ve</source>
-        <translation>Suhteelli&amp;nen</translation>
+        <translation type="unfinished">Відносний</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js" line="+2"/>
         <source>&amp;Polar Coordinate</source>
-        <translation>&amp;Napakoordinaatisto</translation>
+        <translation type="unfinished">Полярна координата</translation>
     </message>
 </context>
 <context>
@@ -12077,12 +12078,12 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap distance:</source>
-        <translation>Tartuntaetäisyys:</translation>
+        <translation type="unfinished">Зблизька:</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistanceInit.js" line="+2"/>
         <source>&amp;Distance</source>
-        <translation>&amp;Etäisyys</translation>
+        <translation type="unfinished">Відстань</translation>
     </message>
 </context>
 <context>
@@ -12090,42 +12091,42 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.js" line="+36"/>
         <source>Specify first point to measure distance from</source>
-        <translation>Määrittele ensimmäinen piste etäisyyden mittaukseen</translation>
+        <translation type="unfinished">Вкажіть першу точку, від якої потрібно виміряти відстань</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Second point</source>
-        <translation>Toinen piste</translation>
+        <translation type="unfinished">Другий момент</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap distance:</source>
-        <translation>Tartunnan etäisyys:</translation>
+        <translation type="unfinished">Зблизька:</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>Distance</source>
-        <translation>Etäisyys</translation>
+        <translation type="unfinished">Відстань</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Percentage</source>
-        <translation>Prosenttia</translation>
+        <translation type="unfinished">У відсотках</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Fraction</source>
-        <translation>Murtoluku</translation>
+        <translation type="unfinished">Фракція</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManualInit.js" line="+2"/>
         <source>&amp;Distance Manual</source>
-        <translation>&amp;Etäisyys käsin</translation>
+        <translation type="unfinished">Посібник з дистанційного керування</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Snap distance between 2 points</source>
-        <translation>Tartuntaetäisyys 2 pisteen välillä</translation>
+        <translation type="unfinished">Відстань між 2 точками прив&apos;язки</translation>
     </message>
 </context>
 <context>
@@ -12133,7 +12134,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/SnapEnd/SnapEndInit.js" line="+2"/>
         <source>&amp;End</source>
-        <translation>&amp;Loppu</translation>
+        <translation type="unfinished">Кінець</translation>
     </message>
 </context>
 <context>
@@ -12141,7 +12142,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/SnapFree/SnapFreeInit.js" line="+2"/>
         <source>&amp;Free</source>
-        <translation>&amp;Rajoittamaton</translation>
+        <translation type="unfinished">Безкоштовно</translation>
     </message>
 </context>
 <context>
@@ -12149,7 +12150,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/SnapGrid/SnapGridInit.js" line="+2"/>
         <source>&amp;Grid</source>
-        <translation>&amp;Ruudukko</translation>
+        <translation type="unfinished">Сітка</translation>
     </message>
 </context>
 <context>
@@ -12157,40 +12158,40 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/SnapIntersection/SnapIntersectionInit.js" line="+2"/>
         <source>&amp;Intersection</source>
-        <translation>&amp;Leikkauspiste</translation>
+        <translation type="unfinished">Перехрестя</translation>
     </message>
 </context>
 <context>
     <name>SnapIntersectionManual</name>
     <message>
-        <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManualInit.js" line="+2"/>
-        <source>&amp;Intersection Manual</source>
-        <translation>&amp;Leikkauspiste käsin</translation>
+        <location filename="../scripts/Snap/SnapIntersectionManual/PreferencesPage.ui" line="+17"/>
+        <source>Terminate manual intersection tool after one use</source>
+        <translation type="unfinished">Вимкніть ручний інструмент для перехресть після одного використання</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManual.js" line="+47"/>
         <source>Snap</source>
-        <translation>Tartunta</translation>
+        <translation type="unfinished">Snap</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Intersection Manual</source>
-        <translation>Leikkauspiste käsin</translation>
+        <translation type="unfinished">Посібник з перехрестя</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>First entity</source>
-        <translation>Ensimmäinen kohde</translation>
+        <translation type="unfinished">Перший суб&apos;єкт</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity</source>
-        <translation>Toinen kohde</translation>
+        <translation type="unfinished">Другий суб&apos;єкт</translation>
     </message>
     <message>
-        <location filename="../scripts/Snap/SnapIntersectionManual/PreferencesPage.ui" line="+17"/>
-        <source>Terminate manual intersection tool after one use</source>
-        <translation>Lopeta manuaalinen leikkauspisteen työkalu yhden käytön jälkeen</translation>
+        <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManualInit.js" line="+2"/>
+        <source>&amp;Intersection Manual</source>
+        <translation type="unfinished">Посібник з перехрестя</translation>
     </message>
 </context>
 <context>
@@ -12198,7 +12199,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/SnapMiddle/SnapMiddleInit.js" line="+2"/>
         <source>&amp;Middle</source>
-        <translation>&amp;Keskellä</translation>
+        <translation type="unfinished">Середній</translation>
     </message>
 </context>
 <context>
@@ -12206,7 +12207,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/SnapMiddleManual/SnapMiddleManualInit.js" line="+2"/>
         <source>&amp;Middle Manual</source>
-        <translation>&amp;Keskellä käsivaraisesti</translation>
+        <translation type="unfinished">Середній посібник</translation>
     </message>
 </context>
 <context>
@@ -12214,7 +12215,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/SnapOnEntity/SnapOnEntityInit.js" line="+2"/>
         <source>&amp;On Entity</source>
-        <translation>&amp;Kohteessa</translation>
+        <translation type="unfinished">Про суб&apos;єкта господарювання</translation>
     </message>
 </context>
 <context>
@@ -12222,7 +12223,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/SnapPerpendicular/SnapPerpendicularInit.js" line="+2"/>
         <source>&amp;Perpendicular</source>
-        <translation>&amp;Kohtisuora</translation>
+        <translation type="unfinished">Перпендикулярний</translation>
     </message>
 </context>
 <context>
@@ -12230,7 +12231,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/SnapReference/SnapReferenceInit.js" line="+2"/>
         <source>&amp;Reference</source>
-        <translation>&amp;Viite</translation>
+        <translation type="unfinished">Посилання</translation>
     </message>
 </context>
 <context>
@@ -12238,7 +12239,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/SnapSelectionCenter/SnapSelectionCenterInit.js" line="+2"/>
         <source>Center of &amp;Selection</source>
-        <translation>&amp;Valinnan keskikohta</translation>
+        <translation type="unfinished">Центр відбору</translation>
     </message>
 </context>
 <context>
@@ -12246,7 +12247,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/SnapTangential/SnapTangentialInit.js" line="+2"/>
         <source>&amp;Tangential</source>
-        <translation>&amp;Tangentiaalinen</translation>
+        <translation type="unfinished">Тангенціальний</translation>
     </message>
 </context>
 <context>
@@ -12254,7 +12255,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/SnapXManual/SnapXManualInit.js" line="+2"/>
         <source>&amp;X/Y from Points</source>
-        <translation>&amp;X/Y pisteistä</translation>
+        <translation type="unfinished">X/Y з точок</translation>
     </message>
 </context>
 <context>
@@ -12262,7 +12263,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/SnapYManual/SnapYManualInit.js" line="+2"/>
         <source>&amp;Y/X from Points</source>
-        <translation>&amp;Y/X Pisteistä</translation>
+        <translation type="unfinished">Y/X з балів</translation>
     </message>
 </context>
 <context>
@@ -12270,12 +12271,12 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Draw/Spline/Spline.js" line="+72"/>
         <source>Spline Tools</source>
-        <translation>Käyrätyökalut</translation>
+        <translation type="unfinished">Сплайн-інструменти</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;Spline</source>
-        <translation>&amp;Käyrä</translation>
+        <translation type="unfinished">Сплайн</translation>
     </message>
 </context>
 <context>
@@ -12283,47 +12284,47 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.js" line="+60"/>
         <source>First control point</source>
-        <translation>Ensimmäinen hallintapiste</translation>
+        <translation type="unfinished">Перший контрольний пункт</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Next control point</source>
-        <translation>Seuraava hallintapiste</translation>
+        <translation type="unfinished">Наступний контрольний пункт</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.ui" line="+23"/>
         <source>Undo Last Control Point</source>
-        <translation>Kumoa viimeinen ohjauspiste</translation>
+        <translation type="unfinished">Скасувати останню контрольну точку</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Degree:</source>
-        <translation>Aste:</translation>
+        <translation type="unfinished">Ступінь:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Choose Spline Degree</source>
-        <translation>Valitse käyrän aste</translation>
+        <translation type="unfinished">Виберіть ступінь сплайна</translation>
     </message>
     <message>
         <location line="+70"/>
         <source>Tick for Closed Spline</source>
-        <translation>Rastita suljetulle käyrälle</translation>
+        <translation type="unfinished">Галочка для закритого сплайну</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Closed</source>
-        <translation>Suljettu</translation>
+        <translation type="unfinished">Закрито</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPointsInit.js" line="+2"/>
         <source>&amp;Spline (Control Points)</source>
-        <translation>&amp;Käyrä (ohjauspisteet)</translation>
+        <translation type="unfinished">Сплайн (контрольні точки)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw spline from control points</source>
-        <translation>Piirrä käyrä ohjauspisteillä</translation>
+        <translation type="unfinished">Побудувати сплайн з контрольних точок</translation>
     </message>
 </context>
 <context>
@@ -12331,7 +12332,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/MiscModify/SplineToLine/SplineToLine.js" line="+71"/>
         <source>Convert Straight Splines to Lines</source>
-        <translation>Muunna suorat käyrät viivoiksi</translation>
+        <translation type="unfinished">Перетворення прямих сплайнів у лінії</translation>
     </message>
 </context>
 <context>
@@ -12339,52 +12340,52 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+47"/>
         <source>Status bar font:</source>
-        <translation type="unfinished">Tilapalkin fontti:</translation>
+        <translation type="unfinished">Шрифт рядка стану:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Status Bar Widgets</source>
-        <translation>Tilarivin pienoisohjelmat</translation>
+        <translation type="unfinished">Віджети рядка стану</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Coordinate display</source>
-        <translation>Koordinaattinäyttö</translation>
+        <translation type="unfinished">Відображення координат</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Mouse display</source>
-        <translation>Hiirinäyttö</translation>
+        <translation type="unfinished">Дисплей миші</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Selection display</source>
-        <translation>Valintanäyttö</translation>
+        <translation type="unfinished">Відображення вибору</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Progress display</source>
-        <translation>Edistymisnäyttö</translation>
+        <translation type="unfinished">Індикатор виконання</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Show status tips</source>
-        <translation>Näytä tilavinkkejä</translation>
+        <translation type="unfinished">Показати підказки про стан</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/StatusBar/StatusBar.js" line="+32"/>
         <source>Widgets</source>
-        <translation>Pienoisohjelmat</translation>
+        <translation type="unfinished">Віджети</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Status Bar</source>
-        <translation>Tilarivi</translation>
+        <translation type="unfinished">Рядок стану</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Status Bar</source>
-        <translation>&amp;Tilarivi</translation>
+        <translation type="unfinished">Рядок стану</translation>
     </message>
 </context>
 <context>
@@ -12392,91 +12393,91 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Modify/Stretch/Stretch.js" line="+59"/>
         <source>First corner</source>
-        <translation>Ensimmäinen kulma</translation>
+        <translation type="unfinished">Перший поворот</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Second corner</source>
-        <translation>Toinen kulma</translation>
+        <translation type="unfinished">Другий поворот</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Reference point</source>
-        <translation>Viitepiste</translation>
+        <translation type="unfinished">Точка відліку</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Target point</source>
-        <translation>Kohdepiste</translation>
+        <translation type="unfinished">Цільова точка</translation>
     </message>
     <message>
         <location line="+141"/>
         <source>No selected entities in given range</source>
-        <translation>Ei valittuja kohteita annetulla alueella</translation>
+        <translation type="unfinished">Немає обраних підприємств у даному діапазоні</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>No entities in given range</source>
-        <translation>Kohteita ei ole määritellyllä alueella</translation>
+        <translation type="unfinished">Немає підприємств у даному діапазоні</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Stretch/StretchInit.js" line="+2"/>
         <source>&amp;Stretch</source>
-        <translation>&amp;Venytä</translation>
+        <translation type="unfinished">Розтяжка</translation>
     </message>
 </context>
 <context>
     <name>SvgImport</name>
     <message>
-        <location filename="../scripts/File/SvgImport/SvgImport.js" line="+30"/>
-        <source>File</source>
-        <translation>Tiedosto</translation>
-    </message>
-    <message>
-        <location line="+35"/>
-        <source>Import SVG</source>
-        <translation>Tuo SVG</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>SVG Files</source>
-        <translation>SVG-tiedostot</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>All Files</source>
-        <translation>Kaikki tiedostot</translation>
-    </message>
-    <message>
-        <location line="-36"/>
-        <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+14"/>
-        <source>SVG Import</source>
-        <translation>SVG-tuonti</translation>
-    </message>
-    <message>
-        <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+8"/>
-        <source>Resolution:</source>
-        <translation>Tarkkuus:</translation>
-    </message>
-    <message>
-        <location line="+57"/>
-        <source>Pixels / Inch</source>
-        <translation>Pikseliä / tuuma</translation>
-    </message>
-    <message>
-        <location filename="../scripts/File/SvgImport/SvgImportInit.js" line="+2"/>
-        <source>SVG &amp;Import...</source>
-        <translation>SVG tuonti ...</translation>
-    </message>
-    <message>
         <location filename="../scripts/File/SvgImport/PreferencesPage.ui" line="+17"/>
         <source>Splines</source>
-        <translation>Käyrät</translation>
+        <translation type="unfinished">Сплайни</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Automatically convert splines to lines / arcs if appropriate</source>
-        <translation>Muunna käyrät tarvittaessa automaattisesti viivoiksi/kaariksi</translation>
+        <translation type="unfinished">Автоматичне перетворення сплайнів в лінії / дуги при необхідності</translation>
+    </message>
+    <message>
+        <location filename="../scripts/File/SvgImport/SvgImport.js" line="+30"/>
+        <source>File</source>
+        <translation type="unfinished">Файл</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+14"/>
+        <source>SVG Import</source>
+        <translation type="unfinished">Імпорт SVG</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Import SVG</source>
+        <translation type="unfinished">Імпорт SVG</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>SVG Files</source>
+        <translation type="unfinished">Файли SVG</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>All Files</source>
+        <translation type="unfinished">Всі файли</translation>
+    </message>
+    <message>
+        <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+8"/>
+        <source>Resolution:</source>
+        <translation type="unfinished">Резолюція:</translation>
+    </message>
+    <message>
+        <location line="+57"/>
+        <source>Pixels / Inch</source>
+        <translation type="unfinished">Пікселі / дюйм</translation>
+    </message>
+    <message>
+        <location filename="../scripts/File/SvgImport/SvgImportInit.js" line="+2"/>
+        <source>SVG &amp;Import...</source>
+        <translation type="unfinished">SVG Імпорт...</translation>
     </message>
 </context>
 <context>
@@ -12484,25 +12485,25 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>
-        <translation>SVG-tiedostot %1</translation>
+        <translation type="unfinished">SVG файли %1</translation>
     </message>
 </context>
 <context>
     <name>TabBar</name>
     <message>
+        <location filename="../scripts/Widgets/TabBar/PreferencesPage.ui" line="+17"/>
+        <source>Show tab bar</source>
+        <translation type="unfinished">Показати панель вкладок</translation>
+    </message>
+    <message>
         <location filename="../scripts/Widgets/TabBar/TabBar.js" line="+24"/>
         <source>Widgets</source>
-        <translation>Pienoisohjelmat</translation>
+        <translation type="unfinished">Віджети</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Tab Bar</source>
-        <translation>Välilehti</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Widgets/TabBar/PreferencesPage.ui" line="+17"/>
-        <source>Show tab bar</source>
-        <translation>Näytä välilehtipalkki</translation>
+        <translation type="unfinished">Панель вкладок</translation>
     </message>
 </context>
 <context>
@@ -12510,109 +12511,109 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Draw/Text/Text.js" line="+88"/>
         <source>Position</source>
-        <translation>Sijainti</translation>
+        <translation type="unfinished">Посада</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Text/Text.ui" line="+17"/>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+17"/>
         <source>Contents:</source>
-        <translation>Sisältö:</translation>
+        <translation type="unfinished">Вміст:</translation>
     </message>
     <message>
         <location line="+20"/>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+23"/>
         <source>Height:</source>
-        <translation>Korkeus:</translation>
+        <translation type="unfinished">Зростання:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Angle:</source>
-        <translation>Kulma:</translation>
+        <translation type="unfinished">Кут:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Text/TextInit.js" line="+2"/>
         <source>&amp;Text</source>
-        <translation>&amp;Teksti</translation>
+        <translation type="unfinished">Текст</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw text</source>
-        <translation>Piirrä teksti</translation>
+        <translation type="unfinished">Намалювати текст</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+19"/>
         <source>Font size in text dialog preview:</source>
-        <translation type="unfinished">Fontin koko tekstin esikatselussa:</translation>
+        <translation type="unfinished">Розмір шрифту в попередньому перегляді текстового діалогу:</translation>
     </message>
     <message>
         <location line="+99"/>
         <source>Show font preview in font controls</source>
-        <translation>Näytä kirjasimien esikatselu niiden ohjauksessa</translation>
+        <translation type="unfinished">Показувати попередній перегляд шрифту в елементах керування шрифтами</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Use reduced selection of fonts:</source>
-        <translation>Käytä rajoitettua kirjasinvalintaa:</translation>
+        <translation type="unfinished">Використовувати зменшений вибір шрифтів:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Uncheck all</source>
-        <translation>Poista valinnat</translation>
+        <translation type="unfinished">Зняти всі галочки</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Check all</source>
-        <translation>Valitse kaikki</translation>
+        <translation type="unfinished">Перевірте всі</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-10"/>
         <source>Text</source>
-        <translation>Teksti</translation>
+        <translation type="unfinished">Текст</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Text height</source>
-        <translation>Tekstin korkeus</translation>
+        <translation type="unfinished">Висота тексту</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Spacing</source>
-        <translation>Riviväli</translation>
+        <translation type="unfinished">Інтервал</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Letter spacing</source>
-        <translation>Kirjainväli</translation>
+        <translation type="unfinished">Інтервал між буквами</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>0</source>
-        <translation>0</translation>
+        <translation type="unfinished">0</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Direction:</source>
-        <translation>Suunta:</translation>
+        <translation type="unfinished">Напрямок:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise</source>
-        <translation>Vastapäivään</translation>
+        <translation type="unfinished">Проти годинникової стрілки</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Clockwise</source>
-        <translation>Myötäpäivään</translation>
+        <translation type="unfinished">За годинниковою стрілкою</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Fit text to line, arc or circle</source>
-        <translation>Sovita teksti viivaan, kaareen tai ympyrään</translation>
+        <translation type="unfinished">Підгонка тексту до лінії, дуги або кола</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Fit</source>
-        <translation>Sovita</translation>
+        <translation type="unfinished">Підходить</translation>
     </message>
 </context>
 <context>
@@ -12620,22 +12621,22 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeader.js" line="+41"/>
         <source>Arrow position</source>
-        <translation type="unfinished">Nuolen sijainti</translation>
+        <translation type="unfinished">Положення стрілки</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Choose text</source>
-        <translation type="unfinished">Valitse teksti</translation>
+        <translation type="unfinished">Виберіть текст</translation>
     </message>
     <message>
         <location line="+102"/>
         <source>Leader was created successfully</source>
-        <translation type="unfinished">Leader luotiin onnistuneesti</translation>
+        <translation type="unfinished">Лідер створено успішно</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
         <source>&amp;Text Aligned Leader</source>
-        <translation type="unfinished">Tekstin mukainen johtaja</translation>
+        <translation type="unfinished">Вирівнювання тексту по центру</translation>
     </message>
 </context>
 <context>
@@ -12644,23 +12645,23 @@ näkyy hakutuloksissa:</translation>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.js" line="+99"/>
         <location line="+1"/>
         <source>Select Entity</source>
-        <translation>Valitse kohde</translation>
+        <translation type="unfinished">Виберіть суб&apos;єкт господарювання</translation>
     </message>
     <message>
         <location line="+6"/>
         <location line="+1"/>
         <source>Position</source>
-        <translation>Sijainti</translation>
+        <translation type="unfinished">Посада</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlongInit.js" line="+2"/>
         <source>&amp;Text Along Entity</source>
-        <translation>&amp;Teksti kohteen suuntaisesti</translation>
+        <translation type="unfinished">Текст уздовж об&apos;єкта</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw text along an entity</source>
-        <translation>Piirrä teksti kohteen suuntaisesti</translation>
+        <translation type="unfinished">Намалюйте текст уздовж об&apos;єкта</translation>
     </message>
 </context>
 <context>
@@ -12668,351 +12669,350 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+241"/>
         <source>Default value:</source>
-        <translation>Oletusarvo:</translation>
+        <translation type="unfinished">Значення за замовчуванням:</translation>
     </message>
     <message>
         <location line="+269"/>
         <source>&amp;Undo</source>
-        <translation>&amp;Kumoa</translation>
+        <translation type="unfinished">Скасувати</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Redo</source>
-        <translation>&amp;Tee uudelleen</translation>
+        <translation type="unfinished">Повторити</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Cu&amp;t</source>
-        <translation>Leikkaa</translation>
+        <translation type="unfinished">Вирізати</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Copy</source>
-        <translation>&amp;Kopioi</translation>
+        <translation type="unfinished">Прийом</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Paste</source>
-        <translation>&amp;Liitä</translation>
+        <translation type="unfinished">Паста</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Bold</source>
-        <translation>&amp;Lihavoitu</translation>
+        <translation type="unfinished">Bold</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Italic</source>
-        <translation>&amp;Kursivoitu</translation>
+        <translation type="unfinished">Курсив</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Underline</source>
-        <translation>&amp;Alleviivaus</translation>
+        <translation type="unfinished">Підкреслити</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Subscript</source>
-        <translation>&amp;Alaindeksi</translation>
+        <translation type="unfinished">Підпис</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Superscript</source>
-        <translation>&amp;Yläindeksi</translation>
+        <translation type="unfinished">Надрядковий індекс</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>&amp;Color...</source>
-        <translation>&amp;Väri ...</translation>
+        <translation type="unfinished">Колір...</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Special Characters...</source>
-        <translation>&amp;Erikoismerkit ...</translation>
+        <translation type="unfinished">Спеціальні символи...</translation>
     </message>
     <message>
         <location line="+319"/>
         <source>Others...</source>
-        <translation>Muut ...</translation>
+        <translation type="unfinished">Інші...</translation>
     </message>
     <message>
         <location line="+138"/>
         <source>Degree</source>
-        <translation>Aste</translation>
+        <translation type="unfinished">Ступінь</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plus-Minus</source>
-        <translation>Plus-miinus</translation>
+        <translation type="unfinished">Плюс-мінус</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Diameter</source>
-        <translation>Halkaisija</translation>
+        <translation type="unfinished">Діаметр</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Almost equal</source>
-        <translation>Lähes yhtäsuuri</translation>
+        <translation type="unfinished">Майже рівні</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Multiplication</source>
-        <translation>Kertolasku</translation>
+        <translation type="unfinished">Множення</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation>Jakolasku</translation>
+        <translation type="unfinished">Підрозділ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delta</source>
-        <translation>Delta</translation>
+        <translation type="unfinished">Дельта</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pi</source>
-        <translation>Pii</translation>
+        <translation type="unfinished">Пі</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Identity</source>
-        <translation>Henkilöllisyys</translation>
+        <translation type="unfinished">Ідентичність</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Not equal</source>
-        <translation>Eri suuri</translation>
+        <translation type="unfinished">Не дорівнює</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Ohm</source>
-        <translation>Ohmi</translation>
+        <translation type="unfinished">Ом</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Omega</source>
-        <translation>Oomega</translation>
+        <translation type="unfinished">Омега</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Squared</source>
-        <translation>Neliöity</translation>
+        <translation type="unfinished">У квадраті</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation>Kuutioitu</translation>
+        <translation type="unfinished">Кубічний</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>No-break space</source>
-        <translation>Kiinteä välilyönti</translation>
+        <translation type="unfinished">Безперервний простір</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/TextDialog.ui" line="+14"/>
         <source>Text</source>
-        <translation>Teksti</translation>
+        <translation type="unfinished">Текст</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Main Font</source>
-        <translation>Pääkirjasin</translation>
+        <translation type="unfinished">Основний шрифт</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Height:</source>
-        <translation>Korkeus:</translation>
+        <translation type="unfinished">Зростання:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Text Height in Drawing Units</source>
-        <translation>Tekstin korkeus piirrosyksikköinä</translation>
+        <translation type="unfinished">Висота тексту в одиницях креслення</translation>
     </message>
     <message>
         <location line="+18"/>
         <location line="+268"/>
         <source>Bold</source>
-        <translation>Lihavointi</translation>
+        <translation type="unfinished">Bold</translation>
     </message>
     <message>
         <location line="-261"/>
         <location line="+274"/>
         <source>Italic</source>
-        <translation>Kursiivi</translation>
+        <translation type="unfinished">Курсив</translation>
     </message>
     <message>
         <location line="-260"/>
         <source>Text fits on one line and has no formatting</source>
-        <translation>Teksti mahtuu yhdelle viivalle eikä sisällä muotoilua</translation>
+        <translation type="unfinished">Текст вміщується в один рядок і не має форматування</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
-        <translation>Pelkkä teksti
-(yksi rivi, ei muotoilua)</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Rich Text</source>
-        <translation>Muotoiltu teksti</translation>
+        <translation type="unfinished">Розширений текст</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Cut</source>
-        <translation>Leikkaa</translation>
+        <translation type="unfinished">Вирізати</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Copy</source>
-        <translation>Kopioi</translation>
+        <translation type="unfinished">Прийом</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Paste</source>
-        <translation>Liitä</translation>
+        <translation type="unfinished">Паста</translation>
     </message>
     <message>
         <location line="+170"/>
         <source>Ctrl+B</source>
-        <translation>Ctrl+B</translation>
+        <translation type="unfinished">Ctrl+B</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Ctrl+I</source>
-        <translation>Ctrl+I</translation>
+        <translation type="unfinished">Ctrl+I</translation>
     </message>
     <message>
         <location line="+50"/>
         <source>Insert Symbol...</source>
-        <translation>Lisää symboli ...</translation>
+        <translation type="unfinished">Вставити символ...</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Source</source>
-        <translation>Lähde</translation>
+        <translation type="unfinished">Джерело</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Attribute Details</source>
-        <translation>Määritteiden yksityiskohdat</translation>
+        <translation type="unfinished">Інформація про атрибут</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Tag:</source>
-        <translation>Tunniste:</translation>
+        <translation type="unfinished">Мітка:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Prompt:</source>
-        <translation>Kehote:</translation>
+        <translation type="unfinished">Негайно:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Value:</source>
-        <translation>Arvo:</translation>
+        <translation type="unfinished">Цінність:</translation>
     </message>
     <message>
         <location line="+42"/>
         <source>Text Geometry</source>
-        <translation>Tekstin geometria</translation>
+        <translation type="unfinished">Геометрія тексту</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Line spacing factor:</source>
-        <translation>Rivivälin kerroin:</translation>
+        <translation type="unfinished">Коефіцієнт міжрядкового інтервалу:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Line Spacing Factor</source>
-        <translation>Rivivälin kerroin</translation>
+        <translation type="unfinished">Коефіцієнт міжрядкового інтервалу</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Angle:</source>
-        <translation>Kulma:</translation>
+        <translation type="unfinished">Кут:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Rotation Angle</source>
-        <translation>Kiertokulma</translation>
+        <translation type="unfinished">Кут повороту</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Alignment</source>
-        <translation>Tasaus</translation>
+        <translation type="unfinished">Вирівнювання</translation>
     </message>
     <message>
-        <location line="+311"/>
-        <source>Bottom Left</source>
-        <translation>Alavasen</translation>
+        <location line="+47"/>
+        <source>Top Left</source>
+        <translation type="unfinished">Вгорі зліва</translation>
     </message>
     <message>
-        <location line="+29"/>
-        <source>Bottom Center</source>
-        <translation>Alakeski</translation>
-    </message>
-    <message>
-        <location line="-261"/>
+        <location line="+32"/>
         <source>Top Center</source>
-        <translation>Yläkeski</translation>
+        <translation type="unfinished">Верхній центр</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Middle Right</source>
-        <translation>Keskioikea</translation>
+        <translation type="unfinished">Середній правий</translation>
     </message>
     <message>
-        <location line="+116"/>
+        <location line="+29"/>
+        <source>Top Right</source>
+        <translation type="unfinished">Вгорі праворуч</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Middle Center</source>
+        <translation type="unfinished">Середній центр</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Middle Left</source>
+        <translation type="unfinished">Середній зліва</translation>
+    </message>
+    <message>
+        <location line="+29"/>
         <source>Base Left</source>
-        <translation>Perusvasen</translation>
+        <translation type="unfinished">База ліворуч</translation>
     </message>
     <message>
-        <location line="-177"/>
-        <source>Top Left</source>
-        <translation>Ylävasen</translation>
-    </message>
-    <message>
-        <location line="+206"/>
+        <location line="+29"/>
         <source>Base Center</source>
-        <translation>Peruskeski</translation>
+        <translation type="unfinished">Базовий центр</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Base Right</source>
-        <translation>Perusoikea</translation>
+        <translation type="unfinished">База правая</translation>
     </message>
     <message>
-        <location line="-116"/>
-        <source>Middle Center</source>
-        <translation>Keskikeskus</translation>
+        <location line="+29"/>
+        <source>Bottom Left</source>
+        <translation type="unfinished">Внизу зліва</translation>
     </message>
     <message>
-        <location line="+203"/>
+        <location line="+29"/>
+        <source>Bottom Center</source>
+        <translation type="unfinished">Нижній центр</translation>
+    </message>
+    <message>
+        <location line="+29"/>
         <source>Bottom Right</source>
-        <translation>Alaoikea</translation>
+        <translation type="unfinished">Внизу праворуч</translation>
     </message>
     <message>
-        <location line="-174"/>
-        <source>Middle Left</source>
-        <translation>Vasen keski</translation>
-    </message>
-    <message>
-        <location line="-58"/>
-        <source>Top Right</source>
-        <translation>Yläoikea</translation>
-    </message>
-    <message>
-        <location line="+291"/>
+        <location line="+59"/>
         <source>Cancel</source>
-        <translation>Peruuta</translation>
+        <translation type="unfinished">Скасувати</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation type="unfinished">ГАРАЗД</translation>
     </message>
 </context>
 <context>
@@ -13020,12 +13020,12 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/TextPreferences.js" line="+30"/>
         <source>Draw</source>
-        <translation>Piirrä</translation>
+        <translation type="unfinished">Жеребкування</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Text</source>
-        <translation>Teksti</translation>
+        <translation type="unfinished">Текст</translation>
     </message>
 </context>
 <context>
@@ -13033,7 +13033,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ThemePreferences/PreferencesPage.ui" line="+20"/>
         <source>User interface theme:</source>
-        <translation type="unfinished">Käyttöliittymän teema:</translation>
+        <translation type="unfinished">Тема інтерфейсу користувача:</translation>
     </message>
 </context>
 <context>
@@ -13041,12 +13041,12 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+31"/>
         <source>General</source>
-        <translation>Yleistä</translation>
+        <translation type="unfinished">Генеральний</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Theme</source>
-        <translation>Teema</translation>
+        <translation type="unfinished">Тема</translation>
     </message>
 </context>
 <context>
@@ -13054,7 +13054,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/23_ThreeBelow.ui" line="+14"/>
         <source>Three: Below</source>
-        <translation>Kolme: Alla</translation>
+        <translation type="unfinished">Три: Нижче</translation>
     </message>
 </context>
 <context>
@@ -13062,7 +13062,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/25_ThreeHorizontal.ui" line="+14"/>
         <source>Three: Horizontal</source>
-        <translation>Kolme: Vaakasuunnassa</translation>
+        <translation type="unfinished">Третій: Горизонтальний</translation>
     </message>
 </context>
 <context>
@@ -13070,7 +13070,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/24_ThreeVertical.ui" line="+14"/>
         <source>Three: Vertical</source>
-        <translation>Kolme: Pystysuunnassa</translation>
+        <translation type="unfinished">Три: Вертикаль</translation>
     </message>
 </context>
 <context>
@@ -13078,7 +13078,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Modify/DrawOrder/ToBack/ToBackInit.js" line="+2"/>
         <source>Send to Bac&amp;k</source>
-        <translation>Lähetä takaisin</translation>
+        <translation type="unfinished">Повернутись до початку</translation>
     </message>
 </context>
 <context>
@@ -13086,7 +13086,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Modify/DrawOrder/ToFront/ToFrontInit.js" line="+2"/>
         <source>Bring to &amp;Front</source>
-        <translation>Tuo &amp;Eteen</translation>
+        <translation type="unfinished">Вивести на передній план</translation>
     </message>
 </context>
 <context>
@@ -13094,7 +13094,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Block/ToggleBlockVisibility/ToggleBlockVisibilityInit.js" line="+2"/>
         <source>&amp;Toggle Visibility</source>
-        <translation>&amp;Vaihda Näkyvyys</translation>
+        <translation type="unfinished">Переключити видимість</translation>
     </message>
 </context>
 <context>
@@ -13102,7 +13102,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/View/ToggleGrid/ToggleGrid.js" line="+90"/>
         <source>&amp;Grid</source>
-        <translation>&amp;Ruudukko</translation>
+        <translation type="unfinished">Сітка</translation>
     </message>
 </context>
 <context>
@@ -13110,7 +13110,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Layer/ToggleLayerLock/ToggleLayerLockInit.js" line="+2"/>
         <source>&amp;Toggle Lock Status</source>
-        <translation>&amp;Vaihda lukitustila</translation>
+        <translation type="unfinished">Стан перемикача блокування</translation>
     </message>
 </context>
 <context>
@@ -13118,7 +13118,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Layer/ToggleLayerVisibility/ToggleLayerVisibilityInit.js" line="+2"/>
         <source>&amp;Toggle Visibility</source>
-        <translation>&amp;Vaihda näkyvyys</translation>
+        <translation type="unfinished">Переключити видимість</translation>
     </message>
 </context>
 <context>
@@ -13126,27 +13126,27 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ToolBarPreferences/PreferencesPage.ui" line="+19"/>
         <source>Icon size:</source>
-        <translation type="unfinished">Kuvakkeen koko:</translation>
+        <translation type="unfinished">Розмір іконки:</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Pixel</source>
-        <translation>Pikseli</translation>
+        <translation type="unfinished">Піксель</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>px</source>
-        <translation>px</translation>
+        <translation type="unfinished">px</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Options Toolbar</source>
-        <translation>Lisävalintojen työkalu</translation>
+        <translation type="unfinished">Параметри Панель інструментів</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Shortcut prefix character:</source>
-        <translation type="unfinished">Lyhytvalintainen etuliitteen merkki:</translation>
+        <translation type="unfinished">Символ швидкого доступу до префікса:</translation>
     </message>
 </context>
 <context>
@@ -13154,12 +13154,12 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Widgets/ToolBarContextMenu/ToolBarContextMenu.js" line="+82"/>
         <source>Widgets</source>
-        <translation>Pienoisohjelmat</translation>
+        <translation type="unfinished">Віджети</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Toolbars</source>
-        <translation>Työkalurivit</translation>
+        <translation type="unfinished">Панелі інструментів</translation>
     </message>
 </context>
 <context>
@@ -13167,12 +13167,12 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ToolBarPreferences/ToolBarPreferences.js" line="+30"/>
         <source>Widgets</source>
-        <translation>Pienoisohjelmat</translation>
+        <translation type="unfinished">Віджети</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Toolbars</source>
-        <translation>Työkalurivit</translation>
+        <translation type="unfinished">Панелі інструментів</translation>
     </message>
 </context>
 <context>
@@ -13180,7 +13180,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/View/ToolMatrixFocus/ToolMatrixFocusInit.js" line="+2"/>
         <source>&amp;Focus on Tool Matrix</source>
-        <translation>&amp;Keskitä työkalumatriisiin</translation>
+        <translation type="unfinished">Зосередьтеся на матриці інструментів</translation>
     </message>
 </context>
 <context>
@@ -13188,7 +13188,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.ui" line="+37"/>
         <source>Filter</source>
-        <translation>Suodatin</translation>
+        <translation type="unfinished">Фільтр</translation>
     </message>
 </context>
 <context>
@@ -13196,60 +13196,60 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Modify/Transform.js" line="+47"/>
         <source>This tool requires a selection</source>
-        <translation>Tämä työkalu tarvitsee valinnan</translation>
+        <translation type="unfinished">Цей інструмент вимагає відбору</translation>
     </message>
 </context>
 <context>
     <name>Translate</name>
     <message>
+        <location filename="../scripts/Modify/Translate/PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation type="unfinished">Діалогове вікно для вибору параметрів інструменту</translation>
+    </message>
+    <message>
         <location filename="../scripts/Modify/Translate/Translate.js" line="+44"/>
         <source>Modify</source>
-        <translation>Muokkaa</translation>
+        <translation type="unfinished">Змінити</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Move/Copy</source>
-        <translation>Siirrä/kopioi</translation>
+        <translation type="unfinished">Перемістити/Копіювати</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Reference point</source>
-        <translation>Viitepiste</translation>
+        <translation type="unfinished">Точка відліку</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Target point</source>
-        <translation>Kohdepiste</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Modify/Translate/TranslateInit.js" line="+2"/>
-        <source>&amp;Move / Copy</source>
-        <translation>&amp;Siirrä / kopioi</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Move or copy entities once or multiple times</source>
-        <translation>Siirrä tai kopioi kohteita kerran tai useita kertoja</translation>
+        <translation type="unfinished">Цільова точка</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Translate/Translate.ui" line="+17"/>
         <source>Copy</source>
-        <translation>Kopioi</translation>
+        <translation type="unfinished">Прийом</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation>Kopioiden määrä:</translation>
+        <translation type="unfinished">Кількість примірників:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>Käytä nykyistä tasoa ja &amp;määrityksiä</translation>
+        <translation type="unfinished">Використовувати поточний шар та атрибути</translation>
     </message>
     <message>
-        <location filename="../scripts/Modify/Translate/PreferencesPage.ui" line="+17"/>
-        <source>Use dialog for tool options</source>
-        <translation>Käytä työkalun vaihtoehtojen valintaikkunaa</translation>
+        <location filename="../scripts/Modify/Translate/TranslateInit.js" line="+2"/>
+        <source>&amp;Move / Copy</source>
+        <translation type="unfinished">Переміщення / Копіювання</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Move or copy entities once or multiple times</source>
+        <translation type="unfinished">Переміщення або копіювання об&apos;єктів один або декілька разів</translation>
     </message>
 </context>
 <context>
@@ -13257,32 +13257,32 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Modify/Translate/TranslateDialog.ui" line="+14"/>
         <source>Move / Copy Options</source>
-        <translation>Siirrä / kopioi valinnat</translation>
+        <translation type="unfinished">Параметри переміщення / копіювання</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation>Kopioiden määrä</translation>
+        <translation type="unfinished">Кількість примірників</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation>&amp;Poista alkuperäinen</translation>
+        <translation type="unfinished">Видалити оригінал</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation>&amp;Säilytä alkuperäinen</translation>
+        <translation type="unfinished">Зберігайте оригінал</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation>&amp;Useita kopioita</translation>
+        <translation type="unfinished">Кілька примірників</translation>
     </message>
     <message>
         <location line="+89"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>Käytä nykyistä tasoa ja &amp;ominaisuuksia</translation>
+        <translation type="unfinished">Використовувати поточний шар та атрибути</translation>
     </message>
 </context>
 <context>
@@ -13290,12 +13290,12 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.ui" line="+17"/>
         <source>Angle:</source>
-        <translation>Kulma:</translation>
+        <translation type="unfinished">Кут:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateInit.js" line="+2"/>
         <source>M&amp;ove and Rotate</source>
-        <translation>S&amp;iirrä ja kierrä</translation>
+        <translation type="unfinished">Переміщення та обертання</translation>
     </message>
 </context>
 <context>
@@ -13303,37 +13303,37 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateDialog.ui" line="+14"/>
         <source>Move and Rotate Options</source>
-        <translation>Siirrä ja kierrä valinnat</translation>
+        <translation type="unfinished">Параметри переміщення та обертання</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation>Kopioiden määrä</translation>
+        <translation type="unfinished">Кількість примірників</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation>&amp;Pyyhi alkuperäinen</translation>
+        <translation type="unfinished">Видалити оригінал</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation>&amp;Säilytä alkuperäinen</translation>
+        <translation type="unfinished">Зберігайте оригінал</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation>&amp;Useita kopioita</translation>
+        <translation type="unfinished">Кілька примірників</translation>
     </message>
     <message>
         <location line="+97"/>
         <source>&amp;Angle (a):</source>
-        <translation>&amp;Kulma (a):</translation>
+        <translation type="unfinished">Кут (а):</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>Käytä nykyistä tasoa ja &amp;ominaisuuksia</translation>
+        <translation type="unfinished">Використовувати поточний шар та атрибути</translation>
     </message>
 </context>
 <context>
@@ -13341,37 +13341,37 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Modify/Trim/Trim.js" line="+77"/>
         <source>Choose limiting entity</source>
-        <translation>Valitse rajoittava kohde</translation>
+        <translation type="unfinished">Вибір лімітуючої особи</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Choose entity to trim</source>
-        <translation>Valitse hienosäädettävä kohde</translation>
+        <translation type="unfinished">Виберіть об&apos;єкт для обрізання</translation>
     </message>
     <message>
         <location line="+174"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
-        <translation>Kaksi kohdetta eivät leikkaa, tai eivät sovi rajaukseen.</translation>
+        <translation type="unfinished">Ці дві структури не перетинаються або наразі не підтримуються для об&apos;єднання.</translation>
     </message>
     <message>
         <location line="+74"/>
         <source>First entity cannot be trimmed.</source>
-        <translation>Ensimmäistä kohdetta ei voida hienosäätää.</translation>
+        <translation type="unfinished">Першу сутність не можна обрізати.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity cannot be trimmed.</source>
-        <translation>Kohdetta ei voi hienosäätää.</translation>
+        <translation type="unfinished">Сутність не може бути обрізана.</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation>Toista kohdetta ei voida hienosäätää.</translation>
+        <translation type="unfinished">Другий суб&apos;єкт не може бути обрізаний.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Trim/TrimInit.js" line="+2"/>
         <source>&amp;Trim</source>
-        <translation>&amp;Rajaa</translation>
+        <translation type="unfinished">Обрізка</translation>
     </message>
 </context>
 <context>
@@ -13379,7 +13379,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Modify/TrimBoth/TrimBothInit.js" line="+2"/>
         <source>Trim &amp;Both</source>
-        <translation>Rajaa &amp;molemmat</translation>
+        <translation type="unfinished">Обрізати обидва</translation>
     </message>
 </context>
 <context>
@@ -13387,7 +13387,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/Tutorials.js" line="+56"/>
         <source>Script &amp;Tutorials</source>
-        <translation>Komentorivisarja &amp;opetusohjelmat</translation>
+        <translation type="unfinished">Навчальні посібники зі скриптів</translation>
     </message>
 </context>
 <context>
@@ -13395,7 +13395,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/11_TwoHorizontal.ui" line="+14"/>
         <source>Two: Horizontal</source>
-        <translation>Kaksi: Vaakasuunnassa</translation>
+        <translation type="unfinished">Другий: Горизонтальний</translation>
     </message>
 </context>
 <context>
@@ -13403,7 +13403,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/10_TwoVertical.ui" line="+14"/>
         <source>Two: Vertical</source>
-        <translation>Kaksi: Pystysuunnassa</translation>
+        <translation type="unfinished">Другий: Вертикальний</translation>
     </message>
 </context>
 <context>
@@ -13411,22 +13411,22 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui" line="+17"/>
         <source>These settings affect the resolution and scale of the QCAD user interface. These preferences can be adjusted if there are problems with the user interface of QCAD, such as very large or very small icons or text labels.</source>
-        <translation type="unfinished">Nämä asetukset vaikuttavat QCADin käyttöliittymän resoluutioon ja mittakaavaan. Näitä asetuksia voidaan säätää, jos QCADin käyttöliittymässä on ongelmia, kuten erittäin suuret tai erittäin pienet kuvakkeet tai tekstitarrat.</translation>
+        <translation type="unfinished">Ці налаштування впливають на роздільну здатність і масштаб інтерфейсу користувача QCAD. Ці налаштування можуть бути скориговані, якщо виникають проблеми з інтерфейсом користувача QCAD, наприклад, дуже великі або дуже маленькі піктограми або текстові написи.</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Auto screen scale factor</source>
-        <translation type="unfinished">Automaattinen näytön skaalauskerroin</translation>
+        <translation type="unfinished">Коефіцієнт автоматичного масштабування екрану</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Enable high DPI scaling</source>
-        <translation type="unfinished">Ota käyttöön korkea DPI-skaalaus</translation>
+        <translation type="unfinished">Увімкнення високого масштабування DPI</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Scale factor:</source>
-        <translation type="unfinished">Mittakaavakerroin:</translation>
+        <translation type="unfinished">Масштабний фактор:</translation>
     </message>
 </context>
 <context>
@@ -13434,12 +13434,12 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/UiPreferences.js" line="+29"/>
         <source>General</source>
-        <translation type="unfinished">Yleistä</translation>
+        <translation type="unfinished">Генеральний</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>User Interface</source>
-        <translation type="unfinished">Käyttöliittymä</translation>
+        <translation type="unfinished">Інтерфейс користувача</translation>
     </message>
 </context>
 <context>
@@ -13447,156 +13447,156 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Edit/Undo/UndoInit.js" line="+2"/>
         <source>&amp;Undo</source>
-        <translation>&amp;Kumoa</translation>
+        <translation type="unfinished">Скасувати</translation>
     </message>
 </context>
 <context>
     <name>UnitSettings</name>
     <message>
+        <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/PreferencesPage.ui" line="+17"/>
+        <source>Drawing unit:</source>
+        <translation type="unfinished">Блок для малювання:</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Paper unit:</source>
+        <translation type="unfinished">Паперовий блок:</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Measurement system (for line types and hatch patterns):</source>
+        <translation type="unfinished">Система вимірювання (для типів ліній і штрихування):</translation>
+    </message>
+    <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/UnitSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
-        <translation>Asetukset uusille piirroksille</translation>
+        <translation type="unfinished">Значення за замовчуванням для нових креслень</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+2"/>
         <source>Drawing Unit</source>
-        <translation>Piirtoyksikkö</translation>
+        <translation type="unfinished">Блок малювання</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation>Yleistä</translation>
+        <translation type="unfinished">Генеральний</translation>
     </message>
     <message>
         <location line="+71"/>
         <source>None</source>
-        <translation>Ei mitään</translation>
+        <translation type="unfinished">Немає</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Inch</source>
-        <translation>Tuuma</translation>
+        <translation type="unfinished">Дюйм</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foot</source>
-        <translation>Jalka</translation>
+        <translation type="unfinished">Нога</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Mile</source>
-        <translation>Maili</translation>
+        <translation type="unfinished">Майл</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Millimeter</source>
-        <translation>Millimetri</translation>
+        <translation type="unfinished">Міліметр</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Centimeter</source>
-        <translation>Senttimetri</translation>
+        <translation type="unfinished">Сантиметр</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Meter</source>
-        <translation>Metri</translation>
+        <translation type="unfinished">Лічильник</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Kilometer</source>
-        <translation>Kilometri</translation>
+        <translation type="unfinished">Кілометр</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Microinch</source>
-        <translation>Mikrotuuma</translation>
+        <translation type="unfinished">Мікродюймовий</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Mil</source>
-        <translation>Maili</translation>
+        <translation type="unfinished">Мільйон</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Yard</source>
-        <translation>Jaardi</translation>
+        <translation type="unfinished">Двір</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angstrom</source>
-        <translation>Ångström</translation>
+        <translation type="unfinished">Angstrom</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Nanometer</source>
-        <translation>Nanometri</translation>
+        <translation type="unfinished">Нанометр</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Micron</source>
-        <translation>Mikroni</translation>
+        <translation type="unfinished">Мікрон</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimeter</source>
-        <translation>Desimetri</translation>
+        <translation type="unfinished">Дециметр</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decameter</source>
-        <translation>Dekametri</translation>
+        <translation type="unfinished">Декаметр</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hectometer</source>
-        <translation>Hektometri</translation>
+        <translation type="unfinished">Гектометр</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gigameter</source>
-        <translation>Gigametri</translation>
+        <translation type="unfinished">Гігаметр</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Astro</source>
-        <translation>Astronominen</translation>
+        <translation type="unfinished">Астро</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Lightyear</source>
-        <translation>Valovuosi</translation>
+        <translation type="unfinished">Світловий рік</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Parsec</source>
-        <translation>Parsek</translation>
+        <translation type="unfinished">Парсек</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Imperial</source>
-        <translation>Imperial</translation>
+        <translation type="unfinished">Imperial</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Metric</source>
-        <translation>Metrinen</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/PreferencesPage.ui" line="+17"/>
-        <source>Drawing unit:</source>
-        <translation type="unfinished">Piirustusyksikkö:</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Paper unit:</source>
-        <translation type="unfinished">Paperiyksikkö:</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Measurement system (for line types and hatch patterns):</source>
-        <translation type="unfinished">Mittausjärjestelmä (viivatyypeille ja luukkukuvioille):</translation>
+        <translation type="unfinished">Метрика</translation>
     </message>
 </context>
 <context>
@@ -13604,7 +13604,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Layer/UnlockAllLayers/UnlockAllLayersInit.js" line="+2"/>
         <source>&amp;Unlock All Layers</source>
-        <translation>&amp;Vapauta kaikki tasot</translation>
+        <translation type="unfinished">Розблокувати всі шари</translation>
     </message>
 </context>
 <context>
@@ -13612,17 +13612,17 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
         <source>View Tools</source>
-        <translation>Katselutyökalut</translation>
+        <translation type="unfinished">Перегляд інструментів</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>View</source>
-        <translation>Näytä</translation>
+        <translation type="unfinished">Вид</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;View</source>
-        <translation>&amp;Näkymä</translation>
+        <translation type="unfinished">Вид</translation>
     </message>
 </context>
 <context>
@@ -13630,17 +13630,17 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/View/ViewToolBars/ViewToolBarsPostInit.js" line="+6"/>
         <source>&amp;Toolbars and Widgets</source>
-        <translation>&amp;Työkalurivit ja pienoisohjelmat</translation>
+        <translation type="unfinished">Панелі інструментів та віджети</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Widgets</source>
-        <translation>Pienoisohjelmat</translation>
+        <translation type="unfinished">Віджети</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Toolbars</source>
-        <translation>Työkalurivit</translation>
+        <translation type="unfinished">Панелі інструментів</translation>
     </message>
 </context>
 <context>
@@ -13648,17 +13648,17 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ViewportSettings/PreferencesPage.ui" line="+21"/>
         <source>Viewports</source>
-        <translation>Näkymäalue</translation>
+        <translation type="unfinished">Видові екрани</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Preview</source>
-        <translation>Esikatselu</translation>
+        <translation type="unfinished">Попередній перегляд</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+105"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation>Ruudukon välit &lt; Aliruudukon välit</translation>
+        <translation type="unfinished">Інтервал між сітками &lt; Мета інтервал між сітками</translation>
     </message>
 </context>
 <context>
@@ -13666,22 +13666,22 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ViewportSettings/ViewportSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
-        <translation>Oletusarvot uusille piirroksille</translation>
+        <translation type="unfinished">Значення за замовчуванням для нових креслень</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layout - Viewports</source>
-        <translation>Näkymäalueiden asettelu</translation>
+        <translation type="unfinished">Макет - Видові екрани</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Layout</source>
-        <translation>Asettelu</translation>
+        <translation type="unfinished">Макет</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Viewports</source>
-        <translation>Näkymäalue</translation>
+        <translation type="unfinished">Видові екрани</translation>
     </message>
 </context>
 <context>
@@ -13689,17 +13689,17 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+322"/>
         <source>Dropped data not supported</source>
-        <translation>Poistettuja tietoja ei tueta</translation>
+        <translation type="unfinished">Скинуті дані не підтримуються</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Importing file: </source>
-        <translation>Tuodaan tiedosto: </translation>
+        <translation type="unfinished">Імпорт файлу:</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Importing URL: </source>
-        <translation>Tuodaan URL: </translation>
+        <translation type="unfinished">Імпорт URL-адреси:</translation>
     </message>
 </context>
 <context>
@@ -13707,7 +13707,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Help/Website/WebsiteInit.js" line="+2"/>
         <source>Visit &amp;Website</source>
-        <translation>Käy &amp;verkkosivustolla</translation>
+        <translation type="unfinished">Відвідати сайт</translation>
     </message>
 </context>
 <context>
@@ -13715,298 +13715,250 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/WidgetFactory.js" line="+1138"/>
         <source>Restore defaults</source>
-        <translation>Palauta oletusarvot</translation>
+        <translation type="unfinished">Відновлення налаштувань за замовчуванням</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Insert Symbol</source>
-        <translation>Lisää symboli</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Diameter</source>
-        <translation>Halkaisija</translation>
+        <translation type="unfinished">Вставити символ</translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>Arc</source>
-        <translation>Kaari</translation>
-    </message>
-    <message>
-        <location line="-5"/>
-        <source>Plus/Minus</source>
-        <translation>Plus/miinus</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>Pi</source>
-        <translation>Pii</translation>
-    </message>
-    <message>
-        <location line="-3"/>
-        <source>Phi</source>
-        <translation>Fii</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>phi</source>
-        <translation>Fii</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Alt phi</source>
-        <translation>Alt fii</translation>
-    </message>
-    <message>
-        <location line="-5"/>
-        <source>Ohm</source>
-        <translation>Ohmi</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>omega</source>
-        <translation>oomega</translation>
-    </message>
-    <message>
-        <location line="-4"/>
-        <source>Multiplication</source>
-        <translation>Kertolasku</translation>
-    </message>
-    <message>
-        <location line="-13"/>
-        <source>Division</source>
-        <translation>Jakolasku</translation>
-    </message>
-    <message>
-        <location line="+25"/>
-        <source>Square</source>
-        <translation>Neliö</translation>
-    </message>
-    <message>
-        <location line="-18"/>
-        <source>Delta</source>
-        <translation>Delta</translation>
-    </message>
-    <message>
-        <location line="-10"/>
         <source>Degrees</source>
-        <translation type="unfinished">Tutkinnot</translation>
+        <translation type="unfinished">Ступені</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+1"/>
+        <source>Plus/Minus</source>
+        <translation type="unfinished">Плюс/мінус</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Diameter</source>
+        <translation type="unfinished">Діаметр</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Division</source>
+        <translation type="unfinished">Підрозділ</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Almost Equal</source>
-        <translation type="unfinished">Lähes tasavertainen</translation>
+        <translation type="unfinished">Майже рівні</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angle</source>
-        <translation type="unfinished">Kulma</translation>
+        <translation type="unfinished">Кут</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
+        <source>Arc</source>
+        <translation type="unfinished">Дуга</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Asymptotically Equal</source>
-        <translation type="unfinished">Asymptoottisesti yhtä suuri</translation>
+        <translation type="unfinished">Асимптотично рівні</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Center Line</source>
-        <translation type="unfinished">Keskilinja</translation>
+        <translation type="unfinished">Center Line</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
+        <source>Delta</source>
+        <translation type="unfinished">Дельта</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Electrical Phase</source>
-        <translation type="unfinished">Sähköinen vaihe</translation>
+        <translation type="unfinished">Електрична фаза</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Identity</source>
-        <translation type="unfinished">Identiteetti</translation>
+        <translation type="unfinished">Ідентичність</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
+        <source>Multiplication</source>
+        <translation type="unfinished">Множення</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Not Equal</source>
-        <translation type="unfinished">Ei yhtäläinen</translation>
+        <translation type="unfinished">Не рівні</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
+        <source>Ohm</source>
+        <translation type="unfinished">Ом</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Omega</source>
-        <translation type="unfinished">Omega</translation>
+        <translation type="unfinished">Омега</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+1"/>
+        <source>omega</source>
+        <translation type="unfinished">омега</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Phi</source>
+        <translation type="unfinished">Фі</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>phi</source>
+        <translation type="unfinished">фі</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Alt phi</source>
+        <translation type="unfinished">Alt phi</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Pi</source>
+        <translation type="unfinished">Пі</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Property Line</source>
-        <translation type="unfinished">Kiinteistöraja</translation>
+        <translation type="unfinished">Лінія власності</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Subscript 2</source>
-        <translation type="unfinished">Alaindeksi 2</translation>
+        <translation type="unfinished">Підзаголовок 2</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Square Root</source>
-        <translation type="unfinished">Neliöjuuri</translation>
+        <translation type="unfinished">Квадратний корінь</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
+        <source>Square</source>
+        <translation type="unfinished">Площа</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Squared</source>
-        <translation type="unfinished">Squared</translation>
+        <translation type="unfinished">У квадраті</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation type="unfinished">Kuutioina</translation>
+        <translation type="unfinished">Кубічний</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Stacked text</source>
-        <translation>Pinottu teksti</translation>
+        <translation type="unfinished">Складений текст</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Measured value</source>
-        <translation>Mitattu arvo</translation>
+        <translation type="unfinished">Вимірювана величина</translation>
     </message>
     <message>
         <location line="+151"/>
         <source>Left</source>
-        <translation>Vasen</translation>
+        <translation type="unfinished">Ліворуч</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Center</source>
-        <translation>Keski</translation>
+        <translation type="unfinished">Центр</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation>Oikea</translation>
+        <translation type="unfinished">Так</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Aligned</source>
-        <translation>Tasattu</translation>
+        <translation type="unfinished">Вирівняно</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+7"/>
         <source>Middle</source>
-        <translation>Keskellä</translation>
+        <translation type="unfinished">Середній</translation>
     </message>
     <message>
         <location line="-6"/>
         <source>Fit</source>
-        <translation>Sovita</translation>
+        <translation type="unfinished">Підходить</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Top</source>
-        <translation>Ylä</translation>
+        <translation type="unfinished">Топ</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Base</source>
-        <translation>Perus</translation>
+        <translation type="unfinished">База</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation>Ala</translation>
+        <translation type="unfinished">Дно</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Scientific</source>
-        <translation type="unfinished">Tieteellinen</translation>
+        <translation type="unfinished">Науковий</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal</source>
-        <translation type="unfinished">Desimaaliluku</translation>
+        <translation type="unfinished">Десятковий</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Engineering</source>
-        <translation type="unfinished">Insinöörityö</translation>
+        <translation type="unfinished">Інжиніринг</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Architectural</source>
-        <translation type="unfinished">Arkkitehtoninen</translation>
+        <translation type="unfinished">Архітектурні</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fractional</source>
-        <translation type="unfinished">Murtoluku</translation>
+        <translation type="unfinished">Дробовий</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Centered</source>
-        <translation type="unfinished">Keskitetty</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <location line="+38"/>
-        <source>Show trailing zeroes</source>
-        <translation type="unfinished">Näytä perässä olevat nollat</translation>
-    </message>
-    <message>
-        <location line="-9"/>
-        <source>Decimal Degrees</source>
-        <translation type="unfinished">Desimaaliasteet</translation>
+        <translation type="unfinished">По центру</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Deg/min/sec</source>
-        <translation type="unfinished">Deg/min/sec</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Gradians</source>
-        <translation type="unfinished">Gradians</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Radians</source>
-        <translation type="unfinished">Radians</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Surveyor&apos;s units</source>
-        <translation type="unfinished">Maanmittausyksiköt</translation>
-    </message>
-    <message>
-        <location line="-28"/>
-        <location line="+35"/>
-        <source>Suppress trailing zeroes</source>
-        <translation type="unfinished">Jälkimmäisten nollien poistaminen</translation>
-    </message>
-    <message>
-        <location line="+22"/>
-        <location line="+4"/>
-        <source>Clockwise</source>
-        <translation>Myötäpäivään</translation>
-    </message>
-    <message>
-        <location line="-3"/>
-        <location line="+4"/>
-        <source>Counterclockwise</source>
-        <translation>Vastapäivään</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Preceding</source>
-        <translation>Edeltävä</translation>
-    </message>
-    <message>
-        <location line="-86"/>
         <location line="+87"/>
         <source>Above</source>
-        <translation>Edellä</translation>
+        <translation type="unfinished">Вище</translation>
     </message>
     <message>
-        <location line="-74"/>
+        <location line="-75"/>
+        <location line="+38"/>
+        <source>Show trailing zeroes</source>
+        <translation type="unfinished">Показати кінцеві нулі</translation>
+    </message>
+    <message>
+        <location line="-37"/>
         <source>Include 0&apos;0&quot;</source>
-        <translation type="unfinished">Sisältää 0&apos;0&quot;</translation>
+        <translation type="unfinished">Включаючи 0&apos;0&quot;</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14017,34 +13969,82 @@ näkyy hakutuloksissa:</translation>
         <location line="+33"/>
         <location line="+2"/>
         <source>(unsupported)</source>
-        <translation type="unfinished">(ei tuettu)</translation>
+        <translation type="unfinished">(не підтримано)</translation>
     </message>
     <message>
         <location line="-39"/>
         <source>Include 0&apos;, suppress 0&quot;</source>
-        <translation type="unfinished">Sisällytä 0&apos;, tukahduta 0&quot;</translation>
+        <translation type="unfinished">Включити 0&apos;, придушити 0&quot;</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Include 0&quot;, suppress 0&apos;</source>
-        <translation type="unfinished">Sisällytä 0&quot;, tukahduta 0&apos;</translation>
+        <translation type="unfinished">Включити 0&quot;, придушити 0</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+35"/>
         <source>Suppress leading zeroes</source>
-        <translation type="unfinished">Johtavien nollien poistaminen</translation>
+        <translation type="unfinished">Придушення початкових нулів</translation>
     </message>
     <message>
-        <location line="-33"/>
+        <location line="-34"/>
+        <location line="+35"/>
+        <source>Suppress trailing zeroes</source>
+        <translation type="unfinished">Придушення кінцевих нулів</translation>
+    </message>
+    <message>
+        <location line="-34"/>
         <location line="+35"/>
         <source>Suppress leading / trailing zeroes</source>
-        <translation type="unfinished">Johtavien ja perässä olevien nollien poistaminen</translation>
+        <translation type="unfinished">Придушення передніх / задніх нулів</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="-12"/>
+        <source>Decimal Degrees</source>
+        <translation type="unfinished">Десяткові ступені</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Deg/min/sec</source>
+        <translation type="unfinished">Град/хв/сек</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Gradians</source>
+        <translation type="unfinished">Градіани</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Radians</source>
+        <translation type="unfinished">Радіан</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Surveyor&apos;s units</source>
+        <translation type="unfinished">Геодезичні підрозділи</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <location line="+4"/>
+        <source>Clockwise</source>
+        <translation type="unfinished">За годинниковою стрілкою</translation>
+    </message>
+    <message>
+        <location line="-3"/>
+        <location line="+4"/>
+        <source>Counterclockwise</source>
+        <translation type="unfinished">Проти годинникової стрілки</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Preceding</source>
+        <translation type="unfinished">Попередні</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>None</source>
-        <translation>Ei mitään</translation>
+        <translation type="unfinished">Немає</translation>
     </message>
 </context>
 <context>
@@ -14052,7 +14052,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Widgets/Widgets.js" line="+56"/>
         <source>&amp;Widgets</source>
-        <translation>&amp;Pienoisohjelmat</translation>
+        <translation type="unfinished">Віджети</translation>
     </message>
 </context>
 <context>
@@ -14060,12 +14060,12 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Window/Window.js" line="+109"/>
         <source>&amp;Window</source>
-        <translation>&amp;Ikkuna</translation>
+        <translation type="unfinished">Вікно</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Window Tools</source>
-        <translation>Ikkunatyökalut</translation>
+        <translation type="unfinished">Інструменти вікна</translation>
     </message>
 </context>
 <context>
@@ -14073,7 +14073,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/View/Zoom/WindowZoom/WindowZoomInit.js" line="+2"/>
         <source>&amp;Window Zoom</source>
-        <translation>&amp;Ikkunan kokomuutos</translation>
+        <translation type="unfinished">Масштабування вікна</translation>
     </message>
 </context>
 <context>
@@ -14081,12 +14081,12 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/XLineHorizontal/XLineHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal Construction Line</source>
-        <translation>&amp;Vaakasuuntainen rakenneviiva</translation>
+        <translation type="unfinished">Горизонтальна лінія будівництва</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw horizontal construction line</source>
-        <translation>Piirrä vaakasuora rakenneviiva</translation>
+        <translation type="unfinished">Провести горизонтальну будівельну лінію</translation>
     </message>
 </context>
 <context>
@@ -14094,12 +14094,12 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/XLineVertical/XLineVerticalInit.js" line="+2"/>
         <source>&amp;Vertical Construction Line</source>
-        <translation>&amp;Pystysuora rakenneviiva</translation>
+        <translation type="unfinished">Вертикальна будівельна лінія</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw vertical construction line</source>
-        <translation>Piirrä pystysuora rakenneviiva</translation>
+        <translation type="unfinished">Накреслити вертикальну лінію будівництва</translation>
     </message>
 </context>
 <context>
@@ -14107,17 +14107,17 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/View/Zoom/Zoom.js" line="+51"/>
         <source>Zoom</source>
-        <translation>Muuta kokoa</translation>
+        <translation type="unfinished">Збільшити</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Zoom Tools</source>
-        <translation>Suurennustyökalut</translation>
+        <translation type="unfinished">Інструменти масштабування</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>&amp;Zoom</source>
-        <translation>&amp;Muuta kokoa</translation>
+        <translation type="unfinished">Збільшити</translation>
     </message>
 </context>
 <context>
@@ -14125,7 +14125,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/View/Zoom/ZoomIn/ZoomInInit.js" line="+2"/>
         <source>Zoom &amp;In</source>
-        <translation>Lähennä</translation>
+        <translation type="unfinished">Збільшити</translation>
     </message>
 </context>
 <context>
@@ -14133,7 +14133,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/View/Zoom/ZoomOut/ZoomOutInit.js" line="+2"/>
         <source>Zoom &amp;Out</source>
-        <translation>Loitonna</translation>
+        <translation type="unfinished">Зменшити</translation>
     </message>
 </context>
 <context>
@@ -14141,12 +14141,12 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/View/Zoom/ZoomToSelection/ZoomToSelection.js" line="+31"/>
         <source>No selection found.</source>
-        <translation>Valintaa ei löydy.</translation>
+        <translation type="unfinished">Вибір не знайдено.</translation>
     </message>
     <message>
         <location filename="../scripts/View/Zoom/ZoomToSelection/ZoomToSelectionInit.js" line="+2"/>
         <source>Zoom to &amp;Selection</source>
-        <translation>Zoomaa &amp;valintaan</translation>
+        <translation type="unfinished">Збільшити до виділення</translation>
     </message>
 </context>
 <context>
@@ -14154,22 +14154,22 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/autostart.js" line="+361"/>
         <source>Loading add-on translations...</source>
-        <translation>Ladataan lisäosia käännökseen ...</translation>
+        <translation type="unfinished">Завантаження додаткових перекладів...</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Loading add-ons...</source>
-        <translation>Ladataan lisäosia ...</translation>
+        <translation type="unfinished">Завантаження доповнень...</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Initializing add-ons...</source>
-        <translation>Määritellään lisäosia ...</translation>
+        <translation type="unfinished">Ініціалізація доповнень...</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Initializing add-ons:</source>
-        <translation>Alustetaan lisäosat:</translation>
+        <translation type="unfinished">Ініціалізація доповнень:</translation>
     </message>
 </context>
 <context>
@@ -14177,467 +14177,467 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/library.js" line="+1226"/>
         <source>Objects</source>
-        <translation>Esineet</translation>
+        <translation type="unfinished">Об&apos;єкти</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Object</source>
-        <translation>Esine</translation>
+        <translation type="unfinished">Об&apos;єкт</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Unknown Objects</source>
-        <translation>Tuntemattomat esineet</translation>
+        <translation type="unfinished">Невідомі об&apos;єкти</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Unknown Object</source>
-        <translation>Tuntematon esine</translation>
+        <translation type="unfinished">Невідомий об&apos;єкт</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Blocks</source>
-        <translation>Lohkot</translation>
+        <translation type="unfinished">Блоки</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block</source>
-        <translation>Lohko</translation>
+        <translation type="unfinished">Блок</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Layer</source>
-        <translation>Taso</translation>
-    </message>
-    <message>
-        <location line="+0"/>
         <source>Layers</source>
-        <translation>Tasot</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Layout</source>
-        <translation>Asettelu</translation>
+        <translation type="unfinished">Шари</translation>
     </message>
     <message>
         <location line="+0"/>
+        <source>Layer</source>
+        <translation type="unfinished">Шар</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Layouts</source>
-        <translation>Asettelut</translation>
+        <translation type="unfinished">Макети</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Layout</source>
+        <translation type="unfinished">Макет</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Linetypes</source>
-        <translation>Viivatyypit</translation>
+        <translation type="unfinished">Типи лінійок</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Linetype</source>
-        <translation>Viivatyyppi</translation>
+        <translation type="unfinished">Тип лінійки</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Views</source>
-        <translation>Näkymät</translation>
+        <translation type="unfinished">Погляди</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>View</source>
-        <translation>Näkymä</translation>
+        <translation type="unfinished">Вид</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Dimension Styles</source>
-        <translation type="unfinished">Mitat Tyylit</translation>
+        <translation type="unfinished">Стилі розмірів</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Dimension Style</source>
-        <translation type="unfinished">Mitta Tyyli</translation>
+        <translation type="unfinished">Розмірний стиль</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Entity</source>
-        <translation>Kohde</translation>
+        <source>Entities</source>
+        <translation type="unfinished">Суб&apos;єкти господарювання</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Entities</source>
-        <translation>Kohteet</translation>
+        <source>Entity</source>
+        <translation type="unfinished">Суб&apos;єкт господарювання</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>3dFaces</source>
-        <translation>3d pinnat</translation>
+        <translation type="unfinished">3dFaces</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>3dFace</source>
-        <translation>3d pinta</translation>
+        <translation type="unfinished">3dFace</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block References</source>
-        <translation>Lohkoviitteet</translation>
+        <translation type="unfinished">Блок посилань</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block Reference</source>
-        <translation>Lohkoviite</translation>
+        <translation type="unfinished">Посилання на блок</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block References and Attributes</source>
-        <translation>Lohkoviitteet ja ominaisuudet</translation>
+        <translation type="unfinished">Блок &quot;Посилання та атрибути</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block Reference and Attributes</source>
-        <translation>Lohkoviitteet ja ominaisuudet</translation>
+        <translation type="unfinished">Посилання та атрибути блоку</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Arcs</source>
-        <translation>Kaaret</translation>
+        <translation type="unfinished">Дуги</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Arc</source>
-        <translation>Kaari</translation>
+        <translation type="unfinished">Дуга</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Attributes</source>
-        <translation>Ominaisuudet</translation>
+        <translation type="unfinished">Атрибути</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Attribute</source>
-        <translation>Ominaisuus</translation>
+        <translation type="unfinished">Атрибут</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Attribute Definitions</source>
-        <translation>Ominaisuuksien määrittely</translation>
+        <translation type="unfinished">Визначення атрибутів</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Attribute Definition</source>
-        <translation>Ominaisuuden määrittely</translation>
+        <translation type="unfinished">Визначення атрибуту</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Circles</source>
-        <translation>Ympyrät</translation>
+        <translation type="unfinished">Кола</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Circle</source>
-        <translation>Ympyrä</translation>
+        <translation type="unfinished">Коло</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Dimensions</source>
-        <translation>Mitat</translation>
+        <translation type="unfinished">Розміри</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Dimension</source>
-        <translation>Mitta</translation>
+        <translation type="unfinished">Вимір</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Aligned Dimensions</source>
-        <translation>Tasatut mitat</translation>
+        <translation type="unfinished">Вирівняні розміри</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Aligned Dimension</source>
-        <translation>Tasattu mitta</translation>
+        <translation type="unfinished">Вирівняний вимір</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions</source>
-        <translation>Kulmamitat</translation>
+        <translation type="unfinished">Кутові розміри</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension</source>
-        <translation>Kulmamitta</translation>
+        <translation type="unfinished">Кутовий розмір</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (2 Line)</source>
-        <translation>Kulmamitat (2 viivaa)</translation>
+        <translation type="unfinished">Кутові розміри (2 лінії)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (2 Line)</source>
-        <translation>Kulmamitta (2 viivaa)</translation>
+        <translation type="unfinished">Кутовий розмір (2 лінії)</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (3 Point)</source>
-        <translation>Kulmamitat (3 pistettä)</translation>
+        <translation type="unfinished">Кутові розміри (3 точки)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (3 Point)</source>
-        <translation>Kulmamitta (3 pistettä)</translation>
+        <translation type="unfinished">Кутовий розмір (3 точки)</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Arc Dimension</source>
-        <translation>Kaarimitta</translation>
+        <translation type="unfinished">Розмір дуги</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Diametric Dimensions</source>
-        <translation>Halkaisijan mitat</translation>
+        <translation type="unfinished">Діаметральні розміри</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Diametric Dimension</source>
-        <translation>Halkaisijan mitta</translation>
+        <translation type="unfinished">Діаметральний розмір</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Ordinate Dimensions</source>
-        <translation>Ordinaatan mitat</translation>
+        <translation type="unfinished">Ординатні розміри</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ordinate Dimension</source>
-        <translation>Ordinaatan mitta</translation>
+        <translation type="unfinished">Ординатний вимір</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Rotated Dimensions</source>
-        <translation>Kierretyt mitat</translation>
+        <translation type="unfinished">Поворотні розміри</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Rotated Dimension</source>
-        <translation>Kierretty mitta</translation>
+        <translation type="unfinished">Поворотний розмір</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Radial Dimensions</source>
-        <translation>Säteittäiset mitat</translation>
+        <translation type="unfinished">Радіальні розміри</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Radial Dimension</source>
-        <translation>Säteittäinen mitta</translation>
+        <translation type="unfinished">Радіальний розмір</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Ellipses</source>
-        <translation>Ellipsit</translation>
+        <translation type="unfinished">Еліпси</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ellipse</source>
-        <translation>Ellipsi</translation>
+        <translation type="unfinished">Еліпс</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Hatches</source>
-        <translation>Kuvioinnit</translation>
+        <translation type="unfinished">Люки</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Hatch</source>
-        <translation>Kuviointi</translation>
+        <translation type="unfinished">Люк</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Images</source>
-        <translation>Kuvat</translation>
+        <translation type="unfinished">Зображення</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Image</source>
-        <translation>Kuva</translation>
+        <translation type="unfinished">Зображення</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Leaders</source>
-        <translation>Perusviivat</translation>
+        <translation type="unfinished">Лідери</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Leader</source>
-        <translation>Perusviiva</translation>
+        <translation type="unfinished">Лідер</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Tolerances</source>
-        <translation type="unfinished">Toleranssit</translation>
+        <translation type="unfinished">Допуски</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Tolerance</source>
-        <translation type="unfinished">Suvaitsevaisuus</translation>
+        <translation type="unfinished">Толерантність</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Lines</source>
-        <translation>Viivat</translation>
+        <translation type="unfinished">Лінії</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Line</source>
-        <translation>Viiva</translation>
+        <translation type="unfinished">Лінія</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Infinite Lines</source>
-        <translation>Äärettömät viivat</translation>
+        <translation type="unfinished">Нескінченні лінії</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Infinite Line</source>
-        <translation>Ääretön viiva</translation>
+        <translation type="unfinished">Нескінченна лінія</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Rays</source>
-        <translation>Säteet</translation>
+        <translation type="unfinished">Промені</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ray</source>
-        <translation>Säde</translation>
+        <translation type="unfinished">Рей</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Points</source>
-        <translation>Pisteet</translation>
+        <translation type="unfinished">Бали</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Point</source>
-        <translation>Piste</translation>
+        <translation type="unfinished">Точка</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Polylines</source>
-        <translation>Murtoviivat</translation>
+        <translation type="unfinished">Полілінії</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Polyline</source>
-        <translation>Murtoviiva</translation>
+        <translation type="unfinished">Полілайн</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Solids</source>
-        <translation>Kiinteät</translation>
+        <translation type="unfinished">Тверді речовини</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Solid</source>
-        <translation>Kiinteä</translation>
+        <translation type="unfinished">Солідний</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Traces</source>
-        <translation>Jäljet</translation>
+        <translation type="unfinished">Сліди</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Trace</source>
-        <translation>Jälki</translation>
+        <translation type="unfinished">Відстежити</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Faces</source>
-        <translation>Pinnat</translation>
+        <translation type="unfinished">Обличчя</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Face</source>
-        <translation>Pinta</translation>
+        <translation type="unfinished">Обличчя</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Splines</source>
-        <translation>Käyrät</translation>
+        <translation type="unfinished">Сплайни</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Spline</source>
-        <translation>Käyrä</translation>
+        <translation type="unfinished">Сплайн</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Text based</source>
-        <translation>Tekstiin perustuva</translation>
+        <translation type="unfinished">На основі тексту</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Texts</source>
-        <translation>Tekstit</translation>
+        <translation type="unfinished">Тексти</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Text</source>
-        <translation>Teksti</translation>
+        <translation type="unfinished">Текст</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Viewports</source>
-        <translation>Näkymäalueet</translation>
+        <translation type="unfinished">Видові екрани</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Viewport</source>
-        <translation>Näkymäalue</translation>
+        <translation type="unfinished">Вікно перегляду</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Unknown Entities</source>
-        <translation>Tuntemattomat kohteet</translation>
+        <translation type="unfinished">Невідомі суб&apos;єкти</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Unknown Entity</source>
-        <translation>Tuntematon kohde</translation>
+        <translation type="unfinished">Невідомий суб&apos;єкт</translation>
     </message>
     <message>
         <location line="+102"/>
         <source>All CAD Files</source>
-        <translation>Kaikki CAD -tiedostot</translation>
+        <translation type="unfinished">Всі CAD файли</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>DXF Files</source>
-        <translation>DXF -tiedostot</translation>
+        <translation type="unfinished">DXF файли</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>SVG Files</source>
-        <translation>SVG -tiedostot</translation>
+        <translation type="unfinished">Файли SVG</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>DXF Drawing</source>
-        <translation>DXF -piirros</translation>
+        <translation type="unfinished">Креслення DXF</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>DWG Drawing</source>
-        <translation>DWG -piirros</translation>
+        <translation type="unfinished">Креслення DWG</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>PDF File</source>
-        <translation>PDF -tiedosto</translation>
+        <translation type="unfinished">Файл PDF</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>PDF/A-1B File</source>
-        <translation type="unfinished">PDF/A-1B-tiedosto</translation>
+        <translation type="unfinished">Файл PDF/A-1B</translation>
     </message>
 </context>
 <context>
@@ -14645,7 +14645,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/GridSettings/PreferencesPage.ui" line="+29"/>
         <source>Viewport 1</source>
-        <translation>Näkymä 1</translation>
+        <translation type="unfinished">Видовий екран 1</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -14653,7 +14653,7 @@ näkyy hakutuloksissa:</translation>
         <location line="+152"/>
         <location line="+152"/>
         <source>Display Grid</source>
-        <translation>Näytä ruudukko</translation>
+        <translation type="unfinished">Сітка дисплея</translation>
     </message>
     <message>
         <location line="-446"/>
@@ -14661,7 +14661,7 @@ näkyy hakutuloksissa:</translation>
         <location line="+152"/>
         <location line="+152"/>
         <source>Isometric Grid</source>
-        <translation>Isometrinen ruudukko</translation>
+        <translation type="unfinished">Ізометрична сітка</translation>
     </message>
     <message>
         <location line="-449"/>
@@ -14669,7 +14669,7 @@ näkyy hakutuloksissa:</translation>
         <location line="+152"/>
         <location line="+152"/>
         <source>Grid Spacing</source>
-        <translation>Ruudukon väli</translation>
+        <translation type="unfinished">Відстань між сітками</translation>
     </message>
     <message>
         <location line="-450"/>
@@ -14681,7 +14681,7 @@ näkyy hakutuloksissa:</translation>
         <location line="+116"/>
         <location line="+30"/>
         <source>Y:</source>
-        <translation>Y:</translation>
+        <translation type="unfinished">Y:</translation>
     </message>
     <message>
         <location line="-512"/>
@@ -14693,7 +14693,7 @@ näkyy hakutuloksissa:</translation>
         <location line="+62"/>
         <location line="+63"/>
         <source>X:</source>
-        <translation>X:</translation>
+        <translation type="unfinished">X:</translation>
     </message>
     <message>
         <location line="-462"/>
@@ -14701,22 +14701,22 @@ näkyy hakutuloksissa:</translation>
         <location line="+152"/>
         <location line="+152"/>
         <source>Meta Grid Spacing</source>
-        <translation>Aliruudukon väli</translation>
+        <translation type="unfinished">Meta Grid Spacing</translation>
     </message>
     <message>
         <location line="-390"/>
         <source>Viewport 2</source>
-        <translation>Näkymäalue 2</translation>
+        <translation type="unfinished">Видовий екран 2</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>Viewport 3</source>
-        <translation>Näkymäalue 3</translation>
+        <translation type="unfinished">Видовий екран 3</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>Viewport 4</source>
-        <translation>Näkymäalue 4</translation>
+        <translation type="unfinished">Видовий екран 4</translation>
     </message>
 </context>
 <context>
@@ -14724,17 +14724,17 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/simple_modify.js" line="+301"/>
         <source>First entity cannot be trimmed.</source>
-        <translation>Ensimmäistä kohdetta ei voi hienosäätää.</translation>
+        <translation type="unfinished">Першу сутність не можна обрізати.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity cannot be trimmed.</source>
-        <translation>Kohdetta ei voi hienosäätää.</translation>
+        <translation type="unfinished">Сутність не може бути обрізана.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation>Toista kohdetta ei voida hienosäätää.</translation>
+        <translation type="unfinished">Другий суб&apos;єкт не може бути обрізаний.</translation>
     </message>
 </context>
 </TS>

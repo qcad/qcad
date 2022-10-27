@@ -562,7 +562,7 @@ para que as mudanças de preferências entrem em vigor.</translation>
         <translation>Ponto final</translation>
     </message>
     <message>
-        <location line="+81"/>
+        <location line="+85"/>
         <source>Invalid length</source>
         <translation>Comprimento inválido</translation>
     </message>
@@ -1119,7 +1119,7 @@ Você deseja recuperá-lo?</translation>
         <translation>Arquivos</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+11"/>
         <source>Export as Bitmap</source>
         <translation>Exportar como Bitmap</translation>
     </message>
@@ -1490,7 +1490,7 @@ Você deseja recuperá-lo?</translation>
 <context>
     <name>CadToolBar</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+53"/>
+        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+56"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -1500,12 +1500,7 @@ Você deseja recuperá-lo?</translation>
         <translation>Barra de Ferramentas CAD</translation>
     </message>
     <message>
-        <location line="+35"/>
-        <source>Vertical/Horizontal</source>
-        <translation>Vertical/Horizontal</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+17"/>
+        <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+20"/>
         <source>Icon size:</source>
         <translation>Tamanho do Ícone:</translation>
     </message>
@@ -1523,15 +1518,6 @@ Você deseja recuperá-lo?</translation>
         <location line="+9"/>
         <source>Columns:</source>
         <translation>Colunas:</translation>
-    </message>
-</context>
-<context>
-    <name>CadToolBarPanel</name>
-    <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBarPanel.js" line="+39"/>
-        <location line="+72"/>
-        <source>Back</source>
-        <translation>Retorne</translation>
     </message>
 </context>
 <context>
@@ -1743,7 +1729,7 @@ Você deseja recuperá-lo?</translation>
     </message>
     <message>
         <location line="+144"/>
-        <location line="+45"/>
+        <location line="+59"/>
         <source>No solution</source>
         <translation>Nenhuma solução</translation>
     </message>
@@ -1848,7 +1834,7 @@ Você deseja recuperá-lo?</translation>
     </message>
     <message>
         <location line="+120"/>
-        <location line="+65"/>
+        <location line="+86"/>
         <source>No solution</source>
         <translation>Nenhuma solução</translation>
     </message>
@@ -2011,7 +1997,7 @@ Você deseja recuperá-lo?</translation>
     </message>
     <message>
         <location line="+138"/>
-        <location line="+48"/>
+        <location line="+55"/>
         <source>No solution</source>
         <translation>Nenhuma solução</translation>
     </message>
@@ -2337,7 +2323,7 @@ Você deseja recuperá-lo?</translation>
         <translation>Coordenadas Polares Relativas</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+28"/>
+        <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+29"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -2547,7 +2533,7 @@ Você deseja recuperá-lo?</translation>
         <translation>Mova a entidade para a localização desejada</translation>
     </message>
     <message>
-        <location line="+405"/>
+        <location line="+409"/>
         <source>Move Reference Point</source>
         <translation>Mova o Ponto de Referência</translation>
     </message>
@@ -4052,7 +4038,7 @@ já se encontra na lista.</translation>
         <translation>Próximo vértice</translation>
     </message>
     <message>
-        <location line="+421"/>
+        <location line="+428"/>
         <source>close</source>
         <translation>encerre</translation>
     </message>
@@ -4159,18 +4145,18 @@ já se encontra na lista.</translation>
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../scripts/EAction.js" line="+70"/>
+        <location filename="../scripts/EAction.js" line="+64"/>
         <source>Back</source>
         <translation>Voltar</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2131"/>
+        <location line="+2120"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location line="-2130"/>
+        <location line="-2119"/>
         <source>Done</source>
         <translation>Concluído</translation>
     </message>
@@ -4186,7 +4172,7 @@ já se encontra na lista.</translation>
         <translation>Nenhum</translation>
     </message>
     <message>
-        <location line="+664"/>
+        <location line="+662"/>
         <source>Options</source>
         <translation>Opções</translation>
     </message>
@@ -4196,12 +4182,12 @@ já se encontra na lista.</translation>
         <translation>Ferramentas principais</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+21"/>
         <source>CAD Tools</source>
         <translation>Ferramentas CAD</translation>
     </message>
     <message>
-        <location line="+582"/>
+        <location line="+577"/>
         <source>Invalid position</source>
         <translation>Posição inválida</translation>
     </message>
@@ -6126,12 +6112,12 @@ já se encontra na lista.</translation>
 <context>
     <name>GraphicsViewFonts</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+41"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+50"/>
         <source>Ruler font:</source>
         <translation>Fonte Régua:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+19"/>
         <source>Snap label font:</source>
         <translation>Fonte de etiquetas de snap:</translation>
     </message>
@@ -7961,7 +7947,7 @@ já se encontra na lista.</translation>
         <translation>camada</translation>
     </message>
     <message>
-        <location line="+150"/>
+        <location line="+156"/>
         <source>Leading or trailing spaces.</source>
         <translation>Espaços à esquerda ou à direita.</translation>
     </message>
@@ -8017,7 +8003,7 @@ já se encontra na lista.</translation>
 <context>
     <name>LayerList</name>
     <message>
-        <location filename="../scripts/Widgets/LayerList/LayerList.js" line="+197"/>
+        <location filename="../scripts/Widgets/LayerList/LayerList.js" line="+213"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -12351,12 +12337,12 @@ nos resultados de busca:</translation>
 <context>
     <name>StatusBar</name>
     <message>
-        <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+53"/>
+        <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+47"/>
         <source>Status bar font:</source>
         <translation>Fonte da Barra de Status:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+13"/>
         <source>Status Bar Widgets</source>
         <translation>Widgets da Barra de Status</translation>
     </message>
@@ -14752,3 +14738,4 @@ nos resultados de busca:</translation>
     </message>
 </context>
 </TS>
+

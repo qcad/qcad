@@ -562,7 +562,7 @@ the preference changes to take effect.</source>
         <translation>Slutpunkt</translation>
     </message>
     <message>
-        <location line="+81"/>
+        <location line="+85"/>
         <source>Invalid length</source>
         <translation>Ugyldig længde</translation>
     </message>
@@ -1119,7 +1119,7 @@ Do you wish to recover it?</source>
         <translation>Filer</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+11"/>
         <source>Export as Bitmap</source>
         <translation>Eksporter som Bitmap</translation>
     </message>
@@ -1490,7 +1490,7 @@ Do you wish to recover it?</source>
 <context>
     <name>CadToolBar</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+53"/>
+        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+56"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -1500,12 +1500,7 @@ Do you wish to recover it?</source>
         <translation>CAD-værktøjslinje</translation>
     </message>
     <message>
-        <location line="+35"/>
-        <source>Vertical/Horizontal</source>
-        <translation>Lodret/horisontal</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+17"/>
+        <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+20"/>
         <source>Icon size:</source>
         <translation>Ikonstørrelse:</translation>
     </message>
@@ -1523,15 +1518,6 @@ Do you wish to recover it?</source>
         <location line="+9"/>
         <source>Columns:</source>
         <translation>Kolonner:</translation>
-    </message>
-</context>
-<context>
-    <name>CadToolBarPanel</name>
-    <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBarPanel.js" line="+39"/>
-        <location line="+72"/>
-        <source>Back</source>
-        <translation>Tilbage</translation>
     </message>
 </context>
 <context>
@@ -1743,7 +1729,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+144"/>
-        <location line="+45"/>
+        <location line="+59"/>
         <source>No solution</source>
         <translation>Ingen løsning</translation>
     </message>
@@ -1848,7 +1834,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+120"/>
-        <location line="+65"/>
+        <location line="+86"/>
         <source>No solution</source>
         <translation>Ingen løsning</translation>
     </message>
@@ -2011,7 +1997,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+138"/>
-        <location line="+48"/>
+        <location line="+55"/>
         <source>No solution</source>
         <translation>Ingen løsning</translation>
     </message>
@@ -2317,7 +2303,7 @@ Do you wish to recover it?</source>
 <context>
     <name>CoordinateDisplay</name>
     <message>
-        <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+28"/>
+        <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+29"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -2547,7 +2533,7 @@ Do you wish to recover it?</source>
         <translation>Flyt enheden til den ønskede placering</translation>
     </message>
     <message>
-        <location line="+405"/>
+        <location line="+409"/>
         <source>Move Reference Point</source>
         <translation>Flyt referencepunkt</translation>
     </message>
@@ -4052,7 +4038,7 @@ er allerede på listen.</translation>
         <translation>Næste toppunkt</translation>
     </message>
     <message>
-        <location line="+421"/>
+        <location line="+428"/>
         <source>close</source>
         <translation>luk</translation>
     </message>
@@ -4159,18 +4145,18 @@ er allerede på listen.</translation>
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../scripts/EAction.js" line="+70"/>
+        <location filename="../scripts/EAction.js" line="+64"/>
         <source>Back</source>
         <translation>Tilbage</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2131"/>
+        <location line="+2120"/>
         <source>Cancel</source>
         <translation>Annuller</translation>
     </message>
     <message>
-        <location line="-2130"/>
+        <location line="-2119"/>
         <source>Done</source>
         <translation>Udført</translation>
     </message>
@@ -4186,7 +4172,7 @@ er allerede på listen.</translation>
         <translation>Ingen</translation>
     </message>
     <message>
-        <location line="+664"/>
+        <location line="+662"/>
         <source>Options</source>
         <translation>Indstillinger</translation>
     </message>
@@ -4196,12 +4182,12 @@ er allerede på listen.</translation>
         <translation>Vigtigste værktøjer</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+21"/>
         <source>CAD Tools</source>
         <translation>CAD-værktøjer</translation>
     </message>
     <message>
-        <location line="+582"/>
+        <location line="+577"/>
         <source>Invalid position</source>
         <translation>Ugyldig position</translation>
     </message>
@@ -6126,12 +6112,12 @@ er allerede på listen.</translation>
 <context>
     <name>GraphicsViewFonts</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+41"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+50"/>
         <source>Ruler font:</source>
         <translation>Skrifttype med lineal:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+19"/>
         <source>Snap label font:</source>
         <translation>Skrifttype til snap-etiketter:</translation>
     </message>
@@ -7961,7 +7947,7 @@ er allerede på listen.</translation>
         <translation>lag</translation>
     </message>
     <message>
-        <location line="+150"/>
+        <location line="+156"/>
         <source>Leading or trailing spaces.</source>
         <translation>Foran eller bagud stående mellemrum.</translation>
     </message>
@@ -8017,7 +8003,7 @@ er allerede på listen.</translation>
 <context>
     <name>LayerList</name>
     <message>
-        <location filename="../scripts/Widgets/LayerList/LayerList.js" line="+197"/>
+        <location filename="../scripts/Widgets/LayerList/LayerList.js" line="+213"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -12351,12 +12337,12 @@ vist i søgeresultaterne:</translation>
 <context>
     <name>StatusBar</name>
     <message>
-        <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+53"/>
+        <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+47"/>
         <source>Status bar font:</source>
         <translation>Skrifttype i statuslinjen:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+13"/>
         <source>Status Bar Widgets</source>
         <translation>Widgets på statuslinjen</translation>
     </message>
@@ -14752,3 +14738,4 @@ vist i søgeresultaterne:</translation>
     </message>
 </context>
 </TS>
+

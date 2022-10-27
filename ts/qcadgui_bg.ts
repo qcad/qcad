@@ -2,6 +2,23 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="bg_BG">
 <context>
+    <name>RCadToolBar</name>
+    <message>
+        <location filename="../src/gui/RCadToolBar.cpp" line="+138"/>
+        <source>Vertical/Horizontal</source>
+        <translation type="unfinished">Вертикално/хоризонтално</translation>
+    </message>
+</context>
+<context>
+    <name>RCadToolBarPanel</name>
+    <message>
+        <location filename="../src/gui/RCadToolBarPanel.cpp" line="+21"/>
+        <location line="+59"/>
+        <source>Back</source>
+        <translation type="unfinished">Обратно</translation>
+    </message>
+</context>
+<context>
     <name>RColorCombo</name>
     <message>
         <location filename="../src/gui/RColorCombo.cpp" line="+157"/>
@@ -66,3 +83,4 @@
     </message>
 </context>
 </TS>
+

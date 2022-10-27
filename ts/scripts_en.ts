@@ -562,7 +562,7 @@ the preference changes to take effect.</translation>
         <translation>End point</translation>
     </message>
     <message>
-        <location line="+81"/>
+        <location line="+85"/>
         <source>Invalid length</source>
         <translation>Invalid length</translation>
     </message>
@@ -1119,7 +1119,7 @@ Do you wish to recover it?</translation>
         <translation>Files</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+11"/>
         <source>Export as Bitmap</source>
         <translation>Export as Bitmap</translation>
     </message>
@@ -1490,7 +1490,7 @@ Do you wish to recover it?</translation>
 <context>
     <name>CadToolBar</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+53"/>
+        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+56"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -1500,12 +1500,7 @@ Do you wish to recover it?</translation>
         <translation>CAD Toolbar</translation>
     </message>
     <message>
-        <location line="+35"/>
-        <source>Vertical/Horizontal</source>
-        <translation>Vertical/Horizontal</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+17"/>
+        <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+20"/>
         <source>Icon size:</source>
         <translation>Icon size:</translation>
     </message>
@@ -1523,15 +1518,6 @@ Do you wish to recover it?</translation>
         <location line="+9"/>
         <source>Columns:</source>
         <translation>Columns:</translation>
-    </message>
-</context>
-<context>
-    <name>CadToolBarPanel</name>
-    <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBarPanel.js" line="+39"/>
-        <location line="+72"/>
-        <source>Back</source>
-        <translation>Back</translation>
     </message>
 </context>
 <context>
@@ -1743,7 +1729,7 @@ Do you wish to recover it?</translation>
     </message>
     <message>
         <location line="+144"/>
-        <location line="+45"/>
+        <location line="+59"/>
         <source>No solution</source>
         <translation>No solution</translation>
     </message>
@@ -1848,7 +1834,7 @@ Do you wish to recover it?</translation>
     </message>
     <message>
         <location line="+120"/>
-        <location line="+65"/>
+        <location line="+86"/>
         <source>No solution</source>
         <translation>No solution</translation>
     </message>
@@ -2011,7 +1997,7 @@ Do you wish to recover it?</translation>
     </message>
     <message>
         <location line="+138"/>
-        <location line="+48"/>
+        <location line="+55"/>
         <source>No solution</source>
         <translation>No solution</translation>
     </message>
@@ -2337,7 +2323,7 @@ Do you wish to recover it?</translation>
         <translation>Relative Polar Coordinate</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+28"/>
+        <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+29"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -2547,7 +2533,7 @@ Do you wish to recover it?</translation>
         <translation>Move entity to desired location</translation>
     </message>
     <message>
-        <location line="+405"/>
+        <location line="+409"/>
         <source>Move Reference Point</source>
         <translation>Move Reference Point</translation>
     </message>
@@ -4052,7 +4038,7 @@ is already in the list.</translation>
         <translation>Next vertex</translation>
     </message>
     <message>
-        <location line="+421"/>
+        <location line="+428"/>
         <source>close</source>
         <translation>close</translation>
     </message>
@@ -4159,18 +4145,18 @@ is already in the list.</translation>
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../scripts/EAction.js" line="+70"/>
+        <location filename="../scripts/EAction.js" line="+64"/>
         <source>Back</source>
         <translation>Back</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2131"/>
+        <location line="+2120"/>
         <source>Cancel</source>
         <translation>Cancel</translation>
     </message>
     <message>
-        <location line="-2130"/>
+        <location line="-2119"/>
         <source>Done</source>
         <translation>Done</translation>
     </message>
@@ -4186,7 +4172,7 @@ is already in the list.</translation>
         <translation>None</translation>
     </message>
     <message>
-        <location line="+664"/>
+        <location line="+662"/>
         <source>Options</source>
         <translation>Options</translation>
     </message>
@@ -4196,12 +4182,12 @@ is already in the list.</translation>
         <translation>Main Tools</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+21"/>
         <source>CAD Tools</source>
         <translation>CAD Tools</translation>
     </message>
     <message>
-        <location line="+582"/>
+        <location line="+577"/>
         <source>Invalid position</source>
         <translation>Invalid position</translation>
     </message>
@@ -6126,12 +6112,12 @@ is already in the list.</translation>
 <context>
     <name>GraphicsViewFonts</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+41"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+50"/>
         <source>Ruler font:</source>
         <translation>Ruler font:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+19"/>
         <source>Snap label font:</source>
         <translation>Snap label font:</translation>
     </message>
@@ -7961,7 +7947,7 @@ is already in the list.</translation>
         <translation>layer</translation>
     </message>
     <message>
-        <location line="+150"/>
+        <location line="+156"/>
         <source>Leading or trailing spaces.</source>
         <translation>Leading or trailing spaces.</translation>
     </message>
@@ -8017,7 +8003,7 @@ is already in the list.</translation>
 <context>
     <name>LayerList</name>
     <message>
-        <location filename="../scripts/Widgets/LayerList/LayerList.js" line="+197"/>
+        <location filename="../scripts/Widgets/LayerList/LayerList.js" line="+213"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -12351,12 +12337,12 @@ shown in search results:</translation>
 <context>
     <name>StatusBar</name>
     <message>
-        <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+53"/>
+        <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+47"/>
         <source>Status bar font:</source>
         <translation>Status bar font:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+13"/>
         <source>Status Bar Widgets</source>
         <translation>Status Bar Widgets</translation>
     </message>

@@ -2,6 +2,23 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="fr_FR">
 <context>
+    <name>RCadToolBar</name>
+    <message>
+        <location filename="../src/gui/RCadToolBar.cpp" line="+138"/>
+        <source>Vertical/Horizontal</source>
+        <translation>Vertical/Horizontal</translation>
+    </message>
+</context>
+<context>
+    <name>RCadToolBarPanel</name>
+    <message>
+        <location filename="../src/gui/RCadToolBarPanel.cpp" line="+21"/>
+        <location line="+59"/>
+        <source>Back</source>
+        <translation>Dos</translation>
+    </message>
+</context>
+<context>
     <name>RColorCombo</name>
     <message>
         <location filename="../src/gui/RColorCombo.cpp" line="+157"/>

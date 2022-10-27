@@ -293,7 +293,6 @@
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
-        <translation></translation>
     </message>
     <message>
         <location line="+86"/>
@@ -561,7 +560,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">Lõpp-punkt</translation>
     </message>
     <message>
-        <location line="+81"/>
+        <location line="+85"/>
         <source>Invalid length</source>
         <translation type="unfinished">Vale pikkus</translation>
     </message>
@@ -918,7 +917,6 @@ Do you wish to recover it/them?</source>
         <location line="+1"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
-        <translation></translation>
     </message>
     <message>
         <location line="+25"/>
@@ -1115,7 +1113,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Failid</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+11"/>
         <source>Export as Bitmap</source>
         <translation type="unfinished">Eksportida bitikaardina</translation>
     </message>
@@ -1486,7 +1484,7 @@ Do you wish to recover it?</source>
 <context>
     <name>CadToolBar</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+53"/>
+        <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+56"/>
         <source>Widgets</source>
         <translation type="unfinished">Vidinad</translation>
     </message>
@@ -1496,12 +1494,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">CAD tööriistariba</translation>
     </message>
     <message>
-        <location line="+35"/>
-        <source>Vertical/Horizontal</source>
-        <translation type="unfinished">Vertikaalne/horisontaalne</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+17"/>
+        <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+20"/>
         <source>Icon size:</source>
         <translation type="unfinished">Ikooni suurus:</translation>
     </message>
@@ -1519,15 +1512,6 @@ Do you wish to recover it?</source>
         <location line="+9"/>
         <source>Columns:</source>
         <translation type="unfinished">Veerud:</translation>
-    </message>
-</context>
-<context>
-    <name>CadToolBarPanel</name>
-    <message>
-        <location filename="../scripts/Widgets/CadToolBar/CadToolBarPanel.js" line="+39"/>
-        <location line="+72"/>
-        <source>Back</source>
-        <translation type="unfinished">Tagasi</translation>
     </message>
 </context>
 <context>
@@ -1739,7 +1723,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+144"/>
-        <location line="+45"/>
+        <location line="+59"/>
         <source>No solution</source>
         <translation type="unfinished">Lahendus puudub</translation>
     </message>
@@ -1844,7 +1828,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+120"/>
-        <location line="+65"/>
+        <location line="+86"/>
         <source>No solution</source>
         <translation type="unfinished">Lahendus puudub</translation>
     </message>
@@ -2007,7 +1991,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+138"/>
-        <location line="+48"/>
+        <location line="+55"/>
         <source>No solution</source>
         <translation type="unfinished">Lahendus puudub</translation>
     </message>
@@ -2313,7 +2297,7 @@ Do you wish to recover it?</source>
 <context>
     <name>CoordinateDisplay</name>
     <message>
-        <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+28"/>
+        <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+29"/>
         <source>Widgets</source>
         <translation type="unfinished">Vidinad</translation>
     </message>
@@ -2543,7 +2527,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Liigutage üksus soovitud kohta</translation>
     </message>
     <message>
-        <location line="+405"/>
+        <location line="+409"/>
         <source>Move Reference Point</source>
         <translation type="unfinished">Viidepunkti liigutamine</translation>
     </message>
@@ -3249,7 +3233,6 @@ Do you wish to recover it?</source>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
-        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4046,7 +4029,7 @@ is already in the list.</source>
         <translation type="unfinished">Järgmine tipp</translation>
     </message>
     <message>
-        <location line="+421"/>
+        <location line="+428"/>
         <source>close</source>
         <translation type="unfinished">sulge</translation>
     </message>
@@ -4153,18 +4136,18 @@ is already in the list.</source>
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../scripts/EAction.js" line="+70"/>
+        <location filename="../scripts/EAction.js" line="+64"/>
         <source>Back</source>
         <translation type="unfinished">Tagasi</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2131"/>
+        <location line="+2120"/>
         <source>Cancel</source>
         <translation type="unfinished">Tühista</translation>
     </message>
     <message>
-        <location line="-2130"/>
+        <location line="-2119"/>
         <source>Done</source>
         <translation type="unfinished">Valmis</translation>
     </message>
@@ -4180,7 +4163,7 @@ is already in the list.</source>
         <translation type="unfinished">Puudub</translation>
     </message>
     <message>
-        <location line="+664"/>
+        <location line="+662"/>
         <source>Options</source>
         <translation type="unfinished">Valikud</translation>
     </message>
@@ -4190,12 +4173,12 @@ is already in the list.</source>
         <translation type="unfinished">Peamised tööriistad</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+21"/>
         <source>CAD Tools</source>
         <translation type="unfinished">CAD tööriistad</translation>
     </message>
     <message>
-        <location line="+582"/>
+        <location line="+577"/>
         <source>Invalid position</source>
         <translation type="unfinished">Vale asend</translation>
     </message>
@@ -6120,12 +6103,12 @@ is already in the list.</source>
 <context>
     <name>GraphicsViewFonts</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+41"/>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+50"/>
         <source>Ruler font:</source>
         <translation type="unfinished">Ruler font:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+19"/>
         <source>Snap label font:</source>
         <translation type="unfinished">Snap sildi font:</translation>
     </message>
@@ -7955,7 +7938,7 @@ is already in the list.</source>
         <translation type="unfinished">kiht</translation>
     </message>
     <message>
-        <location line="+150"/>
+        <location line="+156"/>
         <source>Leading or trailing spaces.</source>
         <translation type="unfinished">Ees- või tagapool olevad tühikud.</translation>
     </message>
@@ -8011,7 +7994,7 @@ is already in the list.</source>
 <context>
     <name>LayerList</name>
     <message>
-        <location filename="../scripts/Widgets/LayerList/LayerList.js" line="+197"/>
+        <location filename="../scripts/Widgets/LayerList/LayerList.js" line="+213"/>
         <source>Widgets</source>
         <translation type="unfinished">Vidinad</translation>
     </message>
@@ -8335,7 +8318,6 @@ is already in the list.</source>
         <location line="+10"/>
         <source>Number of items
 shown in search results:</source>
-        <translation></translation>
     </message>
     <message>
         <location line="+18"/>
@@ -11644,7 +11626,6 @@ shown in search results:</source>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
-        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
@@ -12343,12 +12324,12 @@ shown in search results:</source>
 <context>
     <name>StatusBar</name>
     <message>
-        <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+53"/>
+        <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+47"/>
         <source>Status bar font:</source>
         <translation type="unfinished">Staatusriba font:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+13"/>
         <source>Status Bar Widgets</source>
         <translation type="unfinished">Staatuse riba vidinad</translation>
     </message>
@@ -12857,7 +12838,6 @@ shown in search results:</source>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
-        <translation></translation>
     </message>
     <message>
         <location line="+21"/>
@@ -14743,3 +14723,4 @@ shown in search results:</source>
     </message>
 </context>
 </TS>
+

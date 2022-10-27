@@ -721,7 +721,7 @@
     <message>
         <location line="+1"/>
         <source>Spline</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spline</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -917,3 +917,4 @@
     </message>
 </context>
 </TS>
+
