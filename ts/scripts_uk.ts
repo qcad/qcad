@@ -293,7 +293,8 @@
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
-        <translation></translation>
+        <translation>Будь ласка, перезапустіть QCAD, щоб
+зміни налаштувань набули чинності.</translation>
     </message>
     <message>
         <location line="+86"/>
@@ -919,7 +920,8 @@ Do you wish to recover it/them?</source>
         <location line="+1"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
-        <translation></translation>
+        <translation>Файл автоматичного збереження резервної копії для &quot;%1&quot; існує.
+Ви бажаєте його відновити?</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -3237,7 +3239,9 @@ Do you wish to recover it?</source>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
-        <translation></translation>
+        <translation>Папка
+&quot;%1&quot;
+вже є в списку.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -8325,7 +8329,8 @@ is already in the list.</source>
         <location line="+10"/>
         <source>Number of items
 shown in search results:</source>
-        <translation></translation>
+        <translation>Кількість товарів
+показано в результатах пошуку:</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -11639,7 +11644,8 @@ shown in search results:</source>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
-        <translation></translation>
+        <translation>Вибрані суб'єкти:
+%1.</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
@@ -12852,7 +12858,8 @@ shown in search results:</source>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
-        <translation></translation>
+        <translation>Простий текст
+(один рядок, без форматування)</translation>
     </message>
     <message>
         <location line="+21"/>
