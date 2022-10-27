@@ -56,6 +56,8 @@ public:
     QSize sizeHint() const;
     virtual void setGeometry(const QRect& rect);
 
+    void setGeometry() const;
+
     /**
      * \nonscriptable
      */
@@ -65,7 +67,7 @@ public:
 
 private:
     // map existing layout items to accumulated sort order:
-    QList<QPair<QLayoutItem*, int> > itemList;
+    mutable QList<QPair<QLayoutItem*, int> > itemList;
 
     // tool bar that hosts the layout:
     QToolBar* toolBar;

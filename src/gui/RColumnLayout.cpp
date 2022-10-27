@@ -142,10 +142,15 @@ QSize RColumnLayout::sizeHint() const {
     if (!sHint.isValid()) {
         return QSize(0,0);
     }
+    setGeometry();
     return sHint;
 };
 
 void RColumnLayout::setGeometry(const QRect& rect) {
+    setGeometry();
+}
+
+void RColumnLayout::setGeometry() const {
     if (parentWidget()==NULL || toolBar==NULL) {
         return;
     }

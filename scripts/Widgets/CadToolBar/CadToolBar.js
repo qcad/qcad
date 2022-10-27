@@ -52,24 +52,24 @@ function CadToolBar() {
 
 //CadToolBar.prototype = new QWidget();
 
-//CadToolBar.getPreferencesCategory = function() {
-//    return [qsTr("Widgets"), qsTr("CAD Toolbar")];
-//};
+CadToolBar.getPreferencesCategory = function() {
+    return [qsTr("Widgets"), qsTr("CAD Toolbar")];
+};
 
-//CadToolBar.applyPreferences = function(doc) {
-//    if (!isNull(doc)) {
-//        // document settings: nothing to do
-//        return;
-//    }
+CadToolBar.applyPreferences = function(doc) {
+    if (!isNull(doc)) {
+        // document settings: nothing to do
+        return;
+    }
 
-//    var appWin = EAction.getMainWindow();
-//    if (isNull(appWin)) {
-//        return;
-//    }
+    var appWin = EAction.getMainWindow();
+    if (isNull(appWin)) {
+        return;
+    }
 
-//    var cadToolBar = appWin.findChild("CadToolBar");
-//    CadToolBar.prototype.updateIconSize.call(cadToolBar);
-//};
+    var cadToolBar = appWin.findChild("CadQToolBar");
+    cadToolBar.updateIconSize();
+};
 
 //CadToolBar.prototype.contextMenuEvent = function(event) {
 //    var appWin = EAction.getMainWindow();
