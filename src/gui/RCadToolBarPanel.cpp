@@ -52,8 +52,6 @@ void RCadToolBarPanel::insertAction(QAction* before, QAction* action) {
 };
 
 void RCadToolBarPanel::addAction(QAction* action) {
-    qDebug("RCadToolBarPanel::addAction");
-
     RGuiAction* ga = dynamic_cast<RGuiAction*>(action);
     if (ga==NULL) {
         qWarning() << "RCadToolBarPanel::addAction: trying to add QAction that is not a RGuiAction";
