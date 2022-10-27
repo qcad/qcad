@@ -216,6 +216,16 @@ public:
         return RVector::greaterThanEqualXY(*this, v);
     }
 
+#if QT_VERSION >= 0x060000
+    /**
+     * copy function for Qt 6 scripts:
+     * \nonscriptable
+     */
+    RVector copy() const {
+        return *this;
+    }
+#endif
+
     static bool containsFuzzy(const QList<RVector>& vectors, const RVector& v, double tol = RS::PointTolerance);
     static int findFirstFuzzy(const QList<RVector>& vectors, const RVector& v, double tol = RS::PointTolerance);
 
