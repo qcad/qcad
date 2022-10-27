@@ -105,20 +105,14 @@ CadToolBar.applyPreferences = function(doc) {
 // * \return True if the CAD tool bar switched back to the parent menu,
 // * false if it is already showing the top menu.
 // */
-//CadToolBar.back = function() {
-//    var panel = CadToolBar.getCurrentPanel();
-//    if (isNull(panel)) {
-//        return false;
-//    }
+CadToolBar.back = function() {
+    var cadToolBar = appWin.findChild("CadQToolBar");
+    if (isNull(cadToolBar)) {
+        return false;
+    }
 
-//    // no back for main tools panel:
-//    if (panel.objectName==="MainToolsPanel") {
-//        return false;
-//    }
-
-//    CadToolBar.showPanel(panel.backMenuName, true);
-//    return true;
-//};
+    return cadToolBar.back();
+};
 
 //CadToolBar.getPanel = function(title, name, hasBackButton) {
 //    var appWin = EAction.getMainWindow();
