@@ -140,6 +140,20 @@ function destr(obj) {
 }
 
 /**
+ * Get pointer from shared pointer object using data() (Qt5) or implicitly (Qt6).
+ */
+function getPtr(p) {
+    if (RSettings.getQtVersion() > 0x060000) {
+        return p;
+    }
+    else {
+        if (isFunction(p.data)) {
+            return p.data();
+        }
+    }
+}
+
+/**
  * Checks if the given object is undefined or null.
  *
  * \return true if the given object is defined and not null.
