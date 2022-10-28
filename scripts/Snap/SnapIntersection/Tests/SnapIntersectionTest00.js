@@ -15,9 +15,9 @@ SnapIntersectionTest00.prototype.test00 = function() {
     qDebug('running SnapIntersectionTest00.test00()...');
     this.setUp();
     this.importFile('scripts/Snap/SnapIntersection/Tests/data/line.dxf');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::PointToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::PointToolsPanel::Point1PButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::SnapToolsPanel::SnapIntersectionButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::PointToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::PointToolsPanel::Point1PButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::SnapToolsPanel::SnapIntersectionButton');
     this.setZoom(4.4407484407484406, new RVector(5.75468, 24.7664, 0, true));
     var p = new RVector(5.1, 25);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

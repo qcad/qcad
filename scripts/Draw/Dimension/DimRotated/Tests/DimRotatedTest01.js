@@ -14,8 +14,8 @@ DimRotatedTest01.prototype = new TdbTest();
 DimRotatedTest01.prototype.test00 = function() {
     qDebug('running DimRotatedTest01.test00()...');
     this.setUp();
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::DimensionToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::DimensionToolsPanel::DimRotatedButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::DimensionToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::DimensionToolsPanel::DimRotatedButton');
     this.setToolOption('Dimension/Prefix', '(No prefix)');
     this.setToolOption('Dimension/Text', '');
     this.setToolOption('Dimension/UpperTolerance', '');

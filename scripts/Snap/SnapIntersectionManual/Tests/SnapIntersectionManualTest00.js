@@ -15,9 +15,9 @@ SnapIntersectionManualTest00.prototype.test00 = function() {
     qDebug('running SnapIntersectionManualTest00.test00()...');
     this.setUp();
     this.importFile('scripts/Snap/SnapIntersectionManual/Tests/data/intersections_manual.dxf');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::PointToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::PointToolsPanel::Point1PButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::SnapToolsPanel::SnapIntersectionManualButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::PointToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::PointToolsPanel::Point1PButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::SnapToolsPanel::SnapIntersectionManualButton');
     this.setZoom(11.301587301587302, new RVector(-7.66292, 9.38573, 0, true));
     var p = new RVector(16.599719, 9.638149);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
@@ -26,7 +26,7 @@ SnapIntersectionManualTest00.prototype.test00 = function() {
     var p = new RVector(29.872191, 16.362868);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::SnapToolsPanel::SnapIntersectionManualButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::SnapToolsPanel::SnapIntersectionManualButton');
     this.setZoom(11.301587301587302, new RVector(-7.66292, 9.38573, 0, true));
     var p = new RVector(16.511236, 9.638149);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
@@ -35,7 +35,7 @@ SnapIntersectionManualTest00.prototype.test00 = function() {
     var p = new RVector(33.057584, 8.576351);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::SnapToolsPanel::SnapIntersectionManualButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::SnapToolsPanel::SnapIntersectionManualButton');
     this.setZoom(11.301587301587302, new RVector(-7.66292, 9.38573, 0, true));
     var p = new RVector(17.042135, 9.549666);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
@@ -44,7 +44,7 @@ SnapIntersectionManualTest00.prototype.test00 = function() {
     var p = new RVector(41.109551, 10.699947);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::SnapToolsPanel::SnapIntersectionManualButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::SnapToolsPanel::SnapIntersectionManualButton');
     this.setZoom(11.301587301587302, new RVector(-7.66292, 9.38573, 0, true));
     var p = new RVector(18.457865, 9.3727);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
@@ -53,7 +53,7 @@ SnapIntersectionManualTest00.prototype.test00 = function() {
     var p = new RVector(46.15309, 13.354441);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::SnapToolsPanel::SnapIntersectionManualButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::SnapToolsPanel::SnapIntersectionManualButton');
     this.setZoom(11.301587301587302, new RVector(-7.66292, 9.38573, 0, true));
     var p = new RVector(18.192416, 9.3727);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

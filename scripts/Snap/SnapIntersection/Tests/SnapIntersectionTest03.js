@@ -15,8 +15,8 @@ SnapIntersectionTest03.prototype.test00 = function() {
     qDebug('running SnapIntersectionTest03.test00()...');
     this.setUp();
     this.importFile('scripts/Snap/SnapIntersection/Tests/data/polyline.dxf');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::PointToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::PointToolsPanel::Point1PButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::PointToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::PointToolsPanel::Point1PButton');
     this.setZoom(4.4407484407484406, new RVector(5.75468, 24.7664, 0, true));
     var p = new RVector(4.82912, 22.52294);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

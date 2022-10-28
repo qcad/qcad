@@ -15,8 +15,8 @@ TrimTest11.prototype.test00 = function() {
     qDebug('running TrimTest11.test00()...');
     this.setUp();
     this.importFile('scripts/Modify/Trim/Tests/data/line_spline.dxf');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::ModifyToolsPanel::TrimButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::ModifyToolsPanel::TrimButton');
     this.setZoom(12.945454545454545, new RVector(-8.94382, -10.9872, 0, true));
     var p = new RVector(23.852528, 25.509686);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

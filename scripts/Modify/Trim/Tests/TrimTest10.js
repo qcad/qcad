@@ -15,8 +15,8 @@ TrimTest10.prototype.test00 = function() {
     qDebug('running TrimTest10.test00()...');
     this.setUp();
     this.importFile('scripts/Modify/Trim/Tests/data/tangent.dxf');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::ModifyToolsPanel::TrimButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::ModifyToolsPanel::TrimButton');
     this.setZoom(32.66666394444467, new RVector(-6.06122, 2.76531, 0, true));
     var p = new RVector(19.806122, 4.612244);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

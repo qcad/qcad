@@ -15,8 +15,8 @@ DimAngularTest01.prototype.test00 = function() {
     qDebug('running DimAngularTest01.test00()...');
     this.setUp();
     this.importFile('scripts/Draw/Dimension/Tests/drawing03.dxf');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::DimensionToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::DimensionToolsPanel::DimAngularButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::DimensionToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::DimensionToolsPanel::DimAngularButton');
     this.setToolOption('Dimension/Prefix', '(No prefix)');
     this.setToolOption('Dimension/Text', '');
     this.setToolOption('Dimension/UpperTolerance', '');

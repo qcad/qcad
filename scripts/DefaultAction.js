@@ -416,7 +416,7 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
         }
 
         if (!handled) {
-            var cadToolBar = appWin.findChild("CadQToolBar");
+            var cadToolBar = appWin.findChild("CadToolBar");
             if (cadToolBar.back()===true) {
                 handled = true;
             }
@@ -475,7 +475,7 @@ DefaultAction.prototype.escapeEvent = function(event) {
     this.di.clearPreview();
     this.di.repaintViews();
     var appWin = EAction.getMainWindow();
-    var cadToolBar = appWin.findChild("CadQToolBar");
+    var cadToolBar = appWin.findChild("CadToolBar");
     cadToolBar.back();
     this.setState(DefaultAction.State.Neutral);
 };

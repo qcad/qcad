@@ -15,8 +15,8 @@ InfoArcCircleAreaTest00.prototype.test00 = function() {
     qDebug('running InfoArcCircleAreaTest00.test00()...');
     this.setUp();
     this.importFile('scripts/Information/InfoArcCircleArea/Tests/data/ellipse_area.dxf');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::InformationToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::InformationToolsPanel::InfoArcCircleAreaButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::InformationToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::InformationToolsPanel::InfoArcCircleAreaButton');
     this.setToolOption('Information/AddToDrawing', 'true');
     this.setToolOption('Information/TextHeight', '2');
     this.setToolOption('InfoArcCircleArea/Mode', 'Segment');

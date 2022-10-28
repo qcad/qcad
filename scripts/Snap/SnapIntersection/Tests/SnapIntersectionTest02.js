@@ -15,8 +15,8 @@ SnapIntersectionTest02.prototype.test00 = function() {
     qDebug('running SnapIntersectionTest02.test00()...');
     this.setUp();
     this.importFile('scripts/Snap/SnapIntersection/Tests/data/ellipse.dxf');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::PointToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::PointToolsPanel::Point1PButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::PointToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::PointToolsPanel::Point1PButton');
     this.setZoom(4.456108917243051, new RVector(5.52802, 24.5948, 0, true));
     var p = new RVector(5.019297, 20.960601);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

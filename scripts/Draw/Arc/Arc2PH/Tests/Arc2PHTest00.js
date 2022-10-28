@@ -14,8 +14,8 @@ Arc2PHTest00.prototype = new TdbTest();
 Arc2PHTest00.prototype.test00 = function() {
     qDebug('running Arc2PHTest00.test00()...');
     this.setUp();
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::ArcToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::ArcToolsPanel::Arc2PHButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ArcToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::ArcToolsPanel::Arc2PHButton');
     this.setToolOption('Arc2PH/Height', '10');
     this.setToolOption('Arc2PH/Direction', 'Clockwise');
     this.updateToolOptions();

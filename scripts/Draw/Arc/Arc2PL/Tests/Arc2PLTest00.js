@@ -14,8 +14,8 @@ Arc2PLTest00.prototype = new TdbTest();
 Arc2PLTest00.prototype.test00 = function() {
     qDebug('running Arc2PLTest00.test00()...');
     this.setUp();
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::ArcToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::ArcToolsPanel::Arc2PLButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ArcToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::ArcToolsPanel::Arc2PLButton');
     this.setToolOption('Arc2PL/Length', '100');
     this.setToolOption('Arc2PL/Direction', 'CounterClockwise');
     this.updateToolOptions();
@@ -75,7 +75,7 @@ Arc2PLTest00.prototype.test00 = function() {
     this.setToolOption('Arc2PL/Length', '50');
     this.setToolOption('Arc2PL/Direction', 'Clockwise');
     this.updateToolOptions();
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::SnapToolsPanel::SnapGridButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::SnapToolsPanel::SnapGridButton');
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(19.8, 10.1);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

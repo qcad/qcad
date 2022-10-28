@@ -16,8 +16,8 @@ ScaleTest09.prototype.test00 = function() {
     this.setUp();
     this.importFile('scripts/Modify/Scale/Tests/data/entities.dxf');
     this.selectAll();
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::ModifyToolsPanel::ScaleButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::ModifyToolsPanel::ScaleButton');
     this.setZoom(5.539728061000709, new RVector(31.5165, 14.9789, 0, true));
     var p = new RVector(-0.287543, 60.115018);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

@@ -15,8 +15,8 @@ AutoTrimTest05.prototype.test00 = function() {
     qDebug('running AutoTrimTest05.test00()...');
     this.setUp();
     this.importFile('scripts/Modify/AutoTrim/Tests/data/splines.dxf');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::ModifyToolsPanel::AutoTrimButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::ModifyToolsPanel::AutoTrimButton');
     this.setZoom(7.800995024875622, new RVector(17.4888, 3.32972, 0, true));
     var p = new RVector(27.761832, 45.766582);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

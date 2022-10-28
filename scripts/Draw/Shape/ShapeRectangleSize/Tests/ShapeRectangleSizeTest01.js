@@ -14,8 +14,8 @@ ShapeRectangleSizeTest01.prototype = new TdbTest();
 ShapeRectangleSizeTest01.prototype.test00 = function() {
     qDebug('running ShapeRectangleSizeTest01.test00()...');
     this.setUp();
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::ShapeToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::ShapeToolsPanel::ShapeRectangleSizeButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ShapeToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::ShapeToolsPanel::ShapeRectangleSizeButton');
     this.setToolOption('Shape/CreatePolyline', 'false');
     this.setToolOption('Shape/Fill', 'true');
     this.setToolOption('ShapeRectangleSize/Width', '20');

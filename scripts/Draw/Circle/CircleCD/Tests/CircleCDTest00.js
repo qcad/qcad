@@ -14,8 +14,8 @@ CircleCDTest00.prototype = new TdbTest();
 CircleCDTest00.prototype.test00 = function() {
     qDebug('running CircleCDTest00.test00()...');
     this.setUp();
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::CircleToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::CircleToolsPanel::CircleCDButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::CircleToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::CircleToolsPanel::CircleCDButton');
     this.setToolOption('CircleCD/Diameter', '10');
     this.setToolOption('CircleCD/Angle', '0');
     this.setToolOption('CircleCD/ReferencePoint', '6');

@@ -16,8 +16,8 @@ RotateTest01.prototype.test00 = function() {
     this.setUp();
     this.importFile('scripts/Modify/Rotate/Tests/data/entities.dxf');
     this.selectAll();
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::ModifyToolsPanel::RotateButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::ModifyToolsPanel::RotateButton');
     this.setZoom(2.5712491308276566, new RVector(113.563, -4.04956, 0, true));
     var p = new RVector(101.507083, 98.556153);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

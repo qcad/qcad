@@ -15,9 +15,9 @@ HatchFromSelectionTest07.prototype.test00 = function() {
     qDebug('running HatchFromSelectionTest07.test00()...');
     this.setUp();
     this.importFile('scripts/Draw/Hatch/HatchFromSelection/Tests/data/hatch_blocks.dxf');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::SelectToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::SelectToolsPanel::SelectAllButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::SelectToolsPanel::BackButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::SelectToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::SelectToolsPanel::SelectAllButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::SelectToolsPanel::BackButton');
     this.dlgStart();
     this.dlgAppendCode('var map = new Map()');
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Type', 'HatchPattern')");
