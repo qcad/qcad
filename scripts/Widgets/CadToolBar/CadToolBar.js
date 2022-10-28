@@ -223,8 +223,6 @@ CadToolBar.initStyle = function() {
         return;
     }
 
-    qDebug("CadToolBar.initStyle");
-
     if (RSettings.isQt(5)) {
         // tool bar buttons under Qt 5 have no border:
         if (!RSettings.hasCustomStyleSheet()) {
@@ -311,19 +309,16 @@ CadToolBar.init = function() {
     }
 };
 
-//CadToolBar.postInit = function() {
-//    var appWin = EAction.getMainWindow();
-//    if (isNull(appWin)) {
-//        return;
-//    }
-//    var toolBar = appWin.findChild("CadQToolBar");
-//    if (isNull(toolBar)) {
-//        return;
-//    }
+CadToolBar.postInit = function() {
+    var appWin = EAction.getMainWindow();
 
-//    var pl = new RPaletteListenerAdapter();
-//    appWin.addPaletteListener(pl);
-//    pl.paletteChanged.connect(CadToolBar.initStyle);
+    var pl = new RPaletteListenerAdapter();
+    appWin.addPaletteListener(pl);
+    pl.paletteChanged.connect(CadToolBar.initStyle);
 
-//    RSettings.setValue("CadToolBar/VerticalWhenFloating", toolBar.size.width() < toolBar.size.height());
-//};
+    var cadToolBar = appWin.findChild("CadQToolBar");
+    if (isNull(cadToolBar)) {
+        return;
+    }
+    RSettings.setValue("CadToolBar/VerticalWhenFloating", cadToolBar.size.width() < cadToolBar.size.height());
+};
