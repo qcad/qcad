@@ -93,26 +93,11 @@ if(WIN32)
     )
 endif()
 
-find_library(
-    zlib
-    NAMES zlib libzlib
-    HINTS "../../debug"
-    NO_DEFAULT_PATH
-)
-message(STATUS "ZLIB: [${zlib}]")
-
-find_library(
-    opennurbs
-    NAMES opennurbs libopennurbs
-    HINTS "../../debug"
-    NO_DEFAULT_PATH
-)
-message(STATUS "OPENNURBS: [${opennurbs}]")
-
 if(NOT r_no_opennurbs)
     target_link_libraries(QCAD PRIVATE
-        ${zlib}
-        ${opennurbs}
+        -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug
+        zlib
+        opennurbs
     )
 endif()
 
