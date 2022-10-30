@@ -21,6 +21,7 @@
 #define RDXFSERVICES_H
 
 #include <QString>
+#include <QStringDecoder>
 
 #include "dxf_global.h"
 
