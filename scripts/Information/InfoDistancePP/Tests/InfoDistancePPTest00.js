@@ -14,8 +14,8 @@ InfoDistancePPTest00.prototype = new TdbTest();
 InfoDistancePPTest00.prototype.test00 = function() {
     qDebug('running InfoDistancePPTest00.test00()...');
     this.setUp();
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::InformationToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::InformationToolsPanel::InfoDistancePPButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::InformationToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::InformationToolsPanel::InfoDistancePPButton');
     this.setToolOption('Information/AddToDrawing', 'true');
     this.setToolOption('Information/TextHeight', '1');
     this.updateToolOptions();

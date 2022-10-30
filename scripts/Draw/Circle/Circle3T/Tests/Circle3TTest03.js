@@ -14,8 +14,8 @@ Circle3TTest03.prototype = new TdbTest();
 Circle3TTest03.prototype.test00 = function() {
     qDebug('running Circle3TTest03.test00()...');
     this.setUp();
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::ArcToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::ArcToolsPanel::Arc3PButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ArcToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::ArcToolsPanel::Arc3PButton');
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(10, 30);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
@@ -46,8 +46,8 @@ Circle3TTest03.prototype.test00 = function() {
     var p = new RVector(29.8, 25.3);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::LineToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::LineToolsPanel::Line2PButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::LineToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::LineToolsPanel::Line2PButton');
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(6.3, 22.3);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
@@ -65,8 +65,8 @@ Circle3TTest03.prototype.test00 = function() {
     var p = new RVector(26.6, 28.5);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::CircleToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::CircleToolsPanel::Circle3TButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::CircleToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::CircleToolsPanel::Circle3TButton');
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(12, 25.8);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

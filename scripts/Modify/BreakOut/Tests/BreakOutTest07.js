@@ -24,8 +24,8 @@ BreakOutTest07.prototype.test00 = function() {
     var p = new RVector(-9.925668, 17.052296);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::ModifyToolsPanel::BreakOutProButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::ModifyToolsPanel::BreakOutProButton');
     this.setToolOption('BreakOutPro/RemoveSegment', 'true');
     this.setToolOption('BreakOutPro/LineMode', 'false');
     this.setZoom(7.800995024875622, new RVector(17.4888, 3.32972, 0, true));

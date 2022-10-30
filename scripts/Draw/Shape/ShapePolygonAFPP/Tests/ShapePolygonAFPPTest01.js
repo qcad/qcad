@@ -14,8 +14,8 @@ ShapePolygonAFPPTest01.prototype = new TdbTest();
 ShapePolygonAFPPTest01.prototype.test00 = function() {
     qDebug('running ShapePolygonAFPPTest01.test00()...');
     this.setUp();
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::ShapeToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::ShapeToolsPanel::ShapePolygonAFPPButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ShapeToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::ShapeToolsPanel::ShapePolygonAFPPButton');
     this.setToolOption('Shape/CreatePolyline', 'false');
     this.setToolOption('Shape/Fill', 'true');
     this.setToolOption('ShapePolygonAFPP/Corners', '3');

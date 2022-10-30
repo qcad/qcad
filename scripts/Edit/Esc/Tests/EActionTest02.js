@@ -14,8 +14,8 @@ EActionTest02.prototype = new TdbTest();
 EActionTest02.prototype.test00 = function() {
     qDebug('running EActionTest02.test00()...');
     this.setUp();
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::DimensionToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::DimensionToolsPanel::DimHorizontalButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::DimensionToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::DimensionToolsPanel::DimHorizontalButton');
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(10.2, 10);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

@@ -14,9 +14,9 @@ SnapDistanceManualTest00.prototype = new TdbTest();
 SnapDistanceManualTest00.prototype.test00 = function() {
     qDebug('running SnapDistanceManualTest00.test00()...');
     this.setUp();
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::LineToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::LineToolsPanel::Line2PButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::SnapToolsPanel::SnapDistanceManualButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::LineToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::LineToolsPanel::Line2PButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::SnapToolsPanel::SnapDistanceManualButton');
     this.setToolOption('Line/Type', 'TypeSegment');
     this.setToolOption('Line2P/Restrict', 'false');
     this.setToolOption('SnapDistanceManual/Distance', '10');

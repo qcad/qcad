@@ -14,8 +14,8 @@ Circle2TPTest09.prototype = new TdbTest();
 Circle2TPTest09.prototype.test00 = function() {
     qDebug('running Circle2TPTest09.test00()...');
     this.setUp();
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::LineToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::LineToolsPanel::Line2PButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::LineToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::LineToolsPanel::Line2PButton');
     this.setZoom(10, new RVector(5,5));
     var p = new RVector(19.9, 10.1);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
@@ -33,8 +33,8 @@ Circle2TPTest09.prototype.test00 = function() {
     var p = new RVector(-1.3, 62.4);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::CircleToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::CircleToolsPanel::CircleCPButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::CircleToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::CircleToolsPanel::CircleCPButton');
     this.setZoom(10, new RVector(5,5));
     var p = new RVector(50.1, 39.9);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
@@ -46,7 +46,7 @@ Circle2TPTest09.prototype.test00 = function() {
     var p = new RVector(66.4, 45.2);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::CircleToolsPanel::Circle2TPButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::CircleToolsPanel::Circle2TPButton');
     this.setZoom(10, new RVector(5,5));
     var p = new RVector(47.4, 30.3);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

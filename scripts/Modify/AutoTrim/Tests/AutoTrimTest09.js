@@ -15,8 +15,8 @@ AutoTrimTest09.prototype.test00 = function() {
     qDebug('running AutoTrimTest09.test00()...');
     this.setUp();
     this.importFile('scripts/Modify/AutoTrim/Tests/data/ellipses.dxf');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::ModifyToolsPanel::AutoTrimButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::ModifyToolsPanel::AutoTrimButton');
     this.setZoom(7.005402389224175, new RVector(-10.1736, -10.5995, 0, true));
     var p = new RVector(33.869592, 33.581774);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

@@ -14,8 +14,8 @@ OffsetTest02.prototype = new TdbTest();
 OffsetTest02.prototype.test00 = function() {
     qDebug('running OffsetTest02.test00()...');
     this.setUp();
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::EllipseToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::EllipseToolsPanel::EllipseArcCPPAButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::EllipseToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::EllipseToolsPanel::EllipseArcCPPAButton');
     this.setToolOption('EllipseArcCPPA/Direction', 'CounterClockwise');
     this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0, true));
@@ -125,8 +125,8 @@ OffsetTest02.prototype.test00 = function() {
     var p = new RVector(56.5, 6.6);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::EllipseToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::EllipseToolsPanel::EllipseOffsetButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::EllipseToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::EllipseToolsPanel::EllipseOffsetButton');
     this.setToolOption('EllipseOffset/Distance', '5');
     this.setToolOption('EllipseOffset/Number', '1');
     this.updateToolOptions();

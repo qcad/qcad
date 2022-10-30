@@ -67,7 +67,7 @@ CadToolBar.applyPreferences = function(doc) {
         return;
     }
 
-    var cadToolBar = appWin.findChild("CadQToolBar");
+    var cadToolBar = appWin.findChild("CadToolBar");
     cadToolBar.updateIconSize();
 };
 
@@ -81,7 +81,7 @@ CadToolBar.applyPreferences = function(doc) {
 //        CadToolBar.showPanel("MainToolsPanel");
 //    }
 //    else {
-//        var tb = appWin.findChild("CadQToolBar");
+//        var tb = appWin.findChild("CadToolBar");
 
 //        // TODO: fix for Qt 5:
 //        if (tb.floating && !RSettings.isQt(5)) {
@@ -106,7 +106,8 @@ CadToolBar.applyPreferences = function(doc) {
 // * false if it is already showing the top menu.
 // */
 CadToolBar.back = function() {
-    var cadToolBar = appWin.findChild("CadQToolBar");
+    var appWin = EAction.getMainWindow();
+    var cadToolBar = appWin.findChild("CadToolBar");
     if (isNull(cadToolBar)) {
         return false;
     }
@@ -218,12 +219,10 @@ CadToolBar.back = function() {
 CadToolBar.initStyle = function() {
     var appWin = EAction.getMainWindow();
 
-    var toolBar = appWin.findChild("CadQToolBar");
+    var toolBar = appWin.findChild("CadToolBar");
     if (isNull(toolBar)) {
         return;
     }
-
-    qDebug("CadToolBar.initStyle");
 
     if (RSettings.isQt(5)) {
         // tool bar buttons under Qt 5 have no border:
@@ -297,7 +296,7 @@ CadToolBar.init = function() {
 
     var appWin = EAction.getMainWindow();
 
-    var cadToolBar = appWin.findChild("CadQToolBar");
+    var cadToolBar = appWin.findChild("CadToolBar");
     if (isNull(cadToolBar)) {
         return;
     }
@@ -311,19 +310,16 @@ CadToolBar.init = function() {
     }
 };
 
-//CadToolBar.postInit = function() {
-//    var appWin = EAction.getMainWindow();
-//    if (isNull(appWin)) {
-//        return;
-//    }
-//    var toolBar = appWin.findChild("CadQToolBar");
-//    if (isNull(toolBar)) {
-//        return;
-//    }
+CadToolBar.postInit = function() {
+    var appWin = EAction.getMainWindow();
 
-//    var pl = new RPaletteListenerAdapter();
-//    appWin.addPaletteListener(pl);
-//    pl.paletteChanged.connect(CadToolBar.initStyle);
+    var pl = new RPaletteListenerAdapter();
+    appWin.addPaletteListener(pl);
+    pl.paletteChanged.connect(CadToolBar.initStyle);
 
-//    RSettings.setValue("CadToolBar/VerticalWhenFloating", toolBar.size.width() < toolBar.size.height());
-//};
+    var cadToolBar = appWin.findChild("CadToolBar");
+    if (isNull(cadToolBar)) {
+        return;
+    }
+    RSettings.setValue("CadToolBar/VerticalWhenFloating", cadToolBar.size.width() < cadToolBar.size.height());
+};

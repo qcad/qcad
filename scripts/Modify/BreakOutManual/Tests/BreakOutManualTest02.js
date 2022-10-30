@@ -14,8 +14,8 @@ BreakOutManualTest02.prototype = new TdbTest();
 BreakOutManualTest02.prototype.test00 = function() {
     qDebug('running BreakOutManualTest02.test00()...');
     this.setUp();
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::CircleToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::CircleToolsPanel::CircleCPButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::CircleToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::CircleToolsPanel::CircleCPButton');
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(20.1, 20.2);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
@@ -38,8 +38,8 @@ BreakOutManualTest02.prototype.test00 = function() {
     var p = new RVector(40.6, 16.1);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::ModifyToolsPanel::BreakOutManualButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::ModifyToolsPanel::BreakOutManualButton');
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(34.3, 22.5);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

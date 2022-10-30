@@ -148,7 +148,7 @@ EAction.prototype.finishEvent = function() {
     // reset CAD tool bar:
     if (!isNull(guiAction) && guiAction.getGroup() === "") {
         var appWin = EAction.getMainWindow();
-        var cadToolBar = appWin.findChild("CadQToolBar");
+        var cadToolBar = appWin.findChild("CadToolBar");
         if (!isNull(cadToolBar) && cadToolBar.getCurrentPanelName()==="SnapToolsPanel") {
             cadToolBar.back();
         }
@@ -1187,12 +1187,12 @@ EAction.getMainCadToolBarPanel = function() {
  */
 EAction.getCadToolBarPanel = function(title, objectName, hasBackButton) {
     var appWin = EAction.getMainWindow();
-    var cadToolBar = appWin.findChild("CadQToolBar");
+    var cadToolBar = appWin.findChild("CadToolBar");
 
     // create CAD toolbar if it does not exist already:
     if (isNull(cadToolBar)) {
         cadToolBar = new RCadToolBar(qsTr("CAD Tools"), appWin);
-        cadToolBar.objectName = "CadQToolBar";
+        cadToolBar.objectName = "CadToolBar";
 //        cadToolBar.updateIconSize();
 
         cadToolBar.topLevelChanged.connect(function(onOff) {
@@ -1215,7 +1215,7 @@ EAction.showCadToolBarPanel = function(objectName) {
         return;
     }
 
-    var toolBar = appWin.findChild("CadQToolBar");
+    var toolBar = appWin.findChild("CadToolBar");
     toolBar.showPanel(objectName);
 };
 

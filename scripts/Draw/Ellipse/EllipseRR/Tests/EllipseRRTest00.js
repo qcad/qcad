@@ -14,8 +14,8 @@ EllipseRRTest00.prototype = new TdbTest();
 EllipseRRTest00.prototype.test00 = function() {
     qDebug('running EllipseRRTest00.test00()...');
     this.setUp();
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::EllipseToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::EllipseToolsPanel::EllipseRRButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::EllipseToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::EllipseToolsPanel::EllipseRRButton');
     // key: '1'
     this.pressAndReleaseKeyOnGv(0x31, 0);
     this.setToolOption('EllipseRR/XRadius', '100');

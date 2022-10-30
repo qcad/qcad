@@ -14,8 +14,8 @@ DimDiametricTest01.prototype = new TdbTest();
 DimDiametricTest01.prototype.test00 = function() {
     qDebug('running DimDiametricTest01.test00()...');
     this.setUp();
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::CircleToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::CircleToolsPanel::CircleCPButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::CircleToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::CircleToolsPanel::CircleCPButton');
     this.setZoom(10, new RVector(5,5));
     var p = new RVector(30, 29.6);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
@@ -30,8 +30,8 @@ DimDiametricTest01.prototype.test00 = function() {
     var p = new RVector(54.7, 38);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::DimensionToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::DimensionToolsPanel::DimDiametricButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::DimensionToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::DimensionToolsPanel::DimDiametricButton');
     this.setZoom(10, new RVector(5,5));
     var p = new RVector(45.5, 42.4);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

@@ -14,8 +14,8 @@ EllipseOffsetThroughTest00.prototype = new TdbTest();
 EllipseOffsetThroughTest00.prototype.test00 = function() {
     qDebug('running EllipseOffsetThroughTest00.test00()...');
     this.setUp();
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::EllipseToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::EllipseToolsPanel::EllipseCPPButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::EllipseToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::EllipseToolsPanel::EllipseCPPButton');
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(10, 20.2);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
@@ -31,7 +31,7 @@ EllipseOffsetThroughTest00.prototype.test00 = function() {
     var p = new RVector(29.3, 25);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::EllipseToolsPanel::EllipseArcCPPAButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::EllipseToolsPanel::EllipseArcCPPAButton');
     this.setToolOption('EllipseArcCPPA/Direction', 'CounterClockwise');
     this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0, true));
@@ -57,7 +57,7 @@ EllipseOffsetThroughTest00.prototype.test00 = function() {
     var p = new RVector(36.9, 17.4);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::EllipseToolsPanel::EllipseOffsetThroughButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::EllipseToolsPanel::EllipseOffsetThroughButton');
     this.setToolOption('EllipseOffsetThrough/Number', '1');
     this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0, true));

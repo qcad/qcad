@@ -14,8 +14,8 @@ EllipseInscribedQuadTest00.prototype = new TdbTest();
 EllipseInscribedQuadTest00.prototype.test00 = function() {
     qDebug('running EllipseInscribedQuadTest00.test00()...');
     this.setUp();
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::LineToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::LineToolsPanel::Line2PButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::LineToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::LineToolsPanel::Line2PButton');
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(0.3, 29.9);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
@@ -68,8 +68,8 @@ EllipseInscribedQuadTest00.prototype.test00 = function() {
     var p = new RVector(32.6, 24.4);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::EllipseToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::EllipseToolsPanel::EllipseInscribedQuadButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::EllipseToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::EllipseToolsPanel::EllipseInscribedQuadButton');
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(8.8, 29.9);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

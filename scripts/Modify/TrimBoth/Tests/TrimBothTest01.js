@@ -15,8 +15,8 @@ TrimBothTest01.prototype.test00 = function() {
     qDebug('running TrimBothTest01.test00()...');
     this.setUp();
     this.importFile('scripts/Modify/TrimBoth/Tests/data/open_polylines.dxf');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::ModifyToolsPanel::TrimBothButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::ModifyToolsPanel::TrimBothButton');
     this.setZoom(5.916897506925208, new RVector(-5.64981, 22.3507, 0, true));
     var p = new RVector(12.241105, 17.366105);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

@@ -14,8 +14,8 @@ InfoDistanceEETest00.prototype = new TdbTest();
 InfoDistanceEETest00.prototype.test00 = function() {
     qDebug('running InfoDistanceEETest00.test00()...');
     this.setUp();
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::LineToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::LineToolsPanel::Line2PButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::LineToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::LineToolsPanel::Line2PButton');
     this.setToolOption('Line/Type', 'TypeSegment');
     this.setToolOption('Line2P/Restrict', 'false');
     this.updateToolOptions();
@@ -80,8 +80,8 @@ InfoDistanceEETest00.prototype.test00 = function() {
     var p = new RVector(44.8, 16.4);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::InformationToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::InformationToolsPanel::InfoDistanceEEButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::InformationToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::InformationToolsPanel::InfoDistanceEEButton');
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(10.2, 24.7);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

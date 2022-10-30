@@ -14,8 +14,8 @@ CreateBlockTest01.prototype = new TdbTest();
 CreateBlockTest01.prototype.test00 = function() {
     qDebug('running CreateBlockTest01.test00()...');
     this.setUp();
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::LineToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::LineToolsPanel::Line2PButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::LineToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::LineToolsPanel::Line2PButton');
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(10, 29.8);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
@@ -60,8 +60,8 @@ CreateBlockTest01.prototype.test00 = function() {
     var p = new RVector(28.5, 15.3);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::SelectToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::SelectToolsPanel::SelectContourButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::SelectToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::SelectToolsPanel::SelectContourButton');
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(15.4, 29.6);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
@@ -72,7 +72,7 @@ CreateBlockTest01.prototype.test00 = function() {
     var p = new RVector(13.8, 24.5);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::CreateBlockButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::CreateBlockButton');
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(9.8, 19.6);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
@@ -86,8 +86,8 @@ CreateBlockTest01.prototype.test00 = function() {
     var p = new RVector(27.3, 17.2);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::SelectToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::SelectToolsPanel::SelectContourButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::SelectToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::SelectToolsPanel::SelectContourButton');
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(35.8, 15.8);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
@@ -98,7 +98,7 @@ CreateBlockTest01.prototype.test00 = function() {
     var p = new RVector(23.8, 12.8);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::CreateBlockButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::CreateBlockButton');
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(30, 9.7);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

@@ -41,8 +41,8 @@ IsoProjectTest04.prototype.test00 = function() {
     var p = new RVector(15.079008, 11.991533);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::ProjectionToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::ProjectionToolsPanel::IsoProjectButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ProjectionToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::ProjectionToolsPanel::IsoProjectButton');
     this.setZoom(6.914994309623345, new RVector(1.69613, 14.7619, 0) );
     var p = new RVector(9.728316, 19.80065);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

@@ -15,8 +15,8 @@ BreakOutTest05.prototype.test00 = function() {
     qDebug('running BreakOutTest05.test00()...');
     this.setUp();
     this.importFile('scripts/Modify/BreakOut/Tests/data/line_xline_ray2.dxf');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::ModifyToolsPanel::BreakOutProButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::ModifyToolsPanel::BreakOutProButton');
     this.setToolOption('BreakOutPro/RemoveSegment', 'true');
     this.setToolOption('BreakOutPro/LineMode', 'false');
     this.setZoom(11.120567375886525, new RVector(-3.74235, 2.37309, 0, true));

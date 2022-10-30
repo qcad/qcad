@@ -15,8 +15,8 @@ StretchTest06.prototype.test00 = function() {
     qDebug('running StretchTest06.test00()...');
     this.setUp();
     this.importFile('scripts/Modify/Stretch/Tests/data/entities2.dxf');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::ModifyToolsPanel::StretchProButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::ModifyToolsPanel::StretchProButton');
     this.setToolOption('StretchPro/Mode', 'RectangleArea');
     this.updateToolOptions();
     var p = new RVector(34.416667, 27.943813);

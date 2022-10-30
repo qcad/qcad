@@ -14,8 +14,8 @@ CreateBlockTest02.prototype = new TdbTest();
 CreateBlockTest02.prototype.test00 = function() {
     qDebug('running CreateBlockTest02.test00()...');
     this.setUp();
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::ShapeToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::ShapeToolsPanel::ShapeRectanglePPButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ShapeToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::ShapeToolsPanel::ShapeRectanglePPButton');
     this.setToolOption('Shape/CreatePolyline', 'false');
     this.setToolOption('Shape/Fill', 'false');
     this.setToolOption('Shape/RoundCorners', 'false');
@@ -35,10 +35,10 @@ CreateBlockTest02.prototype.test00 = function() {
     var p = new RVector(28.8, 20.5);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::SelectToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::SelectToolsPanel::SelectAllButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::SelectToolsPanel::BackButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::CreateBlockButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::SelectToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::SelectToolsPanel::SelectAllButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::SelectToolsPanel::BackButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::CreateBlockButton');
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(9.5, 10.1);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

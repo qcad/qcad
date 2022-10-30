@@ -14,8 +14,8 @@ EllipseDDTest00.prototype = new TdbTest();
 EllipseDDTest00.prototype.test00 = function() {
     qDebug('running EllipseDDTest00.test00()...');
     this.setUp();
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::EllipseToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::EllipseToolsPanel::EllipseDDButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::EllipseToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::EllipseToolsPanel::EllipseDDButton');
     this.setToolOption('EllipseDD/XDiameter', '100');
     this.setToolOption('EllipseDD/YDiameter', '50');
     this.setToolOption('EllipseDD/Angle', '0');

@@ -14,8 +14,8 @@ BreakOutManualTest00.prototype = new TdbTest();
 BreakOutManualTest00.prototype.test00 = function() {
     qDebug('running BreakOutManualTest00.test00()...');
     this.setUp();
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::LineToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::LineToolsPanel::Line2PButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::LineToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::LineToolsPanel::Line2PButton');
     this.setZoom(12, new RVector(2.20833, 8.20833, 0, true));
     var p = new RVector(0.208333, 20.041667);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
@@ -52,9 +52,9 @@ BreakOutManualTest00.prototype.test00 = function() {
     var p = new RVector(34.625, 8.458333);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::LineToolsPanel::BackButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::ModifyToolsPanel::BreakOutManualButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::LineToolsPanel::BackButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::ModifyToolsPanel::BreakOutManualButton');
     this.setToolOption('BreakOutManual/RemoveSegment', 'true');
     this.updateToolOptions();
     this.setZoom(12, new RVector(2.20833, 8.20833, 0, true));
