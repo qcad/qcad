@@ -21,7 +21,13 @@ RCadToolBarPanel::RCadToolBarPanel(RCadToolBar* parent, bool hasBackButton) : RW
         RGuiAction* backAction = new RGuiAction(tr("Back"), this);
         backAction->setObjectName("Back");
         backAction->setCheckable(false);
-        backAction->setIcon("scripts/Widgets/CadToolBar/Back.svg");
+        QString backIconFile = "scripts/Widgets/CadToolBar/Back.svg";
+        if (QFileInfo(backIconFile).exists()) {
+            backAction->setIcon(backIconFile);
+        }
+        else {
+            backAction->setIcon(QString(":") + backIconFile);
+        }
         addAction(backAction);
         connect(backAction, SIGNAL(triggered()), parent, SLOT(back()));
     }
