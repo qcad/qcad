@@ -21,7 +21,10 @@
 #define RDXFSERVICES_H
 
 #include <QString>
+
+#if QT_VERSION >= 0x060000
 #include <QStringDecoder>
+#endif
 
 #include "dxf_global.h"
 
