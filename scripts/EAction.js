@@ -2193,8 +2193,8 @@ EAction.getEntityId = function(di, action, event, preview, selectable) {
         }
 
         reactor = new Reactor(id);
-        a.triggered.connect(reactor, "trigger");
-        a.hovered.connect(reactor, "hover");
+        a.triggered.connect(reactor, reactor.trigger);
+        a.hovered.connect(reactor, reactor.hover);
     }
 
     // show context menu:
