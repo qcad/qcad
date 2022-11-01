@@ -48,9 +48,9 @@ public:
     virtual QLayoutItem* itemAt(int index) const;
     virtual QLayoutItem* takeAt(int index);
 
-    static int getAccumulatedSortOrder(QObject* item, const QString& objectName);
-    static int getSortOrder(QObject* item, const QString& objectName);
-    static int getGroupSortOrder(QObject* item, const QString& objectName);
+    static unsigned long int getAccumulatedSortOrder(QObject* item, const QString& objectName);
+    static unsigned int getSortOrder(QObject* item, const QString& objectName);
+    static unsigned int getGroupSortOrder(QObject* item, const QString& objectName);
 
     QSize minimumSize() const;
     QSize sizeHint() const;
@@ -61,13 +61,13 @@ public:
     /**
      * \nonscriptable
      */
-    static bool itemLessThan(const QPair<QLayoutItem*, int>& v1, const QPair<QLayoutItem*, int>& v2) {
+    static bool itemLessThan(const QPair<QLayoutItem*, unsigned long int>& v1, const QPair<QLayoutItem*, unsigned long int>& v2) {
         return v1.second < v2.second;
     }
 
 private:
     // map existing layout items to accumulated sort order:
-    mutable QList<QPair<QLayoutItem*, int> > itemList;
+    mutable QList<QPair<QLayoutItem*, unsigned long int> > itemList;
 
     // tool bar that hosts the layout:
     QToolBar* toolBar;
