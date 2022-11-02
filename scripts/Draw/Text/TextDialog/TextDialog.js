@@ -84,6 +84,8 @@ function TextDialog(mode) {
     this.initialColor = new RColor();
 }
 
+TextDialog.prototype = {};
+
 TextDialog.Mode = {
     Text : 0,
     Attribute : 1,
@@ -415,6 +417,11 @@ TextDialog.prototype.show =  function(textDataIn) {
     var res = this.dialog.exec();
     if (this.tabWidget.currentIndex===0) {
         this.updateSource(true);
+    }
+
+    if (RSettings.getQtVersion() >= 0x060000) {
+        // disconnect clipboard from changed event handler:
+        getClipboard().dataChanged.disconnect(this, this.clipboardDataChanged);
     }
 
     // analyze dialog input:
