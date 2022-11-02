@@ -130,7 +130,7 @@ Image.prototype.getFileName = function() {
 //            filters += ";;";
 //        }
 
-        var filter = format.toUpper() + " " + qsTr("Files") + " (";
+        var filter = format.toUpperCase() + " " + qsTr("Files") + " (";
         filter += "*." + format;
 
         if (filterAllImages.length!==0) {

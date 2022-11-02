@@ -178,7 +178,7 @@ Leader.prototype.getOperation = function(preview) {
 
         if (this.leaderEntity.countVertices()>1) {
             var entity = new RLineEntity(this.getDocument(), new RLineData(this.segment));
-            entity.copyAttributesFrom(this.leaderEntity.data());
+            entity.copyAttributesFrom(getPtr(this.leaderEntity));
             this.initEntity(entity, preview);
             return new RAddObjectOperation(entity, false);
         }

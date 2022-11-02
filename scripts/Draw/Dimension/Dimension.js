@@ -141,7 +141,7 @@ Dimension.prototype.showUiOptions = function(resume, restoreFromSettings) {
             var dialog = WidgetFactory.createDialog(Dimension.includeBasePath, "DimensionScaleDialog.ui", appWin);
             dialog.exec();
             WidgetFactory.saveState(dialog);
-            dialog.destroy();
+            destr(dialog);
             EAction.activateMainWindow();
         }
     }

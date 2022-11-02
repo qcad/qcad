@@ -243,7 +243,7 @@ DimAngular.prototype.getEntity = function(preview) {
     var di = this.getDocumentInterface();
 
     if (isLineBasedShape(this.firstShape)) {
-        var intersections = this.firstShape.getIntersectionPoints(this.secondShape.data(), false);
+        var intersections = this.firstShape.getIntersectionPoints(getPtr(this.secondShape), false);
 
         if (intersections.length!==1) {
             return undefined;
