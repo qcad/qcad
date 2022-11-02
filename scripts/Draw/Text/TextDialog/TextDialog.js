@@ -1017,6 +1017,7 @@ TextDialog.prototype.updateSource = function(force) {
     if (this.getTextDocument().modified || force===true) {
         var html = this.textEdit.html;
         html = this.fixHtml(html);
+
         var textDocument = new QTextDocument();
         textDocument.setHtml(html);
         textDocument.defaultFont = this.getTextDocument().defaultFont;
