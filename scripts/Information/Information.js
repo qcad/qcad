@@ -90,7 +90,8 @@ Information.prototype.formatAreaResult = function(area, rounded) {
         return "%1 (= %2ft² %3in²)".arg(area).arg(sqft, 0, 'f', prec).arg(sqin, 0, 'f', prec);
     }
     else {
-        return "%1".arg(area, 0, 'f', prec);
+        return RUnit.doubleToStringDec(parseFloat(area), prec, true, false, document.getDecimalSeparator());
+        //return "%1".arg(area, 0, 'f', prec);
     }
 };
 
@@ -129,7 +130,9 @@ Information.prototype.addInfoLine = function(op, point1, point2, preview) {
 
     var di = this.getDocumentInterface();
     var view = di.getLastKnownViewWithFocus();
-    view = view.getRGraphicsView();
+    if (RSettings.getQtVersion() < 0x060000) {
+        view = view.getRGraphicsView();
+    }
 
     // line
     var line = new RLine(point1, point2);

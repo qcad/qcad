@@ -256,7 +256,7 @@ InfoDistanceEE.prototype.getCandidatePoints = function(shape1, shape2) {
     }
 
     // add intersection points:
-    var ips = shape1.getIntersectionPoints(shape2.data());
+    var ips = shape1.getIntersectionPoints(getPtr(shape2));
     ret = ret.concat(ips);
 
     // line <-> arc / circle

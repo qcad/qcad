@@ -120,7 +120,9 @@ InfoPosition.prototype.getOperation = function(preview) {
 
     var di = this.getDocumentInterface();
     var view = di.getLastKnownViewWithFocus();
-    view = view.getRGraphicsView();
+    if (RSettings.getQtVersion() < 0x060000) {
+        view = view.getRGraphicsView();
+    }
     view.clearTextLabels();
 
     this.addShape(op, new RPoint(this.pos), preview);

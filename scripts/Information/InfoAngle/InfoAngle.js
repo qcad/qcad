@@ -202,7 +202,9 @@ InfoAngle.prototype.addMeasuringArc = function(op, center, preview) {
 
     // add label:
     var view = di.getLastKnownViewWithFocus();
-    view = view.getRGraphicsView();
+    if (RSettings.getQtVersion() < 0x060000) {
+        view = view.getRGraphicsView();
+    }
     var label = this.formatAngularResult(this.arc.getAngleLength());
     view.clearTextLabels();
     this.addTextLabel(op, view, this.point2, label, preview);
@@ -217,7 +219,8 @@ InfoAngle.prototype.getOperation = function(preview) {
     var op = new RAddObjectsOperation();
     op.setText(this.getToolTitle());
 
-    var sol = this.shape1.getIntersectionPoints(this.shape2.data(), false);
+
+    var sol = this.shape1.getIntersectionPoints(getPtr(this.shape2), false);
     if (!isNull(sol) && sol.length > 0) {
         var intersection = sol[0];
         if (intersection.isValid()) {

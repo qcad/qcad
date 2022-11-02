@@ -89,7 +89,7 @@ Image.prototype.beginEvent = function() {
 Image.prototype.finishEvent = function() {
     Draw.prototype.finishEvent.call(this);
     if (!isNull(this.image)) {
-        this.image.destroy();
+        destr(this.image);
     }
 };
 
@@ -175,14 +175,14 @@ Image.prototype.getFileName = function() {
     fileDialog.fileMode = QFileDialog.ExistingFiles;
     fileDialog.setLabelText(QFileDialog.FileType, qsTr("Format:"));
     if (!fileDialog.exec()) {
-        fileDialog.destroy();
+        destr(fileDialog);
         EAction.activateMainWindow();
         return undefined;
     }
 
     var files = fileDialog.selectedFiles();
     if (files.length===0) {
-        fileDialog.destroy();
+        destr(fileDialog);
         EAction.activateMainWindow();
         return undefined;
     }

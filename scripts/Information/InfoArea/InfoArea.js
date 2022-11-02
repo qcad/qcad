@@ -124,7 +124,9 @@ InfoArea.prototype.getOperation = function(preview) {
     this.addShape(op, this.polyline, preview);
 
     var view = di.getLastKnownViewWithFocus();
-    view = view.getRGraphicsView();
+    if (RSettings.getQtVersion() < 0x060000) {
+        view = view.getRGraphicsView();
+    }
     var areaText = this.getAreaText();
     view.clearTextLabels();
     var c = this.polyline.getLastVertex();
