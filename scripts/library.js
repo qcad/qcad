@@ -3217,16 +3217,6 @@ function makeFlags() {
     }
 }
 
-function getQLocaleName(locale) {
-    if (isFunction(locale.name)) {
-        return locale.name();
-    }
-    else {
-        // QJSEngine does not allow "name" as function.
-        return locale.name2();
-    }
-}
-
 // fix QPlainTextEdit API for Qt 5:
 if (!isFunction(QPlainTextEdit.prototype.toPlainText)) {
     QPlainTextEdit.prototype.toPlainText = function() {

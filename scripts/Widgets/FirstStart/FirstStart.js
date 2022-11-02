@@ -69,7 +69,7 @@ FirstStart.prototype.showDialog = function() {
 
     // try to set the locale from system
     var sysLocale = QLocale.system();
-    var systemLocale = getQLocaleName(sysLocale);
+    var systemLocale = sysLocale.name();
     var flags = makeQtMatchFlags(Qt.MatchExactly);
     var index = langCombo.findData(systemLocale, Qt.UserRole, flags);
     if (index===-1) {
