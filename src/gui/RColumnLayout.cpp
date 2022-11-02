@@ -195,8 +195,6 @@ void RColumnLayout::setGeometry() const {
         if (widget==NULL) {
             continue;
         }
-        qDebug() << "item:" << widget->objectName();
-        qDebug() << "item sort:" << itemList[i].second;
 
         int so = itemList[i].second;
 
@@ -211,22 +209,17 @@ void RColumnLayout::setGeometry() const {
 
         // back button at the top or left:
         if (widget->objectName() == "BackButton") {
-            qDebug() << "got back button";
             QToolButton* tb = qobject_cast<QToolButton*>(widget);
             if (horizontal) {
-                qDebug() << "got back button: hor";
                 tb->setGeometry(0,0, buttonSize*0.75,height);
                 w+=buttonSize*0.75 + 8;
                 h=0;
             }
             else {
-                qDebug() << "got back button: ver";
                 tb->setGeometry(0,0, width,buttonSize*0.75);
                 h+=buttonSize*0.75 + 8;
                 w=0;
             }
-            qDebug() << "w: " << w;
-            qDebug() << "h: " << h;
 //            if (dbg) qDebug("BackButton");
             continue;
         }
