@@ -95,7 +95,7 @@ TextDialog.prototype.setMode = function(mode) {
 };
 
 TextDialog.prototype.getTextDocument = function() {
-    if (RSettings.isQt(5)) {
+    if (RSettings.getQtVersion() >= 0x050000) {
         return this.textEdit.document;
     }
     else {
@@ -135,23 +135,23 @@ TextDialog.prototype.show =  function(textDataIn) {
     initFontComboBox(comboMainFont);
     initFontComboBox(comboFont);
 
-    comboMainFont.currentFontChanged.connect(this, "mainFontChanged");
+    comboMainFont.currentFontChanged.connect(this, this.mainFontChanged);
 
     // main font height:
     var editMainHeight = this.dialog.findChild("MainHeight");
-    editMainHeight.valueChanged.connect(this, "mainFontChanged");
+    editMainHeight.valueChanged.connect(this, this.mainFontChanged);
 
     // main font bold:
     var checkMainBold = this.dialog.findChild("MainBold");
-    checkMainBold.toggled.connect(this, "mainFontChanged");
+    checkMainBold.toggled.connect(this, this.mainFontChanged);
 
     // main font italic:
     var checkMainItalic = this.dialog.findChild("MainItalic");
-    checkMainItalic.toggled.connect(this, "mainFontChanged");
+    checkMainItalic.toggled.connect(this, this.mainFontChanged);
 
     // default line spacing:
     //var checkBoxDefaultLineSpacing = this.dialog.findChild("DefaultLineSpacing");
-    //checkBoxDefaultLineSpacing.toggled.connect(this, "useDefaultLineSpacing");
+    //checkBoxDefaultLineSpacing.toggled.connect(this, this.useDefaultLineSpacing);
 
     // line spacing:
     var editLineSpacingFactor = this.dialog.findChild("LineSpacingFactor");
@@ -170,31 +170,31 @@ TextDialog.prototype.show =  function(textDataIn) {
     this.setupTextActions();
 
     // update status buttons bold / italic / underline:
-    this.textEdit.currentCharFormatChanged.connect(this, "currentCharFormatChanged");
-    this.textEdit.cursorPositionChanged.connect(this, "cursorPositionChanged");
+    this.textEdit.currentCharFormatChanged.connect(this, this.currentCharFormatChanged);
+    this.textEdit.cursorPositionChanged.connect(this, this.cursorPositionChanged);
 
     var td = this.getTextDocument();
-    td.undoAvailable.connect(this.actionUndo, "setEnabled");
-    td.redoAvailable.connect(this.actionRedo, "setEnabled");
+    td.undoAvailable.connect(this.actionUndo, this.actionUndo.setEnabled);
+    td.redoAvailable.connect(this.actionRedo, this.actionRedo.setEnabled);
 
     this.actionUndo.setEnabled(td.isUndoAvailable());
     this.actionRedo.setEnabled(td.isRedoAvailable());
 
-    this.actionUndo.triggered.connect(this.textEdit, "undo");
-    this.actionRedo.triggered.connect(this.textEdit, "redo");
+    this.actionUndo.triggered.connect(this.textEdit, this.textEdit.undo);
+    this.actionRedo.triggered.connect(this.textEdit, this.textEdit.redo);
 
     this.actionCut.setEnabled(false);
     this.actionCopy.setEnabled(false);
 
-    this.actionCut.triggered.connect(this.textEdit, "cut");
-    this.actionCopy.triggered.connect(this.textEdit, "copy");
-    this.actionPaste.triggered.connect(this.textEdit, "paste");
+    this.actionCut.triggered.connect(this.textEdit, this.textEdit.cut);
+    this.actionCopy.triggered.connect(this.textEdit, this.textEdit.copy);
+    this.actionPaste.triggered.connect(this.textEdit, this.textEdit.paste);
 
-    this.textEdit.copyAvailable.connect(this.actionCut, "setEnabled");
-    this.textEdit.copyAvailable.connect(this.actionCopy, "setEnabled");
+    this.textEdit.copyAvailable.connect(this.actionCut, this.actionCut.setEnabled);
+    this.textEdit.copyAvailable.connect(this.actionCopy, this.actionCopy.setEnabled);
 
     var cbSimpleText = this.dialog.findChild("SimpleText");
-    cbSimpleText.toggled.connect(this, "simpleTextToggled");
+    cbSimpleText.toggled.connect(this, this.simpleTextToggled);
 
     var buttonTopLeft = this.dialog.findChild("AlignTopLeft");
     var buttonTopCenter = this.dialog.findChild("AlignTopCenter");
@@ -209,7 +209,7 @@ TextDialog.prototype.show =  function(textDataIn) {
     var buttonBottomCenter = this.dialog.findChild("AlignBottomCenter");
     var buttonBottomRight = this.dialog.findChild("AlignBottomRight");
 
-    getClipboard().dataChanged.connect(this, "clipboardDataChanged");
+    getClipboard().dataChanged.connect(this, this.clipboardDataChanged);
 
     // change dialog into attribute / attribute definition dialog:
     if (this.mode === TextDialog.Mode.AttributeDefinition ||
@@ -235,7 +235,7 @@ TextDialog.prototype.show =  function(textDataIn) {
     }
 
     // sync rich text / source:
-    this.tabWidget["currentChanged(int)"].connect(this, "tabChanged");
+    this.tabWidget["currentChanged(int)"].connect(this, this.tabChanged);
 
     if (this.mode === TextDialog.Mode.AttributeDefinition) {
         this.dialog.findChild("ValueLabel").text = qsTr("Default value:");
@@ -491,7 +491,7 @@ TextDialog.prototype.show =  function(textDataIn) {
     RSettings.setValue("TextDialog/HAlignment", textDataOut.getHAlign());
     RSettings.setValue("TextDialog/MainFont", textDataOut.getFontName());
 
-    this.dialog.destroy();
+    destr(this.dialog);
     EAction.activateMainWindow();
 
     if (res) {
@@ -536,7 +536,7 @@ TextDialog.prototype.setupTextActions = function() {
     var bold = new QFont();
     bold.setBold(true);
     this.actionTextBold.font = bold;
-    this.actionTextBold.triggered.connect(this, "textBold");
+    this.actionTextBold.triggered.connect(this, this.textBold);
     this.actionTextBold.checkable = true;
     this.dialog.findChild("Bold").setDefaultAction(this.actionTextBold);
 
@@ -545,7 +545,7 @@ TextDialog.prototype.setupTextActions = function() {
     var italic = new QFont();
     italic.setItalic(true);
     this.actionTextItalic.font = italic;
-    this.actionTextItalic.triggered.connect(this, "textItalic");
+    this.actionTextItalic.triggered.connect(this, this.textItalic);
     this.actionTextItalic.checkable = true;
     this.dialog.findChild("Italic").setDefaultAction(this.actionTextItalic);
 
@@ -554,19 +554,19 @@ TextDialog.prototype.setupTextActions = function() {
     var underline = new QFont();
     underline.setUnderline(true);
     this.actionTextUnderline.font = underline;
-    this.actionTextUnderline.triggered.connect(this, "textUnderline");
+    this.actionTextUnderline.triggered.connect(this, this.textUnderline);
     this.actionTextUnderline.checkable = true;
     this.dialog.findChild("Underline").setDefaultAction(this.actionTextUnderline);
 
     this.actionSubscript = new QAction(new QIcon(autoIconPath(TextDialog.basePath + "/Subscript.svg")), qsTr("&Subscript"), this.dialog);
     this.actionSubscript.shortcut = new QKeySequence(Qt.ShiftModifier | Qt.ControlModifier | Qt.Key_B);
-    this.actionSubscript.triggered.connect(this, "textSubscript");
+    this.actionSubscript.triggered.connect(this, this.textSubscript);
     this.actionSubscript.checkable = true;
     this.dialog.findChild("Subscript").setDefaultAction(this.actionSubscript);
 
     this.actionSuperscript = new QAction(new QIcon(autoIconPath(TextDialog.basePath + "/Superscript.svg")), qsTr("&Superscript"), this.dialog);
     this.actionSuperscript.shortcut = new QKeySequence(Qt.ShiftModifier | Qt.ControlModifier | Qt.Key_P);
-    this.actionSuperscript.triggered.connect(this, "textSuperscript");
+    this.actionSuperscript.triggered.connect(this, this.textSuperscript);
     this.actionSuperscript.checkable = true;
     this.dialog.findChild("Superscript").setDefaultAction(this.actionSuperscript);
 
@@ -583,21 +583,33 @@ TextDialog.prototype.setupTextActions = function() {
     var pix = new QPixmap(16, 16);
     pix.fill(Qt.black);
     this.actionTextColor = new QAction(new QIcon(pix), qsTr("&Color..."), this.dialog);
-    this.actionTextColor.triggered.connect(this, "textColor");
+    this.actionTextColor.triggered.connect(this, this.textColor);
     this.dialog.findChild("Color").setDefaultAction(this.actionTextColor);
 
     this.actionTextSymbol = new QAction(new QIcon(autoIconPath(TextDialog.basePath + "/Symbol.svg")), qsTr("&Special Characters..."), this.dialog);
-    this.actionTextSymbol.triggered.connect(this, "textSymbol");
+    this.actionTextSymbol.triggered.connect(this, this.textSymbol);
     this.dialog.findChild("Symbol").setDefaultAction(this.actionTextSymbol);
     
     this.comboFont = this.dialog.findChild("Font");
-    this.comboFont["activated(QString)"].connect(this, "textFamily");
+    if (RSettings.getQtVersion() >= 0x060000) {
+        this.comboFont.textActivated.connect(this, this.textFamily);
+    }
+    else {
+        this.comboFont["activated(QString)"].connect(this, this.textFamily);
+    }
+
 
     this.comboSize = this.dialog.findChild("Height");
     this.comboSize.editable = true;
-    this.comboSize["activated(QString)"].connect(this, "textSize");
+    if (RSettings.getQtVersion() >= 0x060000) {
+        this.comboSize.textActivated.connect(this, this.textSize);
+    }
+    else {
+        this.comboSize["activated(QString)"].connect(this, this.textSize);
+    }
+
     this.comboSize.setEditText("1.0");
-    this.comboSize.editTextChanged.connect(this, "textSize");
+    this.comboSize.editTextChanged.connect(this, this.textSize);
 };
 
 /**
