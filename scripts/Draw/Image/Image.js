@@ -130,7 +130,15 @@ Image.prototype.getFileName = function() {
 //            filters += ";;";
 //        }
 
-        var filter = format.toUpperCase() + " " + qsTr("Files") + " (";
+        var filter;
+        if (RSettings.getQtVersion() >= 0x060000) {
+            filter = format.toUpperCase();
+        }
+        else {
+            filter = format.toUpper();
+        }
+        filter += " " + qsTr("Files") + " (";
+
         filter += "*." + format;
 
         if (filterAllImages.length!==0) {
