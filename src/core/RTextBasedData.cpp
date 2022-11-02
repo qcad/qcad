@@ -702,6 +702,11 @@ QString RTextBasedData::toEscapedText(const QTextDocument& textDocument, const R
             QTextCharFormat format = fragment.charFormat();
             QString ff = RS::getFontFamily(format);
 
+            //qDebug() << "format.fontPointSize(): " << format.fontPointSize();
+            //qDebug() << "format.fontFamily(): " << ff;
+            //qDebug() << "format.fontWeight(): " << format.fontWeight();
+            //qDebug() << "format.foreground().color(): " << format.foreground().color();
+
             // detect font weight change (bold):
             if (format.fontWeight()!=fontWeight) {
                 fontWeight = format.fontWeight();
@@ -753,10 +758,9 @@ QString RTextBasedData::toEscapedText(const QTextDocument& textDocument, const R
                 //qDebug() << "color: " << fontColor;
             }
 
-
             // detect height change:
             if (format.fontPointSize() > RS::PointTolerance &&
-                    fabs(format.fontPointSize()/fontHeightFactor - fontHeight) > RS::PointTolerance) {
+                fabs(format.fontPointSize()/fontHeightFactor - fontHeight) > RS::PointTolerance) {
 
                 fontHeight = format.fontPointSize() / fontHeightFactor;
                 heightChanged = true;
