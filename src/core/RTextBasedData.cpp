@@ -700,6 +700,7 @@ QString RTextBasedData::toEscapedText(const QTextDocument& textDocument, const R
             bool verticalAlignmentChanged = false;
 
             QTextCharFormat format = fragment.charFormat();
+            QString ff = RS::getFontFamily(format);
 
             // detect font weight change (bold):
             if (format.fontWeight()!=fontWeight) {
@@ -727,8 +728,8 @@ QString RTextBasedData::toEscapedText(const QTextDocument& textDocument, const R
             }
 
             // detect font family change:
-            if (!format.fontFamily().isEmpty() && format.fontFamily()!=fontFamily) {
-                fontFamily = format.fontFamily();
+            if (!ff.isEmpty() && ff!=fontFamily) {
+                fontFamily = ff;
                 fontChanged = true;
             }
 
@@ -827,7 +828,7 @@ QString RTextBasedData::toEscapedText(const QTextDocument& textDocument, const R
             //RDebug::hexDump(text);
             //qDebug() << "text fragment: " << text;
 //            qDebug() << "  weight: " << format.fontWeight();
-//            qDebug() << "  family: " << format.fontFamily();
+//            qDebug() << "  family: " << RS::getFontFamily(format);
 //            qDebug() << "  italic: " << format.fontItalic();
 //            qDebug() << "  color: " << format.foreground();
 

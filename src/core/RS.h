@@ -31,6 +31,7 @@
 //#include <QTextCodec>
 #include <QVariant>
 #include <QMetaType>
+#include <QTextCharFormat>
 
 #if QT_VERSION >= 0x060000
 #include <QScreen>
@@ -838,6 +839,22 @@ public:
         return QList<T>(set.begin(), set.end());
 #else
         return set.toList();
+#endif
+    }
+
+    static QString getFontFamily(const QTextCharFormat& format) {
+#if QT_VERSION >= 0x060000
+        // note: QTextCharFormat::fontFamily is deprecated and broken in Qt 6:
+        QVariant v = format.fontFamilies();
+        if (v.isValid()) {
+            QStringList l = v.toStringList();
+            if (!l.isEmpty()) {
+                return l.first();
+            }
+        }
+        return "";
+#else
+        return format.fontFamily();
 #endif
     }
 
