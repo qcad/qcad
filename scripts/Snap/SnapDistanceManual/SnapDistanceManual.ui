@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>287</width>
-    <height>47</height>
+    <height>50</height>
    </rect>
   </property>
   <layout class="QHBoxLayout">
@@ -34,6 +34,9 @@
      </property>
      <property name="defaultValue" stdset="0">
       <double>1.000000000000000</double>
+     </property>
+     <property name="nomeasurements" stdset="0">
+      <bool>true</bool>
      </property>
     </widget>
    </item>
@@ -109,11 +112,4 @@
  </customwidgets>
  <resources/>
  <connections/>
- <buttongroups>
-  <buttongroup name="buttonGroup">
-   <property name="exclusive">
-    <bool>true</bool>
-   </property>
-  </buttongroup>
- </buttongroups>
 </ui>
