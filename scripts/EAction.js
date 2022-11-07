@@ -424,6 +424,10 @@ EAction.prototype.initUiOptions = function(resume, optionsToolBar) {
     var children = optionsToolBar.children();
     for (var i=0; i<children.length; i++) {
         var child = children[i];
+        if (isNull(child)) {
+            continue;
+        }
+
         var shortCut = child.shortcut;
         if (!isNull(shortCut) && !shortCut.isEmpty()) {
             var str = shortCut.toString();
@@ -973,9 +977,10 @@ EAction.getMenu = function(title, objectName, initFunction) {
     var appWin = EAction.getMainWindow();
     var menuBar = appWin.menuBar();
     var menu;
-    for (var i in menuBar.children()) {
-        menu = menuBar.children()[i];
-        if (menu.objectName === objectName) {
+    var children = menuBar.children();
+    for (var i in children) {
+        menu = children[i];
+        if (!isNull(menu) && menu.objectName === objectName) {
             break;
         }
         menu = undefined;
