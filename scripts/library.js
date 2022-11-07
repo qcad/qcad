@@ -1521,7 +1521,7 @@ function getWidgets(widget, ca, allowDuplicates) {
     var children = widget.children();
     for (var i = 0; i < children.length; ++i) {
         var child = children[i];
-        if (isDeleted(child)) {
+        if (isNull(child) || isDeleted(child)) {
             continue;
         }
         if (!isNull(child.objectName) && child.objectName !== "") {

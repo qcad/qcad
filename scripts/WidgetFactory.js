@@ -1092,7 +1092,11 @@ WidgetFactory.moveChildren = function(sourceWidget, targetWidget, settingsGroup)
     // on this (especially on macOS):
     var children = sourceWidget.children();
     for(var i=0;i<children.length;++i) {
-        var w=children[i];
+        var w = children[i];
+        if (isNull(w)) {
+            continue;
+        }
+
         w.setProperty("SettingsGroup", settingsGroup);
 
         // add separator:
@@ -1148,7 +1152,7 @@ WidgetFactory.moveChildren = function(sourceWidget, targetWidget, settingsGroup)
 };
 
 WidgetFactory.adjustIcons = function(includeBasePath, widget) {
-    if (!isFunction(widget.children)) {
+    if (isNull(widget) || !isFunction(widget.children)) {
         return;
     }
 
