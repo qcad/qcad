@@ -29,6 +29,9 @@
      <property name="defaultValue" stdset="0">
       <double>1.000000000000000</double>
      </property>
+     <property name="nomeasurements" stdset="0">
+      <bool>true</bool>
+     </property>
     </widget>
    </item>
   </layout>

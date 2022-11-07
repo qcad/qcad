@@ -38,6 +38,9 @@
      <property name="angle" stdset="0">
       <bool>false</bool>
      </property>
+     <property name="nomeasurements" stdset="0">
+      <bool>true</bool>
+     </property>
     </widget>
    </item>
    <item>
@@ -65,6 +68,9 @@
       <string notr="true">0</string>
      </property>
      <property name="angle" stdset="0">
+      <bool>true</bool>
+     </property>
+     <property name="nomeasurements" stdset="0">
       <bool>true</bool>
      </property>
     </widget>
