@@ -19,7 +19,7 @@
 
 include("scripts/EAction.js");
 include("scripts/sprintf.js");
-include("../../WidgetFactory.js");
+include("scripts/WidgetFactory.js");
 
 /**
  * Internal helper class. Notified when properties are changed.
@@ -45,7 +45,7 @@ PropertyWatcher.prototype.propertyChanged = function(value) {
 
     var attributes = this.propertyEditor.getPropertyAttributes(this.propertyType);
 
-    var typeHint = 0;
+    var typeHint = RS.UnknownType;
 
     // value is a list property (e.g. x coordinate of a vertex of a polyline):
     if (attributes.isList()) {
@@ -98,7 +98,7 @@ PropertyWatcher.prototype.propertyChanged = function(value) {
             return;
         }
         if (this.sender.isInteger()) {
-            typeHint = 2;
+            typeHint = RS.Int;
         }
     }
 
@@ -222,20 +222,15 @@ function PropertyEditorImpl(basePath) {
     this.widget.findChild("LabelProtected").text = RSettings.translate("REntity", "Protected") + this.colon;
 
     var selectionCombo = this.widget.findChild("Selection");
-    if (RSettings.isQt(6)) {
-        selectionCombo["activated(int)"].connect(this.filterChanged);
-    }
-    else {
-        selectionCombo["activated(int)"].connect(this, "filterChanged");
-    }
+    selectionCombo["activated(int)"].connect(this, this.filterChanged);
     selectionCombo.installEventFilter(new REventFilter(QEvent.Wheel.valueOf(), true));
     selectionCombo.focusPolicy = Qt.ClickFocus;
 
     // initialize fixed general properties at the top:
     var layerCombo = this.widget.findChild("Layer");
     if (RSettings.isQt(6)) {
-        layerCombo.textActivated.connect(
-                    new PropertyWatcher(this, layerCombo, REntity.PropertyLayer).propertyChanged);
+        var pw = new PropertyWatcher(this, layerCombo, REntity.PropertyLayer);
+        layerCombo.textActivated.connect(pw, pw.propertyChanged);
     }
     else {
         layerCombo['activated(QString)'].connect(
@@ -248,8 +243,8 @@ function PropertyEditorImpl(basePath) {
 
     var colorCombo = this.widget.findChild("Color");
     if (RSettings.isQt(6)) {
-        colorCombo['activated(int)'].connect(
-                    new PropertyWatcher(this, colorCombo, REntity.PropertyColor).propertyChanged);
+        var pw = new PropertyWatcher(this, colorCombo, REntity.PropertyColor);
+        colorCombo['activated(int)'].connect(pw, pw.propertyChanged);
     }
     else {
         colorCombo['activated(int)'].connect(
@@ -261,8 +256,8 @@ function PropertyEditorImpl(basePath) {
 
     var lineweightCombo = this.widget.findChild("Lineweight");
     if (RSettings.isQt(6)) {
-        lineweightCombo['activated(int)'].connect(
-                    new PropertyWatcher(this, lineweightCombo, REntity.PropertyLineweight).propertyChanged);
+        var pw = new PropertyWatcher(this, lineweightCombo, REntity.PropertyLineweight);
+        lineweightCombo['activated(int)'].connect(pw, pw.propertyChanged);
     }
     else {
         lineweightCombo['activated(int)'].connect(
@@ -274,8 +269,8 @@ function PropertyEditorImpl(basePath) {
 
     var linetypeCombo = this.widget.findChild("Linetype");
     if (RSettings.isQt(6)) {
-        linetypeCombo['activated(int)'].connect(
-                    new PropertyWatcher(this, linetypeCombo, REntity.PropertyLinetype).propertyChanged);
+        var pw = new PropertyWatcher(this, linetypeCombo, REntity.PropertyLinetype);
+        linetypeCombo['activated(int)'].connect(pw, pw.propertyChanged);
     }
     else {
         linetypeCombo['activated(int)'].connect(
@@ -304,8 +299,8 @@ function PropertyEditorImpl(basePath) {
 
     var linetypeScaleEdit = this.widget.findChild("LinetypeScale");
     if (RSettings.isQt(6)) {
-        linetypeScaleEdit.editingFinished.connect(
-                    new PropertyWatcher(this, linetypeScaleEdit, REntity.PropertyLinetypeScale).propertyChanged);
+        var pw = new PropertyWatcher(this, linetypeScaleEdit, REntity.PropertyLinetypeScale);
+        linetypeScaleEdit.editingFinished.connect(pw, pw.propertyChanged);
     }
     else {
         linetypeScaleEdit.editingFinished.connect(
@@ -316,8 +311,8 @@ function PropertyEditorImpl(basePath) {
 
     var drawOrderEdit = this.widget.findChild("DrawOrder");
     if (RSettings.isQt(6)) {
-        drawOrderEdit.editingFinished.connect(
-                    new PropertyWatcher(this, drawOrderEdit, REntity.PropertyDrawOrder).propertyChanged);
+        var pw = new PropertyWatcher(this, drawOrderEdit, REntity.PropertyDrawOrder);
+        drawOrderEdit.editingFinished.connect(pw, pw.propertyChanged);
     }
     else {
         drawOrderEdit.editingFinished.connect(
@@ -355,15 +350,15 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
     this.widget.updatesEnabled = false;
     if (!onlyChanges) {
         if (!isNull(this.geometryGroup)) {
-            this.geometryGroup.destroy();
+            destr(this.geometryGroup);
             this.geometryGroup = undefined;
         }
         if (!isNull(this.childGroup)) {
-            this.childGroup.destroy();
+            destr(this.childGroup);
             this.childGroup = undefined;
         }
         if (!isNull(this.customGroup)) {
-            this.customGroup.destroy();
+            destr(this.customGroup);
             this.customGroup = undefined;
         }
     }
@@ -462,6 +457,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
         if (RSettings.isXDataEnabled()) {
             // create custom property group box with grid layout:
             this.customGroup = new QGroupBox(qsTr("Custom"), this.widget);
+            //this.customGroup.objectName = "CustomGroup";
             layout.insertWidget(4, this.customGroup);
 
             // grid layout with four columns and N rows for N property controls:
@@ -496,11 +492,16 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
             var children = groupToClear.children();
             for (var i=0; i<children.length; i++) {
                 var child = children[i];
+                if (isNull(child)) {
+                    // don't destroy wrapper attached to the group box (QGroupBox_Wrapper):
+                    continue;
+                }
                 if (isOfType(child, QGridLayout)) {
                     // don't destroy layout:
                     continue;
                 }
-                children[i].destroy();
+
+                destr(child);
             }
         }
     }
@@ -742,9 +743,8 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
                             removeCustomPropertyButton.objectName = "DeleteCustomProperty" + name;
                             //qDebug("adding button to remove custom property named: ", name);
                             var propertyEditor = this;
-                            removeCustomPropertyButton.clicked.connect(
-                                        new PropertyWatcher(this, removeCustomPropertyButton, propertyTypeId),
-                                        'propertyRemoved');
+                            var pw = new PropertyWatcher(this, removeCustomPropertyButton, propertyTypeId);
+                            removeCustomPropertyButton.clicked.connect(pw, pw.propertyRemoved);
                             gridLayoutCustom.addWidget(removeCustomPropertyButton, row,3);
                         }
 
@@ -877,7 +877,7 @@ PropertyEditorImpl.prototype.initControls = function(propertyTypeId, onlyChanges
         requestAllButton.objectName = objectName + "_request";
         requestAllButton.text = qsTr("Show");
         requestAllButton.toolTip = qsTr("Show all properties");
-        requestAllButton.clicked.connect(this, "requestAllProperties");
+        requestAllButton.clicked.connect(this, this.requestAllProperties);
         requestAllButton.setSizePolicy(QSizePolicy.Ignored, QSizePolicy.Preferred);
 
         return new Array(requestAllButton);
@@ -979,7 +979,8 @@ PropertyEditorImpl.prototype.initControls = function(propertyTypeId, onlyChanges
                 }
                 indexControl.setProperty('controlNames', a);
 
-                indexControl["valueChanged(int)"].connect(new IndexWatcher(this, indexControl, propertyTypeId), "indexChanged");
+                var iw = new IndexWatcher(this, indexControl, propertyTypeId)
+                indexControl["valueChanged(int)"].connect(iw, iw.indexChanged);
             }
             else {
                 // make sure that the values for the current list index are updated:
@@ -1154,9 +1155,9 @@ PropertyEditorImpl.prototype.initNumberControls = function(objectName, propertyT
         else {
             lineEdit = control;
         }
-        lineEdit.editingFinished.connect(
-                    new PropertyWatcher(this, control, propertyTypeId),
-                    'propertyChanged');
+
+        var pw = new PropertyWatcher(this, control, propertyTypeId);
+        lineEdit.editingFinished.connect(pw, pw.propertyChanged);
     }
 
     // move cursor to start if field is not being edited:
@@ -1180,7 +1181,7 @@ PropertyEditorImpl.prototype.initStringControls = function(objectName, propertyT
     var clearButton = undefined;
 
     if (isNull(control)) {
-        control = new QLineEdit(value, this.geometryGroup);
+        control = new QLineEdit(value, geometryGroup);
         control.objectName = objectName;
         /*if (attributes.isRichText()) {
             editAsRichTextButton = new QToolButton(this.geometryGroup);
@@ -1215,9 +1216,8 @@ PropertyEditorImpl.prototype.initStringControls = function(objectName, propertyT
     }
 
     if (!onlyChanges) {
-        control.editingFinished.connect(
-                    new PropertyWatcher(this, control, propertyTypeId),
-                    'propertyChanged');
+        var pw = new PropertyWatcher(this, control, propertyTypeId);
+        control.editingFinished.connect(pw, pw.propertyChanged);
     }
 
     // move cursor to start if field is not being edited:
@@ -1276,9 +1276,8 @@ PropertyEditorImpl.prototype.initBooleanControls = function(objectName, property
     }
 
     if (!onlyChanges) {
-        control['activated(int)'].connect(
-                    new PropertyWatcher(this, control, propertyTypeId),
-                    'propertyChanged');
+        var pw = new PropertyWatcher(this, control, propertyTypeId);
+        control['activated(int)'].connect(pw, pw.propertyChanged);
     }
 
     return new Array(control);
@@ -1290,7 +1289,7 @@ PropertyEditorImpl.prototype.initBooleanControls = function(objectName, property
  */
 PropertyEditorImpl.prototype.initChoiceControls = function(
     objectName, propertyTypeId, onlyChanges, control, choices, choicesData) {
-    
+
     var i;
 
     var value = this.getAdjustedPropertyValue(propertyTypeId);
@@ -1320,14 +1319,12 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
         control.objectName = objectName;
 
         if (isNull(choicesData)/* && propertyTypeId.getId()!==REntity.PropertyLayer.getId()*/) {
-            control['activated(QString)'].connect(
-                        new PropertyWatcher(this, control, propertyTypeId),
-                        'propertyChanged');
+            var pw = new PropertyWatcher(this, control, propertyTypeId)
+            control['activated(QString)'].connect(pw, pw.propertyChanged);
         }
         else {
-            control['activated(int)'].connect(
-                        new PropertyWatcher(this, control, propertyTypeId),
-                        'propertyChanged');
+            var pw = new PropertyWatcher(this, control, propertyTypeId);
+            control['activated(int)'].connect(pw, pw.propertyChanged);
         }
     }
 
@@ -1541,12 +1538,12 @@ PropertyEditorImpl.prototype.makeReadOnly = function(control) {
     }
 
     var p = control.palette;
-    if (isNull(control.oriPalette)) {
+    if (isNull(control.property("oriPalette"))) {
         control.setProperty("oriPalette", control.palette);
     }
 
-    p.setColor(QPalette.Active, QPalette.Text, control.oriPalette.color(QPalette.Disabled, QPalette.WindowText));
-    p.setColor(QPalette.Inactive, QPalette.Text, control.oriPalette.color(QPalette.Disabled, QPalette.WindowText));
+    p.setColor(QPalette.Active, QPalette.Text, control.property("oriPalette").color(QPalette.Disabled, QPalette.WindowText));
+    p.setColor(QPalette.Inactive, QPalette.Text, control.property("oriPalette").color(QPalette.Disabled, QPalette.WindowText));
 
 //    if (RSettings.hasDarkGuiBackground()) {
 //        p.setColor(QPalette.Base, new QColor("#0a0a0a"));
@@ -1570,12 +1567,12 @@ PropertyEditorImpl.prototype.makeReadWrite = function(control) {
     }
 
     var p = control.palette;
-    if (isNull(control.oriPalette)) {
+    if (isNull(control.property("oriPalette"))) {
         control.setProperty("oriPalette", control.palette);
     }
 
-    p.setColor(QPalette.Active, QPalette.Text, control.oriPalette.color(QPalette.Active, QPalette.WindowText));
-    p.setColor(QPalette.Inactive, QPalette.Text, control.oriPalette.color(QPalette.Inactive, QPalette.WindowText));
+    p.setColor(QPalette.Active, QPalette.Text, control.property("oriPalette").color(QPalette.Active, QPalette.WindowText));
+    p.setColor(QPalette.Inactive, QPalette.Text, control.property("oriPalette").color(QPalette.Inactive, QPalette.WindowText));
 //    //if (RSettings.hasDarkGuiBackground()) {
 //        p.setColor(QPalette.Base, control.oriBase);
 ////    }
@@ -1607,7 +1604,7 @@ PropertyEditorImpl.prototype.addCustomProperty = function() {
     var valueEdit = dialog.findChild("Value");
 
     if (!dialog.exec()) {
-        dialog.destroy();
+        destr(dialog);
         EAction.activateMainWindow();
         return;
     }
@@ -1619,7 +1616,7 @@ PropertyEditorImpl.prototype.addCustomProperty = function() {
     this.propertyChanged(new RPropertyTypeId(RSettings.getAppId(), name), value, this.getEntityTypeFilter());
     this.onlyChangesOverride = false;
 
-    dialog.destroy();
+    destr(dialog);
     EAction.activateMainWindow();
 };
 
@@ -1706,7 +1703,7 @@ PropertyEditor.init = function(basePath) {
     dock.objectName = "PropertyEditorDock";
     dock.setWidget(pe.widget);
     appWin.addPropertyListener(pe);
-    if (RSettings.isQt(6)) {
+    if (RSettings.getQtVersion() >= 0x060000) {
         appWin.addLayerListener(pe);
     }
     else {
