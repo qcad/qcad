@@ -501,6 +501,12 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
                     continue;
                 }
 
+                // qt 6: detect wrapper of QGroupBox and never delete that:
+                if (!isNull(child.wrappedType)) {
+                    continue;
+                }
+
+
                 destr(child);
             }
         }
@@ -1181,7 +1187,7 @@ PropertyEditorImpl.prototype.initStringControls = function(objectName, propertyT
     var clearButton = undefined;
 
     if (isNull(control)) {
-        control = new QLineEdit(value, geometryGroup);
+        control = new QLineEdit(value, this.geometryGroup);
         control.objectName = objectName;
         /*if (attributes.isRichText()) {
             editAsRichTextButton = new QToolButton(this.geometryGroup);
@@ -1320,11 +1326,21 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
 
         if (isNull(choicesData)/* && propertyTypeId.getId()!==REntity.PropertyLayer.getId()*/) {
             var pw = new PropertyWatcher(this, control, propertyTypeId)
-            control['activated(QString)'].connect(pw, pw.propertyChanged);
+            if (RSettings.getQtVersion() >= 0x060000) {
+                control.textActivated.connect(pw, pw.propertyChanged);
+            }
+            else {
+                control['activated(QString)'].connect(pw, pw.propertyChanged);
+            }
         }
         else {
             var pw = new PropertyWatcher(this, control, propertyTypeId);
-            control['activated(int)'].connect(pw, pw.propertyChanged);
+            if (RSettings.getQtVersion() >= 0x060000) {
+                control.activated.connect(pw, pw.propertyChanged);
+            }
+            else {
+                control['activated(int)'].connect(pw, pw.propertyChanged);
+            }
         }
     }
 
