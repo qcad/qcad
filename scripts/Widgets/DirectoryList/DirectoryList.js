@@ -38,10 +38,37 @@ DirectoryList.prototype.doInit = function(pageWidget, listWidgetName, fileDlgTit
 
     var btAdd = widgets["btAdd"];
     btAdd.clicked.connect(this, function() {
+        // getExistingDirectory is broken in KDE when it uses the native dialog.
+        /*
         var dir = QFileDialog.getExistingDirectory(this, fileDlgTitle);
         if (dir.length===0) {
             return;
         }
+        */
+
+        var fileDialog = new QFileDialog(this, fileDlgTitle, "", "");
+        fileDialog.setOption(QFileDialog.DontUseNativeDialog, getDontUseNativeDialog());
+
+        fileDialog.fileMode = QFileDialog.Directory;
+        fileDialog.setOption(QFileDialog.ShowDirsOnly, true);
+        fileDialog.setOption(QFileDialog.DontResolveSymlinks, true);
+        if (!isNull(QFileDialog.DontUseCustomDirectoryIcons)) {
+            fileDialog.setOption(QFileDialog.DontUseCustomDirectoryIcons, true);
+        }
+
+        if (!fileDialog.exec()) {
+            fileDialog.destroy();
+            EAction.activateMainWindow();
+            return;
+        }
+
+        var files = fileDialog.selectedFiles();
+        if (files.length===0) {
+            fileDialog.destroy();
+            EAction.activateMainWindow();
+            return;
+        }
+        var dir = files[0];
 
         var found = false;
         for ( var i = 0; i < listWidget.count; ++i) {
