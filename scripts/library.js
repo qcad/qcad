@@ -150,6 +150,9 @@ function getPtr(p) {
         if (isFunction(p.data)) {
             return p.data();
         }
+        else {
+            return p;
+        }
     }
 }
 
