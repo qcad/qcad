@@ -31,7 +31,7 @@
 #include "RGlobal.h"
 #include "RSettings.h"
 
-#if defined(Q_WS_X11)
+#if defined(Q_OS_LINUX)
 #include <X11/Xlib.h>
 /**
  * If things magically start not working with weird and unexpected
@@ -84,7 +84,7 @@ QString RS::getSystemId() {
 QString RS::getWindowManagerId() {
     static QString wm = "";
 
-#if defined(Q_WS_X11)
+#if defined(Q_OS_LINUX)
     Display *dpy;
     Window win;
 
@@ -108,11 +108,11 @@ QString RS::getWindowManagerId() {
 
     wm = "unknown";
 
-#if defined(Q_WS_MAC)
+#if defined(Q_OS_MAC)
     wm = "osx";
-#elif defined(Q_WS_WIN)
+#elif defined(Q_OS_WIN)
     wm = "win";
-#elif defined(Q_WS_X11)
+#elif defined(Q_OS_LINUX)
 
     dpy = NULL;
     data = NULL;
