@@ -73,6 +73,7 @@ public:
     virtual void exportArcSegment(const RArc&, bool=false) {}
     virtual void exportLineSegment(const RLine&, double=RNANDOUBLE) {}
     virtual void exportTriangle(const RTriangle&) {}
+    virtual void exportRay(const RRay&) {}
     virtual void exportXLine(const RXLine&) {}
 
     virtual double getLineTypePatternScale(const RLinetypePattern& p) const { return RFileExporter::getLineTypePatternScale(p); }
