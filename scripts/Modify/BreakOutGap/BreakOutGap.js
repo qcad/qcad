@@ -184,7 +184,7 @@ BreakOutGap.prototype.getOperation = function(preview) {
         var line2 = new RLine(points[0], shape2.getEndPoint());
         e = shapeToEntity(this.entity.getDocument(), line2);
         if (!isNull(e)) {
-            e.copyAttributesFrom(this.entity.data());
+            e.copyAttributesFrom(getPtr(this.entity));
             op.addObject(e, false);
         }
     } else if (isArcShape(this.shape)) {

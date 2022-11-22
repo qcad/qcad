@@ -216,7 +216,7 @@ BreakOut.breakOut = function(op, entity, pos, extend, removeSegment) {
                 if (extend || !removeSegment) {
                     e = shapeToEntity(doc, newSegments[2]);
                     if (!isNull(e)) {
-                        e.copyAttributesFrom(entity.data());
+                        e.copyAttributesFrom(getPtr(entity));
                         op.addObject(e, false);
                     }
                 }
@@ -244,7 +244,7 @@ BreakOut.breakOut = function(op, entity, pos, extend, removeSegment) {
             if (isXLineShape(newSegments[0]) || isRayShape(newSegments[0]) || newSegments[0].getLength()>RS.PointTolerance) {
                 e = shapeToEntity(entity.getDocument(), newSegments[0]);
                 if (!isNull(e)) {
-                    e.copyAttributesFrom(entity.data());
+                    e.copyAttributesFrom(getPtr(entity));
                     op.addObject(e, false);
                 }
             }
@@ -254,7 +254,7 @@ BreakOut.breakOut = function(op, entity, pos, extend, removeSegment) {
             if (isXLineShape(newSegments[1]) || isRayShape(newSegments[1]) || newSegments[1].getLength()>RS.PointTolerance) {
                 e = shapeToEntity(entity.getDocument(), newSegments[1]);
                 if (!isNull(e)) {
-                    e.copyAttributesFrom(entity.data());
+                    e.copyAttributesFrom(getPtr(entity));
                     op.addObject(e, false);
                 }
             }
