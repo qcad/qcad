@@ -542,6 +542,10 @@ EAction.prototype.hideOptionsToolBarWidgets = function(widgets, noSyncWidgets) {
     var children = optionsToolBar.children();
     for (i = 0; i < children.length; ++i) {
         c = children[i];
+        if (isNull(c)) {
+            continue;
+        }
+
         if (c["HideInDialogMode"]===true) {
             destr(c);
         }

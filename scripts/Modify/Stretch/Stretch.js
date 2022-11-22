@@ -312,7 +312,13 @@ Stretch.prototype.getAuxPreview = function() {
         ret.push(line);
 
         if (!isNull(offset)) {
-            line = line.copy();
+            if (RSettings.getQtVersion()>=0x060000) {
+                line = line.clone();
+            }
+            else {
+                line = line.copy();
+            }
+
             line.move(offset);
             ret.push(line);
         }
