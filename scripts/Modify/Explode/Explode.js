@@ -135,7 +135,7 @@ Explode.explodeSelection = function(di, toolTitle) {
                     e = shapeToEntity(entity.getDocument(), newShape);
                     if (!isNull(e)) {
                         e.setSelected(true);
-                        e.copyAttributesFrom(entity.data());
+                        e.copyAttributesFrom(getPtr(entity));
                         if (!isNull(newShape.color)) {
                             e.setColor(new RColor(newShape.color));
                         }
@@ -353,7 +353,7 @@ Explode.explodeEntity = function(entity, options) {
             var polySegments = polyline.getExploded();
             if (polySegments.length>0) {
                 for (k=0; k<polySegments.length; k++) {
-                    var shape = polySegments[k].data();
+                    var shape = getPtr(polySegments[k]);
 
                     // last shape might have zero length if polyline is closed geometrically and logically:
                     if (k===polySegments.length-1) {
@@ -399,7 +399,7 @@ Explode.explodeEntity = function(entity, options) {
             for (k=0; k<painterPaths.length; k++) {
                 shapes = painterPaths[k].getShapes();
                 for (n=0; n<shapes.length; n++) {
-                    shape = shapes[n].data();
+                    shape = getPtr(shapes[n]);
                     if (isSplineShape(shape)) {
                         shape = ShapeAlgorithms.splineToLineOrArc(shape, 0.01);
                     }
@@ -414,13 +414,13 @@ Explode.explodeEntity = function(entity, options) {
         shapes = entity.getShapes();
         for (k=0; k<shapes.length; k++) {
             if (shapes[k].isValid()) {
-                ret.push(shapes[k].data());
+                ret.push(getPtr(shapes[k]));
             }
         }
         var textData = entity.getData().getTextData();
         e = new RTextEntity(entity.getDocument(), textData);
         e.setSelected(true);
-        e.copyAttributesFrom(entity.data());
+        e.copyAttributesFrom(getPtr(entity));
         var textColor = document.getKnownVariable(RS.DIMCLRT, new RColor(RColor.ByBlock));
         e.setColor(textColor);
         ret.push(e);
@@ -430,7 +430,7 @@ Explode.explodeEntity = function(entity, options) {
     else if (isLeaderEntity(entity)) {
         shapes = entity.getShapes();
         for (k=0; k<shapes.length; k++) {
-            shape = shapes[k].data();
+            shape = getPtr(shapes[k]);
             ret.push(shape.clone());
         }
     }
@@ -448,7 +448,7 @@ Explode.explodeEntity = function(entity, options) {
             var d = textDatas[k];
             e = new RTextEntity(document, new RTextData(d))
             e.setSelected(true);
-            e.copyAttributesFrom(entity.data());
+            e.copyAttributesFrom(getPtr(entity));
             if (e.getColor()!==d.getColor()) {
                 e.setColor(d.getColor());
             }
@@ -460,7 +460,7 @@ Explode.explodeEntity = function(entity, options) {
     else if (isSolidEntity(entity)) {
         shapes = entity.getShapes();
         for (k=0; k<shapes.length; k++) {
-            shape = shapes[k].data();
+            shape = getPtr(shapes[k]);
             if (shape.countVertices()===4) {
                 var v3 = shape.getVertexAt(3);
                 shape.setVertexAt(3, shape.getVertexAt(2));
@@ -474,7 +474,7 @@ Explode.explodeEntity = function(entity, options) {
     else if (isFaceEntity(entity)) {
         shapes = entity.getShapes();
         for (k=0; k<shapes.length; k++) {
-            shape = shapes[k].data();
+            shape = getPtr(shapes[k]);
             ret.push(shape.clone());
         }
     }
@@ -490,7 +490,7 @@ Explode.explodeEntity = function(entity, options) {
                 var d = textDatas[k];
                 e = new RTextEntity(document, new RTextData(d))
                 e.setSelected(true);
-                e.copyAttributesFrom(entity.data());
+                e.copyAttributesFrom(getPtr(entity));
                 if (e.getColor()!==d.getColor()) {
                     e.setColor(d.getColor());
                 }
@@ -589,7 +589,7 @@ Explode.explodeEntity = function(entity, options) {
         e = new RTextEntity(document, d);
         e.setSelected(true);
         if (isFunction(entity.data)) {
-            e.copyAttributesFrom(entity.data());
+            e.copyAttributesFrom(getPtr(entity));
         }
         else {
             e.copyAttributesFrom(entity);
