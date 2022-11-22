@@ -272,7 +272,7 @@ BreakOutManual.prototype.getOperation = function(preview) {
         if (!isNull(newSegments[2])) {
             e = shapeToEntity(this.entity.getDocument(), newSegments[2]);
             if (!isNull(e)) {
-                e.copyAttributesFrom(this.entity.data());
+                e.copyAttributesFrom(getPtr(this.entity));
                 op.addObject(e, false);
             }
         }
@@ -294,7 +294,7 @@ BreakOutManual.prototype.getOperation = function(preview) {
     if (!isNull(newSegments[0])) {
         e = shapeToEntity(this.entity.getDocument(), newSegments[0]);
         if (!isNull(e)) {
-            e.copyAttributesFrom(this.entity.data());
+            e.copyAttributesFrom(getPtr(this.entity));
             op.addObject(e, false);
         }
     }
@@ -302,7 +302,7 @@ BreakOutManual.prototype.getOperation = function(preview) {
     if (!isNull(newSegments[1])) {
         e = shapeToEntity(this.entity.getDocument(), newSegments[1])
         if (!isNull(e)) {
-            e.copyAttributesFrom(this.entity.data());
+            e.copyAttributesFrom(getPtr(this.entity));
             op.addObject(e, false);
         }
     }
