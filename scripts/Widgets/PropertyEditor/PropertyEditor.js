@@ -79,7 +79,7 @@ PropertyWatcher.prototype.propertyChanged = function(value) {
     }
 
     // value is string from a line edit (e.g. text contents):
-    else if (this.sender.toString()==="QLineEdit") {
+    else if (isOfType(this.sender, QLineEdit)) {
         value = this.sender.text;
         if (value===PropertyEditor.varies) {
             return;
@@ -87,7 +87,7 @@ PropertyWatcher.prototype.propertyChanged = function(value) {
     }
 
     // value is number from a math line edit:
-    else if (this.sender.toString().startsWith("RMathLineEdit")) {
+    else if (isOfType(this.sender, RMathLineEdit)) {
         if (this.sender.text===this.sender.originalText) {
             return;
         }
@@ -103,7 +103,7 @@ PropertyWatcher.prototype.propertyChanged = function(value) {
     }
 
     // value is number from a math combo box:
-    else if (this.sender.toString().startsWith("RMathComboBox")) {
+    else if (isOfType(this.sender, RMathComboBox)) {
         if (this.sender.currentText===this.sender.originalText) {
             return;
         }
