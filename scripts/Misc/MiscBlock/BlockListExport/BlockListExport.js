@@ -42,14 +42,14 @@ BlockListExport.prototype.beginEvent = function() {
     }
 
     var file = new QFile(fileName);
-    var flags = new QIODevice.OpenMode(QIODevice.WriteOnly | QIODevice.Text);
+    var flags = makeQIODeviceOpenMode(QIODevice.WriteOnly, QIODevice.Text);
     if (!file.open(flags)) {
         this.terminate();
         return;
     }
 
     var ts = new QTextStream(file);
-    ts.setCodec("UTF-8");
+    setUtf8Codec(ts);
     ts.writeString("Reference Count\tBlock Name");
 
     var doc = this.getDocument();

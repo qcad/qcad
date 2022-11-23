@@ -333,7 +333,7 @@ Projection.prototype.addTransformedShapes = function(entity, shapes, op, preview
         hd.newLoop();
 
         for (i=0; i<shapes.length; i++) {
-            s = this.projectShape(shapes[i].data(), preview);
+            s = this.projectShape(getPtr(shapes[i]), preview);
             for (n=0; n<s.length; n++) {
                 if (isNull(s[n])) {
                     debugger;
@@ -368,7 +368,7 @@ Projection.prototype.addTransformedShapes = function(entity, shapes, op, preview
             continue;
         }
 
-        s = this.projectShape(shapes[i].data(), preview);
+        s = this.projectShape(getPtr(shapes[i]), preview);
         for (n=0; n<s.length; n++) {
             if (isNull(s[n])) {
                 debugger;
@@ -585,7 +585,7 @@ Projection.prototype.projectShape = function(shape, preview, trim, rec) {
 //        var shapes = shape.getExploded(segments);
 //        var pls = new RPolyline();
 //        for (i=0; i<shapes.length; i++) {
-//            s = shapes[i].data();
+//            s = getPtr(shapes[i]);
 //            pls.appendShape(s);
 //        }
         ret = this.projectShape(pls, preview, trim);
@@ -608,7 +608,7 @@ Projection.prototype.projectShape = function(shape, preview, trim, rec) {
 
         // project each segment individually:
         for (i=0; i<segmentCount; i++) {
-            s = shape.getSegmentAt(i).data();
+            s = getPtr(shape.getSegmentAt(i));
 
             s = this.projectShape(s, preview, trim, true);
 
@@ -616,7 +616,7 @@ Projection.prototype.projectShape = function(shape, preview, trim, rec) {
             for (k=0; k<s.length; k++) {
                 var seg = s[k];
                 if (isFunction(seg.data)) {
-                    seg = seg.data();
+                    seg = getPtr(seg);
                 }
 
                 var gotGap = pl.countVertices()>0 &&

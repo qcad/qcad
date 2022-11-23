@@ -80,7 +80,7 @@ ExFileExporter.prototype.exportFile = function(fileName, nameFilter, setFileName
 
     // the document 'doc' should be exported to file 'fileName' here...
     var file = new QFile(fileName);
-    var flags = new QIODevice.OpenMode(QIODevice.WriteOnly | QIODevice.Text);
+    var flags = makeQIODeviceOpenMode(QIODevice.WriteOnly, QIODevice.Text);
     if (!file.open(flags)) {
         return false;
     }
@@ -90,7 +90,7 @@ ExFileExporter.prototype.exportFile = function(fileName, nameFilter, setFileName
     }
 
     var ts = new QTextStream(file);
-    ts.setCodec("UTF-8");
+    setUtf8Codec(ts);
     ts.writeString("Example");
 
     file.close();

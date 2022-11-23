@@ -181,7 +181,7 @@ PointPole.prototype.getPointPole = function(preview) {
         return undefined;
     }
 
-    var pole = Apollonius.getPole(this.shape1.data(), this.shape2.data());
+    var pole = Apollonius.getPole(getPtr(this.shape1), getPtr(this.shape2));
 
     if (isNull(pole)) {
         return undefined;

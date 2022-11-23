@@ -14,7 +14,7 @@ function MyWidget(parentWidget) {
     file.open(new QIODevice.OpenMode(QIODevice.ReadOnly | QIODevice.Text));
     var form = loader.load(file, this);
     file.close();
-    loader.destroy();
+    destr(loader);
 
     // add layout to ensure content scales with widget:
     var layout = new QVBoxLayout();

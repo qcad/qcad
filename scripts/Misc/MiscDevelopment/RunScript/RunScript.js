@@ -65,14 +65,14 @@ RunScript.prototype.beginEvent = function() {
         fileDialog.fileMode = QFileDialog.ExistingFiles;
         //fileDialog.setLabelText(QFileDialog.FileType, qsTr("Format:"));
         if (!fileDialog.exec()) {
-            fileDialog.destroy();
+            destr(fileDialog);
             EAction.activateMainWindow();
             return;
         }
         RSettings.setValue("RunScript/Path", fileDialog.directory().absolutePath());
 
         fileNames = fileDialog.selectedFiles();
-        fileDialog.destroy();
+        destr(fileDialog);
         EAction.activateMainWindow();
 
         // show warning:
@@ -86,12 +86,12 @@ RunScript.prototype.beginEvent = function() {
             l.text = l.text.arg(fileNames.join("<br>"));
             var ret = dialog.exec();
             if (ret!==QDialog.Accepted.valueOf()) {
-                dialog.destroy();
+                destr(dialog);
                 EAction.activateMainWindow();
                 return;
             }
             WidgetFactory.saveState(dialog);
-            dialog.destroy();
+            destr(dialog);
             EAction.activateMainWindow();
         }
     }
@@ -106,7 +106,7 @@ RunScript.prototype.beginEvent = function() {
 
         // user chose any js file:
         var file = new QFile(fileNames[i]);
-        var flags = new QIODevice.OpenMode(QIODevice.ReadOnly | QIODevice.Text);
+        var flags = makeQIODeviceOpenMode(QIODevice.ReadOnly, QIODevice.Text);
         if (!file.open(flags)) {
             continue;
         } 

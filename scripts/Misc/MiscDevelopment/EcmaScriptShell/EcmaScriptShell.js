@@ -62,12 +62,12 @@ EcmaScriptShell.prototype.beginEvent = function() {
                 l.openExternalLinks = true;
                 var ret = dialog.exec();
                 if (ret!==QDialog.Accepted.valueOf()) {
-                    dialog.destroy();
+                    destr(dialog);
                     EAction.activateMainWindow();
                     return;
                 }
                 WidgetFactory.saveState(dialog);
-                dialog.destroy();
+                destr(dialog);
                 EAction.activateMainWindow();
             }
         }
