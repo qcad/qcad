@@ -28,18 +28,23 @@ PreviousWindow.prototype = new Window();
 PreviousWindow.prototype.beginEvent = function() {
     Window.prototype.beginEvent.call(this);
     var mdiArea = EAction.getMdiArea();
+
     // part of the workaround for QMdiArea bug
     // with events filtering through all stacked windows:
-    // mdiArea.activatePreviousSubWindow();
-    var windows = mdiArea.subWindowList();
-    var activeWindow = mdiArea.activeSubWindow();
-    if (!isNull(activeWindow)) {
-        var i = windows.indexOf(activeWindow);
-        i--;
-        i = i.mod(windows.length);
-        if (!isNull(windows[i])) {
-            windows[i].show();
-            mdiArea.setActiveSubWindow(windows[i]);
+    if (RSettings.getQtVersion()>=0x060000) {
+        mdiArea.activatePreviousSubWindow();
+    }
+    else {
+        var windows = mdiArea.subWindowList();
+        var activeWindow = mdiArea.activeSubWindow();
+        if (!isNull(activeWindow)) {
+            var i = windows.indexOf(activeWindow);
+            i--;
+            i = i.mod(windows.length);
+            if (!isNull(windows[i])) {
+                windows[i].show();
+                mdiArea.setActiveSubWindow(windows[i]);
+            }
         }
     }
     this.terminate();
