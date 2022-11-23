@@ -171,15 +171,16 @@ WidgetFactory.getKey = function(group, obj) {
     var key = [g, obj.objectName];
 
     // correct key:
-    if (obj.toString() === "QRadioButton" || obj.toString() === "QToolButton") {
+    if (isOfType(obj, QRadioButton) || isOfType(obj, QToolButton)) {
         // correct to button group name:
-        if (isFunction(obj.group) && obj.group()) {
+
+        if (isFunction(obj.group) && !isNull(obj.group())) {
             key = [g, obj.group().objectName];
         }
         else {
             var parent = obj.parent();
             // correct to group box (parent) name:
-            if (parent && parent.toString()=="QGroupBox") {
+            if (parent && isOfType(parent, QGroupBox)) {
                 key = [g, parent.objectName];
             }
         }
@@ -253,8 +254,8 @@ WidgetFactory.saveState = function(widget, group, document, map) {
     for (var i = 0; i < children.length; ++i) {
         var c = children[i];
 
-        if (!c || isDeleted(c) || c.toString()==="QVariantAnimation" ||
-                c.toString()==="QWidgetAction" || c.objectName==="" ||
+        if (!c || isDeleted(c) || c.toString().startsWith("QVariantAnimation") ||
+                c.toString().startsWith("QWidgetAction") || c.objectName==="" ||
                 c.objectName==="Icon" || c.objectName==="qt_toolbar_ext_button") {
             continue;
         }
@@ -470,7 +471,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
         var c = children[i];
         
         if (!c || isDeleted(c)) {
-            break;
+            continue;
         }
 
         // ignore widgets without name:
