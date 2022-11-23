@@ -273,7 +273,8 @@ if(UNIX)
     )
 endif()
 
-if(APPLE)
+#if(APPLE)
+if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
     target_sources(qcadcore PUBLIC
         detectmacdarkmode.h detectmacdarkmode.mm
     )
