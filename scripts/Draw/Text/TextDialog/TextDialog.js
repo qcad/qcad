@@ -539,7 +539,7 @@ TextDialog.prototype.setupEditActions = function() {
 
 TextDialog.prototype.setupTextActions = function() {
     this.actionTextBold = new QAction(new QIcon(autoIconPath(TextDialog.basePath + "/Bold.svg")), qsTr("&Bold"), this.dialog);
-    this.actionTextBold.shortcut = new QKeySequence(Qt.ControlModifier | Qt.Key_B);
+    this.actionTextBold.shortcut = new QKeySequence("Ctrl+B");
     var bold = new QFont();
     bold.setBold(true);
     this.actionTextBold.font = bold;
@@ -548,7 +548,7 @@ TextDialog.prototype.setupTextActions = function() {
     this.dialog.findChild("Bold").setDefaultAction(this.actionTextBold);
 
     this.actionTextItalic = new QAction(new QIcon(autoIconPath(TextDialog.basePath + "/Italic.svg")), qsTr("&Italic"), this.dialog);
-    this.actionTextItalic.shortcut = new QKeySequence(Qt.ControlModifier | Qt.Key_I);
+    this.actionTextItalic.shortcut = new QKeySequence("Ctrl+I");
     var italic = new QFont();
     italic.setItalic(true);
     this.actionTextItalic.font = italic;
@@ -557,7 +557,7 @@ TextDialog.prototype.setupTextActions = function() {
     this.dialog.findChild("Italic").setDefaultAction(this.actionTextItalic);
 
     this.actionTextUnderline = new QAction(new QIcon(autoIconPath(TextDialog.basePath + "/Underline.svg")), qsTr("&Underline"), this.dialog);
-    this.actionTextUnderline.shortcut = Qt.CTRL + Qt.Key_U;
+    this.actionTextUnderline.shortcut = new QKeySequence("Ctrl+U");
     var underline = new QFont();
     underline.setUnderline(true);
     this.actionTextUnderline.font = underline;
@@ -566,13 +566,13 @@ TextDialog.prototype.setupTextActions = function() {
     this.dialog.findChild("Underline").setDefaultAction(this.actionTextUnderline);
 
     this.actionSubscript = new QAction(new QIcon(autoIconPath(TextDialog.basePath + "/Subscript.svg")), qsTr("&Subscript"), this.dialog);
-    this.actionSubscript.shortcut = new QKeySequence(Qt.ShiftModifier | Qt.ControlModifier | Qt.Key_B);
+    this.actionSubscript.shortcut = new QKeySequence("Shift+Ctrl+B");
     this.actionSubscript.triggered.connect(this, this.textSubscript);
     this.actionSubscript.checkable = true;
     this.dialog.findChild("Subscript").setDefaultAction(this.actionSubscript);
 
     this.actionSuperscript = new QAction(new QIcon(autoIconPath(TextDialog.basePath + "/Superscript.svg")), qsTr("&Superscript"), this.dialog);
-    this.actionSuperscript.shortcut = new QKeySequence(Qt.ShiftModifier | Qt.ControlModifier | Qt.Key_P);
+    this.actionSuperscript.shortcut = new QKeySequence("Shift+Ctrl+P");
     this.actionSuperscript.triggered.connect(this, this.textSuperscript);
     this.actionSuperscript.checkable = true;
     this.dialog.findChild("Superscript").setDefaultAction(this.actionSuperscript);
