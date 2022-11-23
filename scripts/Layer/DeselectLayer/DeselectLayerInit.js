@@ -3,7 +3,7 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/DeselectLayer.js");
     action.setIcon(basePath + "/DeselectLayer.svg");
-    action.setDefaultShortcuts([new QKeySequence("y,-"), new QKeySequence("y,d")]);
+    action.setDefaultShortcut(new QKeySequence("y,d"));
     action.setDefaultCommands(["layerdeselect", "deselectlayer", "y-", "yd"]);
     action.setGroupSortOrder(14400);
     action.setSortOrder(200);
