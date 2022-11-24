@@ -203,7 +203,7 @@ File.getSaveFileName = function(parentWidget, caption, path, filterStrings, defa
         done = true;
 
         if (!fileDialog.exec()) {
-            fileDialog.destroy();
+            destr(fileDialog);
             EAction.activateMainWindow();
             return undefined;
         }
@@ -273,14 +273,14 @@ File.getOpenFileName = function(parentWidget, caption, dir, filterStrings, noAll
     fileDialog.fileMode = QFileDialog.ExistingFiles;
     fileDialog.setLabelText(QFileDialog.FileType, qsTr("Format:"));
     if (!fileDialog.exec()) {
-        fileDialog.destroy();
+        destr(fileDialog);
         EAction.activateMainWindow();
         return undefined;
     }
 
     var fileNames = fileDialog.selectedFiles();
     if (fileNames.length===0) {
-        fileDialog.destroy();
+        destr(fileDialog);
         EAction.activateMainWindow();
         return undefined;
     }
@@ -292,7 +292,7 @@ File.getOpenFileName = function(parentWidget, caption, dir, filterStrings, noAll
 
     var nameFilter = fileDialog.selectedNameFilter();
 
-    fileDialog.destroy();
+    destr(fileDialog);
     EAction.activateMainWindow();
 
     return [ fileNames[0], nameFilter ];

@@ -77,7 +77,7 @@ Batch2Pdf.prototype.toPdf = function () {
     }
 
     painter.end();
-    printer.destroy();
+    destr(printer);
 
     doc.setCurrentBlock(keeperCurrentBlockId);
     return "Exported to: " + fileName[0];

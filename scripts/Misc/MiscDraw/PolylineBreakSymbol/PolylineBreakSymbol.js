@@ -280,7 +280,7 @@ PolylineBreakSymbol.prototype.getOperation = function(preview) {    // Unused va
         poly.appendShape(line);
     }
     var polylineEntity = new RPolylineEntity(this.getDocument(), new RPolylineData(poly))
-    polylineEntity.copyAttributesFrom(this.entity.data());
+    polylineEntity.copyAttributesFrom(getPtr(this.entity));
     var pinherit = (this.inherit === true) ? false : true;  //reverse true/false
     op.addObject(polylineEntity, pinherit);
 
@@ -343,7 +343,7 @@ PolylineBreakSymbol.prototype.getBreakOutOperation = function(preview) {    // U
     if (!isNull(newSegments[0])) {
         segment = shapeToEntity(this.entity.getDocument(), newSegments[0]);
         if (!isNull(segment)) {
-            segment.copyAttributesFrom(this.entity.data());
+            segment.copyAttributesFrom(getPtr(this.entity));
             op.addObject(segment, false);    // NOTuseCurrentAttributes
         }
     }
@@ -352,7 +352,7 @@ PolylineBreakSymbol.prototype.getBreakOutOperation = function(preview) {    // U
     if (!isNull(newSegments[1])) {
         segment = shapeToEntity(this.entity.getDocument(), newSegments[1])
         if (!isNull(segment)) {
-            segment.copyAttributesFrom(this.entity.data());
+            segment.copyAttributesFrom(getPtr(this.entity));
             op.addObject(segment, false);    // NOTuseCurrentAttributes
         }
     }

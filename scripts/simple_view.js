@@ -43,8 +43,8 @@ function zoomTo(p1,p2,p3,p4,p5) {
         if (isNull(doc)) {
             return undefined;
         }
-        var entity = doc.queryEntityDirect(e);
-        var e = entity.data();
+        var entity = doc.queryEntityDirect(p1);
+        var e = getPtr(entity);
         return zoomTo(e.getBoundingBox(), p2);
     }
 

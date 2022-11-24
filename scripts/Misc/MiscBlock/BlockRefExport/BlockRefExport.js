@@ -42,14 +42,14 @@ BlockRefExport.prototype.beginEvent = function() {
     }
 
     var file = new QFile(fileName);
-    var flags = new QIODevice.OpenMode(QIODevice.WriteOnly | QIODevice.Text);
+    var flags = makeQIODeviceOpenMode(QIODevice.WriteOnly, QIODevice.Text);
     if (!file.open(flags)) {
         this.terminate();
         return;
     }
 
     var ts = new QTextStream(file);
-    ts.setCodec("UTF-8");
+    setUtf8Codec(ts);
     ts.writeString("Block Name\tX\tY");
 
     var doc = this.getDocument();
@@ -60,7 +60,7 @@ BlockRefExport.prototype.beginEvent = function() {
     for (var i=0; i<result.length; ++i) {
         var id = result[i];
         block = doc.queryBlock(id);
-        if (block.isNull()) {
+        if (isNull(block)) {
             continue;
         }
         var blockRefIds = doc.queryBlockReferences(id);

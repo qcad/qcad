@@ -335,7 +335,7 @@ ScMirrored.prototype.beginEvent = function() {
 //    this.mirrorWidget.resize(this.w,this.h);
 //    this.mirrorWidget.move(this.x,this.y);
     this.mirrorWidget.focusPolicy = Qt.NoFocus;
-    var flags = new Qt.WindowFlags(Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint | Qt.Tool);
+    var flags = makeQtWindowFlags(Qt.FramelessWindowHint, Qt.WindowStaysOnTopHint, Qt.Tool);
     this.mirrorWidget.setWindowFlags(flags);
     this.mirrorWidget.setAttribute(Qt.WA_MacNoShadow);
     this.mirrorWidget.setAttribute(Qt.WA_DeleteOnClose);

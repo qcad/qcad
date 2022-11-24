@@ -176,7 +176,7 @@ LineRadicalAxis.prototype.getLineRadicalAxis = function(preview) {
         return undefined;
     }
 
-    return Apollonius.getRadicalAxis(this.shape1.data(), this.shape2.data());
+    return Apollonius.getRadicalAxis(getPtr(this.shape1), getPtr(this.shape2));
 };
 
 LineRadicalAxis.prototype.getHighlightedEntities = function() {

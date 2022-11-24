@@ -1,6 +1,6 @@
 /**
  * Copyright (c) 2011-2018 by Andrew Mustun. All rights reserved.
- * 
+ *
  * This file is part of the QCAD project.
  *
  * QCAD is free software: you can redistribute it and/or modify
@@ -46,7 +46,7 @@ ImportPoints.prototype.beginEvent = function() {
     }
     fileDialog.fileMode = QFileDialog.ExistingFiles;
     if (!fileDialog.exec()) {
-        fileDialog.destroy();
+        destr(fileDialog);
         EAction.activateMainWindow();
         this.terminate();
         return;
@@ -54,13 +54,13 @@ ImportPoints.prototype.beginEvent = function() {
 
     var files = fileDialog.selectedFiles();
     if (files.length===0) {
-        fileDialog.destroy();
+        destr(fileDialog);
         EAction.activateMainWindow();
         this.terminate();
         return;
     }
 
-    fileDialog.destroy();
+    destr(fileDialog);
     EAction.activateMainWindow();
 
     var fileName = files[0];
@@ -69,14 +69,14 @@ ImportPoints.prototype.beginEvent = function() {
     var di = this.getDocumentInterface();
 
     var file = new QFile(fileName);
-    var flags = new QIODevice.OpenMode(QIODevice.ReadOnly | QIODevice.Text);
+    var flags = makeQIODeviceOpenMode(QIODevice.ReadOnly, QIODevice.Text);
     if (!file.open(flags)) {
         this.terminate();
         return;
     }
 
     var ts = new QTextStream(file);
-    ts.setCodec("UTF-8");
+    setUtf8Codec(ts);
     var line;
     var coordinates;
     var point;
