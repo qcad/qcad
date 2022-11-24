@@ -60,7 +60,7 @@ BlockListExport.prototype.beginEvent = function() {
     for (var i=0; i<result.length; ++i) {
         var id = result[i];
         block = doc.queryBlock(id);
-        if (block.isNull()) {
+        if (isNull(block)) {
             continue;
         }
         var blockRefIds = doc.queryBlockReferences(id);

@@ -112,7 +112,7 @@ RunScript.prototype.beginEvent = function() {
         } 
         else {
             var textStream = new QTextStream(file);
-            textStream.setCodec("UTF-8");
+            setUtf8Codec(textStream);
             var contents = textStream.readAll();
             file.close();
             try {

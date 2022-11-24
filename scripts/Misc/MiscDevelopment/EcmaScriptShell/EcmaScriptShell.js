@@ -48,7 +48,7 @@ EcmaScriptShell.prototype.beginEvent = function() {
 
     var appWin = RMainWindowQt.getMainWindow();
     var dock = appWin.findChild("EcmaScriptShellDock");
-    if (!QCoreApplication.arguments().contains("-no-show")) {
+    if (!RSettings.getOriginalArguments().contains("-no-show")) {
 
         if (dock.visible===false) {
             // show warning:
@@ -282,7 +282,7 @@ EcmaScriptShell.init = function(basePath) {
 
                 appendAndScroll("<span style='color:"+EcmaScriptShell.col+";'>" + RS.escape(res.toString()) + "</span>");
             }
-            catch(e) {
+            catch (e) {
                 appendAndScroll("<span style='color:"+EcmaScriptShell.colWarning+";'>" + RS.escape(e.toString()) + "</span>");
                 //qDebug("error: ", e);
                 //qDebug("error: res:", res);
@@ -365,5 +365,5 @@ EcmaScriptShell.init = function(basePath) {
 };
 
 EcmaScriptShell.eval = function(expression) {
-    return RMainWindow.getMainWindow().eval("js", expression);
+    return RMainWindowQt.getMainWindow().eval("js", expression);
 }

@@ -88,7 +88,7 @@ Counter.prototype.pickCoordinate = function(event, preview) {
         var optionsToolBar = EAction.getOptionsToolBar();
         if (!isNull(optionsToolBar)) {
             var leStart = optionsToolBar.findChild("Start");
-            leStart.text = Number((this.start).toFixed(4));
+            leStart.text = (this.start).toFixed(4);
         }
     }
 };
