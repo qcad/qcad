@@ -362,19 +362,7 @@ SvgImporter.prototype.importFile = function(fileName) {
     }
 
     var handler = new SvgHandler(this);
-
-    if (RSettings.getQtVersion()<0x060000) {
-        parseXml(fileName, handler);
-    }
-    else {
-        var fi = new QFileInfo(fileName);
-        var file = new QFile(fi.absoluteFilePath());
-        var xmlReader = new QXmlSimpleReader();
-        var source = new QXmlInputSource(file);
-        xmlReader.setContentHandler(handler);
-        var ret = xmlReader.parse(source, false);
-        file.close();
-    }
+    parseXml(fileName, handler);
 
     /*
     var fi = new QFileInfo(fileName);
