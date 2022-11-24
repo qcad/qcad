@@ -67,7 +67,7 @@ AppPreferences.init = function(basePath) {
         action.setDefaultShortcut(new QKeySequence(QKeySequence.Preferences));
     }
     else {
-        action.setDefaultShortcut(new QKeySequence(Qt.ControlModifier + Qt.Key_Comma));
+        action.setDefaultShortcut(new QKeySequence("Ctrl+,"));
     }
     action.setDefaultCommands(["preferences"]);
     action.setRequiresDocument(false);
