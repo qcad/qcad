@@ -38,10 +38,23 @@ RDxfServices::RDxfServices() :
 
 }
 
+RDxfServices::~RDxfServices() {
+    if (codec) {
+#if QT_VERSION >= 0x060000
+        delete codec;
+#endif
+    }
+}
+
 void RDxfServices::reset() {
     version2LayerMapping.clear();
     version2BlockMapping.clear();
-    codec = NULL;
+    if (codec) {
+#if QT_VERSION >= 0x060000
+        delete codec;
+#endif
+        codec = NULL;
+    }
 }
 
 void RDxfServices::fixVersion2String(QString& str) const {

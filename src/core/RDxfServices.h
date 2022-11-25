@@ -56,6 +56,7 @@ public:
 
 public:
     RDxfServices();
+    ~RDxfServices();
 
     void reset();
 
