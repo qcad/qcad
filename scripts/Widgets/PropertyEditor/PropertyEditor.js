@@ -124,7 +124,13 @@ PropertyWatcher.prototype.propertyChanged = function(value) {
  * that match the current entity type filter.
  */
 PropertyWatcher.prototype.propertyRemoved = function() {
-    this.propertyEditor.propertyChanged(this.propertyType, null);
+    if (RSettings.getQtVersion() >= 0x060000) {
+        this.propertyEditor.propertyChanged(this.propertyType, new QVariant());
+    }
+    else {
+        this.propertyEditor.propertyChanged(this.propertyType, null);
+    }
+
     this.propertyEditor.onlyChangesOverride = false;
 };
 
@@ -838,7 +844,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
             addCustomPropertyButton.iconSize = new QSize(12,12);
             addCustomPropertyButton.toolTip = qsTr("Add custom property to selected objects");
             addCustomPropertyButton.objectName = "AddCustomProperty";
-            addCustomPropertyButton.clicked.connect(this, "addCustomProperty");
+            addCustomPropertyButton.clicked.connect(this, this.addCustomProperty);
             gridLayoutCustom.addWidget(addCustomPropertyButton, gridLayoutCustom.rowCount(),3, 1,1);
         }
     }
