@@ -90,7 +90,7 @@ ProgressBar.progress = function(value) {
     }
     else {
         if (!isNull(ProgressBar.progressBar)) {
-            if (!QCoreApplication.arguments().contains("-no-show")) {
+            if (!RSettings.getOriginalArguments().contains("-no-show")) {
                 ProgressBar.progressBar.visible = true;
             }
             ProgressBar.progressBar.value = value;
