@@ -800,13 +800,16 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
                 forceSaveIndex = true;
             }
             if (!isNull(value)) {
+                index = -1;
                 if (forceSaveIndex == true) {
                     index = value;
                 }
                 else if (forceSaveText == false && hasData) {
                     index = c.findData(value);
                 } else {
-                    index = c.findText(value);
+                    if (isString(value)) {
+                        index = c.findText(value);
+                    }
                 }
                 if (index !== -1) {
                     c.currentIndex = index;
