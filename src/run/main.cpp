@@ -368,7 +368,7 @@ int main(int argc, char *argv[]) {
     if (handler!=NULL) {
         // got a custom JS handler from a plugin:
         qWarning() << "using custom script handler from plugin";
-        handler->init(autostartFile, arguments.mid(i+1));
+        handler->autostart(autostartFile, arguments.mid(i+1));
         delete handler;
     }
     else {
@@ -380,7 +380,7 @@ int main(int argc, char *argv[]) {
 
         RScriptHandler* handler = RScriptHandlerRegistry::getGlobalScriptHandler("js");
         Q_ASSERT(handler!=NULL);
-        handler->init(autostartFile, arguments.mid(i+1));
+        handler->autostart(autostartFile, arguments.mid(i+1));
 
         if (handler->hasUncaughtExceptions()) {
             ret = 1;
