@@ -39,7 +39,7 @@ ProgressBar.postInit = function(basePath) {
     }
 
     var appWin = EAction.getMainWindow();
-    appWin.progressText.connect(self, this.setProgressText);
+    appWin.progressText.connect(this, this.setProgressText);
     appWin.progress.connect(this, this.progress);
     appWin.progressEnd.connect(this, this.progressEnd);
 };
