@@ -1,3 +1,6 @@
+#ifndef RSTORAGEBLOCKSORT_H
+#define RSTORAGEBLOCKSORT_H
+
 #include <QString>
 
 #include "RBlock.h"
@@ -11,3 +14,4 @@ public:
     const RStorage* storage;
 };
 
+#endif
