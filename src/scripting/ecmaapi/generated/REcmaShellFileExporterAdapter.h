@@ -83,6 +83,12 @@
         
     
     
+      void exportRay(
+                const RRay & arg1
+            );
+        
+    
+    
       void exportXLine(
                 const RXLine & arg1
             );
@@ -437,11 +443,6 @@
       double exportLine(
                 const RLine & line, double offset
         = RNANDOUBLE
-            );
-        
-    
-      void exportRay(
-                const RRay & ray
             );
         
     

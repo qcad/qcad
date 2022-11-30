@@ -3,6 +3,7 @@
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="QString" />
   <class_decl name="QScriptEngine" />
+  <class_decl name="RScriptHandler" />
   <class name="RPluginInterface"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="false"

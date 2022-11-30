@@ -53,6 +53,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, init, "init");
             
+            REcmaHelper::registerFunction(&engine, proto, autostart, "autostart");
+            
             REcmaHelper::registerFunction(&engine, proto, doScript, "doScript");
             
             REcmaHelper::registerFunction(&engine, proto, eval, "eval");
@@ -222,6 +224,50 @@
 
 
         
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RScriptHandler.init().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaScriptHandler::init", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaScriptHandler::autostart
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaScriptHandler::autostart", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaScriptHandler::autostart";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RScriptHandler* self = 
+                        getSelf("autostart", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->autostart();
+    } else
+
+
+        
     
     if( context->argumentCount() ==
     1 && (
@@ -244,7 +290,7 @@
     // call C++ function:
     // return type 'void'
     
-               self->init(a0);
+               self->autostart(a0);
     } else
 
 
@@ -283,7 +329,7 @@
     // call C++ function:
     // return type 'void'
     
-               self->init(a0
+               self->autostart(a0
         ,
     a1);
     } else
@@ -291,10 +337,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RScriptHandler.init().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RScriptHandler.autostart().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaScriptHandler::init", context, engine);
+            //REcmaHelper::functionEnd("REcmaScriptHandler::autostart", context, engine);
             return result;
         }
          QScriptValue

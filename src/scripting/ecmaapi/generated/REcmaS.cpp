@@ -95,6 +95,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, lessThanAlphanumerical, "lessThanAlphanumerical");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getFontFamily, "getFontFamily");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getPageSizeId, "getPageSizeId");
             
             REcmaHelper::registerFunction(&engine, &ctor, getPageSize, "getPageSize");
@@ -3601,6 +3603,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaS::lessThanAlphanumerical", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaS::getFontFamily
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaS::getFontFamily", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaS::getFontFamily";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QTextCharFormat */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    QTextCharFormat*
+                    ap0 =
+                    qscriptvalue_cast<
+                    QTextCharFormat*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RS: Argument 0 is not of type QTextCharFormat*.",
+                               context);                    
+                    }
+                    QTextCharFormat& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RS::
+       getFontFamily(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RS.getFontFamily().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaS::getFontFamily", context, engine);
             return result;
         }
          QScriptValue

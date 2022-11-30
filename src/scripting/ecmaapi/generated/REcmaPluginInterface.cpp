@@ -11,6 +11,8 @@
             
                 #include <QScriptEngine>
             
+                #include "RScriptHandler.h"
+            
             
         // includes for base ecma wrapper classes
          void REcmaPluginInterface::initEcma(QScriptEngine& engine, QScriptValue* proto 

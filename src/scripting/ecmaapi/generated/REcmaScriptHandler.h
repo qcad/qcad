@@ -52,6 +52,9 @@
         init
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        autostart
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         doScript
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

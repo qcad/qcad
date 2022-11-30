@@ -32,6 +32,7 @@
 <comment type="line">//#include &lt;QTextCodec&gt;</comment>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QVariant&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QTextCharFormat&gt;</cpp:file></cpp:include>
 
 <cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x060000</expr></cpp:if>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QScreen&gt;</cpp:file></cpp:include>
@@ -841,6 +842,22 @@
         <return>return <expr><name>set</name>.<call><name>toList</name><argument_list>()</argument_list></call></expr>;</return>
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
     }</block></function></template>
+
+    <function><type><name>static</name> <name>QString</name></type> <name>getFontFamily</name><parameter_list>(<param><decl><type><name>const</name> <name>QTextCharFormat</name>&amp;</type> <name>format</name></decl></param>)</parameter_list> <block>{
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x060000</expr></cpp:if>
+        <comment type="line">// note: QTextCharFormat::fontFamily is deprecated and broken in Qt 6:</comment>
+        <decl_stmt><decl><type><name>QVariant</name></type> <name>v</name> =<init> <expr><name>format</name>.<call><name>fontFamilies</name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>
+        <if>if <condition>(<expr><name>v</name>.<call><name>isValid</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <decl_stmt><decl><type><name>QStringList</name></type> <name>l</name> =<init> <expr><name>v</name>.<call><name>toStringList</name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>
+            <if>if <condition>(<expr>!<name>l</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+                <return>return <expr><name>l</name>.<call><name>first</name><argument_list>()</argument_list></call></expr>;</return>
+            }</block></then></if>
+        }</block></then></if>
+        <return>return <expr>""</expr>;</return>
+<cpp:else>#<cpp:directive>else</cpp:directive></cpp:else>
+        <return>return <expr><name>format</name>.<call><name>fontFamily</name><argument_list>()</argument_list></call></expr>;</return>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+    }</block></function>
 
     <function_decl><type><name>static</name> <name>int</name></type> <name>getPageSizeId</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>name</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QSizeF</name></type> <name>getPageSize</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>name</name></decl></param>)</parameter_list>;</function_decl>

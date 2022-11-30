@@ -626,6 +626,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="getFontFamily" cppName="getFontFamily"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="QTextCharFormat &amp;"
+        typeName="QTextCharFormat" name="format" isConst="true" />
+      </variant>
+    </method>
     <method name="getPageSizeId" cppName="getPageSizeId"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
