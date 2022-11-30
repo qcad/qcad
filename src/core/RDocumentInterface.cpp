@@ -181,6 +181,7 @@ RStorage& RDocumentInterface::getStorage() {
 RScriptHandler* RDocumentInterface::getScriptHandler(const QString& extension) {
     if (!scriptHandlers.contains(extension)) {
         scriptHandlers[extension] = RScriptHandlerRegistry::createScriptHandler(extension);
+        scriptHandlers[extension]->init();
     }
     return scriptHandlers[extension];
 }
