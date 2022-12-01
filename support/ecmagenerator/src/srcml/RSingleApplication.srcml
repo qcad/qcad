@@ -52,7 +52,11 @@
     <function_decl><type><name>void</name></type> <name>setActivationWindow</name><parameter_list>(<param><decl><type><name>QWidget</name>*</type> <name>aw</name></decl></param>, <param><decl><type><name>bool</name></type> <name>activateOnMessage</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>QWidget</name>*</type> <name>activationWindow</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
-<comment type="line">//    bool notify(QObject* receiver, QEvent* e);</comment>
+    <function_decl><type><name>bool</name></type> <name>notify</name><parameter_list>(<param><decl><type><name>QObject</name>*</type> <name>receiver</name></decl></param>, <param><decl><type><name>QEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function><type><name>void</name></type> <name>registerGlobalShortcut</name><parameter_list>(<param><decl><type><name>int</name></type> <name>key</name></decl></param>, <param><decl><type><name><name>Qt</name>::<name>KeyboardModifiers</name></name></type> <name>modifiers</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>globalShortcuts</name>.<call><name>append</name><argument_list>(<argument><expr><call><name>QPair<argument_list>&lt;<argument><name>int</name></argument>, <argument><name><name>Qt</name>::<name>KeyboardModifiers</name></name></argument>&gt;</argument_list></name><argument_list>(<argument><expr><name>key</name></expr></argument>, <argument><expr><name>modifiers</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
 
 </public><public>public slots:
     <function_decl><type><name>bool</name></type> <name>sendMessage</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>, <param><decl><type><name>int</name></type> <name>timeout</name> =<init> <expr>5000</expr></init></decl></param>)</parameter_list>;</function_decl>
@@ -61,6 +65,7 @@
 <label><name>signals</name>:</label>
     <function_decl><type><name>void</name></type> <name>messageReceived</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>fileOpenRequestReceived</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>globalShortcutPressed</name><parameter_list>(<param><decl><type><name>int</name></type> <name>key</name></decl></param>, <param><decl><type><name><name>Qt</name>::<name>KeyboardModifiers</name></name></type> <name>modifiers</name></decl></param>)</parameter_list>;</function_decl>
 
 </public><protected>protected:
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>event</name><parameter_list>(<param><decl><type><name>QEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>
@@ -72,6 +77,8 @@
     <decl_stmt><decl><type><name>QMutex</name></type> <name>mutexEvents</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QThread</name>*</type> <name>mutexEventsLocker</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RSingleApplication</name>*</type> <name>singleInstance</name></decl>;</decl_stmt>
+
+    <expr_stmt><expr><name>QList</name>&lt;<name>QPair</name>&lt;<name>int</name></expr>, <expr><name><name>Qt</name>::<name>KeyboardModifiers</name></name>&gt;&gt; <name>globalShortcuts</name></expr>;</expr_stmt>
 </private>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RSingleApplication*</argument>)</argument_list></macro>
