@@ -235,7 +235,7 @@ PageSettings.postInitPreferences = function(pageWidget, calledByPrefDialog, docu
         widgets["PaperSizeName"].currentIndex = idx;
     }
 
-    paperSizeNameCombo["currentIndexChanged(int)"].connect(PageSettings, "updatePaperSize");
+    paperSizeNameCombo["currentIndexChanged(int)"].connect(PageSettings, PageSettings.updatePaperSize);
 
     PageSettings.updatePaperSize(widgets["PaperSizeName"].currentIndex);
 

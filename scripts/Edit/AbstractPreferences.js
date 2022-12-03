@@ -58,11 +58,11 @@ AbstractPreferences.prototype.beginEvent = function() {
     splitter.setStretchFactor(1, 4);
     
     // connections:
-    this.treeWidget.itemSelectionChanged.connect(this, "showPage");
-    this.filterWidget.textChanged.connect(this, "filterTree");    
+    this.treeWidget.itemSelectionChanged.connect(this, this.showPage);
+    this.filterWidget.textChanged.connect(this, this.filterTree);
 
     var btApply = this.dialog.findChild("buttonBox").button(QDialogButtonBox.Apply);
-    btApply.clicked.connect(this, "apply");
+    btApply.clicked.connect(this, this.apply);
 
     this.addOns = AddOn.getAddOns();
 
@@ -179,12 +179,16 @@ AbstractPreferences.prototype.apply = function() {
     
     this.save();
 
-    for (var i = 0; i < this.addOns.length; ++i) {
+    for (var i=0; i<this.addOns.length; ++i) {
         var addOn = this.addOns[i];
         var className = addOn.getClassName();
         
         var widget = addOn.getPreferenceWidget();
-        if (isNull(widget) || widget.hasChanged !== true) {
+        if (isNull(widget)) {
+            continue;
+        }
+        var hasChanged = widget.property("hasChanged");
+        if (hasChanged !== true) {
             continue;
         }
 
@@ -257,7 +261,15 @@ AbstractPreferences.prototype.uninit = function() {
         var className = addOn.getClassName();
 
         var widget = addOn.getPreferenceWidget();
-        if (isNull(widget) || widget.hasChanged !== true) {
+
+        // break link from add on to preference widget (preference widget is deleted with dialog):
+        addOn.setPreferenceWidget(undefined);
+
+        if (isNull(widget)) {
+            continue;
+        }
+        var hasChanged = widget.property("hasChanged");
+        if (hasChanged !== true) {
             continue;
         }
 
@@ -292,6 +304,7 @@ AbstractPreferences.prototype.uninit = function() {
                      .arg(e.message).arg(e.fileName).arg(e.lineNumber));
             continue;
         }
+
     }
 };
 
@@ -351,7 +364,11 @@ AbstractPreferences.prototype.save = function() {
     for (var i = 0; i < this.addOns.length; ++i) {
         var addOn = this.addOns[i];
         var widget = addOn.getPreferenceWidget();
-        if (isNull(widget) || widget.hasChanged !== true) {
+        if (isNull(widget)) {
+            continue;
+        }
+        var hasChanged = widget.property("hasChanged");
+        if (hasChanged !== true) {
             continue;
         }
         var className = addOn.getClassName();
@@ -478,7 +495,11 @@ AbstractPreferences.prototype.showPage = function() {
     warningLabel.visible = false;
     if (!isNull(parent)) {
         if (parent.text(0).contains(qsTr("Defaults for"))) {
-            warningLabel.text = "<font color='red'>" +
+            var col = "red";
+            if (RSettings.hasDarkGuiBackground()) {
+                col = "#C00000";
+            }
+            warningLabel.text = "<font color='" + col + "'>" +
                     qsTr("These are default preferences for new drawings.") + "<br/>" +
                     qsTr("Changes will affect new drawings but NOT the current drawing.") + "<br/>" +
                     qsTr("Preferences of the current drawing can be changed under<br/><i>Edit &gt; Drawing Preferences</i>.") +
@@ -507,7 +528,10 @@ AbstractPreferences.prototype.showPage = function() {
             widget = this.createWidget(prefFile);
             this.pageWidget.addWidget(widget);
             addOn.setPreferenceWidget(widget);
+
+            // loads (initializes) the page:
             this.load(addOn);
+
             var treeWidget = this.treeWidget;
             widget.settingChangedEvent = function() {
                 // mark changed category in bold:
@@ -517,11 +541,11 @@ AbstractPreferences.prototype.showPage = function() {
             };
             var btReset = this.dialog.findChild("ResetToDefaults");
             try {
-                btReset.clicked.disconnect(this, "reset");
+                btReset.clicked.disconnect(this, this.reset);
             } catch (e) {
                 // ignored: signal might not be connected
             }
-            btReset.clicked.connect(this, "reset");
+            btReset.clicked.connect(this, this.reset);
         }
     } else {
         widget = this.pageWidget.findChild("empty");
@@ -531,7 +555,7 @@ AbstractPreferences.prototype.showPage = function() {
 };
 
 AbstractPreferences.prototype.showPageFor = function(className) {
-    var flags = new Qt.MatchFlags(Qt.MatchWildcard | Qt.MatchContains | Qt.MatchRecursive);
+    var flags = makeQtMatchFlags(Qt.MatchWildcard, Qt.MatchContains, Qt.MatchRecursive);
     var items = this.treeWidget.findItems("*", flags, 0);
     for (var i = 0; i < items.length; ++i) {
         var item = items[i];

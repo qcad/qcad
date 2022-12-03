@@ -54,12 +54,12 @@ TextPreferences.initPreferences = function(pageWidget, calledByPrefDialog, docum
 
     for (var row = 0; row<lReducedList.count; row++) {
         var item = lReducedList.item(row);
-        var flags = new Qt.ItemFlags(item.flags() | Qt.ItemIsUserCheckable);
+        var flags = makeQtItemFlags(item.flags(), Qt.ItemIsUserCheckable);
 
         // always check 'standard' and make it immutable:
         if (item.text().toLowerCase()==="standard") {
             item.setCheckState(Qt.Checked);
-            flags = new Qt.ItemFlags(item.flags() & ~(Qt.ItemIsUserCheckable | Qt.ItemIsEnabled));
+            flags = makeQtItemFlags(item.flags() & ~(Qt.ItemIsUserCheckable | Qt.ItemIsEnabled));
         }
         else if (list.contains(item.text())) {
             item.setCheckState(Qt.Checked);

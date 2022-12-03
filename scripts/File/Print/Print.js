@@ -1163,11 +1163,53 @@ Print.getPaperSizeMM = function(document) {
  * or QPrinter.
  */
 Print.getDefaultPaperSizeMM = function() {
-    var defaultPaperSizeMM = Print.getDefaultPrinter().paperSize(QPrinter.Millimeter);
+    var defaultPrinter = Print.getDefaultPrinter();
 
-    var dwMM = defaultPaperSizeMM.width();
-    var dhMM = defaultPaperSizeMM.height();
+    var dwMM;
+    var dhMM;
 
+    if (RSettings.getQtVersion() >= 0x060000) {
+        var defaultPaperSize = defaultPrinter.pageLayout().pageSize();
+
+        // paper size in appropriate unit:
+        var size = defaultPaperSize.definitionSize();
+        var wUnit = size.width();
+        var hUnit = size.height();
+
+        // unit of paper size:
+        var unit = defaultPaperSize.definitionUnits();
+
+        // convert unit to mm:
+        var factor = 1.0;
+        switch (unit) {
+        case QPageSize.Point:
+            factor = 72 / 25.4;
+            break;
+        case QPageSize.Inch:
+            factor = 25.4;
+            break;
+        case QPageSize.Pica:
+            factor = 6 / 25.4;
+            break;
+        case QPageSize.Didot:
+            factor = 1 / 0.365;
+            break;
+        case QPageSize.Cicero:
+            factor = 1 / 4.5;
+            break;
+        default:
+        case QPageSize.Millimeter:
+            factor = 1.0;
+            break;
+        }
+        dwMM = wUnit * factor;
+        dhMM = hUnit * factor;
+    }
+    else {
+        var defaultPaperSizeMM = defaultPrinter.paperSize(QPrinter.Millimeter);
+        dwMM = defaultPaperSizeMM.width();
+        dhMM = defaultPaperSizeMM.height();
+    }
     // get w / h in paper unit from settings:
     var dw = RUnit.convert(dwMM, RS.Millimeter, Print.getDefaultPaperUnit());
     var dh = RUnit.convert(dhMM, RS.Millimeter, Print.getDefaultPaperUnit());

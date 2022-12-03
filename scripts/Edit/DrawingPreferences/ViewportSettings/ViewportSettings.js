@@ -37,8 +37,8 @@ ViewportSettings.initPreferences = function(pageWidget, calledByPrefDialog, docu
 
     vpList.clear();
     var dir = new QDir(ViewportWidget.templateDir);
-    var filters = new QDir.Filters(QDir.Files, QDir.NoDotAndDotDot, QDir.Readable);
-    var sortFlags = new QDir.SortFlags(QDir.Name);
+    var filters = makeQDirFilters(QDir.Files, QDir.NoDotAndDotDot, QDir.Readable);
+    var sortFlags = makeQDirSortFlags(QDir.Name);
     var eil = dir.entryInfoList(new Array("*.ui"), filters, sortFlags);
     var defaultRow = -1;
     for ( var j = 0; j < eil.length; ++j) {
@@ -65,7 +65,10 @@ ViewportSettings.initPreferences = function(pageWidget, calledByPrefDialog, docu
 
 ViewportSettings.updatePreview = function(previewWidget, item) {
     var chs = previewWidget.children();
-    for (i = 0; i < chs.length; ++i) {
+    for (var i=0; i<chs.length; ++i) {
+        if (isNull(chs[i])) {
+            continue;
+        }
         destr(chs[i]);
     }
     var fileName = item.data(Qt.UserRole);
@@ -91,7 +94,7 @@ ViewportSettings.applyPreferences = function(doc) {
 //    var chs = mdiChild.children();
 //    for ( var i = 0; i < chs.length; ++i) {
 //        var child = chs[i];
-//        child.destroy();
+//        destr(child);
 //    }
     
     var uiFileName = doc.getVariable("Viewport/ViewportList.data");
