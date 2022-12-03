@@ -635,6 +635,9 @@ QSizeF RS::getPageSize(const QString& name) {
         return QSizeF(297, 420);
     }
     else if (name=="ISO A4" || name=="A4") {
+        return QSizeF(210, 297);
+    }
+    else if (name=="ISO A5" || name=="A5") {
         return QSizeF(148, 210);
     }
     else if (name=="ISO A6" || name=="A6") {
