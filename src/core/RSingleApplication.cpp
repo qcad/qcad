@@ -132,26 +132,16 @@ bool RSingleApplication::event(QEvent* e) {
 }
 
 bool RSingleApplication::notify(QObject* receiver, QEvent* e) {
-    //qDebug() << "RSingleApplication::notify:" << receiver->objectName();
-
     if (e->type() == QEvent::KeyPress) {
         QKeyEvent* keyEvent = static_cast<QKeyEvent*>(e);
 
         for (int i=0; i<globalShortcuts.length(); i++) {
             if (keyEvent->key() == globalShortcuts[i].first && keyEvent->modifiers() == globalShortcuts[i].second) {
-                qDebug() << "global shortcut pressed";
                 emit globalShortcutPressed(keyEvent->key(), keyEvent->modifiers());
+                e->accept();
+                return true;
             }
         }
-
-//        if (keyEvent->key() == Qt::Key_Slash && keyEvent->modifiers() == Qt::ControlModifier) {
-//            qDebug() << "RSingleApplication::notify: Slash";
-//        }
     }
-
-//    qDebug() << "type:" << e->type();
-
-//    RDebug::printBacktrace();
-
-    QApplication::notify(receiver, e);
+    return QApplication::notify(receiver, e);
 }
