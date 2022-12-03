@@ -992,8 +992,8 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
 
             if (!reset) {
                 WidgetFactory.connect(c.itemChanged, signalReceiver, c.objectName);
-                c.itemSelectionChanged.connect(WidgetFactory.topLevelWidget, "slotSettingChanged");
-                c.model().rowsInserted.connect(WidgetFactory.topLevelWidget, "slotSettingChanged");
+                c.itemSelectionChanged.connect(WidgetFactory.topLevelWidget, WidgetFactory.topLevelWidget.slotSettingChanged);
+                c.model().rowsInserted.connect(WidgetFactory.topLevelWidget, WidgetFactory.topLevelWidget.slotSettingChanged);
             }
             
             continue;
@@ -1001,7 +1001,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
         if (isOfType(c, RFontChooserWidget)) {
             if (!reset) {
                 WidgetFactory.connect(c.valueChanged, signalReceiver, c.objectName);
-                c.valueChanged.connect(WidgetFactory.topLevelWidget, "slotSettingChanged");
+                c.valueChanged.connect(WidgetFactory.topLevelWidget, WidgetFactory.topLevelWidget.slotSettingChanged);
             }
             if (isNull(c.property("defaultValue"))) {
                 c.setProperty("defaultValue", c.getChosenFont());
