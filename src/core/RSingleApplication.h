@@ -51,7 +51,11 @@ public:
     void setActivationWindow(QWidget* aw, bool activateOnMessage = true);
     QWidget* activationWindow() const;
 
-//    bool notify(QObject* receiver, QEvent* e);
+    bool notify(QObject* receiver, QEvent* e);
+
+    void registerGlobalShortcut(int key, Qt::KeyboardModifiers modifiers) {
+        globalShortcuts.append(QPair<int, Qt::KeyboardModifiers>(key, modifiers));
+    }
 
 public slots:
     bool sendMessage(const QString& message, int timeout = 5000);
@@ -60,6 +64,7 @@ public slots:
 signals:
     void messageReceived(const QString& message);
     void fileOpenRequestReceived(const QString& fileName);
+    void globalShortcutPressed(int key, Qt::KeyboardModifiers modifiers);
 
 protected:
     virtual bool event(QEvent* e);
@@ -71,6 +76,8 @@ private:
     QMutex mutexEvents;
     QThread* mutexEventsLocker;
     static RSingleApplication* singleInstance;
+
+    QList<QPair<int, Qt::KeyboardModifiers>> globalShortcuts;
 };
 
 Q_DECLARE_METATYPE(RSingleApplication*)
