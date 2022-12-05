@@ -6,11 +6,15 @@ include(../../CMakeInclude.txt)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
+find_package(${QT_VER} REQUIRED COMPONENTS Core Gui Widgets)
 qt_standard_project_setup()
 
-qt_add_library(qcadspatialindex
+IF(WIN32)
+    SET(RC spatialindex.rc)
+ENDIF()
+add_library(qcadspatialindex SHARED
     RSpatialIndexNavel.cpp RSpatialIndexNavel.h
+    ${RC}
 )
 target_include_directories(qcadspatialindex PUBLIC
     ../../src/3rdparty
@@ -25,13 +29,10 @@ target_compile_definitions(qcadspatialindex PUBLIC
     QCAD_DLL
 )
 
-set_target_properties(qcadspatialindex PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../debug)
-
 target_link_libraries(qcadspatialindex PUBLIC
     Qt::Core
     Qt::Gui
     Qt::Widgets
-    -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug
     qcadcore
     spatialindexnavel
 )

@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.16)
+project(qtbindings VERSION 1.0 LANGUAGES CXX)
+
+include(../../../../CMakeInclude.txt)
+
+add_subdirectory(qtscript_core)
+add_subdirectory(qtscript_gui)
+add_subdirectory(qtscript_widgets)
+add_subdirectory(qtscript_printsupport)
+add_subdirectory(qtscript_network)
+add_subdirectory(qtscript_opengl)
+add_subdirectory(qtscript_sql)
+add_subdirectory(qtscript_uitools)
+add_subdirectory(qtscript_xml)
+add_subdirectory(qtscript_xmlpatterns)

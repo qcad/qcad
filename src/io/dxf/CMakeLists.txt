@@ -4,15 +4,25 @@ project(qcaddxf VERSION 1.0 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Core Widgets Concurrent Gui Network OpenGL Sql Svg Xml PrintSupport Qml)
+find_package(${QT_VER} REQUIRED COMPONENTS Core Widgets Concurrent Gui Network OpenGL Sql Svg Xml PrintSupport Qml)
+
+SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ${LIBRARY_OUTPUT_PATH}/Debug/plugins)
+SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE ${LIBRARY_OUTPUT_PATH}/Release/plugins)
+SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY_MINSIZEREL ${LIBRARY_OUTPUT_PATH}/MinSizeRel/plugins)
+SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELWITHDEBINFO ${LIBRARY_OUTPUT_PATH}/RelWithDebInfo/plugins)
 qt_standard_project_setup()
 
-qt_add_library(qcaddxf
+IF(WIN32)
+    SET(RC dxf.rc)
+ENDIF()
+
+add_library(qcaddxf SHARED
     RDxfExporter.cpp RDxfExporter.h
     RDxfExporterFactory.cpp RDxfExporterFactory.h
     RDxfImporter.cpp RDxfImporter.h
     RDxfImporterFactory.cpp RDxfImporterFactory.h
     RDxfPlugin.cpp RDxfPlugin.h
+    ${RC}
 )
 
 target_include_directories(qcaddxf PRIVATE
@@ -29,8 +39,6 @@ target_compile_definitions(qcaddxf PRIVATE
     QCAD_DLL
 )
 
-set_target_properties(qcaddxf PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../../plugins)
-
 target_link_libraries(qcaddxf PRIVATE
     Qt::Core
     Qt::Gui
@@ -40,7 +48,6 @@ target_link_libraries(qcaddxf PRIVATE
     Qt::Sql
     Qt::Svg
     Qt::Xml
-    -L${CMAKE_CURRENT_SOURCE_DIR}/../../../debug
     qcadcore
     qcadentity
     qcadoperations

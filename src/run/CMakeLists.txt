@@ -6,11 +6,15 @@ include(../../CMakeInclude.txt)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Core Widgets Concurrent Gui Network OpenGL Sql Svg Xml PrintSupport Qml)
+find_package(${QT_VER} REQUIRED COMPONENTS Core Widgets Concurrent Gui Network OpenGL Sql Svg Xml PrintSupport Qml)
 qt_standard_project_setup()
 
-qt_add_executable(QCAD WIN32 MACOSX_BUNDLE
-    main.cpp
+IF(WIN32)
+SET(RC qcad.rc)
+ENDIF()
+
+add_executable(QCAD WIN32 MACOSX_BUNDLE
+    main.cpp ${RC}
 )
 target_include_directories(QCAD PRIVATE
     ../../src/3rdparty
@@ -35,8 +39,6 @@ target_compile_definitions(QCAD PRIVATE
     QCAD_DLL
 )
 
-set_target_properties(QCAD PROPERTIES RUNTIME_OUTPUT_DIRECTORY ../../debug)
-
 target_link_libraries(QCAD PRIVATE
     # Remove: L${CMAKE_CURRENT_SOURCE_DIR}/
     Qt::Core
@@ -49,7 +51,6 @@ target_link_libraries(QCAD PRIVATE
     Qt::Xml
     Qt::Qml
     Qt::PrintSupport
-    -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug
     qcadcore
     qcadentity
     qcadgui
@@ -62,8 +63,13 @@ target_link_libraries(QCAD PRIVATE
     stemmer
 )
 
+IF(NOT BUILD_QT6)
+target_link_libraries(QCAD PRIVATE qcadecmaapi) 
+ENDIF()
+
+
 if(APPLE)
-    target_sources(QCAD PUBLIC
+    target_sources(QCAD PRIVATE
         removemacmenus.h removemacmenus.mm
     )
 
@@ -95,7 +101,6 @@ endif()
 
 if(NOT r_no_opennurbs)
     target_link_libraries(QCAD PRIVATE
-        -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug
         zlib
         opennurbs
     )

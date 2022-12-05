@@ -6,10 +6,14 @@ include(../../CMakeInclude.txt)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Core Widgets Concurrent Gui Network OpenGL Sql Svg Xml PrintSupport Qml)
+find_package(${QT_VER} REQUIRED COMPONENTS Core Widgets Concurrent Gui Network OpenGL Sql Svg Xml PrintSupport Qml)
 qt_standard_project_setup()
 
-qt_add_library(qcadentity
+IF(WIN32)
+    SET(RC entity.rc)
+ENDIF()
+
+add_library(qcadentity SHARED
     RArcData.cpp RArcData.h
     RArcEntity.cpp RArcEntity.h
     RAttributeData.cpp RAttributeData.h
@@ -72,6 +76,7 @@ qt_add_library(qcadentity
     RTraceEntity.cpp RTraceEntity.h
     RXLineData.cpp RXLineData.h
     RXLineEntity.cpp RXLineEntity.h
+    ${RC}
 )
 
 target_include_directories(qcadentity PUBLIC
@@ -81,12 +86,10 @@ target_include_directories(qcadentity PUBLIC
     ../../src/entity
 )
 
-target_compile_definitions(qcadentity PUBLIC
+target_compile_definitions(qcadentity PRIVATE
     QCADENTITY_LIBRARY
     QCAD_DLL
 )
-
-set_target_properties(qcadentity PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../debug)
 
 target_link_libraries(qcadentity PUBLIC
     Qt::Core
@@ -98,13 +101,12 @@ target_link_libraries(qcadentity PUBLIC
     Qt::Sql
     Qt::Svg
     Qt::Xml
-    -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug
     qcadcore
     opennurbs
 )
 
 if(win32-msvc2010)
-    target_compile_definitions(qcadentity PUBLIC
+    target_compile_definitions(qcadentity PRIVATE
         _CRT_SECURE_NO_WARNINGS
     )
 endif()

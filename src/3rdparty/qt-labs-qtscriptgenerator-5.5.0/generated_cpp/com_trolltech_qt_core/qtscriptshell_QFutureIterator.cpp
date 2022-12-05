@@ -7,7 +7,6 @@
 
 
 QtScriptShell_QFutureIterator::QtScriptShell_QFutureIterator()
-    : QtScriptFutureIterator() {}
+    : QtScriptFutureIterator({}) {}
 
 QtScriptShell_QFutureIterator::~QtScriptShell_QFutureIterator() {}
-

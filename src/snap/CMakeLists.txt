@@ -6,10 +6,12 @@ include(../../CMakeInclude.txt)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Core Widgets Concurrent Gui Network OpenGL Sql Svg Xml PrintSupport Qml)
+find_package(${QT_VER} REQUIRED COMPONENTS Core Widgets Concurrent Gui Network OpenGL Sql Svg Xml PrintSupport Qml)
 qt_standard_project_setup()
-
-qt_add_library(qcadsnap
+IF(WIN32)
+    SET(RC snap.rc)
+ENDIF()
+add_library(qcadsnap SHARED
     RRestrictAngleLength.cpp RRestrictAngleLength.h
     RRestrictHorizontal.cpp RRestrictHorizontal.h
     RRestrictOff.cpp RRestrictOff.h
@@ -28,6 +30,7 @@ qt_add_library(qcadsnap
     RSnapPerpendicular.cpp RSnapPerpendicular.h
     RSnapReference.cpp RSnapReference.h
     RSnapTangential.cpp RSnapTangential.h
+    ${RC}
 )
 
 target_include_directories(qcadsnap PUBLIC
@@ -39,12 +42,10 @@ target_include_directories(qcadsnap PUBLIC
     ../../src/grid
 )
 
-target_compile_definitions(qcadsnap PUBLIC
+target_compile_definitions(qcadsnap PRIVATE
     QCADSNAP_LIBRARY
     QCAD_DLL
 )
-
-set_target_properties(qcadsnap PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../debug)
 
 target_link_libraries(qcadsnap PUBLIC
     Qt::Core
@@ -55,7 +56,6 @@ target_link_libraries(qcadsnap PUBLIC
     Qt::Sql
     Qt::Svg
     Qt::Xml
-    -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug
     qcadcore
     qcadentity
     qcadgrid

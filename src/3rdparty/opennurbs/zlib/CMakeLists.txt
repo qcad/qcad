@@ -18,10 +18,8 @@ add_library(zlib
     zutil.c zutil.h
 )
 
-set_target_properties(zlib PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ../../../../debug)
-
 if(CMAKE_BUILD_TYPE STREQUAL Release)
-    target_compile_definitions(zlib PUBLIC
+    target_compile_definitions(zlib PRIVATE
         NDEBUG
     )
 endif()

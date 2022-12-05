@@ -6,11 +6,16 @@ include(../../CMakeInclude.txt)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Core)
+find_package(${QT_VER} REQUIRED COMPONENTS Core)
 qt_standard_project_setup()
 
-qt_add_library(qcadstemmer
+IF(WIN32)
+    SET(RC stemmer.rc)
+ENDIF()
+
+add_library(qcadstemmer SHARED
     RStemmer.cpp RStemmer.h
+    ${RC}
 )
 
 target_include_directories(qcadstemmer PRIVATE
@@ -26,11 +31,8 @@ target_compile_definitions(qcadstemmer PRIVATE
     QCAD_DLL
 )
 
-set_target_properties(qcadstemmer PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../debug)
-
 target_link_libraries(qcadstemmer PRIVATE
     Qt::Core
-    -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug
     stemmer
 )
 
