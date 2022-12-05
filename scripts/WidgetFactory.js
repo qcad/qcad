@@ -268,12 +268,12 @@ WidgetFactory.saveState = function(widget, group, document, map) {
 
         // ignore widgets that have been saved elsewhere (e.g. plugins might
         // save widgets contents by themselves in savePreferences):
-        if (typeof(c["Saved"]) != "undefined" && c["Saved"]===true) {
+        if (typeof(c.property("Saved")) != "undefined" && c.property("Saved")===true) {
             continue;
         }
 
         // skip children from other groups in this widget (for options toolbar):
-        if (typeof(c["SettingsGroup"]) != "undefined" && c["SettingsGroup"] != group) {
+        if (typeof(c.property("SettingsGroup")) != "undefined" && c.property("SettingsGroup") != group) {
             if (isNull(map)) {
                 continue;
             }
@@ -317,12 +317,12 @@ WidgetFactory.saveState = function(widget, group, document, map) {
         else if (isOfType(c, QComboBox) || isOfType(c, QFontComboBox)) {
             var forceSaveText = false;
             var forceSaveIndex = false;
-            if (typeof(c["ForceSaveText"]) != "undefined"
-                    && c["ForceSaveText"] === true) {
+            if (typeof(c.property("ForceSaveText")) != "undefined"
+                    && c.property("ForceSaveText") === true) {
                 forceSaveText = true;
             }
-            if (typeof(c["ForceSaveIndex"]) != "undefined"
-                    && c["ForceSaveIndex"] === true) {
+            if (typeof(c.property("ForceSaveIndex")) != "undefined"
+                    && c.property("ForceSaveIndex") === true) {
                 forceSaveIndex = true;
             }
             if (forceSaveIndex == true) {
@@ -387,23 +387,23 @@ WidgetFactory.saveState = function(widget, group, document, map) {
         }
 
         // save property
-        if (typeof(c["SaveProperty"]) != "undefined") {
-            var prop = c["SaveProperty"];
+        if (typeof(c.property("SaveProperty")) != "undefined") {
+            var prop = c.property("SaveProperty");
             RSettings.setValue(key + "." + prop, c[prop]);
         }
 
         // widgets with dynamic property "RequiresRestart" trigger a
         // restart application warning after changing preferences:
-        if (typeof(c["RequiresRestart"]) != "undefined"
-            && c["RequiresRestart"] === true) {
+        if (typeof(c.property("RequiresRestart")) != "undefined"
+            && c.property("RequiresRestart") === true) {
             WidgetFactory.requiresRestart = true;
         }
 
         // widgets can be ignored by setting the dynamic property
         // "SaveContents" = false
         var saveContents = true;
-        if (typeof(c["SaveContents"]) != "undefined"
-                && c["SaveContents"] === false) {
+        if (typeof(c.property("SaveContents")) != "undefined"
+                && c.property("SaveContents") === false) {
             saveContents = false;
         }
 
@@ -462,7 +462,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
     }
 
     // Qt5: QWebView has no scriptable children method:
-    if (!isFunction(widget["children"])) {
+    if (!isFunction(widget.children)) {
         return;
     }
 
@@ -491,7 +491,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
 
         // skip children from other groups in this widget (for options toolbar):
         // but not if used from a test [map != undefined]
-        if (isNull(map) && typeof (c["SettingsGroup"]) != "undefined" && c["SettingsGroup"] !== group) {
+        if (isNull(map) && typeof (c.property("SettingsGroup")) != "undefined" && c.property("SettingsGroup") !== group) {
             continue;
         }
 
@@ -502,7 +502,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
 
         // handle widgets which have their own reset method
         var hasOwnReset = false;
-        if (typeof(c["hasOwnReset"]) != "undefined" && c["hasOwnReset"] == true) {
+        if (typeof(c.property("hasOwnReset")) != "undefined" && c.property("hasOwnReset") == true) {
             hasOwnReset = true;
         }
         if (reset && hasOwnReset) {
@@ -514,7 +514,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
         
         var key = WidgetFactory.getKeyString(group, c);
         var value = undefined;
-        if (reset && !isNull(c.property("defaultValue")) && (typeof(c["SettingsGroup"])=="undefined" || c["SettingsGroup"]===group)) {
+        if (reset && !isNull(c.property("defaultValue")) && (typeof(c.property("SettingsGroup"))=="undefined" || c.property("SettingsGroup")===group)) {
             value = c.property("defaultValue");
         } else {
             if (!isNull(map)) {
@@ -551,8 +551,8 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
         }
 
         // restore property
-        if (typeof(c["SaveProperty"]) != "undefined") {
-            var prop = c["SaveProperty"];
+        if (typeof(c.property("SaveProperty")) != "undefined") {
+            var prop = c.property("SaveProperty");
             var val = RSettings.getValue(key + "." + prop);
             if (!isNull(val)) {
                 c[prop] = val;
@@ -772,12 +772,14 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
                 WidgetFactory.connect(c['currentIndexChanged(int)'], WidgetFactory.topLevelWidget, "Setting");
             }
             hasData = false;
-            if (c.itemData(c.currentIndex)!=undefined) {
+            if (c.itemData(c.currentIndex)!=undefined || (c.count>0 && c.itemData(0)!=undefined)) {
                 hasData = true;
             }
             if (isNull(c.property("defaultValue"))) {
                 if (hasData) {
-                    c.setProperty("defaultValue", c.itemData(c.currentIndex));
+                    if (c.currentIndex>=0 && c.currentIndex<c.count) {
+                        c.setProperty("defaultValue", c.itemData(c.currentIndex));
+                    }
                 } else {
                     c.setProperty("defaultValue", c.currentText);
                 }
@@ -790,12 +792,12 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             }
             var forceSaveText = false;
             var forceSaveIndex = false;
-            if (typeof(c["ForceSaveText"]) != "undefined"
-                    && c["ForceSaveText"] == true) {
+            if (typeof(c.property("ForceSaveText")) != "undefined"
+                    && c.property("ForceSaveText") == true) {
                 forceSaveText = true;
             }
-            if (typeof(c["ForceSaveIndex"]) != "undefined"
-                    && c["ForceSaveIndex"] == true) {
+            if (typeof(c.property("ForceSaveIndex")) != "undefined"
+                    && c.property("ForceSaveIndex") == true) {
                 forceSaveIndex = true;
             }
             if (!isNull(value)) {
@@ -926,8 +928,8 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             // if the list contents should not be saved to
             // the configuration file or document:
             var saveContents = true;
-            if (typeof(c["SaveContents"]) != "undefined"
-                    && c["SaveContents"] == false) {
+            if (typeof(c.property("SaveContents")) != "undefined"
+                    && c.property("SaveContents") == false) {
                 saveContents = false;
             }
 
