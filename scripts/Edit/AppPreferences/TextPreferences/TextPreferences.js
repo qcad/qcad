@@ -43,8 +43,15 @@ TextPreferences.initPreferences = function(pageWidget, calledByPrefDialog, docum
     lReducedList.addItems(cadList);
 
     // add system fonts to list:
-    var fontDb = new RFontDatabase();
-    var families = fontDb.families();
+    var families;
+    if (RSettings.getQtVersion() >= 0x060000) {
+        families = QFontDatabase.families();
+    }
+    else {
+        var fontDb = new RFontDatabase();
+        families = fontDb.families();
+    }
+
     lReducedList.addItems(families);
 
     var list = RSettings.getValue("Text/ReducedFontList", []);
