@@ -62,7 +62,13 @@ InputPreferences.initPreferences = function(pageWidget, calledByPrefDialog, docu
     combo['currentIndexChanged(int)'].connect(InputPreferences, InputPreferences.updatePreview);
 
     var locale = QLocale.system();
-    var dot = String.fromCharCode(locale.decimalPoint());
+    var dot;
+    if (RSettings.getQtVersion() >= 0x060000) {
+        dot = locale.decimalPoint();
+    }
+    else {
+        dot = String.fromCharCode(locale.decimalPoint());
+    }
     decimalPointCombo.currentIndex = decimalPointCombo.findData(dot);
 
     InputPreferences.updatePreview();
