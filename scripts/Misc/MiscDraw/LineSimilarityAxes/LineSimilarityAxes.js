@@ -37,5 +37,5 @@ LineSimilarityAxes.prototype.getShapes = function(preview) {
         return undefined;
     }
 
-    return Apollonius.getSimilarityAxes(this.shape1.data(), this.shape2.data(), this.shape3.data());
+    return Apollonius.getSimilarityAxes(getPtr(this.shape1), getPtr(this.shape2), getPtr(this.shape3));
 };

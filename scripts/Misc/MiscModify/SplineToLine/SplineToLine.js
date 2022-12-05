@@ -54,7 +54,7 @@ SplineToLine.prototype.beginEvent = function() {
             var line = ShapeAlgorithms.splineToLineOrArc(shape, 0.01, true);
             if (isLineShape(line)) {
                 var newEntity = shapeToEntity(document, line);
-                newEntity.copyAttributesFrom(entity.data());
+                newEntity.copyAttributesFrom(getPtr(entity));
 
                 op.deleteObject(entity.clone());
                 op.addObject(newEntity);

@@ -222,6 +222,10 @@ public:
         return RPolyline::relocateStartPoint(p);
     }
 
+    bool relocateStartPoint(double dist) {
+        return RPolyline::relocateStartPoint(dist);
+    }
+
     void setClosed(bool on) {
         RPolyline::setClosed(on);
     }

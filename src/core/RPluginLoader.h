@@ -64,6 +64,9 @@ public:
      * \nonscriptable
      */
     static void initScriptExtensions(QObject* plugin, QScriptEngine& engine);
+#else
+    static void initScriptExtensions(RScriptHandler& handler);
+    static void initScriptExtensions(QObject* plugin, RScriptHandler& handler);
 #endif
 
     static void initTranslations();

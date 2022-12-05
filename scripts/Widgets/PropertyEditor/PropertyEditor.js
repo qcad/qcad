@@ -79,7 +79,7 @@ PropertyWatcher.prototype.propertyChanged = function(value) {
     }
 
     // value is string from a line edit (e.g. text contents):
-    else if (this.sender.toString()==="QLineEdit") {
+    else if (isOfType(this.sender, QLineEdit)) {
         value = this.sender.text;
         if (value===PropertyEditor.varies) {
             return;
@@ -87,7 +87,7 @@ PropertyWatcher.prototype.propertyChanged = function(value) {
     }
 
     // value is number from a math line edit:
-    else if (this.sender.toString().startsWith("RMathLineEdit")) {
+    else if (isOfType(this.sender, RMathLineEdit)) {
         if (this.sender.text===this.sender.originalText) {
             return;
         }
@@ -103,7 +103,7 @@ PropertyWatcher.prototype.propertyChanged = function(value) {
     }
 
     // value is number from a math combo box:
-    else if (this.sender.toString().startsWith("RMathComboBox")) {
+    else if (isOfType(this.sender, RMathComboBox)) {
         if (this.sender.currentText===this.sender.originalText) {
             return;
         }
@@ -124,7 +124,13 @@ PropertyWatcher.prototype.propertyChanged = function(value) {
  * that match the current entity type filter.
  */
 PropertyWatcher.prototype.propertyRemoved = function() {
-    this.propertyEditor.propertyChanged(this.propertyType, null);
+    if (RSettings.getQtVersion() >= 0x060000) {
+        this.propertyEditor.propertyChanged(this.propertyType, new QVariant());
+    }
+    else {
+        this.propertyEditor.propertyChanged(this.propertyType, null);
+    }
+
     this.propertyEditor.onlyChangesOverride = false;
 };
 
@@ -838,7 +844,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
             addCustomPropertyButton.iconSize = new QSize(12,12);
             addCustomPropertyButton.toolTip = qsTr("Add custom property to selected objects");
             addCustomPropertyButton.objectName = "AddCustomProperty";
-            addCustomPropertyButton.clicked.connect(this, "addCustomProperty");
+            addCustomPropertyButton.clicked.connect(this, this.addCustomProperty);
             gridLayoutCustom.addWidget(addCustomPropertyButton, gridLayoutCustom.rowCount(),3, 1,1);
         }
     }

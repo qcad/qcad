@@ -23,6 +23,10 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
 
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x060000</expr></cpp:if>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QStringDecoder&gt;</cpp:file></cpp:include>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"dxf_global.h"</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QColor&gt;</cpp:file></cpp:include>
@@ -53,6 +57,7 @@
 
 </public><public>public:
     <constructor_decl><name>RDxfServices</name><parameter_list>()</parameter_list>;</constructor_decl>
+    <destructor_decl><name>~RDxfServices</name><parameter_list>()</parameter_list>;</destructor_decl>
 
     <function_decl><type><name>void</name></type> <name>reset</name><parameter_list>()</parameter_list>;</function_decl>
 

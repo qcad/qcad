@@ -114,6 +114,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, exportTriangle, "exportTriangle");
             
+            REcmaHelper::registerFunction(&engine, proto, exportRay, "exportRay");
+            
             REcmaHelper::registerFunction(&engine, proto, exportXLine, "exportXLine");
             
             REcmaHelper::registerFunction(&engine, proto, getLineTypePatternScale, "getLineTypePatternScale");
@@ -1086,6 +1088,73 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaFileExporterAdapter::exportTriangle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaFileExporterAdapter::exportRay
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaFileExporterAdapter::exportRay", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaFileExporterAdapter::exportRay";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RFileExporterAdapter* self = 
+                        getSelf("exportRay", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RRay */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RRay*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RRay*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RFileExporterAdapter: Argument 0 is not of type RRay.",
+                               context);                    
+                    }
+                    RRay 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->exportRay(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RFileExporterAdapter.exportRay().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaFileExporterAdapter::exportRay", context, engine);
             return result;
         }
          QScriptValue

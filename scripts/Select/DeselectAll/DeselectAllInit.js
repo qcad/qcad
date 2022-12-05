@@ -6,9 +6,9 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("DeselectAll", "Deselect all entities"));
     action.setDefaultShortcuts([
         new QKeySequence("t,n"),
-        new QKeySequence(Qt.ControlModifier + Qt.Key_K),
-        new QKeySequence(Qt.ControlModifier + Qt.Key_D),
-        new QKeySequence(Qt.ControlModifier + Qt.ShiftModifier + Qt.Key_A)
+        new QKeySequence("Ctrl+K"),
+        new QKeySequence("Ctrl+D"),
+        new QKeySequence("Ctrl+Shift+A")
     ]);
     action.setDefaultCommands(["deselectall", "tn"]);
     action.setNoState();

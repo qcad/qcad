@@ -3,8 +3,8 @@ function init(basePath) {
     action.setScriptFile(basePath + "/CommandLineFocus.js");
     action.setDefaultShortcuts(
                 [
-                    new QKeySequence(Qt.Key_Space.valueOf()),
-                    new QKeySequence(Qt.ControlModifier + Qt.Key_M),
+                    new QKeySequence(" "),
+                    new QKeySequence("Ctrl+M"),
                 ]);
     action.setNoState();
     action.checkable = false;

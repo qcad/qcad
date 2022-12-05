@@ -258,6 +258,27 @@ void RPluginLoader::initScriptExtensions(QObject* plugin, QScriptEngine& engine)
         p->initScriptExtensions(engine);
     }
 }
+#else
+void RPluginLoader::initScriptExtensions(RScriptHandler& handler) {
+    foreach (QString fileName, getPluginFiles()) {
+        QPluginLoader loader(fileName);
+        QObject* plugin = loader.instance();
+        initScriptExtensions(plugin, handler);
+    }
+
+    QObjectList staticPlugins = QPluginLoader::staticInstances();
+    for (int i=0; i<staticPlugins.size(); i++) {
+        QObject* plugin = staticPlugins[i];
+        initScriptExtensions(plugin, handler);
+    }
+}
+
+void RPluginLoader::initScriptExtensions(QObject* plugin, RScriptHandler& handler) {
+    RPluginInterface* p = qobject_cast<RPluginInterface*>(plugin);
+    if (p) {
+        p->initScriptExtensions(handler);
+    }
+}
 #endif
 
 void RPluginLoader::initTranslations() {

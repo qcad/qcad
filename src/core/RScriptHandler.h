@@ -64,7 +64,9 @@ public:
      */
     virtual QList<QString> getSupportedFileExtensions() = 0;
 
-    virtual void init(const QString& autostartFile = RDEFAULT_QSTRING, const QStringList& arguments = RDEFAULT_QSTRINGLIST);
+    virtual void init();
+
+    virtual void autostart(const QString& autostartFile = RDEFAULT_QSTRING, const QStringList& arguments = RDEFAULT_QSTRINGLIST);
 
     /**
      * Runs the given script file.

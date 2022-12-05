@@ -38,7 +38,7 @@ PointPowerCenter.prototype.getShapes = function(preview) {
         return undefined;
     }
 
-    var c = Apollonius.getPowerCenter(this.shape1.data(), this.shape2.data(), this.shape3.data());
+    var c = Apollonius.getPowerCenter(getPtr(this.shape1), getPtr(this.shape2), getPtr(this.shape3));
 
     if (isNull(c)) {
         if (!preview) {

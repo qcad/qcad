@@ -45,7 +45,7 @@ ExXmlExport.prototype.beginEvent = function() {
     fileDialog.fileMode = QFileDialog.AnyFile;
     fileDialog.acceptMode = QFileDialog.AcceptSave;
     if (!fileDialog.exec()) {
-        fileDialog.destroy();
+        destr(fileDialog);
         EAction.activateMainWindow();
         this.terminate();
         return;
@@ -53,7 +53,7 @@ ExXmlExport.prototype.beginEvent = function() {
 
     var files = fileDialog.selectedFiles();
     if (files.length===0) {
-        fileDialog.destroy();
+        destr(fileDialog);
         EAction.activateMainWindow();
         this.terminate();
         return;
@@ -63,7 +63,7 @@ ExXmlExport.prototype.beginEvent = function() {
 
     var file = new QFile(fileName);
 
-    var flags = new QIODevice.OpenMode(QIODevice.WriteOnly | QIODevice.Text);
+    var flags = makeQIODeviceOpenMode(QIODevice.WriteOnly, QIODevice.Text);
     if (!file.open(flags)) {
         EAction.handleUserWarning("cannot open file: " + fileName);
         this.terminate();
@@ -87,7 +87,7 @@ ExXmlExport.prototype.beginEvent = function() {
 
     stream.writeEndDocument();
 
-    stream.destroy();
+    destr(stream);
 
     file.close();
 

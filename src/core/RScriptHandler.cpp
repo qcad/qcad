@@ -27,13 +27,16 @@
 QString RScriptHandler::autostartScriptName = "autostart";
 
 
+void RScriptHandler::init() {
+}
+
 /**
  * Looks up and initializes the autostart script(s) available for this
  * script handler.
  * This method calls \ref initScript for all files with a
  * supported file extension (see \ref getSupportedFileExtensions).
  */
-void RScriptHandler::init(const QString& autostartFile, const QStringList& arguments) {
+void RScriptHandler::autostart(const QString& autostartFile, const QStringList& arguments) {
     QStringList triedLocations;
     if (!autostartFile.isEmpty()) {
         QFileInfo fi(autostartFile);

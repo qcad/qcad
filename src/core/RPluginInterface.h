@@ -28,7 +28,11 @@
 #include "RPluginInfo.h"
 
 class QString;
+#if QT_VERSION < 0x060000
 class QScriptEngine;
+#else
+class RScriptHandler;
+#endif
 
 /**
  * Interface for all C++ QCAD plugins.
@@ -80,6 +84,8 @@ public:
      * \nonscriptable
      */
     virtual void initScriptExtensions(QScriptEngine& engine) = 0;
+#else
+    virtual void initScriptExtensions(RScriptHandler& handler) {}
 #endif
 
     /**

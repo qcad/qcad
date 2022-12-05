@@ -307,7 +307,7 @@ Trim.trim = function(op, limitingEntity, limitingClickPos, trimEntity, trimClick
     if (isNull(limitingShape)) {
         limitingShape = limitingEntity.getClosestSimpleShape(limitingClickPos);
         if (!isNull(limitingShape)) {
-            limitingShape = limitingShape.data();
+            limitingShape = getPtr(limitingShape);
         }
     }
     if (isNull(limitingShape)) {
@@ -332,7 +332,7 @@ Trim.trim = function(op, limitingEntity, limitingClickPos, trimEntity, trimClick
         return false;
     }
 
-    if (!modifyEntity(op, trimEntity.clone(), newShapes[0].data())) {
+    if (!modifyEntity(op, trimEntity.clone(), getPtr(newShapes[0]))) {
         if (!preview) {
             if (trimBoth) {
                 EAction.handleUserWarning(qsTr("First entity cannot be trimmed."));
@@ -349,7 +349,7 @@ Trim.trim = function(op, limitingEntity, limitingClickPos, trimEntity, trimClick
     }
 
     if (trimBoth) {
-        if (!modifyEntity(op, limitingEntity.clone(), newShapes[1].data())) {
+        if (!modifyEntity(op, limitingEntity.clone(), getPtr(newShapes[1]))) {
             if (!preview) {
                 EAction.handleUserWarning(qsTr("Second entity cannot be trimmed."));
             }

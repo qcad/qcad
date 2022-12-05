@@ -38,8 +38,8 @@ ThemePreferences.initPreferences = function(pageWidget, calledByPrefDialog, docu
     cb.addItem("Default");
 
     var d = new QDir("themes");
-    var fs = new QDir.Filters(QDir.NoDotAndDotDot, QDir.Readable, QDir.Dirs, QDir.Executable);
-    var sf = new QDir.SortFlags(QDir.Name);
+    var fs = makeQDirFilters(QDir.NoDotAndDotDot, QDir.Readable, QDir.Dirs, QDir.Executable);
+    var sf = makeQDirSortFlags(QDir.Name);
     var themes = d.entryList([], fs, sf);
     cb.addItems(themes);
 };

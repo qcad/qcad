@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RStorageBlockSort.h"><cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RStorageBlockSort.h"><cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RSTORAGEBLOCKSORT_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RSTORAGEBLOCKSORT_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RBlock.h"</cpp:file></cpp:include>
 
@@ -12,4 +15,5 @@
     <decl_stmt><decl><type><name>const</name> <name>RStorage</name>*</type> <name>storage</name></decl>;</decl_stmt>
 </public>}</block>;</class>
 
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

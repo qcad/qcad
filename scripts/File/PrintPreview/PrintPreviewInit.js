@@ -5,7 +5,7 @@ function init(basePath) {
     action.setForceGlobal(true);
     action.setScriptFile(basePath + "/PrintPreview.js");
     action.setIcon(basePath + "/PrintPreview.svg");
-    action.setDefaultShortcut(new QKeySequence(Qt.ControlModifier + Qt.ShiftModifier + Qt.Key_P));
+    action.setDefaultShortcut(new QKeySequence("Ctrl+Shift+P"));
     action.setDefaultCommands(["printpreview"]);
     action.setStatusTip(qsTranslate("PrintPreview", "Preview how current drawing would be printed"));
     action.setGroupSortOrder(1600);

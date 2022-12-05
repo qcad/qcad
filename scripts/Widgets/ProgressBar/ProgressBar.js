@@ -39,10 +39,9 @@ ProgressBar.postInit = function(basePath) {
     }
 
     var appWin = EAction.getMainWindow();
-    var self = this;
-    appWin.progressText.connect(function() { self.setProgressText(); });
-    appWin.progress.connect(function() { self.progress(); });
-    appWin.progressEnd.connect(function() { self.progressEnd(); });
+    appWin.progressText.connect(this, this.setProgressText);
+    appWin.progress.connect(this, this.progress);
+    appWin.progressEnd.connect(this, this.progressEnd);
 };
 
 ProgressBar.prepare = function() {
@@ -91,7 +90,7 @@ ProgressBar.progress = function(value) {
     }
     else {
         if (!isNull(ProgressBar.progressBar)) {
-            if (!QCoreApplication.arguments().contains("-no-show")) {
+            if (!RSettings.getOriginalArguments().contains("-no-show")) {
                 ProgressBar.progressBar.visible = true;
             }
             ProgressBar.progressBar.value = value;

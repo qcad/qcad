@@ -97,6 +97,9 @@
         lessThanAlphanumerical
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getFontFamily
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getPageSizeId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

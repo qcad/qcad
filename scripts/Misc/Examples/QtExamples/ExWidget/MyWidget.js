@@ -9,12 +9,12 @@ function MyWidget(parentWidget) {
 
     // load ui file into widget:
     var loader = new QUiLoader();
-    loader.setWorkingDirectory(MyWidget.includeBasePath);
+    loader.setWorkingDirectory(new QDir(MyWidget.includeBasePath));
     var file = new QFile(MyWidget.includeBasePath + "/MyWidget.ui");
-    file.open(new QIODevice.OpenMode(QIODevice.ReadOnly | QIODevice.Text));
-    var form = loader.load(file, this);
+    file.open(makeQIODeviceOpenMode(QIODevice.ReadOnly, QIODevice.Text));
+    var form = loader.load(file, parentWidget);
     file.close();
-    loader.destroy();
+    destr(loader);
 
     // add layout to ensure content scales with widget:
     var layout = new QVBoxLayout();

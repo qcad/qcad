@@ -71,8 +71,7 @@ RScriptHandler* RScriptHandlerRegistry::createScriptHandler(const QString& exten
     return NULL;
 }
 
-RScriptHandler* RScriptHandlerRegistry::getGlobalScriptHandler(
-        const QString& extension) {
+RScriptHandler* RScriptHandlerRegistry::getGlobalScriptHandler(const QString& extension) {
     if (globalScriptHandlers.count(extension) == 0) {
         RScriptHandler* handler = createScriptHandler(extension);
         if (handler == NULL) {
@@ -84,6 +83,7 @@ RScriptHandler* RScriptHandlerRegistry::getGlobalScriptHandler(
             return NULL;
         }
         globalScriptHandlers[extension] = handler;
+        globalScriptHandlers[extension]->init();
     }
     return globalScriptHandlers[extension];
 }

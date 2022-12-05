@@ -4,7 +4,7 @@ function init(basePath) {
     action.setForceGlobal(true);
     action.setScriptFile(basePath + "/Print.js");
     action.setIcon(basePath + "/Print.svg");
-    action.setDefaultShortcut(new QKeySequence(Qt.ControlModifier + Qt.Key_P));
+    action.setDefaultShortcut(new QKeySequence("Ctrl+P"));
     action.setDefaultCommands(["print"]);
     action.setStatusTip(qsTranslate("Print", "Print current drawing"));
     action.setGroupSortOrder(1600);

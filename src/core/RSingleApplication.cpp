@@ -131,12 +131,17 @@ bool RSingleApplication::event(QEvent* e) {
     return ret;
 }
 
-//bool RSingleApplication::notify(QObject* receiver, QEvent* e) {
-//    qDebug() << "RSingleApplication::notify:" << receiver->objectName();
+bool RSingleApplication::notify(QObject* receiver, QEvent* e) {
+    if (e->type() == QEvent::KeyPress) {
+        QKeyEvent* keyEvent = static_cast<QKeyEvent*>(e);
 
-//    qDebug() << "type:" << e->type();
-
-//    RDebug::printBacktrace();
-
-//    QApplication::notify(receiver, e);
-//}
+        for (int i=0; i<globalShortcuts.length(); i++) {
+            if (keyEvent->key() == globalShortcuts[i].first && keyEvent->modifiers() == globalShortcuts[i].second) {
+                emit globalShortcutPressed(keyEvent->key(), keyEvent->modifiers());
+                e->accept();
+                return true;
+            }
+        }
+    }
+    return QApplication::notify(receiver, e);
+}

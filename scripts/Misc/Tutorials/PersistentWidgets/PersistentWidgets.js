@@ -46,7 +46,7 @@ PersistentWidgets.prototype.beginEvent = function() {
 
     // Display and execute the dialog:
     if (!dialog.exec()) {
-        dialog.destroy();
+        destr(dialog);
         EAction.activateMainWindow();
         // User hit cancel:
         this.terminate();
@@ -64,7 +64,7 @@ PersistentWidgets.prototype.beginEvent = function() {
     appWin.handleUserMessage("Position X: " + positionX);
     appWin.handleUserMessage("Position Y: " + positionY);
     
-    dialog.destroy();
+    destr(dialog);
     EAction.activateMainWindow();
     this.terminate();
 };

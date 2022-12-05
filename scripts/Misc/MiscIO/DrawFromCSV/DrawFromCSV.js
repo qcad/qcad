@@ -152,7 +152,7 @@ DrawFromCSV.prototype.DrawFromCSVFile = function(di, fileName) {
 
     // Try to open the file to read from:
     file = new QFile(fileName);
-    flags = new QIODevice.OpenMode(QIODevice.ReadOnly | QIODevice.Text);
+    flags = makeQIODeviceOpenMode(QIODevice.ReadOnly, QIODevice.Text);
     if (!file.open(flags)) {    // Without a open file >
         msg = qsTr("No file opened.");
         EAction.handleUserWarning(msg);    // Push warning to history (Win)
@@ -194,7 +194,7 @@ DrawFromCSV.prototype.DrawFromCSVFile = function(di, fileName) {
 
     // Initiate a TextStream:
     ts = new QTextStream(file);
-    ts.setCodec("UTF-8");
+    setUtf8Codec(ts);
 
     // Start a new transaction group:
     this.doc.startTransactionGroup();

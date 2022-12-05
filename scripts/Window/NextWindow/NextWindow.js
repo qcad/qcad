@@ -31,18 +31,21 @@ NextWindow.prototype.beginEvent = function() {
 
     // part of the workaround for QMdiArea bug
     // with events filtering through all stacked windows:
-    //mdiArea.activateNextSubWindow();
-    var windows = mdiArea.subWindowList();
-    var activeWindow = mdiArea.activeSubWindow();
-    if (!isNull(activeWindow)) {
-        var i = windows.indexOf(activeWindow);
-        i = (i+1)%windows.length;
-        if (!isNull(windows[i])) {
-            windows[i].show();
-            mdiArea.setActiveSubWindow(windows[i]);
+    if (RSettings.getQtVersion()>=0x060000) {
+        mdiArea.activateNextSubWindow();
+    }
+    else {
+        var windows = mdiArea.subWindowList();
+        var activeWindow = mdiArea.activeSubWindow();
+        if (!isNull(activeWindow)) {
+            var i = windows.indexOf(activeWindow);
+            i = (i+1)%windows.length;
+            if (!isNull(windows[i])) {
+                windows[i].show();
+                mdiArea.setActiveSubWindow(windows[i]);
+            }
         }
     }
-
     this.terminate();
 };
 

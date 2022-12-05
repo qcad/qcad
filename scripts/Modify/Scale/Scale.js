@@ -215,7 +215,7 @@ Scale.prototype.showDialog = function() {
     WidgetFactory.restoreState(dialog);
 
     if (!dialog.exec()) {
-        dialog.destroy();
+        destr(dialog);
         EAction.activateMainWindow();
         return false;
     }
@@ -250,7 +250,7 @@ Scale.prototype.showDialog = function() {
 
     WidgetFactory.saveState(dialog);
 
-    dialog.destroy();
+    destr(dialog);
     EAction.activateMainWindow();
     return true;
 };
@@ -318,7 +318,7 @@ Scale.prototype.getOperation = function(preview) {
 Scale.prototype.transformArc = function(shape, sv) {
     var s = shape;
     if (isFunction(shape.data)) {
-        s = shape.data();
+        s = getPtr(shape);
     }
 
     if (isCircleShape(s)) {

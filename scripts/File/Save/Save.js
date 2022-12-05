@@ -104,7 +104,7 @@ Save.prototype.save = function(fileName, fileVersion, overwriteWarning) {
         if (colorWarning) {
             // dxflib has no full color support:
             if (!fileVersion.contains("dxflib")) {
-                buttons = new QMessageBox.StandardButtons(QMessageBox.Yes, QMessageBox.No);
+                buttons = makeQMessageBoxStandardButtons(QMessageBox.Yes, QMessageBox.No);
                 ret = QMessageBox.warning(
                             appWin,
                             qsTr("File Format Version Not Recommended"),

@@ -1,3 +1,6 @@
+#ifndef RSTORAGELAYERSORT_H
+#define RSTORAGELAYERSORT_H
+
 #include <QString>
 
 #include "RLayer.h"
@@ -11,3 +14,4 @@ public:
     const RStorage* storage;
 };
 
+#endif

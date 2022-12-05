@@ -34,17 +34,25 @@ ExProcess.includeBasePath = includeBasePath;
 ExProcess.prototype.beginEvent = function() {
     QtExamples.prototype.beginEvent.call(this);
 
+    var i;
+
     // application binary:
     var program = "ls";
     // arguments:
     var args = [ "-la" ];
     // additional environment variables:
-    var environment = [ ["MYENVVAR", 1] ];
+    var environment = [ ["MYENVVAR", "1"] ];
 
     var process = new QProcess();
 
     // error handling:
-    process.error.connect(function(e) { qDebug("Error: ", e); });
+    if (RSettings.getQtVersion() >= 0x050000) {
+        process.errorOccurred.connect(function(e) { qDebug("Error: ", e); });
+    }
+    else {
+        process.error.connect(function(e) { qDebug("Error: ", e); });
+    }
+
 
     // buffer stdout, stderr for later output:
     var stdout = "";
@@ -55,7 +63,7 @@ ExProcess.prototype.beginEvent = function() {
     // set enviromnet to current environment, add custom environment:
     if (environment!==undefined) {
         var env = QProcessEnvironment.systemEnvironment();
-        for (var i=0; i<environment.length; i++) {
+        for (i=0; i<environment.length; i++) {
             env.insert(environment[i][0], environment[i][1]);
         }
         process.setProcessEnvironment(env);
@@ -67,9 +75,16 @@ ExProcess.prototype.beginEvent = function() {
     // wait for process to finish:
     process.waitForFinished(-1);   // no timeout
 
+    var stdoutLines = stdout.split("\n");
+    var stderrLines = stderr.split("\n");
+
     // output buffered stdout, stderr:
-    qDebug(stdout);
-    qDebug(stderr);
+    for (i=0; i<stdoutLines.length; i++) {
+        EAction.handleUserMessage(stdoutLines[i]);
+    }
+    for (i=0; i<stderrLines.length; i++) {
+        EAction.handleUserMessage(stderrLines[i]);
+    }
 
     this.terminate();
 };

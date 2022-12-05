@@ -73,7 +73,7 @@ ExFileImporter.prototype.importFile = function(fileName, nameFilter) {
     var fi = new QFileInfo(fileName);
 
     var file = new QFile(fi.absoluteFilePath());
-    var flags = new QIODevice.OpenMode(QIODevice.ReadOnly | QIODevice.Text);
+    var flags = makeQIODeviceOpenMode(QIODevice.ReadOnly, QIODevice.Text);
     if (!file.open(flags)) {
         return false;
     }
@@ -81,7 +81,7 @@ ExFileImporter.prototype.importFile = function(fileName, nameFilter) {
     this.startImport();
 
     var ts = new QTextStream(file);
-    ts.setCodec("UTF-8");
+    setUtf8Codec(ts);
     var line;
 
     do {
