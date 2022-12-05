@@ -546,8 +546,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
         // don't restore widgets that have been restored elsewhere (e.g. script
         // add-ons might load widgets contents by themselves in initPreferences):
         // [but always restore widgets if used from a test (map != undefined)]
-        if (isNull(map) && !reset && typeof (c["Loaded"]) != "undefined"
-                && c["Loaded"] === true) {
+        if (isNull(map) && !reset && c.property("Loaded")===true) {
             value = undefined;
         }
 
