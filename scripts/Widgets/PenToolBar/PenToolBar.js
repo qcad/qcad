@@ -66,7 +66,10 @@ PenToolBar.init = function(basePath) {
     var colorCombo = penToolBar.findChild("Color");
     colorCombo.valueChanged.connect(
         function(color) {
-            EAction.getDocumentInterface().setCurrentColor(color);
+            var di = EAction.getDocumentInterface();
+            if (!isNull(di)) {
+                di.setCurrentColor(color);
+            }
         }
     );
 
@@ -74,14 +77,20 @@ PenToolBar.init = function(basePath) {
     linetypeCombo.minimumWidth = 250;
     linetypeCombo.valueChanged.connect(
         function(p) {
-            EAction.getDocumentInterface().setCurrentLinetypePattern(p);
+            var di = EAction.getDocumentInterface();
+            if (!isNull(di)) {
+                di.setCurrentLinetypePattern(p);
+            }
         }
     );
 
     var lineweightCombo = penToolBar.findChild("Lineweight");
     lineweightCombo.valueChanged.connect(
         function(lw) {
-            EAction.getDocumentInterface().setCurrentLineweight(lw);
+            var di = EAction.getDocumentInterface();
+            if (!isNull(di)) {
+                di.setCurrentLineweight(lw);
+            }
         }
     );
 
