@@ -615,11 +615,11 @@ function main() {
         var key;
         if (RSettings.getDevicePixelRatio()===2) {
             key = "SplashOverride@2x";
-            fn = "scripts/splashscreen@2x.png";
+            fn = ":scripts/splashscreen@2x.png";
         }
         else {
             key = "SplashOverride";
-            fn = "scripts/splashscreen.png";
+            fn = ":scripts/splashscreen.png";
         }
 
         // look up slash screen override:
