@@ -28,6 +28,10 @@
 class RDocument;
 class RExporter;
 
+#ifndef RDEFAULT_MIN1
+#define RDEFAULT_MIN1 -1
+#endif
+
 /**
  * Point entity.
  *
@@ -199,7 +203,7 @@ public:
         return data.getLoopBoundary(index);
     }
 
-    QList<RPolyline> getBoundaryAsPolylines(double segmentLength = -1.0) const {
+    QList<RPolyline> getBoundaryAsPolylines(double segmentLength = RDEFAULT_MIN1) const {
         return data.getBoundaryAsPolylines(segmentLength);
     }
 
