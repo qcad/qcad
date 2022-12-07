@@ -420,6 +420,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RVector &amp;" typeName="RVector" name="p"
         isConst="true" />
       </variant>
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="double" typeName="double" name="dist"
+        isConst="false" />
+      </variant>
     </method>
     <method name="setClosed" cppName="setClosed" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
