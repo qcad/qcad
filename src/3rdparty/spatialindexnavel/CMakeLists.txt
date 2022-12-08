@@ -54,3 +54,5 @@ if(win32-msvc2010)
         _CRT_SECURE_NO_WARNINGS
     )
 endif()
+
+SET_TARGET_PROPERTIES(spatialindexnavel PROPERTIES FOLDER "3rdparty")

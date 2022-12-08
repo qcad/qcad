@@ -29,3 +29,5 @@ add_library(stemmer
 target_compile_definitions(stemmer PRIVATE
     QCAD_DLL
 )
+
+SET_TARGET_PROPERTIES(stemmer PROPERTIES FOLDER "3rdparty")

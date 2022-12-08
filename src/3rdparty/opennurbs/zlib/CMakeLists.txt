@@ -23,3 +23,5 @@ if(CMAKE_BUILD_TYPE STREQUAL Release)
         NDEBUG
     )
 endif()
+
+SET_TARGET_PROPERTIES(zlib PROPERTIES FOLDER "3rdparty")

@@ -4,5 +4,6 @@ project(io VERSION 1.0 LANGUAGES CXX)
 include(../../CMakeInclude.txt)
 
 if(NOT r_no_dxf)
-    add_subdirectory(dxf)
+    #add_subdirectory(dxf)
+    add_subdirectory(libdxfrw)
 endif()

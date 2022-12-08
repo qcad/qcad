@@ -1,0 +1,7 @@
+#ifndef DXF_RC
+#define DXF_RC
+
+#define VER_ORIGINALFILENAME_STR    "qcaddxf.dll"
+#include "../../../shared.rc"
+
+#endif // DXF_RC
