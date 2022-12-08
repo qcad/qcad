@@ -33,6 +33,10 @@
 #include "RPoint.h"
 #include "RVector.h"
 
+#ifndef RDEFAULT_MIN1
+#define RDEFAULT_MIN1 -1
+#endif
+
 /**
  * Stores and manages all data that defines the geometry and
  * appearance of a hatch or solid fill entity.
@@ -191,7 +195,7 @@ public:
 
     QList<QSharedPointer<RShape> > getLoopBoundary(int index) const;
 
-    QList<RPolyline> getBoundaryAsPolylines(double segmentLength = -1.0) const;
+    QList<RPolyline> getBoundaryAsPolylines(double segmentLength = RDEFAULT_MIN1) const;
 
     void autoCloseLoops() {
         if (hatchProxy!=NULL) {
