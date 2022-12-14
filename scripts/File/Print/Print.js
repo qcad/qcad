@@ -115,20 +115,19 @@ Print.prototype.createPrinter = function(pdfFile, printerName, pdfVersion) {
         }
     }
 
-    // QPrinter.Custom is deprecated / undefined:
-//    var paperSizeEnum = Print.getPaperSizeEnum(this.document);
-//    if (paperSizeEnum!==QPrinter.Custom) {
-//        printer.setPaperSize(paperSizeEnum);
-//    }
-//    else {
-        //printer.setPaperSize(QPrinter.Custom);
-
-        // always use custom page size to work around Qt page size limitations:
-        var paperSizeMM = Print.getPaperSizeMM(this.document);
+    // always use custom page size to work around Qt page size limitations:
+    var paperSizeMM = Print.getPaperSizeMM(this.document);
+    if (RSettings.getQtVersion() >= 0x060000) {
+        printer.setPageSize(new QPageSize(paperSizeMM, QPageSize.Millimeter));
+        printer.setFullPage(true);
+        printer.setPageOrientation(Print.getPageOrientationEnum(this.document));
+    }
+    else {
         printer.setPaperSize(paperSizeMM, QPrinter.Millimeter);
-//    }
-    printer.setFullPage(true);
-    printer.setOrientation(Print.getPageOrientationEnum(this.document));
+        printer.setFullPage(true);
+        printer.setOrientation(Print.getPageOrientationEnum(this.document));
+    }
+
 
     var colorMode = Print.getColorMode(this.document);
     if (colorMode == RGraphicsView.FullColor) {
@@ -270,9 +269,17 @@ Print.prototype.printCurrentBlock = function(printer, painter) {
     var heightInMM = printer.paperRect(QPrinter.Millimeter).height();
 
     // factor from mm to printer unit:
+    var paperRect;
+    if (RSettings.getQtVersion() >= 0x060000) {
+        paperRect = printer.pageLayout().fullRectPixels(printer.resolution());
+    }
+    else {
+        paperRect = printer.paperRect();
+    }
+
     var printerFactor = new RVector(
-        printer.paperRect().width() / widthInMM,
-        printer.paperRect().height() / heightInMM
+        paperRect.width() / widthInMM,
+        paperRect.height() / heightInMM
     );
 
     // printer calibration:
@@ -294,8 +301,8 @@ Print.prototype.printCurrentBlock = function(printer, painter) {
     var previousPixelSizeHint = this.scene.getPixelSizeHint();
 
     var widthInDrawingUnits = RUnit.convert(widthInMM, RS.Millimeter, this.document.getUnit());
-    if (printer.paperRect().width()>0) {
-        var pixelSizeHint = 1.0/printer.paperRect().width()*widthInDrawingUnits;
+    if (paperRect.width()>0) {
+        var pixelSizeHint = 1.0/paperRect.width()*widthInDrawingUnits;
         pixelSizeHint = pixelSizeHint / scale;
         this.scene.setPixelSizeHint(pixelSizeHint);
     }
@@ -334,7 +341,7 @@ Print.prototype.printCurrentBlock = function(printer, painter) {
         if (!qclr.equals(new QColor(Qt.white))) {
             painter.setWorldTransform(new QTransform());
             painter.setBackground(new QBrush(qclr, Qt.SolidPattern));
-            painter.eraseRect(printer.paperRect());
+            painter.eraseRect(paperRect);
         }
 
         // paper size in mm:
@@ -1424,7 +1431,7 @@ Print.setPageOrientationString = function(di, pageOrientation) {
 };
 
 Print.setPageOrientationEnum = function(di, pageOrientation) {
-    if (pageOrientation.valueOf()===RS.Landscape.valueOf()) {
+    if (pageOrientation===RS.Landscape) {
         Print.setPageOrientationString(di, "Landscape");
     }
     else {
