@@ -107,7 +107,7 @@ SnapIntersectionManual.prototype.entityPickEvent = function(event) {
     if (this.state===SnapIntersectionManual.State.PickingEntity1) {
         var id = EAction.getEntityId(this.di, this, event, true);
         this.entity1 = doc.queryEntity(id);
-        if (!this.entity1.isNull()) {
+        if (!isNull(this.entity1)) {
             this.shape1 = this.entity1.getClosestSimpleShape(pos);
             this.entityId1 = EAction.prototype.getEntityId.call(this, event, false);
             this.setState(SnapIntersectionManual.State.PickingEntity2);
@@ -172,16 +172,16 @@ SnapIntersectionManual.prototype.getIntersection = function(event, preview) {
     var position = event.getModelPosition();
     var id = EAction.getEntityId(this.getDocumentInterface(), this, event, preview);
     var entity2 = this.getDocument().queryEntity(id);
-    if (entity2.isNull()) {
+    if (isNull(entity2)) {
         return RVector.invalid;
     }
     this.entity2 = entity2;
     this.shape2 = entity2.getClosestSimpleShape(position);
-    if (this.shape2.isNull()) {
+    if (isNull(this.shape2)) {
         return RVector.invalid;
     }
 
-    var ips = this.shape1.getIntersectionPoints(this.shape2.data(), false, false, true);
+    var ips = this.shape1.getIntersectionPoints(getPtr(this.shape2), false, false, true);
 
     return position.getClosest(ips);
 };
