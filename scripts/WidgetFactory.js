@@ -716,7 +716,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             }
             if (isNull(c.property("defaultValue"))) {
                 var button = c.checkedButton();
-                if (button) {
+                if (!isNull(button) && !isNull(button.objectName)) {
                     c.setProperty("defaultValue", button.objectName);
                     if (!isNull(signalReceiver)) {
                         f = signalReceiver["slot"+c.objectName+"Changed"];
