@@ -684,5 +684,13 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="true" />
     <property name="MiddleButton" type="Qt :: MouseButton"
     isConst="true" isStatic="true" />
+    <property name="Portrait" type="QPageLayout :: Orientation"
+    isConst="true" isStatic="true" />
+    <property name="Landscape" type="QPageLayout :: Orientation"
+    isConst="true" isStatic="true" />
+    <property name="Portrait" type="QPrinter :: Orientation"
+    isConst="true" isStatic="true" />
+    <property name="Landscape" type="QPrinter :: Orientation"
+    isConst="true" isStatic="true" />
   </class>
 </unit>

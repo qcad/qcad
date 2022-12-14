@@ -468,10 +468,10 @@ Print.autoFitDrawing = function(di, ori) {
     //qDebug("bb: ", bBox);
     if (ori) {
         if (bBox.getWidth()>bBox.getHeight()) {
-            Print.setPageOrientationEnum(di, QPrinter.Landscape);
+            Print.setPageOrientationEnum(di, RS.Landscape);
         }
         else {
-            Print.setPageOrientationEnum(di, QPrinter.Portrait);
+            Print.setPageOrientationEnum(di, RS.Portrait);
         }
     }
     Print.autoFitBox(di, bBox);
@@ -827,7 +827,7 @@ Print.getPages = function(document) {
     var w;
     var h;
     var paperSizeMM = Print.getPaperSizeMM(document);
-    if (Print.getPageOrientationEnum(document) === QPrinter.Portrait) {
+    if (Print.getPageOrientationEnum(document) === RS.Portrait) {
         w = paperSizeMM.width();
         h = paperSizeMM.height();
     } else {
@@ -1408,10 +1408,10 @@ Print.getDefaultPaperSizeName = function(document) {
 Print.getPageOrientationEnum = function(document) {
     var pageOrientationString = Print.getPageOrientationString(document);
     if (pageOrientationString==="Landscape") {
-        return QPrinter.Landscape;
+        return RS.Landscape;
     }
     else {
-        return QPrinter.Portrait;
+        return RS.Portrait;
     }
 };
 
@@ -1424,7 +1424,7 @@ Print.setPageOrientationString = function(di, pageOrientation) {
 };
 
 Print.setPageOrientationEnum = function(di, pageOrientation) {
-    if (pageOrientation.valueOf()===QPrinter.Landscape.valueOf()) {
+    if (pageOrientation.valueOf()===RS.Landscape.valueOf()) {
         Print.setPageOrientationString(di, "Landscape");
     }
     else {

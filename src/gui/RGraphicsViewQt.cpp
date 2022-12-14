@@ -276,7 +276,7 @@ void RGraphicsViewQt::mouseReleaseEvent(QMouseEvent* event) {
     else {
         // Qt/Wacom bug workaround for omitted mouse press events:
         // got release but no press (Qt / Wacom bug), simulate press:
-        if (event->button()==Qt::MiddleButton) {
+        if (event->button()==RS::MiddleButton) {
             mousePressEvent(event);
         }
     }

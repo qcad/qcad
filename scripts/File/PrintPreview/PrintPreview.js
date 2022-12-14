@@ -526,7 +526,7 @@ PrintPreviewImpl.prototype.showUiOptions = function(resume) {
 
     widgets["Portrait"].blockSignals(true);
     widgets["Landscape"].blockSignals(true);
-    if (Print.getPageOrientationEnum(document).valueOf() === QPrinter.Portrait.valueOf()) {
+    if (Print.getPageOrientationEnum(document).valueOf() === RS.Portrait.valueOf()) {
         widgets["Portrait"].checked=true;
     } else {
         widgets["Landscape"].checked=true;
@@ -1009,7 +1009,7 @@ PrintPreviewImpl.prototype.slotPortraitChanged = function() {
         return;
     }
     var di = this.getDocumentInterface();
-    Print.setPageOrientationEnum(di, QPrinter.Portrait);
+    Print.setPageOrientationEnum(di, RS.Portrait);
 
     this.updateBackgroundDecoration();
     this.slotAutoZoomToPage();
@@ -1020,7 +1020,7 @@ PrintPreviewImpl.prototype.slotLandscapeChanged = function() {
         return;
     }
     var di = this.getDocumentInterface();
-    Print.setPageOrientationEnum(di, QPrinter.Landscape);
+    Print.setPageOrientationEnum(di, RS.Landscape);
 
     this.updateBackgroundDecoration();
     this.slotAutoZoomToPage();
