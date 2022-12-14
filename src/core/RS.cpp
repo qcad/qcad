@@ -49,8 +49,12 @@ const double RS::AngleTolerance = 1.0e-9;
 
 #if QT_VERSION >= 0x060000
     const Qt::MouseButton RS::MiddleButton = Qt::MiddleButton;
+    const QPageLayout::Orientation RS::Portrait = QPageLayout::Portrait;
+    const QPageLayout::Orientation RS::Landscape = QPageLayout::Landscape;
 #else
     const Qt::MouseButton RS::MiddleButton = Qt::MidButton;
+    const QPrinter::Orientation RS::Portrait = QPrinter::Portrait;
+    const QPrinter::Orientation RS::Landscape = QPrinter::Landscape;
 #endif
 
 /**
@@ -253,7 +257,11 @@ QStringList RS::getFileList(const QString& subDirectory, const QString& fileExte
  * \return A list of absolute paths to all font files found.
  */
 QStringList RS::getFontList() {
-    return getFileList("fonts", "cxf");
+    //return getFileList("fonts", "cxf");
+
+    QStringList ret = getFileList("fonts", "cxf");
+    ret.append(getFileList("fonts", "shx"));
+    return ret;
 }
 
 /**

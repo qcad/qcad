@@ -35,6 +35,9 @@
 
 #if QT_VERSION >= 0x060000
 #include <QScreen>
+#include <QPageLayout>
+#else
+#include <QPrinter>
 #endif
 
 // Qt < 5.10
@@ -918,6 +921,14 @@ public:
     static const double AngleTolerance;
 
     static const Qt::MouseButton MiddleButton;
+
+#if QT_VERSION >= 0x060000
+    static const QPageLayout::Orientation Portrait;
+    static const QPageLayout::Orientation Landscape;
+#else
+    static const QPrinter::Orientation Portrait;
+    static const QPrinter::Orientation Landscape;
+#endif
 };
 
 Q_DECLARE_METATYPE(RS*)
