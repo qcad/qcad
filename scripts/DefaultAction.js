@@ -146,7 +146,7 @@ DefaultAction.prototype.resumeEvent = function() {
 DefaultAction.prototype.mouseMoveEvent = function(event) {
     // we're in the middle of panning:
     // do nothing:
-    if (event.buttons().valueOf() === RS.MiddleButton.valueOf() ||
+    if (event.buttons().valueOf() === RS.MiddleButton ||
         (event.buttons().valueOf() === Qt.LeftButton.valueOf() &&
          event.modifiers().valueOf() === Qt.ControlModifier.valueOf())) {
         return;
