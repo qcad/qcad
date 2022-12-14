@@ -223,7 +223,6 @@ PrintPreviewImpl.State = {
 };
 
 PrintPreviewImpl.prototype.beginEvent = function() {
-    qDebug("PrintPreviewImpl.prototype.beginEvent");
     var di = this.getDocumentInterface();
 
     var appWin = RMainWindowQt.getMainWindow();
