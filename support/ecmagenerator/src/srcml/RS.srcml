@@ -36,6 +36,9 @@
 
 <cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x060000</expr></cpp:if>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QScreen&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QPageLayout&gt;</cpp:file></cpp:include>
+<cpp:else>#<cpp:directive>else</cpp:directive></cpp:else>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QPrinter&gt;</cpp:file></cpp:include>
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 
 <comment type="line">// Qt &lt; 5.10</comment>
@@ -919,6 +922,14 @@
     <decl_stmt><decl><type><name>static</name> <name>const</name> <name>double</name></type> <name>AngleTolerance</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>static</name> <name>const</name> <name><name>Qt</name>::<name>MouseButton</name></name></type> <name>MiddleButton</name></decl>;</decl_stmt>
+
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x060000</expr></cpp:if>
+    <decl_stmt><decl><type><name>static</name> <name>const</name> <name><name>QPageLayout</name>::<name>Orientation</name></name></type> <name>Portrait</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>const</name> <name><name>QPageLayout</name>::<name>Orientation</name></name></type> <name>Landscape</name></decl>;</decl_stmt>
+<cpp:else>#<cpp:directive>else</cpp:directive></cpp:else>
+    <decl_stmt><decl><type><name>static</name> <name>const</name> <name><name>QPrinter</name>::<name>Orientation</name></name></type> <name>Portrait</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>const</name> <name><name>QPrinter</name>::<name>Orientation</name></name></type> <name>Landscape</name></decl>;</decl_stmt>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </public>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS*</argument>)</argument_list></macro>

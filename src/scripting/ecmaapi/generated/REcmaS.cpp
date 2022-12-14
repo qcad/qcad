@@ -124,6 +124,22 @@
                 qScriptValueFromValue(&engine, RS::MiddleButton),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("Portrait",
+                qScriptValueFromValue(&engine, RS::Portrait),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("Landscape",
+                qScriptValueFromValue(&engine, RS::Landscape),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("Portrait",
+                qScriptValueFromValue(&engine, RS::Portrait),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("Landscape",
+                qScriptValueFromValue(&engine, RS::Landscape),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
 
     // enum values:
     
