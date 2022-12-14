@@ -934,7 +934,7 @@ void RS::setUtf8Codec(QTextStream& ts) {
 }
 
 QString RS::escape(const QString& plain) {
-#if QT_VERSION >= 0x060000
+#if QT_VERSION >= 0x050F00
     return plain.toHtmlEscaped();
 #else
     return Qt::escape(plain);
