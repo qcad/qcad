@@ -272,7 +272,7 @@ PrintPreviewImpl.prototype.beginEvent = function() {
     }
 
     var action = RGuiAction.getByScriptFile("scripts/Edit/DrawingPreferences/DrawingPreferences.js");
-    action.triggered.connect(this, "updateBackgroundDecoration");
+    action.triggered.connect(this, this.updateBackgroundDecoration);
 
     if (initialZoom==="Auto") {
         // auto fit drawing and auto set orientation:
@@ -294,14 +294,14 @@ PrintPreviewImpl.prototype.beginEvent = function() {
     // create listener to update preview when preferences changed:
     this.pAdapter = new RPreferencesListenerAdapter();
     appWin.addPreferencesListener(this.pAdapter);
-    this.pAdapter.preferencesUpdated.connect(this, "updateFromPreferences");
+    this.pAdapter.preferencesUpdated.connect(this, this.updateFromPreferences);
 
     this.bAdapter = new RBlockListenerAdapter();
     appWin.addBlockListener(this.bAdapter);
-    this.bAdapter.blocksUpdated.connect(this, "updateBackgroundTransform");
-    this.bAdapter.currentBlockSet.connect(this, "updateBackgroundTransform");
-    this.bAdapter.blocksUpdated.connect(this, "updateBackgroundDecoration");
-    this.bAdapter.currentBlockSet.connect(this, "updateBackgroundDecoration");
+    this.bAdapter.blocksUpdated.connect(this, this.updateBackgroundTransform);
+    this.bAdapter.currentBlockSet.connect(this, this.updateBackgroundTransform);
+    this.bAdapter.blocksUpdated.connect(this, this.updateBackgroundDecoration);
+    this.bAdapter.currentBlockSet.connect(this, this.updateBackgroundDecoration);
 };
 
 /**
@@ -356,7 +356,7 @@ PrintPreviewImpl.prototype.finishEvent = function() {
         }
 
         var action = RGuiAction.getByScriptFile("scripts/Edit/DrawingPreferences/DrawingPreferences.js");
-        action.triggered.disconnect(this, "updateBackgroundDecoration");
+        action.triggered.disconnect(this, this.updateBackgroundDecoration);
     }
 
     //PrintPreviewImpl.setRunning(false);
@@ -526,7 +526,7 @@ PrintPreviewImpl.prototype.showUiOptions = function(resume) {
 
     widgets["Portrait"].blockSignals(true);
     widgets["Landscape"].blockSignals(true);
-    if (Print.getPageOrientationEnum(document).valueOf() === RS.Portrait.valueOf()) {
+    if (Print.getPageOrientationEnum(document) === RS.Portrait) {
         widgets["Portrait"].checked=true;
     } else {
         widgets["Landscape"].checked=true;
