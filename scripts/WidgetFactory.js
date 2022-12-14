@@ -635,7 +635,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
                 c.setProperty("defaultValue", c.text);
             }
             if (!isNull(value)) {
-                c.text = value;
+                c.text = value.toString();
             }
             continue;
         }
