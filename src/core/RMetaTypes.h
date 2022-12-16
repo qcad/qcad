@@ -348,6 +348,11 @@ Q_DECLARE_METATYPE(Qt::CursorShape)
 Q_DECLARE_METATYPE(Qt::GlobalColor)
 Q_DECLARE_METATYPE(Qt::MouseButton)
 Q_DECLARE_METATYPE(Qt::Orientation)
+#if QT_VERSION >= 0x060000
+Q_DECLARE_METATYPE(QPageLayout::Orientation)
+#else
+Q_DECLARE_METATYPE(QPrinter::Orientation)
+#endif
 Q_DECLARE_METATYPE(Qt::PenStyle)
 Q_DECLARE_METATYPE(Qt::BrushStyle)
 Q_DECLARE_METATYPE(Qt::ItemDataRole)
