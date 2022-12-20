@@ -3,12 +3,10 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/DeselectBlockReferences.js");
     action.setIcon(basePath + "/DeselectBlockReferences.svg");
-    //action.setDefaultShortcut(new QKeySequence("b,-"));
     action.setDefaultShortcuts([
-                            new QKeySequence("b,-"),
-                            new QKeySequence("b,]")
+                            new QKeySequence("b,x")
                         ]);
-    action.setDefaultCommands(["blockdeselect", "deselectblock", "b-"]);
+    action.setDefaultCommands(["blockdeselect", "deselectblock", "bx"]);
     action.setGroupSortOrder(14400);
     action.setSortOrder(200);
     action.setWidgetNames(["BlockMenu", "BlockToolBar", "BlockToolsPanel", "BlockMatrixPanel"]);
