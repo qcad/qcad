@@ -280,12 +280,12 @@
         <translation type="unfinished">Joonistamise eelistused</translation>
     </message>
     <message>
-        <location line="+300"/>
+        <location line="+313"/>
         <source>Apply preferences</source>
         <translation type="unfinished">Rakenda eelistusi</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+49"/>
         <source>Restart required</source>
         <translation type="unfinished">Vajalik taaskäivitamine</translation>
     </message>
@@ -293,6 +293,7 @@
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+86"/>
@@ -300,7 +301,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">Vaikimisi väärtused</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+6"/>
         <source>These are default preferences for new drawings.</source>
         <translation type="unfinished">Need on uute jooniste vaikimisi eelistused.</translation>
     </message>
@@ -917,6 +918,7 @@ Do you wish to recover it/them?</source>
         <location line="+1"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+25"/>
@@ -1108,12 +1110,12 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Bitaardifail on eksporditud aadressile &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+43"/>
         <source>Files</source>
         <translation type="unfinished">Failid</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+12"/>
         <source>Export as Bitmap</source>
         <translation type="unfinished">Eksportida bitikaardina</translation>
     </message>
@@ -3229,10 +3231,11 @@ Do you wish to recover it?</source>
 <context>
     <name>DirectoryList</name>
     <message>
-        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+57"/>
+        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+84"/>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4142,18 +4145,18 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2120"/>
+        <location line="+2129"/>
         <source>Cancel</source>
         <translation type="unfinished">Tühista</translation>
     </message>
     <message>
-        <location line="-2119"/>
+        <location line="-2128"/>
         <source>Done</source>
         <translation type="unfinished">Valmis</translation>
     </message>
     <message>
         <location line="+277"/>
-        <location line="+140"/>
+        <location line="+144"/>
         <source>Active Tool:</source>
         <translation type="unfinished">Aktiivne tööriist:</translation>
     </message>
@@ -4163,7 +4166,7 @@ is already in the list.</source>
         <translation type="unfinished">Puudub</translation>
     </message>
     <message>
-        <location line="+662"/>
+        <location line="+667"/>
         <source>Options</source>
         <translation type="unfinished">Valikud</translation>
     </message>
@@ -4851,7 +4854,7 @@ is already in the list.</source>
 <context>
     <name>ExProcess</name>
     <message>
-        <location filename="../scripts/Misc/Examples/QtExamples/ExProcess/ExProcess.js" line="+81"/>
+        <location filename="../scripts/Misc/Examples/QtExamples/ExProcess/ExProcess.js" line="+96"/>
         <source>&amp;Run Process</source>
         <translation type="unfinished">Protsessi käivitamine</translation>
     </message>
@@ -6329,12 +6332,12 @@ is already in the list.</source>
 <context>
     <name>Image</name>
     <message>
-        <location filename="../scripts/Draw/Image/Image.js" line="+133"/>
+        <location filename="../scripts/Draw/Image/Image.js" line="+140"/>
         <source>Files</source>
         <translation type="unfinished">Failid</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>All Image Files (%1)</source>
         <translation type="unfinished">Kõik pildifailid (%1)</translation>
     </message>
@@ -6569,7 +6572,7 @@ is already in the list.</source>
         <translation type="unfinished">Valige kaar, ring, ellips või elliptiline kaar</translation>
     </message>
     <message>
-        <location line="+236"/>
+        <location line="+238"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -6711,7 +6714,7 @@ is already in the list.</source>
         <translation type="unfinished">Järgmise hulknurga määramine</translation>
     </message>
     <message>
-        <location line="+121"/>
+        <location line="+123"/>
         <source>Polygon area:</source>
         <translation type="unfinished">Polügooni pindala:</translation>
     </message>
@@ -7346,7 +7349,7 @@ is already in the list.</source>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+334"/>
+        <location filename="../scripts/Information/Information.js" line="+337"/>
         <source>Information Tools</source>
         <translation type="unfinished">Teabevahendid</translation>
     </message>
@@ -7428,20 +7431,20 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+15"/>
-        <location line="+27"/>
+        <location line="+33"/>
         <source>Comma</source>
         <translation type="unfinished">Koma</translation>
     </message>
     <message>
-        <location line="-27"/>
+        <location line="-33"/>
         <location line="+6"/>
         <location line="+5"/>
-        <location line="+15"/>
+        <location line="+21"/>
         <source>(Default)</source>
         <translation type="unfinished">(Vaikimisi)</translation>
     </message>
     <message>
-        <location line="-25"/>
+        <location line="-31"/>
         <source>Semicolon</source>
         <translation type="unfinished">Semikoolon</translation>
     </message>
@@ -7471,7 +7474,7 @@ is already in the list.</source>
         <translation type="unfinished">Hash</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+18"/>
         <source>Dot</source>
         <translation type="unfinished">Punkt</translation>
     </message>
@@ -8318,6 +8321,7 @@ is already in the list.</source>
         <location line="+10"/>
         <source>Number of items
 shown in search results:</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+18"/>
@@ -9388,7 +9392,7 @@ shown in search results:</source>
         <translation type="unfinished">Kõik failid</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscIO/MolImport/MolImportInit.js" line="+2"/>
+        <location filename="../scripts/Misc/MiscIO/MolImport/MolImportInit.js" line="+7"/>
         <source>Leetro MOL Import...</source>
         <translation type="unfinished">Leetro MOL Import...</translation>
     </message>
@@ -9863,7 +9867,7 @@ shown in search results:</source>
         <translation type="unfinished">Pliiats</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+73"/>
         <source>Reset to Defaults</source>
         <translation type="unfinished">Lähtestamine vaikimisi seadistustele</translation>
     </message>
@@ -10190,7 +10194,7 @@ shown in search results:</source>
         <translation type="unfinished">Automaatselt paberile sobiv joonis?</translation>
     </message>
     <message>
-        <location line="+188"/>
+        <location line="+187"/>
         <source>Drag to move paper</source>
         <translation type="unfinished">Paberi liigutamiseks lohistage</translation>
     </message>
@@ -10376,12 +10380,12 @@ shown in search results:</source>
         <translation type="unfinished">Kuvatud omaduste väärtuste kümnendmärgid / täpsus:</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+213"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+219"/>
         <source>:</source>
         <translation type="unfinished">:</translation>
     </message>
     <message>
-        <location line="+194"/>
+        <location line="+189"/>
         <source>No Selection</source>
         <translation type="unfinished">Valik puudub</translation>
     </message>
@@ -10401,7 +10405,7 @@ shown in search results:</source>
         <translation type="unfinished">Kohandatud</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+209"/>
         <source>Index</source>
         <translation type="unfinished">Indeks</translation>
     </message>
@@ -10411,7 +10415,7 @@ shown in search results:</source>
         <translation type="unfinished">Selle omaduse eemaldamine valitud objektidelt</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+68"/>
         <source>All</source>
         <translation type="unfinished">Kõik</translation>
     </message>
@@ -10431,7 +10435,7 @@ shown in search results:</source>
         <translation type="unfinished">Näita kõiki omadusi</translation>
     </message>
     <message>
-        <location line="+134"/>
+        <location line="+135"/>
         <source>Auto</source>
         <translation type="unfinished">Auto</translation>
     </message>
@@ -10441,7 +10445,7 @@ shown in search results:</source>
         <translation type="unfinished">Kasutage automaatset mõõtmist</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+43"/>
         <source>Yes</source>
         <translation type="unfinished">Jah</translation>
     </message>
@@ -10451,7 +10455,7 @@ shown in search results:</source>
         <translation type="unfinished">Ei</translation>
     </message>
     <message>
-        <location line="+379"/>
+        <location line="+386"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*VARIES*</translation>
     </message>
@@ -10637,13 +10641,13 @@ shown in search results:</source>
         <translation type="unfinished">Nurk:</translation>
     </message>
     <message>
-        <location line="+20"/>
-        <location line="+47"/>
+        <location line="+23"/>
+        <location line="+53"/>
         <source>Base:</source>
         <translation type="unfinished">Alus:</translation>
     </message>
     <message>
-        <location line="-20"/>
+        <location line="-23"/>
         <source>Distance:</source>
         <translation type="unfinished">Kaugus:</translation>
     </message>
@@ -11626,6 +11630,7 @@ shown in search results:</source>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
@@ -11734,7 +11739,7 @@ shown in search results:</source>
 <context>
     <name>ShapePolygonAFPP</name>
     <message>
-        <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.js" line="+59"/>
+        <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.js" line="+61"/>
         <source>First side</source>
         <translation type="unfinished">Esimene pool</translation>
     </message>
@@ -11777,7 +11782,7 @@ shown in search results:</source>
 <context>
     <name>ShapePolygonCP</name>
     <message>
-        <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.js" line="+59"/>
+        <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.js" line="+61"/>
         <source>Center</source>
         <translation type="unfinished">Keskus</translation>
     </message>
@@ -11805,7 +11810,7 @@ shown in search results:</source>
 <context>
     <name>ShapePolygonPP</name>
     <message>
-        <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.js" line="+58"/>
+        <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.js" line="+60"/>
         <source>First corner</source>
         <translation type="unfinished">Esimene nurk</translation>
     </message>
@@ -11996,7 +12001,7 @@ shown in search results:</source>
         <translation type="unfinished">X koordinaat</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>&amp;y:</source>
         <translation type="unfinished">y:</translation>
     </message>
@@ -12006,7 +12011,7 @@ shown in search results:</source>
         <translation type="unfinished">Y koordinaat</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Tick for Relative Coordinate</source>
         <translation type="unfinished">Suhtelise koordinaadi märkimine</translation>
     </message>
@@ -12034,7 +12039,7 @@ shown in search results:</source>
         <translation type="unfinished">Raadius (kaugus)</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>&amp;&lt;:</source>
         <translation type="unfinished">&lt;:</translation>
     </message>
@@ -12044,7 +12049,7 @@ shown in search results:</source>
         <translation type="unfinished">Nurk</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Tick for Relative Coordinate</source>
         <translation type="unfinished">Suhtelise koordinaadi märkimine</translation>
     </message>
@@ -12090,7 +12095,7 @@ shown in search results:</source>
         <translation type="unfinished">Snap kaugus:</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+72"/>
         <source>Distance</source>
         <translation type="unfinished">Kaugus</translation>
     </message>
@@ -12495,7 +12500,7 @@ shown in search results:</source>
 <context>
     <name>Text</name>
     <message>
-        <location filename="../scripts/Draw/Text/Text.js" line="+88"/>
+        <location filename="../scripts/Draw/Text/Text.js" line="+92"/>
         <source>Position</source>
         <translation type="unfinished">Positsioon</translation>
     </message>
@@ -12653,12 +12658,12 @@ shown in search results:</source>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+241"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+243"/>
         <source>Default value:</source>
         <translation type="unfinished">Vaikimisi väärtus:</translation>
     </message>
     <message>
-        <location line="+269"/>
+        <location line="+274"/>
         <source>&amp;Undo</source>
         <translation type="unfinished">Undo</translation>
     </message>
@@ -12718,12 +12723,12 @@ shown in search results:</source>
         <translation type="unfinished">Erimärgid...</translation>
     </message>
     <message>
-        <location line="+319"/>
+        <location line="+331"/>
         <source>Others...</source>
         <translation type="unfinished">Teised...</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+139"/>
         <source>Degree</source>
         <translation type="unfinished">Kraad</translation>
     </message>
@@ -12838,6 +12843,7 @@ shown in search results:</source>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+21"/>
@@ -13672,7 +13678,7 @@ shown in search results:</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+322"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+326"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished">Andmete mahajäämine ei ole toetatud</translation>
     </message>
@@ -13698,7 +13704,7 @@ shown in search results:</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1138"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1152"/>
         <source>Restore defaults</source>
         <translation type="unfinished">Taastada vaikimisi seadistused</translation>
     </message>
@@ -14043,7 +14049,7 @@ shown in search results:</source>
 <context>
     <name>Window</name>
     <message>
-        <location filename="../scripts/Window/Window.js" line="+109"/>
+        <location filename="../scripts/Window/Window.js" line="+122"/>
         <source>&amp;Window</source>
         <translation type="unfinished">Aken</translation>
     </message>
@@ -14160,7 +14166,7 @@ shown in search results:</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1226"/>
+        <location filename="../scripts/library.js" line="+1243"/>
         <source>Objects</source>
         <translation type="unfinished">Objektid</translation>
     </message>
@@ -14723,4 +14729,3 @@ shown in search results:</source>
     </message>
 </context>
 </TS>
-

@@ -280,12 +280,12 @@
         <translation>Preferenze Disegno</translation>
     </message>
     <message>
-        <location line="+300"/>
+        <location line="+313"/>
         <source>Apply preferences</source>
         <translation>Applica preferenze</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+49"/>
         <source>Restart required</source>
         <translation>Riavvio richiesto</translation>
     </message>
@@ -302,7 +302,7 @@ applicare le modifiche.</translation>
         <translation>Predefiniti per</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+6"/>
         <source>These are default preferences for new drawings.</source>
         <translation>Queste sono le preferenze predefinite per i nuovi disegni.</translation>
     </message>
@@ -1109,17 +1109,17 @@ Vuoi recuperarlo?</translation>
         <translation>Errore durante la generazione del file bitmap &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+48"/>
         <source>Files</source>
         <translation>File</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+12"/>
         <source>Export as Bitmap</source>
         <translation>Esporta bitmap</translation>
     </message>
     <message>
-        <location line="-47"/>
+        <location line="-55"/>
         <source>Bitmap file has been exported to &quot;%1&quot;</source>
         <translation>File bitmap è stato esportato in &quot;%1&quot;</translation>
     </message>
@@ -3235,7 +3235,7 @@ Vuoi recuperarlo?</translation>
 <context>
     <name>DirectoryList</name>
     <message>
-        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+57"/>
+        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+84"/>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
@@ -4151,18 +4151,18 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2120"/>
+        <location line="+2129"/>
         <source>Cancel</source>
         <translation>Annulla</translation>
     </message>
     <message>
-        <location line="-2119"/>
+        <location line="-2128"/>
         <source>Done</source>
         <translation>Fatto</translation>
     </message>
     <message>
         <location line="+277"/>
-        <location line="+140"/>
+        <location line="+144"/>
         <source>Active Tool:</source>
         <translation>Strumento attivo:</translation>
     </message>
@@ -4172,7 +4172,7 @@ is already in the list.</source>
         <translation>Niente</translation>
     </message>
     <message>
-        <location line="+662"/>
+        <location line="+667"/>
         <source>Options</source>
         <translation>Opzioni</translation>
     </message>
@@ -4860,7 +4860,7 @@ is already in the list.</source>
 <context>
     <name>ExProcess</name>
     <message>
-        <location filename="../scripts/Misc/Examples/QtExamples/ExProcess/ExProcess.js" line="+81"/>
+        <location filename="../scripts/Misc/Examples/QtExamples/ExProcess/ExProcess.js" line="+96"/>
         <source>&amp;Run Process</source>
         <translation>&amp;Eseguire un processo</translation>
     </message>
@@ -6338,12 +6338,12 @@ is already in the list.</source>
 <context>
     <name>Image</name>
     <message>
-        <location filename="../scripts/Draw/Image/Image.js" line="+133"/>
+        <location filename="../scripts/Draw/Image/Image.js" line="+140"/>
         <source>Files</source>
         <translation>File</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>All Image Files (%1)</source>
         <translation>Tutti i file immagine (%1)</translation>
     </message>
@@ -6573,7 +6573,7 @@ is already in the list.</source>
 <context>
     <name>InfoArcCircleArea</name>
     <message>
-        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+306"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+308"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -6634,12 +6634,12 @@ is already in the list.</source>
         <translation>Area del cerchio:</translation>
     </message>
     <message>
-        <location line="-245"/>
+        <location line="-247"/>
         <source>Choose arc, circle, ellipse or elliptical arc</source>
         <translation>Selezionare arco, cerchio, ellisse o arco ellittico</translation>
     </message>
     <message>
-        <location line="+246"/>
+        <location line="+248"/>
         <location line="+67"/>
         <source>circumference:</source>
         <translation>Circonferenza:</translation>
@@ -6720,7 +6720,7 @@ is already in the list.</source>
         <translation>Impostare angolo successiva del poligono</translation>
     </message>
     <message>
-        <location line="+121"/>
+        <location line="+123"/>
         <source>Polygon area:</source>
         <translation>Area poligonale:</translation>
     </message>
@@ -7355,7 +7355,7 @@ is already in the list.</source>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+334"/>
+        <location filename="../scripts/Information/Information.js" line="+337"/>
         <source>Information Tools</source>
         <translation>Strumenti informazione</translation>
     </message>
@@ -7437,20 +7437,20 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+15"/>
-        <location line="+27"/>
+        <location line="+33"/>
         <source>Comma</source>
         <translation>Virgola</translation>
     </message>
     <message>
-        <location line="-27"/>
+        <location line="-33"/>
         <location line="+6"/>
         <location line="+5"/>
-        <location line="+15"/>
+        <location line="+21"/>
         <source>(Default)</source>
         <translation>(Predefinito)</translation>
     </message>
     <message>
-        <location line="-25"/>
+        <location line="-31"/>
         <source>Semicolon</source>
         <translation>Punto e virgola</translation>
     </message>
@@ -7480,7 +7480,7 @@ is already in the list.</source>
         <translation>Cancelletto</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+18"/>
         <source>Dot</source>
         <translation>Puntinata</translation>
     </message>
@@ -9399,7 +9399,7 @@ mostrati nei risultati di ricerca:</translation>
         <translation>Tutti i file</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscIO/MolImport/MolImportInit.js" line="+2"/>
+        <location filename="../scripts/Misc/MiscIO/MolImport/MolImportInit.js" line="+7"/>
         <source>Leetro MOL Import...</source>
         <translation>Leetro MOL importazione...</translation>
     </message>
@@ -9874,7 +9874,7 @@ mostrati nei risultati di ricerca:</translation>
         <translation>Penna</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+73"/>
         <source>Reset to Defaults</source>
         <translation>Ripristina valori predefiniti</translation>
     </message>
@@ -10201,7 +10201,7 @@ mostrati nei risultati di ricerca:</translation>
         <translation>Adattare automaticamente il disegno alla carta?</translation>
     </message>
     <message>
-        <location line="+188"/>
+        <location line="+187"/>
         <source>Drag to move paper</source>
         <translation>Trascinare per spostare la carta</translation>
     </message>
@@ -10352,22 +10352,22 @@ mostrati nei risultati di ricerca:</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+833"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+845"/>
         <source>Add custom property to selected objects</source>
         <translation>Aggiungere una proprietà personalizzata per gli oggetti selezionati</translation>
     </message>
     <message>
-        <location line="+801"/>
+        <location line="+808"/>
         <source>*VARIES*</source>
         <translation>*VARIE*</translation>
     </message>
     <message>
-        <location line="-1421"/>
+        <location line="-1434"/>
         <source>:</source>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+194"/>
+        <location line="+189"/>
         <source>No Selection</source>
         <translation>Nessuna selezione</translation>
     </message>
@@ -10387,7 +10387,7 @@ mostrati nei risultati di ricerca:</translation>
         <translation>Personalizzato</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+209"/>
         <source>Index</source>
         <translation>Indice</translation>
     </message>
@@ -10397,7 +10397,7 @@ mostrati nei risultati di ricerca:</translation>
         <translation>Rimuovere questa proprietà dagli oggetti selezionati</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+68"/>
         <source>All</source>
         <translation>Tutto</translation>
     </message>
@@ -10412,12 +10412,12 @@ mostrati nei risultati di ricerca:</translation>
         <translation>Mostra tutte le proprietà</translation>
     </message>
     <message>
-        <location line="+758"/>
+        <location line="+765"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="-624"/>
+        <location line="-630"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -10427,7 +10427,7 @@ mostrati nei risultati di ricerca:</translation>
         <translation>Utilizzare la misurazione automatica</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+43"/>
         <source>Yes</source>
         <translation>Si</translation>
     </message>
@@ -10437,7 +10437,7 @@ mostrati nei risultati di ricerca:</translation>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+382"/>
+        <location line="+389"/>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>
@@ -10648,13 +10648,13 @@ mostrati nei risultati di ricerca:</translation>
         <translation>Angolo:</translation>
     </message>
     <message>
-        <location line="+20"/>
-        <location line="+47"/>
+        <location line="+23"/>
+        <location line="+53"/>
         <source>Base:</source>
         <translation>Base:</translation>
     </message>
     <message>
-        <location line="-20"/>
+        <location line="-23"/>
         <source>Distance:</source>
         <translation>Distanza:</translation>
     </message>
@@ -11747,7 +11747,7 @@ mostrati nei risultati di ricerca:</translation>
 <context>
     <name>ShapePolygonAFPP</name>
     <message>
-        <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.js" line="+59"/>
+        <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.js" line="+61"/>
         <source>First side</source>
         <translation>Primo lato</translation>
     </message>
@@ -11790,7 +11790,7 @@ mostrati nei risultati di ricerca:</translation>
 <context>
     <name>ShapePolygonCP</name>
     <message>
-        <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.js" line="+59"/>
+        <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.js" line="+61"/>
         <source>Center</source>
         <translation>Centro</translation>
     </message>
@@ -11818,7 +11818,7 @@ mostrati nei risultati di ricerca:</translation>
 <context>
     <name>ShapePolygonPP</name>
     <message>
-        <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.js" line="+58"/>
+        <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.js" line="+60"/>
         <source>First corner</source>
         <translation>Primo punto dell&apos;angolo</translation>
     </message>
@@ -11999,7 +11999,7 @@ mostrati nei risultati di ricerca:</translation>
         <translation>Coordinata X</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>&amp;y:</source>
         <translation>&amp;y:</translation>
     </message>
@@ -12009,7 +12009,7 @@ mostrati nei risultati di ricerca:</translation>
         <translation>Coordinata Y</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Tick for Relative Coordinate</source>
         <translation>Coordinate relative</translation>
     </message>
@@ -12047,7 +12047,7 @@ mostrati nei risultati di ricerca:</translation>
         <translation>Raggio (distanza)</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>&amp;&lt;:</source>
         <translation>&amp;&lt;:</translation>
     </message>
@@ -12057,7 +12057,7 @@ mostrati nei risultati di ricerca:</translation>
         <translation>Angolo</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Tick for Relative Coordinate</source>
         <translation>Coordinate relative</translation>
     </message>
@@ -12113,7 +12113,7 @@ mostrati nei risultati di ricerca:</translation>
         <translation>Distanza di scatto:</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+72"/>
         <source>Distance</source>
         <translation>Distanza</translation>
     </message>
@@ -12509,7 +12509,7 @@ mostrati nei risultati di ricerca:</translation>
 <context>
     <name>Text</name>
     <message>
-        <location filename="../scripts/Draw/Text/Text.js" line="+88"/>
+        <location filename="../scripts/Draw/Text/Text.js" line="+92"/>
         <source>Position</source>
         <translation>Posizione</translation>
     </message>
@@ -12667,12 +12667,12 @@ mostrati nei risultati di ricerca:</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+241"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+243"/>
         <source>Default value:</source>
         <translation>Predefinito:</translation>
     </message>
     <message>
-        <location line="+269"/>
+        <location line="+274"/>
         <source>&amp;Undo</source>
         <translation>&amp;Annulla</translation>
     </message>
@@ -12732,12 +12732,12 @@ mostrati nei risultati di ricerca:</translation>
         <translation>&amp;Carattere speciale...</translation>
     </message>
     <message>
-        <location line="+319"/>
+        <location line="+331"/>
         <source>Others...</source>
         <translation>Altri...</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+139"/>
         <source>Degree</source>
         <translation>Gradi</translation>
     </message>
@@ -13688,7 +13688,7 @@ mostrati nei risultati di ricerca:</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+322"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+326"/>
         <source>Dropped data not supported</source>
         <translation>I dati inseriti non sono supportati</translation>
     </message>
@@ -13714,7 +13714,7 @@ mostrati nei risultati di ricerca:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1138"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1152"/>
         <source>Restore defaults</source>
         <translation>Ripristina predefiniti</translation>
     </message>
@@ -14059,7 +14059,7 @@ mostrati nei risultati di ricerca:</translation>
 <context>
     <name>Window</name>
     <message>
-        <location filename="../scripts/Window/Window.js" line="+109"/>
+        <location filename="../scripts/Window/Window.js" line="+122"/>
         <source>&amp;Window</source>
         <translation>Finestra</translation>
     </message>
@@ -14176,7 +14176,7 @@ mostrati nei risultati di ricerca:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1226"/>
+        <location filename="../scripts/library.js" line="+1243"/>
         <source>Objects</source>
         <translation>Oggetti</translation>
     </message>
@@ -14739,4 +14739,3 @@ mostrati nei risultati di ricerca:</translation>
     </message>
 </context>
 </TS>
-

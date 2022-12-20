@@ -280,12 +280,12 @@
         <translation type="unfinished">Preferencje rysowania</translation>
     </message>
     <message>
-        <location line="+300"/>
+        <location line="+313"/>
         <source>Apply preferences</source>
         <translation type="unfinished">Zastosuj preferencje</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+49"/>
         <source>Restart required</source>
         <translation type="unfinished">Wymagany restart</translation>
     </message>
@@ -302,7 +302,7 @@ aby wprowadzić zmiany preferencji.</translation>
         <translation>Domyślne dla</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+6"/>
         <source>These are default preferences for new drawings.</source>
         <translation>To są domyślne preferencje dla nowych rysunków.</translation>
     </message>
@@ -1116,12 +1116,12 @@ Czy chcesz go odzyskać?</translation>
         <translation type="unfinished">Plik bitmapy został wyeksportowany do &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+43"/>
         <source>Files</source>
         <translation type="unfinished">Pliki</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+12"/>
         <source>Export as Bitmap</source>
         <translation type="unfinished">Eksportuj jako bitmapę</translation>
     </message>
@@ -3238,7 +3238,7 @@ Czy chcesz go odzyskać?</translation>
 <context>
     <name>DirectoryList</name>
     <message>
-        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+57"/>
+        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+84"/>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
@@ -4155,18 +4155,18 @@ jest już na liście.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2120"/>
+        <location line="+2129"/>
         <source>Cancel</source>
         <translation type="unfinished">Anuluj</translation>
     </message>
     <message>
-        <location line="-2119"/>
+        <location line="-2128"/>
         <source>Done</source>
         <translation type="unfinished">Gotowe</translation>
     </message>
     <message>
         <location line="+277"/>
-        <location line="+140"/>
+        <location line="+144"/>
         <source>Active Tool:</source>
         <translation type="unfinished">Aktywne narzędzie:</translation>
     </message>
@@ -4176,7 +4176,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Brak</translation>
     </message>
     <message>
-        <location line="+662"/>
+        <location line="+667"/>
         <source>Options</source>
         <translation type="unfinished">Opcje</translation>
     </message>
@@ -4864,7 +4864,7 @@ jest już na liście.</translation>
 <context>
     <name>ExProcess</name>
     <message>
-        <location filename="../scripts/Misc/Examples/QtExamples/ExProcess/ExProcess.js" line="+81"/>
+        <location filename="../scripts/Misc/Examples/QtExamples/ExProcess/ExProcess.js" line="+96"/>
         <source>&amp;Run Process</source>
         <translation type="unfinished">Uruchom proces</translation>
     </message>
@@ -6343,12 +6343,12 @@ jest już na liście.</translation>
 <context>
     <name>Image</name>
     <message>
-        <location filename="../scripts/Draw/Image/Image.js" line="+133"/>
+        <location filename="../scripts/Draw/Image/Image.js" line="+140"/>
         <source>Files</source>
         <translation type="unfinished">Pliki</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>All Image Files (%1)</source>
         <translation type="unfinished">Wszystkie pliki obrazów (%1)</translation>
     </message>
@@ -6578,7 +6578,7 @@ jest już na liście.</translation>
 <context>
     <name>InfoArcCircleArea</name>
     <message>
-        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+306"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+308"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -6639,12 +6639,12 @@ jest już na liście.</translation>
         <translation>Pole powierzchni koła:</translation>
     </message>
     <message>
-        <location line="-245"/>
+        <location line="-247"/>
         <source>Choose arc, circle, ellipse or elliptical arc</source>
         <translation>Proszę wskazać łuk, okrąg, elipsę lub łuk elipsy</translation>
     </message>
     <message>
-        <location line="+246"/>
+        <location line="+248"/>
         <location line="+67"/>
         <source>circumference:</source>
         <translation>obwód:</translation>
@@ -6725,7 +6725,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Ustaw następny narożnik wielokąta</translation>
     </message>
     <message>
-        <location line="+121"/>
+        <location line="+123"/>
         <source>Polygon area:</source>
         <translation type="unfinished">Obszar wielokąta:</translation>
     </message>
@@ -7360,7 +7360,7 @@ jest już na liście.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+334"/>
+        <location filename="../scripts/Information/Information.js" line="+337"/>
         <source>Information Tools</source>
         <translation type="unfinished">Narzędzia informacyjne</translation>
     </message>
@@ -7442,20 +7442,20 @@ jest już na liście.</translation>
     </message>
     <message>
         <location line="+15"/>
-        <location line="+27"/>
+        <location line="+33"/>
         <source>Comma</source>
         <translation type="unfinished">Przecinek</translation>
     </message>
     <message>
-        <location line="-27"/>
+        <location line="-33"/>
         <location line="+6"/>
         <location line="+5"/>
-        <location line="+15"/>
+        <location line="+21"/>
         <source>(Default)</source>
         <translation type="unfinished">(Domyślnie)</translation>
     </message>
     <message>
-        <location line="-25"/>
+        <location line="-31"/>
         <source>Semicolon</source>
         <translation type="unfinished">Średnik</translation>
     </message>
@@ -7485,7 +7485,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Hash</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+18"/>
         <source>Dot</source>
         <translation type="unfinished">Dot</translation>
     </message>
@@ -9404,7 +9404,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation type="unfinished">Pliki MOL</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscIO/MolImport/MolImportInit.js" line="+2"/>
+        <location filename="../scripts/Misc/MiscIO/MolImport/MolImportInit.js" line="+7"/>
         <source>Leetro MOL Import...</source>
         <translation type="unfinished">Leetro MOL Import...</translation>
     </message>
@@ -9881,7 +9881,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation type="unfinished">Pióro</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+73"/>
         <source>Reset to Defaults</source>
         <translation type="unfinished">Resetuj do ustawień domyślnych</translation>
     </message>
@@ -10208,7 +10208,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation type="unfinished">Automatyczne dopasowywanie rysunku do papieru?</translation>
     </message>
     <message>
-        <location line="+188"/>
+        <location line="+187"/>
         <source>Drag to move paper</source>
         <translation type="unfinished">Przeciągnij, aby przesunąć papier</translation>
     </message>
@@ -10359,17 +10359,17 @@ wyświetlanych w wynikach wyszukiwania:</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1634"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1653"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*VARIES*</translation>
     </message>
     <message>
-        <location line="-1421"/>
+        <location line="-1434"/>
         <source>:</source>
         <translation type="unfinished">:</translation>
     </message>
     <message>
-        <location line="+194"/>
+        <location line="+189"/>
         <source>No Selection</source>
         <translation type="unfinished">Brak wyboru</translation>
     </message>
@@ -10389,7 +10389,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation type="unfinished">Własna</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+209"/>
         <source>Index</source>
         <translation type="unfinished">Indeks</translation>
     </message>
@@ -10399,7 +10399,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation>Usuń właściwość z zaznaczonych obiektów</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+68"/>
         <source>All</source>
         <translation type="unfinished">Wszystkie</translation>
     </message>
@@ -10414,17 +10414,17 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation type="unfinished">Pokaż wszystkie nieruchomości</translation>
     </message>
     <message>
-        <location line="+758"/>
+        <location line="+765"/>
         <source>Widgets</source>
         <translation>Widżety</translation>
     </message>
     <message>
-        <location line="-804"/>
+        <location line="-811"/>
         <source>Add custom property to selected objects</source>
         <translation>Dodaj dostosowaną właściwość do zaznaczonych obiektów</translation>
     </message>
     <message>
-        <location line="+180"/>
+        <location line="+181"/>
         <source>Auto</source>
         <translation type="unfinished">Auto</translation>
     </message>
@@ -10434,7 +10434,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation type="unfinished">Użyj pomiaru automatycznego</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+43"/>
         <source>Yes</source>
         <translation type="unfinished">Tak</translation>
     </message>
@@ -10444,7 +10444,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation type="unfinished">Nie</translation>
     </message>
     <message>
-        <location line="+382"/>
+        <location line="+389"/>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>
@@ -10655,13 +10655,13 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation>Kąt:</translation>
     </message>
     <message>
-        <location line="+20"/>
-        <location line="+47"/>
+        <location line="+23"/>
+        <location line="+53"/>
         <source>Base:</source>
         <translation>Wartość początkowa:</translation>
     </message>
     <message>
-        <location line="-20"/>
+        <location line="-23"/>
         <source>Distance:</source>
         <translation>Odległość:</translation>
     </message>
@@ -11757,7 +11757,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
 <context>
     <name>ShapePolygonAFPP</name>
     <message>
-        <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.js" line="+59"/>
+        <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.js" line="+61"/>
         <source>First side</source>
         <translation>Pierwszy bok</translation>
     </message>
@@ -11800,7 +11800,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
 <context>
     <name>ShapePolygonCP</name>
     <message>
-        <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.js" line="+59"/>
+        <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.js" line="+61"/>
         <source>Center</source>
         <translation>Środek</translation>
     </message>
@@ -11828,7 +11828,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
 <context>
     <name>ShapePolygonPP</name>
     <message>
-        <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.js" line="+58"/>
+        <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.js" line="+60"/>
         <source>First corner</source>
         <translation>Pierwszy narożnik</translation>
     </message>
@@ -12019,7 +12019,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation type="unfinished">X Współrzędna</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>&amp;y:</source>
         <translation type="unfinished">y:</translation>
     </message>
@@ -12029,7 +12029,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation type="unfinished">Współrzędna Y</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Tick for Relative Coordinate</source>
         <translation type="unfinished">Kleszcze dla współrzędnych względnych</translation>
     </message>
@@ -12057,7 +12057,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation type="unfinished">Promień (odległość)</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>&amp;&lt;:</source>
         <translation type="unfinished">&lt;:</translation>
     </message>
@@ -12067,7 +12067,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation type="unfinished">Kąt</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Tick for Relative Coordinate</source>
         <translation type="unfinished">Kleszcze dla współrzędnych względnych</translation>
     </message>
@@ -12123,7 +12123,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation>Odległość przyciągania:</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+72"/>
         <source>Distance</source>
         <translation>Odległość</translation>
     </message>
@@ -12518,7 +12518,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
 <context>
     <name>Text</name>
     <message>
-        <location filename="../scripts/Draw/Text/Text.js" line="+88"/>
+        <location filename="../scripts/Draw/Text/Text.js" line="+92"/>
         <source>Position</source>
         <translation type="unfinished">Pozycja</translation>
     </message>
@@ -12676,12 +12676,12 @@ wyświetlanych w wynikach wyszukiwania:</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+241"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+243"/>
         <source>Default value:</source>
         <translation>Domyślna wartość:</translation>
     </message>
     <message>
-        <location line="+269"/>
+        <location line="+274"/>
         <source>&amp;Undo</source>
         <translation type="unfinished">Undo</translation>
     </message>
@@ -12741,12 +12741,12 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation type="unfinished">Znaki specjalne...</translation>
     </message>
     <message>
-        <location line="+319"/>
+        <location line="+331"/>
         <source>Others...</source>
         <translation type="unfinished">Inni...</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+139"/>
         <source>Degree</source>
         <translation type="unfinished">Stopień naukowy</translation>
     </message>
@@ -13697,7 +13697,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+322"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+326"/>
         <source>Dropped data not supported</source>
         <translation>Nie obsługiwane przeciągnięte dane </translation>
     </message>
@@ -13723,7 +13723,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1138"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1152"/>
         <source>Restore defaults</source>
         <translation type="unfinished">Przywróć ustawienia domyślne</translation>
     </message>
@@ -14068,7 +14068,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
 <context>
     <name>Window</name>
     <message>
-        <location filename="../scripts/Window/Window.js" line="+109"/>
+        <location filename="../scripts/Window/Window.js" line="+122"/>
         <source>&amp;Window</source>
         <translation>&amp;Okno</translation>
     </message>
@@ -14185,7 +14185,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1226"/>
+        <location filename="../scripts/library.js" line="+1243"/>
         <source>Objects</source>
         <translation type="unfinished">Obiekty</translation>
     </message>
@@ -14748,4 +14748,3 @@ wyświetlanych w wynikach wyszukiwania:</translation>
     </message>
 </context>
 </TS>
-

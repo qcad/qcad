@@ -13,7 +13,7 @@
     <name>RCadToolBarPanel</name>
     <message>
         <location filename="../src/gui/RCadToolBarPanel.cpp" line="+21"/>
-        <location line="+59"/>
+        <location line="+63"/>
         <source>Back</source>
         <translation type="unfinished">Tagasi</translation>
     </message>
@@ -83,4 +83,3 @@
     </message>
 </context>
 </TS>
-

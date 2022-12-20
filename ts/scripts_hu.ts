@@ -280,12 +280,12 @@
         <translation type="unfinished">Rajzolási beállítások</translation>
     </message>
     <message>
-        <location line="+300"/>
+        <location line="+313"/>
         <source>Apply preferences</source>
         <translation type="unfinished">Alkalmazza a preferenciákat</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+49"/>
         <source>Restart required</source>
         <translation type="unfinished">Újraindítás szükséges</translation>
     </message>
@@ -302,7 +302,7 @@ a beállítások módosításai hatályba lépjenek.</translation>
         <translation type="unfinished">Alapértelmezett értékek</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+6"/>
         <source>These are default preferences for new drawings.</source>
         <translation type="unfinished">Ezek az új rajzok alapértelmezett beállításai.</translation>
     </message>
@@ -1112,12 +1112,12 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">A bittérképes fájl exportálása a &quot;%1&quot; címre történt.</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+43"/>
         <source>Files</source>
         <translation type="unfinished">Fájlok</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+12"/>
         <source>Export as Bitmap</source>
         <translation type="unfinished">Exportálás bitképként</translation>
     </message>
@@ -3232,7 +3232,7 @@ Szeretné visszaállítani?</translation>
 <context>
     <name>DirectoryList</name>
     <message>
-        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+57"/>
+        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+84"/>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
@@ -4147,18 +4147,18 @@ már szerepel a listában.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2120"/>
+        <location line="+2129"/>
         <source>Cancel</source>
         <translation type="unfinished">Törölje</translation>
     </message>
     <message>
-        <location line="-2119"/>
+        <location line="-2128"/>
         <source>Done</source>
         <translation type="unfinished">Kész</translation>
     </message>
     <message>
         <location line="+277"/>
-        <location line="+140"/>
+        <location line="+144"/>
         <source>Active Tool:</source>
         <translation type="unfinished">Aktív eszköz:</translation>
     </message>
@@ -4168,7 +4168,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Nincs</translation>
     </message>
     <message>
-        <location line="+662"/>
+        <location line="+667"/>
         <source>Options</source>
         <translation type="unfinished">Opciók</translation>
     </message>
@@ -4856,7 +4856,7 @@ már szerepel a listában.</translation>
 <context>
     <name>ExProcess</name>
     <message>
-        <location filename="../scripts/Misc/Examples/QtExamples/ExProcess/ExProcess.js" line="+81"/>
+        <location filename="../scripts/Misc/Examples/QtExamples/ExProcess/ExProcess.js" line="+96"/>
         <source>&amp;Run Process</source>
         <translation type="unfinished">Folyamat futtatása</translation>
     </message>
@@ -6333,12 +6333,12 @@ már szerepel a listában.</translation>
 <context>
     <name>Image</name>
     <message>
-        <location filename="../scripts/Draw/Image/Image.js" line="+133"/>
+        <location filename="../scripts/Draw/Image/Image.js" line="+140"/>
         <source>Files</source>
         <translation type="unfinished">Fájlok</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>All Image Files (%1)</source>
         <translation type="unfinished">Minden képfájl (%1)</translation>
     </message>
@@ -6573,7 +6573,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Válasszon ívet, kört, ellipszist vagy elliptikus ívet</translation>
     </message>
     <message>
-        <location line="+236"/>
+        <location line="+238"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -6715,7 +6715,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Következő poligon sarok beállítása</translation>
     </message>
     <message>
-        <location line="+121"/>
+        <location line="+123"/>
         <source>Polygon area:</source>
         <translation type="unfinished">Poligon terület:</translation>
     </message>
@@ -7350,7 +7350,7 @@ már szerepel a listában.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+334"/>
+        <location filename="../scripts/Information/Information.js" line="+337"/>
         <source>Information Tools</source>
         <translation type="unfinished">Információs eszközök</translation>
     </message>
@@ -7432,20 +7432,20 @@ már szerepel a listában.</translation>
     </message>
     <message>
         <location line="+15"/>
-        <location line="+27"/>
+        <location line="+33"/>
         <source>Comma</source>
         <translation type="unfinished">Vessző</translation>
     </message>
     <message>
-        <location line="-27"/>
+        <location line="-33"/>
         <location line="+6"/>
         <location line="+5"/>
-        <location line="+15"/>
+        <location line="+21"/>
         <source>(Default)</source>
         <translation type="unfinished">(Alapértelmezett)</translation>
     </message>
     <message>
-        <location line="-25"/>
+        <location line="-31"/>
         <source>Semicolon</source>
         <translation type="unfinished">Pontosvessző</translation>
     </message>
@@ -7475,7 +7475,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Hash</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+18"/>
         <source>Dot</source>
         <translation type="unfinished">Dot</translation>
     </message>
@@ -9394,7 +9394,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
         <translation type="unfinished">Minden fájl</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscIO/MolImport/MolImportInit.js" line="+2"/>
+        <location filename="../scripts/Misc/MiscIO/MolImport/MolImportInit.js" line="+7"/>
         <source>Leetro MOL Import...</source>
         <translation type="unfinished">Leetro MOL Import...</translation>
     </message>
@@ -9867,7 +9867,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
         <translation type="unfinished">Toll</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+73"/>
         <source>Reset to Defaults</source>
         <translation type="unfinished">Alapértelmezettre visszaállítása</translation>
     </message>
@@ -10194,7 +10194,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
         <translation type="unfinished">Automatikusan illeszkedő rajz a papírra?</translation>
     </message>
     <message>
-        <location line="+188"/>
+        <location line="+187"/>
         <source>Drag to move paper</source>
         <translation type="unfinished">Húzás a papír mozgatásához</translation>
     </message>
@@ -10345,12 +10345,12 @@ a keresési eredményekben megjelenő elemek száma:</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+213"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+219"/>
         <source>:</source>
         <translation type="unfinished">:</translation>
     </message>
     <message>
-        <location line="+194"/>
+        <location line="+189"/>
         <source>No Selection</source>
         <translation type="unfinished">Nincs kiválasztás</translation>
     </message>
@@ -10370,7 +10370,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
         <translation type="unfinished">Custom</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+209"/>
         <source>Index</source>
         <translation type="unfinished">Index</translation>
     </message>
@@ -10380,7 +10380,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
         <translation type="unfinished">E tulajdonság eltávolítása a kijelölt objektumokról</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+68"/>
         <source>All</source>
         <translation type="unfinished">Minden</translation>
     </message>
@@ -10400,7 +10400,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
         <translation type="unfinished">Minden ingatlan megjelenítése</translation>
     </message>
     <message>
-        <location line="+134"/>
+        <location line="+135"/>
         <source>Auto</source>
         <translation type="unfinished">Auto</translation>
     </message>
@@ -10410,7 +10410,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
         <translation type="unfinished">Automatikus mérés használata</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+43"/>
         <source>Yes</source>
         <translation type="unfinished">Igen</translation>
     </message>
@@ -10420,7 +10420,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
         <translation type="unfinished">Nem</translation>
     </message>
     <message>
-        <location line="+379"/>
+        <location line="+386"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*VÁLTOZÁSOK*</translation>
     </message>
@@ -10646,13 +10646,13 @@ a keresési eredményekben megjelenő elemek száma:</translation>
         <translation type="unfinished">Szög:</translation>
     </message>
     <message>
-        <location line="+20"/>
-        <location line="+47"/>
+        <location line="+23"/>
+        <location line="+53"/>
         <source>Base:</source>
         <translation type="unfinished">Bázis:</translation>
     </message>
     <message>
-        <location line="-20"/>
+        <location line="-23"/>
         <source>Distance:</source>
         <translation type="unfinished">Távolság:</translation>
     </message>
@@ -11737,7 +11737,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
 <context>
     <name>ShapePolygonAFPP</name>
     <message>
-        <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.js" line="+59"/>
+        <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.js" line="+61"/>
         <source>First side</source>
         <translation type="unfinished">Első oldal</translation>
     </message>
@@ -11780,7 +11780,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
 <context>
     <name>ShapePolygonCP</name>
     <message>
-        <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.js" line="+59"/>
+        <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.js" line="+61"/>
         <source>Center</source>
         <translation type="unfinished">Közép</translation>
     </message>
@@ -11808,7 +11808,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
 <context>
     <name>ShapePolygonPP</name>
     <message>
-        <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.js" line="+58"/>
+        <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.js" line="+60"/>
         <source>First corner</source>
         <translation type="unfinished">Első sarok</translation>
     </message>
@@ -12004,7 +12004,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
         <translation type="unfinished">X koordináta</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>&amp;y:</source>
         <translation type="unfinished">y:</translation>
     </message>
@@ -12014,7 +12014,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
         <translation type="unfinished">Y koordináta</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Tick for Relative Coordinate</source>
         <translation type="unfinished">Relatív koordináta jelölése</translation>
     </message>
@@ -12042,7 +12042,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
         <translation type="unfinished">Sugár (távolság)</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>&amp;&lt;:</source>
         <translation type="unfinished">&lt;:</translation>
     </message>
@@ -12052,7 +12052,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
         <translation type="unfinished">Szög</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Tick for Relative Coordinate</source>
         <translation type="unfinished">Relatív koordináta jelölése</translation>
     </message>
@@ -12103,7 +12103,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
         <translation type="unfinished">Csapó távolság:</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+72"/>
         <source>Distance</source>
         <translation type="unfinished">Távolság</translation>
     </message>
@@ -12498,7 +12498,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
 <context>
     <name>Text</name>
     <message>
-        <location filename="../scripts/Draw/Text/Text.js" line="+88"/>
+        <location filename="../scripts/Draw/Text/Text.js" line="+92"/>
         <source>Position</source>
         <translation type="unfinished">Pozíció</translation>
     </message>
@@ -12656,12 +12656,12 @@ a keresési eredményekben megjelenő elemek száma:</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+241"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+243"/>
         <source>Default value:</source>
         <translation type="unfinished">Alapértelmezett érték:</translation>
     </message>
     <message>
-        <location line="+269"/>
+        <location line="+274"/>
         <source>&amp;Undo</source>
         <translation type="unfinished">Undo</translation>
     </message>
@@ -12721,12 +12721,12 @@ a keresési eredményekben megjelenő elemek száma:</translation>
         <translation type="unfinished">Különleges karakterek...</translation>
     </message>
     <message>
-        <location line="+319"/>
+        <location line="+331"/>
         <source>Others...</source>
         <translation type="unfinished">Mások...</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+139"/>
         <source>Degree</source>
         <translation type="unfinished">Fokozat</translation>
     </message>
@@ -13677,7 +13677,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+322"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+326"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished">A megszakadt adatok nem támogatottak</translation>
     </message>
@@ -13703,7 +13703,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1138"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1152"/>
         <source>Restore defaults</source>
         <translation type="unfinished">Alapértelmezett beállítások visszaállítása</translation>
     </message>
@@ -14048,7 +14048,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
 <context>
     <name>Window</name>
     <message>
-        <location filename="../scripts/Window/Window.js" line="+109"/>
+        <location filename="../scripts/Window/Window.js" line="+122"/>
         <source>&amp;Window</source>
         <translation type="unfinished">Ablak</translation>
     </message>
@@ -14165,7 +14165,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1226"/>
+        <location filename="../scripts/library.js" line="+1243"/>
         <source>Objects</source>
         <translation type="unfinished">Tárgyak</translation>
     </message>
@@ -14728,4 +14728,3 @@ a keresési eredményekben megjelenő elemek száma:</translation>
     </message>
 </context>
 </TS>
-

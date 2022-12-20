@@ -280,12 +280,12 @@
         <translation type="unfinished">Налаштування малювання</translation>
     </message>
     <message>
-        <location line="+300"/>
+        <location line="+313"/>
         <source>Apply preferences</source>
         <translation type="unfinished">Застосувати преференції</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+49"/>
         <source>Restart required</source>
         <translation type="unfinished">Потрібне перезавантаження</translation>
     </message>
@@ -302,7 +302,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">Значення за замовчуванням для</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+6"/>
         <source>These are default preferences for new drawings.</source>
         <translation type="unfinished">Це налаштування за замовчуванням для нових креслень.</translation>
     </message>
@@ -1113,12 +1113,12 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Растровий файл експортовано до &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+43"/>
         <source>Files</source>
         <translation type="unfinished">Файли</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+12"/>
         <source>Export as Bitmap</source>
         <translation type="unfinished">Експорт у формат Bitmap</translation>
     </message>
@@ -3235,7 +3235,7 @@ Do you wish to recover it?</source>
 <context>
     <name>DirectoryList</name>
     <message>
-        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+57"/>
+        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+84"/>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
@@ -4152,18 +4152,18 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2120"/>
+        <location line="+2129"/>
         <source>Cancel</source>
         <translation type="unfinished">Скасувати</translation>
     </message>
     <message>
-        <location line="-2119"/>
+        <location line="-2128"/>
         <source>Done</source>
         <translation type="unfinished">Зроблено</translation>
     </message>
     <message>
         <location line="+277"/>
-        <location line="+140"/>
+        <location line="+144"/>
         <source>Active Tool:</source>
         <translation type="unfinished">Активний інструмент:</translation>
     </message>
@@ -4173,7 +4173,7 @@ is already in the list.</source>
         <translation type="unfinished">Немає</translation>
     </message>
     <message>
-        <location line="+662"/>
+        <location line="+667"/>
         <source>Options</source>
         <translation type="unfinished">Опції</translation>
     </message>
@@ -4861,7 +4861,7 @@ is already in the list.</source>
 <context>
     <name>ExProcess</name>
     <message>
-        <location filename="../scripts/Misc/Examples/QtExamples/ExProcess/ExProcess.js" line="+81"/>
+        <location filename="../scripts/Misc/Examples/QtExamples/ExProcess/ExProcess.js" line="+96"/>
         <source>&amp;Run Process</source>
         <translation type="unfinished">Процес запуску</translation>
     </message>
@@ -6340,12 +6340,12 @@ is already in the list.</source>
 <context>
     <name>Image</name>
     <message>
-        <location filename="../scripts/Draw/Image/Image.js" line="+133"/>
+        <location filename="../scripts/Draw/Image/Image.js" line="+140"/>
         <source>Files</source>
         <translation type="unfinished">Файли</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>All Image Files (%1)</source>
         <translation type="unfinished">Всі файли зображень (%1)</translation>
     </message>
@@ -6580,7 +6580,7 @@ is already in the list.</source>
         <translation type="unfinished">Виберіть дугу, коло, еліпс або еліптичну дугу</translation>
     </message>
     <message>
-        <location line="+236"/>
+        <location line="+238"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -6722,7 +6722,7 @@ is already in the list.</source>
         <translation type="unfinished">Встановити наступний кут багатокутника</translation>
     </message>
     <message>
-        <location line="+121"/>
+        <location line="+123"/>
         <source>Polygon area:</source>
         <translation type="unfinished">Площа полігону:</translation>
     </message>
@@ -7357,7 +7357,7 @@ is already in the list.</source>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+334"/>
+        <location filename="../scripts/Information/Information.js" line="+337"/>
         <source>Information Tools</source>
         <translation type="unfinished">Інформаційні інструменти</translation>
     </message>
@@ -7439,20 +7439,20 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+15"/>
-        <location line="+27"/>
+        <location line="+33"/>
         <source>Comma</source>
         <translation type="unfinished">Кома</translation>
     </message>
     <message>
-        <location line="-27"/>
+        <location line="-33"/>
         <location line="+6"/>
         <location line="+5"/>
-        <location line="+15"/>
+        <location line="+21"/>
         <source>(Default)</source>
         <translation type="unfinished">(За замовчуванням)</translation>
     </message>
     <message>
-        <location line="-25"/>
+        <location line="-31"/>
         <source>Semicolon</source>
         <translation type="unfinished">Крапка з комою</translation>
     </message>
@@ -7482,7 +7482,7 @@ is already in the list.</source>
         <translation type="unfinished">Хеш</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+18"/>
         <source>Dot</source>
         <translation type="unfinished">Точка</translation>
     </message>
@@ -9401,7 +9401,7 @@ shown in search results:</source>
         <translation type="unfinished">Всі файли</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscIO/MolImport/MolImportInit.js" line="+2"/>
+        <location filename="../scripts/Misc/MiscIO/MolImport/MolImportInit.js" line="+7"/>
         <source>Leetro MOL Import...</source>
         <translation type="unfinished">Leetro MOL Import...</translation>
     </message>
@@ -9878,7 +9878,7 @@ shown in search results:</source>
         <translation type="unfinished">Ручка</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+73"/>
         <source>Reset to Defaults</source>
         <translation type="unfinished">Скидання до налаштувань за замовчуванням</translation>
     </message>
@@ -10205,7 +10205,7 @@ shown in search results:</source>
         <translation type="unfinished">Автоматичне припасування креслення до паперу?</translation>
     </message>
     <message>
-        <location line="+188"/>
+        <location line="+187"/>
         <source>Drag to move paper</source>
         <translation type="unfinished">Перетягування для переміщення паперу</translation>
     </message>
@@ -10391,12 +10391,12 @@ shown in search results:</source>
         <translation type="unfinished">Десяткові знаки / точність для відображуваних значень властивостей:</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+213"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+219"/>
         <source>:</source>
         <translation type="unfinished">:</translation>
     </message>
     <message>
-        <location line="+194"/>
+        <location line="+189"/>
         <source>No Selection</source>
         <translation type="unfinished">Без вибору</translation>
     </message>
@@ -10416,7 +10416,7 @@ shown in search results:</source>
         <translation type="unfinished">Нестандартний</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+209"/>
         <source>Index</source>
         <translation type="unfinished">Індекс</translation>
     </message>
@@ -10426,7 +10426,7 @@ shown in search results:</source>
         <translation type="unfinished">Видалити цю властивість у вибраних об&apos;єктів</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+68"/>
         <source>All</source>
         <translation type="unfinished">Всі</translation>
     </message>
@@ -10446,7 +10446,7 @@ shown in search results:</source>
         <translation type="unfinished">Показати всі властивості</translation>
     </message>
     <message>
-        <location line="+134"/>
+        <location line="+135"/>
         <source>Auto</source>
         <translation type="unfinished">Авто</translation>
     </message>
@@ -10456,7 +10456,7 @@ shown in search results:</source>
         <translation type="unfinished">Використовуйте автоматичне вимірювання</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+43"/>
         <source>Yes</source>
         <translation type="unfinished">Так</translation>
     </message>
@@ -10466,7 +10466,7 @@ shown in search results:</source>
         <translation type="unfinished">Ні</translation>
     </message>
     <message>
-        <location line="+379"/>
+        <location line="+386"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*ВАРІАНТИ*</translation>
     </message>
@@ -10652,13 +10652,13 @@ shown in search results:</source>
         <translation type="unfinished">Кут:</translation>
     </message>
     <message>
-        <location line="+20"/>
-        <location line="+47"/>
+        <location line="+23"/>
+        <location line="+53"/>
         <source>Base:</source>
         <translation type="unfinished">База:</translation>
     </message>
     <message>
-        <location line="-20"/>
+        <location line="-23"/>
         <source>Distance:</source>
         <translation type="unfinished">Відстань:</translation>
     </message>
@@ -11644,7 +11644,7 @@ shown in search results:</source>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
-        <translation>Вибрані суб'єкти:
+        <translation>Вибрані суб&apos;єкти:
 %1.</translation>
     </message>
     <message>
@@ -11754,7 +11754,7 @@ shown in search results:</source>
 <context>
     <name>ShapePolygonAFPP</name>
     <message>
-        <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.js" line="+59"/>
+        <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.js" line="+61"/>
         <source>First side</source>
         <translation type="unfinished">Перша сторона</translation>
     </message>
@@ -11797,7 +11797,7 @@ shown in search results:</source>
 <context>
     <name>ShapePolygonCP</name>
     <message>
-        <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.js" line="+59"/>
+        <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.js" line="+61"/>
         <source>Center</source>
         <translation type="unfinished">Центр</translation>
     </message>
@@ -11825,7 +11825,7 @@ shown in search results:</source>
 <context>
     <name>ShapePolygonPP</name>
     <message>
-        <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.js" line="+58"/>
+        <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.js" line="+60"/>
         <source>First corner</source>
         <translation type="unfinished">Перший поворот</translation>
     </message>
@@ -12016,7 +12016,7 @@ shown in search results:</source>
         <translation type="unfinished">Координата X</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>&amp;y:</source>
         <translation type="unfinished">y:</translation>
     </message>
@@ -12026,7 +12026,7 @@ shown in search results:</source>
         <translation type="unfinished">Координата Y</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Tick for Relative Coordinate</source>
         <translation type="unfinished">Галочка для відносної координати</translation>
     </message>
@@ -12054,7 +12054,7 @@ shown in search results:</source>
         <translation type="unfinished">Радіус (відстань)</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>&amp;&lt;:</source>
         <translation type="unfinished">&lt;:</translation>
     </message>
@@ -12064,7 +12064,7 @@ shown in search results:</source>
         <translation type="unfinished">Кут</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Tick for Relative Coordinate</source>
         <translation type="unfinished">Галочка для відносної координати</translation>
     </message>
@@ -12110,7 +12110,7 @@ shown in search results:</source>
         <translation type="unfinished">Зблизька:</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+72"/>
         <source>Distance</source>
         <translation type="unfinished">Відстань</translation>
     </message>
@@ -12515,7 +12515,7 @@ shown in search results:</source>
 <context>
     <name>Text</name>
     <message>
-        <location filename="../scripts/Draw/Text/Text.js" line="+88"/>
+        <location filename="../scripts/Draw/Text/Text.js" line="+92"/>
         <source>Position</source>
         <translation type="unfinished">Посада</translation>
     </message>
@@ -12673,12 +12673,12 @@ shown in search results:</source>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+241"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+243"/>
         <source>Default value:</source>
         <translation type="unfinished">Значення за замовчуванням:</translation>
     </message>
     <message>
-        <location line="+269"/>
+        <location line="+274"/>
         <source>&amp;Undo</source>
         <translation type="unfinished">Скасувати</translation>
     </message>
@@ -12738,12 +12738,12 @@ shown in search results:</source>
         <translation type="unfinished">Спеціальні символи...</translation>
     </message>
     <message>
-        <location line="+319"/>
+        <location line="+331"/>
         <source>Others...</source>
         <translation type="unfinished">Інші...</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+139"/>
         <source>Degree</source>
         <translation type="unfinished">Ступінь</translation>
     </message>
@@ -13694,7 +13694,7 @@ shown in search results:</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+322"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+326"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished">Скинуті дані не підтримуються</translation>
     </message>
@@ -13720,7 +13720,7 @@ shown in search results:</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1138"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1152"/>
         <source>Restore defaults</source>
         <translation type="unfinished">Відновлення налаштувань за замовчуванням</translation>
     </message>
@@ -14065,7 +14065,7 @@ shown in search results:</source>
 <context>
     <name>Window</name>
     <message>
-        <location filename="../scripts/Window/Window.js" line="+109"/>
+        <location filename="../scripts/Window/Window.js" line="+122"/>
         <source>&amp;Window</source>
         <translation type="unfinished">Вікно</translation>
     </message>
@@ -14182,7 +14182,7 @@ shown in search results:</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1226"/>
+        <location filename="../scripts/library.js" line="+1243"/>
         <source>Objects</source>
         <translation type="unfinished">Об&apos;єкти</translation>
     </message>

@@ -280,12 +280,12 @@
         <translation>Předvolby kreslení</translation>
     </message>
     <message>
-        <location line="+300"/>
+        <location line="+313"/>
         <source>Apply preferences</source>
         <translation>Použít předvolby</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+49"/>
         <source>Restart required</source>
         <translation>Vyžadován restart</translation>
     </message>
@@ -302,7 +302,7 @@ aby se změny předvoleb projevily.</translation>
         <translation>Výchozí pro</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+6"/>
         <source>These are default preferences for new drawings.</source>
         <translation>Toto jsou výchozí předvolby pro nový výkres.</translation>
     </message>
@@ -1114,12 +1114,12 @@ Přejete si ho obnovit?</translation>
         <translation>Bitmapový soubor byl exportován do &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+43"/>
         <source>Files</source>
         <translation>soubory</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+12"/>
         <source>Export as Bitmap</source>
         <translation>Exportovat jako Bitmapu</translation>
     </message>
@@ -3236,7 +3236,7 @@ Přejete si ho obnovit?</translation>
 <context>
     <name>DirectoryList</name>
     <message>
-        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+57"/>
+        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+84"/>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
@@ -4153,18 +4153,18 @@ již v seznamu je.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2120"/>
+        <location line="+2129"/>
         <source>Cancel</source>
         <translation>Storno</translation>
     </message>
     <message>
-        <location line="-2119"/>
+        <location line="-2128"/>
         <source>Done</source>
         <translation type="unfinished">Hotovo</translation>
     </message>
     <message>
         <location line="+277"/>
-        <location line="+140"/>
+        <location line="+144"/>
         <source>Active Tool:</source>
         <translation>Aktivní nástroj:</translation>
     </message>
@@ -4174,7 +4174,7 @@ již v seznamu je.</translation>
         <translation>Žádný</translation>
     </message>
     <message>
-        <location line="+662"/>
+        <location line="+667"/>
         <source>Options</source>
         <translation>Možnosti</translation>
     </message>
@@ -4862,7 +4862,7 @@ již v seznamu je.</translation>
 <context>
     <name>ExProcess</name>
     <message>
-        <location filename="../scripts/Misc/Examples/QtExamples/ExProcess/ExProcess.js" line="+81"/>
+        <location filename="../scripts/Misc/Examples/QtExamples/ExProcess/ExProcess.js" line="+96"/>
         <source>&amp;Run Process</source>
         <translation>&amp;Spustit proces</translation>
     </message>
@@ -6341,12 +6341,12 @@ již v seznamu je.</translation>
 <context>
     <name>Image</name>
     <message>
-        <location filename="../scripts/Draw/Image/Image.js" line="+133"/>
+        <location filename="../scripts/Draw/Image/Image.js" line="+140"/>
         <source>Files</source>
         <translation>Soubory</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>All Image Files (%1)</source>
         <translation>Všechny soubory obrázků (%1)</translation>
     </message>
@@ -6581,7 +6581,7 @@ již v seznamu je.</translation>
         <translation>Vyberte oblouk, kružnici, elipsu nebo eliptický oblouk</translation>
     </message>
     <message>
-        <location line="+236"/>
+        <location line="+238"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -6723,7 +6723,7 @@ již v seznamu je.</translation>
         <translation>Vyberte další roh polygonu</translation>
     </message>
     <message>
-        <location line="+121"/>
+        <location line="+123"/>
         <source>Polygon area:</source>
         <translation>Plocha polygonu:</translation>
     </message>
@@ -7358,7 +7358,7 @@ již v seznamu je.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+334"/>
+        <location filename="../scripts/Information/Information.js" line="+337"/>
         <source>Information Tools</source>
         <translation>Informační nástroje</translation>
     </message>
@@ -7440,20 +7440,20 @@ již v seznamu je.</translation>
     </message>
     <message>
         <location line="+15"/>
-        <location line="+27"/>
+        <location line="+33"/>
         <source>Comma</source>
         <translation>Čárka</translation>
     </message>
     <message>
-        <location line="-27"/>
+        <location line="-33"/>
         <location line="+6"/>
         <location line="+5"/>
-        <location line="+15"/>
+        <location line="+21"/>
         <source>(Default)</source>
         <translation>(Výchozí)</translation>
     </message>
     <message>
-        <location line="-25"/>
+        <location line="-31"/>
         <source>Semicolon</source>
         <translation>Středník</translation>
     </message>
@@ -7483,7 +7483,7 @@ již v seznamu je.</translation>
         <translation>Křížek</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+18"/>
         <source>Dot</source>
         <translation>Tečka</translation>
     </message>
@@ -9402,7 +9402,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Všechny soubory</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscIO/MolImport/MolImportInit.js" line="+2"/>
+        <location filename="../scripts/Misc/MiscIO/MolImport/MolImportInit.js" line="+7"/>
         <source>Leetro MOL Import...</source>
         <translation>Leetro MOL Import...</translation>
     </message>
@@ -9879,7 +9879,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Pero</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+73"/>
         <source>Reset to Defaults</source>
         <translation>Obnovit výchozí nastavení</translation>
     </message>
@@ -10206,7 +10206,7 @@ ve výsledcích vyhledávání:</translation>
         <translation type="unfinished">Automatické přizpůsobení výkresu papíru?</translation>
     </message>
     <message>
-        <location line="+188"/>
+        <location line="+187"/>
         <source>Drag to move paper</source>
         <translation>Přetažením přesuňte papír</translation>
     </message>
@@ -10392,12 +10392,12 @@ ve výsledcích vyhledávání:</translation>
         <translation type="unfinished">Zobrazení rozšířených předvoleb stylů rozměrů</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+213"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+219"/>
         <source>:</source>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+194"/>
+        <location line="+189"/>
         <source>No Selection</source>
         <translation>Žádný výběr</translation>
     </message>
@@ -10417,7 +10417,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Vlastní</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+209"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
@@ -10427,7 +10427,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Odebrat tuto vlastnost vybraným objektům</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+68"/>
         <source>All</source>
         <translation>Vše</translation>
     </message>
@@ -10447,7 +10447,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Zobrazit všechny vlastnosti</translation>
     </message>
     <message>
-        <location line="+134"/>
+        <location line="+135"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -10457,7 +10457,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Použít automatické měření</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+43"/>
         <source>Yes</source>
         <translation>Ano</translation>
     </message>
@@ -10467,7 +10467,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Ne</translation>
     </message>
     <message>
-        <location line="+379"/>
+        <location line="+386"/>
         <source>*VARIES*</source>
         <translation>*RŮZNÉ*</translation>
     </message>
@@ -10653,13 +10653,13 @@ ve výsledcích vyhledávání:</translation>
         <translation>Úhel:</translation>
     </message>
     <message>
-        <location line="+20"/>
-        <location line="+47"/>
+        <location line="+23"/>
+        <location line="+53"/>
         <source>Base:</source>
         <translation>Základ:</translation>
     </message>
     <message>
-        <location line="-20"/>
+        <location line="-23"/>
         <source>Distance:</source>
         <translation>Vzdálenost:</translation>
     </message>
@@ -11755,7 +11755,7 @@ ve výsledcích vyhledávání:</translation>
 <context>
     <name>ShapePolygonAFPP</name>
     <message>
-        <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.js" line="+59"/>
+        <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.js" line="+61"/>
         <source>First side</source>
         <translation>První strana</translation>
     </message>
@@ -11798,7 +11798,7 @@ ve výsledcích vyhledávání:</translation>
 <context>
     <name>ShapePolygonCP</name>
     <message>
-        <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.js" line="+59"/>
+        <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.js" line="+61"/>
         <source>Center</source>
         <translation>Střed</translation>
     </message>
@@ -11826,7 +11826,7 @@ ve výsledcích vyhledávání:</translation>
 <context>
     <name>ShapePolygonPP</name>
     <message>
-        <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.js" line="+58"/>
+        <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.js" line="+60"/>
         <source>First corner</source>
         <translation>První vrchol</translation>
     </message>
@@ -12017,7 +12017,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Souřadnice X</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>&amp;y:</source>
         <translation>&amp;y:</translation>
     </message>
@@ -12027,7 +12027,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Souřadnice Y</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Tick for Relative Coordinate</source>
         <translation>Zaškrtněte pro relativní souřadnice</translation>
     </message>
@@ -12055,7 +12055,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Poloměr (vzdálenost)</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>&amp;&lt;:</source>
         <translation>&amp;&lt;:</translation>
     </message>
@@ -12065,7 +12065,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Úhel</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Tick for Relative Coordinate</source>
         <translation>Zaškrtněte pro relativní souřadnice</translation>
     </message>
@@ -12111,7 +12111,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Vzdálenost přichycení:</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+72"/>
         <source>Distance</source>
         <translation>Vzdálenost</translation>
     </message>
@@ -12516,7 +12516,7 @@ ve výsledcích vyhledávání:</translation>
 <context>
     <name>Text</name>
     <message>
-        <location filename="../scripts/Draw/Text/Text.js" line="+88"/>
+        <location filename="../scripts/Draw/Text/Text.js" line="+92"/>
         <source>Position</source>
         <translation>Umístění</translation>
     </message>
@@ -12674,12 +12674,12 @@ ve výsledcích vyhledávání:</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+241"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+243"/>
         <source>Default value:</source>
         <translation>Výchozí hodnota:</translation>
     </message>
     <message>
-        <location line="+269"/>
+        <location line="+274"/>
         <source>&amp;Undo</source>
         <translation>&amp;Zpět</translation>
     </message>
@@ -12739,12 +12739,12 @@ ve výsledcích vyhledávání:</translation>
         <translation>&amp;Speciální znaky...</translation>
     </message>
     <message>
-        <location line="+319"/>
+        <location line="+331"/>
         <source>Others...</source>
         <translation>Další...</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+139"/>
         <source>Degree</source>
         <translation>Stupeň</translation>
     </message>
@@ -13695,7 +13695,7 @@ ve výsledcích vyhledávání:</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+322"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+326"/>
         <source>Dropped data not supported</source>
         <translation>Vložené údaje nejsou podporované</translation>
     </message>
@@ -13721,7 +13721,7 @@ ve výsledcích vyhledávání:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1138"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1152"/>
         <source>Restore defaults</source>
         <translation>Obnovit výchozí nastavení</translation>
     </message>
@@ -14066,7 +14066,7 @@ ve výsledcích vyhledávání:</translation>
 <context>
     <name>Window</name>
     <message>
-        <location filename="../scripts/Window/Window.js" line="+109"/>
+        <location filename="../scripts/Window/Window.js" line="+122"/>
         <source>&amp;Window</source>
         <translation>&amp;Okno</translation>
     </message>
@@ -14183,7 +14183,7 @@ ve výsledcích vyhledávání:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1226"/>
+        <location filename="../scripts/library.js" line="+1243"/>
         <source>Objects</source>
         <translation>Objektů</translation>
     </message>
@@ -14746,4 +14746,3 @@ ve výsledcích vyhledávání:</translation>
     </message>
 </context>
 </TS>
-

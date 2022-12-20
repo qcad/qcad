@@ -280,12 +280,12 @@
         <translation>Præferencer for tegning</translation>
     </message>
     <message>
-        <location line="+300"/>
+        <location line="+313"/>
         <source>Apply preferences</source>
         <translation>Anvend præferencer</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+49"/>
         <source>Restart required</source>
         <translation>Genstart nødvendig</translation>
     </message>
@@ -302,7 +302,7 @@ the preference changes to take effect.</source>
         <translation>Standardværdier for</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+6"/>
         <source>These are default preferences for new drawings.</source>
         <translation>Dette er standardindstillingerne for nye tegninger.</translation>
     </message>
@@ -1114,12 +1114,12 @@ Do you wish to recover it?</source>
         <translation>Bitmap-filen er blevet eksporteret til &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+43"/>
         <source>Files</source>
         <translation>Filer</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+12"/>
         <source>Export as Bitmap</source>
         <translation>Eksporter som Bitmap</translation>
     </message>
@@ -3235,7 +3235,7 @@ Do you wish to recover it?</source>
 <context>
     <name>DirectoryList</name>
     <message>
-        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+57"/>
+        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+84"/>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
@@ -4151,18 +4151,18 @@ er allerede på listen.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2120"/>
+        <location line="+2129"/>
         <source>Cancel</source>
         <translation>Annuller</translation>
     </message>
     <message>
-        <location line="-2119"/>
+        <location line="-2128"/>
         <source>Done</source>
         <translation>Udført</translation>
     </message>
     <message>
         <location line="+277"/>
-        <location line="+140"/>
+        <location line="+144"/>
         <source>Active Tool:</source>
         <translation>Aktivt værktøj:</translation>
     </message>
@@ -4172,7 +4172,7 @@ er allerede på listen.</translation>
         <translation>Ingen</translation>
     </message>
     <message>
-        <location line="+662"/>
+        <location line="+667"/>
         <source>Options</source>
         <translation>Indstillinger</translation>
     </message>
@@ -4860,7 +4860,7 @@ er allerede på listen.</translation>
 <context>
     <name>ExProcess</name>
     <message>
-        <location filename="../scripts/Misc/Examples/QtExamples/ExProcess/ExProcess.js" line="+81"/>
+        <location filename="../scripts/Misc/Examples/QtExamples/ExProcess/ExProcess.js" line="+96"/>
         <source>&amp;Run Process</source>
         <translation>&amp;Run Process</translation>
     </message>
@@ -6338,12 +6338,12 @@ er allerede på listen.</translation>
 <context>
     <name>Image</name>
     <message>
-        <location filename="../scripts/Draw/Image/Image.js" line="+133"/>
+        <location filename="../scripts/Draw/Image/Image.js" line="+140"/>
         <source>Files</source>
         <translation>Filer</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>All Image Files (%1)</source>
         <translation>Alle billedfiler (%1)</translation>
     </message>
@@ -6578,7 +6578,7 @@ er allerede på listen.</translation>
         <translation>Vælg bue, cirkel, ellipse eller elliptisk bue</translation>
     </message>
     <message>
-        <location line="+236"/>
+        <location line="+238"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -6720,7 +6720,7 @@ er allerede på listen.</translation>
         <translation>Indstil næste polygonhjørne</translation>
     </message>
     <message>
-        <location line="+121"/>
+        <location line="+123"/>
         <source>Polygon area:</source>
         <translation>Polygonområde:</translation>
     </message>
@@ -7355,7 +7355,7 @@ er allerede på listen.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+334"/>
+        <location filename="../scripts/Information/Information.js" line="+337"/>
         <source>Information Tools</source>
         <translation>Informationsværktøjer</translation>
     </message>
@@ -7437,20 +7437,20 @@ er allerede på listen.</translation>
     </message>
     <message>
         <location line="+15"/>
-        <location line="+27"/>
+        <location line="+33"/>
         <source>Comma</source>
         <translation>Komma</translation>
     </message>
     <message>
-        <location line="-27"/>
+        <location line="-33"/>
         <location line="+6"/>
         <location line="+5"/>
-        <location line="+15"/>
+        <location line="+21"/>
         <source>(Default)</source>
         <translation>(standard)</translation>
     </message>
     <message>
-        <location line="-25"/>
+        <location line="-31"/>
         <source>Semicolon</source>
         <translation>Semikolon</translation>
     </message>
@@ -7480,7 +7480,7 @@ er allerede på listen.</translation>
         <translation>Hash</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+18"/>
         <source>Dot</source>
         <translation>Punkt</translation>
     </message>
@@ -9399,7 +9399,7 @@ vist i søgeresultaterne:</translation>
         <translation>Alle filer</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscIO/MolImport/MolImportInit.js" line="+2"/>
+        <location filename="../scripts/Misc/MiscIO/MolImport/MolImportInit.js" line="+7"/>
         <source>Leetro MOL Import...</source>
         <translation>Leetro MOL Import...</translation>
     </message>
@@ -9874,7 +9874,7 @@ vist i søgeresultaterne:</translation>
         <translation>Pen</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+73"/>
         <source>Reset to Defaults</source>
         <translation>Nulstil til standardindstillingerne</translation>
     </message>
@@ -10201,7 +10201,7 @@ vist i søgeresultaterne:</translation>
         <translation>Automatisk tilpasning af tegning til papir?</translation>
     </message>
     <message>
-        <location line="+188"/>
+        <location line="+187"/>
         <source>Drag to move paper</source>
         <translation>Træk for at flytte papiret</translation>
     </message>
@@ -10387,12 +10387,12 @@ vist i søgeresultaterne:</translation>
         <translation>Vis avancerede dimensionsstilsoverstyringer</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+213"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+219"/>
         <source>:</source>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+194"/>
+        <location line="+189"/>
         <source>No Selection</source>
         <translation>Intet valg</translation>
     </message>
@@ -10412,7 +10412,7 @@ vist i søgeresultaterne:</translation>
         <translation>Tilpasset</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+209"/>
         <source>Index</source>
         <translation>Indeks</translation>
     </message>
@@ -10422,7 +10422,7 @@ vist i søgeresultaterne:</translation>
         <translation>Fjern denne egenskab fra udvalgte objekter</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+68"/>
         <source>All</source>
         <translation>Alle</translation>
     </message>
@@ -10442,7 +10442,7 @@ vist i søgeresultaterne:</translation>
         <translation>Vis alle egenskaber</translation>
     </message>
     <message>
-        <location line="+134"/>
+        <location line="+135"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -10452,7 +10452,7 @@ vist i søgeresultaterne:</translation>
         <translation>Brug automatisk måling</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+43"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
@@ -10462,7 +10462,7 @@ vist i søgeresultaterne:</translation>
         <translation>Nej</translation>
     </message>
     <message>
-        <location line="+379"/>
+        <location line="+386"/>
         <source>*VARIES*</source>
         <translation>*VARIERER*</translation>
     </message>
@@ -10648,13 +10648,13 @@ vist i søgeresultaterne:</translation>
         <translation>Vinkel:</translation>
     </message>
     <message>
-        <location line="+20"/>
-        <location line="+47"/>
+        <location line="+23"/>
+        <location line="+53"/>
         <source>Base:</source>
         <translation>Base:</translation>
     </message>
     <message>
-        <location line="-20"/>
+        <location line="-23"/>
         <source>Distance:</source>
         <translation>Afstand:</translation>
     </message>
@@ -11747,7 +11747,7 @@ vist i søgeresultaterne:</translation>
 <context>
     <name>ShapePolygonAFPP</name>
     <message>
-        <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.js" line="+59"/>
+        <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.js" line="+61"/>
         <source>First side</source>
         <translation>Første side</translation>
     </message>
@@ -11790,7 +11790,7 @@ vist i søgeresultaterne:</translation>
 <context>
     <name>ShapePolygonCP</name>
     <message>
-        <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.js" line="+59"/>
+        <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.js" line="+61"/>
         <source>Center</source>
         <translation>Centrum</translation>
     </message>
@@ -11818,7 +11818,7 @@ vist i søgeresultaterne:</translation>
 <context>
     <name>ShapePolygonPP</name>
     <message>
-        <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.js" line="+58"/>
+        <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.js" line="+60"/>
         <source>First corner</source>
         <translation>Første hjørne</translation>
     </message>
@@ -12009,7 +12009,7 @@ vist i søgeresultaterne:</translation>
         <translation>X-koordinat</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>&amp;y:</source>
         <translation>&amp;y:</translation>
     </message>
@@ -12019,7 +12019,7 @@ vist i søgeresultaterne:</translation>
         <translation>Y-koordinat</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Tick for Relative Coordinate</source>
         <translation>Kryds for relativ koordinat</translation>
     </message>
@@ -12047,7 +12047,7 @@ vist i søgeresultaterne:</translation>
         <translation>Radius (afstand)</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>&amp;&lt;:</source>
         <translation>&amp;&lt;:</translation>
     </message>
@@ -12057,7 +12057,7 @@ vist i søgeresultaterne:</translation>
         <translation>Vinkel</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Tick for Relative Coordinate</source>
         <translation>Kryds for relativ koordinat</translation>
     </message>
@@ -12103,7 +12103,7 @@ vist i søgeresultaterne:</translation>
         <translation>Snap-afstand:</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+72"/>
         <source>Distance</source>
         <translation>Afstand</translation>
     </message>
@@ -12508,7 +12508,7 @@ vist i søgeresultaterne:</translation>
 <context>
     <name>Text</name>
     <message>
-        <location filename="../scripts/Draw/Text/Text.js" line="+88"/>
+        <location filename="../scripts/Draw/Text/Text.js" line="+92"/>
         <source>Position</source>
         <translation>Position</translation>
     </message>
@@ -12666,12 +12666,12 @@ vist i søgeresultaterne:</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+241"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+243"/>
         <source>Default value:</source>
         <translation>Standardværdi:</translation>
     </message>
     <message>
-        <location line="+269"/>
+        <location line="+274"/>
         <source>&amp;Undo</source>
         <translation>&amp;Undo</translation>
     </message>
@@ -12731,12 +12731,12 @@ vist i søgeresultaterne:</translation>
         <translation>&amp;Særlige karakterer...</translation>
     </message>
     <message>
-        <location line="+319"/>
+        <location line="+331"/>
         <source>Others...</source>
         <translation>Andre...</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+139"/>
         <source>Degree</source>
         <translation>Uddannelse</translation>
     </message>
@@ -13687,7 +13687,7 @@ vist i søgeresultaterne:</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+322"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+326"/>
         <source>Dropped data not supported</source>
         <translation>Tabte data ikke understøttet</translation>
     </message>
@@ -13713,7 +13713,7 @@ vist i søgeresultaterne:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1138"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1152"/>
         <source>Restore defaults</source>
         <translation>Gendan standardindstillinger</translation>
     </message>
@@ -14058,7 +14058,7 @@ vist i søgeresultaterne:</translation>
 <context>
     <name>Window</name>
     <message>
-        <location filename="../scripts/Window/Window.js" line="+109"/>
+        <location filename="../scripts/Window/Window.js" line="+122"/>
         <source>&amp;Window</source>
         <translation>&amp;Vindue</translation>
     </message>
@@ -14175,7 +14175,7 @@ vist i søgeresultaterne:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1226"/>
+        <location filename="../scripts/library.js" line="+1243"/>
         <source>Objects</source>
         <translation>Genstande</translation>
     </message>
@@ -14738,4 +14738,3 @@ vist i søgeresultaterne:</translation>
     </message>
 </context>
 </TS>
-

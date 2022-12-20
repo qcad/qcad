@@ -280,12 +280,12 @@
         <translation type="unfinished">Piešimo nuostatos</translation>
     </message>
     <message>
-        <location line="+300"/>
+        <location line="+313"/>
         <source>Apply preferences</source>
         <translation type="unfinished">Taikyti nuostatas</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+49"/>
         <source>Restart required</source>
         <translation type="unfinished">Reikia iš naujo paleisti</translation>
     </message>
@@ -302,7 +302,7 @@ nuostatos pakeitimai įsigaliotų.</translation>
         <translation type="unfinished">Numatytosios reikšmės</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+6"/>
         <source>These are default preferences for new drawings.</source>
         <translation type="unfinished">Tai yra numatytosios naujų brėžinių nuostatos.</translation>
     </message>
@@ -1113,12 +1113,12 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">Bitmap failas eksportuotas į &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+43"/>
         <source>Files</source>
         <translation type="unfinished">Failai</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+12"/>
         <source>Export as Bitmap</source>
         <translation type="unfinished">Eksportuoti kaip bitų žemėlapį</translation>
     </message>
@@ -3235,7 +3235,7 @@ Ar norite jį atkurti?</translation>
 <context>
     <name>DirectoryList</name>
     <message>
-        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+57"/>
+        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+84"/>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
@@ -4152,18 +4152,18 @@ jau yra sąraše.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2120"/>
+        <location line="+2129"/>
         <source>Cancel</source>
         <translation type="unfinished">Atšaukti</translation>
     </message>
     <message>
-        <location line="-2119"/>
+        <location line="-2128"/>
         <source>Done</source>
         <translation type="unfinished">Atlikta</translation>
     </message>
     <message>
         <location line="+277"/>
-        <location line="+140"/>
+        <location line="+144"/>
         <source>Active Tool:</source>
         <translation type="unfinished">Aktyvus įrankis:</translation>
     </message>
@@ -4173,7 +4173,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Nėra</translation>
     </message>
     <message>
-        <location line="+662"/>
+        <location line="+667"/>
         <source>Options</source>
         <translation type="unfinished">Parinktys</translation>
     </message>
@@ -4861,7 +4861,7 @@ jau yra sąraše.</translation>
 <context>
     <name>ExProcess</name>
     <message>
-        <location filename="../scripts/Misc/Examples/QtExamples/ExProcess/ExProcess.js" line="+81"/>
+        <location filename="../scripts/Misc/Examples/QtExamples/ExProcess/ExProcess.js" line="+96"/>
         <source>&amp;Run Process</source>
         <translation type="unfinished">Vykdyti procesą</translation>
     </message>
@@ -6340,12 +6340,12 @@ jau yra sąraše.</translation>
 <context>
     <name>Image</name>
     <message>
-        <location filename="../scripts/Draw/Image/Image.js" line="+133"/>
+        <location filename="../scripts/Draw/Image/Image.js" line="+140"/>
         <source>Files</source>
         <translation type="unfinished">Failai</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>All Image Files (%1)</source>
         <translation type="unfinished">Visi vaizdų failai (%1)</translation>
     </message>
@@ -6580,7 +6580,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Pasirinkite lanką, apskritimą, elipsę arba elipsės formos lanką</translation>
     </message>
     <message>
-        <location line="+236"/>
+        <location line="+238"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -6722,7 +6722,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Nustatyti kitą daugiakampio kampą</translation>
     </message>
     <message>
-        <location line="+121"/>
+        <location line="+123"/>
         <source>Polygon area:</source>
         <translation type="unfinished">Poligono plotas:</translation>
     </message>
@@ -7357,7 +7357,7 @@ jau yra sąraše.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+334"/>
+        <location filename="../scripts/Information/Information.js" line="+337"/>
         <source>Information Tools</source>
         <translation type="unfinished">Informacinės priemonės</translation>
     </message>
@@ -7439,20 +7439,20 @@ jau yra sąraše.</translation>
     </message>
     <message>
         <location line="+15"/>
-        <location line="+27"/>
+        <location line="+33"/>
         <source>Comma</source>
         <translation type="unfinished">Kablelis</translation>
     </message>
     <message>
-        <location line="-27"/>
+        <location line="-33"/>
         <location line="+6"/>
         <location line="+5"/>
-        <location line="+15"/>
+        <location line="+21"/>
         <source>(Default)</source>
         <translation type="unfinished">(Numatytoji reikšmė)</translation>
     </message>
     <message>
-        <location line="-25"/>
+        <location line="-31"/>
         <source>Semicolon</source>
         <translation type="unfinished">Pusjuodis</translation>
     </message>
@@ -7482,7 +7482,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Hash</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+18"/>
         <source>Dot</source>
         <translation type="unfinished">Taškas</translation>
     </message>
@@ -9401,7 +9401,7 @@ rodomas paieškos rezultatuose:</translation>
         <translation type="unfinished">Visi failai</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscIO/MolImport/MolImportInit.js" line="+2"/>
+        <location filename="../scripts/Misc/MiscIO/MolImport/MolImportInit.js" line="+7"/>
         <source>Leetro MOL Import...</source>
         <translation type="unfinished">&quot;Leetro MOL&quot; importas...</translation>
     </message>
@@ -9878,7 +9878,7 @@ rodomas paieškos rezultatuose:</translation>
         <translation type="unfinished">Rašiklis</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+73"/>
         <source>Reset to Defaults</source>
         <translation type="unfinished">Iš naujo nustatyti numatytąsias reikšmes</translation>
     </message>
@@ -10205,7 +10205,7 @@ rodomas paieškos rezultatuose:</translation>
         <translation type="unfinished">Automatinis brėžinio pritaikymas prie popieriaus?</translation>
     </message>
     <message>
-        <location line="+188"/>
+        <location line="+187"/>
         <source>Drag to move paper</source>
         <translation type="unfinished">Vilkite, kad perkeltumėte popierių</translation>
     </message>
@@ -10356,12 +10356,12 @@ rodomas paieškos rezultatuose:</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+213"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+219"/>
         <source>:</source>
         <translation type="unfinished">:</translation>
     </message>
     <message>
-        <location line="+194"/>
+        <location line="+189"/>
         <source>No Selection</source>
         <translation type="unfinished">Nėra atrankos</translation>
     </message>
@@ -10381,7 +10381,7 @@ rodomas paieškos rezultatuose:</translation>
         <translation type="unfinished">Pasirinktinis</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+209"/>
         <source>Index</source>
         <translation type="unfinished">Indeksas</translation>
     </message>
@@ -10391,7 +10391,7 @@ rodomas paieškos rezultatuose:</translation>
         <translation type="unfinished">Pašalinti šią savybę iš pasirinktų objektų</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+68"/>
         <source>All</source>
         <translation type="unfinished">Visi</translation>
     </message>
@@ -10411,7 +10411,7 @@ rodomas paieškos rezultatuose:</translation>
         <translation type="unfinished">Rodyti visas savybes</translation>
     </message>
     <message>
-        <location line="+134"/>
+        <location line="+135"/>
         <source>Auto</source>
         <translation type="unfinished">Automatinis</translation>
     </message>
@@ -10421,7 +10421,7 @@ rodomas paieškos rezultatuose:</translation>
         <translation type="unfinished">Naudokite automatinį matavimą</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+43"/>
         <source>Yes</source>
         <translation type="unfinished">Taip</translation>
     </message>
@@ -10431,7 +10431,7 @@ rodomas paieškos rezultatuose:</translation>
         <translation type="unfinished">Ne</translation>
     </message>
     <message>
-        <location line="+379"/>
+        <location line="+386"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*VARIES*</translation>
     </message>
@@ -10657,13 +10657,13 @@ rodomas paieškos rezultatuose:</translation>
         <translation type="unfinished">Kampas:</translation>
     </message>
     <message>
-        <location line="+20"/>
-        <location line="+47"/>
+        <location line="+23"/>
+        <location line="+53"/>
         <source>Base:</source>
         <translation type="unfinished">Bazė:</translation>
     </message>
     <message>
-        <location line="-20"/>
+        <location line="-23"/>
         <source>Distance:</source>
         <translation type="unfinished">Atstumas:</translation>
     </message>
@@ -11754,7 +11754,7 @@ rodomas paieškos rezultatuose:</translation>
 <context>
     <name>ShapePolygonAFPP</name>
     <message>
-        <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.js" line="+59"/>
+        <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.js" line="+61"/>
         <source>First side</source>
         <translation type="unfinished">Pirmoji pusė</translation>
     </message>
@@ -11797,7 +11797,7 @@ rodomas paieškos rezultatuose:</translation>
 <context>
     <name>ShapePolygonCP</name>
     <message>
-        <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.js" line="+59"/>
+        <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.js" line="+61"/>
         <source>Center</source>
         <translation type="unfinished">Centras</translation>
     </message>
@@ -11825,7 +11825,7 @@ rodomas paieškos rezultatuose:</translation>
 <context>
     <name>ShapePolygonPP</name>
     <message>
-        <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.js" line="+58"/>
+        <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.js" line="+60"/>
         <source>First corner</source>
         <translation type="unfinished">Pirmasis kampas</translation>
     </message>
@@ -12021,7 +12021,7 @@ rodomas paieškos rezultatuose:</translation>
         <translation type="unfinished">X koordinatė</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>&amp;y:</source>
         <translation type="unfinished">y:</translation>
     </message>
@@ -12031,7 +12031,7 @@ rodomas paieškos rezultatuose:</translation>
         <translation type="unfinished">Y koordinatė</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Tick for Relative Coordinate</source>
         <translation type="unfinished">Santykinės koordinatės žymėjimas</translation>
     </message>
@@ -12059,7 +12059,7 @@ rodomas paieškos rezultatuose:</translation>
         <translation type="unfinished">Spindulys (atstumas)</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>&amp;&lt;:</source>
         <translation type="unfinished">&lt;:</translation>
     </message>
@@ -12069,7 +12069,7 @@ rodomas paieškos rezultatuose:</translation>
         <translation type="unfinished">Kampas</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Tick for Relative Coordinate</source>
         <translation type="unfinished">Santykinės koordinatės žymėjimas</translation>
     </message>
@@ -12120,7 +12120,7 @@ rodomas paieškos rezultatuose:</translation>
         <translation type="unfinished">Užfiksuokite atstumą:</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+72"/>
         <source>Distance</source>
         <translation type="unfinished">Atstumas</translation>
     </message>
@@ -12515,7 +12515,7 @@ rodomas paieškos rezultatuose:</translation>
 <context>
     <name>Text</name>
     <message>
-        <location filename="../scripts/Draw/Text/Text.js" line="+88"/>
+        <location filename="../scripts/Draw/Text/Text.js" line="+92"/>
         <source>Position</source>
         <translation type="unfinished">Pozicija</translation>
     </message>
@@ -12673,12 +12673,12 @@ rodomas paieškos rezultatuose:</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+241"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+243"/>
         <source>Default value:</source>
         <translation type="unfinished">Numatytoji reikšmė:</translation>
     </message>
     <message>
-        <location line="+269"/>
+        <location line="+274"/>
         <source>&amp;Undo</source>
         <translation type="unfinished">Panaikinti</translation>
     </message>
@@ -12738,12 +12738,12 @@ rodomas paieškos rezultatuose:</translation>
         <translation type="unfinished">Specialieji simboliai...</translation>
     </message>
     <message>
-        <location line="+319"/>
+        <location line="+331"/>
         <source>Others...</source>
         <translation type="unfinished">Kiti...</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+139"/>
         <source>Degree</source>
         <translation type="unfinished">Studijų laipsnis</translation>
     </message>
@@ -13694,7 +13694,7 @@ rodomas paieškos rezultatuose:</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+322"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+326"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished">Nepalaikomi nutolę duomenys</translation>
     </message>
@@ -13720,7 +13720,7 @@ rodomas paieškos rezultatuose:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1138"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1152"/>
         <source>Restore defaults</source>
         <translation type="unfinished">Atkurti numatytąsias nuostatas</translation>
     </message>
@@ -14065,7 +14065,7 @@ rodomas paieškos rezultatuose:</translation>
 <context>
     <name>Window</name>
     <message>
-        <location filename="../scripts/Window/Window.js" line="+109"/>
+        <location filename="../scripts/Window/Window.js" line="+122"/>
         <source>&amp;Window</source>
         <translation type="unfinished">Langas</translation>
     </message>
@@ -14182,7 +14182,7 @@ rodomas paieškos rezultatuose:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1226"/>
+        <location filename="../scripts/library.js" line="+1243"/>
         <source>Objects</source>
         <translation type="unfinished">Objektai</translation>
     </message>
@@ -14745,4 +14745,3 @@ rodomas paieškos rezultatuose:</translation>
     </message>
 </context>
 </TS>
-

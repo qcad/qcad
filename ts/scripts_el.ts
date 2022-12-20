@@ -280,12 +280,12 @@
         <translation type="unfinished">Προτιμήσεις σχεδίασης</translation>
     </message>
     <message>
-        <location line="+300"/>
+        <location line="+313"/>
         <source>Apply preferences</source>
         <translation type="unfinished">Εφαρμόστε προτιμήσεις</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+49"/>
         <source>Restart required</source>
         <translation type="unfinished">Απαιτείται επανεκκίνηση</translation>
     </message>
@@ -301,7 +301,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">Προεπιλογές για</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+6"/>
         <source>These are default preferences for new drawings.</source>
         <translation type="unfinished">Αυτές είναι οι προεπιλεγμένες προτιμήσεις για νέα σχέδια.</translation>
     </message>
@@ -1110,12 +1110,12 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Το αρχείο Bitmap έχει εξαχθεί στο &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+43"/>
         <source>Files</source>
         <translation type="unfinished">Αρχεία</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+12"/>
         <source>Export as Bitmap</source>
         <translation type="unfinished">Εξαγωγή ως Bitmap</translation>
     </message>
@@ -3231,7 +3231,7 @@ Do you wish to recover it?</source>
 <context>
     <name>DirectoryList</name>
     <message>
-        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+57"/>
+        <location filename="../scripts/Widgets/DirectoryList/DirectoryList.js" line="+84"/>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
@@ -4145,18 +4145,18 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2120"/>
+        <location line="+2129"/>
         <source>Cancel</source>
         <translation type="unfinished">Ακύρωση</translation>
     </message>
     <message>
-        <location line="-2119"/>
+        <location line="-2128"/>
         <source>Done</source>
         <translation type="unfinished">Έγινε</translation>
     </message>
     <message>
         <location line="+277"/>
-        <location line="+140"/>
+        <location line="+144"/>
         <source>Active Tool:</source>
         <translation type="unfinished">Ενεργό εργαλείο:</translation>
     </message>
@@ -4166,7 +4166,7 @@ is already in the list.</source>
         <translation type="unfinished">Κανένα</translation>
     </message>
     <message>
-        <location line="+662"/>
+        <location line="+667"/>
         <source>Options</source>
         <translation type="unfinished">Επιλογές</translation>
     </message>
@@ -4854,7 +4854,7 @@ is already in the list.</source>
 <context>
     <name>ExProcess</name>
     <message>
-        <location filename="../scripts/Misc/Examples/QtExamples/ExProcess/ExProcess.js" line="+81"/>
+        <location filename="../scripts/Misc/Examples/QtExamples/ExProcess/ExProcess.js" line="+96"/>
         <source>&amp;Run Process</source>
         <translation type="unfinished">Διαδικασία εκτέλεσης</translation>
     </message>
@@ -6332,12 +6332,12 @@ is already in the list.</source>
 <context>
     <name>Image</name>
     <message>
-        <location filename="../scripts/Draw/Image/Image.js" line="+133"/>
+        <location filename="../scripts/Draw/Image/Image.js" line="+140"/>
         <source>Files</source>
         <translation type="unfinished">Αρχεία</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>All Image Files (%1)</source>
         <translation type="unfinished">Όλα τα αρχεία εικόνας (%1)</translation>
     </message>
@@ -6572,7 +6572,7 @@ is already in the list.</source>
         <translation type="unfinished">Επιλέξτε τόξο, κύκλο, έλλειψη ή ελλειπτικό τόξο</translation>
     </message>
     <message>
-        <location line="+236"/>
+        <location line="+238"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -6714,7 +6714,7 @@ is already in the list.</source>
         <translation type="unfinished">Ορισμός της επόμενης γωνίας πολυγώνου</translation>
     </message>
     <message>
-        <location line="+121"/>
+        <location line="+123"/>
         <source>Polygon area:</source>
         <translation type="unfinished">Περιοχή πολυγώνου:</translation>
     </message>
@@ -7349,7 +7349,7 @@ is already in the list.</source>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+334"/>
+        <location filename="../scripts/Information/Information.js" line="+337"/>
         <source>Information Tools</source>
         <translation type="unfinished">Εργαλεία πληροφόρησης</translation>
     </message>
@@ -7431,20 +7431,20 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+15"/>
-        <location line="+27"/>
+        <location line="+33"/>
         <source>Comma</source>
         <translation type="unfinished">Κόμμα</translation>
     </message>
     <message>
-        <location line="-27"/>
+        <location line="-33"/>
         <location line="+6"/>
         <location line="+5"/>
-        <location line="+15"/>
+        <location line="+21"/>
         <source>(Default)</source>
         <translation type="unfinished">(Προεπιλογή)</translation>
     </message>
     <message>
-        <location line="-25"/>
+        <location line="-31"/>
         <source>Semicolon</source>
         <translation type="unfinished">Τελεία και παύλα</translation>
     </message>
@@ -7474,7 +7474,7 @@ is already in the list.</source>
         <translation type="unfinished">Κατακερματισμός</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+18"/>
         <source>Dot</source>
         <translation type="unfinished">Σημείο</translation>
     </message>
@@ -9392,7 +9392,7 @@ shown in search results:</source>
         <translation type="unfinished">Όλα τα αρχεία</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscIO/MolImport/MolImportInit.js" line="+2"/>
+        <location filename="../scripts/Misc/MiscIO/MolImport/MolImportInit.js" line="+7"/>
         <source>Leetro MOL Import...</source>
         <translation type="unfinished">Leetro MOL Import...</translation>
     </message>
@@ -9867,7 +9867,7 @@ shown in search results:</source>
         <translation type="unfinished">Στυλό</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+73"/>
         <source>Reset to Defaults</source>
         <translation type="unfinished">Επαναφορά στις προεπιλογές</translation>
     </message>
@@ -10194,7 +10194,7 @@ shown in search results:</source>
         <translation type="unfinished">Αυτόματη προσαρμογή σχεδίου στο χαρτί</translation>
     </message>
     <message>
-        <location line="+188"/>
+        <location line="+187"/>
         <source>Drag to move paper</source>
         <translation type="unfinished">Σύρετε για να μετακινήσετε το χαρτί</translation>
     </message>
@@ -10380,12 +10380,12 @@ shown in search results:</source>
         <translation type="unfinished">Δεκαδικά / ακρίβεια για τις εμφανιζόμενες τιμές ιδιοτήτων:</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+213"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+219"/>
         <source>:</source>
         <translation type="unfinished">:</translation>
     </message>
     <message>
-        <location line="+194"/>
+        <location line="+189"/>
         <source>No Selection</source>
         <translation type="unfinished">Δεν υπάρχει επιλογή</translation>
     </message>
@@ -10405,7 +10405,7 @@ shown in search results:</source>
         <translation type="unfinished">Προσαρμοσμένο</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+209"/>
         <source>Index</source>
         <translation type="unfinished">Ευρετήριο</translation>
     </message>
@@ -10415,7 +10415,7 @@ shown in search results:</source>
         <translation type="unfinished">Αφαίρεση αυτής της ιδιότητας από επιλεγμένα αντικείμενα</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+68"/>
         <source>All</source>
         <translation type="unfinished">Όλα</translation>
     </message>
@@ -10435,7 +10435,7 @@ shown in search results:</source>
         <translation type="unfinished">Εμφάνιση όλων των ακινήτων</translation>
     </message>
     <message>
-        <location line="+134"/>
+        <location line="+135"/>
         <source>Auto</source>
         <translation type="unfinished">Auto</translation>
     </message>
@@ -10445,7 +10445,7 @@ shown in search results:</source>
         <translation type="unfinished">Χρήση αυτόματης μέτρησης</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+43"/>
         <source>Yes</source>
         <translation type="unfinished">Ναι</translation>
     </message>
@@ -10455,7 +10455,7 @@ shown in search results:</source>
         <translation type="unfinished">Όχι</translation>
     </message>
     <message>
-        <location line="+379"/>
+        <location line="+386"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*ΔΙΑΦΟΡΕΣ*</translation>
     </message>
@@ -10641,13 +10641,13 @@ shown in search results:</source>
         <translation type="unfinished">Γωνία:</translation>
     </message>
     <message>
-        <location line="+20"/>
-        <location line="+47"/>
+        <location line="+23"/>
+        <location line="+53"/>
         <source>Base:</source>
         <translation type="unfinished">Βάση:</translation>
     </message>
     <message>
-        <location line="-20"/>
+        <location line="-23"/>
         <source>Distance:</source>
         <translation type="unfinished">Απόσταση:</translation>
     </message>
@@ -11739,7 +11739,7 @@ shown in search results:</source>
 <context>
     <name>ShapePolygonAFPP</name>
     <message>
-        <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.js" line="+59"/>
+        <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.js" line="+61"/>
         <source>First side</source>
         <translation type="unfinished">Πρώτη πλευρά</translation>
     </message>
@@ -11782,7 +11782,7 @@ shown in search results:</source>
 <context>
     <name>ShapePolygonCP</name>
     <message>
-        <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.js" line="+59"/>
+        <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.js" line="+61"/>
         <source>Center</source>
         <translation type="unfinished">Κέντρο</translation>
     </message>
@@ -11810,7 +11810,7 @@ shown in search results:</source>
 <context>
     <name>ShapePolygonPP</name>
     <message>
-        <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.js" line="+58"/>
+        <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.js" line="+60"/>
         <source>First corner</source>
         <translation type="unfinished">Πρώτη γωνία</translation>
     </message>
@@ -12001,7 +12001,7 @@ shown in search results:</source>
         <translation type="unfinished">Συντεταγμένη Χ</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>&amp;y:</source>
         <translation type="unfinished">y:</translation>
     </message>
@@ -12011,7 +12011,7 @@ shown in search results:</source>
         <translation type="unfinished">Συντεταγμένη Υ</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Tick for Relative Coordinate</source>
         <translation type="unfinished">Καρφίτσα για σχετική συντεταγμένη</translation>
     </message>
@@ -12039,7 +12039,7 @@ shown in search results:</source>
         <translation type="unfinished">Ακτίνα (απόσταση)</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>&amp;&lt;:</source>
         <translation type="unfinished">&lt;:</translation>
     </message>
@@ -12049,7 +12049,7 @@ shown in search results:</source>
         <translation type="unfinished">Γωνία</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Tick for Relative Coordinate</source>
         <translation type="unfinished">Καρφίτσα για σχετική συντεταγμένη</translation>
     </message>
@@ -12095,7 +12095,7 @@ shown in search results:</source>
         <translation type="unfinished">Απόσταση:</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+72"/>
         <source>Distance</source>
         <translation type="unfinished">Απόσταση</translation>
     </message>
@@ -12500,7 +12500,7 @@ shown in search results:</source>
 <context>
     <name>Text</name>
     <message>
-        <location filename="../scripts/Draw/Text/Text.js" line="+88"/>
+        <location filename="../scripts/Draw/Text/Text.js" line="+92"/>
         <source>Position</source>
         <translation type="unfinished">Θέση</translation>
     </message>
@@ -12658,12 +12658,12 @@ shown in search results:</source>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+241"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+243"/>
         <source>Default value:</source>
         <translation type="unfinished">Προεπιλεγμένη τιμή:</translation>
     </message>
     <message>
-        <location line="+269"/>
+        <location line="+274"/>
         <source>&amp;Undo</source>
         <translation type="unfinished">Αναίρεση</translation>
     </message>
@@ -12723,12 +12723,12 @@ shown in search results:</source>
         <translation type="unfinished">Ειδικοί χαρακτήρες...</translation>
     </message>
     <message>
-        <location line="+319"/>
+        <location line="+331"/>
         <source>Others...</source>
         <translation type="unfinished">Άλλοι...</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+139"/>
         <source>Degree</source>
         <translation type="unfinished">Πτυχίο</translation>
     </message>
@@ -13678,7 +13678,7 @@ shown in search results:</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+322"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+326"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished">Δεν υποστηρίζεται η απόρριψη δεδομένων</translation>
     </message>
@@ -13704,7 +13704,7 @@ shown in search results:</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1138"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1152"/>
         <source>Restore defaults</source>
         <translation type="unfinished">Επαναφορά προεπιλογών</translation>
     </message>
@@ -14049,7 +14049,7 @@ shown in search results:</source>
 <context>
     <name>Window</name>
     <message>
-        <location filename="../scripts/Window/Window.js" line="+109"/>
+        <location filename="../scripts/Window/Window.js" line="+122"/>
         <source>&amp;Window</source>
         <translation type="unfinished">Παράθυρο</translation>
     </message>
@@ -14166,7 +14166,7 @@ shown in search results:</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1226"/>
+        <location filename="../scripts/library.js" line="+1243"/>
         <source>Objects</source>
         <translation type="unfinished">Αντικείμενα</translation>
     </message>
