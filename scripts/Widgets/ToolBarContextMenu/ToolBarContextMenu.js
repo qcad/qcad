@@ -48,8 +48,6 @@ ToolBarContextMenu.getSubMenu = function(menu, categories) {
 ToolBarContextMenu.sort = function(a,b) {
     var catA = a.property("Category");
     var catB = b.property("Category");
-    var actionA = a.toggleViewAction();
-    var actionB = b.toggleViewAction();
 
     if (isNull(catA) && !isNull(catB)) {
         return -1;
@@ -57,15 +55,20 @@ ToolBarContextMenu.sort = function(a,b) {
     if (!isNull(catA) && isNull(catB)) {
         return 1;
     }
+    if (!isNull(catA) && !isNull(catB)) {
+        return catA.toString().localeCompare(catB.toString());
+    }
 
-    var titleA = (isNull(catA) || catA.length===0) ? actionA.text : catA[0];
-    var titleB = (isNull(catB) || catB.length===0) ? actionB.text : catB[0];
+    // no category:
+    var titleA = a.windowTitle.replace("&", "");
+    var titleB = b.windowTitle.replace("&", "");
 
     return titleA.localeCompare(titleB);
 };
 
 ToolBarContextMenu.createMenu = function(menu) {
     var appWin = RMainWindowQt.getMainWindow();
+
     var tbs = appWin.getToolBars();
     var dws = appWin.getDockWidgets();
     var i, a, m, cat;
@@ -80,9 +83,9 @@ ToolBarContextMenu.createMenu = function(menu) {
             cat = [];
         }
         cat.unshift(qsTr("Widgets"));
-        a = dw.toggleViewAction();
         m = ToolBarContextMenu.getSubMenu(menu, cat);
         if (!isNull(m)) {
+            a = dw.toggleViewAction();
             RGuiAction.addToWidget(a, m);
         }
     }
@@ -94,25 +97,12 @@ ToolBarContextMenu.createMenu = function(menu) {
             cat = [];
         }
         cat.unshift(qsTr("Toolbars"));
-        a = tb.toggleViewAction();
         m = ToolBarContextMenu.getSubMenu(menu, cat);
         if (!isNull(m)) {
+            a = tb.toggleViewAction();
             RGuiAction.addToWidget(a, m);
         }
     }
-
-//    QList<QDockWidget *> dockwidgets = findChildren<QDockWidget *>();
-//    if (dockwidgets.size()) {
-//        menu = new QMenu(this);
-//        for (int i = 0; i < dockwidgets.size(); ++i) {
-//            QDockWidget *dockWidget = dockwidgets.at(i);
-//            if (dockWidget->parentWidget() == this
-//                && !d->layout->layoutState.dockAreaLayout.indexOf(dockWidget).isEmpty()) {
-//                menu->addAction(dockwidgets.at(i)->toggleViewAction());
-//            }
-//        }
-//        menu->addSeparator();
-//    }
 };
 
 ToolBarContextMenu.init = function(basePath) {
