@@ -28,6 +28,6 @@ add_library(stemmer
 
 set_target_properties(stemmer PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ../../../debug)
 
-target_compile_definitions(stemmer PUBLIC
+target_compile_definitions(stemmer PRIVATE
     QCAD_DLL
 )

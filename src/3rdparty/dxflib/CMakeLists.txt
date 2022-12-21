@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.16)
 project(dxflib VERSION 1.0 LANGUAGES CXX)
 
+IF(WIN32)
+    SET(RC dxflib.rc)
+ENDIF()
+
 add_library(dxflib
     src/dl_attributes.h
     src/dl_codes.h
@@ -12,6 +16,7 @@ add_library(dxflib
     src/dl_extrusion.h
     src/dl_writer.h
     src/dl_writer_ascii.cpp src/dl_writer_ascii.h
+    ${RC}
 )
 
 set_target_properties(dxflib PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ../../../debug)
@@ -20,7 +25,7 @@ target_include_directories(dxflib PUBLIC
     src
 )
 
-target_compile_definitions(dxflib PUBLIC
+target_compile_definitions(dxflib PRIVATE
     DXFLIB_LIBRARY
 )
 

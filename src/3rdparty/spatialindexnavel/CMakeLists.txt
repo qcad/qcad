@@ -31,20 +31,20 @@ target_include_directories(spatialindexnavel PUBLIC
     include
 )
 
-target_compile_definitions(spatialindexnavel PUBLIC
+target_compile_definitions(spatialindexnavel PRIVATE
     NDEBUG
     QCAD_DLL
     SPATIALINDEX_CREATE_DLL
 )
 
 if(NOT win32-msvc2010)
-    target_compile_definitions(spatialindexnavel PUBLIC
+    target_compile_definitions(spatialindexnavel PRIVATE
         HAVE_BZERO
     )
 endif()
 
 if(UNIX)
-    target_compile_definitions(spatialindexnavel PUBLIC
+    target_compile_definitions(spatialindexnavel PRIVATE
         HAVE_PTHREAD_H
         HAVE_SRAND48
         PTHREADS
@@ -52,7 +52,7 @@ if(UNIX)
 endif()
 
 if(win32-msvc2010)
-    target_compile_definitions(spatialindexnavel PUBLIC
+    target_compile_definitions(spatialindexnavel PRIVATE
         _CRT_SECURE_NO_WARNINGS
     )
 endif()

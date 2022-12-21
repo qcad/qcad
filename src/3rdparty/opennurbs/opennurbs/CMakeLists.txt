@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.16)
 project(opennurbs VERSION 1.0 LANGUAGES CXX)
 
+IF(WIN32)
+    SET(RC ../opennurbs.rc)
+ENDIF()
+
 add_library(opennurbs
     ../opennurbs.h
     ../opennurbs_3dm.h
@@ -123,6 +127,7 @@ add_library(opennurbs
     ../opennurbs_x.cpp ../opennurbs_x.h
     ../opennurbs_xform.cpp ../opennurbs_xform.h
     ../opennurbs_zlib.cpp ../opennurbs_zlib.h
+    ${RC}
 )
 
 set_target_properties(opennurbs PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ../../../../debug)
@@ -133,7 +138,7 @@ target_link_libraries(opennurbs PUBLIC
 )
 
 if(WIN32)
-    target_compile_definitions(opennurbs PUBLIC
+    target_compile_definitions(opennurbs PRIVATE
         NDEBUG
         ON_COMPILING_OPENNURBS
     )
@@ -145,7 +150,7 @@ if(WIN32)
 endif()
 
 if(win32-msvc2010)
-    target_compile_definitions(opennurbs PUBLIC
+    target_compile_definitions(opennurbs PRIVATE
         _CRT_SECURE_NO_WARNINGS
     )
 endif()
