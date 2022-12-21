@@ -146,7 +146,7 @@ Print.prototype.createPrinter = function(pdfFile, printerName, pdfVersion) {
         if (RSettings.isQt(5)) {
             Print.printDialog.rejected.connect(function() { Print.cancel = true; });
             Print.printDialog.exec();
-            Print.printDialog.destroy();
+            destr(Print.printDialog);
             EAction.activateMainWindow();
         }
         else {
@@ -157,7 +157,7 @@ Print.prototype.createPrinter = function(pdfFile, printerName, pdfVersion) {
                             Print.cancel = false;
                             Print.printDialog.close();
                             if (RS.getSystemId()==="osx") {
-                                Print.printDialog.destroy();
+                                destr(Print.printDialog);
                                 EAction.activateMainWindow();
                             }
                         });
@@ -167,7 +167,7 @@ Print.prototype.createPrinter = function(pdfFile, printerName, pdfVersion) {
                             Print.cancel = true;
                             Print.printDialog.close();
                             if (RS.getSystemId()==="osx") {
-                                Print.printDialog.destroy();
+                                destr(Print.printDialog);
                                 EAction.activateMainWindow();
                             }
                         });
@@ -185,7 +185,7 @@ Print.prototype.createPrinter = function(pdfFile, printerName, pdfVersion) {
         }
 
         if (Print.cancel===true) {
-            printer.destroy();
+            destr(printer);
             return undefined;
         }
     }
@@ -215,7 +215,7 @@ Print.prototype.print = function(pdfFile, printerName, pdfVersion) {
 
     var painter = new QPainter();
     if (!painter.begin(printer)) {
-        printer.destroy();
+        destr(printer);
         return false;
     }
 
@@ -227,7 +227,7 @@ Print.prototype.print = function(pdfFile, printerName, pdfVersion) {
     //}
 
     painter.end();
-    printer.destroy();
+    destr(printer);
 
     return true;
 };
