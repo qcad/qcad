@@ -266,6 +266,16 @@ public:
     int countOriginalShapes() const;
     QSharedPointer<RShape> getOriginalShape(int i) const;
 
+#if QT_VERSION >= 0x060000
+    /**
+     * copy function for Qt 6 scripts:
+     * \nonscriptable
+     */
+    RPainterPath copy() const {
+        return *this;
+    }
+#endif
+
     static void rotateList(QList<RPainterPath>& pps, double angle);
     static void translateList(QList<RPainterPath>& pps, const RVector& offset);
     static void scaleList(QList<RPainterPath>& pps, double fx, double fy);
