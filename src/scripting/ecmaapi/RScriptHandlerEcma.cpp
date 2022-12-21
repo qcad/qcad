@@ -1626,7 +1626,7 @@ QScriptValue RScriptHandlerEcma::ecmaGray(QScriptContext* context,
 QScriptValue RScriptHandlerEcma::ecmaQtEscape(QScriptContext* context,
         QScriptEngine* engine) {
     if (context->argumentCount() == 1) {
-        QString cppResult = Qt::escape(context->argument(0).toString());
+        QString cppResult;
 #if QT_VERSION >= 0x050000
         cppResult = context->argument(0).toString().toHtmlEscaped();
 #else
@@ -2018,7 +2018,7 @@ QScriptValue RScriptHandlerEcma::ecmaQUrlQueryItems(QScriptContext* context, QSc
 
     if (context->argumentCount() == 0) {
         //QUrl* url = qscriptvalue_cast<QUrl*> (context->argument(0));
-        QList<QPair<QString, QString> > cppResult = self->queryItems();
+        QList<QPair<QString, QString> > cppResult = QUrlQuery(*self).queryItems();
         result = REcmaHelper::pairListToScriptValue<QString, QString>(engine, cppResult);
     } else {
         return throwError(
