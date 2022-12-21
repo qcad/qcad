@@ -4,15 +4,20 @@ project(qcaddxf VERSION 1.0 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Core Widgets Concurrent Gui Network OpenGL Sql Svg Xml PrintSupport Qml)
+find_package(${QT_VER} REQUIRED COMPONENTS Core Widgets Concurrent Gui Network OpenGL Sql Svg Xml PrintSupport Qml)
 qt_standard_project_setup()
 
-qt_add_library(qcaddxf
+IF(WIN32)
+    SET(RC dxf.rc)
+ENDIF()
+
+add_library(qcaddxf SHARED
     RDxfExporter.cpp RDxfExporter.h
     RDxfExporterFactory.cpp RDxfExporterFactory.h
     RDxfImporter.cpp RDxfImporter.h
     RDxfImporterFactory.cpp RDxfImporterFactory.h
     RDxfPlugin.cpp RDxfPlugin.h
+    ${RC}
 )
 
 target_include_directories(qcaddxf PRIVATE

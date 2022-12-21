@@ -6,11 +6,15 @@ include(../../CMakeInclude.txt)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Core Widgets Concurrent Gui Network OpenGL Sql Svg Xml PrintSupport Qml)
+find_package(${QT_VER} REQUIRED COMPONENTS Core Widgets Concurrent Gui Network OpenGL Sql Svg Xml PrintSupport Qml)
 qt_standard_project_setup()
 
-qt_add_executable(QCAD WIN32 MACOSX_BUNDLE
-    main.cpp
+IF(WIN32)
+    SET(RC qcad.rc)
+ENDIF()
+
+add_executable(QCAD WIN32 MACOSX_BUNDLE
+    main.cpp ${RC}
 )
 target_include_directories(QCAD PRIVATE
     ../../src/3rdparty
@@ -62,8 +66,12 @@ target_link_libraries(QCAD PRIVATE
     stemmer
 )
 
+IF(NOT BUILD_QT6)
+    target_link_libraries(QCAD PRIVATE qcadecmaapi)
+ENDIF()
+
 if(APPLE)
-    target_sources(QCAD PUBLIC
+    target_sources(QCAD PRIVATE
         removemacmenus.h removemacmenus.mm
     )
 

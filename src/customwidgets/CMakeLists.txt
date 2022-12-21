@@ -6,11 +6,13 @@ include(../../CMakeInclude.txt)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Core Widgets Concurrent Gui Network OpenGL Sql Svg Xml PrintSupport Qml)
+find_package(${QT_VER} REQUIRED COMPONENTS Core Widgets Concurrent Gui Network OpenGL Sql Svg Xml PrintSupport Qml)
 qt_standard_project_setup()
 
-qt_add_library(qcadcustomwidgets)
-target_sources(qcadcustomwidgets PRIVATE
+IF(WIN32)
+    SET(RC customwidgets.rc)
+ENDIF()
+add_library(qcadcustomwidgets SHARED
     RCharacterWidgetPlugin.cpp RCharacterWidgetPlugin.h
     RColorComboPlugin.cpp RColorComboPlugin.h
     RCommandLinePlugin.cpp RCommandLinePlugin.h
@@ -26,6 +28,7 @@ target_sources(qcadcustomwidgets PRIVATE
     RRulerQtPlugin.cpp RRulerQtPlugin.h
     RShortcutLineEditPlugin.cpp RShortcutLineEditPlugin.h
     RTextEditPlugin.cpp RTextEditPlugin.h
+    ${RC}
 )
 target_include_directories(qcadcustomwidgets PRIVATE
     ../../src/core

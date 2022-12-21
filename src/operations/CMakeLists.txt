@@ -6,10 +6,14 @@ include(../../CMakeInclude.txt)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Core Widgets Concurrent Gui Network OpenGL Sql Svg Xml PrintSupport Qml)
+find_package(${QT_VER} REQUIRED COMPONENTS Core Widgets Concurrent Gui Network OpenGL Sql Svg Xml PrintSupport Qml)
 qt_standard_project_setup()
 
-qt_add_library(qcadoperations
+IF(WIN32)
+    SET(RC operations.rc)
+ENDIF()
+
+add_library(qcadoperations SHARED
     RAddObjectOperation.cpp RAddObjectOperation.h
     RAddObjectsOperation.cpp RAddObjectsOperation.h
     RChangePropertyOperation.cpp RChangePropertyOperation.h
@@ -30,6 +34,7 @@ qt_add_library(qcadoperations
     RScaleSelectionOperation.cpp RScaleSelectionOperation.h
     RTransformation.h
     RTranslation.h
+    ${RC}
 )
 target_include_directories(qcadoperations PUBLIC
     ../../src/3rdparty
@@ -41,7 +46,7 @@ target_include_directories(qcadoperations PUBLIC
     ../../src/operations
 )
 
-target_compile_definitions(qcadoperations PUBLIC
+target_compile_definitions(qcadoperations PRIVATE
     QCADOPERATIONS_LIBRARY
     QCAD_DLL
 )

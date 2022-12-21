@@ -6,10 +6,14 @@ include(../../CMakeInclude.txt)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Core Widgets Concurrent Gui Network OpenGL Sql Svg Xml PrintSupport Qml)
+find_package(${QT_VER} REQUIRED COMPONENTS Core Widgets Concurrent Gui Network OpenGL Sql Svg Xml PrintSupport Qml)
 qt_standard_project_setup()
 
-qt_add_library(qcadgui
+IF(WIN32)
+    SET(RC gui.rc)
+ENDIF()
+
+add_library(qcadgui SHARED
     RCharacterWidget.cpp RCharacterWidget.h
     RCadToolBar.cpp RCadToolBar.h
     RCadToolBarPanel.cpp RCadToolBarPanel.h
@@ -44,6 +48,7 @@ qt_add_library(qcadgui
     RToolButton.cpp RToolButton.h
     RToolMatrixItemDelegate.cpp RToolMatrixItemDelegate.h
     RTreeWidget.cpp RTreeWidget.h
+    ${RC}
 )
 
 target_include_directories(qcadgui PUBLIC
@@ -54,7 +59,7 @@ target_include_directories(qcadgui PUBLIC
     ../../src/gui
 )
 
-target_compile_definitions(qcadgui PUBLIC
+target_compile_definitions(qcadgui PRIVATE
     QCADGUI_LIBRARY
     QCAD_DLL
 )

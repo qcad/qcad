@@ -6,10 +6,17 @@ include(../../CMakeInclude.txt)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Core Widgets Concurrent Gui Network OpenGL Sql Svg Xml PrintSupport Qml)
+find_package(${QT_VER} REQUIRED COMPONENTS Core Widgets Concurrent Gui Network OpenGL Sql Svg Xml PrintSupport Qml)
+IF(NOT BUILD_QT6)
+    find_package(${QT_VER} REQUIRED COMPONENTS Script XmlPatterns)
+ENDIF()
 qt_standard_project_setup()
 
-qt_add_library(qcadcore
+IF(WIN32)
+    SET(RC core.rc)
+ENDIF()
+
+add_library(qcadcore SHARED
     RAction.cpp RAction.h
     RActionAdapter.h
     RArcExporter.cpp RArcExporter.h
@@ -174,6 +181,8 @@ qt_add_library(qcadcore
     math/RTriangle.cpp math/RTriangle.h
     math/RVector.cpp math/RVector.h
     math/RXLine.cpp math/RXLine.h
+    resources/core.qrc
+    ${RC}
 )
 
 target_include_directories(qcadcore PUBLIC
@@ -195,7 +204,7 @@ target_include_directories(qcadcore PUBLIC
     ../../src/zip
 )
 
-target_compile_definitions(qcadcore PUBLIC
+target_compile_definitions(qcadcore PRIVATE
     QCADCORE_LIBRARY
     QCAD_DLL
 )
@@ -245,37 +254,42 @@ set(qcadcore_resource_files
     "resources/linetype_dotx2.svg"
 )
 
-qt_add_resources(qcadcore "qcadcore"
-    PREFIX
-        "/qcad"
-    BASE
-        "resources"
-    FILES
-        ${qcadcore_resource_files}
+IF(BUILD_QT6)
+    qt_add_resources(qcadcore "qcadcore"
+        PREFIX
+            "/qcad"
+        BASE
+            "resources"
+        FILES
+            ${qcadcore_resource_files}
 )
+ELSE()
+    target_link_libraries(qcadcore PUBLIC
+        Qt::Script
+        Qt::XmlPatterns)
+ENDIF()
 
-#if(WIN32)
-#    target_sources(qcadcore PUBLIC
-#        RLockedFile_win.cpp
-#    )
-#
-#    target_link_libraries(qcadcore PUBLIC
-#        Advapi32
-#        Rpcrt4
-#        gdi32
-#        user32
-#    )
-#endif()
+if(WIN32)
+    target_sources(qcadcore PRIVATE
+        RLockedFile_win.cpp
+    )
+
+    target_link_libraries(qcadcore PUBLIC
+        Advapi32
+        Rpcrt4
+        gdi32
+        user32
+    )
+endif()
 
 if(UNIX)
-    target_sources(qcadcore PUBLIC
+    target_sources(qcadcore PRIVATE
         RLockedFile_unix.cpp
     )
 endif()
 
-#if(APPLE)
 if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
-    target_sources(qcadcore PUBLIC
+    target_sources(qcadcore PRIVATE
         detectmacdarkmode.h detectmacdarkmode.mm
     )
 endif()

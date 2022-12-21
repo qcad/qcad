@@ -6,14 +6,18 @@ include(../../CMakeInclude.txt)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Core Widgets Concurrent Gui Network OpenGL Sql Svg Xml PrintSupport Qml)
+find_package(${QT_VER} REQUIRED COMPONENTS Core Widgets Concurrent Gui Network OpenGL Sql Svg Xml PrintSupport Qml)
 qt_standard_project_setup()
 
 qt_add_resources(SOURCES scripts.qrc)
+IF(WIN32)
+    SET(RC scripts.rc)
+ENDIF()
 
-qt_add_library(qcadscripts
+add_library(qcadscripts SHARED
     RScriptsPlugin.cpp RScriptsPlugin.h
     ${SOURCES}
+    ${RC}
 )
 target_include_directories(qcadscripts PRIVATE
     ../../src/core

@@ -6,11 +6,16 @@ include(../../CMakeInclude.txt)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Core Widgets Concurrent Gui Network OpenGL Sql Svg Xml PrintSupport Qml)
+find_package(${QT_VER} REQUIRED COMPONENTS Core Widgets Concurrent Gui Network OpenGL Sql Svg Xml PrintSupport Qml)
 qt_standard_project_setup()
 
-qt_add_library(qcadgrid
+IF(WIN32)
+    SET(RC grid.rc)
+ENDIF()
+
+add_library(qcadgrid SHARED
     ROrthoGrid.cpp ROrthoGrid.h
+    ${RC}
 )
 
 target_include_directories(qcadgrid PUBLIC
@@ -20,7 +25,7 @@ target_include_directories(qcadgrid PUBLIC
     ../../src/gui
 )
 
-target_compile_definitions(qcadgrid PUBLIC
+target_compile_definitions(qcadgrid PRIVATE
     QCADGRID_LIBRARY
     QCAD_DLL
 )
@@ -42,7 +47,7 @@ target_link_libraries(qcadgrid PUBLIC
 )
 
 if(win32-msvc2010)
-    target_compile_definitions(qcadgrid PUBLIC
+    target_compile_definitions(qcadgrid PRIVATE
         _CRT_SECURE_NO_WARNINGS
     )
 endif()
