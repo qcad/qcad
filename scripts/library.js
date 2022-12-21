@@ -2628,7 +2628,12 @@ function getMainWindow() {
 }
 
 function getCurrentDateTime(format) {
-    return new QDateTime(QDateTime.currentDateTime()).toString(format);
+    if (RSettings.getQtVersion() >= 0x060000) {
+        return QDateTime.currentDateTime().toString(format);
+    }
+    else {
+        return new QDateTime(QDateTime.currentDateTime()).toString(format);
+    }
 }
 
 function mergeProperties(obj1,obj2) {
