@@ -89,7 +89,7 @@ public:
     /**
      * \nonscriptoverwritable
      */
-    RDocument& getDocument() const;
+    virtual RDocument& getDocument() const;
 
     void setProjectionRenderingHint(RS::ProjectionRenderingHint p);
     RS::ProjectionRenderingHint getProjectionRenderingHint();
