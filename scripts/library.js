@@ -571,7 +571,12 @@ function isEllipseEntity(obj) {
  * \return true if the given object is an ellipse arc entity (REllipseEntity).
  */
 function isEllipseArcEntity(obj) {
-    return (isOfType(obj, REllipseEntity) || isOfType(obj, REllipseEntityPointer)) && !obj.isFullEllipse();
+    if (RSettings.getQtVersion() < 0x060000) {
+        return (isOfType(obj, REllipseEntity) || isOfType(obj, REllipseEntityPointer)) && !obj.isFullEllipse();
+    }
+    else {
+        return isOfType(obj, REllipseEntity);
+    }
 }
 
 /**
