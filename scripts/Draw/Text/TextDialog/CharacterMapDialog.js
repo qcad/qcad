@@ -46,10 +46,9 @@ CharacterMapDialog.prototype.show = function() {
     var style = "";
     style += bold ? "Bold" : "";
     style += italic ? " Italic" : "";
-    font = new QFont(fontFamily, pointSize, bold ? QFont.Bold : QFont.Normal,
-            italic);
+    font = new QFont(fontFamily, pointSize, bold ? QFont.Bold : QFont.Normal, italic);
     characterMap.updateFont(font);
-    characterMap.updateSize(pointSize);
+    characterMap.updateSize(pointSize.toString());
     characterMap.updateStyle(style);
     characterMap.updateFontMerging(true);
 
@@ -72,19 +71,19 @@ CharacterMapDialog.prototype.show = function() {
         font = characterMap.getDisplayFont();
         pointSize = font.pointSize();
         ++pointSize;
-        characterMap.updateSize(pointSize);
+        characterMap.updateSize(pointSize.toString());
         this.updateSlider(widgets["ZoomSlider"], pointSize);
     });
     widgets["ZoomOut"].clicked.connect(this, function() {
         font = characterMap.getDisplayFont();
         pointSize = font.pointSize();
         pointSize = Math.max(1, --pointSize);
-        characterMap.updateSize(pointSize);
+        characterMap.updateSize(pointSize.toString());
         this.updateSlider(widgets["ZoomSlider"], pointSize);
     });
     widgets["ZoomSlider"].valueChanged.connect(this, function(value) {
         pointSize = Math.max(1, Math.round(value / 2));
-        characterMap.updateSize(pointSize);
+        characterMap.updateSize(pointSize.toString());
     });
 
     font = characterMap.getDisplayFont();
