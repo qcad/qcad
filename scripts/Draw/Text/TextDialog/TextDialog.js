@@ -866,8 +866,15 @@ TextDialog.prototype.textColor = function() {
     for (var i=0; i < colorList.length; ++i) {
         var label = colorList[i][0];
         var color = colorList[i][1];
-        var action = menu.addAction(RColor.getIcon(color, new QSize(16,16)), label);
-        action.setProperty("color", color);
+
+        if (label==="---") {
+            menu.addSeparator();
+        }
+        else {
+            var action = menu.addAction(RColor.getIcon(color, new QSize(16,16)), label);
+            action.setProperty("color", color);
+            action.iconVisibleInMenu = true;
+        }
     }
 
     var chosenAction = menu.exec(QCursor.pos());
