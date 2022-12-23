@@ -126,6 +126,16 @@
 
     <function_decl><type><name>void</name></type> <name>transform</name><parameter_list>(<param><decl><type><name>QTransform</name>&amp;</type> <name>t</name></decl></param>)</parameter_list>;</function_decl>
 
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x060000</expr></cpp:if>
+    <comment type="block">/**
+     * copy function for Qt 6 scripts:
+     * \nonscriptable
+     */</comment>
+    <function><type><name>RBox</name></type> <name>copy</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr>*<name>this</name></expr>;</return>
+    }</block></function>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
 </public><public>public:
     <comment type="block">/**
      * \getter{getCorner1}
