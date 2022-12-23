@@ -86,6 +86,8 @@ public:
     static RColor createFromName(const QString& name);
 
     static QList<QPair<QString, RColor> > getList(bool onlyFixed = false);
+    static QStringList getNameList(bool onlyFixed = false);
+    static QList<RColor> getColorList(bool onlyFixed = false);
     static QIcon getIcon(const RColor& color, const QSize& size = RDEFAULT_QSIZE_ICON);
 
     unsigned long long getHash() const;

@@ -216,6 +216,46 @@ QList<QPair<QString, RColor> > RColor::getList(bool onlyFixed) {
     return l;
 }
 
+QStringList RColor::getNameList(bool onlyFixed) {
+    init();
+    QStringList l;
+    for (int i=0; i<list.length(); i++) {
+        l.append(list[i].first);
+    }
+    if (!onlyFixed) {
+        return l;
+    }
+
+    // remove "By Layer"
+    QString name = RColor(RColor::ByLayer).getName();
+    l.removeAll(name);
+
+    // remove "By Block"
+    name = RColor(RColor::ByBlock).getName();
+    l.removeAll(name);
+
+    return l;
+}
+
+QList<RColor> RColor::getColorList(bool onlyFixed) {
+    init();
+    QList<RColor> l;
+    for (int i=0; i<list.length(); i++) {
+        l.append(list[i].second);
+    }
+    if (!onlyFixed) {
+        return l;
+    }
+
+    // remove "By Layer"
+    l.removeAll(RColor(RColor::ByLayer));
+
+    // remove "By Block"
+    l.removeAll(RColor(RColor::ByBlock));
+
+    return l;
+}
+
 /**
  * \return CAD index of this color used in MTEXT strings.
  */
