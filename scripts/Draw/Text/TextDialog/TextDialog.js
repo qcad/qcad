@@ -908,7 +908,7 @@ TextDialog.prototype.textColor = function() {
     }
 
     var fmt = new QTextCharFormat();
-    fmt.setForeground(chosenColor);
+    fmt.setForeground(new QBrush(chosenColor));
     this.mergeFormatOnWordOrSelection(fmt);
     this.colorChanged(chosenColor);
 };
