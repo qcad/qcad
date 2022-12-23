@@ -349,6 +349,11 @@
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>Qt::GlobalColor</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>Qt::MouseButton</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>Qt::Orientation</argument>)</argument_list></macro>
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x060000</expr></cpp:if>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QPageLayout::Orientation</argument>)</argument_list></macro>
+<cpp:else>#<cpp:directive>else</cpp:directive></cpp:else>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QPrinter::Orientation</argument>)</argument_list></macro>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>Qt::PenStyle</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>Qt::BrushStyle</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>Qt::ItemDataRole</argument>)</argument_list></macro>

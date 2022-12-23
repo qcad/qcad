@@ -72,6 +72,12 @@
         getList
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getNameList
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getColorList
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getIcon
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

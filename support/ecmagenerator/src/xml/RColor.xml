@@ -102,6 +102,23 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
+    <method name="getNameList" cppName="getNameList"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QStringList" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="onlyFixed"
+        hasDefault="true" default="false" isConst="false" />
+      </variant>
+    </method>
+    <method name="getColorList" cppName="getColorList"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RColor &gt;"
+      isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="onlyFixed"
+        hasDefault="true" default="false" isConst="false" />
+      </variant>
+    </method>
     <method name="getIcon" cppName="getIcon" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QIcon" isPureVirtual="false">

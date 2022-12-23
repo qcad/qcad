@@ -118,6 +118,10 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getList, "getList");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getNameList, "getNameList");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getColorList, "getColorList");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getIcon, "getIcon");
             
             REcmaHelper::registerFunction(&engine, &ctor, getHighlighted, "getHighlighted");
@@ -1130,6 +1134,148 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaColor::getList", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaColor::getNameList
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaColor::getNameList", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaColor::getNameList";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QStringList'
+    QStringList cppResult =
+        RColor::
+       getNameList();
+        // return type: QStringList
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QStringList'
+    QStringList cppResult =
+        RColor::
+       getNameList(a0);
+        // return type: QStringList
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RColor.getNameList().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaColor::getNameList", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaColor::getColorList
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaColor::getColorList", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaColor::getColorList";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RColor >'
+    QList < RColor > cppResult =
+        RColor::
+       getColorList();
+        // return type: QList < RColor >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RColor >'
+    QList < RColor > cppResult =
+        RColor::
+       getColorList(a0);
+        // return type: QList < RColor >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RColor.getColorList().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaColor::getColorList", context, engine);
             return result;
         }
          QScriptValue
