@@ -242,10 +242,14 @@ int main(int argc, char *argv[]) {
     }
 
     // TODO: make available as script function:
-    if (!app->arguments().contains("-show-menu-icons")) {
+//    if (!app->arguments().contains("-show-menu-icons")) {
+//        QCoreApplication::setAttribute(Qt::AA_DontShowIconsInMenus);
+//    }
+#endif
+
+    if (RSettings::getBoolValue("MenuBar/ShowIcons", true)==false) {
         QCoreApplication::setAttribute(Qt::AA_DontShowIconsInMenus);
     }
-#endif
 
     if (!app->arguments().contains("-allow-multiple-instances")) {
         // send arguments to running instance for further processing:
