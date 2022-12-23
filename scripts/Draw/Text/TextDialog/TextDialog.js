@@ -859,19 +859,23 @@ TextDialog.prototype.textSize = function(p) {
  * Called when user changes font color.
  */
 TextDialog.prototype.textColor = function() {
+    var colorNameList = RColor.getNameList(false);
+    var colorList = RColor.getColorList(false);
+    if (colorNameList.length!==colorList.length) {
+        qWarning("Not same number of colors as color names. Aborting...");
+        return;
+    }
+
     var menu = new QMenu(this.dialog);
-
-    var colorList = RColor.getList(false);
-
-    for (var i=0; i < colorList.length; ++i) {
-        var label = colorList[i][0];
-        var color = colorList[i][1];
+    for (var i=0; i < colorNameList.length; ++i) {
+        var label = colorNameList[i];
+        var color = colorList[i];
 
         if (label==="---") {
             menu.addSeparator();
         }
         else {
-            var action = menu.addAction(RColor.getIcon(color, new QSize(16,16)), label);
+            var action = menu.addAction(RColor.getIcon(color, new QSize(16,16)), label + "...");
             action.setProperty("color", color);
             action.iconVisibleInMenu = true;
         }
@@ -926,7 +930,7 @@ TextDialog.prototype.textSymbol = function() {
         var character = charsMap.get(keys[i])[1];
         action = menu.addAction(str + "\t" + character);
         var menuData = new SymbolMenuData(textWidget, character);
-        action.triggered.connect(menuData, "triggered");
+        action.triggered.connect(menuData, menuData.triggered);
     }
 
     // other characters
