@@ -588,7 +588,7 @@ TextDialog.prototype.setupTextActions = function() {
 //    this.dialog.findChild("ZoomOut").setDefaultAction(this.actionZoomOut);
 
     var pix = new QPixmap(16, 16);
-    pix.fill(Qt.black);
+    pix.fill(new QColor(Qt.black));
     this.actionTextColor = new QAction(new QIcon(pix), qsTr("&Color..."), this.dialog);
     this.actionTextColor.triggered.connect(this, this.textColor);
     this.dialog.findChild("Color").setDefaultAction(this.actionTextColor);
