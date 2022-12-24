@@ -149,7 +149,7 @@ InsertScriptItem.evalInit = function(file) {
             appWin.addDockWidget(Qt.RightDockWidgetArea, dock);
         } else {
             // show previously used and hidden script item UI again:
-            if (!QCoreApplication.arguments().contains("-no-show")) {
+            if (!RSettings.getOriginalArguments().contains("-no-show")) {
                 dock.visible = true;
             }
             formWidget = dock.widget();

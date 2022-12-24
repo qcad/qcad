@@ -507,12 +507,6 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
                     continue;
                 }
 
-                // qt 6: detect wrapper of QGroupBox and never delete that:
-                if (!isNull(child.wrappedType)) {
-                    continue;
-                }
-
-
                 destr(child);
             }
         }
@@ -1669,7 +1663,7 @@ PropertyEditor.prototype.beginEvent = function() {
 
     var appWin = RMainWindowQt.getMainWindow();
     var dock = appWin.findChild("PropertyEditorDock");
-    if (!QCoreApplication.arguments().contains("-no-show")) {
+    if (!RSettings.getOriginalArguments().contains("-no-show")) {
         dock.visible = !dock.visible;
         if (dock.visible) dock.raise();
     }
