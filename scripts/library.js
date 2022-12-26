@@ -3263,6 +3263,18 @@ function makeQtItemFlags() {
     return makeFlags.apply(this, argumentsNew);
 }
 
+function makeQtKeyboardModifiers() {
+    var argumentsNew = [].slice.call(arguments, 0);
+    argumentsNew.unshift(Qt.KeyboardModifiers);
+    return makeFlags.apply(this, argumentsNew);
+}
+
+function makeQtMouseButtons() {
+    var argumentsNew = [].slice.call(arguments, 0);
+    argumentsNew.unshift(Qt.MouseButtons);
+    return makeFlags.apply(this, argumentsNew);
+}
+
 function makeFlags() {
     if (RSettings.isQt(6)) {
         var ret = 0;
