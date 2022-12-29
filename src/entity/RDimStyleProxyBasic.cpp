@@ -982,36 +982,35 @@ void RDimStyleProxyBasic::updateTextPosition(const QString& text, double textWid
         double angle = dimLine1.getAngleTo(dimLine2);
         RVector textPositionSide;
 
-        // minimum space required for text:
+        // available space for text:
         double minSpace = dimLineLength;
-        if (dimtad==0 || dimtih) {
+
+        // dimension text aligned with dimension line
+        if (!dimtih) {
             if (!outsideArrow1) {
                 minSpace -= dimasz;
             }
             if (!outsideArrow2) {
                 minSpace -= dimasz;
             }
-            // if text is centered on dim line, we need more space:
             minSpace -= dimgap*2;
         }
+
+        // dimension text horizontal 
         else {
-            if (outsideArrow1 && outsideArrow2) {
-                minSpace -= dimgap*2;
-            }
+            // minSpace is never used for dimtih==true
+            minSpace -= dimgap*2;
         }
 
         if (!RMath::isNaN(minSpace) && textWidth>minSpace && !dimtih) {
-            double h = textWidth/2.0+dimLineLength/2.0+dimgap;
-            if (dimtad==0) {
-                // text centered with dimension line:
-                // move further away to move away from arrows:
-                if (outsideArrow2) {
-                    h += dimasz;
-                }
-//                else {
-//                    h += dimgap;
-//                }
+            double h = textWidth/2.0 + dimLineLength/2.0 + dimgap ;
+            // move further away to move away from arrows:
+            if (outsideArrow2) {
+                h += dimasz;
             }
+//            else {
+//                h += dimgap;
+//            }
             RVector distH;
             distH.setPolar(h, angle);
             textPositionSide = newTextPos;
