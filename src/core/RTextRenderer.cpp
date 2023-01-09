@@ -36,7 +36,7 @@ QChar RTextRenderer::chPlusMinus = QChar(0x00b1);
 //QChar RTextRenderer::chDiameter = QChar(0x2300);
 QChar RTextRenderer::chDiameter = QChar(0x00f8);
 
-QString RTextRenderer::rxLineFeedStr = "\\\\p(?:x?i(\\d*\\.?\\d*);)?";
+QString RTextRenderer::rxLineFeedStr = "\\\\p(?:x?i(-?\\d*\\.?\\d*)(?:,l-?\\d*\\.?\\d*)(?:,t-?\\d*\\.?\\d*);)?";
 QRegularExpression RTextRenderer::rxLineFeed(rxLineFeedStr);
 QString RTextRenderer::rxAlignmentLeftStr = "\\\\pql;";
 QRegularExpression RTextRenderer::rxAlignmentLeft(rxAlignmentLeftStr);
