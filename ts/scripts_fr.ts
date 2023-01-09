@@ -10357,7 +10357,7 @@ dans les résultats de recherche :</translation>
         <translation>Personnalisé</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+203"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
@@ -10392,7 +10392,7 @@ dans les résultats de recherche :</translation>
         <translation>*VARIABLE*</translation>
     </message>
     <message>
-        <location line="-1434"/>
+        <location line="-1428"/>
         <source>:</source>
         <translation> :</translation>
     </message>
@@ -10412,7 +10412,7 @@ dans les résultats de recherche :</translation>
         <translation>Entités dépendantes</translation>
     </message>
     <message>
-        <location line="+374"/>
+        <location line="+368"/>
         <source>All</source>
         <translation>Tous</translation>
     </message>
@@ -12731,7 +12731,7 @@ dans les résultats de recherche :</translation>
         <translation>&amp;Caractère spécial...</translation>
     </message>
     <message>
-        <location line="+331"/>
+        <location line="+342"/>
         <source>Others...</source>
         <translation>Autres...</translation>
     </message>
@@ -13152,7 +13152,7 @@ dans les résultats de recherche :</translation>
 <context>
     <name>ToolBarContextMenu</name>
     <message>
-        <location filename="../scripts/Widgets/ToolBarContextMenu/ToolBarContextMenu.js" line="+82"/>
+        <location filename="../scripts/Widgets/ToolBarContextMenu/ToolBarContextMenu.js" line="+85"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -13713,7 +13713,7 @@ dans les résultats de recherche :</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1152"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1157"/>
         <source>Restore defaults</source>
         <translation>Restaurer les valeurs par défaut</translation>
     </message>
@@ -14175,7 +14175,7 @@ dans les résultats de recherche :</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1243"/>
+        <location filename="../scripts/library.js" line="+1248"/>
         <source>Objects</source>
         <translation>Objets</translation>
     </message>

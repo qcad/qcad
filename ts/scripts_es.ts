@@ -10352,7 +10352,7 @@ en los resultados de búsqueda:</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+845"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+839"/>
         <source>Add custom property to selected objects</source>
         <translation>Agregar una propiedad personalizada a los objetos seleccionados</translation>
     </message>
@@ -10362,7 +10362,7 @@ en los resultados de búsqueda:</translation>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1434"/>
+        <location line="-1428"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10387,7 +10387,7 @@ en los resultados de búsqueda:</translation>
         <translation>Personalizado</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+203"/>
         <source>Index</source>
         <translation>Índice</translation>
     </message>
@@ -12731,7 +12731,7 @@ en los resultados de búsqueda:</translation>
         <translation>&amp;Caracteres especiales...</translation>
     </message>
     <message>
-        <location line="+331"/>
+        <location line="+342"/>
         <source>Others...</source>
         <translation>Otros...</translation>
     </message>
@@ -13152,7 +13152,7 @@ en los resultados de búsqueda:</translation>
 <context>
     <name>ToolBarContextMenu</name>
     <message>
-        <location filename="../scripts/Widgets/ToolBarContextMenu/ToolBarContextMenu.js" line="+82"/>
+        <location filename="../scripts/Widgets/ToolBarContextMenu/ToolBarContextMenu.js" line="+85"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -13713,7 +13713,7 @@ en los resultados de búsqueda:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1152"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1157"/>
         <source>Restore defaults</source>
         <translation>Restaurar los valores predeterminados</translation>
     </message>
@@ -14175,7 +14175,7 @@ en los resultados de búsqueda:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1243"/>
+        <location filename="../scripts/library.js" line="+1248"/>
         <source>Objects</source>
         <translation>Objetos</translation>
     </message>

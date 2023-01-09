@@ -622,6 +622,7 @@ SOURCES = \
 ../scripts/Misc/MiscDevelopment/MiscDevelopment.js \
 ../scripts/Misc/MiscDevelopment/RunScript/RunScript.js \
 ../scripts/Misc/MiscDevelopment/RunScript/RunScriptInit.js \
+../scripts/Misc/MiscDevelopment/RunScript/demo.js \
 ../scripts/Misc/MiscDraw/Counter/Counter.js \
 ../scripts/Misc/MiscDraw/Counter/CounterInit.js \
 ../scripts/Misc/MiscDraw/Counter/numeral.js \

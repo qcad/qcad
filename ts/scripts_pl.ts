@@ -188,7 +188,7 @@
     <message>
         <location line="+169"/>
         <source>Licenses</source>
-        <translation type="unfinished">Licencje</translation>
+        <translation>Licencje</translation>
     </message>
     <message>
         <location filename="../scripts/Help/About/AboutInit.js" line="+2"/>
@@ -10359,12 +10359,12 @@ wyświetlanych w wynikach wyszukiwania:</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1653"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1647"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*VARIES*</translation>
     </message>
     <message>
-        <location line="-1434"/>
+        <location line="-1428"/>
         <source>:</source>
         <translation type="unfinished">:</translation>
     </message>
@@ -10389,7 +10389,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation type="unfinished">Własna</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+203"/>
         <source>Index</source>
         <translation type="unfinished">Indeks</translation>
     </message>
@@ -12741,7 +12741,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation type="unfinished">Znaki specjalne...</translation>
     </message>
     <message>
-        <location line="+331"/>
+        <location line="+342"/>
         <source>Others...</source>
         <translation type="unfinished">Inni...</translation>
     </message>
@@ -13162,7 +13162,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
 <context>
     <name>ToolBarContextMenu</name>
     <message>
-        <location filename="../scripts/Widgets/ToolBarContextMenu/ToolBarContextMenu.js" line="+82"/>
+        <location filename="../scripts/Widgets/ToolBarContextMenu/ToolBarContextMenu.js" line="+85"/>
         <source>Widgets</source>
         <translation type="unfinished">Widżety</translation>
     </message>
@@ -13723,7 +13723,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1152"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1157"/>
         <source>Restore defaults</source>
         <translation type="unfinished">Przywróć ustawienia domyślne</translation>
     </message>
@@ -14185,7 +14185,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1243"/>
+        <location filename="../scripts/library.js" line="+1248"/>
         <source>Objects</source>
         <translation type="unfinished">Obiekty</translation>
     </message>

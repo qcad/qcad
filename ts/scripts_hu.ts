@@ -10370,7 +10370,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
         <translation type="unfinished">Custom</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+203"/>
         <source>Index</source>
         <translation type="unfinished">Index</translation>
     </message>
@@ -12721,7 +12721,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
         <translation type="unfinished">Különleges karakterek...</translation>
     </message>
     <message>
-        <location line="+331"/>
+        <location line="+342"/>
         <source>Others...</source>
         <translation type="unfinished">Mások...</translation>
     </message>
@@ -13142,7 +13142,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
 <context>
     <name>ToolBarContextMenu</name>
     <message>
-        <location filename="../scripts/Widgets/ToolBarContextMenu/ToolBarContextMenu.js" line="+82"/>
+        <location filename="../scripts/Widgets/ToolBarContextMenu/ToolBarContextMenu.js" line="+85"/>
         <source>Widgets</source>
         <translation type="unfinished">Widgetek</translation>
     </message>
@@ -13703,7 +13703,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1152"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1157"/>
         <source>Restore defaults</source>
         <translation type="unfinished">Alapértelmezett beállítások visszaállítása</translation>
     </message>
@@ -14165,7 +14165,7 @@ a keresési eredményekben megjelenő elemek száma:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1243"/>
+        <location filename="../scripts/library.js" line="+1248"/>
         <source>Objects</source>
         <translation type="unfinished">Tárgyak</translation>
     </message>

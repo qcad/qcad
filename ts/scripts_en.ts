@@ -10412,7 +10412,7 @@ shown in search results:</translation>
         <translation>Custom</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+203"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
@@ -12731,7 +12731,7 @@ shown in search results:</translation>
         <translation>&amp;Special Characters...</translation>
     </message>
     <message>
-        <location line="+331"/>
+        <location line="+342"/>
         <source>Others...</source>
         <translation>Others...</translation>
     </message>
@@ -13152,7 +13152,7 @@ shown in search results:</translation>
 <context>
     <name>ToolBarContextMenu</name>
     <message>
-        <location filename="../scripts/Widgets/ToolBarContextMenu/ToolBarContextMenu.js" line="+82"/>
+        <location filename="../scripts/Widgets/ToolBarContextMenu/ToolBarContextMenu.js" line="+85"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -13713,7 +13713,7 @@ shown in search results:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1152"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1157"/>
         <source>Restore defaults</source>
         <translation>Restore defaults</translation>
     </message>
@@ -14175,7 +14175,7 @@ shown in search results:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1243"/>
+        <location filename="../scripts/library.js" line="+1248"/>
         <source>Objects</source>
         <translation>Objects</translation>
     </message>
