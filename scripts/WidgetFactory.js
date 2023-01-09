@@ -592,7 +592,12 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             if (!isNull(value)) {
                 // deprecated: value and default unit:
                 if (isArray(value) && value.length===2) {
-                    c.text = value[0];
+                    if (isNull(value[0])) {
+                        c.text = "";
+                    }
+                    else {
+                        c.text = value[0].toString();
+                    }
                 }
                 else {
                     if (isString(value)) {
