@@ -528,6 +528,9 @@ AddOn.getAddOns = function(dir) {
             if (typeof(RAutoLoadEcma)!=="undefined") {
                 RAutoLoadEcma.addAutoLoadFile(fileInfo.filePath());
             }
+            if (typeof(RAutoLoadJs)!=="undefined") {
+                RAutoLoadJs.addAutoLoadFile(fileInfo.filePath());
+            }
         }
         else {
             if (fileInfo.exists() && !AddOn.isIgnored(fileInfo.absoluteFilePath())) {
