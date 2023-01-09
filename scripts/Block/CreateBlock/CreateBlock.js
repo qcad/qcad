@@ -18,7 +18,7 @@
  */
 
 include("scripts/Block/Block.js");
-include("../BlockDialog.js");
+include("scripts/Block/BlockDialog.js");
 
 /**
  * \class CreateBlock
