@@ -101,6 +101,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getPageSize, "getPageSize");
             
+            REcmaHelper::registerFunction(&engine, &ctor, setUtf8Codec, "setUtf8Codec");
+            
             REcmaHelper::registerFunction(&engine, &ctor, escape, "escape");
             
             REcmaHelper::registerFunction(&engine, &ctor, getScreenCount, "getScreenCount");
@@ -3779,6 +3781,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaS::getPageSize", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaS::setUtf8Codec
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaS::setUtf8Codec", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaS::setUtf8Codec";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QTextStream */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    QTextStream*
+                    ap0 =
+                    qscriptvalue_cast<
+                    QTextStream*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RS: Argument 0 is not of type QTextStream*.",
+                               context);                    
+                    }
+                    QTextStream& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RS::
+       setUtf8Codec(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RS.setUtf8Codec().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaS::setUtf8Codec", context, engine);
             return result;
         }
          QScriptValue

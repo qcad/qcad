@@ -10345,12 +10345,12 @@ shown in search results:</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1653"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1647"/>
         <source>*VARIES*</source>
         <translation>*VARIES*</translation>
     </message>
     <message>
-        <location line="-1434"/>
+        <location line="-1428"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10375,7 +10375,7 @@ shown in search results:</source>
         <translation>カスタム</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+203"/>
         <source>Index</source>
         <translation>目次</translation>
     </message>
@@ -12721,7 +12721,7 @@ shown in search results:</source>
         <translation>&amp;S 特殊文字...</translation>
     </message>
     <message>
-        <location line="+331"/>
+        <location line="+342"/>
         <source>Others...</source>
         <translation>その他...</translation>
     </message>
@@ -13142,7 +13142,7 @@ shown in search results:</source>
 <context>
     <name>ToolBarContextMenu</name>
     <message>
-        <location filename="../scripts/Widgets/ToolBarContextMenu/ToolBarContextMenu.js" line="+82"/>
+        <location filename="../scripts/Widgets/ToolBarContextMenu/ToolBarContextMenu.js" line="+85"/>
         <source>Widgets</source>
         <translation type="unfinished">ウィジェット</translation>
     </message>
@@ -13703,7 +13703,7 @@ shown in search results:</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1152"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1157"/>
         <source>Restore defaults</source>
         <translation>デフォルトを置き換え</translation>
     </message>
@@ -14165,7 +14165,7 @@ shown in search results:</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1243"/>
+        <location filename="../scripts/library.js" line="+1248"/>
         <source>Objects</source>
         <translation>オブジェクト</translation>
     </message>

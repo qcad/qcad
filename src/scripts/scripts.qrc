@@ -1583,6 +1583,7 @@
     <file alias="scripts/Misc/MiscDevelopment/RunScript/RunScript.svg">../../scripts/Misc/MiscDevelopment/RunScript/RunScript.svg</file>
     <file alias="scripts/Misc/MiscDevelopment/RunScript/RunScriptDialog.ui">../../scripts/Misc/MiscDevelopment/RunScript/RunScriptDialog.ui</file>
     <file alias="scripts/Misc/MiscDevelopment/RunScript/RunScriptInit.js">../../scripts/Misc/MiscDevelopment/RunScript/RunScriptInit.js</file>
+    <file alias="scripts/Misc/MiscDevelopment/RunScript/demo.js">../../scripts/Misc/MiscDevelopment/RunScript/demo.js</file>
     <file alias="scripts/Misc/MiscDraw/Counter/Counter-inverse.svg">../../scripts/Misc/MiscDraw/Counter/Counter-inverse.svg</file>
     <file alias="scripts/Misc/MiscDraw/Counter/Counter.js">../../scripts/Misc/MiscDraw/Counter/Counter.js</file>
     <file alias="scripts/Misc/MiscDraw/Counter/Counter.svg">../../scripts/Misc/MiscDraw/Counter/Counter.svg</file>

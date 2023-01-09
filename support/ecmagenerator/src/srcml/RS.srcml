@@ -894,9 +894,7 @@
      * \nonscriptable
      */</comment>
     <function_decl><type><name>static</name> <name>QRegularExpression</name></type> <name>createRegEpCI</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>str</name></decl></param>, <param><decl><type><name>bool</name></type> <name>regExp2</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
-    <comment type="block">/**
-     * \nonscriptable
-     */</comment>
+
     <function_decl><type><name>static</name> <name>void</name></type> <name>setUtf8Codec</name><parameter_list>(<param><decl><type><name>QTextStream</name>&amp;</type> <name>ts</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>static</name> <name>QString</name></type> <name>escape</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>plain</name></decl></param>)</parameter_list>;</function_decl>

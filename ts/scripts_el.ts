@@ -10405,7 +10405,7 @@ shown in search results:</source>
         <translation type="unfinished">Προσαρμοσμένο</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+203"/>
         <source>Index</source>
         <translation type="unfinished">Ευρετήριο</translation>
     </message>
@@ -12723,7 +12723,7 @@ shown in search results:</source>
         <translation type="unfinished">Ειδικοί χαρακτήρες...</translation>
     </message>
     <message>
-        <location line="+331"/>
+        <location line="+342"/>
         <source>Others...</source>
         <translation type="unfinished">Άλλοι...</translation>
     </message>
@@ -13143,7 +13143,7 @@ shown in search results:</source>
 <context>
     <name>ToolBarContextMenu</name>
     <message>
-        <location filename="../scripts/Widgets/ToolBarContextMenu/ToolBarContextMenu.js" line="+82"/>
+        <location filename="../scripts/Widgets/ToolBarContextMenu/ToolBarContextMenu.js" line="+85"/>
         <source>Widgets</source>
         <translation type="unfinished">Widgets</translation>
     </message>
@@ -13704,7 +13704,7 @@ shown in search results:</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1152"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1157"/>
         <source>Restore defaults</source>
         <translation type="unfinished">Επαναφορά προεπιλογών</translation>
     </message>
@@ -14166,7 +14166,7 @@ shown in search results:</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1243"/>
+        <location filename="../scripts/library.js" line="+1248"/>
         <source>Objects</source>
         <translation type="unfinished">Αντικείμενα</translation>
     </message>

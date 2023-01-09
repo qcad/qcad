@@ -10352,12 +10352,12 @@ im Suchresultat:</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1653"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1647"/>
         <source>*VARIES*</source>
         <translation>*VARIIERT*</translation>
     </message>
     <message>
-        <location line="-1434"/>
+        <location line="-1428"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10377,7 +10377,7 @@ im Suchresultat:</translation>
         <translation>Abhängige Objekte</translation>
     </message>
     <message>
-        <location line="+227"/>
+        <location line="+221"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
@@ -10469,7 +10469,7 @@ im Suchresultat:</translation>
         <translation>Farbe:</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1259"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1253"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>
@@ -12701,7 +12701,7 @@ im Suchresultat:</translation>
         <translation>&amp;Unterstreichen</translation>
     </message>
     <message>
-        <location line="+507"/>
+        <location line="+518"/>
         <source>Degree</source>
         <translation>Grad</translation>
     </message>
@@ -12883,7 +12883,7 @@ im Suchresultat:</translation>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="-540"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="-551"/>
         <source>&amp;Bold</source>
         <translation>&amp;Fett</translation>
     </message>
@@ -12913,7 +12913,7 @@ im Suchresultat:</translation>
         <translation>&amp;Sonderzeichen...</translation>
     </message>
     <message>
-        <location line="+331"/>
+        <location line="+342"/>
         <source>Others...</source>
         <translation>Andere...</translation>
     </message>
@@ -13152,7 +13152,7 @@ im Suchresultat:</translation>
 <context>
     <name>ToolBarContextMenu</name>
     <message>
-        <location filename="../scripts/Widgets/ToolBarContextMenu/ToolBarContextMenu.js" line="+82"/>
+        <location filename="../scripts/Widgets/ToolBarContextMenu/ToolBarContextMenu.js" line="+85"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -13713,7 +13713,7 @@ im Suchresultat:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1152"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1157"/>
         <source>Restore defaults</source>
         <translation>Standardwerte wieder herstellen</translation>
     </message>
@@ -14175,7 +14175,7 @@ im Suchresultat:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1243"/>
+        <location filename="../scripts/library.js" line="+1248"/>
         <source>Objects</source>
         <translation>Objekte</translation>
     </message>

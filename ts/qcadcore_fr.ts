@@ -112,7 +112,7 @@
 <context>
     <name>RColor</name>
     <message>
-        <location filename="../src/core/RColor.cpp" line="+300"/>
+        <location filename="../src/core/RColor.cpp" line="+340"/>
         <source>By Layer</source>
         <translation>Par calque</translation>
     </message>
@@ -1088,7 +1088,7 @@
     <message>
         <location line="+1"/>
         <source>Foul Rising</source>
-        <translation type="unfinished">Levée impure</translation>
+        <translation>Levée impure</translation>
     </message>
 </context>
 <context>

@@ -10381,7 +10381,7 @@ rodomas paieškos rezultatuose:</translation>
         <translation type="unfinished">Pasirinktinis</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+203"/>
         <source>Index</source>
         <translation type="unfinished">Indeksas</translation>
     </message>
@@ -12738,7 +12738,7 @@ rodomas paieškos rezultatuose:</translation>
         <translation type="unfinished">Specialieji simboliai...</translation>
     </message>
     <message>
-        <location line="+331"/>
+        <location line="+342"/>
         <source>Others...</source>
         <translation type="unfinished">Kiti...</translation>
     </message>
@@ -13159,7 +13159,7 @@ rodomas paieškos rezultatuose:</translation>
 <context>
     <name>ToolBarContextMenu</name>
     <message>
-        <location filename="../scripts/Widgets/ToolBarContextMenu/ToolBarContextMenu.js" line="+82"/>
+        <location filename="../scripts/Widgets/ToolBarContextMenu/ToolBarContextMenu.js" line="+85"/>
         <source>Widgets</source>
         <translation type="unfinished">Valdikliai</translation>
     </message>
@@ -13720,7 +13720,7 @@ rodomas paieškos rezultatuose:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1152"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1157"/>
         <source>Restore defaults</source>
         <translation type="unfinished">Atkurti numatytąsias nuostatas</translation>
     </message>
@@ -14182,7 +14182,7 @@ rodomas paieškos rezultatuose:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1243"/>
+        <location filename="../scripts/library.js" line="+1248"/>
         <source>Objects</source>
         <translation type="unfinished">Objektai</translation>
     </message>
