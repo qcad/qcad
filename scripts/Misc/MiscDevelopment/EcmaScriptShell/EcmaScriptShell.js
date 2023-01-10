@@ -95,7 +95,6 @@ EcmaScriptShell.colPrompt = "#0000cc";
 
 
 EcmaScriptShell.initStyle = function() {
-    qDebug("EcmaScriptShell.initStyle:");
     if (RSettings.hasDarkGuiBackground()) {
         EcmaScriptShell.col = "#fff";
         EcmaScriptShell.colWarning = "#cc0000";
