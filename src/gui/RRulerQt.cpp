@@ -45,6 +45,11 @@ RRulerQt::RRulerQt(QWidget* parent) :
     cursorArrow.moveTo(0,0);
     cursorArrow.lineTo(-3*dpr,-3*dpr);
     cursorArrow.lineTo(3*dpr,-3*dpr);
+
+    RMainWindow* appWin = RMainWindow::getMainWindow();
+    if (appWin!=NULL) {
+        appWin->addPaletteListener(this);
+    }
 }
 
 
@@ -52,6 +57,10 @@ RRulerQt::RRulerQt(QWidget* parent) :
  * Destructor
  */
 RRulerQt::~RRulerQt() {
+    RMainWindow* appWin = RMainWindow::getMainWindow();
+    if (appWin!=NULL) {
+        appWin->removePaletteListener(this);
+    }
 }
 
 

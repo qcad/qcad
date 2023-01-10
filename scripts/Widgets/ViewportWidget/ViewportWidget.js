@@ -256,9 +256,10 @@ ViewportWidget.prototype.init = function(uiFile, graphicsSceneClass) {
     var hruler = this.vpWidget.findChild("HorizontalRuler");
     var vruler = this.vpWidget.findChild("VerticalRuler");
 
-    var appWin = RMainWindowQt.getMainWindow();
-    appWin.addPaletteListener(hruler);
-    appWin.addPaletteListener(vruler);
+    // moved to RRulerQt:
+    //var appWin = RMainWindowQt.getMainWindow();
+    //appWin.addPaletteListener(hruler);
+    //appWin.addPaletteListener(vruler);
 
     if (RSettings.getBoolValue("GraphicsView/ShowRulers", true)) {
         this.hruler = hruler;
