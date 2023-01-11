@@ -76,7 +76,7 @@ private:
     QThread* mutexEventsLocker;
     static RSingleApplication* singleInstance;
 
-    QList<QPair<int, int>> globalShortcuts;
+    QList<QPair<int, int> > globalShortcuts;
 };
 
 Q_DECLARE_METATYPE(RSingleApplication*)
