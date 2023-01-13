@@ -286,6 +286,16 @@ public:
         return polylineProxy;
     }
 
+#if QT_VERSION >= 0x060000
+    /**
+     * copy function for Qt 6 scripts:
+     * \nonscriptable
+     */
+    RPolyline copy() const {
+        return *this;
+    }
+#endif
+
 protected:
     bool isLineSegment(int i) const;
 

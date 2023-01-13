@@ -132,6 +132,16 @@ public:
 
     virtual QList<QSharedPointer<RShape> > splitAt(const QList<RVector>& points) const;
 
+#if QT_VERSION >= 0x060000
+    /**
+     * copy function for Qt 6 scripts:
+     * \nonscriptable
+     */
+    RLine copy() const {
+        return *this;
+    }
+#endif
+
 protected:
     virtual void print(QDebug dbg) const;
 

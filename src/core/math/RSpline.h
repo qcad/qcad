@@ -256,6 +256,16 @@ public:
         return splineProxy;
     }
 
+#if QT_VERSION >= 0x060000
+    /**
+     * copy function for Qt 6 scripts:
+     * \nonscriptable
+     */
+    RSpline copy() const {
+        return *this;
+    }
+#endif
+
 protected:
     void appendToExploded(const RLine& line) const;
     //void appendToExploded(QList<QSharedPointer<RShape> >& list) const;
