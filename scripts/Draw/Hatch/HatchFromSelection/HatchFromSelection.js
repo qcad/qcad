@@ -142,7 +142,7 @@ HatchFromSelection.verifyBoundaryEntity = function(doc, entity) {
         var ret = true;
         for (var i=0; i<ids.length; i++) {
             var bEntity = blockReferenceData.queryEntity(ids[i], true);
-            if (bEntity.isNull()) {
+            if (isNull(bEntity)) {
                 continue;
             }
             if (!bEntity.isVisible()) {
@@ -256,7 +256,7 @@ HatchFromSelection.traverse = function(hatchData, docOrBlockRef, entity, candida
             }
 
             var bEntity = blockReferenceData.queryEntity(ids[i], true);
-            if (bEntity.isNull()) {
+            if (isNull(bEntity)) {
                 continue;
             }
             if (!bEntity.isVisible()) {

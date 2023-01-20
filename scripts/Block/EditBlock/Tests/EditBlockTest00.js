@@ -52,7 +52,6 @@ EditBlockTest00.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     var w = objectFromPath('MainWindow::BlockListDock::BlockListWidget::BlockList::qt_scrollarea_viewport');
     this.sendMouseEvent(w, QEvent.MouseButtonPress, new QPoint(58, 48), Qt.LeftButton, 1, 0);
-    var w = objectFromPath('MainWindow::BlockListDock::BlockListWidget::BlockList::qt_scrollarea_viewport');
     this.sendMouseEvent(w, QEvent.MouseButtonRelease, new QPoint(58, 48), Qt.LeftButton, 0, 0);
     TdbTest.clickOnWidget('MainWindow::BlockListDock::BlockListWidget::EditBlock');
     TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::LineToolsPanelButton');

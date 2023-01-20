@@ -33,6 +33,7 @@ QMap<int, QTime> RDebug::timer;
 #endif
 QMap<QString, int> RDebug::counter;
 QString RDebug::prefix;
+QMutex RDebug::mutexCounter;
 
 void RDebug::printBacktrace(const QString& prefix) {
 #if !defined(Q_OS_WIN) && !defined(Q_OS_ANDROID)
@@ -108,19 +109,23 @@ void RDebug::hexDump(const QString& str) {
 }
 
 void RDebug::incCounter(const QString& id) {
+    mutexCounter.lock();
     if (!counter.contains(id)) {
         counter[id] = 0;
     }
-    //qDebug() << id << "+";
     counter[id]++;
+    mutexCounter.unlock();
 }
 
 void RDebug::decCounter(const QString& id) {
+    mutexCounter.lock();
     if (!counter.contains(id)) {
+        Q_ASSERT(false);
         counter[id] = 0;
     }
     //qDebug() << id << "-";
     counter[id]--;
+    mutexCounter.unlock();
 }
 
 int RDebug::getCounter(const QString& id) {
@@ -137,9 +142,9 @@ void RDebug::printCounter(const QString& id) {
     qDebug() << "counter: " << id << ": " << counter[id];
 }
 
-void RDebug::printCounters() {
+void RDebug::printCounters(const QString& prefix) {
     QStringList keys = counter.keys();
     for (int i=0; i<keys.length(); i++) {
-        qDebug() << "counter: " << keys[i] << ": " << counter[keys[i]];
+        qDebug() << prefix << "counter: " << keys[i] << ": " << counter[keys[i]];
     }
 }

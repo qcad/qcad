@@ -88,6 +88,16 @@ public:
 
     virtual QSharedPointer<RShape> getTransformed(const QTransform& transform) const;
 
+#if QT_VERSION >= 0x060000
+    /**
+     * copy function for Qt 6 scripts:
+     * \nonscriptable
+     */
+    RPoint copy() const {
+        return *this;
+    }
+#endif
+
 protected:
     virtual void print(QDebug dbg) const;
 

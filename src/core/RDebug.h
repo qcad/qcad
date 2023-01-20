@@ -32,6 +32,7 @@
 #include <QMap>
 #include <QFile>
 #include <QMetaType>
+#include <QMutex>
 
 #if defined(Q_OS_MAC) && !defined(Q_OS_IOS)
 #include <CoreServices/CoreServices.h>
@@ -101,7 +102,7 @@ public:
     static void decCounter(const QString& id = RDEFAULT_QSTRING);
     static int getCounter(const QString& id = RDEFAULT_QSTRING);
     static void printCounter(const QString& id = RDEFAULT_QSTRING);
-    static void printCounters();
+    static void printCounters(const QString& prefix = RDEFAULT_QSTRING);
 
     static void setPrefix(const QString& p) {
         prefix = p;
@@ -118,6 +119,8 @@ private:
 #endif
     static QMap<QString, int> counter;
     static QString prefix;
+
+    static QMutex mutexCounter;
 };
 
 Q_DECLARE_METATYPE(RDebug*)

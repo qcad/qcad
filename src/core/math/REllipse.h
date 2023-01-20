@@ -209,6 +209,16 @@ public:
         return ellipseProxy;
     }
 
+#if QT_VERSION >= 0x060000
+    /**
+     * copy function for Qt 6 scripts:
+     * \nonscriptable
+     */
+    REllipse copy() const {
+        return *this;
+    }
+#endif
+
 protected:
     virtual void print(QDebug dbg) const;
 
