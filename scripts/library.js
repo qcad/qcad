@@ -3296,6 +3296,20 @@ function makeFlags() {
     }
 }
 
+function getRGraphicsView(view) {
+    if (RSettings.getQtVersion()>=0x060000) {
+        return view;
+    }
+    else {
+        if (isFunction(view.getRGraphicsView)) {
+            return view.getRGraphicsView();
+        }
+        else {
+            return view;
+        }
+    }
+}
+
 // fix QPlainTextEdit API for Qt 5:
 if (!isFunction(QPlainTextEdit.prototype.toPlainText)) {
     QPlainTextEdit.prototype.toPlainText = function() {

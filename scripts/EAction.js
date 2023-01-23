@@ -1844,9 +1844,7 @@ EAction.prototype.simulateMouseMoveEvent = function() {
         return;
     }
 
-    if (isFunction(view.getRGraphicsView)) {
-        view = view.getRGraphicsView();
-    }
+    view = getRGraphicsView(view);
 
     if (isNull(view)) {
         return;

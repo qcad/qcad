@@ -1417,7 +1417,7 @@ DrawFromCSV.prototype.DrawFromCSVFile = function(di, fileName) {
             graphicsView = di.getGraphicsViewWithFocus();
             // Simple.js ... di.getLastKnownViewWithFocus();
             if (!isNull(graphicsView)) {
-                graphicsView.getRGraphicsView().zoomToEntities(ids, 30);    // Margin in pixels
+                getRGraphicsView(graphicsView).zoomToEntities(ids, 30);    // Margin in pixels
             }
         } // End with new
     } // End with flag

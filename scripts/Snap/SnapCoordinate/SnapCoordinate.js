@@ -138,7 +138,7 @@ RSnapCoordinate.prototype.getCoordinateEvent = function() {
     if (isNull(scene)) {
         return undefined;
     }
-    var ce = new RCoordinateEvent(this.getCoordinate(), scene, view.getRGraphicsView());
+    var ce = new RCoordinateEvent(this.getCoordinate(), scene, getRGraphicsView(view));
     return ce;
 };
 

@@ -202,9 +202,7 @@ InfoAngle.prototype.addMeasuringArc = function(op, center, preview) {
 
     // add label:
     var view = di.getLastKnownViewWithFocus();
-    if (RSettings.getQtVersion() < 0x060000) {
-        view = view.getRGraphicsView();
-    }
+    view = getRGraphicsView(view);
     var label = this.formatAngularResult(this.arc.getAngleLength());
     view.clearTextLabels();
     this.addTextLabel(op, view, this.point2, label, preview);

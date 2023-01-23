@@ -118,7 +118,7 @@ DrawPolyline.prototype.keyPressEvent = function(event) {
         if (this.state === DrawPolyline.State.SettingFirstVertex) {
             var view = di.getLastKnownViewWithFocus();
             var pos = di.getLastPosition();
-            var e = new RCoordinateEvent(pos, view.getScene(), view.getRGraphicsView());
+            var e = new RCoordinateEvent(pos, view.getScene(), getRGraphicsView(view));
             this.pickCoordinate(e, false);
         }
     } else {
