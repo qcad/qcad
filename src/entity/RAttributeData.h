@@ -71,7 +71,14 @@ public:
         invisible = i;
     }
 
+    virtual RLinetype::Id getLinetypeId() const {
+        return RTextBasedData::getLinetypeId();
+    }
+
     virtual RLinetype::Id getLinetypeId(bool resolve, const QStack<REntity*>& blockRefStack) const;
+    virtual RLineweight::Lineweight getLineweight() const {
+        return RTextBasedData::getLineweight();
+    }
     virtual RLineweight::Lineweight getLineweight(bool resolve, const QStack<REntity*>& blockRefStack) const;
     virtual RColor getColor(bool resolve, const QStack<REntity*>& blockRefStack) const;
     virtual RColor getColor() const {
