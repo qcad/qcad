@@ -238,7 +238,7 @@ DefaultNavigation.prototype.wheelEvent = function(event) {
             }
 
             if (RSettings.getQtVersion()>=0x060000) {
-                if (Math.abs(event.pixelDelta().y())>Math.abs(event.pixelDelta().x())) {
+                if (Math.abs(event.pixelDelta.y())>Math.abs(event.pixelDelta.x())) {
                     // vertical:
                     this.panOffset = this.panOffset.operator_add(new RVector(0, wheelDelta/2));
                 }
