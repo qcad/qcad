@@ -178,6 +178,13 @@ RStorage& RDocumentInterface::getStorage() {
     return document.getStorage();
 }
 
+void RDocumentInterface::deleteScriptHandler(const QString& extension) {
+    if (scriptHandlers.contains(extension)) {
+        delete scriptHandlers[extension];
+        scriptHandlers.remove(extension);
+    }
+}
+
 RScriptHandler* RDocumentInterface::getScriptHandler(const QString& extension) {
     if (!scriptHandlers.contains(extension)) {
         scriptHandlers[extension] = RScriptHandlerRegistry::createScriptHandler(extension);
@@ -301,6 +308,8 @@ void RDocumentInterface::clear(bool beforeLoad) {
 
     //qDebug() << "RDocumentInterface::clear: modified: " << document.isModified();
     document.setModified(false);
+
+    //deleteScriptHandler("js");
 }
 
 /**

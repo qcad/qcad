@@ -145,6 +145,7 @@ public:
 
     void clear(bool beforeLoad=false);
 
+    void deleteScriptHandler(const QString& extension);
     RScriptHandler* getScriptHandler(const QString& extension);
     bool isScriptRunning();
 
