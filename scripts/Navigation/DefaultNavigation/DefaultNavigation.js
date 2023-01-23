@@ -237,11 +237,22 @@ DefaultNavigation.prototype.wheelEvent = function(event) {
                 this.panOffset = new RVector(0,0);
             }
 
-            if (event.orientation()===Qt.Vertical) {
-                this.panOffset = this.panOffset.operator_add(new RVector(0, wheelDelta/2));
+            if (RSettings.getQtVersion()>=0x060000) {
+                if (Math.abs(event.pixelDelta().y())>Math.abs(event.pixelDelta().x())) {
+                    // vertical:
+                    this.panOffset = this.panOffset.operator_add(new RVector(0, wheelDelta/2));
+                }
+                else {
+                    this.panOffset = this.panOffset.operator_add(new RVector(wheelDelta/2, 0));
+                }
             }
             else {
-                this.panOffset = this.panOffset.operator_add(new RVector(wheelDelta/2, 0));
+                if (event.orientation()===Qt.Vertical) {
+                    this.panOffset = this.panOffset.operator_add(new RVector(0, wheelDelta/2));
+                }
+                else {
+                    this.panOffset = this.panOffset.operator_add(new RVector(wheelDelta/2, 0));
+                }
             }
 
             if (RSettings.getQtVersionString().startsWith("4.")) {
