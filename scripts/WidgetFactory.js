@@ -808,7 +808,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             if (!isNull(value)) {
                 index = -1;
                 if (forceSaveIndex == true) {
-                    index = value;
+                    index = parseInt(value);
                 }
                 else if (forceSaveText == false && hasData) {
                     index = c.findData(value);
