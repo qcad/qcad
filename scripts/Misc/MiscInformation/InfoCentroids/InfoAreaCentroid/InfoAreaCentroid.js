@@ -1315,9 +1315,8 @@ InfoAreaCentroid.prototype.getArcSegmentAreaCentroid = function(arc) {
     sweep = arc.getSweep();
     radius = arc.getRadius();
     if (Math.abs(sweep) >= 2*Math.PI) {
-        area = centerPoint, radius*radius * Math.PI;
         // Return circle centroid data:
-        return [centerPoint.x, centerPoint.y, area];
+        return [centerPoint.x, centerPoint.y, centerPoint, radius*radius * Math.PI];
     }
 
     // Avoid division by zero factor:
