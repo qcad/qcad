@@ -3275,6 +3275,12 @@ function makeQtMouseButtons() {
     return makeFlags.apply(this, argumentsNew);
 }
 
+function makeQEventLoopProcessEventsFlags() {
+    var argumentsNew = [].slice.call(arguments, 0);
+    argumentsNew.unshift(QEventLoop.ProcessEventsFlags);
+    return makeFlags.apply(this, argumentsNew);
+}
+
 function makeFlags() {
     if (RSettings.isQt(6)) {
         var ret = 0;
