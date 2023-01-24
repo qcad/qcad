@@ -655,8 +655,7 @@ PrintPreviewImpl.prototype.updateBackgroundDecoration = function() {
     path = new RPainterPath();
     path.setPen(new QPen(new QColor(0x84, 0x84, 0xff)));
     if (!Print.getShowPaperBorders(document)) {
-        color = new QColor(backgroundColor.red(), backgroundColor.green(),
-                backgroundColor.blue());
+        color = new QColor(backgroundColor.red(), backgroundColor.green(), backgroundColor.blue());
         path.setBrush(new QBrush(color));
     } else {
         path.setBrush(new QBrush(Qt.NoBrush));
