@@ -57,7 +57,7 @@ CharacterMapDialog.prototype.show = function() {
         var cursor = textWidget.textCursor();
         cursor.insertText(character);
         
-        var singleShot = new QTimer();
+        var singleShot = new QTimer(this.parent.dialog);
         singleShot.singleShot = true;
         singleShot.timeout.connect(this, function() {
             dlg.accept();
