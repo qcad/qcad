@@ -382,9 +382,11 @@ PrintPreviewImpl.prototype.finishEvent = function() {
 
     if (!isNull(this.pAdapter)) {
         appWin.removePreferencesListener(this.pAdapter);
+        destr(this.pAdapter);
     }
     if (!isNull(this.bAdapter)) {
         appWin.removeBlockListener(this.bAdapter);
+        destr(this.bAdapter);
     }
 };
 
