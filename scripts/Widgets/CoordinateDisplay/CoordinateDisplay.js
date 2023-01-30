@@ -101,10 +101,15 @@ CoordinateDisplay.update = function(documentInterface) {
         CoordinateDisplay.counter = 0;
     }
     else {
-        CoordinateDisplay.singleShot = new QTimer();
-        CoordinateDisplay.singleShot.singleShot = true;
-        CoordinateDisplay.singleShot.timeout.connect(CoordinateDisplay.timedUpdate);
-        CoordinateDisplay.singleShot.start(20);
+        if (RSettings.getQtVersion()>=0x060000) {
+            CoordinateDisplay.timedUpdate();
+        }
+        else {
+            CoordinateDisplay.singleShot = new QTimer();
+            CoordinateDisplay.singleShot.singleShot = true;
+            CoordinateDisplay.singleShot.timeout.connect(CoordinateDisplay.timedUpdate);
+            CoordinateDisplay.singleShot.start(20);
+        }
     }
 };
 
