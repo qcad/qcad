@@ -7,7 +7,7 @@
  * \ingroup ecma_simple
  *
  * \param docSource RDocument to paste
- * \param docDestination RDocument to paste into (or undefined for current document)
+ * \param diDestination RDocumentInterface to paste into (or undefined for current document)
  * \param offset Offset RVector or [x,y] array
  * \param scale Scale factor
  * \param rotation Rotation angle in degrees
