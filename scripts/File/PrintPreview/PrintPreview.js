@@ -276,11 +276,15 @@ PrintPreviewImpl.prototype.beginEvent = function() {
     if (initialZoom==="Auto") {
         // auto fit drawing and auto set orientation:
         this.slotAutoFitDrawing(true);
+
+        appWin.setProperty("PrintPreview/InitialZoom", "Stored");
     }
     else if (initialZoom==="View") {
         Print.setColumns(di, 1);
         Print.setRows(di, 1);
         this.slotAutoFitBox(this.view.getBox());
+
+        appWin.setProperty("PrintPreview/InitialZoom", "Stored");
     }
 
     if (this.initialAction==="Print") {
