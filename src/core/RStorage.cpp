@@ -453,7 +453,7 @@ QDebug operator<<(QDebug dbg, RStorage& s) {
             RLayer::Id id = i.next();
             QSharedPointer<RLayer> l = s.queryObjectDirect(id).dynamicCast<RLayer>();
             if (l.isNull()) {
-                dbg.nospace() << "layer not found: " << id;
+                dbg.nospace() << "layer not found: " << id << "\n";
                 continue;
             }
             dbg.nospace() << *l.data() << "\n";
@@ -467,7 +467,7 @@ QDebug operator<<(QDebug dbg, RStorage& s) {
             RLayerState::Id id = i.next();
             QSharedPointer<RLayerState> l = s.queryObjectDirect(id).dynamicCast<RLayerState>();
             if (l.isNull()) {
-                dbg.nospace() << "layer state not found: " << id;
+                dbg.nospace() << "layer state not found: " << id << "\n";
                 continue;
             }
             dbg.nospace() << *l.data() << "\n";
@@ -481,7 +481,7 @@ QDebug operator<<(QDebug dbg, RStorage& s) {
             RView::Id id = i.next();
             QSharedPointer<RView> v = s.queryObjectDirect(id).dynamicCast<RView>();
             if (v.isNull()) {
-                dbg.nospace() << "view not found: " << id;
+                dbg.nospace() << "view not found: " << id << "\n";
                 continue;
             }
             dbg.nospace() << *v.data() << "\n";
@@ -495,7 +495,7 @@ QDebug operator<<(QDebug dbg, RStorage& s) {
             RBlock::Id id = i.next();
             QSharedPointer<RBlock> b = s.queryObjectDirect(id).dynamicCast<RBlock>();
             if (b.isNull()) {
-                dbg.nospace() << "block not found: " << id;
+                dbg.nospace() << "block not found: " << id << "\n";
                 continue;
             }
             dbg.nospace() << *b.data() << "\n";
@@ -510,7 +510,7 @@ QDebug operator<<(QDebug dbg, RStorage& s) {
             RLinetype::Id id = i.next();
             QSharedPointer<RLinetype> l = s.queryObjectDirect(id).dynamicCast<RLinetype>();
             if (l.isNull()) {
-                dbg.nospace() << "linetype not found: " << id;
+                dbg.nospace() << "linetype not found: " << id << "\n";
                 continue;
             }
             dbg.nospace() << *l.data() << "\n";
