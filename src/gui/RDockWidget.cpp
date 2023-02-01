@@ -113,7 +113,7 @@ bool RDockWidget::event(QEvent* e) {
     if (e->type()==QEvent::KeyPress || e->type()==QEvent::KeyRelease) {
         //if (!appWin->isAncestorOf(this)) {
         if (isFloating()) {
-            // dock widget is in undocked, floating:
+            // dock widget is undocked, floating:
             // forward event to main window:
             QKeyEvent* ke = dynamic_cast<QKeyEvent*>(e);
             RMainWindowQt* appWin = RMainWindowQt::getMainWindow();
