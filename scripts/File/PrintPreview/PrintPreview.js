@@ -60,6 +60,9 @@ PrintPreview.isRunning = function() {
  * Starts the print preview.
  */
 PrintPreview.start = function(initialAction, instance) {
+    var appWin = RMainWindowQt.getMainWindow();
+//    appWin.enabled = false;
+
     var di = EAction.getDocumentInterface();
     var doc = di.getDocument();
 
@@ -76,7 +79,6 @@ PrintPreview.start = function(initialAction, instance) {
     }
 
     // auto setup:
-    var appWin = RMainWindowQt.getMainWindow();
     var buttons = makeQMessageBoxStandardButtons(QMessageBox.Yes, QMessageBox.No);
 
     var paperSizeMM = Print.getPaperSizeMM(doc);
@@ -144,12 +146,17 @@ PrintPreview.start = function(initialAction, instance) {
         ga.setChecked(true);
     }
 
+    //appWin.enabled = true;
+
 };
 
 /**
  * Exits the print preview.
  */
 PrintPreview.exit = function() {
+    //var appWin = RMainWindowQt.getMainWindow();
+    //appWin.enabled = false;
+
     var di = EAction.getDocumentInterface();
     var a = di.getDefaultAction();
     a.finishEvent();
@@ -159,6 +166,8 @@ PrintPreview.exit = function() {
     if (!isNull(ga)) {
         ga.setChecked(false);
     }
+
+    //appWin.enabled = true;
 };
 
 PrintPreview.prototype.beginEvent = function() {
