@@ -132,6 +132,9 @@ bool RSingleApplication::event(QEvent* e) {
 }
 
 bool RSingleApplication::notify(QObject* receiver, QEvent* e) {
+//    qDebug() << "RSingleApplication::notify: type: " << e->type();
+//    qDebug() << "RSingleApplication::notify: receiver: " << (long int)receiver;
+
     if (e->type() == QEvent::KeyPress) {
         QKeyEvent* keyEvent = static_cast<QKeyEvent*>(e);
 
