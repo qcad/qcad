@@ -60,6 +60,9 @@ PrintPreview.isRunning = function() {
  * Starts the print preview.
  */
 PrintPreview.start = function(initialAction, instance) {
+    var appWin = RMainWindowQt.getMainWindow();
+//    appWin.enabled = false;
+
     var di = EAction.getDocumentInterface();
     var doc = di.getDocument();
 
@@ -76,7 +79,6 @@ PrintPreview.start = function(initialAction, instance) {
     }
 
     // auto setup:
-    var appWin = RMainWindowQt.getMainWindow();
     var buttons = makeQMessageBoxStandardButtons(QMessageBox.Yes, QMessageBox.No);
 
     var paperSizeMM = Print.getPaperSizeMM(doc);
@@ -144,12 +146,17 @@ PrintPreview.start = function(initialAction, instance) {
         ga.setChecked(true);
     }
 
+    //appWin.enabled = true;
+
 };
 
 /**
  * Exits the print preview.
  */
 PrintPreview.exit = function() {
+    //var appWin = RMainWindowQt.getMainWindow();
+    //appWin.enabled = false;
+
     var di = EAction.getDocumentInterface();
     var a = di.getDefaultAction();
     a.finishEvent();
@@ -159,6 +166,8 @@ PrintPreview.exit = function() {
     if (!isNull(ga)) {
         ga.setChecked(false);
     }
+
+    //appWin.enabled = true;
 };
 
 PrintPreview.prototype.beginEvent = function() {
@@ -276,11 +285,15 @@ PrintPreviewImpl.prototype.beginEvent = function() {
     if (initialZoom==="Auto") {
         // auto fit drawing and auto set orientation:
         this.slotAutoFitDrawing(true);
+
+        appWin.setProperty("PrintPreview/InitialZoom", "Stored");
     }
     else if (initialZoom==="View") {
         Print.setColumns(di, 1);
         Print.setRows(di, 1);
         this.slotAutoFitBox(this.view.getBox());
+
+        appWin.setProperty("PrintPreview/InitialZoom", "Stored");
     }
 
     if (this.initialAction==="Print") {
@@ -378,9 +391,11 @@ PrintPreviewImpl.prototype.finishEvent = function() {
 
     if (!isNull(this.pAdapter)) {
         appWin.removePreferencesListener(this.pAdapter);
+        destr(this.pAdapter);
     }
     if (!isNull(this.bAdapter)) {
         appWin.removeBlockListener(this.bAdapter);
+        destr(this.bAdapter);
     }
 };
 
@@ -655,8 +670,7 @@ PrintPreviewImpl.prototype.updateBackgroundDecoration = function() {
     path = new RPainterPath();
     path.setPen(new QPen(new QColor(0x84, 0x84, 0xff)));
     if (!Print.getShowPaperBorders(document)) {
-        color = new QColor(backgroundColor.red(), backgroundColor.green(),
-                backgroundColor.blue());
+        color = new QColor(backgroundColor.red(), backgroundColor.green(), backgroundColor.blue());
         path.setBrush(new QBrush(color));
     } else {
         path.setBrush(new QBrush(Qt.NoBrush));

@@ -217,13 +217,7 @@ ViewportWidget.prototype.init = function(uiFile, graphicsSceneClass) {
         this.graphicsView.setNavigationAction(navigationAction);
     }
 
-    var grid;
-    if (isFunction(this.graphicsView.getRGraphicsView)) {
-        grid = new ROrthoGrid(this.graphicsView.getRGraphicsView());
-    }
-    else {
-        grid = new ROrthoGrid(this.graphicsView);
-    }
+    var grid = new ROrthoGrid(getRGraphicsView(this.graphicsView));
 
     this.graphicsView.setGrid(grid);
 

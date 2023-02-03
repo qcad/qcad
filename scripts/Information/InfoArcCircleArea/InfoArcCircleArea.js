@@ -124,9 +124,7 @@ InfoArcCircleArea.prototype.getOperation = function(preview) {
     }
 
     var view = di.getLastKnownViewWithFocus();
-    if (RSettings.getQtVersion() < 0x060000) {
-        view = view.getRGraphicsView();
-    }
+    view = getRGraphicsView(view);
 
     if (isArcShape(this.shape) || isEllipseArcShape(this.shape)) {
         if (this.segmentMode) {

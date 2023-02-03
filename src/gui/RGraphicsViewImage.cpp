@@ -861,6 +861,7 @@ void RGraphicsViewImage::paintBackground(QPainter* painter, const QRect& rect) {
             double boxTop;
 
             switch (text.getVAlign()) {
+            default:
             case RS::VAlignTop:
                 flags|=Qt::AlignTop;
                 boxTop = -pos.y;
@@ -872,6 +873,7 @@ void RGraphicsViewImage::paintBackground(QPainter* painter, const QRect& rect) {
             }
 
             switch (text.getHAlign()) {
+            default:
             case RS::HAlignLeft:
                 flags|=Qt::AlignLeft;
                 boxLeft = pos.x;

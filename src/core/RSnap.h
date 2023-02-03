@@ -76,7 +76,10 @@ public:
     virtual RVector snap(
             const RVector& position,
             RGraphicsView& view,
-            double range=RNANDOUBLE) = 0;
+            double range=RNANDOUBLE) {
+
+        return RVector::invalid;
+    }
 
     /**
      * \overload

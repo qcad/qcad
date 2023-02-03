@@ -1844,9 +1844,7 @@ EAction.prototype.simulateMouseMoveEvent = function() {
         return;
     }
 
-    if (isFunction(view.getRGraphicsView)) {
-        view = view.getRGraphicsView();
-    }
+    view = getRGraphicsView(view);
 
     if (isNull(view)) {
         return;
@@ -2199,6 +2197,7 @@ EAction.getEntityId = function(di, action, event, preview, selectable) {
         a = menu.addAction(str);
         if (!isNull(icon)) {
             a.icon = icon;
+            a.iconVisibleInMenu = true;
         }
 
         reactor = new Reactor(id);
@@ -2208,12 +2207,9 @@ EAction.getEntityId = function(di, action, event, preview, selectable) {
 
     // show context menu:
     if (!menu.isEmpty()) {
-        var prev = QCoreApplication.testAttribute(Qt.AA_DontShowIconsInMenus);
-        QCoreApplication.setAttribute(Qt.AA_DontShowIconsInMenus, false);
         this.waitingForContextMenu = true;
         menu.exec(new QPoint(QCursor.pos().x(), QCursor.pos().y()+10));
         this.waitingForContextMenu = false;
-        QCoreApplication.setAttribute(Qt.AA_DontShowIconsInMenus, prev);
         di.clearPreview();
     }
 

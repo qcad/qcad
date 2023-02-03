@@ -223,7 +223,7 @@ CommandLine.init = function(basePath) {
         di.setCursorPosition(pos);
         appWin.notifyCoordinateListeners(di);
 
-        e = new RCoordinateEvent(pos, view.getScene(), view.getRGraphicsView());
+        e = new RCoordinateEvent(pos, view.getScene(), getRGraphicsView(view));
         di.clearPreview();
         di.coordinateEventPreview(e);
         di.repaintViews();
@@ -305,7 +305,7 @@ CommandLine.init = function(basePath) {
                 }
 
                 var view = di.getLastKnownViewWithFocus();
-                e = new RCoordinateEvent(pos, view.getScene(), view.getRGraphicsView());
+                e = new RCoordinateEvent(pos, view.getScene(), getRGraphicsView(view));
                 di.coordinateEvent(e);
                 appWin.handleUserCommand(command);
                 leCommand.clear();
