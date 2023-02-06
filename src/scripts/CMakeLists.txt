@@ -28,7 +28,7 @@ target_compile_definitions(qcadscripts PRIVATE
     QCAD_DLL
 )
 
-set_target_properties(qcadscripts PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../plugin)
+set_target_properties(qcadscripts PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../plugins)
 
 target_link_libraries(qcadscripts PRIVATE
     Qt::Core
