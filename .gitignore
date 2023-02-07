@@ -66,3 +66,9 @@ qcadpro_release
 # Obsolete files:
 .obsolete
 build
+
+.qt
+.qt_plugins
+*_autogen
+.rcc
+qrc_*.cpp
