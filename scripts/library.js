@@ -3281,6 +3281,18 @@ function makeQEventLoopProcessEventsFlags() {
     return makeFlags.apply(this, argumentsNew);
 }
 
+function makeQItemSelectionModelSelectionFlags() {
+    var argumentsNew = [].slice.call(arguments, 0);
+    argumentsNew.unshift(QItemSelectionModel.SelectionFlags);
+    return makeFlags.apply(this, argumentsNew);
+}
+
+function makeQAbstractItemViewEditTriggers() {
+    var argumentsNew = [].slice.call(arguments, 0);
+    argumentsNew.unshift(QAbstractItemView.EditTriggers);
+    return makeFlags.apply(this, argumentsNew);
+}
+
 function makeFlags() {
     if (RSettings.isQt(6)) {
         var ret = 0;
