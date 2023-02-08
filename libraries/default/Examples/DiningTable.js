@@ -17,26 +17,7 @@ DiningTable.init = function(formWidget) {
         var dlAngle = DiningTable.widgets["dlAngle"];
         var mleChairAngle = DiningTable.widgets["mleChairAngle"];
 
-        DiningTable.widgets["lbNumberOfChairs"].text = DiningTable.widgets["hsNumberOfChairs"].value;
-
-        var cb = DiningTable.widgets["rbCustomRotation"];
-        if (!cb.checked) {
-            DiningTable.widgets["lbChairAngle"].visible = false;
-            mleChairAngle.visible = false;
-            dlAngle.visible = false;
-        }
-
-        dlAngle.valueChanged.connect(function(value) {
-            dlAngle.blockSignals(true);
-            mleChairAngle.text = 360 - value;
-            dlAngle.blockSignals(false);
-        });
-
-        mleChairAngle.textChanged .connect(function(text) {
-            dlAngle.blockSignals(true);
-            dlAngle.value = Math.abs(360 - text);
-            dlAngle.blockSignals(false);
-        });
+        DiningTable.widgets["lbNumberOfChairs"].text = DiningTable.widgets["hsNumberOfChairs"].value.toString();
     }
 };
 
@@ -78,16 +59,7 @@ DiningTable.generatePreview = function(di, iconSize) {
 
 DiningTable.createTable = function(di, length, width, numberOfChairs, head,
         foot, chairWidth, chairLength) {
-//    length = DiningTable.tableLength;
-//    width = DiningTable.tableWidth;
-
-//    var pasteOperation = new RPasteOperation(DiningTable.doc);
     var addOperation = new RAddObjectsOperation(false);
-
-//    var va = new Array(new RVector(0, 0), new RVector(0, width),
-//            new RVector(length, width), new RVector(length, 0));
-//    DiningTable.vectorArrayToLines(addOpertaion, va);
-//    di.applyOperation(addOpertaion);
 
     var va = new Array(new RVector(0, 0), new RVector(0, width),
             new RVector(length, width), new RVector(length, 0));

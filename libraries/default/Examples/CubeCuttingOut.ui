@@ -29,9 +29,9 @@
     </widget>
    </item>
    <item row="1" column="1">
-    <widget class="QCheckBox" name="DrawPlates">
+    <widget class="QCheckBox" name="DrawFlaps">
      <property name="text">
-      <string>Draw plates</string>
+      <string>Draw flaps</string>
      </property>
     </widget>
    </item>

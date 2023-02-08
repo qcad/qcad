@@ -2,7 +2,7 @@ include("scripts/library.js");
 
 function CubeCuttingOut() {
     CubeCuttingOut.size = 10;
-    CubeCuttingOut.drawPlates = true;
+    CubeCuttingOut.drawFlaps = true;
 }
 
 CubeCuttingOut.init = function(formWidget) {
@@ -18,10 +18,10 @@ CubeCuttingOut.generate = function(documentInterface, file) {
         CubeCuttingOut.size = 10;
     }
     
-    if (CubeCuttingOut.widgets["DrawPlates"].checked) {
-        CubeCuttingOut.drawPlates = true;
+    if (CubeCuttingOut.widgets["DrawFlaps"].checked) {
+        CubeCuttingOut.drawFlaps = true;
     } else {
-        CubeCuttingOut.drawPlates = false;
+        CubeCuttingOut.drawFlaps = false;
     }
     
     return CubeCuttingOut.createCuttingOut(documentInterface);
@@ -29,7 +29,7 @@ CubeCuttingOut.generate = function(documentInterface, file) {
 
 CubeCuttingOut.generatePreview = function(documentInterface, iconSize) {
     CubeCuttingOut.size = iconSize / 6;
-    CubeCuttingOut.drawPlates = true;
+    CubeCuttingOut.drawFlaps = true;
     return CubeCuttingOut.createCuttingOut(documentInterface);
 };
 
@@ -46,9 +46,9 @@ CubeCuttingOut.createCuttingOut = function(documentInterface) {
     var posBottom = new RVector(CubeCuttingOut.size * 2, -CubeCuttingOut.size);
     CubeCuttingOut.createSquare(documentInterface, addOperation, posBottom);
     
-    // create plates
-    if (CubeCuttingOut.drawPlates) {
-        var plates = new Array(
+    // create flaps
+    if (CubeCuttingOut.drawFlaps) {
+        var flaps = new Array(
                 [ new RVector(4 * CubeCuttingOut.size, 0), 0 ],
                 [ new RVector(2 * CubeCuttingOut.size, -3 * CubeCuttingOut.size), 90 ],
                 [ new RVector(1 * CubeCuttingOut.size, -4 * CubeCuttingOut.size), 90 ],
@@ -57,10 +57,10 @@ CubeCuttingOut.createCuttingOut = function(documentInterface) {
                 [ new RVector(1 * CubeCuttingOut.size, 2 * CubeCuttingOut.size), 270 ],
                 [ new RVector(0, 3 * CubeCuttingOut.size), 270 ]
         );
-        for ( var i = 0; i < plates.length; ++i) {
-            var pos = plates[i][0];
-            var angle = RMath.deg2rad(plates[i][1]);
-            CubeCuttingOut.createPlate(documentInterface, addOperation, pos, angle);
+        for ( var i = 0; i < flaps.length; ++i) {
+            var pos = flaps[i][0];
+            var angle = RMath.deg2rad(flaps[i][1]);
+            CubeCuttingOut.createFlap(documentInterface, addOperation, pos, angle);
         }
     }
     
@@ -83,9 +83,9 @@ CubeCuttingOut.createSquare = function(documentInterface, addOperation, pos) {
     }
 };
 
-CubeCuttingOut.createPlate = function(documentInterface, addOperation, pos, angle) {
-    var plateSize = CubeCuttingOut.size / 7;
-    var off = plateSize * Math.sqrt(2);
+CubeCuttingOut.createFlap = function(documentInterface, addOperation, pos, angle) {
+    var flapSize = CubeCuttingOut.size / 7;
+    var off = flapSize * Math.sqrt(2);
     var va = new Array(
             new RVector(0, 0),
             new RVector(off, off),
