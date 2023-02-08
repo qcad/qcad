@@ -601,6 +601,7 @@ Explode.explodeEntity = function(entity, options) {
     else if (isBlockReferenceEntity(entity)) {
         var data = entity.getData();
         var pos = entity.getPosition();
+        var uniform = RMath.fuzzyCompare(entity.getScaleFactors().x, entity.getScaleFactors().y);
 
         // explode array into multiple block references:
         if (data.getColumnCount()>1 || data.getRowCount()>1) {
@@ -634,6 +635,12 @@ Explode.explodeEntity = function(entity, options) {
 
                 // ignore attribute definitions:
                 if (isAttributeDefinitionEntity(subEntity)) {
+                    continue;
+                }
+
+                // ignore hatch in non-uniformly scaled block reference:
+                if (!uniform && isHatchEntity(subEntity)) {
+                    EAction.handleUserWarning(qsTr("Ignored hatch in block reference with non-uniform scale factors"));
                     continue;
                 }
 

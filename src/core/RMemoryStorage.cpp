@@ -1056,7 +1056,7 @@ QSharedPointer<RBlock> RMemoryStorage::queryBlock(const QString& blockName) cons
     QHash<RObject::Id, QSharedPointer<RBlock> >::const_iterator it;
     for (it = blockMap.constBegin(); it != blockMap.constEnd(); ++it) {
         QSharedPointer<RBlock> b = *it;
-        if (!b.isNull() && b->getName().compare(blockName, Qt::CaseInsensitive)==0 && !b->isUndone()) {
+        if (!b.isNull() && !b->isUndone() && b->getName().compare(blockName, Qt::CaseInsensitive)==0) {
             return QSharedPointer<RBlock> (b->clone());
         }
     }

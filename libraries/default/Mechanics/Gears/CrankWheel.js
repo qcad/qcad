@@ -73,6 +73,7 @@ CrankWheel.balanceHoleDiameter = 0.0;
 CrankWheel.balanceHolePositionDiameter = 0.0;
 CrankWheel.centerAngle = 180.0;
 CrankWheel.toothCurveRadius = 0;
+CrankWheel.version = "1.0.2";
 
 // CrankWheel Class
 CrankWheel.prototype.toString = function () {
@@ -82,6 +83,7 @@ CrankWheel.prototype.toString = function () {
 // Build a string for the legend. This uses the class vars
 CrankWheel.getLegendStr = function () {
     var t = "";
+    t += "Software Version     : " + CrankWheel.version + "\n";
     t += "Wheel Diameter       : " + CrankWheel.wheelDiameter + "\n";
     t += "Tooth Count          : " + CrankWheel.numberOfTeeth + "\n";
     t += "Missing Teeth        : " + CrankWheel.missingTeeth + "\n";
@@ -344,7 +346,7 @@ function chordLength(radius, angle) {
 }
 
 // Does all the drawing work. Remember most things here just add points (vertices)
-// to an array for drawing. Drawing is closed so should always be a closed surface for
+// to an array for drawing. Drawing is closed so should alway be a closed surface for
 // the wheel.
 CrankWheel.getOperation = function (di) {
     var addOperation = new RAddObjectsOperation(false);
@@ -597,7 +599,7 @@ CrankWheel.getOperation = function (di) {
                 textPos,            // position
                 textPos,            // alignment point
                 0.15,               // height
-                1.0,                // text width (ignored for now)
+                0.0,                // text width (supported QCAD 3.26.0)
                 RS.VAlignTop,       // alignments
                 RS.HAlignLeft,
                 RS.LeftToRight,
