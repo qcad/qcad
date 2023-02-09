@@ -18,7 +18,7 @@
  */
 
 include("scripts/File/SvgImport/SvgImport.js");
-include("../BlockInsert.js");
+include("scripts/Block/BlockInsert.js");
 
 /**
  * \class InsertBlockItem

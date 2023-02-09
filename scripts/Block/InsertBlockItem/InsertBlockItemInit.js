@@ -1,6 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("InsertBlockItem", "&Insert Block"),
-        RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("InsertBlockItem", "&Insert Block"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setUniqueGroup("InsertBlockItem");
     action.setScriptFile(basePath + "/InsertBlockItem.js");

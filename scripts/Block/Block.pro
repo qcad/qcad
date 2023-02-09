@@ -4,7 +4,6 @@ SUBDIRS = \
     dir \
     AddBlock \
     CreateBlock \
-    CreateLibraryItem \
     DeselectBlockReferences \
     EditBlock \
     EditFromReference \

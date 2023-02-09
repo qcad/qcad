@@ -23,7 +23,6 @@
  */
 
 include("scripts/Tools/arguments.js");
-include("scripts/ImportExport/SvgImporter/SvgImporterInit.js");
 
 function printHelp() {
     print("Usage: " + args[1] + " [OPTIONS]... <XML config file>");
@@ -71,6 +70,7 @@ function main() {
         return;
     }
 
+    include("scripts/ImportExport/SvgImporter/SvgImporterInit.js");
     RFileImporterRegistry.registerFileImporter(new SvgImporterFactory());
 
     var fi = new QFileInfo(xmlFile);

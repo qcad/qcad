@@ -68,12 +68,15 @@ InsertScriptItem.prototype.beginEvent = function() {
 };
 
 InsertScriptItem.prototype.finishEvent = function() {
-    var dock = objectFromPath("MainWindow::"
-            + InsertScriptItem.getObjectName(this.file));
+    var dock = objectFromPath("MainWindow::" + InsertScriptItem.getObjectName(this.file));
     if (!isNull(dock)) {
         dock.hide();
-        dock.destroy();
+        destr(dock);
     }
+    if (!isNull(this.diItem)) {
+        destr(this.diItem);
+    }
+
     InsertBlockItem.prototype.finishEvent.call(this);
 };
 
