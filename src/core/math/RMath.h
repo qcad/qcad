@@ -159,6 +159,8 @@ public:
     static double parseScale(const QString& scaleString);
     static RVector parseCoordinate(const QString& coordinateString, const RVector& relativeZero = RVector::nullVector);
 
+    static QString getMd5Hash(const QString& data);
+
     /**
      * \nonscriptable
      */

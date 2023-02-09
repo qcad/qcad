@@ -24,6 +24,7 @@
 #endif
 
 #include <complex>
+#include <QCryptographicHash>
 
 #if QT_VERSION >= 0x060000
 #  include <QJSEngine>
@@ -1033,6 +1034,14 @@ RVector RMath::parseCoordinate(const QString& coordinateString, const RVector& r
     }
 
     return pos;
+}
+
+/**
+ * \return MD5 hash of given string as hex encoded string.
+ */
+QString RMath::getMd5Hash(const QString& data) {
+    QByteArray ba = QCryptographicHash::hash(data.toUtf8(), QCryptographicHash::Md5);
+    return QString(ba.toHex(0));
 }
 
 void RMath::getQuadRoots(double p[], double r[][5]) {
