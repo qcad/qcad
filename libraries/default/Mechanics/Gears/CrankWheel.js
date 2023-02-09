@@ -77,7 +77,7 @@ CrankWheel.version = "1.0.2";
 
 // CrankWheel Class
 CrankWheel.prototype.toString = function () {
-    print("CrankWheel.js:", "toString(): ");
+    print("CrankWheel");
 };
 
 // Build a string for the legend. This uses the class vars
