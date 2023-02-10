@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>371</width>
-    <height>330</height>
+    <height>332</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -284,6 +284,9 @@
             </item>
             <item>
              <widget class="RMathLineEdit" name="mleChairAngle">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
               <property name="text">
                <string>0</string>
               </property>
@@ -322,12 +325,12 @@
    <slot>setNum(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>209</x>
-     <y>232</y>
+     <x>334</x>
+     <y>71</y>
     </hint>
     <hint type="destinationlabel">
-     <x>315</x>
-     <y>227</y>
+     <x>186</x>
+     <y>68</y>
     </hint>
    </hints>
   </connection>
@@ -335,15 +338,15 @@
    <sender>rbCustomRotation</sender>
    <signal>toggled(bool)</signal>
    <receiver>mleChairAngle</receiver>
-   <slot>setVisible(bool)</slot>
+   <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>185</x>
-     <y>107</y>
+     <x>205</x>
+     <y>250</y>
     </hint>
     <hint type="destinationlabel">
-     <x>248</x>
-     <y>136</y>
+     <x>291</x>
+     <y>278</y>
     </hint>
    </hints>
   </connection>
