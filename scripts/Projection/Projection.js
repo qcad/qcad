@@ -343,7 +343,12 @@ Projection.prototype.addTransformedShapes = function(entity, shapes, op, preview
                     s[n].simplify(0.001);
                 }
 
-                hd.addBoundary(s[n], true);
+                if (RSettings.getQtVersion() >= 0x060000) {
+                    hd.addBoundary(s[n].clone(), true);
+                }
+                else {
+                    hd.addBoundary(s[n], true);
+                }
             }
         }
 

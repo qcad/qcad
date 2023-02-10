@@ -387,12 +387,22 @@ Scale.prototype.transform = function(entity, k, op, preview, flags) {
 
                 if (isArcShape(shape) || isCircleShape(shape) || isEllipseShape(shape)) {
                     var newShape = this.transformArc(shape, sv);
-                    newHatchData.addBoundary(newShape);
+                    if (RSettings.getQtVersion() >= 0x060000) {
+                        newHatchData.addBoundary(newShape.clone());
+                    }
+                    else {
+                        newHatchData.addBoundary(newShape);
+                    }
                 }
                 else {
                     // line, spline:
                     shape.scale(sv, this.focusPoint);
-                    newHatchData.addBoundary(shape);
+                    if (RSettings.getQtVersion() >= 0x060000) {
+                        newHatchData.addBoundary(shape.clone());
+                    }
+                    else {
+                        newHatchData.addBoundary(shape);
+                    }
                 }
             }
         }

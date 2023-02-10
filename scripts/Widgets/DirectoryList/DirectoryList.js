@@ -46,7 +46,7 @@ DirectoryList.prototype.doInit = function(pageWidget, listWidgetName, fileDlgTit
         }
         */
 
-        var fileDialog = new QFileDialog(this, fileDlgTitle, "", "");
+        var fileDialog = new QFileDialog(pageWidget, fileDlgTitle, "", "");
         fileDialog.setOption(QFileDialog.DontUseNativeDialog, getDontUseNativeDialog());
 
         fileDialog.fileMode = QFileDialog.Directory;

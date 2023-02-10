@@ -226,7 +226,12 @@ HatchFromSelection.traverse = function(hatchData, docOrBlockRef, entity, candida
         var segments = entity.getExploded();
         for (i=0; i<segments.length; i++) {
             var segment = segments[i];
-            hatchData.addBoundary(segment);
+            if (RSettings.getQtVersion() >= 0x060000) {
+                hatchData.addBoundary(segment.clone());
+            }
+            else {
+                hatchData.addBoundary(segment);
+            }
         }
         // TODO: add polyline as boundary:
 //        hatchData.addBoundary(entity.getData().castToShape());
@@ -237,7 +242,12 @@ HatchFromSelection.traverse = function(hatchData, docOrBlockRef, entity, candida
     // handle circle, full ellipse and closed spline loops:
     if (HatchFromSelection.isClosedCurve(entity)) {
         hatchData.newLoop();
-        hatchData.addBoundary(entity.getData().castToShape());
+        if (RSettings.getQtVersion() >= 0x060000) {
+            hatchData.addBoundary(entity.getData().castToShape().clone());
+        }
+        else {
+            hatchData.addBoundary(entity.getData().castToShape());
+        }
         docOrBlockRef.traversed[entity.getId()] = true;
         return true;
     }
@@ -285,7 +295,12 @@ HatchFromSelection.traverse = function(hatchData, docOrBlockRef, entity, candida
     // connect 'loose' boundary elements into loops:
     hatchData.newLoop();
     docOrBlockRef.traversed[entity.getId()] = true;
-    hatchData.addBoundary(shape);
+    if (RSettings.getQtVersion() >= 0x060000) {
+        hatchData.addBoundary(shape.clone());
+    }
+    else {
+        hatchData.addBoundary(shape);
+    }
     var currentShape = shape;
     var loopStartPoint = shape.getStartPoint();
 
@@ -343,7 +358,12 @@ HatchFromSelection.traverse = function(hatchData, docOrBlockRef, entity, candida
                 if (epConnects) {
                     shape.reverse();
                 }
-                hatchData.addBoundary(shape);
+                if (RSettings.getQtVersion() >= 0x060000) {
+                    hatchData.addBoundary(shape.clone());
+                }
+                else {
+                    hatchData.addBoundary(shape);
+                }
                 currentShape = shape;
                 done2 = false;
                 //qDebug("Hatch: next loop shape: ", shape, epConnects ? " (reversed)" : "");
