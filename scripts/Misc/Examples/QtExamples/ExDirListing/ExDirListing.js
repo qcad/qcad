@@ -35,14 +35,14 @@ ExDirListing.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
     // create QDir object that represents a directory:
-    var dir = new QDir.home();
+    var dir = QDir.home();
 
     // get directory listing:
     var fileInfos = dir.entryInfoList(
         // name filter(s):
         ["*"],
         // we don't want to get information about '.' or '..', we want all directories and all files:
-        new QDir.Filters(QDir.NoDotAndDotDot, QDir.Dirs, QDir.Files),
+        makeQDirFilters(QDir.NoDotAndDotDot, QDir.Dirs, QDir.Files),
         // sort by name:
         QDir.Name
     );
