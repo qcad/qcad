@@ -361,5 +361,6 @@ EventHandler.prototype.drop = function(event) {
 
     action.setData(urls[0]);
     action.slotTrigger();
+    event.acceptProposedAction();
     event.accept();
 };
