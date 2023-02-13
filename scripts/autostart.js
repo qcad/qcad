@@ -288,7 +288,7 @@ function setUpDragAndDrop(appWin) {
         event.acceptProposedAction();
     });
 
-    appWin.drop.connect(function(evt) {
+    appWin.drop.connect(function(event) {
         // workaround for Qt keyboard focus bug:
         var appWin = RMainWindowQt.getMainWindow();
         if (!isNull(appWin)) {
@@ -297,13 +297,15 @@ function setUpDragAndDrop(appWin) {
             appWin.setFocus(Qt.OtherFocusReason);
         }
 
-        var urls = getUrlsFromMimeData(evt.mimeData());
+        var urls = getUrlsFromMimeData(event.mimeData());
         var urlStrings = [];
         for (var i = 0; i < urls.length; ++i) {
             urlStrings.push(urls[i].toString());
         }
 
         openFiles(urlStrings, false);
+
+        event.acceptProposedAction();
     });
 }
 
