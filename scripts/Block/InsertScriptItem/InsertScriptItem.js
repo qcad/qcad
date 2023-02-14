@@ -58,6 +58,40 @@ InsertScriptItem.prototype.beginEvent = function() {
     }
 
     this.file = this.url.toLocalFile();
+
+    // sanity checks:
+    var baseName = new QFileInfo(this.file).baseName();
+    var content = readTextFile(this.file);
+    if (isNull(content)) {
+        EAction.handleUserWarning(qsTr("Cannot read file:") + " " + this.file);
+        this.terminate();
+        return;
+    }
+
+    if (!content.contains("function " + baseName)) {
+        EAction.handleUserWarning(qsTr("No constructor found in file:") + " " + this.file);
+        this.terminate();
+        return;
+    }
+
+    if (!content.contains(baseName + ".init")) {
+        EAction.handleUserWarning(qsTr("No 'init' function found in file:") + " " + this.file);
+        this.terminate();
+        return;
+    }
+
+    if (!content.contains(baseName + ".generate")) {
+        EAction.handleUserWarning(qsTr("No 'generate' function found in file:") + " " + this.file);
+        this.terminate();
+        return;
+    }
+
+    if (!content.contains(baseName + ".generatePreview")) {
+        EAction.handleUserWarning(qsTr("No 'generatePreview' function found in file:") + " " + this.file);
+        this.terminate();
+        return;
+    }
+
     include(this.file);
     
     InsertScriptItem.evalInit(this.file);
