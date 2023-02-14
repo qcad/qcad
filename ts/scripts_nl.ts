@@ -2411,29 +2411,6 @@ Wilt u deze herstellen?</translation>
     </message>
 </context>
 <context>
-    <name>CreateLibraryItem</name>
-    <message>
-        <location filename="../scripts/Block/CreateLibraryItem/CreateLibraryItem.js" line="+49"/>
-        <source>Reference Point</source>
-        <translation>Referentiepunt</translation>
-    </message>
-    <message>
-        <location line="+45"/>
-        <source>Save library item as...</source>
-        <translation>Bibliotheekitem opslaan als...</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Block/CreateLibraryItem/CreateLibraryItemInit.js" line="+2"/>
-        <source>&amp;Create Library Item</source>
-        <translation>Bibliotheekitem &amp;maken</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Create library item from selection</source>
-        <translation>Bibliotheekitem aan de hand van selectie aanmaken</translation>
-    </message>
-</context>
-<context>
     <name>Cross</name>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Cross/Cross.js" line="+56"/>
@@ -4151,12 +4128,12 @@ is al in de lijst.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2129"/>
+        <location line="+2127"/>
         <source>Cancel</source>
         <translation>Annuleer</translation>
     </message>
     <message>
-        <location line="-2128"/>
+        <location line="-2126"/>
         <source>Done</source>
         <translation>Klaar</translation>
     </message>
@@ -4192,7 +4169,7 @@ is al in de lijst.</translation>
         <translation>Ongeldige positie</translation>
     </message>
     <message>
-        <location line="+177"/>
+        <location line="+175"/>
         <source>Entity is not in working set.</source>
         <translation>Entiteit zit niet in de werkset.</translation>
     </message>
@@ -4207,7 +4184,7 @@ is al in de lijst.</translation>
         <translation>Lengte:</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+62"/>
         <source>Entity is not a block reference.</source>
         <translation>Object is niet een blok referentie.</translation>
     </message>
@@ -4295,7 +4272,7 @@ is al in de lijst.</translation>
         <translation>ECMAScript Shell tonen</translation>
     </message>
     <message>
-        <location line="+56"/>
+        <location line="+55"/>
         <source>&amp;Script Shell</source>
         <translation>&amp;Script Shell</translation>
     </message>
@@ -5054,6 +5031,11 @@ is al in de lijst.</translation>
         <location line="+0"/>
         <source>Explode</source>
         <translation>Opsplitsen</translation>
+    </message>
+    <message>
+        <location line="+613"/>
+        <source>Ignored hatch in block reference with non-uniform scale factors</source>
+        <translation type="unfinished">Genegeerde arcering in blokreferentie met niet-uniforme schaalfactoren</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
@@ -6573,7 +6555,7 @@ is al in de lijst.</translation>
 <context>
     <name>InfoArcCircleArea</name>
     <message>
-        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+308"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+306"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -6634,12 +6616,12 @@ is al in de lijst.</translation>
         <translation>Cirkeloppervlakte:</translation>
     </message>
     <message>
-        <location line="-247"/>
+        <location line="-245"/>
         <source>Choose arc, circle, ellipse or elliptical arc</source>
         <translation>Kies boog, cirkel, ellips of ellipsboog</translation>
     </message>
     <message>
-        <location line="+248"/>
+        <location line="+246"/>
         <location line="+67"/>
         <source>circumference:</source>
         <translation>Omtrek:</translation>
@@ -6720,7 +6702,7 @@ is al in de lijst.</translation>
         <translation>Set volgende polygoon hoek</translation>
     </message>
     <message>
-        <location line="+123"/>
+        <location line="+121"/>
         <source>Polygon area:</source>
         <translation>Polygoonoppervlakte:</translation>
     </message>
@@ -6852,7 +6834,7 @@ is al in de lijst.</translation>
         <translation>Een niet-ondersteunde veelhoek met aangepaste breedtes gevonden</translation>
     </message>
     <message>
-        <location line="+687"/>
+        <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
         <translation>Onbehandelde vorm van luiklus.</translation>
     </message>
@@ -7355,7 +7337,7 @@ is al in de lijst.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+337"/>
+        <location filename="../scripts/Information/Information.js" line="+335"/>
         <source>Information Tools</source>
         <translation>Infogereedschappen</translation>
     </message>
@@ -7654,6 +7636,31 @@ is al in de lijst.</translation>
         <source>Insert &amp;Script</source>
         <translation>&amp;Script invoegen</translation>
     </message>
+    <message>
+        <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+66"/>
+        <source>Cannot read file:</source>
+        <translation type="unfinished">Kan bestand niet lezen:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>No constructor found in file:</source>
+        <translation type="unfinished">Geen constructor gevonden in het bestand:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>No &apos;init&apos; function found in file:</source>
+        <translation type="unfinished">Geen &apos;init&apos; functie gevonden in bestand:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>No &apos;generate&apos; function found in file:</source>
+        <translation type="unfinished">Geen &apos;generate&apos; functie gevonden in bestand:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>No &apos;generatePreview&apos; function found in file:</source>
+        <translation type="unfinished">Geen &apos;generatePreview&apos; functie gevonden in bestand:</translation>
+    </message>
 </context>
 <context>
     <name>InvertSelection</name>
@@ -7832,7 +7839,7 @@ is al in de lijst.</translation>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+57"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+58"/>
         <source>Language Settings</source>
         <translation>Taal instellingen</translation>
     </message>
@@ -8091,312 +8098,6 @@ is al in de lijst.</translation>
         <location filename="../scripts/Modify/Lengthen/LengthenInit.js" line="+2"/>
         <source>&amp;Lengthen / Shorten</source>
         <translation>&amp;Verlengen / inkorten</translation>
-    </message>
-</context>
-<context>
-    <name>LibraryBrowser</name>
-    <message>
-        <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowser.js" line="+72"/>
-        <source>audience</source>
-        <translation>audience</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>creator</source>
-        <translation>creator</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>dimension</source>
-        <translation>dimension</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>levelOfDetail</source>
-        <translation>levelOfDetail</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>license</source>
-        <translation>license</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>perspective</source>
-        <translation>perspective</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>presentation</source>
-        <translation>presentation</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>publisher</source>
-        <translation>publisher</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>subject</source>
-        <translation>subject</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>title</source>
-        <translation>title</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Widgets</source>
-        <translation>Widgets</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <location line="+1157"/>
-        <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowserInit.js" line="+19"/>
-        <source>Library Browser</source>
-        <translation>Bibliotheekbrowser</translation>
-    </message>
-    <message>
-        <location line="-1149"/>
-        <source>Icon</source>
-        <translation>Pictogram</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>List</source>
-        <translation>Lijst</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Choose Source Folder</source>
-        <translation>Kies map</translation>
-    </message>
-    <message>
-        <location line="+687"/>
-        <source>Page %1 of %2</source>
-        <translation>Pagina %1 van %2</translation>
-    </message>
-    <message>
-        <location line="+237"/>
-        <source>Updating icons...</source>
-        <translation>Pictogrammen worden bijgewerkt...</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+219"/>
-        <source>Abort</source>
-        <translation>Afbreken</translation>
-    </message>
-    <message>
-        <location line="-27"/>
-        <source>File:</source>
-        <translation>Bestand:</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Folder:</source>
-        <translation>Map:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>License:</source>
-        <translation>Licentie:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Attribute as:</source>
-        <translation>Toeschrijven als:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Creator:</source>
-        <translation>Auteur:</translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Updating library index:</source>
-        <translation>Index bijwerken:</translation>
-    </message>
-    <message>
-        <location line="+30"/>
-        <source>DB error</source>
-        <translation>DB fout</translation>
-    </message>
-    <message>
-        <location line="+44"/>
-        <source>Source removed from part library: %1</source>
-        <translation>Bron verwijderd uit bibliotheek: %1</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Force database update.</source>
-        <translation>Gedwongen bijwerking van databank.</translation>
-    </message>
-    <message>
-        <location line="+393"/>
-        <source>&amp;Insert</source>
-        <translation>&amp;Invoegen</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>&amp;Edit Script File...</source>
-        <translation>&amp;Script bestand bijwerken...</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Open &amp;SVG File...</source>
-        <translation>&amp;SVG bestand openen...</translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>&amp;Open...</source>
-        <translation>&amp;Open...</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>&amp;Edit...</source>
-        <translation>&amp;Bewerken...</translation>
-    </message>
-    <message>
-        <location line="+25"/>
-        <source>File Browser</source>
-        <translation>Bestandsbrowser</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>&amp;Show in %1...</source>
-        <translation>&amp;Tonen in %1...</translation>
-    </message>
-    <message>
-        <location line="+28"/>
-        <source>&amp;Remove from Favorites</source>
-        <translation>&amp;Verwijderen van favorieten</translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>&amp;Add to Favorites</source>
-        <translation>&amp;Toevoegen aan favorieten</translation>
-    </message>
-    <message>
-        <location line="+34"/>
-        <source>&amp;Regenerate Icon</source>
-        <translation>&amp;Pictogram bijwerken</translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>&amp;Regenerate Icons</source>
-        <translation>&amp;Pictogrammen bijwerken</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowserInit.js" line="-11"/>
-        <source>&amp;Library Browser</source>
-        <translation>&amp;Bibliotheekbrowser</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Widgets/LibraryBrowser/PreferencesPage.ui" line="+17"/>
-        <source>Synchronization</source>
-        <translation>Synchronisatie</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Update search index on startup</source>
-        <translation>Zoekindex bijwerken bij het opstarten</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Display Options</source>
-        <translation>Weergaveopties</translation>
-    </message>
-    <message>
-        <location line="+53"/>
-        <source>Dark icon background</source>
-        <translation>Donkere icon achtergrond</translation>
-    </message>
-    <message>
-        <location line="-44"/>
-        <source>Icon size:</source>
-        <translation>Pictogramgrootte:</translation>
-    </message>
-    <message>
-        <location line="+51"/>
-        <source>View mode:</source>
-        <translation>Weergave:</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Number of items
-shown in search results:</source>
-        <translation>Aantal items
-getoond in zoekresultaten:</translation>
-    </message>
-    <message>
-        <location line="+18"/>
-        <source>Library Sources</source>
-        <translation>Bibliotheekbronnen</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Add...</source>
-        <translation>Toevoegen...</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Remove</source>
-        <translation>Verwijderen</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Up</source>
-        <translation>Omhoog</translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>Down</source>
-        <translation>Omlaag</translation>
-    </message>
-</context>
-<context>
-    <name>LibraryBrowserForm</name>
-    <message>
-        <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowser.ui" line="+28"/>
-        <source>File System</source>
-        <translation>Bestandssysteem</translation>
-    </message>
-    <message>
-        <location line="+60"/>
-        <source>Search</source>
-        <translation>Zoeken</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>Look for:</source>
-        <translation>Zoeken:</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Clear</source>
-        <translation>Wissen</translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>Find</source>
-        <translation>Zoeken</translation>
-    </message>
-    <message>
-        <location line="+129"/>
-        <source>Favorites</source>
-        <translation>Favorieten</translation>
-    </message>
-    <message>
-        <location line="+36"/>
-        <source>Insert selected item into drawing</source>
-        <translation>Geselecteerde object in de tekening invoegen</translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>Update DB from file system</source>
-        <translation>Bijwerken van bestandssysteem</translation>
     </message>
 </context>
 <context>
@@ -10181,7 +9882,7 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+92"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+94"/>
         <source>Auto Paper Size</source>
         <translation>Automatisch papierformaat</translation>
     </message>
@@ -10201,7 +9902,7 @@ getoond in zoekresultaten:</translation>
         <translation>Automatisch tekening op papier passen?</translation>
     </message>
     <message>
-        <location line="+187"/>
+        <location line="+198"/>
         <source>Drag to move paper</source>
         <translation>Slepen om papier te verplaatsen</translation>
     </message>
@@ -10211,7 +9912,7 @@ getoond in zoekresultaten:</translation>
         <translation>Klaar</translation>
     </message>
     <message>
-        <location line="+452"/>
+        <location line="+453"/>
         <source>Export to PDF</source>
         <translation>PDF exporteren</translation>
     </message>
@@ -13687,7 +13388,7 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+326"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+321"/>
         <source>Dropped data not supported</source>
         <translation>Ingevoegd bestand niet ondersteund</translation>
     </message>
@@ -14152,7 +13853,7 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../scripts/autostart.js" line="+361"/>
+        <location filename="../scripts/autostart.js" line="+363"/>
         <source>Loading add-on translations...</source>
         <translation>Laden van add-on vertalingen...</translation>
     </message>
@@ -14738,3 +14439,4 @@ getoond in zoekresultaten:</translation>
     </message>
 </context>
 </TS>
+

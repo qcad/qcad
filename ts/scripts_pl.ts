@@ -2413,29 +2413,6 @@ Czy chcesz go odzyskać?</translation>
     </message>
 </context>
 <context>
-    <name>CreateLibraryItem</name>
-    <message>
-        <location filename="../scripts/Block/CreateLibraryItem/CreateLibraryItem.js" line="+49"/>
-        <source>Reference Point</source>
-        <translation type="unfinished">Punkt odniesienia</translation>
-    </message>
-    <message>
-        <location line="+45"/>
-        <source>Save library item as...</source>
-        <translation type="unfinished">Zapisz element biblioteki jako...</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Block/CreateLibraryItem/CreateLibraryItemInit.js" line="+2"/>
-        <source>&amp;Create Library Item</source>
-        <translation type="unfinished">Tworzenie pozycji bibliotecznych</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Create library item from selection</source>
-        <translation type="unfinished">Tworzenie pozycji biblioteki na podstawie wyboru</translation>
-    </message>
-</context>
-<context>
     <name>Cross</name>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Cross/Cross.js" line="+56"/>
@@ -4155,12 +4132,12 @@ jest już na liście.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2129"/>
+        <location line="+2127"/>
         <source>Cancel</source>
         <translation type="unfinished">Anuluj</translation>
     </message>
     <message>
-        <location line="-2128"/>
+        <location line="-2126"/>
         <source>Done</source>
         <translation type="unfinished">Gotowe</translation>
     </message>
@@ -4196,7 +4173,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Nieprawidłowa pozycja</translation>
     </message>
     <message>
-        <location line="+177"/>
+        <location line="+175"/>
         <source>Entity is not in working set.</source>
         <translation type="unfinished">Podmiot nie znajduje się w zestawie roboczym.</translation>
     </message>
@@ -4211,7 +4188,7 @@ jest już na liście.</translation>
         <translation>Długość:</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+62"/>
         <source>Entity is not a block reference.</source>
         <translation type="unfinished">Podmiot nie jest referencją do bloku.</translation>
     </message>
@@ -4299,7 +4276,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Pokaż powłokę ECMAScript</translation>
     </message>
     <message>
-        <location line="+56"/>
+        <location line="+55"/>
         <source>&amp;Script Shell</source>
         <translation type="unfinished">Skrypt Shell</translation>
     </message>
@@ -5059,6 +5036,11 @@ jest już na liście.</translation>
         <location line="+0"/>
         <source>Explode</source>
         <translation type="unfinished">Eksploduj</translation>
+    </message>
+    <message>
+        <location line="+613"/>
+        <source>Ignored hatch in block reference with non-uniform scale factors</source>
+        <translation type="unfinished">Ignorowane kreskowanie w odniesieniu do bloku z niejednolitymi współczynnikami skalowania</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
@@ -6578,7 +6560,7 @@ jest już na liście.</translation>
 <context>
     <name>InfoArcCircleArea</name>
     <message>
-        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+308"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+306"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -6639,12 +6621,12 @@ jest już na liście.</translation>
         <translation>Pole powierzchni koła:</translation>
     </message>
     <message>
-        <location line="-247"/>
+        <location line="-245"/>
         <source>Choose arc, circle, ellipse or elliptical arc</source>
         <translation>Proszę wskazać łuk, okrąg, elipsę lub łuk elipsy</translation>
     </message>
     <message>
-        <location line="+248"/>
+        <location line="+246"/>
         <location line="+67"/>
         <source>circumference:</source>
         <translation>obwód:</translation>
@@ -6725,7 +6707,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Ustaw następny narożnik wielokąta</translation>
     </message>
     <message>
-        <location line="+123"/>
+        <location line="+121"/>
         <source>Polygon area:</source>
         <translation type="unfinished">Obszar wielokąta:</translation>
     </message>
@@ -6857,7 +6839,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Napotkano nieobsługiwany wielokąt z niestandardowymi szerokościami</translation>
     </message>
     <message>
-        <location line="+687"/>
+        <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
         <translation type="unfinished">Nieobsługiwany kształt z pętli hatch.</translation>
     </message>
@@ -7360,7 +7342,7 @@ jest już na liście.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+337"/>
+        <location filename="../scripts/Information/Information.js" line="+335"/>
         <source>Information Tools</source>
         <translation type="unfinished">Narzędzia informacyjne</translation>
     </message>
@@ -7659,6 +7641,31 @@ jest już na liście.</translation>
         <source>Insert &amp;Script</source>
         <translation type="unfinished">Skrypt wstawiania</translation>
     </message>
+    <message>
+        <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+66"/>
+        <source>Cannot read file:</source>
+        <translation type="unfinished">Nie można odczytać pliku:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>No constructor found in file:</source>
+        <translation type="unfinished">Nie znaleziono konstruktora w pliku:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>No &apos;init&apos; function found in file:</source>
+        <translation type="unfinished">W pliku nie znaleziono funkcji &apos;init&apos;:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>No &apos;generate&apos; function found in file:</source>
+        <translation type="unfinished">W pliku nie znaleziono funkcji &apos;generate&apos;:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>No &apos;generatePreview&apos; function found in file:</source>
+        <translation type="unfinished">W pliku nie znaleziono funkcji &apos;generatePreview&apos;:</translation>
+    </message>
 </context>
 <context>
     <name>InvertSelection</name>
@@ -7837,7 +7844,7 @@ jest już na liście.</translation>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+57"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+58"/>
         <source>Language Settings</source>
         <translation type="unfinished">Ustawienia języka</translation>
     </message>
@@ -8096,312 +8103,6 @@ jest już na liście.</translation>
         <location filename="../scripts/Modify/Lengthen/LengthenInit.js" line="+2"/>
         <source>&amp;Lengthen / Shorten</source>
         <translation type="unfinished">Wydłużanie / skracanie</translation>
-    </message>
-</context>
-<context>
-    <name>LibraryBrowser</name>
-    <message>
-        <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowser.js" line="+72"/>
-        <source>audience</source>
-        <translation type="unfinished">publiczność</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>creator</source>
-        <translation type="unfinished">twórca</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>dimension</source>
-        <translation type="unfinished">wymiar</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>levelOfDetail</source>
-        <translation type="unfinished">levelOfDetail</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>license</source>
-        <translation type="unfinished">licencja</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>perspective</source>
-        <translation type="unfinished">perspektywa</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>presentation</source>
-        <translation type="unfinished">prezentacja</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>publisher</source>
-        <translation type="unfinished">wydawca</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>subject</source>
-        <translation type="unfinished">temat</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>title</source>
-        <translation type="unfinished">tytuł</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Widgets</source>
-        <translation type="unfinished">Widżety</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <location line="+1157"/>
-        <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowserInit.js" line="+19"/>
-        <source>Library Browser</source>
-        <translation type="unfinished">Przeglądarka biblioteki</translation>
-    </message>
-    <message>
-        <location line="-1149"/>
-        <source>Icon</source>
-        <translation type="unfinished">Ikona</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>List</source>
-        <translation type="unfinished">Lista</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Choose Source Folder</source>
-        <translation type="unfinished">Wybierz folder źródłowy</translation>
-    </message>
-    <message>
-        <location line="+687"/>
-        <source>Page %1 of %2</source>
-        <translation type="unfinished">Strona %1 z %2</translation>
-    </message>
-    <message>
-        <location line="+237"/>
-        <source>Updating icons...</source>
-        <translation type="unfinished">Aktualizowanie ikon...</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+219"/>
-        <source>Abort</source>
-        <translation type="unfinished">Przerwij</translation>
-    </message>
-    <message>
-        <location line="-27"/>
-        <source>File:</source>
-        <translation type="unfinished">Plik:</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Folder:</source>
-        <translation type="unfinished">Folder:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>License:</source>
-        <translation type="unfinished">Licencja:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Attribute as:</source>
-        <translation type="unfinished">Atrybut jako:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Creator:</source>
-        <translation type="unfinished">Twórca:</translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Updating library index:</source>
-        <translation type="unfinished">Aktualizacja indeksu biblioteki:</translation>
-    </message>
-    <message>
-        <location line="+30"/>
-        <source>DB error</source>
-        <translation type="unfinished">Błąd DB</translation>
-    </message>
-    <message>
-        <location line="+44"/>
-        <source>Source removed from part library: %1</source>
-        <translation>Usunięto źródło z kolekcji części: %1</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Force database update.</source>
-        <translation>Wymuś uaktualnienie bazy danych.</translation>
-    </message>
-    <message>
-        <location line="+393"/>
-        <source>&amp;Insert</source>
-        <translation type="unfinished">Wkładka</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>&amp;Edit Script File...</source>
-        <translation type="unfinished">Edytuj plik skryptu...</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Open &amp;SVG File...</source>
-        <translation type="unfinished">Otwórz plik SVG...</translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>&amp;Open...</source>
-        <translation type="unfinished">Otwórz...</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>&amp;Edit...</source>
-        <translation type="unfinished">Edit...</translation>
-    </message>
-    <message>
-        <location line="+25"/>
-        <source>File Browser</source>
-        <translation type="unfinished">Przeglądarka plików</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>&amp;Show in %1...</source>
-        <translation type="unfinished">Pokaż w %1...</translation>
-    </message>
-    <message>
-        <location line="+28"/>
-        <source>&amp;Remove from Favorites</source>
-        <translation type="unfinished">Usuń z Ulubionych</translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>&amp;Add to Favorites</source>
-        <translation type="unfinished">Dodaj do ulubionych</translation>
-    </message>
-    <message>
-        <location line="+34"/>
-        <source>&amp;Regenerate Icon</source>
-        <translation type="unfinished">Ikona regeneracji</translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>&amp;Regenerate Icons</source>
-        <translation type="unfinished">Regeneruj ikony</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowserInit.js" line="-11"/>
-        <source>&amp;Library Browser</source>
-        <translation type="unfinished">Przeglądarka biblioteki</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Widgets/LibraryBrowser/PreferencesPage.ui" line="+17"/>
-        <source>Synchronization</source>
-        <translation type="unfinished">Synchronizacja</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Update search index on startup</source>
-        <translation type="unfinished">Aktualizacja indeksu wyszukiwania przy uruchamianiu</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Display Options</source>
-        <translation type="unfinished">Opcje wyświetlania</translation>
-    </message>
-    <message>
-        <location line="+53"/>
-        <source>Dark icon background</source>
-        <translation type="unfinished">Ciemne tło ikony</translation>
-    </message>
-    <message>
-        <location line="-44"/>
-        <source>Icon size:</source>
-        <translation type="unfinished">Rozmiar ikony:</translation>
-    </message>
-    <message>
-        <location line="+51"/>
-        <source>View mode:</source>
-        <translation type="unfinished">Tryb podglądu:</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Number of items
-shown in search results:</source>
-        <translation>Liczba elementów
-wyświetlanych w wynikach wyszukiwania:</translation>
-    </message>
-    <message>
-        <location line="+18"/>
-        <source>Library Sources</source>
-        <translation type="unfinished">Źródła biblioteczne</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Add...</source>
-        <translation type="unfinished">Dodaj...</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Remove</source>
-        <translation type="unfinished">Usuń</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Up</source>
-        <translation type="unfinished">Do góry</translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>Down</source>
-        <translation type="unfinished">Down</translation>
-    </message>
-</context>
-<context>
-    <name>LibraryBrowserForm</name>
-    <message>
-        <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowser.ui" line="+28"/>
-        <source>File System</source>
-        <translation type="unfinished">System plików</translation>
-    </message>
-    <message>
-        <location line="+60"/>
-        <source>Search</source>
-        <translation>Wyszukiwanie</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>Look for:</source>
-        <translation type="unfinished">Szukajcie:</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Clear</source>
-        <translation type="unfinished">Jasne</translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>Find</source>
-        <translation type="unfinished">Znajdź</translation>
-    </message>
-    <message>
-        <location line="+129"/>
-        <source>Favorites</source>
-        <translation type="unfinished">Ulubione</translation>
-    </message>
-    <message>
-        <location line="+36"/>
-        <source>Insert selected item into drawing</source>
-        <translation>Wstaw zaznaczony obiekt do rysunku</translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>Update DB from file system</source>
-        <translation type="unfinished">Aktualizacja DB z systemu plików</translation>
     </message>
 </context>
 <context>
@@ -10188,7 +9889,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+92"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+94"/>
         <source>Auto Paper Size</source>
         <translation type="unfinished">Automatyczny rozmiar papieru</translation>
     </message>
@@ -10208,7 +9909,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation type="unfinished">Automatyczne dopasowywanie rysunku do papieru?</translation>
     </message>
     <message>
-        <location line="+187"/>
+        <location line="+198"/>
         <source>Drag to move paper</source>
         <translation type="unfinished">Przeciągnij, aby przesunąć papier</translation>
     </message>
@@ -10218,7 +9919,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
         <translation type="unfinished">Gotowe</translation>
     </message>
     <message>
-        <location line="+452"/>
+        <location line="+453"/>
         <source>Export to PDF</source>
         <translation type="unfinished">Eksport do PDF</translation>
     </message>
@@ -13697,7 +13398,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+326"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+321"/>
         <source>Dropped data not supported</source>
         <translation>Nie obsługiwane przeciągnięte dane </translation>
     </message>
@@ -14162,7 +13863,7 @@ wyświetlanych w wynikach wyszukiwania:</translation>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../scripts/autostart.js" line="+361"/>
+        <location filename="../scripts/autostart.js" line="+363"/>
         <source>Loading add-on translations...</source>
         <translation>Wczytywanie tłumaczeń dodatków...</translation>
     </message>
@@ -14748,3 +14449,4 @@ wyświetlanych w wynikach wyszukiwania:</translation>
     </message>
 </context>
 </TS>
+

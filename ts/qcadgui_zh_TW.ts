@@ -6,7 +6,7 @@
     <message>
         <location filename="../src/gui/RCadToolBar.cpp" line="+138"/>
         <source>Vertical/Horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">null</translation>
     </message>
 </context>
 <context>
@@ -15,7 +15,7 @@
         <location filename="../src/gui/RCadToolBarPanel.cpp" line="+21"/>
         <location line="+63"/>
         <source>Back</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">null</translation>
     </message>
 </context>
 <context>
@@ -36,42 +36,42 @@
     <message>
         <location line="+3"/>
         <source>End</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">null</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>On Entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">null</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Perpendicular</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">null</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Tangential</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">null</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">null</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Middle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">null</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Intersection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">null</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Reference</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">null</translation>
     </message>
 </context>
 <context>
@@ -79,7 +79,8 @@
     <message>
         <location filename="../src/gui/RMathLineEdit.cpp" line="+186"/>
         <source>Invalid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">null</translation>
     </message>
 </context>
 </TS>
+

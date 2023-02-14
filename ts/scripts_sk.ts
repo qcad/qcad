@@ -2413,29 +2413,6 @@ Prajete si ho obnoviť?</translation>
     </message>
 </context>
 <context>
-    <name>CreateLibraryItem</name>
-    <message>
-        <location filename="../scripts/Block/CreateLibraryItem/CreateLibraryItem.js" line="+49"/>
-        <source>Reference Point</source>
-        <translation>Referenčný bod</translation>
-    </message>
-    <message>
-        <location line="+45"/>
-        <source>Save library item as...</source>
-        <translation>Uložiť položku knižnice ako...</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Block/CreateLibraryItem/CreateLibraryItemInit.js" line="+2"/>
-        <source>&amp;Create Library Item</source>
-        <translation>&amp;Vytvoriť položku knižnice</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Create library item from selection</source>
-        <translation>Vytvoriť položku knižnice z výberu</translation>
-    </message>
-</context>
-<context>
     <name>Cross</name>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Cross/CrossInit.js" line="+6"/>
@@ -4155,12 +4132,12 @@ už existuje v zozname.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2129"/>
+        <location line="+2127"/>
         <source>Cancel</source>
         <translation>Zrušiť</translation>
     </message>
     <message>
-        <location line="-2128"/>
+        <location line="-2126"/>
         <source>Done</source>
         <translation>Hotovo</translation>
     </message>
@@ -4196,7 +4173,7 @@ už existuje v zozname.</translation>
         <translation type="unfinished">Neplatná pozícia</translation>
     </message>
     <message>
-        <location line="+177"/>
+        <location line="+175"/>
         <source>Entity is not in working set.</source>
         <translation type="unfinished">Entita nie je v pracovnej sade.</translation>
     </message>
@@ -4211,7 +4188,7 @@ už existuje v zozname.</translation>
         <translation>Dĺžka:</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+62"/>
         <source>Entity is not a block reference.</source>
         <translation>Prvok nie je blok.</translation>
     </message>
@@ -4299,7 +4276,7 @@ už existuje v zozname.</translation>
         <translation>Zobraziť ECMAScript</translation>
     </message>
     <message>
-        <location line="+91"/>
+        <location line="+90"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
         <translation>Správca skriptu</translation>
@@ -5059,6 +5036,11 @@ už existuje v zozname.</translation>
         <location line="+0"/>
         <source>Explode</source>
         <translation>Rozložiť</translation>
+    </message>
+    <message>
+        <location line="+613"/>
+        <source>Ignored hatch in block reference with non-uniform scale factors</source>
+        <translation type="unfinished">Ignorované šrafovanie v referenčnom bloku s nerovnomernými faktormi mierky</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
@@ -6583,7 +6565,7 @@ už existuje v zozname.</translation>
         <translation>Vyberte oblúk, kružnicu, elipsu alebo eliptický oblúk</translation>
     </message>
     <message>
-        <location line="+238"/>
+        <location line="+236"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -6725,7 +6707,7 @@ už existuje v zozname.</translation>
         <translation>Nastavte roh polygónu</translation>
     </message>
     <message>
-        <location line="+123"/>
+        <location line="+121"/>
         <source>Polygon area:</source>
         <translation>Plocha polygónu:</translation>
     </message>
@@ -6857,7 +6839,7 @@ už existuje v zozname.</translation>
         <translation type="unfinished">Stretol sa s nepodporovaným polygónom s vlastnou šírkou</translation>
     </message>
     <message>
-        <location line="+687"/>
+        <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
         <translation type="unfinished">Neobslužný tvar zo slučky poklopu.</translation>
     </message>
@@ -7360,7 +7342,7 @@ už existuje v zozname.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+337"/>
+        <location filename="../scripts/Information/Information.js" line="+335"/>
         <source>Information Tools</source>
         <translation>Informačné nástroje</translation>
     </message>
@@ -7659,6 +7641,31 @@ už existuje v zozname.</translation>
         <source>Insert &amp;Script</source>
         <translation>Vložiť &amp;skript</translation>
     </message>
+    <message>
+        <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+66"/>
+        <source>Cannot read file:</source>
+        <translation type="unfinished">Nemožno prečítať súbor:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>No constructor found in file:</source>
+        <translation type="unfinished">V súbore nebol nájdený žiadny konštruktor:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>No &apos;init&apos; function found in file:</source>
+        <translation type="unfinished">V súbore nebola nájdená funkcia &apos;init&apos;:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>No &apos;generate&apos; function found in file:</source>
+        <translation type="unfinished">V súbore sa nenašla žiadna funkcia &apos;generate&apos;:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>No &apos;generatePreview&apos; function found in file:</source>
+        <translation type="unfinished">V súbore sa nenašla žiadna funkcia &apos;generatePreview&apos;:</translation>
+    </message>
 </context>
 <context>
     <name>InvertSelection</name>
@@ -7837,7 +7844,7 @@ už existuje v zozname.</translation>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+57"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+58"/>
         <source>Language Settings</source>
         <translation>Voľba jazyka</translation>
     </message>
@@ -8096,312 +8103,6 @@ už existuje v zozname.</translation>
         <location filename="../scripts/Modify/Lengthen/LengthenInit.js" line="+2"/>
         <source>&amp;Lengthen / Shorten</source>
         <translation>&amp;Predĺžiť / Skrátiť</translation>
-    </message>
-</context>
-<context>
-    <name>LibraryBrowser</name>
-    <message>
-        <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowser.js" line="+72"/>
-        <source>audience</source>
-        <translation>podľa odboru</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>creator</source>
-        <translation>vytvoril</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>dimension</source>
-        <translation>rozmer</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>levelOfDetail</source>
-        <translation>podľa úrovne detailu</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>license</source>
-        <translation>podľa licencie</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>perspective</source>
-        <translation>podľa pohľadu</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>presentation</source>
-        <translation>podľa prezentácia</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>publisher</source>
-        <translation>vydavateľ</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>subject</source>
-        <translation>predmet</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>title</source>
-        <translation>názov</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Widgets</source>
-        <translation>Pomôcky</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <location line="+1157"/>
-        <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowserInit.js" line="+19"/>
-        <source>Library Browser</source>
-        <translation>Prehliadač Knižnice</translation>
-    </message>
-    <message>
-        <location line="-1149"/>
-        <source>Icon</source>
-        <translation>Ikona</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>List</source>
-        <translation>Zoznam</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Choose Source Folder</source>
-        <translation>Vybrať zdrojový adresár</translation>
-    </message>
-    <message>
-        <location line="+687"/>
-        <source>Page %1 of %2</source>
-        <translation>Strana %1 z %2</translation>
-    </message>
-    <message>
-        <location line="+237"/>
-        <source>Updating icons...</source>
-        <translation>Aktualizovať ikony...</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+219"/>
-        <source>Abort</source>
-        <translation>Prerušiť</translation>
-    </message>
-    <message>
-        <location line="-27"/>
-        <source>File:</source>
-        <translation>Súbor:</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Folder:</source>
-        <translation>Adresár:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>License:</source>
-        <translation>Licencia:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Attribute as:</source>
-        <translation>Pomenované ako:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Creator:</source>
-        <translation>Vytvoril:</translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Updating library index:</source>
-        <translation>Aktualizuje sa zoznam:</translation>
-    </message>
-    <message>
-        <location line="+30"/>
-        <source>DB error</source>
-        <translation>chyba DB</translation>
-    </message>
-    <message>
-        <location line="+44"/>
-        <source>Source removed from part library: %1</source>
-        <translation>Zdroj odstránený z časti knižnice: %1</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Force database update.</source>
-        <translation>Nútená aktualizácia databázy.</translation>
-    </message>
-    <message>
-        <location line="+393"/>
-        <source>&amp;Insert</source>
-        <translation>Vlož&amp;iť</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>&amp;Edit Script File...</source>
-        <translation>&amp;Upraviť Skriptový súbor...</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Open &amp;SVG File...</source>
-        <translation>Otvoriť &amp;SVG súbor...</translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>&amp;Open...</source>
-        <translation>&amp;Otvoriť...</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>&amp;Edit...</source>
-        <translation>&amp;Upraviť...</translation>
-    </message>
-    <message>
-        <location line="+25"/>
-        <source>File Browser</source>
-        <translation>Prieskumník</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>&amp;Show in %1...</source>
-        <translation>&amp;Zobraziť v %1...</translation>
-    </message>
-    <message>
-        <location line="+28"/>
-        <source>&amp;Remove from Favorites</source>
-        <translation>Odst&amp;rániť z obľúbených</translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>&amp;Add to Favorites</source>
-        <translation>Prid&amp;ať k obľúbeným</translation>
-    </message>
-    <message>
-        <location line="+34"/>
-        <source>&amp;Regenerate Icon</source>
-        <translation>&amp;Obnoviť ikonu</translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>&amp;Regenerate Icons</source>
-        <translation>&amp;Obnoviť ikony</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowserInit.js" line="-11"/>
-        <source>&amp;Library Browser</source>
-        <translation>Preh&amp;liadač Knižnice</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Widgets/LibraryBrowser/PreferencesPage.ui" line="+17"/>
-        <source>Synchronization</source>
-        <translation>Synchronizácia</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Update search index on startup</source>
-        <translation>Pri štarte aktualizovať zoznam knižnice</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Display Options</source>
-        <translation>Voľby zobrazenia</translation>
-    </message>
-    <message>
-        <location line="+53"/>
-        <source>Dark icon background</source>
-        <translation type="unfinished">Tmavé pozadie ikony</translation>
-    </message>
-    <message>
-        <location line="-44"/>
-        <source>Icon size:</source>
-        <translation type="unfinished">Veľkosť ikony:</translation>
-    </message>
-    <message>
-        <location line="+51"/>
-        <source>View mode:</source>
-        <translation type="unfinished">Režim zobrazenia:</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Number of items
-shown in search results:</source>
-        <translation>Počet položiek zobrazených
-vo výsledku vyhľadania:</translation>
-    </message>
-    <message>
-        <location line="+18"/>
-        <source>Library Sources</source>
-        <translation>Zdroje Knižnice</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Add...</source>
-        <translation>Pridať...</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Remove</source>
-        <translation>Odstrániť</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Up</source>
-        <translation>Nahor</translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>Down</source>
-        <translation>Nadol</translation>
-    </message>
-</context>
-<context>
-    <name>LibraryBrowserForm</name>
-    <message>
-        <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowser.ui" line="+28"/>
-        <source>File System</source>
-        <translation>Systém súborov</translation>
-    </message>
-    <message>
-        <location line="+60"/>
-        <source>Search</source>
-        <translation>Hľadať</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>Look for:</source>
-        <translation>Hľadať:</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Clear</source>
-        <translation>Vyčistiť</translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>Find</source>
-        <translation>Nájsť</translation>
-    </message>
-    <message>
-        <location line="+129"/>
-        <source>Favorites</source>
-        <translation>Obľúbené</translation>
-    </message>
-    <message>
-        <location line="+36"/>
-        <source>Insert selected item into drawing</source>
-        <translation>Vložiť vybranú položku na výkres</translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>Update DB from file system</source>
-        <translation>Aktualizovať DB zo systému súborov</translation>
     </message>
 </context>
 <context>
@@ -10188,7 +9889,7 @@ vo výsledku vyhľadania:</translation>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+92"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+94"/>
         <source>Auto Paper Size</source>
         <translation type="unfinished">Automatická veľkosť papiera</translation>
     </message>
@@ -10208,7 +9909,7 @@ vo výsledku vyhľadania:</translation>
         <translation type="unfinished">Automatické prispôsobenie výkresu papieru?</translation>
     </message>
     <message>
-        <location line="+187"/>
+        <location line="+198"/>
         <source>Drag to move paper</source>
         <translation>Chyťte a hýbte papierom</translation>
     </message>
@@ -10218,7 +9919,7 @@ vo výsledku vyhľadania:</translation>
         <translation>Hotovo</translation>
     </message>
     <message>
-        <location line="+452"/>
+        <location line="+453"/>
         <source>Export to PDF</source>
         <translation>Exportovať do PDF</translation>
     </message>
@@ -13697,7 +13398,7 @@ vo výsledku vyhľadania:</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+326"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+321"/>
         <source>Dropped data not supported</source>
         <translation>Vložené údaje nie sú podporované</translation>
     </message>
@@ -14162,7 +13863,7 @@ vo výsledku vyhľadania:</translation>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../scripts/autostart.js" line="+361"/>
+        <location filename="../scripts/autostart.js" line="+363"/>
         <source>Loading add-on translations...</source>
         <translation>Nahrávanie prekladového doplnku...</translation>
     </message>
@@ -14748,3 +14449,4 @@ vo výsledku vyhľadania:</translation>
     </message>
 </context>
 </TS>
+

@@ -2409,29 +2409,6 @@ Vill du återställa den?</translation>
     </message>
 </context>
 <context>
-    <name>CreateLibraryItem</name>
-    <message>
-        <location filename="../scripts/Block/CreateLibraryItem/CreateLibraryItem.js" line="+49"/>
-        <source>Reference Point</source>
-        <translation>Referenspunkt</translation>
-    </message>
-    <message>
-        <location line="+45"/>
-        <source>Save library item as...</source>
-        <translation>Spara biblioteksobjekt som...</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Block/CreateLibraryItem/CreateLibraryItemInit.js" line="+2"/>
-        <source>&amp;Create Library Item</source>
-        <translation>&amp;Skapa biblioteksobjekt</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Create library item from selection</source>
-        <translation>Skapa biblioteksobjekt från markering</translation>
-    </message>
-</context>
-<context>
     <name>Cross</name>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Cross/Cross.js" line="+56"/>
@@ -4149,12 +4126,12 @@ finns redan i listan.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2129"/>
+        <location line="+2127"/>
         <source>Cancel</source>
         <translation>Avbryt</translation>
     </message>
     <message>
-        <location line="-2128"/>
+        <location line="-2126"/>
         <source>Done</source>
         <translation>Klart</translation>
     </message>
@@ -4190,7 +4167,7 @@ finns redan i listan.</translation>
         <translation>Ogiltig position</translation>
     </message>
     <message>
-        <location line="+177"/>
+        <location line="+175"/>
         <source>Entity is not in working set.</source>
         <translation>Enheten finns inte i arbetsuppsättningen.</translation>
     </message>
@@ -4205,7 +4182,7 @@ finns redan i listan.</translation>
         <translation>Längd:</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+62"/>
         <source>Entity is not a block reference.</source>
         <translation>Enhet är inte en blockreferens.</translation>
     </message>
@@ -4293,7 +4270,7 @@ finns redan i listan.</translation>
         <translation>Visa ECMAScript Shell</translation>
     </message>
     <message>
-        <location line="+56"/>
+        <location line="+55"/>
         <source>&amp;Script Shell</source>
         <translation>Skriptskal</translation>
     </message>
@@ -5052,6 +5029,11 @@ finns redan i listan.</translation>
         <location line="+0"/>
         <source>Explode</source>
         <translation>Explodera</translation>
+    </message>
+    <message>
+        <location line="+613"/>
+        <source>Ignored hatch in block reference with non-uniform scale factors</source>
+        <translation type="unfinished">Ignorerad skraffering i blockreferenser med ojämna skalfaktorer</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
@@ -6576,7 +6558,7 @@ finns redan i listan.</translation>
         <translation>Välj båge, cirkel, ellips eller elliptisk båge</translation>
     </message>
     <message>
-        <location line="+238"/>
+        <location line="+236"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -6718,7 +6700,7 @@ finns redan i listan.</translation>
         <translation>Ställ in nästa polygonhörn</translation>
     </message>
     <message>
-        <location line="+123"/>
+        <location line="+121"/>
         <source>Polygon area:</source>
         <translation>Polygonområdet:</translation>
     </message>
@@ -6850,7 +6832,7 @@ finns redan i listan.</translation>
         <translation>En polygon som inte stöds med anpassade bredder har uppstått</translation>
     </message>
     <message>
-        <location line="+687"/>
+        <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
         <translation>Obehandlad form från luckans slinga.</translation>
     </message>
@@ -7353,7 +7335,7 @@ finns redan i listan.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+337"/>
+        <location filename="../scripts/Information/Information.js" line="+335"/>
         <source>Information Tools</source>
         <translation>Informationsverktyg</translation>
     </message>
@@ -7652,6 +7634,31 @@ finns redan i listan.</translation>
         <source>Insert &amp;Script</source>
         <translation>Infoga &amp;Skript</translation>
     </message>
+    <message>
+        <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+66"/>
+        <source>Cannot read file:</source>
+        <translation type="unfinished">Kan inte läsa filen:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>No constructor found in file:</source>
+        <translation type="unfinished">Ingen konstruktör hittades i filen:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>No &apos;init&apos; function found in file:</source>
+        <translation type="unfinished">Ingen "init"-funktion finns i filen:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>No &apos;generate&apos; function found in file:</source>
+        <translation type="unfinished">Ingen "generate"-funktion finns i filen:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>No &apos;generatePreview&apos; function found in file:</source>
+        <translation type="unfinished">Ingen "generatePreview"-funktion finns i filen:</translation>
+    </message>
 </context>
 <context>
     <name>InvertSelection</name>
@@ -7830,7 +7837,7 @@ finns redan i listan.</translation>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+57"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+58"/>
         <source>Language Settings</source>
         <translation>Språkinställningar</translation>
     </message>
@@ -8089,312 +8096,6 @@ finns redan i listan.</translation>
         <location line="+10"/>
         <source>Amount to lengthen or shorten (negative)</source>
         <translation>Belopp som ska förlängas eller förkortas (negativt)</translation>
-    </message>
-</context>
-<context>
-    <name>LibraryBrowser</name>
-    <message>
-        <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowser.js" line="+72"/>
-        <source>audience</source>
-        <translation>publik</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>creator</source>
-        <translation>skapare</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>dimension</source>
-        <translation>dimension</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>levelOfDetail</source>
-        <translation>levelOfDetail</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>license</source>
-        <translation>licens</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>perspective</source>
-        <translation>perspektiv</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>presentation</source>
-        <translation>presentation</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>publisher</source>
-        <translation>förlag</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>subject</source>
-        <translation>ämne</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>title</source>
-        <translation>titel</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Widgets</source>
-        <translation>Widgets</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <location line="+1157"/>
-        <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowserInit.js" line="+19"/>
-        <source>Library Browser</source>
-        <translation>Bibliotekswebbläsare</translation>
-    </message>
-    <message>
-        <location line="-1149"/>
-        <source>Icon</source>
-        <translation>Ikon</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>List</source>
-        <translation>Lista</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Choose Source Folder</source>
-        <translation>Välj källmapp</translation>
-    </message>
-    <message>
-        <location line="+687"/>
-        <source>Page %1 of %2</source>
-        <translation>Sidan %1 av %2</translation>
-    </message>
-    <message>
-        <location line="+237"/>
-        <source>Updating icons...</source>
-        <translation>Uppdatering av ikoner...</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+219"/>
-        <source>Abort</source>
-        <translation>Avbryt</translation>
-    </message>
-    <message>
-        <location line="-27"/>
-        <source>File:</source>
-        <translation>Fil:</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Folder:</source>
-        <translation>Mapp:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>License:</source>
-        <translation>Licens:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Attribute as:</source>
-        <translation>Attribut som:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Creator:</source>
-        <translation>Skapare:</translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Updating library index:</source>
-        <translation>Uppdatering av biblioteksindex:</translation>
-    </message>
-    <message>
-        <location line="+30"/>
-        <source>DB error</source>
-        <translation>DB-fel</translation>
-    </message>
-    <message>
-        <location line="+44"/>
-        <source>Source removed from part library: %1</source>
-        <translation>Källan har tagits bort från delbiblioteket: %1</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Force database update.</source>
-        <translation>Forcera uppdatering av databasen.</translation>
-    </message>
-    <message>
-        <location line="+393"/>
-        <source>&amp;Insert</source>
-        <translation>Infoga</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>&amp;Edit Script File...</source>
-        <translation>Redigera skriptfilen...</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Open &amp;SVG File...</source>
-        <translation>Öppna SVG-fil...</translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>&amp;Open...</source>
-        <translation>Öppna...</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>&amp;Edit...</source>
-        <translation>Redigera...</translation>
-    </message>
-    <message>
-        <location line="+25"/>
-        <source>File Browser</source>
-        <translation>Filwebbläsare</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>&amp;Show in %1...</source>
-        <translation>Visa i %1...</translation>
-    </message>
-    <message>
-        <location line="+28"/>
-        <source>&amp;Remove from Favorites</source>
-        <translation>Ta bort från favoriter</translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>&amp;Add to Favorites</source>
-        <translation>Lägg till i favoriter</translation>
-    </message>
-    <message>
-        <location line="+34"/>
-        <source>&amp;Regenerate Icon</source>
-        <translation>Återskapa ikon</translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>&amp;Regenerate Icons</source>
-        <translation>Återskapa ikoner</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowserInit.js" line="-11"/>
-        <source>&amp;Library Browser</source>
-        <translation>Bibliotekswebbläsare</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Widgets/LibraryBrowser/PreferencesPage.ui" line="+17"/>
-        <source>Synchronization</source>
-        <translation>Synkronisering</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Update search index on startup</source>
-        <translation>Uppdatera sökindex vid start</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Display Options</source>
-        <translation>Visningsalternativ</translation>
-    </message>
-    <message>
-        <location line="+53"/>
-        <source>Dark icon background</source>
-        <translation>Mörk ikonbakgrund</translation>
-    </message>
-    <message>
-        <location line="-44"/>
-        <source>Icon size:</source>
-        <translation>Ikonstorlek:</translation>
-    </message>
-    <message>
-        <location line="+51"/>
-        <source>View mode:</source>
-        <translation>Visningsläge:</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Number of items
-shown in search results:</source>
-        <translation>Antal artiklar
-som visas i sökresultaten:</translation>
-    </message>
-    <message>
-        <location line="+18"/>
-        <source>Library Sources</source>
-        <translation>Bibliotekskällor</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Add...</source>
-        <translation>Lägg till...</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Remove</source>
-        <translation>Ta bort</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Up</source>
-        <translation>Upp</translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>Down</source>
-        <translation>Ned</translation>
-    </message>
-</context>
-<context>
-    <name>LibraryBrowserForm</name>
-    <message>
-        <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowser.ui" line="+28"/>
-        <source>File System</source>
-        <translation>Filsystem</translation>
-    </message>
-    <message>
-        <location line="+60"/>
-        <source>Search</source>
-        <translation>Sök på</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>Look for:</source>
-        <translation>Sök efter:</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Clear</source>
-        <translation>Klart</translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>Find</source>
-        <translation>Hitta</translation>
-    </message>
-    <message>
-        <location line="+129"/>
-        <source>Favorites</source>
-        <translation>Favoriter</translation>
-    </message>
-    <message>
-        <location line="+36"/>
-        <source>Insert selected item into drawing</source>
-        <translation>Infoga det valda objektet i ritningen</translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>Update DB from file system</source>
-        <translation>Uppdatera DB från filsystemet</translation>
     </message>
 </context>
 <context>
@@ -10179,7 +9880,7 @@ som visas i sökresultaten:</translation>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+92"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+94"/>
         <source>Auto Paper Size</source>
         <translation>Automatisk pappersstorlek</translation>
     </message>
@@ -10199,7 +9900,7 @@ som visas i sökresultaten:</translation>
         <translation>Automatisk anpassning av ritning till papper?</translation>
     </message>
     <message>
-        <location line="+187"/>
+        <location line="+198"/>
         <source>Drag to move paper</source>
         <translation>Dra för att flytta papper</translation>
     </message>
@@ -10209,7 +9910,7 @@ som visas i sökresultaten:</translation>
         <translation>Klart</translation>
     </message>
     <message>
-        <location line="+452"/>
+        <location line="+453"/>
         <source>Export to PDF</source>
         <translation>Exportera till PDF</translation>
     </message>
@@ -13685,7 +13386,7 @@ som visas i sökresultaten:</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+326"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+321"/>
         <source>Dropped data not supported</source>
         <translation>Uppgifter som tappats bort stöds inte</translation>
     </message>
@@ -14150,7 +13851,7 @@ som visas i sökresultaten:</translation>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../scripts/autostart.js" line="+361"/>
+        <location filename="../scripts/autostart.js" line="+363"/>
         <source>Loading add-on translations...</source>
         <translation>Laddar översättningar av tilläggsfunktioner...</translation>
     </message>
@@ -14736,3 +14437,4 @@ som visas i sökresultaten:</translation>
     </message>
 </context>
 </TS>
+

@@ -1043,7 +1043,7 @@
     <message>
         <location line="+2"/>
         <source>Water</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">水</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1058,37 +1058,37 @@
     <message>
         <location line="+2"/>
         <source>Communication</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">コミュニケーション</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Electric</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">電気</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Low Voltage</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">低電圧</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>High Voltage</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">高電圧</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Overhead Power</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">オーバーヘッドパワー</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Foul</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ファール</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foul Rising</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ファウルライジング</translation>
     </message>
 </context>
 <context>
@@ -1230,3 +1230,4 @@
     </message>
 </context>
 </TS>
+
