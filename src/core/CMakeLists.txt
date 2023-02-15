@@ -209,7 +209,14 @@ target_compile_definitions(qcadcore PRIVATE
     QCAD_DLL
 )
 
-set_target_properties(qcadcore PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../debug)
+if (CMAKE_BUILD_TYPE STREQUAL "Release")
+    set_target_properties(qcadcore PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../release)
+    target_link_libraries(qcadcore PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../release)
+else()
+    set_target_properties(qcadcore PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../debug)
+    target_link_libraries(qcadcore PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug)
+endif()
+
 
 target_link_libraries(qcadcore PUBLIC
     Qt::Concurrent
@@ -223,7 +230,6 @@ target_link_libraries(qcadcore PUBLIC
     Qt::Svg
     Qt::Xml
     Qt::Qml
-    -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug
     zlib
     opennurbs
 )
