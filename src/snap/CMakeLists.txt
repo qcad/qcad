@@ -49,7 +49,13 @@ target_compile_definitions(qcadsnap PRIVATE
     QCAD_DLL
 )
 
-set_target_properties(qcadsnap PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../debug)
+if (CMAKE_BUILD_TYPE STREQUAL "Release")
+    set_target_properties(qcadsnap PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../release)
+    target_link_libraries(qcadsnap PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../release)
+else()
+    set_target_properties(qcadsnap PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../debug)
+    target_link_libraries(qcadsnap PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug)
+endif()
 
 target_link_libraries(qcadsnap PUBLIC
     Qt::Core
@@ -60,7 +66,6 @@ target_link_libraries(qcadsnap PUBLIC
     Qt::Sql
     Qt::Svg
     Qt::Xml
-    -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug
     qcadcore
     qcadentity
     qcadgrid

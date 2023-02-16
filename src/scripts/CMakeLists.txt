@@ -28,7 +28,13 @@ target_compile_definitions(qcadscripts PRIVATE
     QCAD_DLL
 )
 
-set_target_properties(qcadscripts PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../plugins)
+if (CMAKE_BUILD_TYPE STREQUAL "Release")
+    set_target_properties(qcadscripts PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../release)
+    target_link_libraries(qcadscripts PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../release)
+else()
+    set_target_properties(qcadscripts PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../debug)
+    target_link_libraries(qcadscripts PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug)
+endif()
 
 target_link_libraries(qcadscripts PRIVATE
     Qt::Core
@@ -39,7 +45,6 @@ target_link_libraries(qcadscripts PRIVATE
     Qt::Sql
     Qt::Svg
     Qt::Xml
-    -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug
     qcadcore
 )
 

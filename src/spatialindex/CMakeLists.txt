@@ -30,13 +30,18 @@ target_compile_definitions(qcadspatialindex PUBLIC
     QCAD_DLL
 )
 
-set_target_properties(qcadspatialindex PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../debug)
+if (CMAKE_BUILD_TYPE STREQUAL "Release")
+    set_target_properties(qcadspatialindex PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../release)
+    target_link_libraries(qcadspatialindex PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../release)
+else()
+    set_target_properties(qcadspatialindex PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../debug)
+    target_link_libraries(qcadspatialindex PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug)
+endif()
 
 target_link_libraries(qcadspatialindex PUBLIC
     Qt::Core
     Qt::Gui
     Qt::Widgets
-    -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug
     qcadcore
     spatialindexnavel
 )

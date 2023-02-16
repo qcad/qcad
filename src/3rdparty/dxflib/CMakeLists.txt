@@ -19,7 +19,11 @@ add_library(dxflib
     ${RC}
 )
 
-set_target_properties(dxflib PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ../../../debug)
+if (CMAKE_BUILD_TYPE STREQUAL "Release")
+    set_target_properties(dxflib PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ../../../release)
+else()
+    set_target_properties(dxflib PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ../../../debug)
+endif()
 
 target_include_directories(dxflib PUBLIC
     src

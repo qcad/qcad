@@ -36,6 +36,12 @@ target_compile_definitions(qcaddxf PRIVATE
 
 set_target_properties(qcaddxf PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../../plugins)
 
+if (CMAKE_BUILD_TYPE STREQUAL "Release")
+    target_link_libraries(qcaddxf PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../../release)
+else()
+    target_link_libraries(qcaddxf PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../../debug)
+endif()
+
 target_link_libraries(qcaddxf PRIVATE
     Qt::Core
     Qt::Gui
@@ -45,7 +51,6 @@ target_link_libraries(qcaddxf PRIVATE
     Qt::Sql
     Qt::Svg
     Qt::Xml
-    -L${CMAKE_CURRENT_SOURCE_DIR}/../../../debug
     qcadcore
     qcadentity
     qcadoperations
