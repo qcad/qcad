@@ -18,7 +18,13 @@ add_library(zlib
     zutil.c zutil.h
 )
 
-set_target_properties(zlib PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ../../../../debug)
+if (CMAKE_BUILD_TYPE STREQUAL "Release")
+    set_target_properties(zlib PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ../../../../release)
+    target_link_libraries(zlib PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../../../release)
+else()
+    set_target_properties(zlib PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ../../../../debug)
+    target_link_libraries(zlib PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../../../debug)
+endif()
 
 if(CMAKE_BUILD_TYPE STREQUAL Release)
     target_compile_definitions(zlib PRIVATE

@@ -30,7 +30,13 @@ target_compile_definitions(qcadgrid PRIVATE
     QCAD_DLL
 )
 
-set_target_properties(qcadgrid PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../debug)
+if (CMAKE_BUILD_TYPE STREQUAL "Release")
+    set_target_properties(qcadgrid PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../release)
+    target_link_libraries(qcadgrid PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../release)
+else()
+    set_target_properties(qcadgrid PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../debug)
+    target_link_libraries(qcadgrid PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug)
+endif()
 
 target_link_libraries(qcadgrid PUBLIC
     # Remove: L${CMAKE_CURRENT_SOURCE_DIR}/
@@ -42,7 +48,6 @@ target_link_libraries(qcadgrid PUBLIC
     Qt::Sql
     Qt::Svg
     Qt::Xml
-    -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug
     qcadcore
 )
 

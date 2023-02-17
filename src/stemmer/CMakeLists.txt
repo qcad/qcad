@@ -31,11 +31,16 @@ target_compile_definitions(qcadstemmer PRIVATE
     QCAD_DLL
 )
 
-set_target_properties(qcadstemmer PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../debug)
+if (CMAKE_BUILD_TYPE STREQUAL "Release")
+    set_target_properties(qcadstemmer PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../release)
+    target_link_libraries(qcadstemmer PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../release)
+else()
+    set_target_properties(qcadstemmer PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../debug)
+    target_link_libraries(qcadstemmer PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug)
+endif()
 
 target_link_libraries(qcadstemmer PRIVATE
     Qt::Core
-    -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug
     stemmer
 )
 

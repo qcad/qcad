@@ -109,7 +109,6 @@ target_link_libraries(qcadentity PUBLIC
     Qt::Sql
     Qt::Svg
     Qt::Xml
-    -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug
     qcadcore
     opennurbs
 )

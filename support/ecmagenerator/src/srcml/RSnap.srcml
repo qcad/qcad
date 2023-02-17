@@ -74,10 +74,13 @@
      * \return The snapped position (closest relevant position)
      * for the given mouse position.
      */</comment>
-    <function_decl><type><name>virtual</name> <name>RVector</name></type> <name>snap</name><parameter_list>(
+    <function><type><name>virtual</name> <name>RVector</name></type> <name>snap</name><parameter_list>(
             <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>position</name></decl></param>,
             <param><decl><type><name>RGraphicsView</name>&amp;</type> <name>view</name></decl></param>,
-            <param><decl><type><name>double</name></type> <name>range</name>=<init><expr><name>RNANDOUBLE</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+            <param><decl><type><name>double</name></type> <name>range</name>=<init><expr><name>RNANDOUBLE</name></expr></init></decl></param>)</parameter_list> <block>{
+
+        <return>return <expr><name><name>RVector</name>::<name>invalid</name></name></expr>;</return>
+    }</block></function>
 
     <comment type="block">/**
      * \overload

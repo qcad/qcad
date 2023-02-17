@@ -77,7 +77,7 @@
     <decl_stmt><decl><type><name>QThread</name>*</type> <name>mutexEventsLocker</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RSingleApplication</name>*</type> <name>singleInstance</name></decl>;</decl_stmt>
 
-    <expr_stmt><expr><name>QList</name>&lt;<name>QPair</name>&lt;<name>int</name></expr>, <expr><name>int</name>&gt;&gt; <name>globalShortcuts</name></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>QPair<argument_list>&lt;<argument><name>int</name></argument>, <argument><name>int</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>globalShortcuts</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RSingleApplication*</argument>)</argument_list></macro>

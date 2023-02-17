@@ -1,0 +1,137 @@
+cmake_minimum_required(VERSION 3.16)
+project(${PROJECT_NAME} VERSION 1.0 LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+find_package(${QT_VER} REQUIRED COMPONENTS Core Widgets Concurrent Gui Network OpenGL Sql Svg Xml PrintSupport Qml)
+qt_standard_project_setup()
+
+IF(WIN32)
+    SET(RC qcad.rc)
+ENDIF()
+
+add_executable(${PROJECT_NAME} WIN32 MACOSX_BUNDLE
+    ${CMAKE_CURRENT_LIST_DIR}/main.cpp ${CMAKE_CURRENT_LIST_DIR}/${RC}
+)
+target_include_directories(${PROJECT_NAME} PRIVATE
+    ${CMAKE_CURRENT_LIST_DIR}/../../src/3rdparty
+    ${CMAKE_CURRENT_LIST_DIR}/../../src/core
+    ${CMAKE_CURRENT_LIST_DIR}/../../src/core/math
+    ${CMAKE_CURRENT_LIST_DIR}/../../src/entity
+    ${CMAKE_CURRENT_LIST_DIR}/../../src/grid
+    ${CMAKE_CURRENT_LIST_DIR}/../../src/gui
+    ${CMAKE_CURRENT_LIST_DIR}/../../src/io/dxf
+    ${CMAKE_CURRENT_LIST_DIR}/../../src/operations
+    ${CMAKE_CURRENT_LIST_DIR}/../../src/scripting
+    ${CMAKE_CURRENT_LIST_DIR}/../../src/scripting/ecmaapi
+    ${CMAKE_CURRENT_LIST_DIR}/../../src/scripting/ecmaapi/adapters
+    ${CMAKE_CURRENT_LIST_DIR}/../../src/scripting/ecmaapi/generated
+    ${CMAKE_CURRENT_LIST_DIR}/../../src/snap
+    ${CMAKE_CURRENT_LIST_DIR}/../../src/spatialindex
+    ${CMAKE_CURRENT_LIST_DIR}/../../src/stemmer
+    ${CMAKE_CURRENT_LIST_DIR}/../../src/zip
+)
+
+target_compile_definitions(${PROJECT_NAME} PRIVATE
+    QCAD_DLL
+)
+
+if (CMAKE_BUILD_TYPE STREQUAL "Release")
+    set_target_properties(${PROJECT_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/../../release)
+    target_link_libraries(${PROJECT_NAME} PUBLIC -L${CMAKE_CURRENT_LIST_DIR}/../../release)
+else()
+    set_target_properties(${PROJECT_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/../../debug)
+    target_link_libraries(${PROJECT_NAME} PUBLIC -L${CMAKE_CURRENT_LIST_DIR}/../../debug)
+endif()
+
+target_link_libraries(${PROJECT_NAME} PRIVATE
+    Qt::Core
+    Qt::Gui
+    Qt::Widgets
+    Qt::Network
+    Qt::OpenGL
+    Qt::Sql
+    Qt::Svg
+    Qt::Xml
+    Qt::Qml
+    Qt::PrintSupport
+    qcadcore
+    qcadentity
+    qcadgui
+    qcadgrid
+    qcadgui
+    qcadoperations
+    qcadsnap
+    qcadspatialindex
+    spatialindexnavel
+    stemmer
+)
+
+IF(NOT BUILD_QT6)
+    target_link_libraries(${PROJECT_NAME} PRIVATE qcadecmaapi)
+ENDIF()
+
+if(APPLE)
+    target_sources(${PROJECT_NAME} PRIVATE
+        ${CMAKE_CURRENT_LIST_DIR}/removemacmenus.h ${CMAKE_CURRENT_LIST_DIR}/removemacmenus.mm
+    )
+
+    target_link_libraries(${PROJECT_NAME} PRIVATE
+        "-framework AppKit"
+        "-framework CoreServices"
+        #WrapIconv::WrapIconv
+        #z
+    )
+endif()
+
+if(WIN32)
+    target_link_libraries(${PROJECT_NAME} PRIVATE
+        Rpcrt4
+        advapi32.lib
+        comdlg32.lib
+        gdi32.lib
+        kernel32.lib
+        odbc32.lib
+        odbccp32.lib
+        ole32.lib
+        oleaut32.lib
+        shell32.lib
+        user32.lib
+        uuid.lib
+        winspool.lib
+    )
+endif()
+
+if(NOT r_no_opennurbs)
+    target_link_libraries(${PROJECT_NAME} PRIVATE
+        zlib
+        opennurbs
+    )
+endif()
+
+if(linux-g++)
+    target_link_libraries(${PROJECT_NAME} PRIVATE
+        GLU
+    )
+endif()
+
+
+if(MACOS)
+    target_link_libraries(${PROJECT_NAME} PRIVATE
+        Qt::MacExtras
+    )
+endif()
+
+if(r_no_opennurbs)
+    target_compile_definitions(${PROJECT_NAME} PRIVATE
+        R_NO_OPENNURBS
+    )
+endif()
+
+if(win32-msvc2010)
+    target_compile_definitions(${PROJECT_NAME} PRIVATE
+        _CRT_SECURE_NO_WARNINGS
+    )
+endif()
+

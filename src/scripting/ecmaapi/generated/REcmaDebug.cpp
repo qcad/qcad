@@ -806,6 +806,33 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RDebug::
+       printCounters(a0);
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RDebug.printCounters().",
                    context);

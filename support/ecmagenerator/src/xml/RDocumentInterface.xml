@@ -141,6 +141,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
+    <method name="deleteScriptHandler"
+    cppName="deleteScriptHandler" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="extension" isConst="true" />
+      </variant>
+    </method>
     <method name="getScriptHandler" cppName="getScriptHandler"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

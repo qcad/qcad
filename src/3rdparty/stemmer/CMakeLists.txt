@@ -26,7 +26,11 @@ add_library(stemmer
     src_c/stem_UTF_8_turkish.c src_c/stem_UTF_8_turkish.h
 )
 
-set_target_properties(stemmer PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ../../../debug)
+if (CMAKE_BUILD_TYPE STREQUAL "Release")
+    set_target_properties(stemmer PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ../../../release)
+else()
+    set_target_properties(stemmer PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ../../../debug)
+endif()
 
 target_compile_definitions(stemmer PRIVATE
     QCAD_DLL

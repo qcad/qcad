@@ -99,6 +99,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, clear, "clear");
             
+            REcmaHelper::registerFunction(&engine, proto, deleteScriptHandler, "deleteScriptHandler");
+            
             REcmaHelper::registerFunction(&engine, proto, getScriptHandler, "getScriptHandler");
             
             REcmaHelper::registerFunction(&engine, proto, isScriptRunning, "isScriptRunning");
@@ -1418,6 +1420,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocumentInterface::clear", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentInterface::deleteScriptHandler
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::deleteScriptHandler", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::deleteScriptHandler";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentInterface* self = 
+                        getSelf("deleteScriptHandler", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->deleteScriptHandler(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.deleteScriptHandler().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::deleteScriptHandler", context, engine);
             return result;
         }
          QScriptValue

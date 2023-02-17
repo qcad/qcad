@@ -299,6 +299,7 @@
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QWheelEvent*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QWidget*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QXmlStreamWriter*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QTextStream*</argument>)</argument_list></macro>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QFlags&lt;Qt::MouseButton&gt;</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QFlags&lt;Qt::KeyboardModifier&gt;</argument>)</argument_list></macro>
