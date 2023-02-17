@@ -680,6 +680,27 @@
                 
     
     if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RLinetype::Id'
+    RLinetype::Id cppResult =
+        
+               self->getLinetypeId();
+        // return type: RLinetype::Id
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
     2 && (
             context->argument(0).isBool()
         ) /* type: bool */
@@ -761,6 +782,27 @@
                     return REcmaHelper::throwError("self is NULL", context);
                 }
                 
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RLineweight::Lineweight'
+    RLineweight::Lineweight cppResult =
+        
+               self->getLineweight();
+        // return type: RLineweight::Lineweight
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
     
     if( context->argumentCount() ==
     2 && (

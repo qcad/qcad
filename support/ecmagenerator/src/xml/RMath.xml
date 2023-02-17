@@ -340,5 +340,13 @@ xmlns:rs="http://www.ribbonsoft.com">
         default="RVector :: nullVector" isConst="true" />
       </variant>
     </method>
+    <method name="getMd5Hash" cppName="getMd5Hash"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="data"
+        isConst="true" />
+      </variant>
+    </method>
   </class>
 </unit>

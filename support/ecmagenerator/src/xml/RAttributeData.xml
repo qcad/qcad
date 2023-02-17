@@ -58,6 +58,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getLinetypeId" cppName="getLinetypeId"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
+      <variant returnType="RLinetype::Id" isPureVirtual="false" />
       <variant returnType="RLinetype::Id" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="resolve"
         isConst="false" />
@@ -69,6 +70,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getLineweight" cppName="getLineweight"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
+      <variant returnType="RLineweight::Lineweight"
+      isPureVirtual="false" />
       <variant returnType="RLineweight::Lineweight"
       isPureVirtual="false">
         <arg type="bool" typeName="bool" name="resolve"
