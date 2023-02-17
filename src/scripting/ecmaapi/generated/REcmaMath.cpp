@@ -131,6 +131,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, parseCoordinate, "parseCoordinate");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getMd5Hash, "getMd5Hash");
+            
 
     // static properties:
     
@@ -2885,6 +2887,56 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMath::parseCoordinate", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMath::getMd5Hash
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMath::getMd5Hash", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMath::getMd5Hash";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RMath::
+       getMd5Hash(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMath.getMd5Hash().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMath::getMd5Hash", context, engine);
             return result;
         }
          QScriptValue REcmaMath::toString

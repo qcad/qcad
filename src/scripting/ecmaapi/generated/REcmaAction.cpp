@@ -3112,3 +3112,4 @@
         {
             out = qvariant_cast<RAction::ClickMode>(value.toVariant());
         }
+        

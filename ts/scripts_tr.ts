@@ -75,7 +75,7 @@
     <message>
         <location line="+1"/>
         <source>Additional tools, features and file formats including DWG are available in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; or &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">DWG dahil olmak üzere ek araçlar, özellikler ve dosya formatları &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; veya &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;&apos;de mevcuttur.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -95,7 +95,7 @@
     <message>
         <location line="+1"/>
         <source>Qt ships with QCAD under the &lt;a href=&apos;%1&apos;&gt;LGPL Open Source license&lt;/a&gt; which confers various rights to you as the user, including the right to recompile the Qt libraries for your platform. To do that follow the &lt;a href=&apos;%2&apos;&gt;documentation shown on the Qt website&lt;/a&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Qt, QCAD ile birlikte &lt;a href=&apos;%1&apos;&gt;LGPL Açık Kaynak lisansı&lt;/a&gt; altında gelir ve bu lisans, Qt kütüphanelerini platformunuz için yeniden derleme hakkı da dahil olmak üzere kullanıcı olarak size çeşitli haklar verir. Bunu yapmak için Qt web sitesinde&lt;/a&gt; gösterilen &lt;a href=&apos;%2&apos;&gt;dokümantasyonu takip edin.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -188,7 +188,7 @@
     <message>
         <location line="+169"/>
         <source>Licenses</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lisanslar</translation>
     </message>
     <message>
         <location filename="../scripts/Help/About/AboutInit.js" line="+2"/>
@@ -206,12 +206,12 @@
     <message>
         <location line="+65"/>
         <source>Hatch Patterns</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kapak Desenleri</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Themes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Temalar</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -264,7 +264,7 @@
     <message>
         <location line="+23"/>
         <source>Licenses</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lisanslar</translation>
     </message>
 </context>
 <context>
@@ -335,34 +335,34 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/AddCentroidDialog.ui" line="+14"/>
         <source>Add  point mass 2D Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Noktasal kütle ekle 2D Centroid</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Position Y:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pozisyon Y:</translation>
     </message>
     <message>
         <location line="+7"/>
         <location line="+7"/>
         <location line="+49"/>
         <source>0.00</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">0.00</translation>
     </message>
     <message>
         <location line="-42"/>
         <source>Position X:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pozisyon X:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Point mass:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Noktasal kütle:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Reset to &apos;Undefined&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&apos;Tanımlanmamış&apos; olarak sıfırla</translation>
     </message>
 </context>
 <context>
@@ -1009,12 +1009,12 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location line="+10"/>
         <source>Points on entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varlık üzerindeki noktalar</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Free positioning</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Serbest konumlandırma</translation>
     </message>
 </context>
 <context>
@@ -1022,7 +1022,7 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location filename="../scripts/Modify/AutoTrim/AutoTrimInit.js" line="+2"/>
         <source>Auto &amp;Trim</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Otomatik Döşeme</translation>
     </message>
 </context>
 <context>
@@ -1044,7 +1044,7 @@ Kurtarmak ister misiniz?</translation>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
         <location line="+4"/>
         <source>&amp;Batch2Pdf visible layout blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Batch2Pdf görünür düzen blokları</translation>
     </message>
 </context>
 <context>
@@ -1065,37 +1065,37 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location filename="../scripts/Modify/Bevel/Bevel.js" line="+55"/>
         <source>The two entities cannot be bevelled.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İki varlık eğimli olamaz.</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İlk varlık kırpılamaz.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İkinci varlık kırpılamaz.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
         <source>&amp;Chamfer / Bevel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pah / Eğim</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/Bevel.ui" line="+17"/>
         <source>Trim</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Döşeme</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Length &amp;1:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uzunluk 1:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Length &amp;2:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uzunluk 2:</translation>
     </message>
 </context>
 <context>
@@ -1103,12 +1103,12 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExport.js" line="+78"/>
         <source>Error while generating bitmap file &quot;%1&quot;: %2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&quot;%1&quot; bit eşlem dosyası oluşturulurken hata oluştu: %2</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Bitmap file has been exported to &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bitmap dosyası &quot;%1&quot; olarak dışa aktarıldı</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -1240,7 +1240,7 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location line="+110"/>
         <source>Cannot edit block while editing a block in-place</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bir bloğu yerinde düzenlerken blok düzenlenemiyor</translation>
     </message>
     <message>
         <location line="-82"/>
@@ -1254,7 +1254,7 @@ Kurtarmak ister misiniz?</translation>
         <location filename="../scripts/Block/BlockDialog.js" line="+81"/>
         <source>block</source>
         <comment>default block name prefix</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">blok</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -1274,7 +1274,7 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location line="+11"/>
         <source>Block &quot;%1&quot; already exists&lt;br&gt;and will be overwritten.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&quot;%1&quot; bloğu zaten mevcut&lt;br&gt;ve üzerine yazılacak.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -1305,7 +1305,7 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockFixNames/BlockFixNames.js" line="+80"/>
         <source>&amp;Fix Block Names</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blok Adlarını Düzelt</translation>
     </message>
 </context>
 <context>
@@ -1320,12 +1320,12 @@ Kurtarmak ister misiniz?</translation>
         <location line="+53"/>
         <location line="+44"/>
         <source>Block List</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blok Listesi</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/BlockList/PreferencesPage.ui" line="+17"/>
         <source>Hide internal blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dahili blokları gizle</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -1338,22 +1338,22 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockListAttributes/BlockListAttributes.js" line="+47"/>
         <source>Block:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blok:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Block reference ID:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blok referans kimliği:</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Block attribute:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blok özelliği:</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>&amp;List Block Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blok Özniteliklerini Listele</translation>
     </message>
 </context>
 <context>
@@ -1361,17 +1361,17 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+93"/>
         <source>Export Block List (CSV)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blok Listesini Dışa Aktar (CSV)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>CSV</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">CSV</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block List</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blok Listesini Dışa Aktar</translation>
     </message>
 </context>
 <context>
@@ -1379,17 +1379,17 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockRefExport/BlockRefExport.js" line="+97"/>
         <source>Export Block References List (CSV)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blok Referansları Listesini Dışa Aktar (CSV)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>CSV</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">CSV</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block References List</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blok Referansları Listesini Dışa Aktar</translation>
     </message>
 </context>
 <context>
@@ -1407,7 +1407,7 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOutInit.js" line="+2"/>
         <source>&amp;Break out Segment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ayrılma Segmenti</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOut.ui" line="+17"/>
@@ -1420,7 +1420,7 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.js" line="+54"/>
         <source>Choose line, arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çizgi, yay veya daire seçin</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1430,12 +1430,12 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGapInit.js" line="+2"/>
         <source>&amp;Break out Gap</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kopma Boşluğu</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.ui" line="+17"/>
         <source>Gap:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Boşluk:</translation>
     </message>
 </context>
 <context>
@@ -1453,27 +1453,27 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.js" line="+79"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Parçalamak için çizgi, yay, daire, elips, spline veya çoklu çizgi seçin</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Choose line, arc, circle or ellipse to break up</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Parçalamak için çizgi, yay, daire veya elips seçin</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>First break point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İlk kırılma noktası</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Second break point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İkinci kırılma noktası</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Click the part of the circle or ellipse to remove</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dairenin veya elipsin kaldırılacak kısmına tıklayın</translation>
     </message>
 </context>
 <context>
@@ -1494,12 +1494,12 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location line="+0"/>
         <source>CAD Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">CAD Araç Çubuğu</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+20"/>
         <source>Icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Simge boyutu:</translation>
     </message>
     <message>
         <location line="+71"/>
@@ -1522,12 +1522,12 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+387"/>
         <source>Expand all</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tümünü genişlet</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Collapse all</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tümünü daralt</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1548,12 +1548,12 @@ Kurtarmak ister misiniz?</translation>
         <location line="+0"/>
         <location line="+53"/>
         <source>Tool Matrix</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Araç Matrisi</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CadToolMatrix/PreferencesPage.ui" line="+17"/>
         <source>Icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Simge boyutu:</translation>
     </message>
     <message>
         <location line="+96"/>
@@ -1568,7 +1568,7 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location line="+9"/>
         <source>List view</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Liste görünümü</translation>
     </message>
 </context>
 <context>
@@ -1576,7 +1576,7 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location filename="../scripts/Misc/MiscModify/ChangeFontToArial/ChangeFontToArial.js" line="+65"/>
         <source>Set Font to Arial</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yazı tipini Arial olarak ayarlayın</translation>
     </message>
 </context>
 <context>
@@ -2147,42 +2147,42 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location line="+208"/>
         <source>Invalid value:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçersiz değer:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Invalid coordinate or distance &quot;%1&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçersiz koordinat veya mesafe &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Unknown command or invalid coordinate or value: &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bilinmeyen komut veya geçersiz koordinat veya değer: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Numbers may be entered as: &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sayılar şu şekilde girilebilir: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Coordinates may be entered as: &quot;%1&quot; (absolute) or &quot;%2&quot; (relative) or &quot;%3&quot; (polar) or &quot;%4&quot; (relative polar)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Koordinatlar şu şekilde girilebilir: &quot;%1&quot; (mutlak) veya &quot;%2&quot; (göreli) veya &quot;%3&quot; (kutupsal) veya &quot;%4&quot; (göreli kutupsal)</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>You may change the number / coordinate format in the application preferences.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uygulama tercihlerinde sayı / koordinat formatını değiştirebilirsiniz.</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İşlem başarısız oldu. Lütfen blok özyinelemelerini ve kilitli veya görünmez katmanları veya blokları kontrol edin.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Warning</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uyarı</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -2217,7 +2217,7 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location filename="../scripts/Widgets/CommandLine/PreferencesPage.ui" line="+17"/>
         <source>History size:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tarih boyutu:</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -2251,7 +2251,7 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/CommandLineTools/CommandLineTools.js" line="+50"/>
         <source>&amp;Command Line Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Komut Satırı Araçları</translation>
     </message>
 </context>
 <context>
@@ -2264,7 +2264,7 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location line="+3"/>
         <source>Unit &quot;%1&quot; selected. Nothing to be done</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Birim &quot;%1&quot; seçildi. Yapılacak bir şey yok</translation>
     </message>
     <message>
         <location line="+144"/>
@@ -2327,12 +2327,12 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location line="+0"/>
         <source>Coordinate Display</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Koordinat Ekranı</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/PreferencesPage.ui" line="+17"/>
         <source>Forced update every N mouse moves:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Her N fare hareketinde zorunlu güncelleme:</translation>
     </message>
 </context>
 <context>
@@ -2356,42 +2356,42 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+67"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pozisyon</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Counter/CounterInit.js" line="+2"/>
         <source>&amp;Counter</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sayaç</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Auto increment number</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Otomatik artış numarası</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Counter/Counter.ui" line="+17"/>
         <source>Start:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Başla:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Increment:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Artış:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number Format:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sayı Formatı:</translation>
     </message>
     <message>
         <location line="+79"/>
         <source>Prefix:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Önek:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Suffix:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Son ek:</translation>
     </message>
 </context>
 <context>
@@ -2408,44 +2408,21 @@ Kurtarmak ister misiniz?</translation>
     </message>
 </context>
 <context>
-    <name>CreateLibraryItem</name>
-    <message>
-        <location filename="../scripts/Block/CreateLibraryItem/CreateLibraryItem.js" line="+49"/>
-        <source>Reference Point</source>
-        <translation>Referans Noktası</translation>
-    </message>
-    <message>
-        <location line="+45"/>
-        <source>Save library item as...</source>
-        <translation>Kütüphane öğesini şunun gibi kaydet...</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Block/CreateLibraryItem/CreateLibraryItemInit.js" line="+2"/>
-        <source>&amp;Create Library Item</source>
-        <translation>&amp;Kütüphane Öğesi Oluştur</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Create library item from selection</source>
-        <translation>Seçimden kütüphane öğesi oluştur</translation>
-    </message>
-</context>
-<context>
     <name>Cross</name>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Cross/Cross.js" line="+56"/>
         <source>Select arc, circle, ellipse or elliptical arc</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yay, daire, elips veya eliptik yay seçin</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Cross/CrossInit.js" line="+2"/>
         <source>Centerline Cross</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Merkez Hattı Çapraz</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yaylarda, dairelerde veya elipslerde merkez hattı çaprazını çizme</translation>
     </message>
 </context>
 <context>
@@ -2453,7 +2430,7 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Cross/Cross.ui" line="+17"/>
         <source>X:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">X:</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -2463,17 +2440,17 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location line="+57"/>
         <source>Extension</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uzatma</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Total length</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Toplam uzunluk</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Percent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yüzde</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -2502,52 +2479,52 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location filename="../scripts/DefaultAction.js" line="+92"/>
         <source>Select entity or region</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kurum veya bölge seçin</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Move entity or reference</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varlığı veya referansı taşıma</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second corner</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İkinci köşe</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Target point of reference point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Referans noktasının hedef noktası</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Target point of selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Hedef seçim noktası</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Move entity to desired location</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varlığı istenen konuma taşıma</translation>
     </message>
     <message>
         <location line="+409"/>
         <source>Move Reference Point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Referans Noktasını Taşı</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Move Selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Seçimi Taşı</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Move Entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varlığı Taşı</translation>
     </message>
     <message>
         <location line="+127"/>
         <source>Editing block &quot;%1&quot;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&quot;%1&quot; bloğunu düzenleme &lt;br&gt;İşiniz bittiğinde &lt;i&gt;Blok &gt; Ana Çizime Dön&lt;/i&gt; seçeneğini belirleyin</translation>
     </message>
 </context>
 <context>
@@ -2607,7 +2584,7 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer Entities</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Katman Varlıklarının Seçimini Kaldır</translation>
     </message>
 </context>
 <context>
@@ -2615,7 +2592,7 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/DevDebug/DevDebug.js" line="+45"/>
         <source>&amp;Debug Mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Hata Ayıklama Modu</translation>
     </message>
 </context>
 <context>
@@ -2633,28 +2610,28 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location line="+8"/>
         <source>into line segments (fixed length)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">çizgi segmentlerine (sabit uzunluk)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>into line segments (fixed angle)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">doğru parçalarına (sabit açı)</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Ellipses</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Elipsler</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into polyline with arc segments</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">yay segmentleri ile çoklu çizgiye</translation>
     </message>
     <message>
         <location line="+5"/>
         <location line="+16"/>
         <source>into polyline with line segments</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">doğru parçaları ile çoklu çizgiye</translation>
     </message>
     <message>
         <location line="-8"/>
@@ -2669,17 +2646,17 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location line="+8"/>
         <source>into lines, solids and texts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">çizgiler, katılar ve metinler halinde</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Hatches</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kapaklar</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into lines</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">çizgiler halinde</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2689,7 +2666,7 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location line="+8"/>
         <source>into entities</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">varlıklara</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/Dialog.ui" line="+94"/>
@@ -2704,7 +2681,7 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/CharacterMapDialog.ui" line="+14"/>
         <source>Character Map</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Karakter Haritası</translation>
     </message>
 </context>
 <context>
@@ -2765,7 +2742,7 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
         <source>Use maximum angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Maksimum açıyı kullanın</translation>
     </message>
 </context>
 <context>
@@ -3024,17 +3001,17 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
         <source>Dimension Scale</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Boyut Ölçeği</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>The scale for new dimensions is not 1:1. Dimension labels will show values that differ from the measured value in the drawing. You can correct the scale factor in the options toolbar at the top.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yeni boyutlar için ölçek 1:1 değildir. Boyut etiketleri, çizimdeki ölçülen değerden farklı değerler gösterecektir. Ölçek faktörünü üstteki seçenekler araç çubuğundan düzeltebilirsiniz.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Don&apos;t show this warning again</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bu uyarıyı bir daha gösterme</translation>
     </message>
 </context>
 <context>
@@ -3073,12 +3050,12 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location line="+309"/>
         <source>Unit / Format</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Birim / Format</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The drawing unit must be &quot;Inch&quot; to display dimension labels in formats &quot;Architectural&quot; or &quot;Engineering&quot;. Format changed to &quot;Decimal&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&quot;Mimari&quot; veya &quot;Mühendislik&quot; formatlarında boyut etiketlerini görüntülemek için çizim birimi &quot;İnç&quot; olmalıdır. Biçim &quot;Ondalık&quot; olarak değiştirildi.</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+55"/>
@@ -3098,17 +3075,17 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location line="-63"/>
         <source>Dimension Style</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Boyut Stili</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Horizontal text labels</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yatay metin etiketleri</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Text above dimension line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Boyut çizgisinin üzerindeki metin</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -3118,72 +3095,72 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location line="+73"/>
         <source>Arrow size:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ok boyu:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Extension line extension:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uzatma hattı uzatması:</translation>
     </message>
     <message>
         <location line="+74"/>
         <source>Extension line offset:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uzatma hattı ofseti:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Dimension line increment:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Boyut çizgisi artışı:</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Size scale factor:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Boyut ölçek faktörü:</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Arrow Style</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ok Stili</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ok</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Architectural tick</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mimari kene</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Label</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Etiket</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Label font:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Etiket yazı tipi:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Label color:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Etiket rengi:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Number Format</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sayı Formatı</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Decimal separator:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ondalık ayırıcı:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Label Format</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Etiket Formatı</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -3193,18 +3170,18 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location line="+8"/>
         <source>&amp;Format:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Format:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>P&amp;recision:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Hassas:</translation>
     </message>
     <message>
         <location line="+32"/>
         <location line="+60"/>
         <source>Show trailing zeros</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sondaki sıfırları göster</translation>
     </message>
     <message>
         <location line="-50"/>
@@ -3214,12 +3191,12 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location line="+8"/>
         <source>F&amp;ormat:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Format:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Pre&amp;cision:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Hassas:</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -3235,7 +3212,6 @@ Kurtarmak ister misiniz?</translation>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -3256,7 +3232,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Divide/Divide.js" line="+68"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çizgi, yay, daire, elips, spline veya çoklu çizgi seçin</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3271,12 +3247,12 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Specify second point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İkinci noktayı belirtin</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Divide/DivideInit.js" line="+2"/>
         <source>&amp;Divide</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bölmek</translation>
     </message>
 </context>
 <context>
@@ -3315,7 +3291,7 @@ is already in the list.</source>
     <message>
         <location line="+8"/>
         <source>Second corner</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İkinci köşe</translation>
     </message>
 </context>
 <context>
@@ -3353,7 +3329,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Bottom Left</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sol Alt</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3376,17 +3352,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/DrawBasedOnThreeCircles.js" line="+72"/>
         <source>First arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İlk yay veya daire</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Second arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İkinci yay veya daire</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Third arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Üçüncü yay veya daire</translation>
     </message>
 </context>
 <context>
@@ -3394,7 +3370,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawBoundingBox/DrawBoundingBox.js" line="+71"/>
         <source>Draw &amp;Bounding Box</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sınırlayıcı Kutu Çizme</translation>
     </message>
 </context>
 <context>
@@ -3412,122 +3388,122 @@ is already in the list.</source>
         <location line="+15"/>
         <location line="+1275"/>
         <source>Command ended.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Komut sona erdi.</translation>
     </message>
     <message>
         <location line="-1293"/>
         <source>No import file selected.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Seçili içe aktarma dosyası yok.</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>No file opened.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dosya açılmadı.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>DrawFromCSV script (v3.03) by CVH</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">CVH tarafından DrawFromCSV betiği (v3.03)</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Cast CSV</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Cast CSV</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Reading from file: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dosyadan okunuyor: %1</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Switched to comma/dot CSV style.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Virgül/nokta CSV stiline geçildi.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Switched to semicolon/dot CSV style.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Noktalı virgül/nokta CSV stiline geçildi.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Switched to semicolon/comma CSV style.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Noktalı virgül/virgül CSV stiline geçildi.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Unsupported or invalid CSV style, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Desteklenmeyen veya geçersiz CSV stili, yok sayıldı. Metin satırı: %1</translation>
     </message>
     <message>
         <location line="+82"/>
         <source>Setting new relative origin failed, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yeni göreli kaynak ayarlama başarısız oldu, yoksayıldı. Metin satırı: %1</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Setting new rounding radius failed, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yeni yuvarlama yarıçapı ayarlama başarısız oldu, yok sayıldı. Metin satırı: %1</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Rounding polylines requires QCAD Professional, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çoklu çizgileri yuvarlamak için QCAD Professional gerekir, göz ardı edildi. Metin satırı: %1</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Can not switch to non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mevcut olmayan katmanlara geçiş yapılamıyor, yok sayıldı. Metin satırı: %1%2 Katman: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct set active &apos;Layer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Doğru ayarlanmış etkin bir &apos;Katman&apos; anahtarı değil, yok sayıldı. Metin satırı: %1</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Not a correct &apos;New layer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Doğru bir &apos;Yeni katman&apos; anahtarı değil, yok sayıldı. Metin satırı: %1</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Can not hide non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mevcut olmayan katmanlar gizlenemiyor, yok sayıldı. Metin satırı: %1%2 Katman: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;HideLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Doğru bir &apos;HideLayer&apos; anahtarı değil, yok sayıldı. Metin satırı: %1</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Can not freeze non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mevcut olmayan katmanlar dondurulamaz, yok sayıldı. Metin satırı: %1%2 Katman: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;FreezeLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Doğru bir &apos;FreezeLayer&apos; anahtarı değil, yok sayıldı. Metin satırı: %1</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Can not lock non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mevcut olmayan katmanlar kilitlenemiyor, yok sayıldı. Metin satırı: %1%2 Katman: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;LockLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Doğru bir &apos;LockLayer&apos; anahtarı değil, yok sayıldı. Metin satırı: %1</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Can not allow non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mevcut olmayan katmanlara izin verilemiyor, yok sayıldı. Metin satırı: %1%2 Katman: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;AllowLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Doğru bir &apos;AllowLayer&apos; anahtarı değil, yok sayıldı. Metin satırı: %1</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -3552,7 +3528,7 @@ is already in the list.</source>
         <location line="+33"/>
         <location line="+135"/>
         <source>Low field count.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Düşük saha sayısı.</translation>
     </message>
     <message>
         <location line="-656"/>
@@ -3581,7 +3557,7 @@ is already in the list.</source>
         <location line="+25"/>
         <location line="+23"/>
         <source>Odd field count.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tek alan sayısı.</translation>
     </message>
     <message>
         <location line="-655"/>
@@ -3593,7 +3569,7 @@ is already in the list.</source>
         <location line="+188"/>
         <location line="+168"/>
         <source>Rv Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rv Geçersiz.</translation>
     </message>
     <message>
         <location line="-640"/>
@@ -3609,7 +3585,7 @@ is already in the list.</source>
         <location line="+33"/>
         <location line="+62"/>
         <source>Rv1 Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rv1 Geçersiz.</translation>
     </message>
     <message>
         <location line="-503"/>
@@ -3627,7 +3603,7 @@ is already in the list.</source>
         <location line="+33"/>
         <location line="+35"/>
         <source>Rv2 Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rv2 Geçersiz.</translation>
     </message>
     <message>
         <location line="-510"/>
@@ -3640,7 +3616,7 @@ is already in the list.</source>
         <location line="+49"/>
         <location line="+67"/>
         <source>Equal positions.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Eşit pozisyonlar.</translation>
     </message>
     <message>
         <location line="-265"/>
@@ -3653,7 +3629,7 @@ is already in the list.</source>
         <location line="+22"/>
         <location line="+33"/>
         <source>Radius Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yarıçap Geçersiz.</translation>
     </message>
     <message>
         <location line="-298"/>
@@ -3663,22 +3639,22 @@ is already in the list.</source>
         <location line="+35"/>
         <location line="+150"/>
         <source>Angle Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Açı Geçersiz.</translation>
     </message>
     <message>
         <location line="-527"/>
         <source>Angle1 Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Açı1 Geçersiz.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angle2 Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Açı2 Geçersiz.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Equal angles.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Eşit açılar.</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -3688,7 +3664,7 @@ is already in the list.</source>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 1-2.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Eşit pozisyonlar 1-2.</translation>
     </message>
     <message>
         <location line="-286"/>
@@ -3700,7 +3676,7 @@ is already in the list.</source>
         <location line="+32"/>
         <location line="+35"/>
         <source>Rv3 Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rv3 Geçersiz.</translation>
     </message>
     <message>
         <location line="-354"/>
@@ -3710,7 +3686,7 @@ is already in the list.</source>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 1-3.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Eşit pozisyonlar 1-3.</translation>
     </message>
     <message>
         <location line="-287"/>
@@ -3720,7 +3696,7 @@ is already in the list.</source>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 2-3.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Eşit pozisyonlar 2-3.</translation>
     </message>
     <message>
         <location line="-284"/>
@@ -3728,28 +3704,28 @@ is already in the list.</source>
         <location line="+168"/>
         <location line="+2"/>
         <source>Near co-linear positions.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yakın eş doğrusal pozisyonlar.</translation>
     </message>
     <message>
         <location line="-168"/>
         <source>Arc Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ark Geçersiz.</translation>
     </message>
     <message>
         <location line="+46"/>
         <location line="+47"/>
         <source>Center Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Merkez Geçersiz.</translation>
     </message>
     <message>
         <location line="-21"/>
         <source>Radius too small.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yarıçap çok küçük.</translation>
     </message>
     <message>
         <location line="+98"/>
         <source>Circle Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Daire Geçersiz.</translation>
     </message>
     <message>
         <location line="+79"/>
@@ -3757,45 +3733,45 @@ is already in the list.</source>
         <location line="+30"/>
         <location line="+35"/>
         <source>Rv4 Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rv4 Geçersiz.</translation>
     </message>
     <message>
         <location line="-97"/>
         <location line="+33"/>
         <source>Equal positions 1-4.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Eşit pozisyonlar 1-4.</translation>
     </message>
     <message>
         <location line="-32"/>
         <location line="+33"/>
         <source>Equal positions 2-4.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Eşit pozisyonlar 2-4.</translation>
     </message>
     <message>
         <location line="-32"/>
         <location line="+33"/>
         <source>Equal positions 3-4.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Eşit pozisyonlar 3-4.</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Size Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Boyut Geçersiz.</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Size in X Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">X cinsinden boyut Geçersiz.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Size in Y Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Y cinsinden boyut Geçersiz.</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Polygon: less than 5 references.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Poligon: 5'ten az referans.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3803,192 +3779,192 @@ is already in the list.</source>
         <location line="+26"/>
         <location line="+28"/>
         <source>Rv%1 Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rv%1 Geçersiz.</translation>
     </message>
     <message>
         <location line="-61"/>
         <source>Polyline, less than 2 references.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çoklu çizgi, 2'den az referans.</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Bulge%1 Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bulge%1 Geçersiz.</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Unsupported QCAD Professional feature.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Desteklenmeyen QCAD Professional özelliği.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>3th degree fit point Spline, less than 3 references.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">3. derece uyum noktası Spline, 3'ten az referans.</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>3th degree control point Spline, less than 4 references.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">3. derece kontrol noktası Spline, 4'ten az referans.</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Height Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yükseklik Geçersiz.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Width Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Genişlik Geçersiz.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Vert. alignment Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vert. hizalama Geçersiz.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Horz. alignment Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Horz. hizalama Geçersiz.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Drawing direction Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çizim yönü Geçersiz.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Line spacing style Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Satır aralığı stili Geçersiz.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Line spacing Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Satır aralığı Geçersiz.</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Unsupported method. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Desteklenmeyen yöntem. Metin satırı: %1</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Error with first optional list.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İlk isteğe bağlı liste ile ilgili hata.</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Error with second optional list.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İkinci isteğe bağlı liste ile ilgili hata.</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Not a correct entry, ignored. Text line: %1 &gt; %2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Doğru bir giriş değil, yok sayıldı. Metin satırı: %1 &gt; %2</translation>
     </message>
     <message>
         <location line="+80"/>
         <source>Casted entries: %1 out of %2 text lines</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dökülen girişler: %2 metin satırından %1'i</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Nothing casted.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bir şey çıkmadı.</translation>
     </message>
     <message>
         <location line="+227"/>
         <source>Attributes empty. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Öznitelikler boş. Metin satırı: %1</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Not a correct layer name, ignored. Text line: %1%2 Name: %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Doğru bir katman adı değil, yok sayıldı. Metin satırı: %1%2 Ad: %3</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Layer doesn&apos;t exist, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Katman mevcut değil, yok sayıldı. Metin satırı: %1%2 Katman: %3</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Not a correct color, ignored. Text line: %1%2 Color: %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Doğru renk değil, yok sayıldı. Metin satırı: %1%2 Renk: %3</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Doğru bir Satır Ağırlığı değil, yok sayıldı. Metin satırı: %1%2 Ağırlık: %3</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Not a correct Linetype, ignored. Text line: %1%2 Type: %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Doğru bir Linetype değil, yok sayıldı. Metin satırı: %1%2 Tür: %3</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype scale, ignored. Text line: %1%2 Scale: %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Doğru bir Linetype ölçeği değil, yok sayıldı. Metin satırı: %1%2 Ölçek: %3</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Unsupported attribute, ignored. Text line: %1 &gt; %2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Desteklenmeyen öznitelik, yok sayıldı. Metin satırı: %1 &gt; %2</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>Not a correct layer name. Text line: %1%2 Name: %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Doğru bir katman adı değil. Metin satırı: %1%2 Ad: %3</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Parent layer doesn&apos;t exist. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Üst katman mevcut değil. Metin satırı: %1%2 Katman: %3</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Not a correct color. Text line: %1%2 Color: %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Doğru renk değil. Metin satırı: %1%2 Renk: %3</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Lineweight. Text line: %1%2 Weight: %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Doğru bir Satır Ağırlığı değil. Metin satırı: %1%2 Ağırlık: %3</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype. Text line: %1%2 Type: %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Doğru bir Linetype değil. Metin satırı: %1%2 Tür: %3</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Add/Update layer ignored.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Katman ekle/güncelle yok sayıldı.</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Updated layer: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Güncellenen katman: %1</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Added new layer: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yeni katman eklendi: %1</translation>
     </message>
     <message>
         <location line="-447"/>
         <source>Importing CSV complete. Command ended.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">CSV içe aktarma tamamlandı. Komut sona erdi.</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Draw from CSV</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">CSV'den çizim</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>CSV</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">CSV</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -3998,12 +3974,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
         <source>&amp;Draw from CSV</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">CSV'den çizim</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Draws entities based on textual entries in a CSV file</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">CSV dosyasındaki metinsel girişlere dayalı olarak varlıkları çizer</translation>
     </message>
 </context>
 <context>
@@ -4011,12 +3987,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+92"/>
         <source>&amp;Draw Order</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çekiliş Sırası</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Draw Order</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çekiliş Sırası</translation>
     </message>
 </context>
 <context>
@@ -4024,7 +4000,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+70"/>
         <source>First vertex</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İlk tepe noktası</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -4084,7 +4060,7 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Arc with radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yarıçaplı yay:</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4094,7 +4070,7 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>Sweep</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Süpürme</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -4104,7 +4080,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolylineInit.js" line="+2"/>
         <source>&amp;Draw Polyline</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çoklu Çizgi Çiz</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4117,7 +4093,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DrawingPreferences.js" line="+43"/>
         <source>Drawing &amp;Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çizim Tercihleri</translation>
     </message>
 </context>
 <context>
@@ -4144,12 +4120,12 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2129"/>
+        <location line="+2127"/>
         <source>Cancel</source>
         <translation type="unfinished">İptal</translation>
     </message>
     <message>
-        <location line="-2128"/>
+        <location line="-2126"/>
         <source>Done</source>
         <translation type="unfinished">Bitti</translation>
     </message>
@@ -4157,7 +4133,7 @@ is already in the list.</source>
         <location line="+277"/>
         <location line="+144"/>
         <source>Active Tool:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Aktif Araç:</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -4167,32 +4143,32 @@ is already in the list.</source>
     <message>
         <location line="+667"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Seçenekler</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Main Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ana Araçlar</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>CAD Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">CAD Araçları</translation>
     </message>
     <message>
         <location line="+577"/>
         <source>Invalid position</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçersiz konum</translation>
     </message>
     <message>
-        <location line="+177"/>
+        <location line="+175"/>
         <source>Entity is not in working set.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varlık çalışma kümesinde değil.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity is on a locked layer.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varlık kilitli bir katmanda.</translation>
     </message>
     <message>
         <location line="+225"/>
@@ -4200,84 +4176,84 @@ is already in the list.</source>
         <translation type="unfinished">Uzunluk:</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+62"/>
         <source>Entity is not a block reference.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varlık bir blok referansı değildir.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line or arc.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varlık bir çizgi veya yay değildir.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varlık bir çizgi, yay veya çoklu çizgi değildir.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varlık bir çizgi değildir.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varlık bir yay değildir.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc or circle.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varlık bir yay veya daire değildir.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or circle.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varlık bir çizgi, yay veya daire değildir.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, spline, ellipse arc or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varlık bir çizgi, yay, spline, elips yay veya çoklu çizgi değildir.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc, circle or ellipse.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varlık bir yay, daire veya elips değildir.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle or ellipse.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varlık bir çizgi, yay, daire veya elips değildir.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varlık bir çizgi, yay, daire, elips veya çoklu çizgi değildir.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or spline.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varlık bir çizgi, yay, daire, elips veya spline değildir.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, spline or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varlık bir çizgi, yay, daire, spline veya çoklu çizgi değildir.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varlık bir çizgi, yay, daire, elips, spline veya çoklu çizgi değildir.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varlık bir çoklu çizgi değildir.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a spline with fit points.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varlık, uyum noktaları olan bir spline değildir.</translation>
     </message>
 </context>
 <context>
@@ -4285,33 +4261,33 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+58"/>
         <source>Show ECMAScript Shell</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ECMAScript Kabuğunu Göster</translation>
     </message>
     <message>
-        <location line="+56"/>
+        <location line="+55"/>
         <source>&amp;Script Shell</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Senaryo Kabuğu</translation>
     </message>
     <message>
         <location line="+35"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Senaryo Kabuğu</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShellDialog.ui" line="+20"/>
         <source>ECMAScript Shell</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ECMAScript Kabuk</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You are about to enable the ECMAScript Shell.&lt;/p&gt;&lt;p&gt;Through the ECMAScript Shell you can &lt;span style=&quot; color:#ff0000;&quot;&gt;modify your drawings&lt;/span&gt; but also &lt;span style=&quot; color:#ff0000;&quot;&gt;delete files&lt;/span&gt; or &lt;span style=&quot; color:#ff0000;&quot;&gt;crash the application&lt;/span&gt; which can lead to &lt;span style=&quot; color:#ff0000;&quot;&gt;data loss&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;For inexperienced programmers, it is recommended to limit the use of the ECMAScript shell to the &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; which is considered to be &quot;safe&quot; to use.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ECMAScript Shell'i etkinleştirmek üzeresiniz.&lt;/p&gt;&lt;p&gt;ECMAScript Shell aracılığıyla &lt;span style=&quot; color:#ff0000;&quot;&gt;çizimlerinizi&lt;/span&gt; değiştirebilir, aynı zamanda &lt;span style=&quot; color:#ff0000;&quot;&gt;dosyaları silebilir&lt;/span&gt; veya &lt;span style=&quot; color:#ff0000;&quot;&gt;uygulamayı çökertebilir&lt;/span&gt;, bu da &lt;span style=&quot; color:#ff0000;&quot;&gt;veri kaybına&lt;/span&gt; yol açabilir.&lt;/p&gt;&lt;p&gt;Tecrübesiz programcılar için ECMAScript kabuğunun kullanımının &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; ile sınırlandırılması tavsiye edilir.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Don&apos;t show this dialog again</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bu iletişim kutusunu bir daha gösterme</translation>
     </message>
 </context>
 <context>
@@ -4363,12 +4339,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatch.js" line="+61"/>
         <source>Choose hatch</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kapak seçin</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatchInit.js" line="+2"/>
         <source>Edit &amp;Hatch</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Hatch'i Düzenle</translation>
     </message>
 </context>
 <context>
@@ -4376,7 +4352,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/EditLayer/EditLayerInit.js" line="+2"/>
         <source>&amp;Edit Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Katmanı Düzenle</translation>
     </message>
 </context>
 <context>
@@ -4402,7 +4378,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/EditText/EditText.js" line="+61"/>
         <source>Choose text</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Metin seçin</translation>
     </message>
 </context>
 <context>
@@ -4688,7 +4664,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/BlockExamples/ExAddBlock/ExAddBlock.js" line="+85"/>
         <source>&amp;Create Block</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blok Oluştur</translation>
     </message>
 </context>
 <context>
@@ -4696,7 +4672,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/ExAddLayer/ExAddLayer.js" line="+44"/>
         <source>Added layer &quot;MyLayer&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&quot;MyLayer&quot; katmanı eklendi</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -4709,17 +4685,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ExDeleteObject.js" line="+59"/>
         <source>Deleted line with ID %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ID %1 ile silinmiş satır</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>You can use &lt;i&gt;Edit &gt; Undo&lt;/i&gt; to restore the line entity.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Satır varlığını geri yüklemek için &lt;i&gt;Edit &gt; Geri Al&lt;/i&gt; seçeneğini kullanabilirsiniz.</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Add and Delete Line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Satır Ekleme ve Silme</translation>
     </message>
 </context>
 <context>
@@ -4727,7 +4703,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExDirListing/ExDirListing.js" line="+66"/>
         <source>&amp;Directory Listing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dizin Listesi</translation>
     </message>
 </context>
 <context>
@@ -4735,7 +4711,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExDrawColors/ExDrawColors.js" line="+66"/>
         <source>Draw &amp;Colors</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Renkleri Çizin</translation>
     </message>
 </context>
 <context>
@@ -4743,7 +4719,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExDrawFonts/ExDrawFonts.js" line="+85"/>
         <source>Draw &amp;Fonts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yazı Tipleri Çizin</translation>
     </message>
 </context>
 <context>
@@ -4751,17 +4727,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExDumpPolyline/ExDumpPolyline.js" line="+48"/>
         <source>Clockwise polyline:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Saat yönünde çoklu çizgi:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Counterclockwise polyline:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Saat yönünün tersine çoklu çizgi:</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>&amp;Output Polyline Vertices</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çıktı Çoklu Çizgi Köşeleri</translation>
     </message>
 </context>
 <context>
@@ -4769,12 +4745,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/ExLayerCustomProperty/ExLayerCustomProperty.js" line="+43"/>
         <source>Added custom property &quot;MyCustomProperty&quot; to layer &quot;0&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&quot;0&quot; katmanına &quot;MyCustomProperty&quot; özel özelliği eklendi.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Add Custom Property to a Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Katmana Özel Özellik Ekleme</translation>
     </message>
 </context>
 <context>
@@ -4787,17 +4763,17 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Second corner</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İkinci köşe</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kırlangıç Kuyruğu Mafsal</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw a dovetail joint</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bir kırlangıç kuyruğu bağlantısı çizin</translation>
     </message>
 </context>
 <context>
@@ -4805,7 +4781,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExMainWindow/ExMainWindow.js" line="+50"/>
         <source>&amp;Main Window</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ana Pencere</translation>
     </message>
 </context>
 <context>
@@ -4813,7 +4789,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/ExMandelbrot/ExMandelbrot.js" line="+48"/>
         <source>&amp;Mandelbrot Example</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mandelbrot Örneği</translation>
     </message>
 </context>
 <context>
@@ -4821,7 +4797,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/ExMathSpiral/ExMathSpiral.js" line="+73"/>
         <source>&amp;Spiral</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spiral</translation>
     </message>
 </context>
 <context>
@@ -4829,12 +4805,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal/ExMinimal.js" line="+12"/>
         <source>Hello World.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Merhaba Dünya.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Minimal Example</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Minimal Örnek</translation>
     </message>
 </context>
 <context>
@@ -4842,12 +4818,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.js" line="+51"/>
         <source>&amp;Minimal Example 2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Minimal Örnek 2</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+9"/>
         <source>&amp;Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yarıçap:</translation>
     </message>
 </context>
 <context>
@@ -4855,7 +4831,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExProcess/ExProcess.js" line="+96"/>
         <source>&amp;Run Process</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çalıştırma Süreci</translation>
     </message>
 </context>
 <context>
@@ -4863,7 +4839,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExRegisterFileExporter/ExRegisterFileExporter.js" line="+37"/>
         <source>Example Files %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Örnek Dosyalar %1</translation>
     </message>
     <message>
         <location line="+84"/>
@@ -4873,12 +4849,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Registered a file exporter for file type &quot;.example&quot;. Use File &gt; Save As to see the filter in action.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&quot;.example&quot; dosya türü için bir dosya dışa aktarıcı kaydetti. Filtreyi çalışırken görmek için Dosya &gt; Farklı Kaydet seçeneklerini kullanın.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Register File Exporter</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dosya İhracatçısını Kaydet</translation>
     </message>
 </context>
 <context>
@@ -4886,12 +4862,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExRegisterFileImporter/ExRegisterFileImporter.js" line="+37"/>
         <source>Example Files %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Örnek Dosyalar %1</translation>
     </message>
     <message>
         <location line="+54"/>
         <source>Read from file: &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dosyadan oku: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -4901,12 +4877,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Registered a file importer for file type &quot;.example&quot;. Use File &gt; Open to see the filter in action.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&quot;.example&quot; dosya türü için bir dosya içe aktarıcı kaydetti. Filtreyi çalışırken görmek için Dosya &gt; Aç seçeneğini kullanın.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Register File Importer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dosya İçe Aktarıcıyı Kaydet</translation>
     </message>
 </context>
 <context>
@@ -4914,27 +4890,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExResizeWindow/ExResizeWindow.js" line="+60"/>
         <source>&amp;Resize Window</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pencereyi Yeniden Boyutlandır</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExResizeWindow/ExResizeWindow.ui" line="+14"/>
         <source>Enter Size</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Boyut Girin</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Size:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Boyut:</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>1280x720 (720p) 16:9</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">1280x720 (720p) 16:9</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>1920x1080 (1080p, Full HD) 16:9</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">1920x1080 (1080p, Full HD) 16:9</translation>
     </message>
 </context>
 <context>
@@ -4947,7 +4923,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Draw text</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Metin çizin</translation>
     </message>
 </context>
 <context>
@@ -4955,17 +4931,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExThreePoints/ExThreePoints.js" line="+58"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pozisyon</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Three Points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Üç Nokta</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw three points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Üç puan çizin</translation>
     </message>
 </context>
 <context>
@@ -4980,7 +4956,7 @@ is already in the list.</source>
     <message>
         <location line="+67"/>
         <source>&amp;Transaction Listener</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İşlem Dinleyicisi</translation>
     </message>
 </context>
 <context>
@@ -4988,7 +4964,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExWidget/ExWidget.js" line="+28"/>
         <source>&amp;Widget</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Widget</translation>
     </message>
 </context>
 <context>
@@ -5001,12 +4977,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Export XML</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">XML Dışa Aktar</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlExport/ExXmlExportInit.js" line="+2"/>
         <source>&amp;Export XML</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">XML Dışa Aktar</translation>
     </message>
 </context>
 <context>
@@ -5019,12 +4995,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Import XML</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">XML İçe Aktar</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlImport/ExXmlImportInit.js" line="+2"/>
         <source>&amp;Import XML</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">XML İçe Aktar</translation>
     </message>
 </context>
 <context>
@@ -5032,7 +5008,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/Examples.js" line="+55"/>
         <source>Script &amp;Examples</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Senaryo Örnekleri</translation>
     </message>
 </context>
 <context>
@@ -5040,57 +5016,62 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Explode/Explode.js" line="+30"/>
         <source>Modify</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Değiştirmek</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Explode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Patlamak</translation>
+    </message>
+    <message>
+        <location line="+613"/>
+        <source>Ignored hatch in block reference with non-uniform scale factors</source>
+        <translation type="unfinished">Tekdüze olmayan ölçek faktörleri ile blok referansında yok sayılan tarama</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
         <source>&amp;Explode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Patlamak</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+137"/>
         <source>Spline approximation tolerance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spline yaklaşım toleransı:</translation>
     </message>
     <message>
         <location line="-118"/>
         <source>Explode splines to polylines with line segments</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spline'ları çizgi segmentleriyle çoklu çizgilere patlatın</translation>
     </message>
     <message>
         <location line="+111"/>
         <source>Ellipse segments (per full ellipse):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Elips segmentleri (tam elips başına):</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Convert splines from texts to arcs or lines if appropriate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uygunsa spline'ları metinlerden yaylara veya çizgilere dönüştürün</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Explode circles into polylines with two half circles</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Daireleri iki yarım daire ile çoklu çizgilere patlatın</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Explode text glyphs to polylines</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Metin gliflerini çoklu çizgilere patlatın</translation>
     </message>
     <message>
         <location line="-80"/>
         <source>Explode multiline texts into multiple simple text blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çok satırlı metinleri birden fazla basit metin bloğuna dönüştürme</translation>
     </message>
     <message>
         <location line="-41"/>
         <source>Spline segments:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spline segmentleri:</translation>
     </message>
 </context>
 <context>
@@ -5127,7 +5108,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&quot;%1&quot; dosyası zaten mevcut. Üzerine yazmak istiyor musunuz?</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -5141,7 +5122,7 @@ is already in the list.</source>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
         <location line="+243"/>
         <source>%1 First Start</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">1 İlk Başlangıç</translation>
     </message>
     <message>
         <location line="-5"/>
@@ -5194,17 +5175,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1115"/>
         <source>Add Active SubLayer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Aktif Alt Katman Ekle</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>FP added layer:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">FP katman ekledi:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
         <source>Paints over selection mimicking a roller stamp</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Silindir damgasını taklit ederek seçimin üzerini boyar</translation>
     </message>
 </context>
 <context>
@@ -5212,287 +5193,287 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Boyacı Seçenekleri</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ressamlar döküm seçenekleri</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Flip Painters</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Flip Painters</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cast in group</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Grup içinde rol</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alt katman üzerine döküm</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Add Begin Apex</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Begin Apex Ekle</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add End Apex</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">End Apex Ekle</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add Insertions</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Eklemeler Ekleme</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ressam seti</translation>
     </message>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ayna boyacıları, taban çizgisi üzerinde.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Group all castings to one operation.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tüm dökümleri tek bir işlem için gruplayın.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Açık formlar üzerinde bir başlangıç tepe noktası oluşturarak başlayın.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Açık formlara bir uç tepe noktası dökerek sonlandırın.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add insertions in between eg. spacers, knots. (Not implemented)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Araya eklemeler ekleyin, örneğin ara parçalar, düğümler. (Uygulanmadı)</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Preview of painters.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ressamların önizlemesi.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Boyacı setini seçin.</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>CurtainRope</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">CurtainRope</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalBar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">OrtogonalBar</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalPointsGlobal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">OrthogonalPointsGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWave</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">SinüzoidDalga</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWaveGlobal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">SinüzoidDalgaGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>3PhaseWaveGlobal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">3PhaseWaveGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>TriangleWave</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">TriangleWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SawtoothWave</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">SawtoothWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqaureWave</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">SqaureWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SteppedWave</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">SteppedWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShape</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">SqauredShape</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShapeFlexing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">SqauredShapeFlexing</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>AllPainterDataTypes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">AllPainterDataTypes</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Insertion type</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ekleme tipi</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Preview of insertion.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ekleme önizlemesi.</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Select Insertion or Enter void space. (Not implemented)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ekleme'yi seçin veya Boş alan girin. (Uygulanmadı)</translation>
     </message>
     <message>
         <location line="+277"/>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Versiyon</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>FlexPainter Beta 0.42e © CVH 2020 </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">FlexPainter Beta 0.42e © CVH 2020</translation>
     </message>
     <message>
         <location line="+272"/>
         <source>Document Units.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Belge Birimleri.</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Boyacı genişliğini girin. (+0)</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ana boyacı adım boyutunu girin. (+0)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Enter main painter length. (+)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ana boyacı uzunluğunu girin. (+)</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Keep painters proportional.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Boyacıları orantılı tutun.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Select percentage of Stepsize.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Adım Boyutunun yüzdesini seçin.</translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Adapt scaling f 1.00-0.90 to fit the whole form.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tüm forma uyması için f 1.00-0.90 ölçeklendirmesini uyarlayın.</translation>
     </message>
     <message>
         <location line="+92"/>
         <source>Verbose info. (persistent on)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ayrıntılı bilgi. (kalıcı açık)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Temel varlıklar üzerinde boyalı olarak silindi. (kalıcı kapalı)</translation>
     </message>
     <message>
         <location line="-933"/>
         <source>&lt;Enter space size&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;Alan boyutunu girin&gt;</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Curtain Rope Knot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Perde İp Düğümü</translation>
     </message>
     <message>
         <location line="+543"/>
         <source>#Undefined#</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">#Tanımsız#</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Width : </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Genişlik :</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">0</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tekrarlayan Ressam seçenekleri</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Stepsize :</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Adım boyutu :</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Length :</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uzunluk :</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Closed Forms shifting % :</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kapalı Formlar % kaydırma :</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Open forms scaling options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Formları ölçeklendirme seçeneklerini açın</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Dynamically scale to fit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sığdırmak için dinamik olarak ölçeklendirin</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Align with begin</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Başlangıç ile hizalayın</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Centered</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Merkezlenmiş</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Align with End</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uç ile Hizala</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -5510,7 +5491,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
         <source>&amp;FlexPainter</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">FlexPainter</translation>
     </message>
 </context>
 <context>
@@ -5518,7 +5499,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/FlipHorizontal/FlipHorizontalInit.js" line="+2"/>
         <source>Flip Hori&amp;zontal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yatay Çevirme</translation>
     </message>
 </context>
 <context>
@@ -5526,7 +5507,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/FlipVertical/FlipVerticalInit.js" line="+2"/>
         <source>Flip Verti&amp;cal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dikey Çevirme</translation>
     </message>
 </context>
 <context>
@@ -5534,22 +5515,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscModify/FlushBackLog/FlushBackLog.js" line="+38"/>
         <source>Flush Undo History</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geri Alma Geçmişini Temizle</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Are you sure that you want to flush the undo / redo transaction history?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geri alma / yineleme işlem geçmişini temizlemek istediğinizden emin misiniz?</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>This cannot be undone.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bu geri alınamaz.</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Flush &amp;Undo History</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geri Alma Geçmişini Temizle</translation>
     </message>
 </context>
 <context>
@@ -5585,17 +5566,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/LibraryBrowserScripts/CubeCuttingOut.ui" line="+14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Form</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Cube size:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Küp boyutu:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Draw glue lap</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tutkal turu çizin</translation>
     </message>
 </context>
 <context>
@@ -5665,7 +5646,7 @@ is already in the list.</source>
     <message>
         <location line="+28"/>
         <source>Edit block reference in-place</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blok referansını yerinde düzenleme</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -5675,7 +5656,7 @@ is already in the list.</source>
     <message>
         <location line="+15"/>
         <source>Tolerance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tolerans:</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5700,47 +5681,47 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Cursor Range</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İmleç Aralığı</translation>
     </message>
     <message>
         <location line="+102"/>
         <source>Cursor range for picking entities:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varlıkları seçmek için imleç aralığı:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Cursor range for snap:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çıtçıt için imleç aralığı:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Highlight entity within range</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Menzil içindeki varlığı vurgulayın</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+32"/>
         <source>Origin</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Köken</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show large origin axis</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Büyük orijin eksenini göster</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Rulers and Scrollbars</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Cetveller ve Kaydırma Çubukları</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show rulers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Cetvelleri göster</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Show scrollbars</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kaydırma çubuklarını göster</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5750,192 +5731,192 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>Show crosshairs</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Artı işaretlerini göster</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Show large crosshairs</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Büyük artı işaretlerini göster</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>This can be used if cursors are not visible on external monitors</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İmleçler harici monitörlerde görünmüyorsa bu kullanılabilir</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use system cursors</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sistem imleçlerini kullanma</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Auto Zoom</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Otomatik Yakınlaştırma</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Margin (px):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Marj (px):</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>Auto zoom on load</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yüklemede otomatik yakınlaştırma</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Color Adjustment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Renk Ayarı</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Color lightness threshold:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Renk açıklığı eşiği:</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Prevent white on white / black on black display</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Beyaz üzerine beyaz / siyah üzerine siyah görüntüyü önleyin</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Disable for printing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yazdırma için devre dışı bırak</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Linetypes and Lineweights</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çizgi Tipleri ve Çizgi Ağırlıkları</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Default lineweight:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varsayılan çizgi ağırlığı:</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Automatically use screen based linetypes in model view</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Model görünümünde ekran tabanlı çizgi türlerini otomatik olarak kullan</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Auto switch to screen based linetypes in model view</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Model görünümünde ekran tabanlı çizgi tiplerine otomatik geçiş</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Scale linetype patterns by line weight</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çizgi tipi desenlerini çizgi ağırlığına göre ölçeklendirme</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çizgi ağırlığı için desen ölçeği 0,00 mm:</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Apply line weight to points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Noktalara çizgi ağırlığı uygulama</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Display and Performance</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ekran ve Performans</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Anti-aliasing on by default</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Anti-aliasing varsayılan olarak açık</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Use full resolution for Retina / high resolution display</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Retina / yüksek çözünürlüklü ekran için tam çözünürlüğü kullanın</translation>
     </message>
     <message>
         <location line="+514"/>
         <source>Reference point size (px):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Referans noktası boyutu (px):</translation>
     </message>
     <message>
         <location line="+228"/>
         <source>Persistent selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kalıcı seçim</translation>
     </message>
     <message>
         <location line="-626"/>
         <source>Number of preview entities:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Önizleme varlıklarının sayısı:</translation>
     </message>
     <message>
         <location line="+61"/>
         <source>Display arcs as lines below this angle (degrees):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yayları bu açının (derece) altında çizgiler olarak görüntüleyin:</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yayları oluşturmak için minimum açı adımı (derece):</translation>
     </message>
     <message>
         <location line="+85"/>
         <source>Display entities with more than N dashes as continuous:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">N'den fazla tire içeren varlıkları sürekli olarak görüntüleyin:</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Timeout for hatch rendering:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kapak oluşturma için zaman aşımı:</translation>
     </message>
     <message>
         <location line="-361"/>
         <source>auto</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">otomatik</translation>
     </message>
     <message>
         <location line="-11"/>
         <source>Number of threads:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İplik sayısı:</translation>
     </message>
     <message>
         <location line="+437"/>
         <source>Maximum selected entities with reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Referans noktaları ile maksimum seçilen varlıklar:</translation>
     </message>
     <message>
         <location line="+147"/>
         <source>Text height threshold (px):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Metin yüksekliği eşiği (px):</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Maximum selected entities with displayed reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Görüntülenen referans noktaları ile maksimum seçilen varlıklar:</translation>
     </message>
     <message>
         <location line="+73"/>
         <source>Selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Seçim</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GridPreferences/PreferencesPage.ui" line="+34"/>
         <source>Automatically scale grid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Izgarayı otomatik olarak ölçeklendir</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Automatically scale meta grid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Meta ızgarayı otomatik olarak ölçeklendir</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Solid grid lines</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Düz ızgara çizgileri</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Minimal grid spacing (px):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Minimum ızgara aralığı (px):</translation>
     </message>
 </context>
 <context>
@@ -5948,7 +5929,7 @@ is already in the list.</source>
     <message>
         <location line="+12"/>
         <source>Background:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Arka plan:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -5958,87 +5939,87 @@ is already in the list.</source>
     <message>
         <location line="+18"/>
         <source>Crosshairs:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nişangah:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Inactive crosshairs:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Aktif olmayan artı işaretleri:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Origin</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Köken</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Origin:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Köken:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Relative zero:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bağıl sıfır:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Grid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Izgara</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Grid:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Izgara:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Meta grid:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Meta ızgara:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Seçim</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Primary selection color:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Birincil seçim rengi:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use secondary selection color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İkincil seçim rengini kullan</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Secondary selection color:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İkincil seçim rengi:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Primary reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Birincil referans noktaları:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Secondary reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İkincil referans noktaları:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Selection box border:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Seçim kutusu kenarlığı:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Selection box fill:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Seçim kutusu dolgusu:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Cross-selection box fill:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çapraz seçim kutusu dolgusu:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -6053,17 +6034,17 @@ is already in the list.</source>
     <message>
         <location line="+47"/>
         <source>Tertiary reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Üçüncül referans noktaları:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Snap Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çıtçıtlı Araçlar</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Snap label:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çıtçıtlı etiket:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6073,7 +6054,7 @@ is already in the list.</source>
     <message>
         <location line="+12"/>
         <source>Measurements and labels:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ölçüler ve etiketler:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6083,12 +6064,12 @@ is already in the list.</source>
     <message>
         <location line="+12"/>
         <source>Auxiliary shapes:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yardımcı şekiller:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Working set fading factor:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çalışma seti solma faktörü:</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -6098,7 +6079,7 @@ is already in the list.</source>
     <message>
         <location line="+12"/>
         <source>Zoom box border:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yakınlaştırma kutusu kenarlığı:</translation>
     </message>
 </context>
 <context>
@@ -6106,17 +6087,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+50"/>
         <source>Ruler font:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Cetvel yazı tipi:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Snap label font:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Snap etiket yazı tipi:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Info label font:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bilgi etiketi yazı tipi:</translation>
     </message>
 </context>
 <context>
@@ -6167,7 +6148,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Appearance</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Görünüş</translation>
     </message>
 </context>
 <context>
@@ -6180,7 +6161,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Grid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Izgara</translation>
     </message>
 </context>
 <context>
@@ -6194,7 +6175,7 @@ is already in the list.</source>
         <location line="+0"/>
         <location line="+2"/>
         <source>Grid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Izgara</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -6208,7 +6189,7 @@ is already in the list.</source>
         <location line="+22"/>
         <location line="+1"/>
         <source>auto</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">otomatik</translation>
     </message>
 </context>
 <context>
@@ -6316,7 +6297,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/HideAllLayers/HideAllLayersInit.js" line="+2"/>
         <source>&amp;Hide All Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tüm Katmanları Gizle</translation>
     </message>
 </context>
 <context>
@@ -6324,7 +6305,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/IOExamples.js" line="+51"/>
         <source>&amp;Import/Export</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İthalat/İhracat</translation>
     </message>
 </context>
 <context>
@@ -6382,7 +6363,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Image/ImageInit.js" line="+2"/>
         <source>&amp;Insert Bitmap</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bit Eşlem Ekle</translation>
     </message>
 </context>
 <context>
@@ -6420,12 +6401,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As block:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blok olarak:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Rotation:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rotasyon:</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -6455,7 +6436,7 @@ is already in the list.</source>
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tüm varlıkları&lt;br&gt;orijinal katman yerine&lt;br&gt;geçerli katmana yapıştırın</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -6493,12 +6474,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Import Points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İthalat Noktaları</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>&amp;Import Points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İthalat Noktaları</translation>
     </message>
 </context>
 <context>
@@ -6506,7 +6487,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroid.js" line="+78"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pozisyon</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6516,27 +6497,27 @@ is already in the list.</source>
     <message>
         <location line="+52"/>
         <source>2D point mass Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2B nokta kütlesi Centroid</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Undefined</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tanımsız</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroidInit.js" line="+19"/>
         <source>Add &amp;custom 2D centroid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Özel 2D centroid ekleyin</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Create a customizable 2D Centroid marker</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Özelleştirilebilir bir 2D Centroid işaretleyici oluşturun</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Creates a new point mass 2D Centroid marker customizable by dialog</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Diyalog kutusu ile özelleştirilebilen yeni bir nokta kütlesi 2D Centroid işaretleyici oluşturur</translation>
     </message>
 </context>
 <context>
@@ -6570,7 +6551,7 @@ is already in the list.</source>
         <translation>Ark, daire, elips veya eliptik yayı seç</translation>
     </message>
     <message>
-        <location line="+238"/>
+        <location line="+236"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -6712,7 +6693,7 @@ is already in the list.</source>
         <translation>Bir sonraki çokgen köşeyi ayarla</translation>
     </message>
     <message>
-        <location line="+123"/>
+        <location line="+121"/>
         <source>Polygon area:</source>
         <translation>Çokgen alanı:</translation>
     </message>
@@ -6742,131 +6723,131 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroid.js" line="+123"/>
         <source>No selection.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Seçim yok.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please, make a selection first. Command terminated.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lütfen önce bir seçim yapın. Komut sonlandırıldı.</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Not implemented. Command terminated.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uygulanmadı. Komut sonlandırıldı.</translation>
     </message>
     <message>
         <location line="+5"/>
         <location line="+2"/>
         <source>Area 2D Centroid script (v0.32) by CVH</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">CVH tarafından yazılan Area 2D Centroid betiği (v0.32)</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Arc sector mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ark sektörü modu</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Enclosed area:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kapalı alan:</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Approximated enclosed area:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yaklaşık kapalı alan:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Hatched area:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Taralı alan:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Total hatched area:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Toplam taralı alan:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Differential hatched area:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Diferansiyel taralı alan:</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>2D area Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2B alan Centroid</translation>
     </message>
     <message>
         <location line="-89"/>
         <source>Multiple entities in selection.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Seçimde birden fazla varlık.</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Centroid markers circle in selection. No results.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Centroid işaretleri seçimde daire içine alınır. Sonuç yok.</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Unsupported entity type. No results.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Desteklenmeyen varlık türü. Sonuç yok.</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>No results.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sonuç yok.</translation>
     </message>
     <message>
         <location line="+49"/>
         <location line="+6"/>
         <source>(Incl. approximations)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">(Yaklaşık değerler dahil)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Approximated centroid:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yaklaşık sentroid:</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Centroid:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Centroid:</translation>
     </message>
     <message>
         <location line="+207"/>
         <location line="+578"/>
         <source>Encountered an unsupported polyline with custom widths</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Özel genişliklere sahip desteklenmeyen bir çoklu çizgiyle karşılaşıldı</translation>
     </message>
     <message>
         <location line="-488"/>
         <location line="+596"/>
         <source>Encountered an unsupported polygon with custom widths</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Özel genişliklere sahip desteklenmeyen bir çokgenle karşılaşıldı</translation>
     </message>
     <message>
-        <location line="+687"/>
+        <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kapak döngüsünden işlenmemiş şekil.</translation>
     </message>
     <message>
         <location line="+70"/>
         <source>Self-intersecting shape near (%1). No Results.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">(%1) yakınında kendiliğinden kesişen şekil. Sonuç yok.</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+19"/>
         <source>&amp;Area Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alan Centroidi</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Create an area 2D Centroid for a selected entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Seçilen bir varlık için 2D Centroid alanı oluşturma</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Creates a new uniform areal density 2D Centroid marker and value labels for a selected entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Seçilen bir varlık için yeni bir tekdüze alansal yoğunluk 2D Centroid işaretleyici ve değer etiketleri oluşturur</translation>
     </message>
 </context>
 <context>
@@ -6874,7 +6855,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoBearing/InfoBearing.js" line="+41"/>
         <source>Reference</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Referans</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -6884,22 +6865,22 @@ is already in the list.</source>
     <message>
         <location line="+42"/>
         <source>Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mesafe:</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Bearing:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rulman:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Azimuth:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Azimut:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>&amp;Bearing / Azimuth</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kerteriz / Azimut</translation>
     </message>
 </context>
 <context>
@@ -6907,12 +6888,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroids.js" line="+52"/>
         <source>2D Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2D Centroid</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Point mass</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Noktasal kütle</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6922,37 +6903,37 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Wire</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tel</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>X position</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">X pozisyonu</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Y position</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Y pozisyonu</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Undefined</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tanımsız</translation>
     </message>
     <message>
         <location line="+428"/>
         <source>2D &amp;Centroids</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2D Merkezler</translation>
     </message>
     <message>
         <location line="-431"/>
         <source>Weighted</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ağırlıklı</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Density</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yoğunluk</translation>
     </message>
 </context>
 <context>
@@ -6960,12 +6941,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListener.js" line="+191"/>
         <source>2D Centroids transaction listener active.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2D Centroids işlem dinleyicisi etkin.</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Deactivated/removed the 2D Centroids transaction listener.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2D Centroids işlem dinleyicisi devre dışı bırakıldı/kaldırıldı.</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -6973,22 +6954,22 @@ is already in the list.</source>
         <location line="+40"/>
         <location line="+5"/>
         <source>Syntax error: &apos;%1&apos; parse error</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sözdizimi hatası: &apos;%1&apos; ayrıştırma hatası</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListenerInit.js" line="+19"/>
         <source>Centroid &amp;Listener</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Centroid Dinleyici</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2D Centroids için bir işlem dinleyicisini (De-)Etkinleştirin</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>(De-)Activate a transaction listener for binding changes applied to 2D Centroid markers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2B Centroid işaretleyicilere uygulanan bağlama değişiklikleri için bir işlem dinleyicisini (De-)Etkinleştirin</translation>
     </message>
 </context>
 <context>
@@ -7034,7 +7015,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoDistanceEP/InfoDistanceEPInit.js" line="+2"/>
         <source>Distance &amp;Entity to Point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varlıktan Noktaya Uzaklık</translation>
     </message>
 </context>
 <context>
@@ -7057,12 +7038,12 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Delta X:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Delta X:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delta Y:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Delta Y:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7072,7 +7053,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoDistancePP/InfoDistancePPInit.js" line="+2"/>
         <source>Distance &amp;Point to Point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mesafe Noktadan Noktaya</translation>
     </message>
 </context>
 <context>
@@ -7093,7 +7074,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoPositionPol/InfoPositionPolInit.js" line="+2"/>
         <source>&amp;Polar Position</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kutupsal Konum</translation>
     </message>
 </context>
 <context>
@@ -7101,7 +7082,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/InfoPositionPolRel/InfoPositionPolRelInit.js" line="+2"/>
         <source>Relative P&amp;olar Position</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bağıl Kutup Pozisyonu</translation>
     </message>
 </context>
 <context>
@@ -7117,131 +7098,131 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeighted.js" line="+105"/>
         <source>No selection.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Seçim yok.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please, make a selection first. Command terminated.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lütfen önce bir seçim yapın. Komut sonlandırıldı.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>2D Centroids weighted sum script (v0.24) by CVH.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">cVH tarafından 2D Centroids ağırlıklı toplam komut dosyası (v0.24).</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Encountered a missing coordinate value.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Eksik bir koordinat değeri ile karşılaşıldı.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Encountered an invalid coordinate value.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçersiz bir koordinat değeriyle karşılaşıldı.</translation>
     </message>
     <message>
         <location line="+8"/>
         <location line="+11"/>
         <location line="+10"/>
         <source>Encountered a missing &apos;%1&apos; value.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Eksik bir &apos;%1&apos; değeriyle karşılaşıldı.</translation>
     </message>
     <message>
         <location line="-16"/>
         <location line="+11"/>
         <location line="+17"/>
         <source>Encountered an invalid &apos;%1&apos; value.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçersiz bir &apos;%1&apos; değeriyle karşılaşıldı.</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Encountered an unknown marker type.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bilinmeyen bir işaretleyici türüyle karşılaşıldı.</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>No result.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sonuç yok.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>No 2D Centroid markers found in the selection.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Seçimde hiçbir 2D Centroid işaretleyici bulunamadı.</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Single marker selected, point mass = %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tek işaretleyici seçildi, nokta kütlesi = %1</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Density is undefined</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yoğunluk tanımsızdır</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Results in a division by zero.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sıfıra bölme ile sonuçlanır.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Results in a NaN value.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">NaN değeri ile sonuçlanır.</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Combined 2D Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kombine 2D Centroid</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Combined uniform point mass (%1):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Birleşik tekdüze nokta kütlesi (%1):</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Combined point mass (%1):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Birleşik nokta kütlesi (%1):</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>All densities are undefined</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tüm yoğunluklar tanımsızdır</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Some densities are undefined</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bazı yoğunluklar tanımsızdır</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>area (Informational):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">alanı (Bilgilendirici):</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>wire length (Informational):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">kablo uzunluğu (Bilgilendirici):</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Combined centroid:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Birleşik centroid:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+19"/>
         <source>&amp;Sum 2D Centroids weighted</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Toplam 2D Ağırlıklandırılmış Merkezler</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Combine selected 2D Centroid markers weighted</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Seçilen 2D Centroid işaretleyicileri ağırlıklı olarak birleştirin</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Combines selected 2D Centroid markers, summing all properties weighted</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ağırlıklandırılmış tüm özellikleri toplayarak seçilen 2B Centroid işaretleyicileri birleştirir</translation>
     </message>
 </context>
 <context>
@@ -7249,12 +7230,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroid.js" line="+121"/>
         <source>No selection.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Seçim yok.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please, make a selection first. Command terminated.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lütfen önce bir seçim yapın. Komut sonlandırıldı.</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -7265,89 +7246,89 @@ is already in the list.</source>
         <location line="+35"/>
         <location line="+7"/>
         <source>Approximated length:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yaklaşık uzunluk:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Unsupported entity type. No results.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Desteklenmeyen varlık türü. Sonuç yok.</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>No results.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sonuç yok.</translation>
     </message>
     <message>
         <location line="-71"/>
         <source>Wire 2D Centroid script (v0.32) by CVH</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">CVH tarafından hazırlanan Wire 2D Centroid betiği (v0.32)</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>2D Centroid markers circle in selection. No results.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2D Centroid işaretleyicileri seçimde daire. Sonuç yok.</translation>
     </message>
     <message>
         <location line="+55"/>
         <source>Results in a division by zero.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sıfıra bölme ile sonuçlanır.</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>2D wire Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2D tel Centroid</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Total length:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Toplam uzunluk:</translation>
     </message>
     <message>
         <location line="+4"/>
         <location line="+6"/>
         <source>(Incl. approximations)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">(Yaklaşık değerler dahil)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Approximated centroid:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yaklaşık sentroid:</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Centroid:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Centroid:</translation>
     </message>
     <message>
         <location line="+125"/>
         <source>Encountered an unsupported polyline with custom widths</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Özel genişliklere sahip desteklenmeyen bir çoklu çizgiyle karşılaşıldı</translation>
     </message>
     <message>
         <location line="+105"/>
         <source>Encountered an unsupported polygon with custom widths</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Özel genişliklere sahip desteklenmeyen bir çokgenle karşılaşıldı</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+19"/>
         <source>&amp;Wire Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tel Merkez</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Create a wire 2D Centroid for a selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bir seçim için tel 2D Centroid oluşturma</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Creates a new uniform linear density 2D Centroid marker and value labels for a selection of entities</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bir varlık seçimi için yeni bir tekdüze doğrusal yoğunluklu 2B Centroid işaretleyici ve değer etiketleri oluşturur</translation>
     </message>
 </context>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+337"/>
+        <location filename="../scripts/Information/Information.js" line="+335"/>
         <source>Information Tools</source>
         <translation>Bilgi Araçları</translation>
     </message>
@@ -7372,22 +7353,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/InputPreferences/PreferencesPage.ui" line="+19"/>
         <source>Decimal point:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ondalık nokta:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Cartesian coordinate separator:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kartezyen koordinat ayırıcı:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Polar coordinate separator:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kutupsal koordinat ayırıcı:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Relative coordinate prefix:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bağıl koordinat öneki:</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -7397,22 +7378,22 @@ is already in the list.</source>
     <message>
         <location line="+6"/>
         <source>Absolute Cartesian coordinate:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mutlak Kartezyen koordinat:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Absolute polar coordinate:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mutlak kutupsal koordinat:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Relative Cartesian coordinate:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Göreceli Kartezyen koordinat:</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Relative polar coordinate:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bağıl kutupsal koordinat:</translation>
     </message>
 </context>
 <context>
@@ -7425,13 +7406,13 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Coordinate Format</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Koordinat Formatı</translation>
     </message>
     <message>
         <location line="+15"/>
         <location line="+33"/>
         <source>Comma</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Virgül</translation>
     </message>
     <message>
         <location line="-33"/>
@@ -7439,37 +7420,37 @@ is already in the list.</source>
         <location line="+5"/>
         <location line="+21"/>
         <source>(Default)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">(Varsayılan)</translation>
     </message>
     <message>
         <location line="-31"/>
         <source>Semicolon</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Noktalı virgül</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Less Than</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Daha az</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>At</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">At</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Percentage</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yüzde</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dollar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dolar</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hash</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Hash</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -7576,7 +7557,7 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>Adjusted invalid block name to &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçersiz blok adı &quot;%1&quot; olarak ayarlandı</translation>
     </message>
     <message>
         <location line="+69"/>
@@ -7645,6 +7626,31 @@ is already in the list.</source>
         <location filename="../scripts/Block/InsertScriptItem/InsertScriptItemInit.js" line="+2"/>
         <source>Insert &amp;Script</source>
         <translation>&amp;Betik Ekle</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+66"/>
+        <source>Cannot read file:</source>
+        <translation type="unfinished">Dosya okunamıyor:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>No constructor found in file:</source>
+        <translation type="unfinished">Dosyada kurucu bulunamadı:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>No &apos;init&apos; function found in file:</source>
+        <translation type="unfinished">Dosyada &apos;init&apos; işlevi bulunamadı:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>No &apos;generate&apos; function found in file:</source>
+        <translation type="unfinished">Dosyada &apos;generate&apos; işlevi bulunamadı:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>No &apos;generatePreview&apos; function found in file:</source>
+        <translation type="unfinished">Dosyada &apos;generatePreview&apos; işlevi bulunamadı:</translation>
     </message>
 </context>
 <context>
@@ -7792,12 +7798,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/KeyboardPreferences/PreferencesPage.ui" line="+17"/>
         <source>Shortcut timeout:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kısayol zaman aşımı:</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Enable keyboard navigation in list widgets</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Liste widget'larında klavye gezintisini etkinleştirme</translation>
     </message>
 </context>
 <context>
@@ -7818,13 +7824,13 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/PreferencesPage.ui" line="+20"/>
         <source>Language of user interface:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kullanıcı arayüzü dili:</translation>
     </message>
 </context>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+57"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+58"/>
         <source>Language Settings</source>
         <translation>Dil Ayarları</translation>
     </message>
@@ -7839,62 +7845,62 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/Layer.js" line="+97"/>
         <source>Layer Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Katman Araçları</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>&amp;Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Katman</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Showing all layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tüm katmanları gösterme</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Hiding all layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tüm katmanları gizleme</translation>
     </message>
     <message>
         <location line="+50"/>
         <source>Thawing all layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tüm katmanların çözdürülmesi</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Freezing all layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tüm katmanların dondurulması</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Locking all layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tüm katmanları kilitleme</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Unlocking all layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tüm katmanların kilidini açma</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+33"/>
         <source>Default lineweight for new layers:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yeni katmanlar için varsayılan çizgi ağırlığı:</translation>
     </message>
     <message>
         <location line="+34"/>
         <source>Default color for new layers:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yeni katmanlar için varsayılan renk:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Default lineweight for layer 0:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Katman 0 için varsayılan çizgi ağırlığı:</translation>
     </message>
     <message>
         <location line="-48"/>
         <source>Default color for layer 0:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Katman 0 için varsayılan renk:</translation>
     </message>
 </context>
 <context>
@@ -7907,27 +7913,27 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Compatibility</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uyumluluk</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LayerCompatibility/PreferencesPage.ui" line="+17"/>
         <source>Layer 0</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Katman 0</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Layer 0 behaves like a regular layer (QCAD)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Katman 0 normal bir katman gibi davranır (QCAD)</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Layer 0 behaves differently (best compatibility)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Katman 0 farklı davranır (en iyi uyumluluk)</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Entities in blocks on layer 0 take on attributes and visibility of block reference.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Katman 0'daki bloklarda bulunan varlıklar, blok referansının niteliklerini ve görünürlüğünü alır.</translation>
     </message>
 </context>
 <context>
@@ -7936,7 +7942,7 @@ is already in the list.</source>
         <location filename="../scripts/Layer/LayerDialog.js" line="+40"/>
         <source>layer</source>
         <comment>default layer name prefix</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">katman</translation>
     </message>
     <message>
         <location line="+156"/>
@@ -7946,12 +7952,12 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Layer name is empty.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Katman adı boş.</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Layer already exists.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Katman zaten mevcut.</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/LayerDialog.ui" line="+17"/>
@@ -7961,12 +7967,12 @@ is already in the list.</source>
     <message>
         <location line="+11"/>
         <source>Layer name:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Katman adı:</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nitelikler</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -7989,7 +7995,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/LayerExamples.js" line="+50"/>
         <source>&amp;Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Katman</translation>
     </message>
 </context>
 <context>
@@ -8008,7 +8014,7 @@ is already in the list.</source>
     <message>
         <location line="-55"/>
         <source>&amp;Layer List</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Katman Listesi</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/LayerList/PreferencesPage.ui" line="+19"/>
@@ -8031,7 +8037,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
         <source>Undo Last Segment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Son Segmenti Geri Al</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -8054,12 +8060,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
         <source>Leader was created successfully</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lider başarıyla oluşturuldu</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Seçilmiş Metinlerden Lider</translation>
     </message>
 </context>
 <context>
@@ -8067,327 +8073,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Lengthen/Lengthen.js" line="+60"/>
         <source>Choose line or arc</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çizgi veya yay seçin</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Lengthen/LengthenInit.js" line="+2"/>
         <source>&amp;Lengthen / Shorten</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uzatmak / Kısaltmak</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Lengthen/Lengthen.ui" line="+17"/>
         <source>Amount:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Miktar:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Amount to lengthen or shorten (negative)</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>LibraryBrowser</name>
-    <message>
-        <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowser.js" line="+72"/>
-        <source>audience</source>
-        <translation>seyirci</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>creator</source>
-        <translation>kurucu</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>dimension</source>
-        <translation>boyut</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>levelOfDetail</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>license</source>
-        <translation>lisans</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>perspective</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>presentation</source>
-        <translation>sunum</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>publisher</source>
-        <translation>yayımcı</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>subject</source>
-        <translation>konu</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>title</source>
-        <translation>başlık</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Widgets</source>
-        <translation>Widgetler</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <location line="+1157"/>
-        <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowserInit.js" line="+19"/>
-        <source>Library Browser</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-1149"/>
-        <source>Icon</source>
-        <translation>Simge</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>List</source>
-        <translation>Liste</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Choose Source Folder</source>
-        <translation>Kaynak Klasörünü Seç</translation>
-    </message>
-    <message>
-        <location line="+687"/>
-        <source>Page %1 of %2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+237"/>
-        <source>Updating icons...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+219"/>
-        <source>Abort</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-27"/>
-        <source>File:</source>
-        <translation type="unfinished">Dosya:</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Folder:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>License:</source>
-        <translation type="unfinished">Lisans:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Attribute as:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Creator:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Updating library index:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+30"/>
-        <source>DB error</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+44"/>
-        <source>Source removed from part library: %1</source>
-        <translation>Kaynak kitaplıktan kaldırıldı:%1</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Force database update.</source>
-        <translation>Veritabanı güncellemesini zorla.</translation>
-    </message>
-    <message>
-        <location line="+393"/>
-        <source>&amp;Insert</source>
-        <translation>&amp;Ekle</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>&amp;Edit Script File...</source>
-        <translation>&amp;Betik Dosyası Düzenle ...</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Open &amp;SVG File...</source>
-        <translation>SVG &amp;Dosyası Aç...</translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>&amp;Open...</source>
-        <translation>&amp;Aç...</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>&amp;Edit...</source>
-        <translation>&amp;Düzen</translation>
-    </message>
-    <message>
-        <location line="+25"/>
-        <source>File Browser</source>
-        <translation>Dosya Tarayıcı</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>&amp;Show in %1...</source>
-        <translation>%1 &amp;göster...</translation>
-    </message>
-    <message>
-        <location line="+28"/>
-        <source>&amp;Remove from Favorites</source>
-        <translation>&amp;Favorilerden Çıkar</translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>&amp;Add to Favorites</source>
-        <translation>Fav&amp;orilere Ekle</translation>
-    </message>
-    <message>
-        <location line="+34"/>
-        <source>&amp;Regenerate Icon</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>&amp;Regenerate Icons</source>
-        <translation>&amp;Simgeleri Yeniden Düzenle</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Widgets/LibraryBrowser/PreferencesPage.ui" line="+17"/>
-        <source>Synchronization</source>
-        <translation>Senkronizasyon</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Update search index on startup</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Display Options</source>
-        <translation>Görüntüleme Seçenekleri</translation>
-    </message>
-    <message>
-        <location line="+53"/>
-        <source>Dark icon background</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-44"/>
-        <source>Icon size:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+51"/>
-        <source>View mode:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Number of items
-shown in search results:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+18"/>
-        <source>Library Sources</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Add...</source>
-        <translation>Ekle...</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Remove</source>
-        <translation>Çıkar</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Up</source>
-        <translation>Yukarı</translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>Down</source>
-        <translation>Aşağı</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowserInit.js" line="-11"/>
-        <source>&amp;Library Browser</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>LibraryBrowserForm</name>
-    <message>
-        <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowser.ui" line="+28"/>
-        <source>File System</source>
-        <translation>Dosya Sistemi</translation>
-    </message>
-    <message>
-        <location line="+60"/>
-        <source>Search</source>
-        <translation>Ara</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>Look for:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Clear</source>
-        <translation>Temizle</translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>Find</source>
-        <translation>Bul</translation>
-    </message>
-    <message>
-        <location line="+129"/>
-        <source>Favorites</source>
-        <translation>Sık kullanılanlar</translation>
-    </message>
-    <message>
-        <location line="+36"/>
-        <source>Insert selected item into drawing</source>
-        <translation>Seçilen öğeyi çizime ekle</translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>Update DB from file system</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uzatılacak veya kısaltılacak miktar (negatif)</translation>
     </message>
 </context>
 <context>
@@ -8405,7 +8106,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Line/Line.ui" line="+17"/>
         <source>Same Entity Type as Original</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Orijinal ile Aynı Varlık Türü</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -8420,7 +8121,7 @@ shown in search results:</source>
     <message>
         <location line="+17"/>
         <source>Ray</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ray</translation>
     </message>
 </context>
 <context>
@@ -8587,47 +8288,47 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js" line="+2"/>
         <source>Box &amp;Joint from 2 Points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2 Noktadan Kutu Eklemi</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kutu Mafsal Parmaklarını, Yuvalarını ve Tennonlarını Çizin</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui" line="+17"/>
         <source>Depth:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Derinlik:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Finger Width:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Parmak Genişliği:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Finger/Slot Ratio:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Parmak/Yuva Oranı:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Style:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Stil:</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Finger first</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Önce parmak</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Slot first</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Önce yuva</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Tenons</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zıvanalar</translation>
     </message>
 </context>
 <context>
@@ -8645,32 +8346,32 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint from 2 Points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2 Noktadan Kırlangıç Kuyruğu Mafsal</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw a dovetail joint</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bir kırlangıç kuyruğu bağlantısı çizin</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.ui" line="+18"/>
         <source>Number of Dovetails:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kırlangıç Kuyruğu Sayısı:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Dovetail Height:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kırlangıç Kuyruğu Yüksekliği:</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Dovetail Gradient:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dovetail Gradient:</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Dovetail/Pin Ratio:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kırlangıç Kuyruğu/Pim Oranı:</translation>
     </message>
 </context>
 <context>
@@ -8805,7 +8506,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>Dist&amp;ance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mesafe:</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -8846,17 +8547,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.js" line="+68"/>
         <source>First arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İlk yay veya daire</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İkinci yay veya daire</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxisInit.js" line="+2"/>
         <source>Radical Axis of 2 Circles</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İki Dairenin Radikal Ekseni</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.ui" line="+17"/>
@@ -8922,7 +8623,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineSimilarityAxes/LineSimilarityAxesInit.js" line="+2"/>
         <source>Similarity Axes of 3 Circles</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Üç Çemberin Benzerlik Eksenleri</translation>
     </message>
 </context>
 <context>
@@ -8940,7 +8641,7 @@ shown in search results:</source>
     <message>
         <location line="+85"/>
         <source>No tangent possible.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Teğet geçmek mümkün değil.</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -8951,12 +8652,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent1/LineTangent1Init.js" line="+2"/>
         <source>&amp;Tangent (Point, Circle)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Teğet (Nokta, Daire)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw tangent (point, circle)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Teğet çizme (nokta, daire)</translation>
     </message>
 </context>
 <context>
@@ -9019,7 +8720,7 @@ shown in search results:</source>
         <location line="+0"/>
         <location line="+2"/>
         <source>Linetype</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Linetype</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -9029,12 +8730,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/PreferencesPage.ui" line="+19"/>
         <source>Global linetype scale:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Global çizgi tipi ölçeği:</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Scale of linetypes matches the scale of each viewport</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çizgi tiplerinin ölçeği her bir görüntü alanının ölçeğiyle eşleşir</translation>
     </message>
 </context>
 <context>
@@ -9042,7 +8743,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Examples/ListenerExamples/ListenerExamples.js" line="+50"/>
         <source>&amp;Listeners</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dinleyiciler</translation>
     </message>
 </context>
 <context>
@@ -9050,7 +8751,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Layer/LockAllLayers/LockAllLayersInit.js" line="+2"/>
         <source>&amp;Lock All Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tüm Katmanları Kilitle</translation>
     </message>
 </context>
 <context>
@@ -9066,7 +8767,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/MathExamples.js" line="+51"/>
         <source>&amp;Mathematics</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Matematik</translation>
     </message>
 </context>
 <context>
@@ -9087,12 +8788,12 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>Menu Bar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Menü Çubuğu</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/MenuBar/PreferencesPage.ui" line="+17"/>
         <source>Use native menu bar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yerel menü çubuğunu kullanma</translation>
     </message>
 </context>
 <context>
@@ -9100,12 +8801,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/MenusAndToolBars/MenusAndToolBars.js" line="+32"/>
         <source>MenusAndToolBars() is running...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">MenusAndToolBars() çalışıyor...</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Menus and Toolbars</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Menüler ve Araç Çubukları</translation>
     </message>
 </context>
 <context>
@@ -9118,22 +8819,22 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.js" line="+44"/>
         <source>Modify</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Değiştirmek</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Mirror</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ayna</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>First point of symmetry axis</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Simetri ekseninin ilk noktası</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point of symmetry axis</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Simetri ekseninin ikinci noktası</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.ui" line="+17"/>
@@ -9143,12 +8844,12 @@ shown in search results:</source>
     <message>
         <location line="+14"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçerli katmanı ve öznitelikleri kullan</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Araç seçenekleri için iletişim kutusunu kullanma</translation>
     </message>
 </context>
 <context>
@@ -9161,22 +8862,22 @@ shown in search results:</source>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kopya Sayısı</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Orijinali silin</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Orijinali saklayın</translation>
     </message>
     <message>
         <location line="+85"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçerli katmanı ve öznitelikleri kullan</translation>
     </message>
 </context>
 <context>
@@ -9207,7 +8908,7 @@ shown in search results:</source>
     <message>
         <location line="+9"/>
         <source>Misc Block Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çeşitli Blok Araçları</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -9225,12 +8926,12 @@ shown in search results:</source>
     <message>
         <location line="+9"/>
         <source>Misc Development Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çeşitli Geliştirme Araçları</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>De&amp;velopment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geliştirme</translation>
     </message>
 </context>
 <context>
@@ -9243,12 +8944,12 @@ shown in search results:</source>
     <message>
         <location line="+9"/>
         <source>Misc Drawing Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çeşitli Çizim Araçları</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Misc Draw</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çeşitli Çizim</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -9266,12 +8967,12 @@ shown in search results:</source>
     <message>
         <location line="+9"/>
         <source>Misc Import / Export Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çeşitli İthalat / İhracat Araçları</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>&amp;Import/Export</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İthalat/İhracat</translation>
     </message>
 </context>
 <context>
@@ -9284,12 +8985,12 @@ shown in search results:</source>
     <message>
         <location line="+10"/>
         <source>Misc Information Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çeşitli Bilgi Araçları</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Information</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bilgi</translation>
     </message>
 </context>
 <context>
@@ -9302,12 +9003,12 @@ shown in search results:</source>
     <message>
         <location line="+10"/>
         <source>Misc Modification Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çeşitli Modifikasyon Araçları</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Modify</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Değiştirmek</translation>
     </message>
 </context>
 <context>
@@ -9320,7 +9021,7 @@ shown in search results:</source>
     <message>
         <location line="+9"/>
         <source>Misc Selection Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çeşitli Seçim Araçları</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -9333,12 +9034,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Modify.js" line="+99"/>
         <source>Modification Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Modifikasyon Araçları</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;Modify</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Değiştirmek</translation>
     </message>
 </context>
 <context>
@@ -9346,22 +9047,22 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/ModifyCorner.js" line="+86"/>
         <source>Choose corner</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Köşe seçin</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Choose first entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İlk varlığı seçin</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Choose second entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İkinci varlığı seçin</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Set point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ayar noktası</translation>
     </message>
 </context>
 <context>
@@ -9369,7 +9070,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Examples/ModifyExamples/ModifyExamples.js" line="+49"/>
         <source>&amp;Modify</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Değiştirmek</translation>
     </message>
 </context>
 <context>
@@ -9377,7 +9078,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+38"/>
         <source>Import MOL</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İthalat MOL</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9387,12 +9088,12 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>MOL Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">MOL Dosyaları</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImportInit.js" line="+7"/>
         <source>Leetro MOL Import...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Leetro MOL İthalat...</translation>
     </message>
 </context>
 <context>
@@ -9400,12 +9101,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImporter.js" line="+161"/>
         <source>Importing Leetro MOL file...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Leetro MOL dosyası içe aktarılıyor...</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Abort</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İptal</translation>
     </message>
 </context>
 <context>
@@ -9413,7 +9114,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Widgets/MouseDisplay/MouseDisplay.ui" line="+32"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Form</translation>
     </message>
 </context>
 <context>
@@ -9421,23 +9122,23 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/PersistentWidgets/PersistentWidgets.ui" line="+14"/>
         <source>Enter Position</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pozisyon Girin</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Position X:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pozisyon X:</translation>
     </message>
     <message>
         <location line="+7"/>
         <location line="+14"/>
         <source>0.00</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">0.00</translation>
     </message>
     <message>
         <location line="-7"/>
         <source>Position Y:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pozisyon Y:</translation>
     </message>
 </context>
 <context>
@@ -9445,7 +9146,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/MenusAndToolBars/MyScripts.js" line="+53"/>
         <source>My Scripts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Senaryolarım</translation>
     </message>
 </context>
 <context>
@@ -9453,17 +9154,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExWidget/MyWidget.ui" line="+14"/>
         <source>Character Map</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Karakter Haritası</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>MyLineEdit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">MyLineEdit</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>MyButton</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">BenimButonum</translation>
     </message>
 </context>
 <context>
@@ -9576,12 +9277,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Offset/OffsetInit.js" line="+2"/>
         <source>Offset (with Distance)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ofset (Mesafe ile)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Offset line, arc, circle or ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ofset çizgi, yay, daire veya elips</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
@@ -9604,17 +9305,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThroughInit.js" line="+2"/>
         <source>Offset (through Point)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ofset (Nokta üzerinden)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Offset line, arc, circle or ellipse through point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nokta üzerinden çizgi, yay, daire veya elips ofseti</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Numara:</translation>
     </message>
 </context>
 <context>
@@ -9663,7 +9364,7 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>Printing - Page</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yazdırma - Sayfa</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -9673,17 +9374,17 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>Page</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sayfa</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Custom</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Özel</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+19"/>
         <source>Page Orientation</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sayfa Yönlendirme</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -9698,62 +9399,62 @@ shown in search results:</source>
     <message>
         <location line="+23"/>
         <source>Paper</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kağıt</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Paper size:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kağıt boyutu:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Paper width:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kağıt genişliği:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Paper height:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kağıt yüksekliği:</translation>
     </message>
     <message>
         <location line="+74"/>
         <source>Viewport</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Görünüm Alanı</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ölçek:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Offset X:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ofset X:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Offset Y:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ofset Y:</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Zero-Point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sıfır Noktası</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Miscellaneous</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çeşitli</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Point size (mm):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nokta boyutu (mm):</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Show paper borders</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kağıt kenarlıklarını göster</translation>
     </message>
 </context>
 <context>
@@ -9804,7 +9505,7 @@ shown in search results:</source>
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tüm varlıkları&lt;br&gt;orijinal katman yerine&lt;br&gt;geçerli katmana yapıştırın</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9860,12 +9561,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Widgets/PenToolBar/PenToolBar.js" line="+26"/>
         <source>Pen</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kalem</translation>
     </message>
     <message>
         <location line="+73"/>
         <source>Reset to Defaults</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varsayılanlara Sıfırla</translation>
     </message>
 </context>
 <context>
@@ -9873,7 +9574,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/PersistentWidgets/PersistentWidgets.js" line="+74"/>
         <source>&amp;Persistent Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kalıcı Widget'lar</translation>
     </message>
 </context>
 <context>
@@ -9881,12 +9582,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Point/Point.js" line="+71"/>
         <source>Point Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nokta Araçları</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;Point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nokta</translation>
     </message>
 </context>
 <context>
@@ -9899,12 +9600,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Point/Point1P/Point1PInit.js" line="+2"/>
         <source>Single &amp;Point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tek Nokta</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw single point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tek nokta çizin</translation>
     </message>
 </context>
 <context>
@@ -9918,7 +9619,7 @@ shown in search results:</source>
         <location line="+0"/>
         <location line="+2"/>
         <source>Point Display</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nokta Ekranı</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -9933,7 +9634,7 @@ shown in search results:</source>
     <message>
         <location line="+17"/>
         <source>Size (pixel):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Boyut (piksel):</translation>
     </message>
 </context>
 <context>
@@ -9941,17 +9642,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPole/PointPole.js" line="+67"/>
         <source>Arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yay veya daire</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Hat</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPole/PointPoleInit.js" line="+2"/>
         <source>Pole of Line and Circle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çizgi ve Daire Kutbu</translation>
     </message>
 </context>
 <context>
@@ -9964,7 +9665,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Üç Dairenin Güç Merkezi</translation>
     </message>
 </context>
 <context>
@@ -9972,12 +9673,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Polyline/Polyline.js" line="+73"/>
         <source>Polyline Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çoklu Çizgi Araçları</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;Polyline</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çoklu Çizgi</translation>
     </message>
 </context>
 <context>
@@ -9985,47 +9686,47 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.js" line="+108"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Parçalamak için çizgi, yay, daire, elips, spline veya çoklu çizgi seçin</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Choose line, arc, circle or ellipse to break up</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Parçalamak için çizgi, yay, daire veya elips seçin</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Pick the first point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İlk noktayı seçin</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pick the first break point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İlk kırılma noktasını seçin</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Pick the second point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İkinci noktayı seçin</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pick the second break point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İkinci kırılma noktasını seçin</translation>
     </message>
     <message>
         <location line="+170"/>
         <source>Break Out Segment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Break Out Segmenti</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
         <source>Remove line break segment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Satır sonu segmentini kaldır</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Remove the line segment between the break symbol</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kesme sembolü arasındaki çizgi parçasını kaldırın</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10035,64 +9736,64 @@ shown in search results:</source>
     <message>
         <location line="+17"/>
         <source>Inherit entity properties</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varlık özelliklerini devralma</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inherit all properties from the chosen entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Seçilen varlığın tüm özelliklerini devralır</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inherit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Miras</translation>
     </message>
     <message>
         <location line="+17"/>
         <location line="+13"/>
         <source>Peak ratio</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tepe oranı</translation>
     </message>
     <message>
         <location line="-10"/>
         <location line="+13"/>
         <source>The ratio of the peak height to the break width</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pik yüksekliğinin kırılma genişliğine oranı</translation>
     </message>
     <message>
         <location line="-10"/>
         <source>Peak Ratio:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tepe Oranı:</translation>
     </message>
     <message>
         <location line="+78"/>
         <source>First/Last segment inclined</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İlk/Son segment eğimli</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>The first and last segment of the break symbol are inclined</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kesme sembolünün ilk ve son segmenti eğimlidir</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>First/Last segment vertical</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İlk/Son segment dikey</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>The first and last segment of the break symbol are vertical</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kesme sembolünün ilk ve son segmenti dikeydir</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js" line="+2"/>
         <source>&amp;Polyline break symbol from 2 points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çoklu çizgi kesme sembolü 2 noktadan</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw a polyline break symbol from 2 points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İki noktadan bir çoklu çizgi kesme sembolü çizme</translation>
     </message>
 </context>
 <context>
@@ -10170,27 +9871,27 @@ shown in search results:</source>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+92"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+94"/>
         <source>Auto Paper Size</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Otomatik Kağıt Boyutu</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The paper size is set to a custom size (%1x%2mm). Do you want to change it to the default paper size of your printer (%3)?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kağıt boyutu özel bir boyuta ayarlanmış (%1x%2mm). Bunu yazıcınızın varsayılan kağıt boyutuna (%3) değiştirmek istiyor musunuz?</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Auto fit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Otomatik uyum</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Auto fit drawing to paper?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çizimi kağıda otomatik sığdırma?</translation>
     </message>
     <message>
-        <location line="+187"/>
+        <location line="+198"/>
         <source>Drag to move paper</source>
         <translation>Kağıt taşımak için sürükleyin</translation>
     </message>
@@ -10200,7 +9901,7 @@ shown in search results:</source>
         <translation>Bitti</translation>
     </message>
     <message>
-        <location line="+452"/>
+        <location line="+453"/>
         <source>Export to PDF</source>
         <translation>PDF Olarak Dışa Aktar</translation>
     </message>
@@ -10343,12 +10044,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+17"/>
         <source>Display Z coordinates</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Z koordinatlarını göster</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Display properties of current block and current layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçerli blok ve geçerli katmanın özelliklerini görüntüleme</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -10363,17 +10064,17 @@ shown in search results:</source>
     <message>
         <location line="+17"/>
         <source>Always format property values as decimal numbers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Özellik değerlerini her zaman ondalık sayı olarak biçimlendirin</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Decimals / precision for displayed property values:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Görüntülenen özellik değerleri için ondalıklar / hassasiyet:</translation>
     </message>
     <message>
         <location line="-19"/>
         <source>Display advanced dimension style overrides</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gelişmiş boyut stili geçersiz kılmalarını görüntüleme</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+219"/>
@@ -10398,17 +10099,17 @@ shown in search results:</source>
     <message>
         <location line="+18"/>
         <source>Custom</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Özel</translation>
     </message>
     <message>
         <location line="+203"/>
         <source>Index</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dizin</translation>
     </message>
     <message>
         <location line="+79"/>
         <source>Remove this property from selected objects</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Seçili nesnelerden bu özelliği kaldırın</translation>
     </message>
     <message>
         <location line="+68"/>
@@ -10418,17 +10119,17 @@ shown in search results:</source>
     <message>
         <location line="+24"/>
         <source>Add custom property to selected objects</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Seçilen nesnelere özel özellik ekleme</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Show</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Göster</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Show all properties</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tüm özellikleri göster</translation>
     </message>
     <message>
         <location line="+135"/>
@@ -10438,7 +10139,7 @@ shown in search results:</source>
     <message>
         <location line="+197"/>
         <source>Use auto measurement</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Otomatik ölçümü kullanın</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -10453,7 +10154,7 @@ shown in search results:</source>
     <message>
         <location line="+386"/>
         <source>*VARIES*</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">*DEĞİŞKENLER*</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10465,7 +10166,7 @@ shown in search results:</source>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Emlak Editörü</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.ui" line="+40"/>
@@ -10485,17 +10186,17 @@ shown in search results:</source>
     <message>
         <location line="+10"/>
         <source>Handle:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tut:</translation>
     </message>
     <message>
         <location line="+94"/>
         <source>Linetype Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Linetype Ölçeği:</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Protected:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Korumalı:</translation>
     </message>
 </context>
 <context>
@@ -10503,7 +10204,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/QtExamples.js" line="+50"/>
         <source>&amp;Qt</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Qt</translation>
     </message>
 </context>
 <context>
@@ -10568,7 +10269,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscModify/ReloadLinetypes/ReloadLinetypes.js" line="+48"/>
         <source>Reload Linetype Definitions</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çizgi Tipi Tanımlarını Yeniden Yükle</translation>
     </message>
 </context>
 <context>
@@ -10589,7 +10290,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Layer/RemoveLayer/RemoveLayerInit.js" line="+2"/>
         <source>&amp;Delete Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Katmanı Sil</translation>
     </message>
 </context>
 <context>
@@ -10690,7 +10391,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Reverse/ReverseInit.js" line="+2"/>
         <source>&amp;Reverse</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ters</translation>
     </message>
 </context>
 <context>
@@ -10698,17 +10399,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.js" line="+47"/>
         <source>Modify</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Değiştirmek</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Rotate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Döndür</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Center point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Merkez noktası</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -10723,12 +10424,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
         <source>&amp;Rotate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Döndür</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Araç seçenekleri için iletişim kutusunu kullanma</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
@@ -10738,12 +10439,12 @@ shown in search results:</source>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kopya Sayısı:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçerli katmanı ve öznitelikleri kullan</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -10753,7 +10454,7 @@ shown in search results:</source>
     <message>
         <location line="+23"/>
         <source>Define angle using mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fare imlecini kullanarak açı tanımlama</translation>
     </message>
 </context>
 <context>
@@ -10761,32 +10462,32 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2.js" line="+67"/>
         <source>Center of primary rotation</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Birincil dönüş merkezi</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Center of secondary rotation</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İkincil rotasyon merkezi</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Init.js" line="+2"/>
         <source>Rotate T&amp;wo</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İki Döndür</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2.ui" line="+17"/>
         <source>Primary Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Birincil Açı:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Secondary Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İkincil Açı:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Copies:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kopyalar:</translation>
     </message>
 </context>
 <context>
@@ -10794,42 +10495,42 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Dialog.ui" line="+14"/>
         <source>Rotate Two Options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İki Seçeneği Döndür</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kopya Sayısı</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Orijinali silin</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Orijinali saklayın</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Birden fazla kopya</translation>
     </message>
     <message>
         <location line="+97"/>
         <source>Angle &amp;a:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Açı a:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Angle &amp;b:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Açı b:</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçerli katmanı ve öznitelikleri kullan</translation>
     </message>
 </context>
 <context>
@@ -10837,42 +10538,42 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateDialog.ui" line="+14"/>
         <source>Rotate Options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Döndürme Seçenekleri</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kopya Sayısı</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Orijinali silin</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Orijinali saklayın</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Birden fazla kopya</translation>
     </message>
     <message>
         <location line="+97"/>
         <source>&amp;Angle (a):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Açı (a):</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Define angle using mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fare imlecini kullanarak açı tanımlama</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçerli katmanı ve öznitelikleri kullan</translation>
     </message>
 </context>
 <context>
@@ -10880,32 +10581,32 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Round/Round.js" line="+60"/>
         <source>The two entities cannot be rounded.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İki varlık yuvarlanamaz.</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İlk varlık kırpılamaz.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İkinci varlık kırpılamaz.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
         <source>&amp;Round</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yuvarlak</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/Round.ui" line="+17"/>
         <source>Trim</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Döşeme</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>&amp;Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yarıçap:</translation>
     </message>
 </context>
 <context>
@@ -10913,7 +10614,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScript.js" line="+60"/>
         <source>Open Script File</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Komut Dosyasını Aç</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -10923,37 +10624,37 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>ECMAScript Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ECMAScript Dosyaları</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Run Script</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Komut Dosyasını Çalıştır</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptInit.js" line="+2"/>
         <source>R&amp;un Script</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Komut Dosyasını Çalıştır</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Open and run a script file</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bir komut dosyası açma ve çalıştırma</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptDialog.ui" line="+20"/>
         <source>Running Script</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çalışan Senaryo</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You are about to run the following script(s):&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt;This script could potentially modify your drawings, modify or delete your files or access your network connection.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;It is strongly recommended to only run scripts from trusted sources.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aşağıdaki betik(ler)i çalıştırmak üzeresiniz:&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt;Bu betik potansiyel olarak çizimlerinizi değiştirebilir, dosyalarınızı değiştirebilir veya silebilir ya da ağ bağlantınıza erişebilir.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;Sadece güvenilir kaynaklardan gelen komut dosyalarını çalıştırmanız şiddetle tavsiye edilir.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Don&apos;t show this dialog again</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bu iletişim kutusunu bir daha gösterme</translation>
     </message>
 </context>
 <context>
@@ -10996,27 +10697,27 @@ shown in search results:</source>
     <message>
         <location line="-41"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&quot;%1&quot; dosyası zaten mevcut. Üzerine yazmak istiyor musunuz?</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>The file format version you are using is not recommended: &quot;%1&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kullandığınız dosya biçimi sürümü önerilmemektedir: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>All custom colors will be adjusted to the nearest fixed color.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tüm özel renkler en yakın sabit renge ayarlanacaktır.</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Saving to file format version &quot;%1&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&quot;%1&quot; dosya biçimi sürümüne kaydediliyor.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Custom colors are adjusted to the nearest fixed color.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Özel renkler en yakın sabit renge ayarlanır.</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -11026,7 +10727,7 @@ shown in search results:</source>
     <message>
         <location line="+21"/>
         <source>Saved file:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kaydedilmiş dosya:</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -11054,17 +10755,17 @@ shown in search results:</source>
     <message>
         <location line="+13"/>
         <source>Opening</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Açılış</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Allow opening of zero size files (e.g. online files that are not synched to disk)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sıfır boyutlu dosyaların açılmasına izin ver (örn. diske senkronize edilmeyen çevrimiçi dosyalar)</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Decode strings in DXF/DWG as UTF-8 (experimental)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">DXF/DWG'deki dizeleri UTF-8 olarak çözme (deneysel)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11084,12 +10785,12 @@ shown in search results:</source>
     <message>
         <location line="+27"/>
         <source>Store &quot;last saved by&quot; file information as:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dosya bilgilerini &quot;son kaydedildiği tarih&quot; olarak saklayın:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>(empty for username)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">(kullanıcı adı için boş)</translation>
     </message>
     <message>
         <location filename="../scripts/File/SaveAs/SaveAs.js" line="+38"/>
@@ -11127,12 +10828,12 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>Modify</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Değiştirmek</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Focus point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Odak noktası</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -11152,7 +10853,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Scale/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Araç seçenekleri için iletişim kutusunu kullanma</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>
@@ -11162,38 +10863,38 @@ shown in search results:</source>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kopya Sayısı:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçerli katmanı ve öznitelikleri kullan</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Factor x:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Faktör x:</translation>
     </message>
     <message>
         <location line="+7"/>
         <location line="+14"/>
         <source>1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">1</translation>
     </message>
     <message>
         <location line="-7"/>
         <source>Factor y:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Faktör y:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Proportional</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Orantılı</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Define factor using mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fare imlecini kullanarak faktör tanımlama</translation>
     </message>
 </context>
 <context>
@@ -11201,52 +10902,52 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleDialog.ui" line="+14"/>
         <source>Scale Options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ölçek Seçenekleri</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kopya Sayısı</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Orijinali silin</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Orijinali saklayın</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Birden fazla kopya</translation>
     </message>
     <message>
         <location line="+115"/>
         <source>Factor x:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Faktör x:</translation>
     </message>
     <message>
         <location line="+49"/>
         <source>Factor y:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Faktör y:</translation>
     </message>
     <message>
         <location line="-26"/>
         <source>Proportional</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Orantılı</translation>
     </message>
     <message>
         <location line="+70"/>
         <source>Define factor using mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fare imlecini kullanarak faktör tanımlama</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçerli katmanı ve öznitelikleri kullan</translation>
     </message>
 </context>
 <context>
@@ -11254,7 +10955,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ScriptingPreferences/PreferencesPage.ui" line="+17"/>
         <source>Rescan scripts folder on startup</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Başlangıçta komut dosyaları klasörünü yeniden tara</translation>
     </message>
 </context>
 <context>
@@ -11262,7 +10963,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ScriptingPreferences/ScriptingPreferences.js" line="+24"/>
         <source>Scripting</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Scripting</translation>
     </message>
 </context>
 <context>
@@ -11309,17 +11010,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByColor/SelectByColor.js" line="+64"/>
         <source>Select one or more objects only of the desired color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yalnızca istenen renkte bir veya daha fazla nesne seçin</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Selected all visible entities of color %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">1 rengindeki tüm görünür varlıkları seçti</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByColor/SelectByColorInit.js" line="+2"/>
         <source>By Color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Renklere Göre</translation>
     </message>
 </context>
 <context>
@@ -11327,7 +11028,7 @@ shown in search results:</source>
     <message>
         <location line="+3"/>
         <source>Select all objects of a color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bir renkteki tüm nesneleri seçme</translation>
     </message>
 </context>
 <context>
@@ -11335,17 +11036,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandle.js" line="+58"/>
         <source>Object selected:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nesne seçildi:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Object is not a drawing entity:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nesne bir çizim varlığı değildir:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js" line="+2"/>
         <source>By Handle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sap tarafından</translation>
     </message>
 </context>
 <context>
@@ -11353,12 +11054,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleDialog.ui" line="+17"/>
         <source>Selection by Handle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sapa Göre Seçim</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Handle (hex):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sap (altıgen):</translation>
     </message>
 </context>
 <context>
@@ -11366,17 +11067,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContour.js" line="+54"/>
         <source>Choose entity of contour</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kontur varlığını seçin</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2"/>
         <source>(De-)Select &amp;Contour</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">(De-)Kontur Seçin</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select connected entities</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">bağlı varlıkları (De-)Seçin</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContour.ui" line="+17"/>
@@ -11386,32 +11087,32 @@ shown in search results:</source>
     <message>
         <location line="+7"/>
         <source>Replace the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçerli seçimi değiştir</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçerli seçime ekle</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçerli seçimden çıkarma</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçerli seçimle kesişir</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Tolerance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tolerans:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Same Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Aynı Katman</translation>
     </message>
 </context>
 <context>
@@ -11429,12 +11130,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntitiesInit.js" line="+2"/>
         <source>(De-)Select In&amp;tersected Entities</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">kesişen Varlıkları (De-)Seçin</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select all entities intersected by a line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">bir çizgi ile kesişen tüm varlıkları (De-)Seçme</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.ui" line="+17"/>
@@ -11444,22 +11145,22 @@ shown in search results:</source>
     <message>
         <location line="+7"/>
         <source>Replace the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçerli seçimi değiştir</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçerli seçime ekle</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçerli seçimden çıkarma</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçerli seçimle kesişir</translation>
     </message>
 </context>
 <context>
@@ -11467,17 +11168,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
         <source>%1 entities added to selection.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">seçime %1 varlık eklendi.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>%1 entities removed from selection.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">1 varlık seçimden kaldırıldı.</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
         <source>&amp;Select Layer Entities</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Katman Varlıklarını Seçin</translation>
     </message>
 </context>
 <context>
@@ -11485,17 +11186,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntity.js" line="+68"/>
         <source>Choose entity on layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Katmanda varlık seçin</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntityInit.js" line="+2"/>
         <source>(De-)Select La&amp;yer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">(De-)Select Layer</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select all entities on the same layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">(De-)Aynı katmandaki tüm varlıkları seçin</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntity.ui" line="+17"/>
@@ -11505,22 +11206,22 @@ shown in search results:</source>
     <message>
         <location line="+7"/>
         <source>Replace the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçerli seçimi değiştir</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçerli seçime ekle</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçerli seçimden çıkarma</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçerli seçimle kesişir</translation>
     </message>
 </context>
 <context>
@@ -11533,17 +11234,17 @@ shown in search results:</source>
     <message>
         <location line="+9"/>
         <source>Second corner</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İkinci köşe</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangleInit.js" line="+2"/>
         <source>(De-)Select &amp;Rectangular Area</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">dikdörtgen Alanı (De-)Seçin</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select all entities inside a rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">bir dikdörtgenin içindeki tüm varlıkları (De-)Seçme</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.ui" line="+17"/>
@@ -11553,27 +11254,27 @@ shown in search results:</source>
     <message>
         <location line="+7"/>
         <source>Replace the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçerli seçimi değiştir</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçerli seçime ekle</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçerli seçimden çıkarma</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçerli seçimle kesişir</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Cross Selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çapraz Seçim</translation>
     </message>
 </context>
 <context>
@@ -11581,17 +11282,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.js" line="+58"/>
         <source>No entities selected.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Hiçbir kuruluş seçilmemiştir.</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>%1 %2 on Layer &quot;%3&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&quot;%3&quot; Katmanında %1 %2</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>%1 %2 on %3 Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">3 Katmanda %1 %2</translation>
     </message>
     <message numerus="yes">
         <location line="+4"/>
@@ -11610,7 +11311,7 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>on</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">üzerinde</translation>
     </message>
     <message numerus="yes">
         <location line="+0"/>
@@ -11623,12 +11324,11 @@ shown in search results:</source>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Form</translation>
     </message>
 </context>
 <context>
@@ -11649,22 +11349,22 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Shape/Shape.js" line="+78"/>
         <source>Shape Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Şekil Araçları</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;Shape</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Şekil</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/Shape.ui" line="+17"/>
         <source>Create polyline</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çoklu çizgi oluşturma</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Fill</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Doldur</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11678,27 +11378,27 @@ shown in search results:</source>
         <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">En az iki nokta aynıdır.</translation>
     </message>
     <message>
         <location line="-22"/>
         <source>No circle possible.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çember mümkün değil.</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>No arc possible.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ark mümkün değil.</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Invalid number of segments: %1.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçersiz segment sayısı: %1.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Invalid ellipse major / minor: %1 / %2.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçersiz elips büyük / küçük: %1 / %2.</translation>
     </message>
 </context>
 <context>
@@ -11711,7 +11411,7 @@ shown in search results:</source>
     <message>
         <location line="+8"/>
         <source>Middle of Side</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tarafın Ortası</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.ui" line="+17"/>
@@ -11721,7 +11421,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Side)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çokgen (Merkez, Yan)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -11744,7 +11444,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
         <source>Polygo&amp;n (Side, Side)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çokgen (Yan, Yan)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -11754,22 +11454,22 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.js" line="+61"/>
         <source>First side</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Birinci taraf</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>First Corner</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Birinci Köşe</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Second side</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İkinci taraf</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Second Corner</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İkinci Köşe</translation>
     </message>
 </context>
 <context>
@@ -11792,7 +11492,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Corner)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çokgen (Merkez, Köşe)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -11820,7 +11520,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPPInit.js" line="+2"/>
         <source>Polygo&amp;n (2 Points of Side)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çokgen (2 Kenar Noktası)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -11833,17 +11533,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePPInit.js" line="+2"/>
         <source>&amp;Rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dikdörtgen</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw rectangle from two corners</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İki köşeden dikdörtgen çizin</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
         <source>Rotate:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Döndür:</translation>
     </message>
 </context>
 <context>
@@ -11852,13 +11552,13 @@ shown in search results:</source>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSize.ui" line="+17"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+19"/>
         <source>&amp;Width:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Genişlik:</translation>
     </message>
     <message>
         <location line="+23"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+30"/>
         <source>&amp;Height:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yükseklik:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -11874,17 +11574,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeInit.js" line="+2"/>
         <source>Rectangle with &amp;Size</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Boyutlu Dikdörtgen</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw rectangle with position and size</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Konum ve boyut ile dikdörtgen çizme</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+101"/>
         <source>Create Polyline</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çoklu Çizgi Oluştur</translation>
     </message>
 </context>
 <context>
@@ -11892,7 +11592,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Layer/ShowActiveLayer/ShowActiveLayerInit.js" line="+2"/>
         <source>Show &amp;Only Active</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yalnızca Etkin Göster</translation>
     </message>
 </context>
 <context>
@@ -11908,7 +11608,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Layer/ShowAllLayers/ShowAllLayersInit.js" line="+2"/>
         <source>&amp;Show All Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tüm Katmanları Göster</translation>
     </message>
 </context>
 <context>
@@ -11921,7 +11621,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Help/ShowReadme/ShowReadme.js" line="+46"/>
         <source>File &quot;%1&quot; doesn&apos;t exist.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&quot;%1&quot; dosyası mevcut değil.</translation>
     </message>
 </context>
 <context>
@@ -11937,12 +11637,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/Snap.js" line="+57"/>
         <source>Snap Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çıtçıtlı Araçlar</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Snap</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çıtçıt</translation>
     </message>
 </context>
 <context>
@@ -11981,7 +11681,7 @@ shown in search results:</source>
     <message>
         <location line="+1"/>
         <source>Enter</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Girin</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+17"/>
@@ -12016,7 +11716,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinateInit.js" line="+2"/>
         <source>&amp;Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Koordinat</translation>
     </message>
 </context>
 <context>
@@ -12024,17 +11724,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+17"/>
         <source>&amp;r:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">r:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Radius (Distance)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yarıçap (Mesafe)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>&amp;&lt;:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;:</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -12095,22 +11795,22 @@ shown in search results:</source>
     <message>
         <location line="+5"/>
         <source>Percentage</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yüzde</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Fraction</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kesir</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManualInit.js" line="+2"/>
         <source>&amp;Distance Manual</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mesafe Kılavuzu</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Snap distance between 2 points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2 nokta arasındaki mesafeyi yakala</translation>
     </message>
 </context>
 <context>
@@ -12118,7 +11818,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapEnd/SnapEndInit.js" line="+2"/>
         <source>&amp;End</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bitiş</translation>
     </message>
 </context>
 <context>
@@ -12126,7 +11826,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapFree/SnapFreeInit.js" line="+2"/>
         <source>&amp;Free</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ücretsiz</translation>
     </message>
 </context>
 <context>
@@ -12142,7 +11842,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapIntersection/SnapIntersectionInit.js" line="+2"/>
         <source>&amp;Intersection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kavşak</translation>
     </message>
 </context>
 <context>
@@ -12175,7 +11875,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/PreferencesPage.ui" line="+17"/>
         <source>Terminate manual intersection tool after one use</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bir kullanımdan sonra manuel kesişme aracını sonlandırın</translation>
     </message>
 </context>
 <context>
@@ -12199,7 +11899,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapOnEntity/SnapOnEntityInit.js" line="+2"/>
         <source>&amp;On Entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varlık Üzerinde</translation>
     </message>
 </context>
 <context>
@@ -12207,7 +11907,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapPerpendicular/SnapPerpendicularInit.js" line="+2"/>
         <source>&amp;Perpendicular</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dikey</translation>
     </message>
 </context>
 <context>
@@ -12215,7 +11915,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapReference/SnapReferenceInit.js" line="+2"/>
         <source>&amp;Reference</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Referans</translation>
     </message>
 </context>
 <context>
@@ -12223,7 +11923,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapSelectionCenter/SnapSelectionCenterInit.js" line="+2"/>
         <source>Center of &amp;Selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Seçim Merkezi</translation>
     </message>
 </context>
 <context>
@@ -12231,7 +11931,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapTangential/SnapTangentialInit.js" line="+2"/>
         <source>&amp;Tangential</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Teğetsel</translation>
     </message>
 </context>
 <context>
@@ -12239,7 +11939,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapXManual/SnapXManualInit.js" line="+2"/>
         <source>&amp;X/Y from Points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Noktalardan X/Y</translation>
     </message>
 </context>
 <context>
@@ -12247,7 +11947,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapYManual/SnapYManualInit.js" line="+2"/>
         <source>&amp;Y/X from Points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Noktalardan Y/X</translation>
     </message>
 </context>
 <context>
@@ -12255,12 +11955,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Spline/Spline.js" line="+72"/>
         <source>Spline Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spline Aletleri</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;Spline</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spline</translation>
     </message>
 </context>
 <context>
@@ -12268,22 +11968,22 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.ui" line="+23"/>
         <source>Undo Last Control Point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Son Kontrol Noktasını Geri Al</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Degree:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Derece:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Choose Spline Degree</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spline Derecesini Seçin</translation>
     </message>
     <message>
         <location line="+70"/>
         <source>Tick for Closed Spline</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kapalı Spline için Kene</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12293,22 +11993,22 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.js" line="+60"/>
         <source>First control point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İlk kontrol noktası</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Next control point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sonraki kontrol noktası</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPointsInit.js" line="+2"/>
         <source>&amp;Spline (Control Points)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spline (Kontrol Noktaları)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw spline from control points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kontrol noktalarından spline çizme</translation>
     </message>
 </context>
 <context>
@@ -12316,7 +12016,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscModify/SplineToLine/SplineToLine.js" line="+71"/>
         <source>Convert Straight Splines to Lines</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Düz Spline'ları Çizgilere Dönüştürme</translation>
     </message>
 </context>
 <context>
@@ -12324,32 +12024,32 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+47"/>
         <source>Status bar font:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Durum çubuğu yazı tipi:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Status Bar Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Durum Çubuğu Araçları</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Coordinate display</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Koordinat ekranı</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Mouse display</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fare ekranı</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Selection display</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Seçim ekranı</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Progress display</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İlerleme göstergesi</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -12382,7 +12082,7 @@ shown in search results:</source>
     <message>
         <location line="+10"/>
         <source>Second corner</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İkinci köşe</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -12397,17 +12097,17 @@ shown in search results:</source>
     <message>
         <location line="+141"/>
         <source>No selected entities in given range</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Verilen aralıkta seçili varlık yok</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>No entities in given range</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Verilen aralıkta varlık yok</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Stretch/StretchInit.js" line="+2"/>
         <source>&amp;Stretch</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Esneme</translation>
     </message>
 </context>
 <context>
@@ -12469,7 +12169,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">SVG Dosyaları %1</translation>
     </message>
 </context>
 <context>
@@ -12507,7 +12207,7 @@ shown in search results:</source>
         <location line="+20"/>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+23"/>
         <source>Height:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yükseklik:</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -12517,7 +12217,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+19"/>
         <source>Font size in text dialog preview:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Metin iletişim kutusu önizlemesinde yazı tipi boyutu:</translation>
     </message>
     <message>
         <location line="+99"/>
@@ -12542,12 +12242,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Text/TextInit.js" line="+2"/>
         <source>&amp;Text</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Metin</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw text</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Metin çizin</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-10"/>
@@ -12557,22 +12257,22 @@ shown in search results:</source>
     <message>
         <location line="+17"/>
         <source>Text height</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Metin yüksekliği</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Aralık</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Letter spacing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Harf aralığı</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">0</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -12582,7 +12282,7 @@ shown in search results:</source>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Saat Yönünün Tersine</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -12592,12 +12292,12 @@ shown in search results:</source>
     <message>
         <location line="+30"/>
         <source>Fit text to line, arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Metni çizgiye, yaya veya daireye sığdırma</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Fit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fit</translation>
     </message>
 </context>
 <context>
@@ -12610,17 +12310,17 @@ shown in search results:</source>
     <message>
         <location line="+9"/>
         <source>Choose text</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Metin seçin</translation>
     </message>
     <message>
         <location line="+102"/>
         <source>Leader was created successfully</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lider başarıyla oluşturuldu</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
         <source>&amp;Text Aligned Leader</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Metin Hizalamalı Lider</translation>
     </message>
 </context>
 <context>
@@ -12629,23 +12329,23 @@ shown in search results:</source>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.js" line="+99"/>
         <location line="+1"/>
         <source>Select Entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varlık Seçin</translation>
     </message>
     <message>
         <location line="+6"/>
         <location line="+1"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pozisyon</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlongInit.js" line="+2"/>
         <source>&amp;Text Along Entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varlık Boyunca Metin</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw text along an entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bir varlık boyunca metin çizme</translation>
     </message>
 </context>
 <context>
@@ -12653,7 +12353,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+243"/>
         <source>Default value:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varsayılan değer:</translation>
     </message>
     <message>
         <location line="+274"/>
@@ -12668,7 +12368,7 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>Cu&amp;t</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kesmek</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -12683,52 +12383,52 @@ shown in search results:</source>
     <message>
         <location line="+8"/>
         <source>&amp;Bold</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kalın</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Italic</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İtalik</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Underline</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Altı çizili</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Subscript</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alt simge</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Superscript</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Üst simge</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>&amp;Color...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Renk...</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Special Characters...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Özel Karakterler...</translation>
     </message>
     <message>
         <location line="+342"/>
         <source>Others...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Diğerleri.</translation>
     </message>
     <message>
         <location line="+139"/>
         <source>Degree</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Derece</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plus-Minus</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Artı-Minus</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -12738,17 +12438,17 @@ shown in search results:</source>
     <message>
         <location line="+1"/>
         <source>Almost equal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Neredeyse eşit</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Multiplication</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çarpma İşlemi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bölüm</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12758,42 +12458,42 @@ shown in search results:</source>
     <message>
         <location line="+1"/>
         <source>Pi</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Identity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kimlik</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Not equal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Eşit değil</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Ohm</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ohm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Omega</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Omega</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Squared</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kare</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Küp</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>No-break space</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mola alanı yok</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/TextDialog.ui" line="+14"/>
@@ -12803,17 +12503,17 @@ shown in search results:</source>
     <message>
         <location line="+14"/>
         <source>Main Font</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ana Yazı Tipi</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Height:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yükseklik:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Text Height in Drawing Units</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çizim Birimlerinde Metin Yüksekliği</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -12836,12 +12536,11 @@ shown in search results:</source>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Rich Text</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zengin Metin</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -12886,12 +12585,12 @@ shown in search results:</source>
     <message>
         <location line="+8"/>
         <source>Tag:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Etiket:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Prompt:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İstem:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -12901,17 +12600,17 @@ shown in search results:</source>
     <message>
         <location line="+42"/>
         <source>Text Geometry</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Metin Geometrisi</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Line spacing factor:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Satır aralığı faktörü:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Line Spacing Factor</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Satır Aralığı Faktörü</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -12921,7 +12620,7 @@ shown in search results:</source>
     <message>
         <location line="+13"/>
         <source>Rotation Angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dönme Açısı</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -12951,37 +12650,37 @@ shown in search results:</source>
     <message>
         <location line="+29"/>
         <source>Middle Center</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Orta Merkez</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Middle Left</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Orta Sol</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Base Left</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sol Taban</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Base Center</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Üs Merkezi</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Base Right</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sağ Taban</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Bottom Left</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sol Alt</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Bottom Center</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alt Merkez</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -13017,7 +12716,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ThemePreferences/PreferencesPage.ui" line="+20"/>
         <source>User interface theme:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kullanıcı arayüzü teması:</translation>
     </message>
 </context>
 <context>
@@ -13062,7 +12761,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/DrawOrder/ToBack/ToBackInit.js" line="+2"/>
         <source>Send to Bac&amp;k</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geri Gönder</translation>
     </message>
 </context>
 <context>
@@ -13070,7 +12769,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/DrawOrder/ToFront/ToFrontInit.js" line="+2"/>
         <source>Bring to &amp;Front</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Öne Getir</translation>
     </message>
 </context>
 <context>
@@ -13094,7 +12793,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Layer/ToggleLayerLock/ToggleLayerLockInit.js" line="+2"/>
         <source>&amp;Toggle Lock Status</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kilit Durumunu Değiştir</translation>
     </message>
 </context>
 <context>
@@ -13110,7 +12809,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ToolBarPreferences/PreferencesPage.ui" line="+19"/>
         <source>Icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Simge boyutu:</translation>
     </message>
     <message>
         <location line="+72"/>
@@ -13130,7 +12829,7 @@ shown in search results:</source>
     <message>
         <location line="+6"/>
         <source>Shortcut prefix character:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kısayol önek karakteri:</translation>
     </message>
 </context>
 <context>
@@ -13180,7 +12879,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Transform.js" line="+47"/>
         <source>This tool requires a selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bu araç bir seçim gerektirir</translation>
     </message>
 </context>
 <context>
@@ -13188,12 +12887,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Translate/Translate.js" line="+44"/>
         <source>Modify</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Değiştirmek</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Move/Copy</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Taşı/Kopyala</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -13208,7 +12907,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Translate/TranslateInit.js" line="+2"/>
         <source>&amp;Move / Copy</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Taşı / Kopyala</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -13218,7 +12917,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Translate/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Araç seçenekleri için iletişim kutusunu kullanma</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Translate/Translate.ui" line="+17"/>
@@ -13228,12 +12927,12 @@ shown in search results:</source>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kopya Sayısı:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçerli katmanı ve öznitelikleri kullan</translation>
     </message>
 </context>
 <context>
@@ -13241,32 +12940,32 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Translate/TranslateDialog.ui" line="+14"/>
         <source>Move / Copy Options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Taşı / Kopyala Seçenekleri</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kopya Sayısı</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Orijinali silin</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Orijinali saklayın</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Birden fazla kopya</translation>
     </message>
     <message>
         <location line="+89"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçerli katmanı ve öznitelikleri kullan</translation>
     </message>
 </context>
 <context>
@@ -13274,7 +12973,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateInit.js" line="+2"/>
         <source>M&amp;ove and Rotate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Taşı ve Döndür</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.ui" line="+17"/>
@@ -13287,37 +12986,37 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateDialog.ui" line="+14"/>
         <source>Move and Rotate Options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Taşıma ve Döndürme Seçenekleri</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kopya Sayısı</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Orijinali silin</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Orijinali saklayın</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Birden fazla kopya</translation>
     </message>
     <message>
         <location line="+97"/>
         <source>&amp;Angle (a):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Açı (a):</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçerli katmanı ve öznitelikleri kullan</translation>
     </message>
 </context>
 <context>
@@ -13325,37 +13024,37 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Trim/Trim.js" line="+77"/>
         <source>Choose limiting entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sınırlayıcı kuruluş seçin</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Choose entity to trim</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kırpılacak varlığı seçin</translation>
     </message>
     <message>
         <location line="+174"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İki varlık kesişmiyor veya şu anda kırpma için desteklenmiyor.</translation>
     </message>
     <message>
         <location line="+74"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İlk varlık kırpılamaz.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varlık kırpılamaz.</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İkinci varlık kırpılamaz.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Trim/TrimInit.js" line="+2"/>
         <source>&amp;Trim</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Döşeme</translation>
     </message>
 </context>
 <context>
@@ -13363,7 +13062,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/TrimBoth/TrimBothInit.js" line="+2"/>
         <source>Trim &amp;Both</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Her İkisini de Döşeyin</translation>
     </message>
 </context>
 <context>
@@ -13371,7 +13070,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/Tutorials.js" line="+56"/>
         <source>Script &amp;Tutorials</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Komut Dosyası Öğreticileri</translation>
     </message>
 </context>
 <context>
@@ -13395,22 +13094,22 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui" line="+17"/>
         <source>These settings affect the resolution and scale of the QCAD user interface. These preferences can be adjusted if there are problems with the user interface of QCAD, such as very large or very small icons or text labels.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bu ayarlar QCAD kullanıcı arayüzünün çözünürlüğünü ve ölçeğini etkiler. QCAD'in kullanıcı arayüzünde çok büyük veya çok küçük simgeler veya metin etiketleri gibi sorunlar varsa bu tercihler ayarlanabilir.</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Auto screen scale factor</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Otomatik ekran ölçek faktörü</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Enable high DPI scaling</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yüksek DPI ölçeklendirmeyi etkinleştir</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Scale factor:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ölçek faktörü:</translation>
     </message>
 </context>
 <context>
@@ -13423,7 +13122,7 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>User Interface</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kullanıcı Arayüzü</translation>
     </message>
 </context>
 <context>
@@ -13445,7 +13144,7 @@ shown in search results:</source>
         <location line="+0"/>
         <location line="+2"/>
         <source>Drawing Unit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çizim Birimi</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13505,7 +13204,7 @@ shown in search results:</source>
     <message>
         <location line="+1"/>
         <source>Yard</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bahçe</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13540,47 +13239,47 @@ shown in search results:</source>
     <message>
         <location line="+1"/>
         <source>Gigameter</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gigametre</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Astro</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Astro</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Lightyear</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Işıkyılı</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Parsec</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Parsec</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Imperial</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İmparatorluk</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Metric</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Metrik</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/PreferencesPage.ui" line="+17"/>
         <source>Drawing unit:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çizim birimi:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Paper unit:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kağıt birimi:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Measurement system (for line types and hatch patterns):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ölçüm sistemi (çizgi tipleri ve tarama desenleri için):</translation>
     </message>
 </context>
 <context>
@@ -13588,7 +13287,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Layer/UnlockAllLayers/UnlockAllLayersInit.js" line="+2"/>
         <source>&amp;Unlock All Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tüm Katmanların Kilidini Aç</translation>
     </message>
 </context>
 <context>
@@ -13632,7 +13331,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ViewportSettings/PreferencesPage.ui" line="+21"/>
         <source>Viewports</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Viewports</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -13642,7 +13341,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+105"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Izgara Aralığı &lt; Meta Izgara Aralığı</translation>
     </message>
 </context>
 <context>
@@ -13655,23 +13354,23 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>Layout - Viewports</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Düzen - Görünüm Alanları</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Layout</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Düzen</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Viewports</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Viewports</translation>
     </message>
 </context>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+326"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+321"/>
         <source>Dropped data not supported</source>
         <translation>Bırakılan veriler desteklenmiyor</translation>
     </message>
@@ -13699,12 +13398,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/WidgetFactory.js" line="+1157"/>
         <source>Restore defaults</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varsayılanları geri yükle</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Insert Symbol</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sembol Ekle</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -13724,42 +13423,42 @@ shown in search results:</source>
     <message>
         <location line="+23"/>
         <source>Pi</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pi</translation>
     </message>
     <message>
         <location line="-3"/>
         <source>Phi</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Phi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>phi</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">phi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Alt phi</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alt phi</translation>
     </message>
     <message>
         <location line="-5"/>
         <source>Ohm</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ohm</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>omega</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">omega</translation>
     </message>
     <message>
         <location line="-4"/>
         <source>Multiplication</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çarpma İşlemi</translation>
     </message>
     <message>
         <location line="-13"/>
         <source>Division</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bölüm</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -13774,12 +13473,12 @@ shown in search results:</source>
     <message>
         <location line="-10"/>
         <source>Degrees</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dereceler</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Almost Equal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Neredeyse Eşit</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13789,67 +13488,67 @@ shown in search results:</source>
     <message>
         <location line="+2"/>
         <source>Asymptotically Equal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Asimptotik Olarak Eşit</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Center Line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Merkez Hat</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Electrical Phase</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Elektriksel Faz</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Identity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kimlik</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Not Equal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Eşit Değil</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Omega</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Omega</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Property Line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mülkiyet Hattı</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Subscript 2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alt simge 2</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Square Root</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kare Kök</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Squared</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kare</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Küp</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Stacked text</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yığılmış metin</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Measured value</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ölçülen değer</translation>
     </message>
     <message>
         <location line="+151"/>
@@ -13869,7 +13568,7 @@ shown in search results:</source>
     <message>
         <location line="+1"/>
         <source>Aligned</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Hizalanmış</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13880,7 +13579,7 @@ shown in search results:</source>
     <message>
         <location line="-6"/>
         <source>Fit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fit</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -13890,7 +13589,7 @@ shown in search results:</source>
     <message>
         <location line="+2"/>
         <source>Base</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Üs</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13925,44 +13624,44 @@ shown in search results:</source>
     <message>
         <location line="+5"/>
         <source>Centered</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Merkezlenmiş</translation>
     </message>
     <message>
         <location line="+13"/>
         <location line="+38"/>
         <source>Show trailing zeroes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sondaki sıfırları göster</translation>
     </message>
     <message>
         <location line="-9"/>
         <source>Decimal Degrees</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ondalık Dereceler</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Deg/min/sec</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Derece/dak/sn</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gradians</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gradyanlar</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Radians</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Radyanlar</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Surveyor&apos;s units</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sörveyör birimleri</translation>
     </message>
     <message>
         <location line="-28"/>
         <location line="+35"/>
         <source>Suppress trailing zeroes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sondaki sıfırları bastır</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -13979,18 +13678,18 @@ shown in search results:</source>
     <message>
         <location line="+7"/>
         <source>Preceding</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Önceki</translation>
     </message>
     <message>
         <location line="-86"/>
         <location line="+87"/>
         <source>Above</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yukarıda</translation>
     </message>
     <message>
         <location line="-74"/>
         <source>Include 0&apos;0&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">0&apos;0&quot; dahil</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14001,29 +13700,29 @@ shown in search results:</source>
         <location line="+33"/>
         <location line="+2"/>
         <source>(unsupported)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">(desteklenmiyor)</translation>
     </message>
     <message>
         <location line="-39"/>
         <source>Include 0&apos;, suppress 0&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">0&apos; dahil et, 0&apos;ı bastır&quot;</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Include 0&quot;, suppress 0&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dahil et 0&quot;, bastır 0&apos;</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+35"/>
         <source>Suppress leading zeroes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Baştaki sıfırları bastır</translation>
     </message>
     <message>
         <location line="-33"/>
         <location line="+35"/>
         <source>Suppress leading / trailing zeroes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Baştaki / sondaki sıfırları bastır</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -14065,12 +13764,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/XLineHorizontal/XLineHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal Construction Line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yatay İnşaat Hattı</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw horizontal construction line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yatay inşaat çizgisi çizin</translation>
     </message>
 </context>
 <context>
@@ -14078,12 +13777,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/XLineVertical/XLineVerticalInit.js" line="+2"/>
         <source>&amp;Vertical Construction Line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dikey İnşaat Hattı</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw vertical construction line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dikey inşaat çizgisi çizin</translation>
     </message>
 </context>
 <context>
@@ -14136,7 +13835,7 @@ shown in search results:</source>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../scripts/autostart.js" line="+361"/>
+        <location filename="../scripts/autostart.js" line="+363"/>
         <source>Loading add-on translations...</source>
         <translation>Eklenti çevirileri yükleniyor...</translation>
     </message>
@@ -14191,7 +13890,7 @@ shown in search results:</source>
     <message>
         <location line="+2"/>
         <source>Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Katmanlar</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14201,22 +13900,22 @@ shown in search results:</source>
     <message>
         <location line="+2"/>
         <source>Layouts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Düzenlemeler</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layout</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Düzen</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Linetypes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Linetipler</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Linetype</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Linetype</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14226,17 +13925,17 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>Views</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Görünümler</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Dimension Styles</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Boyut Stilleri</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Dimension Style</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Boyut Stili</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -14246,37 +13945,37 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>Entities</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varlıklar</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>3dFaces</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">3dFaces</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>3dFace</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">3dYüz</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block References</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blok Referansları</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block Reference</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blok Referansı</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block References and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blok Referansları ve Öznitelikleri</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block Reference and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blok Referansı ve Öznitelikleri</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14286,37 +13985,37 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>Arcs</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yaylar</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nitelikler</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Attribute</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Öznitelik</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Attribute Definitions</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Öznitelik Tanımları</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Attribute Definition</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Öznitelik Tanımı</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Circles</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Daireler</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Circle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Daire</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14351,22 +14050,22 @@ shown in search results:</source>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (2 Line)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Açısal Boyutlar (2 Satır)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (2 Line)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Açısal Boyut (2 Çizgi)</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (3 Point)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Açısal Boyutlar (3 Nokta)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (3 Point)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Açısal Boyut (3 Nokta)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14416,12 +14115,12 @@ shown in search results:</source>
     <message>
         <location line="+2"/>
         <source>Ellipses</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Elipsler</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Elips</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14431,47 +14130,47 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>Hatches</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kapaklar</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Images</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Görüntüler</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Image</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Resim</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Leaders</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Liderler</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Leader</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lider</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Tolerances</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Toleranslar</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Tolerance</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Hoşgörü</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Lines</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çizgiler</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Hat</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14481,17 +14180,17 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>Infinite Lines</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sonsuz Çizgiler</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Rays</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Işınlar</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ray</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ray</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14501,47 +14200,47 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>Points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Puanlar</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Polylines</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çoklu Çizgiler</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Polyline</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çoklu Çizgi</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Solids</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Katı maddeler</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Solid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Katı</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Traces</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İzler</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Trace</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İz</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Faces</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yüzler</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Face</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yüz</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14551,12 +14250,12 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>Spline</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spline</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Text based</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Metin tabanlı</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14566,37 +14265,37 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>Texts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Metinler</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Viewports</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Viewports</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Viewport</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Görünüm Alanı</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Unknown Entities</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bilinmeyen Varlıklar</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Unknown Entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bilinmeyen Varlık</translation>
     </message>
     <message>
         <location line="+102"/>
         <source>All CAD Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tüm CAD Dosyaları</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>DXF Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">DXF Dosyaları</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14606,22 +14305,22 @@ shown in search results:</source>
     <message>
         <location line="+1"/>
         <source>DXF Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">DXF Çizim</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>DWG Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">DWG Çizim</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>PDF File</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">PDF Dosyası</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>PDF/A-1B File</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">PDF/A-1B Dosyası</translation>
     </message>
 </context>
 <context>
@@ -14629,7 +14328,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/GridSettings/PreferencesPage.ui" line="+29"/>
         <source>Viewport 1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Görünüm Alanı 1</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -14637,7 +14336,7 @@ shown in search results:</source>
         <location line="+152"/>
         <location line="+152"/>
         <source>Display Grid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ekran Izgarası</translation>
     </message>
     <message>
         <location line="-446"/>
@@ -14645,7 +14344,7 @@ shown in search results:</source>
         <location line="+152"/>
         <location line="+152"/>
         <source>Isometric Grid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İzometrik Izgara</translation>
     </message>
     <message>
         <location line="-449"/>
@@ -14653,7 +14352,7 @@ shown in search results:</source>
         <location line="+152"/>
         <location line="+152"/>
         <source>Grid Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Izgara Aralığı</translation>
     </message>
     <message>
         <location line="-450"/>
@@ -14677,7 +14376,7 @@ shown in search results:</source>
         <location line="+62"/>
         <location line="+63"/>
         <source>X:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">X:</translation>
     </message>
     <message>
         <location line="-462"/>
@@ -14685,22 +14384,22 @@ shown in search results:</source>
         <location line="+152"/>
         <location line="+152"/>
         <source>Meta Grid Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Meta Izgara Aralığı</translation>
     </message>
     <message>
         <location line="-390"/>
         <source>Viewport 2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Görünüm Alanı 2</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>Viewport 3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Görünüm Alanı 3</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>Viewport 4</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Görünüm Alanı 4</translation>
     </message>
 </context>
 <context>
@@ -14708,17 +14407,18 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/simple_modify.js" line="+301"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İlk varlık kırpılamaz.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varlık kırpılamaz.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İkinci varlık kırpılamaz.</translation>
     </message>
 </context>
 </TS>
+

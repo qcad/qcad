@@ -257,6 +257,16 @@
         <return>return <expr><name>splineProxy</name></expr>;</return>
     }</block></function>
 
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x060000</expr></cpp:if>
+    <comment type="block">/**
+     * copy function for Qt 6 scripts:
+     * \nonscriptable
+     */</comment>
+    <function><type><name>RSpline</name></type> <name>copy</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr>*<name>this</name></expr>;</return>
+    }</block></function>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
 </public><protected>protected:
     <function_decl><type><name>void</name></type> <name>appendToExploded</name><parameter_list>(<param><decl><type><name>const</name> <name>RLine</name>&amp;</type> <name>line</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <comment type="line">//void appendToExploded(QList&lt;QSharedPointer&lt;RShape&gt; &gt;&amp; list) const;</comment>

@@ -86,7 +86,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="printCounters" cppName="printCounters"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false" />
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="prefix"
+        hasDefault="true" default="RDEFAULT_QSTRING"
+        isConst="true" />
+      </variant>
     </method>
     <method name="setPrefix" cppName="setPrefix" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">

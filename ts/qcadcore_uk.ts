@@ -1043,7 +1043,7 @@
     <message>
         <location line="+2"/>
         <source>Water</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Вода</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1058,37 +1058,37 @@
     <message>
         <location line="+2"/>
         <source>Communication</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Комунікація</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Electric</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Електричний</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Low Voltage</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Низька напруга</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>High Voltage</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Висока напруга</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Overhead Power</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Повітряні лінії електропередач</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Foul</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Фол!</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foul Rising</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Foul Rising</translation>
     </message>
 </context>
 <context>
@@ -1230,3 +1230,4 @@
     </message>
 </context>
 </TS>
+

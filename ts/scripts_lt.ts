@@ -2410,29 +2410,6 @@ Ar norite jį atkurti?</translation>
     </message>
 </context>
 <context>
-    <name>CreateLibraryItem</name>
-    <message>
-        <location filename="../scripts/Block/CreateLibraryItem/CreateLibraryItem.js" line="+49"/>
-        <source>Reference Point</source>
-        <translation>Atskaitinis taškas</translation>
-    </message>
-    <message>
-        <location line="+45"/>
-        <source>Save library item as...</source>
-        <translation>Išsaugoti bibliotekos elementą kaip...</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Block/CreateLibraryItem/CreateLibraryItemInit.js" line="+2"/>
-        <source>&amp;Create Library Item</source>
-        <translation>&amp;Sukurti Bibliotekos Elementą</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Create library item from selection</source>
-        <translation>Sukurti bibliotekos elementą iš pažymėjimo</translation>
-    </message>
-</context>
-<context>
     <name>Cross</name>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Cross/Cross.js" line="+56"/>
@@ -4152,12 +4129,12 @@ jau yra sąraše.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2129"/>
+        <location line="+2127"/>
         <source>Cancel</source>
         <translation type="unfinished">Atšaukti</translation>
     </message>
     <message>
-        <location line="-2128"/>
+        <location line="-2126"/>
         <source>Done</source>
         <translation type="unfinished">Atlikta</translation>
     </message>
@@ -4193,7 +4170,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Neteisinga padėtis</translation>
     </message>
     <message>
-        <location line="+177"/>
+        <location line="+175"/>
         <source>Entity is not in working set.</source>
         <translation type="unfinished">Subjekto nėra darbiniame rinkinyje.</translation>
     </message>
@@ -4208,7 +4185,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Ilgis:</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+62"/>
         <source>Entity is not a block reference.</source>
         <translation type="unfinished">Subjektas nėra bloko nuoroda.</translation>
     </message>
@@ -4296,7 +4273,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Rodyti &quot;ECMAScript Shell</translation>
     </message>
     <message>
-        <location line="+56"/>
+        <location line="+55"/>
         <source>&amp;Script Shell</source>
         <translation type="unfinished">Skriptų apvalkalas</translation>
     </message>
@@ -5056,6 +5033,11 @@ jau yra sąraše.</translation>
         <location line="+0"/>
         <source>Explode</source>
         <translation type="unfinished">Sprogti</translation>
+    </message>
+    <message>
+        <location line="+613"/>
+        <source>Ignored hatch in block reference with non-uniform scale factors</source>
+        <translation type="unfinished">Ignoruojamas bloko atskaitos liukas su nevienodais mastelio veiksniais</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
@@ -6580,7 +6562,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Pasirinkite lanką, apskritimą, elipsę arba elipsės formos lanką</translation>
     </message>
     <message>
-        <location line="+238"/>
+        <location line="+236"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -6722,7 +6704,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Nustatyti kitą daugiakampio kampą</translation>
     </message>
     <message>
-        <location line="+123"/>
+        <location line="+121"/>
         <source>Polygon area:</source>
         <translation type="unfinished">Poligono plotas:</translation>
     </message>
@@ -6854,7 +6836,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Susidurta su nepalaikomu daugiakampiu su pasirinktiniais pločiais</translation>
     </message>
     <message>
-        <location line="+687"/>
+        <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
         <translation type="unfinished">Neapdorota forma iš liuko kilpos.</translation>
     </message>
@@ -7357,7 +7339,7 @@ jau yra sąraše.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+337"/>
+        <location filename="../scripts/Information/Information.js" line="+335"/>
         <source>Information Tools</source>
         <translation type="unfinished">Informacinės priemonės</translation>
     </message>
@@ -7656,6 +7638,31 @@ jau yra sąraše.</translation>
         <source>Insert &amp;Script</source>
         <translation type="unfinished">Įterpti scenarijų</translation>
     </message>
+    <message>
+        <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+66"/>
+        <source>Cannot read file:</source>
+        <translation type="unfinished">Nepavyksta perskaityti failo:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>No constructor found in file:</source>
+        <translation type="unfinished">Faile nerastas joks konstruktorius:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>No &apos;init&apos; function found in file:</source>
+        <translation type="unfinished">Faile nerasta "init" funkcijos:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>No &apos;generate&apos; function found in file:</source>
+        <translation type="unfinished">Faile nerasta funkcijos &apos;generate&apos;:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>No &apos;generatePreview&apos; function found in file:</source>
+        <translation type="unfinished">Faile nerasta funkcijos &apos;generatePreview&apos;:</translation>
+    </message>
 </context>
 <context>
     <name>InvertSelection</name>
@@ -7834,7 +7841,7 @@ jau yra sąraše.</translation>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+57"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+58"/>
         <source>Language Settings</source>
         <translation type="unfinished">Kalbos nustatymai</translation>
     </message>
@@ -8093,312 +8100,6 @@ jau yra sąraše.</translation>
         <location line="+10"/>
         <source>Amount to lengthen or shorten (negative)</source>
         <translation type="unfinished">Suma, kurią reikia pailginti arba sutrumpinti (neigiama)</translation>
-    </message>
-</context>
-<context>
-    <name>LibraryBrowser</name>
-    <message>
-        <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowser.js" line="+72"/>
-        <source>audience</source>
-        <translation type="unfinished">auditorija</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>creator</source>
-        <translation type="unfinished">kūrėjas</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>dimension</source>
-        <translation type="unfinished">matmuo</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>levelOfDetail</source>
-        <translation type="unfinished">levelOfDetail</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>license</source>
-        <translation type="unfinished">licencija</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>perspective</source>
-        <translation type="unfinished">perspektyva</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>presentation</source>
-        <translation type="unfinished">pristatymas</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>publisher</source>
-        <translation type="unfinished">leidėjas</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>subject</source>
-        <translation type="unfinished">tema</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>title</source>
-        <translation type="unfinished">pavadinimas</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Widgets</source>
-        <translation type="unfinished">Valdikliai</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <location line="+1157"/>
-        <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowserInit.js" line="+19"/>
-        <source>Library Browser</source>
-        <translation type="unfinished">Bibliotekos naršyklė</translation>
-    </message>
-    <message>
-        <location line="-1149"/>
-        <source>Icon</source>
-        <translation type="unfinished">Ikona</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>List</source>
-        <translation type="unfinished">Sąrašas</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Choose Source Folder</source>
-        <translation type="unfinished">Pasirinkite šaltinio aplanką</translation>
-    </message>
-    <message>
-        <location line="+687"/>
-        <source>Page %1 of %2</source>
-        <translation type="unfinished">Puslapis %1 iš %2</translation>
-    </message>
-    <message>
-        <location line="+237"/>
-        <source>Updating icons...</source>
-        <translation type="unfinished">Atnaujinti piktogramas...</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+219"/>
-        <source>Abort</source>
-        <translation type="unfinished">Abort</translation>
-    </message>
-    <message>
-        <location line="-27"/>
-        <source>File:</source>
-        <translation type="unfinished">Failas:</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Folder:</source>
-        <translation type="unfinished">Aplankas:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>License:</source>
-        <translation type="unfinished">Licencija:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Attribute as:</source>
-        <translation type="unfinished">Atributas kaip:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Creator:</source>
-        <translation type="unfinished">Kūrėjas:</translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Updating library index:</source>
-        <translation type="unfinished">Bibliotekos rodyklės atnaujinimas:</translation>
-    </message>
-    <message>
-        <location line="+30"/>
-        <source>DB error</source>
-        <translation type="unfinished">DB klaida</translation>
-    </message>
-    <message>
-        <location line="+44"/>
-        <source>Source removed from part library: %1</source>
-        <translation type="unfinished">Šaltinis pašalintas iš dalies bibliotekos: %1</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Force database update.</source>
-        <translation type="unfinished">Priverstinis duomenų bazės atnaujinimas.</translation>
-    </message>
-    <message>
-        <location line="+393"/>
-        <source>&amp;Insert</source>
-        <translation type="unfinished">Įdėkite</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>&amp;Edit Script File...</source>
-        <translation type="unfinished">Redaguoti scenarijaus failą...</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Open &amp;SVG File...</source>
-        <translation type="unfinished">Atidaryti SVG failą...</translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>&amp;Open...</source>
-        <translation type="unfinished">Atviras...</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>&amp;Edit...</source>
-        <translation type="unfinished">Redaguoti...</translation>
-    </message>
-    <message>
-        <location line="+25"/>
-        <source>File Browser</source>
-        <translation type="unfinished">Failų naršyklė</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>&amp;Show in %1...</source>
-        <translation type="unfinished">Rodyti %1...</translation>
-    </message>
-    <message>
-        <location line="+28"/>
-        <source>&amp;Remove from Favorites</source>
-        <translation type="unfinished">Pašalinti iš mėgstamiausių</translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>&amp;Add to Favorites</source>
-        <translation type="unfinished">Pridėti prie mėgstamiausių</translation>
-    </message>
-    <message>
-        <location line="+34"/>
-        <source>&amp;Regenerate Icon</source>
-        <translation type="unfinished">Regeneruoti piktogramą</translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>&amp;Regenerate Icons</source>
-        <translation type="unfinished">Atkurti piktogramas</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowserInit.js" line="-11"/>
-        <source>&amp;Library Browser</source>
-        <translation type="unfinished">Bibliotekos naršyklė</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Widgets/LibraryBrowser/PreferencesPage.ui" line="+17"/>
-        <source>Synchronization</source>
-        <translation type="unfinished">Sinchronizavimas</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Update search index on startup</source>
-        <translation type="unfinished">Paieškos indekso atnaujinimas paleidimo metu</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Display Options</source>
-        <translation type="unfinished">Rodymo parinktys</translation>
-    </message>
-    <message>
-        <location line="+53"/>
-        <source>Dark icon background</source>
-        <translation type="unfinished">Tamsus piktogramos fonas</translation>
-    </message>
-    <message>
-        <location line="-44"/>
-        <source>Icon size:</source>
-        <translation type="unfinished">Ikonos dydis:</translation>
-    </message>
-    <message>
-        <location line="+51"/>
-        <source>View mode:</source>
-        <translation type="unfinished">Peržiūros režimas:</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Number of items
-shown in search results:</source>
-        <translation>Elementų skaičius
-rodomas paieškos rezultatuose:</translation>
-    </message>
-    <message>
-        <location line="+18"/>
-        <source>Library Sources</source>
-        <translation type="unfinished">Bibliotekos šaltiniai</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Add...</source>
-        <translation type="unfinished">Pridėti...</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Remove</source>
-        <translation type="unfinished">Pašalinti</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Up</source>
-        <translation type="unfinished">Į viršų</translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>Down</source>
-        <translation type="unfinished">Žemyn</translation>
-    </message>
-</context>
-<context>
-    <name>LibraryBrowserForm</name>
-    <message>
-        <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowser.ui" line="+28"/>
-        <source>File System</source>
-        <translation type="unfinished">Failų sistema</translation>
-    </message>
-    <message>
-        <location line="+60"/>
-        <source>Search</source>
-        <translation type="unfinished">Paieška</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>Look for:</source>
-        <translation type="unfinished">Ieškokite:</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Clear</source>
-        <translation type="unfinished">Skaidrus</translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>Find</source>
-        <translation type="unfinished">Rasti</translation>
-    </message>
-    <message>
-        <location line="+129"/>
-        <source>Favorites</source>
-        <translation type="unfinished">Mėgstamiausi</translation>
-    </message>
-    <message>
-        <location line="+36"/>
-        <source>Insert selected item into drawing</source>
-        <translation type="unfinished">Įterpti pasirinktą elementą į brėžinį</translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>Update DB from file system</source>
-        <translation type="unfinished">DB atnaujinimas iš failų sistemos</translation>
     </message>
 </context>
 <context>
@@ -10185,7 +9886,7 @@ rodomas paieškos rezultatuose:</translation>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+92"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+94"/>
         <source>Auto Paper Size</source>
         <translation type="unfinished">Automatinis popieriaus dydis</translation>
     </message>
@@ -10205,7 +9906,7 @@ rodomas paieškos rezultatuose:</translation>
         <translation type="unfinished">Automatinis brėžinio pritaikymas prie popieriaus?</translation>
     </message>
     <message>
-        <location line="+187"/>
+        <location line="+198"/>
         <source>Drag to move paper</source>
         <translation type="unfinished">Vilkite, kad perkeltumėte popierių</translation>
     </message>
@@ -10215,7 +9916,7 @@ rodomas paieškos rezultatuose:</translation>
         <translation type="unfinished">Atlikta</translation>
     </message>
     <message>
-        <location line="+452"/>
+        <location line="+453"/>
         <source>Export to PDF</source>
         <translation type="unfinished">Eksportuoti į PDF</translation>
     </message>
@@ -13694,7 +13395,7 @@ rodomas paieškos rezultatuose:</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+326"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+321"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished">Nepalaikomi nutolę duomenys</translation>
     </message>
@@ -14159,7 +13860,7 @@ rodomas paieškos rezultatuose:</translation>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../scripts/autostart.js" line="+361"/>
+        <location filename="../scripts/autostart.js" line="+363"/>
         <source>Loading add-on translations...</source>
         <translation type="unfinished">Įkeliami priedų vertimai...</translation>
     </message>
@@ -14745,3 +14446,4 @@ rodomas paieškos rezultatuose:</translation>
     </message>
 </context>
 </TS>
+

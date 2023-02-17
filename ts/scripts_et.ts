@@ -293,7 +293,6 @@
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
-        <translation></translation>
     </message>
     <message>
         <location line="+86"/>
@@ -918,7 +917,6 @@ Do you wish to recover it/them?</source>
         <location line="+1"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
-        <translation></translation>
     </message>
     <message>
         <location line="+25"/>
@@ -2407,29 +2405,6 @@ Do you wish to recover it?</source>
     </message>
 </context>
 <context>
-    <name>CreateLibraryItem</name>
-    <message>
-        <location filename="../scripts/Block/CreateLibraryItem/CreateLibraryItem.js" line="+49"/>
-        <source>Reference Point</source>
-        <translation type="unfinished">Võrdluspunkt</translation>
-    </message>
-    <message>
-        <location line="+45"/>
-        <source>Save library item as...</source>
-        <translation type="unfinished">Salvesta raamatukogu kirje kui...</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Block/CreateLibraryItem/CreateLibraryItemInit.js" line="+2"/>
-        <source>&amp;Create Library Item</source>
-        <translation type="unfinished">Raamatukogu kirje loomine</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Create library item from selection</source>
-        <translation type="unfinished">Loo raamatukogu kirje valikust</translation>
-    </message>
-</context>
-<context>
     <name>Cross</name>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Cross/Cross.js" line="+56"/>
@@ -3235,7 +3210,6 @@ Do you wish to recover it?</source>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
-        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4145,12 +4119,12 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2129"/>
+        <location line="+2127"/>
         <source>Cancel</source>
         <translation type="unfinished">Tühista</translation>
     </message>
     <message>
-        <location line="-2128"/>
+        <location line="-2126"/>
         <source>Done</source>
         <translation type="unfinished">Valmis</translation>
     </message>
@@ -4186,7 +4160,7 @@ is already in the list.</source>
         <translation type="unfinished">Vale asend</translation>
     </message>
     <message>
-        <location line="+177"/>
+        <location line="+175"/>
         <source>Entity is not in working set.</source>
         <translation type="unfinished">Entiteet ei ole töökomplektis.</translation>
     </message>
@@ -4201,7 +4175,7 @@ is already in the list.</source>
         <translation type="unfinished">Pikkus:</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+62"/>
         <source>Entity is not a block reference.</source>
         <translation type="unfinished">Entiteet ei ole viide plokile.</translation>
     </message>
@@ -4289,7 +4263,7 @@ is already in the list.</source>
         <translation type="unfinished">Näita ECMAScript Shell</translation>
     </message>
     <message>
-        <location line="+56"/>
+        <location line="+55"/>
         <source>&amp;Script Shell</source>
         <translation type="unfinished">Skripti kest</translation>
     </message>
@@ -5048,6 +5022,11 @@ is already in the list.</source>
         <location line="+0"/>
         <source>Explode</source>
         <translation type="unfinished">Explodeeri</translation>
+    </message>
+    <message>
+        <location line="+613"/>
+        <source>Ignored hatch in block reference with non-uniform scale factors</source>
+        <translation type="unfinished">Ignoreeritud luuk plokkviitungi puhul ebaühtlase mõõtkava teguritega</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
@@ -6572,7 +6551,7 @@ is already in the list.</source>
         <translation type="unfinished">Valige kaar, ring, ellips või elliptiline kaar</translation>
     </message>
     <message>
-        <location line="+238"/>
+        <location line="+236"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -6714,7 +6693,7 @@ is already in the list.</source>
         <translation type="unfinished">Järgmise hulknurga määramine</translation>
     </message>
     <message>
-        <location line="+123"/>
+        <location line="+121"/>
         <source>Polygon area:</source>
         <translation type="unfinished">Polügooni pindala:</translation>
     </message>
@@ -6846,7 +6825,7 @@ is already in the list.</source>
         <translation type="unfinished">Kohtas kohandatud laiusega mittetoetavat polügooni</translation>
     </message>
     <message>
-        <location line="+687"/>
+        <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
         <translation type="unfinished">Käsitlemata kuju luugisilmusest.</translation>
     </message>
@@ -7349,7 +7328,7 @@ is already in the list.</source>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+337"/>
+        <location filename="../scripts/Information/Information.js" line="+335"/>
         <source>Information Tools</source>
         <translation type="unfinished">Teabevahendid</translation>
     </message>
@@ -7648,6 +7627,31 @@ is already in the list.</source>
         <source>Insert &amp;Script</source>
         <translation type="unfinished">Insert Script</translation>
     </message>
+    <message>
+        <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+66"/>
+        <source>Cannot read file:</source>
+        <translation type="unfinished">Ei saa lugeda faili:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>No constructor found in file:</source>
+        <translation type="unfinished">Failis ei leitud konstruktorit:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>No &apos;init&apos; function found in file:</source>
+        <translation type="unfinished">Failis ei leitud funktsiooni &apos;init&apos;:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>No &apos;generate&apos; function found in file:</source>
+        <translation type="unfinished">Failis ei leitud funktsiooni &apos;generate&apos;:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>No &apos;generatePreview&apos; function found in file:</source>
+        <translation type="unfinished">Failis ei leitud funktsiooni &apos;generatePreview&apos;:</translation>
+    </message>
 </context>
 <context>
     <name>InvertSelection</name>
@@ -7826,7 +7830,7 @@ is already in the list.</source>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+57"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+58"/>
         <source>Language Settings</source>
         <translation type="unfinished">Keele seaded</translation>
     </message>
@@ -8085,311 +8089,6 @@ is already in the list.</source>
         <location filename="../scripts/Modify/Lengthen/LengthenInit.js" line="+2"/>
         <source>&amp;Lengthen / Shorten</source>
         <translation type="unfinished">Pikendada / lühendada</translation>
-    </message>
-</context>
-<context>
-    <name>LibraryBrowser</name>
-    <message>
-        <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowser.js" line="+72"/>
-        <source>audience</source>
-        <translation type="unfinished">publik</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>creator</source>
-        <translation type="unfinished">looja</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>dimension</source>
-        <translation type="unfinished">mõõde</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>levelOfDetail</source>
-        <translation type="unfinished">levelOfDetail</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>license</source>
-        <translation type="unfinished">litsents</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>perspective</source>
-        <translation type="unfinished">perspektiiv</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>presentation</source>
-        <translation type="unfinished">esitlus</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>publisher</source>
-        <translation type="unfinished">kirjastaja</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>subject</source>
-        <translation type="unfinished">teema</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>title</source>
-        <translation type="unfinished">pealkiri</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Widgets</source>
-        <translation type="unfinished">Vidinad</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <location line="+1157"/>
-        <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowserInit.js" line="+19"/>
-        <source>Library Browser</source>
-        <translation type="unfinished">Raamatukogu brauser</translation>
-    </message>
-    <message>
-        <location line="-1149"/>
-        <source>Icon</source>
-        <translation type="unfinished">Ikoon</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>List</source>
-        <translation type="unfinished">Loetelu</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Choose Source Folder</source>
-        <translation type="unfinished">Valige allikakaust</translation>
-    </message>
-    <message>
-        <location line="+687"/>
-        <source>Page %1 of %2</source>
-        <translation type="unfinished">Lehekülg %1 %2-st</translation>
-    </message>
-    <message>
-        <location line="+237"/>
-        <source>Updating icons...</source>
-        <translation type="unfinished">Ikoonide uuendamine...</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+219"/>
-        <source>Abort</source>
-        <translation type="unfinished">Katkesta</translation>
-    </message>
-    <message>
-        <location line="-27"/>
-        <source>File:</source>
-        <translation type="unfinished">Faili:</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Folder:</source>
-        <translation type="unfinished">Kaustik:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>License:</source>
-        <translation type="unfinished">Litsents:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Attribute as:</source>
-        <translation type="unfinished">Atribuut nagu:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Creator:</source>
-        <translation type="unfinished">Looja:</translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Updating library index:</source>
-        <translation type="unfinished">Raamatukogu indeksi uuendamine:</translation>
-    </message>
-    <message>
-        <location line="+30"/>
-        <source>DB error</source>
-        <translation type="unfinished">DB viga</translation>
-    </message>
-    <message>
-        <location line="+44"/>
-        <source>Source removed from part library: %1</source>
-        <translation type="unfinished">Allikas eemaldatud osa raamatukogust: %1</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Force database update.</source>
-        <translation type="unfinished">Andmebaasi uuendamise sundimine.</translation>
-    </message>
-    <message>
-        <location line="+393"/>
-        <source>&amp;Insert</source>
-        <translation type="unfinished">Sisesta</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>&amp;Edit Script File...</source>
-        <translation type="unfinished">Skriptifaili redigeerimine...</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Open &amp;SVG File...</source>
-        <translation type="unfinished">Avage SVG fail...</translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>&amp;Open...</source>
-        <translation type="unfinished">Avatud...</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>&amp;Edit...</source>
-        <translation type="unfinished">Edit...</translation>
-    </message>
-    <message>
-        <location line="+25"/>
-        <source>File Browser</source>
-        <translation type="unfinished">Faili brauser</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>&amp;Show in %1...</source>
-        <translation type="unfinished">Näita %1...</translation>
-    </message>
-    <message>
-        <location line="+28"/>
-        <source>&amp;Remove from Favorites</source>
-        <translation type="unfinished">Eemalda lemmikutest</translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>&amp;Add to Favorites</source>
-        <translation type="unfinished">Lisa lemmikute hulka</translation>
-    </message>
-    <message>
-        <location line="+34"/>
-        <source>&amp;Regenerate Icon</source>
-        <translation type="unfinished">Regenereeri ikoon</translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>&amp;Regenerate Icons</source>
-        <translation type="unfinished">Taastage ikoonid</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowserInit.js" line="-11"/>
-        <source>&amp;Library Browser</source>
-        <translation type="unfinished">Raamatukogu brauser</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Widgets/LibraryBrowser/PreferencesPage.ui" line="+17"/>
-        <source>Synchronization</source>
-        <translation type="unfinished">Sünkroniseerimine</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Update search index on startup</source>
-        <translation type="unfinished">Otsinguindeksi uuendamine käivitamisel</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Display Options</source>
-        <translation type="unfinished">Kuvamisvõimalused</translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>Icon size:</source>
-        <translation type="unfinished">Ikooni suurus:</translation>
-    </message>
-    <message>
-        <location line="+44"/>
-        <source>Dark icon background</source>
-        <translation type="unfinished">Tume ikooni taust</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>View mode:</source>
-        <translation type="unfinished">Vaadake režiimi:</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Number of items
-shown in search results:</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location line="+18"/>
-        <source>Library Sources</source>
-        <translation type="unfinished">Raamatukogu allikad</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Add...</source>
-        <translation type="unfinished">Lisa...</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Remove</source>
-        <translation type="unfinished">Eemaldage</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Up</source>
-        <translation type="unfinished">Üles</translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>Down</source>
-        <translation type="unfinished">Alla</translation>
-    </message>
-</context>
-<context>
-    <name>LibraryBrowserForm</name>
-    <message>
-        <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowser.ui" line="+28"/>
-        <source>File System</source>
-        <translation type="unfinished">Failisüsteem</translation>
-    </message>
-    <message>
-        <location line="+60"/>
-        <source>Search</source>
-        <translation type="unfinished">Otsi</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>Look for:</source>
-        <translation type="unfinished">Otsi:</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Clear</source>
-        <translation type="unfinished">Selge</translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>Find</source>
-        <translation type="unfinished">Leia</translation>
-    </message>
-    <message>
-        <location line="+129"/>
-        <source>Favorites</source>
-        <translation type="unfinished">Lemmikud</translation>
-    </message>
-    <message>
-        <location line="+36"/>
-        <source>Insert selected item into drawing</source>
-        <translation type="unfinished">Valitud elemendi sisestamine joonisele</translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>Update DB from file system</source>
-        <translation type="unfinished">Andmebaasi uuendamine failisüsteemist</translation>
     </message>
 </context>
 <context>
@@ -10174,7 +9873,7 @@ shown in search results:</source>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+92"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+94"/>
         <source>Auto Paper Size</source>
         <translation type="unfinished">Automaatne paberi suurus</translation>
     </message>
@@ -10194,7 +9893,7 @@ shown in search results:</source>
         <translation type="unfinished">Automaatselt paberile sobiv joonis?</translation>
     </message>
     <message>
-        <location line="+187"/>
+        <location line="+198"/>
         <source>Drag to move paper</source>
         <translation type="unfinished">Paberi liigutamiseks lohistage</translation>
     </message>
@@ -10204,7 +9903,7 @@ shown in search results:</source>
         <translation type="unfinished">Valmis</translation>
     </message>
     <message>
-        <location line="+452"/>
+        <location line="+453"/>
         <source>Export to PDF</source>
         <translation type="unfinished">Eksportida PDF-i</translation>
     </message>
@@ -11630,7 +11329,6 @@ shown in search results:</source>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
-        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
@@ -12843,7 +12541,6 @@ shown in search results:</source>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
-        <translation></translation>
     </message>
     <message>
         <location line="+21"/>
@@ -13678,7 +13375,7 @@ shown in search results:</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+326"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+321"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished">Andmete mahajäämine ei ole toetatud</translation>
     </message>
@@ -14143,7 +13840,7 @@ shown in search results:</source>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../scripts/autostart.js" line="+361"/>
+        <location filename="../scripts/autostart.js" line="+363"/>
         <source>Loading add-on translations...</source>
         <translation type="unfinished">Täiendavate tõlgete laadimine...</translation>
     </message>
@@ -14729,3 +14426,4 @@ shown in search results:</source>
     </message>
 </context>
 </TS>
+

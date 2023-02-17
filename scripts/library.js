@@ -3126,10 +3126,10 @@ function setUtf8Codec(ts) {
 
 function readTextFile(fileName) {
     var file = new QFile(fileName);
-    var flags = new QIODevice.OpenMode(QIODevice.ReadOnly | QIODevice.Text);
+    var flags = makeQIODeviceOpenMode(QIODevice.ReadOnly, QIODevice.Text);
     if (file.open(flags)) {
         var textStream = new QTextStream(file);
-        textStream.setCodec("UTF-8");
+        setUtf8Codec(textStream);
         var contents = textStream.readAll();
         file.close();
         return contents;
@@ -3140,10 +3140,10 @@ function readTextFile(fileName) {
 
 function writeTextFile(fileName, str) {
     var file = new QFile(fileName);
-    var flags = new QIODevice.OpenMode(QIODevice.WriteOnly | QIODevice.Text);
+    var flags = makeQIODeviceOpenMode(QIODevice.WriteOnly, QIODevice.Text);
     if (file.open(flags)) {
         var textStream = new QTextStream(file);
-        textStream.setCodec("UTF-8");
+        setUtf8Codec(textStream);
         textStream.writeString(str);
         file.close();
     }

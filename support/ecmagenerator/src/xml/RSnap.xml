@@ -4,7 +4,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RGraphicsView" />
   <class name="RSnap" xsi:noNamespaceSchemaLocation="../class.xsd"
   isCopyable="false" hasShell="true" sharedPointerSupport="false"
-  isQObject="false" hasStreamOperator="false" isAbstract="true"
+  isQObject="false" hasStreamOperator="false" isAbstract="false"
   isScriptable="true">
     <enum name="Status">
       <value name="Unknown" />
@@ -32,7 +32,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     </constructor>
     <method name="snap" cppName="snap" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="RVector" isPureVirtual="true">
+      <variant returnType="RVector" isPureVirtual="false">
         <arg type="RVector &amp;" typeName="RVector"
         name="position" isConst="true" />
         <arg type="RGraphicsView &amp;" typeName="RGraphicsView"

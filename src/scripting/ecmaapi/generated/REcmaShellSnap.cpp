@@ -116,8 +116,26 @@
                     ) {
                     //QString cppSig = "RSnap::snap";
                     
-                        qFatal("RSnap::snap is pure virtual.");
-                      
+                        // re-enable recursion for calls from C++ into ECMAScript functions
+                        // leave it marked as generated though if appropriate:
+                        
+                        quint32 prev = _q_function.data().toUInt32();
+                        //if (cppSig!="RGraphicsViewQt::event") {
+                            _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
+                        //}
+                        RVector ret =
+                        RSnap::snap(
+                            position, view, range
+                        );
+
+                        // block recursion again:
+                        _q_function.setData(QScriptValue(engine, prev));
+
+                        //REcmaHelper::shellFunctionEnd("REcmaShellSnap::snap", engine);
+
+                        
+                            return ret;
+                          
                 }
                     // prevent recursion if script implementation calls base implementation
                     // mark function as 'in call':
