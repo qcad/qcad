@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(qcadcore VERSION 1.0 LANGUAGES CXX)
+project(spatialindexnavel VERSION 1.0 LANGUAGES CXX)
 
 add_library(spatialindexnavel SHARED
     src/rtree/BulkLoader.cc src/rtree/BulkLoader.h
@@ -29,7 +29,7 @@ if (CMAKE_BUILD_TYPE STREQUAL "Release")
     set_target_properties(spatialindexnavel PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../../release)
     target_link_libraries(spatialindexnavel PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../../release)
 else()
-    set_target_properties(spatialindexnavel PROPERTIES ALIBRARYOUTPUT_DIRECTORY ../../../debug)
+    set_target_properties(spatialindexnavel PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../../debug)
     target_link_libraries(spatialindexnavel PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../../debug)
 endif()
 
