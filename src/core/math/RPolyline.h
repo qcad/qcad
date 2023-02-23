@@ -217,6 +217,22 @@ public:
     virtual QList<QSharedPointer<RShape> > getExploded(int segments = RDEFAULT_MIN1) const;
     QList<RPolyline> getOutline() const;
     QList<QPair<RPolyline, RPolyline> > getLeftRightOutline() const;
+    QList<RPolyline> getLeftOutline() const {
+        QList<QPair<RPolyline, RPolyline> > lr = getLeftRightOutline();
+        QList<RPolyline> ret;
+        for (int i=0; i<lr.length(); i++) {
+            ret.append(lr[i].first);
+        }
+        return ret;
+    }
+    QList<RPolyline> getRightOutline() const {
+        QList<QPair<RPolyline, RPolyline> > lr = getLeftRightOutline();
+        QList<RPolyline> ret;
+        for (int i=0; i<lr.length(); i++) {
+            ret.append(lr[i].second);
+        }
+        return ret;
+    }
     virtual bool isInterpolated() const {
         return false;
     }
