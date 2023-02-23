@@ -135,7 +135,9 @@ function destr(obj) {
         obj.destr();
     }
     else {
-        obj.destroy();
+        if (isFunction(obj.destroy)) {
+            obj.destroy();
+        }
     }
 }
 

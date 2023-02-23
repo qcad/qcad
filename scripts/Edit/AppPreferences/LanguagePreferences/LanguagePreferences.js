@@ -70,16 +70,16 @@ LanguagePreferences.initPreferences = function(pageWidget, calledByPrefDialog, d
     }
     language.model().sort(0);
     
-    if (RSettings.getQtVersion() >= 0x060000) {
-        language.currentTextChanged.connect(this, function(text) {
-            RSettings.setValue("LibraryBrowser/RebuildDatabase", true);
-        });
-    }
-    else {
-        language["currentIndexChanged(QString)"].connect(this, function(text) {
-            RSettings.setValue("LibraryBrowser/RebuildDatabase", true);
-        });
-    }
+//    if (RSettings.getQtVersion() >= 0x060000) {
+//        language.currentTextChanged.connect(this, function(text) {
+//            RSettings.setValue("LibraryBrowser/RebuildDatabase", true);
+//        });
+//    }
+//    else {
+//        language["currentIndexChanged(QString)"].connect(this, function(text) {
+//            RSettings.setValue("LibraryBrowser/RebuildDatabase", true);
+//        });
+//    }
 
     
 //  var contents = pageWidget.findChild("LanguagePage");
