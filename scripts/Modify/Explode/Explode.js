@@ -278,7 +278,18 @@ Explode.explodeEntity = function(entity, options) {
         if (RPolyline.hasProxy() && polyline.hasWidths()) {
 
             // list of polyline pairs (left / right):
-            var pls = polyline.getLeftRightOutline();
+            var pls;
+            if (RSettings.getQtVersion() >= 0x060000) {
+                pls = [];
+                var plsLeft = polyline.getLeftOutline();
+                var plsRight = polyline.getRightOutline();
+                for (var i=0; i<plsLeft.length && i<plsRight.length; i++) {
+                    pls.push([plsLeft[i], plsRight[i]]);
+                }
+            }
+            else {
+                pls = polyline.getLeftRightOutline();
+            }
 
             var first = true;
             var lastSegment = undefined;
