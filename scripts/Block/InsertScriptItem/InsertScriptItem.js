@@ -60,34 +60,7 @@ InsertScriptItem.prototype.beginEvent = function() {
     this.file = this.url.toLocalFile();
 
     // sanity checks:
-    var baseName = new QFileInfo(this.file).baseName();
-    var content = readTextFile(this.file);
-    if (isNull(content)) {
-        EAction.handleUserWarning(qsTr("Cannot read file:") + " " + this.file);
-        this.terminate();
-        return;
-    }
-
-    if (!content.contains("function " + baseName)) {
-        EAction.handleUserWarning(qsTr("No constructor found in file:") + " " + this.file);
-        this.terminate();
-        return;
-    }
-
-    if (!content.contains(baseName + ".init")) {
-        EAction.handleUserWarning(qsTr("No 'init' function found in file:") + " " + this.file);
-        this.terminate();
-        return;
-    }
-
-    if (!content.contains(baseName + ".generate")) {
-        EAction.handleUserWarning(qsTr("No 'generate' function found in file:") + " " + this.file);
-        this.terminate();
-        return;
-    }
-
-    if (!content.contains(baseName + ".generatePreview")) {
-        EAction.handleUserWarning(qsTr("No 'generatePreview' function found in file:") + " " + this.file);
+    if (!InsertScriptItem.check(this.file)) {
         this.terminate();
         return;
     }
@@ -99,6 +72,41 @@ InsertScriptItem.prototype.beginEvent = function() {
     this.generate();
 
     this.setState(InsertBlockItem.State.SettingPosition);
+};
+
+/**
+ * Sanity check before including a script.
+ * \return true if this is very likely a part library script item.
+ */
+InsertScriptItem.check = function(fileName) {
+    var baseName = new QFileInfo(fileName).baseName();
+    var content = readTextFile(fileName);
+    if (isNull(content)) {
+        EAction.handleUserWarning(qsTr("Cannot read file:") + " " + fileName);
+        return false;
+    }
+
+    if (!content.contains("function " + baseName)) {
+        EAction.handleUserWarning(qsTr("No constructor found in file:") + " " + fileName);
+        return false;
+    }
+
+    if (!content.contains(baseName + ".init")) {
+        EAction.handleUserWarning(qsTr("No 'init' function found in file:") + " " + fileName);
+        return false;
+    }
+
+    if (!content.contains(baseName + ".generate")) {
+        EAction.handleUserWarning(qsTr("No 'generate' function found in file:") + " " + fileName);
+        return false;
+    }
+
+    if (!content.contains(baseName + ".generatePreview")) {
+        EAction.handleUserWarning(qsTr("No 'generatePreview' function found in file:") + " " + this.file);
+        return false;
+    }
+
+    return true;
 };
 
 InsertScriptItem.prototype.finishEvent = function() {
