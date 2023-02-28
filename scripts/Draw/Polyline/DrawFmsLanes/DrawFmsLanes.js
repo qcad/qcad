@@ -33,6 +33,7 @@ function DrawFmsLanes(guiAction) {
 
     this.polylineEntity = undefined;
     this.arcSegment = false;
+    this.laneWidth = 20; // 20meters
     this.radius = 1.0;
     this.prepend = false;
     this.segment = undefined;
@@ -261,22 +262,38 @@ DrawFmsLanes.prototype.pickCoordinate = function(event, preview) {
                 else {
                     this.polylineEntity.setBulgeAt(numberOfVertices-1, bulge);
                     ribLeft = new RLine(this.segment.startPoint, vertex);
-                    ribRight = new RLine(this.segment.startPoint, vertex);
                     ribLeft.rotate(Math.PI/2, ribLeft.startPoint);
-                    ribRight.rotate(-Math.PI/2, ribLeft.startPoint);
+                    var ribLeftVec = new RVector(ribLeft.endPoint.getX() - ribLeft.startPoint.getX(), ribLeft.endPoint.getY() - ribLeft.startPoint.getY());
+                    var ribLeftVecNorm = ribLeftVec.getNormalized();
+                    var scaled = ribLeftVecNorm.scale(this.laneWidth);
+                    var ribLeftFinalEndPoint = new RVector(
+                        ribLeft.startPoint.getX() + scaled.getX(),
+                        ribLeft.startPoint.getY() + scaled.getY());
                     this.polylineEntity.appendVertex(ribLeft.startPoint, 0.0);
-                    this.polylineEntity.appendVertex(ribLeft.endPoint, 0.0);
+                    this.polylineEntity.appendVertex(ribLeftFinalEndPoint, 0.0);
                     this.polylineEntity.appendVertex(ribLeft.startPoint, 0.0);
 
+                    ribRight = new RLine(this.segment.startPoint, vertex);
+                    ribRight.rotate(-Math.PI/2, ribRight.startPoint);
+                    var ribRightVec = new RVector(
+                        ribRight.endPoint.getX() - ribRight.startPoint.getX(),
+                        ribRight.endPoint.getY() - ribRight.startPoint.getY());
+                    var ribRightVecNorm = ribRightVec.getNormalized();
+                    var ribRightVecScaled = ribRightVecNorm.scale(this.laneWidth);
+                    var ribRightFinalEndPoint = new RVector(
+                        ribRight.startPoint.getX() + ribRightVecScaled.getX(),
+                        ribRight.startPoint.getY() + ribRightVecScaled.getY());
+                    // debugger
+                    // this.polylineEntity.appendVertex(ribLeft.startPoint, 0.0);
+                    // this.polylineEntity.appendVertex(ribLeft.endPoint, 0.0);
+                    // this.polylineEntity.appendVertex(ribLeft.startPoint, 0.0);
+
                     this.polylineEntity.appendVertex(ribRight.startPoint, 0.0);
-                    this.polylineEntity.appendVertex(ribRight.endPoint, 0.0);
+                    this.polylineEntity.appendVertex(ribRightFinalEndPoint, 0.0);
                     this.polylineEntity.appendVertex(ribRight.startPoint, 0.0);
 
                     this.polylineEntity.appendVertex(vertex, 0.0);
                     // debugger;
-
-
-
                 }
             }
         }
