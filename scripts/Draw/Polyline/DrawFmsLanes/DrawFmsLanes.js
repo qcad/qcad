@@ -97,7 +97,7 @@ DrawFmsLanes.prototype.initState = function(state) {
  * @param lineStartPoint - RVector
  * @param lineEndPoint - RVector
  */
-DrawFmsLanes.prototype.drawRibsBasedOnLine = function(lineStartPoint, lineEndPoint) {
+DrawFmsLanes.prototype.drawRibsBasedOnLine = function(lineStartPoint, lineEndPoint, isLastVertex) {
     // create left rib based on directionVector to next vertex, multiplied by input laneWidth
     var ribLeft = new RLine(lineStartPoint, lineEndPoint);
     // get leftRib from directionVector rotated 90-deg
@@ -132,6 +132,19 @@ DrawFmsLanes.prototype.drawRibsBasedOnLine = function(lineStartPoint, lineEndPoi
     rib.appendVertex(ribLeftFinalEndPoint);
     rib.appendVertex(lineStartPoint);
     rib.appendVertex(ribRightFinalEndPoint);
+
+    if (isLastVertex) {
+        this.leftBoundaryEntity.appendVertex(ribRightFinalEndPoint);
+        this.rightBoundaryEntity.appendVertex(ribLeftFinalEndPoint);
+
+        this.leftBoundaryEntity.appendVertex(this.rightBoundaryEntity.getVertexAt(this.rightBoundaryEntity.countVertices()-1))
+        this.rightBoundaryEntity.prependVertex(this.leftBoundaryEntity.getVertexAt(0))
+    }
+    else {
+        this.leftBoundaryEntity.appendVertex(ribLeftFinalEndPoint);
+        this.rightBoundaryEntity.appendVertex(ribRightFinalEndPoint);
+    }
+
     rib.setCustomProperty("QCAD", "distance_left_cm", this.laneWidthCm / 2);
     rib.setCustomProperty("QCAD", "distance_right_cm", this.laneWidthCm / 2);
     var line = new RLine(lineStartPoint, lineEndPoint);
@@ -166,8 +179,19 @@ DrawFmsLanes.prototype.escapeEvent = function() {
             }
             else {
                 // add rib to last vertex
-                this.drawRibsBasedOnLine(this.segment.endPoint, this.segment.startPoint);
+                this.drawRibsBasedOnLine(this.segment.endPoint, this.segment.startPoint, true);
 
+                var op = new RAddObjectsOperation();
+                var allBoundary = new RPolylineEntity(this.getDocument(), this.leftBoundaryEntity.getData());
+
+                for (var i = this.rightBoundaryEntity.countVertices()-1; i >= 0 ; i--) {
+                    allBoundary.appendVertex(this.rightBoundaryEntity.getVertexAt(i));
+                }
+                allBoundary.normalize(0.001);
+
+                op.addObject(allBoundary);
+                // op.addObject(this.rightBoundaryEntity);
+                this.getDocumentInterface().applyOperation(op);
             }
         }
 
@@ -333,7 +357,7 @@ DrawFmsLanes.prototype.pickCoordinate = function(event, preview) {
                     this.polylineEntity.setBulgeAt(numberOfVertices-1, bulge);
                     this.polylineEntity.appendVertex(vertex, 0.0);
 
-                    this.drawRibsBasedOnLine(this.segment.startPoint, vertex);
+                    this.drawRibsBasedOnLine(this.segment.startPoint, vertex, false);
 
                 }
             }
