@@ -32,9 +32,11 @@ function DrawFmsLanes(guiAction) {
     Polyline.call(this, guiAction);
 
     this.polylineEntity = undefined;
-    this.ribsEntity = undefined;
+    this.leftBoundaryEntity = undefined;
+    this.rightBoundaryEntity = undefined;
     this.arcSegment = false;
     this.laneWidth = 20; // 20meters
+    this.laneWidthCm = this.laneWidth * 100;
     this.radius = 1.0;
     this.prepend = false;
     this.segment = undefined;
@@ -74,6 +76,8 @@ DrawFmsLanes.prototype.initState = function(state) {
         this.setLeftMouseTip(trFirstVertex);
         this.setRightMouseTip(EAction.trCancel);
         this.segment = undefined;
+        this.leftBoundaryEntity = new RPolylineEntity(this.getDocument(), new RPolylineData());
+        this.rightBoundaryEntity = new RPolylineEntity(this.getDocument(), new RPolylineData());
         EAction.showSnapTools();
         this.redoList = [];
         break;
@@ -88,10 +92,66 @@ DrawFmsLanes.prototype.initState = function(state) {
     }
 };
 
+/***
+ *
+ * @param lineStartPoint - RVector
+ * @param lineEndPoint - RVector
+ */
+DrawFmsLanes.prototype.drawRibsBasedOnLine = function(lineStartPoint, lineEndPoint) {
+    // create left rib based on directionVector to next vertex, multiplied by input laneWidth
+    var ribLeft = new RLine(lineStartPoint, lineEndPoint);
+    // get leftRib from directionVector rotated 90-deg
+    ribLeft.rotate(Math.PI/2, ribLeft.startPoint);
+    // get a normalized ribLeft so can multiply it with laneWidth,
+    // couldn't see RLine.normalize function, so use RVector to normalize and then scale it
+    var ribLeftVec = new RVector(
+        ribLeft.endPoint.getX() - ribLeft.startPoint.getX(),
+        ribLeft.endPoint.getY() - ribLeft.startPoint.getY());
+    var ribLeftVecNorm = ribLeftVec.getNormalized();
+    var scaled = ribLeftVecNorm.scale(this.laneWidth);
+    var ribLeftFinalEndPoint = new RVector(
+        ribLeft.startPoint.getX() + scaled.getX(),
+        ribLeft.startPoint.getY() + scaled.getY());
+
+    var ribRight = new RLine(lineStartPoint, lineEndPoint);
+    ribRight.rotate(-Math.PI/2, ribRight.startPoint);
+    var ribRightVec = new RVector(
+        ribRight.endPoint.getX() - ribRight.startPoint.getX(),
+        ribRight.endPoint.getY() - ribRight.startPoint.getY());
+    var ribRightVecNorm = ribRightVec.getNormalized();
+    var ribRightVecScaled = ribRightVecNorm.scale(this.laneWidth);
+    var ribRightFinalEndPoint = new RVector(
+        ribRight.startPoint.getX() + ribRightVecScaled.getX(),
+        ribRight.startPoint.getY() + ribRightVecScaled.getY());
+
+    // todo use this.applyOperation ?
+    var rib = new RPolylineEntity(
+        this.getDocument(),
+        new RPolylineData()
+    );
+    rib.appendVertex(ribLeftFinalEndPoint);
+    rib.appendVertex(lineStartPoint);
+    rib.appendVertex(ribRightFinalEndPoint);
+    rib.setCustomProperty("QCAD", "distance_left_cm", this.laneWidthCm / 2);
+    rib.setCustomProperty("QCAD", "distance_right_cm", this.laneWidthCm / 2);
+    var line = new RLine(lineStartPoint, lineEndPoint);
+    rib.setCustomProperty("QCAD", "yaw_crad", line.getAngle() * 100);
+    rib.setCustomProperty("QCAD", "type", "ribs");
+    rib.setCustomProperty("QCAD", "center_point_x", lineStartPoint.getX());
+    rib.setCustomProperty("QCAD", "center_point_y", lineStartPoint.getY());
+
+    var op = new RAddObjectsOperation();
+    op.addObject(rib);
+    this.getDocumentInterface().applyOperation(op);
+    // debugger;
+
+    // Todo:
+    //     - check to not add centerPoint if ribs will intersect
+    //     - associate centerLine with ribs, so no need to compute it ?
+    //     - automatically add polygon based on ribs endpoint ?
+}
 
 DrawFmsLanes.prototype.escapeEvent = function() {
-    var di = this.getDocumentInterface();
-
     switch (this.state) {
     case DrawFmsLanes.State.SettingFirstVertex:
         EAction.prototype.escapeEvent.call(this);
@@ -100,18 +160,25 @@ DrawFmsLanes.prototype.escapeEvent = function() {
     case DrawFmsLanes.State.SettingNextVertex:
         if (!isNull(this.polylineEntity)) {
             // remove polyline with one or zero vertices:
-            if (this.polylineEntity.countVertices()<=1) {
+            if (this.polylineEntity.countVertices() <= 1) {
                 var op = new RDeleteObjectOperation(this.polylineEntity, false);
                 this.applyOperation(op);
+            }
+            else {
+                // add rib to last vertex
+                this.drawRibsBasedOnLine(this.segment.endPoint, this.segment.startPoint);
+
             }
         }
 
         this.setState(DrawFmsLanes.State.SettingFirstVertex);
         this.polylineEntity = undefined;
-        this.ribsEntity = undefined;
+        this.leftBoundaryEntity = undefined;
+        this.rightBoundaryEntity = undefined;
         this.updateButtonStates();
         break;
     }
+
 };
 
 DrawFmsLanes.prototype.keyPressEvent = function(event) {
@@ -264,74 +331,10 @@ DrawFmsLanes.prototype.pickCoordinate = function(event, preview) {
                 }
                 else {
                     this.polylineEntity.setBulgeAt(numberOfVertices-1, bulge);
-                    //todo: find built-in function to normalize RLine ?
-
-                    // create left rib based on directionVector to next vertex, multiplied by input laneWidth
-                    ribLeft = new RLine(this.segment.startPoint, vertex);
-                    // get leftRib from directionVector rotated 90-deg
-                    ribLeft.rotate(Math.PI/2, ribLeft.startPoint);
-                    // get a normalized ribLeft so can multiply it with laneWidth,
-                    // couldn't see RLine.normalize function, so use RVector to normalize and then scale it
-                    var ribLeftVec = new RVector(
-                        ribLeft.endPoint.getX() - ribLeft.startPoint.getX(),
-                        ribLeft.endPoint.getY() - ribLeft.startPoint.getY());
-                    var ribLeftVecNorm = ribLeftVec.getNormalized();
-                    var scaled = ribLeftVecNorm.scale(this.laneWidth);
-                    var ribLeftFinalEndPoint = new RVector(
-                        ribLeft.startPoint.getX() + scaled.getX(),
-                        ribLeft.startPoint.getY() + scaled.getY());
-                    // this.polylineEntity.appendVertex(ribLeft.startPoint, 0.0);
-                    // this.polylineEntity.appendVertex(ribLeftFinalEndPoint, 0.0);
-                    // this.polylineEntity.appendVertex(ribLeft.startPoint, 0.0);
-
-                    ribRight = new RLine(this.segment.startPoint, vertex);
-                    ribRight.rotate(-Math.PI/2, ribRight.startPoint);
-                    var ribRightVec = new RVector(
-                        ribRight.endPoint.getX() - ribRight.startPoint.getX(),
-                        ribRight.endPoint.getY() - ribRight.startPoint.getY());
-                    var ribRightVecNorm = ribRightVec.getNormalized();
-                    var ribRightVecScaled = ribRightVecNorm.scale(this.laneWidth);
-                    var ribRightFinalEndPoint = new RVector(
-                        ribRight.startPoint.getX() + ribRightVecScaled.getX(),
-                        ribRight.startPoint.getY() + ribRightVecScaled.getY());
-
-                    // this.polylineEntity.appendVertex(ribRight.startPoint, 0.0);
-                    // this.polylineEntity.appendVertex(ribRightFinalEndPoint, 0.0);
-                    // this.polylineEntity.appendVertex(ribRight.startPoint, 0.0);
-
                     this.polylineEntity.appendVertex(vertex, 0.0);
 
-                    var op = new RAddObjectsOperation();
-                    // var point1 = new RPointEntity(
-                    //     this.getDocument(),
-                    //     new RPointData(ribLeftFinalEndPoint)
-                    // );
-                    // op.addObject(point1);
-                    // var point2 = new RPointEntity(
-                    //     this.getDocument(),
-                    //     new RPointData(ribLeft.startPoint)
-                    // );
-                    // op.addObject(point2);
-                    // var point3 = new RPointEntity(
-                    //     this.getDocument(),
-                    //     new RPointData(ribRightFinalEndPoint)
-                    // );
-                    // op.addObject(point3);
-                    var rib = new RLineEntity(
-                        this.getDocument(),
-                        new RLineData(new RLine(ribLeftFinalEndPoint, ribRightFinalEndPoint))
-                    );
-                    rib.setCustomProperty("QCAD", "type", "ribs");
+                    this.drawRibsBasedOnLine(this.segment.startPoint, vertex);
 
-                    // rib.setProperty("laneType", "ribs", null);
-                    op.addObject(rib);
-                    this.getDocumentInterface().applyOperation(op);
-                    // debugger;
-
-                    // Todo:
-                    //     - check to not add centerPoint if ribs will intersect
-                    //     - associate centerLine with ribs, so no need to compute it ?
-                    //     - automatically add polygon based on ribs endpoint ?
                 }
             }
         }
