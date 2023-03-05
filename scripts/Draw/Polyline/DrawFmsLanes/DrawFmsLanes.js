@@ -133,18 +133,6 @@ DrawFmsLanes.prototype.drawRibsBasedOnLine = function(lineStartPoint, lineEndPoi
     rib.appendVertex(lineStartPoint);
     rib.appendVertex(ribRightFinalEndPoint);
 
-    if (isLastVertex) {
-        this.leftBoundaryEntity.appendVertex(ribRightFinalEndPoint);
-        this.rightBoundaryEntity.appendVertex(ribLeftFinalEndPoint);
-
-        this.leftBoundaryEntity.appendVertex(this.rightBoundaryEntity.getVertexAt(this.rightBoundaryEntity.countVertices()-1))
-        this.rightBoundaryEntity.prependVertex(this.leftBoundaryEntity.getVertexAt(0))
-    }
-    else {
-        this.leftBoundaryEntity.appendVertex(ribLeftFinalEndPoint);
-        this.rightBoundaryEntity.appendVertex(ribRightFinalEndPoint);
-    }
-
     rib.setCustomProperty("QCAD", "distance_left_cm", this.laneWidthCm / 2);
     rib.setCustomProperty("QCAD", "distance_right_cm", this.laneWidthCm / 2);
     var line = new RLine(lineStartPoint, lineEndPoint);
@@ -152,6 +140,24 @@ DrawFmsLanes.prototype.drawRibsBasedOnLine = function(lineStartPoint, lineEndPoi
     rib.setCustomProperty("QCAD", "type", "ribs");
     rib.setCustomProperty("QCAD", "center_point_x", lineStartPoint.getX());
     rib.setCustomProperty("QCAD", "center_point_y", lineStartPoint.getY());
+
+
+    if (isLastVertex) {
+        this.leftBoundaryEntity.appendVertex(ribRightFinalEndPoint);
+        this.rightBoundaryEntity.appendVertex(ribLeftFinalEndPoint);
+
+        this.leftBoundaryEntity.appendVertex(this.rightBoundaryEntity.getVertexAt(this.rightBoundaryEntity.countVertices()-1));
+        this.rightBoundaryEntity.prependVertex(this.leftBoundaryEntity.getVertexAt(0));
+
+        var line = new RLine(lineEndPoint, lineStartPoint);
+        rib.setCustomProperty("QCAD", "yaw_crad", line.getAngle() * 100);
+    }
+    else {
+        this.leftBoundaryEntity.appendVertex(ribLeftFinalEndPoint);
+        this.rightBoundaryEntity.appendVertex(ribRightFinalEndPoint);
+        var line = new RLine(lineStartPoint, lineEndPoint);
+        rib.setCustomProperty("QCAD", "yaw_crad", line.getAngle() * 100);
+    }
 
     var op = new RAddObjectsOperation();
     op.addObject(rib);
