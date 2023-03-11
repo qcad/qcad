@@ -338,13 +338,19 @@ EventHandler.prototype.drop = function(event) {
 
     var action;
     if (urls[0].isLocalFile()) {
-        var file = urls[0].toLocalFile();
-        EAction.handleUserMessage(qsTr("Importing file: ") + file);
-        if (new QFileInfo(file).isFile()) {
+        var filePath = urls[0].toLocalFile();
+        EAction.handleUserMessage(qsTr("Importing file: ") + filePath);
+        if (new QFileInfo(filePath).isFile()) {
             include("scripts/Block/InsertScriptItem/InsertScriptItem.js");
-            if (InsertScriptItem.isScriptFile(file)) {
+            include("scripts/Draw/Image/Image.js");
+
+            if (InsertScriptItem.isScriptFile(filePath)) {
                 action = RGuiAction.getByScriptFile("scripts/Block/InsertScriptItem/InsertScriptItem.js");
-            } else {
+            }
+            else if (Image.isSupportedBitmapFile(filePath)) {
+                action = RGuiAction.getByScriptFile("scripts/Draw/Image/Image.js");
+            }
+            else {
                 action = RGuiAction.getByScriptFile("scripts/Block/InsertBlockItem/InsertBlockItem.js");
             }
         }
