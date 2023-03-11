@@ -5,8 +5,8 @@ function init(basePath) {
     action.setIcon(basePath + "/DrawFmsLanes.svg");
     action.setStatusTip(qsTranslate("DrawFmsLanes", "Draw FMS Lanes (ribs)"));
     action.setDefaultShortcut(new QKeySequence("p,f"));
-    action.setDefaultCommands(["fms_lanes", "pl"]);
-    action.setGroupSortOrder(11010);
-    action.setSortOrder(100);
-    action.setWidgetNames(["DrawPolylineMenu", "PolylineToolBar", "PolylineToolsPanel", "PolylineMatrixPanel"]);
+    action.setDefaultCommands(["fms_lanes", "pf"]);
+    action.setGroupSortOrder(54250);
+    action.setSortOrder(350);
+    action.setWidgetNames(["MiscDrawMenu", "MiscDrawToolBar", "MiscDrawToolsPanel", "MiscDrawMatrixPanel"]);
 }

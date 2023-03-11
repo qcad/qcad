@@ -19,7 +19,7 @@
  * along with QCAD.
  */
 
-include("../Polyline.js");
+include("scripts/Draw/Polyline/Polyline.js");
 include("scripts/Snap/RestrictAngleLength/RestrictAngleLength.js");
 
 /**

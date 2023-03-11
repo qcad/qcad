@@ -5,6 +5,7 @@ SUBDIRS = \
     Counter \
     Cross \
     DrawBoundingBox \
+    DrawFmsLanes \
     LeaderFromText \
     LineBoxJoint \
     LineDove \
