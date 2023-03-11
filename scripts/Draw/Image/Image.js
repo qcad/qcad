@@ -41,6 +41,13 @@ function Image(guiAction) {
     this.angle = undefined;
     this.pos = undefined;
 
+    if (!isNull(guiAction)) {
+        var url = this.guiAction.data();
+        if (!isNull(url) && url.isLocalFile()) {
+            this.fileName = url.toLocalFile();
+        }
+    }
+
     this.setUiOptions(Image.includeBasePath + "/Image.ui");
 }
 
@@ -93,11 +100,49 @@ Image.prototype.finishEvent = function() {
     }
 };
 
-Image.prototype.getFileName = function() {
-    var lastOpenFileDir = RSettings.getStringValue(
-            "Image/Path",
-            RSettings.getDocumentsLocation());
+Image.isSupportedBitmapFile = function(filePath) {
+    var formats = Image.getSupportedFormats(false);
+    var fi = new QFileInfo(filePath);
+    return formats.indexOf(fi.suffix().toLowerCase())!==-1;
+};
+
+Image.getSupportedFormats = function(noAlias) {
+    var ret = [];
     var formats = QImageReader.supportedImageFormats();
+
+    for (var i=0; i<formats.length; ++i) {
+        var format = formats[i];
+        //var formatAlt = "";
+
+        // ignore format aliases:
+        if (noAlias && (format==="jpg" || format==="tif")) {
+            continue;
+        }
+
+        // ignore unsupported formats:
+        if (format==="ico" || format==="mng" ||
+            format==="pbm" || format==="pgm" || format==="ppm" ||
+            format==="svg" || format==="svgz" ||
+            format==="xbm" || format==="xpm") {
+            continue;
+        }
+
+//        if (format==="jpeg") {
+//            formatAlt = "jpg";
+//        }
+//        else if (format==="tiff") {
+//            formatAlt = "tif";
+//        }
+
+        ret.push(format);
+    }
+
+    return ret;
+};
+
+Image.prototype.getFileName = function() {
+    var lastOpenFileDir = RSettings.getStringValue("Image/Path", RSettings.getDocumentsLocation());
+    var formats = Image.getSupportedFormats(true);
     var filters = [];
 
     var filterAllImages = "";
@@ -106,23 +151,23 @@ Image.prototype.getFileName = function() {
         var formatAlt = "";
 
         // ignore format aliases:
-        if (format=="jpg" ||
-            format=="tif") {
-            continue;
-        }
+//        if (format=="jpg" ||
+//            format=="tif") {
+//            continue;
+//        }
 
         // ignore unsupported formats:
-        if (format=="ico" || format=="mng" ||
-            format=="pbm" || format=="pgm" || format=="ppm" ||
-            format=="svg" || format=="svgz" ||
-            format=="xbm" || format=="xpm") {
-            continue;
-        }
+//        if (format=="ico" || format=="mng" ||
+//            format=="pbm" || format=="pgm" || format=="ppm" ||
+//            format=="svg" || format=="svgz" ||
+//            format=="xbm" || format=="xpm") {
+//            continue;
+//        }
 
-        if (format=="jpeg") {
+        if (format==="jpeg") {
             formatAlt = "jpg";
         }
-        else if (format=="tiff") {
+        else if (format==="tiff") {
             formatAlt = "tif";
         }
 
