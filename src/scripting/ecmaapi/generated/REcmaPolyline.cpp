@@ -296,6 +296,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getLeftRightOutline, "getLeftRightOutline");
             
+            REcmaHelper::registerFunction(&engine, proto, getLeftOutline, "getLeftOutline");
+            
+            REcmaHelper::registerFunction(&engine, proto, getRightOutline, "getRightOutline");
+            
             REcmaHelper::registerFunction(&engine, proto, isInterpolated, "isInterpolated");
             
             REcmaHelper::registerFunction(&engine, proto, countSegments, "countSegments");
@@ -9085,6 +9089,104 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolyline::getLeftRightOutline", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolyline::getLeftOutline
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolyline::getLeftOutline", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::getLeftOutline";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("getLeftOutline", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RPolyline >'
+    QList < RPolyline > cppResult =
+        
+               self->getLeftOutline();
+        // return type: QList < RPolyline >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getLeftOutline().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolyline::getLeftOutline", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolyline::getRightOutline
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolyline::getRightOutline", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::getRightOutline";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("getRightOutline", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RPolyline >'
+    QList < RPolyline > cppResult =
+        
+               self->getRightOutline();
+        // return type: QList < RPolyline >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getRightOutline().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolyline::getRightOutline", context, engine);
             return result;
         }
          QScriptValue

@@ -218,6 +218,22 @@
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>getExploded</name><parameter_list>(<param><decl><type><name>int</name></type> <name>segments</name> =<init> <expr><name>RDEFAULT_MIN1</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>QList<argument_list>&lt;<argument><name>RPolyline</name></argument>&gt;</argument_list></name></type> <name>getOutline</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>QList<argument_list>&lt;<argument><name>QPair<argument_list>&lt;<argument><name>RPolyline</name></argument>, <argument><name>RPolyline</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>getLeftRightOutline</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function><type><name>QList<argument_list>&lt;<argument><name>RPolyline</name></argument>&gt;</argument_list></name></type> <name>getLeftOutline</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>QPair<argument_list>&lt;<argument><name>RPolyline</name></argument>, <argument><name>RPolyline</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>lr</name> =<init> <expr><call><name>getLeftRightOutline</name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RPolyline</name></argument>&gt;</argument_list></name></type> <name>ret</name></decl>;</decl_stmt>
+        <for>for (<init><expr><type><name>int</name></type> <name>i</name>=<init><expr>0</expr></init></expr>;</init> <condition><expr><name>i</name>&lt;<name>lr</name>.<call><name>length</name><argument_list>()</argument_list></call></expr>;</condition> <incr><expr><name>i</name>++</expr></incr>) <block>{
+            <expr_stmt><expr><name>ret</name>.<call><name>append</name><argument_list>(<argument><expr><name><name>lr</name><index>[<expr><name>i</name></expr>]</index></name>.<name>first</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></for>
+        <return>return <expr><name>ret</name></expr>;</return>
+    }</block></function>
+    <function><type><name>QList<argument_list>&lt;<argument><name>RPolyline</name></argument>&gt;</argument_list></name></type> <name>getRightOutline</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>QPair<argument_list>&lt;<argument><name>RPolyline</name></argument>, <argument><name>RPolyline</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>lr</name> =<init> <expr><call><name>getLeftRightOutline</name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RPolyline</name></argument>&gt;</argument_list></name></type> <name>ret</name></decl>;</decl_stmt>
+        <for>for (<init><expr><type><name>int</name></type> <name>i</name>=<init><expr>0</expr></init></expr>;</init> <condition><expr><name>i</name>&lt;<name>lr</name>.<call><name>length</name><argument_list>()</argument_list></call></expr>;</condition> <incr><expr><name>i</name>++</expr></incr>) <block>{
+            <expr_stmt><expr><name>ret</name>.<call><name>append</name><argument_list>(<argument><expr><name><name>lr</name><index>[<expr><name>i</name></expr>]</index></name>.<name>second</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></for>
+        <return>return <expr><name>ret</name></expr>;</return>
+    }</block></function>
     <function><type><name>virtual</name> <name>bool</name></type> <name>isInterpolated</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>false</name></expr>;</return>
     }</block></function>

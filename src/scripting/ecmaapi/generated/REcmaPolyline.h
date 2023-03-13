@@ -373,6 +373,12 @@
         getLeftRightOutline
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getLeftOutline
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getRightOutline
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isInterpolated
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
