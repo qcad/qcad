@@ -1592,6 +1592,17 @@
     <file alias="scripts/Misc/MiscDraw/Cross/Cross.ui">../../scripts/Misc/MiscDraw/Cross/Cross.ui</file>
     <file alias="scripts/Misc/MiscDraw/Cross/CrossInit.js">../../scripts/Misc/MiscDraw/Cross/CrossInit.js</file>
     <file alias="scripts/Misc/MiscDraw/DrawBoundingBox/DrawBoundingBox.js">../../scripts/Misc/MiscDraw/DrawBoundingBox/DrawBoundingBox.js</file>
+    <file alias="scripts/Misc/MiscDraw/DrawFmsLanes/Close-inverse.svg">../../scripts/Misc/MiscDraw/DrawFmsLanes/Close-inverse.svg</file>
+    <file alias="scripts/Misc/MiscDraw/DrawFmsLanes/Close.svg">../../scripts/Misc/MiscDraw/DrawFmsLanes/Close.svg</file>
+    <file alias="scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes-inverse.svg">../../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes-inverse.svg</file>
+    <file alias="scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.js">../../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.js</file>
+    <file alias="scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.svg">../../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.svg</file>
+    <file alias="scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.ui">../../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.ui</file>
+    <file alias="scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js">../../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js</file>
+    <file alias="scripts/Misc/MiscDraw/DrawFmsLanes/Redo-inverse.svg">../../scripts/Misc/MiscDraw/DrawFmsLanes/Redo-inverse.svg</file>
+    <file alias="scripts/Misc/MiscDraw/DrawFmsLanes/Redo.svg">../../scripts/Misc/MiscDraw/DrawFmsLanes/Redo.svg</file>
+    <file alias="scripts/Misc/MiscDraw/DrawFmsLanes/Undo-inverse.svg">../../scripts/Misc/MiscDraw/DrawFmsLanes/Undo-inverse.svg</file>
+    <file alias="scripts/Misc/MiscDraw/DrawFmsLanes/Undo.svg">../../scripts/Misc/MiscDraw/DrawFmsLanes/Undo.svg</file>
     <file alias="scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText-inverse.svg">../../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText-inverse.svg</file>
     <file alias="scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js">../../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js</file>
     <file alias="scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.svg">../../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.svg</file>
