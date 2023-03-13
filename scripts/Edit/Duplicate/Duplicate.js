@@ -36,20 +36,51 @@ Duplicate.prototype.beginEvent = function() {
 
     var doc = this.getDocument();
     var di = this.getDocumentInterface();
-    var op = new RAddObjectsOperation();
-    op.setText(this.getToolTitle());
 
     var ids = doc.querySelectedEntities();
-    for (var i = 0; i < ids.length; ++i) {
-        var id = ids[i];
-        var e = doc.queryEntity(id);
-        op.addObject(e, false, true);
-    }
 
-    // deselect originals, duplicates will be selected:
-    di.deselectEntities(ids);
+//    var op = new RAddObjectsOperation();
+//    op.setText(this.getToolTitle());
+//    var ids = doc.querySelectedEntities();
+//    for (var i = 0; i < ids.length; ++i) {
+//        var id = ids[i];
+//        var e = doc.queryEntity(id);
+//        op.addObject(e, false, true);
+//    }
+//    di.applyOperation(op);
+
+    // copy to a local clipboard:
+    var ms = new RMemoryStorage();
+    var si = createSpatialIndex();
+    var tmpDoc = new RDocument(ms, si);
+    var tmpDi = new RDocumentInterface(tmpDoc);
+    tmpDi.setNotifyListeners(false);
+
+    var op = new RCopyOperation(new RVector(0,0), doc);
+    op.setText(this.getToolTitle());
+    tmpDi.applyOperation(op);
+
+    op = new RPasteOperation(tmpDoc);
+    op.setText(this.getToolTitle());
+    op.setOffset(new RVector(0,0));
+    op.setScale(1.0);
+    op.setRotation(0.0);
+    op.setFlipHorizontal(false);
+    op.setFlipVertical(false);
+    op.setToCurrentLayer(false);
+    op.setOverwriteLayers(false);
+    op.setOverwriteBlocks(false);
+
+    // make sure duplicates are selected:
+    tmpDi.selectAll();
+    op.setKeepSelection(true);
 
     di.applyOperation(op);
+
+    destr(tmpDi);
+
+    // deselect originals, duplicates stay selected:
+    di.deselectEntities(ids);
 
     EAction.handleUserMessage(qsTr("%n entity/ies duplicated", "", ids.length));
 
