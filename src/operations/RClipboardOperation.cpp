@@ -27,7 +27,7 @@
 #include "RUnit.h"
 
 
-RClipboardOperation::RClipboardOperation() : copyEmptyBlocks(false), copyAllLayers(false) {
+RClipboardOperation::RClipboardOperation() : copyEmptyBlocks(false), copyAllLayers(false), keepSelection(false) {
 }
 
 void RClipboardOperation::copy(RDocument& src, RDocument& dest,
@@ -475,7 +475,10 @@ void RClipboardOperation::copyEntity(
     QSharedPointer<REntity> destEntity = QSharedPointer<REntity>(entity.clone());
     //dest.getStorage().setObjectId(*destEntity.data(), RObject::INVALID_ID);
     dest.getStorage().setObjectHandle(*destEntity.data(), RObject::INVALID_HANDLE);
-    destEntity->setSelected(false);
+
+    if (!keepSelection) {
+        destEntity->setSelected(false);
+    }
 
     // apply attribute values:
     // create attribute for each attribute definition in block with

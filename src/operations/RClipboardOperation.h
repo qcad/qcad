@@ -239,6 +239,10 @@ public:
         copyAllLayers = on;
     }
 
+    void setKeepSelection(bool on) {
+        keepSelection = on;
+    }
+
 private:
     QMap<QString, QSharedPointer<RLayer> > copiedLayers;
     QMap<QString, QSharedPointer<RLinetype> > copiedLinetypes;
@@ -246,6 +250,7 @@ private:
     QSet<RBlock::Id> copiedBlockContents;
     bool copyEmptyBlocks;
     bool copyAllLayers;
+    bool keepSelection;
 };
 
 Q_DECLARE_METATYPE(RClipboardOperation*)
