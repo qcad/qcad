@@ -173,7 +173,6 @@ WidgetFactory.getKey = function(group, obj) {
     // correct key:
     if (isOfType(obj, QRadioButton) || isOfType(obj, QToolButton)) {
         // correct to button group name:
-
         if (isFunction(obj.group) && !isNull(obj.group())) {
             key = [g, obj.group().objectName];
         }
@@ -518,7 +517,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             value = c.property("defaultValue");
         } else {
             if (!isNull(map)) {
-                value = map.get(key);                
+                value = map.get(key);
             } else {
                 if (!isNull(document)) {
                     if (isObject(document)) {
