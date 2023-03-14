@@ -165,8 +165,8 @@ WidgetFactory.getKey = function(group, obj) {
     }
 
     var g = group;
-    if (typeof(obj["SettingsGroup"])!="undefined") {
-        g = obj["SettingsGroup"];
+    if (typeof(obj.property("SettingsGroup"))!="undefined") {
+        g = obj.property("SettingsGroup");
     }
     var key = [g, obj.objectName];
 
