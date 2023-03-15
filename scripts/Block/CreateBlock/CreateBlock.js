@@ -194,7 +194,7 @@ CreateBlock.createBlock = function(di, block, referencePoint, entityIds, title, 
             if (!isNull(blockReferenceEntity)) {
 
                 // update parent ID:
-                storage.setEntityParentId(attributeEntity.data(), blockReferenceEntity.getId());
+                storage.setEntityParentId(getPtr(attributeEntity), blockReferenceEntity.getId());
                 op.addObject(attributeEntity, false);
             }
         }
