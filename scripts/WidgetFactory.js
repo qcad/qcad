@@ -165,8 +165,8 @@ WidgetFactory.getKey = function(group, obj) {
     }
 
     var g = group;
-    if (typeof(obj["SettingsGroup"])!="undefined") {
-        g = obj["SettingsGroup"];
+    if (typeof(obj.property("SettingsGroup"))!="undefined") {
+        g = obj.property("SettingsGroup");
     }
     var key = [g, obj.objectName];
 
@@ -705,7 +705,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
                 WidgetFactory.connect(c.toggled, signalReceiver, c.objectName);
                 WidgetFactory.connect(c.toggled, WidgetFactory.topLevelWidget, "Setting");
                 if (value==="true") {
-                    c.checked = value;
+                    c.checked = true;
                 }
                 else {
                     c.checked = (c.objectName == value);
