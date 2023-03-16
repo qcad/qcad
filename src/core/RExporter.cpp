@@ -1686,6 +1686,17 @@ double RExporter::getLineTypePatternScale(const RLinetypePattern& p) const {
         }
     }
 
+    if (blockRefViewportStack.size()>1) {
+        // if top level entity is viewport and second level entity is block ref, we are rendering a block reference in a viewport:
+        REntity* topLevel0 = blockRefViewportStack[0];
+        REntity* topLevel1 = blockRefViewportStack[1];
+        if (topLevel0!=NULL && topLevel0->getType()==RS::EntityViewport &&
+            topLevel1!=NULL && topLevel1->getType()==RS::EntityBlockRef) {
+
+            factor *= topLevel1->getLinetypeScale();
+        }
+    }
+
     //qDebug() << "factor (entity): " << factor;
 
     // optional: automatic scaling by line weight:
