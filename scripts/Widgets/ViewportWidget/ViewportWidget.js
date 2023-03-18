@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 
+include("scripts/library.js");
 include("scripts/sprintf.js");
 
 if (exists("scripts/Navigation/DefaultNavigation/DefaultNavigation.js")) {
@@ -339,8 +340,17 @@ EventHandler.prototype.drop = function(event) {
     var action;
     if (urls[0].isLocalFile()) {
         var filePath = urls[0].toLocalFile();
-        EAction.handleUserMessage(qsTr("Importing file: ") + filePath);
-        if (new QFileInfo(filePath).isFile()) {
+        var fi = new QFileInfo(filePath);
+        if (fi.suffix().toLowerCase()==="cxf") {
+            //openFiles(urls[0]);
+            //event.acceptProposedAction();
+            //event.ignore();
+            EAction.handleUserWarning(qsTr("Cannot import file into existing drawing:") + " " + filePath);
+            return;
+        }
+
+        EAction.handleUserMessage(qsTr("Importing file:") + " " + filePath);
+        if (fi.isFile()) {
             include("scripts/Block/InsertScriptItem/InsertScriptItem.js");
             include("scripts/Draw/Image/Image.js");
 
