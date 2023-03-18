@@ -43,7 +43,7 @@ protected:
     RAttributeDefinitionData(RDocument* document, const RAttributeDefinitionData& data);
 
 public:
-    RAttributeDefinitionData() {}
+    RAttributeDefinitionData() : invisible(false) {}
     RAttributeDefinitionData(const RTextBasedData& textData, const QString& tag, const QString& prompt);
     virtual ~RAttributeDefinitionData() {}
 
