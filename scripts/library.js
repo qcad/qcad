@@ -3324,6 +3324,134 @@ function getRGraphicsView(view) {
     }
 }
 
+/**
+ * Open files given as arguments args
+ *
+ * \param createNew Creates a new document if no files are given
+ * \param close Closes existing open MDI widgets
+ */
+function openFiles(args, createNew, close) {
+    qDebug("openFiles: " + args);
+
+    var appWin = RMainWindowQt.getMainWindow();
+    if (isNull(appWin)) {
+        // application is shutting down..
+        return;
+    }
+    var mdiArea = appWin.getMdiArea();
+    var mdiChildren = mdiArea.subWindowList();
+    var foundFile = false;
+    var filter = undefined;
+
+    for (var i = 0; i < args.length; ++i) {
+        // arguments with one parameter:
+        if (args[i] === "-locale" || args[i] === "-autostart"
+            || args[i] === "-app-id" || args[i] === "-ignore"
+            || args[i] === "-config") {
+            // skip 2 arguments
+            i++;
+            if (i>=args.length) {
+                break;
+            }
+            continue;
+        }
+
+        // argument with two parameters
+        if (args[i] === "-font-substitution" || args[i] === "-fs" || args[i] === "-ts") {
+            // skip 3 arguments
+            i+=2;
+            if (i>=args.length) {
+                break;
+            }
+            continue;
+        }
+
+        if (isNull(args[i])) {
+            continue;
+        }
+
+        // all arguments after -exec are script files or script arguments:
+        if (args[i] === "-exec") {
+            break;
+        }
+
+        if (args[i] === "-filter") {
+            if (++i>=args.length) {
+                break;
+            }
+            filter = args[i];
+            continue;
+        }
+
+
+        // skip other arguments without parameter:
+        if (args[i][0] === "-") {
+            continue;
+        }
+
+        foundFile = true;
+        var foundExisting = false;
+
+        var arg = args[i];
+        var isLocalFile = true;
+
+        if (isUrl(arg)) {
+            var url = new QUrl(arg);
+            if (url.isLocalFile()) {
+                // arg is now a path:
+                arg = url.toLocalFile();
+            }
+            else {
+                isLocalFile = false;
+            }
+        }
+
+        if (isLocalFile) {
+            // if the file is already open, activate that appropriate sub window instead
+            // of opening the file again:
+            var document = undefined;
+            var fileName = undefined;
+            var fileInfo = undefined;
+            var argFileInfo = undefined;
+            for (var k=0; k<mdiChildren.length; k++) {
+                document = mdiChildren[k].getDocument();
+                fileName = document.getFileName();
+                fileInfo = new QFileInfo(fileName);
+                argFileInfo = new QFileInfo(getAbsolutePathForArg(arg));
+
+                if (fileInfo.absoluteFilePath()===argFileInfo.absoluteFilePath()) {
+                    mdiArea.setActiveSubWindow(mdiChildren[k]);
+                    if (close) {
+                        mdiArea.closeActiveSubWindow();
+                    }
+                    else {
+                        foundExisting = true;
+                    }
+                    break;
+                }
+            }
+        }
+
+        // open the file if it is not already open:
+        if (!foundExisting) {
+            if (isLocalFile) {
+                NewFile.createMdiChild(getAbsolutePathForArg(arg), filter);
+            }
+            else {
+                NewFile.createMdiChild(arg, filter);
+            }
+        }
+    }
+
+    // create new document if no files were loaded:
+    if (!foundFile && createNew===true) {
+        var fileNewAction = RGuiAction.getByScriptFile("scripts/File/NewFile/NewFile.js");
+        if (!isNull(fileNewAction)) {
+            fileNewAction.slotTrigger();
+        }
+    }
+}
+
 // fix QPlainTextEdit API for Qt 5:
 if (!isFunction(QPlainTextEdit.prototype.toPlainText)) {
     QPlainTextEdit.prototype.toPlainText = function() {
