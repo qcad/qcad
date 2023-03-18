@@ -43,7 +43,7 @@ function Image(guiAction) {
 
     if (!isNull(guiAction)) {
         var url = this.guiAction.data();
-        if (!isNull(url) && url.isLocalFile()) {
+        if (!isNull(url) && isFunction(url.isLocalFile) && url.isLocalFile()) {
             this.fileName = url.toLocalFile();
         }
     }
