@@ -111,7 +111,7 @@ Image.getSupportedFormats = function(noAlias) {
     var formats = QImageReader.supportedImageFormats();
 
     for (var i=0; i<formats.length; ++i) {
-        var format = formats[i];
+        var format = formats[i].toString();
         //var formatAlt = "";
 
         // ignore format aliases:
