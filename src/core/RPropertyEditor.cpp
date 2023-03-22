@@ -858,3 +858,32 @@ bool RPropertyEditor::checkType(RS::EntityType type, RS::EntityType filter) {
 
     return false;
 }
+
+void RPropertyEditor::makeReadOnly(QWidget* control, bool on) {
+    if (control==NULL) {
+        return;
+    }
+
+    QPalette p = control->palette();
+    if (control->property("oriPalette").isNull()) {
+        control->setProperty("oriPalette", control->palette());
+    }
+
+    QPalette oriPalette = control->property("oriPalette").value<QPalette>();
+
+    p.setColor(QPalette::Active, QPalette::Text, oriPalette.color(QPalette::Disabled, QPalette::WindowText));
+    p.setColor(QPalette::Inactive, QPalette::Text, oriPalette.color(QPalette::Disabled, QPalette::WindowText));
+
+//    if (RSettings.hasDarkGuiBackground()) {
+//        p.setColor(QPalette.Base, new QColor("#0a0a0a"));
+//    }
+//    else {
+//        p.setColor(QPalette.Base, new QColor("#eeeeee"));
+//    }
+    control->setPalette(p);
+
+    QLineEdit* le = qobject_cast<QLineEdit*>(control);
+    if (le!=NULL) {
+        le->setReadOnly(on);
+    }
+}

@@ -95,6 +95,8 @@ public:
 
     static bool checkType(RS::EntityType type, RS::EntityType filter);
 
+    static void makeReadOnly(QWidget* control, bool on);
+
 protected:
     /**
      * \nonscriptable
