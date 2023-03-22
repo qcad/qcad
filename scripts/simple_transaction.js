@@ -30,7 +30,7 @@ function startTransaction(d) {
     }
 
     if (!isNull(__simpleOp)) {
-        __simpleOp.destroy();
+        destr(__simpleOp);
         __simpleOp = undefined;
     }
 

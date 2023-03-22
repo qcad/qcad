@@ -86,7 +86,7 @@ CoordinateDisplay.update = function(documentInterface) {
         if (!isNull(CoordinateDisplay.singleShot)) {
             // catch exception when ran with script debugger:
             try {
-                CoordinateDisplay.singleShot.destroy();
+                destr(CoordinateDisplay.singleShot);
                 CoordinateDisplay.singleShot = undefined;
             }
             catch(e) {}

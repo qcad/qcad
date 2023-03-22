@@ -2840,7 +2840,7 @@ function addActionsToWidgets() {
                 if (isNull(scObjs[si])) {
                     continue;
                 }
-                scObjs[si].destroy();
+                destr(scObjs[si]);
             }
         }
         appWin.setProperty("DelegatedShortcutsObjs", []);

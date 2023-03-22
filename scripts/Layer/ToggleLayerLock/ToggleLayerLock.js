@@ -47,7 +47,7 @@ ToggleLayerLock.prototype.beginEvent = function() {
         di.applyOperation(op);
     }
     else {
-        op.destroy();
+        destr(op);
     }
 
     this.terminate();

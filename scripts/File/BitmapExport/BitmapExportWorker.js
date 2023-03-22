@@ -169,7 +169,7 @@ function exportBitmap(doc, scene, fileName, properties, view) {
     view.setNumThreads(numThreadsOri);
     if (viewCreated) {
         scene.unregisterView(view);
-        view.destroy();
+        destr(view);
     }
 
     var iw = new QImageWriter(fileName);
@@ -196,7 +196,7 @@ function exportBitmap(doc, scene, fileName, properties, view) {
     } else {
         ret = [true, ""];
     }
-    iw.destroy();
+    destr(iw);
 
     return ret;
 }

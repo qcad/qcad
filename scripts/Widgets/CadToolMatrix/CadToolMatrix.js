@@ -96,7 +96,7 @@ RCadToolMatrixTreePanel.prototype.actionEvent = function(event) {
                 var w = li.widget();
                 if (!isNull(w)) {
                     if (isFunction(w.destroy)) {
-                        w.destroy();
+                        destr(w);
                     }
                 }
                 li.invalidate();

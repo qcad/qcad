@@ -39,7 +39,7 @@ OptionsToolBar.normalizeSeparators = function(action) {
                     // make sure the action is also removed from the list of added actions:
                     action.optionWidgetActions.splice(idx, 1);
                 }
-                c.destroy();
+                destr(c);
             }
 
             previousWidgetWasSeparator = true;

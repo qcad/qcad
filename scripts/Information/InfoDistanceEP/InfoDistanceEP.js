@@ -90,7 +90,7 @@ InfoDistanceEP.prototype.pickEntity = function(event, preview) {
                 di.previewOperation(op);
             }
             else {
-                op.destroy();
+                destr(op);
             }
         }
     }
@@ -139,7 +139,7 @@ InfoDistanceEP.prototype.pickCoordinate = function(event, preview) {
             di.setRelativeZero(this.point2);
         }
         else {
-            op.destroy();
+            destr(op);
         }
     }
 

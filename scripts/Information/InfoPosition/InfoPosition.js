@@ -98,7 +98,7 @@ InfoPosition.prototype.pickCoordinate = function(event, preview) {
                     di.applyOperation(op);
                 }
                 else {
-                    op.destroy();
+                    destr(op);
                 }
             }
         }

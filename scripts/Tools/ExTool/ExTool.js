@@ -58,7 +58,7 @@ function main() {
 
     // import given file:
     if (di.importFile(inFile) != RDocumentInterface.IoErrorNoError) {
-        di.destroy();
+        destr(di);
         print("Cannot import file:", inFile);
         return;
     }
@@ -70,12 +70,12 @@ function main() {
 
     // export to given file (-o)
     if (!di.exportFile(outFile)) {
-        di.destroy();
+        destr(di);
         print("Cannot export file:", outFile);
         return;
     }
     
-    di.destroy();
+    destr(di);
 }
 
 if (typeof(including)=='undefined' || including===false) {

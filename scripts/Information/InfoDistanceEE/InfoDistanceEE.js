@@ -94,7 +94,7 @@ InfoDistanceEE.prototype.pickEntity = function(event, preview) {
                 di.previewOperation(op);
             }
             else {
-                op.destroy();
+                destr(op);
             }
         }
     }
@@ -301,7 +301,7 @@ InfoDistanceEE.prototype.getCandidatePoints = function(shape1, shape2) {
 //            di.setRelativeZero(this.point2);
 //        }
 //        else {
-//            op.destroy();
+//            destr(op);
 //        }
 //    }
 

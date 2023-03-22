@@ -41,7 +41,7 @@ Explode.initPreferences = function(pageWidget, calledByPrefDialog, document) {
         widgets["SplineTolerance"].visible = false;
         widgets["SplineTolerance_Label"].visible = false;
         widgets["SplinesToLineSegments"].visible = false;
-        widgets["Indent"].destroy();
+        destr(widgets["Indent"]);
         pageWidget.findChild("GridLayout").addWidget(widgets["SplineSegments_Label"], 2, 0, 1, 2);
     }
     else {

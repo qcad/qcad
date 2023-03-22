@@ -154,7 +154,7 @@ function main() {
             op.setBlockName(new QFileInfo(src).completeBaseName());
             diDest.applyOperation(op);
 
-            di.destroy();
+            destr(di);
         }
     }
 
@@ -164,7 +164,7 @@ function main() {
     print("  from: " + xmlFile);
     print("  to  : " + outputFile);
 
-    diDest.destroy();
+    destr(diDest);
 }
 
 

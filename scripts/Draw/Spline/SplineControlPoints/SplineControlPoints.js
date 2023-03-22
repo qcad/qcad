@@ -158,7 +158,7 @@ SplineControlPoints.prototype.getOperation = function(preview) {
     );
 
     if (!e.isValid()) {
-        e.destroy();
+        destr(e);
         return undefined;
     }
 

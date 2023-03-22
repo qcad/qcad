@@ -203,7 +203,7 @@ InsertBlockItem.prototype.setState = function(state) {
 
 InsertBlockItem.prototype.finishEvent = function() {
     if (!isNull(this.diItem)) {
-        this.diItem.destroy();
+        destr(this.diItem);
     }
     BlockInsert.prototype.finishEvent.call(this);
 };

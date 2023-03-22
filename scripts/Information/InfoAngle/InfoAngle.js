@@ -104,7 +104,7 @@ InfoAngle.prototype.pickEntity = function(event, preview) {
                 di.previewOperation(op);
             }
             else {
-                op.destroy();
+                destr(op);
             }
         }
     }
@@ -163,7 +163,7 @@ InfoAngle.prototype.pickEntity = function(event, preview) {
                 di.setRelativeZero(this.point2);
             }
             else {
-                op.destroy();
+                destr(op);
             }
 
             if (!isNull(this.arc)) {

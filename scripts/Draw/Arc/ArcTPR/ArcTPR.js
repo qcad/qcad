@@ -218,7 +218,7 @@ ArcTPR.prototype.pickCoordinate = function(event, preview) {
                 }
                 // multiple solutions:
                 else {
-                    op.destroy();
+                    destr(op);
                     this.setState(ArcTPR.State.ChoosingSolution);
                 }
             }

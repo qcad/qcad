@@ -28,7 +28,7 @@ function getInt(title, prompt, value, step, lower, upper) {
     dialog.setIntMinimum(lower);
 
     if (!dialog.exec()) {
-        dialog.destroy();
+        destr(dialog);
 	}
     return dialog.intValue();
 }
@@ -59,7 +59,7 @@ function getDouble(title, prompt, value, prec, lower, upper) {
     dialog.setDoubleMinimum(lower);
 
     if (!dialog.exec()) {
-        dialog.destroy();
+        destr(dialog);
 	}
     return dialog.doubleValue();
 }
@@ -81,7 +81,7 @@ function getText(title, prompt, txt) {
     dialog.setTextValue(txt);
 
     if (!dialog.exec()) {
-        dialog.destroy();
+        destr(dialog);
 	}
     return dialog.textValue();
 }
@@ -115,7 +115,7 @@ function getItem(title, prompt, items, idx, splitStr) {
 	}
 
     if (!dialog.exec()) {
-        dialog.destroy();
+        destr(dialog);
 	}
     var txt = dialog.textValue();
 	//var idx = itemlst.indexOf(txt, 0);

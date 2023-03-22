@@ -1281,7 +1281,7 @@ WidgetFactory.initLineEdit = function(lineEdit, dimension) {
         menu.insertMenu(separatorAction, subMenu);
         menu.exec(QCursor.pos());
         if (!isDeleted(menu)) {
-            menu.destroy();
+            destr(menu);
         }
     });
 };

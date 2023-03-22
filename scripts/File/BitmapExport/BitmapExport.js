@@ -182,7 +182,7 @@ BitmapExport.prototype.getProperties = function() {
     this.resolutionChanged(resolutionCombo.currentText);
 
     if (!this.dialog.exec()) {
-        this.dialog.destroy();
+        destr(this.dialog);
         EAction.activateMainWindow();
         return undefined;
     }

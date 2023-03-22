@@ -198,7 +198,7 @@ AddOn.prototype.initPreferencePage = function() {
         WidgetFactory.restoreState(widget);
         WidgetFactory.saveState(widget);
         WidgetFactory.requiresRestart = false;
-        widget.destroy();
+        destr(widget);
 
         RSettings.setValue(settingsKey, true);
     }

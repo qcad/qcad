@@ -178,7 +178,7 @@ Transform.prototype.getOperation = function(preview, selectResult, cache) {
 Transform.prototype.clearCache = function() {
     // clear cache:
     if (!isNull(this.diTrans)) {
-        this.diTrans.destroy();
+        destr(this.diTrans);
     }
 
     this.diTrans = undefined;

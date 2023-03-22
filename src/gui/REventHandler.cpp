@@ -167,7 +167,7 @@ void REventHandler::drawInfoLabel(QPainter* painter, const RTextLabel& textLabel
 #endif
         int w = hAdvance+10;
         int h = fm.height()+10;
-        //fm.destroy();
+        //destr(fm);
         painter->setFont(font);
         painter->drawText(p.x - w - 15, p.y + h + 5, w, h, Qt::AlignHCenter | Qt::AlignVCenter, text, NULL);
     }
