@@ -1553,6 +1553,9 @@ PropertyEditorImpl.prototype.makeReadOnly = function(control) {
         return;
     }
 
+    RPropertyEditor.makeReadOnly(control, true);
+
+    /*
     var p = control.palette;
     if (isNull(control.property("oriPalette"))) {
         control.setProperty("oriPalette", control.palette);
@@ -1568,8 +1571,9 @@ PropertyEditorImpl.prototype.makeReadOnly = function(control) {
 //        p.setColor(QPalette.Base, new QColor("#eeeeee"));
 //    }
     control.palette = p;
+    */
 
-    control.readOnly = true;
+    //control.readOnly = true;
     // leave enabled to allow copy / page (20140411):
     //control.enabled = false;
 };
@@ -1582,22 +1586,25 @@ PropertyEditorImpl.prototype.makeReadWrite = function(control) {
         return;
     }
 
-    var p = control.palette;
-    if (isNull(control.property("oriPalette"))) {
-        control.setProperty("oriPalette", control.palette);
-    }
+    RPropertyEditor.makeReadOnly(control, false);
 
-    p.setColor(QPalette.Active, QPalette.Text, control.property("oriPalette").color(QPalette.Active, QPalette.WindowText));
-    p.setColor(QPalette.Inactive, QPalette.Text, control.property("oriPalette").color(QPalette.Inactive, QPalette.WindowText));
-//    //if (RSettings.hasDarkGuiBackground()) {
-//        p.setColor(QPalette.Base, control.oriBase);
-////    }
-////    else {
-////        p.setColor(QPalette.Base, new QColor("#ffffff"));
-////    }
-    control.palette = p;
+//    var p = control.palette;
+//    if (isNull(control.property("oriPalette"))) {
+//        control.setProperty("oriPalette", control.palette);
+//    }
 
-    control.readOnly = false;
+//    p.setColor(QPalette.Active, QPalette.Text, control.property("oriPalette").color(QPalette.Active, QPalette.WindowText));
+//    p.setColor(QPalette.Inactive, QPalette.Text, control.property("oriPalette").color(QPalette.Inactive, QPalette.WindowText));
+////    //if (RSettings.hasDarkGuiBackground()) {
+////        p.setColor(QPalette.Base, control.oriBase);
+//////    }
+//////    else {
+//////        p.setColor(QPalette.Base, new QColor("#ffffff"));
+//////    }
+//    control.palette = p;
+
+    //control.readOnly = false;
+
     control.enabled = true;
 };
 
