@@ -221,15 +221,21 @@ Circle3T.prototype.pickEntity = function(event, preview) {
         }
         else {
             var op = this.getOperation(false);
-            if (!isNull(op) && !isNull(this.candidates)) {
-                // only one solution:
-                if (this.candidates.length===1) {
-                    di.applyOperation(op);
-                    this.setState(Circle3T.State.ChoosingShape1);
+            if (!isNull(op)) {
+                if (!isNull(this.candidates)) {
+                    // only one solution:
+                    if (this.candidates.length===1) {
+                        di.applyOperation(op);
+                        this.setState(Circle3T.State.ChoosingShape1);
+                    }
+                    // multiple solutions:
+                    else {
+                        destr(op);
+                        this.setState(Circle3T.State.ChoosingSolution);
+                    }
                 }
-                // multiple solutions:
                 else {
-                    this.setState(Circle3T.State.ChoosingSolution);
+                    destr(op);
                 }
             }
             // no solution:
