@@ -129,6 +129,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, checkType, "checkType");
             
+            REcmaHelper::registerFunction(&engine, &ctor, makeReadOnly, "makeReadOnly");
+            
 
     // static properties:
     
@@ -2038,6 +2040,68 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPropertyEditor::checkType", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPropertyEditor::makeReadOnly
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyEditor::makeReadOnly", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyEditor::makeReadOnly";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QWidget * */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+            // argument isQObject
+            QWidget *
+            a0 =
+            qobject_cast<
+            QWidget *>
+            ( context->argument(
+            0
+            ).
+            toQObject()
+            );
+        
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RPropertyEditor::
+       makeReadOnly(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyEditor.makeReadOnly().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyEditor::makeReadOnly", context, engine);
             return result;
         }
          QScriptValue REcmaPropertyEditor::toString
