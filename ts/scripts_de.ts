@@ -7501,7 +7501,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>InputPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js" line="+32"/>
+        <location filename="../scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js" line="+33"/>
         <source>General</source>
         <translation>Allgemein</translation>
     </message>
@@ -7511,7 +7511,7 @@ ist bereits in der Liste.</translation>
         <translation>Koordinatenformat</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <location line="+33"/>
         <source>Comma</source>
         <translation>Komma</translation>

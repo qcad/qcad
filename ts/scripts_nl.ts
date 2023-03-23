@@ -3393,92 +3393,92 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.js" line="+74"/>
         <source>First vertex</source>
-        <translation type="unfinished">Eerste hoekpunt</translation>
+        <translation>Eerste hoekpunt</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Next vertex</source>
-        <translation type="unfinished">Volgende hoekpunt</translation>
+        <translation>Volgende hoekpunt</translation>
     </message>
     <message>
         <location line="+532"/>
         <source>close</source>
-        <translation type="unfinished">close</translation>
+        <translation>close</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>undo</source>
-        <translation type="unfinished">undo</translation>
+        <translation>undo</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>redo</source>
-        <translation type="unfinished">Opnieuw toepassen</translation>
+        <translation>Opnieuw toepassen</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>arc</source>
-        <translation type="unfinished">arc</translation>
+        <translation>arc</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.ui" line="+23"/>
         <source>Close polyline</source>
-        <translation type="unfinished">Polylijn sluiten</translation>
+        <translation>Polylijn sluiten</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>,, C</source>
-        <translation type="unfinished">,, C</translation>
+        <translation>,, C</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Undo Previous Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Vorig segment ongedaan maken</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>,, U</source>
-        <translation type="unfinished">,, U</translation>
+        <translation>,, U</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Redo Segment</source>
-        <translation type="unfinished">Segment herstellen</translation>
+        <translation>Segment herstellen</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>,, R</source>
-        <translation type="unfinished">,, R</translation>
+        <translation>,, R</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Arc with radius:</source>
-        <translation type="unfinished">Boog met straal:</translation>
+        <translation>Boog met straal:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>,, A</source>
-        <translation type="unfinished">,, A</translation>
+        <translation>,, A</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Sweep</source>
-        <translation type="unfinished">Sweep</translation>
+        <translation>Sweep</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Restrict length or angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Lengte of hoek beperken</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
         <source>Draw &amp;Fms Lanes</source>
-        <translation type="unfinished"></translation>
+        <translation>Teken Fms Lanes</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw FMS Lanes (ribs)</source>
-        <translation type="unfinished"></translation>
+        <translation>Teken FMS Lanes (ribben)</translation>
     </message>
 </context>
 <context>
@@ -5128,7 +5128,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+624"/>
         <source>Ignored hatch in block reference with non-uniform scale factors</source>
-        <translation type="unfinished">Genegeerde arcering in blokreferentie met niet-uniforme schaalfactoren</translation>
+        <translation>Genegeerde arcering in blokreferentie met niet-uniforme schaalfactoren</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
@@ -7501,7 +7501,7 @@ is al in de lijst.</translation>
 <context>
     <name>InputPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js" line="+32"/>
+        <location filename="../scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js" line="+33"/>
         <source>General</source>
         <translation>Algemeen</translation>
     </message>
@@ -7511,7 +7511,7 @@ is al in de lijst.</translation>
         <translation>Coördinaat formaat</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <location line="+33"/>
         <source>Comma</source>
         <translation>Komma</translation>
@@ -7732,27 +7732,27 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+85"/>
         <source>Cannot read file:</source>
-        <translation type="unfinished">Kan bestand niet lezen:</translation>
+        <translation>Kan bestand niet lezen:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No constructor found in file:</source>
-        <translation type="unfinished">Geen constructor gevonden in het bestand:</translation>
+        <translation>Geen constructor gevonden in het bestand:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No &apos;init&apos; function found in file:</source>
-        <translation type="unfinished">Geen &apos;init&apos; functie gevonden in bestand:</translation>
+        <translation>Geen &apos;init&apos; functie gevonden in bestand:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No &apos;generate&apos; function found in file:</source>
-        <translation type="unfinished">Geen &apos;generate&apos; functie gevonden in bestand:</translation>
+        <translation>Geen &apos;generate&apos; functie gevonden in bestand:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No &apos;generatePreview&apos; function found in file:</source>
-        <translation type="unfinished">Geen &apos;generatePreview&apos; functie gevonden in bestand:</translation>
+        <translation>Geen &apos;generatePreview&apos; functie gevonden in bestand:</translation>
     </message>
 </context>
 <context>
@@ -13488,12 +13488,12 @@ is al in de lijst.</translation>
     <message>
         <location line="+26"/>
         <source>Cannot import file into existing drawing:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kan bestand niet importeren in bestaande tekening:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Importing file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestand importeren:</translation>
     </message>
     <message>
         <location line="+17"/>

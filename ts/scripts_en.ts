@@ -5128,7 +5128,7 @@ is already in the list.</translation>
     <message>
         <location line="+624"/>
         <source>Ignored hatch in block reference with non-uniform scale factors</source>
-        <translation></translation>
+        <translation>Ignored hatch in block reference with non-uniform scale factors</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
@@ -7501,7 +7501,7 @@ is already in the list.</translation>
 <context>
     <name>InputPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js" line="+32"/>
+        <location filename="../scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js" line="+33"/>
         <source>General</source>
         <translation>General</translation>
     </message>
@@ -7511,7 +7511,7 @@ is already in the list.</translation>
         <translation>Coordinate Format</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <location line="+33"/>
         <source>Comma</source>
         <translation>Comma</translation>
@@ -7737,7 +7737,7 @@ is already in the list.</translation>
     <message>
         <location line="+5"/>
         <source>No constructor found in file:</source>
-        <translation></translation>
+        <translation>No constructor found in file:</translation>
     </message>
     <message>
         <location line="+5"/>

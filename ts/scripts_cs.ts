@@ -3399,7 +3399,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+12"/>
         <source>Next vertex</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Další vrchol</translation>
     </message>
     <message>
         <location line="+532"/>
@@ -3444,7 +3444,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+13"/>
         <source>Redo Segment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Segment Redo</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -3474,12 +3474,12 @@ již v seznamu je.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
         <source>Draw &amp;Fms Lanes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Draw Fms Lanes</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw FMS Lanes (ribs)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Losování jízdních pruhů FMS (žebra)</translation>
     </message>
 </context>
 <context>
@@ -7504,7 +7504,7 @@ již v seznamu je.</translation>
 <context>
     <name>InputPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js" line="+32"/>
+        <location filename="../scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js" line="+33"/>
         <source>General</source>
         <translation>Všeobecné</translation>
     </message>
@@ -7514,7 +7514,7 @@ již v seznamu je.</translation>
         <translation>Formát souřadnic</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <location line="+33"/>
         <source>Comma</source>
         <translation>Čárka</translation>
@@ -13496,12 +13496,12 @@ již v seznamu je.</translation>
     <message>
         <location line="+26"/>
         <source>Cannot import file into existing drawing:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nelze importovat soubor do existujícího výkresu:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Importing file:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Importování souboru:</translation>
     </message>
     <message>
         <location line="+17"/>

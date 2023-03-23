@@ -3393,92 +3393,92 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.js" line="+74"/>
         <source>First vertex</source>
-        <translation type="unfinished">Primeiro vértice</translation>
+        <translation>Primeiro vértice</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Next vertex</source>
-        <translation type="unfinished">Próximo vértice</translation>
+        <translation>Próximo vértice</translation>
     </message>
     <message>
         <location line="+532"/>
         <source>close</source>
-        <translation type="unfinished">encerre</translation>
+        <translation>encerre</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>undo</source>
-        <translation type="unfinished">desfaça</translation>
+        <translation>desfaça</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>redo</source>
-        <translation type="unfinished">refaça</translation>
+        <translation>refaça</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>arc</source>
-        <translation type="unfinished">arco</translation>
+        <translation>arco</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.ui" line="+23"/>
         <source>Close polyline</source>
-        <translation type="unfinished">Encerre a polilinha</translation>
+        <translation>Encerre a polilinha</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>,, C</source>
-        <translation type="unfinished">,, C</translation>
+        <translation>,, C</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Undo Previous Segment</source>
-        <translation type="unfinished">Desfazer Segmento Anterior</translation>
+        <translation>Desfazer Segmento Anterior</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>,, U</source>
-        <translation type="unfinished">,, U</translation>
+        <translation>,, U</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Redo Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Segmento Redo</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>,, R</source>
-        <translation type="unfinished">,, R</translation>
+        <translation>,, R</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Arc with radius:</source>
-        <translation type="unfinished">Arco com raio:</translation>
+        <translation>Arco com raio:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>,, A</source>
-        <translation type="unfinished">,, A</translation>
+        <translation>,, A</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Sweep</source>
-        <translation type="unfinished">Varra</translation>
+        <translation>Varra</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Restrict length or angle</source>
-        <translation type="unfinished">Restrinja o comprimento ou o ângulo</translation>
+        <translation>Restrinja o comprimento ou o ângulo</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
         <source>Draw &amp;Fms Lanes</source>
-        <translation type="unfinished"></translation>
+        <translation>Desenho Fms Pistas</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw FMS Lanes (ribs)</source>
-        <translation type="unfinished"></translation>
+        <translation>Desenhar FMS Lanes (costelas)</translation>
     </message>
 </context>
 <context>
@@ -5133,7 +5133,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+624"/>
         <source>Ignored hatch in block reference with non-uniform scale factors</source>
-        <translation type="unfinished">Escotilha ignorada em referência de bloco com factores de escala não-uniforme</translation>
+        <translation>Escotilha ignorada em referência de bloco com factores de escala não-uniforme</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+244"/>
@@ -7501,7 +7501,7 @@ já se encontra na lista.</translation>
 <context>
     <name>InputPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js" line="+32"/>
+        <location filename="../scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js" line="+33"/>
         <source>General</source>
         <translation>Geral</translation>
     </message>
@@ -7511,7 +7511,7 @@ já se encontra na lista.</translation>
         <translation>Formato de Coordenadas</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <location line="+33"/>
         <source>Comma</source>
         <translation>Vírgula</translation>
@@ -7732,27 +7732,27 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+85"/>
         <source>Cannot read file:</source>
-        <translation type="unfinished">Não é possível ler o ficheiro:</translation>
+        <translation>Não é possível ler o ficheiro:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No constructor found in file:</source>
-        <translation type="unfinished">Nenhum construtor encontrado em ficheiro:</translation>
+        <translation>Nenhum construtor encontrado em ficheiro:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No &apos;init&apos; function found in file:</source>
-        <translation type="unfinished">Nenhuma função &apos;init&apos; encontrada no ficheiro:</translation>
+        <translation>Nenhuma função &apos;init&apos; encontrada no ficheiro:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No &apos;generate&apos; function found in file:</source>
-        <translation type="unfinished">Nenhuma função &apos;gerar&apos; encontrada em ficheiro:</translation>
+        <translation>Nenhuma função &apos;gerar&apos; encontrada em ficheiro:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No &apos;generatePreview&apos; function found in file:</source>
-        <translation type="unfinished">Nenhuma função &apos;generatePreview&apos; encontrada em ficheiro:</translation>
+        <translation>Nenhuma função &apos;generatePreview&apos; encontrada em ficheiro:</translation>
     </message>
 </context>
 <context>
@@ -13488,12 +13488,12 @@ já se encontra na lista.</translation>
     <message>
         <location line="+26"/>
         <source>Cannot import file into existing drawing:</source>
-        <translation type="unfinished"></translation>
+        <translation>Não é possível importar ficheiro para o desenho existente:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Importing file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Importação de ficheiro:</translation>
     </message>
     <message>
         <location line="+17"/>

@@ -3470,12 +3470,12 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
         <source>Draw &amp;Fms Lanes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Döntetlen Fms sávok</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw FMS Lanes (ribs)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">FMS sávok rajzolása (bordák)</translation>
     </message>
 </context>
 <context>
@@ -7496,7 +7496,7 @@ már szerepel a listában.</translation>
 <context>
     <name>InputPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js" line="+32"/>
+        <location filename="../scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js" line="+33"/>
         <source>General</source>
         <translation type="unfinished">Általános</translation>
     </message>
@@ -7506,7 +7506,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Koordináta formátum</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <location line="+33"/>
         <source>Comma</source>
         <translation type="unfinished">Vessző</translation>
@@ -13478,12 +13478,12 @@ már szerepel a listában.</translation>
     <message>
         <location line="+26"/>
         <source>Cannot import file into existing drawing:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nem lehet fájlt importálni a meglévő rajzba:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Importing file:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fájl importálása:</translation>
     </message>
     <message>
         <location line="+17"/>

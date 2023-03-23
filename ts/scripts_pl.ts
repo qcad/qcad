@@ -3476,12 +3476,12 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
         <source>Draw &amp;Fms Lanes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Draw Fms Lanes</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw FMS Lanes (ribs)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Draw FMS Lanes (ribs)</translation>
     </message>
 </context>
 <context>
@@ -7506,7 +7506,7 @@ jest już na liście.</translation>
 <context>
     <name>InputPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js" line="+32"/>
+        <location filename="../scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js" line="+33"/>
         <source>General</source>
         <translation type="unfinished">Ogólne</translation>
     </message>
@@ -7516,7 +7516,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Format współrzędnych</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <location line="+33"/>
         <source>Comma</source>
         <translation type="unfinished">Przecinek</translation>
@@ -13498,12 +13498,12 @@ jest już na liście.</translation>
     <message>
         <location line="+26"/>
         <source>Cannot import file into existing drawing:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nie można zaimportować pliku do istniejącego rysunku:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Importing file:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Importowanie pliku:</translation>
     </message>
     <message>
         <location line="+17"/>

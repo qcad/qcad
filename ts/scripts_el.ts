@@ -7495,7 +7495,7 @@ is already in the list.</source>
 <context>
     <name>InputPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js" line="+32"/>
+        <location filename="../scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js" line="+33"/>
         <source>General</source>
         <translation type="unfinished">Γενικά</translation>
     </message>
@@ -7505,7 +7505,7 @@ is already in the list.</source>
         <translation type="unfinished">Μορφή συντεταγμένων</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <location line="+33"/>
         <source>Comma</source>
         <translation type="unfinished">Κόμμα</translation>

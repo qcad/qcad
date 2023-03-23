@@ -3476,12 +3476,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
         <source>Draw &amp;Fms Lanes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Draw Fms Lanes</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw FMS Lanes (ribs)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Рисунок FMS Полосы (ребра)</translation>
     </message>
 </context>
 <context>
@@ -7506,7 +7506,7 @@ is already in the list.</source>
 <context>
     <name>InputPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js" line="+32"/>
+        <location filename="../scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js" line="+33"/>
         <source>General</source>
         <translation>Основное</translation>
     </message>
@@ -7516,7 +7516,7 @@ is already in the list.</source>
         <translation>Формат координаты</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <location line="+33"/>
         <source>Comma</source>
         <translation>Запятая</translation>
@@ -13498,12 +13498,12 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>Cannot import file into existing drawing:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Невозможно импортировать файл в существующий чертеж:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Importing file:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Импортирование файла:</translation>
     </message>
     <message>
         <location line="+17"/>

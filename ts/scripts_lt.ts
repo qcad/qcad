@@ -3473,12 +3473,12 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
         <source>Draw &amp;Fms Lanes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lygiosios Fms juostos</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw FMS Lanes (ribs)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nubraižyti FMS juostos (šonkauliai)</translation>
     </message>
 </context>
 <context>
@@ -7503,7 +7503,7 @@ jau yra sąraše.</translation>
 <context>
     <name>InputPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js" line="+32"/>
+        <location filename="../scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js" line="+33"/>
         <source>General</source>
         <translation type="unfinished">Bendra</translation>
     </message>
@@ -7513,7 +7513,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Koordinačių formatas</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <location line="+33"/>
         <source>Comma</source>
         <translation type="unfinished">Kablelis</translation>
@@ -13495,12 +13495,12 @@ jau yra sąraše.</translation>
     <message>
         <location line="+26"/>
         <source>Cannot import file into existing drawing:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Negalima importuoti failo į esamą brėžinį:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Importing file:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Importuoti failą:</translation>
     </message>
     <message>
         <location line="+17"/>

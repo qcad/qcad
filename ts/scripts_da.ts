@@ -3393,92 +3393,92 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.js" line="+74"/>
         <source>First vertex</source>
-        <translation type="unfinished">Første toppunkt</translation>
+        <translation>Første toppunkt</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Next vertex</source>
-        <translation type="unfinished">Næste toppunkt</translation>
+        <translation>Næste toppunkt</translation>
     </message>
     <message>
         <location line="+532"/>
         <source>close</source>
-        <translation type="unfinished">luk</translation>
+        <translation>luk</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>undo</source>
-        <translation type="unfinished">fortryde</translation>
+        <translation>fortryde</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>redo</source>
-        <translation type="unfinished">gentag</translation>
+        <translation>gentag</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>arc</source>
-        <translation type="unfinished">bue</translation>
+        <translation>bue</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.ui" line="+23"/>
         <source>Close polyline</source>
-        <translation type="unfinished">Luk polylinje</translation>
+        <translation>Luk polylinje</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>,, C</source>
-        <translation type="unfinished">,, C</translation>
+        <translation>,, C</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Undo Previous Segment</source>
-        <translation type="unfinished">Fortryd tidligere segment</translation>
+        <translation>Fortryd tidligere segment</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>,, U</source>
-        <translation type="unfinished">,, U</translation>
+        <translation>,, U</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Redo Segment</source>
-        <translation type="unfinished">Redo-segment</translation>
+        <translation>Genoprette segment</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>,, R</source>
-        <translation type="unfinished">,, R</translation>
+        <translation>,, R</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Arc with radius:</source>
-        <translation type="unfinished">Bue med radius:</translation>
+        <translation>Bue med radius:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>,, A</source>
-        <translation type="unfinished">,, A</translation>
+        <translation>,, A</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Sweep</source>
-        <translation type="unfinished">Feje</translation>
+        <translation>Feje</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Restrict length or angle</source>
-        <translation type="unfinished">Begrænse længde eller vinkel</translation>
+        <translation>Begrænse længde eller vinkel</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
         <source>Draw &amp;Fms Lanes</source>
-        <translation type="unfinished"></translation>
+        <translation>Tegning Fms Lanes</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw FMS Lanes (ribs)</source>
-        <translation type="unfinished"></translation>
+        <translation>Træk FMS baner (ribber)</translation>
     </message>
 </context>
 <context>
@@ -5128,7 +5128,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+624"/>
         <source>Ignored hatch in block reference with non-uniform scale factors</source>
-        <translation type="unfinished">Ignoreret skravering i blokreference med uensartede skalafaktorer</translation>
+        <translation>Ignoreret skravering i blokreference med uensartede skalafaktorer</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
@@ -7501,7 +7501,7 @@ er allerede på listen.</translation>
 <context>
     <name>InputPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js" line="+32"/>
+        <location filename="../scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js" line="+33"/>
         <source>General</source>
         <translation>Generelt</translation>
     </message>
@@ -7511,7 +7511,7 @@ er allerede på listen.</translation>
         <translation>Koordinatformat</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <location line="+33"/>
         <source>Comma</source>
         <translation>Komma</translation>
@@ -7732,27 +7732,27 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+85"/>
         <source>Cannot read file:</source>
-        <translation type="unfinished">Kan ikke læse filen:</translation>
+        <translation>Kan ikke læse filen:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No constructor found in file:</source>
-        <translation type="unfinished">Ingen konstruktør fundet i filen:</translation>
+        <translation>Ingen konstruktør fundet i filen:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No &apos;init&apos; function found in file:</source>
-        <translation type="unfinished">Ingen &apos;init&apos;-funktion fundet i filen:</translation>
+        <translation>Ingen &apos;init&apos;-funktion fundet i filen:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No &apos;generate&apos; function found in file:</source>
-        <translation type="unfinished">Ingen &apos;generate&apos;-funktion fundet i filen:</translation>
+        <translation>Ingen &apos;generate&apos;-funktion fundet i filen:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No &apos;generatePreview&apos; function found in file:</source>
-        <translation type="unfinished">Ingen &apos;generatePreview&apos;-funktion fundet i filen:</translation>
+        <translation>Ingen &apos;generatePreview&apos;-funktion fundet i filen:</translation>
     </message>
 </context>
 <context>
@@ -13488,12 +13488,12 @@ er allerede på listen.</translation>
     <message>
         <location line="+26"/>
         <source>Cannot import file into existing drawing:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kan ikke importere filen til en eksisterende tegning:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Importing file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Import af fil:</translation>
     </message>
     <message>
         <location line="+17"/>
