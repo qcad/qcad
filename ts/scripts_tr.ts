@@ -3212,7 +3212,9 @@ Kurtarmak ister misiniz?</translation>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
-        <translation></translation>
+        <translation>Klasör
+&quot;%1&quot;
+zaten listede.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -11418,7 +11420,8 @@ is already in the list.</source>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
-        <translation></translation>
+        <translation>Seçilen varlıklar:
+%1.</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
@@ -12631,7 +12634,8 @@ is already in the list.</source>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
-        <translation></translation>
+        <translation>Basit metin
+(tek satır, biçimlendirme yok)</translation>
     </message>
     <message>
         <location line="+21"/>

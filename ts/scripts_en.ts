@@ -3473,12 +3473,12 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
         <source>Draw &amp;Fms Lanes</source>
-        <translation></translation>
+        <translation>Draw &amp;Fms Lanes</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw FMS Lanes (ribs)</source>
-        <translation></translation>
+        <translation>Рисуване на ленти за FMS (ребра)</translation>
     </message>
 </context>
 <context>
