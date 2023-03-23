@@ -212,6 +212,16 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="filter" isConst="false" />
       </variant>
     </method>
+    <method name="makeReadOnly" cppName="makeReadOnly"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QWidget *" typeName="QWidget *" name="control"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="updateGui" cppName="updateGui"
     specifier="protected" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

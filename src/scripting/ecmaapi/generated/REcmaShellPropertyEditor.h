@@ -182,6 +182,12 @@
         
     
     
+      void makeReadOnly(
+                QWidget * control, bool on
+            );
+        
+    
+    
       void updateGui(
                 bool onlyChanges
         = false
