@@ -871,8 +871,14 @@ void RPropertyEditor::makeReadOnly(QWidget* control, bool on) {
 
     QPalette oriPalette = control->property("oriPalette").value<QPalette>();
 
-    p.setColor(QPalette::Active, QPalette::Text, oriPalette.color(QPalette::Disabled, QPalette::WindowText));
-    p.setColor(QPalette::Inactive, QPalette::Text, oriPalette.color(QPalette::Disabled, QPalette::WindowText));
+    if (on) {
+        p.setColor(QPalette::Active, QPalette::Text, oriPalette.color(QPalette::Disabled, QPalette::WindowText));
+        p.setColor(QPalette::Inactive, QPalette::Text, oriPalette.color(QPalette::Disabled, QPalette::WindowText));
+    }
+    else {
+        p.setColor(QPalette::Active, QPalette::Text, oriPalette.color(QPalette::Active, QPalette::WindowText));
+        p.setColor(QPalette::Inactive, QPalette::Text, oriPalette.color(QPalette::Inactive, QPalette::WindowText));
+    }
 
 //    if (RSettings.hasDarkGuiBackground()) {
 //        p.setColor(QPalette.Base, new QColor("#0a0a0a"));
