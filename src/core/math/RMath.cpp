@@ -967,7 +967,16 @@ RVector RMath::parseCoordinate(const QString& coordinateString, const RVector& r
     QChar decimalPoint = RSettings::getCharValue("Input/DecimalPoint", '.');
     QChar cartCoordSep = RSettings::getCharValue("Input/CartesianCoordinateSeparator", ',');
     QChar polCoordSep = RSettings::getCharValue("Input/PolarCoordinateSeparator", '<');
-    QChar relCoordPre = RSettings::getCharValue( "Input/RelativeCoordinatePrefix", '@');
+    QChar relCoordPre = RSettings::getCharValue("Input/RelativeCoordinatePrefix", '@');
+    // space means no prefix:
+    QChar absCoordPre = RSettings::getCharValue("Input/AbsoluteCoordinatePrefix", ' ');
+
+    if (relCoordPre==' ') {
+        relCoordPre = QChar();
+    }
+    if (absCoordPre==' ') {
+        absCoordPre = QChar();
+    }
 
     if (str.count(cartCoordSep)!=1 && str.count(polCoordSep)!=1) {
         // not a coordinate (not an error, could be another value such as a radius):
@@ -981,10 +990,25 @@ RVector RMath::parseCoordinate(const QString& coordinateString, const RVector& r
         return RVector::nanVector;
     }
 
+    bool gotPrefix = (str[0]==relCoordPre || str[0]==absCoordPre);
+
+    // default to absolute coordinates:
     bool relative = false;
-    if (str[0]==relCoordPre) {
-        relative = true;
+
+    if (gotPrefix) {
+        // prefix given:
+        if (str[0]==relCoordPre) {
+            relative = true;
+        }
+
+        // strip prefix:
         str = str.mid(1);
+    }
+    else {
+        // no prefix: coordinate is relative if relative coordinate prefix is empty:
+        if (relCoordPre.isNull() && !absCoordPre.isNull()) {
+            relative = true;
+        }
     }
 
     QStringList sl;
