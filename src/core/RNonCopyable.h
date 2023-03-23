@@ -32,7 +32,7 @@
 class QCADCORE_EXPORT RNonCopyable {
 protected:
     RNonCopyable() {}
-    ~RNonCopyable() {}
+    virtual ~RNonCopyable() {}
 
 private:
     RNonCopyable(const RNonCopyable&);
