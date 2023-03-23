@@ -627,6 +627,8 @@ SOURCES = \
 ../scripts/Misc/MiscDraw/Cross/Cross.js \
 ../scripts/Misc/MiscDraw/Cross/CrossInit.js \
 ../scripts/Misc/MiscDraw/DrawBoundingBox/DrawBoundingBox.js \
+../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.js \
+../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js \
 ../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js \
 ../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js \
 ../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.js \
@@ -1173,6 +1175,7 @@ SOURCES = \
 ../scripts/Misc/MiscDevelopment/RunScript/RunScriptDialog.ui \
 ../scripts/Misc/MiscDraw/Counter/Counter.ui \
 ../scripts/Misc/MiscDraw/Cross/Cross.ui \
+../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.ui \
 ../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui \
 ../scripts/Misc/MiscDraw/LineDove/LineDove.ui \
 ../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.ui \

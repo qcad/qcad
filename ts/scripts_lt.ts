@@ -1113,7 +1113,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">Bitmap failas eksportuotas į &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+37"/>
         <source>Files</source>
         <translation type="unfinished">Failai</translation>
     </message>
@@ -1832,7 +1832,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">Pasirinkite sprendimą</translation>
     </message>
     <message>
-        <location line="+120"/>
+        <location line="+126"/>
         <location line="+86"/>
         <source>No solution</source>
         <translation type="unfinished">Nėra sprendimo</translation>
@@ -3389,6 +3389,99 @@ jau yra sąraše.</translation>
     </message>
 </context>
 <context>
+    <name>DrawFmsLanes</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.js" line="+74"/>
+        <source>First vertex</source>
+        <translation type="unfinished">Pirmoji viršūnė</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Next vertex</source>
+        <translation type="unfinished">Kita viršūnė</translation>
+    </message>
+    <message>
+        <location line="+532"/>
+        <source>close</source>
+        <translation type="unfinished">uždaryti</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>undo</source>
+        <translation type="unfinished">atšaukti</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>redo</source>
+        <translation type="unfinished">iš naujo</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>arc</source>
+        <translation type="unfinished">lankas</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.ui" line="+23"/>
+        <source>Close polyline</source>
+        <translation type="unfinished">Uždaryti daugiakampę liniją</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>,, C</source>
+        <translation type="unfinished">,, C</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Undo Previous Segment</source>
+        <translation type="unfinished">Ankstesnio segmento atšaukimas</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>,, U</source>
+        <translation type="unfinished">,, U</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Redo Segment</source>
+        <translation type="unfinished">&quot;Redo&quot; segmentas</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>,, R</source>
+        <translation type="unfinished">,, R</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Arc with radius:</source>
+        <translation type="unfinished">Lanko spindulys:</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>,, A</source>
+        <translation type="unfinished">,, A</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Sweep</source>
+        <translation type="unfinished">Nuvalyti</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Restrict length or angle</source>
+        <translation type="unfinished">Apriboti ilgį arba kampą</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
+        <source>Draw &amp;Fms Lanes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw FMS Lanes (ribs)</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>DrawFromCSV</name>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV.js" line="+145"/>
@@ -4106,7 +4199,7 @@ jau yra sąraše.</translation>
 <context>
     <name>Duplicate</name>
     <message numerus="yes">
-        <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+54"/>
+        <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+85"/>
         <source>%n entity/ies duplicated</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -5035,7 +5128,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Sprogti</translation>
     </message>
     <message>
-        <location line="+613"/>
+        <location line="+624"/>
         <source>Ignored hatch in block reference with non-uniform scale factors</source>
         <translation type="unfinished">Ignoruojamas bloko atskaitos liukas su nevienodais mastelio veiksniais</translation>
     </message>
@@ -6322,7 +6415,7 @@ jau yra sąraše.</translation>
 <context>
     <name>Image</name>
     <message>
-        <location filename="../scripts/Draw/Image/Image.js" line="+140"/>
+        <location filename="../scripts/Draw/Image/Image.js" line="+179"/>
         <source>Files</source>
         <translation type="unfinished">Failai</translation>
     </message>
@@ -7639,27 +7732,27 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Įterpti scenarijų</translation>
     </message>
     <message>
-        <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+66"/>
+        <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+85"/>
         <source>Cannot read file:</source>
         <translation type="unfinished">Nepavyksta perskaityti failo:</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>No constructor found in file:</source>
         <translation type="unfinished">Faile nerastas joks konstruktorius:</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>No &apos;init&apos; function found in file:</source>
-        <translation type="unfinished">Faile nerasta "init" funkcijos:</translation>
+        <translation type="unfinished">Faile nerasta &quot;init&quot; funkcijos:</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>No &apos;generate&apos; function found in file:</source>
         <translation type="unfinished">Faile nerasta funkcijos &apos;generate&apos;:</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>No &apos;generatePreview&apos; function found in file:</source>
         <translation type="unfinished">Faile nerasta funkcijos &apos;generatePreview&apos;:</translation>
     </message>
@@ -10132,7 +10225,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Ne</translation>
     </message>
     <message>
-        <location line="+386"/>
+        <location line="+393"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*VARIES*</translation>
     </message>
@@ -13395,17 +13488,22 @@ jau yra sąraše.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+321"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+322"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished">Nepalaikomi nutolę duomenys</translation>
     </message>
     <message>
-        <location line="+21"/>
-        <source>Importing file: </source>
-        <translation type="unfinished">Importuoti failą:</translation>
+        <location line="+26"/>
+        <source>Cannot import file into existing drawing:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+4"/>
+        <source>Importing file:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Importing URL: </source>
         <translation type="unfinished">URL importavimas:</translation>
     </message>
@@ -13421,7 +13519,7 @@ jau yra sąraše.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1157"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1156"/>
         <source>Restore defaults</source>
         <translation type="unfinished">Atkurti numatytąsias nuostatas</translation>
     </message>
@@ -13860,7 +13958,7 @@ jau yra sąraše.</translation>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../scripts/autostart.js" line="+363"/>
+        <location filename="../scripts/autostart.js" line="+237"/>
         <source>Loading add-on translations...</source>
         <translation type="unfinished">Įkeliami priedų vertimai...</translation>
     </message>
@@ -13883,7 +13981,7 @@ jau yra sąraše.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1248"/>
+        <location filename="../scripts/library.js" line="+1250"/>
         <source>Objects</source>
         <translation type="unfinished">Objektai</translation>
     </message>
@@ -14446,4 +14544,3 @@ jau yra sąraše.</translation>
     </message>
 </context>
 </TS>
-

@@ -868,7 +868,7 @@
     <message>
         <location line="+6"/>
         <source>Use Start Tangent</source>
-        <translation type="unfinished">Teğet Başlat'ı Kullanın</translation>
+        <translation type="unfinished">Teğet Başlat&apos;ı Kullanın</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -917,4 +917,3 @@
     </message>
 </context>
 </TS>
-

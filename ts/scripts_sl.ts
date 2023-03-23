@@ -1114,7 +1114,7 @@ Ali jo želite obnoviti?</translation>
         <translation>Točkovnoslikovna datoteka izvožena v &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+37"/>
         <source>Files</source>
         <translation>Datoteke</translation>
     </message>
@@ -1833,7 +1833,7 @@ Ali jo želite obnoviti?</translation>
         <translation>Izberite rešitev</translation>
     </message>
     <message>
-        <location line="+120"/>
+        <location line="+126"/>
         <location line="+86"/>
         <source>No solution</source>
         <translation>Ni rešitve</translation>
@@ -3391,6 +3391,99 @@ je že na seznamu.</translation>
     </message>
 </context>
 <context>
+    <name>DrawFmsLanes</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.js" line="+74"/>
+        <source>First vertex</source>
+        <translation type="unfinished">Prvi lom</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Next vertex</source>
+        <translation type="unfinished">Naslednji lom</translation>
+    </message>
+    <message>
+        <location line="+532"/>
+        <source>close</source>
+        <translation type="unfinished">zapri</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>undo</source>
+        <translation type="unfinished">razveljavi</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>redo</source>
+        <translation type="unfinished">uveljavi</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>arc</source>
+        <translation type="unfinished">lok</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.ui" line="+23"/>
+        <source>Close polyline</source>
+        <translation type="unfinished">Zaključena lomljenka</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>,, C</source>
+        <translation type="unfinished">,, C</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Undo Previous Segment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>,, U</source>
+        <translation type="unfinished">,, U</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Redo Segment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>,, R</source>
+        <translation type="unfinished">,, R</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Arc with radius:</source>
+        <translation type="unfinished">Lok s polmerom:</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>,, A</source>
+        <translation type="unfinished">,, A</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Sweep</source>
+        <translation type="unfinished">Razpon</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Restrict length or angle</source>
+        <translation type="unfinished">Omeji dolžino ali kot</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
+        <source>Draw &amp;Fms Lanes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw FMS Lanes (ribs)</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>DrawFromCSV</name>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV.js" line="+145"/>
@@ -4113,7 +4206,7 @@ je že na seznamu.</translation>
         <translation>&amp;Podvoji</translation>
     </message>
     <message numerus="yes">
-        <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+54"/>
+        <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+85"/>
         <source>%n entity/ies duplicated</source>
         <translation>
             <numerusform>1 predmet podvojen</numerusform>
@@ -5039,7 +5132,7 @@ je že na seznamu.</translation>
         <translation>Razbij</translation>
     </message>
     <message>
-        <location line="+613"/>
+        <location line="+624"/>
         <source>Ignored hatch in block reference with non-uniform scale factors</source>
         <translation type="unfinished">Ignorirana šrafura v referenčnem bloku z neenakomernimi faktorji merila</translation>
     </message>
@@ -6326,7 +6419,7 @@ je že na seznamu.</translation>
 <context>
     <name>Image</name>
     <message>
-        <location filename="../scripts/Draw/Image/Image.js" line="+140"/>
+        <location filename="../scripts/Draw/Image/Image.js" line="+179"/>
         <source>Files</source>
         <translation>Datoteke</translation>
     </message>
@@ -7643,27 +7736,27 @@ je že na seznamu.</translation>
         <translation>Vstavi &amp;Skripto</translation>
     </message>
     <message>
-        <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+66"/>
+        <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+85"/>
         <source>Cannot read file:</source>
         <translation type="unfinished">Datoteke ni mogoče prebrati:</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>No constructor found in file:</source>
         <translation type="unfinished">V datoteki ni bil najden noben konstruktor:</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>No &apos;init&apos; function found in file:</source>
         <translation type="unfinished">V datoteki ni bilo najdene funkcije &apos;init&apos;:</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>No &apos;generate&apos; function found in file:</source>
         <translation type="unfinished">V datoteki ni bilo najdene funkcije &apos;generate&apos;:</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>No &apos;generatePreview&apos; function found in file:</source>
         <translation type="unfinished">V datoteki niste našli funkcije &apos;generatePreview&apos;:</translation>
     </message>
@@ -10063,12 +10156,12 @@ je že na seznamu.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1647"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1654"/>
         <source>*VARIES*</source>
         <translation>*RAZLIČNO*</translation>
     </message>
     <message>
-        <location line="-1428"/>
+        <location line="-1435"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10123,12 +10216,12 @@ je že na seznamu.</translation>
         <translation>Prikaži vse lasnosti</translation>
     </message>
     <message>
-        <location line="+765"/>
+        <location line="+772"/>
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>
     <message>
-        <location line="-630"/>
+        <location line="-637"/>
         <source>Auto</source>
         <translation>Samodejno</translation>
     </message>
@@ -10148,7 +10241,7 @@ je že na seznamu.</translation>
         <translation>Ne</translation>
     </message>
     <message>
-        <location line="+389"/>
+        <location line="+396"/>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>
@@ -13404,17 +13497,22 @@ je že na seznamu.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+321"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+322"/>
         <source>Dropped data not supported</source>
         <translation>Odvrženi podatki niso podprti</translation>
     </message>
     <message>
-        <location line="+21"/>
-        <source>Importing file: </source>
-        <translation>Uvažam datoteko:</translation>
+        <location line="+26"/>
+        <source>Cannot import file into existing drawing:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+4"/>
+        <source>Importing file:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Importing URL: </source>
         <translation>Uvažam URL: </translation>
     </message>
@@ -13430,7 +13528,7 @@ je že na seznamu.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1157"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1156"/>
         <source>Restore defaults</source>
         <translation>Obnovi privzeto</translation>
     </message>
@@ -13869,7 +13967,7 @@ je že na seznamu.</translation>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../scripts/autostart.js" line="+363"/>
+        <location filename="../scripts/autostart.js" line="+237"/>
         <source>Loading add-on translations...</source>
         <translation>Nalagam prevode dodatkov...</translation>
     </message>
@@ -13892,7 +13990,7 @@ je že na seznamu.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1248"/>
+        <location filename="../scripts/library.js" line="+1250"/>
         <source>Objects</source>
         <translation>Objekti</translation>
     </message>
@@ -14455,4 +14553,3 @@ je že na seznamu.</translation>
     </message>
 </context>
 </TS>
-

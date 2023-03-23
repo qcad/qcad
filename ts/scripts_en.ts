@@ -1114,7 +1114,7 @@ Do you wish to recover it?</translation>
         <translation>Bitmap file has been exported to &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+37"/>
         <source>Files</source>
         <translation>Files</translation>
     </message>
@@ -1833,7 +1833,7 @@ Do you wish to recover it?</translation>
         <translation>Choose solution</translation>
     </message>
     <message>
-        <location line="+120"/>
+        <location line="+126"/>
         <location line="+86"/>
         <source>No solution</source>
         <translation>No solution</translation>
@@ -3389,6 +3389,99 @@ is already in the list.</translation>
     </message>
 </context>
 <context>
+    <name>DrawFmsLanes</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.js" line="+74"/>
+        <source>First vertex</source>
+        <translation>First vertex</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Next vertex</source>
+        <translation>Next vertex</translation>
+    </message>
+    <message>
+        <location line="+532"/>
+        <source>close</source>
+        <translation>close</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>undo</source>
+        <translation>undo</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>redo</source>
+        <translation>redo</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>arc</source>
+        <translation>arc</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.ui" line="+23"/>
+        <source>Close polyline</source>
+        <translation>Close polyline</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>,, C</source>
+        <translation>,, C</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Undo Previous Segment</source>
+        <translation>Undo Previous Segment</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>,, U</source>
+        <translation>,, U</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Redo Segment</source>
+        <translation>Redo Segment</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>,, R</source>
+        <translation>,, R</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Arc with radius:</source>
+        <translation>Arc with radius:</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>,, A</source>
+        <translation>,, A</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Sweep</source>
+        <translation>Sweep</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Restrict length or angle</source>
+        <translation>Restrict length or angle</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
+        <source>Draw &amp;Fms Lanes</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw FMS Lanes (ribs)</source>
+        <translation></translation>
+    </message>
+</context>
+<context>
     <name>DrawFromCSV</name>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV.js" line="+145"/>
@@ -4111,7 +4204,7 @@ is already in the list.</translation>
         <translation>&amp;Duplicate</translation>
     </message>
     <message numerus="yes">
-        <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+54"/>
+        <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+85"/>
         <source>%n entity/ies duplicated</source>
         <translation>
             <numerusform>One entity duplicated</numerusform>
@@ -5033,9 +5126,9 @@ is already in the list.</translation>
         <translation>Explode</translation>
     </message>
     <message>
-        <location line="+613"/>
+        <location line="+624"/>
         <source>Ignored hatch in block reference with non-uniform scale factors</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
@@ -6320,7 +6413,7 @@ is already in the list.</translation>
 <context>
     <name>Image</name>
     <message>
-        <location filename="../scripts/Draw/Image/Image.js" line="+140"/>
+        <location filename="../scripts/Draw/Image/Image.js" line="+179"/>
         <source>Files</source>
         <translation>Files</translation>
     </message>
@@ -7637,29 +7730,29 @@ is already in the list.</translation>
         <translation>Insert &amp;Script</translation>
     </message>
     <message>
-        <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+66"/>
+        <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+85"/>
         <source>Cannot read file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cannot read file:</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>No constructor found in file:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>No &apos;init&apos; function found in file:</source>
-        <translation type="unfinished"></translation>
+        <translation>No &apos;init&apos; function found in file:</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>No &apos;generate&apos; function found in file:</source>
-        <translation type="unfinished"></translation>
+        <translation>No &apos;generate&apos; function found in file:</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>No &apos;generatePreview&apos; function found in file:</source>
-        <translation type="unfinished"></translation>
+        <translation>No &apos;generatePreview&apos; function found in file:</translation>
     </message>
 </context>
 <context>
@@ -10163,7 +10256,7 @@ is already in the list.</translation>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+386"/>
+        <location line="+393"/>
         <source>*VARIES*</source>
         <translation>*VARIES*</translation>
     </message>
@@ -13388,17 +13481,22 @@ is already in the list.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+321"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+322"/>
         <source>Dropped data not supported</source>
         <translation>Dropped data not supported</translation>
     </message>
     <message>
-        <location line="+21"/>
-        <source>Importing file: </source>
-        <translation>Importing file: </translation>
+        <location line="+26"/>
+        <source>Cannot import file into existing drawing:</source>
+        <translation>Cannot import file into existing drawing:</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+4"/>
+        <source>Importing file:</source>
+        <translation>Importing file:</translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Importing URL: </source>
         <translation>Importing URL: </translation>
     </message>
@@ -13414,7 +13512,7 @@ is already in the list.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1157"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1156"/>
         <source>Restore defaults</source>
         <translation>Restore defaults</translation>
     </message>
@@ -13853,7 +13951,7 @@ is already in the list.</translation>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../scripts/autostart.js" line="+363"/>
+        <location filename="../scripts/autostart.js" line="+237"/>
         <source>Loading add-on translations...</source>
         <translation>Loading add-on translations...</translation>
     </message>
@@ -13876,7 +13974,7 @@ is already in the list.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1248"/>
+        <location filename="../scripts/library.js" line="+1250"/>
         <source>Objects</source>
         <translation>Objects</translation>
     </message>

@@ -1111,7 +1111,7 @@ Kurtarmak ister misiniz?</translation>
         <translation type="unfinished">Bitmap dosyası &quot;%1&quot; olarak dışa aktarıldı</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+37"/>
         <source>Files</source>
         <translation>Dosyalar</translation>
     </message>
@@ -1830,7 +1830,7 @@ Kurtarmak ister misiniz?</translation>
         <translation>Çözüm seçin</translation>
     </message>
     <message>
-        <location line="+120"/>
+        <location line="+126"/>
         <location line="+86"/>
         <source>No solution</source>
         <translation>Çözüm yok</translation>
@@ -3212,6 +3212,7 @@ Kurtarmak ister misiniz?</translation>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -3379,6 +3380,99 @@ is already in the list.</source>
         <location filename="../scripts/Misc/Examples/DrawExamples/DrawExamples.js" line="+51"/>
         <source>&amp;Draw</source>
         <translation type="unfinished">&amp;Çiz</translation>
+    </message>
+</context>
+<context>
+    <name>DrawFmsLanes</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.js" line="+74"/>
+        <source>First vertex</source>
+        <translation type="unfinished">İlk tepe noktası</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Next vertex</source>
+        <translation type="unfinished">Sonraki tepe</translation>
+    </message>
+    <message>
+        <location line="+532"/>
+        <source>close</source>
+        <translation type="unfinished">kapat</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>undo</source>
+        <translation type="unfinished">geri</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>redo</source>
+        <translation type="unfinished">ileri</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>arc</source>
+        <translation type="unfinished">yay</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.ui" line="+23"/>
+        <source>Close polyline</source>
+        <translation type="unfinished">Çoklu çizgiyi kapat</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>,, C</source>
+        <translation type="unfinished">,, C</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Undo Previous Segment</source>
+        <translation type="unfinished">Önceki Segmenti Geri Al</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>,, U</source>
+        <translation type="unfinished">,, U</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Redo Segment</source>
+        <translation type="unfinished">Segmenti Yenile</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>,, R</source>
+        <translation type="unfinished">,, R</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Arc with radius:</source>
+        <translation type="unfinished">Yarıçaplı yay:</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>,, A</source>
+        <translation type="unfinished">,, A</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Sweep</source>
+        <translation type="unfinished">Süpürme</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Restrict length or angle</source>
+        <translation type="unfinished">Uzunluk veya açıyı sınırla</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
+        <source>Draw &amp;Fms Lanes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw FMS Lanes (ribs)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3771,7 +3865,7 @@ is already in the list.</source>
     <message>
         <location line="+28"/>
         <source>Polygon: less than 5 references.</source>
-        <translation type="unfinished">Poligon: 5'ten az referans.</translation>
+        <translation type="unfinished">Poligon: 5&apos;ten az referans.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3784,7 +3878,7 @@ is already in the list.</source>
     <message>
         <location line="-61"/>
         <source>Polyline, less than 2 references.</source>
-        <translation type="unfinished">Çoklu çizgi, 2'den az referans.</translation>
+        <translation type="unfinished">Çoklu çizgi, 2&apos;den az referans.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -3799,12 +3893,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>3th degree fit point Spline, less than 3 references.</source>
-        <translation type="unfinished">3. derece uyum noktası Spline, 3'ten az referans.</translation>
+        <translation type="unfinished">3. derece uyum noktası Spline, 3&apos;ten az referans.</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>3th degree control point Spline, less than 4 references.</source>
-        <translation type="unfinished">3. derece kontrol noktası Spline, 4'ten az referans.</translation>
+        <translation type="unfinished">3. derece kontrol noktası Spline, 4&apos;ten az referans.</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -3864,7 +3958,7 @@ is already in the list.</source>
     <message>
         <location line="+80"/>
         <source>Casted entries: %1 out of %2 text lines</source>
-        <translation type="unfinished">Dökülen girişler: %2 metin satırından %1'i</translation>
+        <translation type="unfinished">Dökülen girişler: %2 metin satırından %1&apos;i</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3959,7 +4053,7 @@ is already in the list.</source>
     <message>
         <location line="+46"/>
         <source>Draw from CSV</source>
-        <translation type="unfinished">CSV'den çizim</translation>
+        <translation type="unfinished">CSV&apos;den çizim</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -3974,7 +4068,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
         <source>&amp;Draw from CSV</source>
-        <translation type="unfinished">CSV'den çizim</translation>
+        <translation type="unfinished">CSV&apos;den çizim</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -4104,7 +4198,7 @@ is already in the list.</source>
         <translation>&amp;Çift</translation>
     </message>
     <message numerus="yes">
-        <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+54"/>
+        <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+85"/>
         <source>%n entity/ies duplicated</source>
         <translation>
             <numerusform>%n girişi yinelenmiş</numerusform>
@@ -4282,7 +4376,7 @@ is already in the list.</source>
     <message>
         <location line="+15"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You are about to enable the ECMAScript Shell.&lt;/p&gt;&lt;p&gt;Through the ECMAScript Shell you can &lt;span style=&quot; color:#ff0000;&quot;&gt;modify your drawings&lt;/span&gt; but also &lt;span style=&quot; color:#ff0000;&quot;&gt;delete files&lt;/span&gt; or &lt;span style=&quot; color:#ff0000;&quot;&gt;crash the application&lt;/span&gt; which can lead to &lt;span style=&quot; color:#ff0000;&quot;&gt;data loss&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;For inexperienced programmers, it is recommended to limit the use of the ECMAScript shell to the &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; which is considered to be &quot;safe&quot; to use.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ECMAScript Shell'i etkinleştirmek üzeresiniz.&lt;/p&gt;&lt;p&gt;ECMAScript Shell aracılığıyla &lt;span style=&quot; color:#ff0000;&quot;&gt;çizimlerinizi&lt;/span&gt; değiştirebilir, aynı zamanda &lt;span style=&quot; color:#ff0000;&quot;&gt;dosyaları silebilir&lt;/span&gt; veya &lt;span style=&quot; color:#ff0000;&quot;&gt;uygulamayı çökertebilir&lt;/span&gt;, bu da &lt;span style=&quot; color:#ff0000;&quot;&gt;veri kaybına&lt;/span&gt; yol açabilir.&lt;/p&gt;&lt;p&gt;Tecrübesiz programcılar için ECMAScript kabuğunun kullanımının &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; ile sınırlandırılması tavsiye edilir.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ECMAScript Shell&apos;i etkinleştirmek üzeresiniz.&lt;/p&gt;&lt;p&gt;ECMAScript Shell aracılığıyla &lt;span style=&quot; color:#ff0000;&quot;&gt;çizimlerinizi&lt;/span&gt; değiştirebilir, aynı zamanda &lt;span style=&quot; color:#ff0000;&quot;&gt;dosyaları silebilir&lt;/span&gt; veya &lt;span style=&quot; color:#ff0000;&quot;&gt;uygulamayı çökertebilir&lt;/span&gt;, bu da &lt;span style=&quot; color:#ff0000;&quot;&gt;veri kaybına&lt;/span&gt; yol açabilir.&lt;/p&gt;&lt;p&gt;Tecrübesiz programcılar için ECMAScript kabuğunun kullanımının &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; ile sınırlandırılması tavsiye edilir.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -4344,7 +4438,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatchInit.js" line="+2"/>
         <source>Edit &amp;Hatch</source>
-        <translation type="unfinished">Hatch'i Düzenle</translation>
+        <translation type="unfinished">Hatch&apos;i Düzenle</translation>
     </message>
 </context>
 <context>
@@ -5024,7 +5118,7 @@ is already in the list.</source>
         <translation type="unfinished">Patlamak</translation>
     </message>
     <message>
-        <location line="+613"/>
+        <location line="+624"/>
         <source>Ignored hatch in block reference with non-uniform scale factors</source>
         <translation type="unfinished">Tekdüze olmayan ölçek faktörleri ile blok referansında yok sayılan tarama</translation>
     </message>
@@ -5041,7 +5135,7 @@ is already in the list.</source>
     <message>
         <location line="-118"/>
         <source>Explode splines to polylines with line segments</source>
-        <translation type="unfinished">Spline'ları çizgi segmentleriyle çoklu çizgilere patlatın</translation>
+        <translation type="unfinished">Spline&apos;ları çizgi segmentleriyle çoklu çizgilere patlatın</translation>
     </message>
     <message>
         <location line="+111"/>
@@ -5051,7 +5145,7 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Convert splines from texts to arcs or lines if appropriate</source>
-        <translation type="unfinished">Uygunsa spline'ları metinlerden yaylara veya çizgilere dönüştürün</translation>
+        <translation type="unfinished">Uygunsa spline&apos;ları metinlerden yaylara veya çizgilere dönüştürün</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5348,7 +5442,7 @@ is already in the list.</source>
     <message>
         <location line="+38"/>
         <source>Select Insertion or Enter void space. (Not implemented)</source>
-        <translation type="unfinished">Ekleme'yi seçin veya Boş alan girin. (Uygulanmadı)</translation>
+        <translation type="unfinished">Ekleme&apos;yi seçin veya Boş alan girin. (Uygulanmadı)</translation>
     </message>
     <message>
         <location line="+277"/>
@@ -5861,7 +5955,7 @@ is already in the list.</source>
     <message>
         <location line="+85"/>
         <source>Display entities with more than N dashes as continuous:</source>
-        <translation type="unfinished">N'den fazla tire içeren varlıkları sürekli olarak görüntüleyin:</translation>
+        <translation type="unfinished">N&apos;den fazla tire içeren varlıkları sürekli olarak görüntüleyin:</translation>
     </message>
     <message>
         <location line="+45"/>
@@ -6311,7 +6405,7 @@ is already in the list.</source>
 <context>
     <name>Image</name>
     <message>
-        <location filename="../scripts/Draw/Image/Image.js" line="+140"/>
+        <location filename="../scripts/Draw/Image/Image.js" line="+179"/>
         <source>Files</source>
         <translation>Dosyalar</translation>
     </message>
@@ -7628,27 +7722,27 @@ is already in the list.</source>
         <translation>&amp;Betik Ekle</translation>
     </message>
     <message>
-        <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+66"/>
+        <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+85"/>
         <source>Cannot read file:</source>
         <translation type="unfinished">Dosya okunamıyor:</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>No constructor found in file:</source>
         <translation type="unfinished">Dosyada kurucu bulunamadı:</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>No &apos;init&apos; function found in file:</source>
         <translation type="unfinished">Dosyada &apos;init&apos; işlevi bulunamadı:</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>No &apos;generate&apos; function found in file:</source>
         <translation type="unfinished">Dosyada &apos;generate&apos; işlevi bulunamadı:</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>No &apos;generatePreview&apos; function found in file:</source>
         <translation type="unfinished">Dosyada &apos;generatePreview&apos; işlevi bulunamadı:</translation>
     </message>
@@ -7803,7 +7897,7 @@ is already in the list.</source>
     <message>
         <location line="+52"/>
         <source>Enable keyboard navigation in list widgets</source>
-        <translation type="unfinished">Liste widget'larında klavye gezintisini etkinleştirme</translation>
+        <translation type="unfinished">Liste widget&apos;larında klavye gezintisini etkinleştirme</translation>
     </message>
 </context>
 <context>
@@ -7933,7 +8027,7 @@ is already in the list.</source>
     <message>
         <location line="+25"/>
         <source>Entities in blocks on layer 0 take on attributes and visibility of block reference.</source>
-        <translation type="unfinished">Katman 0'daki bloklarda bulunan varlıklar, blok referansının niteliklerini ve görünürlüğünü alır.</translation>
+        <translation type="unfinished">Katman 0&apos;daki bloklarda bulunan varlıklar, blok referansının niteliklerini ve görünürlüğünü alır.</translation>
     </message>
 </context>
 <context>
@@ -9574,7 +9668,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/PersistentWidgets/PersistentWidgets.js" line="+74"/>
         <source>&amp;Persistent Widgets</source>
-        <translation type="unfinished">Kalıcı Widget'lar</translation>
+        <translation type="unfinished">Kalıcı Widget&apos;lar</translation>
     </message>
 </context>
 <context>
@@ -10152,7 +10246,7 @@ is already in the list.</source>
         <translation>Hayır</translation>
     </message>
     <message>
-        <location line="+386"/>
+        <location line="+393"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*DEĞİŞKENLER*</translation>
     </message>
@@ -10765,7 +10859,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Decode strings in DXF/DWG as UTF-8 (experimental)</source>
-        <translation type="unfinished">DXF/DWG'deki dizeleri UTF-8 olarak çözme (deneysel)</translation>
+        <translation type="unfinished">DXF/DWG&apos;deki dizeleri UTF-8 olarak çözme (deneysel)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11324,6 +11418,7 @@ is already in the list.</source>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
@@ -12016,7 +12111,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscModify/SplineToLine/SplineToLine.js" line="+71"/>
         <source>Convert Straight Splines to Lines</source>
-        <translation type="unfinished">Düz Spline'ları Çizgilere Dönüştürme</translation>
+        <translation type="unfinished">Düz Spline&apos;ları Çizgilere Dönüştürme</translation>
     </message>
 </context>
 <context>
@@ -12536,6 +12631,7 @@ is already in the list.</source>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+21"/>
@@ -13094,7 +13190,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui" line="+17"/>
         <source>These settings affect the resolution and scale of the QCAD user interface. These preferences can be adjusted if there are problems with the user interface of QCAD, such as very large or very small icons or text labels.</source>
-        <translation type="unfinished">Bu ayarlar QCAD kullanıcı arayüzünün çözünürlüğünü ve ölçeğini etkiler. QCAD'in kullanıcı arayüzünde çok büyük veya çok küçük simgeler veya metin etiketleri gibi sorunlar varsa bu tercihler ayarlanabilir.</translation>
+        <translation type="unfinished">Bu ayarlar QCAD kullanıcı arayüzünün çözünürlüğünü ve ölçeğini etkiler. QCAD&apos;in kullanıcı arayüzünde çok büyük veya çok küçük simgeler veya metin etiketleri gibi sorunlar varsa bu tercihler ayarlanabilir.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -13370,17 +13466,22 @@ is already in the list.</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+321"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+322"/>
         <source>Dropped data not supported</source>
         <translation>Bırakılan veriler desteklenmiyor</translation>
     </message>
     <message>
-        <location line="+21"/>
-        <source>Importing file: </source>
-        <translation>Dosya içe aktarılıyor:</translation>
+        <location line="+26"/>
+        <source>Cannot import file into existing drawing:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+4"/>
+        <source>Importing file:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Importing URL: </source>
         <translation>URL içe aktarılıyor:</translation>
     </message>
@@ -13396,7 +13497,7 @@ is already in the list.</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1157"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1156"/>
         <source>Restore defaults</source>
         <translation type="unfinished">Varsayılanları geri yükle</translation>
     </message>
@@ -13835,7 +13936,7 @@ is already in the list.</source>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../scripts/autostart.js" line="+363"/>
+        <location filename="../scripts/autostart.js" line="+237"/>
         <source>Loading add-on translations...</source>
         <translation>Eklenti çevirileri yükleniyor...</translation>
     </message>
@@ -13858,7 +13959,7 @@ is already in the list.</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1248"/>
+        <location filename="../scripts/library.js" line="+1250"/>
         <source>Objects</source>
         <translation>Nesneler</translation>
     </message>
@@ -14421,4 +14522,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

@@ -293,6 +293,7 @@
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+86"/>
@@ -918,6 +919,7 @@ Do you wish to recover it/them?</source>
         <location line="+1"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+25"/>
@@ -1109,7 +1111,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Bitmap fails ir eksportēts uz &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+37"/>
         <source>Files</source>
         <translation type="unfinished">Faili</translation>
     </message>
@@ -1828,7 +1830,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Izvēlieties risinājumu</translation>
     </message>
     <message>
-        <location line="+120"/>
+        <location line="+126"/>
         <location line="+86"/>
         <source>No solution</source>
         <translation type="unfinished">Nav risinājuma</translation>
@@ -3212,6 +3214,7 @@ Do you wish to recover it?</source>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -3382,6 +3385,99 @@ is already in the list.</source>
     </message>
 </context>
 <context>
+    <name>DrawFmsLanes</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.js" line="+74"/>
+        <source>First vertex</source>
+        <translation type="unfinished">Pirmā virsotne</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Next vertex</source>
+        <translation type="unfinished">Nākamā virsotne</translation>
+    </message>
+    <message>
+        <location line="+532"/>
+        <source>close</source>
+        <translation type="unfinished">aizvērt</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>undo</source>
+        <translation type="unfinished">atcelt</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>redo</source>
+        <translation type="unfinished">pārtaisīt</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>arc</source>
+        <translation type="unfinished">loka</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.ui" line="+23"/>
+        <source>Close polyline</source>
+        <translation type="unfinished">Aizvērt daudzlīniju</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>,, C</source>
+        <translation type="unfinished">,, C</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Undo Previous Segment</source>
+        <translation type="unfinished">Iepriekšējā segmenta atcelšana</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>,, U</source>
+        <translation type="unfinished">,, U</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Redo Segment</source>
+        <translation type="unfinished">Pārveidot segmentu</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>,, R</source>
+        <translation type="unfinished">,, R</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Arc with radius:</source>
+        <translation type="unfinished">Loks ar rādiusu:</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>,, A</source>
+        <translation type="unfinished">,, A</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Sweep</source>
+        <translation type="unfinished">Slaucīšana</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Restrict length or angle</source>
+        <translation type="unfinished">Ierobežot garumu vai leņķi</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
+        <source>Draw &amp;Fms Lanes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw FMS Lanes (ribs)</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>DrawFromCSV</name>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV.js" line="+142"/>
@@ -3458,7 +3554,7 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>Not a correct set active &apos;Layer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished">Nav pareizi iestatīts aktīvs "Layer" slēdzis, ignorēts. Teksta rinda: %1</translation>
+        <translation type="unfinished">Nav pareizi iestatīts aktīvs &quot;Layer&quot; slēdzis, ignorēts. Teksta rinda: %1</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -3483,7 +3579,7 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;FreezeLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished">Nav pareizs "FreezeLayer" slēdzis, ignorēts. Teksta rinda: %1</translation>
+        <translation type="unfinished">Nav pareizs &quot;FreezeLayer&quot; slēdzis, ignorēts. Teksta rinda: %1</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -4099,7 +4195,7 @@ is already in the list.</source>
 <context>
     <name>Duplicate</name>
     <message numerus="yes">
-        <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+54"/>
+        <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+85"/>
         <source>%n entity/ies duplicated</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -5028,7 +5124,7 @@ is already in the list.</source>
         <translation type="unfinished">Eksplodēt</translation>
     </message>
     <message>
-        <location line="+613"/>
+        <location line="+624"/>
         <source>Ignored hatch in block reference with non-uniform scale factors</source>
         <translation type="unfinished">Ignorēta luga bloka atsaucē ar nevienmērīgiem mēroga koeficientiem</translation>
     </message>
@@ -6315,7 +6411,7 @@ is already in the list.</source>
 <context>
     <name>Image</name>
     <message>
-        <location filename="../scripts/Draw/Image/Image.js" line="+140"/>
+        <location filename="../scripts/Draw/Image/Image.js" line="+179"/>
         <source>Files</source>
         <translation type="unfinished">Faili</translation>
     </message>
@@ -7632,27 +7728,27 @@ is already in the list.</source>
         <translation type="unfinished">Ievietot skriptu</translation>
     </message>
     <message>
-        <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+66"/>
+        <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+85"/>
         <source>Cannot read file:</source>
         <translation type="unfinished">Nevar nolasīt failu:</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>No constructor found in file:</source>
         <translation type="unfinished">Faili nav atrasts konstruktors:</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>No &apos;init&apos; function found in file:</source>
         <translation type="unfinished">Failā nav atrasta &apos;init&apos; funkcija:</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>No &apos;generate&apos; function found in file:</source>
         <translation type="unfinished">Failā nav atrasta &apos;generate&apos; funkcija:</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>No &apos;generatePreview&apos; function found in file:</source>
         <translation type="unfinished">Failā nav atrasta &apos;generatePreview&apos; funkcija:</translation>
     </message>
@@ -10160,7 +10256,7 @@ is already in the list.</source>
         <translation type="unfinished">Nē</translation>
     </message>
     <message>
-        <location line="+386"/>
+        <location line="+393"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*VARIES*</translation>
     </message>
@@ -11338,6 +11434,7 @@ is already in the list.</source>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
@@ -12550,6 +12647,7 @@ is already in the list.</source>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+21"/>
@@ -13384,17 +13482,22 @@ is already in the list.</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+321"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+322"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished">Nav atbalstīta datu atmešana</translation>
     </message>
     <message>
-        <location line="+21"/>
-        <source>Importing file: </source>
-        <translation type="unfinished">Failu importēšana:</translation>
+        <location line="+26"/>
+        <source>Cannot import file into existing drawing:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+4"/>
+        <source>Importing file:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Importing URL: </source>
         <translation type="unfinished">URL importēšana:</translation>
     </message>
@@ -13410,7 +13513,7 @@ is already in the list.</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1157"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1156"/>
         <source>Restore defaults</source>
         <translation type="unfinished">Atjaunot noklusējuma iestatījumus</translation>
     </message>
@@ -13849,7 +13952,7 @@ is already in the list.</source>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../scripts/autostart.js" line="+363"/>
+        <location filename="../scripts/autostart.js" line="+237"/>
         <source>Loading add-on translations...</source>
         <translation type="unfinished">Papildinājumu tulkojumu ielādēšana...</translation>
     </message>
@@ -13872,7 +13975,7 @@ is already in the list.</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1248"/>
+        <location filename="../scripts/library.js" line="+1250"/>
         <source>Objects</source>
         <translation type="unfinished">Objekti</translation>
     </message>
@@ -14435,4 +14538,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

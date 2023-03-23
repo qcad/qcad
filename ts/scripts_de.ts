@@ -1109,7 +1109,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Fehler beim Generieren der Bitmap Datei &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+42"/>
         <source>Files</source>
         <translation>Dateien</translation>
     </message>
@@ -1119,7 +1119,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Exportieren als Bitmap</translation>
     </message>
     <message>
-        <location line="-55"/>
+        <location line="-49"/>
         <source>Bitmap file has been exported to &quot;%1&quot;</source>
         <translation>Bitmap wurde erstellt als &quot;%1&quot;</translation>
     </message>
@@ -1833,7 +1833,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Lösung wählen</translation>
     </message>
     <message>
-        <location line="+120"/>
+        <location line="+126"/>
         <location line="+86"/>
         <source>No solution</source>
         <translation>Keine Lösung</translation>
@@ -3389,6 +3389,99 @@ ist bereits in der Liste.</translation>
     </message>
 </context>
 <context>
+    <name>DrawFmsLanes</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.js" line="+74"/>
+        <source>First vertex</source>
+        <translation>Erster Eckpunkt</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Next vertex</source>
+        <translation>Nächster Eckpunkt</translation>
+    </message>
+    <message>
+        <location line="+532"/>
+        <source>close</source>
+        <translation>close</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>undo</source>
+        <translation>undo</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>redo</source>
+        <translation>redo</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>arc</source>
+        <translation>arc</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.ui" line="+23"/>
+        <source>Close polyline</source>
+        <translation>Polylinie schliessen</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>,, C</source>
+        <translation>,, C</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Undo Previous Segment</source>
+        <translation>Letztes Segment rückgängig</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>,, U</source>
+        <translation>,, U</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Redo Segment</source>
+        <translation>Letztes Segment wiederherstellen</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>,, R</source>
+        <translation>,, R</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Arc with radius:</source>
+        <translation>Bogensegment mit Radius:</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>,, A</source>
+        <translation>,, A</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Sweep</source>
+        <translation>Sweep</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Restrict length or angle</source>
+        <translation>Länge oder Winkel einschränken</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
+        <source>Draw &amp;Fms Lanes</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw FMS Lanes (ribs)</source>
+        <translation></translation>
+    </message>
+</context>
+<context>
     <name>DrawFromCSV</name>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV.js" line="+145"/>
@@ -4111,7 +4204,7 @@ ist bereits in der Liste.</translation>
         <translation>&amp;Duplizieren</translation>
     </message>
     <message numerus="yes">
-        <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+54"/>
+        <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+85"/>
         <source>%n entity/ies duplicated</source>
         <translation>
             <numerusform>Ein Objekt dupliziert</numerusform>
@@ -5038,7 +5131,7 @@ ist bereits in der Liste.</translation>
         <translation>Aufbrechen</translation>
     </message>
     <message>
-        <location line="+613"/>
+        <location line="+624"/>
         <source>Ignored hatch in block reference with non-uniform scale factors</source>
         <translation>Schraffur in Blockreferenz mit unterschiedlichen Skalierungsfaktoren ignoriert</translation>
     </message>
@@ -6320,7 +6413,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>Image</name>
     <message>
-        <location filename="../scripts/Draw/Image/Image.js" line="+140"/>
+        <location filename="../scripts/Draw/Image/Image.js" line="+179"/>
         <source>Files</source>
         <translation>Dateien</translation>
     </message>
@@ -7637,29 +7730,29 @@ ist bereits in der Liste.</translation>
         <translation>&amp;Skript einfügen</translation>
     </message>
     <message>
-        <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+66"/>
+        <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+85"/>
         <source>Cannot read file:</source>
         <translation>Datei kann nicht gelesen werden:</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>No constructor found in file:</source>
         <translation>Kein Konstruktor in der Datei gefunden:</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>No &apos;init&apos; function found in file:</source>
-        <translation type="unfinished">Keine &apos;init&apos;-Funktion in der Datei gefunden:</translation>
+        <translation>Keine &apos;init&apos;-Funktion in der Datei gefunden:</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>No &apos;generate&apos; function found in file:</source>
-        <translation type="unfinished">Keine &apos;generate&apos;-Funktion in der Datei gefunden:</translation>
+        <translation>Keine &apos;generate&apos;-Funktion in der Datei gefunden:</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>No &apos;generatePreview&apos; function found in file:</source>
-        <translation type="unfinished">Keine &apos;generatePreview&apos;-Funktion in der Datei gefunden:</translation>
+        <translation>Keine &apos;generatePreview&apos;-Funktion in der Datei gefunden:</translation>
     </message>
 </context>
 <context>
@@ -10053,12 +10146,12 @@ ist bereits in der Liste.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1647"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1654"/>
         <source>*VARIES*</source>
         <translation>*VARIIERT*</translation>
     </message>
     <message>
-        <location line="-1428"/>
+        <location line="-1435"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10103,12 +10196,12 @@ ist bereits in der Liste.</translation>
         <translation>Alle Eigenschaften anzeigen</translation>
     </message>
     <message>
-        <location line="+765"/>
+        <location line="+772"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="-811"/>
+        <location line="-818"/>
         <source>Add custom property to selected objects</source>
         <translation>Benutzerdefinierte Eigenschaft an ausgewählte Objekte hinzufügen</translation>
     </message>
@@ -10133,7 +10226,7 @@ ist bereits in der Liste.</translation>
         <translation>Nein</translation>
     </message>
     <message>
-        <location line="+389"/>
+        <location line="+396"/>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>
@@ -10170,7 +10263,7 @@ ist bereits in der Liste.</translation>
         <translation>Farbe:</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1253"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1260"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>
@@ -13388,17 +13481,22 @@ ist bereits in der Liste.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+321"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+322"/>
         <source>Dropped data not supported</source>
         <translation>Eingefügte Daten nicht unterstützt</translation>
     </message>
     <message>
-        <location line="+21"/>
-        <source>Importing file: </source>
-        <translation>Importiere Datei: </translation>
+        <location line="+26"/>
+        <source>Cannot import file into existing drawing:</source>
+        <translation>Datei kann nicht in eine bestehende Zeichnung importiert werden:</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+4"/>
+        <source>Importing file:</source>
+        <translation>Importiere Datei:</translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Importing URL: </source>
         <translation>Importiere URL: </translation>
     </message>
@@ -13414,7 +13512,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1157"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1156"/>
         <source>Restore defaults</source>
         <translation>Standardwerte wieder herstellen</translation>
     </message>
@@ -13853,7 +13951,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../scripts/autostart.js" line="+363"/>
+        <location filename="../scripts/autostart.js" line="+237"/>
         <source>Loading add-on translations...</source>
         <translation>Lade Add-on Übersetzungen...</translation>
     </message>
@@ -13876,7 +13974,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1248"/>
+        <location filename="../scripts/library.js" line="+1250"/>
         <source>Objects</source>
         <translation>Objekte</translation>
     </message>
@@ -14439,4 +14537,3 @@ ist bereits in der Liste.</translation>
     </message>
 </context>
 </TS>
-

@@ -293,6 +293,7 @@
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+86"/>
@@ -360,7 +361,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+7"/>
         <source>Reset to &apos;Undefined&apos;</source>
-        <translation type="unfinished">Se resetează la "nedefinit</translation>
+        <translation type="unfinished">Se resetează la &quot;nedefinit</translation>
     </message>
 </context>
 <context>
@@ -918,6 +919,7 @@ Do you wish to recover it/them?</source>
         <location line="+1"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+25"/>
@@ -1109,7 +1111,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Fișierul bitmap a fost exportat la &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+37"/>
         <source>Files</source>
         <translation type="unfinished">Fișiere</translation>
     </message>
@@ -1828,7 +1830,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Alegeți o soluție</translation>
     </message>
     <message>
-        <location line="+120"/>
+        <location line="+126"/>
         <location line="+86"/>
         <source>No solution</source>
         <translation type="unfinished">Nici o soluție</translation>
@@ -3212,6 +3214,7 @@ Do you wish to recover it?</source>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -3382,6 +3385,99 @@ is already in the list.</source>
     </message>
 </context>
 <context>
+    <name>DrawFmsLanes</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.js" line="+74"/>
+        <source>First vertex</source>
+        <translation type="unfinished">Primul vertex</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Next vertex</source>
+        <translation type="unfinished">Vertexul următor</translation>
+    </message>
+    <message>
+        <location line="+532"/>
+        <source>close</source>
+        <translation type="unfinished">închideți</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>undo</source>
+        <translation type="unfinished">anulează</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>redo</source>
+        <translation type="unfinished">refaceți</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>arc</source>
+        <translation type="unfinished">arc</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.ui" line="+23"/>
+        <source>Close polyline</source>
+        <translation type="unfinished">Închideți polilinia</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>,, C</source>
+        <translation type="unfinished">,, C</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Undo Previous Segment</source>
+        <translation type="unfinished">Anularea segmentului anterior</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>,, U</source>
+        <translation type="unfinished">,, U</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Redo Segment</source>
+        <translation type="unfinished">Segmentul Redo</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>,, R</source>
+        <translation type="unfinished">,, R</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Arc with radius:</source>
+        <translation type="unfinished">Arc cu rază:</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>,, A</source>
+        <translation type="unfinished">,, A</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Sweep</source>
+        <translation type="unfinished">Măturați</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Restrict length or angle</source>
+        <translation type="unfinished">Limitați lungimea sau unghiul</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
+        <source>Draw &amp;Fms Lanes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw FMS Lanes (ribs)</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>DrawFromCSV</name>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV.js" line="+142"/>
@@ -3458,12 +3554,12 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>Not a correct set active &apos;Layer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished">Nu este un comutator "Layer" activ corect setat, ignorat. Linie de text: %1</translation>
+        <translation type="unfinished">Nu este un comutator &quot;Layer&quot; activ corect setat, ignorat. Linie de text: %1</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Not a correct &apos;New layer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished">Nu este un comutator "New layer" corect, ignorat. Linie de text: %1</translation>
+        <translation type="unfinished">Nu este un comutator &quot;New layer&quot; corect, ignorat. Linie de text: %1</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -3473,7 +3569,7 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;HideLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished">Nu este un comutator "HideLayer" corect, ignorat. Linie de text: %1</translation>
+        <translation type="unfinished">Nu este un comutator &quot;HideLayer&quot; corect, ignorat. Linie de text: %1</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -3483,7 +3579,7 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;FreezeLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished">Nu este un comutator "FreezeLayer" corect, ignorat. Linie de text: %1</translation>
+        <translation type="unfinished">Nu este un comutator &quot;FreezeLayer&quot; corect, ignorat. Linie de text: %1</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -3493,7 +3589,7 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;LockLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished">Nu este un comutator "LockLayer" corect, ignorat. Linie de text: %1</translation>
+        <translation type="unfinished">Nu este un comutator &quot;LockLayer&quot; corect, ignorat. Linie de text: %1</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -3503,7 +3599,7 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;AllowLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished">Nu este un comutator "AllowLayer" corect, ignorat. Linie de text: %1</translation>
+        <translation type="unfinished">Nu este un comutator &quot;AllowLayer&quot; corect, ignorat. Linie de text: %1</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -4099,7 +4195,7 @@ is already in the list.</source>
 <context>
     <name>Duplicate</name>
     <message numerus="yes">
-        <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+54"/>
+        <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+85"/>
         <source>%n entity/ies duplicated</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -5028,7 +5124,7 @@ is already in the list.</source>
         <translation type="unfinished">Explodează</translation>
     </message>
     <message>
-        <location line="+613"/>
+        <location line="+624"/>
         <source>Ignored hatch in block reference with non-uniform scale factors</source>
         <translation type="unfinished">Hașurare ignorată în referință bloc cu factori de scară neuniformi</translation>
     </message>
@@ -6315,7 +6411,7 @@ is already in the list.</source>
 <context>
     <name>Image</name>
     <message>
-        <location filename="../scripts/Draw/Image/Image.js" line="+140"/>
+        <location filename="../scripts/Draw/Image/Image.js" line="+179"/>
         <source>Files</source>
         <translation type="unfinished">Fișiere</translation>
     </message>
@@ -6958,7 +7054,7 @@ is already in the list.</source>
         <location line="+40"/>
         <location line="+5"/>
         <source>Syntax error: &apos;%1&apos; parse error</source>
-        <translation type="unfinished">Eroare de sintaxă: "%1" parse error</translation>
+        <translation type="unfinished">Eroare de sintaxă: &quot;%1&quot; parse error</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListenerInit.js" line="+19"/>
@@ -7129,14 +7225,14 @@ is already in the list.</source>
         <location line="+11"/>
         <location line="+10"/>
         <source>Encountered a missing &apos;%1&apos; value.</source>
-        <translation type="unfinished">S-a constatat că lipsește o valoare "%1".</translation>
+        <translation type="unfinished">S-a constatat că lipsește o valoare &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="-16"/>
         <location line="+11"/>
         <location line="+17"/>
         <source>Encountered an invalid &apos;%1&apos; value.</source>
-        <translation type="unfinished">S-a întâlnit o valoare "%1" invalidă.</translation>
+        <translation type="unfinished">S-a întâlnit o valoare &quot;%1&quot; invalidă.</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -7632,27 +7728,27 @@ is already in the list.</source>
         <translation type="unfinished">Introduceți scriptul</translation>
     </message>
     <message>
-        <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+66"/>
+        <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+85"/>
         <source>Cannot read file:</source>
         <translation type="unfinished">Nu se poate citi fișierul:</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>No constructor found in file:</source>
         <translation type="unfinished">Nu s-a găsit niciun constructor în fișier:</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>No &apos;init&apos; function found in file:</source>
         <translation type="unfinished">Nu s-a găsit nicio funcție &apos;init&apos; în fișier:</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>No &apos;generate&apos; function found in file:</source>
         <translation type="unfinished">Nu a fost găsită nicio funcție &apos;generate&apos; în fișier:</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>No &apos;generatePreview&apos; function found in file:</source>
         <translation type="unfinished">Nu s-a găsit nicio funcție &apos;generatePreview&apos; în fișier:</translation>
     </message>
@@ -8332,7 +8428,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
-        <translation type="unfinished">Degetele, fantele și tencuielile pentru articulații de tip "Draw Box</translation>
+        <translation type="unfinished">Degetele, fantele și tencuielile pentru articulații de tip &quot;Draw Box</translation>
     </message>
 </context>
 <context>
@@ -9236,7 +9332,7 @@ is already in the list.</source>
     <message>
         <location line="+63"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
-        <translation type="unfinished">Doriți să salvați modificările pe care le-ați făcut în&lt;br&gt;documentul "%1"?</translation>
+        <translation type="unfinished">Doriți să salvați modificările pe care le-ați făcut în&lt;br&gt;documentul &quot;%1&quot;?</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10160,7 +10256,7 @@ is already in the list.</source>
         <translation type="unfinished">Nu</translation>
     </message>
     <message>
-        <location line="+386"/>
+        <location line="+393"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*VARIANTE*</translation>
     </message>
@@ -11338,6 +11434,7 @@ is already in the list.</source>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
@@ -12550,6 +12647,7 @@ is already in the list.</source>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+21"/>
@@ -13384,17 +13482,22 @@ is already in the list.</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+321"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+322"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished">Nu se acceptă date abandonate</translation>
     </message>
     <message>
-        <location line="+21"/>
-        <source>Importing file: </source>
-        <translation type="unfinished">Importarea fișierului:</translation>
+        <location line="+26"/>
+        <source>Cannot import file into existing drawing:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+4"/>
+        <source>Importing file:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Importing URL: </source>
         <translation type="unfinished">Importarea URL-ului:</translation>
     </message>
@@ -13410,7 +13513,7 @@ is already in the list.</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1157"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1156"/>
         <source>Restore defaults</source>
         <translation type="unfinished">Restabilirea valorilor implicite</translation>
     </message>
@@ -13849,7 +13952,7 @@ is already in the list.</source>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../scripts/autostart.js" line="+363"/>
+        <location filename="../scripts/autostart.js" line="+237"/>
         <source>Loading add-on translations...</source>
         <translation type="unfinished">Încărcarea traducerilor add-on...</translation>
     </message>
@@ -13872,7 +13975,7 @@ is already in the list.</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1248"/>
+        <location filename="../scripts/library.js" line="+1250"/>
         <source>Objects</source>
         <translation type="unfinished">Obiecte</translation>
     </message>
@@ -14435,4 +14538,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

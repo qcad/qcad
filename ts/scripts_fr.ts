@@ -1109,7 +1109,7 @@ Voulez-vous le récupérer ?</translation>
         <translation>Erreur lors de la génération du fichier Bitmap &quot;%1&quot; : %2</translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+42"/>
         <source>Files</source>
         <translation>Fichiers</translation>
     </message>
@@ -1119,7 +1119,7 @@ Voulez-vous le récupérer ?</translation>
         <translation>Exporter en bitmap</translation>
     </message>
     <message>
-        <location line="-55"/>
+        <location line="-49"/>
         <source>Bitmap file has been exported to &quot;%1&quot;</source>
         <translation>Fichier Bitmap a été exportée vers &quot;%1&quot;</translation>
     </message>
@@ -1833,7 +1833,7 @@ Voulez-vous le récupérer ?</translation>
         <translation>Choisir solution</translation>
     </message>
     <message>
-        <location line="+120"/>
+        <location line="+126"/>
         <location line="+86"/>
         <source>No solution</source>
         <translation>Aucune solution</translation>
@@ -3389,6 +3389,99 @@ est déjà dans la liste.</translation>
     </message>
 </context>
 <context>
+    <name>DrawFmsLanes</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.js" line="+74"/>
+        <source>First vertex</source>
+        <translation type="unfinished">Premier vertex</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Next vertex</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+532"/>
+        <source>close</source>
+        <translation type="unfinished">fermer</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>undo</source>
+        <translation type="unfinished">annuler</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>redo</source>
+        <translation type="unfinished">refaire</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>arc</source>
+        <translation type="unfinished">arc</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.ui" line="+23"/>
+        <source>Close polyline</source>
+        <translation type="unfinished">Fermer la polyligne</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>,, C</source>
+        <translation type="unfinished">,, C</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Undo Previous Segment</source>
+        <translation type="unfinished">Annuler dernier segment</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>,, U</source>
+        <translation type="unfinished">,, U</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Redo Segment</source>
+        <translation type="unfinished">Rétablir dernier segment</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>,, R</source>
+        <translation type="unfinished">,, R</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Arc with radius:</source>
+        <translation type="unfinished">Segment d&apos;arc avec un rayon de :</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>,, A</source>
+        <translation type="unfinished">,, A</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Sweep</source>
+        <translation type="unfinished">Balayage</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Restrict length or angle</source>
+        <translation type="unfinished">Limiter longueur ou angle</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
+        <source>Draw &amp;Fms Lanes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw FMS Lanes (ribs)</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>DrawFromCSV</name>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV.js" line="+145"/>
@@ -4111,7 +4204,7 @@ est déjà dans la liste.</translation>
         <translation>&amp;Dupliquer</translation>
     </message>
     <message numerus="yes">
-        <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+54"/>
+        <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+85"/>
         <source>%n entity/ies duplicated</source>
         <translation>
             <numerusform>%n entité a été dupliqué</numerusform>
@@ -5038,9 +5131,9 @@ est déjà dans la liste.</translation>
         <translation>Décomposer</translation>
     </message>
     <message>
-        <location line="+613"/>
+        <location line="+624"/>
         <source>Ignored hatch in block reference with non-uniform scale factors</source>
-        <translation type="unfinished">Hachures ignorées dans les blocs de référence avec des facteurs d'échelle non uniformes</translation>
+        <translation type="unfinished">Hachures ignorées dans les blocs de référence avec des facteurs d&apos;échelle non uniformes</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+244"/>
@@ -6320,7 +6413,7 @@ est déjà dans la liste.</translation>
 <context>
     <name>Image</name>
     <message>
-        <location filename="../scripts/Draw/Image/Image.js" line="+140"/>
+        <location filename="../scripts/Draw/Image/Image.js" line="+179"/>
         <source>Files</source>
         <translation>Fichiers</translation>
     </message>
@@ -7637,27 +7730,27 @@ est déjà dans la liste.</translation>
         <translation>Insérer un &amp;script</translation>
     </message>
     <message>
-        <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+66"/>
+        <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+85"/>
         <source>Cannot read file:</source>
         <translation type="unfinished">Impossible de lire le fichier :</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>No constructor found in file:</source>
         <translation type="unfinished">Aucun constructeur trouvé dans le fichier :</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>No &apos;init&apos; function found in file:</source>
         <translation type="unfinished">Aucune fonction &apos;init&apos; trouvée dans le fichier :</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>No &apos;generate&apos; function found in file:</source>
         <translation type="unfinished">Aucune fonction &apos;generate&apos; n&apos;a été trouvée dans le fichier :</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>No &apos;generatePreview&apos; function found in file:</source>
         <translation type="unfinished">Aucune fonction &apos;generatePreview&apos; n&apos;a été trouvée dans le fichier :</translation>
     </message>
@@ -10083,7 +10176,7 @@ est déjà dans la liste.</translation>
         <translation>Afficher toutes les propriétés</translation>
     </message>
     <message>
-        <location line="+765"/>
+        <location line="+772"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -10093,7 +10186,7 @@ est déjà dans la liste.</translation>
         <translation>*VARIABLE*</translation>
     </message>
     <message>
-        <location line="-1428"/>
+        <location line="-1435"/>
         <source>:</source>
         <translation> :</translation>
     </message>
@@ -10138,7 +10231,7 @@ est déjà dans la liste.</translation>
         <translation>Non</translation>
     </message>
     <message>
-        <location line="+389"/>
+        <location line="+396"/>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>
@@ -13388,17 +13481,22 @@ est déjà dans la liste.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+321"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+322"/>
         <source>Dropped data not supported</source>
         <translation>Données insérées pas pris en charge</translation>
     </message>
     <message>
-        <location line="+21"/>
-        <source>Importing file: </source>
-        <translation>Importation fichier: </translation>
+        <location line="+26"/>
+        <source>Cannot import file into existing drawing:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+4"/>
+        <source>Importing file:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Importing URL: </source>
         <translation>Importation URL: </translation>
     </message>
@@ -13414,7 +13512,7 @@ est déjà dans la liste.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1157"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1156"/>
         <source>Restore defaults</source>
         <translation>Restaurer les valeurs par défaut</translation>
     </message>
@@ -13853,7 +13951,7 @@ est déjà dans la liste.</translation>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../scripts/autostart.js" line="+363"/>
+        <location filename="../scripts/autostart.js" line="+237"/>
         <source>Loading add-on translations...</source>
         <translation>Chargement add-on traductions...</translation>
     </message>
@@ -13876,7 +13974,7 @@ est déjà dans la liste.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1248"/>
+        <location filename="../scripts/library.js" line="+1250"/>
         <source>Objects</source>
         <translation>Objets</translation>
     </message>
@@ -14439,4 +14537,3 @@ est déjà dans la liste.</translation>
     </message>
 </context>
 </TS>
-
