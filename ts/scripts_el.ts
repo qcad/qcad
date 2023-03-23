@@ -3215,7 +3215,7 @@ Do you wish to recover it?</source>
 &quot;%1&quot;
 is already in the list.</source>
         <translation>Ο φάκελος
-&quot;%1&quot,
+&quot;%1&quot;,
 είναι ήδη στη λίστα.</translation>
     </message>
     <message>

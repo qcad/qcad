@@ -293,6 +293,7 @@
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+86"/>
@@ -360,7 +361,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+7"/>
         <source>Reset to &apos;Undefined&apos;</source>
-        <translation type="unfinished">重置为 "未定义"。</translation>
+        <translation type="unfinished">重置为 &quot;未定义&quot;。</translation>
     </message>
 </context>
 <context>
@@ -916,6 +917,7 @@ Do you wish to recover it/them?</source>
         <location line="+1"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+25"/>
@@ -3208,6 +3210,7 @@ Do you wish to recover it?</source>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -3552,7 +3555,7 @@ is already in the list.</source>
     <message>
         <location line="+15"/>
         <source>Not a correct &apos;New layer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished">不是一个正确的 "新层 "开关，被忽略。文本行：%1</translation>
+        <translation type="unfinished">不是一个正确的 &quot;新层 &quot;开关，被忽略。文本行：%1</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -4938,7 +4941,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Registered a file exporter for file type &quot;.example&quot;. Use File &gt; Save As to see the filter in action.</source>
-        <translation type="unfinished">为文件类型&quot;.example &quot;注册了一个文件导出器。使用 "文件"&gt;"另存为 "来查看过滤器的运行情况。</translation>
+        <translation type="unfinished">为文件类型&quot;.example &quot;注册了一个文件导出器。使用 &quot;文件&quot;&gt;&quot;另存为 &quot;来查看过滤器的运行情况。</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -4966,7 +4969,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Registered a file importer for file type &quot;.example&quot;. Use File &gt; Open to see the filter in action.</source>
-        <translation type="unfinished">为文件类型&quot;.example &quot;注册了一个文件导入器。使用 "文件"&gt;"打开 "来查看过滤器的运行情况。</translation>
+        <translation type="unfinished">为文件类型&quot;.example &quot;注册了一个文件导入器。使用 &quot;文件&quot;&gt;&quot;打开 &quot;来查看过滤器的运行情况。</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11413,6 +11416,7 @@ is already in the list.</source>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
@@ -12625,6 +12629,7 @@ is already in the list.</source>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+21"/>
@@ -14515,4 +14520,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-
