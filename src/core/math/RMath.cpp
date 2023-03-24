@@ -1065,7 +1065,11 @@ RVector RMath::parseCoordinate(const QString& coordinateString, const RVector& r
  */
 QString RMath::getMd5Hash(const QString& data) {
     QByteArray ba = QCryptographicHash::hash(data.toUtf8(), QCryptographicHash::Md5);
+#if QT_VERSION >= 0x050900
     return QString(ba.toHex(0));
+#else
+    return QString(ba.toHex());
+#endif
 }
 
 void RMath::getQuadRoots(double p[], double r[][5]) {
