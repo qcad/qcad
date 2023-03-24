@@ -35,6 +35,8 @@ RPluginInfo RScriptsPlugin::getPluginInfo() {
     ret.set("URL", "http://qcad.org");
 
     ret.set("OverridePriority", "0");
+    ret.set("SplashOverride", ":/scripts/splashscreen.png");
+    ret.set("SplashOverride@2x", ":/scripts/splashscreen@2x.png");
     ret.set("NameOverride", "QCAD");
     return ret;
 }
