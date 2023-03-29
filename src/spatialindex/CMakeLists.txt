@@ -6,7 +6,7 @@ include(../../CMakeInclude.txt)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(${QT_VER} REQUIRED COMPONENTS Core Gui Widgets)
+find_package(${QT_VER} REQUIRED COMPONENTS Core Gui Widgets PrintSupport)
 qt_standard_project_setup()
 
 IF(WIN32)
@@ -42,6 +42,7 @@ target_link_libraries(qcadspatialindex PUBLIC
     Qt::Core
     Qt::Gui
     Qt::Widgets
+    Qt::PrintSupport
     qcadcore
     spatialindexnavel
 )
