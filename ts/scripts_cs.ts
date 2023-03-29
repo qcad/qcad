@@ -1114,7 +1114,7 @@ Přejete si ho obnovit?</translation>
         <translation>Bitmapový soubor byl exportován do &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+43"/>
         <source>Files</source>
         <translation>soubory</translation>
     </message>
@@ -1523,7 +1523,7 @@ Přejete si ho obnovit?</translation>
 <context>
     <name>CadToolMatrix</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+387"/>
+        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+401"/>
         <source>Expand all</source>
         <translation>Rozbalit vše</translation>
     </message>

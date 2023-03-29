@@ -1114,7 +1114,7 @@ Do you wish to recover it?</source>
         <translation>Bitmap-filen er blevet eksporteret til &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+43"/>
         <source>Files</source>
         <translation>Filer</translation>
     </message>
@@ -1523,7 +1523,7 @@ Do you wish to recover it?</source>
 <context>
     <name>CadToolMatrix</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+387"/>
+        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+401"/>
         <source>Expand all</source>
         <translation>Udvid alle</translation>
     </message>

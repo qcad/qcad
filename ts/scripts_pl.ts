@@ -1116,7 +1116,7 @@ Czy chcesz go odzyskać?</translation>
         <translation type="unfinished">Plik bitmapy został wyeksportowany do &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+43"/>
         <source>Files</source>
         <translation type="unfinished">Pliki</translation>
     </message>
@@ -1525,7 +1525,7 @@ Czy chcesz go odzyskać?</translation>
 <context>
     <name>CadToolMatrix</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+387"/>
+        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+401"/>
         <source>Expand all</source>
         <translation>Rozwiń wszystko</translation>
     </message>

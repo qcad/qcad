@@ -1112,7 +1112,7 @@ Vill du återställa den?</translation>
         <translation>Bitmappsfilen har exporterats till &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+43"/>
         <source>Files</source>
         <translation>Filer</translation>
     </message>
@@ -1521,7 +1521,7 @@ Vill du återställa den?</translation>
 <context>
     <name>CadToolMatrix</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+387"/>
+        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+401"/>
         <source>Expand all</source>
         <translation>Expandera alla</translation>
     </message>

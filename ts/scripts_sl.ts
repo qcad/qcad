@@ -1114,7 +1114,7 @@ Ali jo želite obnoviti?</translation>
         <translation>Točkovnoslikovna datoteka izvožena v &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+43"/>
         <source>Files</source>
         <translation>Datoteke</translation>
     </message>
@@ -1523,7 +1523,7 @@ Ali jo želite obnoviti?</translation>
 <context>
     <name>CadToolMatrix</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+387"/>
+        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+401"/>
         <source>Expand all</source>
         <translation>Razširi vse</translation>
     </message>

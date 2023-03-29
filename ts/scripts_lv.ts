@@ -1113,7 +1113,7 @@ Vai vēlaties to atjaunot?</translation>
         <translation type="unfinished">Bitmap fails ir eksportēts uz &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+43"/>
         <source>Files</source>
         <translation type="unfinished">Faili</translation>
     </message>
@@ -1522,7 +1522,7 @@ Vai vēlaties to atjaunot?</translation>
 <context>
     <name>CadToolMatrix</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+387"/>
+        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+401"/>
         <source>Expand all</source>
         <translation type="unfinished">Izvērst visu</translation>
     </message>

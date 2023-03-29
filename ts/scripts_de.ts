@@ -1109,7 +1109,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Fehler beim Generieren der Bitmap Datei &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+48"/>
         <source>Files</source>
         <translation>Dateien</translation>
     </message>
@@ -1119,7 +1119,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Exportieren als Bitmap</translation>
     </message>
     <message>
-        <location line="-49"/>
+        <location line="-55"/>
         <source>Bitmap file has been exported to &quot;%1&quot;</source>
         <translation>Bitmap wurde erstellt als &quot;%1&quot;</translation>
     </message>
@@ -1523,7 +1523,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
 <context>
     <name>CadToolMatrix</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+387"/>
+        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+401"/>
         <source>Expand all</source>
         <translation>Alles aufklappen</translation>
     </message>

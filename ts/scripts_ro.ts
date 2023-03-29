@@ -1113,7 +1113,7 @@ Doriți să îl recuperați?</translation>
         <translation type="unfinished">Fișierul bitmap a fost exportat la &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+43"/>
         <source>Files</source>
         <translation type="unfinished">Fișiere</translation>
     </message>
@@ -1522,7 +1522,7 @@ Doriți să îl recuperați?</translation>
 <context>
     <name>CadToolMatrix</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+387"/>
+        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+401"/>
         <source>Expand all</source>
         <translation type="unfinished">Extindeți toate</translation>
     </message>

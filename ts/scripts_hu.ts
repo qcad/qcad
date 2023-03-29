@@ -1112,7 +1112,7 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">A bittérképes fájl exportálása a &quot;%1&quot; címre történt.</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+43"/>
         <source>Files</source>
         <translation type="unfinished">Fájlok</translation>
     </message>
@@ -1521,7 +1521,7 @@ Szeretné visszaállítani?</translation>
 <context>
     <name>CadToolMatrix</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+387"/>
+        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+401"/>
         <source>Expand all</source>
         <translation type="unfinished">Minden bővítése</translation>
     </message>

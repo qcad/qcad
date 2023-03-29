@@ -1109,7 +1109,7 @@ Do you wish to recover it?</source>
         <translation>Error al generar el archivo de mapa de bits &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+48"/>
         <source>Files</source>
         <translation>Archivos</translation>
     </message>
@@ -1119,7 +1119,7 @@ Do you wish to recover it?</source>
         <translation>Exportar mapa de bits</translation>
     </message>
     <message>
-        <location line="-49"/>
+        <location line="-55"/>
         <source>Bitmap file has been exported to &quot;%1&quot;</source>
         <translation>Archivo de mapa de bits se ha exportado en &quot;%1&quot;</translation>
     </message>
@@ -1523,7 +1523,7 @@ Do you wish to recover it?</source>
 <context>
     <name>CadToolMatrix</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+387"/>
+        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+401"/>
         <source>Expand all</source>
         <translation>Desplegar todo</translation>
     </message>
