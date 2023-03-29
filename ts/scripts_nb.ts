@@ -11928,7 +11928,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapFree/SnapFreeInit.js" line="+2"/>
         <source>&amp;Free</source>
-        <translation type="unfinished">Gratis</translation>
+        <translation type="unfinished">Fri</translation>
     </message>
 </context>
 <context>

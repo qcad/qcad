@@ -11735,7 +11735,7 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>&amp;Snap</source>
-        <translation type="unfinished">Snap</translation>
+        <translation type="unfinished">스냅</translation>
     </message>
 </context>
 <context>
@@ -11743,7 +11743,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAuto.js" line="+34"/>
         <source>Snap</source>
-        <translation type="unfinished">Snap</translation>
+        <translation type="unfinished">스냅</translation>
     </message>
     <message>
         <location line="+0"/>
