@@ -43,8 +43,7 @@ RToolMatrixItemDelegate::RToolMatrixItemDelegate(QTreeView* view, QWidget* paren
 {
 }
 
-void RToolMatrixItemDelegate::paint(QPainter* painter, const QStyleOptionViewItem& option, const QModelIndex& index) const
-{
+void RToolMatrixItemDelegate::paint(QPainter* painter, const QStyleOptionViewItem& option, const QModelIndex& index) const {
     const QAbstractItemModel* model = index.model();
     Q_ASSERT(model);
 
