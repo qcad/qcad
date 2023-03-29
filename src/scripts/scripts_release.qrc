@@ -1851,8 +1851,10 @@
     <file alias="ts/scripts_id.qm">../../ts/scripts_id.qm</file>
     <file alias="ts/scripts_it.qm">../../ts/scripts_it.qm</file>
     <file alias="ts/scripts_ja.qm">../../ts/scripts_ja.qm</file>
+    <file alias="ts/scripts_ko.qm">../../ts/scripts_ko.qm</file>
     <file alias="ts/scripts_lt.qm">../../ts/scripts_lt.qm</file>
     <file alias="ts/scripts_lv.qm">../../ts/scripts_lv.qm</file>
+    <file alias="ts/scripts_nb.qm">../../ts/scripts_nb.qm</file>
     <file alias="ts/scripts_nl.qm">../../ts/scripts_nl.qm</file>
     <file alias="ts/scripts_pl.qm">../../ts/scripts_pl.qm</file>
     <file alias="ts/scripts_pt.qm">../../ts/scripts_pt.qm</file>
