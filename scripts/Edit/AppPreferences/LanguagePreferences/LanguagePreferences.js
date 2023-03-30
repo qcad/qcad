@@ -52,9 +52,10 @@ LanguagePreferences.localLanguageName["sk"] = "Slovenčina";
 LanguagePreferences.localLanguageName["sl"] = "Slovenščina";
 LanguagePreferences.localLanguageName["sv"] = "Svenska";
 LanguagePreferences.localLanguageName["tr"] = "Türkçe";
+LanguagePreferences.localLanguageName["uk"] = "Українська";
 LanguagePreferences.localLanguageName["zh_TW"] = "繁體中文";
 LanguagePreferences.localLanguageName["zh"] = "简体中文";
-LanguagePreferences.localLanguageName["zh_ZN"] = "简体中文";
+LanguagePreferences.localLanguageName["zh_CN"] = "简体中文";
 
 LanguagePreferences.getPreferencesCategory = function() {
     return [qsTr("Language Settings"), qsTr("Language")];
