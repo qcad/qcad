@@ -293,7 +293,8 @@
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
-        <translation></translation>
+        <translation>Silakan mulai ulang QCAD untuk
+agar perubahan preferensi dapat diterapkan.</translation>
     </message>
     <message>
         <location line="+86"/>
@@ -895,7 +896,8 @@ the preference changes to take effect.</source>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>%n file cadangan penyimpanan otomatis untuk (sebuah) gambar tanpa judul ditemukan.
+Apakah Anda ingin memulihkannya?</numerusform>
         </translation>
     </message>
     <message>
@@ -917,7 +919,8 @@ Do you wish to recover it/them?</source>
         <location line="+1"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
-        <translation></translation>
+        <translation>Ada file cadangan yang disimpan secara otomatis untuk "%1".
+Apakah Anda ingin memulihkannya?</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -2836,7 +2839,7 @@ Do you wish to recover it?</source>
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>Posisi label dari %n dimensi telah diatur ulang.</numerusform>
         </translation>
     </message>
     <message>
@@ -3210,7 +3213,9 @@ Do you wish to recover it?</source>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
-        <translation></translation>
+        <translation>Folder
+&quot;%1&quot;
+sudah ada dalam daftar.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -3465,12 +3470,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
         <source>Draw &amp;Fms Lanes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gambar & Jalur Fms</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw FMS Lanes (ribs)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Menggambar Jalur FMS (tulang rusuk)</translation>
     </message>
 </context>
 <context>
@@ -4194,7 +4199,7 @@ is already in the list.</source>
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+85"/>
         <source>%n entity/ies duplicated</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>%n objek yang diduplikasi</numerusform>
         </translation>
     </message>
     <message>
@@ -5042,7 +5047,7 @@ is already in the list.</source>
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>Transaksi yang terpengaruh %n objek.</numerusform>
         </translation>
     </message>
     <message>
@@ -5565,7 +5570,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Verbose *</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Verbose *</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5575,7 +5580,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Delete Base Entities *</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Hapus Entitas Dasar *</translation>
     </message>
 </context>
 <context>
@@ -9356,14 +9361,14 @@ is already in the list.</source>
         <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>Radius turun di bawah 0,0 setelah %n lingkaran konsentris.</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>Radius turun di bawah 0,0 setelah %n busur konsentris.</numerusform>
         </translation>
     </message>
     <message>
@@ -11390,14 +11395,14 @@ is already in the list.</source>
         <location line="+4"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>%n Entitas pada Layer &quot;%1&quot;</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>>%n Entitas</numerusform>
         </translation>
     </message>
     <message>
@@ -11409,14 +11414,15 @@ is already in the list.</source>
         <location line="+0"/>
         <source>%n Layers</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>%n Lapisan</numerusform>
         </translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
-        <translation></translation>
+        <translation>Entitas yang dipilih:
+%1.</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
@@ -12629,7 +12635,8 @@ is already in the list.</source>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
-        <translation></translation>
+        <translation>Teks sederhana
+(satu baris, tanpa pemformatan)</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -13471,12 +13478,12 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>Cannot import file into existing drawing:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tidak dapat mengimpor file ke dalam gambar yang sudah ada:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Importing file:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mengimpor file:</translation>
     </message>
     <message>
         <location line="+17"/>

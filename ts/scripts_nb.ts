@@ -293,7 +293,8 @@
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
-        <translation></translation>
+        <translation>Start QCAD på nytt for at
+preferanseendringene skal tre i kraft.</translation>
     </message>
     <message>
         <location line="+86"/>
@@ -895,8 +896,10 @@ the preference changes to take effect.</source>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n automatisk sikkerhetskopifil for en tegning uten tittel ble funnet.
+Ønsker du å gjenopprette den?</numerusform>
+            <numerusform>%n automatisk lagrede sikkerhetskopifiler for tegninger uten tittel ble funnet.
+Ønsker du å gjenopprette dem?</numerusform>
         </translation>
     </message>
     <message>
@@ -918,7 +921,8 @@ Do you wish to recover it/them?</source>
         <location line="+1"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
-        <translation></translation>
+        <translation>Det finnes en automatisk sikkerhetskopifil for &quot;%1&quot;.
+Ønsker du å gjenopprette den?</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -2837,8 +2841,8 @@ Do you wish to recover it?</source>
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Etikettposisjon for %n dimensjon ble tilbakestilt.</numerusform>
+            <numerusform>Etikettposisjon for %n dimensjoner ble tilbakestilt.</numerusform>
         </translation>
     </message>
     <message>
@@ -3212,7 +3216,9 @@ Do you wish to recover it?</source>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
-        <translation></translation>
+        <translation>Mappen
+&quot;%1&quot;
+er allerede i listen.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4196,8 +4202,8 @@ is already in the list.</source>
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+85"/>
         <source>%n entity/ies duplicated</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n enhet duplisert</numerusform>
+            <numerusform>%n enheter duplisert</numerusform>
         </translation>
     </message>
     <message>
@@ -5045,8 +5051,8 @@ is already in the list.</source>
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Transaksjonen berørte %n objekt.</numerusform>
+            <numerusform>Transaksjonen berørte %n objekter.</numerusform>
         </translation>
     </message>
     <message>
@@ -5569,7 +5575,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Verbose *</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Verbose *</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5579,7 +5585,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Delete Base Entities *</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Slett basisenheter *</translation>
     </message>
 </context>
 <context>
@@ -9360,16 +9366,16 @@ is already in the list.</source>
         <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Radius falt under 0,0 etter %n konsentrisk sirkel.</numerusform>
+            <numerusform>Radius falt under 0,0 etter %n konsentriske sirkler.</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Radius falt under 0,0 etter %n konsentrisk bue.</numerusform>
+            <numerusform>Radius falt under 0,0 etter %n konsentriske buer.</numerusform>
         </translation>
     </message>
     <message>
@@ -11396,16 +11402,16 @@ is already in the list.</source>
         <location line="+4"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n enhet på lag &quot;%1&quot;</numerusform>
+            <numerusform>%n enheter på lag &quot;%1&quot;</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n enhet</numerusform>
+            <numerusform>%n enheter</numerusform>
         </translation>
     </message>
     <message>
@@ -11417,15 +11423,16 @@ is already in the list.</source>
         <location line="+0"/>
         <source>%n Layers</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n lag</numerusform>
+            <numerusform>%n lag</numerusform>
         </translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
-        <translation></translation>
+        <translation>Utvalgte enheter:
+%1.</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
@@ -12638,7 +12645,8 @@ is already in the list.</source>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
-        <translation></translation>
+        <translation>Enkel tekst 
+(én linje, ingen formatering)</translation>
     </message>
     <message>
         <location line="+21"/>

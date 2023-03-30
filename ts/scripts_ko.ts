@@ -293,7 +293,8 @@
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
-        <translation></translation>
+        <translation>QCAD를 다시 시작해야
+기본 설정 변경 사항을 적용하십시오.</translation>
     </message>
     <message>
         <location line="+86"/>
@@ -895,7 +896,8 @@ the preference changes to take effect.</source>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>제목 없는 그림(들)에 대한 %n 자동 저장 백업 파일을 찾았습니다.
+해당 파일을 복구하시겠습니까?</numerusform>
         </translation>
     </message>
     <message>
@@ -917,7 +919,8 @@ Do you wish to recover it/them?</source>
         <location line="+1"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
-        <translation></translation>
+        <translation>'%1'에 대한 자동 저장 백업 파일이 있습니다.
+복구하시겠습니까?</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -2836,7 +2839,7 @@ Do you wish to recover it?</source>
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>%n차원의 레이블 위치가 재설정되었습니다.</numerusform>
         </translation>
     </message>
     <message>
@@ -3210,7 +3213,9 @@ Do you wish to recover it?</source>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
-        <translation></translation>
+        <translation>폴더
+&quot;%1&quot;
+폴더가 이미 목록에 있습니다.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4194,7 +4199,7 @@ is already in the list.</source>
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+85"/>
         <source>%n entity/ies duplicated</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>중복된 엔티티 %n개</numerusform>
         </translation>
     </message>
     <message>
@@ -5042,7 +5047,7 @@ is already in the list.</source>
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>트랜잭션이 %n 개체에 영향을 미쳤습니다.</numerusform>
         </translation>
     </message>
     <message>
@@ -5565,7 +5570,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Verbose *</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">자세한 설명 *</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5575,7 +5580,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Delete Base Entities *</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">기본 엔터티 삭제 *</translation>
     </message>
 </context>
 <context>
@@ -9356,14 +9361,14 @@ is already in the list.</source>
         <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>동심원을 %n번 돌고 난 후 반경이 0.0 아래로 떨어졌습니다.</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>%n번의 동심원 호 이후 반경이 0.0 아래로 떨어졌습니다.</numerusform>
         </translation>
     </message>
     <message>
@@ -11390,14 +11395,14 @@ is already in the list.</source>
         <location line="+4"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>%n 레이어 '%1'의 엔티티;</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>%n개 엔티티</numerusform>
         </translation>
     </message>
     <message>
@@ -11409,14 +11414,15 @@ is already in the list.</source>
         <location line="+0"/>
         <source>%n Layers</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>%n개의 레이어</numerusform>
         </translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
-        <translation></translation>
+        <translation>선택한 엔터티입니다:
+%1.</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
@@ -12629,7 +12635,8 @@ is already in the list.</source>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
-        <translation></translation>
+        <translation>간단한 텍스트
+(한 줄, 서식 없음)</translation>
     </message>
     <message>
         <location line="+21"/>
