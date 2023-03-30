@@ -3470,7 +3470,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
         <source>Draw &amp;Fms Lanes</source>
-        <translation type="unfinished">Gambar & Jalur Fms</translation>
+        <translation type="unfinished">Gambar &amp;Jalur Fms</translation>
     </message>
     <message>
         <location line="+4"/>
