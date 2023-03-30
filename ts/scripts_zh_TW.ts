@@ -293,7 +293,8 @@
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
-        <translation></translation>
+        <translation>请重新启动QCAD以便
+的偏好变化生效。</translation>
     </message>
     <message>
         <location line="+86"/>
@@ -895,7 +896,8 @@ the preference changes to take effect.</source>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>发现了%n个无标题图纸的自动保存备份文件。
+你希望恢复它们吗？</numerusform>
         </translation>
     </message>
     <message>
@@ -917,7 +919,8 @@ Do you wish to recover it/them?</source>
         <location line="+1"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
-        <translation></translation>
+        <translation>存在一个&quot;%1&quot;的自动保存备份文件。
+你想恢复它吗？</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -2836,7 +2839,7 @@ Do you wish to recover it?</source>
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>%n个维度的标签位置被重置。</numerusform>
         </translation>
     </message>
     <message>
@@ -3210,7 +3213,9 @@ Do you wish to recover it?</source>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
-        <translation></translation>
+        <translation>该文件夹
+&quot;%1&quot;
+已经在列表中。</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -4194,7 +4199,7 @@ is already in the list.</source>
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+85"/>
         <source>%n entity/ies duplicated</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>%n个实体/ies重复</numerusform>
         </translation>
     </message>
     <message>
@@ -5042,7 +5047,7 @@ is already in the list.</source>
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>交易影响了%n个对象。</numerusform>
         </translation>
     </message>
     <message>
@@ -5570,12 +5575,12 @@ is already in the list.</source>
     <message>
         <location line="+39"/>
         <source>Verbose *</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">冗长的 *</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Delete Base Entities *</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">删除基础实体 *</translation>
     </message>
 </context>
 <context>
@@ -7922,7 +7927,7 @@ is already in the list.</source>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+58"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+60"/>
         <source>Language Settings</source>
         <translation type="unfinished">语言设置</translation>
     </message>
@@ -9356,14 +9361,14 @@ is already in the list.</source>
         <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>半径在%n个同心圆后下降到0.0以下。</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>半径在%n个同心圆后下降到0.0以下。</numerusform>
         </translation>
     </message>
     <message>
@@ -11390,14 +11395,14 @@ is already in the list.</source>
         <location line="+4"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>%n层的实体&quot;%1&quot;</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>%n 实体</numerusform>
         </translation>
     </message>
     <message>
@@ -11409,14 +11414,15 @@ is already in the list.</source>
         <location line="+0"/>
         <source>%n Layers</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>%n层</numerusform>
         </translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
-        <translation></translation>
+        <translation>选定的实体：
+%1.</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
@@ -12629,7 +12635,8 @@ is already in the list.</source>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
-        <translation></translation>
+        <translation>简单的文本
+(一行，无格式化)</translation>
     </message>
     <message>
         <location line="+21"/>

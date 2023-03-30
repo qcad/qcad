@@ -919,7 +919,7 @@ Apakah Anda ingin memulihkannya?</numerusform>
         <location line="+1"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
-        <translation>Ada file cadangan yang disimpan secara otomatis untuk "%1".
+        <translation>Ada file cadangan yang disimpan secara otomatis untuk &quot;%1&quot;.
 Apakah Anda ingin memulihkannya?</translation>
     </message>
     <message>
@@ -7927,7 +7927,7 @@ sudah ada dalam daftar.</translation>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+58"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+60"/>
         <source>Language Settings</source>
         <translation type="unfinished">Pengaturan Bahasa</translation>
     </message>
@@ -11402,7 +11402,7 @@ sudah ada dalam daftar.</translation>
         <location line="+3"/>
         <source>%n Entities</source>
         <translation type="unfinished">
-            <numerusform>>%n Entitas</numerusform>
+            <numerusform>&gt;%n Entitas</numerusform>
         </translation>
     </message>
     <message>

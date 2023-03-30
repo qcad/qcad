@@ -919,7 +919,7 @@ Do you wish to recover it/them?</source>
         <location line="+1"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
-        <translation>'%1'에 대한 자동 저장 백업 파일이 있습니다.
+        <translation>&apos;%1&apos;에 대한 자동 저장 백업 파일이 있습니다.
 복구하시겠습니까?</translation>
     </message>
     <message>
@@ -7927,7 +7927,7 @@ is already in the list.</source>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+58"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+60"/>
         <source>Language Settings</source>
         <translation type="unfinished">언어 설정</translation>
     </message>
@@ -11395,7 +11395,7 @@ is already in the list.</source>
         <location line="+4"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
         <translation type="unfinished">
-            <numerusform>%n 레이어 '%1'의 엔티티;</numerusform>
+            <numerusform>%n 레이어 &apos;%1&apos;의 엔티티;</numerusform>
         </translation>
     </message>
     <message numerus="yes">

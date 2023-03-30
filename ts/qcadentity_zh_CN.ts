@@ -216,7 +216,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">中层</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -663,7 +663,7 @@
     <message>
         <location line="+1"/>
         <source>Spline</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">花键</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -913,7 +913,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle Point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">中点</translation>
     </message>
 </context>
 </TS>
