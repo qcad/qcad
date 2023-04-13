@@ -723,7 +723,13 @@ TextDialog.prototype.fixHtml = function(html) {
     // keeps content formatting by adding font style with previous
     // default font to all content:
     var dom = new QDomDocument();
-    dom.setContent(htmlNbsp, false);
+    if (RSettings.getQtVersion()>=0x060500) {
+        dom.setContent(htmlNbsp);
+    }
+    else {
+        dom.setContent(htmlNbsp, false);
+    }
+
     var docElem = dom.documentElement();
 
     //qDebug("initial font color: ", this.initialColor);
@@ -875,7 +881,7 @@ TextDialog.prototype.textColor = function() {
             menu.addSeparator();
         }
         else {
-            var action = menu.addAction(RColor.getIcon(color, new QSize(16,16)), label + "...");
+            var action = menu.addAction(RColor.getIcon(color, new QSize(16,16)), label);
             action.setProperty("color", color);
             action.iconVisibleInMenu = true;
         }
