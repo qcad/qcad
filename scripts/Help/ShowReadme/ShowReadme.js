@@ -44,7 +44,8 @@ ShowReadme.prototype.beginEvent = function() {
     var flags = makeQIODeviceOpenMode(QIODevice.ReadOnly, QIODevice.Text);
     if (!file.open(flags)) {
         text.plainText = qsTr("File \"%1\" doesn't exist.").arg(ShowReadme.readmeFile);
-    } else {
+    }
+    else {
         var textStream = new QTextStream(file);
         setUtf8Codec(textStream);
         var allLines = textStream.readAll();
