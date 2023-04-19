@@ -253,6 +253,7 @@ WidgetFactory.saveState = function(widget, group, document, map) {
     for (var i = 0; i < children.length; ++i) {
         var c = children[i];
 
+
         if (!c || isDeleted(c) || c.toString().startsWith("QVariantAnimation") ||
                 c.toString().startsWith("QWidgetAction") || c.objectName==="" ||
                 c.objectName==="Icon" || c.objectName==="qt_toolbar_ext_button") {
@@ -376,7 +377,7 @@ WidgetFactory.saveState = function(widget, group, document, map) {
                 }
             }
         }
-        else if (c.toString().startsWith("RFontChooserWidget")) {
+        else if (isOfType(c, RFontChooserWidget)) {
             value = c.getChosenFont();
         }
 
