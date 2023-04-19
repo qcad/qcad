@@ -198,6 +198,8 @@ public:
     void enableMouseTracking();
     void disableMouseTracking();
 
+    void setAllowSnapInterruption(bool on);
+
     void updateAllEntities();
 
     void regenerateScenes(bool undone = false, bool invisible = false);
@@ -406,6 +408,7 @@ private:
 
     bool keepPreviewOnce;
     bool mouseTrackingEnabled;
+    bool allowSnapInterruption;
 
     QMap<QString, int> tags;
 

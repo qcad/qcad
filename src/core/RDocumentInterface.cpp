@@ -78,6 +78,7 @@ RDocumentInterface::RDocumentInterface(RDocument& document)
     cursorOverride(false),
     keepPreviewOnce(false),
     mouseTrackingEnabled(true),
+    allowSnapInterruption(true),
     previewDocument(NULL) {
     //pressEvent(NULL) {
 
@@ -670,6 +671,10 @@ void RDocumentInterface::enableMouseTracking() {
 
 void RDocumentInterface::disableMouseTracking() {
     mouseTrackingEnabled = false;
+}
+
+void RDocumentInterface::setAllowSnapInterruption(bool on) {
+    allowSnapInterruption = on;
 }
 
 /**
@@ -1510,7 +1515,7 @@ RVector RDocumentInterface::snap(RMouseEvent& event, bool preview) {
     if (currentSnap!=NULL) {
         // only allow interruption by mouse move if this is a preview and no buttons are pressed:
         //if (preview && (!RSettings::getPositionByMousePress() || event.buttons()==Qt::NoButton)) {
-        if (preview) {
+        if (preview && allowSnapInterruption) {
 #if QT_VERSION >= 0x060000
             RMouseEvent::setOriginalMousePos(event.globalPosition().toPoint());
 #else
