@@ -794,6 +794,16 @@ EAction.prototype.setCursor = function(cursor, name) {
     if (!isNull(di)) {
         di.setCursor(cursor);
     }
+    var appWin = EAction.getMainWindow();
+    if (!isNull(appWin)) {
+        if (isNull(name)) {
+            appWin.setProperty("MouseCursor", "");
+        }
+        else {
+            appWin.setProperty("MouseCursor", name);
+        }
+    }
+
 //    if (!isNull(name)) {
 //        var views = this.getGraphicsViews();
 //        for (var i=0; i<views.length; i++) {
