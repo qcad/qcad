@@ -46,6 +46,7 @@ StatusBar.init = function(basePath) {
     action.setWidgetNames(["ViewMenu", "!WidgetsToolBar", "!ViewToolsPanel"]);
 
     var statusBar = appWin.statusBar();
+    statusBar.objectName = "StatusBarWidget";
     var splitter = new QSplitter(statusBar);
     splitter.setSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.Fixed);
     splitter.setFixedHeight(40);
