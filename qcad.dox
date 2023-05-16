@@ -71,7 +71,7 @@ They may also be used by other applications.
 - \subpage ScriptOverviews
 - \subpage ScriptTutorials
 - \ref ecma_scripts "ECMAScript classes and libraries"
-- <a href="http://www.ecmascript.org" target="_blank">ECMAScript Language Standard</a>
+- <a href="https://doc.qt.io/archives/qt-5.13/qtscript-index.html" target="_blank">QtScript reference with further ECMAScript pointers</a>
 
 <p>&nbsp;</p>
 
