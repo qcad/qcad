@@ -896,7 +896,7 @@ the preference changes to take effect.</translation>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
         <translation>
-            <numerusform>An &quot;autosave backup file for an untitled drawing was found.
+            <numerusform>An autosave backup file for an untitled drawing was found.
 Do you wish to recover it?</numerusform>
             <numerusform>%n autosave backup files for untitled drawings were found.
 Do you wish to recover them?</numerusform>
