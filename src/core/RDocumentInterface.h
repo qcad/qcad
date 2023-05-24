@@ -45,6 +45,7 @@
 #include "RTextLabel.h"
 #include "RTransactionListener.h"
 #include "RUcs.h"
+#include "RSnap.h"
 
 #define RDEFAULT_QLIST_QREAL QList<qreal>()
 #ifndef RDEFAULT_MIN1
@@ -61,7 +62,6 @@ class RGraphicsView;
 class RMouseEvent;
 class ROperation;
 class RPropertyEvent;
-class RSnap;
 class RSnapRestriction;
 class RScriptHandler;
 class RTransaction;
@@ -236,6 +236,10 @@ public:
     void setSnap(RSnap* snap);
     RSnap* getSnap();
 
+    RSnap::Status getSnapStatus() const {
+        return lastSnapState;
+    }
+
     void setSnapRestriction(RSnapRestriction* snapRestriction);
     RSnapRestriction* getSnapRestriction();
 
@@ -389,6 +393,7 @@ private:
 
     RSnap* currentSnap;
     RSnapRestriction* currentSnapRestriction;
+    RSnap::Status lastSnapState;
 
     RVector lastPosition;
     RVector relativeZero;

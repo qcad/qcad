@@ -66,6 +66,7 @@ RDocumentInterface::RDocumentInterface(RDocument& document)
     defaultAction(NULL),
     currentSnap(NULL),
     currentSnapRestriction(NULL),
+    lastSnapState(RSnap::Unknown),
     relativeZero(RVector(0,0)),
     relativeZeroLocked(false),
     snapLocked(false),
@@ -1523,6 +1524,7 @@ RVector RDocumentInterface::snap(RMouseEvent& event, bool preview) {
 #endif
         }
         RVector ret = currentSnap->snap(event);
+        lastSnapState = currentSnap->getStatus();
         if (preview) {
             RMouseEvent::resetOriginalMousePos();
         }
