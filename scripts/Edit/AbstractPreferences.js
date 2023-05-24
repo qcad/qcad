@@ -387,10 +387,13 @@ AbstractPreferences.prototype.save = function() {
                 }
             }
             if (!isNull(document) && preferencesScope==="block") {
+                // saving to block:
                 store = document.queryCurrentBlock();
             }
         }
+
         WidgetFactory.saveState(widget, undefined, store);
+
         if (!this.appPreferences) {
             if (preferencesScope==="block") {
                 transaction.addObject(store);
