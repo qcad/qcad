@@ -379,16 +379,6 @@ function main() {
     // make sure settings file path is reinitialized:
     RSettings.uninit();
 
-    // alternative path for QCAD3.ini:
-    for (i=1; i<args.length; ++i) {
-        if (args[i] === "-config") {
-            ++i;
-            if (i < args.length) {
-                QSettings.setPath(QSettings.IniFormat, QSettings.UserScope, getAbsolutePathForArg(args[i]));
-            }
-        }
-    }
-
     // ignore config file if it does not identify itself with a version
     // number or is known as being incompatible
     var reset = false;

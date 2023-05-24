@@ -108,6 +108,8 @@ int main(int argc, char *argv[]) {
     // But use usual conversion for scanf()/sprintf():
     setlocale(LC_NUMERIC, "C");
 
+    QString cwd = QDir::currentPath();
+
     // Finetuning Japanese encoding for correct DXF/DWG import.
     // see http://qt-project.org/doc/qt-4.8/codecs-jis.html
 #ifdef Q_OS_WIN
@@ -134,6 +136,30 @@ int main(int argc, char *argv[]) {
     qApp->setOrganizationDomain("QCAD.org");
     qApp->setApplicationName("QCAD");
     qApp->setApplicationVersion(RSettings::getVersionString());
+
+    // alternative path for QCAD3.ini:
+    for (int i=0; i<argc; i++) {
+        QString a = argv[i];
+        if (a == "-config") {
+            ++i;
+            if (i < argc) {
+                a = argv[i];
+                QFileInfo fi(a);
+                QString absConfigFile;
+                if (fi.isAbsolute() || a.startsWith(":")){
+                    absConfigFile = a;
+                }
+                else {
+                    // relative path (prepend application dir):
+                    absConfigFile = cwd + QDir::separator() + a;
+                }
+
+                qDebug() << "absConfigFile:" << absConfigFile;
+
+                QSettings::setPath(QSettings::IniFormat, QSettings::UserScope, absConfigFile);
+            }
+        }
+    }
 
     RSettings::setApplicationNameOverride("QCAD3");
 
@@ -277,7 +303,6 @@ int main(int argc, char *argv[]) {
     // TODO #qt6
 #endif
 
-    QString cwd = QDir::currentPath();
     RSettings::setLaunchPath(cwd);
 
     // set current working directory:
