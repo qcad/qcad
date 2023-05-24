@@ -386,6 +386,7 @@ void RGraphicsViewImage::updateImage() {
             RSnap* snap = di->getSnap();
             RSnapRestriction* snapRestriction = di->getSnapRestriction();
             emitUpdateSnapInfo(snap, snapRestriction);
+            // prevent snap to show "End" directly after snapping to grid:
             if (snap!=NULL) {
                 snap->reset();
             }
