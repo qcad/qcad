@@ -410,7 +410,13 @@ WidgetFactory.saveState = function(widget, group, document, map) {
         if (saveContents) {
             if (document) {
                 if (isObject(document)) {
-                    // save key / value pair to object:
+                    // make sure value of custom property is string, not QColor or RColor:
+                    // ensures that it can be stored in DXF/DWG and displayed in property editor:
+                    if (isOfType(value, QColor) || isOfType(value, RColor)) {
+                        value = value.name();
+                    }
+
+                    // save key / value pair to object (e.g. layout block):
                     document.setCustomProperty("QCAD", key, value);
                 }
                 else {
