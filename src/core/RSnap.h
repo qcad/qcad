@@ -111,6 +111,10 @@ public:
         return status;
     }
 
+    void setStatus(RSnap::Status s) {
+        status = s;
+    }
+
     RVector getLastSnap() const {
         return lastSnap;
     }
