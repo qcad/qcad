@@ -167,6 +167,7 @@ PageSettings.updatePaperUnit = function(unit) {
 };
 
 PageSettings.getPreferencesScope = function() {
+    // page settings apply to the current layout block:
     return "block";
 };
 

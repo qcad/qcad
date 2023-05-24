@@ -28,6 +28,7 @@ ColorSettings.getPreferencesCategory = function(appPreferences) {
 };
 
 ColorSettings.getPreferencesScope = function() {
+    // print color settings apply to the current layout block:
     return "block";
 };
 
