@@ -107,14 +107,7 @@ void RRulerQt::setOrientation(Qt::Orientation orientation) {
 }
 
 QFont RRulerQt::getFont() const {
-    qreal dpr = 1.0;
-#if QT_VERSION >= 0x050000
-    dpr = devicePixelRatio();
-#endif
-
-    QFont ret = RSettings::getRulerFont();
-    ret.setPointSizeF(ret.pointSizeF()*dpr);
-    return ret;
+    return RSettings::getRulerFont();
 }
 
 void RRulerQt::paintTick(int pos, bool major, const QString& label) {
