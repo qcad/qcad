@@ -46,6 +46,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTextLabel.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTransactionListener.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RUcs.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RSnap.h"</cpp:file></cpp:include>
 
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_QLIST_QREAL</name> <name>QList</name>&lt;qreal&gt;()</cpp:define>
 <cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDEFAULT_MIN1</name></cpp:ifndef>
@@ -62,7 +63,6 @@
 <class_decl>class <name>RMouseEvent</name>;</class_decl>
 <class_decl>class <name>ROperation</name>;</class_decl>
 <class_decl>class <name>RPropertyEvent</name>;</class_decl>
-<class_decl>class <name>RSnap</name>;</class_decl>
 <class_decl>class <name>RSnapRestriction</name>;</class_decl>
 <class_decl>class <name>RScriptHandler</name>;</class_decl>
 <class_decl>class <name>RTransaction</name>;</class_decl>
@@ -199,6 +199,8 @@
     <function_decl><type><name>void</name></type> <name>enableMouseTracking</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>disableMouseTracking</name><parameter_list>()</parameter_list>;</function_decl>
 
+    <function_decl><type><name>void</name></type> <name>setAllowSnapInterruption</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
+
     <function_decl><type><name>void</name></type> <name>updateAllEntities</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>regenerateScenes</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>undone</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>invisible</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
@@ -234,6 +236,10 @@
 
     <function_decl><type><name>void</name></type> <name>setSnap</name><parameter_list>(<param><decl><type><name>RSnap</name>*</type> <name>snap</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>RSnap</name>*</type> <name>getSnap</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function><type><name><name>RSnap</name>::<name>Status</name></name></type> <name>getSnapStatus</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>lastSnapState</name></expr>;</return>
+    }</block></function>
 
     <function_decl><type><name>void</name></type> <name>setSnapRestriction</name><parameter_list>(<param><decl><type><name>RSnapRestriction</name>*</type> <name>snapRestriction</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>RSnapRestriction</name>*</type> <name>getSnapRestriction</name><parameter_list>()</parameter_list>;</function_decl>
@@ -388,6 +394,7 @@
 
     <decl_stmt><decl><type><name>RSnap</name>*</type> <name>currentSnap</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RSnapRestriction</name>*</type> <name>currentSnapRestriction</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>RSnap</name>::<name>Status</name></name></type> <name>lastSnapState</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>RVector</name></type> <name>lastPosition</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RVector</name></type> <name>relativeZero</name></decl>;</decl_stmt>
@@ -407,6 +414,7 @@
 
     <decl_stmt><decl><type><name>bool</name></type> <name>keepPreviewOnce</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>mouseTrackingEnabled</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>allowSnapInterruption</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>int</name></argument>&gt;</argument_list></name></type> <name>tags</name></decl>;</decl_stmt>
 

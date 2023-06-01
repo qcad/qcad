@@ -33,7 +33,7 @@
 <class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RNonCopyable</name> <block>{<private type="default">
 </private><protected>protected:
     <constructor><name>RNonCopyable</name><parameter_list>()</parameter_list> <block>{}</block></constructor>
-    <destructor><name>~RNonCopyable</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
+    <destructor><specifier>virtual</specifier> <name>~RNonCopyable</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
 
 </protected><private>private:
     <constructor_decl><name>RNonCopyable</name><parameter_list>(<param><decl><type><name>const</name> <name>RNonCopyable</name>&amp;</type></decl></param>)</parameter_list>;</constructor_decl>

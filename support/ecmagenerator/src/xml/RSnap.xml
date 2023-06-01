@@ -71,6 +71,13 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RSnap::Status" isPureVirtual="false" />
     </method>
+    <method name="setStatus" cppName="setStatus" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RSnap::Status" typeName="RSnap::Status" name="s"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getLastSnap" cppName="getLastSnap"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

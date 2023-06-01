@@ -63,6 +63,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getStatus, "getStatus");
             
+            REcmaHelper::registerFunction(&engine, proto, setStatus, "setStatus");
+            
             REcmaHelper::registerFunction(&engine, proto, getLastSnap, "getLastSnap");
             
             REcmaHelper::registerFunction(&engine, proto, reset, "reset");
@@ -738,6 +740,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSnap::getStatus", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSnap::setStatus
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSnap::setStatus", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSnap::setStatus";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSnap* self = 
+                        getSelf("setStatus", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RSnap::Status */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RSnap::Status
+                    a0 =
+                    (RSnap::Status)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setStatus(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSnap.setStatus().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSnap::setStatus", context, engine);
             return result;
         }
          QScriptValue

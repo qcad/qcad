@@ -67,6 +67,9 @@
         getStatus
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setStatus
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLastSnap
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

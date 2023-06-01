@@ -90,6 +90,11 @@
             );
         
     
+      void setStatus(
+                RSnap::Status s
+            );
+        
+    
       RVector getLastSnap(
                 
             );

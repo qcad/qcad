@@ -7,7 +7,6 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RMouseEvent" />
   <class_decl name="ROperation" />
   <class_decl name="RPropertyEvent" />
-  <class_decl name="RSnap" />
   <class_decl name="RSnapRestriction" />
   <class_decl name="RScriptHandler" />
   <class_decl name="RTransaction" />
@@ -425,6 +424,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
+    <method name="setAllowSnapInterruption"
+    cppName="setAllowSnapInterruption" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="updateAllEntities" cppName="updateAllEntities"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -610,6 +617,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getSnap" cppName="getSnap" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RSnap *" isPureVirtual="false" />
+    </method>
+    <method name="getSnapStatus" cppName="getSnapStatus"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RSnap::Status" isPureVirtual="false" />
     </method>
     <method name="setSnapRestriction" cppName="setSnapRestriction"
     specifier="public" isStatic="false" isVirtual="false"

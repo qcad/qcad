@@ -157,6 +157,11 @@
      */</comment>
     <function_decl><type><name>bool</name></type> <name>applyTransformationTo</name><parameter_list>(<param><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>REntity</name></argument>&gt;</argument_list></name>&amp;</type> <name>entity</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <function><type><name>QSharedPointer<argument_list>&lt;<argument><name>REntity</name></argument>&gt;</argument_list></name></type> <name>getTransformed</name><parameter_list>(<param><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>REntity</name></argument>&gt;</argument_list></name>&amp;</type> <name>entity</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <constructor_decl><name>applyTransformationTo</name><parameter_list>(<param><decl><type><name>entity</name></type></decl></param>)</parameter_list>;</constructor_decl>
+        <return>return <expr><name>entity</name></expr>;</return>
+    }</block></function>
+
     <function_decl><type><name>RTransform</name></type> <name>getTransform</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>RVector</name></type> <name>getColumnRowOffset</name><parameter_list>(<param><decl><type><name>int</name></type> <name>col</name></decl></param>, <param><decl><type><name>int</name></type> <name>row</name></decl></param>, <param><decl><type><name>bool</name></type> <name>rotated</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>

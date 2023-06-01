@@ -19,8 +19,6 @@
             
                 #include "RPropertyEvent.h"
             
-                #include "RSnap.h"
-            
                 #include "RSnapRestriction.h"
             
                 #include "RScriptHandler.h"
@@ -183,6 +181,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, disableMouseTracking, "disableMouseTracking");
             
+            REcmaHelper::registerFunction(&engine, proto, setAllowSnapInterruption, "setAllowSnapInterruption");
+            
             REcmaHelper::registerFunction(&engine, proto, updateAllEntities, "updateAllEntities");
             
             REcmaHelper::registerFunction(&engine, proto, regenerateScenes, "regenerateScenes");
@@ -222,6 +222,8 @@
             REcmaHelper::registerFunction(&engine, proto, setSnap, "setSnap");
             
             REcmaHelper::registerFunction(&engine, proto, getSnap, "getSnap");
+            
+            REcmaHelper::registerFunction(&engine, proto, getSnapStatus, "getSnapStatus");
             
             REcmaHelper::registerFunction(&engine, proto, setSnapRestriction, "setSnapRestriction");
             
@@ -3785,6 +3787,61 @@
             return result;
         }
          QScriptValue
+        REcmaDocumentInterface::setAllowSnapInterruption
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::setAllowSnapInterruption", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::setAllowSnapInterruption";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentInterface* self = 
+                        getSelf("setAllowSnapInterruption", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setAllowSnapInterruption(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.setAllowSnapInterruption().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::setAllowSnapInterruption", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaDocumentInterface::updateAllEntities
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -5692,6 +5749,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocumentInterface::getSnap", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentInterface::getSnapStatus
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::getSnapStatus", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::getSnapStatus";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentInterface* self = 
+                        getSelf("getSnapStatus", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RSnap::Status'
+    RSnap::Status cppResult =
+        
+               self->getSnapStatus();
+        // return type: RSnap::Status
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.getSnapStatus().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::getSnapStatus", context, engine);
             return result;
         }
          QScriptValue
