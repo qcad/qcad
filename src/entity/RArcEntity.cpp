@@ -229,6 +229,7 @@ QSharedPointer<REntity> RArcEntity::scaleNonUniform(REntity& entity, const RVect
             return QSharedPointer<REntity>();
         }
         REllipseEntity* e = new REllipseEntity(entity.getDocument(), REllipseData(*ellipseT));
+        e->copyAttributesFrom(entity.getData());
         return QSharedPointer<REntity>(e);
     }
     else if (RShape::isArcShape(*shapeT)) {
@@ -241,6 +242,7 @@ QSharedPointer<REntity> RArcEntity::scaleNonUniform(REntity& entity, const RVect
             return QSharedPointer<REntity>();
         }
         RArcEntity* cl = arcEntity->clone();
+        cl->copyAttributesFrom(entity.getData());
         cl->setShape(*arcT);
         return QSharedPointer<REntity>(cl);
     }
@@ -250,6 +252,7 @@ QSharedPointer<REntity> RArcEntity::scaleNonUniform(REntity& entity, const RVect
             return QSharedPointer<REntity>();
         }
         RCircleEntity* e = new RCircleEntity(entity.getDocument(), RCircleData(*circleT));
+        e->copyAttributesFrom(entity.getData());
         return QSharedPointer<REntity>(e);
     }
 
