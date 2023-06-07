@@ -1433,7 +1433,7 @@ ShapeAlgorithms.createCircleFrom3Points = function(point1, point2, point3) {
 
     var ret = RCircle.createFrom3Points(point1, point2, point3);
 
-    if (isNull(ret)) {
+    if (!ret.isValid()) {
         ShapeAlgorithms.error = qsTr("No circle possible.");
         return undefined;
     }
