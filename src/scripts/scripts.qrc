@@ -1937,9 +1937,11 @@
     <file alias="scripts/Modify/Explode/Tests/ExplodeTest03.js">../../scripts/Modify/Explode/Tests/ExplodeTest03.js</file>
     <file alias="scripts/Modify/Explode/Tests/ExplodeTest04.js">../../scripts/Modify/Explode/Tests/ExplodeTest04.js</file>
     <file alias="scripts/Modify/Explode/Tests/ExplodeTest05.js">../../scripts/Modify/Explode/Tests/ExplodeTest05.js</file>
+    <file alias="scripts/Modify/Explode/Tests/ExplodeTest06.js">../../scripts/Modify/Explode/Tests/ExplodeTest06.js</file>
     <file alias="scripts/Modify/Explode/Tests/data/attributes.dxf">../../scripts/Modify/Explode/Tests/data/attributes.dxf</file>
     <file alias="scripts/Modify/Explode/Tests/data/block.dxf">../../scripts/Modify/Explode/Tests/data/block.dxf</file>
     <file alias="scripts/Modify/Explode/Tests/data/block_attrib.dxf">../../scripts/Modify/Explode/Tests/data/block_attrib.dxf</file>
+    <file alias="scripts/Modify/Explode/Tests/data/block_nonuniform.dxf">../../scripts/Modify/Explode/Tests/data/block_nonuniform.dxf</file>
     <file alias="scripts/Modify/Explode/Tests/data/explodable.dxf">../../scripts/Modify/Explode/Tests/data/explodable.dxf</file>
     <file alias="scripts/Modify/Explode/Tests/data/splines.dxf">../../scripts/Modify/Explode/Tests/data/splines.dxf</file>
     <file alias="scripts/Modify/Explode/Tests/required/ExplodeTest00_000.dxf">../../scripts/Modify/Explode/Tests/required/ExplodeTest00_000.dxf</file>
@@ -1948,6 +1950,7 @@
     <file alias="scripts/Modify/Explode/Tests/required/ExplodeTest03_000.dxf">../../scripts/Modify/Explode/Tests/required/ExplodeTest03_000.dxf</file>
     <file alias="scripts/Modify/Explode/Tests/required/ExplodeTest04_000.dxf">../../scripts/Modify/Explode/Tests/required/ExplodeTest04_000.dxf</file>
     <file alias="scripts/Modify/Explode/Tests/required/ExplodeTest05_000.dxf">../../scripts/Modify/Explode/Tests/required/ExplodeTest05_000.dxf</file>
+    <file alias="scripts/Modify/Explode/Tests/required/ExplodeTest06_000.dxf">../../scripts/Modify/Explode/Tests/required/ExplodeTest06_000.dxf</file>
     <file alias="scripts/Modify/FlipHorizontal/FlipHorizontal-inverse.svg">../../scripts/Modify/FlipHorizontal/FlipHorizontal-inverse.svg</file>
     <file alias="scripts/Modify/FlipHorizontal/FlipHorizontal.js">../../scripts/Modify/FlipHorizontal/FlipHorizontal.js</file>
     <file alias="scripts/Modify/FlipHorizontal/FlipHorizontal.svg">../../scripts/Modify/FlipHorizontal/FlipHorizontal.svg</file>

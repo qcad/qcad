@@ -649,9 +649,60 @@ Explode.explodeEntity = function(entity, options) {
                     continue;
                 }
 
-                // ignore hatch in non-uniformly scaled block reference:
+                // hatch in non-uniformly scaled block reference:
                 if (!uniform && isHatchEntity(subEntity)) {
-                    EAction.handleUserWarning(qsTr("Ignored hatch in block reference with non-uniform scale factors"));
+                    // query source entity from block (no transform):
+                    var untransformedSubEntity = data.queryEntity(subIds[k], false);
+
+                    // explode source entity:
+                    var untransformedEntitites = Explode.explodeEntity(untransformedSubEntity, options);
+
+                    var explodedHatchData = undefined;
+                    if (subEntity.isSolid()) {
+                        // solid hatch: create new solid hatch:
+                        explodedHatchData = new RHatchData();
+                        explodedHatchData.newLoop();
+                    }
+
+                    // transform by block transforms:
+                    for (var n=0; n<untransformedEntitites.length; n++) {
+                        var untransformedEntity = untransformedEntitites[n];
+
+                        if (isShape(untransformedEntity)) {
+                            untransformedEntity = shapeToEntity(document, untransformedEntity);
+                        }
+
+                        e = data.getTransformed(untransformedEntity);
+
+                        if (!isNull(explodedHatchData)) {
+                            // solid hatch: add transformed boundary to exploded hatch entity:
+                            explodedHatchData.addBoundary(e.castToShape());
+                        }
+                        else {
+                            // hatch pattern: add transformed entity:
+                            e.setSelected(true);
+                            if (isFunction(subEntity.data)) {
+                                e.copyAttributesFrom(getPtr(subEntity));
+                            }
+                            else {
+                                e.copyAttributesFrom(subEntity);
+                            }
+                            ret.push(e);
+                        }
+                    }
+
+                    if (!isNull(explodedHatchData)) {
+                        // solid hatch: add new solid hatch:
+                        e = new RHatchEntity(document, explodedHatchData);
+                        e.setSelected(true);
+                        if (isFunction(subEntity.data)) {
+                            e.copyAttributesFrom(getPtr(subEntity));
+                        }
+                        else {
+                            e.copyAttributesFrom(subEntity);
+                        }
+                        ret.push(e);
+                    }
                     continue;
                 }
 
