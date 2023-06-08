@@ -32,6 +32,19 @@ ColorSettings.getPreferencesScope = function() {
     return "block";
 };
 
+ColorSettings.initPreferences = function(pageWidget, calledByPrefDialog, document) {
+    var defaults = [
+                [ "BackgroundColor", "#ffffff" ],
+    ];
+
+    for (var i=0; i<defaults.length; i++) {
+        var def = defaults[i];
+
+        var cb = pageWidget.findChild(def[0]);
+        cb.setColor(new RColor(def[1]));
+    }
+};
+
 ColorSettings.applyPreferences = function(doc, mdiChild) {
     if (isNull(doc) || isNull(mdiChild)) {
         return;
