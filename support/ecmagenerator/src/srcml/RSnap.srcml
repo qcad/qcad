@@ -112,6 +112,10 @@
         <return>return <expr><name>status</name></expr>;</return>
     }</block></function>
 
+    <function><type><name>void</name></type> <name>setStatus</name><parameter_list>(<param><decl><type><name><name>RSnap</name>::<name>Status</name></name></type> <name>s</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>status</name> = <name>s</name></expr>;</expr_stmt>
+    }</block></function>
+
     <function><type><name>RVector</name></type> <name>getLastSnap</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>lastSnap</name></expr>;</return>
     }</block></function>

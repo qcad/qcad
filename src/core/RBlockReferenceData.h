@@ -156,6 +156,11 @@ public:
      */
     bool applyTransformationTo(QSharedPointer<REntity>& entity) const;
 
+    QSharedPointer<REntity> getTransformed(QSharedPointer<REntity>& entity) const {
+        applyTransformationTo(entity);
+        return entity;
+    }
+
     RTransform getTransform() const;
 
     RVector getColumnRowOffset(int col, int row, bool rotated = false) const;

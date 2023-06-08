@@ -494,12 +494,6 @@ bool RBlockReferenceData::applyTransformationTo(REntity& entity) const {
 }
 
 bool RBlockReferenceData::applyTransformationTo(QSharedPointer<REntity>& entity) const {
-//    qDebug() << "swap";
-
-    //QSharedPointer<REntity> e = QSharedPointer<REntity>(new RBlockReferenceEntity(entity->getDocument(), RBlockReferenceData()));
-    //entity.swap(e);
-    //entity = ;
-
     QSharedPointer<RBlock> block = document->queryBlockDirect(referencedBlockId);
     if (block.isNull()) {
         qWarning("RBlockReferenceData::applyTransformationTo: "

@@ -171,6 +171,9 @@
         applyTransformationTo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getTransformed
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getTransform
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

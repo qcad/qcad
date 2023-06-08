@@ -217,6 +217,9 @@
         disableMouseTracking
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setAllowSnapInterruption
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         updateAllEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -275,6 +278,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getSnap
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getSnapStatus
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setSnapRestriction
