@@ -285,7 +285,7 @@
         <translation>Použít předvolby</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+52"/>
         <source>Restart required</source>
         <translation>Vyžadován restart</translation>
     </message>
@@ -4223,12 +4223,12 @@ již v seznamu je.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2127"/>
+        <location line="+2137"/>
         <source>Cancel</source>
         <translation>Storno</translation>
     </message>
     <message>
-        <location line="-2126"/>
+        <location line="-2136"/>
         <source>Done</source>
         <translation type="unfinished">Hotovo</translation>
     </message>
@@ -4244,7 +4244,7 @@ již v seznamu je.</translation>
         <translation>Žádný</translation>
     </message>
     <message>
-        <location line="+667"/>
+        <location line="+677"/>
         <source>Options</source>
         <translation>Možnosti</translation>
     </message>
@@ -7935,7 +7935,7 @@ již v seznamu je.</translation>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+60"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+61"/>
         <source>Language Settings</source>
         <translation>Nastavení jazyka</translation>
     </message>
@@ -12533,7 +12533,7 @@ již v seznamu je.</translation>
         <translation>&amp;Speciální znaky...</translation>
     </message>
     <message>
-        <location line="+342"/>
+        <location line="+348"/>
         <source>Others...</source>
         <translation>Další...</translation>
     </message>
@@ -13520,7 +13520,7 @@ již v seznamu je.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1156"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1163"/>
         <source>Restore defaults</source>
         <translation>Obnovit výchozí nastavení</translation>
     </message>

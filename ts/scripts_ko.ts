@@ -285,7 +285,7 @@
         <translation type="unfinished">기본 설정 적용</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+52"/>
         <source>Restart required</source>
         <translation type="unfinished">재시작 필요</translation>
     </message>
@@ -4217,12 +4217,12 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2127"/>
+        <location line="+2137"/>
         <source>Cancel</source>
         <translation type="unfinished">취소</translation>
     </message>
     <message>
-        <location line="-2126"/>
+        <location line="-2136"/>
         <source>Done</source>
         <translation type="unfinished">완료</translation>
     </message>
@@ -4238,7 +4238,7 @@ is already in the list.</source>
         <translation type="unfinished">없음</translation>
     </message>
     <message>
-        <location line="+667"/>
+        <location line="+677"/>
         <source>Options</source>
         <translation type="unfinished">옵션</translation>
     </message>
@@ -7927,7 +7927,7 @@ is already in the list.</source>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+60"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+61"/>
         <source>Language Settings</source>
         <translation type="unfinished">언어 설정</translation>
     </message>
@@ -12515,7 +12515,7 @@ is already in the list.</source>
         <translation type="unfinished">특수 문자...</translation>
     </message>
     <message>
-        <location line="+342"/>
+        <location line="+348"/>
         <source>Others...</source>
         <translation type="unfinished">기타...</translation>
     </message>
@@ -13502,7 +13502,7 @@ is already in the list.</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1156"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1163"/>
         <source>Restore defaults</source>
         <translation type="unfinished">기본값 복원</translation>
     </message>

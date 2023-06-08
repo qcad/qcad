@@ -285,7 +285,7 @@
         <translation>Použiť nastavenia</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+52"/>
         <source>Restart required</source>
         <translation>Vyžaduje reštart</translation>
     </message>
@@ -4225,12 +4225,12 @@ už existuje v zozname.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2127"/>
+        <location line="+2137"/>
         <source>Cancel</source>
         <translation>Zrušiť</translation>
     </message>
     <message>
-        <location line="-2126"/>
+        <location line="-2136"/>
         <source>Done</source>
         <translation>Hotovo</translation>
     </message>
@@ -4246,7 +4246,7 @@ už existuje v zozname.</translation>
         <translation>Žiadne</translation>
     </message>
     <message>
-        <location line="+667"/>
+        <location line="+677"/>
         <source>Options</source>
         <translation>Možnosti</translation>
     </message>
@@ -7937,7 +7937,7 @@ už existuje v zozname.</translation>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+60"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+61"/>
         <source>Language Settings</source>
         <translation>Voľba jazyka</translation>
     </message>
@@ -12535,7 +12535,7 @@ už existuje v zozname.</translation>
         <translation>&amp;Špeciálne Znaky...</translation>
     </message>
     <message>
-        <location line="+342"/>
+        <location line="+348"/>
         <source>Others...</source>
         <translation>Ďalšie...</translation>
     </message>
@@ -13522,7 +13522,7 @@ už existuje v zozname.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1156"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1163"/>
         <source>Restore defaults</source>
         <translation>Obnoviť predvolené</translation>
     </message>

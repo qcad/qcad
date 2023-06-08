@@ -285,7 +285,7 @@
         <translation type="unfinished">Alkalmazza a preferenciákat</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+52"/>
         <source>Restart required</source>
         <translation type="unfinished">Újraindítás szükséges</translation>
     </message>
@@ -4217,12 +4217,12 @@ már szerepel a listában.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2127"/>
+        <location line="+2137"/>
         <source>Cancel</source>
         <translation type="unfinished">Törölje</translation>
     </message>
     <message>
-        <location line="-2126"/>
+        <location line="-2136"/>
         <source>Done</source>
         <translation type="unfinished">Kész</translation>
     </message>
@@ -4238,7 +4238,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Nincs</translation>
     </message>
     <message>
-        <location line="+667"/>
+        <location line="+677"/>
         <source>Options</source>
         <translation type="unfinished">Opciók</translation>
     </message>
@@ -7927,7 +7927,7 @@ már szerepel a listában.</translation>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+60"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+61"/>
         <source>Language Settings</source>
         <translation type="unfinished">Nyelvi beállítások</translation>
     </message>
@@ -12515,7 +12515,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Különleges karakterek...</translation>
     </message>
     <message>
-        <location line="+342"/>
+        <location line="+348"/>
         <source>Others...</source>
         <translation type="unfinished">Mások...</translation>
     </message>
@@ -13502,7 +13502,7 @@ már szerepel a listában.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1156"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1163"/>
         <source>Restore defaults</source>
         <translation type="unfinished">Alapértelmezett beállítások visszaállítása</translation>
     </message>

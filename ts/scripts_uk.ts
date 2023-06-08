@@ -285,7 +285,7 @@
         <translation type="unfinished">Застосувати преференції</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+52"/>
         <source>Restart required</source>
         <translation type="unfinished">Потрібне перезавантаження</translation>
     </message>
@@ -4222,12 +4222,12 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2127"/>
+        <location line="+2137"/>
         <source>Cancel</source>
         <translation type="unfinished">Скасувати</translation>
     </message>
     <message>
-        <location line="-2126"/>
+        <location line="-2136"/>
         <source>Done</source>
         <translation type="unfinished">Зроблено</translation>
     </message>
@@ -4243,7 +4243,7 @@ is already in the list.</source>
         <translation type="unfinished">Немає</translation>
     </message>
     <message>
-        <location line="+667"/>
+        <location line="+677"/>
         <source>Options</source>
         <translation type="unfinished">Опції</translation>
     </message>
@@ -7934,7 +7934,7 @@ is already in the list.</source>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+60"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+61"/>
         <source>Language Settings</source>
         <translation type="unfinished">Налаштування мови</translation>
     </message>
@@ -12532,7 +12532,7 @@ is already in the list.</source>
         <translation type="unfinished">Спеціальні символи...</translation>
     </message>
     <message>
-        <location line="+342"/>
+        <location line="+348"/>
         <source>Others...</source>
         <translation type="unfinished">Інші...</translation>
     </message>
@@ -13519,7 +13519,7 @@ is already in the list.</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1156"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1163"/>
         <source>Restore defaults</source>
         <translation type="unfinished">Відновлення налаштувань за замовчуванням</translation>
     </message>

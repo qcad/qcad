@@ -285,7 +285,7 @@
         <translation>Aplicar preferencias</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+52"/>
         <source>Restart required</source>
         <translation>Se requiere reiniciar</translation>
     </message>
@@ -4221,12 +4221,12 @@ ya está en la lista.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2127"/>
+        <location line="+2137"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location line="-2126"/>
+        <location line="-2136"/>
         <source>Done</source>
         <translation>Terminar</translation>
     </message>
@@ -4242,7 +4242,7 @@ ya está en la lista.</translation>
         <translation>Ninguno</translation>
     </message>
     <message>
-        <location line="+667"/>
+        <location line="+677"/>
         <source>Options</source>
         <translation>Opciones</translation>
     </message>
@@ -7932,7 +7932,7 @@ ya está en la lista.</translation>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+60"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+61"/>
         <source>Language Settings</source>
         <translation>Configuración de idioma</translation>
     </message>
@@ -12525,7 +12525,7 @@ ya está en la lista.</translation>
         <translation>&amp;Caracteres especiales...</translation>
     </message>
     <message>
-        <location line="+342"/>
+        <location line="+348"/>
         <source>Others...</source>
         <translation>Otros...</translation>
     </message>
@@ -13512,7 +13512,7 @@ ya está en la lista.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1156"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1163"/>
         <source>Restore defaults</source>
         <translation>Restaurar los valores predeterminados</translation>
     </message>

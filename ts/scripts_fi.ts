@@ -285,7 +285,7 @@
         <translation>Käytä asetuksia</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+52"/>
         <source>Restart required</source>
         <translation>Uudelleenkäynnistys tarvitaan</translation>
     </message>
@@ -4221,12 +4221,12 @@ on jo luettelossa.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2127"/>
+        <location line="+2137"/>
         <source>Cancel</source>
         <translation>Peruuta</translation>
     </message>
     <message>
-        <location line="-2126"/>
+        <location line="-2136"/>
         <source>Done</source>
         <translation>Valmis</translation>
     </message>
@@ -4242,7 +4242,7 @@ on jo luettelossa.</translation>
         <translation>Ei mitään</translation>
     </message>
     <message>
-        <location line="+667"/>
+        <location line="+677"/>
         <source>Options</source>
         <translation>Asetukset</translation>
     </message>
@@ -7932,7 +7932,7 @@ on jo luettelossa.</translation>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+60"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+61"/>
         <source>Language Settings</source>
         <translation>Kieliasetukset</translation>
     </message>
@@ -12525,7 +12525,7 @@ on jo luettelossa.</translation>
         <translation>&amp;Erikoismerkit ...</translation>
     </message>
     <message>
-        <location line="+342"/>
+        <location line="+348"/>
         <source>Others...</source>
         <translation>Muut ...</translation>
     </message>
@@ -13512,7 +13512,7 @@ on jo luettelossa.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1156"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1163"/>
         <source>Restore defaults</source>
         <translation>Palauta oletusarvot</translation>
     </message>
