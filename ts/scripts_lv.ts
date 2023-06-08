@@ -285,7 +285,7 @@
         <translation type="unfinished">Piemērot preferences</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+52"/>
         <source>Restart required</source>
         <translation type="unfinished">Nepieciešams restartēt</translation>
     </message>
@@ -4222,12 +4222,12 @@ jau ir sarakstā.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2127"/>
+        <location line="+2137"/>
         <source>Cancel</source>
         <translation type="unfinished">Atcelt</translation>
     </message>
     <message>
-        <location line="-2126"/>
+        <location line="-2136"/>
         <source>Done</source>
         <translation type="unfinished">Paveikts</translation>
     </message>
@@ -4243,7 +4243,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Nav</translation>
     </message>
     <message>
-        <location line="+667"/>
+        <location line="+677"/>
         <source>Options</source>
         <translation type="unfinished">Iespējas</translation>
     </message>
@@ -7934,7 +7934,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+60"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+61"/>
         <source>Language Settings</source>
         <translation type="unfinished">Valodas iestatījumi</translation>
     </message>
@@ -12532,7 +12532,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Īpašie rakstzīmes...</translation>
     </message>
     <message>
-        <location line="+342"/>
+        <location line="+348"/>
         <source>Others...</source>
         <translation type="unfinished">Citi...</translation>
     </message>
@@ -13519,7 +13519,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1156"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1163"/>
         <source>Restore defaults</source>
         <translation type="unfinished">Atjaunot noklusējuma iestatījumus</translation>
     </message>

@@ -285,7 +285,7 @@
         <translation>設定を適用</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+52"/>
         <source>Restart required</source>
         <translation>再起動が必要</translation>
     </message>
@@ -4217,12 +4217,12 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2127"/>
+        <location line="+2137"/>
         <source>Cancel</source>
         <translation>キャンセル</translation>
     </message>
     <message>
-        <location line="-2126"/>
+        <location line="-2136"/>
         <source>Done</source>
         <translation type="unfinished">完了</translation>
     </message>
@@ -4238,7 +4238,7 @@ is already in the list.</source>
         <translation>なし</translation>
     </message>
     <message>
-        <location line="+667"/>
+        <location line="+677"/>
         <source>Options</source>
         <translation>オプション</translation>
     </message>
@@ -7927,7 +7927,7 @@ is already in the list.</source>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+60"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+61"/>
         <source>Language Settings</source>
         <translation>言語設定</translation>
     </message>
@@ -12515,7 +12515,7 @@ is already in the list.</source>
         <translation>&amp;S 特殊文字...</translation>
     </message>
     <message>
-        <location line="+342"/>
+        <location line="+348"/>
         <source>Others...</source>
         <translation>その他...</translation>
     </message>
@@ -13502,7 +13502,7 @@ is already in the list.</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1156"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1163"/>
         <source>Restore defaults</source>
         <translation>デフォルトを置き換え</translation>
     </message>

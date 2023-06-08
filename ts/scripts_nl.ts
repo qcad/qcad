@@ -285,7 +285,7 @@
         <translation>Voorkeuren toepassen</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+52"/>
         <source>Restart required</source>
         <translation>Herstart nodig</translation>
     </message>
@@ -4221,12 +4221,12 @@ is al in de lijst.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2127"/>
+        <location line="+2137"/>
         <source>Cancel</source>
         <translation>Annuleer</translation>
     </message>
     <message>
-        <location line="-2126"/>
+        <location line="-2136"/>
         <source>Done</source>
         <translation>Klaar</translation>
     </message>
@@ -4242,7 +4242,7 @@ is al in de lijst.</translation>
         <translation>Geen</translation>
     </message>
     <message>
-        <location line="+667"/>
+        <location line="+677"/>
         <source>Options</source>
         <translation>Opties</translation>
     </message>
@@ -7932,7 +7932,7 @@ is al in de lijst.</translation>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+60"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+61"/>
         <source>Language Settings</source>
         <translation>Taal instellingen</translation>
     </message>
@@ -12525,7 +12525,7 @@ is al in de lijst.</translation>
         <translation>&amp;Speciale tekens...</translation>
     </message>
     <message>
-        <location line="+342"/>
+        <location line="+348"/>
         <source>Others...</source>
         <translation>Andere...</translation>
     </message>
@@ -13512,7 +13512,7 @@ is al in de lijst.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1156"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1163"/>
         <source>Restore defaults</source>
         <translation>Standaardinstellingen herstellen</translation>
     </message>

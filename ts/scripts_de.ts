@@ -285,7 +285,7 @@
         <translation>Einstellungen anwenden</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+52"/>
         <source>Restart required</source>
         <translation>Neustart</translation>
     </message>
@@ -4221,12 +4221,12 @@ ist bereits in der Liste.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2127"/>
+        <location line="+2137"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location line="-2126"/>
+        <location line="-2136"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
@@ -4242,7 +4242,7 @@ ist bereits in der Liste.</translation>
         <translation>Kein</translation>
     </message>
     <message>
-        <location line="+667"/>
+        <location line="+677"/>
         <source>Options</source>
         <translation>Optionen</translation>
     </message>
@@ -7932,7 +7932,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+60"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+61"/>
         <source>Language Settings</source>
         <translation>Spracheinstellungen</translation>
     </message>
@@ -12495,7 +12495,7 @@ ist bereits in der Liste.</translation>
         <translation>&amp;Unterstreichen</translation>
     </message>
     <message>
-        <location line="+518"/>
+        <location line="+524"/>
         <source>Degree</source>
         <translation>Grad</translation>
     </message>
@@ -12677,7 +12677,7 @@ ist bereits in der Liste.</translation>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="-551"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="-557"/>
         <source>&amp;Bold</source>
         <translation>&amp;Fett</translation>
     </message>
@@ -12707,7 +12707,7 @@ ist bereits in der Liste.</translation>
         <translation>&amp;Sonderzeichen...</translation>
     </message>
     <message>
-        <location line="+342"/>
+        <location line="+348"/>
         <source>Others...</source>
         <translation>Andere...</translation>
     </message>
@@ -13512,7 +13512,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1156"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1163"/>
         <source>Restore defaults</source>
         <translation>Standardwerte wieder herstellen</translation>
     </message>

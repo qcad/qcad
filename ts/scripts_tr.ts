@@ -285,7 +285,7 @@
         <translation>Tercihleri uygula</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+52"/>
         <source>Restart required</source>
         <translation>Yeniden başlatmak gerekir</translation>
     </message>
@@ -4216,12 +4216,12 @@ zaten listede.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2127"/>
+        <location line="+2137"/>
         <source>Cancel</source>
         <translation type="unfinished">İptal</translation>
     </message>
     <message>
-        <location line="-2126"/>
+        <location line="-2136"/>
         <source>Done</source>
         <translation type="unfinished">Bitti</translation>
     </message>
@@ -4237,7 +4237,7 @@ zaten listede.</translation>
         <translation type="unfinished">Yok</translation>
     </message>
     <message>
-        <location line="+667"/>
+        <location line="+677"/>
         <source>Options</source>
         <translation type="unfinished">Seçenekler</translation>
     </message>
@@ -7926,7 +7926,7 @@ zaten listede.</translation>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+60"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+61"/>
         <source>Language Settings</source>
         <translation>Dil Ayarları</translation>
     </message>
@@ -12514,7 +12514,7 @@ zaten listede.</translation>
         <translation type="unfinished">Özel Karakterler...</translation>
     </message>
     <message>
-        <location line="+342"/>
+        <location line="+348"/>
         <source>Others...</source>
         <translation type="unfinished">Diğerleri.</translation>
     </message>
@@ -13501,7 +13501,7 @@ zaten listede.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1156"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1163"/>
         <source>Restore defaults</source>
         <translation type="unfinished">Varsayılanları geri yükle</translation>
     </message>

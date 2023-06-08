@@ -285,7 +285,7 @@
         <translation>Aplicar preferências</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+52"/>
         <source>Restart required</source>
         <translation>Reinício necessário</translation>
     </message>
@@ -4221,12 +4221,12 @@ já se encontra na lista.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2127"/>
+        <location line="+2137"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location line="-2126"/>
+        <location line="-2136"/>
         <source>Done</source>
         <translation>Concluído</translation>
     </message>
@@ -4242,7 +4242,7 @@ já se encontra na lista.</translation>
         <translation>Nenhum</translation>
     </message>
     <message>
-        <location line="+667"/>
+        <location line="+677"/>
         <source>Options</source>
         <translation>Opções</translation>
     </message>
@@ -7932,7 +7932,7 @@ já se encontra na lista.</translation>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+60"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+61"/>
         <source>Language Settings</source>
         <translation>Configurações de Linguagem</translation>
     </message>
@@ -12525,7 +12525,7 @@ já se encontra na lista.</translation>
         <translation>&amp;Caracteres Especiais...</translation>
     </message>
     <message>
-        <location line="+342"/>
+        <location line="+348"/>
         <source>Others...</source>
         <translation>Outros...</translation>
     </message>
@@ -13512,7 +13512,7 @@ já se encontra na lista.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1156"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1163"/>
         <source>Restore defaults</source>
         <translation>Restaurar inadimplências</translation>
     </message>

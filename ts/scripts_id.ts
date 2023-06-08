@@ -285,7 +285,7 @@
         <translation type="unfinished">Menerapkan preferensi</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+52"/>
         <source>Restart required</source>
         <translation type="unfinished">Diperlukan restart</translation>
     </message>
@@ -4217,12 +4217,12 @@ sudah ada dalam daftar.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2127"/>
+        <location line="+2137"/>
         <source>Cancel</source>
         <translation type="unfinished">Batal</translation>
     </message>
     <message>
-        <location line="-2126"/>
+        <location line="-2136"/>
         <source>Done</source>
         <translation type="unfinished">Selesai</translation>
     </message>
@@ -4238,7 +4238,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Tidak ada</translation>
     </message>
     <message>
-        <location line="+667"/>
+        <location line="+677"/>
         <source>Options</source>
         <translation type="unfinished">Pilihan</translation>
     </message>
@@ -7927,7 +7927,7 @@ sudah ada dalam daftar.</translation>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+60"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+61"/>
         <source>Language Settings</source>
         <translation type="unfinished">Pengaturan Bahasa</translation>
     </message>
@@ -12515,7 +12515,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Karakter Khusus...</translation>
     </message>
     <message>
-        <location line="+342"/>
+        <location line="+348"/>
         <source>Others...</source>
         <translation type="unfinished">Lainnya...</translation>
     </message>
@@ -13502,7 +13502,7 @@ sudah ada dalam daftar.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1156"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1163"/>
         <source>Restore defaults</source>
         <translation type="unfinished">Memulihkan default</translation>
     </message>
