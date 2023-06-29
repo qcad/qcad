@@ -36,7 +36,7 @@ AppPreferences.init = function(basePath) {
 
     // macOS also has a preferences menu under the application menu
     // (only if macOS is configured to use the same language as the application):
-    if (RS.getSystemId() === "osx") {
+    if (RS.getSystemId() === "osx" && !RSettings.getOriginalArguments().contains("-no-pref-menu")) {
         var sysLang = QLocale.system().name();
         if (sysLang.length>=2) {
             sysLang = sysLang.substring(0,2);
