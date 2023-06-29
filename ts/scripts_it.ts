@@ -967,7 +967,7 @@ Vuoi recuperarlo?</translation>
     <message>
         <location filename="../scripts/Snap/SnapAuto/PreferencesPage.ui" line="+17"/>
         <source>Auto Snap</source>
-        <translation>Scatto automatico</translation>
+        <translation>Snap automatico</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -5788,17 +5788,17 @@ is already in the list.</source>
     <message>
         <location line="+64"/>
         <source>Cursor Range</source>
-        <translation>Gamma cursore del mouse</translation>
+        <translation>Intervallo del cursore</translation>
     </message>
     <message>
         <location line="+109"/>
         <source>Cursor range for snap:</source>
-        <translation>Gamma cursore del mouse di scatto:</translation>
+        <translation>Intervallo del cursore per lo snap:</translation>
     </message>
     <message>
         <location line="-7"/>
         <source>Cursor range for picking entities:</source>
-        <translation>Gamma cursore per scegliere le entità:</translation>
+        <translation>Intervallo del cursore per la selezione delle entità:</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GridPreferences/PreferencesPage.ui" line="+34"/>
@@ -6131,7 +6131,7 @@ is already in the list.</source>
     <message>
         <location line="+30"/>
         <source>Snap Tools</source>
-        <translation>Strumenti scatto</translation>
+        <translation>Strumenti snap</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -11746,12 +11746,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/Snap.js" line="+57"/>
         <source>Snap Tools</source>
-        <translation>Strumenti scatto</translation>
+        <translation>Strumenti snap</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Snap</source>
-        <translation>&amp;Scatto</translation>
+        <translation>&amp;Snap</translation>
     </message>
 </context>
 <context>
@@ -11764,12 +11764,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAuto.js" line="+34"/>
         <source>Snap</source>
-        <translation>Scatto</translation>
+        <translation>Snap</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Auto Snap</source>
-        <translation>Scatto automatico</translation>
+        <translation>Snap automatico</translation>
     </message>
 </context>
 <context>
@@ -11876,7 +11876,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap distance:</source>
-        <translation>Distanza di scatto:</translation>
+        <translation>Distanza di snap:</translation>
     </message>
 </context>
 <context>
@@ -11904,7 +11904,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap distance:</source>
-        <translation>Distanza di scatto:</translation>
+        <translation>Distanza di snap:</translation>
     </message>
     <message>
         <location line="+72"/>
@@ -11964,7 +11964,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManual.js" line="+47"/>
         <source>Snap</source>
-        <translation>Scatto</translation>
+        <translation>Snap</translation>
     </message>
     <message>
         <location line="+0"/>
