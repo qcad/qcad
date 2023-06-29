@@ -1002,7 +1002,8 @@ EAction.getMenu = function(title, objectName, initFunction) {
     if (isNull(menu)) {
         menu = new QMenu(title, menuBar);
         menu.objectName = objectName;
-        menuBar.addMenu(menu);
+        var action = menuBar.addMenu(menu);
+        action.objectName = objectName + "Action";
         if (initFunction != undefined) {
             initFunction(menu);
         }
