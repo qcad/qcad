@@ -45,6 +45,8 @@ function WindowZoom(guiAction) {
             mask = new QBitmap(WindowZoom.includeBasePath + "/WindowZoomCursorMask.png", "PNG");
             this.cursor = new QCursor(bitmap, mask, 12, 12);
         }
+        var appWin = EAction.getMainWindow();
+        appWin.setProperty("MouseCursor", "WindowZoomCursor");
     }
 }
 
