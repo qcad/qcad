@@ -36,11 +36,11 @@ AbstractPreferences.includeBasePath = includeBasePath;
 AbstractPreferences.prototype.beginEvent = function() {
     Edit.prototype.beginEvent.call(this);
     
-    this.dialog = this.createWidget(AbstractPreferences.includeBasePath + "/AbstractPreferences.ui");
+    this.dialog = this.createDialog(AbstractPreferences.includeBasePath + "/AbstractPreferences.ui");
     // TODO: Qt 5: add this flag (?)
     //var flags = new Qt.WindowFlags(Qt.WindowTitleHint);
     //this.dialog.setWindowFlags(flags);
-    this.treeWidget = this.dialog.findChild("twCategory");
+    this.treeWidget = this.dialog.findChild("Category");
     var title;
     if (this.appPreferences) {
         title = qsTr("Application Preferences");
@@ -49,9 +49,9 @@ AbstractPreferences.prototype.beginEvent = function() {
     }
     this.dialog.setWindowTitle(title);
     this.treeWidget.setHeaderLabel(title);
-    this.pageWidget = this.dialog.findChild("stwPage");
-    this.filterWidget = this.dialog.findChild("leFilter");
-    this.titleWidget = this.dialog.findChild("lbTitle");
+    this.pageWidget = this.dialog.findChild("Page");
+    this.filterWidget = this.dialog.findChild("Filter");
+    this.titleWidget = this.dialog.findChild("Title");
     
     var splitter = this.dialog.findChild("splitter");
     splitter.setStretchFactor(0, 1);
@@ -87,6 +87,10 @@ AbstractPreferences.prototype.beginEvent = function() {
  * Initializes the navigation tree based on available add-ons with preferences.
  */
 AbstractPreferences.fillTreeWidget = function(addOns, treeWidget, appPreferences) {
+
+    var appWin = EAction.getMainWindow();
+    var defaultPage = appWin.property("PreferencesPage");
+
     for (var i = 0; i < addOns.length; ++i) {
         var addOn = addOns[i];
         var className = addOn.getClassName();
@@ -144,23 +148,28 @@ AbstractPreferences.fillTreeWidget = function(addOns, treeWidget, appPreferences
         }
         var parent = item;
         for (var x = 1; x < cat.length; ++x) {
-            var subitem;
-            subitem = undefined;
+            var subItem;
+            subItem = undefined;
             for (var c = 0; c < parent.childCount(); ++c) {
                 var child = parent.child(c);
                 if (child.text(0) === cat[x]) {
-                    subitem = child;
+                    subItem = child;
                     break;
                 }
             }
-            if (isNull(subitem)) {
-                subitem = new QTreeWidgetItem(parent, [ cat[x] ]);
-                parent.addChild(subitem);
+            if (isNull(subItem)) {
+                subItem = new QTreeWidgetItem(parent, [ cat[x] ]);
+                parent.addChild(subItem);
                 if (x == cat.length - 1) {
-                    subitem.setData(0, Qt.UserRole, i);
+                    subItem.setData(0, Qt.UserRole, i);
+
+                    // select a default page:
+                    if (className===defaultPage) {
+                        subItem.setSelected(true);
+                    }
                 }
             }
-            parent = subitem;
+            parent = subItem;
         }
     }
     treeWidget.sortItems(0, Qt.AscendingOrder);
