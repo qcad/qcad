@@ -251,7 +251,7 @@ CadToolBar.initStyle = function() {
                         + "  background-color: #606060;"
                         + "}";
                 appWin.styleSheet =
-                        "QToolBar > QToolButton {"
+                          "QToolBar > QToolButton {"
                              // make sure unchecked button renders with same size as checked
                              // prevents things from moving around when checking / unchecking
                         + "  border: 1px solid transparent;"
@@ -268,7 +268,7 @@ CadToolBar.initStyle = function() {
             }
             else {
                 toolBar.styleSheet =
-                        "QToolButton {"
+                          "QToolButton {"
                         + "  border: 1px solid #969696;"
                         + "  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #f8f8f8, stop: 0.2 #e3e3e3, stop: 1 #f9f9f9);"
                         + "}"
