@@ -62,6 +62,8 @@ function RBlockListQt(parent, addListener, showHeader) {
     this.setColumnWidth(BlockList.colVisible, 22);
     this.setColumnWidth(BlockList.colEdit, 22);
 
+    this.selectionMode = QAbstractItemView.ExtendedSelection;
+
     var self = this;
     if (addListener) {
         var appWin = EAction.getMainWindow();
@@ -512,6 +514,16 @@ BlockList.getActiveItem = function() {
     }
 
     return blockList.getActiveItem();
+};
+
+BlockList.getSelectedItems = function() {
+    var appWin = RMainWindowQt.getMainWindow();
+    var blockList = appWin.findChild("BlockList");
+    if (isNull(blockList)) {
+        return undefined;
+    }
+
+    return blockList.selectedItems();
 };
 
 /**
