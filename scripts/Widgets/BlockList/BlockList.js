@@ -62,8 +62,6 @@ function RBlockListQt(parent, addListener, showHeader) {
     this.setColumnWidth(BlockList.colVisible, 22);
     this.setColumnWidth(BlockList.colEdit, 22);
 
-    this.selectionMode = QAbstractItemView.ExtendedSelection;
-
     var self = this;
     if (addListener) {
         var appWin = EAction.getMainWindow();
