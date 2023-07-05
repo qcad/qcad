@@ -192,7 +192,7 @@ QPair<QVariant, RPropertyAttributes> RLayer::getProperty(RPropertyTypeId& proper
         return qMakePair(QVariant(isLocked()), RPropertyAttributes());
     }
     if (propertyTypeId == PropertyCollapsed) {
-        return qMakePair(QVariant(isCollapsed()), RPropertyAttributes(RPropertyAttributes::Invisible));
+        return qMakePair(QVariant(isCollapsed()), RPropertyAttributes());
     }
     if (propertyTypeId == PropertyPlottable) {
         return qMakePair(QVariant(isPlottable()), RPropertyAttributes());
@@ -201,7 +201,7 @@ QPair<QVariant, RPropertyAttributes> RLayer::getProperty(RPropertyTypeId& proper
         return qMakePair(QVariant(isSnappable()), RPropertyAttributes());
     }
     if (propertyTypeId == PropertyOffIsFreeze) {
-        return qMakePair(QVariant(isOffIsFreeze()), RPropertyAttributes());
+        return qMakePair(QVariant(isOffIsFreeze()), RPropertyAttributes(RPropertyAttributes::Invisible));
     }
     if (propertyTypeId == PropertyColor) {
         QVariant v;
