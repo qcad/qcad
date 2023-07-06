@@ -514,6 +514,16 @@ BlockList.getActiveItem = function() {
     return blockList.getActiveItem();
 };
 
+BlockList.getSelectedItems = function() {
+    var appWin = RMainWindowQt.getMainWindow();
+    var blockList = appWin.findChild("BlockList");
+    if (isNull(blockList)) {
+        return undefined;
+    }
+
+    return blockList.selectedItems();
+};
+
 /**
  * Shows / hides the block list.
  */
