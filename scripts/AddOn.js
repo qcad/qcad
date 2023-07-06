@@ -104,6 +104,7 @@ AddOn.prototype.initAddOn = function(splash, text) {
 
     var initFilePath = this.getInitFilePath();
     if (new QFileInfo(initFilePath).exists()) {
+        // include Init file of action (e.g. MyActionInit.js) and call global init function:
         include(initFilePath, className, true);
         init(includeBasePath);
     }
