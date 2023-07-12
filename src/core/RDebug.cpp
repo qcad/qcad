@@ -143,8 +143,22 @@ void RDebug::printCounter(const QString& id) {
 }
 
 void RDebug::printCounters(const QString& prefix) {
-    QStringList keys = counter.keys();
-    for (int i=0; i<keys.length(); i++) {
-        qDebug() << prefix << "counter: " << keys[i] << ": " << counter[keys[i]];
+    std::vector<std::pair<QString, int>> sortedPairs;
+    for (auto it = counter.begin(); it != counter.end(); ++it) {
+        sortedPairs.push_back(std::pair<QString, int>(it.key(), it.value()));
     }
+
+    std::sort(sortedPairs.begin(), sortedPairs.end(),
+              [](const std::pair<QString, int>& a, const std::pair<QString, int>& b) {
+                  return a.second < b.second;
+              });
+
+    for (const auto& pair : sortedPairs) {
+        qDebug() << prefix << "counter: " << pair.first << ": " << pair.second;
+    }
+
+//    QStringList keys = counter.keys();
+//    for (int i=0; i<keys.length(); i++) {
+//        qDebug() << prefix << "counter: " << keys[i] << ": " << counter[keys[i]];
+//    }
 }
