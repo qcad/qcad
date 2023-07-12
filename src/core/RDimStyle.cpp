@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 #include "RDimStyle.h"
-#include "RSettings.h"
 #include "RDxfServices.h"
 #include "RDocument.h"
 
