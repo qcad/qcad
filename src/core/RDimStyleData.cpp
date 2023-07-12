@@ -122,7 +122,8 @@ void RDimStyleData::initFromSettings() {
     setDouble(RS::DIMEXE, RSettings::getDoubleValue("DimensionSettings/DIMEXE", getDoubleDefault(RS::DIMEXE)));
     setDouble(RS::DIMEXO, RSettings::getDoubleValue("DimensionSettings/DIMEXO", getDoubleDefault(RS::DIMEXO)));
 
-    setInt(RS::DIMTAD, RSettings::getIntValue("DimensionSettings/DIMTAD", getIntDefault(RS::DIMTAD)));
+    // preference is stored in settings as true/false:
+    setInt(RS::DIMTAD, (int)RSettings::getBoolValue("DimensionSettings/DIMTAD", getIntDefault(RS::DIMTAD)));
     setBool(RS::DIMTIH, RSettings::getBoolValue("DimensionSettings/DIMTIH", getBoolDefault(RS::DIMTIH)));
 
     setDouble(RS::DIMDLI, RSettings::getDoubleValue("DimensionSettings/DIMDLI", getDoubleDefault(RS::DIMDLI)));
