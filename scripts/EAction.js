@@ -148,9 +148,12 @@ EAction.prototype.finishEvent = function() {
     // reset CAD tool bar:
     if (!isNull(guiAction) && guiAction.getGroup() === "") {
         var appWin = EAction.getMainWindow();
-        var cadToolBar = appWin.findChild("CadToolBar");
-        if (!isNull(cadToolBar) && cadToolBar.getCurrentPanelName()==="SnapToolsPanel") {
-            cadToolBar.back();
+        if (!isNull(appWin)) {
+            // appWin can be NULL if it is being deleted
+            var cadToolBar = appWin.findChild("CadToolBar");
+            if (!isNull(cadToolBar) && cadToolBar.getCurrentPanelName()==="SnapToolsPanel") {
+                cadToolBar.back();
+            }
         }
     }
 
