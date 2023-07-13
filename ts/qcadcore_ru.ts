@@ -696,7 +696,7 @@
         <translation>Максимальные степени</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+862"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+856"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Обнаружена круговая (рекурсивная) ссылка на блок:</translation>
     </message>
@@ -706,7 +706,7 @@
         <translation>Имя блока:</translation>
     </message>
     <message>
-        <location filename="../src/core/RDimStyle.cpp" line="+72"/>
+        <location filename="../src/core/RDimStyle.cpp" line="+71"/>
         <source>Style</source>
         <translation>Стиль</translation>
     </message>

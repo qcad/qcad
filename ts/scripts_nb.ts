@@ -280,7 +280,7 @@
         <translation type="unfinished">Tegningspreferanser</translation>
     </message>
     <message>
-        <location line="+313"/>
+        <location line="+322"/>
         <source>Apply preferences</source>
         <translation type="unfinished">Bruk preferanser</translation>
     </message>
@@ -1320,7 +1320,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+53"/>
+        <location line="+63"/>
         <location line="+44"/>
         <source>Block List</source>
         <translation type="unfinished">Blokkeringsliste</translation>
@@ -4221,17 +4221,17 @@ er allerede i listen.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2137"/>
+        <location line="+2141"/>
         <source>Cancel</source>
         <translation type="unfinished">Avbryt</translation>
     </message>
     <message>
-        <location line="-2136"/>
+        <location line="-2140"/>
         <source>Done</source>
         <translation type="unfinished">Ferdig</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+280"/>
         <location line="+144"/>
         <source>Active Tool:</source>
         <translation type="unfinished">Aktivt verktøy:</translation>
@@ -4242,7 +4242,7 @@ er allerede i listen.</translation>
         <translation type="unfinished">Ingen</translation>
     </message>
     <message>
-        <location line="+677"/>
+        <location line="+678"/>
         <source>Options</source>
         <translation type="unfinished">Alternativer</translation>
     </message>
@@ -5124,11 +5124,6 @@ er allerede i listen.</translation>
         <location line="+0"/>
         <source>Explode</source>
         <translation type="unfinished">Eksplodere</translation>
-    </message>
-    <message>
-        <location line="+624"/>
-        <source>Ignored hatch in block reference with non-uniform scale factors</source>
-        <translation type="unfinished">Ignorert skravering i blokkreferanse med ujevne skalafaktorer</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
@@ -9904,13 +9899,13 @@ er allerede i listen.</translation>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.ui" line="+14"/>
-        <location line="+71"/>
-        <location line="+21"/>
+        <location line="+98"/>
+        <location line="+20"/>
         <source>Preferences</source>
         <translation type="unfinished">Preferanser</translation>
     </message>
     <message>
-        <location line="-74"/>
+        <location line="-85"/>
         <source>Filter</source>
         <translation type="unfinished">Filter</translation>
     </message>
@@ -9925,7 +9920,7 @@ er allerede i listen.</translation>
         <translation type="unfinished">Kollapstreet</translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="+78"/>
         <source>Restore to Default Values</source>
         <translation type="unfinished">Gjenopprett til standardverdier</translation>
     </message>

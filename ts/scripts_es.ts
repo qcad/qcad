@@ -280,7 +280,7 @@
         <translation>Preferencias del dibujo</translation>
     </message>
     <message>
-        <location line="+313"/>
+        <location line="+322"/>
         <source>Apply preferences</source>
         <translation>Aplicar preferencias</translation>
     </message>
@@ -1315,13 +1315,13 @@ Do you wish to recover it?</source>
     <name>BlockList</name>
     <message>
         <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
-        <location line="+53"/>
+        <location line="+63"/>
         <location line="+44"/>
         <source>Block List</source>
         <translation>Lista de bloques</translation>
     </message>
     <message>
-        <location line="-97"/>
+        <location line="-107"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -4221,17 +4221,17 @@ ya está en la lista.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2137"/>
+        <location line="+2141"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location line="-2136"/>
+        <location line="-2140"/>
         <source>Done</source>
         <translation>Terminar</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+280"/>
         <location line="+144"/>
         <source>Active Tool:</source>
         <translation>Herramienta activa:</translation>
@@ -4242,7 +4242,7 @@ ya está en la lista.</translation>
         <translation>Ninguno</translation>
     </message>
     <message>
-        <location line="+677"/>
+        <location line="+678"/>
         <source>Options</source>
         <translation>Opciones</translation>
     </message>
@@ -5129,11 +5129,6 @@ ya está en la lista.</translation>
         <location line="+0"/>
         <source>Explode</source>
         <translation>Expota</translation>
-    </message>
-    <message>
-        <location line="+624"/>
-        <source>Ignored hatch in block reference with non-uniform scale factors</source>
-        <translation>Sombreado ignorado en referencia de bloque con factores de escala no uniformes</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+244"/>
@@ -9904,13 +9899,13 @@ ya está en la lista.</translation>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.ui" line="+14"/>
-        <location line="+71"/>
-        <location line="+21"/>
+        <location line="+98"/>
+        <location line="+20"/>
         <source>Preferences</source>
         <translation>Preferencias</translation>
     </message>
     <message>
-        <location line="-74"/>
+        <location line="-85"/>
         <source>Filter</source>
         <translation>Filtro</translation>
     </message>
@@ -9925,7 +9920,7 @@ ya está en la lista.</translation>
         <translation>Colapso de navegación</translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="+78"/>
         <source>Restore to Default Values</source>
         <translation>Restaurar los valores</translation>
     </message>

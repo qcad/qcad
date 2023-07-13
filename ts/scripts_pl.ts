@@ -280,7 +280,7 @@
         <translation type="unfinished">Preferencje rysowania</translation>
     </message>
     <message>
-        <location line="+313"/>
+        <location line="+322"/>
         <source>Apply preferences</source>
         <translation type="unfinished">Zastosuj preferencje</translation>
     </message>
@@ -1317,13 +1317,13 @@ Czy chcesz go odzyskać?</translation>
     <name>BlockList</name>
     <message>
         <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
-        <location line="+53"/>
+        <location line="+63"/>
         <location line="+44"/>
         <source>Block List</source>
         <translation type="unfinished">Lista bloków</translation>
     </message>
     <message>
-        <location line="-97"/>
+        <location line="-107"/>
         <source>Widgets</source>
         <translation>Widżety</translation>
     </message>
@@ -4225,17 +4225,17 @@ jest już na liście.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2137"/>
+        <location line="+2141"/>
         <source>Cancel</source>
         <translation type="unfinished">Anuluj</translation>
     </message>
     <message>
-        <location line="-2136"/>
+        <location line="-2140"/>
         <source>Done</source>
         <translation type="unfinished">Gotowe</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+280"/>
         <location line="+144"/>
         <source>Active Tool:</source>
         <translation type="unfinished">Aktywne narzędzie:</translation>
@@ -4246,7 +4246,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Brak</translation>
     </message>
     <message>
-        <location line="+677"/>
+        <location line="+678"/>
         <source>Options</source>
         <translation type="unfinished">Opcje</translation>
     </message>
@@ -5129,11 +5129,6 @@ jest już na liście.</translation>
         <location line="+0"/>
         <source>Explode</source>
         <translation type="unfinished">Eksploduj</translation>
-    </message>
-    <message>
-        <location line="+624"/>
-        <source>Ignored hatch in block reference with non-uniform scale factors</source>
-        <translation type="unfinished">Ignorowane kreskowanie w odniesieniu do bloku z niejednolitymi współczynnikami skalowania</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
@@ -9911,13 +9906,13 @@ jest już na liście.</translation>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.ui" line="+14"/>
-        <location line="+71"/>
-        <location line="+21"/>
+        <location line="+98"/>
+        <location line="+20"/>
         <source>Preferences</source>
         <translation type="unfinished">Preferencje</translation>
     </message>
     <message>
-        <location line="-74"/>
+        <location line="-85"/>
         <source>Filter</source>
         <translation type="unfinished">Filtr</translation>
     </message>
@@ -9932,7 +9927,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Zawalić drzewo</translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="+78"/>
         <source>Restore to Default Values</source>
         <translation type="unfinished">Przywrócenie wartości domyślnych</translation>
     </message>

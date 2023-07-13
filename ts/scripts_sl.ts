@@ -280,7 +280,7 @@
         <translation>Nastavitve risbe</translation>
     </message>
     <message>
-        <location line="+313"/>
+        <location line="+322"/>
         <source>Apply preferences</source>
         <translation>Uveljavi nastavitve</translation>
     </message>
@@ -1315,13 +1315,13 @@ Ali jo želite obnoviti?</translation>
     <name>BlockList</name>
     <message>
         <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
-        <location line="+53"/>
+        <location line="+63"/>
         <location line="+44"/>
         <source>Block List</source>
         <translation>Seznam blokov</translation>
     </message>
     <message>
-        <location line="-97"/>
+        <location line="-107"/>
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>
@@ -4225,17 +4225,17 @@ je že na seznamu.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2137"/>
+        <location line="+2141"/>
         <source>Cancel</source>
         <translation>Prekliči</translation>
     </message>
     <message>
-        <location line="-2136"/>
+        <location line="-2140"/>
         <source>Done</source>
         <translation>Končano</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+280"/>
         <location line="+144"/>
         <source>Active Tool:</source>
         <translation>Aktivno orodje:</translation>
@@ -4246,7 +4246,7 @@ je že na seznamu.</translation>
         <translation>Brez</translation>
     </message>
     <message>
-        <location line="+677"/>
+        <location line="+678"/>
         <source>Options</source>
         <translation>Nastavitve</translation>
     </message>
@@ -5130,11 +5130,6 @@ je že na seznamu.</translation>
         <location line="+0"/>
         <source>Explode</source>
         <translation>Razbij</translation>
-    </message>
-    <message>
-        <location line="+624"/>
-        <source>Ignored hatch in block reference with non-uniform scale factors</source>
-        <translation type="unfinished">Ignorirana šrafura v referenčnem bloku z neenakomernimi faktorji merila</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
@@ -9914,13 +9909,13 @@ je že na seznamu.</translation>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.ui" line="+14"/>
-        <location line="+71"/>
-        <location line="+21"/>
+        <location line="+98"/>
+        <location line="+20"/>
         <source>Preferences</source>
         <translation>Nastavitve</translation>
     </message>
     <message>
-        <location line="-74"/>
+        <location line="-85"/>
         <source>Filter</source>
         <translation>Filter</translation>
     </message>
@@ -9935,7 +9930,7 @@ je že na seznamu.</translation>
         <translation>Združi drevo</translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="+78"/>
         <source>Restore to Default Values</source>
         <translation>Obnovi na privzete vrednosti</translation>
     </message>

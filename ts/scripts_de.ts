@@ -280,7 +280,7 @@
         <translation>Zeichnungseinstellungen</translation>
     </message>
     <message>
-        <location line="+313"/>
+        <location line="+322"/>
         <source>Apply preferences</source>
         <translation>Einstellungen anwenden</translation>
     </message>
@@ -1315,13 +1315,13 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <name>BlockList</name>
     <message>
         <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
-        <location line="+53"/>
+        <location line="+63"/>
         <location line="+44"/>
         <source>Block List</source>
         <translation>Blockliste</translation>
     </message>
     <message>
-        <location line="-97"/>
+        <location line="-107"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -4221,17 +4221,17 @@ ist bereits in der Liste.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2137"/>
+        <location line="+2141"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location line="-2136"/>
+        <location line="-2140"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+280"/>
         <location line="+144"/>
         <source>Active Tool:</source>
         <translation>Aktives Werkzeug:</translation>
@@ -4242,7 +4242,7 @@ ist bereits in der Liste.</translation>
         <translation>Kein</translation>
     </message>
     <message>
-        <location line="+677"/>
+        <location line="+678"/>
         <source>Options</source>
         <translation>Optionen</translation>
     </message>
@@ -5129,11 +5129,6 @@ ist bereits in der Liste.</translation>
         <location line="+0"/>
         <source>Explode</source>
         <translation>Aufbrechen</translation>
-    </message>
-    <message>
-        <location line="+624"/>
-        <source>Ignored hatch in block reference with non-uniform scale factors</source>
-        <translation>Schraffur in Blockreferenz mit unterschiedlichen Skalierungsfaktoren ignoriert</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+244"/>
@@ -9904,13 +9899,13 @@ ist bereits in der Liste.</translation>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.ui" line="+14"/>
-        <location line="+71"/>
-        <location line="+21"/>
+        <location line="+98"/>
+        <location line="+20"/>
         <source>Preferences</source>
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location line="-74"/>
+        <location line="-85"/>
         <source>Filter</source>
         <translation>Filter</translation>
     </message>
@@ -9925,7 +9920,7 @@ ist bereits in der Liste.</translation>
         <translation>Übersicht zuklappen</translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="+78"/>
         <source>Restore to Default Values</source>
         <translation>Voreinstellungen wiederherstellen</translation>
     </message>

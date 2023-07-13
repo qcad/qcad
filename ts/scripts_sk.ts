@@ -280,7 +280,7 @@
         <translation>Nastavenia Kreslenia</translation>
     </message>
     <message>
-        <location line="+313"/>
+        <location line="+322"/>
         <source>Apply preferences</source>
         <translation>Použiť nastavenia</translation>
     </message>
@@ -1322,7 +1322,7 @@ Prajete si ho obnoviť?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+53"/>
+        <location line="+63"/>
         <location line="+44"/>
         <source>Block List</source>
         <translation>Zoznam Blokov</translation>
@@ -4225,17 +4225,17 @@ už existuje v zozname.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2137"/>
+        <location line="+2141"/>
         <source>Cancel</source>
         <translation>Zrušiť</translation>
     </message>
     <message>
-        <location line="-2136"/>
+        <location line="-2140"/>
         <source>Done</source>
         <translation>Hotovo</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+280"/>
         <location line="+144"/>
         <source>Active Tool:</source>
         <translation>Aktívny Nástroj:</translation>
@@ -4246,7 +4246,7 @@ už existuje v zozname.</translation>
         <translation>Žiadne</translation>
     </message>
     <message>
-        <location line="+677"/>
+        <location line="+678"/>
         <source>Options</source>
         <translation>Možnosti</translation>
     </message>
@@ -5129,11 +5129,6 @@ už existuje v zozname.</translation>
         <location line="+0"/>
         <source>Explode</source>
         <translation>Rozložiť</translation>
-    </message>
-    <message>
-        <location line="+624"/>
-        <source>Ignored hatch in block reference with non-uniform scale factors</source>
-        <translation type="unfinished">Ignorované šrafovanie v referenčnom bloku s nerovnomernými faktormi mierky</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
@@ -9911,13 +9906,13 @@ už existuje v zozname.</translation>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.ui" line="+14"/>
-        <location line="+71"/>
-        <location line="+21"/>
+        <location line="+98"/>
+        <location line="+20"/>
         <source>Preferences</source>
         <translation>Nastavenia</translation>
     </message>
     <message>
-        <location line="-74"/>
+        <location line="-85"/>
         <source>Filter</source>
         <translation>Filter</translation>
     </message>
@@ -9932,7 +9927,7 @@ už existuje v zozname.</translation>
         <translation>Zbaliť Strom</translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="+78"/>
         <source>Restore to Default Values</source>
         <translation>Obnoviť predvolené hodnoty</translation>
     </message>

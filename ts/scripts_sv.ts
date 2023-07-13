@@ -280,7 +280,7 @@
         <translation>Ritningsinställningar</translation>
     </message>
     <message>
-        <location line="+313"/>
+        <location line="+322"/>
         <source>Apply preferences</source>
         <translation>Verkställ ändringar</translation>
     </message>
@@ -1318,7 +1318,7 @@ Vill du återställa den?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+53"/>
+        <location line="+63"/>
         <location line="+44"/>
         <source>Block List</source>
         <translation>Lista över block</translation>
@@ -4219,17 +4219,17 @@ finns redan i listan.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2137"/>
+        <location line="+2141"/>
         <source>Cancel</source>
         <translation>Avbryt</translation>
     </message>
     <message>
-        <location line="-2136"/>
+        <location line="-2140"/>
         <source>Done</source>
         <translation>Klart</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+280"/>
         <location line="+144"/>
         <source>Active Tool:</source>
         <translation>Aktivt verktyg:</translation>
@@ -4240,7 +4240,7 @@ finns redan i listan.</translation>
         <translation>Ingen</translation>
     </message>
     <message>
-        <location line="+677"/>
+        <location line="+678"/>
         <source>Options</source>
         <translation>Alternativ</translation>
     </message>
@@ -5122,11 +5122,6 @@ finns redan i listan.</translation>
         <location line="+0"/>
         <source>Explode</source>
         <translation>Explodera</translation>
-    </message>
-    <message>
-        <location line="+624"/>
-        <source>Ignored hatch in block reference with non-uniform scale factors</source>
-        <translation>Ignorerad skraffering i blockreferenser med ojämna skalfaktorer</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
@@ -9902,13 +9897,13 @@ finns redan i listan.</translation>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.ui" line="+14"/>
-        <location line="+71"/>
-        <location line="+21"/>
+        <location line="+98"/>
+        <location line="+20"/>
         <source>Preferences</source>
         <translation>Inställningar</translation>
     </message>
     <message>
-        <location line="-74"/>
+        <location line="-85"/>
         <source>Filter</source>
         <translation>Filter</translation>
     </message>
@@ -9923,7 +9918,7 @@ finns redan i listan.</translation>
         <translation>Kollapsande träd</translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="+78"/>
         <source>Restore to Default Values</source>
         <translation>Återställa till standardvärden</translation>
     </message>

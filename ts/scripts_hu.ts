@@ -280,7 +280,7 @@
         <translation type="unfinished">Rajzolási beállítások</translation>
     </message>
     <message>
-        <location line="+313"/>
+        <location line="+322"/>
         <source>Apply preferences</source>
         <translation type="unfinished">Alkalmazza a preferenciákat</translation>
     </message>
@@ -1318,7 +1318,7 @@ Szeretné visszaállítani?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+53"/>
+        <location line="+63"/>
         <location line="+44"/>
         <source>Block List</source>
         <translation type="unfinished">Blokk lista</translation>
@@ -4217,17 +4217,17 @@ már szerepel a listában.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2137"/>
+        <location line="+2141"/>
         <source>Cancel</source>
         <translation type="unfinished">Törölje</translation>
     </message>
     <message>
-        <location line="-2136"/>
+        <location line="-2140"/>
         <source>Done</source>
         <translation type="unfinished">Kész</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+280"/>
         <location line="+144"/>
         <source>Active Tool:</source>
         <translation type="unfinished">Aktív eszköz:</translation>
@@ -4238,7 +4238,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Nincs</translation>
     </message>
     <message>
-        <location line="+677"/>
+        <location line="+678"/>
         <source>Options</source>
         <translation type="unfinished">Opciók</translation>
     </message>
@@ -5119,11 +5119,6 @@ már szerepel a listában.</translation>
         <location line="+0"/>
         <source>Explode</source>
         <translation type="unfinished">Robbanás</translation>
-    </message>
-    <message>
-        <location line="+624"/>
-        <source>Ignored hatch in block reference with non-uniform scale factors</source>
-        <translation type="unfinished">Figyelmen kívül hagyott sraffozás a nem egységes méretaránytényezőkkel rendelkező blokkreferenciában</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
@@ -9897,13 +9892,13 @@ már szerepel a listában.</translation>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.ui" line="+14"/>
-        <location line="+71"/>
-        <location line="+21"/>
+        <location line="+98"/>
+        <location line="+20"/>
         <source>Preferences</source>
         <translation type="unfinished">Preferenciák</translation>
     </message>
     <message>
-        <location line="-74"/>
+        <location line="-85"/>
         <source>Filter</source>
         <translation type="unfinished">Szűrő</translation>
     </message>
@@ -9918,7 +9913,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Összeomló fa</translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="+78"/>
         <source>Restore to Default Values</source>
         <translation type="unfinished">Alapértelmezett értékek visszaállítása</translation>
     </message>

@@ -315,7 +315,7 @@
         <translation>Layout</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+862"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+856"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Circular (recursive) block referencing detected:</translation>
     </message>
@@ -706,7 +706,7 @@
         <translation>Overall</translation>
     </message>
     <message>
-        <location filename="../src/core/RDimStyle.cpp" line="+72"/>
+        <location filename="../src/core/RDimStyle.cpp" line="+71"/>
         <source>Style</source>
         <translation>Style</translation>
     </message>

@@ -696,7 +696,7 @@
         <translation type="unfinished">Bendras</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+862"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+856"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation type="unfinished">Aptikta žiedinė (rekursinė) bloko nuoroda:</translation>
     </message>
@@ -706,7 +706,7 @@
         <translation type="unfinished">Bloko pavadinimas:</translation>
     </message>
     <message>
-        <location filename="../src/core/RDimStyle.cpp" line="+72"/>
+        <location filename="../src/core/RDimStyle.cpp" line="+71"/>
         <source>Style</source>
         <translation type="unfinished">Stilius</translation>
     </message>

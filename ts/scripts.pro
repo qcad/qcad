@@ -777,6 +777,7 @@ SOURCES = \
 ../scripts/Modify/Explode/Tests/ExplodeTest03.js \
 ../scripts/Modify/Explode/Tests/ExplodeTest04.js \
 ../scripts/Modify/Explode/Tests/ExplodeTest05.js \
+../scripts/Modify/Explode/Tests/ExplodeTest06.js \
 ../scripts/Modify/FlipHorizontal/FlipHorizontal.js \
 ../scripts/Modify/FlipHorizontal/FlipHorizontalInit.js \
 ../scripts/Modify/FlipHorizontal/Tests/FlipHorizontalTest00.js \

@@ -280,7 +280,7 @@
         <translation>Préférences de dessin</translation>
     </message>
     <message>
-        <location line="+313"/>
+        <location line="+322"/>
         <source>Apply preferences</source>
         <translation>Appliquer préférences</translation>
     </message>
@@ -1315,13 +1315,13 @@ Voulez-vous le récupérer ?</translation>
     <name>BlockList</name>
     <message>
         <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
-        <location line="+53"/>
+        <location line="+63"/>
         <location line="+44"/>
         <source>Block List</source>
         <translation>Liste des blocs</translation>
     </message>
     <message>
-        <location line="-97"/>
+        <location line="-107"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -4221,17 +4221,17 @@ est déjà dans la liste.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2137"/>
+        <location line="+2141"/>
         <source>Cancel</source>
         <translation>Annuler</translation>
     </message>
     <message>
-        <location line="-2136"/>
+        <location line="-2140"/>
         <source>Done</source>
         <translation>Terminer</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+280"/>
         <location line="+144"/>
         <source>Active Tool:</source>
         <translation>Outil actif:</translation>
@@ -4242,7 +4242,7 @@ est déjà dans la liste.</translation>
         <translation>Aucun</translation>
     </message>
     <message>
-        <location line="+677"/>
+        <location line="+678"/>
         <source>Options</source>
         <translation>Options</translation>
     </message>
@@ -5129,11 +5129,6 @@ est déjà dans la liste.</translation>
         <location line="+0"/>
         <source>Explode</source>
         <translation>Décomposer</translation>
-    </message>
-    <message>
-        <location line="+624"/>
-        <source>Ignored hatch in block reference with non-uniform scale factors</source>
-        <translation>Hachures ignorées dans les blocs de référence avec des facteurs d&apos;échelle non uniformes</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+244"/>
@@ -6227,7 +6222,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="-255"/>
         <source>Mouse wheel zoom factor:</source>
-        <translation>Molette de la souris facteur de zoom :</translation>
+        <translation>Facteur de zoom de la molette de la souris :</translation>
     </message>
     <message>
         <location line="+241"/>
@@ -9904,13 +9899,13 @@ est déjà dans la liste.</translation>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.ui" line="+14"/>
-        <location line="+71"/>
-        <location line="+21"/>
+        <location line="+98"/>
+        <location line="+20"/>
         <source>Preferences</source>
         <translation>Préférences</translation>
     </message>
     <message>
-        <location line="-74"/>
+        <location line="-85"/>
         <source>Filter</source>
         <translation>Filtre</translation>
     </message>
@@ -9925,7 +9920,7 @@ est déjà dans la liste.</translation>
         <translation>Réduire la navigation</translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="+78"/>
         <source>Restore to Default Values</source>
         <translation>Restaurer les valeurs par défaut</translation>
     </message>

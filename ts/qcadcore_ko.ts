@@ -315,7 +315,7 @@
         <translation type="unfinished">레이아웃</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+862"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+856"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation type="unfinished">순환(재귀적) 블록 참조가 감지되었습니다:</translation>
     </message>
@@ -378,7 +378,7 @@
         <translation type="unfinished">속성</translation>
     </message>
     <message>
-        <location filename="../src/core/RDimStyle.cpp" line="+72"/>
+        <location filename="../src/core/RDimStyle.cpp" line="+71"/>
         <source>Style</source>
         <translation type="unfinished">스타일</translation>
     </message>

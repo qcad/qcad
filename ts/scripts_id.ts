@@ -280,7 +280,7 @@
         <translation type="unfinished">Preferensi Menggambar</translation>
     </message>
     <message>
-        <location line="+313"/>
+        <location line="+322"/>
         <source>Apply preferences</source>
         <translation type="unfinished">Menerapkan preferensi</translation>
     </message>
@@ -1318,7 +1318,7 @@ Apakah Anda ingin memulihkannya?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+53"/>
+        <location line="+63"/>
         <location line="+44"/>
         <source>Block List</source>
         <translation type="unfinished">Daftar Blokir</translation>
@@ -4217,17 +4217,17 @@ sudah ada dalam daftar.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2137"/>
+        <location line="+2141"/>
         <source>Cancel</source>
         <translation type="unfinished">Batal</translation>
     </message>
     <message>
-        <location line="-2136"/>
+        <location line="-2140"/>
         <source>Done</source>
         <translation type="unfinished">Selesai</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+280"/>
         <location line="+144"/>
         <source>Active Tool:</source>
         <translation type="unfinished">Alat Aktif:</translation>
@@ -4238,7 +4238,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Tidak ada</translation>
     </message>
     <message>
-        <location line="+677"/>
+        <location line="+678"/>
         <source>Options</source>
         <translation type="unfinished">Pilihan</translation>
     </message>
@@ -5119,11 +5119,6 @@ sudah ada dalam daftar.</translation>
         <location line="+0"/>
         <source>Explode</source>
         <translation type="unfinished">Meledak</translation>
-    </message>
-    <message>
-        <location line="+624"/>
-        <source>Ignored hatch in block reference with non-uniform scale factors</source>
-        <translation type="unfinished">Palka yang diabaikan dalam referensi blok dengan faktor skala yang tidak seragam</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
@@ -9897,13 +9892,13 @@ sudah ada dalam daftar.</translation>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.ui" line="+14"/>
-        <location line="+71"/>
-        <location line="+21"/>
+        <location line="+98"/>
+        <location line="+20"/>
         <source>Preferences</source>
         <translation type="unfinished">Preferensi</translation>
     </message>
     <message>
-        <location line="-74"/>
+        <location line="-85"/>
         <source>Filter</source>
         <translation type="unfinished">Filter</translation>
     </message>
@@ -9918,7 +9913,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Pohon runtuh</translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="+78"/>
         <source>Restore to Default Values</source>
         <translation type="unfinished">Mengembalikan ke Nilai Default</translation>
     </message>

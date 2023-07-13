@@ -280,7 +280,7 @@
         <translation>Предпочтения чертежа</translation>
     </message>
     <message>
-        <location line="+313"/>
+        <location line="+322"/>
         <source>Apply preferences</source>
         <translation>Применить предпочтения</translation>
     </message>
@@ -1317,13 +1317,13 @@ Do you wish to recover it?</source>
     <name>BlockList</name>
     <message>
         <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
-        <location line="+53"/>
+        <location line="+63"/>
         <location line="+44"/>
         <source>Block List</source>
         <translation>Список блоков</translation>
     </message>
     <message>
-        <location line="-97"/>
+        <location line="-107"/>
         <source>Widgets</source>
         <translation>Виджеты</translation>
     </message>
@@ -4225,17 +4225,17 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2137"/>
+        <location line="+2141"/>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
     <message>
-        <location line="-2136"/>
+        <location line="-2140"/>
         <source>Done</source>
         <translation>Готово</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+280"/>
         <location line="+144"/>
         <source>Active Tool:</source>
         <translation>Активный инструмент:</translation>
@@ -4246,7 +4246,7 @@ is already in the list.</source>
         <translation>Нет</translation>
     </message>
     <message>
-        <location line="+677"/>
+        <location line="+678"/>
         <source>Options</source>
         <translation>Параметры</translation>
     </message>
@@ -5129,11 +5129,6 @@ is already in the list.</source>
         <location line="+0"/>
         <source>Explode</source>
         <translation>Разнести</translation>
-    </message>
-    <message>
-        <location line="+624"/>
-        <source>Ignored hatch in block reference with non-uniform scale factors</source>
-        <translation type="unfinished">Игнорируемый штрих в блочном эталоне с неоднородными масштабными коэффициентами</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
@@ -9911,13 +9906,13 @@ is already in the list.</source>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.ui" line="+14"/>
-        <location line="+71"/>
-        <location line="+21"/>
+        <location line="+98"/>
+        <location line="+20"/>
         <source>Preferences</source>
         <translation>Предпочтения</translation>
     </message>
     <message>
-        <location line="-74"/>
+        <location line="-85"/>
         <source>Filter</source>
         <translation>Фильтр</translation>
     </message>
@@ -9932,7 +9927,7 @@ is already in the list.</source>
         <translation>Свернуть дерево</translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="+78"/>
         <source>Restore to Default Values</source>
         <translation>Сбросить в значения по умолчанию</translation>
     </message>
