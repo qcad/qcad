@@ -198,7 +198,7 @@ BitmapExport.prototype.getProperties = function() {
     var ret = [];
 
     if (resolutionCombo.currentText!=="auto") {
-        ret["resolution"] = parseInt(resolutionCombo.currentText);
+        ret["resolution"] = parseFloat(resolutionCombo.currentText);
     }
     else {
         ret["width"] = Math.ceil(widthEdit.getValue());
@@ -248,7 +248,7 @@ BitmapExport.prototype.resolutionChanged = function(str) {
         return;
     }
 
-    var res = parseInt(str, 10);
+    var res = parseFloat(str, 10);
     if (isNaN(res)) {
         return;
     }
