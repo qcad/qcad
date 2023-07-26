@@ -573,6 +573,9 @@ void RGraphicsSceneQt::exportLineSegment(const RLine& line, double angle) {
     }
 
     currentPainterPath.lineTo(line.endPoint);
+
+    //currentPainterPath.setPixelWidth(true);
+    //currentPainterPath.setPen(QPen(QBrush("white"), 10));
 }
 
 void RGraphicsSceneQt::exportXLine(const RXLine& xLine) {
