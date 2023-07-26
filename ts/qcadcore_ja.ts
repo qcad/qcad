@@ -696,7 +696,7 @@
         <translation>最大範囲</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+862"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+856"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>循環的な（再帰的な）ブロック参照が検出されました:</translation>
     </message>
@@ -706,7 +706,7 @@
         <translation>ブロック名:</translation>
     </message>
     <message>
-        <location filename="../src/core/RDimStyle.cpp" line="+72"/>
+        <location filename="../src/core/RDimStyle.cpp" line="+71"/>
         <source>Style</source>
         <translation type="unfinished">スタイル</translation>
     </message>

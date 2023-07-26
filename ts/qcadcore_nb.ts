@@ -315,7 +315,7 @@
         <translation type="unfinished">Utforming</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+862"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+856"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation type="unfinished">Sirkulær (rekursiv) blokkreferanse oppdaget:</translation>
     </message>
@@ -378,7 +378,7 @@
         <translation type="unfinished">Attributter</translation>
     </message>
     <message>
-        <location filename="../src/core/RDimStyle.cpp" line="+72"/>
+        <location filename="../src/core/RDimStyle.cpp" line="+71"/>
         <source>Style</source>
         <translation type="unfinished">Stil</translation>
     </message>

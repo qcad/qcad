@@ -280,7 +280,7 @@
         <translation>Zeichnungseinstellungen</translation>
     </message>
     <message>
-        <location line="+313"/>
+        <location line="+322"/>
         <source>Apply preferences</source>
         <translation>Einstellungen anwenden</translation>
     </message>
@@ -399,6 +399,146 @@ um die Änderungen zu übernehmen.</translation>
         <location line="+0"/>
         <source>Add Layer</source>
         <translation>Layer hinzufügen</translation>
+    </message>
+</context>
+<context>
+    <name>Align</name>
+    <message>
+        <location filename="../scripts/QCTrack/Align/Align.js" line="+56"/>
+        <source>Select end of track to move</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Select destination track end</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Select alignment track end</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+142"/>
+        <source>move by </source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>AngleHint</name>
+    <message>
+        <location filename="../scripts/QCTrack/AngleHint/AngleHint.js" line="+43"/>
+        <source>Select first track end</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Select second track end</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+76"/>
+        <source>info from </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+2"/>
+        <source> at </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>° to </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+5"/>
+        <location line="+88"/>
+        <source>°</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-89"/>
+        <source>direct distance: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>, track end rotated by </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+49"/>
+        <location line="+1"/>
+        <source>no curved track found</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>AngleHint</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>searching angle </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>° +/- </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>° as combination of max. </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source> tracks of </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>+-</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>° (</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>°) done with </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source> tracks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>, </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>x </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>found </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source> solutions</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1315,13 +1455,13 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <name>BlockList</name>
     <message>
         <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
-        <location line="+53"/>
+        <location line="+63"/>
         <location line="+44"/>
         <source>Block List</source>
         <translation>Blockliste</translation>
     </message>
     <message>
-        <location line="-97"/>
+        <location line="-107"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -2398,6 +2538,61 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     </message>
 </context>
 <context>
+    <name>Create</name>
+    <message>
+        <location filename="../scripts/QCTrack/Create/Create.js" line="+74"/>
+        <source>block name must not be empty if creating in block</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+8"/>
+        <location line="+8"/>
+        <source>Create Track</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-16"/>
+        <source>block name must not be empty if creating in block, did not create anything</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>block name already existing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>block name already existing, did not change anything</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>either straight or curve (one set has to be greater zero, set other values to zero)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>either straight or curve (one set has to be greater zero, set other values to zero), did not create anything</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>creating </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>creating track</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+225"/>
+        <source>track creating done</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>CreateBlock</name>
     <message>
         <location filename="../scripts/Block/CreateBlock/CreateBlock.js" line="+51"/>
@@ -3232,6 +3427,61 @@ ist bereits in der Liste.</translation>
         <location filename="../scripts/View/DisplayDistanceAngle/DisplayDistanceAngleInit.js" line="+2"/>
         <source>Display &amp;Distance/Angle</source>
         <translation>&amp;Distanz/Winkel anzeigen</translation>
+    </message>
+</context>
+<context>
+    <name>DistanceInfo</name>
+    <message>
+        <location filename="../scripts/QCTrack/DistanceInfo/DistanceInfo.js" line="+42"/>
+        <source>Select first track end</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Select second track end</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+76"/>
+        <source>info from </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+2"/>
+        <source> at </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>° to </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+4"/>
+        <source>°</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>direct distance: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>, track end rotated by </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>distance in track direction: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>, offset: </source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4197,6 +4447,19 @@ ist bereits in der Liste.</translation>
     </message>
 </context>
 <context>
+    <name>DupParallel</name>
+    <message>
+        <location filename="../scripts/QCTrack/DupParallel/DupParallel.js" line="+44"/>
+        <source>Select track to duplicate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/QCTrack/DupParallel/DupParallel.ui" line="+17"/>
+        <source>&amp;Distance:</source>
+        <translation type="unfinished">&amp;Abstand:</translation>
+    </message>
+</context>
+<context>
     <name>Duplicate</name>
     <message>
         <location filename="../scripts/Edit/Duplicate/DuplicateInit.js" line="+2"/>
@@ -4221,12 +4484,12 @@ ist bereits in der Liste.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2137"/>
+        <location line="+2138"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location line="-2136"/>
+        <location line="-2137"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
@@ -4242,7 +4505,7 @@ ist bereits in der Liste.</translation>
         <translation>Kein</translation>
     </message>
     <message>
-        <location line="+677"/>
+        <location line="+678"/>
         <source>Options</source>
         <translation>Optionen</translation>
     </message>
@@ -4753,6 +5016,49 @@ ist bereits in der Liste.</translation>
     </message>
 </context>
 <context>
+    <name>EnsureOrder</name>
+    <message>
+        <location filename="../scripts/QCTrack/EnsureOrder/EnsureOrder.js" line="+35"/>
+        <source>object ordering done with objects: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source> on TR_NMBRS, </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source> on TR_PLAN, </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source> on TR_SWELLS, </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source> on TR_BEDS, </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source> on TR_ENDS, </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source> on TR_MIDS, </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source> on TR_COST</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Esc</name>
     <message>
         <location filename="../scripts/Edit/Esc/EscInit.js" line="+2"/>
@@ -5131,11 +5437,6 @@ ist bereits in der Liste.</translation>
         <translation>Aufbrechen</translation>
     </message>
     <message>
-        <location line="+624"/>
-        <source>Ignored hatch in block reference with non-uniform scale factors</source>
-        <translation>Schraffur in Blockreferenz mit unterschiedlichen Skalierungsfaktoren ignoriert</translation>
-    </message>
-    <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+244"/>
         <source>Explode text glyphs to polylines</source>
         <translation>Textumrisse aufbrechen in Polylinien</translation>
@@ -5216,6 +5517,44 @@ ist bereits in der Liste.</translation>
         <location line="+1"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
         <translation>Die Datei &quot;%1&quot; besteht bereits. Möchten Sie die bestehende Datei überschreiben?</translation>
+    </message>
+</context>
+<context>
+    <name>FillStraight</name>
+    <message>
+        <location filename="../scripts/QCTrack/FillStraight/FillStraight.js" line="+47"/>
+        <source>Select start of straight line</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Select end of straight line</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+100"/>
+        <source>can not connect those track ends (angle differs too much: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>° &gt; 2°)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>can not connect those track ends (there&apos;s no intersection)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>can not connect those track ends (ends are too near)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>internal error: neither left nor right hand</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7723,6 +8062,29 @@ ist bereits in der Liste.</translation>
     </message>
 </context>
 <context>
+    <name>InsertExplodedBlock</name>
+    <message>
+        <location filename="../scripts/QCTrack/InsertExplodedBlock/InsertExplodedBlock.js" line="+31"/>
+        <source>no valid block selected in BlockList</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Insert exploded block</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>no valid block selected in BlockList, did not insert anything</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Select destination</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>InsertScriptItem</name>
     <message>
         <location filename="../scripts/Block/InsertScriptItem/InsertScriptItemInit.js" line="+2"/>
@@ -8865,6 +9227,25 @@ ist bereits in der Liste.</translation>
     </message>
 </context>
 <context>
+    <name>MarkOpen</name>
+    <message>
+        <location filename="../scripts/QCTrack/MarkOpen/MarkOpen.js" line="+37"/>
+        <location line="+1"/>
+        <source>distance must not be negative</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Mark Open Track Ends</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>open track end count: </source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>MathExamples</name>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/MathExamples.js" line="+51"/>
@@ -9220,6 +9601,39 @@ ist bereits in der Liste.</translation>
     </message>
 </context>
 <context>
+    <name>Move</name>
+    <message>
+        <location filename="../scripts/QCTrack/Move/Move.js" line="+56"/>
+        <source>Select end of track to move</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Select destination track end</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+102"/>
+        <source>move by </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source> / </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>, rotate by </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>°</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>MyPositionDialog</name>
     <message>
         <location filename="../scripts/Misc/Tutorials/PersistentWidgets/PersistentWidgets.ui" line="+14"/>
@@ -9570,6 +9984,103 @@ ist bereits in der Liste.</translation>
     </message>
 </context>
 <context>
+    <name>PartList</name>
+    <message>
+        <location filename="../scripts/QCTrack/PartList/PartList.js" line="+39"/>
+        <source>Part List File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+78"/>
+        <location line="+6"/>
+        <source>processed </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-6"/>
+        <source> blocks containing </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source> numbers:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source> blocks:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>length of all blocks: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>cost of all blocks: </source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>PartListDialog</name>
+    <message>
+        <location filename="../scripts/QCTrack/PartList/PartListDialog.ui" line="+17"/>
+        <source>Part List Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Entities to evaluate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Selected blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>All blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Name to evaluate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Block name and length</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Number(s) inside block (layer TR_NMBRS)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>Block name, length and cost (TR_COST)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Output destination</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Print to console</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>Write to file</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Paste</name>
     <message>
         <location filename="../scripts/Edit/Paste/Paste.ui" line="+17"/>
@@ -9904,13 +10415,13 @@ ist bereits in der Liste.</translation>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.ui" line="+14"/>
-        <location line="+71"/>
-        <location line="+21"/>
+        <location line="+98"/>
+        <location line="+20"/>
         <source>Preferences</source>
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location line="-74"/>
+        <location line="-85"/>
         <source>Filter</source>
         <translation>Filter</translation>
     </message>
@@ -9925,7 +10436,7 @@ ist bereits in der Liste.</translation>
         <translation>Übersicht zuklappen</translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="+78"/>
         <source>Restore to Default Values</source>
         <translation>Voreinstellungen wiederherstellen</translation>
     </message>
@@ -10304,6 +10815,129 @@ ist bereits in der Liste.</translation>
     </message>
 </context>
 <context>
+    <name>QCTrack</name>
+    <message>
+        <location filename="../scripts/QCTrack/QCTrack.js" line="+50"/>
+        <source>&amp;Create track</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Insert e&amp;xploded block from BlockListWidget</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ensure &amp;order of track layer objects</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>&amp;Select connected tracks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Mar&amp;k open tracks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&amp;Move</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&amp;Duplicate and move</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Duplicate &amp;parallel with distance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Distance &amp;information</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Angle &amp;hint</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&amp;Align</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&amp;Fill with straight tracks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Reorder ob&amp;jects on layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>&amp;View track widget</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Insert &amp;new track from track widget</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&amp;Connect new track from track widget</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&amp;Rotate track at track widget</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Show part &amp;list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&amp;Variegate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>QCTrack version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>&amp;QCTrack</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+308"/>
+        <source>Format:</source>
+        <translation type="unfinished">Format:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Overwrite File?</source>
+        <translation type="unfinished">Datei überschreiben?</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>QtExamples</name>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/QtExamples.js" line="+50"/>
@@ -10403,6 +11037,57 @@ ist bereits in der Liste.</translation>
         <location filename="../scripts/Block/RenameBlock/RenameBlockInit.js" line="+2"/>
         <source>Re&amp;name Block</source>
         <translation>Block um&amp;benennen</translation>
+    </message>
+</context>
+<context>
+    <name>ReorderObjects</name>
+    <message>
+        <location filename="../scripts/QCTrack/ReorderObjects/ReorderObjects.js" line="+73"/>
+        <source>object ordering done, objects ordered: </source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ReorderObjectsDialog</name>
+    <message>
+        <location filename="../scripts/QCTrack/ReorderObjects/ReorderObjectsDialog.ui" line="+17"/>
+        <source>Reorder Objects Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>top</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>&lt;&lt;== no sort</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>invert</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>do sort ==&gt;&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>bottom</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -11164,6 +11849,30 @@ ist bereits in der Liste.</translation>
         <location line="+8"/>
         <source>Handle (hex):</source>
         <translation>Handle (Hex):</translation>
+    </message>
+</context>
+<context>
+    <name>SelectCon</name>
+    <message>
+        <location filename="../scripts/QCTrack/SelectCon/SelectCon.js" line="+40"/>
+        <location line="+1"/>
+        <source>distance must not be negative</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Select Connected Track</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>added </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source> tracks to selection.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -12986,6 +13695,48 @@ ist bereits in der Liste.</translation>
     </message>
 </context>
 <context>
+    <name>TrackWidget</name>
+    <message>
+        <location filename="../scripts/QCTrack/TrackWidget/TrackWidget.js" line="+88"/>
+        <source>complex</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+159"/>
+        <source>Widgets</source>
+        <translation type="unfinished">Widgets</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+59"/>
+        <source>Track Widget</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/QCTrack/TrackWidget/TrackWidget.ui" line="+59"/>
+        <source>Ins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Con</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Rot</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>TrackWidgetInsert</name>
+    <message>
+        <location filename="../scripts/QCTrack/TrackWidgetInsert/TrackWidgetInsert.js" line="+96"/>
+        <source>Select destination track end</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Transform</name>
     <message>
         <location filename="../scripts/Modify/Transform.js" line="+47"/>
@@ -13399,6 +14150,134 @@ ist bereits in der Liste.</translation>
         <location filename="../scripts/Layer/UnlockAllLayers/UnlockAllLayersInit.js" line="+2"/>
         <source>&amp;Unlock All Layers</source>
         <translation>Alle Layer &amp;entsperren</translation>
+    </message>
+</context>
+<context>
+    <name>Variegate</name>
+    <message>
+        <location filename="../scripts/QCTrack/Variegate/Variegate.js" line="+114"/>
+        <location line="+1"/>
+        <source>no straight line for variegation available</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+111"/>
+        <location line="+22"/>
+        <source>Variegate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-114"/>
+        <source>overall elements</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+91"/>
+        <location line="+1"/>
+        <source>all tracks were disabled by user, can not variegate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>sorry, did not found a solution - retry?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Select solutions, searched: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+322"/>
+        <source>Position</source>
+        <translation type="unfinished">Position</translation>
+    </message>
+</context>
+<context>
+    <name>VariegateDialog</name>
+    <message>
+        <location filename="../scripts/QCTrack/Variegate/VariegateDialog.ui" line="+17"/>
+        <source>Variegate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Minimum track length</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Desired track length</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Maximum track length</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>Maximum element usage (-1: unlimited)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>None</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>All</source>
+        <translation type="unfinished">Alle</translation>
+    </message>
+</context>
+<context>
+    <name>VariegateResultDialog</name>
+    <message>
+        <location filename="../scripts/QCTrack/Variegate/VariegateResultDialog.ui" line="+17"/>
+        <source>Variegation Results</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Label created tracks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+54"/>
+        <source>Select solutions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Show all (reset filter)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Export selected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Print selected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Export all to clipboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Print all on console</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Orthogonal distance between solution</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -13972,6 +14851,89 @@ ist bereits in der Liste.</translation>
     </message>
 </context>
 <context>
+    <name>createDialog</name>
+    <message>
+        <location filename="../scripts/QCTrack/Create/CreateDialog.ui" line="+17"/>
+        <source>Create Track</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;For straight tracks, leave radius and angle zero,&lt;/p&gt;&lt;p&gt;for curved tracks, leace straight length zero.&lt;/p&gt;&lt;p&gt;If you don&apos;t need track bed or swells, set it to zero.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Create in block, block name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Display name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Display name size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Cost</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Distance between tracks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Track bed size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Swell distance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Swell width</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Swell length</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Straight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>Radius</source>
+        <translation type="unfinished">Radius</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>right</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Angle</source>
+        <translation type="unfinished">Winkel</translation>
+    </message>
+</context>
+<context>
     <name>library</name>
     <message>
         <location filename="../scripts/library.js" line="+1250"/>
@@ -14440,6 +15402,24 @@ ist bereits in der Liste.</translation>
     </message>
 </context>
 <context>
+    <name>markOpenDialog</name>
+    <message>
+        <location filename="../scripts/QCTrack/MarkOpen/MarkOpenDialog.ui" line="+17"/>
+        <source>Mark Open Track Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Maximum track end distance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>This will remove and re-create the TR_OPEN layer and create a circle for each open track end.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>scrollArea</name>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/GridSettings/PreferencesPage.ui" line="+29"/>
@@ -14516,6 +15496,29 @@ ist bereits in der Liste.</translation>
         <location line="+152"/>
         <source>Viewport 4</source>
         <translation>Ansicht 4</translation>
+    </message>
+</context>
+<context>
+    <name>selectConDialog</name>
+    <message>
+        <location filename="../scripts/QCTrack/SelectCon/SelectConDialog.ui" line="+17"/>
+        <source>Select Connected Track Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Only select tracks on same layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Stop at turnout</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Maximum track end distance</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
