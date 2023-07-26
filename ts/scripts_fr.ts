@@ -6217,7 +6217,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+231"/>
         <source>Middle mouse button zoom factor:</source>
-        <translation>Facteur de zoom du bouton central de la souris :</translation>
+        <translation>Facteur de zoom du bouton central :</translation>
     </message>
     <message>
         <location line="-255"/>

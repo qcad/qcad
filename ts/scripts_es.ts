@@ -9561,7 +9561,7 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/View/Zoom/PanZoom/PanZoomInit.js" line="+2"/>
         <source>&amp;Pan Zoom</source>
-        <translation>Zoom &amp;panorámico</translation>
+        <translation>&amp;Encuadre</translation>
     </message>
 </context>
 <context>
@@ -13867,7 +13867,7 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/View/Zoom/WindowZoom/WindowZoomInit.js" line="+2"/>
         <source>&amp;Window Zoom</source>
-        <translation>Zoom &amp;ventana</translation>
+        <translation>Zoom de &amp;ventana</translation>
     </message>
 </context>
 <context>

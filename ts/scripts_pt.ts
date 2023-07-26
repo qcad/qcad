@@ -6222,7 +6222,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="-255"/>
         <source>Mouse wheel zoom factor:</source>
-        <translation>Roda do mouse fator de zoom:</translation>
+        <translation>Fator de zoom da roda do mouse:</translation>
     </message>
     <message>
         <location line="+241"/>
