@@ -1826,7 +1826,7 @@ void RDocumentInterface::addZoomBoxToPreview(const RBox& box) {
     int width = (RSettings::getHighResolutionGraphicsView() ? (int)RSettings::getDevicePixelRatio() : 1);
     QPen pen(QBrush(RSettings::getColor("GraphicsViewColors/ZoomBoxColor", RColor(127,0,0))), width);
     pen.setStyle(Qt::CustomDashLine);
-    QList<qreal> dashPattern;
+    QVector<qreal> dashPattern;
     dashPattern << 10 << 5;
     pen.setDashPattern(dashPattern);
     pp.setPen(pen);
