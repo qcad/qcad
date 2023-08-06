@@ -44,8 +44,8 @@ public:
         EndPoints = 0x0002,
         MiddlePoints = 0x0004,
         CenterPoints = 0x0008,
-        Perpendicular = 0x0010,
-        Tangential = 0x0020,
+        PerpendicularPoints = 0x0010,
+        TangentialPoints = 0x0020,
         ReferencePoints = 0x0040,
         GridPoints = 0x0080,
         PointsOnEntity = 0x0100,
@@ -113,17 +113,17 @@ public:
     }
 
     static void setPerpendicular(bool on) {
-        setMode(Perpendicular, on);
+        setMode(PerpendicularPoints, on);
     }
     static bool getPerpendicular() {
-        return getMode(Perpendicular);
+        return getMode(PerpendicularPoints);
     }
 
     static void setTangential(bool on) {
-        setMode(Tangential, on);
+        setMode(TangentialPoints, on);
     }
     static bool getTangential() {
-        return getMode(Tangential);
+        return getMode(TangentialPoints);
     }
 
     static void setReferencePoints(bool on) {
