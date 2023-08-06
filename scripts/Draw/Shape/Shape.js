@@ -212,16 +212,19 @@ Shape.getShapes = function(action, vertices) {
             var clickPos2 = s2.getPointWithDistanceToStart(s2.getLength()/3);
             var pos = RVector.getAverage(clickPos1, clickPos2);
             var res;
-            if (RSettings.getQtVersion()>=0x060000) {
-                s1 = s1.clone();
-                s2 = s2.clone();
-            }
+            //if (RSettings.getQtVersion()>=0x060000) {
+            //    s1 = s1.clone();
+            //    s2 = s2.clone();
+            //}
             res = RShape.roundShapes(s1, clickPos1, s2, clickPos2, true, false, action.radius, pos);
             if (res.length>2) {
                 if (!isNull(cursor)) {
+                    // line until arc:
                     newShapes.push(new RLine(cursor, res[1].getStartPoint()));
                 }
+                // arc:
                 newShapes.push(res[1].clone());
+                // move cursor to end of arc:
                 cursor = res[1].getEndPoint();
             }
         }
@@ -259,7 +262,9 @@ Shape.complementOperation = function(action, doc, op, shapes) {
         hatchData.newLoop();
         for (var k=0; k<shapes.length; ++k) {
             if (RSettings.getQtVersion()>=0x060000) {
-                hatchData.addBoundary(shapes[k].clone());
+                // cloning not necessary, handle in caller:
+                //hatchData.addBoundary(shapes[k].clone());
+                hatchData.addBoundary(shapes[k]);
             }
             else {
                 hatchData.addBoundary(shapes[k]);
