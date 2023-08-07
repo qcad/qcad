@@ -6,7 +6,7 @@ include(../../CMakeInclude.txt)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(${QT_VER} REQUIRED COMPONENTS Core Gui Widgets PrintSupport)
+find_package(${QT_VER} REQUIRED COMPONENTS Core Gui Widgets PrintSupport QmlIntegration)
 qt_standard_project_setup()
 
 IF(WIN32)
