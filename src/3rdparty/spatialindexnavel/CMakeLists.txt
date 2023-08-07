@@ -72,9 +72,11 @@ add_library(spatialindexnavel SHARED
 
 if (CMAKE_BUILD_TYPE STREQUAL "Release")
     set_target_properties(spatialindexnavel PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../../release)
+    set_target_properties(spatialindexnavel PROPERTIES RUNTIME_OUTPUT_DIRECTORY ../../../release)
     target_link_libraries(spatialindexnavel PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../../release)
 else()
     set_target_properties(spatialindexnavel PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../../debug)
+    set_target_properties(spatialindexnavel PROPERTIES RUNTIME_OUTPUT_DIRECTORY ../../../debug)
     target_link_libraries(spatialindexnavel PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../../debug)
 endif()
 
@@ -86,6 +88,7 @@ target_compile_definitions(spatialindexnavel PRIVATE
     NDEBUG
     QCAD_DLL
     SPATIALINDEX_CREATE_DLL
+    SIDX_DLL_EXPORT
 )
 
 if(NOT win32-msvc2010)
