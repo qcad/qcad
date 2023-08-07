@@ -1762,7 +1762,7 @@ bool RShape::scale(double scaleFactor, const RVector& center) {
 
 void RShape::print(QDebug dbg) const {
     dbg.nospace() << "RShape("
-            << "address: " << QString("0x%1").arg((long int) this, 0, 16)
+            << "address: " << QString("0x%1").arg((unsigned long long int) this, 0, 16)
             << ")";
 }
 
