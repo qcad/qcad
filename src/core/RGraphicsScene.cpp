@@ -436,6 +436,6 @@ RRefPoint RGraphicsScene::getHighlightedReferencePoint() {
  * Stream operator for QDebug
  */
 QDebug operator<<(QDebug dbg, RGraphicsScene& gs) {
-    dbg.nospace() << "RGraphicsScene(" << QString("%1").arg((long int)&gs, 0, 16) << ")";
+    dbg.nospace() << "RGraphicsScene(" << QString("%1").arg((unsigned long long int)&gs, 0, 16) << ")";
     return dbg.space();
 }

@@ -686,8 +686,8 @@ void RObject::print(QDebug dbg) const {
     dbg.nospace() << "RObject("
             << "id: " << getId()
             << ", handle: " << QString("0x%1").arg(getHandle(), 0, 16)
-            << ", document: " << QString("0x%1").arg((long int)document, 0, 16)
-            << ", address: " << QString("0x%1").arg((long int) this, 0, 16)
+            << ", document: " << QString("0x%1").arg((unsigned long long int)document, 0, 16)
+            << ", address: " << QString("0x%1").arg((unsigned long long int) this, 0, 16)
             << ", undone: " << (int)isUndone()
             << ", protected: " << (int)isProtected()
             << ", selected: " << (int)isSelected()

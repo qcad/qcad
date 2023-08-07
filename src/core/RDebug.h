@@ -28,7 +28,7 @@
 #include <stdio.h>
 
 #include <QString>
-#include <QTime>
+#include <QElapsedTimer>
 #include <QMap>
 #include <QFile>
 #include <QMetaType>
@@ -115,7 +115,7 @@ private:
 #if defined(Q_OS_MAC) && !defined(Q_OS_IOS)
     static QMap<int, uint64_t> timerMac;
 #else
-    static QMap<int, QTime> timer;
+    static QMap<int, QElapsedTimer> timer;
 #endif
     static QMap<QString, int> counter;
     static QString prefix;

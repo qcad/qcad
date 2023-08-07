@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.16)
 project(opennurbs VERSION 1.0 LANGUAGES CXX)
 
 IF(WIN32)
-    SET(RC ../opennurbs.rc)
+	#SET(RC ../opennurbs.rc)
 ENDIF()
 
 add_library(opennurbs

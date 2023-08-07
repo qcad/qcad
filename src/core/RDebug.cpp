@@ -20,6 +20,7 @@
 
 #include <QDebug>
 #include <QStringList>
+#include <QTime>
 
 #include "RS.h"
 #include "RDebug.h"
@@ -29,7 +30,7 @@
 #if defined(Q_OS_MAC) && !defined(Q_OS_IOS)
 QMap<int, uint64_t> RDebug::timerMac;
 #else
-QMap<int, QTime> RDebug::timer;
+QMap<int, QElapsedTimer> RDebug::timer;
 #endif
 QMap<QString, int> RDebug::counter;
 QString RDebug::prefix;

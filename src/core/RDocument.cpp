@@ -3139,7 +3139,7 @@ bool RDocument::getNotifyListeners() const {
  * Stream operator for QDebug
  */
 QDebug operator<<(QDebug dbg, RDocument& d) {
-    dbg.nospace() << "RDocument(" << QString("0x%1").arg((long int)&d, 0, 16) << ", ";
+    dbg.nospace() << "RDocument(" << QString("0x%1").arg((unsigned long long int)&d, 0, 16) << ", ";
     dbg.nospace() << d.getStorage();
     dbg.nospace() << d.getSpatialIndex();
 //    QSet<RBlock::Id> blockIds = d.queryAllBlocks();

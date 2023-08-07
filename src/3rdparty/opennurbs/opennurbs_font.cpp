@@ -461,7 +461,8 @@ int ON_Font::HeightOfI() const
           HFONT oldfont = (HFONT)::SelectObject( hdc, font);
           ::SetBkMode( hdc, TRANSPARENT);
           ::BeginPath(hdc);
-          ::ExtTextOut( hdc, 0, 0, 0, NULL, str, 1, NULL);
+	  // andrew: disabled to compile on MSVC 2019, never called
+          //::ExtTextOut( hdc, 0, 0, 0, NULL, str, 1, NULL);
           ::EndPath( hdc);
           int numPoints = ::GetPath( hdc, NULL, NULL, 0);
 

@@ -963,6 +963,7 @@ QSize RS::getAvailableGeometry(int screen) {
     if (screen < screens.count() && screens[screen]!=NULL) {
         return screens[screen]->availableSize();
     }
+    return QSize();
 #else
     return QApplication::desktop()->availableGeometry(screen).size();
 #endif
