@@ -5,7 +5,7 @@
  * Copyright (c) 2002, Marios Hadjieleftheriou
  *
  * All rights reserved.
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the "Software"),
  * to deal in the Software without restriction, including without limitation
@@ -30,6 +30,10 @@
 #include "Statistics.h"
 #include "Node.h"
 #include "PointerPoolNode.h"
+#include <memory>
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wcast-qual"
 
 namespace SpatialIndex
 {
@@ -63,24 +67,26 @@ namespace SpatialIndex
 				// StrongVersionOverflow    VT_DOUBLE Default is 0.8
 				// VersionUnderflow         VT_DOUBLE Default is 0.3
 
-			virtual ~MVRTree();
+			~MVRTree() ;
 
 			//
 			// ISpatialIndex interface
 			//
-			virtual void insertData(uint32_t len, const byte* pData, const IShape& shape, id_type id);
-			virtual bool deleteData(const IShape& shape, id_type id);
-			virtual void containsWhatQuery(const IShape& query, IVisitor& v);
-			virtual void intersectsWithQuery(const IShape& query, IVisitor& v);
-			virtual void pointLocationQuery(const Point& query, IVisitor& v);
-			virtual void nearestNeighborQuery(uint32_t k, const IShape& query, IVisitor& v, INearestNeighborComparator&);
-			virtual void nearestNeighborQuery(uint32_t k, const IShape& query, IVisitor& v);
-			virtual void selfJoinQuery(const IShape& s, IVisitor& v);
-			virtual void queryStrategy(IQueryStrategy& qs);
-			virtual void getIndexProperties(Tools::PropertySet& out) const;
-			virtual void addCommand(ICommand* pCommand, CommandType ct);
-			virtual bool isIndexValid();
-			virtual void getStatistics(IStatistics** out) const;
+			virtual void insertData(uint32_t len, const uint8_t* pData, const IShape& shape, id_type id) ;
+			virtual bool deleteData(const IShape& shape, id_type id) ;
+			virtual void internalNodesQuery(const IShape& query, IVisitor& v) ;
+			virtual void containsWhatQuery(const IShape& query, IVisitor& v) ;
+			virtual void intersectsWithQuery(const IShape& query, IVisitor& v) ;
+			virtual void pointLocationQuery(const Point& query, IVisitor& v) ;
+			virtual void nearestNeighborQuery(uint32_t k, const IShape& query, IVisitor& v, INearestNeighborComparator&) ;
+			virtual void nearestNeighborQuery(uint32_t k, const IShape& query, IVisitor& v) ;
+			virtual void selfJoinQuery(const IShape& s, IVisitor& v) ;
+			virtual void queryStrategy(IQueryStrategy& qs) ;
+			virtual void getIndexProperties(Tools::PropertySet& out) const ;
+			virtual void addCommand(ICommand* pCommand, CommandType ct) ;
+			virtual bool isIndexValid() ;
+			virtual void getStatistics(IStatistics** out) const ;
+			virtual void flush() ;
 
 		private:
 			void initNew(Tools::PropertySet&);
@@ -88,8 +94,8 @@ namespace SpatialIndex
 			void storeHeader();
 			void loadHeader();
 
-			void insertData_impl(uint32_t dataLength, byte* pData, TimeRegion& mbr, id_type id);
-			void insertData_impl(uint32_t dataLength, byte* pData, TimeRegion& mbr, id_type id, uint32_t level);
+			void insertData_impl(uint32_t dataLength, uint8_t* pData, TimeRegion& mbr, id_type id);
+			void insertData_impl(uint32_t dataLength, uint8_t* pData, TimeRegion& mbr, id_type id, uint32_t level);
 			bool deleteData_impl(const TimeRegion& mbr, id_type id);
 
 			id_type writeNode(Node*);
@@ -150,18 +156,14 @@ namespace SpatialIndex
 			Tools::PointerPool<Node> m_indexPool;
 			Tools::PointerPool<Node> m_leafPool;
 
-			std::vector<Tools::SmartPointer<ICommand> > m_writeNodeCommands;
-			std::vector<Tools::SmartPointer<ICommand> > m_readNodeCommands;
-			std::vector<Tools::SmartPointer<ICommand> > m_deleteNodeCommands;
-
-#ifdef HAVE_PTHREAD_H
-			pthread_mutex_t m_lock;
-#endif
+			std::vector<std::shared_ptr<ICommand> > m_writeNodeCommands;
+			std::vector<std::shared_ptr<ICommand> > m_readNodeCommands;
+			std::vector<std::shared_ptr<ICommand> > m_deleteNodeCommands;
 
 			class RootEntry
 			{
 			public:
-				RootEntry() {}
+				RootEntry() = default;
 				RootEntry(id_type id, double s, double e) : m_id(id), m_startTime(s), m_endTime(e) {}
 
 				id_type m_id;
@@ -177,22 +179,18 @@ namespace SpatialIndex
 				double m_minDist;
 
 				NNEntry(id_type id, IEntry* e, double f) : m_id(id), m_pEntry(e), m_minDist(f) {}
-				~NNEntry() {}
+				~NNEntry() = default;
 
-				struct greater : public std::binary_function<NNEntry*, NNEntry*, bool>
-				{
-					bool operator()(const NNEntry* __x, const NNEntry* __y) const { return __x->m_minDist > __y->m_minDist; }
-				};
 			}; // NNEntry
 
 			class NNComparator : public INearestNeighborComparator
 			{
 			public:
-				double getMinimumDistance(const IShape& query, const IShape& entry)
+				double getMinimumDistance(const IShape& query, const IShape& entry) 
 				{
 					return query.getMinimumDistance(entry);
 				}
-				double getMinimumDistance(const IShape& query, const IData& data)
+				double getMinimumDistance(const IShape& query, const IData& data) 
 				{
 					IShape* pR;
 					data.getShape(&pR);
@@ -223,4 +221,4 @@ namespace SpatialIndex
 		std::ostream& operator<<(std::ostream& os, const MVRTree& t);
 	}
 }
-
+#pragma GCC diagnostic pop

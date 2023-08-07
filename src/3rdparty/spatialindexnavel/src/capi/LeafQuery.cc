@@ -59,17 +59,21 @@ void LeafQuery::getNextEntry(	const SpatialIndex::IEntry& entry,
 
 	const SpatialIndex::INode* n = dynamic_cast<const SpatialIndex::INode*>(&entry);
 
-	// traverse only index nodes at levels 2 and higher.
-	if (n != 0 && n->getLevel() > 0)
+	if (n != 0)
 	{
-		for (uint32_t cChild = 0; cChild < n->getChildrenCount(); cChild++)
+		// traverse only index nodes at levels 2 and higher.
+		if (n->getLevel() > 0)
 		{
-			m_ids.push(n->getChildIdentifier(cChild));
+			for (uint32_t cChild = 0; cChild < n->getChildrenCount(); cChild++)
+			{
+				m_ids.push(n->getChildIdentifier(cChild));
+			}
 		}
-	}
 
-	if (n->isLeaf()) {
-		m_results.push_back(get_results(n));
+		if (n->isLeaf())
+		{
+			m_results.push_back(get_results(n));
+		}
 	}
 			
 	if (! m_ids.empty())

@@ -6,7 +6,7 @@
  * Copyright (c) 2009, Howard Butler
  *
  * All rights reserved.
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the "Software"),
  * to deal in the Software without restriction, including without limitation
@@ -44,25 +44,24 @@
   typedef unsigned __int64 uint64_t;
 #endif
 
+#if _MSC_VER >= 1900
+   #include <cinttypes>
+#endif
+
    #include <windows.h>
    #define STRDUP _strdup
-   #include <spatialindex/SpatialIndex.h>
    #include <windows.h>
 
 #else
 
    #include <stdint.h>
    #define SIDX_THREAD  __thread
-   #include <spatialindex/SpatialIndex.h>
    #define STRDUP strdup
 #endif
 
 #include <sys/stat.h>
 
 #include "sidx_export.h"
-
-class Item;
-class Index;
 
 typedef enum
 {
@@ -106,9 +105,9 @@ typedef enum
 #  define IDX_C_END
 #endif
 
-typedef Index *IndexH;
-typedef SpatialIndex::IData *IndexItemH;
-typedef Tools::PropertySet *IndexPropertyH;
+typedef struct IndexS *IndexH;
+typedef struct SpatialIndex_IData *IndexItemH;
+typedef struct Tools_PropertySet *IndexPropertyH;
 
 
 

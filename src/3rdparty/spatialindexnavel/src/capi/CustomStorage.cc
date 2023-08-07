@@ -75,14 +75,14 @@ void CustomStorageManager::flush()
     processErrorCode( errorCode, NewPage );
 }
 
-void CustomStorageManager::loadByteArray(const id_type page, uint32_t& len, byte** data)
+void CustomStorageManager::loadByteArray(const id_type page, uint32_t& len, uint8_t** data)
 {
     int errorCode( NoError );
     if ( callbacks.loadByteArrayCallback ) callbacks.loadByteArrayCallback( callbacks.context, page, &len, data, &errorCode );
     processErrorCode( errorCode, page );
 }
 
-void CustomStorageManager::storeByteArray(id_type& page, const uint32_t len, const byte* const data)
+void CustomStorageManager::storeByteArray(id_type& page, const uint32_t len, const uint8_t* const data)
 {
     int errorCode( NoError );
     if ( callbacks.storeByteArrayCallback ) callbacks.storeByteArrayCallback( callbacks.context, &page, len, data, &errorCode );

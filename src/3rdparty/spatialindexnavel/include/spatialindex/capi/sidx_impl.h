@@ -33,6 +33,7 @@
 #include <sstream>
 #include <cstring>
 
+#include "../SpatialIndex.h"
 #include "sidx_config.h"
 #include "Utility.h"
 #include "ObjVisitor.h"

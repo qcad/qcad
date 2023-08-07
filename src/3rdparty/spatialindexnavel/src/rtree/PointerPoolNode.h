@@ -88,18 +88,18 @@ namespace Tools
 
 		void release(RTree::Node* p)
 		{
-			if (p != 0)
+			if (p != nullptr)
 			{
 				if (m_pool.size() < m_capacity)
 				{
-					if (p->m_pData != 0)
+					if (p->m_pData != nullptr)
 					{
 						for (uint32_t cChild = 0; cChild < p->m_children; ++cChild)
 						{
 							// there is no need to set the pointer to zero, after deleting it,
 							// since it will be redeleted only if it is actually initialized again,
 							// a fact that will be depicted by variable m_children.
-							if (p->m_pData[cChild] != 0) delete[] p->m_pData[cChild];
+							if (p->m_pData[cChild] != nullptr) delete[] p->m_pData[cChild];
 						}
 					}
 

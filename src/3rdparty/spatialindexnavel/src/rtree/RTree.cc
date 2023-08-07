@@ -30,6 +30,7 @@
 #include <limits>
 
 #include <spatialindex/SpatialIndex.h>
+#include <spatialindex/capi/IdVisitor.h>
 #include "Node.h"
 #include "Leaf.h"
 #include "Index.h"
@@ -39,12 +40,12 @@
 using namespace SpatialIndex::RTree;
 using namespace SpatialIndex;
 
-SpatialIndex::RTree::Data::Data(uint32_t len, byte* pData, Region& r, id_type id)
-	: m_id(id), m_region(r), m_pData(0), m_dataLength(len)
+SpatialIndex::RTree::Data::Data(uint32_t len, uint8_t* pData, Region& r, id_type id)
+	: m_id(id), m_region(r), m_pData(nullptr), m_dataLength(len)
 {
 	if (m_dataLength > 0)
 	{
-		m_pData = new byte[m_dataLength];
+		m_pData = new uint8_t[m_dataLength];
 		memcpy(m_pData, pData, m_dataLength);
 	}
 }
@@ -69,14 +70,14 @@ void SpatialIndex::RTree::Data::getShape(IShape** out) const
 	*out = new Region(m_region);
 }
 
-void SpatialIndex::RTree::Data::getData(uint32_t& len, byte** data) const
+void SpatialIndex::RTree::Data::getData(uint32_t& len, uint8_t** data) const
 {
 	len = m_dataLength;
-	*data = 0;
+	*data = nullptr;
 
 	if (m_dataLength > 0)
 	{
-		*data = new byte[m_dataLength];
+		*data = new uint8_t[m_dataLength];
 		memcpy(*data, m_pData, m_dataLength);
 	}
 }
@@ -90,20 +91,20 @@ uint32_t SpatialIndex::RTree::Data::getByteArraySize()
 		m_region.getByteArraySize();
 }
 
-void SpatialIndex::RTree::Data::loadFromByteArray(const byte* ptr)
+void SpatialIndex::RTree::Data::loadFromByteArray(const uint8_t* ptr)
 {
 	memcpy(&m_id, ptr, sizeof(id_type));
 	ptr += sizeof(id_type);
 
 	delete[] m_pData;
-	m_pData = 0;
+	m_pData = nullptr;
 
 	memcpy(&m_dataLength, ptr, sizeof(uint32_t));
 	ptr += sizeof(uint32_t);
 
 	if (m_dataLength > 0)
 	{
-		m_pData = new byte[m_dataLength];
+		m_pData = new uint8_t[m_dataLength];
 		memcpy(m_pData, ptr, m_dataLength);
 		ptr += m_dataLength;
 	}
@@ -111,17 +112,17 @@ void SpatialIndex::RTree::Data::loadFromByteArray(const byte* ptr)
 	m_region.loadFromByteArray(ptr);
 }
 
-void SpatialIndex::RTree::Data::storeToByteArray(byte** data, uint32_t& len)
+void SpatialIndex::RTree::Data::storeToByteArray(uint8_t** data, uint32_t& len)
 {
 	// it is thread safe this way.
 	uint32_t regionsize;
-	byte* regiondata = 0;
+	uint8_t* regiondata = nullptr;
 	m_region.storeToByteArray(&regiondata, regionsize);
 
 	len = sizeof(id_type) + sizeof(uint32_t) + m_dataLength + regionsize;
 
-	*data = new byte[len];
-	byte* ptr = *data;
+	*data = new uint8_t[len];
+	uint8_t* ptr = *data;
 
 	memcpy(ptr, &m_id, sizeof(id_type));
 	ptr += sizeof(id_type);
@@ -372,10 +373,6 @@ SpatialIndex::RTree::RTree::RTree(IStorageManager& sm, Tools::PropertySet& ps) :
 	m_indexPool(100),
 	m_leafPool(100)
 {
-#ifdef HAVE_PTHREAD_H
-	pthread_mutex_init(&m_lock, NULL);
-#endif
-
 	Tools::Variant var = ps.getProperty("IndexIdentifier");
 	if (var.m_varType != Tools::VT_EMPTY)
 	{
@@ -397,10 +394,6 @@ SpatialIndex::RTree::RTree::RTree(IStorageManager& sm, Tools::PropertySet& ps) :
 
 SpatialIndex::RTree::RTree::~RTree()
 {
-#ifdef HAVE_PTHREAD_H
-	pthread_mutex_destroy(&m_lock);
-#endif
-
 	storeHeader();
 }
 
@@ -408,23 +401,19 @@ SpatialIndex::RTree::RTree::~RTree()
 // ISpatialIndex interface
 //
 
-void SpatialIndex::RTree::RTree::insertData(uint32_t len, const byte* pData, const IShape& shape, id_type id)
+void SpatialIndex::RTree::RTree::insertData(uint32_t len, const uint8_t* pData, const IShape& shape, id_type id)
 {
 	if (shape.getDimension() != m_dimension) throw Tools::IllegalArgumentException("insertData: Shape has the wrong number of dimensions.");
-
-#ifdef HAVE_PTHREAD_H
-	Tools::LockGuard lock(&m_lock);
-#endif
 
 	// convert the shape into a Region (R-Trees index regions only; i.e., approximations of the shapes).
 	RegionPtr mbr = m_regionPool.acquire();
 	shape.getMBR(*mbr);
 
-	byte* buffer = 0;
+	uint8_t* buffer = nullptr;
 
 	if (len > 0)
 	{
-		buffer = new byte[len];
+		buffer = new uint8_t[len];
 		memcpy(buffer, pData, len);
 	}
 
@@ -436,10 +425,6 @@ bool SpatialIndex::RTree::RTree::deleteData(const IShape& shape, id_type id)
 {
 	if (shape.getDimension() != m_dimension) throw Tools::IllegalArgumentException("deleteData: Shape has the wrong number of dimensions.");
 
-#ifdef HAVE_PTHREAD_H
-	Tools::LockGuard lock(&m_lock);
-#endif
-
 	RegionPtr mbr = m_regionPool.acquire();
 	shape.getMBR(*mbr);
 	bool ret = deleteData_impl(*mbr, id);
@@ -448,13 +433,73 @@ bool SpatialIndex::RTree::RTree::deleteData(const IShape& shape, id_type id)
 }
 
 
-void SpatialIndex::RTree::RTree::containsWhatQuery(const IShape& query, IVisitor& v)
+void SpatialIndex::RTree::RTree::internalNodesQuery(const IShape& query, IVisitor& v)
 {
 	if (query.getDimension() != m_dimension) throw Tools::IllegalArgumentException("containsWhatQuery: Shape has the wrong number of dimensions.");
 
-#ifdef HAVE_PTHREAD_H
-	Tools::LockGuard lock(&m_lock);
-#endif
+//#ifdef HAVE_PTHREAD_H
+//	Tools::LockGuard lock(&m_lock);
+//#endif
+
+	try
+	{
+		std::stack<NodePtr> st;
+		NodePtr root = readNode(m_rootID);
+		st.push(root);
+
+		while (! st.empty())
+		{
+			NodePtr n = st.top(); st.pop();
+
+			if(query.containsShape(n->m_nodeMBR))
+			{
+				IdVisitor vId = IdVisitor();
+				visitSubTree(n, vId);
+				const uint64_t nObj = vId.GetResultCount();
+				uint64_t *obj = new uint64_t[nObj];
+				std::copy(vId.GetResults().begin(), vId.GetResults().end(), obj);
+
+				Data data = Data((uint32_t)(sizeof(uint64_t) * nObj), (uint8_t *) obj, n->m_nodeMBR, n->getIdentifier());
+				v.visitData(data);
+				++(m_stats.m_u64QueryResults);
+			}
+			else
+			{
+				if(n->m_level == 0)
+				{
+					for (uint32_t cChild = 0; cChild < n->m_children; ++cChild)
+					{
+						if(query.containsShape(*(n->m_ptrMBR[cChild])))
+						{
+							Data data = Data(sizeof(id_type), (uint8_t *) &n->m_pIdentifier[cChild], *(n->m_ptrMBR[cChild]), n->getIdentifier());
+							v.visitData(data);
+							++(m_stats.m_u64QueryResults);
+						}
+					}
+				}
+				else //not a leaf
+				{
+					if(query.intersectsShape(n->m_nodeMBR))
+					{
+						for (uint32_t cChild = 0; cChild < n->m_children; ++cChild)
+						{
+							st.push(readNode(n->m_pIdentifier[cChild]));
+						}
+					}
+				}
+			}
+		}
+
+	}
+	catch (...)
+	{
+		throw;
+	}
+}
+
+void SpatialIndex::RTree::RTree::containsWhatQuery(const IShape& query, IVisitor& v)
+{
+	if (query.getDimension() != m_dimension) throw Tools::IllegalArgumentException("containsWhatQuery: Shape has the wrong number of dimensions.");
 
 	try
 	{
@@ -521,13 +566,10 @@ void SpatialIndex::RTree::RTree::nearestNeighborQuery(uint32_t k, const IShape& 
 {
 	if (query.getDimension() != m_dimension) throw Tools::IllegalArgumentException("nearestNeighborQuery: Shape has the wrong number of dimensions.");
 
-#ifdef HAVE_PTHREAD_H
-	Tools::LockGuard lock(&m_lock);
-#endif
+	auto ascending = [](const NNEntry* lhs, const NNEntry* rhs) { return lhs->m_minDist > rhs->m_minDist;  };
+	std::priority_queue<NNEntry*, std::vector<NNEntry*>, decltype(ascending)> queue(ascending);
 
-	std::priority_queue<NNEntry*, std::vector<NNEntry*>, NNEntry::ascending> queue;
-
-	queue.push(new NNEntry(m_rootID, 0, 0.0));
+	queue.push(new NNEntry(m_rootID, nullptr, 0.0));
 
 	uint32_t count = 0;
 	double knearest = 0.0;
@@ -542,7 +584,7 @@ void SpatialIndex::RTree::RTree::nearestNeighborQuery(uint32_t k, const IShape& 
 
 		queue.pop();
 
-		if (pFirst->m_pEntry == 0)
+		if (pFirst->m_pEntry == nullptr)
 		{
 			// n is a leaf or an index.
 			NodePtr n = readNode(pFirst->m_id);
@@ -559,7 +601,7 @@ void SpatialIndex::RTree::RTree::nearestNeighborQuery(uint32_t k, const IShape& 
 				}
 				else
 				{
-					queue.push(new NNEntry(n->m_pIdentifier[cChild], 0, nnc.getMinimumDistance(query, *(n->m_ptrMBR[cChild]))));
+					queue.push(new NNEntry(n->m_pIdentifier[cChild], nullptr, nnc.getMinimumDistance(query, *(n->m_ptrMBR[cChild]))));
 				}
 			}
 		}
@@ -578,7 +620,7 @@ void SpatialIndex::RTree::RTree::nearestNeighborQuery(uint32_t k, const IShape& 
 	while (! queue.empty())
 	{
 		NNEntry* e = queue.top(); queue.pop();
-		if (e->m_pEntry != 0) delete e->m_pEntry;
+		if (e->m_pEntry != nullptr) delete e->m_pEntry;
 		delete e;
 	}
 }
@@ -596,10 +638,6 @@ void SpatialIndex::RTree::RTree::selfJoinQuery(const IShape& query, IVisitor& v)
 	if (query.getDimension() != m_dimension)
 		throw Tools::IllegalArgumentException("selfJoinQuery: Shape has the wrong number of dimensions.");
 
-#ifdef HAVE_PTHREAD_H
-	Tools::LockGuard lock(&m_lock);
-#endif
-
 	RegionPtr mbr = m_regionPool.acquire();
 	query.getMBR(*mbr);
 	selfJoinQuery(m_rootID, m_rootID, *mbr, v);
@@ -607,10 +645,6 @@ void SpatialIndex::RTree::RTree::selfJoinQuery(const IShape& query, IVisitor& v)
 
 void SpatialIndex::RTree::RTree::queryStrategy(IQueryStrategy& qs)
 {
-#ifdef HAVE_PTHREAD_H
-	Tools::LockGuard lock(&m_lock);
-#endif
-
 	id_type next = m_rootID;
 	bool hasNext = true;
 
@@ -689,6 +723,11 @@ void SpatialIndex::RTree::RTree::getIndexProperties(Tools::PropertySet& out) con
 	var.m_varType = Tools::VT_ULONG;
 	var.m_val.ulVal = m_pointPool.getCapacity();
 	out.setProperty("PointPoolCapacity", var);
+
+	var.m_varType = Tools::VT_LONGLONG;
+	var.m_val.llVal = m_headerID;
+	out.setProperty("IndexIdentifier", var);
+
 }
 
 void SpatialIndex::RTree::RTree::addCommand(ICommand* pCommand, CommandType ct)
@@ -696,13 +735,13 @@ void SpatialIndex::RTree::RTree::addCommand(ICommand* pCommand, CommandType ct)
 	switch (ct)
 	{
 		case CT_NODEREAD:
-			m_readNodeCommands.push_back(Tools::SmartPointer<ICommand>(pCommand));
+			m_readNodeCommands.push_back(std::shared_ptr<ICommand>(pCommand));
 			break;
 		case CT_NODEWRITE:
-			m_writeNodeCommands.push_back(Tools::SmartPointer<ICommand>(pCommand));
+			m_writeNodeCommands.push_back(std::shared_ptr<ICommand>(pCommand));
 			break;
 		case CT_NODEDELETE:
-			m_deleteNodeCommands.push_back(Tools::SmartPointer<ICommand>(pCommand));
+			m_deleteNodeCommands.push_back(std::shared_ptr<ICommand>(pCommand));
 			break;
 	}
 }
@@ -802,6 +841,11 @@ bool SpatialIndex::RTree::RTree::isIndexValid()
 void SpatialIndex::RTree::RTree::getStatistics(IStatistics** out) const
 {
 	*out = new Statistics(m_stats);
+}
+
+void SpatialIndex::RTree::RTree::flush()
+{
+	storeHeader();
 }
 
 void SpatialIndex::RTree::RTree::initNew(Tools::PropertySet& ps)
@@ -1099,8 +1143,8 @@ void SpatialIndex::RTree::RTree::storeHeader()
 		sizeof(uint32_t) +						// m_stats.m_treeHeight
 		m_stats.m_u32TreeHeight * sizeof(uint32_t);	// m_stats.m_nodesInLevel
 
-	byte* header = new byte[headerSize];
-	byte* ptr = header;
+	uint8_t* header = new uint8_t[headerSize];
+	uint8_t* ptr = header;
 
 	memcpy(ptr, &m_rootID, sizeof(id_type));
 	ptr += sizeof(id_type);
@@ -1144,10 +1188,10 @@ void SpatialIndex::RTree::RTree::storeHeader()
 void SpatialIndex::RTree::RTree::loadHeader()
 {
 	uint32_t headerSize;
-	byte* header = 0;
+	uint8_t* header = nullptr;
 	m_pStorageManager->loadByteArray(m_headerID, headerSize, &header);
 
-	byte* ptr = header;
+	uint8_t* ptr = header;
 
 	memcpy(&m_rootID, ptr, sizeof(id_type));
 	ptr += sizeof(id_type);
@@ -1189,18 +1233,18 @@ void SpatialIndex::RTree::RTree::loadHeader()
 	delete[] header;
 }
 
-void SpatialIndex::RTree::RTree::insertData_impl(uint32_t dataLength, byte* pData, Region& mbr, id_type id)
+void SpatialIndex::RTree::RTree::insertData_impl(uint32_t dataLength, uint8_t* pData, Region& mbr, id_type id)
 {
 	assert(mbr.getDimension() == m_dimension);
 
 	std::stack<id_type> pathBuffer;
-	byte* overflowTable = 0;
+	uint8_t* overflowTable = nullptr;
 
 	try
 	{
 		NodePtr root = readNode(m_rootID);
 
-		overflowTable = new byte[root->m_level];
+		overflowTable = new uint8_t[root->m_level];
 		memset(overflowTable, 0, root->m_level);
 
 		NodePtr l = root->chooseSubtree(mbr, 0, pathBuffer);
@@ -1221,7 +1265,7 @@ void SpatialIndex::RTree::RTree::insertData_impl(uint32_t dataLength, byte* pDat
 	}
 }
 
-void SpatialIndex::RTree::RTree::insertData_impl(uint32_t dataLength, byte* pData, Region& mbr, id_type id, uint32_t level, byte* overflowTable)
+void SpatialIndex::RTree::RTree::insertData_impl(uint32_t dataLength, uint8_t* pData, Region& mbr, id_type id, uint32_t level, uint8_t* overflowTable)
 {
 	assert(mbr.getDimension() == m_dimension);
 
@@ -1252,10 +1296,10 @@ bool SpatialIndex::RTree::RTree::deleteData_impl(const Region& mbr, id_type id)
 		root.relinquish();
 	}
 
-	if (l.get() != 0)
+	if (l.get() != nullptr)
 	{
 		Leaf* pL = static_cast<Leaf*>(l.get());
-		pL->deleteData(id, pathBuffer);
+		pL->deleteData(mbr, id, pathBuffer);
 		--(m_stats.m_u64Data);
 		return true;
 	}
@@ -1265,7 +1309,7 @@ bool SpatialIndex::RTree::RTree::deleteData_impl(const Region& mbr, id_type id)
 
 SpatialIndex::id_type SpatialIndex::RTree::RTree::writeNode(Node* n)
 {
-	byte* buffer;
+	uint8_t* buffer;
 	uint32_t dataLength;
 	n->storeToByteArray(&buffer, dataLength);
 
@@ -1317,7 +1361,7 @@ SpatialIndex::id_type SpatialIndex::RTree::RTree::writeNode(Node* n)
 SpatialIndex::RTree::NodePtr SpatialIndex::RTree::RTree::readNode(id_type page)
 {
 	uint32_t dataLength;
-	byte* buffer;
+	uint8_t* buffer;
 
 	try
 	{
@@ -1340,7 +1384,7 @@ SpatialIndex::RTree::NodePtr SpatialIndex::RTree::RTree::readNode(id_type page)
 		else if (nodeType == PersistentLeaf) n = m_leafPool.acquire();
 		else throw Tools::IllegalStateException("readNode: failed reading the correct node type information");
 
-		if (n.get() == 0)
+		if (n.get() == nullptr)
 		{
 			if (nodeType == PersistentIndex) n = NodePtr(new Index(this, -1, 0), &m_indexPool);
 			else if (nodeType == PersistentLeaf) n = NodePtr(new Leaf(this, -1), &m_leafPool);
@@ -1390,10 +1434,6 @@ void SpatialIndex::RTree::RTree::deleteNode(Node* n)
 
 void SpatialIndex::RTree::RTree::rangeQuery(RangeQueryType type, const IShape& query, IVisitor& v)
 {
-#ifdef HAVE_PTHREAD_H
-	Tools::LockGuard lock(&m_lock);
-#endif
-
 	std::stack<NodePtr> st;
 	NodePtr root = readNode(m_rootID);
 

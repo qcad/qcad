@@ -34,8 +34,7 @@
 using namespace SpatialIndex;
 
 MovingPoint::MovingPoint()
-{
-}
+= default;
 
 MovingPoint::MovingPoint(	const double* pCoords, 
 							const double* pVCoords, 
@@ -88,7 +87,7 @@ MovingPoint::MovingPoint(const MovingPoint& p)
 {
 	m_startTime = p.m_startTime;
 	m_endTime = p.m_endTime;
-	m_pCoords = 0;
+	m_pCoords = nullptr;
 
 	m_dimension = p.m_dimension;
 
@@ -119,7 +118,7 @@ void MovingPoint::initialize(
 	m_dimension = dimension;
 	m_startTime = tStart;
 	m_endTime = tEnd;
-	m_pCoords = 0;
+	m_pCoords = nullptr;
 
 	if (m_endTime <= m_startTime) 
 		throw Tools::IllegalArgumentException("MovingPoint: Cannot support degenerate time intervals.");
@@ -225,7 +224,7 @@ uint32_t MovingPoint::getByteArraySize()
 	return (sizeof(uint32_t) + 2 * sizeof(double) + 2 * m_dimension * sizeof(double));
 }
 
-void MovingPoint::loadFromByteArray(const byte* ptr)
+void MovingPoint::loadFromByteArray(const uint8_t* ptr)
 {
 	uint32_t dimension;
 	memcpy(&dimension, ptr, sizeof(uint32_t));
@@ -242,11 +241,11 @@ void MovingPoint::loadFromByteArray(const byte* ptr)
 	//ptr += m_dimension * sizeof(double);
 }
 
-void MovingPoint::storeToByteArray(byte** data, uint32_t& len)
+void MovingPoint::storeToByteArray(uint8_t** data, uint32_t& len)
 {
 	len = getByteArraySize();
-	*data = new byte[len];
-	byte* ptr = *data;
+	*data = new uint8_t[len];
+	uint8_t* ptr = *data;
 
 	memcpy(ptr, &m_dimension, sizeof(uint32_t));
 	ptr += sizeof(uint32_t);
@@ -299,7 +298,7 @@ void MovingPoint::makeDimension(uint32_t dimension)
 	{
 		delete[] m_pCoords;
 		delete[] m_pVCoords;
-		m_pCoords = 0; m_pVCoords = 0;
+		m_pCoords = nullptr; m_pVCoords = nullptr;
 
 		m_dimension = dimension;
 		m_pCoords = new double[m_dimension];

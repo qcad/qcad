@@ -86,15 +86,15 @@ namespace Tools
 
 		void release(SpatialIndex::MVRTree::Node* p)
 		{
-			if (p != 0)
+			if (p != nullptr)
 			{
 				if (m_pool.size() < m_capacity)
 				{
-					if (p->m_pData != 0)
+					if (p->m_pData != nullptr)
 					{
 						for (uint32_t cChild = 0; cChild < p->m_children; ++cChild)
 						{
-							if (p->m_pData[cChild] != 0) delete[] p->m_pData[cChild];
+							if (p->m_pData[cChild] != nullptr) delete[] p->m_pData[cChild];
 						}
 					}
 

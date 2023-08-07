@@ -5,7 +5,7 @@
  * Copyright (c) 2002, Marios Hadjieleftheriou
  *
  * All rights reserved.
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the "Software"),
  * to deal in the Software without restriction, including without limitation
@@ -27,6 +27,9 @@
 
 #pragma once
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wcast-qual"
+
 namespace SpatialIndex
 {
 	namespace MVRTree
@@ -34,17 +37,17 @@ namespace SpatialIndex
 		class Index : public Node
 		{
 		public:
-			virtual ~Index();
+			~Index() override;
 
 		private:
 			Index(MVRTree* pTree, id_type id, uint32_t level);
 
-			virtual NodePtr chooseSubtree(const TimeRegion& mbr, uint32_t level, std::stack<id_type>& pathBuffer);
-			virtual NodePtr findLeaf(const TimeRegion& mbr, id_type id, std::stack<id_type>& pathBuffer);
+			NodePtr chooseSubtree(const TimeRegion& mbr, uint32_t level, std::stack<id_type>& pathBuffer) override;
+			NodePtr findLeaf(const TimeRegion& mbr, id_type id, std::stack<id_type>& pathBuffer) override;
 
-			virtual void split(
-				uint32_t dataLength, byte* pData, TimeRegion& mbr, id_type id, NodePtr& left, NodePtr& right,
-				TimeRegion& mbr2, id_type id2, bool bInsertMbr2 = false);
+			void split(
+				uint32_t dataLength, uint8_t* pData, TimeRegion& mbr, id_type id, NodePtr& left, NodePtr& right,
+				TimeRegion& mbr2, id_type id2, bool bInsertMbr2 = false) override;
 
 			uint32_t findLeastEnlargement(const TimeRegion&) const;
 			uint32_t findLeastOverlap(const TimeRegion&) const;
@@ -78,4 +81,4 @@ namespace SpatialIndex
 		}; // Index
 	}
 }
-
+#pragma GCC diagnostic pop

@@ -5,7 +5,7 @@
  * Copyright (c) 2002, Marios Hadjieleftheriou
  *
  * All rights reserved.
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the "Software"),
  * to deal in the Software without restriction, including without limitation
@@ -34,21 +34,21 @@ namespace SpatialIndex
 		class Index : public Node
 		{
 		public:
-			virtual ~Index();
+			~Index() override;
 
 		private:
 			Index(TPRTree* pTree, id_type id, uint32_t level);
 
-			virtual NodePtr chooseSubtree(const MovingRegion& mbr, uint32_t level, std::stack<id_type>& pathBuffer);
-			virtual NodePtr findLeaf(const MovingRegion& mbr, id_type id, std::stack<id_type>& pathBuffer);
+			NodePtr chooseSubtree(const MovingRegion& mbr, uint32_t level, std::stack<id_type>& pathBuffer) override;
+			NodePtr findLeaf(const MovingRegion& mbr, id_type id, std::stack<id_type>& pathBuffer) override;
 
-			virtual void split(uint32_t dataLength, byte* pData, MovingRegion& mbr, id_type id, NodePtr& left, NodePtr& right);
+			void split(uint32_t dataLength, uint8_t* pData, MovingRegion& mbr, id_type id, NodePtr& left, NodePtr& right) override;
 
 			uint32_t findLeastEnlargement(const MovingRegion&) const;
 			uint32_t findLeastOverlap(const MovingRegion&) const;
 
 			void adjustTree(Node*, std::stack<id_type>&);
-			void adjustTree(Node*, Node*, std::stack<id_type>&, byte* overflowTable);
+			void adjustTree(Node*, Node*, std::stack<id_type>&, uint8_t* overflowTable);
 
 			class OverlapEntry
 			{
@@ -62,9 +62,11 @@ namespace SpatialIndex
 
 				static int compareEntries(const void* pv1, const void* pv2)
 				{
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wcast-qual"
 					OverlapEntry* pe1 = * (OverlapEntry**) pv1;
 					OverlapEntry* pe2 = * (OverlapEntry**) pv2;
-
+#pragma GCC diagnostic pop
 					if (pe1->m_enlargement < pe2->m_enlargement) return -1;
 					if (pe1->m_enlargement > pe2->m_enlargement) return 1;
 					return 0;

@@ -38,8 +38,7 @@ using namespace SpatialIndex;
 using namespace SpatialIndex::RTree;
 
 Leaf::~Leaf()
-{
-}
+= default;
 
 Leaf::Leaf(SpatialIndex::RTree::RTree* pTree, id_type id): Node(pTree, id, 0, pTree->m_leafCapacity)
 {
@@ -64,7 +63,7 @@ NodePtr Leaf::findLeaf(const Region& mbr, id_type id, std::stack<id_type>&)
 	return NodePtr();
 }
 
-void Leaf::split(uint32_t dataLength, byte* pData, Region& mbr, id_type id, NodePtr& pLeft, NodePtr& pRight)
+void Leaf::split(uint32_t dataLength, uint8_t* pData, Region& mbr, id_type id, NodePtr& pLeft, NodePtr& pRight)
 {
 	++(m_pTree->m_stats.m_u64Splits);
 
@@ -86,8 +85,8 @@ void Leaf::split(uint32_t dataLength, byte* pData, Region& mbr, id_type id, Node
 	pLeft = m_pTree->m_leafPool.acquire();
 	pRight = m_pTree->m_leafPool.acquire();
 
-	if (pLeft.get() == 0) pLeft = NodePtr(new Leaf(m_pTree, -1), &(m_pTree->m_leafPool));
-	if (pRight.get() == 0) pRight = NodePtr(new Leaf(m_pTree, -1), &(m_pTree->m_leafPool));
+	if (pLeft.get() == nullptr) pLeft = NodePtr(new Leaf(m_pTree, -1), &(m_pTree->m_leafPool));
+	if (pRight.get() == nullptr) pRight = NodePtr(new Leaf(m_pTree, -1), &(m_pTree->m_leafPool));
 
 	pLeft->m_nodeMBR = m_pTree->m_infiniteRegion;
 	pRight->m_nodeMBR = m_pTree->m_infiniteRegion;
@@ -98,24 +97,24 @@ void Leaf::split(uint32_t dataLength, byte* pData, Region& mbr, id_type id, Node
 	{
 		pLeft->insertEntry(m_pDataLength[g1[cIndex]], m_pData[g1[cIndex]], *(m_ptrMBR[g1[cIndex]]), m_pIdentifier[g1[cIndex]]);
 		// we don't want to delete the data array from this node's destructor!
-		m_pData[g1[cIndex]] = 0;
+		m_pData[g1[cIndex]] = nullptr;
 	}
 
 	for (cIndex = 0; cIndex < g2.size(); ++cIndex)
 	{
 		pRight->insertEntry(m_pDataLength[g2[cIndex]], m_pData[g2[cIndex]], *(m_ptrMBR[g2[cIndex]]), m_pIdentifier[g2[cIndex]]);
 		// we don't want to delete the data array from this node's destructor!
-		m_pData[g2[cIndex]] = 0;
+		m_pData[g2[cIndex]] = nullptr;
 	}
 }
 
-void Leaf::deleteData(id_type id, std::stack<id_type>& pathBuffer)
+void Leaf::deleteData(const Region& mbr, id_type id, std::stack<id_type>& pathBuffer)
 {
 	uint32_t child;
 
 	for (child = 0; child < m_children; ++child)
 	{
-		if (m_pIdentifier[child] == id) break;
+		if (m_pIdentifier[child] == id && mbr == *(m_ptrMBR[child])) break;
 	}
 
 	deleteEntry(child);
@@ -135,10 +134,10 @@ void Leaf::deleteData(id_type id, std::stack<id_type>& pathBuffer)
 		for (uint32_t cChild = 0; cChild < n->m_children; ++cChild)
 		{
 			// keep this in the for loop. The tree height might change after insertions.
-			byte* overflowTable = new byte[m_pTree->m_stats.m_u32TreeHeight];
+			uint8_t* overflowTable = new uint8_t[m_pTree->m_stats.m_u32TreeHeight];
 			memset(overflowTable, 0, m_pTree->m_stats.m_u32TreeHeight);
 			m_pTree->insertData_impl(n->m_pDataLength[cChild], n->m_pData[cChild], *(n->m_ptrMBR[cChild]), n->m_pIdentifier[cChild], n->m_level, overflowTable);
-			n->m_pData[cChild] = 0;
+			n->m_pData[cChild] = nullptr;
 			delete[] overflowTable;
 		}
 		if (n.get() == this) n.relinquish();

@@ -39,10 +39,10 @@ namespace SpatialIndex
 			RandomEvictionsBuffer(IStorageManager&, Tools::PropertySet& ps);
 				// see Buffer.h for available properties.
 
-			virtual ~RandomEvictionsBuffer();
+			~RandomEvictionsBuffer() override;
 
-			virtual void addEntry(id_type page, Buffer::Entry* pEntry);
-			virtual void removeEntry();
+			void addEntry(id_type page, Buffer::Entry* pEntry) override;
+			void removeEntry() override;
 		}; // RandomEvictionsBuffer
 	}
 }

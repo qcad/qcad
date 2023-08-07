@@ -94,7 +94,7 @@ Index::Index(	const Tools::PropertySet& poProperties,
 								double **pMax,
 								uint32_t *nDimension,
 								const uint8_t **pData,
-								uint32_t *nDataLength))
+								size_t *nDataLength))
 : m_properties(poProperties)
 {
 	using namespace SpatialIndex;
@@ -427,5 +427,6 @@ void Index::SetResultSetLimit(int64_t v)
 
 void Index::flush()
 {
+	m_rtree->flush();
 	m_storage->flush();
 }

@@ -36,7 +36,7 @@ namespace SpatialIndex
 		Region(const double* pLow, const double* pHigh, uint32_t dimension);
 		Region(const Point& low, const Point& high);
 		Region(const Region& in);
-		virtual ~Region();
+		~Region() override;
 
 		virtual Region& operator=(const Region& r);
 		virtual bool operator==(const Region&) const;
@@ -44,26 +44,26 @@ namespace SpatialIndex
 		//
 		// IObject interface
 		//
-		virtual Region* clone();
+		Region* clone() override;
 
 		//
 		// ISerializable interface
 		//
-		virtual uint32_t getByteArraySize();
-		virtual void loadFromByteArray(const byte* data);
-		virtual void storeToByteArray(byte** data, uint32_t& length);
+		uint32_t getByteArraySize() override;
+		void loadFromByteArray(const uint8_t* data) override;
+		void storeToByteArray(uint8_t** data, uint32_t& length) override;
 
 		//
 		// IShape interface
 		//
-		virtual bool intersectsShape(const IShape& in) const;
-		virtual bool containsShape(const IShape& in) const;
-		virtual bool touchesShape(const IShape& in) const;
-		virtual void getCenter(Point& out) const;
-		virtual uint32_t getDimension() const;
-		virtual void getMBR(Region& out) const;
-		virtual double getArea() const;
-		virtual double getMinimumDistance(const IShape& in) const;
+		bool intersectsShape(const IShape& in) const override;
+		bool containsShape(const IShape& in) const override;
+		bool touchesShape(const IShape& in) const override;
+		void getCenter(Point& out) const override;
+		uint32_t getDimension() const override;
+		void getMBR(Region& out) const override;
+		double getArea() const override;
+		double getMinimumDistance(const IShape& in) const override;
 
 		virtual bool intersectsRegion(const Region& in) const;
 		virtual bool containsRegion(const Region& in) const;
@@ -94,9 +94,9 @@ namespace SpatialIndex
 		void initialize(const double* pLow, const double* pHigh, uint32_t dimension);
 
 	public:
-		uint32_t m_dimension;
-		double* m_pLow;
-		double* m_pHigh;
+		uint32_t m_dimension{0};
+		double* m_pLow{nullptr};
+		double* m_pHigh{nullptr};
 
 		friend SIDX_DLL std::ostream& operator<<(std::ostream& os, const Region& r);
 	}; // Region

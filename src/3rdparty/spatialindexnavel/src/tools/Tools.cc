@@ -5,7 +5,7 @@
  * Copyright (c) 2004, Marios Hadjieleftheriou
  *
  * All rights reserved.
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the "Software"),
  * to deal in the Software without restriction, including without limitation
@@ -25,7 +25,7 @@
  * DEALINGS IN THE SOFTWARE.
 ******************************************************************************/
 
-#include <time.h>
+#include <ctime>
 #include <limits>
 #include <spatialindex/tools/Tools.h>
 
@@ -103,23 +103,20 @@ std::string Tools::NotSupportedException::what()
 	return "NotSupportedException: " + m_error;
 }
 
-Tools::Variant::Variant() : m_varType(VT_EMPTY)
-{
-}
+Tools::Variant::Variant()
+= default;
 
-Tools::PropertySet::PropertySet(const byte* data)
+Tools::PropertySet::PropertySet(const uint8_t* data)
 {
 	loadFromByteArray(data);
 }
 
 Tools::PropertySet::~PropertySet()
-{
-}
+= default;
 
 Tools::PropertySet::PropertySet()
-{
-}
-void Tools::PropertySet::loadFromByteArray(const byte* ptr)
+= default;
+void Tools::PropertySet::loadFromByteArray(const uint8_t* ptr)
 {
 	m_propertySet.clear();
 
@@ -139,10 +136,10 @@ void Tools::PropertySet::loadFromByteArray(const byte* ptr)
 		switch (v.m_varType)
 		{
 		case VT_SHORT:
-			int16_t s;
-			memcpy(&s, ptr, sizeof(int16_t));
+			int16_t st;
+			memcpy(&st, ptr, sizeof(int16_t));
 			ptr += sizeof(int16_t);
-			v.m_val.iVal = s;
+			v.m_val.iVal = st;
 			break;
 		case VT_LONG:
 			int32_t l;
@@ -157,9 +154,9 @@ void Tools::PropertySet::loadFromByteArray(const byte* ptr)
 			v.m_val.llVal = ll;
 			break;
 		case VT_BYTE:
-			byte b;
-			memcpy(&b, ptr, sizeof(byte));
-			ptr += sizeof(byte);
+			uint8_t b;
+			memcpy(&b, ptr, sizeof(uint8_t));
+			ptr += sizeof(uint8_t);
 			v.m_val.bVal = b;
 			break;
 		case VT_FLOAT:
@@ -199,9 +196,9 @@ void Tools::PropertySet::loadFromByteArray(const byte* ptr)
 			v.m_val.ullVal = ull;
 			break;
 		case VT_BOOL:
-			byte bl;
-			memcpy(&bl, ptr, sizeof(byte));
-			ptr += sizeof(byte);
+			uint8_t bl;
+			memcpy(&bl, ptr, sizeof(uint8_t));
+			ptr += sizeof(uint8_t);
 			v.m_val.blVal = (bl != 0);
 			break;
 		default:
@@ -217,9 +214,8 @@ void Tools::PropertySet::loadFromByteArray(const byte* ptr)
 uint32_t Tools::PropertySet::getByteArraySize()
 {
 	uint32_t size = sizeof(uint32_t);
-	std::map<std::string, Variant>::iterator it;
 
-	for (it = m_propertySet.begin(); it != m_propertySet.end(); ++it)
+	for (auto it = m_propertySet.begin(); it != m_propertySet.end(); ++it)
 	{
 		switch ((*it).second.m_varType)
 		{
@@ -233,7 +229,7 @@ uint32_t Tools::PropertySet::getByteArraySize()
 			size += sizeof(int64_t);
 			break;
 		case VT_BYTE:
-			size += sizeof(byte);
+			size += sizeof(uint8_t);
 			break;
 		case VT_FLOAT:
 			size += sizeof(float);
@@ -254,7 +250,7 @@ uint32_t Tools::PropertySet::getByteArraySize()
 			size += sizeof(uint64_t);
 			break;
 		case VT_BOOL:
-			size += sizeof(byte);
+			size += sizeof(uint8_t);
 			break;
 		default:
 			throw NotSupportedException(
@@ -267,19 +263,18 @@ uint32_t Tools::PropertySet::getByteArraySize()
 	return size;
 }
 
-void Tools::PropertySet::storeToByteArray(byte** data, uint32_t& length)
+void Tools::PropertySet::storeToByteArray(uint8_t** data, uint32_t& length)
 {
 	length = getByteArraySize();
-	*data = new byte[length];
-	byte* ptr = *data;
+	*data = new uint8_t[length];
+	uint8_t* ptr = *data;
 
 	uint32_t numberOfProperties = static_cast<uint32_t>(m_propertySet.size());
 	memcpy(ptr, &numberOfProperties, sizeof(uint32_t));
 	ptr += sizeof(uint32_t);
 
-	std::map<std::string, Variant>::iterator it;
 
-	for (it = m_propertySet.begin(); it != m_propertySet.end(); ++it)
+	for (auto it = m_propertySet.begin(); it != m_propertySet.end(); ++it)
 	{
 		size_t strSize = (*it).first.size();
 		memcpy(ptr, (*it).first.c_str(), strSize);
@@ -305,8 +300,8 @@ void Tools::PropertySet::storeToByteArray(byte** data, uint32_t& length)
 			ptr += sizeof(int64_t);
 			break;
 		case VT_BYTE:
-			memcpy(ptr, &((*it).second.m_val.bVal), sizeof(byte));
-			ptr += sizeof(byte);
+			memcpy(ptr, &((*it).second.m_val.bVal), sizeof(uint8_t));
+			ptr += sizeof(uint8_t);
 			break;
 		case VT_FLOAT:
 			memcpy(ptr, &((*it).second.m_val.fltVal), sizeof(float));
@@ -333,10 +328,10 @@ void Tools::PropertySet::storeToByteArray(byte** data, uint32_t& length)
 			ptr += sizeof(uint64_t);
 			break;
 		case VT_BOOL:
-			byte bl;
+			uint8_t bl;
 			bl = (*it).second.m_val.blVal;
-			memcpy(ptr, &bl, sizeof(byte));
-			ptr += sizeof(byte);
+			memcpy(ptr, &bl, sizeof(uint8_t));
+			ptr += sizeof(uint8_t);
 			break;
 		default:
 			throw NotSupportedException(
@@ -350,7 +345,7 @@ void Tools::PropertySet::storeToByteArray(byte** data, uint32_t& length)
 
 Tools::Variant Tools::PropertySet::getProperty(std::string property) const
 {
-   	std::map<std::string, Variant>::const_iterator it = m_propertySet.find(property);
+   	const auto& it = m_propertySet.find(property);
 
    	if (it != m_propertySet.end()) return (*it).second;
    	else return Variant();
@@ -370,13 +365,12 @@ void Tools::PropertySet::setProperty(std::string property, Variant const& v)
 
 void Tools::PropertySet::removeProperty(std::string property)
 {
-   	std::map<std::string, Variant>::iterator it = m_propertySet.find(property);
+   	auto it = m_propertySet.find(property);
    	if (it != m_propertySet.end()) m_propertySet.erase(it);
 }
 
-Tools::Interval::Interval() : m_type(IT_RIGHTOPEN), m_low(0.0), m_high(0.0)
-{
-}
+Tools::Interval::Interval()
+= default;
 
 Tools::Interval::Interval(IntervalType t, double l, double h) : m_type(t), m_low(l), m_high(h)
 {
@@ -546,13 +540,13 @@ Tools::IntervalType Tools::Interval::getIntervalType() const
 
 Tools::Random::Random()
 {
-	m_pBuffer = 0;
-	initDrand(static_cast<uint32_t>(time(0)), 0xD31A);
+	m_pBuffer = nullptr;
+	initDrand(static_cast<uint32_t>(time(nullptr)), 0xD31A);
 }
 
 Tools::Random::Random(uint32_t seed, uint16_t xsubi0)
 {
-	m_pBuffer = 0;
+	m_pBuffer = nullptr;
 	initDrand(seed, xsubi0);
 }
 
@@ -650,24 +644,10 @@ bool Tools::Random::flipCoin()
 	return false;
 }
 
-#if HAVE_PTHREAD_H
-Tools::LockGuard::LockGuard(pthread_mutex_t* pLock)
- : m_pLock(pLock)
-{
-	pthread_mutex_lock(m_pLock);
-}
-
-Tools::LockGuard::~LockGuard()
-{
-	pthread_mutex_unlock(m_pLock);
-}
-#endif
-
 std::ostream& Tools::operator<<(std::ostream& os, const Tools::PropertySet& p)
 {
-	std::map<std::string, Variant>::const_iterator it;
 
-	for (it = p.m_propertySet.begin(); it != p.m_propertySet.end(); ++it)
+	for (auto it = p.m_propertySet.begin(); it != p.m_propertySet.end(); ++it)
 	{
 		if (it != p.m_propertySet.begin()) os << ", ";
 
@@ -733,7 +713,7 @@ std::ostream& Tools::operator<<(std::ostream& os, const Tools::Interval& iv)
 // BufferedFile
 //
 Tools::BufferedFile::BufferedFile(uint32_t u32BufferSize)
-: m_buffer(new char[u32BufferSize]), m_u32BufferSize(u32BufferSize), m_bEOF(true)
+: m_buffer(new char[u32BufferSize]), m_u32BufferSize(u32BufferSize)
 {
 }
 
@@ -757,8 +737,7 @@ bool Tools::BufferedFile::eof()
 // BufferedFileReader
 //
 Tools::BufferedFileReader::BufferedFileReader()
-{
-}
+= default;
 
 Tools::BufferedFileReader::BufferedFileReader(const std::string& sFileName, uint32_t u32BufferSize)
 : BufferedFile(u32BufferSize)
@@ -780,8 +759,7 @@ void Tools::BufferedFileReader::open(const std::string& sFileName)
 }
 
 Tools::BufferedFileReader::~BufferedFileReader()
-{
-}
+= default;
 
 void Tools::BufferedFileReader::rewind()
 {
@@ -927,11 +905,11 @@ std::string Tools::BufferedFileReader::readString()
 	return ret;
 }
 
-void Tools::BufferedFileReader::readBytes(uint32_t u32Len, byte** pData)
+void Tools::BufferedFileReader::readBytes(uint32_t u32Len, uint8_t** pData)
 {
 	if (m_bEOF) throw Tools::EndOfStreamException("");
 
-	*pData = new byte[u32Len];
+	*pData = new uint8_t[u32Len];
 	m_file.read(reinterpret_cast<char*>(*pData), u32Len);
 	if (! m_file.good())
 	{
@@ -1065,7 +1043,7 @@ void Tools::BufferedFileWriter::write(const std::string& s)
 	if (! m_file.good()) throw std::ios_base::failure("");
 }
 
-void Tools::BufferedFileWriter::write(uint32_t u32Len, byte* pData)
+void Tools::BufferedFileWriter::write(uint32_t u32Len, uint8_t* pData)
 {
 	m_file.write(reinterpret_cast<const char*>(pData), u32Len);
 	if (! m_file.good()) throw std::ios_base::failure("");
@@ -1102,7 +1080,7 @@ Tools::TemporaryFile::TemporaryFile()
 
 #else
 	char tmpName[7] = "XXXXXX";
-	if (mktemp(tmpName) == 0)
+	if (mkstemp(tmpName) == -1)
 		throw std::ios_base::failure("Tools::TemporaryFile: Cannot create temporary file name.");
 	m_sFile = tmpName;
 #endif
@@ -1124,7 +1102,7 @@ Tools::TemporaryFile::~TemporaryFile()
 void Tools::TemporaryFile::rewindForReading()
 {
 	Tools::BufferedFileReader* br = dynamic_cast<Tools::BufferedFileReader*>(m_pFile);
-	if (br != 0)
+	if (br != nullptr)
 		m_pFile->rewind();
 	else
 	{
@@ -1136,7 +1114,7 @@ void Tools::TemporaryFile::rewindForReading()
 void Tools::TemporaryFile::rewindForWriting()
 {
 	Tools::BufferedFileWriter* bw = dynamic_cast<Tools::BufferedFileWriter*>(m_pFile);
-	if (bw != 0)
+	if (bw != nullptr)
 		m_pFile->rewind();
 	else
 	{
@@ -1158,7 +1136,7 @@ std::string Tools::TemporaryFile::getFileName() const
 uint8_t Tools::TemporaryFile::readUInt8()
 {
 	Tools::BufferedFileReader* br = dynamic_cast<Tools::BufferedFileReader*>(m_pFile);
-	if (br == 0)
+	if (br == nullptr)
 		throw std::ios_base::failure("Tools::TemporaryFile::readUInt8: file not open for reading.");
 
 	return br->readUInt8();
@@ -1167,7 +1145,7 @@ uint8_t Tools::TemporaryFile::readUInt8()
 uint16_t Tools::TemporaryFile::readUInt16()
 {
 	Tools::BufferedFileReader* br = dynamic_cast<Tools::BufferedFileReader*>(m_pFile);
-	if (br == 0)
+	if (br == nullptr)
 		throw std::ios_base::failure("Tools::TemporaryFile::readUInt16: file not open for reading.");
 
 	return br->readUInt16();
@@ -1176,7 +1154,7 @@ uint16_t Tools::TemporaryFile::readUInt16()
 uint32_t Tools::TemporaryFile::readUInt32()
 {
 	Tools::BufferedFileReader* br = dynamic_cast<Tools::BufferedFileReader*>(m_pFile);
-	if (br == 0)
+	if (br == nullptr)
 		throw std::ios_base::failure("Tools::TemporaryFile::readUInt32: file not open for reading.");
 
 	return br->readUInt32();
@@ -1185,7 +1163,7 @@ uint32_t Tools::TemporaryFile::readUInt32()
 uint64_t Tools::TemporaryFile::readUInt64()
 {
 	Tools::BufferedFileReader* br = dynamic_cast<Tools::BufferedFileReader*>(m_pFile);
-	if (br == 0)
+	if (br == nullptr)
 		throw std::ios_base::failure("Tools::TemporaryFile::readUInt64: file not open for reading.");
 
 	return br->readUInt64();
@@ -1194,7 +1172,7 @@ uint64_t Tools::TemporaryFile::readUInt64()
 float Tools::TemporaryFile::readFloat()
 {
 	Tools::BufferedFileReader* br = dynamic_cast<Tools::BufferedFileReader*>(m_pFile);
-	if (br == 0)
+	if (br == nullptr)
 		throw std::ios_base::failure("Tools::TemporaryFile::readFloat: file not open for reading.");
 
 	return br->readFloat();
@@ -1203,7 +1181,7 @@ float Tools::TemporaryFile::readFloat()
 double Tools::TemporaryFile::readDouble()
 {
 	Tools::BufferedFileReader* br = dynamic_cast<Tools::BufferedFileReader*>(m_pFile);
-	if (br == 0)
+	if (br == nullptr)
 		throw std::ios_base::failure("Tools::TemporaryFile::readDouble: file not open for reading.");
 
 	return br->readDouble();
@@ -1212,16 +1190,16 @@ double Tools::TemporaryFile::readDouble()
 std::string Tools::TemporaryFile::readString()
 {
 	Tools::BufferedFileReader* br = dynamic_cast<Tools::BufferedFileReader*>(m_pFile);
-	if (br == 0)
+	if (br == nullptr)
 		throw std::ios_base::failure("Tools::TemporaryFile::readString: file not open for reading.");
 
 	return br->readString();
 }
 
-void Tools::TemporaryFile::readBytes(uint32_t u32Len, byte** pData)
+void Tools::TemporaryFile::readBytes(uint32_t u32Len, uint8_t** pData)
 {
 	Tools::BufferedFileReader* br = dynamic_cast<Tools::BufferedFileReader*>(m_pFile);
-	if (br == 0)
+	if (br == nullptr)
 		throw std::ios_base::failure("Tools::TemporaryFile::readString: file not open for reading.");
 
 	return br->readBytes(u32Len, pData);
@@ -1230,7 +1208,7 @@ void Tools::TemporaryFile::readBytes(uint32_t u32Len, byte** pData)
 void Tools::TemporaryFile::write(uint8_t i)
 {
 	Tools::BufferedFileWriter* bw = dynamic_cast<Tools::BufferedFileWriter*>(m_pFile);
-	if (bw == 0)
+	if (bw == nullptr)
 		throw std::ios_base::failure("Tools::TemporaryFile::write: file not open for writing.");
 
 	return bw->write(i);
@@ -1239,7 +1217,7 @@ void Tools::TemporaryFile::write(uint8_t i)
 void Tools::TemporaryFile::write(uint16_t i)
 {
 	Tools::BufferedFileWriter* bw = dynamic_cast<Tools::BufferedFileWriter*>(m_pFile);
-	if (bw == 0)
+	if (bw == nullptr)
 		throw std::ios_base::failure("Tools::TemporaryFile::write: file not open for writing.");
 
 	return bw->write(i);
@@ -1248,7 +1226,7 @@ void Tools::TemporaryFile::write(uint16_t i)
 void Tools::TemporaryFile::write(uint32_t i)
 {
 	Tools::BufferedFileWriter* bw = dynamic_cast<Tools::BufferedFileWriter*>(m_pFile);
-	if (bw == 0)
+	if (bw == nullptr)
 		throw std::ios_base::failure("Tools::TemporaryFile::write: file not open for writing.");
 
 	return bw->write(i);
@@ -1257,7 +1235,7 @@ void Tools::TemporaryFile::write(uint32_t i)
 void Tools::TemporaryFile::write(uint64_t i)
 {
 	Tools::BufferedFileWriter* bw = dynamic_cast<Tools::BufferedFileWriter*>(m_pFile);
-	if (bw == 0)
+	if (bw == nullptr)
 		throw std::ios_base::failure("Tools::TemporaryFile::write: file not open for writing.");
 
 	return bw->write(i);
@@ -1266,7 +1244,7 @@ void Tools::TemporaryFile::write(uint64_t i)
 void Tools::TemporaryFile::write(float i)
 {
 	Tools::BufferedFileWriter* bw = dynamic_cast<Tools::BufferedFileWriter*>(m_pFile);
-	if (bw == 0)
+	if (bw == nullptr)
 		throw std::ios_base::failure("Tools::TemporaryFile::write: file not open for writing.");
 
 	return bw->write(i);
@@ -1275,7 +1253,7 @@ void Tools::TemporaryFile::write(float i)
 void Tools::TemporaryFile::write(double i)
 {
 	Tools::BufferedFileWriter* bw = dynamic_cast<Tools::BufferedFileWriter*>(m_pFile);
-	if (bw == 0)
+	if (bw == nullptr)
 		throw std::ios_base::failure("Tools::TemporaryFile::write: file not open for writing.");
 
 	return bw->write(i);
@@ -1284,16 +1262,16 @@ void Tools::TemporaryFile::write(double i)
 void Tools::TemporaryFile::write(const std::string& s)
 {
 	Tools::BufferedFileWriter* bw = dynamic_cast<Tools::BufferedFileWriter*>(m_pFile);
-	if (bw == 0)
+	if (bw == nullptr)
 		throw std::ios_base::failure("Tools::TemporaryFile::write: file not open for writing.");
 
 	return bw->write(s);
 }
 
-void Tools::TemporaryFile::write(uint32_t u32Len, byte* pData)
+void Tools::TemporaryFile::write(uint32_t u32Len, uint8_t* pData)
 {
 	Tools::BufferedFileWriter* bw = dynamic_cast<Tools::BufferedFileWriter*>(m_pFile);
-	if (bw == 0)
+	if (bw == nullptr)
 		throw std::ios_base::failure("Tools::TemporaryFile::write: file not open for writing.");
 
 	return bw->write(u32Len, pData);

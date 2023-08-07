@@ -34,9 +34,7 @@
 using namespace SpatialIndex;
 
 LineSegment::LineSegment()
-	: m_dimension(0), m_pStartPoint(0), m_pEndPoint(0)
-{
-}
+= default;
 
 LineSegment::LineSegment(const double* pStartPoint, const double* pEndPoint, uint32_t dimension)
 	: m_dimension(dimension)
@@ -131,7 +129,7 @@ uint32_t LineSegment::getByteArraySize()
 	return (sizeof(uint32_t) + m_dimension * sizeof(double) * 2);
 }
 
-void LineSegment::loadFromByteArray(const byte* ptr)
+void LineSegment::loadFromByteArray(const uint8_t* ptr)
 {
 	uint32_t dimension;
 	memcpy(&dimension, ptr, sizeof(uint32_t));
@@ -144,11 +142,11 @@ void LineSegment::loadFromByteArray(const byte* ptr)
 	//ptr += m_dimension * sizeof(double);
 }
 
-void LineSegment::storeToByteArray(byte** data, uint32_t& len)
+void LineSegment::storeToByteArray(uint8_t** data, uint32_t& len)
 {
 	len = getByteArraySize();
-	*data = new byte[len];
-	byte* ptr = *data;
+	*data = new uint8_t[len];
+	uint8_t* ptr = *data;
 
 	memcpy(ptr, &m_dimension, sizeof(uint32_t));
 	ptr += sizeof(uint32_t);
@@ -164,10 +162,10 @@ void LineSegment::storeToByteArray(byte** data, uint32_t& len)
 bool LineSegment::intersectsShape(const IShape& s) const
 {
 	const LineSegment* ps = dynamic_cast<const LineSegment*>(&s);
-	if (ps != 0) return intersectsLineSegment(*ps);
+	if (ps != nullptr) return intersectsLineSegment(*ps);
 
 	const Region* pr = dynamic_cast<const Region*>(&s);
-	if (pr != 0) return intersectsRegion(*pr);
+	if (pr != nullptr) return intersectsRegion(*pr);
 
 	throw Tools::IllegalStateException(
 		"LineSegment::intersectsShape: Not implemented yet!"
@@ -228,7 +226,7 @@ double LineSegment::getArea() const
 double LineSegment::getMinimumDistance(const IShape& s) const
 {
 	const Point* ppt = dynamic_cast<const Point*>(&s);
-	if (ppt != 0)
+	if (ppt != nullptr)
 	{
 		return getMinimumDistance(*ppt);
 	}
@@ -416,8 +414,8 @@ void LineSegment::makeDimension(uint32_t dimension)
 
 		// remember that this is not a constructor. The object will be destructed normally if
 		// something goes wrong (bad_alloc), so we must take care not to leave the object at an intermediate state.
-		m_pStartPoint = 0;
-		m_pEndPoint = 0;
+		m_pStartPoint = nullptr;
+		m_pEndPoint = nullptr;
 
 		m_dimension = dimension;
 		m_pStartPoint = new double[m_dimension];

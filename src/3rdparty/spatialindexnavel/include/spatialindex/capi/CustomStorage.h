@@ -49,8 +49,8 @@ namespace SpatialIndex
             void (*createCallback)( const void* context, int* errorCode );
             void (*destroyCallback)( const void* context, int* errorCode );
 			void (*flushCallback)( const void* context, int* errorCode );
-            void (*loadByteArrayCallback)( const void* context, const id_type page, uint32_t* len, byte** data, int* errorCode );
-            void (*storeByteArrayCallback)( const void* context, id_type* page, const uint32_t len, const byte* const data, int* errorCode );
+            void (*loadByteArrayCallback)( const void* context, const id_type page, uint32_t* len, uint8_t** data, int* errorCode );
+            void (*storeByteArrayCallback)( const void* context, id_type* page, const uint32_t len, const uint8_t* const data, int* errorCode );
             void (*deleteByteArrayCallback)( const void* context, const id_type page, int* errorCode );
         };
 
@@ -67,8 +67,8 @@ namespace SpatialIndex
 	        virtual ~CustomStorageManager();
 
 			virtual void flush();
-	        virtual void loadByteArray(const id_type page, uint32_t& len, byte** data);
-	        virtual void storeByteArray(id_type& page, const uint32_t len, const byte* const data);
+	        virtual void loadByteArray(const id_type page, uint32_t& len, uint8_t** data);
+	        virtual void storeByteArray(id_type& page, const uint32_t len, const uint8_t* const data);
 	        virtual void deleteByteArray(const id_type page);
 
         private:

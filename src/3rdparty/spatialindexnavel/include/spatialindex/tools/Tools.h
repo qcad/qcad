@@ -5,7 +5,7 @@
  * Copyright (c) 2004, Marios Hadjieleftheriou
  *
  * All rights reserved.
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the "Software"),
  * to deal in the Software without restriction, including without limitation
@@ -28,7 +28,7 @@
 #pragma once
 
 
-#if (defined _WIN32 || defined _WIN64 || defined WIN32 || defined WIN64) && !defined __GNUC__ && _MSC_VER<1900 && _MSC_VER!=1800 && _MSC_VER!=1600
+#if (defined _WIN32 || defined _WIN64 || defined WIN32 || defined WIN64) && (defined _MSC_VER) && (_MSC_VER < 1900) && !defined __GNUC__
   typedef __int8 int8_t;
   typedef __int16 int16_t;
   typedef __int32 int32_t;
@@ -38,24 +38,25 @@
   typedef unsigned __int32 uint32_t;
   typedef unsigned __int64 uint64_t;
 
-// Nuke this annoying warning.  See http://www.unknownroad.com/rtfm/VisualStudio/warningC4251.html
-#pragma warning( disable: 4251 )
-
 #else
-  #include <stdint.h>
+  #include <cstdint>
 #endif
 
 #if (defined _WIN32 || defined _WIN64 || defined WIN32 || defined WIN64) && !defined __GNUC__
-  #ifdef SPATIALINDEX_CREATE_DLL
+  #ifdef SIDX_DLL_EXPORT
     #define SIDX_DLL __declspec(dllexport)
   #else
     #define SIDX_DLL __declspec(dllimport)
   #endif
+
+  // Nuke this annoying warning.  See http://www.unknownroad.com/rtfm/VisualStudio/warningC4251.html
+#pragma warning( disable: 4251 )
+
 #else
   #define SIDX_DLL
 #endif
 
-#include <assert.h>
+#include <cassert>
 #include <iostream>
 #include <iomanip>
 #include <iterator>
@@ -71,19 +72,12 @@
 #include <algorithm>
 #include <cwchar>
 
-#if HAVE_PTHREAD_H
-  #include <pthread.h>
-#endif
-
-#include "SmartPointer.h"
 #include "PointerPool.h"
 #include "PoolPointer.h"
 
-typedef uint8_t byte;
-
 namespace Tools
 {
-	SIDX_DLL enum IntervalType
+	enum IntervalType
 	{
 		IT_RIGHTOPEN = 0x0,
 		IT_LEFTOPEN,
@@ -91,7 +85,7 @@ namespace Tools
 		IT_CLOSED
 	};
 
-	SIDX_DLL enum VariantType
+	enum VariantType
 	{
 		VT_LONG = 0x0,
 		VT_BYTE,
@@ -112,7 +106,7 @@ namespace Tools
         VT_PWCHAR
     };
 
-	SIDX_DLL enum FileMode
+	enum FileMode
 	{
 		APPEND = 0x0,
 		CREATE
@@ -125,15 +119,15 @@ namespace Tools
 	{
 	public:
 		virtual std::string what() = 0;
-		virtual ~Exception() {}
+		virtual ~Exception() = default;
 	};
 
 	class SIDX_DLL IndexOutOfBoundsException : public Exception
 	{
 	public:
 		IndexOutOfBoundsException(size_t i);
-		virtual ~IndexOutOfBoundsException() {}
-		virtual std::string what();
+		~IndexOutOfBoundsException() override = default;
+		std::string what() override;
 
 	private:
 		std::string m_error;
@@ -143,8 +137,8 @@ namespace Tools
 	{
 	public:
 		IllegalArgumentException(std::string s);
-		virtual ~IllegalArgumentException() {}
-		virtual std::string what();
+		~IllegalArgumentException() override = default;
+		std::string what() override;
 
 	private:
 		std::string m_error;
@@ -154,8 +148,8 @@ namespace Tools
 	{
 	public:
 		IllegalStateException(std::string s);
-		virtual ~IllegalStateException() {}
-		virtual std::string what();
+		~IllegalStateException() override = default;
+		std::string what() override;
 
 	private:
 		std::string m_error;
@@ -165,8 +159,8 @@ namespace Tools
 	{
 	public:
 		EndOfStreamException(std::string s);
-		virtual ~EndOfStreamException() {}
-		virtual std::string what();
+		~EndOfStreamException() override = default;
+		std::string what() override;
 
 	private:
 		std::string m_error;
@@ -176,8 +170,8 @@ namespace Tools
 	{
 	public:
 		ResourceLockedException(std::string s);
-		virtual ~ResourceLockedException() {}
-		virtual std::string what();
+		~ResourceLockedException() override = default;
+		std::string what() override;
 
 	private:
 		std::string m_error;
@@ -187,8 +181,8 @@ namespace Tools
 	{
 	public:
 		NotSupportedException(std::string s);
-		virtual ~NotSupportedException() {}
-		virtual std::string what();
+		~NotSupportedException() override = default;
+		std::string what() override;
 
 	private:
 		std::string m_error;
@@ -200,7 +194,7 @@ namespace Tools
 	class SIDX_DLL IInterval
 	{
 	public:
-		virtual ~IInterval() {}
+		virtual ~IInterval() = default;
 
 		virtual double getLowerBound() const = 0;
 		virtual double getUpperBound() const = 0;
@@ -214,7 +208,7 @@ namespace Tools
 	class SIDX_DLL IObject
 	{
 	public:
-		virtual ~IObject() {}
+		virtual ~IObject() = default;
 
 		virtual IObject* clone() = 0;
 			// return a new object that is an exact copy of this one.
@@ -224,20 +218,20 @@ namespace Tools
 	class SIDX_DLL ISerializable
 	{
 	public:
-		virtual ~ISerializable() {}
+		virtual ~ISerializable() = default;
 
 		virtual uint32_t getByteArraySize() = 0;
-			// returns the size of the required byte array.
-		virtual void loadFromByteArray(const byte* data) = 0;
-			// load this object using the byte array.
-		virtual void storeToByteArray(byte** data, uint32_t& length) = 0;
-			// store this object in the byte array.
+			// returns the size of the required uint8_t array.
+		virtual void loadFromByteArray(const uint8_t* data) = 0;
+			// load this object using the uint8_t array.
+		virtual void storeToByteArray(uint8_t** data, uint32_t& length) = 0;
+			// store this object in the uint8_t array.
 	};
 
 	class SIDX_DLL IComparable
 	{
 	public:
-		virtual ~IComparable() {}
+		virtual ~IComparable() = default;
 
 		virtual bool operator<(const IComparable& o) const = 0;
 		virtual bool operator>(const IComparable& o) const = 0;
@@ -247,7 +241,7 @@ namespace Tools
 	class SIDX_DLL IObjectComparator
 	{
 	public:
-		virtual ~IObjectComparator() {}
+		virtual ~IObjectComparator() = default;
 
 		virtual int compare(IObject* o1, IObject* o2) = 0;
 	}; // IObjectComparator
@@ -255,7 +249,7 @@ namespace Tools
 	class SIDX_DLL IObjectStream
 	{
 	public:
-		virtual ~IObjectStream() {}
+		virtual ~IObjectStream() = default;
 
 		virtual IObject* getNext() = 0;
 			// returns a pointer to the next entry in the
@@ -280,14 +274,14 @@ namespace Tools
 	public:
 		Variant();
 
-		VariantType m_varType;
+		VariantType m_varType{VT_EMPTY};
 
 		union
 		{
 			int16_t iVal;              // VT_SHORT
 			int32_t lVal;              // VT_LONG
 			int64_t llVal;             // VT_LONGLONG
-			byte bVal;                 // VT_BYTE
+			uint8_t bVal;                 // VT_BYTE
 			float fltVal;              // VT_FLOAT
 			double dblVal;             // VT_DOUBLE
 			char cVal;                 // VT_CHAR
@@ -308,16 +302,16 @@ namespace Tools
 	{
 	public:
 		PropertySet();
-		PropertySet(const byte* data);
-		virtual ~PropertySet();
+		PropertySet(const uint8_t* data);
+		~PropertySet() override;
 
 		Variant getProperty(std::string property) const;
 		void setProperty(std::string property, Variant const& v);
 		void removeProperty(std::string property);
 
-		virtual uint32_t getByteArraySize();
-		virtual void loadFromByteArray(const byte* data);
-		virtual void storeToByteArray(byte** data, uint32_t& length);
+		uint32_t getByteArraySize() override;
+		void loadFromByteArray(const uint8_t* data) override;
+		void storeToByteArray(uint8_t** data, uint32_t& length) override;
 
 	private:
 		std::map<std::string, Variant> m_propertySet;
@@ -337,22 +331,22 @@ namespace Tools
 		Interval(IntervalType, double, double);
 		Interval(double, double);
 		Interval(const Interval&);
-		virtual ~Interval() {}
+		~Interval() override = default;
 		virtual IInterval& operator=(const IInterval&);
 
 		virtual bool operator==(const Interval&) const;
 		virtual bool operator!=(const Interval&) const;
-		virtual double getLowerBound() const;
-		virtual double getUpperBound() const;
-		virtual void setBounds(double, double);
-		virtual bool intersectsInterval(const IInterval&) const;
-		virtual bool intersectsInterval(IntervalType type, const double start, const double end) const;
-		virtual bool containsInterval(const IInterval&) const;
-		virtual IntervalType getIntervalType() const;
+		double getLowerBound() const override;
+		double getUpperBound() const override;
+		void setBounds(double, double) override;
+		bool intersectsInterval(const IInterval&) const override;
+		bool intersectsInterval(IntervalType type, const double start, const double end) const override;
+		bool containsInterval(const IInterval&) const override;
+		IntervalType getIntervalType() const override;
 
-		IntervalType m_type;
-		double m_low;
-		double m_high;
+		IntervalType m_type{IT_RIGHTOPEN};
+		double m_low{0.0};
+		double m_high{0.0};
 	}; // Interval
 
 	SIDX_DLL std::ostream& operator<<(std::ostream& os, const Tools::Interval& iv);
@@ -424,7 +418,7 @@ namespace Tools
 		std::fstream m_file;
 		char* m_buffer;
 		uint32_t m_u32BufferSize;
-		bool m_bEOF;
+		bool m_bEOF{true};
 	};
 
 	class SIDX_DLL BufferedFileReader : public BufferedFile
@@ -432,11 +426,11 @@ namespace Tools
 	public:
 		BufferedFileReader();
 		BufferedFileReader(const std::string& sFileName, uint32_t u32BufferSize = 32768);
-		virtual ~BufferedFileReader();
+		~BufferedFileReader() override;
 
 		virtual void open(const std::string& sFileName);
-		virtual void rewind();
-		virtual void seek(std::fstream::off_type offset);
+		void rewind() override;
+		void seek(std::fstream::off_type offset) override;
 
 		virtual uint8_t readUInt8();
 		virtual uint16_t readUInt16();
@@ -446,7 +440,7 @@ namespace Tools
 		virtual double readDouble();
 		virtual bool readBoolean();
 		virtual std::string readString();
-		virtual void readBytes(uint32_t u32Len, byte** pData);
+		virtual void readBytes(uint32_t u32Len, uint8_t** pData);
 	};
 
 	class SIDX_DLL BufferedFileWriter : public BufferedFile
@@ -454,11 +448,11 @@ namespace Tools
 	public:
 		BufferedFileWriter();
 		BufferedFileWriter(const std::string& sFileName, FileMode mode = CREATE, uint32_t u32BufferSize = 32768);
-		virtual ~BufferedFileWriter();
+		~BufferedFileWriter() override;
 
 		virtual void open(const std::string& sFileName, FileMode mode = CREATE);
-		virtual void rewind();
-		virtual void seek(std::fstream::off_type offset);
+		void rewind() override;
+		void seek(std::fstream::off_type offset) override;
 
 		virtual void write(uint8_t i);
 		virtual void write(uint16_t i);
@@ -468,7 +462,7 @@ namespace Tools
 		virtual void write(double i);
 		virtual void write(bool b);
 		virtual void write(const std::string& s);
-		virtual void write(uint32_t u32Len, byte* pData);
+		virtual void write(uint32_t u32Len, uint8_t* pData);
 	};
 
 	class SIDX_DLL TemporaryFile
@@ -489,7 +483,7 @@ namespace Tools
 		float readFloat();
 		double readDouble();
 		std::string readString();
-		void readBytes(uint32_t u32Len, byte** pData);
+		void readBytes(uint32_t u32Len, uint8_t** pData);
 
 		void write(uint8_t i);
 		void write(uint16_t i);
@@ -498,7 +492,7 @@ namespace Tools
 		void write(float i);
 		void write(double i);
 		void write(const std::string& s);
-		void write(uint32_t u32Len, byte* pData);
+		void write(uint32_t u32Len, uint8_t* pData);
 
 	private:
 		std::string m_sFile;

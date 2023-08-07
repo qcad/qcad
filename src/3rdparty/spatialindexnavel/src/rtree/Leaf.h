@@ -34,17 +34,17 @@ namespace SpatialIndex
 		class Leaf : public Node
 		{
 		public:
-			virtual ~Leaf();
+			~Leaf() override;
 
 		protected:
 			Leaf(RTree* pTree, id_type id);
 
-			virtual NodePtr chooseSubtree(const Region& mbr, uint32_t level, std::stack<id_type>& pathBuffer);
-			virtual NodePtr findLeaf(const Region& mbr, id_type id, std::stack<id_type>& pathBuffer);
+			NodePtr chooseSubtree(const Region& mbr, uint32_t level, std::stack<id_type>& pathBuffer) override;
+			NodePtr findLeaf(const Region& mbr, id_type id, std::stack<id_type>& pathBuffer) override;
 
-			virtual void split(uint32_t dataLength, byte* pData, Region& mbr, id_type id, NodePtr& left, NodePtr& right);
+			void split(uint32_t dataLength, uint8_t* pData, Region& mbr, id_type id, NodePtr& left, NodePtr& right) override;
 
-			virtual void deleteData(id_type id, std::stack<id_type>& pathBuffer);
+			virtual void deleteData(const Region& mbr, id_type id, std::stack<id_type>& pathBuffer);
 
 			friend class RTree;
 			friend class BulkLoader;

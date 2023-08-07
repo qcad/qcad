@@ -31,25 +31,25 @@ namespace SpatialIndex
 {
 	namespace RTree
 	{
-		SIDX_DLL enum RTreeVariant
+		enum RTreeVariant
 		{
 			RV_LINEAR = 0x0,
 			RV_QUADRATIC,
 			RV_RSTAR
 		};
 
-		SIDX_DLL enum BulkLoadMethod
+		enum BulkLoadMethod
 		{
 			BLM_STR = 0x0
 		};
 
-		SIDX_DLL enum PersistenObjectIdentifier
+		enum PersistenObjectIdentifier
 		{
 			PersistentIndex = 0x1,
 			PersistentLeaf = 0x2
 		};
 
-		SIDX_DLL enum RangeQueryType
+		enum RangeQueryType
 		{
 			ContainmentQuery = 0x1,
 			IntersectionQuery = 0x2
@@ -58,20 +58,20 @@ namespace SpatialIndex
 		class SIDX_DLL Data : public IData, public Tools::ISerializable
 		{
 		public:
-			Data(uint32_t len, byte* pData, Region& r, id_type id);
-			virtual ~Data();
+			Data(uint32_t len, uint8_t* pData, Region& r, id_type id);
+			~Data() override;
 
-			virtual Data* clone();
-			virtual id_type getIdentifier() const;
-			virtual void getShape(IShape** out) const;
-			virtual void getData(uint32_t& len, byte** data) const;
-			virtual uint32_t getByteArraySize();
-			virtual void loadFromByteArray(const byte* data);
-			virtual void storeToByteArray(byte** data, uint32_t& len);
+			Data* clone() override;
+			id_type getIdentifier() const override;
+			void getShape(IShape** out) const override;
+			void getData(uint32_t& len, uint8_t** data) const override;
+			uint32_t getByteArraySize() override;
+			void loadFromByteArray(const uint8_t* data) override;
+			void storeToByteArray(uint8_t** data, uint32_t& len) override;
 
 			id_type m_id;
 			Region m_region;
-			byte* m_pData;
+			uint8_t* m_pData;
 			uint32_t m_dataLength;
 		}; // Data
 

@@ -38,7 +38,7 @@ namespace SpatialIndex
 		MovingPoint(const Point& p, const Point& vp, const Tools::IInterval& ti);
 		MovingPoint(const Point& p, const Point& vp, double tStart, double tEnd);
 		MovingPoint(const MovingPoint& p);
-		virtual ~MovingPoint();
+		~MovingPoint() override;
 
 		virtual MovingPoint& operator=(const MovingPoint& p);
 		virtual bool operator==(const MovingPoint& p) const;
@@ -51,23 +51,23 @@ namespace SpatialIndex
 		//
 		// IObject interface
 		//
-		virtual MovingPoint* clone();
+		MovingPoint* clone() override;
 
 		//
 		// ISerializable interface
 		//
-		virtual uint32_t getByteArraySize();
-		virtual void loadFromByteArray(const byte* data);
-		virtual void storeToByteArray(byte** data, uint32_t& len);
+		uint32_t getByteArraySize() override;
+		void loadFromByteArray(const uint8_t* data) override;
+		void storeToByteArray(uint8_t** data, uint32_t& len) override;
 
 		//
 		// IEvolvingShape interface
 		//
-		virtual void getVMBR(Region& out) const;
-		virtual void getMBRAtTime(double t, Region& out) const;
+		void getVMBR(Region& out) const override;
+		void getMBRAtTime(double t, Region& out) const override;
 
-		virtual void makeInfinite(uint32_t dimension);
-		virtual void makeDimension(uint32_t dimension);
+		void makeInfinite(uint32_t dimension) override;
+		void makeDimension(uint32_t dimension) override;
 
 	private:
 		void initialize(

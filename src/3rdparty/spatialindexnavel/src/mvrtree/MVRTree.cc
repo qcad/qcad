@@ -5,7 +5,7 @@
  * Copyright (c) 2002, Marios Hadjieleftheriou
  *
  * All rights reserved.
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the "Software"),
  * to deal in the Software without restriction, including without limitation
@@ -38,12 +38,12 @@
 
 using namespace SpatialIndex::MVRTree;
 
-SpatialIndex::MVRTree::Data::Data(uint32_t len, byte* pData, TimeRegion& r, id_type id)
-	: m_id(id), m_region(r), m_pData(0), m_dataLength(len)
+SpatialIndex::MVRTree::Data::Data(uint32_t len, uint8_t* pData, TimeRegion& r, id_type id)
+	: m_id(id), m_region(r), m_pData(nullptr), m_dataLength(len)
 {
 	if (m_dataLength > 0)
 	{
-		m_pData = new byte[m_dataLength];
+		m_pData = new uint8_t[m_dataLength];
 		memcpy(m_pData, pData, m_dataLength);
 	}
 }
@@ -68,14 +68,14 @@ void SpatialIndex::MVRTree::Data::getShape(IShape** out) const
 	*out = new TimeRegion(m_region);
 }
 
-void SpatialIndex::MVRTree::Data::getData(uint32_t& len, byte** data) const
+void SpatialIndex::MVRTree::Data::getData(uint32_t& len, uint8_t** data) const
 {
 	len = m_dataLength;
-	*data = 0;
+	*data = nullptr;
 
 	if (m_dataLength > 0)
 	{
-		*data = new byte[m_dataLength];
+		*data = new uint8_t[m_dataLength];
 		memcpy(*data, m_pData, m_dataLength);
 	}
 }
@@ -89,20 +89,20 @@ uint32_t SpatialIndex::MVRTree::Data::getByteArraySize()
 		m_region.getByteArraySize();
 }
 
-void SpatialIndex::MVRTree::Data::loadFromByteArray(const byte* ptr)
+void SpatialIndex::MVRTree::Data::loadFromByteArray(const uint8_t* ptr)
 {
 	memcpy(&m_id, ptr, sizeof(id_type));
 	ptr += sizeof(id_type);
 
 	delete[] m_pData;
-	m_pData = 0;
+	m_pData = nullptr;
 
 	memcpy(&m_dataLength, ptr, sizeof(uint32_t));
 	ptr += sizeof(uint32_t);
 
 	if (m_dataLength > 0)
 	{
-		m_pData = new byte[m_dataLength];
+		m_pData = new uint8_t[m_dataLength];
 		memcpy(m_pData, ptr, m_dataLength);
 		ptr += m_dataLength;
 	}
@@ -110,17 +110,17 @@ void SpatialIndex::MVRTree::Data::loadFromByteArray(const byte* ptr)
 	m_region.loadFromByteArray(ptr);
 }
 
-void SpatialIndex::MVRTree::Data::storeToByteArray(byte** data, uint32_t& len)
+void SpatialIndex::MVRTree::Data::storeToByteArray(uint8_t** data, uint32_t& len)
 {
 	// it is thread safe this way.
 	uint32_t regionsize;
-	byte* regiondata = 0;
+	uint8_t* regiondata = nullptr;
 	m_region.storeToByteArray(&regiondata, regionsize);
 
 	len = sizeof(id_type) + sizeof(uint32_t) + m_dataLength + regionsize;
 
-	*data = new byte[len];
-	byte* ptr = *data;
+	*data = new uint8_t[len];
+	uint8_t* ptr = *data;
 
 	memcpy(ptr, &m_id, sizeof(id_type));
 	ptr += sizeof(id_type);
@@ -219,9 +219,6 @@ SpatialIndex::MVRTree::MVRTree::MVRTree(IStorageManager& sm, Tools::PropertySet&
 	m_indexPool(100),
 	m_leafPool(100)
 {
-#ifdef HAVE_PTHREAD_H
-	Tools::LockGuard lock(&m_lock);
-#endif
 
 	Tools::Variant var = ps.getProperty("IndexIdentifier");
 	if (var.m_varType != Tools::VT_EMPTY)
@@ -244,10 +241,6 @@ SpatialIndex::MVRTree::MVRTree::MVRTree(IStorageManager& sm, Tools::PropertySet&
 
 SpatialIndex::MVRTree::MVRTree::~MVRTree()
 {
-#ifdef HAVE_PTHREAD_H
-	Tools::LockGuard lock(&m_lock);
-#endif
-
 	storeHeader();
 }
 
@@ -255,16 +248,12 @@ SpatialIndex::MVRTree::MVRTree::~MVRTree()
 // ISpatialIndex interface
 //
 
-void SpatialIndex::MVRTree::MVRTree::insertData(uint32_t len, const byte* pData, const IShape& shape, id_type id)
+void SpatialIndex::MVRTree::MVRTree::insertData(uint32_t len, const uint8_t* pData, const IShape& shape, id_type id)
 {
 	if (shape.getDimension() != m_dimension) throw Tools::IllegalArgumentException("insertData: Shape has the wrong number of dimensions.");
 	const Tools::IInterval* ti = dynamic_cast<const Tools::IInterval*>(&shape);
-	if (ti == 0) throw Tools::IllegalArgumentException("insertData: Shape does not support the Tools::IInterval interface.");
+	if (ti == nullptr) throw Tools::IllegalArgumentException("insertData: Shape does not support the Tools::IInterval interface.");
 	if (ti->getLowerBound() < m_currentTime) throw Tools::IllegalArgumentException("insertData: Shape start time is older than tree current time.");
-
-#ifdef HAVE_PTHREAD_H
-	Tools::LockGuard lock(&m_lock);
-#endif
 
 	// convert the shape into a TimeRegion (R-Trees index regions only; i.e., approximations of the shapes).
 	Region mbrold;
@@ -278,11 +267,11 @@ void SpatialIndex::MVRTree::MVRTree::insertData(uint32_t len, const byte* pData,
 	mbr->m_startTime = ti->getLowerBound();
 	mbr->m_endTime = std::numeric_limits<double>::max();
 
-	byte* buffer = 0;
+	uint8_t* buffer = nullptr;
 
 	if (len > 0)
 	{
-		buffer = new byte[len];
+		buffer = new uint8_t[len];
 		memcpy(buffer, pData, len);
 	}
 
@@ -294,11 +283,7 @@ bool SpatialIndex::MVRTree::MVRTree::deleteData(const IShape& shape, id_type id)
 {
 	if (shape.getDimension() != m_dimension) throw Tools::IllegalArgumentException("deleteData: Shape has the wrong number of dimensions.");
 	const Tools::IInterval* ti = dynamic_cast<const Tools::IInterval*>(&shape);
-	if (ti == 0) throw Tools::IllegalArgumentException("deleteData: Shape does not support the Tools::IInterval interface.");
-
-#ifdef HAVE_PTHREAD_H
-	Tools::LockGuard lock(&m_lock);
-#endif
+	if (ti == nullptr) throw Tools::IllegalArgumentException("deleteData: Shape does not support the Tools::IInterval interface.");
 
 	Region mbrold;
 	shape.getMBR(mbrold);
@@ -314,6 +299,12 @@ bool SpatialIndex::MVRTree::MVRTree::deleteData(const IShape& shape, id_type id)
 	bool ret = deleteData_impl(*mbr, id);
 
 	return ret;
+}
+
+
+void SpatialIndex::MVRTree::MVRTree::internalNodesQuery(const IShape& /* query */, IVisitor& /* v */)
+{
+	throw Tools::IllegalStateException("internalNodesQuery: not impelmented yet.");
 }
 
 void SpatialIndex::MVRTree::MVRTree::containsWhatQuery(const IShape& query, IVisitor& v)
@@ -332,7 +323,7 @@ void SpatialIndex::MVRTree::MVRTree::pointLocationQuery(const Point& query, IVis
 {
 	if (query.m_dimension != m_dimension) throw Tools::IllegalArgumentException("pointLocationQuery: Shape has the wrong number of dimensions.");
 	const Tools::IInterval* ti = dynamic_cast<const Tools::IInterval*>(&query);
-	if (ti == 0) throw Tools::IllegalArgumentException("pointLocationQuery: Shape does not support the Tools::IInterval interface.");
+	if (ti == nullptr) throw Tools::IllegalArgumentException("pointLocationQuery: Shape does not support the Tools::IInterval interface.");
 	TimeRegion r(query, query, *ti);
 	rangeQuery(IntersectionQuery, r, v);
 }
@@ -356,10 +347,6 @@ void SpatialIndex::MVRTree::MVRTree::selfJoinQuery(const IShape&, IVisitor&)
 
 void SpatialIndex::MVRTree::MVRTree::queryStrategy(IQueryStrategy& qs)
 {
-#ifdef HAVE_PTHREAD_H
-	Tools::LockGuard lock(&m_lock);
-#endif
-
 	id_type next = m_roots[m_roots.size() - 1].m_id;
 	bool hasNext = true;
 
@@ -453,6 +440,10 @@ void SpatialIndex::MVRTree::MVRTree::getIndexProperties(Tools::PropertySet& out)
 	var.m_varType = Tools::VT_DOUBLE;
 	var.m_val.dblVal = m_versionUnderflow;
 	out.setProperty("VersionUnderflow", var);
+
+	var.m_varType = Tools::VT_LONGLONG;
+	var.m_val.llVal = m_headerID;
+	out.setProperty("IndexIdentifier", var);
 }
 
 void SpatialIndex::MVRTree::MVRTree::addCommand(ICommand* pCommand, CommandType ct)
@@ -460,13 +451,13 @@ void SpatialIndex::MVRTree::MVRTree::addCommand(ICommand* pCommand, CommandType 
 	switch (ct)
 	{
 		case CT_NODEREAD:
-			m_readNodeCommands.push_back(Tools::SmartPointer<ICommand>(pCommand));
+			m_readNodeCommands.push_back(std::shared_ptr<ICommand>(pCommand));
 			break;
 		case CT_NODEWRITE:
-			m_writeNodeCommands.push_back(Tools::SmartPointer<ICommand>(pCommand));
+			m_writeNodeCommands.push_back(std::shared_ptr<ICommand>(pCommand));
 			break;
 		case CT_NODEDELETE:
-			m_deleteNodeCommands.push_back(Tools::SmartPointer<ICommand>(pCommand));
+			m_deleteNodeCommands.push_back(std::shared_ptr<ICommand>(pCommand));
 			break;
 	}
 }
@@ -564,6 +555,11 @@ bool SpatialIndex::MVRTree::MVRTree::isIndexValid()
 void SpatialIndex::MVRTree::MVRTree::getStatistics(IStatistics** out) const
 {
 	*out = new Statistics(m_stats);
+}
+
+void SpatialIndex::MVRTree::MVRTree::flush()
+{
+	storeHeader();
 }
 
 void SpatialIndex::MVRTree::MVRTree::initNew(Tools::PropertySet& ps)
@@ -741,7 +737,7 @@ void SpatialIndex::MVRTree::MVRTree::initNew(Tools::PropertySet& ps)
 	root.m_nodeMBR.m_startTime = 0.0;
 	root.m_nodeMBR.m_endTime = std::numeric_limits<double>::max();
 	writeNode(&root);
-	m_roots.push_back(RootEntry(root.m_identifier, root.m_nodeMBR.m_startTime, root.m_nodeMBR.m_endTime));
+	m_roots.emplace_back(root.m_identifier, root.m_nodeMBR.m_startTime, root.m_nodeMBR.m_endTime);
 
 	storeHeader();
 }
@@ -857,7 +853,7 @@ void SpatialIndex::MVRTree::MVRTree::storeHeader()
 		sizeof(double) +											// m_splitDistributionFactor
 		sizeof(double) +											// m_reinsertFactor
 		sizeof(uint32_t) +											// m_dimension
-		sizeof(byte) +												// m_bTightMBRs
+		sizeof(uint8_t) +												// m_bTightMBRs
 		sizeof(uint32_t) +											// m_stats.m_nodes
 		sizeof(uint64_t) +											// m_stats.m_totalData
 		sizeof(uint32_t) +											// m_stats.m_deadIndexNodes
@@ -874,8 +870,8 @@ void SpatialIndex::MVRTree::MVRTree::storeHeader()
 		static_cast<uint32_t>(m_stats.m_nodesInLevel.size())
 		* sizeof(uint32_t);											// m_nodesInLevel values
 
-	byte* header = new byte[headerSize];
-	byte* ptr = header;
+	uint8_t* header = new uint8_t[headerSize];
+	uint8_t* ptr = header;
 
 	uint32_t u32I = static_cast<uint32_t>(m_roots.size());
 	memcpy(ptr, &u32I, sizeof(uint32_t));
@@ -908,9 +904,9 @@ void SpatialIndex::MVRTree::MVRTree::storeHeader()
 	ptr += sizeof(double);
 	memcpy(ptr, &m_dimension, sizeof(uint32_t));
 	ptr += sizeof(uint32_t);
-	byte c = (byte) m_bTightMBRs;
-	memcpy(ptr, &c, sizeof(byte));
-	ptr += sizeof(byte);
+	uint8_t c = (uint8_t) m_bTightMBRs;
+	memcpy(ptr, &c, sizeof(uint8_t));
+	ptr += sizeof(uint8_t);
 	memcpy(ptr, &(m_stats.m_u32Nodes), sizeof(uint32_t));
 	ptr += sizeof(uint32_t);
 	memcpy(ptr, &(m_stats.m_u64TotalData), sizeof(uint64_t));
@@ -961,10 +957,10 @@ void SpatialIndex::MVRTree::MVRTree::storeHeader()
 void SpatialIndex::MVRTree::MVRTree::loadHeader()
 {
 	uint32_t headerSize;
-	byte* header = 0;
+	uint8_t* header = nullptr;
 	m_pStorageManager->loadByteArray(m_headerID, headerSize, &header);
 
-	byte* ptr = header;
+	uint8_t* ptr = header;
 
 	uint32_t rootsSize;
 	memcpy(&rootsSize, ptr, sizeof(uint32_t));
@@ -998,10 +994,10 @@ void SpatialIndex::MVRTree::MVRTree::loadHeader()
 	ptr += sizeof(double);
 	memcpy(&m_dimension, ptr, sizeof(uint32_t));
 	ptr += sizeof(uint32_t);
-	byte c;
-	memcpy(&c, ptr, sizeof(byte));
+	uint8_t c;
+	memcpy(&c, ptr, sizeof(uint8_t));
 	m_bTightMBRs = (c != 0);
-	ptr += sizeof(byte);
+	ptr += sizeof(uint8_t);
 	memcpy(&(m_stats.m_u32Nodes), ptr, sizeof(uint32_t));
 	ptr += sizeof(uint32_t);
 	memcpy(&(m_stats.m_u64TotalData), ptr, sizeof(uint64_t));
@@ -1049,7 +1045,7 @@ void SpatialIndex::MVRTree::MVRTree::loadHeader()
 	delete[] header;
 }
 
-void SpatialIndex::MVRTree::MVRTree::insertData_impl(uint32_t dataLength, byte* pData, TimeRegion& mbr, id_type id)
+void SpatialIndex::MVRTree::MVRTree::insertData_impl(uint32_t dataLength, uint8_t* pData, TimeRegion& mbr, id_type id)
 {
 	assert(mbr.getDimension() == m_dimension);
 	assert(m_currentTime <= mbr.m_startTime);
@@ -1071,7 +1067,7 @@ void SpatialIndex::MVRTree::MVRTree::insertData_impl(uint32_t dataLength, byte* 
 	++(m_stats.m_u64TotalData);
 }
 
-void SpatialIndex::MVRTree::MVRTree::insertData_impl(uint32_t dataLength, byte* pData, TimeRegion& mbr, id_type id, uint32_t level)
+void SpatialIndex::MVRTree::MVRTree::insertData_impl(uint32_t dataLength, uint8_t* pData, TimeRegion& mbr, id_type id, uint32_t level)
 {
 	assert(mbr.getDimension() == m_dimension);
 
@@ -1106,7 +1102,7 @@ bool SpatialIndex::MVRTree::MVRTree::deleteData_impl(const TimeRegion& mbr, id_t
 		root.relinquish();
 	}
 
-	if (l.get() != 0)
+	if (l.get() != nullptr)
 	{
 		l->deleteData(id, mbr.m_endTime, pathBuffer);
 		--(m_stats.m_u64Data);
@@ -1118,7 +1114,7 @@ bool SpatialIndex::MVRTree::MVRTree::deleteData_impl(const TimeRegion& mbr, id_t
 
 SpatialIndex::id_type SpatialIndex::MVRTree::MVRTree::writeNode(Node* n)
 {
-	byte* buffer;
+	uint8_t* buffer;
 	uint32_t dataLength;
 	n->storeToByteArray(&buffer, dataLength);
 
@@ -1158,7 +1154,7 @@ SpatialIndex::id_type SpatialIndex::MVRTree::MVRTree::writeNode(Node* n)
 SpatialIndex::MVRTree::NodePtr SpatialIndex::MVRTree::MVRTree::readNode(id_type id)
 {
 	uint32_t dataLength;
-	byte* buffer;
+	uint8_t* buffer;
 
 	try
 	{
@@ -1182,7 +1178,7 @@ SpatialIndex::MVRTree::NodePtr SpatialIndex::MVRTree::MVRTree::readNode(id_type 
 		else if (nodeType == PersistentLeaf) n = m_leafPool.acquire();
 		else throw Tools::IllegalStateException("readNode: failed reading the correct node type information");
 
-		if (n.get() == 0)
+		if (n.get() == nullptr)
 		{
 			if (nodeType == PersistentIndex) n = NodePtr(new Index(this, -1, 0), &m_indexPool);
 			else if (nodeType == PersistentLeaf) n = NodePtr(new Leaf(this, -1), &m_leafPool);
@@ -1236,11 +1232,7 @@ void SpatialIndex::MVRTree::MVRTree::rangeQuery(RangeQueryType type, const IShap
 	// FIXME: I am not using ITimeShape yet, even though I should.
 
 	const Tools::IInterval* ti = dynamic_cast<const Tools::IInterval*>(&query);
-	if (ti == 0) throw Tools::IllegalArgumentException("rangeQuery: Shape does not support the Tools::IInterval interface.");
-
-#ifdef HAVE_PTHREAD_H
-	Tools::LockGuard lock(&m_lock);
-#endif
+	if (ti == nullptr) throw Tools::IllegalArgumentException("rangeQuery: Shape does not support the Tools::IInterval interface.");
 
 	std::set<id_type> visitedNodes;
 	std::set<id_type> visitedData;

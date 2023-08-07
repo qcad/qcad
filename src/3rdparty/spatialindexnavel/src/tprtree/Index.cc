@@ -38,8 +38,7 @@ using namespace SpatialIndex;
 using namespace SpatialIndex::TPRTree;
 
 Index::~Index()
-{
-}
+= default;
 
 Index::Index(SpatialIndex::TPRTree::TPRTree* pTree, id_type id, uint32_t level) : Node(pTree, id, level, pTree->m_indexCapacity)
 {
@@ -90,7 +89,7 @@ NodePtr Index::findLeaf(const MovingRegion& mbr, id_type id, std::stack<id_type>
 			NodePtr n = m_pTree->readNode(m_pIdentifier[cChild]);
 			NodePtr l = n->findLeaf(mbr, id, pathBuffer);
 			if (n.get() == l.get()) n.relinquish();
-			if (l.get() != 0) return l;
+			if (l.get() != nullptr) return l;
 		}
 	}
 
@@ -99,7 +98,7 @@ NodePtr Index::findLeaf(const MovingRegion& mbr, id_type id, std::stack<id_type>
 	return NodePtr();
 }
 
-void Index::split(uint32_t dataLength, byte* pData, MovingRegion& mbr, id_type id, NodePtr& pLeft, NodePtr& pRight)
+void Index::split(uint32_t dataLength, uint8_t* pData, MovingRegion& mbr, id_type id, NodePtr& pLeft, NodePtr& pRight)
 {
 	++(m_pTree->m_stats.m_splits);
 
@@ -117,8 +116,8 @@ void Index::split(uint32_t dataLength, byte* pData, MovingRegion& mbr, id_type i
 	pLeft = m_pTree->m_indexPool.acquire();
 	pRight = m_pTree->m_indexPool.acquire();
 
-	if (pLeft.get() == 0) pLeft = NodePtr(new Index(m_pTree, m_identifier, m_level), &(m_pTree->m_indexPool));
-	if (pRight.get() == 0) pRight = NodePtr(new Index(m_pTree, -1, m_level), &(m_pTree->m_indexPool));
+	if (pLeft.get() == nullptr) pLeft = NodePtr(new Index(m_pTree, m_identifier, m_level), &(m_pTree->m_indexPool));
+	if (pRight.get() == nullptr) pRight = NodePtr(new Index(m_pTree, -1, m_level), &(m_pTree->m_indexPool));
 
 	pLeft->m_nodeMBR = m_pTree->m_infiniteRegion;
 	pRight->m_nodeMBR = m_pTree->m_infiniteRegion;
@@ -127,12 +126,12 @@ void Index::split(uint32_t dataLength, byte* pData, MovingRegion& mbr, id_type i
 
 	for (cIndex = 0; cIndex < g1.size(); ++cIndex)
 	{
-		pLeft->insertEntry(0, 0, *(m_ptrMBR[g1[cIndex]]), m_pIdentifier[g1[cIndex]]);
+		pLeft->insertEntry(0, nullptr, *(m_ptrMBR[g1[cIndex]]), m_pIdentifier[g1[cIndex]]);
 	}
 
 	for (cIndex = 0; cIndex < g2.size(); ++cIndex)
 	{
-		pRight->insertEntry(0, 0, *(m_ptrMBR[g2[cIndex]]), m_pIdentifier[g2[cIndex]]);
+		pRight->insertEntry(0, nullptr, *(m_ptrMBR[g2[cIndex]]), m_pIdentifier[g2[cIndex]]);
 	}
 }
 
@@ -175,7 +174,7 @@ uint32_t Index::findLeastOverlap(const MovingRegion& r) const
 
 	double leastOverlap = std::numeric_limits<double>::max();
 	double me = std::numeric_limits<double>::max();
-	OverlapEntry* best = 0;
+	OverlapEntry* best = nullptr;
 
 	Tools::Interval ivT(m_pTree->m_currentTime, m_pTree->m_currentTime + m_pTree->m_horizon);
 
@@ -340,7 +339,7 @@ void Index::adjustTree(Node* n, std::stack<id_type>& pathBuffer)
 	}
 }
 
-void Index::adjustTree(Node* n1, Node* n2, std::stack<id_type>& pathBuffer, byte* overflowTable)
+void Index::adjustTree(Node* n1, Node* n2, std::stack<id_type>& pathBuffer, uint8_t* overflowTable)
 {
 	++(m_pTree->m_stats.m_adjustments);
 
@@ -393,7 +392,7 @@ void Index::adjustTree(Node* n1, Node* n2, std::stack<id_type>& pathBuffer, byte
 	// No write necessary here. insertData will write the node if needed.
 	//m_pTree->writeNode(this);
 
-	bool bAdjusted = insertData(0, 0, n2->m_nodeMBR, n2->m_identifier, pathBuffer, overflowTable);
+	bool bAdjusted = insertData(0, nullptr, n2->m_nodeMBR, n2->m_identifier, pathBuffer, overflowTable);
 
 	// if n2 is contained in the node and there was no split or reinsert,
 	// we need to adjust only if recalculation took place.

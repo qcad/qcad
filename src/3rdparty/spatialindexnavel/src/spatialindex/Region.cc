@@ -34,9 +34,7 @@
 using namespace SpatialIndex;
 
 Region::Region()
-	: m_dimension(0), m_pLow(0), m_pHigh(0)
-{
-}
+= default;
 
 Region::Region(const double* pLow, const double* pHigh, uint32_t dimension)
 {
@@ -60,7 +58,7 @@ Region::Region(const Region& r)
 
 void Region::initialize(const double* pLow, const double* pHigh, uint32_t dimension)
 {
-	m_pLow = 0;
+	m_pLow = nullptr;
 	m_dimension = dimension;
 
 #ifndef NDEBUG
@@ -147,7 +145,7 @@ uint32_t Region::getByteArraySize()
 	return (sizeof(uint32_t) + 2 * m_dimension * sizeof(double));
 }
 
-void Region::loadFromByteArray(const byte* ptr)
+void Region::loadFromByteArray(const uint8_t* ptr)
 {
 	uint32_t dimension;
 	memcpy(&dimension, ptr, sizeof(uint32_t));
@@ -160,11 +158,11 @@ void Region::loadFromByteArray(const byte* ptr)
 	//ptr += m_dimension * sizeof(double);
 }
 
-void Region::storeToByteArray(byte** data, uint32_t& len)
+void Region::storeToByteArray(uint8_t** data, uint32_t& len)
 {
 	len = getByteArraySize();
-	*data = new byte[len];
-	byte* ptr = *data;
+	*data = new uint8_t[len];
+	uint8_t* ptr = *data;
 
 	memcpy(ptr, &m_dimension, sizeof(uint32_t));
 	ptr += sizeof(uint32_t);
@@ -180,13 +178,13 @@ void Region::storeToByteArray(byte** data, uint32_t& len)
 bool Region::intersectsShape(const IShape& s) const
 {
 	const Region* pr = dynamic_cast<const Region*>(&s);
-	if (pr != 0) return intersectsRegion(*pr);
+	if (pr != nullptr) return intersectsRegion(*pr);
 
 	const LineSegment* pls = dynamic_cast<const LineSegment*>(&s);
-	if (pls != 0) return intersectsLineSegment(*pls);
+	if (pls != nullptr) return intersectsLineSegment(*pls);
 
 	const Point* ppt = dynamic_cast<const Point*>(&s);
-	if (ppt != 0) return containsPoint(*ppt);
+	if (ppt != nullptr) return containsPoint(*ppt);
 
 	throw Tools::IllegalStateException(
 		"Region::intersectsShape: Not implemented yet!"
@@ -196,10 +194,10 @@ bool Region::intersectsShape(const IShape& s) const
 bool Region::containsShape(const IShape& s) const
 {
 	const Region* pr = dynamic_cast<const Region*>(&s);
-	if (pr != 0) return containsRegion(*pr);
+	if (pr != nullptr) return containsRegion(*pr);
 
 	const Point* ppt = dynamic_cast<const Point*>(&s);
-	if (ppt != 0) return containsPoint(*ppt);
+	if (ppt != nullptr) return containsPoint(*ppt);
 
 	throw Tools::IllegalStateException(
 		"Region::containsShape: Not implemented yet!"
@@ -209,10 +207,10 @@ bool Region::containsShape(const IShape& s) const
 bool Region::touchesShape(const IShape& s) const
 {
 	const Region* pr = dynamic_cast<const Region*>(&s);
-	if (pr != 0) return touchesRegion(*pr);
+	if (pr != nullptr) return touchesRegion(*pr);
 
 	const Point* ppt = dynamic_cast<const Point*>(&s);
-	if (ppt != 0) return touchesPoint(*ppt);
+	if (ppt != nullptr) return touchesPoint(*ppt);
 
 	throw Tools::IllegalStateException(
 		"Region::touchesShape: Not implemented yet!"
@@ -253,10 +251,10 @@ double Region::getArea() const
 double Region::getMinimumDistance(const IShape& s) const
 {
 	const Region* pr = dynamic_cast<const Region*>(&s);
-	if (pr != 0) return getMinimumDistance(*pr);
+	if (pr != nullptr) return getMinimumDistance(*pr);
 
 	const Point* ppt = dynamic_cast<const Point*>(&s);
-	if (ppt != 0) return getMinimumDistance(*ppt);
+	if (ppt != nullptr) return getMinimumDistance(*ppt);
 
 	throw Tools::IllegalStateException(
 		"Region::getMinimumDistance: Not implemented yet!"
@@ -301,13 +299,13 @@ bool Region::touchesRegion(const Region& r) const
 	for (uint32_t i = 0; i < m_dimension; ++i)
 	{
 		if (
-			(m_pLow[i] >= r.m_pLow[i] + std::numeric_limits<double>::epsilon() &&
-			m_pLow[i] <= r.m_pLow[i] - std::numeric_limits<double>::epsilon()) ||
-			(m_pHigh[i] >= r.m_pHigh[i] + std::numeric_limits<double>::epsilon() &&
-			m_pHigh[i] <= r.m_pHigh[i] - std::numeric_limits<double>::epsilon()))
-			return false;
+			(m_pLow[i] >= r.m_pLow[i] - std::numeric_limits<double>::epsilon() &&
+			m_pLow[i] <= r.m_pLow[i] + std::numeric_limits<double>::epsilon()) ||
+			(m_pHigh[i] >= r.m_pHigh[i] - std::numeric_limits<double>::epsilon() &&
+			m_pHigh[i] <= r.m_pHigh[i] + std::numeric_limits<double>::epsilon()))
+			return true;
 	}
-	return true;
+	return false;
 }
 
 
@@ -569,7 +567,7 @@ void Region::makeDimension(uint32_t dimension)
 
 		// remember that this is not a constructor. The object will be destructed normally if
 		// something goes wrong (bad_alloc), so we must take care not to leave the object at an intermediate state.
-		m_pLow = 0; m_pHigh = 0;
+		m_pLow = nullptr; m_pHigh = nullptr;
 
 		m_dimension = dimension;
 		m_pLow = new double[m_dimension];

@@ -6,7 +6,7 @@
  * Copyright (c) 2009, Howard Butler
  *
  * All rights reserved.
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the "Software"),
  * to deal in the Software without restriction, including without limitation
@@ -29,17 +29,17 @@
 #include <spatialindex/capi/sidx_impl.h>
 
 
-DataStream::DataStream(int (*readNext)(SpatialIndex::id_type * id, 
-					   double **pMin, 
-					   double **pMax, 
-					   uint32_t *nDimension, 
-					   const uint8_t** pData, 
-					   uint32_t *nDataLength) ) 
+DataStream::DataStream(int (*readNext)(SpatialIndex::id_type * id,
+					   double **pMin,
+					   double **pMax,
+					   uint32_t *nDimension,
+					   const uint8_t** pData,
+					   size_t *nDataLength) )
   : m_pNext(0),
     m_bDoneReading(false)
 {
 	iterfunct = readNext;
-	
+
 	// Read the first one.
 	readData();
 }
@@ -56,26 +56,26 @@ bool DataStream::readData()
 	double *pMax=0;
 	uint32_t nDimension=0;
 	uint8_t *p_data=0;
-	uint32_t nDataLength=0;
-	
+	size_t nDataLength=0;
+
 	if (m_bDoneReading == true) {
 		return false;
 	}
-	
+
 	int ret = iterfunct(&id, &pMin, &pMax, &nDimension, const_cast<const uint8_t**>(&p_data), &nDataLength);
 
-	// The callback should return anything other than 0 
+	// The callback should return anything other than 0
 	// when it is done.
-	if (ret != 0) 
+	if (ret != 0)
 	{
 		m_bDoneReading = true;
 		return false;
 	}
-	
+
 	SpatialIndex::Region r = SpatialIndex::Region(pMin, pMax, nDimension);
-	
+
 	// Data gets copied here anyway. We should fix this part of SpatialIndex::RTree::Data's constructor
-	m_pNext = new SpatialIndex::RTree::Data(nDataLength, p_data, r, id);
+	m_pNext = new SpatialIndex::RTree::Data((uint32_t)nDataLength, p_data, r, id);
 
 	return true;
 }
@@ -105,9 +105,10 @@ void DataStream::rewind()
 {
 	throw Tools::NotSupportedException("Operation not supported.");
 
-	if (m_pNext != 0)
+/*	if (m_pNext != 0)
 	{
 	 delete m_pNext;
 	 m_pNext = 0;
 	}
+*/
 }

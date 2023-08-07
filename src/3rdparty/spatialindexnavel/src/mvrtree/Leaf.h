@@ -34,17 +34,17 @@ namespace SpatialIndex
 		class Leaf : public Node
 		{
 		public:
-			virtual ~Leaf();
+			~Leaf() override;
 
 		private:
 			Leaf(MVRTree* pTree, id_type id);
 
-			virtual NodePtr chooseSubtree(const TimeRegion& mbr, uint32_t level, std::stack<id_type>& pathBuffer);
-			virtual NodePtr findLeaf(const TimeRegion& mbr, id_type id, std::stack<id_type>& pathBuffer);
+			NodePtr chooseSubtree(const TimeRegion& mbr, uint32_t level, std::stack<id_type>& pathBuffer) override;
+			NodePtr findLeaf(const TimeRegion& mbr, id_type id, std::stack<id_type>& pathBuffer) override;
 
-			virtual void split(
-				uint32_t dataLength, byte* pData, TimeRegion& mbr, id_type id, NodePtr& left, NodePtr& right,
-				TimeRegion& mbr2, id_type id2, bool bInsertMbr2 = false);
+			void split(
+				uint32_t dataLength, uint8_t* pData, TimeRegion& mbr, id_type id, NodePtr& left, NodePtr& right,
+				TimeRegion& mbr2, id_type id2, bool bInsertMbr2 = false) override;
 
 			friend class MVRTree;
 			friend class Node;

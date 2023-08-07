@@ -24,8 +24,8 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
 ******************************************************************************/
-#include <time.h>
-#include <stdlib.h>
+#include <ctime>
+#include <cstdlib>
 #include <cmath>
 
 #ifndef HAVE_SRAND48
@@ -62,12 +62,11 @@ IBuffer* SpatialIndex::StorageManager::createNewRandomEvictionsBuffer(IStorageMa
 
 RandomEvictionsBuffer::RandomEvictionsBuffer(IStorageManager& sm, Tools::PropertySet& ps) : Buffer(sm, ps)
 {
-	srand48(static_cast<uint32_t>(time(0)));
+	srand48(static_cast<uint32_t>(time(nullptr)));
 }
 
 RandomEvictionsBuffer::~RandomEvictionsBuffer()
-{
-}
+= default;
 
 void RandomEvictionsBuffer::addEntry(id_type page, Entry* e)
 {
@@ -94,7 +93,7 @@ void RandomEvictionsBuffer::removeEntry()
 	if ((*it).second->m_bDirty)
 	{
 		id_type page = (*it).first;
-		m_pStorageManager->storeByteArray(page, ((*it).second)->m_length, (const byte *) ((*it).second)->m_pData);
+		m_pStorageManager->storeByteArray(page, ((*it).second)->m_length, (const uint8_t *) ((*it).second)->m_pData);
 	}
 
 	delete (*it).second;

@@ -37,7 +37,7 @@ namespace SpatialIndex
 		Point();
 		Point(const double* pCoords, uint32_t dimension);
 		Point(const Point& p);
-		virtual ~Point();
+		~Point() override;
 
 		virtual Point& operator=(const Point& p);
 		virtual bool operator==(const Point& p) const;
@@ -45,26 +45,26 @@ namespace SpatialIndex
 		//
 		// IObject interface
 		//
-		virtual Point* clone();
+		Point* clone() override;
 
 		//
 		// ISerializable interface
 		//
-		virtual uint32_t getByteArraySize();
-		virtual void loadFromByteArray(const byte* data);
-		virtual void storeToByteArray(byte** data, uint32_t& length);
+		uint32_t getByteArraySize() override;
+		void loadFromByteArray(const uint8_t* data) override;
+		void storeToByteArray(uint8_t** data, uint32_t& length) override;
 
 		//
 		// IShape interface
 		//
-		virtual bool intersectsShape(const IShape& in) const;
-		virtual bool containsShape(const IShape& in) const;
-		virtual bool touchesShape(const IShape& in) const;
-		virtual void getCenter(Point& out) const;
-		virtual uint32_t getDimension() const;
-		virtual void getMBR(Region& out) const;
-		virtual double getArea() const;
-		virtual double getMinimumDistance(const IShape& in) const;
+		bool intersectsShape(const IShape& in) const override;
+		bool containsShape(const IShape& in) const override;
+		bool touchesShape(const IShape& in) const override;
+		void getCenter(Point& out) const override;
+		uint32_t getDimension() const override;
+		void getMBR(Region& out) const override;
+		double getArea() const override;
+		double getMinimumDistance(const IShape& in) const override;
 
 		virtual double getMinimumDistance(const Point& p) const;
 
@@ -74,8 +74,8 @@ namespace SpatialIndex
 		virtual void makeDimension(uint32_t dimension);
 
 	public:
-		uint32_t m_dimension;
-		double* m_pCoords;
+		uint32_t m_dimension{0};
+		double* m_pCoords{nullptr};
 
 		friend class Region;
 		friend SIDX_DLL std::ostream& operator<<(std::ostream& os, const Point& pt);

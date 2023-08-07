@@ -171,12 +171,12 @@ void Page_ResultSet_Ids(IdVisitor& visitor, int64_t** ids, int64_t nStart, int64
     if ((nResultCount - (nStart + nResultLimit)) < 0)
     {
       // not enough results to fill nResultCount
-      nStart = std::min(nStart, nResultCount);
-      nResultCount = nStart + std::min(nResultLimit, nResultCount - nStart);
+      nStart = (std::min)(nStart, nResultCount);
+      nResultCount = nStart + (std::min)(nResultLimit, nResultCount - nStart);
     }
     else
     {
-      nResultCount = std::min(nResultCount, nStart + nResultLimit);
+      nResultCount = (std::min)(nResultCount, nStart + nResultLimit);
     }
   }
 
@@ -209,16 +209,16 @@ void Page_ResultSet_Obj(ObjVisitor& visitor, IndexItemH** items, int64_t nStart,
 		if ((nResultCount - (nStart + nResultLimit)) < 0)
 		{
 			// not enough results to fill nResultCount
-			nStart = std::min(nStart, nResultCount);
-			nResultCount = nStart + std::min(nResultLimit, nResultCount - nStart);
+			nStart = (std::min)(nStart, nResultCount);
+			nResultCount = nStart + (std::min)(nResultLimit, nResultCount - nStart);
 		}
 		else
 		{
-			nResultCount = std::min(nResultCount, nStart + nResultLimit);
+			nResultCount = (std::min)(nResultCount, nStart + nResultLimit);
 		}
 	}
 
-	*items = (SpatialIndex::IData**) malloc (nResultLimit * sizeof(SpatialIndex::IData*));
+	*items = (IndexItemH*) malloc (nResultLimit * sizeof(SpatialIndex::IData*));
 
 	std::vector<SpatialIndex::IData*>& results = visitor.GetResults();
 
@@ -229,7 +229,7 @@ void Page_ResultSet_Obj(ObjVisitor& visitor, IndexItemH** items, int64_t nStart,
 	for (int64_t i = nStart; i < nResultCount; ++i)
 	{
 		SpatialIndex::IData* result =results[i];
-		(*items)[i - nStart] =  dynamic_cast<SpatialIndex::IData*>(result->clone());
+		(*items)[i - nStart] =  (IndexItemH)dynamic_cast<SpatialIndex::IData*>(result->clone());
 	}
 	*nResults = nResultCount - nStart;
 }

@@ -5,7 +5,7 @@
  * Copyright (c) 2002, Marios Hadjieleftheriou
  *
  * All rights reserved.
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the "Software"),
  * to deal in the Software without restriction, including without limitation
@@ -30,6 +30,10 @@
 
 // For checking if a file exists - hobu
 #include <sys/stat.h>
+
+#ifdef WIN32
+#define stat _stat64
+#endif
 
 #include <spatialindex/SpatialIndex.h>
 #include "DiskStorageManager.h"
@@ -121,7 +125,7 @@ SpatialIndex::IStorageManager* SpatialIndex::StorageManager::loadDiskStorageMana
 	return returnDiskStorageManager(ps);
 }
 
-DiskStorageManager::DiskStorageManager(Tools::PropertySet& ps) : m_pageSize(0), m_nextPage(-1), m_buffer(0)
+DiskStorageManager::DiskStorageManager(Tools::PropertySet& ps) : m_pageSize(0), m_nextPage(-1), m_buffer(nullptr)
 {
 	Tools::Variant var;
 
@@ -129,7 +133,7 @@ DiskStorageManager::DiskStorageManager(Tools::PropertySet& ps) : m_pageSize(0), 
 	bool bOverwrite = false;
 	bool bFileExists = false;
 	std::streamoff length = 0;
-	
+
 	var = ps.getProperty("Overwrite");
 
 	if (var.m_varType != Tools::VT_EMPTY)
@@ -171,7 +175,7 @@ DiskStorageManager::DiskStorageManager(Tools::PropertySet& ps) : m_pageSize(0), 
 			m_dataFile.open(sDataFile.c_str(), mode);
 
 			if (m_indexFile.fail() || m_dataFile.fail())
-				throw Tools::IllegalArgumentException("SpatialIndex::DiskStorageManager: Index/Data file cannot be read/writen.");
+				throw Tools::IllegalArgumentException("SpatialIndex::DiskStorageManager: Index/Data file cannot be read/written.");
 		}
 		else
 		{
@@ -223,7 +227,7 @@ DiskStorageManager::DiskStorageManager(Tools::PropertySet& ps) : m_pageSize(0), 
 	}
 
 	// create buffer.
-	m_buffer = new byte[m_pageSize];
+	m_buffer = new uint8_t[m_pageSize];
 	memset(m_buffer, 0, m_pageSize);
 
 	if ((bOverwrite == false) && (length > 0))
@@ -283,10 +287,10 @@ DiskStorageManager::~DiskStorageManager()
 	flush();
 	m_indexFile.close();
 	m_dataFile.close();
-	if (m_buffer != 0) delete[] m_buffer;
+	if (m_buffer != nullptr) delete[] m_buffer;
 
-	std::map<id_type, Entry*>::iterator it;
-	for (it = m_pageIndex.begin(); it != m_pageIndex.end(); ++it) delete (*it).second;
+	for (auto& v: m_pageIndex)
+		delete v.second;
 }
 
 void DiskStorageManager::flush()
@@ -347,7 +351,7 @@ void DiskStorageManager::flush()
 	m_dataFile.flush();
 }
 
-void DiskStorageManager::loadByteArray(const id_type page, uint32_t& len, byte** data)
+void DiskStorageManager::loadByteArray(const id_type page, uint32_t& len, uint8_t** data)
 {
 	std::map<id_type, Entry*>::iterator it = m_pageIndex.find(page);
 
@@ -359,9 +363,9 @@ void DiskStorageManager::loadByteArray(const id_type page, uint32_t& len, byte**
 	uint32_t cTotal = static_cast<uint32_t>(pages.size());
 
 	len = (*it).second->m_length;
-	*data = new byte[len];
+	*data = new uint8_t[len];
 
-	byte* ptr = *data;
+	uint8_t* ptr = *data;
 	uint32_t cLen;
 	uint32_t cRem = len;
 
@@ -385,14 +389,14 @@ void DiskStorageManager::loadByteArray(const id_type page, uint32_t& len, byte**
 	while (cNext < cTotal);
 }
 
-void DiskStorageManager::storeByteArray(id_type& page, const uint32_t len, const byte* const data)
+void DiskStorageManager::storeByteArray(id_type& page, const uint32_t len, const uint8_t* const data)
 {
 	if (page == NewPage)
 	{
 		Entry* e = new Entry();
 		e->m_length = len;
 
-		const byte* ptr = data;
+		const uint8_t* ptr = data;
 		id_type cPage;
 		uint32_t cRem = len;
 		uint32_t cLen;
@@ -445,7 +449,7 @@ void DiskStorageManager::storeByteArray(id_type& page, const uint32_t len, const
 		Entry* e = new Entry();
 		e->m_length = len;
 
-		const byte* ptr = data;
+		const uint8_t* ptr = data;
 		id_type cPage;
 		uint32_t cRem = len;
 		uint32_t cLen, cNext = 0;

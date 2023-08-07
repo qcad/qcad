@@ -68,7 +68,7 @@ TimeRegion::TimeRegion(const Region& r, double tStart, double tEnd)
 }
 
 TimeRegion::TimeRegion(const TimePoint& low, const TimePoint& high)
-	: Region((Point&) low, (Point&) high), m_startTime(low.m_startTime), m_endTime(high.m_endTime)
+    : Region( low, high), m_startTime(low.m_startTime), m_endTime(high.m_endTime)
 {
 }
 
@@ -76,7 +76,7 @@ TimeRegion::TimeRegion(const TimeRegion& r)
 	: m_startTime(r.m_startTime), m_endTime(r.m_endTime)
 {
 	m_dimension = r.m_dimension;
-	m_pLow = 0;
+	m_pLow = nullptr;
 
 	try
 	{
@@ -94,8 +94,7 @@ TimeRegion::TimeRegion(const TimeRegion& r)
 }
 
 TimeRegion::~TimeRegion()
-{
-}
+= default;
 
 TimeRegion& TimeRegion::operator=(const TimeRegion& r)
 {
@@ -211,7 +210,7 @@ uint32_t TimeRegion::getByteArraySize()
 	return (sizeof(uint32_t) + 2 * sizeof(double) + 2 * m_dimension * sizeof(double));
 }
 
-void TimeRegion::loadFromByteArray(const byte* ptr)
+void TimeRegion::loadFromByteArray(const uint8_t* ptr)
 {
 	uint32_t dimension;
 
@@ -229,11 +228,11 @@ void TimeRegion::loadFromByteArray(const byte* ptr)
 	//ptr += m_dimension * sizeof(double);
 }
 
-void TimeRegion::storeToByteArray(byte** data, uint32_t& len)
+void TimeRegion::storeToByteArray(uint8_t** data, uint32_t& len)
 {
 	len = getByteArraySize();
-	*data = new byte[len];
-	byte* ptr = *data;
+	*data = new uint8_t[len];
+	uint8_t* ptr = *data;
 
 	memcpy(ptr, &m_dimension, sizeof(uint32_t));
 	ptr += sizeof(uint32_t);
@@ -254,10 +253,10 @@ void TimeRegion::storeToByteArray(byte** data, uint32_t& len)
 bool TimeRegion::intersectsShapeInTime(const ITimeShape& in) const
 {
 	const TimeRegion* pr = dynamic_cast<const TimeRegion*>(&in);
-	if (pr != 0) return intersectsRegionInTime(*pr);
+	if (pr != nullptr) return intersectsRegionInTime(*pr);
 
 	const TimePoint* ppt = dynamic_cast<const TimePoint*>(&in);
-	if (ppt != 0) return containsPointInTime(*ppt);
+	if (ppt != nullptr) return containsPointInTime(*ppt);
 
 	throw Tools::IllegalStateException("intersectsShapeInTime: Not implemented yet!");
 }
@@ -270,10 +269,10 @@ bool TimeRegion::intersectsShapeInTime(const IInterval&, const ITimeShape&) cons
 bool TimeRegion::containsShapeInTime(const ITimeShape& in) const
 {
 	const TimeRegion* pr = dynamic_cast<const TimeRegion*>(&in);
-	if (pr != 0) return containsRegionInTime(*pr);
+	if (pr != nullptr) return containsRegionInTime(*pr);
 
 	const TimePoint* ppt = dynamic_cast<const TimePoint*>(&in);
-	if (ppt != 0) return containsPointInTime(*ppt);
+	if (ppt != nullptr) return containsPointInTime(*ppt);
 
 	throw Tools::IllegalStateException("containsShapeInTime: Not implemented yet!");
 }
@@ -286,7 +285,7 @@ bool TimeRegion::containsShapeInTime(const IInterval&, const ITimeShape&) const
 bool TimeRegion::touchesShapeInTime(const ITimeShape& in) const
 {
 	const TimeRegion* pr = dynamic_cast<const TimeRegion*>(&in);
-	if (pr != 0) return touchesRegionInTime(*pr);
+	if (pr != nullptr) return touchesRegionInTime(*pr);
 
 	throw Tools::IllegalStateException("touchesShapeInTime: Not implemented yet!");
 }
@@ -395,7 +394,7 @@ void TimeRegion::makeDimension(uint32_t dimension)
 
 		delete[] m_pLow;
 		delete[] m_pHigh;
-		m_pLow = 0; m_pHigh = 0;
+		m_pLow = nullptr; m_pHigh = nullptr;
 
 		m_pLow = new double[m_dimension];
 		m_pHigh = new double[m_dimension];

@@ -63,7 +63,7 @@ namespace Tools
 
 		PoolPointer<X> acquire()
 		{
-			X* p = 0;
+			X* p = nullptr;
 
 			if (! m_pool.empty())
 			{

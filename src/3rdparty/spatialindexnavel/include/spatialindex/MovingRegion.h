@@ -61,7 +61,7 @@ namespace SpatialIndex
 		MovingRegion(const Region& mbr, const Region& vbr, double tStart, double tEnd);
 		MovingRegion(const MovingPoint& low, const MovingPoint& high);
 		MovingRegion(const MovingRegion& in);
-		virtual ~MovingRegion();
+		~MovingRegion() override;
 
 		virtual MovingRegion& operator=(const MovingRegion& r);
 		virtual bool operator==(const MovingRegion&) const;
@@ -111,31 +111,31 @@ namespace SpatialIndex
 		//
 		// IObject interface
 		//
-		virtual MovingRegion* clone();
+		MovingRegion* clone() override;
 
 		//
 		// ISerializable interface
 		//
-		virtual uint32_t getByteArraySize();
-		virtual void loadFromByteArray(const byte* data);
-		virtual void storeToByteArray(byte** data, uint32_t& len);
+		uint32_t getByteArraySize() override;
+		void loadFromByteArray(const uint8_t* data) override;
+		void storeToByteArray(uint8_t** data, uint32_t& len) override;
 
 		//
 		// IEvolvingShape interface
 		//
-		virtual void getVMBR(Region& out) const;
-		virtual void getMBRAtTime(double t, Region& out) const;
+		void getVMBR(Region& out) const override;
+		void getMBRAtTime(double t, Region& out) const override;
 
 		//
 		// ITimeShape interface
 		//
-		virtual double getAreaInTime() const;
-		virtual double getAreaInTime(const Tools::IInterval& ivI) const;
-		virtual double getIntersectingAreaInTime(const ITimeShape& r) const;
-		virtual double getIntersectingAreaInTime(const Tools::IInterval& ivI, const ITimeShape& r) const;
+		double getAreaInTime() const override;
+		double getAreaInTime(const Tools::IInterval& ivI) const override;
+		double getIntersectingAreaInTime(const ITimeShape& r) const override;
+		double getIntersectingAreaInTime(const Tools::IInterval& ivI, const ITimeShape& r) const override;
 
-		virtual void makeInfinite(uint32_t dimension);
-		virtual void makeDimension(uint32_t dimension);
+		void makeInfinite(uint32_t dimension) override;
+		void makeDimension(uint32_t dimension) override;
 
 	private:
 		void initialize(
@@ -152,15 +152,11 @@ namespace SpatialIndex
 			uint32_t m_boundary;
 			const MovingRegion* m_to;
 
-			struct ascending: public std::binary_function<CrossPoint&, CrossPoint&, bool>
-			{
-				bool operator()(const CrossPoint& __x, const CrossPoint& __y) const { return __x.m_t > __y.m_t; }
-			};
 		}; // CrossPoint
 
 	public:
-		double* m_pVLow;
-		double* m_pVHigh;
+		double* m_pVLow{nullptr};
+		double* m_pVHigh{nullptr};
 
 		friend SIDX_DLL std::ostream& operator<<(std::ostream& os, const MovingRegion& r);
 	}; // MovingRegion

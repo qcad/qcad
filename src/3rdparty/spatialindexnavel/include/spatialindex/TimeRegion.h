@@ -41,7 +41,7 @@ namespace SpatialIndex
 		TimeRegion(const Region& in, double tStart, double tEnd);
 		TimeRegion(const TimePoint& low, const TimePoint& high);
 		TimeRegion(const TimeRegion& in);
-		virtual ~TimeRegion();
+		~TimeRegion() override;
 
 		virtual TimeRegion& operator=(const TimeRegion& r);
 		virtual bool operator==(const TimeRegion&) const;
@@ -59,43 +59,43 @@ namespace SpatialIndex
 		//
 		// IObject interface
 		//
-		virtual TimeRegion* clone();
+		TimeRegion* clone() override;
 
 		//
 		// ISerializable interface
 		//
-		virtual uint32_t getByteArraySize();
-		virtual void loadFromByteArray(const byte* data);
-		virtual void storeToByteArray(byte** data, uint32_t& len);
+		uint32_t getByteArraySize() override;
+		void loadFromByteArray(const uint8_t* data) override;
+		void storeToByteArray(uint8_t** data, uint32_t& len) override;
 
 		//
 		// ITimeShape interface
 		//
-		virtual bool intersectsShapeInTime(const ITimeShape& in) const;
-		virtual bool intersectsShapeInTime(const Tools::IInterval& ivI, const ITimeShape& in) const;
-		virtual bool containsShapeInTime(const ITimeShape& in) const;
-		virtual bool containsShapeInTime(const Tools::IInterval& ivI, const ITimeShape& in) const;
-		virtual bool touchesShapeInTime(const ITimeShape& in) const;
-		virtual bool touchesShapeInTime(const Tools::IInterval& ivI, const ITimeShape& in) const;
-		virtual double getAreaInTime() const;
-		virtual double getAreaInTime(const Tools::IInterval& ivI) const;
-		virtual double getIntersectingAreaInTime(const ITimeShape& r) const;
-		virtual double getIntersectingAreaInTime(const Tools::IInterval& ivI, const ITimeShape& r) const;
+		bool intersectsShapeInTime(const ITimeShape& in) const override;
+		bool intersectsShapeInTime(const Tools::IInterval& ivI, const ITimeShape& in) const override;
+		bool containsShapeInTime(const ITimeShape& in) const override;
+		bool containsShapeInTime(const Tools::IInterval& ivI, const ITimeShape& in) const override;
+		bool touchesShapeInTime(const ITimeShape& in) const override;
+		bool touchesShapeInTime(const Tools::IInterval& ivI, const ITimeShape& in) const override;
+		double getAreaInTime() const override;
+		double getAreaInTime(const Tools::IInterval& ivI) const override;
+		double getIntersectingAreaInTime(const ITimeShape& r) const override;
+		double getIntersectingAreaInTime(const Tools::IInterval& ivI, const ITimeShape& r) const override;
 
 		//
 		// IInterval interface
 		//
 		virtual Tools::IInterval& operator=(const Tools::IInterval&);
-		virtual double getLowerBound() const;
-		virtual double getUpperBound() const;
-		virtual void setBounds(double, double);
-		virtual bool intersectsInterval(const Tools::IInterval& ti) const;
-		virtual bool intersectsInterval(Tools::IntervalType t, const double start, const double end) const;
-		virtual bool containsInterval(const Tools::IInterval& ti) const;
-		virtual Tools::IntervalType getIntervalType() const;
+		double getLowerBound() const override;
+		double getUpperBound() const override;
+		void setBounds(double, double) override;
+		bool intersectsInterval(const Tools::IInterval& ti) const override;
+		bool intersectsInterval(Tools::IntervalType t, const double start, const double end) const override;
+		bool containsInterval(const Tools::IInterval& ti) const override;
+		Tools::IntervalType getIntervalType() const override;
 
-		virtual void makeInfinite(uint32_t dimension);
-		virtual void makeDimension(uint32_t dimension);
+		void makeInfinite(uint32_t dimension) override;
+		void makeDimension(uint32_t dimension) override;
 
 	public:
 		double m_startTime;

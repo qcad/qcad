@@ -63,7 +63,7 @@ uint32_t Node::getByteArraySize()
 		(2 * m_pTree->m_dimension * sizeof(double)));
 }
 
-void Node::loadFromByteArray(const byte* ptr)
+void Node::loadFromByteArray(const uint8_t* ptr)
 {
 	m_nodeMBR = m_pTree->m_infiniteRegion;
 
@@ -103,13 +103,13 @@ void Node::loadFromByteArray(const byte* ptr)
 		if (m_pDataLength[cChild] > 0)
 		{
 			m_totalDataLength += m_pDataLength[cChild];
-			m_pData[cChild] = new byte[m_pDataLength[cChild]];
+			m_pData[cChild] = new uint8_t[m_pDataLength[cChild]];
 			memcpy(m_pData[cChild], ptr, m_pDataLength[cChild]);
 			ptr += m_pDataLength[cChild];
 		}
 		else
 		{
-			m_pData[cChild] = 0;
+			m_pData[cChild] = nullptr;
 		}
 
 		//m_nodeMBR.combineRegion(*(m_ptrMBR[cChild]));
@@ -121,12 +121,12 @@ void Node::loadFromByteArray(const byte* ptr)
 	//ptr += m_pTree->m_dimension * sizeof(double);
 }
 
-void Node::storeToByteArray(byte** data, uint32_t& len)
+void Node::storeToByteArray(uint8_t** data, uint32_t& len)
 {
 	len = getByteArraySize();
 
-	*data = new byte[len];
-	byte* ptr = *data;
+	*data = new uint8_t[len];
+	uint8_t* ptr = *data;
 
 	uint32_t nodeType;
 
@@ -213,13 +213,13 @@ void Node::getChildShape(uint32_t index, IShape** out) const
 }
 
 
-void Node::getChildData(uint32_t index, uint32_t& length, byte** data) const
+void Node::getChildData(uint32_t index, uint32_t& length, uint8_t** data) const
 {
         if (index >= m_children) throw Tools::IndexOutOfBoundsException(index);
-        if (m_pData[index] == NULL)
+        if (m_pData[index] == nullptr)
         {
                 length = 0;
-                data = NULL;
+                data = nullptr;
         }
         else
         {
@@ -247,19 +247,8 @@ bool Node::isIndex() const
 // Internal
 //
 
-Node::Node() :
-	m_pTree(0),
-	m_level(0),
-	m_identifier(-1),
-	m_children(0),
-	m_capacity(0),
-	m_pData(0),
-	m_ptrMBR(0),
-	m_pIdentifier(0),
-	m_pDataLength(0),
-	m_totalDataLength(0)
-{
-}
+Node::Node()
+= default;
 
 	Node::Node(SpatialIndex::MVRTree::MVRTree* pTree, id_type id, uint32_t level, uint32_t capacity) :
 	m_pTree(pTree),
@@ -267,10 +256,10 @@ Node::Node() :
 	m_identifier(id),
 	m_children(0),
 	m_capacity(capacity),
-	m_pData(0),
-	m_ptrMBR(0),
-	m_pIdentifier(0),
-	m_pDataLength(0),
+	m_pData(nullptr),
+	m_ptrMBR(nullptr),
+	m_pIdentifier(nullptr),
+	m_pDataLength(nullptr),
 	m_totalDataLength(0)
 {
 	m_nodeMBR.makeInfinite(m_pTree->m_dimension);
@@ -278,7 +267,7 @@ Node::Node() :
 	try
 	{
 		m_pDataLength = new uint32_t[m_capacity + 2];
-		m_pData = new byte*[m_capacity + 2];
+		m_pData = new uint8_t*[m_capacity + 2];
 		m_ptrMBR = new TimeRegionPtr[m_capacity + 2];
 		m_pIdentifier = new id_type[m_capacity + 2];
 	}
@@ -294,19 +283,19 @@ Node::Node() :
 
 Node::~Node()
 {
-	if (m_pData != 0)
+	if (m_pData != nullptr)
 	{
 		for (uint32_t cChild = 0; cChild < m_children; ++cChild)
 		{
-			if (m_pData[cChild] != 0) delete[] m_pData[cChild];
+			if (m_pData[cChild] != nullptr) delete[] m_pData[cChild];
 		}
 
 		delete[] m_pData;
 		delete[] m_pDataLength;
 	}
 
-	if (m_ptrMBR != 0) delete[] m_ptrMBR;
-	if (m_pIdentifier != 0) delete[] m_pIdentifier;
+	if (m_ptrMBR != nullptr) delete[] m_ptrMBR;
+	if (m_pIdentifier != nullptr) delete[] m_pIdentifier;
 }
 
 Node& Node::operator=(const Node&)
@@ -314,7 +303,7 @@ Node& Node::operator=(const Node&)
 	throw Tools::IllegalStateException("operator =: This should never be called.");
 }
 
-void Node::insertEntry(uint32_t dataLength, byte* pData, TimeRegion& mbr, id_type id)
+void Node::insertEntry(uint32_t dataLength, uint8_t* pData, TimeRegion& mbr, id_type id)
 {
 	assert(m_children < m_capacity);
 
@@ -338,7 +327,7 @@ bool Node::deleteEntry(uint32_t index)
 	TimeRegionPtr ptrR = m_ptrMBR[index];
 
 	m_totalDataLength -= m_pDataLength[index];
-	if (m_pData[index] != 0) delete[] m_pData[index];
+	if (m_pData[index] != nullptr) delete[] m_pData[index];
 
 	if (m_children > 1 && index != m_children - 1)
 	{
@@ -377,7 +366,7 @@ bool Node::deleteEntry(uint32_t index)
 }
 
 bool Node::insertData(
-	uint32_t dataLength, byte* pData, TimeRegion& mbr, id_type id, std::stack<id_type>& pathBuffer,
+	uint32_t dataLength, uint8_t* pData, TimeRegion& mbr, id_type id, std::stack<id_type>& pathBuffer,
 	TimeRegion& mbr2, id_type id2, bool bInsertMbr2, bool bForceAdjust)
 {
 	// we should be certain that when bInsertMbr2 is true the node needs to be version split
@@ -421,13 +410,13 @@ bool Node::insertData(
 		if (m_level == 0)
 		{
 			ptrCopy = m_pTree->m_leafPool.acquire();
-			if (ptrCopy.get() == 0) ptrCopy = NodePtr(new Leaf(m_pTree, - 1), &(m_pTree->m_leafPool));
+			if (ptrCopy.get() == nullptr) ptrCopy = NodePtr(new Leaf(m_pTree, - 1), &(m_pTree->m_leafPool));
 			else ptrCopy->m_nodeMBR = m_pTree->m_infiniteRegion;
 		}
 		else
 		{
 			ptrCopy = m_pTree->m_indexPool.acquire();
-			if (ptrCopy.get() == 0) ptrCopy = NodePtr(new Index(m_pTree, -1, m_level), &(m_pTree->m_indexPool));
+			if (ptrCopy.get() == nullptr) ptrCopy = NodePtr(new Index(m_pTree, -1, m_level), &(m_pTree->m_indexPool));
 			else
 			{
 				ptrCopy->m_level = m_level;
@@ -439,12 +428,12 @@ bool Node::insertData(
 		{
 			if (! (m_ptrMBR[cChild]->m_endTime < std::numeric_limits<double>::max()))
 			{
-				byte* data = 0;
+				uint8_t* data = nullptr;
 
 				if (m_pDataLength[cChild] > 0)
 				{
-					data = new byte[m_pDataLength[cChild]];
-					memcpy(data, m_pData[cChild], m_pDataLength[cChild] * sizeof(byte));
+					data = new uint8_t[m_pDataLength[cChild]];
+					memcpy(data, m_pData[cChild], m_pDataLength[cChild] * sizeof(uint8_t));
 				}
 				ptrCopy->insertEntry(m_pDataLength[cChild], data, *(m_ptrMBR[cChild]), m_pIdentifier[cChild]);
 				ptrCopy->m_ptrMBR[ptrCopy->m_children - 1]->m_startTime = mbr.m_startTime;
@@ -477,7 +466,7 @@ bool Node::insertData(
 				m_pTree->writeNode(nn.get());
 
 				NodePtr ptrR = m_pTree->m_indexPool.acquire();
-				if (ptrR.get() == 0) ptrR = NodePtr(new Index(m_pTree, -1, ptrCopy->m_level + 1), &(m_pTree->m_indexPool));
+				if (ptrR.get() == nullptr) ptrR = NodePtr(new Index(m_pTree, -1, ptrCopy->m_level + 1), &(m_pTree->m_indexPool));
 				else
 				{
 					//ptrR->m_pTree = m_pTree;
@@ -486,8 +475,8 @@ bool Node::insertData(
 					ptrR->m_nodeMBR = m_pTree->m_infiniteRegion;
 				}
 
-				ptrR->insertEntry(0, 0, n->m_nodeMBR, n->m_identifier);
-				ptrR->insertEntry(0, 0, nn->m_nodeMBR, nn->m_identifier);
+				ptrR->insertEntry(0, nullptr, n->m_nodeMBR, n->m_identifier);
+				ptrR->insertEntry(0, nullptr, nn->m_nodeMBR, nn->m_identifier);
 
 				if (m_nodeMBR.m_startTime == m_nodeMBR.m_endTime)
 				{
@@ -506,7 +495,7 @@ bool Node::insertData(
 					assert(m_pTree->m_roots[m_pTree->m_roots.size() - 1].m_id == m_identifier);
 					m_pTree->m_roots[m_pTree->m_roots.size() - 1].m_startTime = m_nodeMBR.m_startTime;
 					m_pTree->m_roots[m_pTree->m_roots.size() - 1].m_endTime = m_nodeMBR.m_endTime;
-					m_pTree->m_roots.push_back(MVRTree::RootEntry(ptrR->m_identifier, ptrR->m_nodeMBR.m_startTime, ptrR->m_nodeMBR.m_endTime));
+					m_pTree->m_roots.emplace_back(ptrR->m_identifier, ptrR->m_nodeMBR.m_startTime, ptrR->m_nodeMBR.m_endTime);
 					m_pTree->m_stats.m_treeHeight.push_back(ptrR->m_level + 1);
 					m_pTree->m_stats.m_nodesInLevel.at(n->m_level) = m_pTree->m_stats.m_nodesInLevel[n->m_level] + 2;
 					if (m_level > 0) ++(m_pTree->m_stats.m_u32DeadIndexNodes);
@@ -567,7 +556,7 @@ bool Node::insertData(
 			// the entry contains the appropriate number of live entries
 
 			ptrCopy->insertEntry(dataLength, pData, mbr, id);
-			if (bInsertMbr2) ptrCopy->insertEntry(0, 0, mbr2, id2);
+			if (bInsertMbr2) ptrCopy->insertEntry(0, nullptr, mbr2, id2);
 
 			if (bIsRoot)
 			{
@@ -586,7 +575,7 @@ bool Node::insertData(
 					assert(m_pTree->m_roots[m_pTree->m_roots.size() - 1].m_id == m_identifier);
 					m_pTree->m_roots[m_pTree->m_roots.size() - 1].m_startTime = m_nodeMBR.m_startTime;
 					m_pTree->m_roots[m_pTree->m_roots.size() - 1].m_endTime = m_nodeMBR.m_endTime;
-					m_pTree->m_roots.push_back(MVRTree::RootEntry(ptrCopy->m_identifier, ptrCopy->m_nodeMBR.m_startTime, ptrCopy->m_nodeMBR.m_endTime));
+					m_pTree->m_roots.emplace_back(ptrCopy->m_identifier, ptrCopy->m_nodeMBR.m_startTime, ptrCopy->m_nodeMBR.m_endTime);
 					m_pTree->m_stats.m_treeHeight.push_back(ptrCopy->m_level + 1);
 
 					m_pTree->m_stats.m_nodesInLevel.at(ptrCopy->m_level) = m_pTree->m_stats.m_nodesInLevel[ptrCopy->m_level] + 1;
@@ -623,7 +612,7 @@ bool Node::insertData(
 				//p->m_ptrMBR[child]->m_endTime = mbr.m_startTime;
 
 				// insert this new version copy into the parent
-				p->insertData(0, 0, ptrCopy->m_nodeMBR, ptrCopy->m_identifier, pathBuffer, m_pTree->m_infiniteRegion, -1, false);
+				p->insertData(0, nullptr, ptrCopy->m_nodeMBR, ptrCopy->m_identifier, pathBuffer, m_pTree->m_infiniteRegion, -1, false);
 
 				return false;
 			}
@@ -658,8 +647,8 @@ void Node::insertData(TimeRegion& mbr1, id_type id1, TimeRegion& mbr2, id_type i
 	{
 		// there is enough space for both new entries
 
-		insertEntry(0, 0, mbr1, id1);
-		insertEntry(0, 0, mbr2, id2);
+		insertEntry(0, nullptr, mbr1, id1);
+		insertEntry(0, nullptr, mbr2, id2);
 
 		m_pTree->writeNode(this);
 
@@ -675,7 +664,7 @@ void Node::insertData(TimeRegion& mbr1, id_type id1, TimeRegion& mbr2, id_type i
 	{
 		// call a normal insertData which will trigger a version copy
 		// insertData will adjust the parent since this node will certainly do a version copy
-		bool bStored = insertData(0, 0, mbr1, id1, pathBuffer, mbr2, id2, true);
+		bool bStored = insertData(0, nullptr, mbr1, id1, pathBuffer, mbr2, id2, true);
 		if (! bStored) m_pTree->writeNode(this);
 	}
 }
@@ -800,7 +789,7 @@ bool Node::deleteData(id_type id, double delTime, std::stack<id_type>& pathBuffe
 								*tmpR = m_nodeMBR;
 								tmpR->combineRegion(*(sibling->m_ptrMBR[cSiblingChild]));
 								double a = tmpR->getArea();
-								if (a <= m_nodeMBR.getArea() * 1.1) toCheck.push_back(DeleteDataEntry(cSiblingChild, a));
+								if (a <= m_nodeMBR.getArea() * 1.1) toCheck.emplace_back(cSiblingChild, a);
 							}
 						}
 					}
@@ -875,7 +864,7 @@ bool Node::deleteData(id_type id, double delTime, std::stack<id_type>& pathBuffe
 					bool b2 = sibling->m_nodeMBR.touchesShape(*(sibling->m_ptrMBR[entry]));
 
 					insertEntry(sibling->m_pDataLength[entry], sibling->m_pData[entry], *(sibling->m_ptrMBR[entry]), sibling->m_pIdentifier[entry]);
-					sibling->m_pData[entry] = 0;
+					sibling->m_pData[entry] = nullptr;
 
 					// the weak version condition check above, guarantees that.
 					assert(sibling->m_children > 1);
@@ -901,7 +890,7 @@ bool Node::deleteData(id_type id, double delTime, std::stack<id_type>& pathBuffe
 		if (m_level > 0) ++(m_pTree->m_stats.m_u32DeadIndexNodes);
 		else ++(m_pTree->m_stats.m_u32DeadLeafNodes);
 
-		if (parent.get() == 0)
+		if (parent.get() == nullptr)
 		{
 			parent = m_pTree->readNode(pathBuffer.top());
 			pathBuffer.pop();
@@ -949,7 +938,7 @@ bool Node::deleteData(id_type id, double delTime, std::stack<id_type>& pathBuffe
 					m_ptrMBR[child]->m_startTime = delTime;
 					m_pTree->insertData_impl(m_pDataLength[child], m_pData[child], *(m_ptrMBR[child]), m_pIdentifier[child], m_level);
 					// make sure we do not delete the data array from this node's destructor
-					m_pData[child] = 0;
+					m_pData[child] = nullptr;
 				}
 				else
 				{
@@ -967,7 +956,7 @@ bool Node::deleteData(id_type id, double delTime, std::stack<id_type>& pathBuffe
 									p->m_ptrMBR[cIndex]->m_startTime = delTime;
 									m_pTree->insertData_impl(p->m_pDataLength[cIndex], p->m_pData[cIndex], *(p->m_ptrMBR[cIndex]), p->m_pIdentifier[cIndex], p->m_level);
 									// make sure we do not delete the data array from this node's destructor
-									p->m_pData[cIndex] = 0;
+									p->m_pData[cIndex] = nullptr;
 								}
 							}
 						}
@@ -1024,7 +1013,7 @@ bool Node::deleteData(id_type id, double delTime, std::stack<id_type>& pathBuffe
 					assert(m_pTree->m_roots[m_pTree->m_roots.size() - 1].m_id == m_identifier);
 					m_pTree->m_roots[m_pTree->m_roots.size() - 1].m_startTime = m_nodeMBR.m_startTime;
 					m_pTree->m_roots[m_pTree->m_roots.size() - 1].m_endTime = m_nodeMBR.m_endTime;
-					m_pTree->m_roots.push_back(MVRTree::RootEntry(root.m_identifier, root.m_nodeMBR.m_startTime, root.m_nodeMBR.m_endTime));
+					m_pTree->m_roots.emplace_back(root.m_identifier, root.m_nodeMBR.m_startTime, root.m_nodeMBR.m_endTime);
 
 					m_pTree->m_stats.m_treeHeight.push_back(1);
 					m_pTree->m_stats.m_nodesInLevel.at(root.m_level) = m_pTree->m_stats.m_nodesInLevel[root.m_level] + 1;
@@ -1058,7 +1047,7 @@ bool Node::deleteData(id_type id, double delTime, std::stack<id_type>& pathBuffe
 }
 
 void Node::rtreeSplit(
-	uint32_t dataLength, byte* pData, TimeRegion& mbr, id_type id, std::vector<uint32_t>& group1, std::vector<uint32_t>& group2,
+	uint32_t dataLength, uint8_t* pData, TimeRegion& mbr, id_type id, std::vector<uint32_t>& group1, std::vector<uint32_t>& group2,
 	TimeRegion& mbr2, id_type id2, bool bInsertMbr2)
 {
 	uint32_t cChild;
@@ -1067,7 +1056,7 @@ void Node::rtreeSplit(
 	uint32_t cTotal = (bInsertMbr2) ? m_children + 2 : m_children + 1;
 
 	// use this mask array for marking visited entries.
-	byte* mask = new byte[cTotal];
+	uint8_t* mask = new uint8_t[cTotal];
 	memset(mask, 0, cTotal);
 
 	// insert new data in the node for easier manipulation. Data arrays are always
@@ -1081,7 +1070,7 @@ void Node::rtreeSplit(
 	if (bInsertMbr2)
 	{
 		m_pDataLength[m_children + 1] = 0;
-		m_pData[m_children + 1] = 0;
+		m_pData[m_children + 1] = nullptr;
 		m_ptrMBR[m_children + 1] = m_pTree->m_regionPool.acquire();
 		*(m_ptrMBR[m_children + 1]) = mbr2;
 		m_pIdentifier[m_children + 1] = id2;
@@ -1224,11 +1213,11 @@ void Node::rtreeSplit(
 }
 
 void Node::rstarSplit(
-	uint32_t dataLength, byte* pData, TimeRegion& mbr, id_type id, std::vector<uint32_t>& group1, std::vector<uint32_t>& group2,
+	uint32_t dataLength, uint8_t* pData, TimeRegion& mbr, id_type id, std::vector<uint32_t>& group1, std::vector<uint32_t>& group2,
 	TimeRegion& mbr2, id_type id2, bool bInsertMbr2)
 {
-	RstarSplitEntry** dataLow = 0;
-	RstarSplitEntry** dataHigh = 0;
+	RstarSplitEntry** dataLow = nullptr;
+	RstarSplitEntry** dataHigh = nullptr;
 
 	uint32_t cTotal = (bInsertMbr2) ? m_children + 2 : m_children + 1;
 
@@ -1252,7 +1241,7 @@ void Node::rstarSplit(
 	if (bInsertMbr2)
 	{
 		m_pDataLength[m_children + 1] = 0;
-		m_pData[m_children + 1] = 0;
+		m_pData[m_children + 1] = nullptr;
 		m_ptrMBR[m_children + 1] = m_pTree->m_regionPool.acquire();
 		*(m_ptrMBR[m_children + 1]) = mbr2;
 		m_pIdentifier[m_children + 1] = id2;
@@ -1510,7 +1499,7 @@ NodePtr Node::findNode(const TimeRegion& mbr, id_type id, std::stack<id_type>& p
 			NodePtr n = m_pTree->readNode(m_pIdentifier[cChild]);
 			NodePtr l = n->findNode(mbr, id, pathBuffer);
 			assert(n.get() != l.get());
-			if (l.get() != 0) return l;
+			if (l.get() != nullptr) return l;
 		}
 	}
 

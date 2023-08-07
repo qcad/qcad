@@ -5,7 +5,7 @@
  * Copyright (c) 2002, Marios Hadjieleftheriou
  *
  * All rights reserved.
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the "Software"),
  * to deal in the Software without restriction, including without limitation
@@ -26,7 +26,7 @@
 ******************************************************************************/
 
 #include <cstring>
-#include <stdio.h>
+#include <cstdio>
 #include <cmath>
 
 #ifndef _MSC_VER
@@ -47,11 +47,9 @@ using namespace SpatialIndex::RTree;
 // ExternalSorter::Record
 //
 ExternalSorter::Record::Record()
-: m_pData(0)
-{
-}
+= default;
 
-ExternalSorter::Record::Record(const Region& r, id_type id, uint32_t len, byte* pData, uint32_t s)
+ExternalSorter::Record::Record(const Region& r, id_type id, uint32_t len, uint8_t* pData, uint32_t s)
 : m_r(r), m_id(id), m_len(len), m_pData(pData), m_s(s)
 {
 }
@@ -110,7 +108,7 @@ void ExternalSorter::Record::loadFromFile(Tools::TemporaryFile& f)
 	}
 
 	m_len = f.readUInt32();
-	delete[] m_pData; m_pData = 0;
+	delete[] m_pData; m_pData = nullptr;
 	if (m_len > 0) f.readBytes(m_len, &m_pData);
 }
 
@@ -149,7 +147,7 @@ void ExternalSorter::insert(Record* r)
 		}
 		m_buffer.clear();
 		tf->rewindForReading();
-		m_runs.push_back(Tools::SmartPointer<Tools::TemporaryFile>(tf));
+		m_runs.push_back(std::shared_ptr<Tools::TemporaryFile>(tf));
 	}
 }
 
@@ -179,7 +177,7 @@ void ExternalSorter::sort()
 		}
 		m_buffer.clear();
 		tf->rewindForReading();
-		m_runs.push_back(Tools::SmartPointer<Tools::TemporaryFile>(tf));
+		m_runs.push_back(std::shared_ptr<Tools::TemporaryFile>(tf));
 	}
 
 	if (m_runs.size() == 1)
@@ -188,21 +186,21 @@ void ExternalSorter::sort()
 	}
 	else
 	{
-		Record* r = 0;
+		Record* r = nullptr;
 
 		while (m_runs.size() > 1)
 		{
-			Tools::SmartPointer<Tools::TemporaryFile> tf(new Tools::TemporaryFile());
-			std::vector<Tools::SmartPointer<Tools::TemporaryFile> > buckets;
+            std::shared_ptr<Tools::TemporaryFile> tf(new Tools::TemporaryFile());
+			std::vector<std::shared_ptr<Tools::TemporaryFile> > buckets;
 			std::vector<std::queue<Record*> > buffers;
 			std::priority_queue<PQEntry, std::vector<PQEntry>, PQEntry::SortAscending> pq;
 
 			// initialize buffers and priority queue.
-			std::list<Tools::SmartPointer<Tools::TemporaryFile> >::iterator it = m_runs.begin();
+			std::list<std::shared_ptr<Tools::TemporaryFile> >::iterator it = m_runs.begin();
 			for (uint32_t i = 0; i < (std::min)(static_cast<uint32_t>(m_runs.size()), m_u32BufferPages); ++i)
 			{
 				buckets.push_back(*it);
-				buffers.push_back(std::queue<Record*>());
+				buffers.emplace_back();
 
 				r = new Record();
 				r->loadFromFile(**it);
@@ -218,7 +216,7 @@ void ExternalSorter::sort()
 						r->loadFromFile(**it);
 						buffers.back().push(r);
 					}
-					catch (Tools::EndOfStreamException)
+					catch (Tools::EndOfStreamException&)
 					{
 						delete r;
 						break;
@@ -244,7 +242,7 @@ void ExternalSorter::sort()
 							r->loadFromFile(*buckets[e.m_u32Index]);
 							buffers[e.m_u32Index].push(r);
 						}
-						catch (Tools::EndOfStreamException)
+						catch (Tools::EndOfStreamException&)
 						{
 							delete r;
 							break;
@@ -291,12 +289,12 @@ ExternalSorter::Record* ExternalSorter::getNextRecord()
 
 	Record* ret;
 
-	if (m_sortedFile.get() == 0)
+	if (m_sortedFile.get() == nullptr)
 	{
 		if (m_stI < m_buffer.size())
 		{
 			ret = m_buffer[m_stI];
-			m_buffer[m_stI] = 0;
+			m_buffer[m_stI] = nullptr;
 			++m_stI;
 		}
 		else
@@ -339,18 +337,18 @@ void BulkLoader::bulkLoadUsingSTR(
 	std::cerr << "RTree::BulkLoader: Sorting data." << std::endl;
 	#endif
 
-	Tools::SmartPointer<ExternalSorter> es = Tools::SmartPointer<ExternalSorter>(new ExternalSorter(pageSize, numberOfPages));
+    std::shared_ptr<ExternalSorter> es = std::shared_ptr<ExternalSorter>(new ExternalSorter(pageSize, numberOfPages));
 
 	while (stream.hasNext())
 	{
 		Data* d = reinterpret_cast<Data*>(stream.getNext());
-		if (d == 0)
+		if (d == nullptr)
 			throw Tools::IllegalArgumentException(
 				"bulkLoadUsingSTR: RTree bulk load expects SpatialIndex::RTree::Data entries."
 			);
 
 		es->insert(new ExternalSorter::Record(d->m_region, d->m_id, d->m_dataLength, d->m_pData, 0));
-		d->m_pData = 0;
+		d->m_pData = nullptr;
 		delete d;
 	}
 	es->sort();
@@ -368,7 +366,7 @@ void BulkLoader::bulkLoadUsingSTR(
 
 		pTree->m_stats.m_nodesInLevel.push_back(0);
 
-		Tools::SmartPointer<ExternalSorter> es2 = Tools::SmartPointer<ExternalSorter>(new ExternalSorter(pageSize, numberOfPages));
+        std::shared_ptr<ExternalSorter> es2 = std::shared_ptr<ExternalSorter>(new ExternalSorter(pageSize, numberOfPages));
 		createLevel(pTree, es, 0, bleaf, bindex, level++, es2, pageSize, numberOfPages);
 		es = es2;
 
@@ -382,12 +380,12 @@ void BulkLoader::bulkLoadUsingSTR(
 
 void BulkLoader::createLevel(
 	SpatialIndex::RTree::RTree* pTree,
-	Tools::SmartPointer<ExternalSorter> es,
+	std::shared_ptr<ExternalSorter> es,
 	uint32_t dimension,
 	uint32_t bleaf,
 	uint32_t bindex,
 	uint32_t level,
-	Tools::SmartPointer<ExternalSorter> es2,
+	std::shared_ptr<ExternalSorter> es2,
 	uint32_t pageSize,
 	uint32_t numberOfPages
 ) {
@@ -402,7 +400,7 @@ void BulkLoader::createLevel(
 
 		while (true)
 		{
-			try { r = es->getNextRecord(); } catch (Tools::EndOfStreamException) { break; }
+			try { r = es->getNextRecord(); } catch (Tools::EndOfStreamException&) { break; }
 			node.push_back(r);
 
 			if (node.size() == b)
@@ -410,7 +408,7 @@ void BulkLoader::createLevel(
 				Node* n = createNode(pTree, node, level);
 				node.clear();
 				pTree->writeNode(n);
-				es2->insert(new ExternalSorter::Record(n->m_nodeMBR, n->m_identifier, 0, 0, 0));
+				es2->insert(new ExternalSorter::Record(n->m_nodeMBR, n->m_identifier, 0, nullptr, 0));
 				pTree->m_rootID = n->m_identifier;
 					// special case when the root has exactly bindex entries.
 				delete n;
@@ -421,7 +419,7 @@ void BulkLoader::createLevel(
 		{
 			Node* n = createNode(pTree, node, level);
 			pTree->writeNode(n);
-			es2->insert(new ExternalSorter::Record(n->m_nodeMBR, n->m_identifier, 0, 0, 0));
+			es2->insert(new ExternalSorter::Record(n->m_nodeMBR, n->m_identifier, 0, nullptr, 0));
 			pTree->m_rootID = n->m_identifier;
 			delete n;
 		}
@@ -433,12 +431,12 @@ void BulkLoader::createLevel(
 		while (bMore)
 		{
 			ExternalSorter::Record* pR;
-			Tools::SmartPointer<ExternalSorter> es3 = Tools::SmartPointer<ExternalSorter>(new ExternalSorter(pageSize, numberOfPages));
+            std::shared_ptr<ExternalSorter> es3 = std::shared_ptr<ExternalSorter>(new ExternalSorter(pageSize, numberOfPages));
 
 			for (uint64_t i = 0; i < S * b; ++i)
 			{
 				try { pR = es->getNextRecord(); }
-				catch (Tools::EndOfStreamException) { bMore = false; break; }
+				catch (Tools::EndOfStreamException&) { bMore = false; break; }
 				pR->m_s = dimension + 1;
 				es3->insert(pR);
 			}
@@ -458,7 +456,7 @@ Node* BulkLoader::createNode(SpatialIndex::RTree::RTree* pTree, std::vector<Exte
 	for (size_t cChild = 0; cChild < e.size(); ++cChild)
 	{
 		n->insertEntry(e[cChild]->m_len, e[cChild]->m_pData, e[cChild]->m_r, e[cChild]->m_id);
-		e[cChild]->m_pData = 0;
+		e[cChild]->m_pData = nullptr;
 		delete e[cChild];
 	}
 

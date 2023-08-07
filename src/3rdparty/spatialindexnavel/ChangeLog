@@ -1,0 +1,892 @@
+2019-02-05
+	* Howard Butler <howard@hobu.co> get gtest happy with autoconf (20:32:12)
+	* Howard Butler <howard@hobu.co> more 'dist' target for cmake and autotools (20:22:57)
+	* Howard Butler <howard@hobu.co> add 'dist' target to cmake (20:04:59)
+
+2019-02-04
+	* Howard Butler <howard@hobu.co> don't ls (13:01:54)
+	* Howard Butler <howard@hobu.co> another doxygen cycle (12:39:24)
+	* Howard Butler <howard@hobu.co> doxygen dir stuff (11:37:44)
+	* Howard Butler <howard@hobu.co> make doxygen dir (11:09:01)
+	* Howard Butler <howard@hobu.co> copy doxygen output (10:47:34)
+	* Howard Butler <howard@hobu.co> doc updates and reorganization (09:05:14)
+	* Howard Butler <howard@hobu.co> Automated doc build and update (#134) (08:22:23)
+
+2019-02-03
+	* Howard Butler <howard@hobu.co> ignore unknown pragmas on msvc (#133) (22:38:35)
+	* Howard Butler <howard@hobu.co> Merge and catch up of #116 (#132) (13:12:47)
+	* Howard Butler <howard@hobu.co> silence a bunch of cast-qual (#130) (10:21:54)
+	* Howard Butler <howard@hobu.co> autotools based Travis build (10:21:27)
+
+2019-02-02
+	* Howard Butler <howard@hobu.co> remove unnecessary personal config (22:40:57)
+	* Howard Butler <howard@hobu.co> README is an autotools-required file (22:40:33)
+	* Howard Butler <howard@hobu.co> remove a bunch of dead stuff and add some docker/conda scripts (#129) (22:07:01)
+	* Howard Butler <howard@hobu.co> appveyor configuration based on conda (#128) (21:20:23)
+	* Howard Butler <howard@hobu.co> upstream Tools.h patch from conda libspatialindex feedstock (#127) (17:33:29)
+	* Howard Butler <howard@hobu.co> add Appveyor status badge (16:07:20)
+	* Howard Butler <howard@hobu.co> link to Travis instead of dummy link (15:34:24)
+
+2019-01-29
+	* Julien Cabieces <julien.cabieces@oslandia.com> Correct findLeastEnlargement method to always return a correct value (11:37:38)
+
+2018-11-19
+	* Elliot Saba <staticfloat@gmail.com> libstdc++/libc++ fixes for macOS and FreeBSD (#124) (09:12:07)
+
+2018-09-29
+	* Howard Butler <howard@hobu.co> Merge pull request #122 from willp552/master (19:57:45)
+	* William Price <willp552@gmail.com> Use tabs as opposed to spaces for consistency. (09:35:09)
+
+2018-08-08
+	* Howard Butler <howard@hobu.co> Merge pull request #121 from nyalldawson/fix_120 (16:00:03)
+
+2018-07-31
+	* Nyall Dawson <nyall.dawson@gmail.com> Revert changes to c API (16:06:17)
+
+2018-07-30
+	* Howard Butler <howard@hobu.co> Merge pull request #119 from nyalldawson/modernize (14:05:47)
+
+2018-07-26
+	* Nyall Dawson <nyall.dawson@gmail.com> More unique_ptr use (17:01:19)
+	* Nyall Dawson <nyall.dawson@gmail.com> Convert some raw to unique ptr (16:51:54)
+	* Howard Butler <howard@hobu.co> Merge pull request #117 from nyalldawson/modernize (08:59:06)
+
+2018-07-21
+	* Nyall Dawson <nyall.dawson@gmail.com> Fix a warning (04:15:38)
+	* Nyall Dawson <nyall.dawson@gmail.com> Fix warning (04:05:19)
+	* Nyall Dawson <nyall.dawson@gmail.com> Fix build (04:04:17)
+	* Nyall Dawson <nyall.dawson@gmail.com> Use noexcept (04:02:50)
+	* Nyall Dawson <nyall.dawson@gmail.com> Use = delete (04:02:07)
+	* Nyall Dawson <nyall.dawson@gmail.com> Use = default (04:01:19)
+	* Nyall Dawson <nyall.dawson@gmail.com> Use emplace_back instead of push_back (04:00:37)
+	* Nyall Dawson <nyall.dawson@gmail.com> Use default member init (03:59:51)
+	* Nyall Dawson <nyall.dawson@gmail.com> Replace raw string literal (03:54:27)
+	* Nyall Dawson <nyall.dawson@gmail.com> Replace deprecated headers (03:53:09)
+	* Nyall Dawson <nyall.dawson@gmail.com> 0 -> nullptr (03:52:08)
+	* Nyall Dawson <nyall.dawson@gmail.com> Add overrides (03:51:26)
+	* Nyall Dawson <nyall.dawson@gmail.com> Fix build (03:47:46)
+
+2015-02-21
+	* Howard Butler <howard@hobu.co> remove broken pthread support #60 (11:10:05)
+
+2015-02-12
+	* Norman Barker <norman@cloudant.com> Fixed potential memory leaks (10:27:08)
+	* Norman Barker <norman@cloudant.com> Travis status (10:34:36)
+	* Norman Barker <norman@cloudant.com> Merge pull request #50 from cloudant/simple_c_test (08:33:40)
+	* Norman Barker <norman@cloudant.com> Merge pull request #51 from cloudant/sidx_test (08:33:30)
+
+2014-11-29
+	* Howard Butler <howard@hobu.co> auto-up some iterators (20:04:40)
+
+2014-11-27
+	* Howard Butler <howard@hobu.co> remove Tools::SmartPointer in exchange for C++11 std::shared_ptr (14:25:27)
+
+2018-05-29
+	* Howard Butler <howard@hobu.co> Merge remote-tracking branch 'origin/master' into capi-fixes (10:21:34)
+	* Howard Butler <howard@hobu.co> bump version numbers (10:21:28)
+
+2018-04-26
+	* Howard Butler <howard@hobu.co> Merge pull request #114 from michael-herwig/master (10:58:17)
+	* Michael Herwig <michael.herwig@hotmail.de> added summary to changelog (05:34:40)
+	* Michael Herwig <michael.herwig@hotmail.de> Added silent tr1 depecreation flag vor msvc compiler >= 1900 (05:30:27)
+	* Michael Herwig <michael.herwig@hotmail.de> Added <cinttypes> include for proper compilation using msvc15 (05:23:48)
+	* Michael Herwig <michael.herwig@hotmail.de> Added cmake option for conditional test integration (05:19:21)
+
+2017-12-05
+	* Howard Butler <howard@hobu.co> Merge pull request #111 from QuLogic/scanbuild (09:41:26)
+	* Elliott Sales de Andrade <quantum.analyst@gmail.com> Fix leaks in tests. (01:27:11)
+	* Elliott Sales de Andrade <quantum.analyst@gmail.com> Fix possible memory leaks with unexpected returns. (01:05:35)
+	* Elliott Sales de Andrade <quantum.analyst@gmail.com> Re-arrange loop to avoid double-free warning. (00:55:54)
+	* Elliott Sales de Andrade <quantum.analyst@gmail.com> Fix possible NULL-dereference. (00:48:28)
+
+2017-11-29
+	* Howard Butler <howard@hobu.co> Merge pull request #108 from QuLogic/fix-oob (10:28:43)
+
+2017-11-28
+	* Elliott Sales de Andrade <quantum.analyst@gmail.com> Fix array allocation in Index_GetLeaves. (04:03:40)
+
+2017-10-17
+	* Howard Butler <howard@hobu.co> Merge pull request #106 from r-barnes/patch-2 (13:43:04)
+
+2017-10-16
+	* Richard Barnes <rbarnes@umn.edu> Update introduction.txt (11:29:24)
+
+2017-08-22
+	* Howard Butler <howard@hobu.co> Merge pull request #101 from tpetazzoni/configure-optim-fix (09:44:32)
+
+2017-08-14
+	* Thomas Petazzoni <thomas.petazzoni@free-electrons.com> configure.ac: do not force -O2 (16:36:36)
+
+2017-04-20
+	* Howard Butler <howard@hobu.co> Merge pull request #94 from libspatialindex/capi-fixes (11:35:39)
+
+2017-03-03
+	* Howard Butler <howard@hobu.co> modify C API internals to match C API definition in headers (fixes #92) (10:52:35)
+
+2016-12-19
+	* Howard Butler <howard@hobu.co> reset path to fix #91 when generating autoconf stuff (11:38:49)
+
+2016-08-23
+	* Howard Butler <howard@hobu.co> tmpstamp function (13:42:21)
+	* Howard Butler <howard@hobu.co> add travis config for libspatialindex (13:38:37)
+
+2016-08-22
+	* Howard Butler <howard@hobu.co> don't install gtest (16:24:15)
+	* Howard Butler <howard@hobu.co> whitespace cleanup (16:24:06)
+	* Howard Butler <howard@hobu.co> build libsidxtest for both autotools and cmake (13:19:33)
+	* Howard Butler <howard@hobu.co> embed gtest in the source tree for use in testing (12:05:36)
+	* Howard Butler <howard@hobu.co> Merge pull request #74 from sasavilic/master (10:52:58)
+	* Howard Butler <howard@hobu.co> Merge pull request #84 from naihil/msvs2010_stdint (10:52:23)
+
+2016-03-17
+	* Anatoliy Golubev <darth.naihil@gmail.com> Use stdint.h for MSVS 2010 too (04:22:01)
+
+2016-02-29
+	* Howard Butler <howard@hobu.co> Merge pull request #82 from miklos1/master (13:59:36)
+	* Miklos Homolya <m.homolya14@imperial.ac.uk> fix C API (09:01:24)
+
+2016-02-02
+	* Howard Butler <howard@hobu.co> Merge pull request #81 from Hemofektik/master (08:52:57)
+	* Richard Schubert <rs@directx9.de> fixed stat use for MSVC to use _stat64 instead to support files larger than 2GB (02:38:35)
+
+2016-01-29
+	* Howard Butler <howard@hobu.co> Merge pull request #80 from Hemofektik/master (06:42:30)
+	* Richard Schubert <rs@directx9.de> fixed CMakeLists.txt to support MSVC14 (Visual Studio 2015) (04:18:39)
+
+2015-12-07
+	* Howard Butler <howard@hobu.co> Merge pull request #79 from cloudant/fix-rtree-multi-entry-deletes (11:05:16)
+
+2015-12-04
+	* Paul J. Davis <paul.joseph.davis@gmail.com> Fix RTree deletions (16:19:19)
+
+2015-11-23
+	* Howard Butler <howard@hobu.co> another tweak for #78 (09:41:35)
+	* Howard Butler <howard@hobu.co> shut up MSVC about dll linkage warnings #78 (08:51:14)
+
+2015-11-20
+	* Howard Butler <howard@hobu.co> attempt to fix #78 -- MSVC stdint.h for MSVC versions > 1700 (12:57:14)
+
+2015-07-16
+	* Sasa Vilic <svilic@ubimet.com> Making error passing over C interface reentrant for GCC implementation (05:17:51)
+
+2015-04-25
+	* Howard Butler <howard@hobu.co> Merge pull request #68 from cloudant/fix-adjust-tree (16:34:58)
+	* Howard Butler <howard@hobu.co> Merge pull request #72 from zippy1981/patch-1 (16:34:37)
+
+2015-04-23
+	* Justin Dearing <zippy1981@gmail.com> Update .gitignore (17:55:34)
+
+2015-04-09
+	* Howard Butler <howard@hobu.co> Merge pull request #70 from TheSkorm/patch-1 (08:55:27)
+	* Michael Wheeler <git@michael-wheeler.org> Small typo in DiskStorageManager.cc (06:38:54)
+
+2015-03-17
+	* Paul J. Davis <paul.joseph.davis@gmail.com> Fix RTree::Index::adjustTree (12:00:33)
+
+2015-03-03
+	* Howard Butler <howard@hobu.co> Merge pull request #67 from sciencectn/master (09:42:23)
+
+2015-03-02
+	* Chris Taylor <sciencectn@gmail.com> Made a few changes so it would compile on Cygwin. (23:30:24)
+
+2015-02-23
+	* Howard Butler <howard@hobu.co> Merge pull request #56 from cloudant/fix-root-mbr-on-condense (16:25:19)
+	* Howard Butler <howard@hobu.co> Merge pull request #61 from cloudant/55-fix-region-touches-region (16:25:07)
+	* Howard Butler <howard@hobu.co> Merge pull request #62 from cloudant/57-fix-index-adjust-tree (16:25:02)
+	* Howard Butler <howard@hobu.co> Merge pull request #63 from cloudant/58-fix-rstar-reinsert (16:24:52)
+	* Norman Barker <norman@cloudant.com> Merge pull request #53 from cloudant/fix-rstar-reinsert (15:07:44)
+
+2015-02-20
+	* Paul J. Davis <paul.joseph.davis@gmail.com> Fix adjustTree during R*-tree reinserts (16:04:19)
+	* Paul J. Davis <paul.joseph.davis@gmail.com> Fix Index::adjustTree/4 (16:01:13)
+	* Paul J. Davis <paul.joseph.davis@gmail.com> Fix Region::touchesRegion (15:59:23)
+	* Paul J. Davis <paul.joseph.davis@gmail.com> Update the root MBR during condenseTree (01:45:46)
+
+2015-02-18
+	* Paul J. Davis <paul.joseph.davis@gmail.com> Fix Node::reinsertData selection criteria (12:48:18)
+
+2015-02-11
+	* Norman Barker <norman@cloudant.com> Initial gtest tests (12:24:21)
+	* Norman Barker <norman@cloudant.com> Initial Travis build file (09:35:02)
+	* Norman Barker <norman@cloudant.com> Simple RTree CAPI example (08:34:10)
+
+2015-02-05
+	* Howard Butler <howard@hobu.co> Merge pull request #49 from cloudant/fix-mvrtree-locks (08:09:28)
+
+2015-02-04
+	* Paul J. Davis <paul.joseph.davis@gmail.com> Fix the locking calls in MVRTree.cc (19:59:55)
+
+2015-01-14
+	* Howard Butler <howard@hobu.co> Merge pull request #47 from cloudant/flush-index-headers (15:56:05)
+
+2014-12-17
+	* Paul J. Davis <paul.joseph.davis@gmail.com> Add a flush function to each index type (22:17:17)
+
+2014-11-02
+	* Howard Butler <howard@hobu.co> Set IndexIdentifier on getIndexProperties for MVRTree and TPRTree (21:05:53)
+
+2014-11-01
+	* Howard Butler <howard@hobu.co> modify fix for #40 to keep IndexIdentifier around when getting Index properties (11:49:48)
+	* Howard Butler <howard@hobu.co> point download to 1.8.5 release (11:22:42)
+	* Howard Butler <howard@hobu.co> more automake tweak (11:11:38)
+	* Howard Butler <howard@hobu.co> automake tweaks (11:08:19)
+	* Howard Butler <hobu@hobu.co> add my windows config example (10:40:38)
+	* Howard Butler <howard@hobu.co> update HOWTORELEASE notes (09:21:25)
+	* Howard Butler <howard@hobu.co> Increment versioning to 1.8.5 in preparation for release (09:19:25)
+
+2014-10-31
+	* Howard Butler <howard@hobu.co> CAPI: revert #40, which could cause inconsistent object lifetime behavior (23:53:04)
+	* Howard Butler <howard@hobu.co> missed a variable substitution on SIDX_LIB_VERSION (21:38:14)
+
+2014-09-29
+	* Howard Butler <howard@hobu.co> Merge pull request #45 from sebastic/soversion (16:26:19)
+	* Bas Couwenberg <sebastic@xs4all.nl> Fix separate library VERSION and SOVERSION variables. (16:14:43)
+	* Howard Butler <howard@hobu.co> doc tweak (08:49:07)
+	* Howard Butler <howard@hobu.co> fix up library SOVERSION'ing and issue new release 1.8.4 #44 (08:45:00)
+
+2014-09-20
+	* Howard Butler <howard@hobu.co> point to 1.8.3 release (16:41:15)
+	* Howard Butler <howard@hobu.co> increment and prepare for 1.8.3 release (16:27:48)
+
+2014-09-13
+	* Howard Butler <howard@hobu.co> update ChangeLog (18:46:21)
+
+2014-09-11
+	* Howard Butler <howard@hobu.co> Changelog update (10:57:08)
+	* Howard Butler <howard@hobu.co> clean up integer warning (10:56:53)
+	* Howard Butler <howard@hobu.co> Merge pull request #42 from libspatialindex/issues/42-automake-exports (10:54:58)
+	* Howard Butler <howard@hobu.co> Add sidx_export to Makefile.am #42 (10:54:07)
+
+2014-08-27
+	* Howard Butler <howard@hobu.co> Merge pull request #41 from cloudant/capi_mvrtree (10:20:03)
+
+2014-08-26
+	* Norman Barker <norman@cloudant.com> fixed typo in MVRIntersects_Count (17:18:32)
+	* Norman Barker <norman@cloudant.com> added MVR index type to the C API (17:16:03)
+
+2014-08-03
+	* Howard Butler <hobu.inc@gmail.com> fix up Release name (14:14:35)
+
+2014-07-28
+	* Howard Butler <hobu.inc@gmail.com> unused parameters (10:04:59)
+	* Howard Butler <hobu.inc@gmail.com> clean up C API for numResults being a uint64_t when it is only possible to specify uint32_t of nResults (09:53:36)
+	* Howard Butler <hobu.inc@gmail.com> more C API warning cleanups (09:50:55)
+	* Howard Butler <hobu.inc@gmail.com> leaf node counts are uint32_t, not size_t (09:34:41)
+	* Howard Butler <hobu@hobu.co> silence condition expression warning 4127 on msvc (09:20:58)
+	* Howard Butler <hobu.inc@gmail.com> unreferenced parameter cleanup (09:13:36)
+	* Howard Butler <hobu.inc@gmail.com> nuke assignment and empty constructor of C API Index class (09:13:01)
+	* Howard Butler <hobu.inc@gmail.com> children count is uint32_t (09:11:04)
+	* Howard Butler <hobu.inc@gmail.com> clean up LeafQuery visitor id management (09:09:20)
+	* Howard Butler <hobu.inc@gmail.com> clean up more unused parameters (08:37:24)
+	* Howard Butler <hobu.inc@gmail.com> fix mismatched type warning (using uint32_t as an id instead of SpatialIndex::id_type (08:37:15)
+	* Howard Butler <hobu.inc@gmail.com> remove unused and potentially problematic throw specification for DataStream (08:28:49)
+	* Howard Butler <hobu.inc@gmail.com> export all C API stuff to the DLL (08:23:49)
+
+2014-07-27
+	* Howard Butler <hobu.inc@gmail.com> more unreferenced parameter cleanups (23:37:25)
+	* Howard Butler <hobu.inc@gmail.com> screw 20ad010a1b55a4437b73c805270837c294b57251 and MSVC's dumb C4127 warning (23:36:15)
+	* Howard Butler <hobu.inc@gmail.com> more unreferenced parameter warnings (23:34:20)
+	* Howard Butler <hobu.inc@gmail.com> use ;; to denote looping forever to silence C4127 warning on MSVC (23:34:11)
+	* Howard Butler <hobu@hobu.co> support MSVC 2012 and 2013 (23:30:59)
+	* Howard Butler <hobu.inc@gmail.com> big unreferenced variable cleanup (23:30:35)
+	* Howard Butler <hobu.inc@gmail.com> clean up some unreferenced parameters warnings (23:17:14)
+	* Howard Butler <hobu.inc@gmail.com> Merge branch 'master' of github.com:libspatialindex/libspatialindex (23:03:10)
+	* Howard Butler <howard@hobu.co> Merge pull request #40 from libspatialindex/issues/40-capi-property-copying (23:03:04)
+	* Howard Butler <hobu.inc@gmail.com> clean up file open mode (23:02:48)
+	* Howard Butler <hobu.inc@gmail.com> bump versions to 1.8.2 in preparation for release (22:59:49)
+	* Howard Butler <hobu.inc@gmail.com> Update ChangeLog in preparation for release (22:59:21)
+	* Howard Butler <hobu.inc@gmail.com> add Norman to AUTHORS (22:57:12)
+	* Howard Butler <hobu.inc@gmail.com> Implement a fix for #40 to maintain pointers to IndexProperty references rather than copying (18:15:38)
+
+2014-07-22
+	* Howard Butler <hobu.inc@gmail.com> only do policy check for CMAKE > 2.x (11:25:02)
+	* Howard Butler <hobu.inc@gmail.com> turn off osx rpath cmake complaint (11:05:29)
+
+2014-07-14
+	* Howard Butler <hobu.inc@gmail.com> more cmake quoting #27 (16:07:21)
+	* Howard Butler <hobu.inc@gmail.com> fix up unfixed LGPL file from test suite (16:07:04)
+
+2014-07-12
+	* Howard Butler <hobu.inc@gmail.com> add BUILD_WITH_INSTALL_RPATH target property for OSX (23:59:03)
+	* Howard Butler <hobu.inc@gmail.com> CMake config quoting #27 (23:50:05)
+	* Howard Butler <hobu.inc@gmail.com> FSF postal adress update #5 (23:38:24)
+	* Howard Butler <hobu.inc@gmail.com> support wide character as possible tools::Variant type -- doesn't work yet though (23:32:19)
+	* Howard Butler <hobu.inc@gmail.com> add VT_PWCHAR to support wide character pointer for the Variant type (23:31:15)
+	* Howard Butler <hobu.inc@gmail.com> add MSVC 2013 and 2014 defns (23:27:45)
+	* Howard Butler <hobu.inc@gmail.com> fix redundant checks in destructor #28 (23:25:39)
+	* Howard Butler <hobu.inc@gmail.com> Remove LDFLAGS from Libs for pkg-config #23 (23:24:32)
+
+2014-05-12
+	* Howard Butler <howard@hobu.co> Merge pull request #38 from cloudant/c_tpr (10:22:16)
+
+2014-05-10
+	* Norman Barker <norman@cloudant.com> added temporal function to capi (16:49:28)
+
+2014-05-08
+	* Howard Butler <howard@hobu.co> Merge pull request #37 from cloudant/paging (13:48:51)
+
+2014-05-07
+	* Norman Barker <norman@cloudant.com> added paging to all indexes (19:11:58)
+
+2014-03-13
+	* Howard Butler <hobu.inc@gmail.com> turn off the unused m_rwLock for now (21:15:39)
+	* Howard Butler <hobu.inc@gmail.com> switch to int64_t instead of uint64_t when checking result counts (21:15:14)
+	* Howard Butler <hobu.inc@gmail.com> add newline to end of file (21:07:45)
+
+2014-02-13
+	* Howard Butler <howard@hobu.co> Merge pull request #32 from cloudant/empty_index (19:00:32)
+	* Howard Butler <howard@hobu.co> Merge pull request #33 from mlt/nominmax (19:00:07)
+
+2014-02-12
+	* Mikhail Titov <mlt@gmx.us> Prevent min/max from windef.h interference (15:09:53)
+
+2014-02-11
+	* Norman Barker <norman@cloudant.com> Added support for empty index files (17:46:14)
+
+2013-09-09
+	* Howard Butler <howard@hobu.co> update download location for new release (12:07:03)
+
+2013-08-21
+	* Howard Butler <howard@hobu.co> Merge pull request #26 from cloudant/skip_results (15:32:33)
+
+2013-08-19
+	* Norman Barker <norman@cloudant.com> made files protected variables (21:37:25)
+	* Norman Barker <norman@cloudant.com> added paging and flushing (21:35:32)
+
+2013-07-29
+	* Norman Barker <norman@cloudant.com> Added error handling to the C API (20:52:47)
+
+2013-07-25
+	* Norman Barker <norman@cloudant.com> Added Result Set Limit so that the number of items can be controlled. (17:58:54)
+
+2013-06-26
+	* Howard Butler <hobu.inc@gmail.com> fixups for MSVC2008 compilation (14:17:28)
+	* Howard Butler <hobu.inc@gmail.com> updates for v1.8.1 release (13:51:45)
+	* Howard Butler <hobu.inc@gmail.com> Merge branch 'master' of github.com:libspatialindex/libspatialindex (13:44:32)
+	* Howard Butler <hobu.inc@gmail.com> increment versions in preparation for 1.8.1 release (13:43:28)
+	* Howard Butler <hobu.inc@gmail.com> Merge pull request #22 from libspatialindex/issues/22-lgpl-fixups (13:40:35)
+	* Howard Butler <hobu.inc@gmail.com> update licenses for #22 (13:39:34)
+	* Howard Butler <hobu.inc@gmail.com> Merge branch 'libspatialindex-issues/19-mingw64' (13:26:44)
+
+2013-06-04
+	* Mateusz Loskot <mateusz@loskot.net> Fix redefinition of integer types for Visual C++ (09:46:51)
+
+2013-05-31
+	* Mateusz Loskot <mateusz@loskot.net> Add Visual C++ 11.0 support to CMake build (09:23:22)
+
+2013-03-04
+	* Howard Butler <hobu.inc@gmail.com> apply Theun's patch for Makefile.am #19 (11:09:25)
+
+2013-02-28
+	* Howard Butler <hobu.inc@gmail.com> first pass at fixing issue for Theuns #19 (10:54:56)
+
+2012-12-28
+	* Howard Butler <hobu.inc@gmail.com> fix up link to missing file (09:05:56)
+
+2012-12-20
+	* chrisnatali <chris.natali@gmail.com> refactored as suggested by maintainer (11:01:44)
+
+2012-12-10
+	* chrisnatali <chris.natali@gmail.com> Forgot the contains case when checking region-segment intersection (14:38:13)
+
+2012-12-07
+	* chrisnatali <chris.natali@gmail.com> exposed SegmentIntersects functions in capi, fixed test (17:22:08)
+
+2012-12-06
+	* chrisnatali <chris.natali@gmail.com> Updated LineSegment to LineSegment and LineSegment to Region intersection methods and tests.  Need to fix LineSegment to Region (17:03:03)
+	* chrisnatali <chris.natali@gmail.com> Added GeomUtil and simple tests for segment intersection (14:40:22)
+
+2012-12-12
+	* Howard Butler <hobu.inc@gmail.com> update download links (22:20:57)
+	* Howard Butler <hobu.inc@gmail.com> makefile.vc no longer used -- use cmake build instead (21:48:48)
+	* Howard Butler <hobu.inc@gmail.com> more release process notes (21:42:30)
+	* Howard Butler <hobu.inc@gmail.com> bring ChangeLog up to date for 1.8.0 release (21:42:20)
+	* Howard Butler <hobu.inc@gmail.com> increment release date (21:42:07)
+	* Howard Butler <hobu.inc@gmail.com> doc updates for 1.8.0 (21:40:50)
+	* Howard Butler <hobu.inc@gmail.com> doc updates for 1.8.0 (21:40:35)
+	* Howard Butler <hobu.inc@gmail.com> increment version in preparation for 1.8.0 release (19:54:32)
+	* Howard Butler <hobu.inc@gmail.com> increment SO_VERSION to 3:0:0 due to adding flush() to C and C++ APIs (19:54:12)
+
+2012-11-16
+	* Howard Butler <hobu.inc@gmail.com> define pthread when we have it (11:34:50)
+	* Howard Butler <hobu.inc@gmail.com> SharedLock was renamed to LockGuard - fix up patch for #15 (11:15:13)
+
+2012-11-15
+	* Howard Butler <hobu.inc@gmail.com> Merge branch 'containsWhatQuery' (15:17:18)
+
+2012-11-12
+	* Howard Butler <hobu.inc@gmail.com> link to libspatialindex.org (11:02:13)
+
+2012-11-04
+	* Howard Butler <hobu.inc@gmail.com> point to http://libspatialindex.org as our new URL (14:10:54)
+	* Howard Butler <hobu.inc@gmail.com> update to point to http://libspatialindex.github.com (14:06:00)
+	* Howard Butler <hobu.inc@gmail.com> try again (13:54:58)
+	* Howard Butler <hobu.inc@gmail.com> adapt a patch for #15 to be able to incorporate a more efficient containsWhatQuery method (12:43:28)
+	* Howard Butler <hobu.inc@gmail.com> update versions to 1.8.0 in prep for upcoming release (12:31:13)
+	* Howard Butler <hobu.inc@gmail.com> update versions to 1.8.0 in prep for upcoming release (12:31:03)
+	* Howard Butler <hobu.inc@gmail.com> update main page to try to get github includes working (11:03:21)
+	* Howard Butler <hobu.inc@gmail.com> use CMake if you want windows makefiles builds (11:02:30)
+	* Howard Butler <hobu.inc@gmail.com> update AUTHORS with links to Mattias and Leonard (11:00:53)
+
+2012-10-25
+	* Howard Butler <hobu.inc@gmail.com> update licensing of base library to MIT, update docs accordingly (14:06:08)
+	* Howard Butler <hobu.inc@gmail.com> update licensing of C API (12:18:19)
+	* Howard Butler <hobu.inc@gmail.com> use local imports for public within-tree public includes #14 (10:49:20)
+	* Howard Butler <hobu.inc@gmail.com> adapt a patch to fix #12 -- allow cross-compilation on ANDROID (10:22:46)
+	* Howard Butler <hobu.inc@gmail.com> Merge pull request #8 from booo/master (10:03:27)
+
+2012-07-14
+	* Marios Hadjieleftheriou <mhadji@gmail.com> Reverted to using pthread mutex and exlusively lock all queries, since fine grain locking using spinlocks was too slow. (09:57:39)
+	* Marios Hadjieleftheriou <mhadji@gmail.com> Reverted to using pthread mutex for all queries, since fine grain locking using spinlocks was too slow. (09:52:34)
+
+2012-07-10
+	* Howard Butler <hobu.inc@gmail.com> attempt to use sched_yield for instances where pthread_yield doesn't exist (osx) -- please check this marios (15:54:01)
+	* Howard Butler <hobu.inc@gmail.com> put #ifdef guards around LockGuard which is only implemented for pthread for now (15:52:32)
+	* Howard Butler <hobu.inc@gmail.com> add check for pthread (15:52:09)
+	* Howard Butler <hobu.inc@gmail.com> be explicit about which overloads should be used to silence the warning about implementation hiding (15:51:32)
+
+2012-07-09
+	* Marios Hadjieleftheriou <mhadji@gmail.com> Added SpinLock to fix multi-threaded support bug. Removed silly non atomic m_rwLock when pthreads is not found. (10:00:41)
+
+2012-04-17
+	* Howard Butler <hobu.inc@gmail.com> make sure _c library gets soversion and that we install in include/spatialindex instead of install/libspatialindex (15:36:27)
+
+2012-04-09
+	* booo <borgers@mi.fu-berlin.de> src/CMakeLists.txt: fix issue #6 (16:28:50)
+	* booo <borgers@mi.fu-berlin.de> Merge branch 'master' of https://github.com/libspatialindex/libspatialindex (16:26:48)
+
+2012-04-03
+	* Marios Hadjieleftheriou <mhadji@gmail.com> Added flush() in IStorageManger interface. (13:10:45)
+
+2012-03-03
+	* booo <borgers@mi.fu-berlin.de> autogen.sh: check if libtoolize exists (08:03:59)
+
+2012-02-16
+	* Marios Hadjieleftheriou <mhadji@gmail.com> replace bzero with memset (09:18:13)
+
+2012-02-07
+	* Howard Butler <hobu.inc@gmail.com> add bit depth prefix to library name output (18:19:48)
+
+2011-12-29
+	* Howard Butler <hobu.inc@gmail.com> add explicit links to download (08:20:41)
+
+2011-12-09
+	* Howard Butler <hobu.inc@gmail.com> add back (copy) of README to placate automake (20:16:38)
+	* Howard Butler <hobu.inc@gmail.com> increment versions to 1.7.1 in preparation for release (20:11:06)
+	* Howard Butler <hobu.inc@gmail.com> rename so github renders it (20:08:51)
+
+2011-12-06
+	* Howard Butler <hobu.inc@gmail.com> increment soversion for both cmake and autoconf builds (12:32:52)
+
+2011-10-19
+	* Howard Butler <hobu.inc@gmail.com> update permissions for #3 (12:41:36)
+	* Howard Butler <hobu.inc@gmail.com> apply variation of patch in #4 (12:36:34)
+	* Howard Butler <hobu.inc@gmail.com> update packaging script for #7 (12:33:25)
+
+2011-10-14
+	* Howard Butler <hobu.inc@gmail.com> update ChangeLog (12:44:43)
+	* Howard Butler <hobu.inc@gmail.com> oops, need line separators (12:44:38)
+	* Howard Butler <hobu.inc@gmail.com> update ChangeLog (12:43:43)
+	* Howard Butler <hobu.inc@gmail.com> distribut test running scripts too (12:43:33)
+	* Howard Butler <hobu.inc@gmail.com> update ChangeLog (12:34:57)
+	* Howard Butler <hobu.inc@gmail.com> newline (12:34:48)
+	* Howard Butler <hobu.inc@gmail.com> update ChangeLog (12:31:54)
+	* Howard Butler <hobu.inc@gmail.com> update release date (12:31:43)
+	* Howard Butler <hobu.inc@gmail.com> update ChangeLog again (12:15:57)
+	* Howard Butler <hobu.inc@gmail.com> fixes to be able to make things work on msvc 10 (12:12:54)
+	* Howard Butler <hobu.inc@gmail.com> only redefine c++0x types if we're <= msvc_ver 1500 (12:12:36)
+	* Howard Butler <hobu.inc@gmail.com> add definition to make sure we export symbols in windows land (12:11:51)
+	* Howard Butler <hobu.inc@gmail.com> namespace usings and such to satisfy msvc 10 (11:49:40)
+	* Howard Butler <hobu.inc@gmail.com> more ignores (11:49:24)
+	* Howard Butler <hobu.inc@gmail.com> check for msvc 10 (11:40:45)
+	* Howard Butler <hobu.inc@gmail.com> update ChangeLog (11:26:39)
+	* Howard Butler <hobu.inc@gmail.com> missing reference to file (11:20:14)
+	* Howard Butler <hobu.inc@gmail.com> missing reference to file (11:19:02)
+	* Howard Butler <hobu.inc@gmail.com> this file is now gone (11:17:10)
+	* Howard Butler <hobu.inc@gmail.com> add pkg-config script for libspatialindex -- autoconf build only for now (11:01:17)
+	* Howard Butler <hobu.inc@gmail.com> typo (10:28:04)
+	* Howard Butler <hobu.inc@gmail.com> move Makefile.am up (10:23:23)
+	* Howard Butler <hobu.inc@gmail.com> start fixing up automake include structure (10:20:16)
+	* Howard Butler <hobu.inc@gmail.com> include was still busted (10:06:05)
+	* Howard Butler <hobu.inc@gmail.com> fix include path (10:04:08)
+	* Howard Butler <hobu.inc@gmail.com> add function detection to cmake config (09:25:08)
+	* Howard Butler <hobu.inc@gmail.com> point to doxygen output (09:14:18)
+	* Howard Butler <hobu.inc@gmail.com> more doc rearranging (08:53:17)
+	* Howard Butler <hobu.inc@gmail.com> add doxygen configuration -- run doxygen docs/doxygen/doxygen.conf from the top level directory to get output (08:38:07)
+	* Howard Butler <hobu.inc@gmail.com> more ignore (08:37:39)
+	* Howard Butler <hobu.inc@gmail.com> more ignores (08:36:45)
+
+2011-10-13
+	* Howard Butler <hobu.inc@gmail.com> a little proposed whitespace normalization -- my terminal isn't 250 characters long :) (21:18:10)
+	* Howard Butler <hobu.inc@gmail.com> remove SpatialIndexImpl.h, which didn't seem to be used to hide the implementation and was contributing to relative include spaghetti (21:14:01)
+	* Howard Butler <hobu.inc@gmail.com> #include file deck chair rearrangement (20:54:22)
+	* Howard Butler <hobu.inc@gmail.com> #include file deck chair rearrangement (20:49:45)
+	* Howard Butler <hobu.inc@gmail.com> don't add -ansi to clang compiles (16:31:05)
+	* Howard Butler <hobu.inc@gmail.com> unsigned values can never be <0, no need to test for this (16:30:50)
+	* Howard Butler <hobu.inc@gmail.com> clean up some warnings that clang found (16:25:05)
+	* Howard Butler <hobu.inc@gmail.com> unsigned values can never be <0, no need to test for this (16:24:46)
+
+2011-10-11
+	* Howard Butler <hobu.inc@gmail.com> regressiontest directory changed names (11:33:56)
+	* Howard Butler <hobu.inc@gmail.com> rename regressiontest directory to test/ directory for added clarity.  maybe next release we can have these test be auto-run with 'make test' (11:20:47)
+	* Howard Butler <hobu.inc@gmail.com> check for an existing srand48, and if we have it, don't use our local one (11:03:21)
+	* Howard Butler <hobu.inc@gmail.com> CMake for regressiontests (11:02:45)
+
+2011-10-10
+	* Howard Butler <hobu.inc@gmail.com> start organizing docs (23:01:48)
+	* Howard Butler <hobu.inc@gmail.com> update CMakeLists.txt when releasing too (23:01:37)
+	* Howard Butler <hobu.inc@gmail.com> c/p fix (23:01:23)
+	* Howard Butler <hobu.inc@gmail.com> add dummy file (22:38:19)
+	* Howard Butler <hobu.inc@gmail.com> makefile for sphinx (22:37:20)
+	* Howard Butler <hobu.inc@gmail.com> more cmake config (22:31:04)
+	* Howard Butler <hobu.inc@gmail.com> ignore more (22:31:00)
+	* Howard Butler <hobu.inc@gmail.com> clean up warning (22:30:22)
+
+2011-10-09
+	* Howard Butler <hobu.inc@gmail.com> add cmake config (22:59:20)
+	* Howard Butler <hobu.inc@gmail.com> ignore cmake stuff (22:58:56)
+
+2011-10-06
+	* Howard Butler <hobu.inc@gmail.com> attempt 2 on #1 to fix rand in stdlib on newer gcc's (14:32:42)
+	* Howard Butler <hobu.inc@gmail.com> a fix for #1 because gcc 4.5.2 appears to have these defined in stdlib.h (13:41:09)
+
+2011-09-26
+	* Howard Butler <hobu.inc@gmail.com> add documentation for http://libspatialindex.github.com (16:10:17)
+
+2011-09-25
+	* Howard Butler <hobu.inc@gmail.com> increment versions in preparation for release (20:44:57)
+
+2011-07-15
+	* Howard Butler <hobu.inc@gmail.com> use int64_t for IDs instead of uint64_t's (12:12:48)
+	* Howard Butler <hobu.inc@gmail.com> clean up warnings (10:55:15)
+	* Howard Butler <hobu.inc@gmail.com> initialize variables to 0's before we use them (10:51:50)
+	* Howard Butler <hobu.inc@gmail.com> fix up initialization order (10:48:07)
+	* Howard Butler <hobu.inc@gmail.com> use -pedantic for compilation (10:42:11)
+	* Howard Butler <hobu@ember.hobu.biz> add .gitignore (10:40:44)
+
+2011-05-18
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (10:20:08)
+
+2011-03-01
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (08:50:59)
+
+2011-01-10
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (09:53:08)
+
+2010-12-04
+	* Howard Butler <hobu.inc@gmail.com> bump version in prep for 1.6.1 release (15:22:32)
+
+2010-11-22
+	* Sean Gillies <sean.gillies@gmail.com> Fix test of length value (13:53:16)
+	* Howard Butler <hobu.inc@gmail.com> whitespace normalization (13:23:02)
+	* Sean Gillies <sean.gillies@gmail.com> Add up deltas for multidimensional input (13:00:24)
+	* Sean Gillies <sean.gillies@gmail.com> Add up deltas for multidimensional input (12:49:10)
+	* Howard Butler <hobu.inc@gmail.com> revert r193 (12:46:06)
+	* Howard Butler <hobu.inc@gmail.com> we should set isPoint to true if we pass our epsilon test -- this didn't work before (10:02:47)
+
+2010-10-14
+	* Marios Hadjieleftheriou <mhadji@gmail.com> Removed nextUnifromLongDouble. It was incorrect (08:18:23)
+
+2010-10-13
+	* Marios Hadjieleftheriou <mhadji@gmail.com> Added nextUniformLongDouble (10:10:35)
+
+2010-09-16
+	* Howard Butler <hobu.inc@gmail.com> fix #25 and include visual studio files in the release (08:56:14)
+	* Howard Butler <hobu.inc@gmail.com> bump versions in preparation for release (08:53:22)
+	* Howard Butler <hobu.inc@gmail.com> bump versions in preparation for release (08:52:38)
+
+2010-06-19
+	* Howard Butler <hobu.inc@gmail.com> add Matthias' CustomStorage backend for C API (15:34:19)
+
+2010-04-21
+	* Howard Butler <hobu.inc@gmail.com> Add Marios' pagesize diatribe to the docs (13:50:02)
+
+2010-04-12
+	* Howard Butler <hobu.inc@gmail.com> update ChangeLog (14:56:52)
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (12:17:47)
+	* Marios Hadjieleftheriou <mhadji@gmail.com> Fixed rtree/BulkLoader infinit loop bug (12:07:13)
+
+2010-03-31
+	* Howard Butler <hobu.inc@gmail.com> format and layout normalization (10:33:43)
+
+2010-03-30
+	* Howard Butler <hobu.inc@gmail.com> ensure that we instantiate the ivOut with at least the ivIn so we have a properly constructed Tools::Interval #16 (15:18:40)
+
+2010-03-05
+	* Howard Butler <hobu.inc@gmail.com> add doc describing how to release (08:19:51)
+
+2010-03-04
+	* Howard Butler <hobu.inc@gmail.com> propsets to ignore test output: (20:56:08)
+	* Howard Butler <hobu.inc@gmail.com> use subdir-objects for automake and rename the make dist output to spatialindex-src (20:53:18)
+	* Howard Butler <hobu.inc@gmail.com> increment version info in preparation for release (20:52:47)
+	* Howard Butler <hobu.inc@gmail.com> update for release (19:59:41)
+	* Howard Butler <hobu.inc@gmail.com> add CountVisitor to the CAPI to provide a cumulation of the number of hits that land within a query (10:33:28)
+
+2010-03-03
+	* Howard Butler <hobu.inc@gmail.com> use uint64_t for result counts instead of uint32_t in C API (15:55:09)
+
+2009-12-28
+	* Howard Butler <hobu.inc@gmail.com> fix up for gcc 4.4 (20:35:01)
+
+2009-12-04
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (15:57:15)
+	* Marios Hadjieleftheriou <mhadji@gmail.com> Fixed Region::touchesRegion member function bug. (12:46:19)
+
+2009-11-05
+	* Howard Butler <hobu.inc@gmail.com> don't thrown an error when -DDEBUG is on and we initialize an infinite Region (10:26:45)
+
+2009-11-02
+	* Howard Butler <hobu.inc@gmail.com> pass in a reference for the query bounds (21:10:46)
+	* Howard Butler <hobu.inc@gmail.com> try to do no harm when calling Index_Free on something that's null (21:04:49)
+	* Howard Butler <hobu.inc@gmail.com> pass in a reference for the query bounds (21:00:54)
+	* Howard Butler <hobu.inc@gmail.com> copy the array using memcpy because we can't free() something created with new (20:15:41)
+	* Howard Butler <hobu.inc@gmail.com> put the data in a newly malloc'd array to match our std::free call of Index_Delete (19:48:00)
+	* Howard Butler <hobu.inc@gmail.com> make sure to delete our shape when we're done (15:32:57)
+	* Howard Butler <hobu.inc@gmail.com> get dimension from the Region, no need to fetch from index properties (15:32:26)
+	* Howard Butler <hobu.inc@gmail.com> make sure we clean up the bounds and region (14:53:30)
+	* Howard Butler <hobu.inc@gmail.com> only #include <limits> where needed, and not in the global Tools.h file (14:08:16)
+
+2009-10-30
+	* Howard Butler <hobu.inc@gmail.com> remove <cmath> <limits> and <climits> from Tools.h and include them seperately in each file that needs them (12:09:14)
+	* Howard Butler <hobu.inc@gmail.com> define to denote we're C API (11:37:11)
+	* Howard Butler <hobu.inc@gmail.com> add a newline (10:03:47)
+
+2009-10-21
+	* Howard Butler <hobu.inc@gmail.com> make sure we use new/delete instead of new/free (21:42:21)
+	* Howard Butler <hobu.inc@gmail.com> remove namespace pollution of Tools:: into the globally include'd header SpatialIndex.h (12:35:24)
+
+2009-10-20
+	* Howard Butler <hobu.inc@gmail.com> bump versions in preparation for release (10:24:18)
+
+2009-10-19
+	* Howard Butler <hobu.inc@gmail.com> add SIDX_Version prototype (15:31:14)
+	* Howard Butler <hobu.inc@gmail.com> ltmain.sh doesn't belong in svn (15:23:59)
+	* Howard Butler <hobu.inc@gmail.com> Makefile.in's don't belong in svn (15:23:48)
+	* Howard Butler <hobu.inc@gmail.com> C API compilation fix (13:50:42)
+	* Howard Butler <hobu.inc@gmail.com> tmpname fixes so we compile on msvc2003 (13:50:31)
+	* Howard Butler <hobu.inc@gmail.com> don't define a variable to "" or cl will complain (13:29:17)
+
+2009-10-08
+	* Howard Butler <hobu.inc@gmail.com> bleaf and bindex switched around in createLevel call (14:32:03)
+
+2009-09-17
+	* Howard Butler <hobu.inc@gmail.com> more leaf querying code (15:40:25)
+
+2009-09-16
+	* Howard Butler <hobu.inc@gmail.com> add beginnings of leaf querying to C API (13:45:57)
+
+2009-09-15
+	* Howard Butler <hobu.inc@gmail.com> remove the duplicate and unnecessary Item construct that was masking the already existing IData interface (22:34:14)
+
+2009-08-31
+	* Howard Butler <hobu.inc@gmail.com> support building the c api (10:32:06)
+
+2009-08-24
+	* Howard Butler <hobu.inc@gmail.com> fix issue with uint32_t by copying macros from Tools.h (08:25:53)
+
+2009-08-19
+	* Howard Butler <hobu.inc@gmail.com> try to ensure -lstdc++ is linked (15:47:58)
+	* Howard Butler <hobu.inc@gmail.com> ignores (14:56:31)
+	* Howard Butler <hobu.inc@gmail.com> add C API (not currently built on windows) (11:37:50)
+	* Howard Butler <hobu.inc@gmail.com> ignore propset (10:25:06)
+	* Howard Butler <hobu.inc@gmail.com> propsets to ignore test results (10:24:15)
+
+2009-08-18
+	* Howard Butler <hobu.inc@gmail.com> locking for Tools::PropertySet (commented out though because it doesn't work (13:07:34)
+
+2009-08-14
+	* Howard Butler <hobu.inc@gmail.com> comment out PropertySet locking for now (12:41:31)
+	* Howard Butler <hobu.inc@gmail.com> use HAVE_PTHREAD_H for #ifdef, make Tools::PropertySet threadsafe for read/write (10:19:40)
+
+2009-08-13
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (14:10:02)
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (10:42:43)
+	* Marios Hadjieleftheriou <mhadji@gmail.com> 1. Replace size_t with uint32_t to fix 64/32 bit compatibility issues 2. Fixed memory bug related to data array and bulk loading for RTree. (10:24:35)
+
+2009-08-10
+	* Howard Butler <hobu.inc@gmail.com> remove #define interface, use class (08:35:22)
+
+2009-08-05
+	* Howard Butler <hobu.inc@gmail.com> osgeo4w packaging (20:11:54)
+	* Howard Butler <hobu.inc@gmail.com> don't redefine interface if it is already defined (/me scowls at windows (15:21:47)
+	* Howard Butler <hobu.inc@gmail.com> comment out record deletion entirely (14:27:33)
+	* Howard Butler <hobu.inc@gmail.com> guard against invalid delete (12:58:43)
+
+2009-07-30
+	* Howard Butler <hobu.inc@gmail.com> bump version to 1.4.0 in prep for release, add a windows docs to the dist (13:48:52)
+	* Howard Butler <hobu.inc@gmail.com> Add a CheckFilesExists(Tools::PropertySet&) method instead of the cheap way we were checking for existence before.  This takes into account the file extensions and only returns true if both files exist (11:57:21)
+	* Howard Butler <hobu.inc@gmail.com> move the warning about 4251 down into _MSC_VER (11:56:37)
+
+2009-07-29
+	* Howard Butler <hobu.inc@gmail.com> new changelog (22:10:27)
+	* Howard Butler <hobu.inc@gmail.com> update for new layout.  make sure to build dll appropriately (21:32:41)
+	* Howard Butler <hobu.inc@gmail.com> turn off warning 4251 (16:24:23)
+	* Howard Butler <hobu.inc@gmail.com> fix #15 and provide a way to determine the library version at compile time (15:57:26)
+	* Howard Butler <hobu.inc@gmail.com> add back makefile.vc (15:50:19)
+
+2009-07-22
+	* Howard Butler <hobu.inc@gmail.com> a note about the debugging lint that is incorrect when the bounds are infinity (14:29:35)
+	* Howard Butler <hobu.inc@gmail.com> make sure to #include <cstring> to satisfy gcc 4.3+ (14:24:28)
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (10:23:22)
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (10:18:42)
+
+2009-07-21
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (08:11:09)
+
+2009-07-20
+	* Howard Butler <hobu.inc@gmail.com> attempt to fix #8 and allow users to specify extensions for the dat and idx files of the diskstorage manager (15:32:50)
+	* Howard Butler <hobu.inc@gmail.com> make sure to update existing values in setProperties instead of assuming it doesn't exist in the map (12:35:36)
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (10:01:52)
+
+2009-07-19
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (09:51:46)
+
+2009-07-18
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (20:26:54)
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (20:15:51)
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (20:13:28)
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (20:09:59)
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (20:02:29)
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (17:52:03)
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (17:19:51)
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (17:19:07)
+
+2009-07-15
+	* Howard Butler <hobu.inc@gmail.com> apply Willem's patch for #14 (09:39:07)
+
+2009-07-06
+	* Howard Butler <hobu.inc@gmail.com> more descriptive and separate exception descriptions for FillFactor inconsistencies (17:23:39)
+	* Howard Butler <hobu.inc@gmail.com> silence warnings about windows compiler complaints on non-windows systems (09:38:20)
+
+2009-05-28
+	* Howard Butler <hobu.inc@gmail.com> rename dlls to not have lib* in front of them (12:52:06)
+	* Howard Butler <hobu.inc@gmail.com> A much improved windows makefile based in libLAS' (11:31:33)
+	* Howard Butler <hobu.inc@gmail.com> On MSVC, just about every class complains about 4250, inheritance by dominance.  We'll just shut that up for now. (11:31:04)
+
+2009-05-14
+	* Howard Butler <hobu.inc@gmail.com> apply Patrick Mézard's patch for the inverted use of mktemp on windows #13 (13:26:54)
+	* Howard Butler <hobu.inc@gmail.com> Fix #12, add time.h so msvc9 works (13:21:20)
+
+2009-05-04
+	* Howard Butler <hobu.inc@gmail.com> apply the patch for #11 - cstring and limits includes so gcc 4.3+ works (12:10:20)
+
+2008-05-30
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (14:42:57)
+
+2008-05-23
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (13:27:25)
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (12:55:19)
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (12:28:17)
+
+2008-05-18
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (07:35:58)
+
+2008-04-30
+	* Howard Butler <hobu.inc@gmail.com> propset to ignore aclocal.m4 (00:39:52)
+	* Howard Butler <hobu.inc@gmail.com> aclocal.m4 is autogenerated.  removing (00:39:18)
+	* Howard Butler <hobu.inc@gmail.com> set svn:ignore properties for autogenerated files and automake cruft (00:35:53)
+	* Howard Butler <hobu.inc@gmail.com> delete Makefile.in's from source tree.  Use autogen.sh to remake them if building from svn source yourself (00:27:52)
+	* Howard Butler <hobu.inc@gmail.com> add rand48.h to dist target (00:26:18)
+
+2008-04-29
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (14:47:25)
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (13:17:22)
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (13:06:31)
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (13:03:50)
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (11:36:51)
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (11:36:38)
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (11:36:22)
+	* Marios Hadjieleftheriou <mhadji@gmail.com> Fixex malloc memory leak. (10:40:31)
+	* Marios Hadjieleftheriou <mhadji@gmail.com> Fixed malloc memory leak (10:40:11)
+
+2008-02-26
+	* Howard Butler <hobu.inc@gmail.com> oops.  Add missing file (10:15:43)
+	* Howard Butler <hobu.inc@gmail.com> oops.  Add missing file (10:14:56)
+
+2008-01-25
+	* Howard Butler <hobu.inc@gmail.com> Initial push of windows patches (13:43:36)
+
+2008-01-23
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (10:25:52)
+
+2008-01-21
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (08:19:44)
+
+2008-01-19
+	* Howard Butler <hobu.inc@gmail.com> bump version to 1.3 (14:51:44)
+	* Howard Butler <hobu.inc@gmail.com> Add an auto-generated ChangeLog (12:42:27)
+	* Howard Butler <hobu.inc@gmail.com> add myself and some notes (12:37:39)
+	* Howard Butler <hobu.inc@gmail.com> update to ReST (12:36:26)
+	* Howard Butler <hobu.inc@gmail.com> update ReST (12:09:45)
+	* Howard Butler <hobu.inc@gmail.com> update ReST (12:09:16)
+	* Howard Butler <hobu.inc@gmail.com> update ReST (12:03:40)
+	* Howard Butler <hobu.inc@gmail.com> update ReST (12:02:48)
+	* Howard Butler <hobu.inc@gmail.com> update ReST (12:02:10)
+	* Howard Butler <hobu.inc@gmail.com> update ReST (12:01:58)
+	* Howard Butler <hobu.inc@gmail.com> update ReST (11:59:42)
+	* Howard Butler <hobu.inc@gmail.com> update ReST (11:59:10)
+	* Howard Butler <hobu.inc@gmail.com> update ReST (11:58:53)
+	* Howard Butler <hobu.inc@gmail.com> update ReST (11:58:13)
+	* Howard Butler <hobu.inc@gmail.com> update ReST (11:56:33)
+	* Howard Butler <hobu.inc@gmail.com> update ReST (11:55:11)
+	* Howard Butler <hobu.inc@gmail.com> update ReST (11:29:26)
+	* Howard Butler <hobu.inc@gmail.com> update to ReST (11:26:06)
+	* Howard Butler <hobu.inc@gmail.com> set mimetype to reStructured text so Trac will render it for us in the browser (11:02:56)
+
+2008-01-17
+	* Howard Butler <hobu.inc@gmail.com> add internal headers to the _SOURCES targets so they get included in make dist (17:34:01)
+	* Howard Butler <hobu.inc@gmail.com> add autogen.sh to simplify auto stuff (11:06:18)
+	* Howard Butler <hobu.inc@gmail.com> move debian packaging stuff out of trunk (11:04:16)
+
+2008-01-15
+	* Howard Butler <hobu.inc@gmail.com> add nmake makefile (13:33:39)
+
+2007-12-07
+	* Kenneth Christiansen <kenneth.christiansen@openbossa.org> Wrong names (14:44:52)
+	* Kenneth Christiansen <kenneth.christiansen@openbossa.org> Fixed rules file (13:58:13)
+	* Kenneth Christiansen <kenneth.christiansen@openbossa.org> Updates to the control file (packaging) Removal of files that shouldn't be in SVN (12:10:46)
+
+2007-11-30
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (12:04:00)
+	* Sean Gillies <sean.gillies@gmail.com> Version info to 1:0:0 (10:50:02)
+
+2007-11-29
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (16:26:44)
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (15:54:08)
+	* Marios Hadjieleftheriou <mhadji@gmail.com>  (15:48:42)
+	* Sean Gillies <sean.gillies@gmail.com> Add debian directory created by dh_make (12:00:13)
+
+2007-11-28
+	* Howard Butler <hobu.inc@gmail.com> use -version-info instead of -release (22:05:27)
+	* Howard Butler <hobu.inc@gmail.com> include Makefile.in's (18:59:56)
+	* Howard Butler <hobu.inc@gmail.com>  use .'s to separate version info and don't do -no-undefined (18:55:06)
+	* Howard Butler <hobu.inc@gmail.com> tweak formatting (18:19:42)
+	* Sean Gillies <sean.gillies@gmail.com> Add version-info to Makefile.am (18:11:46)
+	* Howard Butler <hobu.inc@gmail.com> finish incorporating -ltools (17:54:30)
+	* Howard Butler <hobu.inc@gmail.com> more progress on automake for includes directories... close, but not quite (16:48:19)
+	* Howard Butler <hobu.inc@gmail.com> Add automake files for includes (16:38:55)
+	* Howard Butler <hobu.inc@gmail.com> start incorporating -ltools into the tree (15:03:45)
+
+2007-08-30
+	* Marios Hadjieleftheriou <mhadji@gmail.com> README should be INSTALL, and INSTALL should be README (10:16:33)
+	* Marios Hadjieleftheriou <mhadji@gmail.com> README should be INSTALL, and INSTALL should be README (10:15:49)
+	* Marios Hadjieleftheriou <mhadji@gmail.com> README file should be INSTALL, and INSTALL should be README (10:13:34)
+
+2007-08-01
+	* Howard Butler <hobu.inc@gmail.com> revert r9 (23:37:29)
+	* Howard Butler <hobu.inc@gmail.com> revert r10 (23:37:03)
+	* Howard Butler <hobu.inc@gmail.com> revert r11 (23:36:42)
+	* Howard Butler <hobu.inc@gmail.com> revert r12 (23:36:19)
+	* Howard Butler <hobu.inc@gmail.com> revert r13 (23:35:52)
+	* Howard Butler <hobu.inc@gmail.com> add strings.h (23:34:57)
+	* Howard Butler <hobu.inc@gmail.com> add strings.h (23:27:45)
+	* Howard Butler <hobu.inc@gmail.com> add strings.h (23:26:36)
+	* Howard Butler <hobu.inc@gmail.com> add strings.h (23:25:26)
+	* Howard Butler <hobu.inc@gmail.com> include <strings.h> (21:23:28)
+	* Howard Butler <hobu.inc@gmail.com> include <strings.h> in DiskStorageManager (this is not available on Solaris by default) (21:21:34)
+	* Howard Butler <hobu.inc@gmail.com> add data and queries for tests (15:49:33)
+	* Howard Butler <hobu.inc@gmail.com> add Marios' latest updates (15:48:13)
+	* Howard Butler <hobu.inc@gmail.com> oops, don't include zip files (15:40:50)
+	* Howard Butler <hobu.inc@gmail.com> add 1.1.1 version of library (15:37:49)
+	* Howard Butler <hobu.inc@gmail.com> basic layout (15:32:49)
+

@@ -5,7 +5,7 @@
  * Copyright (c) 2002, Marios Hadjieleftheriou
  *
  * All rights reserved.
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the "Software"),
  * to deal in the Software without restriction, including without limitation
@@ -59,26 +59,26 @@ void MemoryStorageManager::flush()
 {
 }
 
-void MemoryStorageManager::loadByteArray(const id_type page, uint32_t& len, byte** data)
+void MemoryStorageManager::loadByteArray(const id_type page, uint32_t& len, uint8_t** data)
 {
 	Entry* e;
 	try
 	{
 		e = m_buffer.at(page);
-		if (e == 0) throw InvalidPageException(page);
+		if (e == nullptr) throw InvalidPageException(page);
 	}
-	catch (std::out_of_range)
+	catch (std::out_of_range&)
 	{
 		throw InvalidPageException(page);
 	}
 
 	len = e->m_length;
-	*data = new byte[len];
+	*data = new uint8_t[len];
 
 	memcpy(*data, e->m_pData, len);
 }
 
-void MemoryStorageManager::storeByteArray(id_type& page, const uint32_t len, const byte* const data)
+void MemoryStorageManager::storeByteArray(id_type& page, const uint32_t len, const uint8_t* const data)
 {
 	if (page == NewPage)
 	{
@@ -101,9 +101,9 @@ void MemoryStorageManager::storeByteArray(id_type& page, const uint32_t len, con
 		try
 		{
 			e_old = m_buffer.at(page);
-			if (e_old == 0) throw InvalidPageException(page);
+			if (e_old == nullptr) throw InvalidPageException(page);
 		}
-		catch (std::out_of_range)
+		catch (std::out_of_range&)
 		{
 			throw InvalidPageException(page);
 		}
@@ -121,16 +121,15 @@ void MemoryStorageManager::deleteByteArray(const id_type page)
 	try
 	{
 		e = m_buffer.at(page);
-		if (e == 0) throw InvalidPageException(page);
+		if (e == nullptr) throw InvalidPageException(page);
 	}
-	catch (std::out_of_range)
+	catch (std::out_of_range&)
 	{
 		throw InvalidPageException(page);
 	}
 
-	m_buffer[page] = 0;
+	m_buffer[page] = nullptr;
 	m_emptyPages.push(page);
 
 	delete e;
 }
-

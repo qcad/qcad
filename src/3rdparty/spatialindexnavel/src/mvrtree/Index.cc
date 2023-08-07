@@ -38,8 +38,7 @@ using namespace SpatialIndex;
 using namespace SpatialIndex::MVRTree;
 
 Index::~Index()
-{
-}
+= default;
 
 Index::Index(SpatialIndex::MVRTree::MVRTree* pTree, id_type id, uint32_t level) : Node(pTree, id, level, pTree->m_indexCapacity)
 {
@@ -99,7 +98,7 @@ NodePtr Index::findLeaf(const TimeRegion& mbr, id_type id, std::stack<id_type>& 
 			NodePtr n = m_pTree->readNode(m_pIdentifier[cChild]);
 			NodePtr l = n->findLeaf(mbr, id, pathBuffer);
 			if (n.get() == l.get()) n.relinquish();
-			if (l.get() != 0) return l;
+			if (l.get() != nullptr) return l;
 		}
 	}
 
@@ -109,7 +108,7 @@ NodePtr Index::findLeaf(const TimeRegion& mbr, id_type id, std::stack<id_type>& 
 }
 
 void Index::split(
-	uint32_t dataLength, byte* pData, TimeRegion& mbr, id_type id, NodePtr& pLeft, NodePtr& pRight,
+	uint32_t dataLength, uint8_t* pData, TimeRegion& mbr, id_type id, NodePtr& pLeft, NodePtr& pRight,
 	TimeRegion& mbr2, id_type id2, bool bInsertMbr2)
 {
 	++(m_pTree->m_stats.m_u64Splits);
@@ -132,8 +131,8 @@ void Index::split(
 	pLeft = m_pTree->m_indexPool.acquire();
 	pRight = m_pTree->m_indexPool.acquire();
 
-	if (pLeft.get() == 0) pLeft = NodePtr(new Index(m_pTree, m_identifier, m_level), &(m_pTree->m_indexPool));
-	if (pRight.get() == 0) pRight = NodePtr(new Index(m_pTree, -1, m_level), &(m_pTree->m_indexPool));
+	if (pLeft.get() == nullptr) pLeft = NodePtr(new Index(m_pTree, m_identifier, m_level), &(m_pTree->m_indexPool));
+	if (pRight.get() == nullptr) pRight = NodePtr(new Index(m_pTree, -1, m_level), &(m_pTree->m_indexPool));
 
 	pLeft->m_nodeMBR = m_pTree->m_infiniteRegion;
 	pRight->m_nodeMBR = m_pTree->m_infiniteRegion;
@@ -142,12 +141,12 @@ void Index::split(
 
 	for (cIndex = 0; cIndex < g1.size(); ++cIndex)
 	{
-		pLeft->insertEntry(0, 0, *(m_ptrMBR[g1[cIndex]]), m_pIdentifier[g1[cIndex]]);
+		pLeft->insertEntry(0, nullptr, *(m_ptrMBR[g1[cIndex]]), m_pIdentifier[g1[cIndex]]);
 	}
 
 	for (cIndex = 0; cIndex < g2.size(); ++cIndex)
 	{
-		pRight->insertEntry(0, 0, *(m_ptrMBR[g2[cIndex]]), m_pIdentifier[g2[cIndex]]);
+		pRight->insertEntry(0, nullptr, *(m_ptrMBR[g2[cIndex]]), m_pIdentifier[g2[cIndex]]);
 	}
 }
 
@@ -199,7 +198,7 @@ uint32_t Index::findLeastOverlap(const TimeRegion& r) const
 
 	double leastOverlap = std::numeric_limits<double>::max();
 	double me = std::numeric_limits<double>::max();
-	OverlapEntry* best = 0;
+	OverlapEntry* best = nullptr;
 	uint32_t cLiveEntries = 0;
 
 	// find combined region and enlargement of every entry and store it.

@@ -5,7 +5,7 @@
  * Copyright (c) 2002, Marios Hadjieleftheriou
  *
  * All rights reserved.
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the "Software"),
  * to deal in the Software without restriction, including without limitation
@@ -58,7 +58,7 @@ Buffer::~Buffer()
 
 void Buffer::flush()
 {
-	for (std::map<id_type, Entry*>::iterator it = m_buffer.begin(); it != m_buffer.end(); ++it)
+	for (auto it = m_buffer.begin(); it != m_buffer.end(); ++it)
 	{
 		if ((*it).second->m_bDirty)
 		{
@@ -69,25 +69,25 @@ void Buffer::flush()
 	}
 }
 
-void Buffer::loadByteArray(const id_type page, uint32_t& len, byte** data)
+void Buffer::loadByteArray(const id_type page, uint32_t& len, uint8_t** data)
 {
-	std::map<id_type, Entry*>::iterator it = m_buffer.find(page);
+	auto it = m_buffer.find(page);
 
 	if (it != m_buffer.end())
 	{
 		++m_u64Hits;
 		len = (*it).second->m_length;
-		*data = new byte[len];
+		*data = new uint8_t[len];
 		memcpy(*data, (*it).second->m_pData, len);
 	}
 	else
 	{
 		m_pStorageManager->loadByteArray(page, len, data);
-		addEntry(page, new Entry(len, static_cast<const byte*>(*data)));
+		addEntry(page, new Entry(len, static_cast<const uint8_t*>(*data)));
 	}
 }
 
-void Buffer::storeByteArray(id_type& page, const uint32_t len, const byte* const data)
+void Buffer::storeByteArray(id_type& page, const uint32_t len, const uint8_t* const data)
 {
 	if (page == NewPage)
 	{
@@ -105,7 +105,7 @@ void Buffer::storeByteArray(id_type& page, const uint32_t len, const byte* const
 		Entry* e = new Entry(len, data);
 		if (m_bWriteThrough == false) e->m_bDirty = true;
 
-		std::map<id_type, Entry*>::iterator it = m_buffer.find(page);
+		auto it = m_buffer.find(page);
 		if (it != m_buffer.end())
 		{
 			delete (*it).second;
@@ -121,7 +121,7 @@ void Buffer::storeByteArray(id_type& page, const uint32_t len, const byte* const
 
 void Buffer::deleteByteArray(const id_type page)
 {
-	std::map<id_type, Entry*>::iterator it = m_buffer.find(page);
+	auto it = m_buffer.find(page);
 	if (it != m_buffer.end())
 	{
 		delete (*it).second;
@@ -133,12 +133,12 @@ void Buffer::deleteByteArray(const id_type page)
 
 void Buffer::clear()
 {
-	for (std::map<id_type, Entry*>::iterator it = m_buffer.begin(); it != m_buffer.end(); ++it)
+	for (auto it = m_buffer.begin(); it != m_buffer.end(); ++it)
 	{
 		if ((*it).second->m_bDirty)
 		{
 			id_type page = (*it).first;
-			m_pStorageManager->storeByteArray(page, ((*it).second)->m_length, static_cast<const byte*>(((*it).second)->m_pData));
+			m_pStorageManager->storeByteArray(page, ((*it).second)->m_length, static_cast<const uint8_t*>(((*it).second)->m_pData));
 		}
 
 		delete (*it).second;

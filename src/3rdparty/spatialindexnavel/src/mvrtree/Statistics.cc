@@ -55,8 +55,7 @@ Statistics::Statistics(const Statistics& s)
 }
 
 Statistics::~Statistics()
-{
-}
+= default;
 
 Statistics& Statistics::operator=(const Statistics& s)
 {

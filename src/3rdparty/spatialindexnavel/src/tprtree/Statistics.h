@@ -41,16 +41,16 @@ namespace SpatialIndex
 		public:
 			Statistics();
 			Statistics(const Statistics&);
-			virtual ~Statistics();
+			~Statistics() override;
 			Statistics& operator=(const Statistics&);
 
 			//
 			// IStatistics interface
 			//
-			virtual uint64_t getReads() const;
-			virtual uint64_t getWrites() const;
-			virtual uint32_t getNumberOfNodes() const;
-			virtual uint64_t getNumberOfData() const;
+			uint64_t getReads() const override;
+			uint64_t getWrites() const override;
+			uint32_t getNumberOfNodes() const override;
+			uint64_t getNumberOfData() const override;
 
 			virtual uint64_t getSplits() const;
 			virtual uint64_t getHits() const;

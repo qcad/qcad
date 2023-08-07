@@ -39,7 +39,7 @@
 using namespace SpatialIndex;
 
 MovingRegion::MovingRegion()
-	: TimeRegion(), m_pVLow(0), m_pVHigh(0)
+    : TimeRegion()
 {
 }
 
@@ -108,8 +108,8 @@ MovingRegion::MovingRegion(const MovingPoint& low, const MovingPoint& high)
 	m_startTime = low.m_startTime;
 	m_endTime = high.m_endTime;;
 	m_dimension = low.m_dimension;
-	m_pLow = 0; m_pHigh = 0;
-	m_pVLow = 0; m_pVHigh = 0;
+	m_pLow = nullptr; m_pHigh = nullptr;
+	m_pVLow = nullptr; m_pVHigh = nullptr;
 
 	if (m_endTime <= m_startTime) throw Tools::IllegalArgumentException("MovingRegion: Cannot support degenerate time intervals.");
 
@@ -142,8 +142,8 @@ MovingRegion::MovingRegion(const MovingRegion& r)
 {
 	m_startTime = r.m_startTime;
 	m_endTime = r.m_endTime;
-	m_pLow = 0; m_pHigh = 0;
-	m_pVLow = 0; m_pVHigh = 0;
+	m_pLow = nullptr; m_pHigh = nullptr;
+	m_pVLow = nullptr; m_pVHigh = nullptr;
 
 	m_dimension = r.m_dimension;
 
@@ -177,8 +177,8 @@ void MovingRegion::initialize(
 	m_startTime = tStart;
 	m_endTime = tEnd;
 	m_dimension = dimension;
-	m_pLow = 0; m_pHigh = 0;
-	m_pVLow = 0; m_pVHigh = 0;
+	m_pLow = nullptr; m_pHigh = nullptr;
+	m_pVLow = nullptr; m_pVHigh = nullptr;
 
 	if (m_endTime <= m_startTime) throw Tools::IllegalArgumentException("MovingRegion: Cannot support degenerate time intervals.");
 
@@ -611,6 +611,9 @@ double MovingRegion::getCenterDistanceInTime(const IInterval& ivI, const MovingR
 		c += dx[cDim] * dx[cDim];
 	}
 
+	delete[] dx;
+	delete[] dv;
+
 	if (a == 0.0 && c == 0.0) return 0.0;
 	if (a == 0.0) return H * std::sqrt(c);
 	if (c == 0.0) return H * H * std::sqrt(a) / 2.0;
@@ -619,9 +622,6 @@ double MovingRegion::getCenterDistanceInTime(const IInterval& ivI, const MovingR
 	l = 2.0 * a * H + b;
 	m = 4.0 * a * c - b * b;
 	n = 2.0 * std::sqrt(a);
-
-	delete[] dx;
-	delete[] dv;
 
 	return (l * f + log(l / n + f) * m / n - b * std::sqrt(c) - std::log(b / n + std::sqrt(c)) * m / n) / (4.0 * a);
 }
@@ -910,7 +910,8 @@ double MovingRegion::getIntersectingAreaInTime(const IInterval& ivI, const Movin
 
 	MovingRegion x = *this;
 	CrossPoint c;
-	std::priority_queue<CrossPoint, std::vector<CrossPoint>, CrossPoint::ascending> pq;
+	auto ascending = [](CrossPoint& lhs, CrossPoint& rhs) { return lhs.m_t > rhs.m_t; };
+	std::priority_queue < CrossPoint, std::vector<CrossPoint>, decltype(ascending)> pq(ascending);
 
 	// find points of intersection in all dimensions.
 	for (uint32_t i = 0; i < m_dimension; ++i)
@@ -1031,7 +1032,7 @@ uint32_t MovingRegion::getByteArraySize()
 	return (sizeof(uint32_t) + 2 * sizeof(double) + 4 * m_dimension * sizeof(double));
 }
 
-void MovingRegion::loadFromByteArray(const byte* ptr)
+void MovingRegion::loadFromByteArray(const uint8_t* ptr)
 {
 	uint32_t dimension;
 
@@ -1053,11 +1054,11 @@ void MovingRegion::loadFromByteArray(const byte* ptr)
 	//ptr += m_dimension * sizeof(double);
 }
 
-void MovingRegion::storeToByteArray(byte** data, uint32_t& len)
+void MovingRegion::storeToByteArray(uint8_t** data, uint32_t& len)
 {
 	len = getByteArraySize();
-	*data = new byte[len];
-	byte* ptr = *data;
+	*data = new uint8_t[len];
+	uint8_t* ptr = *data;
 
 	memcpy(ptr, &m_dimension, sizeof(uint32_t));
 	ptr += sizeof(uint32_t);
@@ -1162,7 +1163,7 @@ double MovingRegion::getIntersectingAreaInTime(const ITimeShape& r) const
 double MovingRegion::getIntersectingAreaInTime(const IInterval&, const ITimeShape& in) const
 {
 	const MovingRegion* pr = dynamic_cast<const MovingRegion*>(&in);
-	if (pr != 0) return getIntersectingAreaInTime(*pr);
+	if (pr != nullptr) return getIntersectingAreaInTime(*pr);
 
 	throw Tools::IllegalStateException("getIntersectingAreaInTime: Not implemented yet!");
 }
@@ -1190,8 +1191,8 @@ void MovingRegion::makeDimension(uint32_t dimension)
 		delete[] m_pHigh;
 		delete[] m_pVLow;
 		delete[] m_pVHigh;
-		m_pLow = 0; m_pHigh = 0;
-		m_pVLow = 0; m_pVHigh = 0;
+		m_pLow = nullptr; m_pHigh = nullptr;
+		m_pVLow = nullptr; m_pVHigh = nullptr;
 
 		m_dimension = dimension;
 		m_pLow = new double[m_dimension];
