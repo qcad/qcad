@@ -26,6 +26,7 @@
 #include <QTextStream>
 #include <QTime>
 #include <QSqlDatabase>
+#include <QLoggingCategory>
 
 #if defined(Q_OS_MAC) || defined(Q_OS_LINUX)
 #include <signal.h>
