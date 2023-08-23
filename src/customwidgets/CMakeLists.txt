@@ -42,6 +42,7 @@ target_compile_definitions(qcadcustomwidgets PRIVATE
 )
 
 set_target_properties(qcadcustomwidgets PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../plugins/designer)
+set_target_properties(qcadcustomwidgets PROPERTIES RUNTIME_OUTPUT_DIRECTORY ../../plugins/designer)
 
 if (CMAKE_BUILD_TYPE STREQUAL "Release")
     target_link_libraries(qcadcustomwidgets PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../release)

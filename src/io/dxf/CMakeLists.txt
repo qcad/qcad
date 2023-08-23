@@ -35,6 +35,8 @@ target_compile_definitions(qcaddxf PRIVATE
 )
 
 set_target_properties(qcaddxf PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../../plugins)
+set_target_properties(qcaddxf PROPERTIES RUNTIME_OUTPUT_DIRECTORY ../../../plugins)
+set_target_properties(qcaddxf PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ../../../plugins)
 
 if (CMAKE_BUILD_TYPE STREQUAL "Release")
     target_link_libraries(qcaddxf PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../../release)

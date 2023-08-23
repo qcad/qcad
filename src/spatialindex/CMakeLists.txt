@@ -9,9 +9,14 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(${QT_VER} REQUIRED COMPONENTS Core Gui Widgets PrintSupport QmlIntegration)
 qt_standard_project_setup()
 
-IF(WIN32)
-    SET(RC spatialindex.rc)
-ENDIF()
+if(WIN32)
+    set(RC spatialindex.rc)
+endif()
+
+if(MSVC)
+    set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+    #set(BUILD_SHARED_LIBS TRUE)
+endif()
 
 add_library(qcadspatialindex SHARED
     RSpatialIndexNavel.cpp RSpatialIndexNavel.h
@@ -32,9 +37,13 @@ target_compile_definitions(qcadspatialindex PUBLIC
 
 if (CMAKE_BUILD_TYPE STREQUAL "Release")
     set_target_properties(qcadspatialindex PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../release)
+    set_target_properties(qcadspatialindex PROPERTIES RUNTIME_OUTPUT_DIRECTORY ../../release)
+    set_target_properties(qcadspatialindex PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ../../release)
     target_link_libraries(qcadspatialindex PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../release)
 else()
     set_target_properties(qcadspatialindex PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../debug)
+    set_target_properties(qcadspatialindex PROPERTIES RUNTIME_OUTPUT_DIRECTORY ../../debug)
+    set_target_properties(qcadspatialindex PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ../../debug)
     target_link_libraries(qcadspatialindex PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug)
 endif()
 

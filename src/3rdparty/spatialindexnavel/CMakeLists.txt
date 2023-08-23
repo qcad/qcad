@@ -3,6 +3,11 @@ project(spatialindexnavel VERSION 1.0 LANGUAGES CXX)
 
 set (CMAKE_CXX_STANDARD 11)
 
+if(MSVC)
+    set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+    #set(BUILD_SHARED_LIBS TRUE)
+endif()
+
 add_library(spatialindexnavel SHARED
     src/storagemanager/RandomEvictionsBuffer.h
     src/storagemanager/MemoryStorageManager.h
@@ -73,10 +78,12 @@ add_library(spatialindexnavel SHARED
 if (CMAKE_BUILD_TYPE STREQUAL "Release")
     set_target_properties(spatialindexnavel PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../../release)
     set_target_properties(spatialindexnavel PROPERTIES RUNTIME_OUTPUT_DIRECTORY ../../../release)
+    set_target_properties(spatialindexnavel PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ../../../release)
     target_link_libraries(spatialindexnavel PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../../release)
 else()
     set_target_properties(spatialindexnavel PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../../debug)
     set_target_properties(spatialindexnavel PROPERTIES RUNTIME_OUTPUT_DIRECTORY ../../../debug)
+    set_target_properties(spatialindexnavel PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ../../../debug)
     target_link_libraries(spatialindexnavel PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../../debug)
 endif()
 

@@ -66,9 +66,13 @@ target_compile_definitions(qcadgui PRIVATE
 
 if (CMAKE_BUILD_TYPE STREQUAL "Release")
     set_target_properties(qcadgui PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../release)
+    set_target_properties(qcadgui PROPERTIES RUNTIME_OUTPUT_DIRECTORY ../../release)
+    set_target_properties(qcadgui PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ../../release)
     target_link_libraries(qcadgui PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../release)
 else()
     set_target_properties(qcadgui PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../debug)
+    set_target_properties(qcadgui PROPERTIES RUNTIME_OUTPUT_DIRECTORY ../../debug)
+    set_target_properties(qcadgui PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ../../debug)
     target_link_libraries(qcadgui PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug)
 endif()
 

@@ -402,26 +402,24 @@ int main(int argc, char *argv[]) {
         delete handler;
     }
     else {
+        qWarning() << "No script handler found...";
+    }
 #endif
 
 #if QT_VERSION < 0x060000
-        RScriptHandlerRegistry::registerScriptHandler(RScriptHandlerEcma::factory,
-                RScriptHandlerEcma::getSupportedFileExtensionsStatic());
+    RScriptHandlerRegistry::registerScriptHandler(RScriptHandlerEcma::factory,
+            RScriptHandlerEcma::getSupportedFileExtensionsStatic());
 
-        RScriptHandler* handler = RScriptHandlerRegistry::getGlobalScriptHandler("js");
-        Q_ASSERT(handler!=NULL);
-        handler->autostart(autostartFile, arguments.mid(i+1));
+    RScriptHandler* handler = RScriptHandlerRegistry::getGlobalScriptHandler("js");
+    Q_ASSERT(handler!=NULL);
+    handler->autostart(autostartFile, arguments.mid(i+1));
 
-        if (handler->hasUncaughtExceptions()) {
-            ret = 1;
-        }
-
-        // delete script handler and print uncaught exceptions:
-        delete handler;
-#endif
-
-#if QT_VERSION >= 0x060000
+    if (handler->hasUncaughtExceptions()) {
+        ret = 1;
     }
+
+    // delete script handler and print uncaught exceptions:
+    delete handler;
 #endif
 
     RPluginLoader::unloadPlugins();

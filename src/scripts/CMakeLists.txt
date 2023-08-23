@@ -29,6 +29,9 @@ target_compile_definitions(qcadscripts PRIVATE
 )
 
 set_target_properties(qcadscripts PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../plugins)
+set_target_properties(qcadscripts PROPERTIES RUNTIME_OUTPUT_DIRECTORY ../../plugins)
+set_target_properties(qcadscripts PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ../../plugins)
+
 if (CMAKE_BUILD_TYPE STREQUAL "Release")
     target_link_libraries(qcadscripts PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../release)
 else()
