@@ -10,9 +10,16 @@ find_package(${QT_VER} REQUIRED COMPONENTS Core Widgets Concurrent Gui Network O
 qt_standard_project_setup()
 
 qt_add_resources(SOURCES scripts.qrc)
-IF(WIN32)
-    SET(RC scripts.rc)
-ENDIF()
+
+if(WIN32)
+    set(RC scripts.rc)
+endif()
+
+if (CMAKE_BUILD_TYPE STREQUAL "Release")
+    link_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../release)
+else()
+    link_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../debug)
+endif()
 
 add_library(qcadscripts SHARED
     RScriptsPlugin.cpp RScriptsPlugin.h
@@ -31,12 +38,6 @@ target_compile_definitions(qcadscripts PRIVATE
 set_target_properties(qcadscripts PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../plugins)
 set_target_properties(qcadscripts PROPERTIES RUNTIME_OUTPUT_DIRECTORY ../../plugins)
 set_target_properties(qcadscripts PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ../../plugins)
-
-if (CMAKE_BUILD_TYPE STREQUAL "Release")
-    target_link_libraries(qcadscripts PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../release)
-else()
-    target_link_libraries(qcadscripts PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug)
-endif()
 
 target_link_libraries(qcadscripts PRIVATE
     Qt::Core

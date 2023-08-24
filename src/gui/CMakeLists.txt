@@ -9,9 +9,15 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(${QT_VER} REQUIRED COMPONENTS Core Widgets Concurrent Gui Network OpenGL Sql Svg Xml PrintSupport Qml)
 qt_standard_project_setup()
 
-IF(WIN32)
-    SET(RC gui.rc)
-ENDIF()
+if(WIN32)
+    set(RC gui.rc)
+endif()
+
+if (CMAKE_BUILD_TYPE STREQUAL "Release")
+    link_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../release)
+else()
+    link_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../debug)
+endif()
 
 add_library(qcadgui SHARED
     RCharacterWidget.cpp RCharacterWidget.h
@@ -68,12 +74,10 @@ if (CMAKE_BUILD_TYPE STREQUAL "Release")
     set_target_properties(qcadgui PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../release)
     set_target_properties(qcadgui PROPERTIES RUNTIME_OUTPUT_DIRECTORY ../../release)
     set_target_properties(qcadgui PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ../../release)
-    target_link_libraries(qcadgui PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../release)
 else()
     set_target_properties(qcadgui PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../debug)
     set_target_properties(qcadgui PROPERTIES RUNTIME_OUTPUT_DIRECTORY ../../debug)
     set_target_properties(qcadgui PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ../../debug)
-    target_link_libraries(qcadgui PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug)
 endif()
 
 target_link_libraries(qcadgui PUBLIC

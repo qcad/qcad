@@ -12,9 +12,15 @@ IF(NOT BUILD_QT6)
 ENDIF()
 qt_standard_project_setup()
 
-IF(WIN32)
-    SET(RC core.rc)
-ENDIF()
+if(WIN32)
+    set(RC core.rc)
+endif()
+
+if (CMAKE_BUILD_TYPE STREQUAL "Release")
+    link_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../release)
+else()
+    link_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../debug)
+endif()
 
 add_library(qcadcore SHARED
     RAction.cpp RAction.h
@@ -213,12 +219,10 @@ if (CMAKE_BUILD_TYPE STREQUAL "Release")
     set_target_properties(qcadcore PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../release)
     set_target_properties(qcadcore PROPERTIES RUNTIME_OUTPUT_DIRECTORY ../../release)
     set_target_properties(qcadcore PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ../../release)
-    target_link_libraries(qcadcore PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../release)
 else()
     set_target_properties(qcadcore PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../debug)
     set_target_properties(qcadcore PROPERTIES RUNTIME_OUTPUT_DIRECTORY ../../debug)
     set_target_properties(qcadcore PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ../../debug)
-    target_link_libraries(qcadcore PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug)
 endif()
 
 

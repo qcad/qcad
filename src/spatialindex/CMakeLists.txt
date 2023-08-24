@@ -18,6 +18,12 @@ if(MSVC)
     #set(BUILD_SHARED_LIBS TRUE)
 endif()
 
+if (CMAKE_BUILD_TYPE STREQUAL "Release")
+    link_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../release)
+else()
+    link_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../debug)
+endif()
+
 add_library(qcadspatialindex SHARED
     RSpatialIndexNavel.cpp RSpatialIndexNavel.h
     ${RC}
@@ -39,12 +45,10 @@ if (CMAKE_BUILD_TYPE STREQUAL "Release")
     set_target_properties(qcadspatialindex PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../release)
     set_target_properties(qcadspatialindex PROPERTIES RUNTIME_OUTPUT_DIRECTORY ../../release)
     set_target_properties(qcadspatialindex PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ../../release)
-    target_link_libraries(qcadspatialindex PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../release)
 else()
     set_target_properties(qcadspatialindex PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../../debug)
     set_target_properties(qcadspatialindex PROPERTIES RUNTIME_OUTPUT_DIRECTORY ../../debug)
     set_target_properties(qcadspatialindex PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ../../debug)
-    target_link_libraries(qcadspatialindex PUBLIC -L${CMAKE_CURRENT_SOURCE_DIR}/../../debug)
 endif()
 
 target_link_libraries(qcadspatialindex PUBLIC
