@@ -119,6 +119,10 @@ public:
         return lastSnap;
     }
 
+    void setLastSnap(const RVector& v) {
+        lastSnap = v;
+    }
+
     virtual void reset() {
         entityIds.clear();
         lastSnap = RVector::invalid;
