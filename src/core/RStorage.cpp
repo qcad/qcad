@@ -413,7 +413,7 @@ double RStorage::getLinetypeScale() const {
  * Stream operator for QDebug
  */
 QDebug operator<<(QDebug dbg, RStorage& s) {
-    dbg.nospace() << "RStorage(" << QString("%1").arg((long int)&s, 0, 16) << ", ";
+    dbg.nospace() << "RStorage(" << QString("%1").arg((unsigned long long int)&s, 0, 16) << ", ";
     dbg.nospace() << "\n";
     //dbg.nospace() << "current block ID: " << s.getCurrentBlockId() << "\n";
     dbg.nospace() << "modified: " << s.isModified() << "\n";
