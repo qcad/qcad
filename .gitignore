@@ -9,6 +9,7 @@
 *.dylib
 *.exp
 *.dll
+*.dll.manifest
 *.disabled
 
 # Compiled Static libraries
