@@ -36,8 +36,7 @@ void RFocusFrame::paintEvent(QPaintEvent* e) {
     QStylePainter p(this);
     QStyleOption option;
     initStyleOption(&option);
-    option.palette.setColor(QPalette::Foreground, option.palette.color(
-            QPalette::Highlight));
+    option.palette.setColor(QPalette::WindowText, option.palette.color(QPalette::Highlight));
     p.drawControl(QStyle::CE_FocusFrame, option);
 #endif
 }
