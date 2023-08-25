@@ -3321,6 +3321,12 @@ function makeQAbstractItemViewEditTriggers() {
     return makeFlags.apply(this, argumentsNew);
 }
 
+function makeQDirIteratorIteratorFlags() {
+    var argumentsNew = [].slice.call(arguments, 0);
+    argumentsNew.unshift(QDirIterator.IteratorFlags);
+    return makeFlags.apply(this, argumentsNew);
+}
+
 function makeFlags() {
     if (RSettings.isQt(6)) {
         var ret = 0;
