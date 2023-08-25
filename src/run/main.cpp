@@ -301,7 +301,7 @@ int main(int argc, char *argv[]) {
     qRegisterMetaType<RVector>();
     qRegisterMetaTypeStreamOperators<RVector>("RVector");
 #else
-    // TODO #qt6
+    // TODO #qt6 ?
 #endif
 
     RSettings::setLaunchPath(cwd);
