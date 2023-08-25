@@ -49,6 +49,10 @@ RMouseEvent::~RMouseEvent() {
 }
 
 bool RMouseEvent::hasMouseMoved() {
+    if (!RSettings::getAllowMouseMoveInterruptions()) {
+        return false;
+    }
+
     return (
         !oriCursor.isNull() &&
         (oriCursor - QCursor::pos()).manhattanLength()>RSettings::getMouseThreshold()
