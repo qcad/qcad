@@ -1245,7 +1245,7 @@ void RGraphicsSceneQt::startEntity(bool topLevelEntity) {
  * Stream operator for QDebug
  */
 QDebug operator<<(QDebug dbg, RGraphicsSceneQt& gs) {
-    dbg.nospace() << "RGraphicsSceneQt(" << QString("%1").arg((long int)&gs, 0, 16) << ")";
+    dbg.nospace() << "RGraphicsSceneQt(" << QString("%1").arg((unsigned long long int)&gs, 0, 16) << ")";
     //QMap<REntity::Id, QList<RGraphicsSceneDrawable> >::iterator it;
     //for (it=gs.drawables.begin(); it!=gs.drawables.end(); it++) {
         //dbg.nospace() << "\n" << it.key() << "\n  " << it.value() << "\n";
