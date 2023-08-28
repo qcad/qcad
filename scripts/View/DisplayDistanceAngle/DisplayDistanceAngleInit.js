@@ -3,7 +3,12 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/DisplayDistanceAngle.js");
     action.setIcon(basePath + "/DisplayDistanceAngle.svg");
-    action.setDefaultShortcuts([new QKeySequence(Qt.Key_F8.valueOf())]);
+    if (RSettings.getQtVersion()>=0x060000) {
+        action.setDefaultShortcuts([new QKeySequence(new QKeyCombination(Qt.Key_F8))]);
+    }
+    else {
+        action.setDefaultShortcuts([new QKeySequence(Qt.Key_F8.valueOf())]);
+    }
     action.setNoState(true);
     action.setOverride();
     action.checkable = false;
