@@ -228,7 +228,9 @@ void REventHandler::updateSnapInfo(QPainter* painter, RSnap* snap, RSnapRestrict
         break;
     }
 
-    drawSnapLabel(painter, pos, posRestriction, text);
+    if (!text.isEmpty()) {
+        drawSnapLabel(painter, pos, posRestriction, text);
+    }
 }
 
 void REventHandler::drawSnapLabel(QPainter* painter, const RVector& pos, const RVector& posRestriction, const QString& text) {
