@@ -309,6 +309,17 @@ int main(int argc, char *argv[]) {
     // set current working directory:
     QDir::setCurrent(RSettings::getApplicationPath());
 
+#ifdef Q_OS_WIN
+#if QT_VERSION >= 0x060000
+    QString path;
+    path  = QString("PATH=") + getenv("PATH");
+    path += ";";
+    path += RSettings::getApplicationPath() + QDir::separator() + "plugins";
+    QByteArray ba = path.toLocal8Bit();
+    _putenv_s("PATH", ba.data());
+#endif
+#endif
+
     // disable Qt library paths to avoid plugins for Qt designer from being found:
     QStringList pluginPaths = RSettings::getPluginPaths();
     if (pluginPaths.isEmpty()) {
