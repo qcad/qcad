@@ -27,76 +27,63 @@
 
 #pragma once
 
-#include "PointerPool.h"
-
-namespace Tools
+namespace SpatialIndex
 {
-	template <class X> class PointerPool;
-
-	template <class X> class PoolPointer
+	namespace MVRTree
 	{
-	public:
-		explicit PoolPointer(X* p = nullptr) : m_pointer(p), m_pPool(nullptr) { m_prev = m_next = this; }
-		explicit PoolPointer(X* p, PointerPool<X>* pPool) : m_pointer(p), m_pPool(pPool) { m_prev = m_next = this; }
-		~PoolPointer() { release(); }
-		PoolPointer(const PoolPointer& p) { acquire(p); }
-		PoolPointer& operator=(const PoolPointer& p)
+		SIDX_DLL enum MVRTreeVariant
 		{
-			if (this != &p)
-			{
-				release();
-				acquire(p);
-			}
-			return *this;
-		}
+			RV_LINEAR = 0x0,
+			RV_QUADRATIC,
+			RV_RSTAR
+		};
 
-		X& operator*() const { return *m_pointer; }
-		X* operator->() const { return m_pointer; }
-		X* get() const { return m_pointer; }
-		bool unique() const { return m_prev ? m_prev == this : true; }
-		void relinquish() 
+		SIDX_DLL enum PersistenObjectIdentifier
 		{
-			m_pPool = nullptr;
-			m_pointer = nullptr;
-			release();
-		}
+			PersistentIndex = 0x1,
+			PersistentLeaf = 0x2
+		};
 
-	private:
-		X* m_pointer;
-		mutable const PoolPointer* m_prev;
-		mutable const PoolPointer* m_next;
-		PointerPool<X>* m_pPool;
-
-		void acquire(const PoolPointer& p) 
+		SIDX_DLL enum RangeQueryType
 		{
-			m_pPool = p.m_pPool;
-			m_pointer = p.m_pointer;
-			m_next = p.m_next;
-			m_next->m_prev = this;
-			m_prev = &p;
-			#ifndef mutable
-			p.m_next = this;
-			#else
-			(const_cast<linked_ptr<X>*>(&p))->m_next = this;
-			#endif
-		}
+			ContainmentQuery = 0x1,
+			IntersectionQuery = 0x2
+		};
 
-		void release()
+		class SIDX_DLL Data : public IData, public Tools::ISerializable
 		{
-			if (unique())
-			{
-				if (m_pPool != nullptr) m_pPool->release(m_pointer);
-				else delete m_pointer;
-			}
-			else
-			{
-				m_prev->m_next = m_next;
-				m_next->m_prev = m_prev;
-				m_prev = m_next = nullptr;
-			}
-			m_pointer = nullptr;
-			m_pPool = nullptr;
-		}
-	};
+		public:
+			Data(uint32_t len, byte* pData, TimeRegion& r, id_type id);
+			virtual ~Data();
+
+			virtual Data* clone();
+			virtual id_type getIdentifier() const;
+			virtual void getShape(IShape** out) const;
+			virtual void getData(uint32_t& len, byte** data) const;
+			virtual uint32_t getByteArraySize();
+			virtual void loadFromByteArray(const byte* data);
+			virtual void storeToByteArray(byte** data, uint32_t& len);
+
+			id_type m_id;
+			TimeRegion m_region;
+			byte* m_pData;
+			uint32_t m_dataLength;
+		}; // Data
+
+		SIDX_DLL ISpatialIndex* returnMVRTree(IStorageManager& ind, Tools::PropertySet& in);
+		SIDX_DLL ISpatialIndex* createNewMVRTree(
+			IStorageManager& in,
+			double fillFactor,
+			uint32_t indexCapacity,
+			uint32_t leafCapacity,
+			uint32_t dimension,
+			MVRTreeVariant rv,
+			id_type& out_indexIdentifier
+		);
+		SIDX_DLL ISpatialIndex* loadMVRTree(
+			IStorageManager& in,
+			id_type indexIdentifier
+		);
+	}
 }
 

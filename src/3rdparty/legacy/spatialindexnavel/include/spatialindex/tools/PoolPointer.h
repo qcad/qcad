@@ -36,10 +36,10 @@ namespace Tools
 	template <class X> class PoolPointer
 	{
 	public:
-		explicit PoolPointer(X* p = nullptr) : m_pointer(p), m_pPool(nullptr) { m_prev = m_next = this; }
-		explicit PoolPointer(X* p, PointerPool<X>* pPool) : m_pointer(p), m_pPool(pPool) { m_prev = m_next = this; }
+		explicit PoolPointer(X* p = 0) : m_pointer(p), m_pPool(0) { m_prev = m_next = this; }
+		explicit PoolPointer(X* p, PointerPool<X>* pPool) throw() : m_pointer(p), m_pPool(pPool) { m_prev = m_next = this; }
 		~PoolPointer() { release(); }
-		PoolPointer(const PoolPointer& p) { acquire(p); }
+		PoolPointer(const PoolPointer& p) throw() { acquire(p); }
 		PoolPointer& operator=(const PoolPointer& p)
 		{
 			if (this != &p)
@@ -50,14 +50,14 @@ namespace Tools
 			return *this;
 		}
 
-		X& operator*() const { return *m_pointer; }
-		X* operator->() const { return m_pointer; }
-		X* get() const { return m_pointer; }
-		bool unique() const { return m_prev ? m_prev == this : true; }
-		void relinquish() 
+		X& operator*() const throw() { return *m_pointer; }
+		X* operator->() const throw() { return m_pointer; }
+		X* get() const throw() { return m_pointer; }
+		bool unique() const throw() { return m_prev ? m_prev == this : true; }
+		void relinquish() throw()
 		{
-			m_pPool = nullptr;
-			m_pointer = nullptr;
+			m_pPool = 0;
+			m_pointer = 0;
 			release();
 		}
 
@@ -67,7 +67,7 @@ namespace Tools
 		mutable const PoolPointer* m_next;
 		PointerPool<X>* m_pPool;
 
-		void acquire(const PoolPointer& p) 
+		void acquire(const PoolPointer& p) throw()
 		{
 			m_pPool = p.m_pPool;
 			m_pointer = p.m_pointer;
@@ -85,17 +85,17 @@ namespace Tools
 		{
 			if (unique())
 			{
-				if (m_pPool != nullptr) m_pPool->release(m_pointer);
+				if (m_pPool != 0) m_pPool->release(m_pointer);
 				else delete m_pointer;
 			}
 			else
 			{
 				m_prev->m_next = m_next;
 				m_next->m_prev = m_prev;
-				m_prev = m_next = nullptr;
+				m_prev = m_next = 0;
 			}
-			m_pointer = nullptr;
-			m_pPool = nullptr;
+			m_pointer = 0;
+			m_pPool = 0;
 		}
 	};
 }

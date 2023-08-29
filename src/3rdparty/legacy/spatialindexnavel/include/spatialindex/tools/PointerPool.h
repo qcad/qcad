@@ -27,76 +27,97 @@
 
 #pragma once
 
-#include "PointerPool.h"
+#include "PoolPointer.h"
 
 namespace Tools
 {
-	template <class X> class PointerPool;
-
-	template <class X> class PoolPointer
+	template <class X> class PointerPool
 	{
 	public:
-		explicit PoolPointer(X* p = nullptr) : m_pointer(p), m_pPool(nullptr) { m_prev = m_next = this; }
-		explicit PoolPointer(X* p, PointerPool<X>* pPool) : m_pointer(p), m_pPool(pPool) { m_prev = m_next = this; }
-		~PoolPointer() { release(); }
-		PoolPointer(const PoolPointer& p) { acquire(p); }
-		PoolPointer& operator=(const PoolPointer& p)
+		explicit PointerPool(uint32_t capacity) : m_capacity(capacity)
 		{
-			if (this != &p)
-			{
-				release();
-				acquire(p);
-			}
-			return *this;
-		}
-
-		X& operator*() const { return *m_pointer; }
-		X* operator->() const { return m_pointer; }
-		X* get() const { return m_pointer; }
-		bool unique() const { return m_prev ? m_prev == this : true; }
-		void relinquish() 
-		{
-			m_pPool = nullptr;
-			m_pointer = nullptr;
-			release();
-		}
-
-	private:
-		X* m_pointer;
-		mutable const PoolPointer* m_prev;
-		mutable const PoolPointer* m_next;
-		PointerPool<X>* m_pPool;
-
-		void acquire(const PoolPointer& p) 
-		{
-			m_pPool = p.m_pPool;
-			m_pointer = p.m_pointer;
-			m_next = p.m_next;
-			m_next->m_prev = this;
-			m_prev = &p;
-			#ifndef mutable
-			p.m_next = this;
-			#else
-			(const_cast<linked_ptr<X>*>(&p))->m_next = this;
+			#ifndef NDEBUG
+			m_hits = 0;
+			m_misses = 0;
+			m_pointerCount = 0;
 			#endif
 		}
 
-		void release()
+		~PointerPool()
 		{
-			if (unique())
+			assert(m_pool.size() <= m_capacity);
+
+			while (! m_pool.empty())
 			{
-				if (m_pPool != nullptr) m_pPool->release(m_pointer);
-				else delete m_pointer;
+				X* x = m_pool.top(); m_pool.pop();
+				#ifndef NDEBUG
+				--m_pointerCount;
+				#endif
+				delete x;
+			}
+
+			#ifndef NDEBUG
+			std::cerr << "Lost pointers: " << m_pointerCount << std::endl;
+			#endif
+		}
+
+		PoolPointer<X> acquire()
+		{
+			X* p = 0;
+
+			if (! m_pool.empty())
+			{
+				p = m_pool.top(); m_pool.pop();
+				#ifndef NDEBUG
+				m_hits++;
+				#endif
 			}
 			else
 			{
-				m_prev->m_next = m_next;
-				m_next->m_prev = m_prev;
-				m_prev = m_next = nullptr;
+				p = new X();
+				#ifndef NDEBUG
+				m_pointerCount++;
+				m_misses++;
+				#endif
 			}
-			m_pointer = nullptr;
-			m_pPool = nullptr;
+
+			return PoolPointer<X>(p, this);
 		}
+
+		void release(X* p)
+		{
+			if (m_pool.size() < m_capacity)
+			{
+				m_pool.push(p);
+			}
+			else
+			{
+				#ifndef NDEBUG
+				--m_pointerCount;
+				#endif
+				delete p;
+			}
+
+			assert(m_pool.size() <= m_capacity);
+		}
+
+		uint32_t getCapacity() const { return m_capacity; }
+		void setCapacity(uint32_t c)
+		{
+			assert (c >= 0);
+			m_capacity = c;
+		}
+
+	private:
+		uint32_t m_capacity;
+		std::stack<X*> m_pool;
+
+	#ifndef NDEBUG
+	public:
+		uint64_t m_hits;
+		uint64_t m_misses;
+		uint64_t m_pointerCount;
+	#endif
 	};
 }
 

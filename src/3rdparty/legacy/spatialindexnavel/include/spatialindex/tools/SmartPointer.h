@@ -27,20 +27,15 @@
 
 #pragma once
 
-#include "PointerPool.h"
-
 namespace Tools
 {
-	template <class X> class PointerPool;
-
-	template <class X> class PoolPointer
+	template <class X> class SmartPointer
 	{
 	public:
-		explicit PoolPointer(X* p = nullptr) : m_pointer(p), m_pPool(nullptr) { m_prev = m_next = this; }
-		explicit PoolPointer(X* p, PointerPool<X>* pPool) : m_pointer(p), m_pPool(pPool) { m_prev = m_next = this; }
-		~PoolPointer() { release(); }
-		PoolPointer(const PoolPointer& p) { acquire(p); }
-		PoolPointer& operator=(const PoolPointer& p)
+		explicit SmartPointer(X* p = 0) throw() : m_pointer(p) { m_prev = m_next = this; }
+		~SmartPointer()	{ release(); }
+		SmartPointer(const SmartPointer& p) throw() { acquire(p); }
+		SmartPointer& operator=(const SmartPointer& p)
 		{
 			if (this != &p)
 			{
@@ -50,26 +45,18 @@ namespace Tools
 			return *this;
 		}
 
-		X& operator*() const { return *m_pointer; }
-		X* operator->() const { return m_pointer; }
-		X* get() const { return m_pointer; }
-		bool unique() const { return m_prev ? m_prev == this : true; }
-		void relinquish() 
-		{
-			m_pPool = nullptr;
-			m_pointer = nullptr;
-			release();
-		}
+		X& operator*() const throw() { return *m_pointer; }
+		X* operator->() const throw() { return m_pointer; }
+		X* get() const throw() { return m_pointer; }
+		bool unique() const throw() { return m_prev ? m_prev == this : true; }
 
 	private:
 		X* m_pointer;
-		mutable const PoolPointer* m_prev;
-		mutable const PoolPointer* m_next;
-		PointerPool<X>* m_pPool;
+		mutable const SmartPointer* m_prev;
+		mutable const SmartPointer* m_next;
 
-		void acquire(const PoolPointer& p) 
+		void acquire(const SmartPointer& p) throw()
 		{
-			m_pPool = p.m_pPool;
 			m_pointer = p.m_pointer;
 			m_next = p.m_next;
 			m_next->m_prev = this;
@@ -83,19 +70,14 @@ namespace Tools
 
 		void release()
 		{
-			if (unique())
-			{
-				if (m_pPool != nullptr) m_pPool->release(m_pointer);
-				else delete m_pointer;
-			}
+			if (unique()) delete m_pointer;
 			else
 			{
 				m_prev->m_next = m_next;
 				m_next->m_prev = m_prev;
-				m_prev = m_next = nullptr;
+				m_prev = m_next = 0;
 			}
-			m_pointer = nullptr;
-			m_pPool = nullptr;
+			m_pointer = 0;
 		}
 	};
 }

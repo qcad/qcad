@@ -27,76 +27,61 @@
 
 #pragma once
 
-#include "PointerPool.h"
+#include "tools/Tools.h"
 
-namespace Tools
+namespace SpatialIndex
 {
-	template <class X> class PointerPool;
-
-	template <class X> class PoolPointer
+	class SIDX_DLL Point : public Tools::IObject, public virtual IShape
 	{
 	public:
-		explicit PoolPointer(X* p = nullptr) : m_pointer(p), m_pPool(nullptr) { m_prev = m_next = this; }
-		explicit PoolPointer(X* p, PointerPool<X>* pPool) : m_pointer(p), m_pPool(pPool) { m_prev = m_next = this; }
-		~PoolPointer() { release(); }
-		PoolPointer(const PoolPointer& p) { acquire(p); }
-		PoolPointer& operator=(const PoolPointer& p)
-		{
-			if (this != &p)
-			{
-				release();
-				acquire(p);
-			}
-			return *this;
-		}
+		Point();
+		Point(const double* pCoords, uint32_t dimension);
+		Point(const Point& p);
+		virtual ~Point();
 
-		X& operator*() const { return *m_pointer; }
-		X* operator->() const { return m_pointer; }
-		X* get() const { return m_pointer; }
-		bool unique() const { return m_prev ? m_prev == this : true; }
-		void relinquish() 
-		{
-			m_pPool = nullptr;
-			m_pointer = nullptr;
-			release();
-		}
+		virtual Point& operator=(const Point& p);
+		virtual bool operator==(const Point& p) const;
 
-	private:
-		X* m_pointer;
-		mutable const PoolPointer* m_prev;
-		mutable const PoolPointer* m_next;
-		PointerPool<X>* m_pPool;
+		//
+		// IObject interface
+		//
+		virtual Point* clone();
 
-		void acquire(const PoolPointer& p) 
-		{
-			m_pPool = p.m_pPool;
-			m_pointer = p.m_pointer;
-			m_next = p.m_next;
-			m_next->m_prev = this;
-			m_prev = &p;
-			#ifndef mutable
-			p.m_next = this;
-			#else
-			(const_cast<linked_ptr<X>*>(&p))->m_next = this;
-			#endif
-		}
+		//
+		// ISerializable interface
+		//
+		virtual uint32_t getByteArraySize();
+		virtual void loadFromByteArray(const byte* data);
+		virtual void storeToByteArray(byte** data, uint32_t& length);
 
-		void release()
-		{
-			if (unique())
-			{
-				if (m_pPool != nullptr) m_pPool->release(m_pointer);
-				else delete m_pointer;
-			}
-			else
-			{
-				m_prev->m_next = m_next;
-				m_next->m_prev = m_prev;
-				m_prev = m_next = nullptr;
-			}
-			m_pointer = nullptr;
-			m_pPool = nullptr;
-		}
-	};
+		//
+		// IShape interface
+		//
+		virtual bool intersectsShape(const IShape& in) const;
+		virtual bool containsShape(const IShape& in) const;
+		virtual bool touchesShape(const IShape& in) const;
+		virtual void getCenter(Point& out) const;
+		virtual uint32_t getDimension() const;
+		virtual void getMBR(Region& out) const;
+		virtual double getArea() const;
+		virtual double getMinimumDistance(const IShape& in) const;
+
+		virtual double getMinimumDistance(const Point& p) const;
+
+		virtual double getCoordinate(uint32_t index) const;
+
+		virtual void makeInfinite(uint32_t dimension);
+		virtual void makeDimension(uint32_t dimension);
+
+	public:
+		uint32_t m_dimension;
+		double* m_pCoords;
+
+		friend class Region;
+		friend SIDX_DLL std::ostream& operator<<(std::ostream& os, const Point& pt);
+	}; // Point
+	
+	typedef Tools::PoolPointer<Point> PointPtr;
+
+	SIDX_DLL std::ostream& operator<<(std::ostream& os, const Point& pt);
 }
-
