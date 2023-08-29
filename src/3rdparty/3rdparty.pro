@@ -4,9 +4,11 @@ SUBDIRS = \
     stemmer
 
 contains(QMAKE_COMPILER_DEFINES, _MSC_VER=1600) {
+    # MSVC 2010
     SUBDIRS += legacy
 }
 else:contains(QMAKE_COMPILER_DEFINES, _MSC_VER=1916) {
+    # MSVC 2017
     SUBDIRS += legacy
 }
 else {
