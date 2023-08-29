@@ -495,8 +495,21 @@ function addObject(obj) {
     }
     else {
         var di = getDocumentInterface();
-        di.applyOperation(new RAddObjectOperation(obj, false));
-        return obj.clone();
+        var doc = di.getDocument();
+        var storage = doc.getStorage();
+
+        var t = di.applyOperation(new RAddObjectOperation(obj, false));
+
+        // make sure returned object carries ID of added object:
+        var ret = obj.clone();
+        var ids = t.getAffectedObjects();
+        for (var i=0; i<ids.length; i++) {
+            if (doc.isEntity(ids[i])) {
+                storage.setObjectId(ret, ids[i]);
+                break;
+            }
+        }
+        return ret;
     }
 }
 
