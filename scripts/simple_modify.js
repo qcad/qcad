@@ -73,6 +73,10 @@ function move(e, offset) {
             return undefined;
         }
         var entity = doc.queryEntity(e);
+        if (isNull(entity)) {
+            warning(qsTr("ID does not refer to an entity:") + e);
+            return undefined;
+        }
         entity.move(offset);
         return addEntity(entity);
     }
@@ -112,6 +116,10 @@ function rotate(e, angle, center) {
             return undefined;
         }
         var entity = doc.queryEntity(e);
+        if (isNull(entity)) {
+            warning(qsTr("ID does not refer to an entity:") + e);
+            return undefined;
+        }
 
         if (isNull(center)) {
             entity.rotate(deg2rad(angle));
@@ -157,6 +165,10 @@ function scale(e, factor, focusPoint) {
             return undefined;
         }
         var entity = doc.queryEntity(e);
+        if (isNull(entity)) {
+            warning(qsTr("ID does not refer to an entity:") + e);
+            return undefined;
+        }
         if (isNull(focusPoint)) {
             entity.scale(factor);
         }
@@ -219,6 +231,10 @@ function mirror(e, axis) {
             return undefined;
         }
         var entity = doc.queryEntity(e);
+        if (isNull(entity)) {
+            warning(qsTr("ID does not refer to an entity:") + e);
+            return undefined;
+        }
         entity.mirror(axis);
         return addEntity(entity);
     }
@@ -337,7 +353,14 @@ function lengthen(entity, start, amount) {
     }
 
     if (isNumber(entity)) {
-        entity = doc.queryEntity(entity);
+        var e = doc.queryEntity(entity);
+
+        if (isNull(e)) {
+            warning(qsTr("ID does not refer to an entity:") + entity);
+            return undefined;
+        }
+
+        entity = e;
     }
     else {
         entity = entity.clone();
