@@ -37,9 +37,9 @@ namespace Tools
 	{
 	public:
 		explicit PoolPointer(X* p = nullptr) : m_pointer(p), m_pPool(nullptr) { m_prev = m_next = this; }
-		explicit PoolPointer(X* p, PointerPool<X>* pPool) : m_pointer(p), m_pPool(pPool) { m_prev = m_next = this; }
+		explicit PoolPointer(X* p, PointerPool<X>* pPool) noexcept : m_pointer(p), m_pPool(pPool) { m_prev = m_next = this; }
 		~PoolPointer() { release(); }
-		PoolPointer(const PoolPointer& p) { acquire(p); }
+		PoolPointer(const PoolPointer& p) noexcept { acquire(p); }
 		PoolPointer& operator=(const PoolPointer& p)
 		{
 			if (this != &p)
@@ -50,11 +50,11 @@ namespace Tools
 			return *this;
 		}
 
-		X& operator*() const { return *m_pointer; }
-		X* operator->() const { return m_pointer; }
-		X* get() const { return m_pointer; }
-		bool unique() const { return m_prev ? m_prev == this : true; }
-		void relinquish() 
+		X& operator*() const noexcept { return *m_pointer; }
+		X* operator->() const noexcept { return m_pointer; }
+		X* get() const noexcept { return m_pointer; }
+		bool unique() const noexcept { return m_prev ? m_prev == this : true; }
+		void relinquish() noexcept 
 		{
 			m_pPool = nullptr;
 			m_pointer = nullptr;
@@ -67,7 +67,7 @@ namespace Tools
 		mutable const PoolPointer* m_next;
 		PointerPool<X>* m_pPool;
 
-		void acquire(const PoolPointer& p) 
+		void acquire(const PoolPointer& p) noexcept
 		{
 			m_pPool = p.m_pPool;
 			m_pointer = p.m_pointer;
