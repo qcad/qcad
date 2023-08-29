@@ -3,7 +3,10 @@ TEMPLATE = subdirs
 SUBDIRS = \
     stemmer
 
-win32-msvc2010 {
+contains(QMAKE_COMPILER_DEFINES, _MSC_VER=1600) {
+    SUBDIRS += legacy
+}
+else:contains(QMAKE_COMPILER_DEFINES, _MSC_VER=1916) {
     SUBDIRS += legacy
 }
 else {
