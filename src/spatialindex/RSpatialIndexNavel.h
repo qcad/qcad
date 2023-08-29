@@ -28,7 +28,7 @@
 
 #include "RSpatialIndex.h"
 
-#include "spatialindexnavel/include/spatialindex/SpatialIndex.h"
+#include "include/spatialindex/SpatialIndex.h"
 
 class RSiDataStream : public SpatialIndex::IDataStream
 {
