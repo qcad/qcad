@@ -24,6 +24,7 @@
 
 #include <QString>
 #include <QSharedPointer>
+#include <QDateTime>
 
 #include "RBlock.h"
 #include "RBlockReferenceEntity.h"
