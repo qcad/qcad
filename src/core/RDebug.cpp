@@ -144,6 +144,12 @@ void RDebug::printCounter(const QString& id) {
 }
 
 void RDebug::printCounters(const QString& prefix) {
+#if _MSC_VER==1600
+    QStringList keys = counter.keys();
+    for (int i=0; i<keys.length(); i++) {
+        qDebug() << prefix << "counter: " << keys[i] << ": " << counter[keys[i]];
+    }
+#else
     std::vector<std::pair<QString, int>> sortedPairs;
     for (auto it = counter.begin(); it != counter.end(); ++it) {
         sortedPairs.push_back(std::pair<QString, int>(it.key(), it.value()));
@@ -157,9 +163,5 @@ void RDebug::printCounters(const QString& prefix) {
     for (const auto& pair : sortedPairs) {
         qDebug() << prefix << "counter: " << pair.first << ": " << pair.second;
     }
-
-//    QStringList keys = counter.keys();
-//    for (int i=0; i<keys.length(); i++) {
-//        qDebug() << prefix << "counter: " << keys[i] << ": " << counter[keys[i]];
-//    }
+#endif
 }

@@ -1,8 +1,14 @@
 include (../../shared.pri)
 TEMPLATE = subdirs
 SUBDIRS = \
-    spatialindexnavel \
     stemmer
+
+win32-msvc2010 {
+    SUBDIRS += legacy
+}
+else {
+    SUBDIRS += spatialindexnavel
+}
 
 !r_no_opennurbs {
     SUBDIRS += opennurbs
