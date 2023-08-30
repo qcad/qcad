@@ -233,14 +233,10 @@ INCLUDEPATH += \
     $$PWD/src/3rdparty \
     $$PWD/src/zip
 
-contains(QMAKE_COMPILER_DEFINES, _MSC_VER=1600) {
-    # MSVC 2010
-    INCLUDEPATH += $$PWD/src/3rdparty/legacy/spatialindexnavel
-}
-else:contains(QMAKE_COMPILER_DEFINES, _MSC_VER=1916) {
-    # MSVC 2017
-    INCLUDEPATH += $$PWD/src/3rdparty/legacy/spatialindexnavel
+contains(QMAKE_COMPILER_DEFINES, _MSC_VER=1929) {
+    # MSVC 2019
+    INCLUDEPATH += $$PWD/src/3rdparty/spatialindexnavel
 }
 else {
-    INCLUDEPATH += $$PWD/src/3rdparty/spatialindexnavel
+    INCLUDEPATH += $$PWD/src/3rdparty/legacy/spatialindexnavel
 }
