@@ -8,6 +8,5 @@ SUBDIRS = \
     MiscInformation \
     MiscModify \
     MiscSelect \
-    Screencast \
     Tutorials \
     dir
