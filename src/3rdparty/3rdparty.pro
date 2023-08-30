@@ -3,16 +3,12 @@ TEMPLATE = subdirs
 SUBDIRS = \
     stemmer
 
-contains(QMAKE_COMPILER_DEFINES, _MSC_VER=1600) {
-    # MSVC 2010
-    SUBDIRS += legacy
-}
-else:contains(QMAKE_COMPILER_DEFINES, _MSC_VER=1916) {
-    # MSVC 2017
-    SUBDIRS += legacy
+contains(QMAKE_COMPILER_DEFINES, _MSC_VER=1929) {
+    # MSVC 2019
+    SUBDIRS += spatialindexnavel
 }
 else {
-    SUBDIRS += spatialindexnavel
+    SUBDIRS += legacy
 }
 
 !r_no_opennurbs {
