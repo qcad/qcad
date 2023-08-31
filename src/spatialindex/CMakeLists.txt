@@ -29,7 +29,7 @@ add_library(qcadspatialindex SHARED
     ${RC}
 )
 target_include_directories(qcadspatialindex PUBLIC
-    ../../src/3rdparty
+    ../../src/3rdparty/spatialindexnavel
     ../../src/core
     ../../src/core/math
     ../../src/entity
