@@ -1,24 +1,24 @@
 add_definitions(-DQT_SHAREDPOINTER_TRACK_POINTERS)
 
-IF(MSVC)
-    SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /MP")
+if(MSVC)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /MP")
 
     # min / max macros in Windows.h break std::numeric_limits<type>::min / max:
     add_definitions(-DNOMINMAX)
-ENDIF()
+endif()
 
-IF(BUILD_QT6)
-    SET(QT_VER Qt6)
-ELSE()
-    SET(QT_VER Qt5)
+if(BUILD_QT6)
+    set(QT_VER Qt6)
+else()
+    set(QT_VER Qt5)
     macro(qt_standard_project_setup)
         set(CMAKE_AUTOMOC ON)
         set(CMAKE_AUTOUIC ON)
         set(CMAKE_AUTORCC ON)
     endmacro()
-ENDIF()
+endif()
 
-SET_PROPERTY(GLOBAL PROPERTY USE_FOLDERS ON)
+set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 set(CMAKE_DEBUG_POSTFIX "_debug")
 
 if(CMAKE_SIZEOF_VOID_P EQUAL 8)
