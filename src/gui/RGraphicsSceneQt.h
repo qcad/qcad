@@ -118,6 +118,11 @@ public:
      */
     QList<RGraphicsSceneDrawable>* getDrawables(REntity::Id entityId);
 
+    /**
+     * \nonscriptable
+     */
+    QList<RGraphicsSceneDrawable> getDrawablesList(REntity::Id entityId);
+
     bool hasPreview() const;
     QList<REntity::Id> getPreviewEntityIds();
 
