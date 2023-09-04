@@ -930,9 +930,8 @@ QList<RGraphicsSceneDrawable> RGraphicsSceneQt::getDrawablesList(REntity::Id ent
 }
 
 /**
- * \return A list of all painter paths that represent the entity with the
+ * \return A list of all drawables (painter path, text, image) that represent the entity with the
  * given ID.
- * TODO: return reference or pointer
  */
 QList<RGraphicsSceneDrawable>* RGraphicsSceneQt::getDrawables(REntity::Id entityId) {
     // TODO: check should not be necessary:
