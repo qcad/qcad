@@ -922,6 +922,13 @@ void RGraphicsSceneQt::deleteDrawables() {
     previewClipRectangles.clear();
 }
 
+QList<RGraphicsSceneDrawable> RGraphicsSceneQt::getDrawablesList(REntity::Id entityId) {
+    if (drawables.contains(entityId)) {
+        return drawables[entityId];
+    }
+    return QList<RGraphicsSceneDrawable>();
+}
+
 /**
  * \return A list of all painter paths that represent the entity with the
  * given ID.
