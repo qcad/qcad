@@ -163,7 +163,7 @@ TextDialog.prototype.show =  function(textDataIn) {
 
     /*
     var buttonNew = this.dialog.findChild("New");
-    buttonNew.clicked.connect(this.textEdit, "clear");
+    buttonNew.clicked.connect(this.textEdit, this.textEdit.clear);
     var buttonOpen = this.dialog.findChild("Open");
     var buttonSaveAs = this.dialog.findChild("SaveAs");
     */
@@ -579,12 +579,12 @@ TextDialog.prototype.setupTextActions = function() {
 
 //    this.actionZoomIn = new QAction(new QIcon(autoIconPath(TextDialog.basePath + "/ZoomIn.svg")), qsTr("Zoom &In"), this.dialog);
 //    this.actionZoomIn.shortcut = new QKeySequence(Qt.ControlModifier | Qt.Key_Plus);
-//    this.actionZoomIn.triggered.connect(this.textEdit, "zoomIn");
+//    this.actionZoomIn.triggered.connect(this.textEdit, this.textEdit.zoomIn);
 //    this.dialog.findChild("ZoomIn").setDefaultAction(this.actionZoomIn);
 
 //    this.actionZoomOut = new QAction(new QIcon(autoIconPath(TextDialog.basePath + "/ZoomOut.svg")), qsTr("Zoom &Out"), this.dialog);
 //    this.actionZoomOut.shortcut = new QKeySequence(Qt.ControlModifier | Qt.Key_Minus);
-//    this.actionZoomOut.triggered.connect(this.textEdit, "zoomOut");
+//    this.actionZoomOut.triggered.connect(this.textEdit, this.textEdit.zoomOut);
 //    this.dialog.findChild("ZoomOut").setDefaultAction(this.actionZoomOut);
 
     var pix = new QPixmap(16, 16);

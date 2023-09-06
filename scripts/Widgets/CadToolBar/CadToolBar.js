@@ -46,7 +46,7 @@ function CadToolBar() {
 //    this.setLayout(stackedLayout);
 
 //    var appWin = RMainWindowQt.getMainWindow();
-//    //appWin.escape.connect(CadToolBar, "back");
+//    //appWin.escape.connect(CadToolBar, CadToolBar.back);
 //    appWin.escape.connect(CadToolBar.back);
 //}
 

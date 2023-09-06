@@ -2934,7 +2934,7 @@ function addActionsToWidgets() {
                         }
                         for (var si=0; si<shortcuts.length; si++) {
                             var scObj = new QShortcut(shortcuts[si], a.parentWidget(), 0, 0, Qt.WindowShortcut)
-                            scObj.activated.connect(a, "trigger");
+                            scObj.activated.connect(a, a.trigger);
                             scObjs.push(scObj);
                         }
                         appWin.setProperty("DelegatedShortcutsObjs", scObjs);

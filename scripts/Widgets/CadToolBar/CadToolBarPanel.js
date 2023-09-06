@@ -42,7 +42,7 @@
 //        backAction.checkable = false;
 //        backAction.setIcon(autoPath("scripts/Widgets/CadToolBar/Back.svg"));
 //        this.addAction(backAction);
-//        //backAction.triggered.connect(CadToolBar, "back");
+//        //backAction.triggered.connect(CadToolBar, CadToolBar.back);
 //        backAction.triggered.connect(CadToolBar.back);
 //    }
 //}

@@ -140,7 +140,7 @@ function RCadToolMatrixTree(parent) {
 
     this.setItemDelegate(new RToolMatrixItemDelegate(this, this));
 
-    //this.itemPressed.connect(this, "handleItemPress");
+    //this.itemPressed.connect(this, this.handleItemPress);
     this.itemPressed.connect(this, RCadToolMatrixTree.prototype.handleItemPress);
 
     this.minimumWidth = 120;
@@ -494,7 +494,7 @@ CadToolMatrix.getToolMatrix = function() {
 
         // init filter widget:
         var filterEdit = formWidget.findChild("FilterEdit");
-        //filterEdit.textChanged.connect(toolMatrix, "filter");
+        //filterEdit.textChanged.connect(toolMatrix, toolMatrix.filter);
         filterEdit.textChanged.connect(toolMatrix, toolMatrix.filter);
         var clearButton = formWidget.findChild("Clear");
         if (filterEdit.clearButtonEnabled===true) {

@@ -51,7 +51,7 @@ HatchDialog.prototype.show =  function(hatchDataIn) {
 
     editAngle.valueChanged.connect(this, this.patternChanged);
     radioSolid.toggled.connect(this, this.patternChanged);
-    //comboPattern["activated(QString)"].connect(this, "patternChanged");
+    //comboPattern["activated(QString)"].connect(this, this.patternChanged);
     comboPattern["currentIndexChanged(int)"].connect(this, this.patternChanged);
 
     var previewDoc = new RDocument(new RMemoryStorage(), new RSpatialIndexSimple());
