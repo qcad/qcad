@@ -494,6 +494,7 @@ function addObject(obj) {
         return obj.clone();
     }
     else {
+        var type = obj.getType();
         var di = getDocumentInterface();
         var doc = di.getDocument();
         var storage = doc.getStorage();
@@ -504,7 +505,9 @@ function addObject(obj) {
         var ret = obj.clone();
         var ids = t.getAffectedObjects();
         for (var i=0; i<ids.length; i++) {
-            if (doc.isEntity(ids[i])) {
+            var id = ids[i];
+            var e = doc.queryObject(id);
+            if (e.getType()===type) {
                 storage.setObjectId(ret, ids[i]);
                 break;
             }
