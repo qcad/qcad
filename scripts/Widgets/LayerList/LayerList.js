@@ -30,28 +30,15 @@ function RLayerListQt(parent) {
     var appWin = EAction.getMainWindow();
     var adapter = new RLayerListenerAdapter();
     appWin.addLayerListener(adapter);
-    if (RSettings.getQtVersion() < 0x060000) {
-        adapter.layersUpdated.connect(this, "updateLayers");
-        adapter.currentLayerSet.connect(this, "updateLayers");
-        adapter.layersCleared.connect(this, "clearLayers");
+    adapter.layersUpdated.connect(this, this.updateLayers);
+    adapter.currentLayerSet.connect(this, this.updateLayers);
+    adapter.layersCleared.connect(this, this.clearLayers);
 
-        this.setProperty("listener", adapter);
+    this.setProperty("listener", adapter);
 
-        this.itemSelectionChanged.connect(this, "layerActivated");
-        this.itemDoubleClicked.connect(this, "moveSelectionToLayer");
-        this.iconClicked.connect(this, "iconClickedSlot");
-    }
-    else {
-        adapter.layersUpdated.connect(this, this.updateLayers);
-        adapter.currentLayerSet.connect(this, this.updateLayers);
-        adapter.layersCleared.connect(this, this.clearLayers);
-
-        this.setProperty("listener", adapter);
-
-        this.itemSelectionChanged.connect(this, this.layerActivated);
-        this.itemDoubleClicked.connect(this, this.moveSelectionToLayer);
-        this.iconClicked.connect(this, this.iconClickedSlot);
-    }
+    this.itemSelectionChanged.connect(this, this.layerActivated);
+    this.itemDoubleClicked.connect(this, this.moveSelectionToLayer);
+    this.iconClicked.connect(this, this.iconClickedSlot);
 
     this.basePath = includeBasePath;
 }
