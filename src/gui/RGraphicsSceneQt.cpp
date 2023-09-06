@@ -1099,7 +1099,6 @@ void RGraphicsSceneQt::exportEntities(bool allBlocks, bool undone, bool invisibl
     }
 
     RDebug::startTimer(100);
-    //qDebug() << "vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv";
     RDocumentInterface& di = getDocumentInterface();
     di.disableUpdates();
 
@@ -1167,7 +1166,6 @@ void RGraphicsSceneQt::exportEntities(bool allBlocks, bool undone, bool invisibl
 
     RDebug::stopTimer(100, "exportEntitiesThread");
 
-    //qDebug() << "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^";
     */
 }
 
