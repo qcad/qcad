@@ -63,6 +63,7 @@ DefaultNavigation.applyPreferences = function(doc) {
     DefaultNavigation.panGesture = RSettings.getBoolValue("GraphicsViewNavigation/PanGesture", false);
     DefaultNavigation.middleMouseButtonZoomFactor = RSettings.getDoubleValue("GraphicsViewNavigation/MiddleMouseButtonZoomFactor", 1.2);
     DefaultNavigation.panThreshold = RSettings.getDoubleValue("GraphicsViewNavigation/PanThreshold", 4);
+    DefaultNavigation.scrollHorVer = RSettings.getBoolValue("GraphicsViewNavigation/ScrollHorVer", false);
 };
 
 DefaultNavigation.prototype.beginEvent = function() {
@@ -192,27 +193,40 @@ DefaultNavigation.prototype.wheelEvent = function(event) {
         return;
     }
 
-    var wheelDelta;
+    var wheelDelta = undefined;
+    var wheelDeltaX = undefined;
+    var wheelDeltaY = undefined;
 
     if (isFunction(event.delta)) {
         wheelDelta = event.delta();
     }
     else {
-        // Qt 6:
-        wheelDelta = event.pixelDelta.y();
+        // Qt 6 (scroll in both directions simultaniously):
+        wheelDeltaX = event.pixelDelta.x();
+        wheelDeltaY = event.pixelDelta.y();
     }
 
     switch (event.modifiers().valueOf()) {
     
     // scroll up / down:
     case Qt.ControlModifier.valueOf():
-        this.view.pan(new RVector(0, wheelDelta / 2));
+        if (RSettings.getQtVersion()>=0x060000) {
+            this.view.pan(new RVector(0, wheelDeltaY / 2));
+        }
+        else {
+            this.view.pan(new RVector(0, wheelDelta / 2));
+        }
         this.view.simulateMouseMoveEvent();
         break;
 
     // scroll left / right:
     case Qt.ShiftModifier.valueOf():
-        this.view.pan(new RVector(wheelDelta / 2, 0));
+        if (RSettings.getQtVersion()>=0x060000) {
+            this.view.pan(new RVector(wheelDeltaX / 2, 0));
+        }
+        else {
+            this.view.pan(new RVector(wheelDelta / 2, 0));
+        }
         this.view.simulateMouseMoveEvent();
         break;
 
@@ -238,6 +252,19 @@ DefaultNavigation.prototype.wheelEvent = function(event) {
             }
 
             if (RSettings.getQtVersion()>=0x060000) {
+                if (DefaultNavigation.scrollHorVer) {
+                    // limit scrolling to horizontal / vertical:
+                    if (Math.abs(wheelDeltaX)>Math.abs(wheelDeltaY)) {
+                        wheelDeltaY = 0;
+                    }
+                    else {
+                        wheelDeltaX = 0;
+                    }
+                }
+
+                this.panOffset = this.panOffset.operator_add(new RVector(wheelDeltaX, wheelDeltaY));
+
+                /*
                 if (Math.abs(event.pixelDelta.y())>Math.abs(event.pixelDelta.x())) {
                     // vertical:
                     this.panOffset = this.panOffset.operator_add(new RVector(0, wheelDelta/2));
@@ -245,6 +272,7 @@ DefaultNavigation.prototype.wheelEvent = function(event) {
                 else {
                     this.panOffset = this.panOffset.operator_add(new RVector(wheelDelta/2, 0));
                 }
+                */
             }
             else {
                 if (event.orientation()===Qt.Vertical) {
@@ -300,6 +328,8 @@ DefaultNavigation.prototype.tabletEvent = function(event) {
  * Pans the current view.
  */
 DefaultNavigation.prototype.panGestureEvent = function(gesture) {
+    qDebug("DefaultNavigation.prototype.panGestureEvent");
+
     if (DefaultNavigation.panGesture===false) {
         return;
     }
@@ -310,11 +340,13 @@ DefaultNavigation.prototype.panGestureEvent = function(gesture) {
 
     switch (gesture.state) {
         case Qt.GestureStarted:
+            qDebug("DefaultNavigation.prototype.panGestureEvent: gesture started");
             this.lastCursor = this.view.getCursor();
             this.view.setCursor(new QCursor(Qt.OpenHandCursor));
             break;
 
         case Qt.GestureUpdated:
+            qDebug("DefaultNavigation.prototype.panGestureEvent: gesture updated");
             this.view.setCursor(new QCursor(Qt.ClosedHandCursor));
             break;
 
@@ -326,6 +358,7 @@ DefaultNavigation.prototype.panGestureEvent = function(gesture) {
     }
 
     var delta = gesture.delta;
+    qDebug("DefaultNavigation.prototype.panGestureEvent: delta:" + delta.x() + " / " + delta.y());
     this.view.pan(new RVector(delta.x(), delta.y()));
     this.view.simulateMouseMoveEvent();
 };
