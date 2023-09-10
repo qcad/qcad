@@ -27,11 +27,11 @@ function getIntersectionPoints(e1, e2, limited) {
 
     if (isNumber(e1)) {
         var entity1 = doc.queryEntityDirect(e1);
-        e1 = entity1.data();
+        e1 = getPtr(entity1);
     }
     if (isNumber(e2)) {
         var entity2 = doc.queryEntityDirect(e2);
-        e2 = entity2.data();
+        e2 = getPtr(entity2);
     }
 
     if (isEntity(e1) && isEntity(e2)) {
