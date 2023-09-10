@@ -364,7 +364,7 @@ ShapeAlgorithms.getIntersectingShapes = function(doc, entityId, shape, extend) {
             else {
                 // ignore same shape for block reference entities:
                 for (var k=0; k<s.length; k++) {
-                     if (!shape.equals(s[k].data())) {
+                     if (!shape.equals(getPtr(s[k]))) {
                          ret.push(s[k]);
                      }
                 }
