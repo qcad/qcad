@@ -339,7 +339,7 @@ ModifyCorner.prototype.pickCorner = function(event) {
         var entity2Candidate = doc.queryEntity(entityId);
 
         // intersection points between entity1 and entity2:
-        var ips = this.entity1.getIntersectionPoints(entity2Candidate.data());
+        var ips = this.entity1.getIntersectionPoints(getPtr(entity2Candidate));
         for (var k=0; k<ips.length; k++) {
             var ip = ips[k];
             var side1 = this.shape1.getSideOfPoint(this.posCorner);
