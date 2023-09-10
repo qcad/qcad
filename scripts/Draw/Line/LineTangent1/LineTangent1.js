@@ -208,49 +208,6 @@ LineTangent1.prototype.getOperation = function(preview) {
     return op;
 };
 
-LineTangent1.prototype.getTangentArcOrCircle = function(arcOrCircle, preview) {
-    var doc = this.getDocument();
-
-    // create temporary thales circle:
-    var thalesCenter = this.pos1.operator_add(arcOrCircle.getCenter()).operator_divide(2.0);
-    var thalesRadius = this.pos1.getDistanceTo(thalesCenter);
-
-    if (thalesRadius<arcOrCircle.getRadius()/2.0) {
-        if (!preview) {
-            this.error = qsTr("Cannot draw tangent from point inside circle to circle");
-        }
-        return undefined;
-    }
-
-    var thalesCircle = new RCircle(thalesCenter, thalesRadius);
-
-    // get the two intersection points which are the tangent points:
-    var ips = thalesCircle.getIntersectionPoints(
-            arcOrCircle.data(),
-            false
-    );
-
-    if (ips.length>0) {
-        var tangent1 = new RLine(this.pos1, ips[0]);
-        if (ips.length>1) {
-            var tangent2 = new RLine(this.pos1, ips[1]);
-            if (tangent1.getDistanceTo(this.pos2) <
-                    tangent2.getDistanceTo(this.pos2)) {
-                return tangent1;
-            }
-            else {
-                return tangent2;
-            }
-        }
-        else {
-            return tangent1;
-        }
-    }
-    else {
-        return undefined;
-    }
-};
-
 LineTangent1.prototype.getAuxPreview = function() {
     var ret = [];
 
