@@ -204,6 +204,9 @@ DefaultNavigation.prototype.wheelEvent = function(event) {
         // Qt 6 (scroll in both directions simultaniously):
         wheelDeltaX = event.pixelDelta.x();
         wheelDeltaY = event.pixelDelta.y();
+
+        // Qt 6: zoom in / out:
+        wheelDelta = event.pixelDelta.y();
     }
 
     switch (event.modifiers().valueOf()) {
@@ -252,6 +255,8 @@ DefaultNavigation.prototype.wheelEvent = function(event) {
             }
 
             if (RSettings.getQtVersion()>=0x060000) {
+
+                // Qt 6:
                 if (DefaultNavigation.scrollHorVer) {
                     // limit scrolling to horizontal / vertical:
                     if (Math.abs(wheelDeltaX)>Math.abs(wheelDeltaY)) {
@@ -275,6 +280,8 @@ DefaultNavigation.prototype.wheelEvent = function(event) {
                 */
             }
             else {
+
+                // Qt 5:
                 if (event.orientation()===Qt.Vertical) {
                     this.panOffset = this.panOffset.operator_add(new RVector(0, wheelDelta/2));
                 }
