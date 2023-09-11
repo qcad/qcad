@@ -9,7 +9,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(${QT_VER} REQUIRED COMPONENTS Core Widgets Concurrent Gui Network OpenGL Sql Svg Xml PrintSupport Qml)
 qt_standard_project_setup()
 
-qt_add_resources(SOURCES scripts.qrc)
+if(rtest)
+    qt_add_resources(SOURCES scripts.qrc)
+else()
+    qt_add_resources(SOURCES scripts_release.qrc)
+endif()
 
 if(WIN32)
     set(RC scripts.rc)

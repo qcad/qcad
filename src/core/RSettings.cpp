@@ -1037,14 +1037,20 @@ QString RSettings::getRelativeCoordinatePrefix() {
 }
 
 /**
- * \return True for macOS dark mode only.
+ * \return True for macOS or Windows dark mode.
  */
 bool RSettings::isDarkMode() {
     if (darkMode==-1) {
-#ifdef Q_OS_MAC
+#if defined(Q_OS_MAC)
         darkMode = (isMacDarkMode() ? 1 : 0);
-#else
-        darkMode = 0;
+#elif defined(Q_OS_WIN32)
+        const QPalette defaultPalette;
+        if (defaultPalette.color(QPalette::WindowText).lightness() > defaultPalette.color(QPalette::Window).lightness()) {
+            darkMode = 1;
+        }
+        else {
+            darkMode = 0;
+        }
 #endif
     }
     return darkMode==1;
@@ -1057,7 +1063,7 @@ bool RSettings::hasDarkGuiBackground() {
             darkGuiBackground = 1;
         }
         else {
-#ifdef Q_OS_MAC
+#if defined(Q_OS_MAC)
             // detect macOS dark mode:
             if (isMacDarkMode()) {
                 darkGuiBackground = 1;
@@ -1074,6 +1080,14 @@ bool RSettings::hasDarkGuiBackground() {
 //            else {
 //                darkGuiBackground = 0;
 //            }
+#elif defined(Q_OS_WIN32)
+            // detect Windows dark mode:
+            if (isDarkMode()) {
+                darkGuiBackground = 1;
+            }
+            else {
+                darkGuiBackground = 0;
+            }
 #else
             darkGuiBackground = 0;
 #endif
@@ -1170,6 +1184,8 @@ QString RSettings::getCompilerVersion() {
         return "MSVC++ 12.0 (2013)";
 #   elif _MSC_VER==1900
         return "MSVC++ 14.0 (2015)";
+#   elif _MSC_VER==1929
+        return "MSVC++ 16.11 (2019)";
 #   endif
 #endif
     return "Unknown";
