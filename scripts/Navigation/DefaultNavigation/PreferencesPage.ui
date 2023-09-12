@@ -359,6 +359,9 @@
        <property name="currentText">
         <string notr="true">1.0</string>
        </property>
+       <property name="currentIndex">
+        <number>9</number>
+       </property>
        <item>
         <property name="text">
          <string notr="true">0.1</string>
