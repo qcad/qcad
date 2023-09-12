@@ -63,6 +63,7 @@ DefaultNavigation.applyPreferences = function(doc) {
     DefaultNavigation.panGesture = RSettings.getBoolValue("GraphicsViewNavigation/PanGesture", false);
     DefaultNavigation.middleMouseButtonZoomFactor = RSettings.getDoubleValue("GraphicsViewNavigation/MiddleMouseButtonZoomFactor", 1.2);
     DefaultNavigation.panThreshold = RSettings.getDoubleValue("GraphicsViewNavigation/PanThreshold", 4);
+    DefaultNavigation.panSpeed = RSettings.getDoubleValue("GraphicsViewNavigation/PanSpeed", 1.0);
     DefaultNavigation.scrollHorVer = RSettings.getBoolValue("GraphicsViewNavigation/ScrollHorVer", false);
 };
 
@@ -207,7 +208,18 @@ DefaultNavigation.prototype.wheelEvent = function(event) {
 
         // Qt 6: zoom in / out:
         wheelDelta = event.pixelDelta.y();
+
+        if (wheelDeltaX===0 && wheelDeltaY===0) {
+            wheelDeltaX = event.angleDelta.x()/8/2;
+            wheelDeltaY = event.angleDelta.y()/8/2;
+            wheelDelta = event.angleDelta.y()/8/2;
+        }
+
+        wheelDeltaX *= DefaultNavigation.panSpeed;
+        wheelDeltaY *= DefaultNavigation.panSpeed;
     }
+
+    wheelDelta *= DefaultNavigation.panSpeed;
 
     switch (event.modifiers().valueOf()) {
     
