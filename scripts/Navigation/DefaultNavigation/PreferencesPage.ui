@@ -13,82 +13,10 @@
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <layout class="QGridLayout" name="gridLayout">
-     <item row="5" column="0">
-      <widget class="QLabel" name="label_2">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
        <property name="text">
-        <string>Mouse wheel zoom factor:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="7" column="1" colspan="2">
-      <widget class="QComboBox" name="PanThreshold">
-       <property name="editable">
-        <bool>true</bool>
-       </property>
-       <property name="currentIndex">
-        <number>2</number>
-       </property>
-       <item>
-        <property name="text">
-         <string notr="true">0</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">2</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">4</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">6</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">8</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">10</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">12</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">14</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">16</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">18</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">20</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-     <item row="4" column="0" colspan="3">
-      <widget class="QCheckBox" name="ReverseMouseWheelZoom">
-       <property name="text">
-        <string>Reverse mouse wheel direction for zoom</string>
+        <string>Mouse wheel / two finger swipe:</string>
        </property>
       </widget>
      </item>
@@ -120,13 +48,6 @@
        </property>
        <property name="checked">
         <bool>false</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="7" column="0">
-      <widget class="QLabel" name="label_4">
-       <property name="text">
-        <string>Panning threshold (px):</string>
        </property>
       </widget>
      </item>
@@ -226,6 +147,71 @@
        <item>
         <property name="text">
          <string notr="true">2</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="7" column="1" colspan="2">
+      <widget class="QComboBox" name="PanThreshold">
+       <property name="editable">
+        <bool>true</bool>
+       </property>
+       <property name="currentIndex">
+        <number>2</number>
+       </property>
+       <item>
+        <property name="text">
+         <string notr="true">0</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">4</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">6</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">8</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">10</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">12</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">14</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">16</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">18</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">20</string>
         </property>
        </item>
       </widget>
@@ -330,10 +316,17 @@
        </item>
       </widget>
      </item>
-     <item row="0" column="0">
-      <widget class="QLabel" name="label">
+     <item row="5" column="0">
+      <widget class="QLabel" name="label_2">
        <property name="text">
-        <string>Mouse wheel / two finger swipe:</string>
+        <string>Mouse wheel zoom factor:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0" colspan="3">
+      <widget class="QCheckBox" name="ReverseMouseWheelZoom">
+       <property name="text">
+        <string>Reverse mouse wheel direction for zoom</string>
        </property>
       </widget>
      </item>
@@ -342,6 +335,130 @@
        <property name="text">
         <string>Limit scrolling to vertical and horizontal</string>
        </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Panning threshold (px):</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Panning speed:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="1" colspan="2">
+      <widget class="QComboBox" name="PanSpeed">
+       <property name="editable">
+        <bool>true</bool>
+       </property>
+       <property name="currentText">
+        <string>1.0</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>0.1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>0.2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>0.3</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>0.4</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>0.5</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>0.6</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>0.7</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>0.8</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>0.9</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1.0</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1.1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1.2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1.3</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1.4</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1.5</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1.6</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1.7</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1.8</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1.9</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">2.0</string>
+        </property>
+       </item>
       </widget>
      </item>
     </layout>
