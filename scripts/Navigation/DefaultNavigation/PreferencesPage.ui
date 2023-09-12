@@ -357,101 +357,101 @@
         <bool>true</bool>
        </property>
        <property name="currentText">
-        <string>1.0</string>
+        <string notr="true">1.0</string>
        </property>
        <item>
         <property name="text">
-         <string>0.1</string>
+         <string notr="true">0.1</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>0.2</string>
+         <string notr="true">0.2</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>0.3</string>
+         <string notr="true">0.3</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>0.4</string>
+         <string notr="true">0.4</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>0.5</string>
+         <string notr="true">0.5</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>0.6</string>
+         <string notr="true">0.6</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>0.7</string>
+         <string notr="true">0.7</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>0.8</string>
+         <string notr="true">0.8</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>0.9</string>
+         <string notr="true">0.9</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>1.0</string>
+         <string notr="true">1.0</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>1.1</string>
+         <string notr="true">1.1</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>1.2</string>
+         <string notr="true">1.2</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>1.3</string>
+         <string notr="true">1.3</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>1.4</string>
+         <string notr="true">1.4</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>1.5</string>
+         <string notr="true">1.5</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>1.6</string>
+         <string notr="true">1.6</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>1.7</string>
+         <string notr="true">1.7</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>1.8</string>
+         <string notr="true">1.8</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>1.9</string>
+         <string notr="true">1.9</string>
         </property>
        </item>
        <item>
