@@ -200,6 +200,10 @@ QString RS::getWindowManagerId() {
     return wm;
 }
 
+QString RS::getCpuArchitecture() {
+    return QSysInfo::buildCpuArchitecture();
+}
+
 /**
  * \return Number of CPU cores available.
  */

@@ -782,6 +782,7 @@ public:
     static QString getHostId();
     static QString getSystemId();
     static QString getWindowManagerId();
+    static QString getCpuArchitecture();
 
     static bool showInFileManager(const QString& filePaths);
 
