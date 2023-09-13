@@ -385,7 +385,10 @@ void RGraphicsViewImage::updateImage() {
         if (di->getClickMode()==RAction::PickCoordinate) {
             RSnap* snap = di->getSnap();
             RSnapRestriction* snapRestriction = di->getSnapRestriction();
+
+            // draw snap label:
             emitUpdateSnapInfo(snap, snapRestriction);
+
             // prevent snap to show "End" directly after snapping to grid:
             if (snap!=NULL) {
                 snap->reset();
