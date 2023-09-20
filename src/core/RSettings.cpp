@@ -740,7 +740,7 @@ QFont RSettings::getRulerFont() {
     if (rulerFont==NULL) {
         // get application's default font (pixel size is -1, point size e.g. 10pt):
         QFont font;
-        font.setPointSize(9*getDevicePixelRatio());
+        font.setPointSize(9);
         rulerFont = new QFont(getValue("GraphicsViewFonts/Ruler", font).value<QFont>());
     }
     return *rulerFont;
@@ -758,7 +758,7 @@ QFont RSettings::getSnapLabelFont() {
     if (snapLabelFont==NULL) {
         // get application's default font (pixel size is -1, point size e.g. 10pt):
         QFont font;
-        font.setPointSize(9);
+        font.setPointSize(11);
         snapLabelFont = new QFont(getValue("GraphicsViewFonts/SnapLabel", font).value<QFont>());
     }
     return *snapLabelFont;

@@ -114,9 +114,15 @@ ViewportWidget.prototype.initEventHandler = function() {
     if (isOfType(this.graphicsView, RGraphicsViewQt)) {
         this.graphicsView.drop.connect(function(e) { self.eventHandler.drop(e); });
         this.graphicsView.dragEnter.connect(function(e) { self.eventHandler.dragEnter(e); });
-        this.graphicsView.viewportChanged.connect(function() { self.eventHandler.viewportChanged(); });
-        this.graphicsView.updateSnapInfo.connect(function(painter, snap, restriction) { self.eventHandler.updateSnapInfo(painter, snap, restriction); });
-        this.graphicsView.updateTextLabel.connect(function(painter, textLabel) { self.eventHandler.updateTextLabel(painter, textLabel); });
+
+        this.graphicsView.getImageView().viewportChanged.connect(function() { self.eventHandler.viewportChanged(); });
+        this.graphicsView.getImageView().updateSnapInfo.connect(
+            function(painter, snap, restriction) {
+                qDebug("REventHandler: updateSnapInfo slot called");
+                self.eventHandler.updateSnapInfo(painter, snap, restriction);
+            }
+        );
+        this.graphicsView.getImageView().updateTextLabel.connect(function(painter, textLabel) { self.eventHandler.updateTextLabel(painter, textLabel); });
     }
 
     if (!isNull(this.hsb)) {
@@ -175,23 +181,45 @@ ViewportWidget.prototype.init = function(uiFile, graphicsSceneClass) {
     // clear style sheet
     this.vpWidget.styleSheet = "";
 
-    this.graphicsView = this.vpWidget.findChild("GraphicsView");
+
+    if (RSettings.getQtVersion()>=0x060000) {
+        // skia view:
+//        var gridLayout = vpw.layout();
+//        gridLayout.removeWidget(vpw.findChild("GraphicsView"));
+//        this.graphicsView = new RGraphicsViewSkia(vpw);
+//        gridLayout.addWidget(this.graphicsView, 1,1);
+//        gridLayout.setRowStretch(1,1);
+
+        this.graphicsView = this.vpWidget.findChild("GraphicsView");
+    }
+    else {
+        this.graphicsView = this.vpWidget.findChild("GraphicsView");
+    }
+
     if (isNull(this.graphicsView)) {
         qWarning("graphics view not found");
         return;
     }
-    this.graphicsView.setViewportNumber(this.vpNumber);
-    if (isFunction(this.graphicsView.setFocusFrameWidget)) {
-        this.graphicsView.setFocusFrameWidget(this.vpWidget);
+
+
+    // underlying image view (not based on widget):
+    //var imageView = this.graphicsView.getImageView();
+
+    var imageView = new RGraphicsViewImage();
+    this.graphicsView.setImageView(imageView);
+
+    imageView.setViewportNumber(this.vpNumber);
+    if (isFunction(imageView.setFocusFrameWidget)) {
+        imageView.setFocusFrameWidget(this.vpWidget);
     }
 
-    this.graphicsView.setAntialiasing(RSettings.getBoolValue("GraphicsView/Antialiasing", false));
+    imageView.setAntialiasing(RSettings.getBoolValue("GraphicsView/Antialiasing", false));
 
     // enable multithreaded graphics view:
     //if (RSettings.getBoolValue("GraphicsView/Multithreading", true)) {
     var numThreads = RSettings.getIntValue("GraphicsView/Threads", Math.min(RS.getIdealThreadCount(), 6));
     if (numThreads!==1) {
-        this.graphicsView.setNumThreads(numThreads);
+        imageView.setNumThreads(numThreads);
         //EAction.handleUserMessage(qsTr("Threads:") + " " + numThreads);
     }
     //}
@@ -212,15 +240,15 @@ ViewportWidget.prototype.init = function(uiFile, graphicsSceneClass) {
         scene.setScreenBasedLinetypes(true);
     }
 
-    this.graphicsView.setScene(scene);
+    imageView.setScene(scene);
     if (typeof(DefaultNavigation)!=="undefined") {
         var navigationAction = new DefaultNavigation(this.vpWidget);
-        this.graphicsView.setNavigationAction(navigationAction);
+        imageView.setNavigationAction(navigationAction);
     }
 
-    var grid = new ROrthoGrid(getRGraphicsView(this.graphicsView));
+    var grid = new ROrthoGrid(getRGraphicsView(imageView));
 
-    this.graphicsView.setGrid(grid);
+    imageView.setGrid(grid);
 
     if (RSettings.isQt(6)) {
         this.graphicsView.setFocus(Qt.OtherFocusReason);
@@ -259,12 +287,12 @@ ViewportWidget.prototype.init = function(uiFile, graphicsSceneClass) {
     if (RSettings.getBoolValue("GraphicsView/ShowRulers", true)) {
         this.hruler = hruler;
         if (!isNull(this.hruler)) {
-            this.hruler.setGraphicsView(this.graphicsView);
+            this.hruler.setGraphicsView(imageView);
             this.documentInterface.addCoordinateListener(this.hruler);
         }
         this.vruler = vruler;
         if (!isNull(this.vruler)) {
-            this.vruler.setGraphicsView(this.graphicsView);
+            this.vruler.setGraphicsView(imageView);
             this.documentInterface.addCoordinateListener(this.vruler);
         }
     } else {
@@ -286,7 +314,7 @@ ViewportWidget.prototype.getVpWidget = function() {
 };
 
 ViewportWidget.prototype.getGraphicsView = function() {
-    return this.graphicsView;
+    return this.graphicsView.getImageView();
 };
 
 ViewportWidget.prototype.getDocumentInterface = function() {

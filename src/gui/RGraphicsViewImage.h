@@ -43,17 +43,17 @@ class RSnapRestriction;
 /**
  * \brief QImage based 2d graphics view.
  *
- * This graphics view displays a rectangular area of a
- * RGraphicsSceneQt.
+ * This graphics view renders a rectangular area of a RGraphicsSceneQt into a QImage.
  *
  * \ingroup gui
  * \scriptable
  * \generateScriptShell
  */
-class QCADGUI_EXPORT RGraphicsViewImage : public RGraphicsView {
+class QCADGUI_EXPORT RGraphicsViewImage : public QObject, public RGraphicsView {
+    Q_OBJECT
 
 public:
-    RGraphicsViewImage();
+    RGraphicsViewImage(QObject* parent=NULL);
     virtual ~RGraphicsViewImage();
 
     int getNumThreads() const {
@@ -210,9 +210,7 @@ public:
         RGraphicsView::setPrintPointSize(s);
     }
 
-    virtual void simulateMouseMoveEvent() {
-        RGraphicsView::simulateMouseMoveEvent();
-    }
+    virtual void simulateMouseMoveEvent();
 
     void setTextHeightThresholdOverride(int v) {
         RGraphicsView::setTextHeightThresholdOverride(v);
@@ -238,17 +236,9 @@ public:
     virtual void repaintView();
     virtual void updateImage();
 
-    virtual void giveFocus() {
-        return;
-    }
-
-    virtual bool hasFocus() {
-        return true;
-    }
-
-    virtual void removeFocus() {
-        return;
-    }
+    virtual void giveFocus();
+    virtual bool hasFocus();
+    virtual void removeFocus();
 
     void saveViewport();
     void restoreViewport();
@@ -281,16 +271,6 @@ public:
 
     QImage getBuffer() const;
     QTransform getTransform() const;
-
-    virtual void emitUpdateSnapInfo(RSnap* snap, RSnapRestriction* restriction) {
-        Q_UNUSED(snap)
-        Q_UNUSED(restriction)
-    }
-    virtual void emitUpdateTextLabel(const RTextLabel& textLabel) {
-        Q_UNUSED(textLabel)
-    }
-    //virtual void emitDecorateBackground(QPainter* painter) { Q_UNUSED(painter) }
-    //virtual void emitDecorateForeground(QPainter* painter) { Q_UNUSED(painter) }
 
     void clearBackground();
     void addToBackground(const RGraphicsSceneDrawable& drawable);
@@ -340,6 +320,40 @@ public:
         alphaEnabled = on;
     }
 
+    QImage getGraphicsBufferWithPreview() const {
+        return graphicsBufferWithPreview;
+    }
+
+    RVector getLastKnownScreenPosition() const {
+        return lastKnownScreenPosition;
+    }
+
+    void setLastKnownScreenPosition(const RVector& p) {
+        lastKnownScreenPosition = p;
+    }
+
+    void setLastKnownModelPosition(const RVector& p) {
+        lastKnownModelPosition = p;
+    }
+
+    virtual bool isShared() const {
+        // never delete image view:
+        // owned by creator
+        return true;
+    }
+
+    virtual bool registerForFocus() const {
+        return true;
+    }
+
+    virtual void viewportChangeEvent();
+
+    virtual void emitUpdateSnapInfo(RSnap* snap, RSnapRestriction* restriction);
+    virtual void emitUpdateTextLabel(const RTextLabel& textLabel);
+
+    virtual double getDevicePixelRatio() const;
+
+
 protected:
     QList<RPainterPath> getTextLayoutsPainterPaths(const RTextBasedData& text, const QList<RTextLayout>& textLayouts);
     void applyMinimumLineweight(QPen& pen);
@@ -375,6 +389,11 @@ protected:
     void invalidate(bool force=false);
     void updateGraphicsBuffer();
     void updateTransformation() const;
+
+signals:
+    void viewportChanged();
+    void updateSnapInfo(QPainter* painter, RSnap* snap, RSnapRestriction* restriction);
+    void updateTextLabel(QPainter* painter, const RTextLabel& textLabel);
 
 protected:
     QList<QImage> graphicsBufferThread;

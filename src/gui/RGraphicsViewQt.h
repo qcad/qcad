@@ -29,7 +29,6 @@
 #include <QPinchGesture>
 
 #include "RGraphicsViewImage.h"
-#include "RPainterPath.h"
 
 class RAction;
 class RDocument;
@@ -52,12 +51,18 @@ class RSnapRestriction;
  * \scriptable
  * \generateScriptShell
  */
-class QCADGUI_EXPORT RGraphicsViewQt : public QWidget, public RGraphicsViewImage {
+class QCADGUI_EXPORT RGraphicsViewQt : public QWidget {
     Q_OBJECT
 
 public:
     RGraphicsViewQt(QWidget* parent=NULL, bool showFocus=true);
     virtual ~RGraphicsViewQt();
+
+    void setImageView(RGraphicsViewImage* v);
+
+    RGraphicsViewImage* getImageView() const {
+        return imageView;
+    }
     
     void disableGestures() {
         gesturesEnabled = false;
@@ -65,11 +70,6 @@ public:
         ungrabGesture(Qt::PinchGesture);
     }
 
-    virtual void repaintView();
-    virtual void repaintNow();
-
-    virtual void giveFocus();
-    virtual bool hasFocus();
     virtual void removeFocus();
 
     virtual int getWidth() const;
@@ -85,29 +85,13 @@ public:
 
     void setFocusFrameWidget(QFrame* w);
 
-    virtual void viewportChangeEvent();
-
-    virtual void emitUpdateSnapInfo(RSnap* snap, RSnapRestriction* restriction);
-    virtual void emitUpdateTextLabel(const RTextLabel& textLabel);
-
     virtual void simulateMouseMoveEvent();
-
-    virtual double getDevicePixelRatio() const;
-
-    virtual bool registerForFocus() const {
-        return true;
-    }
 
     virtual QSize sizeHint() const;
 
 signals:
     void drop(QDropEvent* event);
     void dragEnter(QDragEnterEvent* event);
-
-    void viewportChanged();
-
-    void updateSnapInfo(QPainter* painter, RSnap* snap, RSnapRestriction* restriction);
-    void updateTextLabel(QPainter* painter, const RTextLabel& textLabel);
 
 protected:
 
@@ -132,20 +116,21 @@ protected:
     virtual void dropEvent(QDropEvent* event);
 
 private:
-    QTransform previousView;
     //! remember last mouse button state for wacom bug workaround
     Qt::MouseButtons lastButtonState;
 
     bool showFocus;
 
     QFrame* focusFrameWidget;
-    QCursor lastCursor;
 
     bool gesturesEnabled;
     QElapsedTimer mouseClickTimer;
     RVector mousePressScreenPosition;
     RVector mousePressModelPosition;
     bool gotMouseButtonPress;
+
+    // backend to render to bitmap (can be QPainter or Skia):
+    RGraphicsViewImage* imageView;
 };
 
 Q_DECLARE_METATYPE(RGraphicsViewQt*)

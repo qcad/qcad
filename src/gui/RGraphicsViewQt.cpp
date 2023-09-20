@@ -23,33 +23,24 @@
 #include <QWheelEvent>
 
 #include "RDebug.h"
-#include "RDocument.h"
 #include "RDocumentInterface.h"
-#include "RFocusFrame.h"
-#include "RGuiAction.h"
 #include "RGraphicsScene.h"
-#include "RGraphicsSceneQt.h"
 #include "RGraphicsViewQt.h"
-#include "RLine.h"
-#include "RMainWindowQt.h"
-#include "RMdiChildQt.h"
+#include "RMainWindow.h"
 #include "RMouseEvent.h"
 #include "RSettings.h"
-#include "RSingleApplication.h"
-#include "RSnap.h"
 #include "RTerminateEvent.h"
-#include "RUnit.h"
 #include "RWheelEvent.h"
 
 
 
 RGraphicsViewQt::RGraphicsViewQt(QWidget* parent, bool showFocus)
     : QWidget(parent),
-      RGraphicsViewImage(),
       showFocus(showFocus),
       focusFrameWidget(NULL),
       gesturesEnabled(true),
-      gotMouseButtonPress(false) {
+      gotMouseButtonPress(false),
+      imageView(NULL) {
 
     setFocusPolicy(Qt::WheelFocus);
     setMouseTracking(true);
@@ -65,6 +56,8 @@ RGraphicsViewQt::RGraphicsViewQt(QWidget* parent, bool showFocus)
     grabGesture(Qt::PanGesture);
     grabGesture(Qt::PinchGesture);
     setContextMenuPolicy(Qt::PreventContextMenu);
+
+    setImageView(new RGraphicsViewImage(this));
 }
 
 
@@ -72,20 +65,13 @@ RGraphicsViewQt::RGraphicsViewQt(QWidget* parent, bool showFocus)
 RGraphicsViewQt::~RGraphicsViewQt() {
 }
 
-/**
- * Triggers a paintEvent based on a buffered offscreen bitmap (very fast).
- */
-void RGraphicsViewQt::repaintView() {
-    update();
-}
-
-void RGraphicsViewQt::repaintNow() {
-    QWidget::repaint();
-}
-
-void RGraphicsViewQt::viewportChangeEvent() {
-    RGraphicsViewImage::viewportChangeEvent();
-    emit viewportChanged();
+void RGraphicsViewQt::setImageView(RGraphicsViewImage* v) {
+    if (imageView!=NULL) {
+        delete imageView;
+    }
+    imageView = v;
+    imageView->setParent(this);
+    imageView->setWidget(this);
 }
     
 /**
@@ -96,24 +82,35 @@ void RGraphicsViewQt::viewportChangeEvent() {
  * \see invalidate
  */
 void RGraphicsViewQt::paintEvent(QPaintEvent* e) {
-    RDocumentInterface* di = getDocumentInterface();
+    if (imageView==NULL) {
+        return;
+    }
+
+    double dpr = imageView->getDevicePixelRatio();
+
+    RDocumentInterface* di = imageView->getDocumentInterface();
     if (di!=NULL && di->isSuspended()) {
         QPainter wPainter(this);
-        wPainter.drawImage(getRect(), graphicsBufferWithPreview);
+        QImage img = imageView->getGraphicsBufferWithPreview();
+        if (!RMath::fuzzyCompare(dpr, 0.0)) {
+            img.setDevicePixelRatio(dpr);
+        }
+        wPainter.drawImage(0,0, img);
         wPainter.end();
         return;
     }
 
-    updateImage();
+    imageView->updateImage();
 
     // event is NULL for fake paint events (testing):
     if (e!=NULL) {
         QPainter wPainter(this);
-        //wPainter.drawImage(0, 0, graphicsBufferWithPreview);
-        wPainter.drawImage(getRect(), graphicsBufferWithPreview);
-        //QPixmap pm;
-        //pm.convertFromImage(graphicsBufferWithPreview);
-        //wPainter.drawPixmap(this->rect(), pm);
+        QImage img = imageView->getGraphicsBufferWithPreview();
+        if (!RMath::fuzzyCompare(dpr, 0.0)) {
+            img.setDevicePixelRatio(dpr);
+        }
+        wPainter.drawImage(0,0, img);
+
         wPainter.end();
     }
 }
@@ -124,7 +121,12 @@ void RGraphicsViewQt::paintEvent(QPaintEvent* e) {
 bool RGraphicsViewQt::event(QEvent* e) {
     RTerminateEvent* te = dynamic_cast<RTerminateEvent*>(e);
     if (te!=NULL) {
-        RGraphicsView::handleTerminateEvent(*te);
+        if (imageView!=NULL) {
+            imageView->handleTerminateEvent(*te);
+        }
+        else {
+            qWarning() << "imageView was deleted";
+        }
         return true;
     }
 
@@ -151,16 +153,20 @@ bool RGraphicsViewQt::event(QEvent* e) {
  * Handle gesture events.
  */
 bool RGraphicsViewQt::gestureEvent(QGestureEvent* event) {
+    if (imageView==NULL) {
+        return true;
+    }
+
     if (QGesture* swipe = event->gesture(Qt::SwipeGesture)) {
-        RGraphicsView::handleSwipeGestureEvent(*static_cast<QSwipeGesture *>(swipe));
+        imageView->handleSwipeGestureEvent(*static_cast<QSwipeGesture *>(swipe));
     }
 
     else if (QGesture* pan = event->gesture(Qt::PanGesture)) {
-        RGraphicsView::handlePanGestureEvent(*static_cast<QPanGesture *>(pan));
+        imageView->handlePanGestureEvent(*static_cast<QPanGesture *>(pan));
     }
 
     else if (QGesture* pinch = event->gesture(Qt::PinchGesture)) {
-        RGraphicsView::handlePinchGestureEvent(*static_cast<QPinchGesture *>(pinch));
+        imageView->handlePinchGestureEvent(*static_cast<QPinchGesture *>(pinch));
     }
 
     event->accept();
@@ -169,7 +175,13 @@ bool RGraphicsViewQt::gestureEvent(QGestureEvent* event) {
 }
 
 void RGraphicsViewQt::tabletEvent(QTabletEvent* event) {
-    if (event == NULL || scene==NULL) {
+    if (imageView==NULL) {
+        return;
+    }
+
+    RGraphicsScene* s = imageView->getScene();
+
+    if (event == NULL || s==NULL) {
         return;
     }
 
@@ -187,12 +199,19 @@ void RGraphicsViewQt::tabletEvent(QTabletEvent* event) {
  * Relays the Qt mouse event to the scene.
  */
 void RGraphicsViewQt::mouseMoveEvent(QMouseEvent* event) {
-    if (event==NULL || scene==NULL) {
+    if (imageView==NULL) {
         return;
     }
 
-    RMouseEvent e(*event, *scene, *this, getDevicePixelRatio());
-    RGraphicsView::handleMouseMoveEvent(e);
+
+    if (event==NULL || imageView->getScene()==NULL) {
+        return;
+    }
+
+    RGraphicsScene* s = imageView->getScene();
+
+    RMouseEvent e(*event, *s, *imageView, imageView->getDevicePixelRatio());
+    imageView->handleMouseMoveEvent(e);
 
  #if (QT_VERSION < QT_VERSION_CHECK(4, 8, 0))
     // workaround for wacom tablets bug: wacom tablets don't fire a mouseReleaseEvent
@@ -244,8 +263,13 @@ void RGraphicsViewQt::mouseMoveEvent(QMouseEvent* event) {
 }
 
 void RGraphicsViewQt::mousePressEvent(QMouseEvent* event) {
+    if (imageView==NULL) {
+        return;
+    }
+
     gotMouseButtonPress = true;
-    if (event==NULL || scene==NULL) {
+    RGraphicsScene* s = imageView->getScene();
+    if (event==NULL || s==NULL) {
         return;
     }
 
@@ -257,11 +281,12 @@ void RGraphicsViewQt::mousePressEvent(QMouseEvent* event) {
 //    }
 //#endif
 
-    RMouseEvent e(*event, *scene, *this, getDevicePixelRatio());
+
+    RMouseEvent e(*event, *s, *imageView, imageView->getDevicePixelRatio());
     mousePressScreenPosition = e.getScreenPosition();
     mousePressModelPosition = e.getModelPosition();
     mouseClickTimer.start();
-    RGraphicsView::handleMousePressEvent(e);
+    imageView->handleMousePressEvent(e);
     lastButtonState = event->buttons();
     event->accept();
 }
@@ -269,6 +294,10 @@ void RGraphicsViewQt::mousePressEvent(QMouseEvent* event) {
 void RGraphicsViewQt::mouseReleaseEvent(QMouseEvent* event) {
     static int ignoreTimeThreshold = RSettings::getIntValue("GraphicsView/IgnoreTimeThreshold", 150);
     static int ignoreDeltaThreshold = RSettings::getIntValue("GraphicsView/IgnoreDeltaThreshold", 100);
+
+    if (imageView==NULL) {
+        return;
+    }
 
     if (gotMouseButtonPress) {
         // everything OK, got press, followed by release
@@ -282,7 +311,9 @@ void RGraphicsViewQt::mouseReleaseEvent(QMouseEvent* event) {
     }
     gotMouseButtonPress = false;
 
-    if (event==NULL || scene==NULL) {
+    RGraphicsScene* s = imageView->getScene();
+
+    if (event==NULL || s==NULL) {
         return;
     }
 
@@ -296,7 +327,8 @@ void RGraphicsViewQt::mouseReleaseEvent(QMouseEvent* event) {
 
     event->ignore();
 
-    RMouseEvent e(*event, *scene, *this, getDevicePixelRatio());
+
+    RMouseEvent e(*event, *s, *imageView, imageView->getDevicePixelRatio());
 
     // if mouse press and mouse release happened within a short time span and the
     // mouse movement was small, use the mouse press location
@@ -306,13 +338,19 @@ void RGraphicsViewQt::mouseReleaseEvent(QMouseEvent* event) {
         e.setScreenPosition(mousePressScreenPosition);
         e.setModelPosition(mousePressModelPosition);
     }
-    RGraphicsView::handleMouseReleaseEvent(e);
+    imageView->handleMouseReleaseEvent(e);
     lastButtonState = event->buttons();
     event->accept();
 }
 
 void RGraphicsViewQt::mouseDoubleClickEvent(QMouseEvent* event) {
-    if (event==NULL || scene==NULL) {
+    if (imageView==NULL) {
+        return;
+    }
+
+    RGraphicsScene* s = imageView->getScene();
+
+    if (event==NULL || s==NULL) {
         return;
     }
 
@@ -324,28 +362,38 @@ void RGraphicsViewQt::mouseDoubleClickEvent(QMouseEvent* event) {
 //    }
 //#endif
 
-    RMouseEvent e(*event, *scene, *this, getDevicePixelRatio());
-    RGraphicsView::handleMouseDoubleClickEvent(e);
+    RMouseEvent e(*event, *s, *imageView, imageView->getDevicePixelRatio());
+    imageView->handleMouseDoubleClickEvent(e);
     lastButtonState = event->buttons();
     event->accept();
 }
 
 void RGraphicsViewQt::wheelEvent(QWheelEvent* event) {
-    if (event==NULL || scene==NULL) {
+    if (imageView==NULL) {
         return;
     }
-    RWheelEvent e(*event, *scene, *this, getDevicePixelRatio());
-    RGraphicsView::handleWheelEvent(e);
+
+    RGraphicsScene* s = imageView->getScene();
+
+    if (event==NULL || s==NULL) {
+        return;
+    }
+    RWheelEvent e(*event, *s, *imageView, imageView->getDevicePixelRatio());
+    imageView->handleWheelEvent(e);
     event->accept();
 }
 
 void RGraphicsViewQt::keyPressEvent(QKeyEvent* event) {
+    if (imageView==NULL) {
+        return;
+    }
+
     if (event==NULL) {
         return;
     }
     event->ignore();
 
-    RGraphicsView::handleKeyPressEvent(*event);
+    imageView->handleKeyPressEvent(*event);
 
     // we're NOT accepting the event here to make sure the
     // event handler of the main window has a chance to
@@ -353,12 +401,15 @@ void RGraphicsViewQt::keyPressEvent(QKeyEvent* event) {
 }
 
 void RGraphicsViewQt::keyReleaseEvent(QKeyEvent* event) {
+    if (imageView==NULL) {
+        return;
+    }
     if (event==NULL) {
         return;
     }
     event->ignore();
 
-    RGraphicsView::handleKeyReleaseEvent(*event);
+    imageView->handleKeyReleaseEvent(*event);
 
     // we're NOT accepting the event here to make sure the
     // event handler of the main window has a chance to
@@ -376,15 +427,19 @@ void RGraphicsViewQt::dropEvent(QDropEvent* event) {
 }
 
 void RGraphicsViewQt::resizeEvent(QResizeEvent* ) {
-    regenerate();
+    if (imageView==NULL) {
+        return;
+    }
+    imageView->resizeImage(width(), height());
+    imageView->regenerate();
 }
 
 int RGraphicsViewQt::getWidth() const {
-    return width() * getDevicePixelRatio();
+    return width() * imageView->getDevicePixelRatio();
 }
 
 int RGraphicsViewQt::getHeight() const {
-    return height() * getDevicePixelRatio();
+    return height() * imageView->getDevicePixelRatio();
 }
 
 QRect RGraphicsViewQt::getRect() const {
@@ -420,16 +475,22 @@ QSize RGraphicsViewQt::sizeHint() const {
  * that events go to this view.
  */
 void RGraphicsViewQt::focusInEvent(QFocusEvent* event) {
-    if (getDocumentInterface()!=NULL) {
+    if (imageView==NULL) {
+        return;
+    }
+
+    RDocumentInterface* di = imageView->getDocumentInterface();
+    if (di!=NULL) {
         RGraphicsViewQt* other =
                 dynamic_cast<RGraphicsViewQt*>(
-                    getDocumentInterface()->getLastKnownViewWithFocus()
+                    di->getLastKnownViewWithFocus()
                 );
         if (other!=NULL) {
             other->removeFocus();
         }
 
-        getDocumentInterface()->setLastKnownViewWithFocus(this);
+        qDebug() << "RGraphicsViewQt::focusInEvent: setLastKnownViewWithFocus";
+        di->setLastKnownViewWithFocus(imageView);
 
         if (focusFrameWidget!=NULL) {
             QPalette p = focusFrameWidget->palette();
@@ -447,7 +508,7 @@ void RGraphicsViewQt::focusInEvent(QFocusEvent* event) {
 
         RMainWindow* mainWindow = RMainWindow::getMainWindow();
         if (mainWindow!=NULL) {
-            mainWindow->notifyViewFocusListeners(this);
+            mainWindow->notifyViewFocusListeners(imageView);
         }
     }
 
@@ -461,14 +522,6 @@ void RGraphicsViewQt::focusOutEvent(QFocusEvent* event) {
     QWidget::focusOutEvent(event);
 }
 
-void RGraphicsViewQt::giveFocus() {
-    QWidget::setFocus(Qt::OtherFocusReason);
-}
-
-bool RGraphicsViewQt::hasFocus() {
-    return QWidget::hasFocus();
-}
-
 void RGraphicsViewQt::removeFocus() {
     if (showFocus && focusFrameWidget!=NULL) {
         QPalette p = focusFrameWidget->parentWidget()->palette();
@@ -480,43 +533,18 @@ void RGraphicsViewQt::setFocusFrameWidget(QFrame* w) {
     focusFrameWidget = w;
 }
 
-void RGraphicsViewQt::emitUpdateSnapInfo(RSnap* snap, RSnapRestriction* restriction) {
-    if (receivers(SIGNAL(updateSnapInfo(QPainter*, RSnap*, RSnapRestriction*))) > 0) {
-        QPainter gbPainter(&graphicsBufferWithPreview);
-        emit(updateSnapInfo(&gbPainter, snap, restriction));
-        gbPainter.end();
-    }
-}
-
-void RGraphicsViewQt::emitUpdateTextLabel(const RTextLabel& textLabel) {
-    if (receivers(SIGNAL(updateTextLabel(QPainter*, const RTextLabel&))) > 0) {
-        QPainter gbPainter(&graphicsBufferWithPreview);
-        emit(updateTextLabel(&gbPainter, textLabel));
-        gbPainter.end();
-    }
-}
-
 void RGraphicsViewQt::simulateMouseMoveEvent() {
-    if (!lastKnownScreenPosition.isValid() && isVisible()) {
+    if (imageView==NULL) {
+        return;
+    }
+
+    if (!imageView->getLastKnownScreenPosition().isValid() && isVisible()) {
         QPoint p = mapFromGlobal(QCursor::pos());
         if (p.x()>width() || p.x()<0 || p.y()<0 || p.y()>height()) {
             p = QPoint(width()/2, height()/2);
         }
-        lastKnownScreenPosition = RVector(p.x(), p.y());
-        lastKnownModelPosition = mapFromView(lastKnownScreenPosition);
+        imageView->setLastKnownScreenPosition(RVector(p.x(), p.y()));
+        imageView->setLastKnownModelPosition(imageView->mapFromView(RVector(p.x(), p.y())));
     }
-    RGraphicsView::simulateMouseMoveEvent();
-}
-
-double RGraphicsViewQt::getDevicePixelRatio() const {
-    if (RSettings::getHighResolutionGraphicsView()) {
-#if QT_VERSION >= 0x050000
-        return devicePixelRatio();
-#else
-        return 1;
-#endif
-    }
-    else {
-        return 1;
-    }
+    //imageView->simulateMouseMoveEvent();
 }

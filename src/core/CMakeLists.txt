@@ -10,6 +10,7 @@ find_package(${QT_VER} REQUIRED COMPONENTS Core Widgets Concurrent Gui Network O
 IF(NOT BUILD_QT6)
     find_package(${QT_VER} REQUIRED COMPONENTS Script XmlPatterns)
 ENDIF()
+
 qt_standard_project_setup()
 
 if(WIN32)

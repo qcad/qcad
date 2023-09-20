@@ -321,6 +321,14 @@ public:
         return false;
     }
 
+    void setWidget(QWidget* w) {
+        widget = w;
+    }
+
+    QWidget* getWidget() const {
+        return widget;
+    }
+
 protected:
     bool exporting;
     bool printing;
@@ -399,6 +407,9 @@ protected:
 
     //RVector mousePressScreenPosition;
     //RVector mousePressModelPosition;
+
+    // widget that displays this view if any:
+    QWidget* widget;
 };
 
 Q_DECLARE_METATYPE(RGraphicsView::ColorMode)

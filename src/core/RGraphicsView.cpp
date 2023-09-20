@@ -50,7 +50,8 @@ RGraphicsView::RGraphicsView(RGraphicsScene* scene) :
       textHeightThreshold(3),
       viewportNumber(-1),
       antialiasing(false),
-      gridVisible(-1) {
+      gridVisible(-1),
+      widget(NULL) {
 
     setScene(scene, false);
 
@@ -68,6 +69,7 @@ RGraphicsView::~RGraphicsView() {
     RDebug::decCounter("RGraphicsView");
     if (navigationAction!=NULL) {
         delete navigationAction;
+        navigationAction = NULL;
     }
     if (grid!=NULL) {
         delete grid;
