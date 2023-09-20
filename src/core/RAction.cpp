@@ -84,7 +84,6 @@ void RAction::setGuiAction(RGuiAction* guiAction) {
  * method.
  */
 void RAction::terminate() {
-    qDebug() << "RAction::terminate";
     terminated = true;
 
     if (getDocumentInterface()==NULL) {
@@ -92,14 +91,11 @@ void RAction::terminate() {
     }
     RGraphicsView* view = getDocumentInterface()->getLastKnownViewWithFocus();
     //RGraphicsViewImage* imageView = dynamic_cast<RGraphicsViewImage*>(view);
-    qDebug() << "RAction::terminate: view:" << QString("%1").arg((unsigned long long int)view);
 
     if (view!=NULL) {
-        qDebug() << "RAction::terminate: got view";
         QWidget* w = view->getWidget();
 
         if (w!=NULL) {
-            qDebug() << "post RTerminateEvent";
             RTerminateEvent* event = new RTerminateEvent();
             QCoreApplication::postEvent(w, event);
         }
