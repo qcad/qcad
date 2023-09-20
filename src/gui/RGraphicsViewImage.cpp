@@ -2227,6 +2227,10 @@ void RGraphicsViewImage::paintText(QPainter* painter, RTextBasedData& text, bool
 
 
 int RGraphicsViewImage::getWidth() const {
+    if (widget!=NULL) {
+        double dpr = getDevicePixelRatio();
+        return (int)(widget->width() * dpr);
+    }
     if (graphicsBufferThread.isEmpty()) {
         return 100;
     }
@@ -2234,6 +2238,10 @@ int RGraphicsViewImage::getWidth() const {
 }
 
 int RGraphicsViewImage::getHeight() const {
+    if (widget!=NULL) {
+        double dpr = getDevicePixelRatio();
+        return (int)(widget->height() * dpr);
+    }
     if (graphicsBufferThread.isEmpty()) {
         return 100;
     }

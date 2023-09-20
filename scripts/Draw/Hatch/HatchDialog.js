@@ -65,11 +65,12 @@ HatchDialog.prototype.show =  function(hatchDataIn) {
     include("scripts/Widgets/AutoZoomView/AutoZoomView.js");
     var view = new AutoZoomView(this.dialog);
     view.objectName = "PreviewView";
-    view.setPaintOrigin(false);
+    var imageView = view.getImageView();
+    imageView.setPaintOrigin(false);
     layout.addWidget(view, 0, 0);
-    view.setScene(new RGraphicsSceneQt(this.previewDi));
+    imageView.setScene(new RGraphicsSceneQt(this.previewDi));
     view.disableGestures();
-    view.setMargin(10);
+    imageView.setMargin(10);
 
     var patternNames;
     if (RUnit.isMetric(EAction.getDocument().getUnit())) {

@@ -430,16 +430,17 @@ void RGraphicsViewQt::resizeEvent(QResizeEvent* ) {
     if (imageView==NULL) {
         return;
     }
-    imageView->resizeImage(width(), height());
+    double dpr = imageView->getDevicePixelRatio();
+    imageView->resizeImage((int)(width()*dpr), (int)(height()*dpr));
     imageView->regenerate();
 }
 
 int RGraphicsViewQt::getWidth() const {
-    return width() * imageView->getDevicePixelRatio();
+    return width();
 }
 
 int RGraphicsViewQt::getHeight() const {
-    return height() * imageView->getDevicePixelRatio();
+    return height();
 }
 
 QRect RGraphicsViewQt::getRect() const {
@@ -489,7 +490,6 @@ void RGraphicsViewQt::focusInEvent(QFocusEvent* event) {
             other->removeFocus();
         }
 
-        qDebug() << "RGraphicsViewQt::focusInEvent: setLastKnownViewWithFocus";
         di->setLastKnownViewWithFocus(imageView);
 
         if (focusFrameWidget!=NULL) {
