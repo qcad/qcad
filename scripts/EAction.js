@@ -977,6 +977,15 @@ EAction.getGraphicsView = function() {
     return di.getLastKnownViewWithFocus();
 };
 
+EAction.getGraphicsViewWidget = function() {
+    var view = EAction.getGraphicsView();
+    if (isNull(view)) {
+        return undefined;
+    }
+
+    return view.getWidget();
+};
+
 /**
  * \return the existing menu with the given object name or, if no such menu
  * exists, a new menu with the given title and the given object name.
