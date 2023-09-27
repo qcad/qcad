@@ -118,7 +118,6 @@ ViewportWidget.prototype.initEventHandler = function() {
         this.graphicsView.getImageView().viewportChanged.connect(function() { self.eventHandler.viewportChanged(); });
         this.graphicsView.getImageView().updateSnapInfo.connect(
             function(painter, snap, restriction) {
-                qDebug("REventHandler: updateSnapInfo slot called");
                 self.eventHandler.updateSnapInfo(painter, snap, restriction);
             }
         );
@@ -147,7 +146,8 @@ ViewportWidget.prototype.init = function(uiFile, graphicsSceneClass) {
         }
 
         if (RSettings.getQtVersion()>=0x060000) {
-            if (ch.isOfObjectType(RJSType.QLayout_Type) || ch.isOfObjectType(RJSType.QWidget_Type)) {
+            //if (ch.isOfObjectType(RJSType.QLayout_Type) || ch.isOfObjectType(RJSType.QWidget_Type)) {
+            if (ch.isOfObjectType(RJSType_QLayout.id) || ch.isOfObjectType(RJSType_QWidget.id)) {
                 destr(ch);
             }
         }
