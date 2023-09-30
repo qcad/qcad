@@ -225,6 +225,7 @@ public:
     void setGridVisible(bool on);
     bool isGridVisible() const;
 
+    virtual void paintGridPoints(const QVector<double>& ucsPositionX, const QVector<double>& ucsPositionY);
     virtual void paintGridPoint(const RVector& /*ucsPosition*/) {}
     virtual void paintGridLine(const RLine& /*ucsPosition*/) {}
 

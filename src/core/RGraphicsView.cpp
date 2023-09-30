@@ -131,6 +131,12 @@ bool RGraphicsView::isGridVisible() const {
     return gridVisible;
 }
 
+void RGraphicsView::paintGridPoints(const QVector<double>& ucsPositionX, const QVector<double>& ucsPositionY) {
+    for (int i=0; i<ucsPositionX.length() && i<ucsPositionY.length(); i++) {
+        paintGridPoint(RVector(ucsPositionX[i], ucsPositionY[i]));
+    }
+}
+
 void RGraphicsView::viewportChangeEvent() {
     if (grid == NULL) {
         return;
