@@ -48,7 +48,7 @@ RGraphicsViewImage::RGraphicsViewImage(QObject* parent)
       lastSize(0,0),
       lastOffset(RVector::invalid),
       lastFactor(-1.0),
-      gridPainter(NULL),
+      painter(NULL),
       doPaintOrigin(true),
       isSelected(false),
       bgColorLightness(0),
@@ -282,9 +282,10 @@ void RGraphicsViewImage::updateImage() {
     // draws the current preview on top of the buffer:
     // highlighted entities are also part of the preview
     if (sceneQt->hasPreview()) {
-        QPainter* painter = initPainter(graphicsBufferWithPreview, false);
+        initPainter(graphicsBufferWithPreview, false);
 
         painterThread.clear();
+        // TODO: add function RGraphicsViewImage:
         painterThread.append(painter);
         entityTransformThread.clear();
         entityTransformThread.append(QStack<RTransform>());
@@ -295,6 +296,7 @@ void RGraphicsViewImage::updateImage() {
         for (int i=0; i<ids.length(); i++) {
             paintEntityThread(0, ids[i], true);
         }
+        // TODO: add function RGraphicsViewImage:
         painter->end();
         delete painter;
     }
@@ -456,18 +458,18 @@ void RGraphicsViewImage::paintErase(QPaintDevice& device, const QRect& rect) {
     RVector c2 = mapFromView(RVector(r.left() + r.width(),r.top() + r.height()));
     QRectF rf(c1.x, c1.y, c2.x-c1.x, c2.y-c1.y);
 
-    gridPainter = initPainter(device, false, false, rect);
-    gridPainter->setBackground(getBackgroundColor());
+    initPainter(device, false, false, rect);
+    painter->setBackground(getBackgroundColor());
     if (!rect.isNull()) {
-        gridPainter->setClipRect(rf);
+        painter->setClipRect(rf);
     }
     if (backgroundColor.alpha()==0) {
-        gridPainter->setCompositionMode(QPainter::CompositionMode_Clear);
+        painter->setCompositionMode(QPainter::CompositionMode_Clear);
     }
-    gridPainter->eraseRect(rf);
+    painter->eraseRect(rf);
 
-    delete gridPainter;
-    gridPainter = NULL;
+    delete painter;
+    painter = NULL;
 }
 
 void RGraphicsViewImage::paintGrid(QPaintDevice& device, const QRect& rect) {
@@ -480,29 +482,29 @@ void RGraphicsViewImage::paintGrid(QPaintDevice& device, const QRect& rect) {
     RVector c2 = mapFromView(RVector(r.left() + r.width(),r.top() + r.height()));
     QRectF rf(c1.x, c1.y, c2.x-c1.x, c2.y-c1.y);
 
-    gridPainter = initPainter(device, false, false, rect);
-    gridPainter->setRenderHint(QPainter::Antialiasing, false);
+    initPainter(device, false, false, rect);
+    painter->setRenderHint(QPainter::Antialiasing, false);
     if (!rect.isNull()) {
-        gridPainter->setClipRect(rf);
+        painter->setClipRect(rf);
     }
 
     if (grid!=NULL) {
         QPen pen(RSettings::getColor("GraphicsViewColors/GridColor", RColor(192,192,192,192)));
         pen.setWidth(0);
-        gridPainter->setPen(pen);
+        painter->setPen(pen);
         grid->paint();
     }
 
-    delete gridPainter;
-    gridPainter = NULL;
+    delete painter;
+    painter = NULL;
 }
 
 void RGraphicsViewImage::paintGridPoint(const RVector& ucsPosition) {
-    if (gridPainter==NULL) {
-        qWarning("RGraphicsViewImage::paintGridPoint: gridPainter is NULL");
+    if (painter==NULL) {
+        qWarning("RGraphicsViewImage::paintGridPoint: painter is NULL");
         return;
     }
-    gridPainter->drawPoint(QPointF(ucsPosition.x, ucsPosition.y));
+    painter->drawPoint(QPointF(ucsPosition.x, ucsPosition.y));
 }
 
 void RGraphicsViewImage::paintMetaGrid(QPaintDevice& device, const QRect& rect) {
@@ -511,26 +513,26 @@ void RGraphicsViewImage::paintMetaGrid(QPaintDevice& device, const QRect& rect) 
         r = QRect(0,0,getWidth(),getHeight());
     }
 
-    gridPainter = initPainter(device, false, false, rect);
-    gridPainter->setBackground(getBackgroundColor());
+    initPainter(device, false, false, rect);
+    painter->setBackground(getBackgroundColor());
 
     if (grid!=NULL) {
-        gridPainter->setPen(QPen(
+        painter->setPen(QPen(
                 RSettings::getColor("GraphicsViewColors/MetaGridColor", RColor(192,192,192,64)),
                 0, Qt::SolidLine));
         grid->paintMetaGrid();
     }
 
-    delete gridPainter;
-    gridPainter = NULL;
+    delete painter;
+    painter = NULL;
 }
 
 void RGraphicsViewImage::paintGridLine(const RLine& ucsPosition) {
-    if (gridPainter==NULL) {
-        qWarning("RGraphicsViewImage::paintGridLine: gridPainter is NULL");
+    if (painter==NULL) {
+        qWarning("RGraphicsViewImage::paintGridLine: painter is NULL");
         return;
     }
-    gridPainter->drawLine(
+    painter->drawLine(
         QPointF(ucsPosition.startPoint.x, ucsPosition.startPoint.y),
         QPointF(ucsPosition.endPoint.x, ucsPosition.endPoint.y)
     );
@@ -545,7 +547,7 @@ void RGraphicsViewImage::paintOrigin(QPaintDevice& device) {
         return;
     }
 
-    gridPainter = initPainter(device, false, false);
+    initPainter(device, false, false);
 
     QPen pen(RSettings::getColor("GraphicsViewColors/OriginColor", RColor(255,0,0,192)));
     pen.setWidth(0);
@@ -556,27 +558,27 @@ void RGraphicsViewImage::paintOrigin(QPaintDevice& device) {
         pen.setDashPattern(QVector<qreal>() << 9 << 3 << 3 << 3 << 3 << 3);
         //RVector z = mapToView(RVector(0,0));
         //pen.setDashOffset(-z.x);
-        gridPainter->setPen(pen);
-        gridPainter->drawLine(QPointF(b.c1.x, 0.0), QPointF(b.c2.x, 0));
+        painter->setPen(pen);
+        painter->drawLine(QPointF(b.c1.x, 0.0), QPointF(b.c2.x, 0));
 //        pen.setDashOffset(z.y);
-//        gridPainter->setPen(pen);
-        gridPainter->drawLine(QPointF(0.0, b.c1.y), QPointF(0.0, b.c2.y));
+//        painter->setPen(pen);
+        painter->drawLine(QPointF(0.0, b.c1.y), QPointF(0.0, b.c2.y));
     }
     else {
-        gridPainter->setPen(pen);
+        painter->setPen(pen);
         double r = mapDistanceFromView(20.0 * getDevicePixelRatio());
-        gridPainter->drawLine(
+        painter->drawLine(
             QPointF(-r,0.0),
             QPointF(r,0.0)
         );
-        gridPainter->drawLine(
+        painter->drawLine(
             QPointF(0.0,-r),
             QPointF(0.0,r)
         );
     }
 
-    delete gridPainter;
-    gridPainter = NULL;
+    delete painter;
+    painter = NULL;
 }
 
 void RGraphicsViewImage::paintCursor(QPaintDevice& device) {
@@ -606,15 +608,15 @@ void RGraphicsViewImage::paintCursor(QPaintDevice& device) {
         crossHairColor = RSettings::getColor("GraphicsViewColors/CrosshairColorInactive", RColor(108,79,0,192));
     }
 
-    gridPainter = initPainter(device, false, false);
+    initPainter(device, false, false);
 
     if (grid!=NULL) {
-        gridPainter->setPen(QPen(crossHairColor, 0, Qt::DashLine));
+        painter->setPen(QPen(crossHairColor, 0, Qt::DashLine));
         grid->paintCursor(pos);
     }
 
-    delete gridPainter;
-    gridPainter = NULL;
+    delete painter;
+    painter = NULL;
 }
 
 void RGraphicsViewImage::paintRelativeZero(QPaintDevice& device) {
@@ -719,7 +721,8 @@ void RGraphicsViewImage::paintDocument(const QRect& rect) {
     painterThread.clear();
     entityTransformThread.clear();
     for (int i=0; i<graphicsBufferThread.length(); i++) {
-        painterThread.append(initPainter(graphicsBufferThread[i], false, false, r));
+        initPainter(graphicsBufferThread[i], false, false, r);
+        painterThread.append(painter);
         entityTransformThread.append(QStack<RTransform>());
     }
 
@@ -964,8 +967,8 @@ void RGraphicsViewImage::paintOverlay(QPainter* painter) {
     }
 }
 
-QPainter* RGraphicsViewImage::initPainter(QPaintDevice& device, bool erase, bool screen, const QRect& rect) {
-    QPainter* painter = new QPainter(&device);
+void RGraphicsViewImage::initPainter(QPaintDevice& device, bool erase, bool screen, const QRect& rect) {
+    painter = new QPainter(&device);
     if (antialiasing) {
         painter->setRenderHint(QPainter::Antialiasing);
     }
@@ -988,7 +991,7 @@ QPainter* RGraphicsViewImage::initPainter(QPaintDevice& device, bool erase, bool
         painter->setWorldTransform(transform);
     }
     //painter->setPen(QPen());
-    return painter;
+    //return painter;
 }
 
 void RGraphicsViewImage::paintEntities(QPainter* painter, const RBox& queryBox) {

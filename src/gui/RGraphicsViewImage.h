@@ -384,7 +384,7 @@ protected:
     /**
      * \nonscriptable
      */
-    QPainter* initPainter(QPaintDevice& device, bool erase, bool screen = false, const QRect& rect = QRect());
+    void initPainter(QPaintDevice& device, bool erase, bool screen = false, const QRect& rect = QRect());
 
     void invalidate(bool force=false);
     void updateGraphicsBuffer();
@@ -414,7 +414,7 @@ protected:
     mutable QTransform transform;
     QTransform previousView;
 
-    QPainter* gridPainter;
+    QPainter* painter;
     bool doPaintOrigin;
 
     bool isSelected;
