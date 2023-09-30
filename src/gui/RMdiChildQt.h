@@ -29,7 +29,7 @@
 
 class RDocument;
 class RDocumentInterface;
-class RGraphicsViewQt;
+class RGraphicsViewImage;
 
 /**
  * \brief MDI child window.
@@ -49,7 +49,7 @@ public:
 
     RDocumentInterface* getDocumentInterface();
     RDocument* getDocument();
-    RGraphicsViewQt* getLastKnownViewWithFocus();
+    RGraphicsViewImage* getLastKnownViewWithFocus();
 
     virtual void updateModifiedListener(const RStorage* storage);
 
