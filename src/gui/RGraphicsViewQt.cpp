@@ -1,6 +1,6 @@
 /**
  * Copyright (c) 2011-2018 by Andrew Mustun. All rights reserved.
- * 
+ *
  * This file is part of the QCAD project.
  *
  * QCAD is free software: you can redistribute it and/or modify
@@ -63,6 +63,9 @@ RGraphicsViewQt::RGraphicsViewQt(QWidget* parent, bool showFocus)
 
 
 RGraphicsViewQt::~RGraphicsViewQt() {
+    if (imageView!=NULL) {
+        delete imageView;
+    }
 }
 
 void RGraphicsViewQt::setImageView(RGraphicsViewImage* v) {
