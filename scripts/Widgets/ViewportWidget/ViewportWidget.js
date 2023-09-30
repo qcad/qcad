@@ -181,32 +181,23 @@ ViewportWidget.prototype.init = function(uiFile, graphicsSceneClass) {
     // clear style sheet
     this.vpWidget.styleSheet = "";
 
-
-    if (RSettings.getQtVersion()>=0x060000) {
-        // skia view:
-//        var gridLayout = vpw.layout();
-//        gridLayout.removeWidget(vpw.findChild("GraphicsView"));
-//        this.graphicsView = new RGraphicsViewSkia(vpw);
-//        gridLayout.addWidget(this.graphicsView, 1,1);
-//        gridLayout.setRowStretch(1,1);
-
-        this.graphicsView = this.vpWidget.findChild("GraphicsView");
-    }
-    else {
-        this.graphicsView = this.vpWidget.findChild("GraphicsView");
-    }
+    this.graphicsView = this.vpWidget.findChild("GraphicsView");
 
     if (isNull(this.graphicsView)) {
         qWarning("graphics view not found");
         return;
     }
 
+    var imageView;
 
-    // underlying image view (not based on widget):
-    //var imageView = this.graphicsView.getImageView();
-
-    var imageView = new RGraphicsViewImage();
-    this.graphicsView.setImageView(imageView);
+    if (false && !isNull(RGraphicsViewSkia)) {
+        // skia view:
+        imageView = new RGraphicsViewSkia();
+        this.graphicsView.setImageView(imageView);
+    }
+    else {
+        imageView = this.graphicsView.getImageView();
+    }
 
     imageView.setViewportNumber(this.vpNumber);
     if (isFunction(imageView.setFocusFrameWidget)) {
