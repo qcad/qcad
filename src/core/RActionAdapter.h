@@ -56,7 +56,7 @@ public:
 //        qDebug() << "RActionAdapter " << QString("0x%1").arg((int)this, 0, 16);
     }
     virtual ~RActionAdapter() {
-//        qDebug() << "~RActionAdapter " << QString("0x%1").arg((int)this, 0, 16);
+        //qDebug() << "~RActionAdapter " << QString("%1").arg((unsigned long long int)this);
     }
     virtual void beginEvent() {}
     virtual void setGraphicsView(RGraphicsView* /*view*/) {}

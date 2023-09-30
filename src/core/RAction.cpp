@@ -52,7 +52,7 @@ RAction::RAction(RGuiAction* guiAction)
 
 RAction::~RAction() {
     RDebug::decCounter("RAction");
-//    qDebug() << "~RAction " << QString("0x%1").arg((int)this, 0, 16);
+    //qDebug() << "~RAction " << QString("%1").arg((unsigned long long int)this);
 }
 
 
