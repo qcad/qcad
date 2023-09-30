@@ -184,7 +184,6 @@ void RGraphicsViewImage::updateImage() {
         return;
     }
 
-
     if (graphicsBufferNeedsUpdate) {
         // TODO: check if buffer is not updated unnecessarily:
         //RDebug::startTimer(77);
@@ -216,62 +215,6 @@ void RGraphicsViewImage::updateImage() {
 
         bool displayGrid = gridVisible;
 
-        // optimization for panning and scrolling:
-        /*
-        if (panOptimization && lastFactor==factor) {
-            Q_ASSERT(false);
-            QImage lastBuffer = graphicsBuffer.copy();
-            RVector o = mapToView(offset) - mapToView(lastOffset);
-            int ox = RMath::mround(o.x);
-            int oy = RMath::mround(o.y);
-
-            if (ox!=0) {
-                // fill gap at the right or left side:
-                QRect rect(
-                    ox<0 ? ox+getWidth() : 0,
-                    0,
-                    abs(ox),
-                    getHeight()
-                );
-                rect.adjust(-1,-1,1,1);
-
-                paintErase(graphicsBuffer, rect);
-                if (displayGrid) {
-                    paintMetaGrid(graphicsBuffer, rect);
-                }
-                paintDocument(rect);
-                if (displayGrid) {
-                    paintGrid(graphicsBuffer, rect);
-                }
-                paintOrigin(graphicsBuffer);
-            }
-
-            if (oy!=0) {
-                // fill gap at the top or bottom:
-                QRect rect(
-                    qMax(ox, 0),
-                    oy<0 ? oy+getHeight() : 0,
-                    getWidth() - abs(ox),
-                    abs(oy)
-                );
-                rect.adjust(-1,-1,1,1);
-                paintErase(graphicsBuffer, rect);
-                if (displayGrid) {
-                    paintMetaGrid(graphicsBuffer, rect);
-                }
-                paintDocument(rect);
-                if (displayGrid) {
-                    paintGrid(graphicsBuffer, rect);
-                }
-                paintOrigin(graphicsBuffer);
-            }
-
-            QPainter gbPainter(&graphicsBuffer);
-            gbPainter.drawImage(ox, oy, lastBuffer);
-            gbPainter.end();
-        }
-        else {
-        */
         if (!graphicsBufferThread.isEmpty()) {
             paintErase(graphicsBufferThread.first());
             //paintErase(graphicsBuffer2);
