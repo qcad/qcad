@@ -41,6 +41,7 @@ Makefile.SimulatorRelease
 .ninja_log
 CMakeFiles
 CMakeCache.txt
+CMakeLists.txt.user
 cmake_install.cmake
 build.ninja
 *.depends

@@ -25,5 +25,5 @@ AutoZoomView.prototype = new RGraphicsViewQt();
 
 AutoZoomView.prototype.resizeEvent = function(event) {
     RGraphicsViewQt.prototype.resizeEvent.call(this, event);
-    this.autoZoom();
+    this.getImageView().autoZoom();
 };

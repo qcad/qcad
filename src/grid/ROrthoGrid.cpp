@@ -503,6 +503,8 @@ void ROrthoGrid::paintGridPoints(const RVector& space, const RBox& box) {
         return;
     }
 
+    QVector<double> gridPointsUcsX;
+    QVector<double> gridPointsUcsY;
     RVector gridPointUcs;
     int x, y;
     for (gridPointUcs.x = min.x; gridPointUcs.x < max.x; gridPointUcs.x += space.x) {
@@ -510,10 +512,14 @@ void ROrthoGrid::paintGridPoints(const RVector& space, const RBox& box) {
         for (gridPointUcs.y = min.y; gridPointUcs.y < max.y; gridPointUcs.y += space.y) {
             y = RMath::mround(gridPointUcs.y/space.y);
             if (!isometric || (x+y)%2==0) {
-                view.paintGridPoint(gridPointUcs);
+                //view.paintGridPoint(gridPointUcs);
+                gridPointsUcsX.append(gridPointUcs.x);
+                gridPointsUcsY.append(gridPointUcs.y);
             }
         }
     }
+
+    view.paintGridPoints(gridPointsUcsX, gridPointsUcsY);
 }
 
 void ROrthoGrid::paintGridLines(const RVector& space, const RBox& box, bool meta) {

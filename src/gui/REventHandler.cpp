@@ -31,6 +31,7 @@
 #include "RSnapRestriction.h"
 #include "RSnap.h"
 #include "RUnit.h"
+#include "RGraphicsViewQt.h"
 
 /**
  * Event handler for scroll, drag and drop, snap info.
@@ -47,8 +48,15 @@ REventHandler::REventHandler(QWidget* widget, RDocumentInterface* di)
     if (widget!=NULL) {
         hsb = widget->findChild<QScrollBar*>("HorizontalScrollBar");
         vsb = widget->findChild<QScrollBar*>("VerticalScrollBar");
-        QWidget* gv = widget->findChild<QWidget*>("GraphicsView");
-        graphicsView = dynamic_cast<RGraphicsView*>(gv);
+        //QWidget* gv = widget->findChild<QWidget*>("GraphicsView");
+        //graphicsView = dynamic_cast<RGraphicsView*>(gv);
+        RGraphicsViewQt* gv = widget->findChild<RGraphicsViewQt*>("GraphicsView");
+        if (gv!=NULL) {
+            graphicsView = gv->getImageView();
+        }
+        else {
+            qCritical() << "no graphics view found";
+        }
         hruler = widget->findChild<RRulerQt*>("HorizontalRuler");
         vruler = widget->findChild<RRulerQt*>("VerticalRuler");
     }

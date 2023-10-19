@@ -16,12 +16,16 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+
+#include <QWidget>
+
 #include "RAction.h"
 #include "RDebug.h"
 #include "RDocument.h"
 #include "REntity.h"
 #include "RGraphicsScene.h"
 #include "RGraphicsView.h"
+#include "RGraphicsViewImage.h"
 #include "RGuiAction.h"
 #include "RMouseEvent.h"
 #include "RTransaction.h"
@@ -48,7 +52,7 @@ RAction::RAction(RGuiAction* guiAction)
 
 RAction::~RAction() {
     RDebug::decCounter("RAction");
-//    qDebug() << "~RAction " << QString("0x%1").arg((int)this, 0, 16);
+    //qDebug() << "~RAction " << QString("%1").arg((unsigned long long int)this);
 }
 
 
@@ -86,14 +90,25 @@ void RAction::terminate() {
         return;
     }
     RGraphicsView* view = getDocumentInterface()->getLastKnownViewWithFocus();
-    QObject* obj = dynamic_cast<QObject*>(view);
-    if (obj==NULL) {
-        //qWarning() << "RAction::terminate: view is not a QObject";
-        return;
+    //RGraphicsViewImage* imageView = dynamic_cast<RGraphicsViewImage*>(view);
+
+    if (view!=NULL) {
+        QWidget* w = view->getWidget();
+
+        if (w!=NULL) {
+            RTerminateEvent* event = new RTerminateEvent();
+            QCoreApplication::postEvent(w, event);
+        }
     }
 
-    RTerminateEvent* event = new RTerminateEvent();
-    QCoreApplication::postEvent(obj, event);
+//    QObject* obj = dynamic_cast<QObject*>(view);
+//    if (obj==NULL) {
+//        //qWarning() << "RAction::terminate: view is not a QObject";
+//        return;
+//    }
+
+//    RTerminateEvent* event = new RTerminateEvent();
+//    QCoreApplication::postEvent(obj, event);
 }
 
 

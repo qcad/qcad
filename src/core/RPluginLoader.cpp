@@ -225,7 +225,6 @@ void RPluginLoader::postInitPlugins(RPluginInterface::InitStatus status) {
     QObjectList staticPlugins = QPluginLoader::staticInstances();
     for (int i=0; i<staticPlugins.size(); i++) {
         QObject* plugin = staticPlugins[i];
-        qDebug() << "postInitPlugin (static)";
         postInitPlugin(plugin, status);
     }
 }

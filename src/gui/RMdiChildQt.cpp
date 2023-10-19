@@ -80,12 +80,12 @@ RDocument* RMdiChildQt::getDocument() {
     return &documentInterface->getDocument();
 }
 
-RGraphicsViewQt* RMdiChildQt::getLastKnownViewWithFocus() {
+RGraphicsViewImage* RMdiChildQt::getLastKnownViewWithFocus() {
     RDocumentInterface* di = getDocumentInterface();
     if (di==NULL) {
         return NULL;
     }
-    return dynamic_cast<RGraphicsViewQt*>(di->getLastKnownViewWithFocus());
+    return dynamic_cast<RGraphicsViewImage*>(di->getLastKnownViewWithFocus());
 }
 
 void RMdiChildQt::closeEvent(QCloseEvent* closeEvent) {
