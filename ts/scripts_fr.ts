@@ -293,7 +293,7 @@
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
-        <translation>S&apos;il vous plaît redémarrer QCAD
+        <translation>S&apos;il vous plaît redémarrez QCAD
 pour appliquer les modifications.</translation>
     </message>
     <message>
@@ -1578,7 +1578,7 @@ Voulez-vous le récupérer ?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGapInit.js" line="+2"/>
         <source>&amp;Break out Gap</source>
-        <translation>&amp;Suppression du écart</translation>
+        <translation>Écart de &amp;rupture</translation>
     </message>
 </context>
 <context>
@@ -7515,7 +7515,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/Information/InfoPositionPol/InfoPositionPolInit.js" line="+2"/>
         <source>&amp;Polar Position</source>
-        <translation>Position &amp;polar</translation>
+        <translation>Position &amp;polaire</translation>
     </message>
 </context>
 <context>
@@ -7523,7 +7523,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/Information/InfoPositionPolRel/InfoPositionPolRelInit.js" line="+2"/>
         <source>Relative P&amp;olar Position</source>
-        <translation>Position relative p&amp;olar</translation>
+        <translation>Position polaire &amp;relative</translation>
     </message>
 </context>
 <context>
@@ -7531,7 +7531,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/Information/InfoPositionRel/InfoPositionRelInit.js" line="+2"/>
         <source>&amp;Relative Position</source>
-        <translation>Position &amp;relatif</translation>
+        <translation>Position &amp;relative</translation>
     </message>
 </context>
 <context>
@@ -9302,7 +9302,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+0"/>
         <source>Mirror</source>
-        <translation>Mirroir</translation>
+        <translation>Miroir</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -11095,7 +11095,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/Help/ReportBug/ReportBugInit.js" line="+2"/>
         <source>Report &amp;Bug</source>
-        <translation>Rapportez une &amp;erreur</translation>
+        <translation>Rapporter une &amp;erreur</translation>
     </message>
 </context>
 <context>
@@ -11111,7 +11111,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/Reset/ResetInit.js" line="+5"/>
         <source>Reset</source>
-        <translation>Réinitialisé</translation>
+        <translation>Réinitialiser</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -12717,7 +12717,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/Snap/SnapOnEntity/SnapOnEntityInit.js" line="+2"/>
         <source>&amp;On Entity</source>
-        <translation>&amp;A l&apos;entité</translation>
+        <translation>&amp;À l&apos;entité</translation>
     </message>
 </context>
 <context>
