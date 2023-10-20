@@ -30,7 +30,7 @@
 
 <class_decl>class <name>RDocument</name>;</class_decl>
 <class_decl>class <name>RDocumentInterface</name>;</class_decl>
-<class_decl>class <name>RGraphicsViewQt</name>;</class_decl>
+<class_decl>class <name>RGraphicsViewImage</name>;</class_decl>
 
 <comment type="block">/**
  * \brief MDI child window.
@@ -50,7 +50,7 @@
 
     <function_decl><type><name>RDocumentInterface</name>*</type> <name>getDocumentInterface</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>RDocument</name>*</type> <name>getDocument</name><parameter_list>()</parameter_list>;</function_decl>
-    <function_decl><type><name>RGraphicsViewQt</name>*</type> <name>getLastKnownViewWithFocus</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>RGraphicsViewImage</name>*</type> <name>getLastKnownViewWithFocus</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>updateModifiedListener</name><parameter_list>(<param><decl><type><name>const</name> <name>RStorage</name>*</type> <name>storage</name></decl></param>)</parameter_list>;</function_decl>
 

@@ -30,7 +30,6 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QPinchGesture&gt;</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RGraphicsViewImage.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPainterPath.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>RAction</name>;</class_decl>
 <class_decl>class <name>RDocument</name>;</class_decl>
@@ -53,12 +52,18 @@
  * \scriptable
  * \generateScriptShell
  */</comment>
-<class>class <macro><name>QCADGUI_EXPORT</name></macro> <name>RGraphicsViewQt</name> <super>: <specifier>public</specifier> <name>QWidget</name>, <specifier>public</specifier> <name>RGraphicsViewImage</name></super> <block>{<private type="default">
+<class>class <macro><name>QCADGUI_EXPORT</name></macro> <name>RGraphicsViewQt</name> <super>: <specifier>public</specifier> <name>QWidget</name></super> <block>{<private type="default">
     <macro><name>Q_OBJECT</name></macro>
 
 </private><public>public:
     <constructor_decl><name>RGraphicsViewQt</name><parameter_list>(<param><decl><type><name>QWidget</name>*</type> <name>parent</name>=<init><expr><name>NULL</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>showFocus</name>=<init><expr><name>true</name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
     <destructor_decl><specifier>virtual</specifier> <name>~RGraphicsViewQt</name><parameter_list>()</parameter_list>;</destructor_decl>
+
+    <function_decl><type><name>void</name></type> <name>setImageView</name><parameter_list>(<param><decl><type><name>RGraphicsViewImage</name>*</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function><type><name>RGraphicsViewImage</name>*</type> <name>getImageView</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>imageView</name></expr>;</return>
+    }</block></function>
     
     <function><type><name>void</name></type> <name>disableGestures</name><parameter_list>()</parameter_list> <block>{
         <expr_stmt><expr><name>gesturesEnabled</name> = <name>false</name></expr>;</expr_stmt>
@@ -66,11 +71,6 @@
         <constructor_decl><name>ungrabGesture</name><parameter_list>(<param><decl><type><name><name>Qt</name>::<name>PinchGesture</name></name></type></decl></param>)</parameter_list>;</constructor_decl>
     }</block></function>
 
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>repaintView</name><parameter_list>()</parameter_list>;</function_decl>
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>repaintNow</name><parameter_list>()</parameter_list>;</function_decl>
-
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>giveFocus</name><parameter_list>()</parameter_list>;</function_decl>
-    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>hasFocus</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>removeFocus</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>int</name></type> <name>getWidth</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
@@ -86,29 +86,13 @@
 
     <function_decl><type><name>void</name></type> <name>setFocusFrameWidget</name><parameter_list>(<param><decl><type><name>QFrame</name>*</type> <name>w</name></decl></param>)</parameter_list>;</function_decl>
 
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>viewportChangeEvent</name><parameter_list>()</parameter_list>;</function_decl>
-
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>emitUpdateSnapInfo</name><parameter_list>(<param><decl><type><name>RSnap</name>*</type> <name>snap</name></decl></param>, <param><decl><type><name>RSnapRestriction</name>*</type> <name>restriction</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>emitUpdateTextLabel</name><parameter_list>(<param><decl><type><name>const</name> <name>RTextLabel</name>&amp;</type> <name>textLabel</name></decl></param>)</parameter_list>;</function_decl>
-
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>simulateMouseMoveEvent</name><parameter_list>()</parameter_list>;</function_decl>
-
-    <function_decl><type><name>virtual</name> <name>double</name></type> <name>getDevicePixelRatio</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
-
-    <function><type><name>virtual</name> <name>bool</name></type> <name>registerForFocus</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>true</name></expr>;</return>
-    }</block></function>
 
     <function_decl><type><name>virtual</name> <name>QSize</name></type> <name>sizeHint</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
 <label><name>signals</name>:</label>
     <function_decl><type><name>void</name></type> <name>drop</name><parameter_list>(<param><decl><type><name>QDropEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>dragEnter</name><parameter_list>(<param><decl><type><name>QDragEnterEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
-
-    <function_decl><type><name>void</name></type> <name>viewportChanged</name><parameter_list>()</parameter_list>;</function_decl>
-
-    <function_decl><type><name>void</name></type> <name>updateSnapInfo</name><parameter_list>(<param><decl><type><name>QPainter</name>*</type> <name>painter</name></decl></param>, <param><decl><type><name>RSnap</name>*</type> <name>snap</name></decl></param>, <param><decl><type><name>RSnapRestriction</name>*</type> <name>restriction</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>void</name></type> <name>updateTextLabel</name><parameter_list>(<param><decl><type><name>QPainter</name>*</type> <name>painter</name></decl></param>, <param><decl><type><name>const</name> <name>RTextLabel</name>&amp;</type> <name>textLabel</name></decl></param>)</parameter_list>;</function_decl>
 
 </public><protected>protected:
 
@@ -133,20 +117,21 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>dropEvent</name><parameter_list>(<param><decl><type><name>QDropEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
 
 </protected><private>private:
-    <decl_stmt><decl><type><name>QTransform</name></type> <name>previousView</name></decl>;</decl_stmt>
     <comment type="line">//! remember last mouse button state for wacom bug workaround</comment>
     <decl_stmt><decl><type><name><name>Qt</name>::<name>MouseButtons</name></name></type> <name>lastButtonState</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>bool</name></type> <name>showFocus</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>QFrame</name>*</type> <name>focusFrameWidget</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>QCursor</name></type> <name>lastCursor</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>bool</name></type> <name>gesturesEnabled</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QElapsedTimer</name></type> <name>mouseClickTimer</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RVector</name></type> <name>mousePressScreenPosition</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RVector</name></type> <name>mousePressModelPosition</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>gotMouseButtonPress</name></decl>;</decl_stmt>
+
+    <comment type="line">// backend to render to bitmap (can be QPainter or Skia):</comment>
+    <decl_stmt><decl><type><name>RGraphicsViewImage</name>*</type> <name>imageView</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RGraphicsViewQt*</argument>)</argument_list></macro>

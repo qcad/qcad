@@ -226,6 +226,7 @@
     <function_decl><type><name>void</name></type> <name>setGridVisible</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>isGridVisible</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>paintGridPoints</name><parameter_list>(<param><decl><type><name>const</name> <name>QVector<argument_list>&lt;<argument><name>double</name></argument>&gt;</argument_list></name>&amp;</type> <name>ucsPositionX</name></decl></param>, <param><decl><type><name>const</name> <name>QVector<argument_list>&lt;<argument><name>double</name></argument>&gt;</argument_list></name>&amp;</type> <name>ucsPositionY</name></decl></param>)</parameter_list>;</function_decl>
     <function><type><name>virtual</name> <name>void</name></type> <name>paintGridPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type></decl></param> <comment type="block">/*ucsPosition*/</comment>)</parameter_list> <block>{}</block></function>
     <function><type><name>virtual</name> <name>void</name></type> <name>paintGridLine</name><parameter_list>(<param><decl><type><name>const</name> <name>RLine</name>&amp;</type></decl></param> <comment type="block">/*ucsPosition*/</comment>)</parameter_list> <block>{}</block></function>
 
@@ -322,6 +323,14 @@
         <return>return <expr><name>false</name></expr>;</return>
     }</block></function>
 
+    <function><type><name>void</name></type> <name>setWidget</name><parameter_list>(<param><decl><type><name>QWidget</name>*</type> <name>w</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>widget</name> = <name>w</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>QWidget</name>*</type> <name>getWidget</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>widget</name></expr>;</return>
+    }</block></function>
+
 </public><protected>protected:
     <decl_stmt><decl><type><name>bool</name></type> <name>exporting</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>printing</name></decl>;</decl_stmt>
@@ -400,6 +409,9 @@
 
     <comment type="line">//RVector mousePressScreenPosition;</comment>
     <comment type="line">//RVector mousePressModelPosition;</comment>
+
+    <comment type="line">// widget that displays this view if any:</comment>
+    <decl_stmt><decl><type><name>QWidget</name>*</type> <name>widget</name></decl>;</decl_stmt>
 </protected>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RGraphicsView::ColorMode</argument>)</argument_list></macro>

@@ -11,11 +11,15 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RSnapRestriction" />
   <class name="RGraphicsViewImage"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
-  hasShell="true" sharedPointerSupport="false" isQObject="false"
+  hasShell="true" sharedPointerSupport="false" isQObject="true"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="QObject" specifier="public" />
     <baseClass name="RGraphicsView" specifier="public" />
     <constructor>
-      <variant />
+      <variant>
+        <arg type="QObject *" typeName="QObject *" name="parent"
+        hasDefault="true" default="NULL" isConst="false" />
+      </variant>
     </constructor>
     <method name="getNumThreads" cppName="getNumThreads"
     specifier="public" isStatic="false" isVirtual="false"
@@ -413,7 +417,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="int" isPureVirtual="false" />
     </method>
     <method name="resizeImage" cppName="resizeImage"
-    specifier="public" isStatic="false" isVirtual="false"
+    specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="int" typeName="int" name="w" isConst="false" />
@@ -518,25 +522,6 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="QTransform" isPureVirtual="false" />
-    </method>
-    <method name="emitUpdateSnapInfo" cppName="emitUpdateSnapInfo"
-    specifier="public" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="RSnap *" typeName="RSnap *" name="snap"
-        isConst="false" />
-        <arg type="RSnapRestriction *"
-        typeName="RSnapRestriction *" name="restriction"
-        isConst="false" />
-      </variant>
-    </method>
-    <method name="emitUpdateTextLabel"
-    cppName="emitUpdateTextLabel" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="RTextLabel &amp;" typeName="RTextLabel"
-        name="textLabel" isConst="true" />
-      </variant>
     </method>
     <method name="clearBackground" cppName="clearBackground"
     specifier="public" isStatic="false" isVirtual="false"
@@ -653,6 +638,70 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="bool" typeName="bool" name="on"
         isConst="false" />
       </variant>
+    </method>
+    <method name="getGraphicsBufferWithPreview"
+    cppName="getGraphicsBufferWithPreview" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QImage" isPureVirtual="false" />
+    </method>
+    <method name="getLastKnownScreenPosition"
+    cppName="getLastKnownScreenPosition" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="setLastKnownScreenPosition"
+    cppName="setLastKnownScreenPosition" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="p"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="setLastKnownModelPosition"
+    cppName="setLastKnownModelPosition" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="p"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="isShared" cppName="isShared" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="registerForFocus" cppName="registerForFocus"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="viewportChangeEvent"
+    cppName="viewportChangeEvent" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="emitUpdateSnapInfo" cppName="emitUpdateSnapInfo"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RSnap *" typeName="RSnap *" name="snap"
+        isConst="false" />
+        <arg type="RSnapRestriction *"
+        typeName="RSnapRestriction *" name="restriction"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="emitUpdateTextLabel"
+    cppName="emitUpdateTextLabel" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RTextLabel &amp;" typeName="RTextLabel"
+        name="textLabel" isConst="true" />
+      </variant>
+    </method>
+    <method name="getDevicePixelRatio"
+    cppName="getDevicePixelRatio" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
     </method>
     <method name="getTextLayoutsPainterPaths"
     cppName="getTextLayoutsPainterPaths" specifier="protected"
@@ -832,6 +881,34 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QPaintDevice &amp;" typeName="QPaintDevice"
         name="device" isConst="false" />
+      </variant>
+    </method>
+    <method name="endPaint" cppName="endPaint"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="setBrush" cppName="setBrush"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QBrush &amp;" typeName="QBrush" name="brush"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="setPen" cppName="setPen" specifier="protected"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QPen &amp;" typeName="QPen" name="pen"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="drawLine" cppName="drawLine"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QLineF &amp;" typeName="QLineF" name="line"
+        isConst="true" />
       </variant>
     </method>
     <method name="invalidate" cppName="invalidate"

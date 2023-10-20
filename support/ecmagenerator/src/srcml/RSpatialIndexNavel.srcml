@@ -29,7 +29,7 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RSpatialIndex.h"</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"spatialindexnavel/include/spatialindex/SpatialIndex.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"include/spatialindex/SpatialIndex.h"</cpp:file></cpp:include>
 
 <class>class <name>RSiDataStream</name> <super>: <specifier>public</specifier> <name><name>SpatialIndex</name>::<name>IDataStream</name></name></super>
 <block>{<private type="default">

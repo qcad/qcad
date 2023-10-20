@@ -239,6 +239,12 @@ xmlns:rs="http://www.ribbonsoft.com">
         typeName="RGraphicsSceneDrawable" name="drawable"
         isConst="false" />
       </variant>
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="REntity::Id" typeName="REntity::Id"
+        name="entityId" isConst="false" />
+        <arg type="RPainterPath &amp;" typeName="RPainterPath"
+        name="pp" isConst="false" />
+      </variant>
     </method>
     <method name="beginNoColorMode" cppName="beginNoColorMode"
     specifier="public" isStatic="false" isVirtual="false"

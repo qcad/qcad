@@ -14,7 +14,6 @@ xmlns:rs="http://www.ribbonsoft.com">
   hasShell="true" sharedPointerSupport="false" isQObject="true"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
     <baseClass name="QWidget" specifier="public" />
-    <baseClass name="RGraphicsViewImage" specifier="public" />
     <constructor>
       <variant>
         <arg type="QWidget *" typeName="QWidget *" name="parent"
@@ -23,28 +22,24 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="true" isConst="false" />
       </variant>
     </constructor>
+    <method name="setImageView" cppName="setImageView"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RGraphicsViewImage *"
+        typeName="RGraphicsViewImage *" name="v" isConst="false" />
+      </variant>
+    </method>
+    <method name="getImageView" cppName="getImageView"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RGraphicsViewImage *"
+      isPureVirtual="false" />
+    </method>
     <method name="disableGestures" cppName="disableGestures"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
-    </method>
-    <method name="repaintView" cppName="repaintView"
-    specifier="public" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false" />
-    </method>
-    <method name="repaintNow" cppName="repaintNow"
-    specifier="public" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false" />
-    </method>
-    <method name="giveFocus" cppName="giveFocus" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false" />
-    </method>
-    <method name="hasFocus" cppName="hasFocus" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="removeFocus" cppName="removeFocus"
     specifier="public" isStatic="false" isVirtual="true"
@@ -99,44 +94,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
-    <method name="viewportChangeEvent"
-    cppName="viewportChangeEvent" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false" />
-    </method>
-    <method name="emitUpdateSnapInfo" cppName="emitUpdateSnapInfo"
-    specifier="public" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="RSnap *" typeName="RSnap *" name="snap"
-        isConst="false" />
-        <arg type="RSnapRestriction *"
-        typeName="RSnapRestriction *" name="restriction"
-        isConst="false" />
-      </variant>
-    </method>
-    <method name="emitUpdateTextLabel"
-    cppName="emitUpdateTextLabel" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="RTextLabel &amp;" typeName="RTextLabel"
-        name="textLabel" isConst="true" />
-      </variant>
-    </method>
     <method name="simulateMouseMoveEvent"
     cppName="simulateMouseMoveEvent" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
-    </method>
-    <method name="getDevicePixelRatio"
-    cppName="getDevicePixelRatio" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="double" isPureVirtual="false" />
-    </method>
-    <method name="registerForFocus" cppName="registerForFocus"
-    specifier="public" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="sizeHint" cppName="sizeHint" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">

@@ -313,6 +313,12 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="REntity::Id" typeName="REntity::Id"
         name="entityId" isConst="false" />
+        <arg type="RPainterPath &amp;" typeName="RPainterPath"
+        name="pp" isConst="false" />
+      </variant>
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="REntity::Id" typeName="REntity::Id"
+        name="entityId" isConst="false" />
         <arg type="QList &lt; RGraphicsSceneDrawable &gt; &amp;"
         typeName="QList &lt; RGraphicsSceneDrawable &gt;"
         name="drawables" isConst="false" />

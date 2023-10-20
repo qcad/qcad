@@ -29,7 +29,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;stdio.h&gt;</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QTime&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QElapsedTimer&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QFile&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
@@ -116,7 +116,7 @@
 <cpp:if>#<cpp:directive>if</cpp:directive> <expr><call><name>defined</name><argument_list>(<argument><expr><name>Q_OS_MAC</name></expr></argument>)</argument_list></call> &amp;&amp; !<call><name>defined</name><argument_list>(<argument><expr><name>Q_OS_IOS</name></expr></argument>)</argument_list></call></expr></cpp:if>
     <decl_stmt><decl><type><name>static</name> <name>QMap<argument_list>&lt;<argument><name>int</name></argument>, <argument><name>uint64_t</name></argument>&gt;</argument_list></name></type> <name>timerMac</name></decl>;</decl_stmt>
 <cpp:else>#<cpp:directive>else</cpp:directive></cpp:else>
-    <decl_stmt><decl><type><name>static</name> <name>QMap<argument_list>&lt;<argument><name>int</name></argument>, <argument><name>QTime</name></argument>&gt;</argument_list></name></type> <name>timer</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QMap<argument_list>&lt;<argument><name>int</name></argument>, <argument><name>QElapsedTimer</name></argument>&gt;</argument_list></name></type> <name>timer</name></decl>;</decl_stmt>
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
     <decl_stmt><decl><type><name>static</name> <name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>int</name></argument>&gt;</argument_list></name></type> <name>counter</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>prefix</name></decl>;</decl_stmt>

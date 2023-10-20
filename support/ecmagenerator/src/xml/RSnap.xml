@@ -83,6 +83,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false" />
     </method>
+    <method name="setLastSnap" cppName="setLastSnap"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="reset" cppName="reset" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />

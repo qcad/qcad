@@ -45,8 +45,8 @@
         <expr><name>EndPoints</name> = 0x0002</expr>,
         <expr><name>MiddlePoints</name> = 0x0004</expr>,
         <expr><name>CenterPoints</name> = 0x0008</expr>,
-        <expr><name>Perpendicular</name> = 0x0010</expr>,
-        <expr><name>Tangential</name> = 0x0020</expr>,
+        <expr><name>PerpendicularPoints</name> = 0x0010</expr>,
+        <expr><name>TangentialPoints</name> = 0x0020</expr>,
         <expr><name>ReferencePoints</name> = 0x0040</expr>,
         <expr><name>GridPoints</name> = 0x0080</expr>,
         <expr><name>PointsOnEntity</name> = 0x0100</expr>,
@@ -114,17 +114,17 @@
     }</block></function>
 
     <function><type><name>static</name> <name>void</name></type> <name>setPerpendicular</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>setMode</name><parameter_list>(<param><decl><type><name>Perpendicular</name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+        <constructor_decl><name>setMode</name><parameter_list>(<param><decl><type><name>PerpendicularPoints</name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
     }</block></function>
     <function><type><name>static</name> <name>bool</name></type> <name>getPerpendicular</name><parameter_list>()</parameter_list> <block>{
-        <return>return <expr><call><name>getMode</name><argument_list>(<argument><expr><name>Perpendicular</name></expr></argument>)</argument_list></call></expr>;</return>
+        <return>return <expr><call><name>getMode</name><argument_list>(<argument><expr><name>PerpendicularPoints</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name>static</name> <name>void</name></type> <name>setTangential</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>setMode</name><parameter_list>(<param><decl><type><name>Tangential</name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+        <constructor_decl><name>setMode</name><parameter_list>(<param><decl><type><name>TangentialPoints</name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
     }</block></function>
     <function><type><name>static</name> <name>bool</name></type> <name>getTangential</name><parameter_list>()</parameter_list> <block>{
-        <return>return <expr><call><name>getMode</name><argument_list>(<argument><expr><name>Tangential</name></expr></argument>)</argument_list></call></expr>;</return>
+        <return>return <expr><call><name>getMode</name><argument_list>(<argument><expr><name>TangentialPoints</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name>static</name> <name>void</name></type> <name>setReferencePoints</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{

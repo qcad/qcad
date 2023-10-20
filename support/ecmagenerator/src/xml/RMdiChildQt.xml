@@ -3,7 +3,7 @@
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RDocument" />
   <class_decl name="RDocumentInterface" />
-  <class_decl name="RGraphicsViewQt" />
+  <class_decl name="RGraphicsViewImage" />
   <class name="RMdiChildQt"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="true"
@@ -39,7 +39,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getLastKnownViewWithFocus"
     cppName="getLastKnownViewWithFocus" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="RGraphicsViewQt *"
+      <variant returnType="RGraphicsViewImage *"
       isPureVirtual="false" />
     </method>
     <method name="updateModifiedListener"

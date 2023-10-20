@@ -120,6 +120,10 @@
         <return>return <expr><name>lastSnap</name></expr>;</return>
     }</block></function>
 
+    <function><type><name>void</name></type> <name>setLastSnap</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>lastSnap</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
+
     <function><type><name>virtual</name> <name>void</name></type> <name>reset</name><parameter_list>()</parameter_list> <block>{
         <expr_stmt><expr><name>entityIds</name>.<call><name>clear</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
         <expr_stmt><expr><name>lastSnap</name> = <name><name>RVector</name>::<name>invalid</name></name></expr>;</expr_stmt>
