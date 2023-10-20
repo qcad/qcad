@@ -67,6 +67,9 @@
         getWindowManagerId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getCpuArchitecture
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         showInFileManager
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

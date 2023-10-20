@@ -73,6 +73,9 @@
         getLastSnap
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setLastSnap
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         reset
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

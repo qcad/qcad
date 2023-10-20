@@ -165,13 +165,13 @@
     QScriptValue::ReadOnly);
 
 
-    ctor.setProperty("Perpendicular",
-    QScriptValue(RSnapAuto::Perpendicular),
+    ctor.setProperty("PerpendicularPoints",
+    QScriptValue(RSnapAuto::PerpendicularPoints),
     QScriptValue::ReadOnly);
 
 
-    ctor.setProperty("Tangential",
-    QScriptValue(RSnapAuto::Tangential),
+    ctor.setProperty("TangentialPoints",
+    QScriptValue(RSnapAuto::TangentialPoints),
     QScriptValue::ReadOnly);
 
 

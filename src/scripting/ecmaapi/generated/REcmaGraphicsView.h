@@ -238,6 +238,9 @@
         isGridVisible
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        paintGridPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         paintGridPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -359,6 +362,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         registerForFocus
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setWidget
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getWidget
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

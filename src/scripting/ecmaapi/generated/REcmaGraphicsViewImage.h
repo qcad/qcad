@@ -31,7 +31,9 @@
     ;
 
     // conversion functions for base classes:
-    static  QScriptValue getRGraphicsView(QScriptContext *context,
+    static  QScriptValue getQObject(QScriptContext *context,
+            QScriptEngine *engine)
+        ;static  QScriptValue getRGraphicsView(QScriptContext *context,
             QScriptEngine *engine)
         ;
 
@@ -41,6 +43,146 @@
 
     // returns all base classes (in case of multiple inheritance):
     static  QScriptValue getBaseClasses(QScriptContext *context, QScriptEngine *engine) 
+        ;
+        // properties of secondary base class RGraphicsView:
+        
+
+        // methods of secondary base class RGraphicsView:
+        static  QScriptValue
+        clearCaches
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDisplayOnlyCurrentUcs
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        mapCornersFromView
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getMinimum
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getMaximum
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        handleTerminateEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        handleKeyPressEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        handleKeyReleaseEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        handleMouseMoveEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        handleMousePressEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        handleMouseReleaseEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        handleMouseDoubleClickEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        handleWheelEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        handleTabletEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        handleSwipeGestureEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        handlePanGestureEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        handlePinchGestureEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        zoomIn
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        zoomOut
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        zoomPrevious
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        zoomToSelection
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        zoomToEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        startPan
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isActive
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getSignalsBlocked
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setSignalsBlocked
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        paintGridPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getCursor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setCursor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getClosestReferencePoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getClosestEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getMargin
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getColorMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getTextLabels
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        clearTextLabels
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        addTextLabel
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLastKnownMousePosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getCurrentStepScaleFactor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setCurrentStepScaleFactor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getCurrentStepOffset
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setCurrentStepOffset
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        updateTextHeightThreshold
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isPathVisible
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setWidget
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getWidget
+        (QScriptContext* context, QScriptEngine* engine) 
         ;
 
     // properties:
@@ -267,12 +409,6 @@
         getTransform
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        emitUpdateSnapInfo
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        emitUpdateTextLabel
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         clearBackground
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -317,11 +453,60 @@
         ;static  QScriptValue
         setAlphaEnabled
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getGraphicsBufferWithPreview
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLastKnownScreenPosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setLastKnownScreenPosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setLastKnownModelPosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isShared
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        registerForFocus
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        viewportChangeEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        emitUpdateSnapInfo
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        emitUpdateTextLabel
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDevicePixelRatio
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RGraphicsViewImage* getSelf(const QString& fName, QScriptContext* context)
     ;static REcmaShellGraphicsViewImage* getSelfShell(const QString& fName, QScriptContext* context)
-    ;};
+    ;static  void fromScriptValue(const QScriptValue& value,
+        RGraphicsViewImage*
+        &out) {
+            QObject* o = value.toQObject();
+            out = qobject_cast<
+            RGraphicsViewImage*>(o);
+        }
+    static  QScriptValue toScriptValue(QScriptEngine *engine,
+        RGraphicsViewImage*
+        const &in){
+            QScriptValue s = engine->newQObject(in, QScriptEngine::QtOwnership,
+            QScriptEngine::PreferExistingWrapperObject);
+            /*
+            if(s.isNull()){
+               REcmaHelper::throwError("This object is null.", engine->currentContext());
+            }
+            */
+            return s;
+        }
+    };
     #endif
     

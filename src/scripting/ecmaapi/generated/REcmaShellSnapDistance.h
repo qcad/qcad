@@ -100,6 +100,11 @@
             );
         
     
+      void setLastSnap(
+                const RVector & v
+            );
+        
+    
       void reset(
                 
             );

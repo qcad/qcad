@@ -204,6 +204,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isGridVisible, "isGridVisible");
             
+            REcmaHelper::registerFunction(&engine, proto, paintGridPoints, "paintGridPoints");
+            
             REcmaHelper::registerFunction(&engine, proto, paintGridPoint, "paintGridPoint");
             
             REcmaHelper::registerFunction(&engine, proto, paintGridLine, "paintGridLine");
@@ -285,6 +287,10 @@
             REcmaHelper::registerFunction(&engine, proto, isShared, "isShared");
             
             REcmaHelper::registerFunction(&engine, proto, registerForFocus, "registerForFocus");
+            
+            REcmaHelper::registerFunction(&engine, proto, setWidget, "setWidget");
+            
+            REcmaHelper::registerFunction(&engine, proto, getWidget, "getWidget");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RGraphicsView*>(), *proto);
@@ -4734,6 +4740,94 @@
             return result;
         }
          QScriptValue
+        REcmaGraphicsView::paintGridPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsView::paintGridPoints", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsView::paintGridPoints";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsView* self = 
+                        getSelf("paintGridPoints", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QVector < double > */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: QVector < double > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    QVector < double >*
+                    ap0 =
+                    qscriptvalue_cast<
+                    QVector < double >*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RGraphicsView: Argument 0 is not of type QVector < double >*.",
+                               context);                    
+                    }
+                    QVector < double >& a0 = *ap0;
+                
+                    // argument is reference
+                    QVector < double >*
+                    ap1 =
+                    qscriptvalue_cast<
+                    QVector < double >*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if( ap1 == NULL ){
+                           return REcmaHelper::throwError("RGraphicsView: Argument 1 is not of type QVector < double >*.",
+                               context);                    
+                    }
+                    QVector < double >& a1 = *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->paintGridPoints(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsView.paintGridPoints().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsView::paintGridPoints", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaGraphicsView::paintGridPoint
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -7283,6 +7377,114 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsView::registerForFocus", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsView::setWidget
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsView::setWidget", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsView::setWidget";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsView* self = 
+                        getSelf("setWidget", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QWidget * */
+    
+    ){
+    // prepare arguments:
+    
+            // argument isQObject
+            QWidget *
+            a0 =
+            qobject_cast<
+            QWidget *>
+            ( context->argument(
+            0
+            ).
+            toQObject()
+            );
+        
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setWidget(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsView.setWidget().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsView::setWidget", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsView::getWidget
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsView::getWidget", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsView::getWidget";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsView* self = 
+                        getSelf("getWidget", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QWidget *'
+    QWidget * cppResult =
+        
+               self->getWidget();
+        // return type: QWidget *
+                // QObject
+                result = engine->newQObject(cppResult, QScriptEngine::QtOwnership);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsView.getWidget().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsView::getWidget", context, engine);
             return result;
         }
          QScriptValue REcmaGraphicsView::toString

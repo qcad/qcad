@@ -41,17 +41,18 @@
     }
 
     
-        // primary base class RGraphicsView:
+        // primary base class QObject:
         
             QScriptValue dpt = engine.defaultPrototype(
-                qMetaTypeId<RGraphicsView*>());
+                qMetaTypeId<QObject*>());
 
             if (dpt.isValid()) {
                 proto->setPrototype(dpt);
             }
           
         /*
-        
+        REcmaGraphicsView::initEcma(engine, proto);
+          
         */
     
 
@@ -64,6 +65,9 @@
     // destroy:
     REcmaHelper::registerFunction(&engine, proto, destroy, "destroy");
     
+        // conversion for base class QObject
+        REcmaHelper::registerFunction(&engine, proto, getQObject, "getQObject");
+        
         // conversion for base class RGraphicsView
         REcmaHelper::registerFunction(&engine, proto, getRGraphicsView, "getRGraphicsView");
         
@@ -75,6 +79,102 @@
     // conversion to all base classes (multiple inheritance):
     REcmaHelper::registerFunction(&engine, proto, getBaseClasses, "getBaseClasses");
     
+
+        // properties of secondary base class RGraphicsView:
+        
+
+        // methods of secondary base class RGraphicsView:
+        
+            REcmaHelper::registerFunction(&engine, proto, clearCaches, "clearCaches");
+            
+            REcmaHelper::registerFunction(&engine, proto, setDisplayOnlyCurrentUcs, "setDisplayOnlyCurrentUcs");
+            
+            REcmaHelper::registerFunction(&engine, proto, mapCornersFromView, "mapCornersFromView");
+            
+            REcmaHelper::registerFunction(&engine, proto, getMinimum, "getMinimum");
+            
+            REcmaHelper::registerFunction(&engine, proto, getMaximum, "getMaximum");
+            
+            REcmaHelper::registerFunction(&engine, proto, handleTerminateEvent, "handleTerminateEvent");
+            
+            REcmaHelper::registerFunction(&engine, proto, handleKeyPressEvent, "handleKeyPressEvent");
+            
+            REcmaHelper::registerFunction(&engine, proto, handleKeyReleaseEvent, "handleKeyReleaseEvent");
+            
+            REcmaHelper::registerFunction(&engine, proto, handleMouseMoveEvent, "handleMouseMoveEvent");
+            
+            REcmaHelper::registerFunction(&engine, proto, handleMousePressEvent, "handleMousePressEvent");
+            
+            REcmaHelper::registerFunction(&engine, proto, handleMouseReleaseEvent, "handleMouseReleaseEvent");
+            
+            REcmaHelper::registerFunction(&engine, proto, handleMouseDoubleClickEvent, "handleMouseDoubleClickEvent");
+            
+            REcmaHelper::registerFunction(&engine, proto, handleWheelEvent, "handleWheelEvent");
+            
+            REcmaHelper::registerFunction(&engine, proto, handleTabletEvent, "handleTabletEvent");
+            
+            REcmaHelper::registerFunction(&engine, proto, handleSwipeGestureEvent, "handleSwipeGestureEvent");
+            
+            REcmaHelper::registerFunction(&engine, proto, handlePanGestureEvent, "handlePanGestureEvent");
+            
+            REcmaHelper::registerFunction(&engine, proto, handlePinchGestureEvent, "handlePinchGestureEvent");
+            
+            REcmaHelper::registerFunction(&engine, proto, zoomIn, "zoomIn");
+            
+            REcmaHelper::registerFunction(&engine, proto, zoomOut, "zoomOut");
+            
+            REcmaHelper::registerFunction(&engine, proto, zoomPrevious, "zoomPrevious");
+            
+            REcmaHelper::registerFunction(&engine, proto, zoomToSelection, "zoomToSelection");
+            
+            REcmaHelper::registerFunction(&engine, proto, zoomToEntities, "zoomToEntities");
+            
+            REcmaHelper::registerFunction(&engine, proto, startPan, "startPan");
+            
+            REcmaHelper::registerFunction(&engine, proto, isActive, "isActive");
+            
+            REcmaHelper::registerFunction(&engine, proto, getSignalsBlocked, "getSignalsBlocked");
+            
+            REcmaHelper::registerFunction(&engine, proto, setSignalsBlocked, "setSignalsBlocked");
+            
+            REcmaHelper::registerFunction(&engine, proto, paintGridPoints, "paintGridPoints");
+            
+            REcmaHelper::registerFunction(&engine, proto, getCursor, "getCursor");
+            
+            REcmaHelper::registerFunction(&engine, proto, setCursor, "setCursor");
+            
+            REcmaHelper::registerFunction(&engine, proto, getClosestReferencePoint, "getClosestReferencePoint");
+            
+            REcmaHelper::registerFunction(&engine, proto, getClosestEntity, "getClosestEntity");
+            
+            REcmaHelper::registerFunction(&engine, proto, getMargin, "getMargin");
+            
+            REcmaHelper::registerFunction(&engine, proto, getColorMode, "getColorMode");
+            
+            REcmaHelper::registerFunction(&engine, proto, getTextLabels, "getTextLabels");
+            
+            REcmaHelper::registerFunction(&engine, proto, clearTextLabels, "clearTextLabels");
+            
+            REcmaHelper::registerFunction(&engine, proto, addTextLabel, "addTextLabel");
+            
+            REcmaHelper::registerFunction(&engine, proto, getLastKnownMousePosition, "getLastKnownMousePosition");
+            
+            REcmaHelper::registerFunction(&engine, proto, getCurrentStepScaleFactor, "getCurrentStepScaleFactor");
+            
+            REcmaHelper::registerFunction(&engine, proto, setCurrentStepScaleFactor, "setCurrentStepScaleFactor");
+            
+            REcmaHelper::registerFunction(&engine, proto, getCurrentStepOffset, "getCurrentStepOffset");
+            
+            REcmaHelper::registerFunction(&engine, proto, setCurrentStepOffset, "setCurrentStepOffset");
+            
+            REcmaHelper::registerFunction(&engine, proto, updateTextHeightThreshold, "updateTextHeightThreshold");
+            
+            REcmaHelper::registerFunction(&engine, proto, isPathVisible, "isPathVisible");
+            
+            REcmaHelper::registerFunction(&engine, proto, setWidget, "setWidget");
+            
+            REcmaHelper::registerFunction(&engine, proto, getWidget, "getWidget");
+            
 
     // properties:
     
@@ -227,10 +327,6 @@
             
             REcmaHelper::registerFunction(&engine, proto, getTransform, "getTransform");
             
-            REcmaHelper::registerFunction(&engine, proto, emitUpdateSnapInfo, "emitUpdateSnapInfo");
-            
-            REcmaHelper::registerFunction(&engine, proto, emitUpdateTextLabel, "emitUpdateTextLabel");
-            
             REcmaHelper::registerFunction(&engine, proto, clearBackground, "clearBackground");
             
             REcmaHelper::registerFunction(&engine, proto, addToBackground, "addToBackground");
@@ -261,10 +357,34 @@
             
             REcmaHelper::registerFunction(&engine, proto, setAlphaEnabled, "setAlphaEnabled");
             
+            REcmaHelper::registerFunction(&engine, proto, getGraphicsBufferWithPreview, "getGraphicsBufferWithPreview");
+            
+            REcmaHelper::registerFunction(&engine, proto, getLastKnownScreenPosition, "getLastKnownScreenPosition");
+            
+            REcmaHelper::registerFunction(&engine, proto, setLastKnownScreenPosition, "setLastKnownScreenPosition");
+            
+            REcmaHelper::registerFunction(&engine, proto, setLastKnownModelPosition, "setLastKnownModelPosition");
+            
+            REcmaHelper::registerFunction(&engine, proto, isShared, "isShared");
+            
+            REcmaHelper::registerFunction(&engine, proto, registerForFocus, "registerForFocus");
+            
+            REcmaHelper::registerFunction(&engine, proto, viewportChangeEvent, "viewportChangeEvent");
+            
+            REcmaHelper::registerFunction(&engine, proto, emitUpdateSnapInfo, "emitUpdateSnapInfo");
+            
+            REcmaHelper::registerFunction(&engine, proto, emitUpdateTextLabel, "emitUpdateTextLabel");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDevicePixelRatio, "getDevicePixelRatio");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RGraphicsViewImage*>(), *proto);
 
         
+                        qScriptRegisterMetaType<
+                        RGraphicsViewImage*>(
+                        &engine, toScriptValue, fromScriptValue, *proto);
+                    
     
 
     QScriptValue ctor = engine.newFunction(createEcma, *proto, 2);
@@ -320,8 +440,49 @@
                     REcmaShellGraphicsViewImage
                     ();
                 
-                    // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
-                    result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
+                    result = engine->newQObject(context->thisObject(), cppResult, QScriptEngine::QtOwnership);
+                
+        cppResult->__qtscript_self = result;
+    
+    } else 
+
+    if( context->argumentCount() ==
+        1
+                && (
+                
+                        context->argument(
+                        0
+                        ).isQObject()
+                ) /* type: QObject * */
+            
+    ){
+    // prepare arguments:
+    
+            // argument isQObject
+            QObject *
+            a0 =
+            qobject_cast<
+            QObject *>
+            ( context->argument(
+            0
+            ).
+            toQObject()
+            );
+        
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // non-copyable class:
+            REcmaShellGraphicsViewImage
+                    * cppResult =
+                    new
+                    REcmaShellGraphicsViewImage
+                    (
+                    a0
+                    );
+                
+                    result = engine->newQObject(context->thisObject(), cppResult, QScriptEngine::QtOwnership);
                 
         cppResult->__qtscript_self = result;
     
@@ -338,7 +499,16 @@
     
 
     // conversion functions for base classes:
-     QScriptValue REcmaGraphicsViewImage::getRGraphicsView(QScriptContext *context,
+     QScriptValue REcmaGraphicsViewImage::getQObject(QScriptContext *context,
+            QScriptEngine *engine)
+        
+            {
+                QObject* cppResult =
+                    qscriptvalue_cast<RGraphicsViewImage*> (context->thisObject());
+                QScriptValue result = qScriptValueFromValue(engine, cppResult);
+                return result;
+            }
+             QScriptValue REcmaGraphicsViewImage::getRGraphicsView(QScriptContext *context,
             QScriptEngine *engine)
         
             {
@@ -363,12 +533,3139 @@
     {
         QStringList list;
         
+        list.append("QObject");
+    
         list.append("RGraphicsView");
     
 
         return qScriptValueFromSequence(engine, list);
     }
     
+        // properties of secondary base class RGraphicsView:
+        
+
+        // methods of secondary base class RGraphicsView:
+         QScriptValue
+        REcmaGraphicsViewImage::clearCaches
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::clearCaches", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::clearCaches";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("clearCaches", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->clearCaches();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.clearCaches().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::clearCaches", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::setDisplayOnlyCurrentUcs
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::setDisplayOnlyCurrentUcs", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::setDisplayOnlyCurrentUcs";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("setDisplayOnlyCurrentUcs", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDisplayOnlyCurrentUcs(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.setDisplayOnlyCurrentUcs().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::setDisplayOnlyCurrentUcs", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::mapCornersFromView
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::mapCornersFromView", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::mapCornersFromView";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("mapCornersFromView", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        
+               self->mapCornersFromView();
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.mapCornersFromView().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::mapCornersFromView", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::getMinimum
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::getMinimum", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::getMinimum";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("getMinimum", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getMinimum();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.getMinimum().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::getMinimum", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::getMaximum
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::getMaximum", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::getMaximum";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("getMaximum", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getMaximum();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.getMaximum().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::getMaximum", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::handleTerminateEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::handleTerminateEvent", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::handleTerminateEvent";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("handleTerminateEvent", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RTerminateEvent */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RTerminateEvent*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RTerminateEvent*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RGraphicsView: Argument 0 is not of type RTerminateEvent*.",
+                               context);                    
+                    }
+                    RTerminateEvent& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->handleTerminateEvent(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.handleTerminateEvent().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::handleTerminateEvent", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::handleKeyPressEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::handleKeyPressEvent", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::handleKeyPressEvent";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("handleKeyPressEvent", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant()
+        ) /* type: QKeyEvent */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    QKeyEvent*
+                    ap0 =
+                    qscriptvalue_cast<
+                    QKeyEvent*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RGraphicsView: Argument 0 is not of type QKeyEvent*.",
+                               context);                    
+                    }
+                    QKeyEvent& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->handleKeyPressEvent(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.handleKeyPressEvent().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::handleKeyPressEvent", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::handleKeyReleaseEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::handleKeyReleaseEvent", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::handleKeyReleaseEvent";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("handleKeyReleaseEvent", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant()
+        ) /* type: QKeyEvent */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    QKeyEvent*
+                    ap0 =
+                    qscriptvalue_cast<
+                    QKeyEvent*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RGraphicsView: Argument 0 is not of type QKeyEvent*.",
+                               context);                    
+                    }
+                    QKeyEvent& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->handleKeyReleaseEvent(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.handleKeyReleaseEvent().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::handleKeyReleaseEvent", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::handleMouseMoveEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::handleMouseMoveEvent", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::handleMouseMoveEvent";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("handleMouseMoveEvent", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RMouseEvent */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RMouseEvent*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RMouseEvent*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RGraphicsView: Argument 0 is not of type RMouseEvent*.",
+                               context);                    
+                    }
+                    RMouseEvent& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->handleMouseMoveEvent(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.handleMouseMoveEvent().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::handleMouseMoveEvent", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::handleMousePressEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::handleMousePressEvent", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::handleMousePressEvent";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("handleMousePressEvent", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RMouseEvent */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RMouseEvent*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RMouseEvent*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RGraphicsView: Argument 0 is not of type RMouseEvent*.",
+                               context);                    
+                    }
+                    RMouseEvent& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->handleMousePressEvent(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.handleMousePressEvent().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::handleMousePressEvent", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::handleMouseReleaseEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::handleMouseReleaseEvent", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::handleMouseReleaseEvent";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("handleMouseReleaseEvent", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RMouseEvent */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RMouseEvent*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RMouseEvent*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RGraphicsView: Argument 0 is not of type RMouseEvent*.",
+                               context);                    
+                    }
+                    RMouseEvent& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->handleMouseReleaseEvent(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.handleMouseReleaseEvent().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::handleMouseReleaseEvent", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::handleMouseDoubleClickEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::handleMouseDoubleClickEvent", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::handleMouseDoubleClickEvent";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("handleMouseDoubleClickEvent", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RMouseEvent */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RMouseEvent*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RMouseEvent*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RGraphicsView: Argument 0 is not of type RMouseEvent*.",
+                               context);                    
+                    }
+                    RMouseEvent& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->handleMouseDoubleClickEvent(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.handleMouseDoubleClickEvent().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::handleMouseDoubleClickEvent", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::handleWheelEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::handleWheelEvent", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::handleWheelEvent";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("handleWheelEvent", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RWheelEvent */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RWheelEvent*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RWheelEvent*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RGraphicsView: Argument 0 is not of type RWheelEvent*.",
+                               context);                    
+                    }
+                    RWheelEvent& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->handleWheelEvent(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.handleWheelEvent().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::handleWheelEvent", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::handleTabletEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::handleTabletEvent", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::handleTabletEvent";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("handleTabletEvent", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RTabletEvent */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RTabletEvent*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RTabletEvent*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RGraphicsView: Argument 0 is not of type RTabletEvent*.",
+                               context);                    
+                    }
+                    RTabletEvent& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->handleTabletEvent(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.handleTabletEvent().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::handleTabletEvent", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::handleSwipeGestureEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::handleSwipeGestureEvent", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::handleSwipeGestureEvent";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("handleSwipeGestureEvent", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QSwipeGesture */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    QSwipeGesture*
+                    ap0 =
+                    qscriptvalue_cast<
+                    QSwipeGesture*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RGraphicsView: Argument 0 is not of type QSwipeGesture*.",
+                               context);                    
+                    }
+                    QSwipeGesture& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->handleSwipeGestureEvent(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.handleSwipeGestureEvent().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::handleSwipeGestureEvent", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::handlePanGestureEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::handlePanGestureEvent", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::handlePanGestureEvent";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("handlePanGestureEvent", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QPanGesture */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    QPanGesture*
+                    ap0 =
+                    qscriptvalue_cast<
+                    QPanGesture*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RGraphicsView: Argument 0 is not of type QPanGesture*.",
+                               context);                    
+                    }
+                    QPanGesture& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->handlePanGestureEvent(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.handlePanGestureEvent().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::handlePanGestureEvent", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::handlePinchGestureEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::handlePinchGestureEvent", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::handlePinchGestureEvent";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("handlePinchGestureEvent", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QPinchGesture */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    QPinchGesture*
+                    ap0 =
+                    qscriptvalue_cast<
+                    QPinchGesture*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RGraphicsView: Argument 0 is not of type QPinchGesture*.",
+                               context);                    
+                    }
+                    QPinchGesture& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->handlePinchGestureEvent(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.handlePinchGestureEvent().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::handlePinchGestureEvent", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::zoomIn
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::zoomIn", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::zoomIn";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("zoomIn", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->zoomIn();
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsView: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->zoomIn(a0);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsView: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isStandardType
+                    double
+                    a1 =
+                    (double)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->zoomIn(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.zoomIn().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::zoomIn", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::zoomOut
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::zoomOut", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::zoomOut";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("zoomOut", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->zoomOut();
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsView: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->zoomOut(a0);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsView: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isStandardType
+                    double
+                    a1 =
+                    (double)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->zoomOut(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.zoomOut().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::zoomOut", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::zoomPrevious
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::zoomPrevious", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::zoomPrevious";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("zoomPrevious", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->zoomPrevious();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.zoomPrevious().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::zoomPrevious", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::zoomToSelection
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::zoomToSelection", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::zoomToSelection";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("zoomToSelection", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->zoomToSelection();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->zoomToSelection(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.zoomToSelection().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::zoomToSelection", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::zoomToEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::zoomToEntities", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::zoomToEntities";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("zoomToEntities", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QSet < REntity::Id > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray or QVariantMap
+                    QSet < REntity::Id >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->zoomToEntities(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isArray()
+        ) /* type: QSet < REntity::Id > */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray or QVariantMap
+                    QSet < REntity::Id >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+                    // argument isStandardType
+                    int
+                    a1 =
+                    (int)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->zoomToEntities(a0
+        ,
+    a1);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.zoomToEntities().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::zoomToEntities", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::startPan
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::startPan", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::startPan";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("startPan", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->startPan();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.startPan().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::startPan", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::isActive
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::isActive", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::isActive";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("isActive", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->isActive();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.isActive().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::isActive", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::getSignalsBlocked
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::getSignalsBlocked", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::getSignalsBlocked";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("getSignalsBlocked", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getSignalsBlocked();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.getSignalsBlocked().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::getSignalsBlocked", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::setSignalsBlocked
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::setSignalsBlocked", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::setSignalsBlocked";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("setSignalsBlocked", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setSignalsBlocked(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.setSignalsBlocked().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::setSignalsBlocked", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::paintGridPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::paintGridPoints", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::paintGridPoints";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("paintGridPoints", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QVector < double > */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: QVector < double > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    QVector < double >*
+                    ap0 =
+                    qscriptvalue_cast<
+                    QVector < double >*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RGraphicsView: Argument 0 is not of type QVector < double >*.",
+                               context);                    
+                    }
+                    QVector < double >& a0 = *ap0;
+                
+                    // argument is reference
+                    QVector < double >*
+                    ap1 =
+                    qscriptvalue_cast<
+                    QVector < double >*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if( ap1 == NULL ){
+                           return REcmaHelper::throwError("RGraphicsView: Argument 1 is not of type QVector < double >*.",
+                               context);                    
+                    }
+                    QVector < double >& a1 = *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->paintGridPoints(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.paintGridPoints().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::paintGridPoints", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::getCursor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::getCursor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::getCursor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("getCursor", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QCursor'
+    QCursor cppResult =
+        
+               self->getCursor();
+        // return type: QCursor
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.getCursor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::getCursor", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::setCursor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::setCursor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::setCursor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("setCursor", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: Qt::CursorShape */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    Qt::CursorShape
+                    a0 =
+                    (Qt::CursorShape)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setCursor(a0);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QCursor */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    QCursor*
+                    ap0 =
+                    qscriptvalue_cast<
+                    QCursor*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RGraphicsView: Argument 0 is not of type QCursor*.",
+                               context);                    
+                    }
+                    QCursor& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setCursor(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.setCursor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::setCursor", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::getClosestReferencePoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::getClosestReferencePoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::getClosestReferencePoint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("getClosestReferencePoint", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsView: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isStandardType
+                    int
+                    a1 =
+                    (int)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RRefPoint'
+    RRefPoint cppResult =
+        
+               self->getClosestReferencePoint(a0
+        ,
+    a1);
+        // return type: RRefPoint
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: REntity::Id */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    REntity::Id
+                    a0 =
+                    (REntity::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsView: Argument 1 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RRefPoint'
+    RRefPoint cppResult =
+        
+               self->getClosestReferencePoint(a0
+        ,
+    a1);
+        // return type: RRefPoint
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.getClosestReferencePoint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::getClosestReferencePoint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::getClosestEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::getClosestEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::getClosestEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("getClosestEntity", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(2).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsView: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isStandardType
+                    int
+                    a1 =
+                    (int)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    int
+                    a2 =
+                    (int)
+                    
+                    context->argument( 2 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'REntity::Id'
+    REntity::Id cppResult =
+        
+               self->getClosestEntity(a0
+        ,
+    a1
+        ,
+    a2);
+        // return type: REntity::Id
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    4 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(2).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(3).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsView: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isStandardType
+                    int
+                    a1 =
+                    (int)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    int
+                    a2 =
+                    (int)
+                    
+                    context->argument( 2 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    bool
+                    a3 =
+                    (bool)
+                    
+                    context->argument( 3 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'REntity::Id'
+    REntity::Id cppResult =
+        
+               self->getClosestEntity(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3);
+        // return type: REntity::Id
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    5 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(2).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(3).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(4).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsView: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isStandardType
+                    int
+                    a1 =
+                    (int)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    int
+                    a2 =
+                    (int)
+                    
+                    context->argument( 2 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    bool
+                    a3 =
+                    (bool)
+                    
+                    context->argument( 3 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a4 =
+                    (bool)
+                    
+                    context->argument( 4 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'REntity::Id'
+    REntity::Id cppResult =
+        
+               self->getClosestEntity(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3
+        ,
+    a4);
+        // return type: REntity::Id
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.getClosestEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::getClosestEntity", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::getMargin
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::getMargin", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::getMargin";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("getMargin", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getMargin();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.getMargin().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::getMargin", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::getColorMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::getColorMode", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::getColorMode";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("getColorMode", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RGraphicsView::ColorMode'
+    RGraphicsView::ColorMode cppResult =
+        
+               self->getColorMode();
+        // return type: RGraphicsView::ColorMode
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.getColorMode().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::getColorMode", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::getTextLabels
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::getTextLabels", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::getTextLabels";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("getTextLabels", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RTextLabel >'
+    QList < RTextLabel > cppResult =
+        
+               self->getTextLabels();
+        // return type: QList < RTextLabel >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.getTextLabels().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::getTextLabels", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::clearTextLabels
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::clearTextLabels", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::clearTextLabels";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("clearTextLabels", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->clearTextLabels();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.clearTextLabels().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::clearTextLabels", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::addTextLabel
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::addTextLabel", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::addTextLabel";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("addTextLabel", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RTextLabel */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RTextLabel*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RTextLabel*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsView: Argument 0 is not of type RTextLabel.",
+                               context);                    
+                    }
+                    RTextLabel 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->addTextLabel(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.addTextLabel().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::addTextLabel", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::getLastKnownMousePosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::getLastKnownMousePosition", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::getLastKnownMousePosition";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("getLastKnownMousePosition", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getLastKnownMousePosition();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.getLastKnownMousePosition().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::getLastKnownMousePosition", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::getCurrentStepScaleFactor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::getCurrentStepScaleFactor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::getCurrentStepScaleFactor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("getCurrentStepScaleFactor", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getCurrentStepScaleFactor();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.getCurrentStepScaleFactor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::getCurrentStepScaleFactor", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::setCurrentStepScaleFactor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::setCurrentStepScaleFactor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::setCurrentStepScaleFactor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("setCurrentStepScaleFactor", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setCurrentStepScaleFactor(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.setCurrentStepScaleFactor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::setCurrentStepScaleFactor", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::getCurrentStepOffset
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::getCurrentStepOffset", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::getCurrentStepOffset";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("getCurrentStepOffset", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getCurrentStepOffset();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.getCurrentStepOffset().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::getCurrentStepOffset", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::setCurrentStepOffset
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::setCurrentStepOffset", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::setCurrentStepOffset";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("setCurrentStepOffset", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsView: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setCurrentStepOffset(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.setCurrentStepOffset().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::setCurrentStepOffset", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::updateTextHeightThreshold
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::updateTextHeightThreshold", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::updateTextHeightThreshold";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("updateTextHeightThreshold", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->updateTextHeightThreshold();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.updateTextHeightThreshold().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::updateTextHeightThreshold", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::isPathVisible
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::isPathVisible", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::isPathVisible";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("isPathVisible", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RPainterPath */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RPainterPath*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RPainterPath*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsView: Argument 0 is not of type RPainterPath.",
+                               context);                    
+                    }
+                    RPainterPath 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isPathVisible(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.isPathVisible().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::isPathVisible", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::setWidget
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::setWidget", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::setWidget";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("setWidget", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QWidget * */
+    
+    ){
+    // prepare arguments:
+    
+            // argument isQObject
+            QWidget *
+            a0 =
+            qobject_cast<
+            QWidget *>
+            ( context->argument(
+            0
+            ).
+            toQObject()
+            );
+        
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setWidget(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.setWidget().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::setWidget", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::getWidget
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::getWidget", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::getWidget";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("getWidget", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QWidget *'
+    QWidget * cppResult =
+        
+               self->getWidget();
+        // return type: QWidget *
+                // QObject
+                result = engine->newQObject(cppResult, QScriptEngine::QtOwnership);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.getWidget().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::getWidget", context, engine);
+            return result;
+        }
+        
 
     // properties:
     
@@ -5007,155 +8304,6 @@
             return result;
         }
          QScriptValue
-        REcmaGraphicsViewImage::emitUpdateSnapInfo
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaGraphicsViewImage::emitUpdateSnapInfo", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::emitUpdateSnapInfo";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RGraphicsViewImage* self = 
-                        getSelf("emitUpdateSnapInfo", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    2 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RSnap * */
-     && (
-            context->argument(1).isVariant() || 
-            context->argument(1).isQObject() || 
-            context->argument(1).isNull()
-        ) /* type: RSnapRestriction * */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument is pointer
-                    RSnap * a0 = NULL;
-
-                    a0 = 
-                        REcmaHelper::scriptValueTo<RSnap >(
-                            context->argument(0)
-                        );
-                    
-                    if (a0==NULL && 
-                        !context->argument(0).isNull()) {
-                        return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RSnap *RSnap *.", context);                    
-                    }
-                
-                    // argument is pointer
-                    RSnapRestriction * a1 = NULL;
-
-                    a1 = 
-                        REcmaHelper::scriptValueTo<RSnapRestriction >(
-                            context->argument(1)
-                        );
-                    
-                    if (a1==NULL && 
-                        !context->argument(1).isNull()) {
-                        return REcmaHelper::throwError("RGraphicsViewImage: Argument 1 is not of type RSnapRestriction *RSnapRestriction *.", context);                    
-                    }
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->emitUpdateSnapInfo(a0
-        ,
-    a1);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.emitUpdateSnapInfo().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::emitUpdateSnapInfo", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaGraphicsViewImage::emitUpdateTextLabel
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaGraphicsViewImage::emitUpdateTextLabel", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::emitUpdateTextLabel";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RGraphicsViewImage* self = 
-                        getSelf("emitUpdateTextLabel", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RTextLabel */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RTextLabel*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RTextLabel*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RTextLabel.",
-                               context);                    
-                    }
-                    RTextLabel 
-                    a0 = 
-                    *ap0;
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->emitUpdateTextLabel(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.emitUpdateTextLabel().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::emitUpdateTextLabel", context, engine);
-            return result;
-        }
-         QScriptValue
         REcmaGraphicsViewImage::clearBackground
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -6066,6 +9214,578 @@
             //REcmaHelper::functionEnd("REcmaGraphicsViewImage::setAlphaEnabled", context, engine);
             return result;
         }
+         QScriptValue
+        REcmaGraphicsViewImage::getGraphicsBufferWithPreview
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::getGraphicsBufferWithPreview", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::getGraphicsBufferWithPreview";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("getGraphicsBufferWithPreview", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QImage'
+    QImage cppResult =
+        
+               self->getGraphicsBufferWithPreview();
+        // return type: QImage
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.getGraphicsBufferWithPreview().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::getGraphicsBufferWithPreview", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::getLastKnownScreenPosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::getLastKnownScreenPosition", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::getLastKnownScreenPosition";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("getLastKnownScreenPosition", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getLastKnownScreenPosition();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.getLastKnownScreenPosition().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::getLastKnownScreenPosition", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::setLastKnownScreenPosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::setLastKnownScreenPosition", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::setLastKnownScreenPosition";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("setLastKnownScreenPosition", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setLastKnownScreenPosition(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.setLastKnownScreenPosition().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::setLastKnownScreenPosition", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::setLastKnownModelPosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::setLastKnownModelPosition", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::setLastKnownModelPosition";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("setLastKnownModelPosition", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setLastKnownModelPosition(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.setLastKnownModelPosition().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::setLastKnownModelPosition", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::isShared
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::isShared", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::isShared";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("isShared", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isShared();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.isShared().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::isShared", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::registerForFocus
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::registerForFocus", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::registerForFocus";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("registerForFocus", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->registerForFocus();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.registerForFocus().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::registerForFocus", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::viewportChangeEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::viewportChangeEvent", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::viewportChangeEvent";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("viewportChangeEvent", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->viewportChangeEvent();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.viewportChangeEvent().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::viewportChangeEvent", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::emitUpdateSnapInfo
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::emitUpdateSnapInfo", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::emitUpdateSnapInfo";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("emitUpdateSnapInfo", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RSnap * */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RSnapRestriction * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RSnap * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RSnap >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RSnap *RSnap *.", context);                    
+                    }
+                
+                    // argument is pointer
+                    RSnapRestriction * a1 = NULL;
+
+                    a1 = 
+                        REcmaHelper::scriptValueTo<RSnapRestriction >(
+                            context->argument(1)
+                        );
+                    
+                    if (a1==NULL && 
+                        !context->argument(1).isNull()) {
+                        return REcmaHelper::throwError("RGraphicsViewImage: Argument 1 is not of type RSnapRestriction *RSnapRestriction *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->emitUpdateSnapInfo(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.emitUpdateSnapInfo().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::emitUpdateSnapInfo", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::emitUpdateTextLabel
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::emitUpdateTextLabel", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::emitUpdateTextLabel";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("emitUpdateTextLabel", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RTextLabel */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RTextLabel*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RTextLabel*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RTextLabel.",
+                               context);                    
+                    }
+                    RTextLabel 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->emitUpdateTextLabel(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.emitUpdateTextLabel().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::emitUpdateTextLabel", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::getDevicePixelRatio
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::getDevicePixelRatio", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::getDevicePixelRatio";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("getDevicePixelRatio", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getDevicePixelRatio();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.getDevicePixelRatio().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::getDevicePixelRatio", context, engine);
+            return result;
+        }
          QScriptValue REcmaGraphicsViewImage::toString
     (QScriptContext *context, QScriptEngine *engine)
     
@@ -6143,4 +9863,23 @@
 
 
         }
-        
+         void fromScriptValue(const QScriptValue& value,
+        RGraphicsViewImage*
+        &out) {
+            QObject* o = value.toQObject();
+            out = qobject_cast<
+            RGraphicsViewImage*>(o);
+        }
+     QScriptValue toScriptValue(QScriptEngine *engine,
+        RGraphicsViewImage*
+        const &in){
+            QScriptValue s = engine->newQObject(in, QScriptEngine::QtOwnership,
+            QScriptEngine::PreferExistingWrapperObject);
+            /*
+            if(s.isNull()){
+               REcmaHelper::throwError("This object is null.", engine->currentContext());
+            }
+            */
+            return s;
+        }
+    

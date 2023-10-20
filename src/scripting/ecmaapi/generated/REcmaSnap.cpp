@@ -67,6 +67,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getLastSnap, "getLastSnap");
             
+            REcmaHelper::registerFunction(&engine, proto, setLastSnap, "setLastSnap");
+            
             REcmaHelper::registerFunction(&engine, proto, reset, "reset");
             
         engine.setDefaultPrototype(
@@ -844,6 +846,73 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSnap::getLastSnap", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSnap::setLastSnap
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSnap::setLastSnap", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSnap::setLastSnap";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSnap* self = 
+                        getSelf("setLastSnap", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RSnap: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setLastSnap(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSnap.setLastSnap().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSnap::setLastSnap", context, engine);
             return result;
         }
          QScriptValue

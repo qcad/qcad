@@ -30,10 +30,12 @@
     ;
     
     
+    
     // Constructors:
     
       REcmaShellGraphicsViewImage(
-                
+                QObject * parent
+        = NULL
             );
         
     
@@ -489,18 +491,6 @@
         
     
     
-      void emitUpdateSnapInfo(
-                RSnap * snap, RSnapRestriction * restriction
-            );
-        
-    
-    
-      void emitUpdateTextLabel(
-                const RTextLabel & textLabel
-            );
-        
-    
-    
       void clearBackground(
                 
             );
@@ -591,6 +581,66 @@
     
       void setAlphaEnabled(
                 bool on
+            );
+        
+    
+    
+      QImage getGraphicsBufferWithPreview(
+                
+            );
+        
+    
+    
+      RVector getLastKnownScreenPosition(
+                
+            );
+        
+    
+    
+      void setLastKnownScreenPosition(
+                const RVector & p
+            );
+        
+    
+    
+      void setLastKnownModelPosition(
+                const RVector & p
+            );
+        
+    
+    
+      bool isShared(
+                
+            );
+        
+    
+    
+      bool registerForFocus(
+                
+            );
+        
+    
+    
+      void viewportChangeEvent(
+                
+            );
+        
+    
+    
+      void emitUpdateSnapInfo(
+                RSnap * snap, RSnapRestriction * restriction
+            );
+        
+    
+    
+      void emitUpdateTextLabel(
+                const RTextLabel & textLabel
+            );
+        
+    
+    
+      double getDevicePixelRatio(
+                
             );
         
     
@@ -707,6 +757,30 @@
         
     
     
+      void endPaint(
+                
+            );
+        
+    
+    
+      void setBrush(
+                const QBrush & brush
+            );
+        
+    
+    
+      void setPen(
+                const QPen & pen
+            );
+        
+    
+    
+      void drawLine(
+                const QLineF & line
+            );
+        
+    
+    
       void invalidate(
                 bool force
         = false
@@ -813,11 +887,6 @@
             );
         
     
-      void viewportChangeEvent(
-                
-            );
-        
-    
       void zoomIn(
                 
             );
@@ -872,6 +941,11 @@
     
       void setSignalsBlocked(
                 bool on
+            );
+        
+    
+      void paintGridPoints(
+                const QVector < double > & ucsPositionX, const QVector < double > & ucsPositionY
             );
         
     
@@ -965,17 +1039,12 @@
             );
         
     
-      double getDevicePixelRatio(
-                
+      void setWidget(
+                QWidget * w
             );
         
     
-      bool isShared(
-                
-            );
-        
-    
-      bool registerForFocus(
+      QWidget * getWidget(
                 
             );
         
@@ -1032,6 +1101,18 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         paintRelativeZero
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        endPaint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setBrush
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setPen
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        drawLine
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         invalidate

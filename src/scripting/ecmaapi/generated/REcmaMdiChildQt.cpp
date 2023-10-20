@@ -11,7 +11,7 @@
             
                 #include "RDocumentInterface.h"
             
-                #include "RGraphicsViewQt.h"
+                #include "RGraphicsViewImage.h"
             
             
         // includes for base ecma wrapper classes
@@ -464,11 +464,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RGraphicsViewQt *'
-    RGraphicsViewQt * cppResult =
+    // return type 'RGraphicsViewImage *'
+    RGraphicsViewImage * cppResult =
         
                self->getLastKnownViewWithFocus();
-        // return type: RGraphicsViewQt *
+        // return type: RGraphicsViewImage *
                 // QObject
                 result = engine->newQObject(cppResult, QScriptEngine::QtOwnership);
             

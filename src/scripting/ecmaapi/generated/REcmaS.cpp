@@ -75,6 +75,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getWindowManagerId, "getWindowManagerId");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getCpuArchitecture, "getCpuArchitecture");
+            
             REcmaHelper::registerFunction(&engine, &ctor, showInFileManager, "showInFileManager");
             
             REcmaHelper::registerFunction(&engine, &ctor, getDirectoryList, "getDirectoryList");
@@ -3092,6 +3094,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaS::getWindowManagerId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaS::getCpuArchitecture
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaS::getCpuArchitecture", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaS::getCpuArchitecture";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RS::
+       getCpuArchitecture();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RS.getCpuArchitecture().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaS::getCpuArchitecture", context, engine);
             return result;
         }
          QScriptValue
