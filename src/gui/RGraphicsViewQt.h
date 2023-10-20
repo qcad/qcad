@@ -115,6 +115,9 @@ protected:
     virtual void dragEnterEvent(QDragEnterEvent* event);
     virtual void dropEvent(QDropEvent* event);
 
+private slots:
+    void imageViewDeleted();
+
 private:
     //! remember last mouse button state for wacom bug workaround
     Qt::MouseButtons lastButtonState;

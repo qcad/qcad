@@ -58,14 +58,16 @@ RGraphicsViewQt::RGraphicsViewQt(QWidget* parent, bool showFocus)
     setContextMenuPolicy(Qt::PreventContextMenu);
 
     setImageView(new RGraphicsViewImage(this));
+
+    connect(imageView, &QObject::destroyed, this, &RGraphicsViewQt::imageViewDeleted);
 }
 
 
 
 RGraphicsViewQt::~RGraphicsViewQt() {
-    if (imageView!=NULL) {
-        delete imageView;
-    }
+//    if (imageView!=NULL) {
+//        delete imageView;
+//    }
 }
 
 void RGraphicsViewQt::setImageView(RGraphicsViewImage* v) {
@@ -430,7 +432,7 @@ void RGraphicsViewQt::dropEvent(QDropEvent* event) {
 }
 
 void RGraphicsViewQt::resizeEvent(QResizeEvent* ) {
-    if (imageView==NULL) {
+    if (imageView==NULL || imageView->getDocument()==NULL) {
         return;
     }
     double dpr = imageView->getDevicePixelRatio();
@@ -550,4 +552,8 @@ void RGraphicsViewQt::simulateMouseMoveEvent() {
         imageView->setLastKnownModelPosition(imageView->mapFromView(RVector(p.x(), p.y())));
     }
     //imageView->simulateMouseMoveEvent();
+}
+
+void RGraphicsViewQt::imageViewDeleted() {
+    imageView = NULL;
 }
