@@ -298,7 +298,6 @@ HEADERS += \
     $$PWD/REcmaShellFileImporterFactoryAdapter.h \
     $$PWD/REcmaShellFlowLayout.h \
     $$PWD/REcmaShellFocusListenerAdapter.h \
-    $$PWD/REcmaShellGraphicsViewImage.h \
     $$PWD/REcmaShellGraphicsViewQt.h \
     $$PWD/REcmaShellListView.h \
     $$PWD/REcmaShellListWidget.h \
@@ -686,7 +685,6 @@ SOURCES += \
     $$PWD/REcmaShellFileImporterFactoryAdapter.cpp \
     $$PWD/REcmaShellFlowLayout.cpp \
     $$PWD/REcmaShellFocusListenerAdapter.cpp \
-    $$PWD/REcmaShellGraphicsViewImage.cpp \
     $$PWD/REcmaShellGraphicsViewQt.cpp \
     $$PWD/REcmaShellListView.cpp \
     $$PWD/REcmaShellListWidget.cpp \
