@@ -61,6 +61,11 @@ RColor* RSettings::startReferencePointColor = NULL;
 RColor* RSettings::endReferencePointColor = NULL;
 RColor* RSettings::secondaryReferencePointColor = NULL;
 RColor* RSettings::tertiaryReferencePointColor = NULL;
+RColor* RSettings::crossHairColor = NULL;
+RColor* RSettings::crossHairColorInactive = NULL;
+RColor* RSettings::gridColor = NULL;
+RColor* RSettings::metaGridColor = NULL;
+RColor* RSettings::originColor = NULL;
 int RSettings::darkMode = -1;
 int RSettings::darkGuiBackground = -1;
 int RSettings::snapRange = -1;
@@ -825,6 +830,44 @@ RColor RSettings::getTertiaryReferencePointColor() {
         tertiaryReferencePointColor = new RColor(getColor("GraphicsViewColors/TertiaryReferencePointColor", RColor(0,64,172)));
     }
     return *tertiaryReferencePointColor;
+}
+
+RColor RSettings::getCrossHairColor() {
+    if (crossHairColor==NULL) {
+        crossHairColor = new RColor(getColor("GraphicsViewColors/CrosshairColor", RColor(255,194,0,192)));
+    }
+    return *crossHairColor;
+}
+
+RColor RSettings::getCrossHairColorInactive() {
+    if (crossHairColorInactive==NULL) {
+        crossHairColorInactive = new RColor(getColor("GraphicsViewColors/CrosshairColorInactive", RColor(108,79,0,192)));
+    }
+    return *crossHairColorInactive;
+}
+
+RColor RSettings::getGridColor() {
+    if (gridColor==NULL) {
+        gridColor = new RColor(getColor("GraphicsViewColors/GridColor", RColor(192,192,192,192)));
+
+    }
+    return *gridColor;
+}
+
+RColor RSettings::getMetaGridColor() {
+    if (metaGridColor==NULL) {
+        metaGridColor = new RColor(getColor("GraphicsViewColors/MetaGridColor", RColor(192,192,192,64)));
+
+    }
+    return *metaGridColor;
+}
+
+RColor RSettings::getOriginColor() {
+    if (originColor==NULL) {
+        originColor = new RColor(getColor("GraphicsViewColors/OriginColor", RColor(255,0,0,192)));
+
+    }
+    return *originColor;
 }
 
 bool RSettings::getAutoScaleGrid() {
