@@ -35,6 +35,8 @@
             
                 #include "RSnapRestriction.h"
             
+                #include "RGraphicsViewWorker.h"
+            
             
         // includes for base ecma wrapper classes
         
@@ -262,7 +264,7 @@
     
     
       void REcmaShellEventHandler::drawInfoLabel(
-                QPainter * painter, const RTextLabel & textLabel
+                RGraphicsViewWorker * worker, const RTextLabel & textLabel
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellEventHandler::drawInfoLabel", engine);
@@ -288,7 +290,7 @@
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
                         REventHandler::drawInfoLabel(
-                            painter, textLabel
+                            worker, textLabel
                         );
 
                         // block recursion again:
@@ -311,10 +313,10 @@
 
 
 
-    // type: QPainter *, copyable: false
+    // type: RGraphicsViewWorker *, copyable: false
         << qScriptValueFromValue(engine, 
 
-        painter
+        worker
         )
       
 
@@ -341,7 +343,7 @@
     
     
       void REcmaShellEventHandler::drawSnapLabel(
-                QPainter * painter, const RVector & pos, const RVector & posRestriction, const QString & text
+                RGraphicsViewWorker * worker, const RVector & pos, const RVector & posRestriction, const QString & text
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellEventHandler::drawSnapLabel", engine);
@@ -367,7 +369,7 @@
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
                         REventHandler::drawSnapLabel(
-                            painter, pos, posRestriction, text
+                            worker, pos, posRestriction, text
                         );
 
                         // block recursion again:
@@ -390,10 +392,10 @@
 
 
 
-    // type: QPainter *, copyable: false
+    // type: RGraphicsViewWorker *, copyable: false
         << qScriptValueFromValue(engine, 
 
-        painter
+        worker
         )
       
 
@@ -508,7 +510,7 @@
     
     
       void REcmaShellEventHandler::updateTextLabel(
-                QPainter * painter, const RTextLabel & textLabel
+                RGraphicsViewWorker * worker, const RTextLabel & textLabel
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellEventHandler::updateTextLabel", engine);
@@ -534,7 +536,7 @@
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
                         REventHandler::updateTextLabel(
-                            painter, textLabel
+                            worker, textLabel
                         );
 
                         // block recursion again:
@@ -557,10 +559,10 @@
 
 
 
-    // type: QPainter *, copyable: false
+    // type: RGraphicsViewWorker *, copyable: false
         << qScriptValueFromValue(engine, 
 
-        painter
+        worker
         )
       
 
@@ -587,7 +589,7 @@
     
     
       void REcmaShellEventHandler::updateSnapInfo(
-                QPainter * painter, RSnap * snap, RSnapRestriction * restriction
+                RGraphicsViewWorker * worker, RSnap * snap, RSnapRestriction * restriction
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellEventHandler::updateSnapInfo", engine);
@@ -613,7 +615,7 @@
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
                         REventHandler::updateSnapInfo(
-                            painter, snap, restriction
+                            worker, snap, restriction
                         );
 
                         // block recursion again:
@@ -636,10 +638,10 @@
 
 
 
-    // type: QPainter *, copyable: false
+    // type: RGraphicsViewWorker *, copyable: false
         << qScriptValueFromValue(engine, 
 
-        painter
+        worker
         )
       
 

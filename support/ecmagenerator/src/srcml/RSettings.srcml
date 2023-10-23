@@ -127,6 +127,11 @@
     <function_decl><type><name>static</name> <name>RColor</name></type> <name>getEndReferencePointColor</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>RColor</name></type> <name>getSecondaryReferencePointColor</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>RColor</name></type> <name>getTertiaryReferencePointColor</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RColor</name></type> <name>getCrossHairColor</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RColor</name></type> <name>getCrossHairColorInactive</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RColor</name></type> <name>getGridColor</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RColor</name></type> <name>getMetaGridColor</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RColor</name></type> <name>getOriginColor</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>static</name> <name>bool</name></type> <name>getHighResolutionGraphicsView</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>getAutoScaleGrid</name><parameter_list>()</parameter_list>;</function_decl>
@@ -319,6 +324,11 @@
     <decl_stmt><decl><type><name>static</name> <name>RColor</name>*</type> <name>endReferencePointColor</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RColor</name>*</type> <name>secondaryReferencePointColor</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RColor</name>*</type> <name>tertiaryReferencePointColor</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RColor</name>*</type> <name>crossHairColor</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RColor</name>*</type> <name>crossHairColorInactive</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RColor</name>*</type> <name>gridColor</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RColor</name>*</type> <name>metaGridColor</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RColor</name>*</type> <name>originColor</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>darkMode</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>darkGuiBackground</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>snapRange</name></decl>;</decl_stmt>

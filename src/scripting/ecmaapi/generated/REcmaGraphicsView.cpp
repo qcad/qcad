@@ -210,6 +210,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, paintGridLine, "paintGridLine");
             
+            REcmaHelper::registerFunction(&engine, proto, paintCursorLine, "paintCursorLine");
+            
             REcmaHelper::registerFunction(&engine, proto, getCursor, "getCursor");
             
             REcmaHelper::registerFunction(&engine, proto, setCursor, "setCursor");
@@ -4959,6 +4961,73 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsView::paintGridLine", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsView::paintCursorLine
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsView::paintCursorLine", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsView::paintCursorLine";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsView* self = 
+                        getSelf("paintCursorLine", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RLine */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RLine*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RLine*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsView: Argument 0 is not of type RLine.",
+                               context);                    
+                    }
+                    RLine 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->paintCursorLine(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsView.paintCursorLine().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsView::paintCursorLine", context, engine);
             return result;
         }
          QScriptValue

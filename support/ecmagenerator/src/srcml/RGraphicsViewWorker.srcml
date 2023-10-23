@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./gui" filename="RGraphicsViewWorker.h"><cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RGraphicsViewImage.h"</cpp:file></cpp:include>
+</unit>

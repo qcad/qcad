@@ -196,6 +196,21 @@
         getTertiaryReferencePointColor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getCrossHairColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getCrossHairColorInactive
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getGridColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getMetaGridColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getOriginColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getHighResolutionGraphicsView
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

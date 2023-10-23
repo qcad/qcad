@@ -14,6 +14,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RVector" />
   <class_decl name="RTextLabel" />
   <class_decl name="RSnapRestriction" />
+  <class_decl name="RGraphicsViewWorker" />
   <class name="REventHandler"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="true" sharedPointerSupport="false" isQObject="true"
@@ -48,7 +49,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="QPainter *" typeName="QPainter *" name="painter"
+        <arg type="RGraphicsViewWorker *"
+        typeName="RGraphicsViewWorker *" name="worker"
         isConst="false" />
         <arg type="RTextLabel &amp;" typeName="RTextLabel"
         name="textLabel" isConst="true" />
@@ -58,7 +60,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="QPainter *" typeName="QPainter *" name="painter"
+        <arg type="RGraphicsViewWorker *"
+        typeName="RGraphicsViewWorker *" name="worker"
         isConst="false" />
         <arg type="RVector &amp;" typeName="RVector" name="pos"
         isConst="true" />
@@ -79,7 +82,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="QPainter *" typeName="QPainter *" name="painter"
+        <arg type="RGraphicsViewWorker *"
+        typeName="RGraphicsViewWorker *" name="worker"
         isConst="false" />
         <arg type="RTextLabel &amp;" typeName="RTextLabel"
         name="textLabel" isConst="true" />
@@ -89,7 +93,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="QPainter *" typeName="QPainter *" name="painter"
+        <arg type="RGraphicsViewWorker *"
+        typeName="RGraphicsViewWorker *" name="worker"
         isConst="false" />
         <arg type="RSnap *" typeName="RSnap *" name="snap"
         isConst="false" />

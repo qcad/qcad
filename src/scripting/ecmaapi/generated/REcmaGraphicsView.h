@@ -247,6 +247,9 @@
         paintGridLine
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        paintCursorLine
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getCursor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

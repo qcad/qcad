@@ -33,6 +33,8 @@
             
                 #include "RSnapRestriction.h"
             
+                #include "RGraphicsViewWorker.h"
+            
             
         // includes for base ecma wrapper classes
          void REcmaEventHandler::initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -485,7 +487,7 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: QPainter * */
+        ) /* type: RGraphicsViewWorker * */
      && (
             context->argument(1).isVariant() || 
             context->argument(1).isQObject() || 
@@ -496,16 +498,16 @@
     // prepare arguments:
     
                     // argument is pointer
-                    QPainter * a0 = NULL;
+                    RGraphicsViewWorker * a0 = NULL;
 
                     a0 = 
-                        REcmaHelper::scriptValueTo<QPainter >(
+                        REcmaHelper::scriptValueTo<RGraphicsViewWorker >(
                             context->argument(0)
                         );
                     
                     if (a0==NULL && 
                         !context->argument(0).isNull()) {
-                        return REcmaHelper::throwError("REventHandler: Argument 0 is not of type QPainter *QPainter *.", context);                    
+                        return REcmaHelper::throwError("REventHandler: Argument 0 is not of type RGraphicsViewWorker *RGraphicsViewWorker *.", context);                    
                     }
                 
                     // argument isCopyable and has default constructor and isSimpleClass 
@@ -572,7 +574,7 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: QPainter * */
+        ) /* type: RGraphicsViewWorker * */
      && (
             context->argument(1).isVariant() || 
             context->argument(1).isQObject() || 
@@ -591,16 +593,16 @@
     // prepare arguments:
     
                     // argument is pointer
-                    QPainter * a0 = NULL;
+                    RGraphicsViewWorker * a0 = NULL;
 
                     a0 = 
-                        REcmaHelper::scriptValueTo<QPainter >(
+                        REcmaHelper::scriptValueTo<RGraphicsViewWorker >(
                             context->argument(0)
                         );
                     
                     if (a0==NULL && 
                         !context->argument(0).isNull()) {
-                        return REcmaHelper::throwError("REventHandler: Argument 0 is not of type QPainter *QPainter *.", context);                    
+                        return REcmaHelper::throwError("REventHandler: Argument 0 is not of type RGraphicsViewWorker *RGraphicsViewWorker *.", context);                    
                     }
                 
                     // argument isCopyable and has default constructor and isSimpleClass 
@@ -759,7 +761,7 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: QPainter * */
+        ) /* type: RGraphicsViewWorker * */
      && (
             context->argument(1).isVariant() || 
             context->argument(1).isQObject() || 
@@ -770,16 +772,16 @@
     // prepare arguments:
     
                     // argument is pointer
-                    QPainter * a0 = NULL;
+                    RGraphicsViewWorker * a0 = NULL;
 
                     a0 = 
-                        REcmaHelper::scriptValueTo<QPainter >(
+                        REcmaHelper::scriptValueTo<RGraphicsViewWorker >(
                             context->argument(0)
                         );
                     
                     if (a0==NULL && 
                         !context->argument(0).isNull()) {
-                        return REcmaHelper::throwError("REventHandler: Argument 0 is not of type QPainter *QPainter *.", context);                    
+                        return REcmaHelper::throwError("REventHandler: Argument 0 is not of type RGraphicsViewWorker *RGraphicsViewWorker *.", context);                    
                     }
                 
                     // argument isCopyable and has default constructor and isSimpleClass 
@@ -846,7 +848,7 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: QPainter * */
+        ) /* type: RGraphicsViewWorker * */
      && (
             context->argument(1).isVariant() || 
             context->argument(1).isQObject() || 
@@ -862,16 +864,16 @@
     // prepare arguments:
     
                     // argument is pointer
-                    QPainter * a0 = NULL;
+                    RGraphicsViewWorker * a0 = NULL;
 
                     a0 = 
-                        REcmaHelper::scriptValueTo<QPainter >(
+                        REcmaHelper::scriptValueTo<RGraphicsViewWorker >(
                             context->argument(0)
                         );
                     
                     if (a0==NULL && 
                         !context->argument(0).isNull()) {
-                        return REcmaHelper::throwError("REventHandler: Argument 0 is not of type QPainter *QPainter *.", context);                    
+                        return REcmaHelper::throwError("REventHandler: Argument 0 is not of type RGraphicsViewWorker *RGraphicsViewWorker *.", context);                    
                     }
                 
                     // argument is pointer
