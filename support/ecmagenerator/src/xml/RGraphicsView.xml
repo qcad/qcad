@@ -505,6 +505,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="paintCursorLine" cppName="paintCursorLine"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RLine &amp;" typeName="RLine" name=""
+        isConst="true" />
+      </variant>
+    </method>
     <method name="getCursor" cppName="getCursor" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="QCursor" isPureVirtual="false" />

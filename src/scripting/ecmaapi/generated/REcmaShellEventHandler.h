@@ -53,13 +53,13 @@
     
     
       void drawInfoLabel(
-                QPainter * painter, const RTextLabel & textLabel
+                RGraphicsViewWorker * worker, const RTextLabel & textLabel
             );
         
     
     
       void drawSnapLabel(
-                QPainter * painter, const RVector & pos, const RVector & posRestriction, const QString & text
+                RGraphicsViewWorker * worker, const RVector & pos, const RVector & posRestriction, const QString & text
             );
         
     
@@ -71,13 +71,13 @@
     
     
       void updateTextLabel(
-                QPainter * painter, const RTextLabel & textLabel
+                RGraphicsViewWorker * worker, const RTextLabel & textLabel
             );
         
     
     
       void updateSnapInfo(
-                QPainter * painter, RSnap * snap, RSnapRestriction * restriction
+                RGraphicsViewWorker * worker, RSnap * snap, RSnapRestriction * restriction
             );
         
     

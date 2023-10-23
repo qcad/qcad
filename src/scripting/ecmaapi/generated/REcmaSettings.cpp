@@ -157,6 +157,16 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getTertiaryReferencePointColor, "getTertiaryReferencePointColor");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getCrossHairColor, "getCrossHairColor");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getCrossHairColorInactive, "getCrossHairColorInactive");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getGridColor, "getGridColor");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getMetaGridColor, "getMetaGridColor");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getOriginColor, "getOriginColor");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getHighResolutionGraphicsView, "getHighResolutionGraphicsView");
             
             REcmaHelper::registerFunction(&engine, &ctor, getAutoScaleGrid, "getAutoScaleGrid");
@@ -3366,6 +3376,201 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getTertiaryReferencePointColor", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getCrossHairColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getCrossHairColor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getCrossHairColor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RColor'
+    RColor cppResult =
+        RSettings::
+       getCrossHairColor();
+        // return type: RColor
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getCrossHairColor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getCrossHairColor", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getCrossHairColorInactive
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getCrossHairColorInactive", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getCrossHairColorInactive";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RColor'
+    RColor cppResult =
+        RSettings::
+       getCrossHairColorInactive();
+        // return type: RColor
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getCrossHairColorInactive().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getCrossHairColorInactive", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getGridColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getGridColor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getGridColor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RColor'
+    RColor cppResult =
+        RSettings::
+       getGridColor();
+        // return type: RColor
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getGridColor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getGridColor", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getMetaGridColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getMetaGridColor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getMetaGridColor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RColor'
+    RColor cppResult =
+        RSettings::
+       getMetaGridColor();
+        // return type: RColor
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getMetaGridColor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getMetaGridColor", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getOriginColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getOriginColor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getOriginColor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RColor'
+    RColor cppResult =
+        RSettings::
+       getOriginColor();
+        // return type: RColor
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getOriginColor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getOriginColor", context, engine);
             return result;
         }
          QScriptValue

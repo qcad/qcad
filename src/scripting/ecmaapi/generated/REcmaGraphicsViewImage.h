@@ -49,6 +49,9 @@
 
         // methods of secondary base class RGraphicsView:
         static  QScriptValue
+        clear
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         clearCaches
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -178,6 +181,9 @@
         isPathVisible
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setAntialiasing
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setWidget
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -194,9 +200,6 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setNumThreads
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        clear
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setViewportNumber
@@ -266,9 +269,6 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getHairlineMinimumMode
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setAntialiasing
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getAntialiasing
@@ -379,6 +379,9 @@
         paintGridLine
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        paintCursorLine
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setPaintOrigin
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -388,25 +391,19 @@
         getPanOptimization
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        paintEntities
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         paintEntitiesMulti
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        paintEntitiesThread
+        paintEntityThread
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        paintEntityThread
+        paintDrawableThread
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         paintOverlay
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getBuffer
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getTransform
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         clearBackground
@@ -488,25 +485,6 @@
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RGraphicsViewImage* getSelf(const QString& fName, QScriptContext* context)
     ;static REcmaShellGraphicsViewImage* getSelfShell(const QString& fName, QScriptContext* context)
-    ;static  void fromScriptValue(const QScriptValue& value,
-        RGraphicsViewImage*
-        &out) {
-            QObject* o = value.toQObject();
-            out = qobject_cast<
-            RGraphicsViewImage*>(o);
-        }
-    static  QScriptValue toScriptValue(QScriptEngine *engine,
-        RGraphicsViewImage*
-        const &in){
-            QScriptValue s = engine->newQObject(in, QScriptEngine::QtOwnership,
-            QScriptEngine::PreferExistingWrapperObject);
-            /*
-            if(s.isNull()){
-               REcmaHelper::throwError("This object is null.", engine->currentContext());
-            }
-            */
-            return s;
-        }
-    };
+    ;};
     #endif
     

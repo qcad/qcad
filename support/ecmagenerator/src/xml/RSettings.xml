@@ -360,6 +360,31 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RColor" isPureVirtual="false" />
     </method>
+    <method name="getCrossHairColor" cppName="getCrossHairColor"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RColor" isPureVirtual="false" />
+    </method>
+    <method name="getCrossHairColorInactive"
+    cppName="getCrossHairColorInactive" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RColor" isPureVirtual="false" />
+    </method>
+    <method name="getGridColor" cppName="getGridColor"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RColor" isPureVirtual="false" />
+    </method>
+    <method name="getMetaGridColor" cppName="getMetaGridColor"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RColor" isPureVirtual="false" />
+    </method>
+    <method name="getOriginColor" cppName="getOriginColor"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RColor" isPureVirtual="false" />
+    </method>
     <method name="getHighResolutionGraphicsView"
     cppName="getHighResolutionGraphicsView" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
