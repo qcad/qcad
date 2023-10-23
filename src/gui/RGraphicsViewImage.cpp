@@ -40,6 +40,259 @@
 #include "RUnit.h"
 
 
+RGraphicsViewWorker::~RGraphicsViewWorker() {
+}
+
+void RGraphicsViewWorker::run() {
+    paint();
+    emit finished();
+}
+
+void RGraphicsViewWorker::init(QList<REntity::Id>& list, int startIndex, int endIndex) {
+    this->list = &list;
+    this->startIndex = startIndex;
+    this->endIndex = endIndex;
+}
+
+void RGraphicsViewWorker::paint() {
+    // paint entities of worker slice:
+    for (int i=startIndex; i<endIndex; i++) {
+        //qDebug() << "RGraphicsViewWorker::paint: " << i;
+        imageView.paintEntityThread(this, list->at(i));
+    }
+
+    //qDebug() << "RGraphicsViewWorker::paint: emit finished";
+    //emit finished();
+    //qDebug() << "RGraphicsViewWorker::paint: DONE";
+}
+
+void RGraphicsViewWorker::paintImage(const RImageData& img, bool workingSet) {
+    imageView.paintImage(this, img, workingSet);
+}
+
+void RGraphicsViewWorker::paintText(const RTextBasedData& text, bool workingSet) {
+    imageView.paintText(this, text, workingSet);
+}
+
+
+
+
+RGraphicsViewWorkerPainter::~RGraphicsViewWorkerPainter() {
+}
+
+void RGraphicsViewWorkerPainter::clear() {
+
+}
+
+void RGraphicsViewWorkerPainter::end() {
+    painter->end();
+}
+
+void RGraphicsViewWorkerPainter::begin() {
+    painter->begin(&image);
+
+    if (clearMode==ClearToBackground) {
+        painter->setBackground(QBrush(imageView.getBackgroundColor()));
+        //painter->setBackground(QBrush(QColor(64,64,128,255)));
+        painter->eraseRect(0, 0, image.width(), image.height());
+    }
+    else if (clearMode==ClearToTransparent) {
+        painter->setCompositionMode(QPainter::CompositionMode_Clear);
+        painter->eraseRect(0, 0, image.width(), image.height());
+        painter->setCompositionMode(QPainter::CompositionMode_SourceOver);
+    }
+
+    painter->setWorldTransform(imageView.getTransform());
+}
+
+void RGraphicsViewWorkerPainter::setAntialiasing(bool on) {
+    painter->setRenderHint(QPainter::Antialiasing, on);
+}
+
+void RGraphicsViewWorkerPainter::setBackground(const QColor& col) {
+    painter->setBackground(col);
+}
+
+void RGraphicsViewWorkerPainter::setCompositionMode(QPainter::CompositionMode mode) {
+    painter->setCompositionMode(mode);
+}
+
+void RGraphicsViewWorkerPainter::setFont(const QFont& font) {
+    painter->setFont(font);
+}
+
+void RGraphicsViewWorkerPainter::eraseRect(const QRectF& rect) {
+    painter->eraseRect(rect);
+}
+
+void RGraphicsViewWorkerPainter::setImage(const QImage& img) {
+    RGraphicsViewWorker::setImage(img);
+
+    if (painter!=NULL) {
+        delete painter;
+    }
+    painter = new QPainter();
+    if (imageView.getAntialiasing()) {
+        painter->setRenderHint(QPainter::Antialiasing);
+    }
+}
+
+void RGraphicsViewWorkerPainter::paint() {
+
+//    painter->resetTransform();
+
+//    if (erase) {
+//        QRect r = rect;
+//        if (rect.isNull()) {
+//            r = QRect(0,0,lastSize.width(),lastSize.height());
+//        }
+//        // erase background to transparent:
+//        painter->setCompositionMode(QPainter::CompositionMode_Clear);
+//        painter->eraseRect(r);
+//        painter->setCompositionMode(QPainter::CompositionMode_SourceOver);
+//    }
+
+    //if (threadId==0) {
+        // first buffer: erase to background color:
+//        QRect r = rect;
+//        if (rect.isNull()) {
+//            r = QRect(0,0,lastSize.width(),lastSize.height());
+//        }
+        // erase background to transparent:
+        //qDebug() << "bg:" << imageView.getBackgroundColor();
+        //painter->setBackground(QBrush(imageView.getBackgroundColor()));
+
+        // bottom buffer contains background color:
+//        if (threadId==0) {
+//            painter->setBackground(QBrush(imageView.getBackgroundColor()));
+//            //painter->setBackground(QBrush(QColor(64,64,128,255)));
+//            painter->eraseRect(0, 0, image.width(), image.height());
+//        }
+//        else {
+//            painter->setCompositionMode(QPainter::CompositionMode_Clear);
+//            painter->eraseRect(0, 0, image.width(), image.height());
+//            painter->setCompositionMode(QPainter::CompositionMode_SourceOver);
+//        }
+    //}
+
+    //if (!screen) {
+//    painter->setWorldTransform(imageView.getTransform());
+    //}
+
+    RGraphicsViewWorker::paint();
+
+    //delete painter;
+    //painter = NULL;
+
+
+    //qDebug() << "RGraphicsViewWorker::paint: emit finished";
+    //emit finished();
+    //qDebug() << "RGraphicsViewWorker::paint: DONE";
+}
+
+
+void RGraphicsViewWorkerPainter::setClipRect(const QRectF& rect) {
+    painter->setClipRect(rect);
+}
+
+void RGraphicsViewWorkerPainter::setClipping(bool on) {
+    painter->setClipping(on);
+}
+
+void RGraphicsViewWorkerPainter::setOpacity(double opacity) {
+    painter->setOpacity(opacity);
+}
+
+void RGraphicsViewWorkerPainter::save() {
+    painter->save();
+}
+
+void RGraphicsViewWorkerPainter::restore() {
+    painter->restore();
+}
+
+QTransform RGraphicsViewWorkerPainter::getTransform() {
+    return painter->transform();
+}
+
+void RGraphicsViewWorkerPainter::setTransform(const QTransform& t, bool combine) {
+    painter->setTransform(t, combine);
+}
+
+void RGraphicsViewWorkerPainter::translate(double x, double y) {
+    painter->translate(x, y);
+}
+
+void RGraphicsViewWorkerPainter::scale(double x, double y) {
+    painter->scale(x, y);
+}
+
+QTransform RGraphicsViewWorkerPainter::getWorldTransform() const {
+    return painter->worldTransform();
+}
+
+void RGraphicsViewWorkerPainter::setWorldTransform(const QTransform& t, bool combine) {
+    painter->setWorldTransform(t, combine);
+}
+
+void RGraphicsViewWorkerPainter::setBrush(const QBrush& brush) {
+    painter->setBrush(brush);
+}
+
+QPen RGraphicsViewWorkerPainter::getPen() const {
+    return painter->pen();
+}
+
+void RGraphicsViewWorkerPainter::setPen(const QPen& pen) {
+    painter->setPen(pen);
+}
+
+void RGraphicsViewWorkerPainter::drawPoint(const QPointF& p) {
+    painter->drawPoint(p);
+}
+
+void RGraphicsViewWorkerPainter::drawImage(int x, int y, const QImage& image) {
+    painter->drawImage(x, y, image);
+}
+
+void RGraphicsViewWorkerPainter::drawTextLayout(const QTextLayout& textLayout) {
+    //painter->drawImage(x, y, image);
+    textLayout.draw(painter, QPoint(0,0));
+}
+
+void RGraphicsViewWorkerPainter::drawText(const QRectF& rectangle, int flags, const QString& text) {
+    painter->drawText(rectangle, flags, text);
+}
+
+void RGraphicsViewWorkerPainter::fillPath(const RPainterPath& path, const QBrush& brush) {
+    painter->fillPath(path, brush);
+}
+
+void RGraphicsViewWorkerPainter::drawPath(const RPainterPath& path) {
+    painter->drawPath(path);
+}
+
+void RGraphicsViewWorkerPainter::drawLine(const QLineF& line) {
+    painter->drawLine(line);
+}
+
+void RGraphicsViewWorkerPainter::strokePath(const QPainterPath& path, const QPen& pen) {
+    painter->strokePath(path, pen);
+}
+
+void RGraphicsViewWorkerPainter::drawEllipse(const QRectF& rectangle) {
+    painter->drawEllipse(rectangle);
+}
+
+void RGraphicsViewWorkerPainter::drawRect(const QRectF& rectangle) {
+    painter->drawRect(rectangle);
+}
+
+void RGraphicsViewWorkerPainter::fillRect(const QRectF& rectangle, const QBrush& brush) {
+    painter->fillRect(rectangle, brush);
+}
+
+
 RGraphicsViewImage::RGraphicsViewImage(QObject* parent)
     : QObject(parent), RGraphicsView(),
       numThreads(1),
@@ -59,7 +312,8 @@ RGraphicsViewImage::RGraphicsViewImage(QObject* parent)
       maximumLineweight(-1.0),
       drawingScale(1.0),
       alphaEnabled(false),
-      showOnlyPlottable(false) {
+      showOnlyPlottable(false),
+      decorationWorker(NULL) {
 
     currentScale = 1.0;
     saveViewport();
@@ -68,24 +322,35 @@ RGraphicsViewImage::RGraphicsViewImage(QObject* parent)
 
 RGraphicsViewImage::~RGraphicsViewImage() {
     //qDebug() << "RGraphicsViewImage::~RGraphicsViewImage()";
+
+    if (decorationWorker!=NULL) {
+        delete decorationWorker;
+    }
 }
 
 void RGraphicsViewImage::setNumThreads(int n) {
     if (n!=numThreads) {
         numThreads = n;
-        graphicsBufferThread.clear();
-        updateGraphicsBuffer();
+        //graphicsBufferThread.clear();
+        //initWorkers();
         lastSize = QSize(0,0);
     }
 }
 
 void RGraphicsViewImage::clear() {
-    for (int i=0; i<graphicsBufferThread.length(); i++) {
-        QPainter painter(&graphicsBufferThread[i]);
-        // erase background to transparent:
-        painter.setCompositionMode(QPainter::CompositionMode_Clear);
-        painter.eraseRect(graphicsBufferThread[i].rect());
+#ifdef RFUTURE
+    for (int i=0; i<workers.length(); i++) {
+        RGraphicsViewWorker* worker = workers[i];
+        worker->clear();
     }
+#endif
+
+//    for (int i=0; i<graphicsBufferThread.length(); i++) {
+//        QPainter painter(&graphicsBufferThread[i]);
+//        // erase background to transparent:
+//        painter.setCompositionMode(QPainter::CompositionMode_Clear);
+//        painter.eraseRect(graphicsBufferThread[i].rect());
+//    }
 }
 
 void RGraphicsViewImage::setPaintOrigin(bool val) {
@@ -186,7 +451,26 @@ void RGraphicsViewImage::updateImage() {
 
     if (graphicsBufferNeedsUpdate) {
         // TODO: check if buffer is not updated unnecessarily:
-        RDebug::startTimer();
+        //RDebug::startTimer();
+
+        // not the right number of workers, re-init workers:
+        if (workers.length()!=numThreads) {
+            for (int i=0; i<workers.length(); i++) {
+                delete workers[i];
+            }
+            workers.clear();
+
+            for (int i=0; i<numThreads; i++) {
+                RGraphicsViewWorkerPainter* worker = new RGraphicsViewWorkerPainter(*this, i);
+                if (i==0) {
+                    worker->setClearMode(RGraphicsViewWorker::ClearToBackground);
+                }
+                else {
+                    worker->setClearMode(RGraphicsViewWorker::ClearToTransparent);
+                }
+                workers.append(worker);
+            }
+        }
 
         // update drawing scale from document setting:
         QString scaleString;
@@ -209,30 +493,43 @@ void RGraphicsViewImage::updateImage() {
 
         showOnlyPlottable = RSettings::getBoolValue("PrintPreviewPro/ShowOnlyPlottable", false);
 
-        //RDebug::startTimer();
-        updateGraphicsBuffer();
-        graphicsBufferNeedsUpdate = false;
+        RDebug::startTimer();
 
-        bool displayGrid = gridVisible;
+        initWorkers();
 
-        if (!graphicsBufferThread.isEmpty()) {
-            paintErase(graphicsBufferThread.first());
+        if (!workers.isEmpty()) {
+            // fill first worker (bottom buffer) with background color:
+            //paintErase(workers.first());
+
+            // end paiting (required e.g. for QPainter)
+            for (int i=0; i<workers.length(); i++) {
+                RGraphicsViewWorker* worker = workers[i];
+                worker->begin();
+            }
+
             //paintErase(graphicsBuffer2);
             bool originBelowEntities = RSettings::getShowLargeOriginAxis();
             if (originBelowEntities) {
-                paintOrigin(graphicsBufferThread.first());
+                paintOrigin(workers.first());
             }
 
-            //RDebug::startTimer();
+            //RDebug::startTimer(700);
             paintDocument();
-            //RDebug::stopTimer("paintDocument");
+            //RDebug::stopTimer(700, "paintDocument");
 
-            if (displayGrid) {
-                paintMetaGrid(graphicsBufferThread.last());
-                paintGrid(graphicsBufferThread.last());
+            if (gridVisible) {
+                paintMetaGrid(workers.last());
+                paintGrid(workers.last());
             }
+
             if (!originBelowEntities) {
-                paintOrigin(graphicsBufferThread.last());
+                paintOrigin(workers.last());
+            }
+
+            // end paiting (required e.g. for QPainter)
+            for (int i=0; i<workers.length(); i++) {
+                RGraphicsViewWorker* worker = workers[i];
+                worker->end();
             }
         }
         lastOffset = offset;
@@ -240,24 +537,28 @@ void RGraphicsViewImage::updateImage() {
 
         //qDebug() << "updateImage: OK";
         RDebug::stopTimer("updateImage");
-    }
 
-    //RDebug::startTimer();
+        RDebug::startTimer();
+        if (!workers.isEmpty()) {
+            // first thread buffer has background color + first set of entities:
+            graphicsBuffer = workers[0]->getImage();
 
-    if (!graphicsBufferThread.isEmpty()) {
-        // first thread buffer has background color + first set of entities:
-        graphicsBufferWithPreview = graphicsBufferThread.first();
-
-        // merge buffers from all threads (transparent backgrounds):
-        if (graphicsBufferThread.length()>1) {
-            QPainter p(&graphicsBufferWithPreview);
-            p.setCompositionMode(QPainter::CompositionMode_SourceOver);
-            for (int i=1; i<graphicsBufferThread.length(); i++) {
-                p.drawImage(0, 0, graphicsBufferThread[i]);
+            // merge buffers from all threads (transparent backgrounds):
+            if (workers.length()>1) {
+                QPainter p(&graphicsBuffer);
+                p.setCompositionMode(QPainter::CompositionMode_SourceOver);
+                for (int i=1; i<workers.length(); i++) {
+                    p.drawImage(0, 0, workers[i]->getImage());
+                }
             }
         }
+        RDebug::stopTimer("compose");
+
+        // graphics buffer with drawing is now up to date:
+        graphicsBufferNeedsUpdate = false;
+
     }
-    //RDebug::stopTimer("compose");
+
 
     // draws previewed texts:
 //    QList<RTextBasedData> previewTexts = sceneQt->getPreviewTexts();
@@ -278,34 +579,53 @@ void RGraphicsViewImage::updateImage() {
 //        delete painter;
 //    }
 
+    RDebug::startTimer(77);
+    // compose the final buffer with preview, selection, highlights, etc.:
+    graphicsBufferWithPreview = graphicsBuffer;
+    RDebug::stopTimer(77, "graphicsBufferWithPreview = graphicsBuffer");
+
+    RDebug::startTimer(77);
+    decorationWorker->setImage(graphicsBufferWithPreview);
+    RDebug::stopTimer(77, "decorationWorker->setImage");
+    decorationWorker->begin();
+
     // draws the current preview on top of the buffer:
     // highlighted entities are also part of the preview
+    // TODO: use worker for this, run in parallel
+
+    RDebug::startTimer(77);
     if (sceneQt->hasPreview()) {
-        initPainter(graphicsBufferWithPreview, false);
+        //initPainter(graphicsBufferWithPreview, false);
 
-        painterThread.clear();
+        //painterThread.clear();
         // TODO: add function RGraphicsViewImage:
-        painterThread.append(painter);
-        entityTransformThread.clear();
-        entityTransformThread.append(QStack<RTransform>());
+        //painterThread.append(painter);
+        //entityTransformThread.clear();
+        //entityTransformThread.append(QStack<RTransform>());
 
-        bgColorLightness = getBackgroundColor().lightness();
+        //bgColorLightness = getBackgroundColor().lightness();
         isSelected = false;
         QList<REntity::Id> ids = sceneQt->getPreviewEntityIds();
         for (int i=0; i<ids.length(); i++) {
-            paintEntityThread(0, ids[i], true);
+            paintEntityThread(decorationWorker, ids[i], true);
         }
+        //worker->end();
         // TODO: add function RGraphicsViewImage:
-        endPaint();
-        if (painter!=NULL) {
-            delete painter;
-        }
+        //endPaint();
+//        if (painter!=NULL) {
+//            delete painter;
+//        }
     }
+    RDebug::stopTimer(77, "preview");
 
+    RDebug::startTimer(77);
     // paint reference points of selected entities:
+    decorationWorker->save();
+    QTransform t;
+    decorationWorker->setTransform(t);
     QMap<REntity::Id, QList<RRefPoint> >& referencePoints = scene->getReferencePoints();
     if (getDocument()->countSelectedEntities()<RSettings::getMaxReferencePointEntitiesDisplay()) {
-        QPainter gbPainter(&graphicsBufferWithPreview);
+        //QPainter gbPainter(&graphicsBufferWithPreview);
         QMap<REntity::Id, QList<RRefPoint> >::iterator it;
         for (it = referencePoints.begin(); it != referencePoints.end(); ++it) {
             QList<RRefPoint>& list = it.value();
@@ -313,31 +633,33 @@ void RGraphicsViewImage::updateImage() {
                 RRefPoint p = list[i];
                 RRefPoint pm = mapToView(p);
                 pm.setFlags(p.getFlags());
-                paintReferencePoint(gbPainter, pm, false);
+
+                paintReferencePoint(decorationWorker, pm, false);
             }
         }
-        gbPainter.end();
+        //gbPainter.end();
     }
-
     // highlighting of closest reference point:
     if (scene->getHighlightedReferencePoint().isValid()) {
         RRefPoint p = scene->getHighlightedReferencePoint();
         RRefPoint pm = mapToView(p);
-        QPainter gbPainter(&graphicsBufferWithPreview);
+        //QPainter gbPainter(&graphicsBufferWithPreview);
         pm.setFlags(p.getFlags());
-        paintReferencePoint(gbPainter, pm, true);
-        gbPainter.end();
+        paintReferencePoint(decorationWorker, pm, true);
+        //gbPainter.end();
     }
+    RDebug::stopTimer(77, "ref points");
 
-    // overlay (painted after / on top of preview and highlighting):
+//    // overlay (painted after / on top of preview and highlighting):
 //    if (!overlayDrawables.isEmpty()) {
-//        QPainter* painter = initPainter(graphicsBufferWithPreview, false);
-//        painter->setRenderHint(QPainter::Antialiasing);
-//        paintOverlay(painter);
-//        painter->end();
+//        //QPainter* painter = initPainter(graphicsBufferWithPreview, false);
+//        //painter->setRenderHint(QPainter::Antialiasing);
+//        paintOverlay(decorationWorker);
+//        //painter->end();
 //    }
 
     // snap label:
+    RDebug::startTimer(77);
     if (hasFocus() || this == di->getLastKnownViewWithFocus()) {
         if (di->getClickMode()==RAction::PickCoordinate) {
             RSnap* snap = di->getSnap();
@@ -355,21 +677,42 @@ void RGraphicsViewImage::updateImage() {
             }
         }
     }
+    RDebug::stopTimer(77, "snap label");
+
 
     // informational text labels:
+    RDebug::startTimer(77);
     for (int i=0; i<textLabels.size(); i++) {
         emitUpdateTextLabel(textLabels.at(i));
     }
     textLabels.clear();
+    RDebug::stopTimer(77, "info label");
+
+    decorationWorker->restore();
 
     // cursor:
-    paintCursor(graphicsBufferWithPreview);
+    RDebug::startTimer(77);
+    paintCursor(decorationWorker);
+    RDebug::stopTimer(77, "cursor");
+
+    decorationWorker->save();
+    decorationWorker->setTransform(t);
 
     // relative zero:
-    paintRelativeZero(graphicsBufferWithPreview);
+    RDebug::startTimer(77);
+    paintRelativeZero(decorationWorker);
+    RDebug::stopTimer(77, "rel zero");
+
+    decorationWorker->restore();
+
+    decorationWorker->end();
+
+    RDebug::startTimer(77);
+    graphicsBufferWithPreview = decorationWorker->getImage();
+    RDebug::stopTimer(77, "graphicsBufferWithPreview = decorationWorker->getImage()");
 }
 
-void RGraphicsViewImage::paintReferencePoint(QPainter& painter, const RRefPoint& pos, bool highlight) {
+void RGraphicsViewImage::paintReferencePoint(RGraphicsViewWorker* worker, const RRefPoint& pos, bool highlight) {
     RColor color;
     if (pos.isStart()) {
         color = RSettings::getStartReferencePointColor();
@@ -396,84 +739,91 @@ void RGraphicsViewImage::paintReferencePoint(QPainter& painter, const RRefPoint&
         // cross:
         QPen p(color);
         p.setWidth(3);
-        painter.setPen(p);
-        painter.drawLine(QPointF(pos.x-size/2, pos.y), QPointF(pos.x+size/2, pos.y));
-        painter.drawLine(QPointF(pos.x, pos.y-size/2), QPointF(pos.x, pos.y+size/2));
+        worker->setPen(p);
+        worker->drawLine(QLineF(pos.x-size/2, pos.y, pos.x+size/2, pos.y));
+        worker->drawLine(QLineF(pos.x, pos.y-size/2, pos.x, pos.y+size/2));
     }
     else {
         if (pos.isCenter() || pos.isArrow()) {
             // center or arrow:
             // round:
-            painter.setBrush(color);
-            painter.drawEllipse(pos.x - size/2, pos.y - size/2, size, size);
+            worker->setBrush(color);
+            worker->drawEllipse(QRectF(pos.x - size/2, pos.y - size/2, size, size));
         }
         else {
             // other:
             // rectangle:
-            painter.setBrush(color);
-            painter.fillRect(QRect(pos.x - size/2, pos.y - size/2, size, size), color);
+            //??
+            worker->setBrush(color);
+            worker->fillRect(QRectF(pos.x - size/2, pos.y - size/2, size, size), color);
         }
 
         if (backgroundColor.value()<128) {
             if (highlight) {
-                painter.setPen(QPen(Qt::white));
+                worker->setPen(QPen(Qt::white));
             }
             else {
                 if (pos.isSelected()) {
-                    painter.setPen(QPen(Qt::red));
+                    worker->setPen(QPen(Qt::red));
                 }
                 else {
-                    painter.setPen(QPen(Qt::gray));
+                    worker->setPen(QPen(Qt::gray));
                 }
             }
         }
         else {
             if (highlight) {
-                painter.setPen(QPen(Qt::black));
+                worker->setPen(QPen(Qt::black));
             }
             else {
                 if (pos.isSelected()) {
-                    painter.setPen(QPen(Qt::red));
+                    worker->setPen(QPen(Qt::red));
                 }
                 else {
-                    painter.setPen(QPen(Qt::gray));
+                    worker->setPen(QPen(Qt::gray));
                 }
             }
         }
         if (pos.isCenter() || pos.isArrow()) {
-            painter.drawEllipse(pos.x - size/2, pos.y - size/2, size, size);
+            worker->drawEllipse(QRectF(pos.x - size/2, pos.y - size/2, size, size));
         }
         else {
-            painter.drawRect(QRect(pos.x - size/2, pos.y - size/2, size, size));
+            worker->drawRect(QRectF(pos.x - size/2, pos.y - size/2, size, size));
         }
     }
 }
 
-void RGraphicsViewImage::paintErase(QPaintDevice& device, const QRect& rect) {
+void RGraphicsViewImage::paintErase(RGraphicsViewWorker* worker, const QRect& rect) {
+    //qDebug() << "RGraphicsViewImage::paintErase: " << rect;
     QRect r = rect;
     if (rect.isNull()) {
         r = QRect(0,0,getWidth(),getHeight());
     }
+//    qDebug() << "RGraphicsViewImage::paintErase: r: " << r;
 
-    RVector c1 = mapFromView(RVector(r.left(),r.top()));
-    RVector c2 = mapFromView(RVector(r.left() + r.width(),r.top() + r.height()));
-    QRectF rf(c1.x, c1.y, c2.x-c1.x, c2.y-c1.y);
+//    RVector c1 = mapFromView(RVector(r.left(),r.top()));
+//    RVector c2 = mapFromView(RVector(r.left() + r.width(),r.top() + r.height()));
+//    QRectF rf(c1.x, c1.y, c2.x-c1.x, c2.y-c1.y);
 
-    initPainter(device, false, false, rect);
-    painter->setBackground(getBackgroundColor());
-    if (!rect.isNull()) {
-        painter->setClipRect(rf);
+    //initPainter(worker, false, false, rect);
+    worker->setBackground(getBackgroundColor());
+    if (!r.isNull()) {
+        worker->setClipRect(r);
     }
     if (backgroundColor.alpha()==0) {
-        painter->setCompositionMode(QPainter::CompositionMode_Clear);
+        //worker->setCompositionMode(QPainter::CompositionMode_Clear);
     }
-    painter->eraseRect(rf);
 
-    delete painter;
-    painter = NULL;
+    qDebug() << "bg: " << getBackgroundColor();
+
+    //worker->eraseRect(rf);
+    worker->eraseRect(r);
+
+    //delete painter;
+    //painter = NULL;
 }
 
-void RGraphicsViewImage::paintGrid(QPaintDevice& device, const QRect& rect) {
+void RGraphicsViewImage::paintGrid(RGraphicsViewWorker* worker, const QRect& rect) {
     QRect r = rect;
     if (rect.isNull()) {
         r = QRect(0,0,getWidth(),getHeight());
@@ -483,74 +833,91 @@ void RGraphicsViewImage::paintGrid(QPaintDevice& device, const QRect& rect) {
     RVector c2 = mapFromView(RVector(r.left() + r.width(),r.top() + r.height()));
     QRectF rf(c1.x, c1.y, c2.x-c1.x, c2.y-c1.y);
 
-    initPainter(device, false, false, rect);
-    painter->setRenderHint(QPainter::Antialiasing, false);
+    //initPainter(device, false, false, rect);
+    worker->setAntialiasing(false);
     if (!rect.isNull()) {
-        painter->setClipRect(rf);
+        worker->setClipRect(rf);
     }
 
     if (grid!=NULL) {
-        QPen pen(RSettings::getColor("GraphicsViewColors/GridColor", RColor(192,192,192,192)));
+        QPen pen(RSettings::getGridColor());
         pen.setWidth(0);
-        painter->setPen(pen);
+        worker->setPen(pen);
         grid->paint();
     }
 
-    delete painter;
-    painter = NULL;
+//    delete painter;
+//    painter = NULL;
 }
 
 void RGraphicsViewImage::paintGridPoint(const RVector& ucsPosition) {
-    if (painter==NULL) {
-        qWarning("RGraphicsViewImage::paintGridPoint: painter is NULL");
+    if (workers.isEmpty()) {
+        qWarning("RGraphicsViewImage::paintGridPoint: no workers");
         return;
     }
-    painter->drawPoint(QPointF(ucsPosition.x, ucsPosition.y));
+
+    RGraphicsViewWorker* worker = workers.last();
+
+    worker->drawPoint(QPointF(ucsPosition.x, ucsPosition.y));
 }
 
-void RGraphicsViewImage::paintMetaGrid(QPaintDevice& device, const QRect& rect) {
+void RGraphicsViewImage::paintMetaGrid(RGraphicsViewWorker* worker, const QRect& rect) {
     QRect r = rect;
     if (rect.isNull()) {
         r = QRect(0,0,getWidth(),getHeight());
     }
 
-    initPainter(device, false, false, rect);
-    painter->setBackground(getBackgroundColor());
+    //initPainter(device, false, false, rect);
+    worker->setBackground(getBackgroundColor());
 
     if (grid!=NULL) {
-        painter->setPen(QPen(
-                RSettings::getColor("GraphicsViewColors/MetaGridColor", RColor(192,192,192,64)),
-                0, Qt::SolidLine));
+        worker->setPen(QPen(RSettings::getMetaGridColor(), 0, Qt::SolidLine));
+//        painter->setPen(QPen(
+//                RSettings::getColor("GraphicsViewColors/MetaGridColor", RColor(192,192,192,64)),
+//                0, Qt::SolidLine));
         grid->paintMetaGrid();
     }
 
-    delete painter;
-    painter = NULL;
+//    delete painter;
+//    painter = NULL;
 }
 
 void RGraphicsViewImage::paintGridLine(const RLine& ucsPosition) {
-    if (painter==NULL) {
-        qWarning("RGraphicsViewImage::paintGridLine: painter is NULL");
+    if (workers.isEmpty()) {
+        qWarning("RGraphicsViewImage::paintGridLine: no workers");
         return;
     }
-    painter->drawLine(
-        QPointF(ucsPosition.startPoint.x, ucsPosition.startPoint.y),
-        QPointF(ucsPosition.endPoint.x, ucsPosition.endPoint.y)
+
+    RGraphicsViewWorker* worker = workers.last();
+
+    worker->drawLine(
+        QLineF(ucsPosition.startPoint.x, ucsPosition.startPoint.y, ucsPosition.endPoint.x, ucsPosition.endPoint.y)
     );
+}
+
+void RGraphicsViewImage::paintCursorLine(const RLine& ucsPosition) {
+    if (decorationWorker==NULL) {
+        qWarning("RGraphicsViewImage::paintCursorLine: worker is NULL");
+        return;
+    }
+
+    decorationWorker->drawLine(
+        QLineF(ucsPosition.startPoint.x, ucsPosition.startPoint.y, ucsPosition.endPoint.x, ucsPosition.endPoint.y)
+        );
 }
 
 /**
  * Paints the absolute zero point (origin).
  */
-void RGraphicsViewImage::paintOrigin(QPaintDevice& device) {
+void RGraphicsViewImage::paintOrigin(RGraphicsViewWorker* worker) {
     // bitmap export: paint origin if requested (e.g. dwg2bmp -origin)
     if (!doPaintOrigin || isPrinting()) {
         return;
     }
 
-    initPainter(device, false, false);
+    //initPainter(device, false, false);
 
-    QPen pen(RSettings::getColor("GraphicsViewColors/OriginColor", RColor(255,0,0,192)));
+    QPen pen(RSettings::getOriginColor());
     pen.setWidth(0);
 
     if (RSettings::getShowLargeOriginAxis()) {
@@ -559,30 +926,26 @@ void RGraphicsViewImage::paintOrigin(QPaintDevice& device) {
         pen.setDashPattern(QVector<qreal>() << 9 << 3 << 3 << 3 << 3 << 3);
         //RVector z = mapToView(RVector(0,0));
         //pen.setDashOffset(-z.x);
-        painter->setPen(pen);
-        painter->drawLine(QPointF(b.c1.x, 0.0), QPointF(b.c2.x, 0));
+        worker->setPen(pen);
+        worker->drawLine(QLineF(b.c1.x, 0.0, b.c2.x, 0));
 //        pen.setDashOffset(z.y);
 //        painter->setPen(pen);
-        painter->drawLine(QPointF(0.0, b.c1.y), QPointF(0.0, b.c2.y));
+        worker->drawLine(QLineF(0.0, b.c1.y, 0.0, b.c2.y));
     }
     else {
-        painter->setPen(pen);
+        worker->setPen(pen);
         double r = mapDistanceFromView(20.0 * getDevicePixelRatio());
-        painter->drawLine(
-            QPointF(-r,0.0),
-            QPointF(r,0.0)
-        );
-        painter->drawLine(
-            QPointF(0.0,-r),
-            QPointF(0.0,r)
-        );
+        worker->drawLine(QLineF(-r,0.0, r,0.0));
+        worker->drawLine(QLineF(0.0,-r, 0.0,r));
     }
 
-    delete painter;
-    painter = NULL;
+//    delete painter;
+//    painter = NULL;
 }
 
-void RGraphicsViewImage::paintCursor(QPaintDevice& device) {
+void RGraphicsViewImage::paintCursor(RGraphicsViewWorker* worker) {
+    //qDebug() << "RGraphicsViewImage::paintCursor";
+
     RDocumentInterface* di = getDocumentInterface();
     if (di==NULL) {
         return;
@@ -603,24 +966,24 @@ void RGraphicsViewImage::paintCursor(QPaintDevice& device) {
 
     RColor crossHairColor;
     if (hasFocus() || this == di->getLastKnownViewWithFocus()) {
-        crossHairColor = RSettings::getColor("GraphicsViewColors/CrosshairColor", RColor(255,194,0,192));
+        crossHairColor = RSettings::getCrossHairColor();
     }
     else {
-        crossHairColor = RSettings::getColor("GraphicsViewColors/CrosshairColorInactive", RColor(108,79,0,192));
+        crossHairColor = RSettings::getCrossHairColorInactive();
     }
 
-    initPainter(device, false, false);
+    //initPainter(device, false, false);
 
     if (grid!=NULL) {
-        painter->setPen(QPen(crossHairColor, 0, Qt::DashLine));
+        worker->setPen(QPen(crossHairColor, 0, Qt::DashLine));
         grid->paintCursor(pos);
     }
 
-    delete painter;
-    painter = NULL;
+//    delete painter;
+//    painter = NULL;
 }
 
-void RGraphicsViewImage::paintRelativeZero(QPaintDevice& device) {
+void RGraphicsViewImage::paintRelativeZero(RGraphicsViewWorker* worker) {
     if (!doPaintOrigin || isPrintingOrExporting()) {
         return;
     }
@@ -638,20 +1001,14 @@ void RGraphicsViewImage::paintRelativeZero(QPaintDevice& device) {
     RVector screenPos = mapToView(relativeZero);
     double r = 5.0 * getDevicePixelRatio();
 
-    QPainter painter(&device);
-    painter.setPen(
+    //QPainter painter(&device);
+    worker->setPen(
         QPen(RSettings::getColor("GraphicsViewColors/RelativeZeroColor", RColor(162,36,36)), 0)
     );
-    painter.drawLine(
-        QPointF(screenPos.x-r, screenPos.y),
-        QPointF(screenPos.x+r, screenPos.y)
-    );
-    painter.drawLine(
-        QPointF(screenPos.x, screenPos.y-r),
-        QPointF(screenPos.x, screenPos.y+r)
-    );
-    painter.drawEllipse(QPointF(screenPos.x, screenPos.y), r, r);
-    painter.end();
+    worker->drawLine(QLineF(screenPos.x-r, screenPos.y, screenPos.x+r, screenPos.y));
+    worker->drawLine(QLineF(screenPos.x, screenPos.y-r, screenPos.x, screenPos.y+r));
+    worker->drawEllipse(QRectF(screenPos.x-r, screenPos.y-r, 2*r, 2*r));
+    //worker->end();
 }
 
 void RGraphicsViewImage::updateTransformation() const {
@@ -669,35 +1026,44 @@ void RGraphicsViewImage::updateTransformation() const {
  * This can be relatively slow and is only called on view
  * port changes or document changes.
  */
-void RGraphicsViewImage::updateGraphicsBuffer() {
+void RGraphicsViewImage::initWorkers() {
     if (widget==NULL) {
         return;
     }
 
+    qDebug() << "RGraphicsViewImage::initWorkers";
+
     double dpr = getDevicePixelRatio();
     QSize newSize(int(widget->width()*dpr), int(widget->height()*dpr));
 
-    if (graphicsBufferThread.isEmpty()) {
-        for (int i=0; i<numThreads; i++) {
-            graphicsBufferThread.append(QImage());
-        }
-    }
+//    if (graphicsBufferThread.isEmpty()) {
+//        for (int i=0; i<numThreads; i++) {
+//            graphicsBufferThread.append(QImage());
+//        }
+//    }
 
-    if (lastSize!=newSize && graphicsBufferThread.first().size()!=newSize) {
+    if (lastSize!=newSize && workers.first()->getImage().size()!=newSize) {
         //graphicsBuffer = QImage(newSize, alphaEnabled ? QImage::Format_ARGB32 : QImage::Format_RGB32);
         //graphicsBuffer2 = QImage(newSize, QImage::Format_ARGB32);
-        for (int i=0; i<graphicsBufferThread.length(); i++) {
-            if (i==0) {
-                graphicsBufferThread[i] = QImage(newSize, alphaEnabled ? QImage::Format_ARGB32 : QImage::Format_RGB32);
-            }
-            else {
-                graphicsBufferThread[i] = QImage(newSize, QImage::Format_ARGB32);
-            }
+        for (int i=0; i<workers.length(); i++) {
+//            if (i==0) {
+//                workers[i]->setImage(QImage(newSize, alphaEnabled ? QImage::Format_ARGB32 : QImage::Format_RGB32));
+//                //graphicsBufferThread[i] = QImage(newSize, alphaEnabled ? QImage::Format_ARGB32 : QImage::Format_RGB32);
+//            }
+//            else {
+                workers[i]->setImage(QImage(newSize, QImage::Format_ARGB32));
+                //graphicsBufferThread[i] = QImage(newSize, QImage::Format_ARGB32);
+//            }
         }
         lastFactor = -1;
     }
 
     lastSize = newSize;
+
+    if (decorationWorker==NULL) {
+        decorationWorker = new RGraphicsViewWorkerPainter(*this, -1);
+        decorationWorker->setClearMode(RGraphicsViewWorker::NoClear);
+    }
 }
 
 void RGraphicsViewImage::paintDocument(const QRect& rect) {
@@ -714,71 +1080,28 @@ void RGraphicsViewImage::paintDocument(const QRect& rect) {
     bgColorLightness = getBackgroundColor().lightness();
     selectedIds.clear();
 
-    for (int i=1; i<graphicsBufferThread.length(); i++) {
-        graphicsBufferThread[i].fill(qRgba(0,0,0,0));
-    }
-
-    //QList<QPainter*> painterThread;
-    painterThread.clear();
-    entityTransformThread.clear();
-    for (int i=0; i<graphicsBufferThread.length(); i++) {
-        initPainter(graphicsBufferThread[i], false, false, r);
-        painterThread.append(painter);
-        entityTransformThread.append(QStack<RTransform>());
-    }
-
-    paintBackground(painterThread.first(), r);
+    paintBackground(workers.first(), r);
 
     RVector c1 = mapFromView(RVector(r.left()-1,r.bottom()+1), -1e300);
     RVector c2 = mapFromView(RVector(r.right()+1,r.top()-1), 1e300);
     RBox queryBox(c1, c2);
 
-    //RDebug::startTimer();
+    RDebug::startTimer(800);
     paintEntitiesMulti(queryBox);
-    //RDebug::stopTimer("paint");
+    RDebug::stopTimer(800, "paintEntitiesMulti");
 
-    // paint selected entities on top:
+    // paint selected entities (omitted above) always on top:
     if (!selectedIds.isEmpty()) {
         isSelected = true;
         QList<REntity::Id> list = document->getStorage().orderBackToFront(selectedIds);
         QListIterator<RObject::Id> i(list);
         while (i.hasNext()) {
-            paintEntityThread(painterThread.length()-1, i.next());
+            paintEntityThread(workers.last(), i.next());
         }
     }
 
     // paint overlay:
-    paintOverlay(painterThread.last());
-
-    for (int i=0; i<painterThread.length(); i++) {
-        painterThread[i]->end();
-        delete painterThread[i];
-        painterThread[i] = NULL;
-    }
-    painterThread.clear();
-    entityTransformThread.clear();
-
-//    painter->end();
-//    painter2->end();
-//    delete painter;
-//    delete painter2;
-
-//    // paint reference points of selected entities:
-//    QMultiMap<REntity::Id, RRefPoint>& referencePoints = scene->getReferencePoints();
-//    int num = referencePoints.count();
-//    if (num!=0 && num<RSettings::getIntValue("GraphicsView/MaxReferencePoints", 100000)) {
-//        QPainter gbPainter(&graphicsBuffer);
-//        QMultiMap<REntity::Id, RRefPoint>::iterator it;
-
-//        for (it = referencePoints.begin(); it != referencePoints.end(); ++it) {
-//            RRefPoint p = it.value();
-//            RRefPoint pm = mapToView(p);
-//            pm.setFlags(p.getFlags());
-//            paintReferencePoint(gbPainter, pm, false);
-//        }
-
-//        gbPainter.end();
-//    }
+    paintOverlay(workers.last());
 }
 
 void RGraphicsViewImage::clearBackground() {
@@ -794,7 +1117,7 @@ void RGraphicsViewImage::setBackgroundTransform(double bgFactor, const RVector& 
     backgroundOffset = bgOffset;
 }
 
-void RGraphicsViewImage::paintBackground(QPainter* painter, const QRect& rect) {
+void RGraphicsViewImage::paintBackground(RGraphicsViewWorker* worker, const QRect& rect) {
     Q_UNUSED(rect)
 
     if (backgroundDecoration.isEmpty()) {
@@ -804,23 +1127,23 @@ void RGraphicsViewImage::paintBackground(QPainter* painter, const QRect& rect) {
     int boxWidth = 1000;
     int boxHeight = 30;
 
-    QTransform savedTransform = painter->transform();
-    painter->translate(backgroundOffset.x, backgroundOffset.y);
-    painter->scale(backgroundFactor, backgroundFactor);
+    QTransform savedTransform = worker->getTransform();
+    worker->translate(backgroundOffset.x, backgroundOffset.y);
+    worker->scale(backgroundFactor, backgroundFactor);
 
     for (int i=0; i<backgroundDecoration.size(); i++) {
         RGraphicsSceneDrawable d = backgroundDecoration[i];
         if (d.isPainterPath()) {
             RPainterPath& path = d.getPainterPath();
-            painter->setPen(path.getPen());
-            painter->setBrush(path.getBrush());
-            painter->drawPath(path);
+            worker->setPen(path.getPen());
+            worker->setBrush(path.getBrush());
+            worker->drawPath(path);
         }
         else if (d.isText()) {
             RTextBasedData& text = d.getText();
             RVector pos = text.getPosition();
-            painter->setFont(QFont(text.getFontName(), text.getTextHeight()));
-            painter->setPen(QPen(Qt::black));
+            worker->setFont(QFont(text.getFontName(), text.getTextHeight()));
+            worker->setPen(QPen(Qt::black));
 
             int flags = 0;
             double boxLeft;
@@ -859,13 +1182,13 @@ void RGraphicsViewImage::paintBackground(QPainter* painter, const QRect& rect) {
             QTransform t;
             t.scale(1,-1);
             QTransform savedTransform2 = painter->transform();
-            painter->setTransform(t, true);
-            painter->drawText(box, flags, text.getText());
-            painter->setTransform(savedTransform2);
+            worker->setTransform(t, true);
+            worker->drawText(box, flags, text.getText());
+            worker->setTransform(savedTransform2);
         }
     }
 
-    painter->setTransform(savedTransform);
+    worker->setTransform(savedTransform);
 }
 
 void RGraphicsViewImage::clearOverlay(int overlayId) {
@@ -894,7 +1217,7 @@ void RGraphicsViewImage::addToOverlay(int overlayId, RObject::Id objectId, const
     overlayDrawables[overlayId][objectId].append(drawable);
 }
 
-void RGraphicsViewImage::paintOverlay(QPainter* painter) {
+void RGraphicsViewImage::paintOverlay(RGraphicsViewWorker* worker) {
     QList<int> overlayIds = overlayDrawables.keys();
     //qSort(overlayIds);
 
@@ -934,9 +1257,9 @@ void RGraphicsViewImage::paintOverlay(QPainter* painter) {
                         pen.setWidthF(pen.widthF() / factor);
                     }
 
-                    painter->setPen(pen);
-                    painter->setBrush(path.getBrush());
-                    painter->drawPath(path);
+                    worker->setPen(pen);
+                    worker->setBrush(path.getBrush());
+                    worker->drawPath(path);
                 }
 
                 else if (drawable.getType()==RGraphicsSceneDrawable::Text) {
@@ -958,7 +1281,7 @@ void RGraphicsViewImage::paintOverlay(QPainter* painter) {
                     text.move(drawable.getOffset());
                     text.move(paintOffset);
 
-                    paintText(painter, text);
+                    paintText(worker, text);
                 }
                 //painter->setPen(path.getPen());
                 //painter->setBrush(path.getBrush());
@@ -995,14 +1318,14 @@ void RGraphicsViewImage::initPainter(QPaintDevice& device, bool erase, bool scre
     //return painter;
 }
 
-void RGraphicsViewImage::paintEntities(QPainter* painter, const RBox& queryBox) {
-    painterThread.clear();
-    painterThread.append(painter);
-    entityTransformThread.clear();
-    entityTransformThread.append(QStack<RTransform>());
+//void RGraphicsViewImage::paintEntities(QPainter* painter, const RBox& queryBox) {
+    //painterThread.clear();
+    //painterThread.append(painter);
+    //entityTransformThread.clear();
+    //entityTransformThread.append(QStack<RTransform>());
 
-    paintEntitiesMulti(queryBox);
-}
+    //paintEntitiesMulti(queryBox);
+//}
 
 void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
     RDocument* document = getDocument();
@@ -1038,10 +1361,51 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
     // draw painter paths:
     isSelected = false;
 
+    /*
+    static QList<RGraphicsSceneDrawable> drawablesCache;
+
+    // TOTO clear cache if
+    // - document has changed since last call
+    // - remember document modified state with counter instead of flag
+    // - we're working with the preview
+    // - zoom has changed significantly (regen arcs)
+
+    if (drawablesCache.isEmpty()) {
+        RDebug::startTimer(60);
+        QList<REntity::Id> list = document->getStorage().orderBackToFront(ids);
+        //QList<REntity::Id> list = ids.toList();
+        RDebug::stopTimer(60, "ordering");
+
+
+        RDebug::startTimer(60);
+        for (int i=0; i<list.length(); i++) {
+            REntity::Id id = list[i];
+
+            // get drawables of the given entity:
+            QList<RGraphicsSceneDrawable>* drawables = sceneQt->getDrawables(id);
+
+            for (int k=0; k<drawables->length(); k++) {
+                drawablesCache.append(drawables->at(k));
+            }
+        }
+        RDebug::stopTimer(60, "caching");
+    }
+    */
+
     RDebug::startTimer(60);
     QList<REntity::Id> list = document->getStorage().orderBackToFront(ids);
     //QList<REntity::Id> list = ids.toList();
     RDebug::stopTimer(60, "ordering");
+
+    // about 30ms for 50000:
+//    RDebug::startTimer(60);
+//    for (int i=0; i<list.length(); i++) {
+//        REntity::Id id = list[i];
+
+//        // get drawables of the given entity:
+//        QList<RGraphicsSceneDrawable>* drawables = sceneQt->getDrawables(id);
+//    }
+//    RDebug::stopTimer(60, "getting drawables for each entity");
 
     //RDebug::startTimer();
 
@@ -1114,49 +1478,143 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
     RDebug::stopTimer(61, "regen");
 
     if (numThreads==1) {
-        RDebug::startTimer(62);
-        paintEntitiesThread(0, list, 0, list.length());
-        RDebug::stopTimer(62, "paintEntitiesThread");
+        RGraphicsViewWorker* worker = workers[0];
+        worker->init(list, 0, list.length());
+        worker->paint();
+        //qDebug() << "paintDrawablesThread";
+//        RDebug::startTimer(62);
+//        paintEntitiesThread(0, list, 0, list.length());
+//        //paintDrawablesThread(0, drawablesCache, 0, drawablesCache.length());
+//        RDebug::stopTimer(62, "paintEntitiesThread");
     }
     else {
-        Q_ASSERT(painterThread.length()==entityTransformThread.length());
+        //Q_ASSERT(painterThread.length()==entityTransformThread.length());
 
-        //RDebug::startTimer(100);
+        RDebug::startTimer(100);
         //qDebug() << "list.length():" << list.length();
-        int slice = int(floor(double(list.length())/painterThread.length()));
-        QList<QFuture<void> > futureThread;
-        for (int threadId=0; threadId<painterThread.length(); threadId++) {
+        int slice = int(floor(double(list.length())/numThreads));
+        //QList<QFuture<void> > futureThread;
+
+//        // not enough or too many workers:
+//        if (workers.length()!=numThreads) {
+//            for (int i=0; i<workers.length(); i++) {
+//                delete workers[i];
+//            }
+//            workers.clear();
+
+//            for (int i=0; i<numThreads; i++) {
+//                RGraphicsViewWorkerPainter* worker = new RGraphicsViewWorkerPainter(*this);
+//                workers.append(worker);
+//            }
+//        }
+
+        //QList<RGraphicsViewWorker*> threads;
+        for (int threadId=0; threadId<numThreads; threadId++) {
             int start = threadId*slice;
             int end = (threadId+1)*slice;
-            if (threadId==painterThread.length()-1) {
+            if (threadId==numThreads-1) {
                 end = (int)list.length();
             }
-            //qDebug() << "slice:" << start << end;
+            qDebug() << "slice:" << start << end;
 
-            // TODO (#qt6):
             //futureThread.append(QtConcurrent::run(this, &RGraphicsViewImage::paintEntitiesThread, threadId, list, start, end));
-            //QFuture<void> future = QtConcurrent::run(&RGraphicsViewImage::paintEntitiesThread, *this, threadId, list, start, end);
-            //futureThread.append(future);
 
-            paintEntitiesThread(threadId, list, start, end);
+            // Qt 6:
+//            QFuture<void> future = QtConcurrent::run([this, threadId, list, start, end]() {
+//                this->paintEntitiesThread(threadId, list, start, end);
+//            });
+//            futureThread.append(future);
+
+            //QThread* thread = new QThread();
+            RGraphicsViewWorker* worker = workers[threadId];
+            //RGraphicsViewWorkerPainter* worker = dynamic_cast<RGraphicsViewWorkerPainter*>(workers[threadId]);
+            //RGraphicsViewWorkerPainter* worker = new RGraphicsViewWorkerPainter(*this);
+            worker->init(list, start, end);
+            //RGraphicsViewWorkerPainter* worker = new RGraphicsViewWorkerPainter(threadId, list, start, end);
+            //worker->setParent(thread);
+            //worker->moveToThread(thread);
+            //threads.append(worker);
+
+//            QObject::connect(thread, &QThread::started, [worker]() {
+//                worker->paint();
+//            });
+
+//            qDebug() << "connecting signals...";
+            //connect(worker, &RGraphicsViewWorker::finished, );
+//            QObject::connect(thread, &QThread::started, worker, &RGraphicsViewWorkerPainter::paint);
+//            QObject::connect(worker, &RGraphicsViewWorkerPainter::finished, thread, &QThread::quit);
+
+//            QObject::connect(thread, &QThread::started, [&worker]() {
+//                qDebug() << "thread started: worker thread id: " << QThread::currentThreadId();
+//            });
+//            QObject::connect(thread, &QThread::finished, [&worker]() {
+//                qDebug() << "thread finished: worker thread id: " << QThread::currentThreadId();
+//            });
+//            QObject::connect(worker, &RGraphicsViewWorkerPainter::finished, []() {
+//                qDebug() << "worker finished: worker thread id: " << QThread::currentThreadId();
+//            });
+//            qDebug() << "connecting signals... DONE";
+
+            //QObject::connect(thread, &QThread::finished, thread, &QThread::deleteLater);
+
+            //qDebug() << "starting thread...";
+            //thread->start();
+            worker->start();
+            //qDebug() << "starting thread...DONE";
+
+            //paintDrawablesThread(threadId, drawablesCache, start, end);
+            //paintEntitiesThread(threadId, list, start, end);
         }
-    }
-    //RDebug::stopTimer(100, "launch threads");
+        RDebug::stopTimer(100, "launch threads");
 
-    //RDebug::startTimer(100);
-//    for (int i=0; i<futureThread.length(); i++) {
-//        futureThread[i].waitForFinished();
+        RDebug::startTimer(100);
+//        for (int i=0; i<futureThread.length(); i++) {
+//            futureThread[i].waitForFinished();
+//        }
+
+//        bool running;
+//        do {
+//            running = false;
+//            for (int i=0; i<workers.length(); i++) {
+//                RGraphicsViewWorker* worker = threads[i];
+//                running = running || worker->isRunning();
+//                qDebug() << "thread " << i << " running: " << worker->isRunning();
+//            }
+//        } while (running);
+
+        for (int i=0; i<workers.length(); i++) {
+            RGraphicsViewWorker* worker = workers[i];
+            worker->wait();
+//            qDebug() << "waiting for thread:" << i << "...";
+//            QThread* thread = threads[i];
+//            thread->wait();
+//            qDebug() << "waiting for thread:" << i << ": DONE";
+        }
+        RDebug::stopTimer(100, "waitForFinished");
+    }
+
+}
+
+//void RGraphicsViewImage::paintEntitiesThread(int threadId, const QList<REntity::Id>& list, int start, int end) {
+//    for (int i=start; i<end; i++) {
+//        paintEntityThread(threadId, list[i]);
 //    }
-    //RDebug::stopTimer(100, "waitForFinished");
-}
+//}
 
-void RGraphicsViewImage::paintEntitiesThread(int threadId, const QList<REntity::Id>& list, int start, int end) {
-    for (int i=start; i<end; i++) {
-        paintEntityThread(threadId, list[i]);
-    }
-}
+//void RGraphicsViewImage::paintDrawablesThread(int threadId, const QList<RGraphicsSceneDrawable>& list, int start, int end) {
+//    qDebug() << "RGraphicsViewImage::paintDrawablesThread";
+//    // TODO: clip rectangle of entity
+//    RBox clipRectangle;
+//    for (int i=start; i<end; i++) {
+//        RGraphicsSceneDrawable d = list[i];
+//        paintDrawableThread(d, clipRectangle);
+//    }
+//}
 
-void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool preview) {
+/**
+ * Looks up entity drawable and paints it using the given worker.
+ */
+void RGraphicsViewImage::paintEntityThread(RGraphicsViewWorker* worker, REntity::Id id, bool preview) {
     if (!preview && !isPrintingOrExporting() && !isSelected && (getDocument()->isSelected(id) || getDocument()->isSelectedWorkingSet(id))) {
         static QMutex m;
         m.lock();
@@ -1168,31 +1626,32 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
 
     //qDebug() << "RGraphicsViewImage::paintEntityThread";
 
-    Q_ASSERT(threadId<painterThread.length());
-    Q_ASSERT(threadId<entityTransformThread.length());
+    //Q_ASSERT(threadId<painterThread.length());
+    //Q_ASSERT(threadId<entityTransformThread.length());
 
     // TODO: set class member painter to use in other functions:
-    if (painterThread.length()>threadId) {
-        painter = painterThread[threadId];
-    }
-    else {
-        painter = NULL;
-    }
+//    if (painterThread.length()>threadId) {
+//        painter = painterThread[threadId];
+//    }
+//    else {
+//        painter = NULL;
+//    }
 
-    // clipping:
+    // clipping of this particular entity:
+    // TODO: should this be a drawable
     RBox clipRectangle = sceneQt->getClipRectangle(id, preview);
     if (clipRectangle.isValid()) {
         clipRectangle.move(paintOffset);
 
         // TODO: add function to RGraphicsViewImage:
-        if (painter!=NULL) {
-            painter->setClipRect(QRectF(clipRectangle.getMinimum().x, clipRectangle.getMinimum().y, clipRectangle.getWidth(), clipRectangle.getHeight()));
+        if (worker!=NULL) {
+            worker->setClipRect(QRectF(clipRectangle.getMinimum().x, clipRectangle.getMinimum().y, clipRectangle.getWidth(), clipRectangle.getHeight()));
         }
     }
     else {
         // TODO: add function to RGraphicsViewImage:
-        if (painter!=NULL) {
-            painter->setClipping(false);
+        if (worker!=NULL) {
+            worker->setClipping(false);
         }
     }
 
@@ -1280,84 +1739,98 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
     while (i.hasNext()) {
         RGraphicsSceneDrawable drawable = i.next();
 
-        // drawable is not plottable (from layer for which plottable is off):
-        if (drawable.getNoPlot() && (isPrinting() || (showOnlyPlottable && isPrintPreview()))) {
-            // always export transforms (viewports):
-            if (drawable.getType()!=RGraphicsSceneDrawable::Transform && drawable.getType()!=RGraphicsSceneDrawable::EndTransform) {
-                continue;
+        paintDrawableThread(worker, drawable, clipRectangle, preview);
+    }
+}
+
+
+// TODO: remove threadId:
+void RGraphicsViewImage::paintDrawableThread(RGraphicsViewWorker* worker, RGraphicsSceneDrawable& drawable, const RBox& clipRectangle, bool preview) {
+
+    // drawable is not plottable (from layer for which plottable is off):
+    if (drawable.getNoPlot() && (isPrinting() || (showOnlyPlottable && isPrintPreview()))) {
+        // always export transforms (viewports):
+        if (drawable.getType()!=RGraphicsSceneDrawable::Transform && drawable.getType()!=RGraphicsSceneDrawable::EndTransform) {
+            return;
+        }
+    }
+
+    bool workingSet = true;
+    if (!isPrintingOrExporting() && !preview) {
+        RDocument* doc = getDocument();
+        if (doc->isEditingWorkingSet()) {
+            if (!drawable.isWorkingSet()) {
+                // fade out entities not in working set:
+                workingSet = false;
             }
         }
+    }
 
-        bool workingSet = true;
-        if (!isPrintingOrExporting() && !preview) {
-            RDocument* doc = getDocument();
-            if (doc->isEditingWorkingSet()) {
-                if (!drawable.isWorkingSet()) {
-                    // fade out entities not in working set:
-                    workingSet = false;
-                }
-            }
+    // image:
+    if (drawable.isImage()) {
+        if (clipRectangle.isValid()) {
+            // re-enable clipping for image if a path switched it off:
+            // TODO: add function to RGraphicsViewImage:
+            worker->setClipping(true);
         }
+        RImageData image = drawable.getImage();
+        image.move(drawable.getOffset());
 
-        // image:
-        if (drawable.isImage()) {
-            if (clipRectangle.isValid()) {
-                // re-enable clipping for image if a path switched it off:
-                // TODO: add function to RGraphicsViewImage:
-                painter->setClipping(true);
-            }
-            RImageData image = drawable.getImage();
-            image.move(drawable.getOffset());
-
-            if (entityTransformThread[threadId].isEmpty()) {
-                image.move(paintOffset);
-            }
-            else {
-                // transform (image in block reference):
-                // TODO: add function to RGraphicsViewImage:
-                painter->save();
-                for (int k=0; k<entityTransformThread[threadId].size(); k++) {
-                    if (k==0) {
-                        // paintOffset must be applied here to get the correct placement for
-                        // texts with non-uniform scale:
-                        QTransform tt;
-                        tt.translate(paintOffset.x, paintOffset.y);
-
-                        // TODO: add function to RGraphicsViewImage:
-                        painter->setTransform(tt, true);
-                    }
-
-                    RTransform t = entityTransformThread[threadId][k];
+        //if (entityTransformThread[threadId].isEmpty()) {
+        if (!worker->hasTransforms()) {
+            image.move(paintOffset);
+        }
+        else {
+            // transform (image in block reference):
+            // TODO: add function to RGraphicsViewImage:
+            worker->save();
+            QStack<RTransform> entityTransformStack = worker->getEntityTransformStack();
+            //for (int k=0; k<entityTransformThread[threadId].size(); k++) {
+            for (int k=0; k<entityTransformStack.size(); k++) {
+                if (k==0) {
+                    // paintOffset must be applied here to get the correct placement for
+                    // texts with non-uniform scale:
+                    QTransform tt;
+                    tt.translate(paintOffset.x, paintOffset.y);
 
                     // TODO: add function to RGraphicsViewImage:
-                    painter->setTransform(t, true);
+                    worker->setTransform(tt, true);
                 }
-            }
 
-            // TODO: add function to RGraphicsViewImage:
-            // TODO: remove painter:
-            paintImage(painter, image, workingSet);
+                //RTransform t = entityTransformThread[threadId][k];
+                RTransform t = entityTransformStack[k];
 
-            if (!entityTransformThread[threadId].isEmpty()) {
                 // TODO: add function to RGraphicsViewImage:
-                painter->restore();
+                worker->setTransform(t, true);
             }
         }
 
-        // TTF text block (CAD text block is painter path):
-        else if (drawable.isText()) {
-            RTextBasedData text = drawable.getText();
+        // TODO: add function to RGraphicsViewImage:
+        // TODO: remove painter:
+        worker->paintImage(image, workingSet);
 
-            if (drawable.getPixelUnit()) {
-                text.scale(RVector(1/factor,1/factor), text.getAlignmentPoint());
-            }
+        //if (!entityTransformThread[threadId].isEmpty()) {
+        if (worker->hasTransforms()) {
+            // TODO: add function to RGraphicsViewImage:
+            worker->restore();
+        }
+    }
 
-            text.move(drawable.getOffset());
+    // TTF text block (CAD text block is painter path):
+    else if (drawable.isText()) {
+        RTextBasedData text = drawable.getText();
 
-            if (entityTransformThread[threadId].isEmpty()) {
-                text.move(paintOffset);
-            }
-            else {
+        if (drawable.getPixelUnit()) {
+            text.scale(RVector(1/factor,1/factor), text.getAlignmentPoint());
+        }
+
+        text.move(drawable.getOffset());
+
+        //if (entityTransformThread[threadId].isEmpty()) {
+        if (!worker->hasTransforms()) {
+            text.move(paintOffset);
+        }
+        else {
 //                RVector p = text.getPosition();
 //                RVector ap = text.getAlignmentPoint();
 //                RVector anglePoint = ap + RVector::createPolar(1.0, text.getAngle());
@@ -1366,27 +1839,30 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
 //                RVector centerPoint = text.getBoundingBox().getCenter();
 //                qDebug() << "centerPoint before:" << centerPoint;
 
-                // transform (text in block reference):
-                // TODO: add function to RGraphicsViewImage:
-                painter->save();
-                for (int k=0; k<entityTransformThread[threadId].size(); k++) {
-                    if (k==0) {
-                        // paintOffset must be applied here to get the correct placement for
-                        // texts with non-uniform scale:
+            // transform (text in block reference):
+            // TODO: add function to RGraphicsViewImage:
+            worker->save();
+            QStack<RTransform> entityTransformStack = worker->getEntityTransformStack();
+            //for (int k=0; k<entityTransformThread[threadId].size(); k++) {
+            for (int k=0; k<entityTransformStack.size(); k++) {
+                if (k==0) {
+                    // paintOffset must be applied here to get the correct placement for
+                    // texts with non-uniform scale:
 
-                        QTransform tt;
-                        tt.translate(paintOffset.x, paintOffset.y);
+                    QTransform tt;
+                    tt.translate(paintOffset.x, paintOffset.y);
 
-                        //text.move(paintOffset);
-                        // TODO: add function to RGraphicsViewImage:
-                        painter->setTransform(tt, true);
+                    //text.move(paintOffset);
+                    // TODO: add function to RGraphicsViewImage:
+                    worker->setTransform(tt, true);
 //                        p.transform2D(tt);
 //                        ap.transform2D(tt);
 //                        anglePoint.transform2D(tt);
 //                        centerPoint.transform2D(tt);
-                    }
+                }
 
-                    RTransform t = entityTransformThread[threadId][k];
+                //RTransform t = entityTransformThread[threadId][k];
+                RTransform t = entityTransformStack[k];
 //                    QList<RTransformOp> ops = t.getOps();
 //                    for (int n=ops.length()-1; n>=0; n--) {
 //                        RTransformOp op = ops[n];
@@ -1405,12 +1881,12 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
 //                    ap.transform2D(t);
 //                    anglePoint.transform2D(t);
 //                    centerPoint.transform2D(t);
-                    // TODO: add function to RGraphicsViewImage:
-                    painter->setTransform(t, true);
+                // TODO: add function to RGraphicsViewImage:
+                worker->setTransform(t, true);
 
-                    //qDebug() << "m11:" << t.m11();
-                    //qDebug() << "m22:" << t.m22();
-                }
+                //qDebug() << "m11:" << t.m11();
+                //qDebug() << "m22:" << t.m22();
+            }
 
 //                text.setPosition(p);
 //                text.setAlignmentPoint(ap);
@@ -1425,7 +1901,7 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
 //                double angle = RMath::makeAngleReadable(ap.getAngleTo(anglePoint), readable, &corr);
 //                text.setAngle(angle);
 
-                // TODO: fix alignment and angle of text to make readable:
+            // TODO: fix alignment and angle of text to make readable:
 
 //                if (text.getBoundingBox().getCenter().getDistanceTo(centerPoint)>0.1) {
 //                    bool corr = false;
@@ -1447,357 +1923,365 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
 //                        }
 //                    }
 //                }
-            }
+        }
 
+        // TODO: add function to RGraphicsViewImage:
+        // remove painter (member var):
+        worker->paintText(text, workingSet);
+
+        //if (!entityTransformThread[threadId].isEmpty()) {
+        if (worker->hasTransforms()) {
             // TODO: add function to RGraphicsViewImage:
-            // remove painter (member var):
-            paintText(painter, text, workingSet);
-
-            if (!entityTransformThread[threadId].isEmpty()) {
-                // TODO: add function to RGraphicsViewImage:
-                painter->restore();
-            }
+            worker->restore();
         }
+    }
 
-        // Transform:
-        else if (drawable.getType()==RGraphicsSceneDrawable::Transform) {
-            RTransform transform = drawable.getTransform();
-            entityTransformThread[threadId].push(transform);
+    // Transform:
+    else if (drawable.getType()==RGraphicsSceneDrawable::Transform) {
+        RTransform transform = drawable.getTransform();
+        //entityTransformThread[threadId].push(transform);
+        worker->pushTransform(transform);
+    }
+
+    else if (drawable.getType()==RGraphicsSceneDrawable::EndTransform) {
+        //if (!entityTransformThread[threadId].isEmpty()) {
+        if (worker->hasTransforms()) {
+            //entityTransformThread[threadId].pop();
+            worker->popTransform();
         }
+        else {
+            qWarning() << "pop transform: stack empty";
+        }
+    }
 
-        else if (drawable.getType()==RGraphicsSceneDrawable::EndTransform) {
-            if (!entityTransformThread[threadId].isEmpty()) {
-                entityTransformThread[threadId].pop();
+    // unknown drawable or already handled (image, text, transform, end transform):
+    if (!drawable.isPainterPath()) {
+        return;
+    }
+
+    // painter path:
+    RPainterPath path = drawable.getPainterPath();
+    if (!path.isSane()) {
+        return;
+    }
+
+    if (drawable.getPixelUnit() || path.getPixelUnit()) {
+        // path is displayed in pixels, not drawing unit:
+        //RVector sp = path.getStartPoint();
+        RVector sp = path.getBoundingBox().getCenter();
+        path.move(-sp);
+        path.scale(1/factor,1/factor);
+        path.move(sp);
+    }
+
+    path.move(drawable.getOffset());
+    path.move(paintOffset);
+    RBox pathBB = path.getBoundingBox();
+
+    // additional bounding box check for painter paths that are
+    // part of one block reference entity:
+    if (!isPrintingOrExporting() && !clipBox.intersects(pathBB)) {
+        return;
+    }
+
+    // small texts might be invisible while their bounding box is displayed:
+    if (!isPathVisible(path)) {
+        return;
+    }
+
+    // individual paths might disable clipping:
+    if (clipRectangle.isValid()) {
+        // TODO: add function to RGraphicsViewImage:
+        //if (painter!=NULL) {
+            worker->setClipping(!path.getNoClipping());
+        //}
+    }
+
+    QPen pen = path.getPen();
+    QBrush brush = path.getBrush();
+
+    if (pen.style() != Qt::NoPen) {
+        if (path.getPixelWidth()) {
+            // use width of path pen
+            pen.setWidthF(pen.widthF() / getFactor());
+        }
+        else if (isPrinting()) {
+            if (hairlineMode) {
+                //pen.setWidthF(0.05 / drawingScale);
+                pen.setWidthF(0.0);
+                pen.setCosmetic(true);
             }
             else {
-                qWarning() << "pop transform: stack empty";
+                // printing: always use real, scaled line weight, no matter
+                // how thin:
+                pen.setWidthF(pen.widthF() / drawingScale);
             }
         }
-
-        // unknown drawable or already handled (image, text, transform, end transform):
-        if (!drawable.isPainterPath()) {
-            continue;
-        }
-
-        // painter path:
-        RPainterPath path = drawable.getPainterPath();
-        if (!path.isSane()) {
-            continue;
-        }
-
-        if (drawable.getPixelUnit() || path.getPixelUnit()) {
-            // path is displayed in pixels, not drawing unit:
-            //RVector sp = path.getStartPoint();
-            RVector sp = path.getBoundingBox().getCenter();
-            path.move(-sp);
-            path.scale(1/factor,1/factor);
-            path.move(sp);
-        }
-
-        path.move(drawable.getOffset());
-        path.move(paintOffset);
-        RBox pathBB = path.getBoundingBox();
-
-        // additional bounding box check for painter paths that are
-        // part of one block reference entity:
-        if (!isPrintingOrExporting() && !clipBox.intersects(pathBB)) {
-            continue;
-        }
-
-        // small texts might be invisible while their bounding box is displayed:
-        if (!isPathVisible(path)) {
-            continue;
-        }
-
-        // individual paths might disable clipping:
-        if (clipRectangle.isValid()) {
-            // TODO: add function to RGraphicsViewImage:
-            if (painter!=NULL) {
-                painter->setClipping(!path.getNoClipping());
-            }
-        }
-
-        QPen pen = path.getPen();
-        QBrush brush = path.getBrush();
-
-        if (pen.style() != Qt::NoPen) {
-            if (path.getPixelWidth()) {
-                // use width of path pen
-                pen.setWidthF(pen.widthF() / getFactor());
-            }
-            else if (isPrinting()) {
-                if (hairlineMode) {
-                    //pen.setWidthF(0.05 / drawingScale);
-                    pen.setWidthF(0.0);
-                    pen.setCosmetic(true);
+        else if (isPrintPreview()) {
+            if (!pen.isCosmetic()) {
+                // print preview: optimize thin lines to 0 (1 pixel):
+                if (pen.widthF() * getFactor() / drawingScale < 1.5) {
+                    pen.setWidth(0);
                 }
                 else {
-                    // printing: always use real, scaled line weight, no matter
-                    // how thin:
-                    pen.setWidthF(pen.widthF() / drawingScale);
-                }
-            }
-            else if (isPrintPreview()) {
-                if (!pen.isCosmetic()) {
-                    // print preview: optimize thin lines to 0 (1 pixel):
-                    if (pen.widthF() * getFactor() / drawingScale < 1.5) {
-                        pen.setWidth(0);
+                    if (hairlineMode) {
+                        //pen.setWidthF(0.05 / drawingScale);
+                        pen.setWidthF(0.0);
+                        pen.setCosmetic(true);
                     }
                     else {
-                        if (hairlineMode) {
-                            //pen.setWidthF(0.05 / drawingScale);
-                            pen.setWidthF(0.0);
-                            pen.setCosmetic(true);
-                        }
-                        else {
-                            pen.setWidthF(pen.widthF() / drawingScale);
-                        }
+                        pen.setWidthF(pen.widthF() / drawingScale);
                     }
                 }
             }
-            else {
-                if (!pen.isCosmetic()) {
-                    // for display, ignore drawing scale and optimize
-                    // thin lines to 0:
-                    if (pen.widthF() * getFactor() < 1.5) {
-                        pen.setWidth(0);
-                    }
+        }
+        else {
+            if (!pen.isCosmetic()) {
+                // for display, ignore drawing scale and optimize
+                // thin lines to 0:
+                if (pen.widthF() * getFactor() < 1.5) {
+                    pen.setWidth(0);
                 }
-            }
-
-            // hairline minimum mode:
-            // ensure a line weight of at least 1 device pixel (e.g. bitmap export):
-            if (hairlineMinimumMode && pen.widthF()*getFactor()<1.0) {
-                pen.setWidth(0);
             }
         }
 
-        // prevent black on black / white on white drawing
-        applyColorCorrection(pen);
-        applyColorCorrection(brush);
+        // hairline minimum mode:
+        // ensure a line weight of at least 1 device pixel (e.g. bitmap export):
+        if (hairlineMinimumMode && pen.widthF()*getFactor()<1.0) {
+            pen.setWidth(0);
+        }
+    }
 
-        // apply minimum line weight:
-        applyMinimumLineweight(pen);
+    // prevent black on black / white on white drawing
+    applyColorCorrection(pen);
+    applyColorCorrection(brush);
 
-        // highlighted:
-        if (!isPrintingOrExporting() && path.isHighlighted()) {
+    // apply minimum line weight:
+    applyMinimumLineweight(pen);
+
+    // highlighted:
+    if (!isPrintingOrExporting() && path.isHighlighted()) {
+        if (pen.style() != Qt::NoPen) {
+            pen.setColor(RColor::getHighlighted(pen.color(), QColor((QRgb)bgColorLightness), 100));
+        }
+        if (brush.style() != Qt::NoBrush) {
+            RColor ch = RColor::getHighlighted(brush.color(), QColor((QRgb)bgColorLightness), 100);
+            ch.setAlpha(128);
+            brush.setColor(ch);
+        }
+    }
+
+    if (!workingSet) {
+        if (!path.isSelected()) {
             if (pen.style() != Qt::NoPen) {
-                pen.setColor(RColor::getHighlighted(pen.color(), QColor((QRgb)bgColorLightness), 100));
+                // fade out entities not in working set:
+                pen.setColor(RColor::getFaded(pen.color(), getBackgroundColor(), RSettings::getFadingFactor()));
             }
             if (brush.style() != Qt::NoBrush) {
-                RColor ch = RColor::getHighlighted(brush.color(), QColor((QRgb)bgColorLightness), 100);
-                ch.setAlpha(128);
-                brush.setColor(ch);
+                brush.setColor(RColor::getFaded(brush.color(), getBackgroundColor(), RSettings::getFadingFactor()));
             }
         }
+    }
 
-        if (!workingSet) {
-            if (!path.isSelected()) {
-                if (pen.style() != Qt::NoPen) {
-                    // fade out entities not in working set:
-                    pen.setColor(RColor::getFaded(pen.color(), getBackgroundColor(), RSettings::getFadingFactor()));
-                }
-                if (brush.style() != Qt::NoBrush) {
-                    brush.setColor(RColor::getFaded(brush.color(), getBackgroundColor(), RSettings::getFadingFactor()));
-                }
+    if (!path.getNoColorMode()) {
+        applyColorMode(pen);
+        applyColorMode(brush);
+    }
+
+    //setBrush(brush);
+    worker->setBrush(brush);
+    //setPen(pen);
+    worker->setPen(pen);
+
+    // 20210903: make sure screen-based linetypes are rendered as path to keep pattern visible:
+    if (scene->getScreenBasedLinetypes() || path.getScreenBasedLinetype() || scene->getDraftMode() || isPrintingOrExporting() /*|| clipBox.contains(pathBB)*/) {
+        if (brush.style() != Qt::NoBrush) {
+            // TODO: add function to RGraphicsViewImage:
+            worker->fillPath(path, brush);
+        }
+
+        // draw outline:
+        if (pen.style() != Qt::NoPen) {
+            // TODO: add function to RGraphicsViewImage:
+            worker->drawPath(path);
+        }
+    }
+    else {
+        // prevent overflows for simple lines:
+        // TODO: make this an option for rendering:
+        if (path.elementCount() == 2 &&
+            path.elementAt(0).isMoveTo() &&
+            path.elementAt(1).isLineTo()) {
+
+            qreal x1 = path.elementAt(0).x;
+            qreal y1 = path.elementAt(0).y;
+            qreal x2 = path.elementAt(1).x;
+            qreal y2 = path.elementAt(1).y;
+            RLine line(RVector(x1,y1), RVector(x2,y2));
+            if (!clipBox.contains(line.getBoundingBox())) {
+                line.clipToXY(clipBox);
+            }
+
+            QLineF qLine(QPointF(line.startPoint.x, line.startPoint.y),
+                         QPointF(line.endPoint.x, line.endPoint.y));
+
+            if (line.startPoint.equalsFuzzy(line.endPoint, 1e-5)) {
+                // draw zero length line as one pixel long line:
+                double d = mapDistanceFromView(1.0);
+                qLine.setP2(QPointF(line.endPoint.x + d, line.endPoint.y));
+            }
+            if (line.isValid()) {
+                //qDebug() << "calling drawLine";
+                worker->drawLine(qLine);
             }
         }
-
-        if (!path.getNoColorMode()) {
-            applyColorMode(pen);
-            applyColorMode(brush);
-        }
-
-        setBrush(brush);
-        setPen(pen);
-
-        // 20210903: make sure screen-based linetypes are rendered as path to keep pattern visible:
-        if (scene->getScreenBasedLinetypes() || path.getScreenBasedLinetype() || scene->getDraftMode() || isPrintingOrExporting() /*|| clipBox.contains(pathBB)*/) {
+        else {
+            // draw fill:
             if (brush.style() != Qt::NoBrush) {
                 // TODO: add function to RGraphicsViewImage:
-                painter->fillPath(path, brush);
+                worker->fillPath(path, brush);
             }
 
             // draw outline:
             if (pen.style() != Qt::NoPen) {
-                // TODO: add function to RGraphicsViewImage:
-                painter->drawPath(path);
-            }
-        }
-        else {
-            // prevent overflows for simple lines:
-            // TODO: make this an option for rendering:
-            if (path.elementCount() == 2 &&
-                path.elementAt(0).isMoveTo() &&
-                path.elementAt(1).isLineTo()) {
+                // TODO: optional (more accurate, slower?):
+                qreal x=0.0;
+                qreal y=0.0;
+                for (int i=0; i<path.elementCount(); i++) {
+                    QPainterPath::Element el = path.elementAt(i);
+                    if (el.isMoveTo()) {
+                        x = el.x;
+                        y = el.y;
+                        continue;
+                    }
 
-                qreal x1 = path.elementAt(0).x;
-                qreal y1 = path.elementAt(0).y;
-                qreal x2 = path.elementAt(1).x;
-                qreal y2 = path.elementAt(1).y;
-                RLine line(RVector(x1,y1), RVector(x2,y2));
-                if (!clipBox.contains(line.getBoundingBox())) {
-                    line.clipToXY(clipBox);
-                }
-
-                QLineF qLine(QPointF(line.startPoint.x, line.startPoint.y),
-                             QPointF(line.endPoint.x, line.endPoint.y));
-
-                if (line.startPoint.equalsFuzzy(line.endPoint, 1e-5)) {
-                    // draw zero length line as one pixel long line:
-                    double d = mapDistanceFromView(1.0);
-                    qLine.setP2(QPointF(line.endPoint.x + d, line.endPoint.y));
-                }
-                if (line.isValid()) {
-                    //qDebug() << "calling drawLine";
-                    drawLine(qLine);
-                }
-            }
-            else {
-                // draw fill:
-                if (brush.style() != Qt::NoBrush) {
-                    // TODO: add function to RGraphicsViewImage:
-                    painter->fillPath(path, brush);
-                }
-
-                // draw outline:
-                if (pen.style() != Qt::NoPen) {
-                    // TODO: optional (more accurate, slower?):
-                    qreal x=0.0;
-                    qreal y=0.0;
-                    for (int i=0; i<path.elementCount(); i++) {
-                        QPainterPath::Element el = path.elementAt(i);
-                        if (el.isMoveTo()) {
-                            x = el.x;
-                            y = el.y;
-                            continue;
+                    if (el.isLineTo()) {
+                        RLine line(RVector(x,y), RVector(el.x,el.y));
+                        if (!clipBox.contains(line.getBoundingBox())) {
+                            line.clipToXY(clipBox);
                         }
-
-                        if (el.isLineTo()) {
-                            RLine line(RVector(x,y), RVector(el.x,el.y));
-                            if (!clipBox.contains(line.getBoundingBox())) {
-                                line.clipToXY(clipBox);
+                        if (line.isValid()) {
+                            QLineF qLine(QPointF(line.startPoint.x, line.startPoint.y),
+                                         QPointF(line.endPoint.x, line.endPoint.y));
+                            if (line.startPoint.equalsFuzzy(line.endPoint, 1e-5)) {
+                                // draw zero length line as one pixel long line:
+                                double d = mapDistanceFromView(1.0);
+                                qLine.setP2(QPointF(line.endPoint.x + d, line.endPoint.y));
                             }
-                            if (line.isValid()) {
-                                QLineF qLine(QPointF(line.startPoint.x, line.startPoint.y),
-                                             QPointF(line.endPoint.x, line.endPoint.y));
-                                if (line.startPoint.equalsFuzzy(line.endPoint, 1e-5)) {
-                                    // draw zero length line as one pixel long line:
-                                    double d = mapDistanceFromView(1.0);
-                                    qLine.setP2(QPointF(line.endPoint.x + d, line.endPoint.y));
-                                }
 
-                                //qDebug() << "calling drawLine";
-                                drawLine(qLine);
+                            //qDebug() << "calling drawLine";
+                            worker->drawLine(qLine);
 //                                if (pen2.style() != Qt::NoPen) {
 //                                    painter->setPen(pen2);
 //                                    painter->drawLine(qLine);
 //                                    painter->setPen(pen);
 //                                }
-                            }
-                            x = el.x;
-                            y = el.y;
-                            continue;
                         }
+                        x = el.x;
+                        y = el.y;
+                        continue;
+                    }
 
-                        if (el.isCurveTo()) {
-                            i++;
-                            QPainterPath::Element del1 = path.elementAt(i);
-                            i++;
-                            QPainterPath::Element del2 = path.elementAt(i);
+                    if (el.isCurveTo()) {
+                        i++;
+                        QPainterPath::Element del1 = path.elementAt(i);
+                        i++;
+                        QPainterPath::Element del2 = path.elementAt(i);
 
-                            QPainterPath cubicCurve;
-                            cubicCurve.moveTo(x, y);
-                            cubicCurve.cubicTo(el.x, el.y, del1.x, del1.y, del2.x, del2.y);
-                            // TODO: add function to RGraphicsViewImage:
-                            painter->strokePath(cubicCurve, painter->pen());
-                            //painter->strokePath(cubicCurve, pen2);
-                            x = del2.x;
-                            y = del2.y;
-                            continue;
-                        }
+                        QPainterPath cubicCurve;
+                        cubicCurve.moveTo(x, y);
+                        cubicCurve.cubicTo(el.x, el.y, del1.x, del1.y, del2.x, del2.y);
+                        // TODO: add function to RGraphicsViewImage:
+                        //worker->strokePath(cubicCurve, painter->pen());
+                        worker->strokePath(cubicCurve, worker->getPen());
+                        //painter->strokePath(cubicCurve, pen2);
+                        x = del2.x;
+                        y = del2.y;
+                        continue;
                     }
                 }
             }
         }
+    }
 
-        // draw points:
-        if (path.hasPoints()) {
-            // simple point display for hatches (don't apply point styles):
-            if (path.getSimplePointDisplay()) {
-                double ps = getScene()->getPixelSizeHint();
-                // simple point mode for hatch patterns:
-                // force point display as points:
-                QList<RVector> points = path.getPoints();
-                QList<RVector>::iterator it;
-                for (it=points.begin(); it<points.end(); it++) {
-                    RVector p = *it;
-
-                    // draws lines at higher zoom levels:
-                    //drawDot(painter, QPointF(p.x, p.y));
-
-                    // TODO: add function to RGraphicsViewImage:
-                    painter->drawLine(QLineF(p.x, p.y, p.x + ps, p.y));
-                }
-                continue;
-            }
-
-            double pSize = getDocument()->getKnownVariable(RS::PDSIZE, 0).toDouble();
-            pSize = getPointSize(pSize);
-            int pMode = getDocument()->getKnownVariable(RS::PDMODE, 0).toInt();
-
-            // FS#481: for printing, point size does not depend on current viewing factor:
-            if (isPrinting() || isPrintPreview()) {
-                pMode = 0;
-            }
-            else {
-                // When not printing, set pen width to zero so when zooming in
-                // the lines don't turn into a blob
-                // This also applies when exporting (e.g. to bitmap):
-                QPen pen = painter->pen();
-                if (!RSettings::getApplyLineweightToPoints()) {
-                    pen.setWidth(0);
-                }
-                // TODO: add function to RGraphicsViewImage:
-                painter->setPen(pen);
-            }
-
-            // if PDMODE = 1 nothing is drawn
-            // we are in an while loop, so continue
-            if (pMode == 1) {
-                continue;
-            }
-
-            // do ANDs once, outside loop
-            int rslt7 = pMode & 7;
-            int rslt32 = pMode & 32;
-            int rslt64 = pMode & 64;
+    // draw points:
+    if (path.hasPoints()) {
+        // simple point display for hatches (don't apply point styles):
+        if (path.getSimplePointDisplay()) {
+            double ps = getScene()->getPixelSizeHint();
+            // simple point mode for hatch patterns:
+            // force point display as points:
             QList<RVector> points = path.getPoints();
             QList<RVector>::iterator it;
             for (it=points.begin(); it<points.end(); it++) {
                 RVector p = *it;
-                //int rslt = pMode & 7;
-                if (rslt7 == 0) {
-                    // TODO: add function to RGraphicsViewImage:
-                    drawDot(painter, QPointF(p.x, p.y));
-                } else if (rslt7 == 2) {
-                    drawPlus(painter, QPointF(p.x, p.y), pSize);
-                } else if (rslt7 == 3) {
-                    drawEx(painter, QPointF(p.x, p.y), pSize);
-                } else if (rslt7 == 4) {
-                    drawVBar(painter, QPointF(p.x, p.y), pSize);
-                }
-                //rslt = pMode & 32;
-                if (rslt32 == 32) {
-                    drawCircle(painter, QPointF(p.x, p.y), pSize);
-                }
-                //rslt = pMode & 64;
-                if (rslt64 == 64) {
-                    drawSquare(painter, QPointF(p.x, p.y), pSize);
-                }
+
+                // draws lines at higher zoom levels:
+                //drawDot(painter, QPointF(p.x, p.y));
+
+                // TODO: add function to RGraphicsViewImage:
+                worker->drawLine(QLineF(p.x, p.y, p.x + ps, p.y));
+            }
+            return;
+        }
+
+        double pSize = getDocument()->getKnownVariable(RS::PDSIZE, 0).toDouble();
+        pSize = getPointSize(pSize);
+        int pMode = getDocument()->getKnownVariable(RS::PDMODE, 0).toInt();
+
+        // FS#481: for printing, point size does not depend on current viewing factor:
+        if (isPrinting() || isPrintPreview()) {
+            pMode = 0;
+        }
+        else {
+            // When not printing, set pen width to zero so when zooming in
+            // the lines don't turn into a blob
+            // This also applies when exporting (e.g. to bitmap):
+            //QPen pen = painter->pen();
+            QPen pen = worker->getPen();
+            if (!RSettings::getApplyLineweightToPoints()) {
+                pen.setWidth(0);
+            }
+            // TODO: add function to RGraphicsViewImage:
+            worker->setPen(pen);
+        }
+
+        // if PDMODE = 1 nothing is drawn
+        // we are in an while loop, so continue
+        if (pMode == 1) {
+            return;
+        }
+
+        // do ANDs once, outside loop
+        int rslt7 = pMode & 7;
+        int rslt32 = pMode & 32;
+        int rslt64 = pMode & 64;
+        QList<RVector> points = path.getPoints();
+        QList<RVector>::iterator it;
+        for (it=points.begin(); it<points.end(); it++) {
+            RVector p = *it;
+            //int rslt = pMode & 7;
+            if (rslt7 == 0) {
+                // TODO: add function to RGraphicsViewImage:
+                drawDot(worker, QPointF(p.x, p.y));
+            } else if (rslt7 == 2) {
+                drawPlus(worker, QPointF(p.x, p.y), pSize);
+            } else if (rslt7 == 3) {
+                drawEx(worker, QPointF(p.x, p.y), pSize);
+            } else if (rslt7 == 4) {
+                drawVBar(worker, QPointF(p.x, p.y), pSize);
+            }
+            //rslt = pMode & 32;
+            if (rslt32 == 32) {
+                drawCircle(worker, QPointF(p.x, p.y), pSize);
+            }
+            //rslt = pMode & 64;
+            if (rslt64 == 64) {
+                drawSquare(worker, QPointF(p.x, p.y), pSize);
             }
         }
     }
+
 }
 
 QList<RPainterPath> RGraphicsViewImage::getTextLayoutsPainterPaths(const RTextBasedData& text, const QList<RTextLayout>& textLayouts) {
@@ -1932,7 +2416,7 @@ double RGraphicsViewImage::getPointSize(double pSize) {
     }
 }
 
-void RGraphicsViewImage::drawDot(QPainter* painter, QPointF pt) {
+void RGraphicsViewImage::drawDot(RGraphicsViewWorker* worker, QPointF pt) {
     qreal r;
     if (isPrinting() || isPrintPreview()) {
         RDocument* doc = getDocument();
@@ -1941,74 +2425,65 @@ void RGraphicsViewImage::drawDot(QPainter* painter, QPointF pt) {
         // screen rendering / (bitmap) exporting
         r = mapDistanceFromView(1.5);
     }
-    painter->setBrush(painter->pen().color());
-    painter->drawEllipse(pt, r, r);
-    painter->setBrush(Qt::NoBrush);
+    worker->setBrush(worker->getPen().color());
+    worker->drawEllipse(pt, r, r);
+    worker->setBrush(Qt::NoBrush);
 }
 
-void RGraphicsViewImage::drawPlus(QPainter* painter, QPointF pt, double pSize) {
+void RGraphicsViewImage::drawPlus(RGraphicsViewWorker* worker, QPointF pt, double pSize) {
     qreal size = pSize / 2;
     size = mapDistanceFromView(size);
-    painter->drawLine(
-        QPointF(pt.x() - size, pt.y()),
-        QPointF(pt.x() + size, pt.y())
+    worker->drawLine(
+        QLineF(pt.x() - size, pt.y(), pt.x() + size, pt.y())
     );
-    painter->drawLine(
-        QPointF(pt.x(), pt.y() - size),
-        QPointF(pt.x(), pt.y() + size)
+    worker->drawLine(
+        QLineF(pt.x(), pt.y() - size, pt.x(), pt.y() + size)
     );
 }
 
-void RGraphicsViewImage::drawEx(QPainter* painter, QPointF pt, double pSize) {
+void RGraphicsViewImage::drawEx(RGraphicsViewWorker* worker, QPointF pt, double pSize) {
     qreal size = pSize / 2;
     size = mapDistanceFromView(size);
-    painter->drawLine(
-        QPointF(pt.x() - size, pt.y() + size),
-        QPointF(pt.x() + size, pt.y() - size)
+    worker->drawLine(
+        QLineF(pt.x() - size, pt.y() + size, pt.x() + size, pt.y() - size)
     );
-    painter->drawLine(
-        QPointF(pt.x() + size, pt.y() + size),
-        QPointF(pt.x() - size, pt.y() - size)
+    worker->drawLine(
+        QLineF(pt.x() + size, pt.y() + size, pt.x() - size, pt.y() - size)
     );
 }
 
-void RGraphicsViewImage::drawVBar(QPainter* painter, QPointF pt, double pSize) {
+void RGraphicsViewImage::drawVBar(RGraphicsViewWorker* worker, QPointF pt, double pSize) {
     qreal size = (pSize * 0.8) / 2 ;
     size = mapDistanceFromView(size);
-    painter->drawLine(
-        QPointF(pt.x(), pt.y()),
-        QPointF(pt.x(), pt.y() + size)
+    worker->drawLine(
+        QLineF(pt.x(), pt.y(), pt.x(), pt.y() + size)
     );
 }
 
-void RGraphicsViewImage::drawCircle(QPainter* painter, QPointF pt, double pSize) {
+void RGraphicsViewImage::drawCircle(RGraphicsViewWorker* worker, QPointF pt, double pSize) {
     qreal size = (pSize * 0.8) / 2;
     size = mapDistanceFromView(size);
-    painter->drawEllipse(pt, size, size);
+    worker->drawEllipse(pt, size, size);
 }
 
-void RGraphicsViewImage::drawSquare(QPainter* painter, QPointF pt, double pSize) {
+void RGraphicsViewImage::drawSquare(RGraphicsViewWorker* worker, QPointF pt, double pSize) {
     qreal size = (pSize * 0.8) / 2;
     size = mapDistanceFromView(size);
-    painter->drawLine(
-        QPointF(pt.x() - size, pt.y() + size),
-        QPointF(pt.x() + size, pt.y() + size)
+    worker->drawLine(
+        QLineF(pt.x() - size, pt.y() + size, pt.x() + size, pt.y() + size)
     );
-    painter->drawLine(
-        QPointF(pt.x() + size, pt.y() + size),
-        QPointF(pt.x() + size, pt.y() - size)
+    worker->drawLine(
+        QLineF(pt.x() + size, pt.y() + size, pt.x() + size, pt.y() - size)
     );
-    painter->drawLine(
-        QPointF(pt.x() + size, pt.y() - size),
-        QPointF(pt.x() - size, pt.y() - size)
+    worker->drawLine(
+        QLineF(pt.x() + size, pt.y() - size, pt.x() - size, pt.y() - size)
     );
-    painter->drawLine(
-        QPointF(pt.x() - size, pt.y() - size),
-        QPointF(pt.x() - size, pt.y() + size)
+    worker->drawLine(
+        QLineF(pt.x() - size, pt.y() - size, pt.x() - size, pt.y() + size)
     );
 }
 
-void RGraphicsViewImage::paintImage(QPainter* painter, RImageData& image, bool workingSet) {
+void RGraphicsViewImage::paintImage(RGraphicsViewWorker* worker, const RImageData& image, bool workingSet) {
     if (scene==NULL) {
         return;
     }
@@ -2032,7 +2507,7 @@ void RGraphicsViewImage::paintImage(QPainter* painter, RImageData& image, bool w
 
         double angle = image.getUVector().getAngle();
 
-        painter->save();
+        worker->save();
         /*
         QMatrix wm = painter->matrix();
         wm.translate(image.getInsertionPoint().x, image.getInsertionPoint().y);
@@ -2041,11 +2516,11 @@ void RGraphicsViewImage::paintImage(QPainter* painter, RImageData& image, bool w
         painter->setMatrix(wm);
         */
 
-        QTransform t = painter->worldTransform();
+        QTransform t = worker->getWorldTransform();
         t.translate(image.getInsertionPoint().x, image.getInsertionPoint().y);
         t.rotate(RMath::rad2deg(angle));
         t.scale(scale.x, -scale.y);
-        painter->setWorldTransform(t);
+        worker->setWorldTransform(t);
 
         double opacity = 1.0;
         if (image.getFade()>0 && image.getFade()<100) {
@@ -2054,36 +2529,35 @@ void RGraphicsViewImage::paintImage(QPainter* painter, RImageData& image, bool w
         if (!workingSet) {
             opacity *= 0.5;
         }
-        painter->setOpacity(opacity);
-        painter->drawImage(0,-qImage.height(), qImage);
-        painter->setOpacity(1.0);
-        painter->restore();
+        worker->setOpacity(opacity);
+        worker->drawImage(0,-qImage.height(), qImage);
+        worker->setOpacity(1.0);
+        worker->restore();
     }
 
     // draw image in draft mode / selected mode (border in black or white):
     if (scene->getDraftMode() || image.isSelected()) {
         if (image.isSelected()) {
-            painter->setPen(QPen(QBrush(RSettings::getSelectionColor()), 0));
+            worker->setPen(QPen(QBrush(RSettings::getSelectionColor()), 0));
         }
         else {
             if (backgroundColor.value()<128) {
-                painter->setPen(QPen(QBrush(QColor(Qt::white)), 0));
+                worker->setPen(QPen(QBrush(QColor(Qt::white)), 0));
             }
             else {
-                painter->setPen(QPen(QBrush(QColor(Qt::black)), 0));
+                worker->setPen(QPen(QBrush(QColor(Qt::black)), 0));
             }
         }
         QList<RLine> edges = image.getEdges();
         for (int i=0; i<edges.count(); i++) {
             RLine l = edges[i];
-            painter->drawLine(QPointF(l.getStartPoint().x, l.getStartPoint().y),
-                              QPointF(l.getEndPoint().x, l.getEndPoint().y));
+            worker->drawLine(QLineF(l.getStartPoint().x, l.getStartPoint().y, l.getEndPoint().x, l.getEndPoint().y));
         }
     }
 
 }
 
-void RGraphicsViewImage::paintText(QPainter* painter, RTextBasedData& text, bool workingSet) {
+void RGraphicsViewImage::paintText(RGraphicsViewWorker* worker, const RTextBasedData& text, bool workingSet) {
     if (scene==NULL) {
         return;
     }
@@ -2134,13 +2608,13 @@ void RGraphicsViewImage::paintText(QPainter* painter, RTextBasedData& text, bool
         // TTF font text block:
 //        else {
         if (!textLayout.layout.isNull()) {
-            painter->save();
-            painter->setTransform(t, true);
+            worker->save();
+            worker->setTransform(t, true);
 
             QTextOption o;
             if (text.isSelected()) {
                 o.setFlags(QTextOption::SuppressColors);
-                painter->setPen(QPen(RSettings::getSelectionColor()));
+                worker->setPen(QPen(RSettings::getSelectionColor()));
             }
             else {
                 o.setFlags(QTextOption::SuppressColors);
@@ -2173,18 +2647,19 @@ void RGraphicsViewImage::paintText(QPainter* painter, RTextBasedData& text, bool
                     }
                 }
 
-                painter->setPen(pen);
+                worker->setPen(pen);
             }
             textLayout.layout->setTextOption(o);
 
             // TODO: should be reentrant but crashes if not locked:
             {
                 RTextRenderer::lockForDrawing();
-                textLayout.layout->draw(painter, QPoint(0,0));
+                //textLayout.layout->draw(painter, QPoint(0,0));
+                worker->drawTextLayout(*textLayout.layout);
                 RTextRenderer::unlockForDrawing();
             }
 
-            painter->restore();
+            worker->restore();
         }
 
     }
@@ -2197,10 +2672,12 @@ int RGraphicsViewImage::getWidth() const {
         double dpr = getDevicePixelRatio();
         return (int)(widget->width() * dpr);
     }
-    if (graphicsBufferThread.isEmpty()) {
+    //if (graphicsBufferThread.isEmpty()) {
+    if (workers.isEmpty()) {
         return 100;
     }
-    return graphicsBufferThread.first().width();
+    //return graphicsBufferThread.first().width();
+    return workers.first()->getImage().width();
 }
 
 int RGraphicsViewImage::getHeight() const {
@@ -2208,22 +2685,34 @@ int RGraphicsViewImage::getHeight() const {
         double dpr = getDevicePixelRatio();
         return (int)(widget->height() * dpr);
     }
-    if (graphicsBufferThread.isEmpty()) {
+    //if (graphicsBufferThread.isEmpty()) {
+    if (workers.isEmpty()) {
         return 100;
     }
-    return graphicsBufferThread.first().height();
+    //return graphicsBufferThread.first().height();
+    return workers.first()->getImage().height();
 }
 
 void RGraphicsViewImage::resizeImage(int w, int h) {
+    qDebug() << "RGraphicsViewImage::resizeImage";
     //graphicsBuffer = QImage(QSize(w,h), alphaEnabled ? QImage::Format_ARGB32 : QImage::Format_RGB32);
 
-    for (int i=0; i<graphicsBufferThread.length(); i++) {
-        if (i==0) {
-            graphicsBufferThread[i] = QImage(QSize(w,h), alphaEnabled ? QImage::Format_ARGB32 : QImage::Format_RGB32);
-        }
-        else {
-            graphicsBufferThread[i] = QImage(QSize(w,h), QImage::Format_ARGB32);
-        }
+//    for (int i=0; i<graphicsBufferThread.length(); i++) {
+//        if (i==0) {
+//            graphicsBufferThread[i] = QImage(QSize(w,h), alphaEnabled ? QImage::Format_ARGB32 : QImage::Format_RGB32);
+//        }
+//        else {
+//            graphicsBufferThread[i] = QImage(QSize(w,h), QImage::Format_ARGB32);
+//        }
+//    }
+    for (int i=0; i<workers.length(); i++) {
+//        if (i==0) {
+//            workers[i]->setImage(QImage(QSize(w,h), alphaEnabled ? QImage::Format_ARGB32 : QImage::Format_RGB32));
+//        }
+//        else {
+            //graphicsBufferThread[i] = QImage(QSize(w,h), QImage::Format_ARGB32);
+            workers[i]->setImage(QImage(QSize(w,h), QImage::Format_ARGB32));
+//        }
     }
 }
 
@@ -2236,7 +2725,7 @@ bool RGraphicsViewImage::getPanOptimization() {
 }
 
 QImage RGraphicsViewImage::getBuffer() const {
-    return graphicsBufferWithPreview;
+    return graphicsBuffer;
 }
 
 QTransform RGraphicsViewImage::getTransform() const {
@@ -2249,18 +2738,18 @@ void RGraphicsViewImage::viewportChangeEvent() {
 }
 
 void RGraphicsViewImage::emitUpdateSnapInfo(RSnap* snap, RSnapRestriction* restriction) {
-    if (receivers(SIGNAL(updateSnapInfo(QPainter*, RSnap*, RSnapRestriction*))) > 0) {
-        QPainter gbPainter(&graphicsBufferWithPreview);
-        emit(updateSnapInfo(&gbPainter, snap, restriction));
-        gbPainter.end();
+    if (receivers(SIGNAL(updateSnapInfo(RGraphicsViewWorker*, RSnap*, RSnapRestriction*))) > 0) {
+        //QPainter gbPainter(&graphicsBufferWithPreview);
+        emit(updateSnapInfo(decorationWorker, snap, restriction));
+        //gbPainter.end();
     }
 }
 
 void RGraphicsViewImage::emitUpdateTextLabel(const RTextLabel& textLabel) {
-    if (receivers(SIGNAL(updateTextLabel(QPainter*, const RTextLabel&))) > 0) {
-        QPainter gbPainter(&graphicsBufferWithPreview);
-        emit(updateTextLabel(&gbPainter, textLabel));
-        gbPainter.end();
+    if (receivers(SIGNAL(updateTextLabel(RGraphicsViewWorker*, const RTextLabel&))) > 0) {
+        //QPainter gbPainter(&graphicsBufferWithPreview);
+        emit(updateTextLabel(decorationWorker, textLabel));
+        //gbPainter.end();
     }
 }
 

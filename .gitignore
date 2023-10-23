@@ -35,6 +35,7 @@ Makefile.SimulatorRelease
 .qmake.stash
 *.xcodeproj
 *.opt
+qtcsettings.cmake
 
 .qmake2cmake
 .ninja_deps

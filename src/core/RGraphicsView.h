@@ -228,6 +228,7 @@ public:
     virtual void paintGridPoints(const QVector<double>& ucsPositionX, const QVector<double>& ucsPositionY);
     virtual void paintGridPoint(const RVector& /*ucsPosition*/) {}
     virtual void paintGridLine(const RLine& /*ucsPosition*/) {}
+    virtual void paintCursorLine(const RLine& /*ucsPosition*/) {}
 
     virtual QCursor getCursor() { return QCursor(Qt::ArrowCursor); }
     virtual void setCursor(Qt::CursorShape /*cursorShape*/) {}

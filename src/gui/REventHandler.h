@@ -40,6 +40,7 @@ class RSnap;
 class RVector;
 class RTextLabel;
 class RSnapRestriction;
+class RGraphicsViewWorker;
 
 /**
  * Event handler class. For each new document that is created or
@@ -59,14 +60,14 @@ public:
     static bool isUrl(const QString& urlString);
     static QList<QUrl> getUrlsFromMimeData(QMimeData* mimeData);
 
-    void drawInfoLabel(QPainter *painter, const RTextLabel &textLabel);
-    void drawSnapLabel(QPainter *painter, const RVector &pos, const RVector &posRestriction, const QString &text);
+    void drawInfoLabel(RGraphicsViewWorker* worker, const RTextLabel& textLabel);
+    void drawSnapLabel(RGraphicsViewWorker* worker, const RVector& pos, const RVector& posRestriction, const QString& text);
 
 public slots:
-    void dragEnter(QDragEnterEvent *event);
+    void dragEnter(QDragEnterEvent* event);
 
-    void updateTextLabel(QPainter *painter, const RTextLabel &textLabel);
-    void updateSnapInfo(QPainter *painter, RSnap *snap, RSnapRestriction *restriction);
+    void updateTextLabel(RGraphicsViewWorker* worker, const RTextLabel& textLabel);
+    void updateSnapInfo(RGraphicsViewWorker* worker, RSnap* snap, RSnapRestriction* restriction);
     void viewportChanged();
 
     void horizontalScrolled(double pos);

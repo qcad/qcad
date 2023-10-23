@@ -126,6 +126,11 @@ public:
     static RColor getEndReferencePointColor();
     static RColor getSecondaryReferencePointColor();
     static RColor getTertiaryReferencePointColor();
+    static RColor getCrossHairColor();
+    static RColor getCrossHairColorInactive();
+    static RColor getGridColor();
+    static RColor getMetaGridColor();
+    static RColor getOriginColor();
 
     static bool getHighResolutionGraphicsView();
     static bool getAutoScaleGrid();
@@ -318,6 +323,11 @@ private:
     static RColor* endReferencePointColor;
     static RColor* secondaryReferencePointColor;
     static RColor* tertiaryReferencePointColor;
+    static RColor* crossHairColor;
+    static RColor* crossHairColorInactive;
+    static RColor* gridColor;
+    static RColor* metaGridColor;
+    static RColor* originColor;
     static int darkMode;
     static int darkGuiBackground;
     static int snapRange;
