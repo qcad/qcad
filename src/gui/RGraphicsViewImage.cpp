@@ -241,10 +241,12 @@ void RGraphicsViewImage::updateImage() {
 
         showOnlyPlottable = RSettings::getBoolValue("PrintPreviewPro/ShowOnlyPlottable", false);
 
+
         RDebug::startTimer();
-
         initWorkers();
+        RDebug::stopTimer("initWorkers");
 
+        RDebug::startTimer();
         if (!workers.isEmpty()) {
             // fill first worker (bottom buffer) with background color:
             //paintErase(workers.first());
@@ -799,7 +801,8 @@ void RGraphicsViewImage::initWorkers() {
 //                //graphicsBufferThread[i] = QImage(newSize, alphaEnabled ? QImage::Format_ARGB32 : QImage::Format_RGB32);
 //            }
 //            else {
-                workers[i]->setImage(QImage(newSize, QImage::Format_ARGB32));
+                //workers[i]->setImage(QImage(newSize, QImage::Format_ARGB32));
+                workers[i]->setImage(QImage(newSize, QImage::Format_ARGB32_Premultiplied));
                 //graphicsBufferThread[i] = QImage(newSize, QImage::Format_ARGB32);
 //            }
         }
