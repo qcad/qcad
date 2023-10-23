@@ -32,6 +32,7 @@
 #include "RSnap.h"
 #include "RUnit.h"
 #include "RGraphicsViewQt.h"
+#include "RGraphicsViewWorker.h"
 
 /**
  * Event handler for scroll, drag and drop, snap info.

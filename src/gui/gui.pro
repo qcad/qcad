@@ -20,6 +20,8 @@ SOURCES += \
     RGraphicsSceneDrawable.cpp \
     RGraphicsSceneQt.cpp \
     RGraphicsViewImage.cpp \
+    RGraphicsViewWorker.cpp \
+    RGraphicsViewWorkerPainter.cpp \
     RGraphicsViewQt.cpp \
     RLinetypeCombo.cpp \
     RLinetypeComboDelegate.cpp \
@@ -56,6 +58,8 @@ HEADERS += \
     RGraphicsSceneDrawable.h \
     RGraphicsSceneQt.h \
     RGraphicsViewImage.h \
+    RGraphicsViewWorker.h \
+    RGraphicsViewWorkerPainter.h \
     RGraphicsViewQt.h \
     RLinetypeCombo.h \
     RLinetypeComboDelegate.h \

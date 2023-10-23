@@ -37,6 +37,8 @@ add_library(qcadgui SHARED
     RGraphicsSceneDrawable.cpp RGraphicsSceneDrawable.h
     RGraphicsSceneQt.cpp RGraphicsSceneQt.h
     RGraphicsViewImage.cpp RGraphicsViewImage.h
+    RGraphicsViewWorker.cpp RGraphicsViewWorker.h
+    RGraphicsViewWorkerPainter.cpp RGraphicsViewWorkerPainter.h
     RGraphicsViewQt.cpp RGraphicsViewQt.h
     RLinetypeCombo.cpp RLinetypeCombo.h
     RLinetypeComboDelegate.cpp RLinetypeComboDelegate.h
