@@ -149,11 +149,11 @@ REventHandler::drop(QDropEvent* event) {
 };
 */
 
-void REventHandler::updateTextLabel(QPainter* painter, const RTextLabel& textLabel) {
-    drawInfoLabel(painter, textLabel);
+void REventHandler::updateTextLabel(RGraphicsViewWorker* worker, const RTextLabel& textLabel) {
+    drawInfoLabel(worker, textLabel);
 }
 
-void REventHandler::drawInfoLabel(QPainter* painter, const RTextLabel& textLabel) {
+void REventHandler::drawInfoLabel(RGraphicsViewWorker* worker, const RTextLabel& textLabel) {
     RVector pos = textLabel.getPosition();
     QString text = textLabel.getText();
 
@@ -161,7 +161,7 @@ void REventHandler::drawInfoLabel(QPainter* painter, const RTextLabel& textLabel
     // info labels might have individual colors in future
     //var color = RSettings.getColor("GraphicsViewColors/TextLabelColor", new RColor(249,198,31));
     RColor color = RSettings::getColor("GraphicsViewColors/MeasurementToolsColor", RColor(155,220,112));
-    painter->setPen(color);
+    worker->setPen(color);
 
     if (!text.isEmpty()) {
         QFont font = RSettings::getInfoLabelFont();
@@ -176,8 +176,8 @@ void REventHandler::drawInfoLabel(QPainter* painter, const RTextLabel& textLabel
         int w = hAdvance+10;
         int h = fm.height()+10;
         //destr(fm);
-        painter->setFont(font);
-        painter->drawText(p.x - w - 15, p.y + h + 5, w, h, Qt::AlignHCenter | Qt::AlignVCenter, text, NULL);
+        worker->setFont(font);
+        worker->drawText(QRectF(p.x - w - 15, p.y + h + 5, w, h), Qt::AlignHCenter | Qt::AlignVCenter, text);
     }
 }
 
@@ -186,7 +186,8 @@ void REventHandler::drawInfoLabel(QPainter* painter, const RTextLabel& textLabel
  * \param painter QPainter for the view in screen coordinates.
  * \param snap Current snap.
  */
-void REventHandler::updateSnapInfo(QPainter* painter, RSnap* snap, RSnapRestriction* restriction) {
+void REventHandler::updateSnapInfo(RGraphicsViewWorker* worker, RSnap* snap, RSnapRestriction* restriction) {
+    qDebug() << "REventHandler::updateSnapInfo";
     if (snap==NULL) {
         return;
     }
@@ -236,24 +237,27 @@ void REventHandler::updateSnapInfo(QPainter* painter, RSnap* snap, RSnapRestrict
         break;
     }
 
+    qDebug() << "snap text:" << text;
+
     if (!text.isEmpty()) {
-        drawSnapLabel(painter, pos, posRestriction, text);
+        drawSnapLabel(worker, pos, posRestriction, text);
     }
 }
 
-void REventHandler::drawSnapLabel(QPainter* painter, const RVector& pos, const RVector& posRestriction, const QString& text) {
+void REventHandler::drawSnapLabel(RGraphicsViewWorker* worker, const RVector& pos, const RVector& posRestriction, const QString& text) {
+    qDebug() << "REventHandler::drawSnapLabel";
     RVector p = graphicsView->mapToView(pos);
     RVector pr = RVector::invalid;
     if (posRestriction.isValid()) {
         pr = graphicsView->mapToView(posRestriction);
     }
     RColor color = RSettings::getColor("GraphicsViewColors/TextLabelColor", RColor(249,198,31));
-    painter->setPen(color);
+    worker->setPen(color);
 
     QFont font = RSettings::getSnapLabelFont();
     font.setPointSizeF(font.pointSizeF()*graphicsView->getDevicePixelRatio());
     QFontMetrics fm(font);
-    painter->setFont(font);
+    worker->setFont(font);
 
     int offset = 5 * graphicsView->getDevicePixelRatio();
 
@@ -264,21 +268,21 @@ void REventHandler::drawSnapLabel(QPainter* painter, const RVector& pos, const R
 #else
         int hAdvance = fm.width(text);
 #endif
-        painter->drawText(
-            p.x + offset, p.y + offset,
-            hAdvance+10, fm.height()+10,
+        worker->drawText(
+            QRectF(p.x + offset, p.y + offset,
+                   hAdvance+10, fm.height()+10),
             Qt::AlignHCenter | Qt::AlignVCenter,
-            text, NULL);
+            text);
     }
 
-    painter->drawEllipse(p.x-offset, p.y-offset, offset*2, offset*2);
+    worker->drawEllipse(QRectF(p.x-offset, p.y-offset, offset*2, offset*2));
 
     // restriction position:
     if (pr.isSane()) {
-        painter->drawLine(pr.x, pr.y-offset, pr.x+offset, pr.y);
-        painter->drawLine(pr.x+offset, pr.y, pr.x, pr.y+offset);
-        painter->drawLine(pr.x, pr.y+offset, pr.x-offset, pr.y);
-        painter->drawLine(pr.x-offset, pr.y, pr.x, pr.y-offset);
+        worker->drawLine(QLineF(pr.x, pr.y-offset, pr.x+offset, pr.y));
+        worker->drawLine(QLineF(pr.x+offset, pr.y, pr.x, pr.y+offset));
+        worker->drawLine(QLineF(pr.x, pr.y+offset, pr.x-offset, pr.y));
+        worker->drawLine(QLineF(pr.x-offset, pr.y, pr.x, pr.y-offset));
     }
 
     // display distance/angle:
@@ -311,7 +315,7 @@ void REventHandler::drawSnapLabel(QPainter* painter, const RVector& pos, const R
     QString sep = RSettings::getStringValue("Input/PolarCoordinateSeparator", "<");
 
     color = RSettings::getColor("GraphicsViewColors/MeasurementToolsColor", RColor(155,220,112));
-    painter->setPen(color);
+    worker->setPen(color);
     QString displayText;
     switch (display) {
     case 0:
@@ -337,11 +341,11 @@ void REventHandler::drawSnapLabel(QPainter* painter, const RVector& pos, const R
 #else
         int hAdvance = fm.width(displayText);
 #endif
-        painter->drawText(
-                    p.x + offset, p.y - 3*offset - fm.height(),
-                    hAdvance+10, fm.height()+10,
+        worker->drawText(
+                    QRectF(p.x + offset, p.y - 3*offset - fm.height(),
+                        hAdvance+10, fm.height()+10),
                     Qt::AlignHCenter | Qt::AlignVCenter,
-                    displayText, NULL);
+                    displayText);
     }
 }
 

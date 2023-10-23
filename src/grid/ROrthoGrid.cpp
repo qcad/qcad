@@ -604,40 +604,40 @@ void ROrthoGrid::paintCursor(const RVector& pos) {
 
         // .-´
         if (projection==RS::IsoTop || projection==RS::IsoRight) {
-            view.paintGridLine(RLine(pos + RVector(dxp,dyp), pos - RVector(dxn,dyn)));
+            view.paintCursorLine(RLine(pos + RVector(dxp,dyp), pos - RVector(dxn,dyn)));
         }
         // `-.
         if (projection==RS::IsoTop || projection==RS::IsoLeft) {
-            view.paintGridLine(RLine(pos + RVector(dxp,-dyp), pos - RVector(dxn,-dyn)));
+            view.paintCursorLine(RLine(pos + RVector(dxp,-dyp), pos - RVector(dxn,-dyn)));
         }
 
         // |
         if (projection==RS::IsoRight || projection==RS::IsoLeft) {
             if (RSettings::getShowLargeCrosshair()) {
-                view.paintGridLine(RLine(RVector(pos.x, b.c1.y), RVector(pos.x, b.c2.y)));
+                view.paintCursorLine(RLine(RVector(pos.x, b.c1.y), RVector(pos.x, b.c2.y)));
             }
             else {
-                view.paintGridLine(RLine(RVector(pos.x, pos.y - s), RVector(pos.x, pos.y + s)));
+                view.paintCursorLine(RLine(RVector(pos.x, pos.y - s), RVector(pos.x, pos.y + s)));
             }
         }
     }
     else {
         if (RSettings::getShowLargeCrosshair()) {
-            view.paintGridLine(RLine(RVector(b.c1.x, pos.y), RVector(b.c2.x, pos.y)));
-            view.paintGridLine(RLine(RVector(pos.x, b.c1.y), RVector(pos.x, b.c2.y)));
+            view.paintCursorLine(RLine(RVector(b.c1.x, pos.y), RVector(b.c2.x, pos.y)));
+            view.paintCursorLine(RLine(RVector(pos.x, b.c1.y), RVector(pos.x, b.c2.y)));
 
             // TODO: alternative cross hairs from corners to cursor:
-//            view.paintGridLine(RLine(pos, RVector(b.c1.x, b.c1.y)));
-//            view.paintGridLine(RLine(pos, RVector(b.c1.x, b.c2.y)));
-//            view.paintGridLine(RLine(pos, RVector(b.c2.x, b.c1.y)));
-//            view.paintGridLine(RLine(pos, RVector(b.c2.x, b.c2.y)));
+//            view.paintCursorLine(RLine(pos, RVector(b.c1.x, b.c1.y)));
+//            view.paintCursorLine(RLine(pos, RVector(b.c1.x, b.c2.y)));
+//            view.paintCursorLine(RLine(pos, RVector(b.c2.x, b.c1.y)));
+//            view.paintCursorLine(RLine(pos, RVector(b.c2.x, b.c2.y)));
         }
         else {
             double s = view.mapDistanceFromView(25);
             RVector sx(s, 0);
             RVector sy(0, s);
-            view.paintGridLine(RLine(pos-sx, pos+sx));
-            view.paintGridLine(RLine(pos-sy, pos+sy));
+            view.paintCursorLine(RLine(pos-sx, pos+sx));
+            view.paintCursorLine(RLine(pos-sy, pos+sy));
         }
     }
 }

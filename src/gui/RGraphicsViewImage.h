@@ -25,6 +25,7 @@
 #include <QtCore>
 #include <QPinchGesture>
 #include <QTransform>
+#include <QPainter>
 
 #include "RGraphicsView.h"
 #include "RPainterPath.h"
@@ -37,6 +38,200 @@ class RGraphicsSceneDrawable;
 class RLine;
 class RSnap;
 class RSnapRestriction;
+class RGraphicsViewImage;
+
+
+
+class QCADGUI_EXPORT RGraphicsViewWorker : public QThread {
+    Q_OBJECT
+
+public:
+    RGraphicsViewWorker(RGraphicsViewImage& imageView, int threadId) : imageView(imageView), threadId(threadId), list(nullptr), startIndex(-1), endIndex(-1) {}
+    virtual ~RGraphicsViewWorker();
+
+    enum ClearMode {
+        NoClear = 0,
+        ClearToTransparent = 1,
+        ClearToBackground = 2
+    };
+
+    void run();
+
+    virtual void init(QList<REntity::Id>& list, int start, int end);
+
+    void setClearMode(ClearMode m) {
+        clearMode = m;
+    }
+
+    ClearMode getClearMode() const {
+        return clearMode;
+    }
+
+    QImage getImage() const {
+        return image;
+    }
+    virtual void setImage(const QImage& img) {
+        image = img;
+    }
+
+    bool hasTransforms() const {
+        return !entityTransformStack.isEmpty();
+    }
+
+    QStack<RTransform> getEntityTransformStack() const {
+        return entityTransformStack;
+    }
+
+    void pushTransform(const RTransform& t) {
+        entityTransformStack.push(t);
+    }
+
+    void popTransform() {
+        entityTransformStack.pop();
+    }
+
+    virtual void paint();
+
+    virtual void begin() = 0;
+    virtual void end() = 0;
+
+    virtual void clear() = 0;
+
+    virtual void setAntialiasing(bool on) = 0;
+    virtual void setBackground(const QColor& col) = 0;
+    virtual void setCompositionMode(QPainter::CompositionMode mode) = 0;
+    virtual void setFont(const QFont& font) = 0;
+
+    virtual void eraseRect(const QRectF& rect) = 0;
+
+    virtual void setClipRect(const QRectF& rect) = 0;
+    virtual void setClipping(bool on) = 0;
+    virtual void setOpacity(double opacity) = 0;
+    virtual void save() = 0;
+    virtual void restore() = 0;
+
+    virtual QTransform getTransform() = 0;
+    virtual void setTransform(const QTransform& t, bool combine = false) = 0;
+
+    virtual void translate(double x, double y) = 0;
+    virtual void scale(double x, double y) = 0;
+
+    virtual QTransform getWorldTransform() const = 0;
+    virtual void setWorldTransform(const QTransform& t, bool combine = false) = 0;
+
+    virtual void setBrush(const QBrush& brush) = 0;
+    virtual QPen getPen() const = 0;
+    virtual void setPen(const QPen& pen) = 0;
+
+    virtual void drawPoint(const QPointF& p) = 0;
+
+    virtual void paintImage(const RImageData& img, bool workingSet);
+    virtual void drawImage(int x, int y, const QImage& image) = 0;
+
+    virtual void paintText(const RTextBasedData& text, bool workingSet);
+    virtual void drawText(const QRectF& rectangle, int flags, const QString& text) = 0;
+    virtual void drawTextLayout(const QTextLayout& textLayout) = 0;
+
+    virtual void fillPath(const RPainterPath& path, const QBrush& brush) = 0;
+    virtual void drawPath(const RPainterPath& path) = 0;
+    virtual void drawLine(const QPointF& p1, const QPointF& p2) {
+        drawLine(QLineF(p1, p2));
+    }
+    virtual void drawLine(const QLineF& line) = 0;
+    virtual void strokePath(const QPainterPath& path, const QPen& pen) = 0;
+
+    virtual void drawEllipse(const QPointF& center, double rx, double ry) {
+        drawEllipse(QRectF(center.x()-rx, center.y()-ry, rx*2, ry*2));
+    }
+    virtual void drawEllipse(const QRectF& rectangle) = 0;
+
+    virtual void drawRect(const QRectF& rectangle) = 0;
+    virtual void fillRect(const QRectF& rectangle, const QBrush& brush) = 0;
+
+
+signals:
+    void finished();
+
+protected:
+    int threadId;
+    QList<REntity::Id>* list;
+    int startIndex;
+    int endIndex;
+    ClearMode clearMode;
+
+    QImage image;
+    RGraphicsViewImage& imageView;
+    QStack<RTransform> entityTransformStack;
+};
+
+
+
+
+class QCADGUI_EXPORT RGraphicsViewWorkerPainter : public RGraphicsViewWorker {
+    Q_OBJECT
+
+public:
+    RGraphicsViewWorkerPainter(RGraphicsViewImage& imageView, int threadId) : RGraphicsViewWorker(imageView, threadId), painter(NULL) {}
+    virtual ~RGraphicsViewWorkerPainter();
+
+    virtual void begin();
+    virtual void end();
+
+    virtual void setImage(const QImage& img);
+
+    virtual void paint();
+
+    virtual void clear();
+
+    virtual void setAntialiasing(bool on);
+    virtual void setBackground(const QColor& col);
+    virtual void setCompositionMode(QPainter::CompositionMode mode);
+    virtual void setFont(const QFont& font);
+
+    virtual void eraseRect(const QRectF& rect);
+
+    virtual void setClipRect(const QRectF& rect);
+    virtual void setClipping(bool on);
+    virtual void setOpacity(double opacity);
+    virtual void save();
+    virtual void restore();
+
+    virtual QTransform getTransform();
+    virtual void setTransform(const QTransform& t, bool combine = false);
+
+    virtual void translate(double x, double y);
+    virtual void scale(double x, double y);
+
+    virtual QTransform getWorldTransform() const;
+    virtual void setWorldTransform(const QTransform& t, bool combine = false);
+
+
+    virtual void setBrush(const QBrush& brush);
+    virtual QPen getPen() const;
+    virtual void setPen(const QPen& pen);
+
+    virtual void drawPoint(const QPointF& p);
+
+    //virtual void paintImage(const RImageData& img, bool workingSet);
+    virtual void drawImage(int x, int y, const QImage& image);
+
+    //virtual void paintText(const RTextBasedData& text, bool workingSet);
+    virtual void drawText(const QRectF& rectangle, int flags, const QString& text);
+    virtual void drawTextLayout(const QTextLayout& textLayout);
+
+    virtual void fillPath(const RPainterPath& path, const QBrush& brush);
+    virtual void drawPath(const RPainterPath& path);
+    virtual void drawLine(const QLineF& line);
+    virtual void strokePath(const QPainterPath& path, const QPen& pen);
+
+    virtual void drawEllipse(const QRectF& rectangle);
+
+    virtual void drawRect(const QRectF& rectangle);
+    virtual void fillRect(const QRectF& rectangle, const QBrush& brush);
+
+protected:
+    QPainter* painter;
+};
 
 
 
@@ -254,20 +449,22 @@ public:
 
     virtual void paintGridPoint(const RVector& ucsPosition);
     virtual void paintGridLine(const RLine& ucsPosition);
-    //virtual void paintCursorLine(const RLine& ucsPosition);
+    virtual void paintCursorLine(const RLine& ucsPosition);
 
     void setPaintOrigin(bool val);
 
     void setPanOptimization(bool on);
     bool getPanOptimization();
 
-    virtual void paintEntities(QPainter* painter, const RBox& queryBox);
+    //virtual void paintEntities(QPainter* painter, const RBox& queryBox);
     void paintEntitiesMulti(const RBox& queryBox);
-    void paintEntitiesThread(int threadId, const QList<REntity::Id>& list, int start, int end);
+    //void paintEntitiesThread(int threadId, const QList<REntity::Id>& list, int start, int end);
+    //void paintDrawablesThread(int threadId, const QList<RGraphicsSceneDrawable>& list, int start, int end);
 
-    virtual void paintEntityThread(int threadId, REntity::Id id, bool preview = false);
+    virtual void paintEntityThread(RGraphicsViewWorker* worker, REntity::Id id, bool preview = false);
+    virtual void paintDrawableThread(RGraphicsViewWorker* worker, RGraphicsSceneDrawable& drawable, const RBox& clipRectangle, bool preview = false);
 
-    virtual void paintOverlay(QPainter* painter);
+    virtual void paintOverlay(RGraphicsViewWorker* worker);
 
     QImage getBuffer() const;
     QTransform getTransform() const;
@@ -353,6 +550,8 @@ public:
 
     virtual double getDevicePixelRatio() const;
 
+    virtual void paintImage(RGraphicsViewWorker* worker, const RImageData& image, bool workingSet = true);
+    virtual void paintText(RGraphicsViewWorker* worker, const RTextBasedData& text, bool workingSet = true);
 
 protected:
     QList<RPainterPath> getTextLayoutsPainterPaths(const RTextBasedData& text, const QList<RTextLayout>& textLayouts);
@@ -362,24 +561,22 @@ protected:
     void applyColorMode(QPen& pen);
     void applyColorMode(QBrush& brush);
     double getPointSize(double pSize);
-    virtual void drawDot(QPainter* painter, QPointF pt);
-    virtual void drawPlus(QPainter* painter, QPointF pt, double pSize);
-    virtual void drawEx(QPainter* painter, QPointF pt, double pSize);
-    virtual void drawVBar(QPainter* painter, QPointF pt, double pSize);
-    virtual void drawCircle(QPainter* painter, QPointF pt, double pSize);
-    virtual void drawSquare(QPainter* painter, QPointF pt, double pSize);
+    virtual void drawDot(RGraphicsViewWorker* worker, QPointF pt);
+    virtual void drawPlus(RGraphicsViewWorker* worker, QPointF pt, double pSize);
+    virtual void drawEx(RGraphicsViewWorker* worker, QPointF pt, double pSize);
+    virtual void drawVBar(RGraphicsViewWorker* worker, QPointF pt, double pSize);
+    virtual void drawCircle(RGraphicsViewWorker* worker, QPointF pt, double pSize);
+    virtual void drawSquare(RGraphicsViewWorker* worker, QPointF pt, double pSize);
 
-    virtual void paintImage(QPainter* painter, RImageData& image, bool workingSet = true);
-    virtual void paintText(QPainter* painter, RTextBasedData& text, bool workingSet = true);
-    virtual void paintOrigin(QPaintDevice& device);
-    virtual void paintReferencePoint(QPainter& painter, const RRefPoint& pos, bool highlight);
-    virtual void paintErase(QPaintDevice& device, const QRect& rect = QRect());
-    virtual void paintGrid(QPaintDevice& device, const QRect& rect = QRect());
-    virtual void paintMetaGrid(QPaintDevice& device, const QRect& rect = QRect());
-    virtual void paintCursor(QPaintDevice& device);
-    virtual void paintRelativeZero(QPaintDevice& device);
+    virtual void paintOrigin(RGraphicsViewWorker* worker);
+    virtual void paintReferencePoint(RGraphicsViewWorker* worker, const RRefPoint& pos, bool highlight);
+    virtual void paintErase(RGraphicsViewWorker* worker, const QRect& rect = QRect());
+    virtual void paintGrid(RGraphicsViewWorker* worker, const QRect& rect = QRect());
+    virtual void paintMetaGrid(RGraphicsViewWorker* worker, const QRect& rect = QRect());
+    virtual void paintCursor(RGraphicsViewWorker* worker);
+    virtual void paintRelativeZero(RGraphicsViewWorker* worker);
     virtual void paintDocument(const QRect& rect = QRect());
-    virtual void paintBackground(QPainter* painter, const QRect& rect = QRect());
+    virtual void paintBackground(RGraphicsViewWorker* worker, const QRect& rect = QRect());
 
     virtual void endPaint() const;
     virtual void setBrush(const QBrush& brush) const;
@@ -392,18 +589,23 @@ protected:
     void initPainter(QPaintDevice& device, bool erase, bool screen = false, const QRect& rect = QRect());
 
     void invalidate(bool force=false);
-    void updateGraphicsBuffer();
+    void initWorkers();
     void updateTransformation() const;
 
 signals:
     void viewportChanged();
-    void updateSnapInfo(QPainter* painter, RSnap* snap, RSnapRestriction* restriction);
-    void updateTextLabel(QPainter* painter, const RTextLabel& textLabel);
+    void updateSnapInfo(RGraphicsViewWorker* worker, RSnap* snap, RSnapRestriction* restriction);
+    void updateTextLabel(RGraphicsViewWorker* worker, const RTextLabel& textLabel);
 
 protected:
-    QList<QImage> graphicsBufferThread;
-    QList<QPainter*> painterThread;
+    //QList<QImage> graphicsBufferThread;
+    //QList<QPainter*> painterThread;
+
+    // graphics buffer with current drawing rendered into it, without preview:
+    QImage graphicsBuffer;
+    // graphics buffer with current drawing rendered into it, with preview:
     QImage graphicsBufferWithPreview;
+
     int numThreads;
 
 protected:
@@ -447,13 +649,16 @@ protected:
     QMap<int, QMap<RObject::Id, QList<RGraphicsSceneDrawable> > > overlayDrawables;
 
     RBox clipBox;
-    QList<QStack<RTransform> > entityTransformThread;
+    //QList<QStack<RTransform> > entityTransformThread;
     RVector paintOffset;
     bool alphaEnabled;
 
     QString lastScaleString;
 
     bool showOnlyPlottable;
+
+    QList<RGraphicsViewWorker*> workers;
+    RGraphicsViewWorker* decorationWorker;
 };
 
 Q_DECLARE_METATYPE(RGraphicsViewImage*)
