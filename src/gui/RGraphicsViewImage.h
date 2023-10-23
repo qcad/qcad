@@ -261,167 +261,167 @@ public:
     // TODO: these methods are not found in RGraphicsViewQt, due to the
     // multiple inheritance of RGraphicsViewQt (QWidget and RGraphicsViewImage)
     // unless they are re-declared here again:
-    void setViewportNumber(int n) {
-        RGraphicsView::setViewportNumber(n);
-    }
+//    void setViewportNumber(int n) {
+//        RGraphicsView::setViewportNumber(n);
+//    }
 
-    int getViewportNumber() const {
-        return RGraphicsView::getViewportNumber();
-    }
+//    int getViewportNumber() const {
+//        return RGraphicsView::getViewportNumber();
+//    }
 
-    void setNavigationAction(RAction* action) {
-        RGraphicsView::setNavigationAction(action);
-    }
+//    void setNavigationAction(RAction* action) {
+//        RGraphicsView::setNavigationAction(action);
+//    }
 
-    RBox getBox() const {
-        return RGraphicsView::getBox();
-    }
+//    RBox getBox() const {
+//        return RGraphicsView::getBox();
+//    }
 
-    void autoZoom(int margin = RDEFAULT_MIN1, bool ignoreEmpty=false, bool ignoreLineweight=false) {
-        RGraphicsView::autoZoom(margin, ignoreEmpty, ignoreLineweight);
-    }
+//    void autoZoom(int margin = RDEFAULT_MIN1, bool ignoreEmpty=false, bool ignoreLineweight=false) {
+//        RGraphicsView::autoZoom(margin, ignoreEmpty, ignoreLineweight);
+//    }
 
-    void zoomTo(const RBox &window, int margin = 0) {
-        RGraphicsView::zoomTo(window, margin);
-    }
+//    void zoomTo(const RBox &window, int margin = 0) {
+//        RGraphicsView::zoomTo(window, margin);
+//    }
 
-    void zoom(const RVector& center, double factor) {
-        RGraphicsView::zoom(center, factor);
-    }
+//    void zoom(const RVector& center, double factor) {
+//        RGraphicsView::zoom(center, factor);
+//    }
 
-    void pan(const RVector& delta, bool regen=true) {
-        RGraphicsView::pan(delta, regen);
-    }
+//    void pan(const RVector& delta, bool regen=true) {
+//        RGraphicsView::pan(delta, regen);
+//    }
 
-    void centerToBox(const RBox& box) {
-        RGraphicsView::centerToBox(box);
-    }
+//    void centerToBox(const RBox& box) {
+//        RGraphicsView::centerToBox(box);
+//    }
 
-    void centerToPoint(const RVector& point) {
-        RGraphicsView::centerToPoint(point);
-    }
+//    void centerToPoint(const RVector& point) {
+//        RGraphicsView::centerToPoint(point);
+//    }
 
-    void setGrid(RGrid* grid) {
-        RGraphicsView::setGrid(grid);
-    }
+//    void setGrid(RGrid* grid) {
+//        RGraphicsView::setGrid(grid);
+//    }
 
-    RGrid* getGrid() {
-        return RGraphicsView::getGrid();
-    }
+//    RGrid* getGrid() {
+//        return RGraphicsView::getGrid();
+//    }
 
-    double getFactor(bool includeStepFactor=true) const {
-        return RGraphicsView::getFactor(includeStepFactor);
-    }
+//    double getFactor(bool includeStepFactor=true) const {
+//        return RGraphicsView::getFactor(includeStepFactor);
+//    }
 
-    void setFactor(double f, bool regen=true) {
-        RGraphicsView::setFactor(f, regen);
-    }
+//    void setFactor(double f, bool regen=true) {
+//        RGraphicsView::setFactor(f, regen);
+//    }
 
-    RVector getOffset(bool includeStepOffset=true) const {
-        return RGraphicsView::getOffset(includeStepOffset);
-    }
+//    RVector getOffset(bool includeStepOffset=true) const {
+//        return RGraphicsView::getOffset(includeStepOffset);
+//    }
 
-    void setOffset(const RVector& offset, bool regen=true) {
-        RGraphicsView::setOffset(offset, regen);
-    }
+//    void setOffset(const RVector& offset, bool regen=true) {
+//        RGraphicsView::setOffset(offset, regen);
+//    }
 
-    QColor getBackgroundColor() {
-        return RGraphicsView::getBackgroundColor();
-    }
+//    QColor getBackgroundColor() {
+//        return RGraphicsView::getBackgroundColor();
+//    }
 
-    void setMargin(int m) {
-        RGraphicsView::setMargin(m);
-    }
+//    void setMargin(int m) {
+//        RGraphicsView::setMargin(m);
+//    }
 
-    void setColorMode(RGraphicsView::ColorMode cm) {
-        RGraphicsView::setColorMode(cm);
-    }
+//    void setColorMode(RGraphicsView::ColorMode cm) {
+//        RGraphicsView::setColorMode(cm);
+//    }
 
-    void setHairlineMode(bool on) {
-        RGraphicsView::setHairlineMode(on);
-    }
+//    void setHairlineMode(bool on) {
+//        RGraphicsView::setHairlineMode(on);
+//    }
 
-    bool getHairlineMode() {
-        return RGraphicsView::getHairlineMode();
-    }
+//    bool getHairlineMode() {
+//        return RGraphicsView::getHairlineMode();
+//    }
 
-    void setHairlineMinimumMode(bool on) {
-        RGraphicsView::setHairlineMinimumMode(on);
-    }
+//    void setHairlineMinimumMode(bool on) {
+//        RGraphicsView::setHairlineMinimumMode(on);
+//    }
 
-    bool getHairlineMinimumMode() {
-        return RGraphicsView::getHairlineMinimumMode();
-    }
+//    bool getHairlineMinimumMode() {
+//        return RGraphicsView::getHairlineMinimumMode();
+//    }
 
-    void setAntialiasing(bool on) {
-        RGraphicsView::setAntialiasing(on);
-    }
+//    void setAntialiasing(bool on) {
+//        RGraphicsView::setAntialiasing(on);
+//    }
 
-    bool getAntialiasing() const {
-        return RGraphicsView::getAntialiasing();
-    }
+//    bool getAntialiasing() const {
+//        return RGraphicsView::getAntialiasing();
+//    }
 
-    RGraphicsScene* getScene() const {
-        return RGraphicsView::getScene();
-    }
+//    RGraphicsScene* getScene() const {
+//        return RGraphicsView::getScene();
+//    }
 
-    RDocument* getDocument() const {
-        return RGraphicsView::getDocument();
-    }
+//    RDocument* getDocument() const {
+//        return RGraphicsView::getDocument();
+//    }
 
-    RDocumentInterface* getDocumentInterface() const {
-        return RGraphicsView::getDocumentInterface();
-    }
+//    RDocumentInterface* getDocumentInterface() const {
+//        return RGraphicsView::getDocumentInterface();
+//    }
 
-    void setExporting(bool on) {
-        RGraphicsView::setExporting(on);
-    }
+//    void setExporting(bool on) {
+//        RGraphicsView::setExporting(on);
+//    }
 
-    bool isExporting() const {
-        return RGraphicsView::isExporting();
-    }
+//    bool isExporting() const {
+//        return RGraphicsView::isExporting();
+//    }
 
-    bool isPrintingOrExporting() const {
-        return RGraphicsView::isPrintingOrExporting();
-    }
+//    bool isPrintingOrExporting() const {
+//        return RGraphicsView::isPrintingOrExporting();
+//    }
 
-    void setPrinting(bool on) {
-        RGraphicsView::setPrinting(on);
-    }
+//    void setPrinting(bool on) {
+//        RGraphicsView::setPrinting(on);
+//    }
 
-    bool isPrinting() const {
-        return RGraphicsView::isPrinting();
-    }
+//    bool isPrinting() const {
+//        return RGraphicsView::isPrinting();
+//    }
 
-    void setPrintPreview(bool on) {
-        RGraphicsView::setPrintPreview(on);
-    }
+//    void setPrintPreview(bool on) {
+//        RGraphicsView::setPrintPreview(on);
+//    }
 
-    bool isPrintPreview() const {
-        return RGraphicsView::isPrintPreview();
-    }
+//    bool isPrintPreview() const {
+//        return RGraphicsView::isPrintPreview();
+//    }
 
-    void setPrintPointSize(const RVector& s) {
-        RGraphicsView::setPrintPointSize(s);
-    }
+//    void setPrintPointSize(const RVector& s) {
+//        RGraphicsView::setPrintPointSize(s);
+//    }
 
     virtual void simulateMouseMoveEvent();
 
-    void setTextHeightThresholdOverride(int v) {
-        RGraphicsView::setTextHeightThresholdOverride(v);
-    }
+//    void setTextHeightThresholdOverride(int v) {
+//        RGraphicsView::setTextHeightThresholdOverride(v);
+//    }
 
-    int getTextHeightThresholdOverride() const {
-        return RGraphicsView::getTextHeightThresholdOverride();
-    }
+//    int getTextHeightThresholdOverride() const {
+//        return RGraphicsView::getTextHeightThresholdOverride();
+//    }
 
-    bool isGridVisible() const {
-        return RGraphicsView::isGridVisible();
-    }
+//    bool isGridVisible() const {
+//        return RGraphicsView::isGridVisible();
+//    }
 
-    void setGridVisible(bool on) {
-        RGraphicsView::setGridVisible(on);
-    }
+//    void setGridVisible(bool on) {
+//        RGraphicsView::setGridVisible(on);
+//    }
     
     virtual void setScene(RGraphicsSceneQt* scene, bool regen=true);
 
