@@ -10,16 +10,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RSnap" />
   <class_decl name="RSnapRestriction" />
   <class_decl name="RGraphicsViewImage" />
-  <class name="RGraphicsViewWorker"
-  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
-  hasShell="false" sharedPointerSupport="false" isQObject="true"
-  hasStreamOperator="false" isAbstract="true"
-  isScriptable="false" />
-  <class name="RGraphicsViewWorkerPainter"
-  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
-  hasShell="false" sharedPointerSupport="false" isQObject="true"
-  hasStreamOperator="false" isAbstract="false"
-  isScriptable="false" />
+  <class_decl name="RGraphicsViewWorker" />
   <class name="RGraphicsViewImage"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="true"
@@ -43,6 +34,10 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="int" typeName="int" name="n" isConst="false" />
       </variant>
+    </method>
+    <method name="clear" cppName="clear" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
     </method>
     <method name="simulateMouseMoveEvent"
     cppName="simulateMouseMoveEvent" specifier="public"
@@ -252,6 +247,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QImage" isPureVirtual="false" />
     </method>
+    <method name="getTransform" cppName="getTransform"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QTransform" isPureVirtual="false" />
+    </method>
     <method name="clearBackground" cppName="clearBackground"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -432,6 +432,31 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false" />
     </method>
+    <method name="paintImage" cppName="paintImage"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RGraphicsViewWorker *"
+        typeName="RGraphicsViewWorker *" name="worker"
+        isConst="false" />
+        <arg type="RImageData &amp;" typeName="RImageData"
+        name="image" isConst="true" />
+        <arg type="bool" typeName="bool" name="workingSet"
+        hasDefault="true" default="true" isConst="false" />
+      </variant>
+    </method>
+    <method name="paintText" cppName="paintText" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RGraphicsViewWorker *"
+        typeName="RGraphicsViewWorker *" name="worker"
+        isConst="false" />
+        <arg type="RTextBasedData &amp;" typeName="RTextBasedData"
+        name="text" isConst="true" />
+        <arg type="bool" typeName="bool" name="workingSet"
+        hasDefault="true" default="true" isConst="false" />
+      </variant>
+    </method>
     <method name="getTextLayoutsPainterPaths"
     cppName="getTextLayoutsPainterPaths" specifier="protected"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
@@ -602,6 +627,29 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="protected" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="setBrush" cppName="setBrush"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QBrush &amp;" typeName="QBrush" name="brush"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="setPen" cppName="setPen" specifier="protected"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QPen &amp;" typeName="QPen" name="pen"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="drawLine" cppName="drawLine"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QLineF &amp;" typeName="QLineF" name="line"
+        isConst="true" />
+      </variant>
     </method>
     <method name="invalidate" cppName="invalidate"
     specifier="protected" isStatic="false" isVirtual="false"

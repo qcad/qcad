@@ -25,6 +25,8 @@
             
                 #include "RGraphicsViewImage.h"
             
+                #include "RGraphicsViewWorker.h"
+            
             
         // includes for base ecma wrapper classes
         
@@ -90,8 +92,6 @@
             REcmaHelper::registerFunction(&engine, proto, setViewportNumber, "setViewportNumber");
             
             REcmaHelper::registerFunction(&engine, proto, getViewportNumber, "getViewportNumber");
-            
-            REcmaHelper::registerFunction(&engine, proto, clear, "clear");
             
             REcmaHelper::registerFunction(&engine, proto, clearCaches, "clearCaches");
             
@@ -269,6 +269,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setNumThreads, "setNumThreads");
             
+            REcmaHelper::registerFunction(&engine, proto, clear, "clear");
+            
             REcmaHelper::registerFunction(&engine, proto, simulateMouseMoveEvent, "simulateMouseMoveEvent");
             
             REcmaHelper::registerFunction(&engine, proto, setScene, "setScene");
@@ -327,6 +329,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getBuffer, "getBuffer");
             
+            REcmaHelper::registerFunction(&engine, proto, getTransform, "getTransform");
+            
             REcmaHelper::registerFunction(&engine, proto, clearBackground, "clearBackground");
             
             REcmaHelper::registerFunction(&engine, proto, addToBackground, "addToBackground");
@@ -377,10 +381,18 @@
             
             REcmaHelper::registerFunction(&engine, proto, getDevicePixelRatio, "getDevicePixelRatio");
             
+            REcmaHelper::registerFunction(&engine, proto, paintImage, "paintImage");
+            
+            REcmaHelper::registerFunction(&engine, proto, paintText, "paintText");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RGraphicsViewImage*>(), *proto);
 
         
+                        qScriptRegisterMetaType<
+                        RGraphicsViewImage*>(
+                        &engine, toScriptValue, fromScriptValue, *proto);
+                    
     
 
     QScriptValue ctor = engine.newFunction(createEcma, *proto, 2);
@@ -409,8 +421,84 @@
      QScriptValue REcmaGraphicsViewImage::createEcma(QScriptContext* context, QScriptEngine* engine) 
     
     {
-           return REcmaHelper::throwError("Abstract class RGraphicsViewImage: Cannot be constructed.",
-               context); 
+    if (context->thisObject().strictlyEquals(
+       engine->globalObject())) {
+       return REcmaHelper::throwError(
+       QString::fromLatin1("RGraphicsViewImage(): Did you forget to construct with 'new'?"),
+           context);
+    }
+
+    QScriptValue result;
+        
+            // generate constructor variants:
+            
+    if( context->argumentCount() ==
+        0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // non-copyable class:
+            RGraphicsViewImage
+                    * cppResult =
+                    new
+                    RGraphicsViewImage
+                    ();
+                
+                    result = engine->newQObject(context->thisObject(), cppResult, QScriptEngine::QtOwnership);
+                
+    } else 
+
+    if( context->argumentCount() ==
+        1
+                && (
+                
+                        context->argument(
+                        0
+                        ).isQObject()
+                ) /* type: QObject * */
+            
+    ){
+    // prepare arguments:
+    
+            // argument isQObject
+            QObject *
+            a0 =
+            qobject_cast<
+            QObject *>
+            ( context->argument(
+            0
+            ).
+            toQObject()
+            );
+        
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // non-copyable class:
+            RGraphicsViewImage
+                    * cppResult =
+                    new
+                    RGraphicsViewImage
+                    (
+                    a0
+                    );
+                
+                    result = engine->newQObject(context->thisObject(), cppResult, QScriptEngine::QtOwnership);
+                
+    } else 
+
+    {
+       return REcmaHelper::throwError(
+       QString::fromLatin1("RGraphicsViewImage(): no matching constructor found."),
+           context);
+    }
+    
+    return result;
     }
     
 
@@ -563,50 +651,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsViewImage::getViewportNumber", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaGraphicsViewImage::clear
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaGraphicsViewImage::clear", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::clear";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RGraphicsViewImage* self = 
-                        getSelf("clear", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->clear();
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.clear().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::clear", context, engine);
             return result;
         }
          QScriptValue
@@ -6308,6 +6352,50 @@
             return result;
         }
          QScriptValue
+        REcmaGraphicsViewImage::clear
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::clear", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::clear";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("clear", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->clear();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.clear().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::clear", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaGraphicsViewImage::simulateMouseMoveEvent
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -7847,9 +7935,7 @@
     
     if( context->argumentCount() ==
     2 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
+            context->argument(0).isQObject()
         ) /* type: RGraphicsViewWorker * */
      && (
             context->argument(1).isNumber()
@@ -7894,9 +7980,7 @@
     
     if( context->argumentCount() ==
     3 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
+            context->argument(0).isQObject()
         ) /* type: RGraphicsViewWorker * */
      && (
             context->argument(1).isNumber()
@@ -7982,9 +8066,7 @@
     
     if( context->argumentCount() ==
     3 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
+            context->argument(0).isQObject()
         ) /* type: RGraphicsViewWorker * */
      && (
             context->argument(1).isVariant() || 
@@ -8066,9 +8148,7 @@
     
     if( context->argumentCount() ==
     4 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
+            context->argument(0).isQObject()
         ) /* type: RGraphicsViewWorker * */
      && (
             context->argument(1).isVariant() || 
@@ -8191,9 +8271,7 @@
     
     if( context->argumentCount() ==
     1 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
+            context->argument(0).isQObject()
         ) /* type: RGraphicsViewWorker * */
     
     ){
@@ -8276,6 +8354,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsViewImage::getBuffer", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::getTransform
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::getTransform", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::getTransform";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("getTransform", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QTransform'
+    QTransform cppResult =
+        
+               self->getTransform();
+        // return type: QTransform
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.getTransform().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::getTransform", context, engine);
             return result;
         }
          QScriptValue
@@ -9761,6 +9888,316 @@
             //REcmaHelper::functionEnd("REcmaGraphicsViewImage::getDevicePixelRatio", context, engine);
             return result;
         }
+         QScriptValue
+        REcmaGraphicsViewImage::paintImage
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::paintImage", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::paintImage";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("paintImage", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isQObject()
+        ) /* type: RGraphicsViewWorker * */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RImageData */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RGraphicsViewWorker * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RGraphicsViewWorker >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RGraphicsViewWorker *RGraphicsViewWorker *.", context);                    
+                    }
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RImageData*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RImageData*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 1 is not of type RImageData.",
+                               context);                    
+                    }
+                    RImageData 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->paintImage(a0
+        ,
+    a1);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isQObject()
+        ) /* type: RGraphicsViewWorker * */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RImageData */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RGraphicsViewWorker * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RGraphicsViewWorker >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RGraphicsViewWorker *RGraphicsViewWorker *.", context);                    
+                    }
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RImageData*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RImageData*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 1 is not of type RImageData.",
+                               context);                    
+                    }
+                    RImageData 
+                    a1 = 
+                    *ap1;
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->paintImage(a0
+        ,
+    a1
+        ,
+    a2);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.paintImage().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::paintImage", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::paintText
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::paintText", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::paintText";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("paintText", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isQObject()
+        ) /* type: RGraphicsViewWorker * */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RTextBasedData */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RGraphicsViewWorker * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RGraphicsViewWorker >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RGraphicsViewWorker *RGraphicsViewWorker *.", context);                    
+                    }
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RTextBasedData*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RTextBasedData*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 1 is not of type RTextBasedData.",
+                               context);                    
+                    }
+                    RTextBasedData 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->paintText(a0
+        ,
+    a1);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isQObject()
+        ) /* type: RGraphicsViewWorker * */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RTextBasedData */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RGraphicsViewWorker * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RGraphicsViewWorker >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RGraphicsViewWorker *RGraphicsViewWorker *.", context);                    
+                    }
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RTextBasedData*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RTextBasedData*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 1 is not of type RTextBasedData.",
+                               context);                    
+                    }
+                    RTextBasedData 
+                    a1 = 
+                    *ap1;
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->paintText(a0
+        ,
+    a1
+        ,
+    a2);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.paintText().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::paintText", context, engine);
+            return result;
+        }
          QScriptValue REcmaGraphicsViewImage::toString
     (QScriptContext *context, QScriptEngine *engine)
     
@@ -9838,4 +10275,23 @@
 
 
         }
-        
+         void fromScriptValue(const QScriptValue& value,
+        RGraphicsViewImage*
+        &out) {
+            QObject* o = value.toQObject();
+            out = qobject_cast<
+            RGraphicsViewImage*>(o);
+        }
+     QScriptValue toScriptValue(QScriptEngine *engine,
+        RGraphicsViewImage*
+        const &in){
+            QScriptValue s = engine->newQObject(in, QScriptEngine::QtOwnership,
+            QScriptEngine::PreferExistingWrapperObject);
+            /*
+            if(s.isNull()){
+               REcmaHelper::throwError("This object is null.", engine->currentContext());
+            }
+            */
+            return s;
+        }
+    

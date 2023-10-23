@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./gui" filename="RGraphicsViewWorkerPainter.h"><comment type="block">/**
+ * Copyright (c) 2011-2018 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RGRAPHICSVIEWWORKERPAINTER_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RGRAPHICSVIEWWORKERPAINTER_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"gui_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RGraphicsViewWorker.h"</cpp:file></cpp:include>
+
+<class>class <macro><name>QCADGUI_EXPORT</name></macro> <name>RGraphicsViewWorkerPainter</name> <super>: <specifier>public</specifier> <name>RGraphicsViewWorker</name></super> <block>{<private type="default">
+    <macro><name>Q_OBJECT</name></macro>
+
+</private><public>public:
+    <constructor><name>RGraphicsViewWorkerPainter</name><parameter_list>(<param><decl><type><name>RGraphicsViewImage</name>&amp;</type> <name>imageView</name></decl></param>, <param><decl><type><name>int</name></type> <name>threadId</name></decl></param>)</parameter_list> <member_list>: <call><name>RGraphicsViewWorker</name><argument_list>(<argument><expr><name>imageView</name></expr></argument>, <argument><expr><name>threadId</name></expr></argument>)</argument_list></call>, <call><name>painter</name><argument_list>(<argument><expr><name>NULL</name></expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
+    <destructor_decl><specifier>virtual</specifier> <name>~RGraphicsViewWorkerPainter</name><parameter_list>()</parameter_list>;</destructor_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>begin</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>end</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setImage</name><parameter_list>(<param><decl><type><name>const</name> <name>QImage</name>&amp;</type> <name>img</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>paint</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>clear</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setAntialiasing</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setBackground</name><parameter_list>(<param><decl><type><name>const</name> <name>QColor</name>&amp;</type> <name>col</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setCompositionMode</name><parameter_list>(<param><decl><type><name><name>QPainter</name>::<name>CompositionMode</name></name></type> <name>mode</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setFont</name><parameter_list>(<param><decl><type><name>const</name> <name>QFont</name>&amp;</type> <name>font</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>eraseRect</name><parameter_list>(<param><decl><type><name>const</name> <name>QRectF</name>&amp;</type> <name>rect</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setClipRect</name><parameter_list>(<param><decl><type><name>const</name> <name>QRectF</name>&amp;</type> <name>rect</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setClipping</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setOpacity</name><parameter_list>(<param><decl><type><name>double</name></type> <name>opacity</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>save</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>restore</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>QTransform</name></type> <name>getTransform</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setTransform</name><parameter_list>(<param><decl><type><name>const</name> <name>QTransform</name>&amp;</type> <name>t</name></decl></param>, <param><decl><type><name>bool</name></type> <name>combine</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>translate</name><parameter_list>(<param><decl><type><name>double</name></type> <name>x</name></decl></param>, <param><decl><type><name>double</name></type> <name>y</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>scale</name><parameter_list>(<param><decl><type><name>double</name></type> <name>x</name></decl></param>, <param><decl><type><name>double</name></type> <name>y</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>QTransform</name></type> <name>getWorldTransform</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setWorldTransform</name><parameter_list>(<param><decl><type><name>const</name> <name>QTransform</name>&amp;</type> <name>t</name></decl></param>, <param><decl><type><name>bool</name></type> <name>combine</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setBrush</name><parameter_list>(<param><decl><type><name>const</name> <name>QBrush</name>&amp;</type> <name>brush</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QPen</name></type> <name>getPen</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setPen</name><parameter_list>(<param><decl><type><name>const</name> <name>QPen</name>&amp;</type> <name>pen</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>drawPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>QPointF</name>&amp;</type> <name>p</name></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="line">//virtual void paintImage(const RImageData&amp; img, bool workingSet);</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>drawImage</name><parameter_list>(<param><decl><type><name>int</name></type> <name>x</name></decl></param>, <param><decl><type><name>int</name></type> <name>y</name></decl></param>, <param><decl><type><name>const</name> <name>QImage</name>&amp;</type> <name>image</name></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="line">//virtual void paintText(const RTextBasedData&amp; text, bool workingSet);</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>drawText</name><parameter_list>(<param><decl><type><name>const</name> <name>QRectF</name>&amp;</type> <name>rectangle</name></decl></param>, <param><decl><type><name>int</name></type> <name>flags</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>text</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>drawTextLayout</name><parameter_list>(<param><decl><type><name>const</name> <name>QTextLayout</name>&amp;</type> <name>textLayout</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>fillPath</name><parameter_list>(<param><decl><type><name>const</name> <name>RPainterPath</name>&amp;</type> <name>path</name></decl></param>, <param><decl><type><name>const</name> <name>QBrush</name>&amp;</type> <name>brush</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>drawPath</name><parameter_list>(<param><decl><type><name>const</name> <name>RPainterPath</name>&amp;</type> <name>path</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>drawLine</name><parameter_list>(<param><decl><type><name>const</name> <name>QLineF</name>&amp;</type> <name>line</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>strokePath</name><parameter_list>(<param><decl><type><name>const</name> <name>QPainterPath</name>&amp;</type> <name>path</name></decl></param>, <param><decl><type><name>const</name> <name>QPen</name>&amp;</type> <name>pen</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>drawEllipse</name><parameter_list>(<param><decl><type><name>const</name> <name>QRectF</name>&amp;</type> <name>rectangle</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>drawRect</name><parameter_list>(<param><decl><type><name>const</name> <name>QRectF</name>&amp;</type> <name>rectangle</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>fillRect</name><parameter_list>(<param><decl><type><name>const</name> <name>QRectF</name>&amp;</type> <name>rectangle</name></decl></param>, <param><decl><type><name>const</name> <name>QBrush</name>&amp;</type> <name>brush</name></decl></param>)</parameter_list>;</function_decl>
+
+</public><protected>protected:
+    <decl_stmt><decl><type><name>QPainter</name>*</type> <name>painter</name></decl>;</decl_stmt>
+</protected>}</block>;</class>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

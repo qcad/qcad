@@ -55,9 +55,6 @@
         getViewportNumber
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        clear
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         clearCaches
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -319,6 +316,9 @@
         setNumThreads
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        clear
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         simulateMouseMoveEvent
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -406,6 +406,9 @@
         getBuffer
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getTransform
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         clearBackground
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -480,11 +483,36 @@
         ;static  QScriptValue
         getDevicePixelRatio
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        paintImage
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        paintText
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RGraphicsViewImage* getSelf(const QString& fName, QScriptContext* context)
     ;static RGraphicsViewImage* getSelfShell(const QString& fName, QScriptContext* context)
-    ;};
+    ;static  void fromScriptValue(const QScriptValue& value,
+        RGraphicsViewImage*
+        &out) {
+            QObject* o = value.toQObject();
+            out = qobject_cast<
+            RGraphicsViewImage*>(o);
+        }
+    static  QScriptValue toScriptValue(QScriptEngine *engine,
+        RGraphicsViewImage*
+        const &in){
+            QScriptValue s = engine->newQObject(in, QScriptEngine::QtOwnership,
+            QScriptEngine::PreferExistingWrapperObject);
+            /*
+            if(s.isNull()){
+               REcmaHelper::throwError("This object is null.", engine->currentContext());
+            }
+            */
+            return s;
+        }
+    };
     #endif
     

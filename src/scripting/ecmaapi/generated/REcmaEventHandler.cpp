@@ -484,9 +484,7 @@
     
     if( context->argumentCount() ==
     2 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
+            context->argument(0).isQObject()
         ) /* type: RGraphicsViewWorker * */
      && (
             context->argument(1).isVariant() || 
@@ -571,9 +569,7 @@
     
     if( context->argumentCount() ==
     4 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
+            context->argument(0).isQObject()
         ) /* type: RGraphicsViewWorker * */
      && (
             context->argument(1).isVariant() || 
@@ -758,9 +754,7 @@
     
     if( context->argumentCount() ==
     2 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
+            context->argument(0).isQObject()
         ) /* type: RGraphicsViewWorker * */
      && (
             context->argument(1).isVariant() || 
@@ -845,9 +839,7 @@
     
     if( context->argumentCount() ==
     3 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
+            context->argument(0).isQObject()
         ) /* type: RGraphicsViewWorker * */
      && (
             context->argument(1).isVariant() || 
