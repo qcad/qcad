@@ -49,6 +49,12 @@
 
         // methods of secondary base class RGraphicsView:
         static  QScriptValue
+        setViewportNumber
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getViewportNumber
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         clear
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -58,7 +64,19 @@
         setDisplayOnlyCurrentUcs
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getScene
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDocument
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDocumentInterface
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         mapCornersFromView
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getBox
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getMinimum
@@ -109,7 +127,16 @@
         zoomOut
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        zoom
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        zoomTo
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         zoomPrevious
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        autoZoom
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         zoomToSelection
@@ -118,7 +145,28 @@
         zoomToEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        centerToPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        centerToBox
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        pan
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         startPan
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getFactor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setFactor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getOffset
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setOffset
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isActive
@@ -128,6 +176,21 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setSignalsBlocked
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setNavigationAction
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getGrid
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setGrid
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setGridVisible
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isGridVisible
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         paintGridPoints
@@ -145,142 +208,13 @@
         getClosestEntity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getMargin
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getColorMode
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getTextLabels
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        clearTextLabels
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        addTextLabel
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getLastKnownMousePosition
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getCurrentStepScaleFactor
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setCurrentStepScaleFactor
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getCurrentStepOffset
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setCurrentStepOffset
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        updateTextHeightThreshold
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        isPathVisible
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setAntialiasing
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setWidget
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getWidget
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;
-
-    // properties:
-    
-
-    // public methods:
-    static  QScriptValue
-        getNumThreads
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setNumThreads
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setViewportNumber
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getViewportNumber
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setNavigationAction
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getBox
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        autoZoom
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        zoomTo
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        zoom
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        pan
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        centerToBox
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        centerToPoint
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setGrid
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getGrid
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getFactor
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setFactor
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getOffset
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setOffset
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         getBackgroundColor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getMargin
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setMargin
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setColorMode
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setHairlineMode
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getHairlineMode
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setHairlineMinimumMode
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getHairlineMinimumMode
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getAntialiasing
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getScene
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getDocument
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getDocumentInterface
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setExporting
@@ -307,7 +241,46 @@
         setPrintPointSize
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        simulateMouseMoveEvent
+        setColorMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getColorMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setHairlineMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getHairlineMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setHairlineMinimumMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getHairlineMinimumMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getTextLabels
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        clearTextLabels
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        addTextLabel
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLastKnownMousePosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getCurrentStepScaleFactor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setCurrentStepScaleFactor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getCurrentStepOffset
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setCurrentStepOffset
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setTextHeightThresholdOverride
@@ -316,10 +289,37 @@
         getTextHeightThresholdOverride
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        isGridVisible
+        updateTextHeightThreshold
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        setGridVisible
+        isPathVisible
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setAntialiasing
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getAntialiasing
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setWidget
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getWidget
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;
+
+    // properties:
+    
+
+    // public methods:
+    static  QScriptValue
+        getNumThreads
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setNumThreads
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        simulateMouseMoveEvent
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setScene

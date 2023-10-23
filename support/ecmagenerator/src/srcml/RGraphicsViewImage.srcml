@@ -262,167 +262,167 @@
     <comment type="line">// TODO: these methods are not found in RGraphicsViewQt, due to the</comment>
     <comment type="line">// multiple inheritance of RGraphicsViewQt (QWidget and RGraphicsViewImage)</comment>
     <comment type="line">// unless they are re-declared here again:</comment>
-    <function><type><name>void</name></type> <name>setViewportNumber</name><parameter_list>(<param><decl><type><name>int</name></type> <name>n</name></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>RGraphicsView::setViewportNumber</name><parameter_list>(<param><decl><type><name>n</name></type></decl></param>)</parameter_list>;</constructor_decl>
-    }</block></function>
+<comment type="line">//    void setViewportNumber(int n) {</comment>
+<comment type="line">//        RGraphicsView::setViewportNumber(n);</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>int</name></type> <name>getViewportNumber</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><call><name><name>RGraphicsView</name>::<name>getViewportNumber</name></name><argument_list>()</argument_list></call></expr>;</return>
-    }</block></function>
+<comment type="line">//    int getViewportNumber() const {</comment>
+<comment type="line">//        return RGraphicsView::getViewportNumber();</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>void</name></type> <name>setNavigationAction</name><parameter_list>(<param><decl><type><name>RAction</name>*</type> <name>action</name></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>RGraphicsView::setNavigationAction</name><parameter_list>(<param><decl><type><name>action</name></type></decl></param>)</parameter_list>;</constructor_decl>
-    }</block></function>
+<comment type="line">//    void setNavigationAction(RAction* action) {</comment>
+<comment type="line">//        RGraphicsView::setNavigationAction(action);</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>RBox</name></type> <name>getBox</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><call><name><name>RGraphicsView</name>::<name>getBox</name></name><argument_list>()</argument_list></call></expr>;</return>
-    }</block></function>
+<comment type="line">//    RBox getBox() const {</comment>
+<comment type="line">//        return RGraphicsView::getBox();</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>void</name></type> <name>autoZoom</name><parameter_list>(<param><decl><type><name>int</name></type> <name>margin</name> =<init> <expr><name>RDEFAULT_MIN1</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>ignoreEmpty</name>=<init><expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>ignoreLineweight</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>RGraphicsView::autoZoom</name><parameter_list>(<param><decl><type><name>margin</name></type></decl></param>, <param><decl><type><name>ignoreEmpty</name></type></decl></param>, <param><decl><type><name>ignoreLineweight</name></type></decl></param>)</parameter_list>;</constructor_decl>
-    }</block></function>
+<comment type="line">//    void autoZoom(int margin = RDEFAULT_MIN1, bool ignoreEmpty=false, bool ignoreLineweight=false) {</comment>
+<comment type="line">//        RGraphicsView::autoZoom(margin, ignoreEmpty, ignoreLineweight);</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>void</name></type> <name>zoomTo</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name> &amp;</type><name>window</name></decl></param>, <param><decl><type><name>int</name></type> <name>margin</name> =<init> <expr>0</expr></init></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>RGraphicsView::zoomTo</name><parameter_list>(<param><decl><type><name>window</name></type></decl></param>, <param><decl><type><name>margin</name></type></decl></param>)</parameter_list>;</constructor_decl>
-    }</block></function>
+<comment type="line">//    void zoomTo(const RBox &amp;window, int margin = 0) {</comment>
+<comment type="line">//        RGraphicsView::zoomTo(window, margin);</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>void</name></type> <name>zoom</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>center</name></decl></param>, <param><decl><type><name>double</name></type> <name>factor</name></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>RGraphicsView::zoom</name><parameter_list>(<param><decl><type><name>center</name></type></decl></param>, <param><decl><type><name>factor</name></type></decl></param>)</parameter_list>;</constructor_decl>
-    }</block></function>
+<comment type="line">//    void zoom(const RVector&amp; center, double factor) {</comment>
+<comment type="line">//        RGraphicsView::zoom(center, factor);</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>void</name></type> <name>pan</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>delta</name></decl></param>, <param><decl><type><name>bool</name></type> <name>regen</name>=<init><expr><name>true</name></expr></init></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>RGraphicsView::pan</name><parameter_list>(<param><decl><type><name>delta</name></type></decl></param>, <param><decl><type><name>regen</name></type></decl></param>)</parameter_list>;</constructor_decl>
-    }</block></function>
+<comment type="line">//    void pan(const RVector&amp; delta, bool regen=true) {</comment>
+<comment type="line">//        RGraphicsView::pan(delta, regen);</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>void</name></type> <name>centerToBox</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>box</name></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>RGraphicsView::centerToBox</name><parameter_list>(<param><decl><type><name>box</name></type></decl></param>)</parameter_list>;</constructor_decl>
-    }</block></function>
+<comment type="line">//    void centerToBox(const RBox&amp; box) {</comment>
+<comment type="line">//        RGraphicsView::centerToBox(box);</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>void</name></type> <name>centerToPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>point</name></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>RGraphicsView::centerToPoint</name><parameter_list>(<param><decl><type><name>point</name></type></decl></param>)</parameter_list>;</constructor_decl>
-    }</block></function>
+<comment type="line">//    void centerToPoint(const RVector&amp; point) {</comment>
+<comment type="line">//        RGraphicsView::centerToPoint(point);</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>void</name></type> <name>setGrid</name><parameter_list>(<param><decl><type><name>RGrid</name>*</type> <name>grid</name></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>RGraphicsView::setGrid</name><parameter_list>(<param><decl><type><name>grid</name></type></decl></param>)</parameter_list>;</constructor_decl>
-    }</block></function>
+<comment type="line">//    void setGrid(RGrid* grid) {</comment>
+<comment type="line">//        RGraphicsView::setGrid(grid);</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>RGrid</name>*</type> <name>getGrid</name><parameter_list>()</parameter_list> <block>{
-        <return>return <expr><call><name><name>RGraphicsView</name>::<name>getGrid</name></name><argument_list>()</argument_list></call></expr>;</return>
-    }</block></function>
+<comment type="line">//    RGrid* getGrid() {</comment>
+<comment type="line">//        return RGraphicsView::getGrid();</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>double</name></type> <name>getFactor</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>includeStepFactor</name>=<init><expr><name>true</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><call><name><name>RGraphicsView</name>::<name>getFactor</name></name><argument_list>(<argument><expr><name>includeStepFactor</name></expr></argument>)</argument_list></call></expr>;</return>
-    }</block></function>
+<comment type="line">//    double getFactor(bool includeStepFactor=true) const {</comment>
+<comment type="line">//        return RGraphicsView::getFactor(includeStepFactor);</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>void</name></type> <name>setFactor</name><parameter_list>(<param><decl><type><name>double</name></type> <name>f</name></decl></param>, <param><decl><type><name>bool</name></type> <name>regen</name>=<init><expr><name>true</name></expr></init></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>RGraphicsView::setFactor</name><parameter_list>(<param><decl><type><name>f</name></type></decl></param>, <param><decl><type><name>regen</name></type></decl></param>)</parameter_list>;</constructor_decl>
-    }</block></function>
+<comment type="line">//    void setFactor(double f, bool regen=true) {</comment>
+<comment type="line">//        RGraphicsView::setFactor(f, regen);</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>RVector</name></type> <name>getOffset</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>includeStepOffset</name>=<init><expr><name>true</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><call><name><name>RGraphicsView</name>::<name>getOffset</name></name><argument_list>(<argument><expr><name>includeStepOffset</name></expr></argument>)</argument_list></call></expr>;</return>
-    }</block></function>
+<comment type="line">//    RVector getOffset(bool includeStepOffset=true) const {</comment>
+<comment type="line">//        return RGraphicsView::getOffset(includeStepOffset);</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>void</name></type> <name>setOffset</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>offset</name></decl></param>, <param><decl><type><name>bool</name></type> <name>regen</name>=<init><expr><name>true</name></expr></init></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>RGraphicsView::setOffset</name><parameter_list>(<param><decl><type><name>offset</name></type></decl></param>, <param><decl><type><name>regen</name></type></decl></param>)</parameter_list>;</constructor_decl>
-    }</block></function>
+<comment type="line">//    void setOffset(const RVector&amp; offset, bool regen=true) {</comment>
+<comment type="line">//        RGraphicsView::setOffset(offset, regen);</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>QColor</name></type> <name>getBackgroundColor</name><parameter_list>()</parameter_list> <block>{
-        <return>return <expr><call><name><name>RGraphicsView</name>::<name>getBackgroundColor</name></name><argument_list>()</argument_list></call></expr>;</return>
-    }</block></function>
+<comment type="line">//    QColor getBackgroundColor() {</comment>
+<comment type="line">//        return RGraphicsView::getBackgroundColor();</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>void</name></type> <name>setMargin</name><parameter_list>(<param><decl><type><name>int</name></type> <name>m</name></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>RGraphicsView::setMargin</name><parameter_list>(<param><decl><type><name>m</name></type></decl></param>)</parameter_list>;</constructor_decl>
-    }</block></function>
+<comment type="line">//    void setMargin(int m) {</comment>
+<comment type="line">//        RGraphicsView::setMargin(m);</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>void</name></type> <name>setColorMode</name><parameter_list>(<param><decl><type><name><name>RGraphicsView</name>::<name>ColorMode</name></name></type> <name>cm</name></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>RGraphicsView::setColorMode</name><parameter_list>(<param><decl><type><name>cm</name></type></decl></param>)</parameter_list>;</constructor_decl>
-    }</block></function>
+<comment type="line">//    void setColorMode(RGraphicsView::ColorMode cm) {</comment>
+<comment type="line">//        RGraphicsView::setColorMode(cm);</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>void</name></type> <name>setHairlineMode</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>RGraphicsView::setHairlineMode</name><parameter_list>(<param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
-    }</block></function>
+<comment type="line">//    void setHairlineMode(bool on) {</comment>
+<comment type="line">//        RGraphicsView::setHairlineMode(on);</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>bool</name></type> <name>getHairlineMode</name><parameter_list>()</parameter_list> <block>{
-        <return>return <expr><call><name><name>RGraphicsView</name>::<name>getHairlineMode</name></name><argument_list>()</argument_list></call></expr>;</return>
-    }</block></function>
+<comment type="line">//    bool getHairlineMode() {</comment>
+<comment type="line">//        return RGraphicsView::getHairlineMode();</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>void</name></type> <name>setHairlineMinimumMode</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>RGraphicsView::setHairlineMinimumMode</name><parameter_list>(<param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
-    }</block></function>
+<comment type="line">//    void setHairlineMinimumMode(bool on) {</comment>
+<comment type="line">//        RGraphicsView::setHairlineMinimumMode(on);</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>bool</name></type> <name>getHairlineMinimumMode</name><parameter_list>()</parameter_list> <block>{
-        <return>return <expr><call><name><name>RGraphicsView</name>::<name>getHairlineMinimumMode</name></name><argument_list>()</argument_list></call></expr>;</return>
-    }</block></function>
+<comment type="line">//    bool getHairlineMinimumMode() {</comment>
+<comment type="line">//        return RGraphicsView::getHairlineMinimumMode();</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>void</name></type> <name>setAntialiasing</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>RGraphicsView::setAntialiasing</name><parameter_list>(<param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
-    }</block></function>
+<comment type="line">//    void setAntialiasing(bool on) {</comment>
+<comment type="line">//        RGraphicsView::setAntialiasing(on);</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>bool</name></type> <name>getAntialiasing</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><call><name><name>RGraphicsView</name>::<name>getAntialiasing</name></name><argument_list>()</argument_list></call></expr>;</return>
-    }</block></function>
+<comment type="line">//    bool getAntialiasing() const {</comment>
+<comment type="line">//        return RGraphicsView::getAntialiasing();</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>RGraphicsScene</name>*</type> <name>getScene</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><call><name><name>RGraphicsView</name>::<name>getScene</name></name><argument_list>()</argument_list></call></expr>;</return>
-    }</block></function>
+<comment type="line">//    RGraphicsScene* getScene() const {</comment>
+<comment type="line">//        return RGraphicsView::getScene();</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>RDocument</name>*</type> <name>getDocument</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><call><name><name>RGraphicsView</name>::<name>getDocument</name></name><argument_list>()</argument_list></call></expr>;</return>
-    }</block></function>
+<comment type="line">//    RDocument* getDocument() const {</comment>
+<comment type="line">//        return RGraphicsView::getDocument();</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>RDocumentInterface</name>*</type> <name>getDocumentInterface</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><call><name><name>RGraphicsView</name>::<name>getDocumentInterface</name></name><argument_list>()</argument_list></call></expr>;</return>
-    }</block></function>
+<comment type="line">//    RDocumentInterface* getDocumentInterface() const {</comment>
+<comment type="line">//        return RGraphicsView::getDocumentInterface();</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>void</name></type> <name>setExporting</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>RGraphicsView::setExporting</name><parameter_list>(<param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
-    }</block></function>
+<comment type="line">//    void setExporting(bool on) {</comment>
+<comment type="line">//        RGraphicsView::setExporting(on);</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>bool</name></type> <name>isExporting</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><call><name><name>RGraphicsView</name>::<name>isExporting</name></name><argument_list>()</argument_list></call></expr>;</return>
-    }</block></function>
+<comment type="line">//    bool isExporting() const {</comment>
+<comment type="line">//        return RGraphicsView::isExporting();</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>bool</name></type> <name>isPrintingOrExporting</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><call><name><name>RGraphicsView</name>::<name>isPrintingOrExporting</name></name><argument_list>()</argument_list></call></expr>;</return>
-    }</block></function>
+<comment type="line">//    bool isPrintingOrExporting() const {</comment>
+<comment type="line">//        return RGraphicsView::isPrintingOrExporting();</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>void</name></type> <name>setPrinting</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>RGraphicsView::setPrinting</name><parameter_list>(<param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
-    }</block></function>
+<comment type="line">//    void setPrinting(bool on) {</comment>
+<comment type="line">//        RGraphicsView::setPrinting(on);</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>bool</name></type> <name>isPrinting</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><call><name><name>RGraphicsView</name>::<name>isPrinting</name></name><argument_list>()</argument_list></call></expr>;</return>
-    }</block></function>
+<comment type="line">//    bool isPrinting() const {</comment>
+<comment type="line">//        return RGraphicsView::isPrinting();</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>void</name></type> <name>setPrintPreview</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>RGraphicsView::setPrintPreview</name><parameter_list>(<param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
-    }</block></function>
+<comment type="line">//    void setPrintPreview(bool on) {</comment>
+<comment type="line">//        RGraphicsView::setPrintPreview(on);</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>bool</name></type> <name>isPrintPreview</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><call><name><name>RGraphicsView</name>::<name>isPrintPreview</name></name><argument_list>()</argument_list></call></expr>;</return>
-    }</block></function>
+<comment type="line">//    bool isPrintPreview() const {</comment>
+<comment type="line">//        return RGraphicsView::isPrintPreview();</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>void</name></type> <name>setPrintPointSize</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>s</name></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>RGraphicsView::setPrintPointSize</name><parameter_list>(<param><decl><type><name>s</name></type></decl></param>)</parameter_list>;</constructor_decl>
-    }</block></function>
+<comment type="line">//    void setPrintPointSize(const RVector&amp; s) {</comment>
+<comment type="line">//        RGraphicsView::setPrintPointSize(s);</comment>
+<comment type="line">//    }</comment>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>simulateMouseMoveEvent</name><parameter_list>()</parameter_list>;</function_decl>
 
-    <function><type><name>void</name></type> <name>setTextHeightThresholdOverride</name><parameter_list>(<param><decl><type><name>int</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>RGraphicsView::setTextHeightThresholdOverride</name><parameter_list>(<param><decl><type><name>v</name></type></decl></param>)</parameter_list>;</constructor_decl>
-    }</block></function>
+<comment type="line">//    void setTextHeightThresholdOverride(int v) {</comment>
+<comment type="line">//        RGraphicsView::setTextHeightThresholdOverride(v);</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>int</name></type> <name>getTextHeightThresholdOverride</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><call><name><name>RGraphicsView</name>::<name>getTextHeightThresholdOverride</name></name><argument_list>()</argument_list></call></expr>;</return>
-    }</block></function>
+<comment type="line">//    int getTextHeightThresholdOverride() const {</comment>
+<comment type="line">//        return RGraphicsView::getTextHeightThresholdOverride();</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>bool</name></type> <name>isGridVisible</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><call><name><name>RGraphicsView</name>::<name>isGridVisible</name></name><argument_list>()</argument_list></call></expr>;</return>
-    }</block></function>
+<comment type="line">//    bool isGridVisible() const {</comment>
+<comment type="line">//        return RGraphicsView::isGridVisible();</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>void</name></type> <name>setGridVisible</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>RGraphicsView::setGridVisible</name><parameter_list>(<param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
-    }</block></function>
+<comment type="line">//    void setGridVisible(bool on) {</comment>
+<comment type="line">//        RGraphicsView::setGridVisible(on);</comment>
+<comment type="line">//    }</comment>
     
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setScene</name><parameter_list>(<param><decl><type><name>RGraphicsSceneQt</name>*</type> <name>scene</name></decl></param>, <param><decl><type><name>bool</name></type> <name>regen</name>=<init><expr><name>true</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 

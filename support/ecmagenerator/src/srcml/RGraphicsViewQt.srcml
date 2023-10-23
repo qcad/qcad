@@ -116,7 +116,10 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>dragEnterEvent</name><parameter_list>(<param><decl><type><name>QDragEnterEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>dropEvent</name><parameter_list>(<param><decl><type><name>QDropEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
 
-</protected><private>private:
+</protected><private>private slots:
+    <function_decl><type><name>void</name></type> <name>imageViewDeleted</name><parameter_list>()</parameter_list>;</function_decl>
+
+</private><private>private:
     <comment type="line">//! remember last mouse button state for wacom bug workaround</comment>
     <decl_stmt><decl><type><name><name>Qt</name>::<name>MouseButtons</name></name></type> <name>lastButtonState</name></decl>;</decl_stmt>
 
