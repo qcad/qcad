@@ -242,7 +242,6 @@ protected:
  *
  * \ingroup gui
  * \scriptable
- * \generateScriptShell
  */
 class QCADGUI_EXPORT RGraphicsViewImage : public QObject, public RGraphicsView {
     Q_OBJECT
