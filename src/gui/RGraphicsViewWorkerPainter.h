@@ -24,6 +24,8 @@
 
 #include "RGraphicsViewWorker.h"
 
+class QPainter;
+
 class QCADGUI_EXPORT RGraphicsViewWorkerPainter : public RGraphicsViewWorker {
     Q_OBJECT
 
