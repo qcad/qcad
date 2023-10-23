@@ -12,7 +12,7 @@
         #include <QDebug>
 
         
-                #include "REcmaShellGraphicsViewImage.h"
+                #include "RGraphicsViewImage.h"
             
 
         /**
@@ -484,7 +484,7 @@
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RGraphicsViewImage* getSelf(const QString& fName, QScriptContext* context)
-    ;static REcmaShellGraphicsViewImage* getSelfShell(const QString& fName, QScriptContext* context)
+    ;static RGraphicsViewImage* getSelfShell(const QString& fName, QScriptContext* context)
     ;};
     #endif
     

@@ -22,7 +22,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   isScriptable="false" />
   <class name="RGraphicsViewImage"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
-  hasShell="true" sharedPointerSupport="false" isQObject="true"
+  hasShell="false" sharedPointerSupport="false" isQObject="true"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
     <baseClass name="QObject" specifier="public" />
     <baseClass name="RGraphicsView" specifier="public" />

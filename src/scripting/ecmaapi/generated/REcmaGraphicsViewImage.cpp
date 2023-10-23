@@ -409,88 +409,8 @@
      QScriptValue REcmaGraphicsViewImage::createEcma(QScriptContext* context, QScriptEngine* engine) 
     
     {
-    if (context->thisObject().strictlyEquals(
-       engine->globalObject())) {
-       return REcmaHelper::throwError(
-       QString::fromLatin1("RGraphicsViewImage(): Did you forget to construct with 'new'?"),
-           context);
-    }
-
-    QScriptValue result;
-        
-            // generate constructor variants:
-            
-    if( context->argumentCount() ==
-        0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ constructor:
-    
-            // non-copyable class:
-            REcmaShellGraphicsViewImage
-                    * cppResult =
-                    new
-                    REcmaShellGraphicsViewImage
-                    ();
-                
-                    result = engine->newQObject(context->thisObject(), cppResult, QScriptEngine::QtOwnership);
-                
-        cppResult->__qtscript_self = result;
-    
-    } else 
-
-    if( context->argumentCount() ==
-        1
-                && (
-                
-                        context->argument(
-                        0
-                        ).isQObject()
-                ) /* type: QObject * */
-            
-    ){
-    // prepare arguments:
-    
-            // argument isQObject
-            QObject *
-            a0 =
-            qobject_cast<
-            QObject *>
-            ( context->argument(
-            0
-            ).
-            toQObject()
-            );
-        
-    // end of arguments
-
-    // call C++ constructor:
-    
-            // non-copyable class:
-            REcmaShellGraphicsViewImage
-                    * cppResult =
-                    new
-                    REcmaShellGraphicsViewImage
-                    (
-                    a0
-                    );
-                
-                    result = engine->newQObject(context->thisObject(), cppResult, QScriptEngine::QtOwnership);
-                
-        cppResult->__qtscript_self = result;
-    
-    } else 
-
-    {
-       return REcmaHelper::throwError(
-       QString::fromLatin1("RGraphicsViewImage(): no matching constructor found."),
-           context);
-    }
-    
-    return result;
+           return REcmaHelper::throwError("Abstract class RGraphicsViewImage: Cannot be constructed.",
+               context); 
     }
     
 
@@ -9901,12 +9821,12 @@
 
             return self;
         }
-        REcmaShellGraphicsViewImage* REcmaGraphicsViewImage::getSelfShell(const QString& fName, QScriptContext* context)
+        RGraphicsViewImage* REcmaGraphicsViewImage::getSelfShell(const QString& fName, QScriptContext* context)
     
         {
           RGraphicsViewImage* selfBase = getSelf(fName, context);
-                REcmaShellGraphicsViewImage* self = dynamic_cast<REcmaShellGraphicsViewImage*>(selfBase);
-                //return REcmaHelper::scriptValueTo<REcmaShellGraphicsViewImage >(context->thisObject());
+                RGraphicsViewImage* self = dynamic_cast<RGraphicsViewImage*>(selfBase);
+                //return REcmaHelper::scriptValueTo<RGraphicsViewImage >(context->thisObject());
             if(self == NULL){
                 REcmaHelper::throwError(QString("RGraphicsViewImage.%1(): "
                     "This object is not a RGraphicsViewImage").arg(fName),
