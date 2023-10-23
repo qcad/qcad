@@ -117,8 +117,8 @@ ViewportWidget.prototype.initEventHandler = function() {
 
         this.graphicsView.getImageView().viewportChanged.connect(function() { self.eventHandler.viewportChanged(); });
         this.graphicsView.getImageView().updateSnapInfo.connect(
-            function(painter, snap, restriction) {
-                self.eventHandler.updateSnapInfo(painter, snap, restriction);
+            function(worker, snap, restriction) {
+                self.eventHandler.updateSnapInfo(worker, snap, restriction);
             }
         );
         this.graphicsView.getImageView().updateTextLabel.connect(function(painter, textLabel) { self.eventHandler.updateTextLabel(painter, textLabel); });
