@@ -12,10 +12,12 @@ void RGraphicsViewWorkerPainter::end() {
 }
 
 void RGraphicsViewWorkerPainter::begin() {
-    if (!painter->begin(&image)) {
-        qWarning() << "image.isNull:" << image.isNull();
-        qWarning() << "cannot start painting";
-        return;
+    if (!image.isNull()) {
+        if (!painter->begin(&image)) {
+            qWarning() << "image.isNull:" << image.isNull();
+            qWarning() << "cannot start painting";
+            return;
+        }
     }
 
     if (clearMode==ClearToBackground) {
@@ -57,13 +59,16 @@ QImage RGraphicsViewWorkerPainter::getImage() const {
 }
 
 void RGraphicsViewWorkerPainter::setImage(const QImage& img) {
-    //RGraphicsViewWorker::setImage(img);
     image = img;
+    setPainter(new QPainter());
+}
 
+void RGraphicsViewWorkerPainter::setPainter(QPainter* p) {
     if (painter!=NULL) {
+        //painter->end();
         delete painter;
     }
-    painter = new QPainter();
+    painter = p;
     if (imageView.getAntialiasing()) {
         painter->setRenderHint(QPainter::Antialiasing);
     }
@@ -138,6 +143,7 @@ void RGraphicsViewWorkerPainter::setClipRect(const QRectF& rect) {
 }
 
 void RGraphicsViewWorkerPainter::setClipping(bool on) {
+    //qDebug() << "painter:" << (unsigned long long int)painter;
     painter->setClipping(on);
 }
 

@@ -433,7 +433,7 @@ Print.prototype.printPage = function(painter, rect) {
         )
     );
 
-    this.view.paintOverlay(painter);
+    this.view.paintOverlay();
 };
 
 /**

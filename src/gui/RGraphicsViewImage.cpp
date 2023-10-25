@@ -840,7 +840,7 @@ void RGraphicsViewImage::paintDocument(const QRect& rect) {
     }
 
     // paint overlay:
-    paintOverlay(workers.last());
+    paintOverlay();
 }
 
 void RGraphicsViewImage::clearBackground() {
@@ -956,7 +956,14 @@ void RGraphicsViewImage::addToOverlay(int overlayId, RObject::Id objectId, const
     overlayDrawables[overlayId][objectId].append(drawable);
 }
 
-void RGraphicsViewImage::paintOverlay(RGraphicsViewWorker* worker) {
+void RGraphicsViewImage::paintOverlay() {
+    if (workers.isEmpty()) {
+        qWarning() << "RGraphicsViewImage::paintOverlay: no workers";
+        return;
+    }
+
+    RGraphicsViewWorker* worker = workers.last();
+
     QList<int> overlayIds = overlayDrawables.keys();
     //qSort(overlayIds);
 
@@ -1057,14 +1064,32 @@ void RGraphicsViewImage::initPainter(QPaintDevice& device, bool erase, bool scre
     //return painter;
 }
 
-//void RGraphicsViewImage::paintEntities(QPainter* painter, const RBox& queryBox) {
+void RGraphicsViewImage::paintEntities(QPainter* painter, const RBox& queryBox) {
     //painterThread.clear();
     //painterThread.append(painter);
     //entityTransformThread.clear();
     //entityTransformThread.append(QStack<RTransform>());
 
-    //paintEntitiesMulti(queryBox);
-//}
+    // save workers:
+    QList<RGraphicsViewWorker*> workersOri = workers;
+    int numThreadsOri = numThreads;
+
+    // prepare for QPainter painting (printing / PDF export):
+    workers.clear();
+    numThreads = 1;
+    RGraphicsViewWorkerPainter* w = new RGraphicsViewWorkerPainter(*this, -1);
+    w->setPainter(painter);
+    workers.append(w);
+
+    paintEntitiesMulti(queryBox);
+
+    delete w;
+    workers.clear();
+
+    // restore workers:
+    workers = workersOri;
+    numThreads = numThreadsOri;
+}
 
 void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
     RDocument* document = getDocument();

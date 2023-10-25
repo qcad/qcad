@@ -38,6 +38,7 @@ public:
 
     virtual QImage getImage() const;
     virtual void setImage(const QImage& img);
+    virtual void setPainter(QPainter* p);
 
     virtual QSize getImageSize() const;
     virtual void initImageBuffer(const QSize& size);

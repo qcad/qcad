@@ -262,7 +262,7 @@ public:
     void setPanOptimization(bool on);
     bool getPanOptimization();
 
-    //virtual void paintEntities(QPainter* painter, const RBox& queryBox);
+    virtual void paintEntities(QPainter* painter, const RBox& queryBox);
     void paintEntitiesMulti(const RBox& queryBox);
     //void paintEntitiesThread(int threadId, const QList<REntity::Id>& list, int start, int end);
     //void paintDrawablesThread(int threadId, const QList<RGraphicsSceneDrawable>& list, int start, int end);
@@ -270,7 +270,7 @@ public:
     virtual void paintEntityThread(RGraphicsViewWorker* worker, REntity::Id id, bool preview = false);
     virtual void paintDrawableThread(RGraphicsViewWorker* worker, RGraphicsSceneDrawable& drawable, const RBox& clipRectangle, bool preview = false);
 
-    virtual void paintOverlay(RGraphicsViewWorker* worker);
+    virtual void paintOverlay();
 
     QImage getBuffer() const;
     QTransform getTransform() const;
