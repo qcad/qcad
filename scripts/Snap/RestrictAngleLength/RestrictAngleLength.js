@@ -42,6 +42,9 @@ function RRestrictAngleLengthExtension(di) {
     this.action.slotBaseAngleChanged = function(value) {
         restriction.setBaseAngle(value);
     };
+    this.action.slotRepeatAngleChanged = function(value) {
+        restriction.setRepeatAngle(value);
+    };
 
     this.action.slotRestrictLengthChanged = function(value) {
         restriction.setRestrictLength(value);
@@ -51,6 +54,9 @@ function RRestrictAngleLengthExtension(di) {
     };
     this.action.slotBaseLengthChanged = function(value) {
         restriction.setBaseLength(value);
+    };
+    this.action.slotRepeatLengthChanged = function(value) {
+        restriction.setRepeatLength(value);
     };
 }
 

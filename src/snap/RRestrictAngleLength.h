@@ -55,7 +55,8 @@ public:
         : RSnapRestriction(documentInterface), 
           mode(RRestrictAngleLength::AngleLength),
           baseAngle(baseAngle), angle(angle),
-          baseLength(baseLength), length(length) {}
+          baseLength(baseLength), length(length),
+          repeatAngle(false), repeatLength(false) {}
 
     virtual ~RRestrictAngleLength() {}
 
@@ -115,12 +116,22 @@ public:
         }
     }
 
+    virtual void setRepeatAngle(bool on) {
+        repeatAngle = on;
+    }
+
+    virtual void setRepeatLength(bool on) {
+        repeatLength = on;
+    }
+
 protected:
     AngleLengthMode mode;
     double baseAngle;
     double angle;
     double baseLength;
     double length;
+    bool repeatAngle;
+    bool repeatLength;
 };
 
 Q_DECLARE_METATYPE(RRestrictAngleLength*)

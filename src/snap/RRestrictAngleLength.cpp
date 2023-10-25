@@ -27,7 +27,12 @@ RVector RRestrictAngleLength::restrictSnap(const RVector& position, const RVecto
     double ang = relativeZero.getAngleTo(position);
     double angRes = ang;
     if (fabs(angle)>RS::AngleTolerance) {
-        angRes = RMath::mround((ang - baseAngle) / angle) * angle + baseAngle;
+        if (repeatAngle) {
+            angRes = RMath::mround((ang - baseAngle) / angle) * angle + baseAngle;
+        }
+        else {
+            angRes = baseAngle + angle;
+        }
     }
 
     RVector rPos = position;
@@ -39,7 +44,12 @@ RVector RRestrictAngleLength::restrictSnap(const RVector& position, const RVecto
     double len = relativeZero.getDistanceTo(rPos);
     double lenRes = len;
     if (fabs(length)>RS::PointTolerance) {
-        lenRes = RMath::mround((len - baseLength) / length) * length + baseLength;
+        if (repeatLength) {
+            lenRes = RMath::mround((len - baseLength) / length) * length + baseLength;
+        }
+        else {
+            lenRes = baseLength + length;
+        }
     }
 
     switch (mode) {

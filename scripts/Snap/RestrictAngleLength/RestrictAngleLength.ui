@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>539</width>
+    <width>674</width>
     <height>46</height>
    </rect>
   </property>
@@ -54,6 +54,13 @@
      </property>
      <property name="nomeasurements" stdset="0">
       <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="RepeatAngle">
+     <property name="text">
+      <string>Repeat</string>
      </property>
     </widget>
    </item>
@@ -107,6 +114,13 @@
      </property>
      <property name="nomeasurements" stdset="0">
       <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="RepeatLength">
+     <property name="text">
+      <string>Repeat</string>
      </property>
     </widget>
    </item>
