@@ -29,7 +29,7 @@
 <context>
     <name>REventHandler</name>
     <message>
-        <location filename="../src/gui/REventHandler.cpp" line="+201"/>
+        <location filename="../src/gui/REventHandler.cpp" line="+211"/>
         <source>Grid</source>
         <translation>Mreža</translation>
     </message>
@@ -72,6 +72,11 @@
         <location line="+3"/>
         <source>Reference</source>
         <translation>Referenca</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Distance</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

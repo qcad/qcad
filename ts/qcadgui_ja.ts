@@ -29,7 +29,7 @@
 <context>
     <name>REventHandler</name>
     <message>
-        <location filename="../src/gui/REventHandler.cpp" line="+201"/>
+        <location filename="../src/gui/REventHandler.cpp" line="+211"/>
         <source>Grid</source>
         <translation>グリッド</translation>
     </message>
@@ -73,6 +73,11 @@
         <source>Reference</source>
         <translation>基準点</translation>
     </message>
+    <message>
+        <location line="+3"/>
+        <source>Distance</source>
+        <translation type="unfinished">距離</translation>
+    </message>
 </context>
 <context>
     <name>RMathLineEdit</name>
@@ -83,3 +88,4 @@
     </message>
 </context>
 </TS>
+

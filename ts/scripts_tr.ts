@@ -402,146 +402,6 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
     </message>
 </context>
 <context>
-    <name>Align</name>
-    <message>
-        <location filename="../scripts/QCTrack/Align/Align.js" line="+56"/>
-        <source>Select end of track to move</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Select destination track end</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Select alignment track end</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+142"/>
-        <source>move by </source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>AngleHint</name>
-    <message>
-        <location filename="../scripts/QCTrack/AngleHint/AngleHint.js" line="+43"/>
-        <source>Select first track end</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Select second track end</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+76"/>
-        <source>info from </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+2"/>
-        <source> at </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-1"/>
-        <source>° to </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <location line="+5"/>
-        <location line="+88"/>
-        <source>°</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-89"/>
-        <source>direct distance: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>, track end rotated by </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+49"/>
-        <location line="+1"/>
-        <source>no curved track found</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>AngleHint</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+15"/>
-        <source>searching angle </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>° +/- </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>° as combination of max. </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source> tracks of </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+15"/>
-        <source>+-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>° (</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>°) done with </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source> tracks</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>, </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>x </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>found </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source> solutions</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>AntialiasingMode</name>
     <message>
         <location filename="../scripts/View/AntialiasingMode/AntialiasingMode.js" line="+74"/>
@@ -2535,61 +2395,6 @@ Kurtarmak ister misiniz?</translation>
     </message>
 </context>
 <context>
-    <name>Create</name>
-    <message>
-        <location filename="../scripts/QCTrack/Create/Create.js" line="+74"/>
-        <source>block name must not be empty if creating in block</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <location line="+8"/>
-        <location line="+8"/>
-        <source>Create Track</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-16"/>
-        <source>block name must not be empty if creating in block, did not create anything</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>block name already existing</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>block name already existing, did not change anything</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>either straight or curve (one set has to be greater zero, set other values to zero)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>either straight or curve (one set has to be greater zero, set other values to zero), did not create anything</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+26"/>
-        <source>creating </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>creating track</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+225"/>
-        <source>track creating done</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>CreateBlock</name>
     <message>
         <location filename="../scripts/Block/CreateBlock/CreateBlock.js" line="+51"/>
@@ -3423,61 +3228,6 @@ zaten listede.</translation>
         <location filename="../scripts/View/DisplayDistanceAngle/DisplayDistanceAngleInit.js" line="+2"/>
         <source>Display &amp;Distance/Angle</source>
         <translation>Görüntü M&amp;esafesi/Açı</translation>
-    </message>
-</context>
-<context>
-    <name>DistanceInfo</name>
-    <message>
-        <location filename="../scripts/QCTrack/DistanceInfo/DistanceInfo.js" line="+42"/>
-        <source>Select first track end</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Select second track end</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+76"/>
-        <source>info from </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <location line="+2"/>
-        <source> at </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-1"/>
-        <source>° to </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <location line="+4"/>
-        <source>°</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-1"/>
-        <source>direct distance: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>, track end rotated by </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>distance in track direction: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>, offset: </source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4443,19 +4193,6 @@ zaten listede.</translation>
     </message>
 </context>
 <context>
-    <name>DupParallel</name>
-    <message>
-        <location filename="../scripts/QCTrack/DupParallel/DupParallel.js" line="+44"/>
-        <source>Select track to duplicate</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../scripts/QCTrack/DupParallel/DupParallel.ui" line="+17"/>
-        <source>&amp;Distance:</source>
-        <translation type="unfinished">&amp;Ara</translation>
-    </message>
-</context>
-<context>
     <name>Duplicate</name>
     <message>
         <location filename="../scripts/Edit/Duplicate/DuplicateInit.js" line="+2"/>
@@ -4479,17 +4216,17 @@ zaten listede.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2138"/>
+        <location line="+2150"/>
         <source>Cancel</source>
         <translation type="unfinished">İptal</translation>
     </message>
     <message>
-        <location line="-2137"/>
+        <location line="-2149"/>
         <source>Done</source>
         <translation type="unfinished">Bitti</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+280"/>
         <location line="+144"/>
         <source>Active Tool:</source>
         <translation type="unfinished">Aktif Araç:</translation>
@@ -4500,7 +4237,7 @@ zaten listede.</translation>
         <translation type="unfinished">Yok</translation>
     </message>
     <message>
-        <location line="+678"/>
+        <location line="+687"/>
         <source>Options</source>
         <translation type="unfinished">Seçenekler</translation>
     </message>
@@ -5011,49 +4748,6 @@ zaten listede.</translation>
     </message>
 </context>
 <context>
-    <name>EnsureOrder</name>
-    <message>
-        <location filename="../scripts/QCTrack/EnsureOrder/EnsureOrder.js" line="+35"/>
-        <source>object ordering done with objects: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source> on TR_NMBRS, </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source> on TR_PLAN, </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source> on TR_SWELLS, </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source> on TR_BEDS, </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source> on TR_ENDS, </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source> on TR_MIDS, </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source> on TR_COST</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>Esc</name>
     <message>
         <location filename="../scripts/Edit/Esc/EscInit.js" line="+2"/>
@@ -5514,44 +5208,6 @@ zaten listede.</translation>
     </message>
 </context>
 <context>
-    <name>FillStraight</name>
-    <message>
-        <location filename="../scripts/QCTrack/FillStraight/FillStraight.js" line="+47"/>
-        <source>Select start of straight line</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Select end of straight line</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+100"/>
-        <source>can not connect those track ends (angle differs too much: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>° &gt; 2°)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>can not connect those track ends (there&apos;s no intersection)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>can not connect those track ends (ends are too near)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>internal error: neither left nor right hand</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+38"/>
@@ -5913,12 +5569,12 @@ zaten listede.</translation>
     <message>
         <location line="+39"/>
         <source>Verbose *</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Verbose _tmp_bg _tmp_cs _tmp_da _tmp_de _tmp_es _tmp_et _tmp_fi _tmp_fr _tmp_hu _tmp_id _tmp_it _tmp_ja _tmp_ko _tmp_lt _tmp_lv _tmp_nb _tmp_nl _tmp_pl _tmp_pt _tmp_ro _tmp_ru _tmp_sk _tmp_sl _tmp_sv _tmp_tr _tmp_uk _tmp_zh_TW assistant_ar.qm assistant_bg.qm assistant_cs.qm assistant_da.qm assistant_de.qm assistant_en.qm assistant_es.qm assistant_fr.qm assistant_hr.qm assistant_hu.qm assistant_ja.qm assistant_ko.qm assistant_nl.qm assistant_pl.qm assistant_pt_BR.qm assistant_ru.qm assistant_sk.qm assistant_sl.qm assistant_tr.qm assistant_uk.qm assistant_zh_CN.qm assistant_zh_TW.qm designer_ar.qm designer_bg.qm designer_cs.qm designer_da.qm designer_de.qm designer_en.qm designer_es.qm designer_fr.qm designer_hr.qm designer_hu.qm designer_ja.qm designer_ko.qm designer_nl.qm designer_pl.qm designer_ru.qm designer_sk.qm designer_sl.qm designer_tr.qm designer_uk.qm designer_zh_CN.qm designer_zh_TW.qm linguist_ar.qm linguist_bg.qm linguist_cs.qm linguist_da.qm linguist_de.qm linguist_en.qm linguist_es.qm linguist_fr.qm linguist_hr.qm linguist_hu.qm linguist_it.qm linguist_ja.qm linguist_ko.qm linguist_nl.qm linguist_pl.qm linguist_ru.qm linguist_sk.qm linguist_sl.qm linguist_sv.qm linguist_tr.qm linguist_uk.qm linguist_zh_CN.qm linguist_zh_TW.qm qcadcore_bg.qm qcadcore_bg.ts qcadcore_cs.qm qcadcore_cs.ts qcadcore_da.qm qcadcore_da.ts qcadcore_de.qm qcadcore_de.ts qcadcore_el.qm qcadcore_el.ts qcadcore_en.qm qcadcore_en.ts qcadcore_es.qm qcadcore_es.ts qcadcore_et.qm qcadcore_et.ts qcadcore_fi.qm qcadcore_fi.ts qcadcore_fr.qm qcadcore_fr.ts qcadcore_hr.qm qcadcore_hr.ts qcadcore_hu.qm qcadcore_hu.ts qcadcore_id.qm qcadcore_id.ts qcadcore_it.qm qcadcore_it.ts qcadcore_ja.qm qcadcore_ja.ts qcadcore_ko.qm qcadcore_ko.ts qcadcore_lt.qm qcadcore_lt.ts qcadcore_lv.qm qcadcore_lv.ts qcadcore_nb.qm qcadcore_nb.ts qcadcore_nl.qm qcadcore_nl.ts qcadcore_pl.qm qcadcore_pl.ts qcadcore_pt.qm qcadcore_pt.ts qcadcore_ro.qm qcadcore_ro.ts qcadcore_ru.qm qcadcore_ru.ts qcadcore_sk.qm qcadcore_sk.ts qcadcore_sl.qm qcadcore_sl.ts qcadcore_sv.qm qcadcore_sv.ts qcadcore_th.qm qcadcore_th.ts qcadcore_tr.qm qcadcore_tr.ts qcadcore_uk.qm qcadcore_uk.ts qcadcore_zh_CN.qm qcadcore_zh_CN.ts qcadcore_zh_TW.qm qcadcore_zh_TW.ts qcadentity_bg.qm qcadentity_bg.ts qcadentity_cs.qm qcadentity_cs.ts qcadentity_da.qm qcadentity_da.ts qcadentity_de.qm qcadentity_de.ts qcadentity_el.qm qcadentity_el.ts qcadentity_en.qm qcadentity_en.ts qcadentity_es.qm qcadentity_es.ts qcadentity_et.qm qcadentity_et.ts qcadentity_fi.qm qcadentity_fi.ts qcadentity_fr.qm qcadentity_fr.ts qcadentity_hr.qm qcadentity_hr.ts qcadentity_hu.qm qcadentity_hu.ts qcadentity_id.qm qcadentity_id.ts qcadentity_it.qm qcadentity_it.ts qcadentity_ja.qm qcadentity_ja.ts qcadentity_ko.qm qcadentity_ko.ts qcadentity_lt.qm qcadentity_lt.ts qcadentity_lv.qm qcadentity_lv.ts qcadentity_nb.qm qcadentity_nb.ts qcadentity_nl.qm qcadentity_nl.ts qcadentity_pl.qm qcadentity_pl.ts qcadentity_pt.qm qcadentity_pt.ts qcadentity_ro.qm qcadentity_ro.ts qcadentity_ru.qm qcadentity_ru.ts qcadentity_sk.qm qcadentity_sk.ts qcadentity_sl.qm qcadentity_sl.ts qcadentity_sv.qm qcadentity_sv.ts qcadentity_th.qm qcadentity_th.ts qcadentity_tr.qm qcadentity_tr.ts qcadentity_uk.qm qcadentity_uk.ts qcadentity_zh_CN.qm qcadentity_zh_CN.ts qcadentity_zh_TW.qm qcadentity_zh_TW.ts qcadgui_bg.qm qcadgui_bg.ts qcadgui_cs.qm qcadgui_cs.ts qcadgui_da.qm qcadgui_da.ts qcadgui_de.qm qcadgui_de.ts qcadgui_el.qm qcadgui_el.ts qcadgui_en.qm qcadgui_en.ts qcadgui_es.qm qcadgui_es.ts qcadgui_et.qm qcadgui_et.ts qcadgui_fi.qm qcadgui_fi.ts qcadgui_fr.qm qcadgui_fr.ts qcadgui_hr.qm qcadgui_hr.ts qcadgui_hu.qm qcadgui_hu.ts qcadgui_id.qm qcadgui_id.ts qcadgui_it.qm qcadgui_it.ts qcadgui_ja.qm qcadgui_ja.ts qcadgui_ko.qm qcadgui_ko.ts qcadgui_lt.qm qcadgui_lt.ts qcadgui_lv.qm qcadgui_lv.ts qcadgui_nb.qm qcadgui_nb.ts qcadgui_nl.qm qcadgui_nl.ts qcadgui_pl.qm qcadgui_pl.ts qcadgui_pt.qm qcadgui_pt.ts qcadgui_ro.qm qcadgui_ro.ts qcadgui_ru.qm qcadgui_ru.ts qcadgui_sk.qm qcadgui_sk.ts qcadgui_sl.qm qcadgui_sl.ts qcadgui_sv.qm qcadgui_sv.ts qcadgui_th.qm qcadgui_th.ts qcadgui_tr.qm qcadgui_tr.ts qcadgui_uk.qm qcadgui_uk.ts qcadgui_zh_CN.qm qcadgui_zh_CN.ts qcadgui_zh_TW.qm qcadgui_zh_TW.ts qmlviewer_ar.qm qmlviewer_bg.qm qmlviewer_cs.qm qmlviewer_da.qm qmlviewer_en.qm qmlviewer_es.qm qmlviewer_fi.qm qmlviewer_fr.qm qmlviewer_he.qm qmlviewer_hu.qm qmlviewer_ja.qm qmlviewer_ko.qm qmlviewer_pl.qm qmlviewer_ru.qm qmlviewer_sk.qm qmlviewer_uk.qm qt_ar.qm qt_bg.qm qt_ca.qm qt_cs.qm qt_da.qm qt_de.qm qt_en.qm qt_es.qm qt_fa.qm qt_fi.qm qt_fr.qm qt_gd.qm qt_gl.qm qt_he.qm qt_help_ar.qm qt_help_bg.qm qt_help_ca.qm qt_help_cs.qm qt_help_da.qm qt_help_de.qm qt_help_en.qm qt_help_es.qm qt_help_fr.qm qt_help_gl.qm qt_help_hr.qm qt_help_hu.qm qt_help_it.qm qt_help_ja.qm qt_help_ko.qm qt_help_nl.qm qt_help_nn.qm qt_help_pl.qm qt_help_pt_BR.qm qt_help_ru.qm qt_help_sk.qm qt_help_sl.qm qt_help_tr.qm qt_help_uk.qm qt_help_zh_CN.qm qt_help_zh_TW.qm qt_hr.qm qt_hu.qm qt_it.qm qt_ja.qm qt_ko.qm qt_lt.qm qt_lv.qm qt_nl.qm qt_nn.qm qt_pl.qm qt_pt.qm qt_pt_BR.qm qt_pt_PT.qm qt_ru.qm qt_sk.qm qt_sl.qm qt_sv.qm qt_tr.qm qt_uk.qm qt_zh_CN.qm qt_zh_TW.qm qtbase_ar.qm qtbase_bg.qm qtbase_ca.qm qtbase_cs.qm qtbase_da.qm qtbase_de.qm qtbase_en.qm qtbase_es.qm qtbase_fa.qm qtbase_fi.qm qtbase_fr.qm qtbase_gd.qm qtbase_he.qm qtbase_hr.qm qtbase_hu.qm qtbase_it.qm qtbase_ja.qm qtbase_ko.qm qtbase_lv.qm qtbase_nl.qm qtbase_nl.ts qtbase_nn.qm qtbase_pl.qm qtbase_pt.qm qtbase_pt.ts qtbase_pt_BR.qm qtbase_ru.qm qtbase_sk.qm qtbase_tr.qm qtbase_uk.qm qtbase_zh_CN.qm qtbase_zh_CN.ts qtbase_zh_TW.qm qtconfig_hu.qm qtconfig_ja.qm qtconfig_ko.qm qtconfig_pl.qm qtconfig_ru.qm qtconfig_sk.qm qtconfig_sl.qm qtconfig_uk.qm qtconfig_zh_CN.qm qtconfig_zh_TW.qm qtconnectivity_bg.qm qtconnectivity_da.qm qtconnectivity_de.qm qtconnectivity_en.qm qtconnectivity_es.qm qtconnectivity_ko.qm qtconnectivity_pl.qm qtconnectivity_ru.qm qtconnectivity_uk.qm qtdeclarative_bg.qm qtdeclarative_da.qm qtdeclarative_de.qm qtdeclarative_en.qm qtdeclarative_es.qm qtdeclarative_fi.qm qtdeclarative_fr.qm qtdeclarative_ja.qm qtdeclarative_ko.qm qtdeclarative_lv.qm qtdeclarative_pl.qm qtdeclarative_ru.qm qtdeclarative_sk.qm qtdeclarative_uk.qm qtlocation_bg.qm qtlocation_da.qm qtlocation_de.qm qtlocation_en.qm qtlocation_es.qm qtlocation_fr.qm qtlocation_ko.qm qtlocation_pl.qm qtlocation_ru.qm qtlocation_uk.qm qtmultimedia_ar.qm qtmultimedia_bg.qm qtmultimedia_ca.qm qtmultimedia_cs.qm qtmultimedia_da.qm qtmultimedia_de.qm qtmultimedia_en.qm qtmultimedia_es.qm qtmultimedia_fi.qm qtmultimedia_fr.qm qtmultimedia_hu.qm qtmultimedia_it.qm qtmultimedia_ja.qm qtmultimedia_ko.qm qtmultimedia_pl.qm qtmultimedia_ru.qm qtmultimedia_sk.qm qtmultimedia_uk.qm qtquick1_bg.qm qtquick1_ca.qm qtquick1_cs.qm qtquick1_da.qm qtquick1_de.qm qtquick1_en.qm qtquick1_es.qm qtquick1_fi.qm qtquick1_fr.qm qtquick1_he.qm qtquick1_hu.qm qtquick1_it.qm qtquick1_ja.qm qtquick1_ko.qm qtquick1_pl.qm qtquick1_ru.qm qtquick1_sk.qm qtquick1_uk.qm qtquickcontrols2_ar.qm qtquickcontrols2_bg.qm qtquickcontrols2_en.qm qtquickcontrols2_ko.qm qtquickcontrols2_uk.qm qtquickcontrols_bg.qm qtquickcontrols_de.qm qtquickcontrols_en.qm qtquickcontrols_fi.qm qtquickcontrols_fr.qm qtquickcontrols_ja.qm qtquickcontrols_ru.qm qtquickcontrols_uk.qm qtscript_ar.qm qtscript_bg.qm qtscript_ca.qm qtscript_cs.qm qtscript_da.qm qtscript_de.qm qtscript_en.qm qtscript_es.qm qtscript_fi.qm qtscript_fr.qm qtscript_he.qm qtscript_hu.qm qtscript_it.qm qtscript_ja.qm qtscript_ko.qm qtscript_lv.qm qtscript_pl.qm qtscript_ru.qm qtscript_sk.qm qtscript_uk.qm qtserialport_de.qm qtserialport_en.qm qtserialport_es.qm qtserialport_ja.qm qtserialport_ko.qm qtserialport_pl.qm qtserialport_ru.qm qtserialport_uk.qm qtwebengine_de.qm qtwebengine_en.qm qtwebengine_es.qm qtwebengine_ko.qm qtwebengine_pl.qm qtwebengine_ru.qm qtwebengine_uk.qm qtwebsockets_de.qm qtwebsockets_en.qm qtwebsockets_es.qm qtwebsockets_fr.qm qtwebsockets_ja.qm qtwebsockets_ko.qm qtwebsockets_pl.qm qtwebsockets_ru.qm qtwebsockets_uk.qm qtxmlpatterns_bg.qm qtxmlpatterns_ca.qm qtxmlpatterns_cs.qm qtxmlpatterns_da.qm qtxmlpatterns_de.qm qtxmlpatterns_en.qm qtxmlpatterns_es.qm qtxmlpatterns_fr.qm qtxmlpatterns_hu.qm qtxmlpatterns_it.qm qtxmlpatterns_ja.qm qtxmlpatterns_ko.qm qtxmlpatterns_pl.qm qtxmlpatterns_ru.qm qtxmlpatterns_sk.qm qtxmlpatterns_uk.qm scripts.pro scripts_bg.qm scripts_bg.ts scripts_cs.qm scripts_cs.ts scripts_da.qm scripts_da.ts scripts_de.qm scripts_de.ts scripts_el.qm scripts_el.ts scripts_en.qm scripts_en.ts scripts_es.qm scripts_es.ts scripts_et.qm scripts_et.ts scripts_fi.qm scripts_fi.ts scripts_fr.qm scripts_fr.ts scripts_hr.qm scripts_hr.ts scripts_hu.qm scripts_hu.ts scripts_id.qm scripts_id.ts scripts_it.qm scripts_it.ts scripts_ja.qm scripts_ja.ts scripts_ko.qm scripts_ko.ts scripts_lt.qm scripts_lt.ts scripts_lv.qm scripts_lv.ts scripts_nb.qm scripts_nb.ts scripts_nl.qm scripts_nl.ts scripts_pl.qm scripts_pl.ts scripts_pt.qm scripts_pt.ts scripts_ro.qm scripts_ro.ts scripts_ru.qm scripts_ru.ts scripts_sk.qm scripts_sk.ts scripts_sl.qm scripts_sl.ts scripts_sv.qm scripts_sv.ts scripts_th.qm scripts_th.ts scripts_tr.qm scripts_tr.ts scripts_uk.qm scripts_uk.ts scripts_zh_CN.qm scripts_zh_CN.ts scripts_zh_TW.qm scripts_zh_TW.ts</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Delete Base Entities *</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Temel Varlıkları Sil _tmp_bg _tmp_cs _tmp_da _tmp_de _tmp_es _tmp_et _tmp_fi _tmp_fr _tmp_hu _tmp_id _tmp_it _tmp_ja _tmp_ko _tmp_lt _tmp_lv _tmp_nb _tmp_nl _tmp_pl _tmp_pt _tmp_ro _tmp_ru _tmp_sk _tmp_sl _tmp_sv _tmp_tr _tmp_uk _tmp_zh_TW assistant_ar.qm assistant_bg.qm assistant_cs.qm assistant_da.qm assistant_de.qm assistant_en.qm assistant_es.qm assistant_fr.qm assistant_hr.qm assistant_hu.qm assistant_ja.qm assistant_ko.qm assistant_nl.qm assistant_pl.qm assistant_pt_BR.qm assistant_ru.qm assistant_sk.qm assistant_sl.qm assistant_tr.qm assistant_uk.qm assistant_zh_CN.qm assistant_zh_TW.qm designer_ar.qm designer_bg.qm designer_cs.qm designer_da.qm designer_de.qm designer_en.qm designer_es.qm designer_fr.qm designer_hr.qm designer_hu.qm designer_ja.qm designer_ko.qm designer_nl.qm designer_pl.qm designer_ru.qm designer_sk.qm designer_sl.qm designer_tr.qm designer_uk.qm designer_zh_CN.qm designer_zh_TW.qm linguist_ar.qm linguist_bg.qm linguist_cs.qm linguist_da.qm linguist_de.qm linguist_en.qm linguist_es.qm linguist_fr.qm linguist_hr.qm linguist_hu.qm linguist_it.qm linguist_ja.qm linguist_ko.qm linguist_nl.qm linguist_pl.qm linguist_ru.qm linguist_sk.qm linguist_sl.qm linguist_sv.qm linguist_tr.qm linguist_uk.qm linguist_zh_CN.qm linguist_zh_TW.qm qcadcore_bg.qm qcadcore_bg.ts qcadcore_cs.qm qcadcore_cs.ts qcadcore_da.qm qcadcore_da.ts qcadcore_de.qm qcadcore_de.ts qcadcore_el.qm qcadcore_el.ts qcadcore_en.qm qcadcore_en.ts qcadcore_es.qm qcadcore_es.ts qcadcore_et.qm qcadcore_et.ts qcadcore_fi.qm qcadcore_fi.ts qcadcore_fr.qm qcadcore_fr.ts qcadcore_hr.qm qcadcore_hr.ts qcadcore_hu.qm qcadcore_hu.ts qcadcore_id.qm qcadcore_id.ts qcadcore_it.qm qcadcore_it.ts qcadcore_ja.qm qcadcore_ja.ts qcadcore_ko.qm qcadcore_ko.ts qcadcore_lt.qm qcadcore_lt.ts qcadcore_lv.qm qcadcore_lv.ts qcadcore_nb.qm qcadcore_nb.ts qcadcore_nl.qm qcadcore_nl.ts qcadcore_pl.qm qcadcore_pl.ts qcadcore_pt.qm qcadcore_pt.ts qcadcore_ro.qm qcadcore_ro.ts qcadcore_ru.qm qcadcore_ru.ts qcadcore_sk.qm qcadcore_sk.ts qcadcore_sl.qm qcadcore_sl.ts qcadcore_sv.qm qcadcore_sv.ts qcadcore_th.qm qcadcore_th.ts qcadcore_tr.qm qcadcore_tr.ts qcadcore_uk.qm qcadcore_uk.ts qcadcore_zh_CN.qm qcadcore_zh_CN.ts qcadcore_zh_TW.qm qcadcore_zh_TW.ts qcadentity_bg.qm qcadentity_bg.ts qcadentity_cs.qm qcadentity_cs.ts qcadentity_da.qm qcadentity_da.ts qcadentity_de.qm qcadentity_de.ts qcadentity_el.qm qcadentity_el.ts qcadentity_en.qm qcadentity_en.ts qcadentity_es.qm qcadentity_es.ts qcadentity_et.qm qcadentity_et.ts qcadentity_fi.qm qcadentity_fi.ts qcadentity_fr.qm qcadentity_fr.ts qcadentity_hr.qm qcadentity_hr.ts qcadentity_hu.qm qcadentity_hu.ts qcadentity_id.qm qcadentity_id.ts qcadentity_it.qm qcadentity_it.ts qcadentity_ja.qm qcadentity_ja.ts qcadentity_ko.qm qcadentity_ko.ts qcadentity_lt.qm qcadentity_lt.ts qcadentity_lv.qm qcadentity_lv.ts qcadentity_nb.qm qcadentity_nb.ts qcadentity_nl.qm qcadentity_nl.ts qcadentity_pl.qm qcadentity_pl.ts qcadentity_pt.qm qcadentity_pt.ts qcadentity_ro.qm qcadentity_ro.ts qcadentity_ru.qm qcadentity_ru.ts qcadentity_sk.qm qcadentity_sk.ts qcadentity_sl.qm qcadentity_sl.ts qcadentity_sv.qm qcadentity_sv.ts qcadentity_th.qm qcadentity_th.ts qcadentity_tr.qm qcadentity_tr.ts qcadentity_uk.qm qcadentity_uk.ts qcadentity_zh_CN.qm qcadentity_zh_CN.ts qcadentity_zh_TW.qm qcadentity_zh_TW.ts qcadgui_bg.qm qcadgui_bg.ts qcadgui_cs.qm qcadgui_cs.ts qcadgui_da.qm qcadgui_da.ts qcadgui_de.qm qcadgui_de.ts qcadgui_el.qm qcadgui_el.ts qcadgui_en.qm qcadgui_en.ts qcadgui_es.qm qcadgui_es.ts qcadgui_et.qm qcadgui_et.ts qcadgui_fi.qm qcadgui_fi.ts qcadgui_fr.qm qcadgui_fr.ts qcadgui_hr.qm qcadgui_hr.ts qcadgui_hu.qm qcadgui_hu.ts qcadgui_id.qm qcadgui_id.ts qcadgui_it.qm qcadgui_it.ts qcadgui_ja.qm qcadgui_ja.ts qcadgui_ko.qm qcadgui_ko.ts qcadgui_lt.qm qcadgui_lt.ts qcadgui_lv.qm qcadgui_lv.ts qcadgui_nb.qm qcadgui_nb.ts qcadgui_nl.qm qcadgui_nl.ts qcadgui_pl.qm qcadgui_pl.ts qcadgui_pt.qm qcadgui_pt.ts qcadgui_ro.qm qcadgui_ro.ts qcadgui_ru.qm qcadgui_ru.ts qcadgui_sk.qm qcadgui_sk.ts qcadgui_sl.qm qcadgui_sl.ts qcadgui_sv.qm qcadgui_sv.ts qcadgui_th.qm qcadgui_th.ts qcadgui_tr.qm qcadgui_tr.ts qcadgui_uk.qm qcadgui_uk.ts qcadgui_zh_CN.qm qcadgui_zh_CN.ts qcadgui_zh_TW.qm qcadgui_zh_TW.ts qmlviewer_ar.qm qmlviewer_bg.qm qmlviewer_cs.qm qmlviewer_da.qm qmlviewer_en.qm qmlviewer_es.qm qmlviewer_fi.qm qmlviewer_fr.qm qmlviewer_he.qm qmlviewer_hu.qm qmlviewer_ja.qm qmlviewer_ko.qm qmlviewer_pl.qm qmlviewer_ru.qm qmlviewer_sk.qm qmlviewer_uk.qm qt_ar.qm qt_bg.qm qt_ca.qm qt_cs.qm qt_da.qm qt_de.qm qt_en.qm qt_es.qm qt_fa.qm qt_fi.qm qt_fr.qm qt_gd.qm qt_gl.qm qt_he.qm qt_help_ar.qm qt_help_bg.qm qt_help_ca.qm qt_help_cs.qm qt_help_da.qm qt_help_de.qm qt_help_en.qm qt_help_es.qm qt_help_fr.qm qt_help_gl.qm qt_help_hr.qm qt_help_hu.qm qt_help_it.qm qt_help_ja.qm qt_help_ko.qm qt_help_nl.qm qt_help_nn.qm qt_help_pl.qm qt_help_pt_BR.qm qt_help_ru.qm qt_help_sk.qm qt_help_sl.qm qt_help_tr.qm qt_help_uk.qm qt_help_zh_CN.qm qt_help_zh_TW.qm qt_hr.qm qt_hu.qm qt_it.qm qt_ja.qm qt_ko.qm qt_lt.qm qt_lv.qm qt_nl.qm qt_nn.qm qt_pl.qm qt_pt.qm qt_pt_BR.qm qt_pt_PT.qm qt_ru.qm qt_sk.qm qt_sl.qm qt_sv.qm qt_tr.qm qt_uk.qm qt_zh_CN.qm qt_zh_TW.qm qtbase_ar.qm qtbase_bg.qm qtbase_ca.qm qtbase_cs.qm qtbase_da.qm qtbase_de.qm qtbase_en.qm qtbase_es.qm qtbase_fa.qm qtbase_fi.qm qtbase_fr.qm qtbase_gd.qm qtbase_he.qm qtbase_hr.qm qtbase_hu.qm qtbase_it.qm qtbase_ja.qm qtbase_ko.qm qtbase_lv.qm qtbase_nl.qm qtbase_nl.ts qtbase_nn.qm qtbase_pl.qm qtbase_pt.qm qtbase_pt.ts qtbase_pt_BR.qm qtbase_ru.qm qtbase_sk.qm qtbase_tr.qm qtbase_uk.qm qtbase_zh_CN.qm qtbase_zh_CN.ts qtbase_zh_TW.qm qtconfig_hu.qm qtconfig_ja.qm qtconfig_ko.qm qtconfig_pl.qm qtconfig_ru.qm qtconfig_sk.qm qtconfig_sl.qm qtconfig_uk.qm qtconfig_zh_CN.qm qtconfig_zh_TW.qm qtconnectivity_bg.qm qtconnectivity_da.qm qtconnectivity_de.qm qtconnectivity_en.qm qtconnectivity_es.qm qtconnectivity_ko.qm qtconnectivity_pl.qm qtconnectivity_ru.qm qtconnectivity_uk.qm qtdeclarative_bg.qm qtdeclarative_da.qm qtdeclarative_de.qm qtdeclarative_en.qm qtdeclarative_es.qm qtdeclarative_fi.qm qtdeclarative_fr.qm qtdeclarative_ja.qm qtdeclarative_ko.qm qtdeclarative_lv.qm qtdeclarative_pl.qm qtdeclarative_ru.qm qtdeclarative_sk.qm qtdeclarative_uk.qm qtlocation_bg.qm qtlocation_da.qm qtlocation_de.qm qtlocation_en.qm qtlocation_es.qm qtlocation_fr.qm qtlocation_ko.qm qtlocation_pl.qm qtlocation_ru.qm qtlocation_uk.qm qtmultimedia_ar.qm qtmultimedia_bg.qm qtmultimedia_ca.qm qtmultimedia_cs.qm qtmultimedia_da.qm qtmultimedia_de.qm qtmultimedia_en.qm qtmultimedia_es.qm qtmultimedia_fi.qm qtmultimedia_fr.qm qtmultimedia_hu.qm qtmultimedia_it.qm qtmultimedia_ja.qm qtmultimedia_ko.qm qtmultimedia_pl.qm qtmultimedia_ru.qm qtmultimedia_sk.qm qtmultimedia_uk.qm qtquick1_bg.qm qtquick1_ca.qm qtquick1_cs.qm qtquick1_da.qm qtquick1_de.qm qtquick1_en.qm qtquick1_es.qm qtquick1_fi.qm qtquick1_fr.qm qtquick1_he.qm qtquick1_hu.qm qtquick1_it.qm qtquick1_ja.qm qtquick1_ko.qm qtquick1_pl.qm qtquick1_ru.qm qtquick1_sk.qm qtquick1_uk.qm qtquickcontrols2_ar.qm qtquickcontrols2_bg.qm qtquickcontrols2_en.qm qtquickcontrols2_ko.qm qtquickcontrols2_uk.qm qtquickcontrols_bg.qm qtquickcontrols_de.qm qtquickcontrols_en.qm qtquickcontrols_fi.qm qtquickcontrols_fr.qm qtquickcontrols_ja.qm qtquickcontrols_ru.qm qtquickcontrols_uk.qm qtscript_ar.qm qtscript_bg.qm qtscript_ca.qm qtscript_cs.qm qtscript_da.qm qtscript_de.qm qtscript_en.qm qtscript_es.qm qtscript_fi.qm qtscript_fr.qm qtscript_he.qm qtscript_hu.qm qtscript_it.qm qtscript_ja.qm qtscript_ko.qm qtscript_lv.qm qtscript_pl.qm qtscript_ru.qm qtscript_sk.qm qtscript_uk.qm qtserialport_de.qm qtserialport_en.qm qtserialport_es.qm qtserialport_ja.qm qtserialport_ko.qm qtserialport_pl.qm qtserialport_ru.qm qtserialport_uk.qm qtwebengine_de.qm qtwebengine_en.qm qtwebengine_es.qm qtwebengine_ko.qm qtwebengine_pl.qm qtwebengine_ru.qm qtwebengine_uk.qm qtwebsockets_de.qm qtwebsockets_en.qm qtwebsockets_es.qm qtwebsockets_fr.qm qtwebsockets_ja.qm qtwebsockets_ko.qm qtwebsockets_pl.qm qtwebsockets_ru.qm qtwebsockets_uk.qm qtxmlpatterns_bg.qm qtxmlpatterns_ca.qm qtxmlpatterns_cs.qm qtxmlpatterns_da.qm qtxmlpatterns_de.qm qtxmlpatterns_en.qm qtxmlpatterns_es.qm qtxmlpatterns_fr.qm qtxmlpatterns_hu.qm qtxmlpatterns_it.qm qtxmlpatterns_ja.qm qtxmlpatterns_ko.qm qtxmlpatterns_pl.qm qtxmlpatterns_ru.qm qtxmlpatterns_sk.qm qtxmlpatterns_uk.qm scripts.pro scripts_bg.qm scripts_bg.ts scripts_cs.qm scripts_cs.ts scripts_da.qm scripts_da.ts scripts_de.qm scripts_de.ts scripts_el.qm scripts_el.ts scripts_en.qm scripts_en.ts scripts_es.qm scripts_es.ts scripts_et.qm scripts_et.ts scripts_fi.qm scripts_fi.ts scripts_fr.qm scripts_fr.ts scripts_hr.qm scripts_hr.ts scripts_hu.qm scripts_hu.ts scripts_id.qm scripts_id.ts scripts_it.qm scripts_it.ts scripts_ja.qm scripts_ja.ts scripts_ko.qm scripts_ko.ts scripts_lt.qm scripts_lt.ts scripts_lv.qm scripts_lv.ts scripts_nb.qm scripts_nb.ts scripts_nl.qm scripts_nl.ts scripts_pl.qm scripts_pl.ts scripts_pt.qm scripts_pt.ts scripts_ro.qm scripts_ro.ts scripts_ru.qm scripts_ru.ts scripts_sk.qm scripts_sk.ts scripts_sl.qm scripts_sl.ts scripts_sv.qm scripts_sv.ts scripts_th.qm scripts_th.ts scripts_tr.qm scripts_tr.ts scripts_uk.qm scripts_uk.ts scripts_zh_CN.qm scripts_zh_CN.ts scripts_zh_TW.qm scripts_zh_TW.ts</translation>
     </message>
 </context>
 <context>
@@ -6538,12 +6194,12 @@ zaten listede.</translation>
 <context>
     <name>GraphicsViewNavigation</name>
     <message>
-        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+91"/>
+        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+47"/>
         <source>Limit zoom and scroll to prevent overflows</source>
         <translation>Yakınlaştırmayı sınırlandırın ve taşmaları önlemek için kaydırın</translation>
     </message>
     <message>
-        <location line="+241"/>
+        <location line="-28"/>
         <source>Mouse wheel / two finger swipe:</source>
         <translation>Fare tekerleği / iki parmak tıklama:</translation>
     </message>
@@ -6553,22 +6209,32 @@ zaten listede.</translation>
         <translation>Orta fare düğmesi zoom faktörü:</translation>
     </message>
     <message>
-        <location line="-238"/>
+        <location line="+14"/>
         <source>Enable pan gesture</source>
         <translation>Pan hareketini etkinleştir</translation>
     </message>
     <message>
-        <location line="+224"/>
+        <location line="+296"/>
+        <source>Limit scrolling to vertical and horizontal</source>
+        <translation type="unfinished">Kaydırmayı dikey ve yatay olarak sınırlama</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Panning threshold (px):</source>
         <translation>Eşik eşiği (px):</translation>
     </message>
     <message>
-        <location line="-217"/>
+        <location line="+7"/>
+        <source>Panning speed:</source>
+        <translation type="unfinished">Kaydırma hızı:</translation>
+    </message>
+    <message>
+        <location line="-21"/>
         <source>Reverse mouse wheel direction for zoom</source>
         <translation>Yakınlaştırma için fare tekerleği yönünü ters çevir</translation>
     </message>
     <message>
-        <location line="-24"/>
+        <location line="-7"/>
         <source>Mouse wheel zoom factor:</source>
         <translation>Fare tekerleği yakınlaştırma faktörü:</translation>
     </message>
@@ -8056,29 +7722,6 @@ zaten listede.</translation>
     </message>
 </context>
 <context>
-    <name>InsertExplodedBlock</name>
-    <message>
-        <location filename="../scripts/QCTrack/InsertExplodedBlock/InsertExplodedBlock.js" line="+31"/>
-        <source>no valid block selected in BlockList</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Insert exploded block</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>no valid block selected in BlockList, did not insert anything</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
-        <source>Select destination</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>InsertScriptItem</name>
     <message>
         <location filename="../scripts/Block/InsertScriptItem/InsertScriptItemInit.js" line="+2"/>
@@ -8459,7 +8102,7 @@ zaten listede.</translation>
 <context>
     <name>LayerList</name>
     <message>
-        <location filename="../scripts/Widgets/LayerList/LayerList.js" line="+213"/>
+        <location filename="../scripts/Widgets/LayerList/LayerList.js" line="+200"/>
         <source>Widgets</source>
         <translation>Widgetler</translation>
     </message>
@@ -9103,7 +8746,6 @@ zaten listede.</translation>
     </message>
     <message>
         <location line="+25"/>
-        <location line="+33"/>
         <source>Cannot draw tangent from point inside circle to circle</source>
         <translation>Daire içindeki noktadan daireye teğet çekilemez</translation>
     </message>
@@ -9218,25 +8860,6 @@ zaten listede.</translation>
         <location filename="../scripts/Snap/LockRelativeZero/LockRelativeZeroInit.js" line="+2"/>
         <source>&amp;Lock Relative Zero</source>
         <translation>&amp;Göreli Sıfır Kilidi</translation>
-    </message>
-</context>
-<context>
-    <name>MarkOpen</name>
-    <message>
-        <location filename="../scripts/QCTrack/MarkOpen/MarkOpen.js" line="+37"/>
-        <location line="+1"/>
-        <source>distance must not be negative</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Mark Open Track Ends</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+56"/>
-        <source>open track end count: </source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -9595,39 +9218,6 @@ zaten listede.</translation>
     </message>
 </context>
 <context>
-    <name>Move</name>
-    <message>
-        <location filename="../scripts/QCTrack/Move/Move.js" line="+56"/>
-        <source>Select end of track to move</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Select destination track end</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+102"/>
-        <source>move by </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source> / </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>, rotate by </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>°</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>MyPositionDialog</name>
     <message>
         <location filename="../scripts/Misc/Tutorials/PersistentWidgets/PersistentWidgets.ui" line="+14"/>
@@ -9973,103 +9563,6 @@ zaten listede.</translation>
         <location filename="../scripts/View/Zoom/PanZoom/PanZoomInit.js" line="+2"/>
         <source>&amp;Pan Zoom</source>
         <translation>&amp;Yakınlaştırma</translation>
-    </message>
-</context>
-<context>
-    <name>PartList</name>
-    <message>
-        <location filename="../scripts/QCTrack/PartList/PartList.js" line="+39"/>
-        <source>Part List File</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+78"/>
-        <location line="+6"/>
-        <source>processed </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-6"/>
-        <source> blocks containing </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source> numbers:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source> blocks:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>length of all blocks: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>cost of all blocks: </source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>PartListDialog</name>
-    <message>
-        <location filename="../scripts/QCTrack/PartList/PartListDialog.ui" line="+17"/>
-        <source>Part List Options</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>Entities to evaluate</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+24"/>
-        <source>Selected blocks</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+22"/>
-        <source>All blocks</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Name to evaluate</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+18"/>
-        <source>Block name and length</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Number(s) inside block (layer TR_NMBRS)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+22"/>
-        <source>Block name, length and cost (TR_COST)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>Output destination</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+18"/>
-        <source>Print to console</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+22"/>
-        <source>Write to file</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10807,129 +10300,6 @@ zaten listede.</translation>
     </message>
 </context>
 <context>
-    <name>QCTrack</name>
-    <message>
-        <location filename="../scripts/QCTrack/QCTrack.js" line="+50"/>
-        <source>&amp;Create track</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Insert e&amp;xploded block from BlockListWidget</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Ensure &amp;order of track layer objects</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>&amp;Select connected tracks</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Mar&amp;k open tracks</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>&amp;Move</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>&amp;Duplicate and move</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Duplicate &amp;parallel with distance</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Distance &amp;information</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Angle &amp;hint</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>&amp;Align</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>&amp;Fill with straight tracks</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Reorder ob&amp;jects on layers</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>&amp;View track widget</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Insert &amp;new track from track widget</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>&amp;Connect new track from track widget</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>&amp;Rotate track at track widget</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Show part &amp;list</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>&amp;Variegate</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>QCTrack version</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+29"/>
-        <source>&amp;QCTrack</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+308"/>
-        <source>Format:</source>
-        <translation type="unfinished">Biçim:</translation>
-    </message>
-    <message>
-        <location line="+36"/>
-        <source>Overwrite File?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>QtExamples</name>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/QtExamples.js" line="+50"/>
@@ -11032,57 +10402,6 @@ zaten listede.</translation>
     </message>
 </context>
 <context>
-    <name>ReorderObjects</name>
-    <message>
-        <location filename="../scripts/QCTrack/ReorderObjects/ReorderObjects.js" line="+73"/>
-        <source>object ordering done, objects ordered: </source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>ReorderObjectsDialog</name>
-    <message>
-        <location filename="../scripts/QCTrack/ReorderObjects/ReorderObjectsDialog.ui" line="+17"/>
-        <source>Reorder Objects Options</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+26"/>
-        <source>top</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>up</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>&lt;&lt;== no sort</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>invert</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>do sort ==&gt;&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>down</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>bottom</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>ReportBug</name>
     <message>
         <location filename="../scripts/Help/ReportBug/ReportBugInit.js" line="+2"/>
@@ -11120,12 +10439,18 @@ zaten listede.</translation>
     </message>
     <message>
         <location line="+23"/>
-        <location line="+53"/>
+        <location line="+60"/>
         <source>Base:</source>
         <translation>Temel:</translation>
     </message>
     <message>
-        <location line="-23"/>
+        <location line="-37"/>
+        <location line="+60"/>
+        <source>Multiples</source>
+        <translation type="unfinished">Multiples</translation>
+    </message>
+    <message>
+        <location line="-46"/>
         <source>Distance:</source>
         <translation>Ara:</translation>
     </message>
@@ -11841,30 +11166,6 @@ zaten listede.</translation>
         <location line="+8"/>
         <source>Handle (hex):</source>
         <translation type="unfinished">Sap (altıgen):</translation>
-    </message>
-</context>
-<context>
-    <name>SelectCon</name>
-    <message>
-        <location filename="../scripts/QCTrack/SelectCon/SelectCon.js" line="+40"/>
-        <location line="+1"/>
-        <source>distance must not be negative</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Select Connected Track</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+32"/>
-        <source>added </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source> tracks to selection.</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -13684,48 +12985,6 @@ zaten listede.</translation>
     </message>
 </context>
 <context>
-    <name>TrackWidget</name>
-    <message>
-        <location filename="../scripts/QCTrack/TrackWidget/TrackWidget.js" line="+88"/>
-        <source>complex</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+159"/>
-        <source>Widgets</source>
-        <translation type="unfinished">Widgetler</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <location line="+59"/>
-        <source>Track Widget</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../scripts/QCTrack/TrackWidget/TrackWidget.ui" line="+59"/>
-        <source>Ins</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Con</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Rot</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>TrackWidgetInsert</name>
-    <message>
-        <location filename="../scripts/QCTrack/TrackWidgetInsert/TrackWidgetInsert.js" line="+96"/>
-        <source>Select destination track end</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>Transform</name>
     <message>
         <location filename="../scripts/Modify/Transform.js" line="+47"/>
@@ -14142,134 +13401,6 @@ zaten listede.</translation>
     </message>
 </context>
 <context>
-    <name>Variegate</name>
-    <message>
-        <location filename="../scripts/QCTrack/Variegate/Variegate.js" line="+114"/>
-        <location line="+1"/>
-        <source>no straight line for variegation available</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <location line="+111"/>
-        <location line="+22"/>
-        <source>Variegate</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-114"/>
-        <source>overall elements</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+91"/>
-        <location line="+1"/>
-        <source>all tracks were disabled by user, can not variegate</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+22"/>
-        <source>sorry, did not found a solution - retry?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+15"/>
-        <source>Select solutions, searched: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+322"/>
-        <source>Position</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>VariegateDialog</name>
-    <message>
-        <location filename="../scripts/QCTrack/Variegate/VariegateDialog.ui" line="+17"/>
-        <source>Variegate</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>Minimum track length</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>Desired track length</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>Maximum track length</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+31"/>
-        <source>Maximum element usage (-1: unlimited)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>None</source>
-        <translation type="unfinished">Yok</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>All</source>
-        <translation type="unfinished">Tümü</translation>
-    </message>
-</context>
-<context>
-    <name>VariegateResultDialog</name>
-    <message>
-        <location filename="../scripts/QCTrack/Variegate/VariegateResultDialog.ui" line="+17"/>
-        <source>Variegation Results</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>Label created tracks</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+54"/>
-        <source>Select solutions</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Show all (reset filter)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+28"/>
-        <source>Export selected</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Print selected</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Export all to clipboard</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Print all on console</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>Orthogonal distance between solution</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>View</name>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
@@ -14349,7 +13480,7 @@ zaten listede.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+322"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+342"/>
         <source>Dropped data not supported</source>
         <translation>Bırakılan veriler desteklenmiyor</translation>
     </message>
@@ -14840,89 +13971,6 @@ zaten listede.</translation>
     </message>
 </context>
 <context>
-    <name>createDialog</name>
-    <message>
-        <location filename="../scripts/QCTrack/Create/CreateDialog.ui" line="+17"/>
-        <source>Create Track</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;For straight tracks, leave radius and angle zero,&lt;/p&gt;&lt;p&gt;for curved tracks, leace straight length zero.&lt;/p&gt;&lt;p&gt;If you don&apos;t need track bed or swells, set it to zero.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+21"/>
-        <source>Create in block, block name</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>Display name</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Display name size</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>Cost</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>Distance between tracks</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>Track bed size</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>Swell distance</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>Swell width</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>Swell length</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+24"/>
-        <source>Straight</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+42"/>
-        <source>Radius</source>
-        <translation type="unfinished">Yarıçap</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>left</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>right</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>Angle</source>
-        <translation type="unfinished">Açı</translation>
-    </message>
-</context>
-<context>
     <name>library</name>
     <message>
         <location filename="../scripts/library.js" line="+1250"/>
@@ -15391,24 +14439,6 @@ zaten listede.</translation>
     </message>
 </context>
 <context>
-    <name>markOpenDialog</name>
-    <message>
-        <location filename="../scripts/QCTrack/MarkOpen/MarkOpenDialog.ui" line="+17"/>
-        <source>Mark Open Track Options</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+21"/>
-        <source>Maximum track end distance</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
-        <source>This will remove and re-create the TR_OPEN layer and create a circle for each open track end.</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>scrollArea</name>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/GridSettings/PreferencesPage.ui" line="+29"/>
@@ -15488,32 +14518,18 @@ zaten listede.</translation>
     </message>
 </context>
 <context>
-    <name>selectConDialog</name>
-    <message>
-        <location filename="../scripts/QCTrack/SelectCon/SelectConDialog.ui" line="+17"/>
-        <source>Select Connected Track Options</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+21"/>
-        <source>Only select tracks on same layer</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Stop at turnout</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Maximum track end distance</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>simple_modify</name>
     <message>
-        <location filename="../scripts/simple_modify.js" line="+301"/>
+        <location filename="../scripts/simple_modify.js" line="+77"/>
+        <location line="+43"/>
+        <location line="+49"/>
+        <location line="+66"/>
+        <location line="+124"/>
+        <source>ID does not refer to an entity:</source>
+        <translation type="unfinished">Kimlik bir varlığa atıfta bulunmaz:</translation>
+    </message>
+    <message>
+        <location line="-42"/>
         <source>First entity cannot be trimmed.</source>
         <translation type="unfinished">İlk varlık kırpılamaz.</translation>
     </message>
@@ -15529,3 +14545,4 @@ zaten listede.</translation>
     </message>
 </context>
 </TS>
+
