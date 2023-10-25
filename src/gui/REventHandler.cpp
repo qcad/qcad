@@ -234,6 +234,9 @@ void REventHandler::updateSnapInfo(RGraphicsViewWorker* worker, RSnap* snap, RSn
     case RSnap::Reference:
         text = tr("Reference");
         break;
+    case RSnap::Distance:
+        text = tr("Distance");
+        break;
     default:
         break;
     }
