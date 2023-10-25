@@ -68,6 +68,12 @@
         ;static  QScriptValue
         setRestrictLength
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setRepeatAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setRepeatLength
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

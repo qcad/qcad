@@ -263,7 +263,7 @@
     <function_decl><type><name>void</name></type> <name>setPanOptimization</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>getPanOptimization</name><parameter_list>()</parameter_list>;</function_decl>
 
-    <comment type="line">//virtual void paintEntities(QPainter* painter, const RBox&amp; queryBox);</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>paintEntities</name><parameter_list>(<param><decl><type><name>QPainter</name>*</type> <name>painter</name></decl></param>, <param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>queryBox</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>paintEntitiesMulti</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>queryBox</name></decl></param>)</parameter_list>;</function_decl>
     <comment type="line">//void paintEntitiesThread(int threadId, const QList&lt;REntity::Id&gt;&amp; list, int start, int end);</comment>
     <comment type="line">//void paintDrawablesThread(int threadId, const QList&lt;RGraphicsSceneDrawable&gt;&amp; list, int start, int end);</comment>
@@ -271,7 +271,7 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>paintEntityThread</name><parameter_list>(<param><decl><type><name>RGraphicsViewWorker</name>*</type> <name>worker</name></decl></param>, <param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>id</name></decl></param>, <param><decl><type><name>bool</name></type> <name>preview</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>paintDrawableThread</name><parameter_list>(<param><decl><type><name>RGraphicsViewWorker</name>*</type> <name>worker</name></decl></param>, <param><decl><type><name>RGraphicsSceneDrawable</name>&amp;</type> <name>drawable</name></decl></param>, <param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>clipRectangle</name></decl></param>, <param><decl><type><name>bool</name></type> <name>preview</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>paintOverlay</name><parameter_list>(<param><decl><type><name>RGraphicsViewWorker</name>*</type> <name>worker</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>paintOverlay</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>QImage</name></type> <name>getBuffer</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>QTransform</name></type> <name>getTransform</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
@@ -396,7 +396,8 @@
     <decl_stmt><decl><type><name>void</name></type> <name>initPainter</name><argument_list>(<argument><expr><name>QPaintDevice</name>&amp; <name>device</name></expr></argument>, <argument><expr><name>bool</name> <name>erase</name></expr></argument>, <argument><expr><name>bool</name> <name>screen</name> = <name>false</name></expr></argument>, <argument><expr><name>const</name> <name>QRect</name>&amp; <name>rect</name> = <call><name>QRect</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></decl>;</decl_stmt>
 
     <function_decl><type><name>void</name></type> <name>invalidate</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>force</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>void</name></type> <name>initWorkers</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>initWorkers</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>RGraphicsViewWorker</name>*</type> <name>initWorker</name><parameter_list>(<param><decl><type><name>int</name></type> <name>threadId</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>updateTransformation</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
 <label><name>signals</name>:</label>
