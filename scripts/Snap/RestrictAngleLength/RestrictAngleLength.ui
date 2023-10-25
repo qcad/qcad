@@ -60,7 +60,7 @@
    <item>
     <widget class="QCheckBox" name="RepeatAngle">
      <property name="text">
-      <string>Repeat</string>
+      <string>Multiples</string>
      </property>
     </widget>
    </item>
@@ -120,7 +120,7 @@
    <item>
     <widget class="QCheckBox" name="RepeatLength">
      <property name="text">
-      <string>Repeat</string>
+      <string>Multiples</string>
      </property>
     </widget>
    </item>
