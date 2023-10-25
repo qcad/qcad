@@ -12,7 +12,11 @@ void RGraphicsViewWorkerPainter::end() {
 }
 
 void RGraphicsViewWorkerPainter::begin() {
-    painter->begin(&image);
+    if (!painter->begin(&image)) {
+        qWarning() << "image.isNull:" << image.isNull();
+        qWarning() << "cannot start painting";
+        return;
+    }
 
     if (clearMode==ClearToBackground) {
         painter->setBackground(QBrush(imageView.getBackgroundColor()));
@@ -48,8 +52,13 @@ void RGraphicsViewWorkerPainter::eraseRect(const QRectF& rect) {
     painter->eraseRect(rect);
 }
 
+QImage RGraphicsViewWorkerPainter::getImage() const {
+    return image;
+}
+
 void RGraphicsViewWorkerPainter::setImage(const QImage& img) {
-    RGraphicsViewWorker::setImage(img);
+    //RGraphicsViewWorker::setImage(img);
+    image = img;
 
     if (painter!=NULL) {
         delete painter;
@@ -58,6 +67,16 @@ void RGraphicsViewWorkerPainter::setImage(const QImage& img) {
     if (imageView.getAntialiasing()) {
         painter->setRenderHint(QPainter::Antialiasing);
     }
+}
+
+QSize RGraphicsViewWorkerPainter::getImageSize() const {
+    return image.size();
+}
+
+void RGraphicsViewWorkerPainter::initImageBuffer(const QSize& size) {
+    //qDebug() << "RGraphicsViewWorkerPainter::initImageBuffer: " << size;
+    QImage img = QImage(size, QImage::Format_ARGB32_Premultiplied);
+    setImage(img);
 }
 
 void RGraphicsViewWorkerPainter::paint() {

@@ -201,25 +201,6 @@ void RGraphicsViewImage::updateImage() {
         // TODO: check if buffer is not updated unnecessarily:
         //RDebug::startTimer();
 
-        // not the right number of workers, re-init workers:
-        if (workers.length()!=numThreads) {
-            for (int i=0; i<workers.length(); i++) {
-                delete workers[i];
-            }
-            workers.clear();
-
-            for (int i=0; i<numThreads; i++) {
-                RGraphicsViewWorkerPainter* worker = new RGraphicsViewWorkerPainter(*this, i);
-                if (i==0) {
-                    worker->setClearMode(RGraphicsViewWorker::ClearToBackground);
-                }
-                else {
-                    worker->setClearMode(RGraphicsViewWorker::ClearToTransparent);
-                }
-                workers.append(worker);
-            }
-        }
-
         // update drawing scale from document setting:
         QString scaleString;
         if (doc->getCurrentBlockId()==doc->getModelSpaceBlockId()) {
@@ -242,11 +223,11 @@ void RGraphicsViewImage::updateImage() {
         showOnlyPlottable = RSettings::getBoolValue("PrintPreviewPro/ShowOnlyPlottable", false);
 
 
-        RDebug::startTimer();
+        //RDebug::startTimer();
         initWorkers();
-        RDebug::stopTimer("initWorkers");
+        //RDebug::stopTimer("initWorkers");
 
-        RDebug::startTimer();
+        //RDebug::startTimer();
         if (!workers.isEmpty()) {
             // fill first worker (bottom buffer) with background color:
             //paintErase(workers.first());
@@ -286,9 +267,9 @@ void RGraphicsViewImage::updateImage() {
         lastFactor = factor;
 
         //qDebug() << "updateImage: OK";
-        RDebug::stopTimer("updateImage");
+        //RDebug::stopTimer("updateImage");
 
-        RDebug::startTimer();
+        //RDebug::startTimer();
         if (!workers.isEmpty()) {
             // first thread buffer has background color + first set of entities:
             graphicsBuffer = workers[0]->getImage();
@@ -302,7 +283,7 @@ void RGraphicsViewImage::updateImage() {
                 }
             }
         }
-        RDebug::stopTimer("compose");
+        //RDebug::stopTimer("compose");
 
         // graphics buffer with drawing is now up to date:
         graphicsBufferNeedsUpdate = false;
@@ -329,21 +310,21 @@ void RGraphicsViewImage::updateImage() {
 //        delete painter;
 //    }
 
-    RDebug::startTimer(77);
+    //RDebug::startTimer(77);
     // compose the final buffer with preview, selection, highlights, etc.:
     graphicsBufferWithPreview = graphicsBuffer;
-    RDebug::stopTimer(77, "graphicsBufferWithPreview = graphicsBuffer");
+    //RDebug::stopTimer(77, "graphicsBufferWithPreview = graphicsBuffer");
 
-    RDebug::startTimer(77);
+    //RDebug::startTimer(77);
     decorationWorker->setImage(graphicsBufferWithPreview);
-    RDebug::stopTimer(77, "decorationWorker->setImage");
+    //RDebug::stopTimer(77, "decorationWorker->setImage");
     decorationWorker->begin();
 
     // draws the current preview on top of the buffer:
     // highlighted entities are also part of the preview
     // TODO: use worker for this, run in parallel
 
-    RDebug::startTimer(77);
+    //RDebug::startTimer(77);
     if (sceneQt->hasPreview()) {
         //initPainter(graphicsBufferWithPreview, false);
 
@@ -366,9 +347,9 @@ void RGraphicsViewImage::updateImage() {
 //            delete painter;
 //        }
     }
-    RDebug::stopTimer(77, "preview");
+    //RDebug::stopTimer(77, "preview");
 
-    RDebug::startTimer(77);
+    //RDebug::startTimer(77);
     // paint reference points of selected entities:
     decorationWorker->save();
     QTransform t;
@@ -398,7 +379,7 @@ void RGraphicsViewImage::updateImage() {
         paintReferencePoint(decorationWorker, pm, true);
         //gbPainter.end();
     }
-    RDebug::stopTimer(77, "ref points");
+    //RDebug::stopTimer(77, "ref points");
 
 //    // overlay (painted after / on top of preview and highlighting):
 //    if (!overlayDrawables.isEmpty()) {
@@ -409,7 +390,7 @@ void RGraphicsViewImage::updateImage() {
 //    }
 
     // snap label:
-    RDebug::startTimer(77);
+    //RDebug::startTimer(77);
     if (hasFocus() || this == di->getLastKnownViewWithFocus()) {
         if (di->getClickMode()==RAction::PickCoordinate) {
             RSnap* snap = di->getSnap();
@@ -427,39 +408,39 @@ void RGraphicsViewImage::updateImage() {
             }
         }
     }
-    RDebug::stopTimer(77, "snap label");
+    //RDebug::stopTimer(77, "snap label");
 
 
     // informational text labels:
-    RDebug::startTimer(77);
+    //RDebug::startTimer(77);
     for (int i=0; i<textLabels.size(); i++) {
         emitUpdateTextLabel(textLabels.at(i));
     }
     textLabels.clear();
-    RDebug::stopTimer(77, "info label");
+    //RDebug::stopTimer(77, "info label");
 
     decorationWorker->restore();
 
     // cursor:
-    RDebug::startTimer(77);
+    //RDebug::startTimer(77);
     paintCursor(decorationWorker);
-    RDebug::stopTimer(77, "cursor");
+    //RDebug::stopTimer(77, "cursor");
 
     decorationWorker->save();
     decorationWorker->setTransform(t);
 
     // relative zero:
-    RDebug::startTimer(77);
+    //RDebug::startTimer(77);
     paintRelativeZero(decorationWorker);
-    RDebug::stopTimer(77, "rel zero");
+    //RDebug::stopTimer(77, "rel zero");
 
     decorationWorker->restore();
 
     decorationWorker->end();
 
-    RDebug::startTimer(77);
+    //RDebug::startTimer(77);
     graphicsBufferWithPreview = decorationWorker->getImage();
-    RDebug::stopTimer(77, "graphicsBufferWithPreview = decorationWorker->getImage()");
+    //RDebug::stopTimer(77, "graphicsBufferWithPreview = decorationWorker->getImage()");
 }
 
 void RGraphicsViewImage::paintReferencePoint(RGraphicsViewWorker* worker, const RRefPoint& pos, bool highlight) {
@@ -783,28 +764,31 @@ void RGraphicsViewImage::initWorkers() {
 
     qDebug() << "RGraphicsViewImage::initWorkers";
 
+    // not the right number of workers, re-init workers:
+    if (workers.length()!=numThreads) {
+        for (int i=0; i<workers.length(); i++) {
+            delete workers[i];
+        }
+        workers.clear();
+
+        for (int i=0; i<numThreads; i++) {
+            RGraphicsViewWorker* worker = initWorker(i);
+            if (i==0) {
+                worker->setClearMode(RGraphicsViewWorker::ClearToBackground);
+            }
+            else {
+                worker->setClearMode(RGraphicsViewWorker::ClearToTransparent);
+            }
+            workers.append(worker);
+        }
+    }
+
     double dpr = getDevicePixelRatio();
     QSize newSize(int(widget->width()*dpr), int(widget->height()*dpr));
 
-//    if (graphicsBufferThread.isEmpty()) {
-//        for (int i=0; i<numThreads; i++) {
-//            graphicsBufferThread.append(QImage());
-//        }
-//    }
-
-    if (lastSize!=newSize && workers.first()->getImage().size()!=newSize) {
-        //graphicsBuffer = QImage(newSize, alphaEnabled ? QImage::Format_ARGB32 : QImage::Format_RGB32);
-        //graphicsBuffer2 = QImage(newSize, QImage::Format_ARGB32);
+    if (lastSize!=newSize && workers.first()->getImageSize()!=newSize) {
         for (int i=0; i<workers.length(); i++) {
-//            if (i==0) {
-//                workers[i]->setImage(QImage(newSize, alphaEnabled ? QImage::Format_ARGB32 : QImage::Format_RGB32));
-//                //graphicsBufferThread[i] = QImage(newSize, alphaEnabled ? QImage::Format_ARGB32 : QImage::Format_RGB32);
-//            }
-//            else {
-                //workers[i]->setImage(QImage(newSize, QImage::Format_ARGB32));
-                workers[i]->setImage(QImage(newSize, QImage::Format_ARGB32_Premultiplied));
-                //graphicsBufferThread[i] = QImage(newSize, QImage::Format_ARGB32);
-//            }
+            workers[i]->initImageBuffer(newSize);
         }
         lastFactor = -1;
     }
@@ -812,9 +796,13 @@ void RGraphicsViewImage::initWorkers() {
     lastSize = newSize;
 
     if (decorationWorker==NULL) {
-        decorationWorker = new RGraphicsViewWorkerPainter(*this, -1);
+        decorationWorker = initWorker(-1);
         decorationWorker->setClearMode(RGraphicsViewWorker::NoClear);
     }
+}
+
+RGraphicsViewWorker* RGraphicsViewImage::initWorker(int threadId) {
+    return new RGraphicsViewWorkerPainter(*this, threadId);
 }
 
 void RGraphicsViewImage::paintDocument(const QRect& rect) {
@@ -837,9 +825,9 @@ void RGraphicsViewImage::paintDocument(const QRect& rect) {
     RVector c2 = mapFromView(RVector(r.right()+1,r.top()-1), 1e300);
     RBox queryBox(c1, c2);
 
-    RDebug::startTimer(800);
+    //RDebug::startTimer(800);
     paintEntitiesMulti(queryBox);
-    RDebug::stopTimer(800, "paintEntitiesMulti");
+    //RDebug::stopTimer(800, "paintEntitiesMulti");
 
     // paint selected entities (omitted above) always on top:
     if (!selectedIds.isEmpty()) {
@@ -1101,13 +1089,13 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
         )
     );
 
-    RDebug::startTimer(60);
+    //RDebug::startTimer(60);
     //mutexSi.lock();
     QSet<REntity::Id> ids;
     ids = document->queryIntersectedEntitiesXYFast(qb);
     //qDebug() << "RGraphicsViewImage::paintEntities: ids: " << ids;
     //mutexSi.unlock();
-    RDebug::stopTimer(60, "spatial index");
+    //RDebug::stopTimer(60, "spatial index");
 
     // draw painter paths:
     isSelected = false;
@@ -1143,10 +1131,10 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
     }
     */
 
-    RDebug::startTimer(60);
+    //RDebug::startTimer(60);
     QList<REntity::Id> list = document->getStorage().orderBackToFront(ids);
     //QList<REntity::Id> list = ids.toList();
-    RDebug::stopTimer(60, "ordering");
+    //RDebug::stopTimer(60, "ordering");
 
     // about 30ms for 50000:
 //    RDebug::startTimer(60);
@@ -1181,7 +1169,7 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
     }
 
     // regen arcs, xlines, rays, block references if necessary:
-    RDebug::startTimer(61);
+    //RDebug::startTimer(61);
     for (int i=0; i<list.length(); i++) {
         REntity::Id id = list[i];
 
@@ -1226,7 +1214,7 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
             sceneQt->exportEntity(id, true);
         }
     }
-    RDebug::stopTimer(61, "regen");
+    //RDebug::stopTimer(61, "regen");
 
     if (numThreads==1) {
         RGraphicsViewWorker* worker = workers[0];
@@ -1241,7 +1229,7 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
     else {
         //Q_ASSERT(painterThread.length()==entityTransformThread.length());
 
-        RDebug::startTimer(100);
+        //RDebug::startTimer(100);
         //qDebug() << "list.length():" << list.length();
         int slice = int(floor(double(list.length())/numThreads));
         //QList<QFuture<void> > futureThread;
@@ -1316,9 +1304,9 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
             //paintDrawablesThread(threadId, drawablesCache, start, end);
             //paintEntitiesThread(threadId, list, start, end);
         }
-        RDebug::stopTimer(100, "launch threads");
+        //RDebug::stopTimer(100, "launch threads");
 
-        RDebug::startTimer(100);
+        //RDebug::startTimer(100);
 //        for (int i=0; i<futureThread.length(); i++) {
 //            futureThread[i].waitForFinished();
 //        }
@@ -1341,7 +1329,7 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
 //            thread->wait();
 //            qDebug() << "waiting for thread:" << i << ": DONE";
         }
-        RDebug::stopTimer(100, "waitForFinished");
+        //RDebug::stopTimer(100, "waitForFinished");
     }
 
 }
@@ -2445,25 +2433,8 @@ int RGraphicsViewImage::getHeight() const {
 }
 
 void RGraphicsViewImage::resizeImage(int w, int h) {
-    qDebug() << "RGraphicsViewImage::resizeImage";
-    //graphicsBuffer = QImage(QSize(w,h), alphaEnabled ? QImage::Format_ARGB32 : QImage::Format_RGB32);
-
-//    for (int i=0; i<graphicsBufferThread.length(); i++) {
-//        if (i==0) {
-//            graphicsBufferThread[i] = QImage(QSize(w,h), alphaEnabled ? QImage::Format_ARGB32 : QImage::Format_RGB32);
-//        }
-//        else {
-//            graphicsBufferThread[i] = QImage(QSize(w,h), QImage::Format_ARGB32);
-//        }
-//    }
     for (int i=0; i<workers.length(); i++) {
-//        if (i==0) {
-//            workers[i]->setImage(QImage(QSize(w,h), alphaEnabled ? QImage::Format_ARGB32 : QImage::Format_RGB32));
-//        }
-//        else {
-            //graphicsBufferThread[i] = QImage(QSize(w,h), QImage::Format_ARGB32);
-            workers[i]->setImage(QImage(QSize(w,h), QImage::Format_ARGB32));
-//        }
+        workers[i]->initImageBuffer(QSize(w,h));
     }
 }
 

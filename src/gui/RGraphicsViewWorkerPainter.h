@@ -36,7 +36,11 @@ public:
     virtual void begin();
     virtual void end();
 
+    virtual QImage getImage() const;
     virtual void setImage(const QImage& img);
+
+    virtual QSize getImageSize() const;
+    virtual void initImageBuffer(const QSize& size);
 
     virtual void paint();
 
@@ -90,6 +94,7 @@ public:
 
 protected:
     QPainter* painter;
+    QImage image;
 };
 
 #endif

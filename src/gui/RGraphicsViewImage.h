@@ -395,7 +395,8 @@ protected:
     void initPainter(QPaintDevice& device, bool erase, bool screen = false, const QRect& rect = QRect());
 
     void invalidate(bool force=false);
-    void initWorkers();
+    virtual void initWorkers();
+    virtual RGraphicsViewWorker* initWorker(int threadId);
     void updateTransformation() const;
 
 signals:

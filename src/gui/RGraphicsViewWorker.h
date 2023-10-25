@@ -51,12 +51,13 @@ public:
         return clearMode;
     }
 
-    QImage getImage() const {
-        return image;
-    }
-    virtual void setImage(const QImage& img) {
-        image = img;
-    }
+    virtual QImage getImage() const = 0;
+    virtual void setImage(const QImage& img) = 0;
+
+    virtual QSize getImageSize() const = 0;
+
+    virtual void initImageBuffer(const QSize& size) = 0;
+
 
     bool hasTransforms() const {
         return !entityTransformStack.isEmpty();
@@ -143,7 +144,6 @@ protected:
     int endIndex;
     ClearMode clearMode;
 
-    QImage image;
     RGraphicsViewImage& imageView;
     QStack<RTransform> entityTransformStack;
 };
