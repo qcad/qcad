@@ -191,6 +191,7 @@ ViewportWidget.prototype.init = function(uiFile, graphicsSceneClass) {
     var imageView;
 
     if (false && !isNull(RGraphicsViewSkia)) {
+    //if (!isNull(RGraphicsViewSkia)) {
         // skia view:
         imageView = new RGraphicsViewSkia();
         this.graphicsView.setImageView(imageView);
