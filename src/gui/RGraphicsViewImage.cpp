@@ -762,7 +762,7 @@ void RGraphicsViewImage::initWorkers() {
         return;
     }
 
-    qDebug() << "RGraphicsViewImage::initWorkers";
+    //qDebug() << "RGraphicsViewImage::initWorkers";
 
     // not the right number of workers, re-init workers:
     if (workers.length()!=numThreads) {
@@ -1279,7 +1279,7 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
             if (threadId==numThreads-1) {
                 end = (int)list.length();
             }
-            qDebug() << "slice:" << start << end;
+            //qDebug() << "slice:" << start << end;
 
             //futureThread.append(QtConcurrent::run(this, &RGraphicsViewImage::paintEntitiesThread, threadId, list, start, end));
 
