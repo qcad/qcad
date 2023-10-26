@@ -152,10 +152,11 @@ Explode.explodeSelection = function(di, toolTitle) {
             op.deleteObject(entity);
         }
     }
-    di.applyOperation(op);
+    var t = di.applyOperation(op);
 
     // update block reference attributes:
     if (attributeEntities.length>0) {
+
         op = new RAddObjectsOperation();
         //op.setTransactionGroup(doc.getTransactionGroup());
         if (!isNull(toolTitle)) {
@@ -165,12 +166,15 @@ Explode.explodeSelection = function(di, toolTitle) {
         // fix attribute links to block references:
         for (i=0; i<attributeEntities.length; i++) {
             var attributeEntity = attributeEntities[i].clone();
+            var newAttributeId = t.getNewObjectId(attributeEntity.getId());
+            storage.setObjectId(attributeEntity, newAttributeId);
 
             // find parent entity of attribute:
             var blockReferenceEntity = blockReferenceMap[attributeEntity.getParentId()];
             if (!isNull(blockReferenceEntity)) {
                 // update parent ID:
-                storage.setEntityParentId(attributeEntity, blockReferenceEntity.getId());
+                var newAttributeParentId = t.getNewObjectId(blockReferenceEntity.getId());
+                storage.setEntityParentId(attributeEntity, newAttributeParentId);
                 op.addObject(attributeEntity, false);
             }
         }
