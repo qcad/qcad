@@ -171,7 +171,7 @@ Block.editBlock = function(di, blockName) {
     var doc = di.getDocument();
     var views = EAction.getGraphicsViews(di);
 
-    var i, view, blockZoom;
+    var i, view;
 
     if (doc.isEditingWorkingSet()) {
         EAction.handleUserWarning(qsTr("Cannot edit block while editing a block in-place"));
@@ -187,13 +187,8 @@ Block.editBlock = function(di, blockName) {
             continue;
         }
 
-        blockZoom = view.property("blockZoom");
-        if (isNull(blockZoom)) {
-            blockZoom = new Object();
-        }
-
-        blockZoom[blockId] = [view.getFactor(), view.getOffset()];
-        view.setProperty("blockZoom", blockZoom);
+        view.setProperty("BlockZoomFactor_" + blockId, view.getFactor());
+        view.setProperty("BlockZoomOffset_" + blockId, view.getOffset());
         //print("stored zoom for block: ", blockId, ", view: ", i, ", factor: ", view.getFactor());
     }
 
@@ -209,18 +204,15 @@ Block.editBlock = function(di, blockName) {
             continue;
         }
 
-        blockZoom = view.property("blockZoom");
-        if (isNull(blockZoom)) {
-            view.autoZoom(-1, true);
-            continue;
-        }
+        var blockZoomFactor = view.property("BlockZoomFactor_" + blockId);
+        var blockZoomOffset = view.property("BlockZoomOffset_" + blockId);
 
-        if (isNull(blockZoom[blockId]) || blockZoom[blockId].length!==2) {
+        if (isNull(blockZoomFactor) || isNull(blockZoomOffset)) {
             view.autoZoom(-1, true);
         }
         else {
-            view.setFactor(blockZoom[blockId][0]);
-            view.setOffset(blockZoom[blockId][1]);
+            view.setFactor(blockZoomFactor);
+            view.setOffset(blockZoomOffset);
             //print("restored zoom for block: ", blockId, ", view: ", i, ", factor: ", view.getFactor());
         }
     }
