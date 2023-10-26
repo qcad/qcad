@@ -188,7 +188,6 @@ void REventHandler::drawInfoLabel(RGraphicsViewWorker* worker, const RTextLabel&
  * \param snap Current snap.
  */
 void REventHandler::updateSnapInfo(RGraphicsViewWorker* worker, RSnap* snap, RSnapRestriction* restriction) {
-    qDebug() << "REventHandler::updateSnapInfo";
     if (snap==NULL) {
         return;
     }
@@ -241,15 +240,12 @@ void REventHandler::updateSnapInfo(RGraphicsViewWorker* worker, RSnap* snap, RSn
         break;
     }
 
-    qDebug() << "snap text:" << text;
-
     if (!text.isEmpty()) {
         drawSnapLabel(worker, pos, posRestriction, text);
     }
 }
 
 void REventHandler::drawSnapLabel(RGraphicsViewWorker* worker, const RVector& pos, const RVector& posRestriction, const QString& text) {
-    qDebug() << "REventHandler::drawSnapLabel";
     RVector p = graphicsView->mapToView(pos);
     RVector pr = RVector::invalid;
     if (posRestriction.isValid()) {
