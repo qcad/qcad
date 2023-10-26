@@ -197,6 +197,16 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="paintEntities" cppName="paintEntities"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QPainter *" typeName="QPainter *" name="painter"
+        isConst="false" />
+        <arg type="RBox &amp;" typeName="RBox" name="queryBox"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="paintEntitiesMulti" cppName="paintEntitiesMulti"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -237,11 +247,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="paintOverlay" cppName="paintOverlay"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="RGraphicsViewWorker *"
-        typeName="RGraphicsViewWorker *" name="worker"
-        isConst="false" />
-      </variant>
+      <variant returnType="void" isPureVirtual="false" />
     </method>
     <method name="getBuffer" cppName="getBuffer" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
@@ -660,9 +666,18 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="initWorkers" cppName="initWorkers"
-    specifier="protected" isStatic="false" isVirtual="false"
+    specifier="protected" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="initWorker" cppName="initWorker"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="RGraphicsViewWorker *"
+      isPureVirtual="false">
+        <arg type="int" typeName="int" name="threadId"
+        isConst="false" />
+      </variant>
     </method>
     <method name="updateTransformation"
     cppName="updateTransformation" specifier="protected"

@@ -25,6 +25,8 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RGraphicsViewWorker.h"</cpp:file></cpp:include>
 
+<class_decl>class <name>QPainter</name>;</class_decl>
+
 <class>class <macro><name>QCADGUI_EXPORT</name></macro> <name>RGraphicsViewWorkerPainter</name> <super>: <specifier>public</specifier> <name>RGraphicsViewWorker</name></super> <block>{<private type="default">
     <macro><name>Q_OBJECT</name></macro>
 
@@ -35,7 +37,12 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>begin</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>end</name><parameter_list>()</parameter_list>;</function_decl>
 
+    <function_decl><type><name>virtual</name> <name>QImage</name></type> <name>getImage</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setImage</name><parameter_list>(<param><decl><type><name>const</name> <name>QImage</name>&amp;</type> <name>img</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setPainter</name><parameter_list>(<param><decl><type><name>QPainter</name>*</type> <name>p</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>QSize</name></type> <name>getImageSize</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>initImageBuffer</name><parameter_list>(<param><decl><type><name>const</name> <name>QSize</name>&amp;</type> <name>size</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>paint</name><parameter_list>()</parameter_list>;</function_decl>
 
@@ -89,6 +96,7 @@
 
 </public><protected>protected:
     <decl_stmt><decl><type><name>QPainter</name>*</type> <name>painter</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QImage</name></type> <name>image</name></decl>;</decl_stmt>
 </protected>}</block>;</class>
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>

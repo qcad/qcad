@@ -319,6 +319,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getPanOptimization, "getPanOptimization");
             
+            REcmaHelper::registerFunction(&engine, proto, paintEntities, "paintEntities");
+            
             REcmaHelper::registerFunction(&engine, proto, paintEntitiesMulti, "paintEntitiesMulti");
             
             REcmaHelper::registerFunction(&engine, proto, paintEntityThread, "paintEntityThread");
@@ -7845,6 +7847,93 @@
             return result;
         }
          QScriptValue
+        REcmaGraphicsViewImage::paintEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::paintEntities", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::paintEntities";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("paintEntities", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QPainter * */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RBox */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    QPainter * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<QPainter >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type QPainter *QPainter *.", context);                    
+                    }
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RBox*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RBox*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 1 is not of type RBox.",
+                               context);                    
+                    }
+                    RBox 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->paintEntities(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.paintEntities().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::paintEntities", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaGraphicsViewImage::paintEntitiesMulti
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -8270,32 +8359,16 @@
                 
     
     if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isQObject()
-        ) /* type: RGraphicsViewWorker * */
-    
+    0
     ){
     // prepare arguments:
     
-                    // argument is pointer
-                    RGraphicsViewWorker * a0 = NULL;
-
-                    a0 = 
-                        REcmaHelper::scriptValueTo<RGraphicsViewWorker >(
-                            context->argument(0)
-                        );
-                    
-                    if (a0==NULL && 
-                        !context->argument(0).isNull()) {
-                        return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RGraphicsViewWorker *RGraphicsViewWorker *.", context);                    
-                    }
-                
     // end of arguments
 
     // call C++ function:
     // return type 'void'
     
-               self->paintOverlay(a0);
+               self->paintOverlay();
     } else
 
 

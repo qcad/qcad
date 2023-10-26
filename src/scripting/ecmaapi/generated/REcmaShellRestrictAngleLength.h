@@ -90,6 +90,18 @@
             );
         
     
+    
+      void setRepeatAngle(
+                bool on
+            );
+        
+    
+    
+      void setRepeatLength(
+                bool on
+            );
+        
+    
   
         // methods of 1st level base class RSnapRestriction:
         

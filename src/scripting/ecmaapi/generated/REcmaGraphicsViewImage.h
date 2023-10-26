@@ -391,6 +391,9 @@
         getPanOptimization
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        paintEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         paintEntitiesMulti
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
