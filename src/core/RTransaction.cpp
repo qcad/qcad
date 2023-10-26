@@ -1149,6 +1149,12 @@ bool RTransaction::isPreview() const {
     return (ls!=NULL);
 }
 
+RObject::Id RTransaction::getNewObjectId(RObject::Id oldId) const {
+    if (cloneIds.contains(oldId)) {
+        return cloneIds[oldId];
+    }
+    return RObject::INVALID_ID;
+}
 
 /**
  * \return List of property changes by this transaction for the given object.

@@ -268,6 +268,8 @@ public:
         return propertyChanges;
     }
 
+    RObject::Id getNewObjectId(RObject::Id oldId) const;
+
     QList<RPropertyChange> getPropertyChanges(RObject::Id id) const;
 
     bool hasOnlyChanges() const {
