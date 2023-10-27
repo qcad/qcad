@@ -117,6 +117,7 @@ SOURCES = \
 ../scripts/Draw/Circle/Circle3T/Tests/Circle3TTest01.js \
 ../scripts/Draw/Circle/Circle3T/Tests/Circle3TTest02.js \
 ../scripts/Draw/Circle/Circle3T/Tests/Circle3TTest03.js \
+../scripts/Draw/Circle/Circle3T/Tests/Circle3TTest04.js \
 ../scripts/Draw/Circle/CircleCD/CircleCD.js \
 ../scripts/Draw/Circle/CircleCD/CircleCDInit.js \
 ../scripts/Draw/Circle/CircleCD/Tests/CircleCDTest00.js \

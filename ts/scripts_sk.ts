@@ -412,7 +412,7 @@ musíte znovu spustiť QCAD.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1932"/>
+        <location filename="../scripts/Apollonius.js" line="+1986"/>
         <source>Invalid radius</source>
         <translation>Neplatný polomer</translation>
     </message>

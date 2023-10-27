@@ -412,7 +412,7 @@ para que as mudanças de preferências entrem em vigor.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1932"/>
+        <location filename="../scripts/Apollonius.js" line="+1986"/>
         <source>Invalid radius</source>
         <translation>Raio inválido</translation>
     </message>
