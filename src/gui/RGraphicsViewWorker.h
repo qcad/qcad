@@ -156,5 +156,6 @@ protected:
 
 Q_DECLARE_METATYPE(RGraphicsViewWorker*)
 Q_DECLARE_METATYPE(RGraphicsViewWorker::ClearMode)
+Q_DECLARE_METATYPE(RGraphicsViewWorker::ClearMode*)
 
 #endif

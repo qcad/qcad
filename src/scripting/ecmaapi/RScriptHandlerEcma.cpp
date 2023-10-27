@@ -152,6 +152,7 @@
 #include "REcmaGraphicsView.h"
 #include "REcmaGraphicsViewImage.h"
 #include "REcmaGraphicsViewQt.h"
+#include "REcmaGraphicsViewWorker.h"
 #include "REcmaGrid.h"
 #include "REcmaGuiAction.h"
 #include "REcmaHatchData.h"
@@ -731,6 +732,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaGraphicsView::initEcma(*engine);
     REcmaGraphicsViewImage::initEcma(*engine);
     REcmaGraphicsViewQt::initEcma(*engine);
+    REcmaGraphicsViewWorker::initEcma(*engine);
 
     REcmaMainWindow::initEcma(*engine);
     REcmaMainWindowQt::initEcma(*engine);
