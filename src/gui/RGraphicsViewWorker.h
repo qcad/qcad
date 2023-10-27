@@ -49,11 +49,11 @@ public:
 
     virtual void init(QList<REntity::Id>& list, int start, int end);
 
-    void setClearMode(ClearMode m) {
+    void setClearMode(RGraphicsViewWorker::ClearMode m) {
         clearMode = m;
     }
 
-    ClearMode getClearMode() const {
+    RGraphicsViewWorker::ClearMode getClearMode() const {
         return clearMode;
     }
 
@@ -155,5 +155,6 @@ protected:
 };
 
 Q_DECLARE_METATYPE(RGraphicsViewWorker*)
+Q_DECLARE_METATYPE(RGraphicsViewWorker::ClearMode)
 
 #endif
