@@ -135,11 +135,65 @@ Apollonius.getSolutionsCCC = function(c1, c2, c3, intersect) {
     var circle3 = c3;
 
     // special case: at least two circles are concentric: no solution:
-    if (c1.center.equalsFuzzy(c2.center) ||
-        c1.center.equalsFuzzy(c3.center) ||
-        c2.center.equalsFuzzy(c3.center)) {
+    // # Enhanced by CVH #
+    // Verify if circle 1 is concentric with circle 2:
+    if (c1.center.equalsFuzzy(c2.center)) {
+        if (c1.center.equalsFuzzy(c3.center)) {
+            // Failed: 3 concentric circles
+            return [];    // No or infinite solutions
+        }
+        var rDiff = c1.getRadius() - c2.getRadius();
+        var locus = c1.clone();
+        circle1 = c3.clone();
+    }
+    // Verify if circle 1 is concentric with circle 3:
+    else if (c1.center.equalsFuzzy(c3.center)) {
+        if (c1.center.equalsFuzzy(c2.center)) {
+            // Failed: 3 concentric circles
+            return [];    // No or infinite solutions
+        }
+        var rDiff = c1.getRadius() - c3.getRadius();
+        var locus = c1.clone();
+        circle1 = c2.clone();
+    }
+    // Verify if circle 2 is concentric with circle 3:
+    else if (c2.center.equalsFuzzy(c3.center)) {
+        if (c2.center.equalsFuzzy(c1.center)) {
+            // Failed: 3 concentric circles
+            return [];    // No or infinite solutions
+        }
+        var rDiff = c2.getRadius() - c3.getRadius();
+        var locus = c2.clone();
+        circle1 = c1.clone();
+    }
 
-        return [];
+    // Handle two concentric circles:
+    if (!isNull(locus)) {
+        if (!isNumber(rDiff)) {
+            return [];    // No solutions
+        }
+        if (RMath.fuzzyCompare(rDiff, 0.0)) {
+            return [];    // Infinite solutions
+        }
+
+        // Get intersections of two concentric with the other circle and the locus:
+        locus.setRadius(locus.getRadius() - rDiff / 2);
+        circle1.setRadius(circle1.getRadius() - Math.abs(rDiff / 2));
+        circle2 = circle1.clone();
+        circle2.setRadius(circle1.getRadius() + Math.abs(rDiff));
+        var ips = locus.getIntersectionPoints(circle1);
+        ips = ips.concat(locus.getIntersectionPoints(circle2));
+
+        // If any, create tangent circles at intersections;
+        if (ips.length === 0) {
+            return [];    // No solutions
+        }
+        for (var i=0; i<ips.length; i++) {
+            ret.push(new RCircle(ips[i], Math.abs(rDiff / 2)));
+        }
+
+        ret = Apollonius.removeDuplicates(ret);    // Most likely none
+        return ret;
     }
 
     // special case: three circles of equal size:
