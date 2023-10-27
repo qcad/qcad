@@ -29,7 +29,7 @@
 <context>
     <name>REventHandler</name>
     <message>
-        <location filename="../src/gui/REventHandler.cpp" line="+211"/>
+        <location filename="../src/gui/REventHandler.cpp" line="+210"/>
         <source>Grid</source>
         <translation>Siatka</translation>
     </message>
@@ -88,4 +88,3 @@
     </message>
 </context>
 </TS>
-

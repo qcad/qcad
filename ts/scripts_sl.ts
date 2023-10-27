@@ -8119,13 +8119,13 @@ je že na seznamu.</translation>
         <translation>Gradniki</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+55"/>
         <source>&amp;Layer List</source>
         <translation>&amp;Seznam plasti</translation>
     </message>
     <message>
-        <location line="-54"/>
-        <location line="+109"/>
+        <location line="-55"/>
+        <location line="+110"/>
         <source>Layer List</source>
         <translation>Seznam plasti</translation>
     </message>
@@ -14572,4 +14572,3 @@ je že na seznamu.</translation>
     </message>
 </context>
 </TS>
-

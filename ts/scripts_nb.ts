@@ -8114,7 +8114,7 @@ er allerede i listen.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+109"/>
+        <location line="+110"/>
         <source>Layer List</source>
         <translation type="unfinished">Lagliste</translation>
     </message>
@@ -14556,4 +14556,3 @@ er allerede i listen.</translation>
     </message>
 </context>
 </TS>
-

@@ -8118,13 +8118,13 @@ is already in the list.</source>
         <translation>Виджеты</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+55"/>
         <source>&amp;Layer List</source>
         <translation>&amp;Список слоёв</translation>
     </message>
     <message>
-        <location line="-54"/>
-        <location line="+109"/>
+        <location line="-55"/>
+        <location line="+110"/>
         <source>Layer List</source>
         <translation>Список слоёв</translation>
     </message>
@@ -14566,4 +14566,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

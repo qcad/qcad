@@ -8116,7 +8116,7 @@ jau ir sarakstā.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+109"/>
+        <location line="+110"/>
         <source>Layer List</source>
         <translation type="unfinished">Slāņu saraksts</translation>
     </message>
@@ -14563,4 +14563,3 @@ jau ir sarakstā.</translation>
     </message>
 </context>
 </TS>
-

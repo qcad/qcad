@@ -8113,13 +8113,13 @@ já se encontra na lista.</translation>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+55"/>
         <source>&amp;Layer List</source>
         <translation>&amp;Lista de Camadas</translation>
     </message>
     <message>
-        <location line="-54"/>
-        <location line="+109"/>
+        <location line="-55"/>
+        <location line="+110"/>
         <source>Layer List</source>
         <translation>Lista de camadas</translation>
     </message>

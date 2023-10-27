@@ -8109,7 +8109,7 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+109"/>
+        <location line="+110"/>
         <source>Layer List</source>
         <translation type="unfinished">레이어 목록</translation>
     </message>
@@ -14546,4 +14546,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

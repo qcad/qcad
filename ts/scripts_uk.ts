@@ -8116,7 +8116,7 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+109"/>
+        <location line="+110"/>
         <source>Layer List</source>
         <translation type="unfinished">Список шарів</translation>
     </message>
@@ -14544,7 +14544,7 @@ is already in the list.</source>
         <location line="+66"/>
         <location line="+124"/>
         <source>ID does not refer to an entity:</source>
-        <translation type="unfinished">Ідентифікатор не відноситься до суб'єкта:</translation>
+        <translation type="unfinished">Ідентифікатор не відноситься до суб&apos;єкта:</translation>
     </message>
     <message>
         <location line="-42"/>
@@ -14563,4 +14563,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

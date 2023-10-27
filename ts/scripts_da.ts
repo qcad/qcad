@@ -8114,7 +8114,7 @@ er allerede på listen.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+109"/>
+        <location line="+110"/>
         <source>Layer List</source>
         <translation>Liste over lag</translation>
     </message>

@@ -8116,7 +8116,7 @@ este deja în listă.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+109"/>
+        <location line="+110"/>
         <source>Layer List</source>
         <translation type="unfinished">Lista de straturi</translation>
     </message>
@@ -14563,4 +14563,3 @@ este deja în listă.</translation>
     </message>
 </context>
 </TS>
-

@@ -8118,13 +8118,13 @@ jest już na liście.</translation>
         <translation>Widżety</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+55"/>
         <source>&amp;Layer List</source>
         <translation type="unfinished">Lista warstw</translation>
     </message>
     <message>
-        <location line="-54"/>
-        <location line="+109"/>
+        <location line="-55"/>
+        <location line="+110"/>
         <source>Layer List</source>
         <translation type="unfinished">Lista warstw</translation>
     </message>
@@ -14566,4 +14566,3 @@ jest już na liście.</translation>
     </message>
 </context>
 </TS>
-

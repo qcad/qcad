@@ -8108,7 +8108,7 @@ zaten listede.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+109"/>
+        <location line="+110"/>
         <source>Layer List</source>
         <translation>Katman Listesi</translation>
     </message>
@@ -14545,4 +14545,3 @@ zaten listede.</translation>
     </message>
 </context>
 </TS>
-

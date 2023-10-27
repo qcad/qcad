@@ -8113,13 +8113,13 @@ est déjà dans la liste.</translation>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+55"/>
         <source>&amp;Layer List</source>
         <translation>&amp;Liste des calques</translation>
     </message>
     <message>
-        <location line="-54"/>
-        <location line="+109"/>
+        <location line="-55"/>
+        <location line="+110"/>
         <source>Layer List</source>
         <translation>Liste des calques</translation>
     </message>

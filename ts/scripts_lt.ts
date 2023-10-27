@@ -8116,7 +8116,7 @@ jau yra sąraše.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+109"/>
+        <location line="+110"/>
         <source>Layer List</source>
         <translation type="unfinished">Sluoksnių sąrašas</translation>
     </message>

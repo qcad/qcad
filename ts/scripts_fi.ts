@@ -8113,13 +8113,13 @@ on jo luettelossa.</translation>
         <translation>Pienoisohjelmat</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+55"/>
         <source>&amp;Layer List</source>
         <translation>&amp;Tasojen lista</translation>
     </message>
     <message>
-        <location line="-54"/>
-        <location line="+109"/>
+        <location line="-55"/>
+        <location line="+110"/>
         <source>Layer List</source>
         <translation>Tasojen lista</translation>
     </message>
@@ -14556,4 +14556,3 @@ on jo luettelossa.</translation>
     </message>
 </context>
 </TS>
-
