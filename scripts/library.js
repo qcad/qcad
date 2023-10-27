@@ -1491,7 +1491,14 @@ function objectFromPath(path) {
  */
 function getWidgetPath(widget) {
     var pw = widget.parentWidget();
-    var str = widget.objectName !== "" ? widget.objectName : widget.toString();
+    var str;
+    if (RSettings.getQtVersion()>=0x060000) {
+        str = widget.objectName;
+    }
+    else {
+        str = widget.objectName !== "" ? widget.objectName : widget.toString();
+    }
+
     if (isNull(pw)) {
         return str;
     }
