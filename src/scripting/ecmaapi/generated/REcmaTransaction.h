@@ -142,6 +142,9 @@
         getPropertyChanges
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getNewObjectId
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         hasOnlyChanges
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

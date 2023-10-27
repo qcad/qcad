@@ -113,6 +113,7 @@ HEADERS += \
     $$PWD/REcmaGraphicsView.h \
     $$PWD/REcmaGraphicsViewImage.h \
     $$PWD/REcmaGraphicsViewQt.h \
+    $$PWD/REcmaGraphicsViewWorker.h \
     $$PWD/REcmaGrid.h \
     $$PWD/REcmaGuiAction.h \
     $$PWD/REcmaHatchData.h \
@@ -500,6 +501,7 @@ SOURCES += \
     $$PWD/REcmaGraphicsView.cpp \
     $$PWD/REcmaGraphicsViewImage.cpp \
     $$PWD/REcmaGraphicsViewQt.cpp \
+    $$PWD/REcmaGraphicsViewWorker.cpp \
     $$PWD/REcmaGrid.cpp \
     $$PWD/REcmaGuiAction.cpp \
     $$PWD/REcmaHatchData.cpp \

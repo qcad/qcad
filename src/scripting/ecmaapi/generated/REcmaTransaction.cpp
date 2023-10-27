@@ -118,6 +118,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getPropertyChanges, "getPropertyChanges");
             
+            REcmaHelper::registerFunction(&engine, proto, getNewObjectId, "getNewObjectId");
+            
             REcmaHelper::registerFunction(&engine, proto, hasOnlyChanges, "hasOnlyChanges");
             
             REcmaHelper::registerFunction(&engine, proto, fail, "fail");
@@ -2897,6 +2899,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaTransaction::getPropertyChanges", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTransaction::getNewObjectId
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTransaction::getNewObjectId", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTransaction::getNewObjectId";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTransaction* self = 
+                        getSelf("getNewObjectId", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RObject::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RObject::Id
+                    a0 =
+                    (RObject::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
+        
+               self->getNewObjectId(a0);
+        // return type: RObject::Id
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTransaction.getNewObjectId().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTransaction::getNewObjectId", context, engine);
             return result;
         }
          QScriptValue
