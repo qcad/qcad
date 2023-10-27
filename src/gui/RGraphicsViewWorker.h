@@ -26,6 +26,12 @@
 
 #include "RGraphicsViewImage.h"
 
+/**
+ * Thread worker that draws a part of a document.
+ *
+ * \ingroup gui
+ * \scriptable
+ */
 class QCADGUI_EXPORT RGraphicsViewWorker : public QThread {
     Q_OBJECT
 
@@ -147,5 +153,7 @@ protected:
     RGraphicsViewImage& imageView;
     QStack<RTransform> entityTransformStack;
 };
+
+Q_DECLARE_METATYPE(RGraphicsViewWorker*)
 
 #endif
