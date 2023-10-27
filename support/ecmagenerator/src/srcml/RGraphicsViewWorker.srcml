@@ -50,11 +50,11 @@
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>init</name><parameter_list>(<param><decl><type><name>QList<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>list</name></decl></param>, <param><decl><type><name>int</name></type> <name>start</name></decl></param>, <param><decl><type><name>int</name></type> <name>end</name></decl></param>)</parameter_list>;</function_decl>
 
-    <function><type><name>void</name></type> <name>setClearMode</name><parameter_list>(<param><decl><type><name>ClearMode</name></type> <name>m</name></decl></param>)</parameter_list> <block>{
+    <function><type><name>void</name></type> <name>setClearMode</name><parameter_list>(<param><decl><type><name><name>RGraphicsViewWorker</name>::<name>ClearMode</name></name></type> <name>m</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>clearMode</name> = <name>m</name></expr>;</expr_stmt>
     }</block></function>
 
-    <function><type><name>ClearMode</name></type> <name>getClearMode</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+    <function><type><name><name>RGraphicsViewWorker</name>::<name>ClearMode</name></name></type> <name>getClearMode</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>clearMode</name></expr>;</return>
     }</block></function>
 
@@ -156,6 +156,7 @@
 </protected>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RGraphicsViewWorker*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RGraphicsViewWorker::ClearMode</argument>)</argument_list></macro>
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>
