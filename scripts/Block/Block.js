@@ -182,13 +182,14 @@ Block.editBlock = function(di, blockName) {
     var blockId = doc.getCurrentBlockId();
     for (i=0; i<views.length; i++) {
         view = views[i];
+        var viewWidget = view.getWidget();
 
-        if (!isFunction(view.property)) {
+        if (!isFunction(viewWidget.property)) {
             continue;
         }
 
-        view.setProperty("BlockZoomFactor_" + blockId, view.getFactor());
-        view.setProperty("BlockZoomOffset_" + blockId, view.getOffset());
+        viewWidget.setProperty("BlockZoomFactor_" + blockId, view.getFactor());
+        viewWidget.setProperty("BlockZoomOffset_" + blockId, view.getOffset());
         //print("stored zoom for block: ", blockId, ", view: ", i, ", factor: ", view.getFactor());
     }
 
@@ -199,13 +200,14 @@ Block.editBlock = function(di, blockName) {
     blockId = doc.getCurrentBlockId();
     for (i=0; i<views.length; i++) {
         view = views[i];
+        var viewWidget = view.getWidget();
 
-        if (!isFunction(view.property)) {
+        if (!isFunction(viewWidget.property)) {
             continue;
         }
 
-        var blockZoomFactor = view.property("BlockZoomFactor_" + blockId);
-        var blockZoomOffset = view.property("BlockZoomOffset_" + blockId);
+        var blockZoomFactor = viewWidget.property("BlockZoomFactor_" + blockId);
+        var blockZoomOffset = viewWidget.property("BlockZoomOffset_" + blockId);
 
         if (isNull(blockZoomFactor) || isNull(blockZoomOffset)) {
             view.autoZoom(-1, true);
