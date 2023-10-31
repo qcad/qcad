@@ -362,6 +362,23 @@ RVector REllipse::getMiddlePoint() const {
     return getPointAt(a);
 }
 
+RVector REllipse::getPointOnShape() const {
+    double sp = startParam;
+    double ep = endParam;
+    if (isReversed()) {
+        if (sp<ep) {
+            sp+=M_PI*2;
+        }
+    }
+    else {
+        if (ep<sp) {
+            ep+=M_PI*2;
+        }
+    }
+    double mp = (sp+ep)/2.0;
+    return getPointAt(mp);
+}
+
 RVector REllipse::getCenter() const{
     return center;
 }

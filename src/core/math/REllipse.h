@@ -156,6 +156,8 @@ public:
     RVector getPointAt(double param) const;
     RVector getMiddlePoint() const;
 
+    virtual RVector getPointOnShape() const;
+
     virtual bool move(const RVector& offset);
     virtual bool rotate(double rotation, const RVector& center = RDEFAULT_RVECTOR);
     virtual bool scale(const RVector& scaleFactors, const RVector& center = RDEFAULT_RVECTOR);
