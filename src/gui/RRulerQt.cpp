@@ -42,9 +42,13 @@ RRulerQt::RRulerQt(QWidget* parent) :
 #if QT_VERSION >= 0x050000
     dpr = devicePixelRatio();
 #endif
-    cursorArrow.moveTo(0,0);
-    cursorArrow.lineTo(-3*dpr,-3*dpr);
-    cursorArrow.lineTo(3*dpr,-3*dpr);
+    cursorArrowH.moveTo(0,0);
+    cursorArrowH.lineTo(-3*dpr,-3*dpr);
+    cursorArrowH.lineTo(3*dpr,-3*dpr);
+
+    cursorArrowV.moveTo(0,0);
+    cursorArrowV.lineTo(-3*dpr,-3*dpr);
+    cursorArrowV.lineTo(-3*dpr,3*dpr);
 
     RMainWindow* appWin = RMainWindow::getMainWindow();
     if (appWin!=NULL) {
@@ -225,12 +229,13 @@ void RRulerQt::paintEvent(QPaintEvent* e) {
     }
     if (orientation==Qt::Horizontal) {
         wPainter.translate(p.x, height()-4);
-        wPainter.fillPath(cursorArrow, darkGuiBackground==1 ? Qt::white : Qt::black);
+        wPainter.fillPath(cursorArrowH, darkGuiBackground==1 ? Qt::white : Qt::black);
     }
     else {
-        wPainter.rotate(-90);
-        wPainter.translate(-p.y+1, width()-4);
-        wPainter.fillPath(cursorArrow, darkGuiBackground==1 ? Qt::white : Qt::black);
+        //wPainter.rotate(-90);
+        //wPainter.translate(-p.y+1, width()-4);
+        wPainter.translate(width()-4, p.y);
+        wPainter.fillPath(cursorArrowV, darkGuiBackground==1 ? Qt::white : Qt::black);
     }
     wPainter.end();
 

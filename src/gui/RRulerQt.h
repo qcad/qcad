@@ -75,7 +75,8 @@ private:
     QImage buffer;
     QSize lastSize;
     bool viewportChanged;
-    QPainterPath cursorArrow;
+    QPainterPath cursorArrowH;
+    QPainterPath cursorArrowV;
     RVector cursorPosition;
     int darkGuiBackground;
     mutable QSize hint;
