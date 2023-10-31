@@ -288,10 +288,12 @@
     <file alias="scripts/Draw/Circle/Circle3T/Tests/Circle3TTest01.js">../../scripts/Draw/Circle/Circle3T/Tests/Circle3TTest01.js</file>
     <file alias="scripts/Draw/Circle/Circle3T/Tests/Circle3TTest02.js">../../scripts/Draw/Circle/Circle3T/Tests/Circle3TTest02.js</file>
     <file alias="scripts/Draw/Circle/Circle3T/Tests/Circle3TTest03.js">../../scripts/Draw/Circle/Circle3T/Tests/Circle3TTest03.js</file>
+    <file alias="scripts/Draw/Circle/Circle3T/Tests/Circle3TTest04.js">../../scripts/Draw/Circle/Circle3T/Tests/Circle3TTest04.js</file>
     <file alias="scripts/Draw/Circle/Circle3T/Tests/required/Circle3TTest00_000.dxf">../../scripts/Draw/Circle/Circle3T/Tests/required/Circle3TTest00_000.dxf</file>
     <file alias="scripts/Draw/Circle/Circle3T/Tests/required/Circle3TTest01_000.dxf">../../scripts/Draw/Circle/Circle3T/Tests/required/Circle3TTest01_000.dxf</file>
     <file alias="scripts/Draw/Circle/Circle3T/Tests/required/Circle3TTest02_000.dxf">../../scripts/Draw/Circle/Circle3T/Tests/required/Circle3TTest02_000.dxf</file>
     <file alias="scripts/Draw/Circle/Circle3T/Tests/required/Circle3TTest03_000.dxf">../../scripts/Draw/Circle/Circle3T/Tests/required/Circle3TTest03_000.dxf</file>
+    <file alias="scripts/Draw/Circle/Circle3T/Tests/required/Circle3TTest04_000.dxf">../../scripts/Draw/Circle/Circle3T/Tests/required/Circle3TTest04_000.dxf</file>
     <file alias="scripts/Draw/Circle/CircleCD/CircleCD-inverse.svg">../../scripts/Draw/Circle/CircleCD/CircleCD-inverse.svg</file>
     <file alias="scripts/Draw/Circle/CircleCD/CircleCD.js">../../scripts/Draw/Circle/CircleCD/CircleCD.js</file>
     <file alias="scripts/Draw/Circle/CircleCD/CircleCD.svg">../../scripts/Draw/Circle/CircleCD/CircleCD.svg</file>
