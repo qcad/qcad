@@ -341,6 +341,8 @@ Q_DECLARE_METATYPE(QVector<float>)
 Q_DECLARE_METATYPE(QVector<float>*)
 Q_DECLARE_METATYPE(QVector<uint>)
 Q_DECLARE_METATYPE(QVector<uint>*)
+Q_DECLARE_METATYPE(QVector<int>)
+Q_DECLARE_METATYPE(QVector<int>*)
 
 Q_DECLARE_METATYPE(QEvent::Type)
 Q_DECLARE_METATYPE(QKeySequence::SequenceFormat)
