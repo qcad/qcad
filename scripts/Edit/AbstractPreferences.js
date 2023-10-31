@@ -112,7 +112,8 @@ AbstractPreferences.fillTreeWidget = function(addOns, treeWidget, appPreferences
                 include(addOn.getFilePath());
             }
         } catch (e1) {
-            qWarning("AppPreferences.js: Exception: ", e1);
+            qWarning("AbstractPreferences.js: exception: ", e1);
+            qWarning("AbstractPreferences.js: file: ", addOn.getFilePath());
             continue;
         }
         var cat;
@@ -125,7 +126,7 @@ AbstractPreferences.fillTreeWidget = function(addOns, treeWidget, appPreferences
                 continue;
             }
         } catch (e2) {
-            qWarning("AppPreferences.js: Add-on class not found: ", className, " exception: ", e2);
+            qWarning("AbstractPreferences.js: add-on class not found: ", className, " exception: ", e2);
             continue;
         }
         
