@@ -908,6 +908,10 @@ void RDocumentInterface::coordinateEventPreview(RCoordinateEvent& event) {
     }
 
     cursorPosition = event.getModelPosition();
+
+    if (RMainWindow::hasMainWindow()) {
+        notifyCoordinateListeners();
+    }
 }
 
 void RDocumentInterface::commandEvent(RCommandEvent& event) {
