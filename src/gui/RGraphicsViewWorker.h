@@ -89,6 +89,7 @@ public:
     virtual void clear() = 0;
 
     virtual void setAntialiasing(bool on) = 0;
+    virtual bool getAntialiasing() const = 0;
     virtual void setBackground(const QColor& col) = 0;
     virtual void setCompositionMode(QPainter::CompositionMode mode) = 0;
     virtual void setFont(const QFont& font) = 0;

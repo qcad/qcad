@@ -232,10 +232,15 @@ void RGraphicsViewImage::updateImage() {
             // fill first worker (bottom buffer) with background color:
             //paintErase(workers.first());
 
-            // end paiting (required e.g. for QPainter)
+            // start painting (required e.g. for QPainter)
             for (int i=0; i<workers.length(); i++) {
                 RGraphicsViewWorker* worker = workers[i];
                 worker->begin();
+
+                if (antialiasing) {
+                    // must happen after begin as begin resets all settings:
+                    worker->setAntialiasing(true);
+                }
             }
 
             //paintErase(graphicsBuffer2);
@@ -319,6 +324,10 @@ void RGraphicsViewImage::updateImage() {
     decorationWorker->setImage(graphicsBufferWithPreview);
     //RDebug::stopTimer(77, "decorationWorker->setImage");
     decorationWorker->begin();
+    if (antialiasing) {
+        // must happen after begin as begin resets all settings:
+        decorationWorker->setAntialiasing(true);
+    }
 
     // draws the current preview on top of the buffer:
     // highlighted entities are also part of the preview
@@ -565,6 +574,7 @@ void RGraphicsViewImage::paintGrid(RGraphicsViewWorker* worker, const QRect& rec
     QRectF rf(c1.x, c1.y, c2.x-c1.x, c2.y-c1.y);
 
     //initPainter(device, false, false, rect);
+    bool a = worker->getAntialiasing();
     worker->setAntialiasing(false);
     if (!rect.isNull()) {
         worker->setClipRect(rf);
@@ -576,6 +586,8 @@ void RGraphicsViewImage::paintGrid(RGraphicsViewWorker* worker, const QRect& rec
         worker->setPen(pen);
         grid->paint();
     }
+
+    worker->setAntialiasing(a);
 
 //    delete painter;
 //    painter = NULL;
@@ -589,7 +601,12 @@ void RGraphicsViewImage::paintGridPoint(const RVector& ucsPosition) {
 
     RGraphicsViewWorker* worker = workers.last();
 
+    bool a = worker->getAntialiasing();
+    worker->setAntialiasing(false);
+
     worker->drawPoint(QPointF(ucsPosition.x, ucsPosition.y));
+
+    worker->setAntialiasing(a);
 }
 
 void RGraphicsViewImage::paintMetaGrid(RGraphicsViewWorker* worker, const QRect& rect) {
@@ -632,9 +649,28 @@ void RGraphicsViewImage::paintCursorLine(const RLine& ucsPosition) {
         return;
     }
 
+    bool a = decorationWorker->getAntialiasing();
+    decorationWorker->setAntialiasing(false);
+
+    QPen p = decorationWorker->getPen();
+    int w = p.width();
+    if (RSettings::getHighResolutionGraphicsView()) {
+        p.setWidth(2);
+        p.setCosmetic(true);
+        decorationWorker->setPen(p);
+    }
+
     decorationWorker->drawLine(
         QLineF(ucsPosition.startPoint.x, ucsPosition.startPoint.y, ucsPosition.endPoint.x, ucsPosition.endPoint.y)
         );
+
+    decorationWorker->setAntialiasing(a);
+
+    if (RSettings::getHighResolutionGraphicsView()) {
+        p.setWidth(w);
+        p.setCosmetic(false);
+        decorationWorker->setPen(p);
+    }
 }
 
 /**

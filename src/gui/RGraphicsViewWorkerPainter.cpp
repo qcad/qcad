@@ -12,13 +12,20 @@ void RGraphicsViewWorkerPainter::end() {
 }
 
 void RGraphicsViewWorkerPainter::begin() {
-    if (!image.isNull()) {
-        if (!painter->begin(&image)) {
-            qWarning() << "image.isNull:" << image.isNull();
-            qWarning() << "cannot start painting";
-            return;
-        }
+    if (image.isNull()) {
+        qWarning() << "image.isNull:" << image.isNull();
+        return;
     }
+
+    // Note: QPainter::begin resets all flags, pen, brush, etc:
+    if (!painter->begin(&image)) {
+        qWarning() << "cannot start painting";
+        return;
+    }
+
+//    if (imageView.getAntialiasing()) {
+//        painter->setRenderHint(QPainter::Antialiasing);
+//    }
 
     if (clearMode==ClearToBackground) {
         painter->setBackground(QBrush(imageView.getBackgroundColor()));
@@ -35,7 +42,12 @@ void RGraphicsViewWorkerPainter::begin() {
 }
 
 void RGraphicsViewWorkerPainter::setAntialiasing(bool on) {
-    painter->setRenderHint(QPainter::Antialiasing, on);
+    //qDebug() << "RGraphicsViewWorkerPainter::setAntialiasing" << on;
+    painter->setRenderHint(QPainter::Antialiasing, true);
+}
+
+bool RGraphicsViewWorkerPainter::getAntialiasing() const {
+    return painter->testRenderHint(QPainter::Antialiasing);
 }
 
 void RGraphicsViewWorkerPainter::setBackground(const QColor& col) {
@@ -69,9 +81,6 @@ void RGraphicsViewWorkerPainter::setPainter(QPainter* p) {
         delete painter;
     }
     painter = p;
-    if (imageView.getAntialiasing()) {
-        painter->setRenderHint(QPainter::Antialiasing);
-    }
 }
 
 QSize RGraphicsViewWorkerPainter::getImageSize() const {
