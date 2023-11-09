@@ -30,12 +30,14 @@ MolImport.basePath = includeBasePath;
 
 MolImport.prototype.beginEvent = function() {
     MiscIO.prototype.beginEvent.call(this);
+
+    var appWin = EAction.getMainWindow();
     
     var lastDir = RSettings.getStringValue(
             "MolImport/Path",
             RSettings.getDocumentsLocation());
     var fileName = QFileDialog.getOpenFileName(
-        this, qsTr("Import MOL"), lastDir,
+        appWin, qsTr("Import MOL"), lastDir,
         qsTr("MOL Files") + " (*.mol);;" + qsTr("All Files") + " (*)");
     if (fileName.length===0) {
         this.terminate();
