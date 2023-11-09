@@ -175,18 +175,31 @@ REllipse REllipse::createInscribed(const RVector& p1, const RVector& p2, const R
 
     RVector majorPoint = RVector::createPolar(axis1, angle);
 
-    REllipse ellipse(center, majorPoint, axis2/axis1, 0.0, 2*M_PI, false);
+    REllipse ellipse1(center, majorPoint, axis2/axis1, 0.0, 2*M_PI, false);
+    REllipse ellipse2 = ellipse1;
+    ellipse2.rotate(M_PI/2, ellipse2.getCenter());
+
+    REllipse canditates[2] = { ellipse1, ellipse2 };
+    int score[2] = { 0, 0 };
 
     // workaround if the algorithm above does not produce the correct angle
     // (90 degrees off):
+    // check which ellipse is _more likely_ the correct match:
     for (i=0; i<4; i++) {
-        QList<RVector> ips = ellipse.getIntersectionPoints(edges[i], false);
-        if (ips.length()==2) {
-            if (!ips[0].equalsFuzzy(ips[1], 0.001)) {
-                ellipse.rotate(M_PI/2, ellipse.getCenter());
-                break;
+        for (int k=0; k<2; k++) {
+            QList<RVector> ips = canditates[k].getIntersectionPoints(edges[i], false, false, true);
+            if (ips.length()==1 || (ips.length()==2 && ips[0].equalsFuzzy(ips[1], 0.001))) {
+                score[k]++;
             }
         }
+    }
+
+    REllipse ellipse;
+    if (score[0]>score[1]) {
+        ellipse = ellipse1;
+    }
+    else {
+        ellipse = ellipse2;
     }
 
     if (!RMath::isNaN(scale)) {
