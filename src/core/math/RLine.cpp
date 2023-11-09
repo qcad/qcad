@@ -172,11 +172,12 @@ QList<RVector> RLine::getPointsWithDistanceToEnd(double distance, int from) cons
 }
 
 QList<RVector> RLine::getPointCloud(double segmentLength) const {
-    Q_UNUSED(segmentLength)
     QList<RVector> ret;
     ret.append(startPoint);
-    for (double d = segmentLength; d<getLength(); d+=segmentLength) {
-        ret.append(getPointWithDistanceToStart(d));
+    if (segmentLength>getLength()/10000.0) {
+        for (double d = segmentLength; d<getLength(); d+=segmentLength) {
+            ret.append(getPointWithDistanceToStart(d));
+        }
     }
     ret.append(endPoint);
     return ret;
