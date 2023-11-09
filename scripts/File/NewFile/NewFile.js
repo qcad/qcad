@@ -323,6 +323,9 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
 
     if (!isNull(mdiChild) && !isDeleted(mdiChild)) {
         mdiChild.setFocus();
+
+        // in case the application does not have the focus, make sure the status of various buttons is still updated:
+        appWin.notifyViewFocusListeners(documentInterface.getLastKnownViewWithFocus());
     }
 
     return mdiChild;
