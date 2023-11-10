@@ -280,7 +280,7 @@
         <translation>Çizim Tercihleri</translation>
     </message>
     <message>
-        <location line="+322"/>
+        <location line="+323"/>
         <source>Apply preferences</source>
         <translation>Tercihleri uygula</translation>
     </message>
@@ -9176,7 +9176,7 @@ zaten listede.</translation>
 <context>
     <name>MolImport</name>
     <message>
-        <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+38"/>
+        <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+40"/>
         <source>Import MOL</source>
         <translation type="unfinished">İthalat MOL</translation>
     </message>
@@ -9320,7 +9320,7 @@ zaten listede.</translation>
         <translation>Biçim:</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+141"/>
         <source>Untitled %1</source>
         <translation>%1 isimsiz</translation>
     </message>

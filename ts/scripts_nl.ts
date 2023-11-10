@@ -280,7 +280,7 @@
         <translation>Tekeningsvoorkeuren</translation>
     </message>
     <message>
-        <location line="+322"/>
+        <location line="+323"/>
         <source>Apply preferences</source>
         <translation>Voorkeuren toepassen</translation>
     </message>
@@ -9182,7 +9182,7 @@ is al in de lijst.</translation>
 <context>
     <name>MolImport</name>
     <message>
-        <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+38"/>
+        <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+40"/>
         <source>Import MOL</source>
         <translation>MOL importeren</translation>
     </message>
@@ -9326,7 +9326,7 @@ is al in de lijst.</translation>
         <translation>Formaat:</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+141"/>
         <source>Untitled %1</source>
         <translation>Naamloos %1</translation>
     </message>

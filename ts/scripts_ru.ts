@@ -280,7 +280,7 @@
         <translation>Предпочтения чертежа</translation>
     </message>
     <message>
-        <location line="+322"/>
+        <location line="+323"/>
         <source>Apply preferences</source>
         <translation>Применить предпочтения</translation>
     </message>
@@ -9187,7 +9187,7 @@ is already in the list.</source>
 <context>
     <name>MolImport</name>
     <message>
-        <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+38"/>
+        <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+40"/>
         <source>Import MOL</source>
         <translation>Импортировать MOL</translation>
     </message>
@@ -9331,7 +9331,7 @@ is already in the list.</source>
         <translation>Формат:</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+141"/>
         <source>Untitled %1</source>
         <translation>Без имени %1</translation>
     </message>

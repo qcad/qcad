@@ -280,7 +280,7 @@
         <translation>Nastavitve risbe</translation>
     </message>
     <message>
-        <location line="+322"/>
+        <location line="+323"/>
         <source>Apply preferences</source>
         <translation>Uveljavi nastavitve</translation>
     </message>
@@ -9188,7 +9188,7 @@ je že na seznamu.</translation>
 <context>
     <name>MolImport</name>
     <message>
-        <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+38"/>
+        <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+40"/>
         <source>Import MOL</source>
         <translation>Uvozi MOL</translation>
     </message>
@@ -9332,7 +9332,7 @@ je že na seznamu.</translation>
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+141"/>
         <source>Untitled %1</source>
         <translation>Brez naslova %1</translation>
     </message>

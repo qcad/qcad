@@ -280,7 +280,7 @@
         <translation>図面設定</translation>
     </message>
     <message>
-        <location line="+322"/>
+        <location line="+323"/>
         <source>Apply preferences</source>
         <translation>設定を適用</translation>
     </message>
@@ -9177,7 +9177,7 @@ is already in the list.</source>
 <context>
     <name>MolImport</name>
     <message>
-        <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+38"/>
+        <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+40"/>
         <source>Import MOL</source>
         <translation type="unfinished">インポートMOL</translation>
     </message>
@@ -9321,7 +9321,7 @@ is already in the list.</source>
         <translation>フォーマット:</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+141"/>
         <source>Untitled %1</source>
         <translation>無題%1</translation>
     </message>

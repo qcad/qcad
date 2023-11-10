@@ -280,7 +280,7 @@
         <translation>Piirroksen asetukset</translation>
     </message>
     <message>
-        <location line="+322"/>
+        <location line="+323"/>
         <source>Apply preferences</source>
         <translation>Käytä asetuksia</translation>
     </message>
@@ -9182,7 +9182,7 @@ on jo luettelossa.</translation>
 <context>
     <name>MolImport</name>
     <message>
-        <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+38"/>
+        <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+40"/>
         <source>Import MOL</source>
         <translation>Tuo MOL</translation>
     </message>
@@ -9326,7 +9326,7 @@ on jo luettelossa.</translation>
         <translation>Muoto:</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+141"/>
         <source>Untitled %1</source>
         <translation>Nimetön %1</translation>
     </message>

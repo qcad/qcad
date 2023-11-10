@@ -280,7 +280,7 @@
         <translation>Drawing Preferences</translation>
     </message>
     <message>
-        <location line="+322"/>
+        <location line="+323"/>
         <source>Apply preferences</source>
         <translation>Apply preferences</translation>
     </message>
@@ -9182,7 +9182,7 @@ is already in the list.</translation>
 <context>
     <name>MolImport</name>
     <message>
-        <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+38"/>
+        <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+40"/>
         <source>Import MOL</source>
         <translation>Import MOL</translation>
     </message>
@@ -9326,7 +9326,7 @@ is already in the list.</translation>
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+141"/>
         <source>Untitled %1</source>
         <translation>Untitled %1</translation>
     </message>

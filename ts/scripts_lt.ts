@@ -280,7 +280,7 @@
         <translation type="unfinished">Piešimo nuostatos</translation>
     </message>
     <message>
-        <location line="+322"/>
+        <location line="+323"/>
         <source>Apply preferences</source>
         <translation type="unfinished">Taikyti nuostatas</translation>
     </message>
@@ -9184,7 +9184,7 @@ jau yra sąraše.</translation>
 <context>
     <name>MolImport</name>
     <message>
-        <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+38"/>
+        <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+40"/>
         <source>Import MOL</source>
         <translation type="unfinished">MOL importas</translation>
     </message>
@@ -9328,7 +9328,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Formatas:</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+141"/>
         <source>Untitled %1</source>
         <translation type="unfinished">Be pavadinimo %1</translation>
     </message>

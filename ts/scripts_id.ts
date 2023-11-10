@@ -280,7 +280,7 @@
         <translation type="unfinished">Preferensi Menggambar</translation>
     </message>
     <message>
-        <location line="+322"/>
+        <location line="+323"/>
         <source>Apply preferences</source>
         <translation type="unfinished">Menerapkan preferensi</translation>
     </message>
@@ -9177,7 +9177,7 @@ sudah ada dalam daftar.</translation>
 <context>
     <name>MolImport</name>
     <message>
-        <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+38"/>
+        <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+40"/>
         <source>Import MOL</source>
         <translation type="unfinished">Impor MOL</translation>
     </message>
@@ -9321,7 +9321,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Format:</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+141"/>
         <source>Untitled %1</source>
         <translation type="unfinished">Tanpa judul %1</translation>
     </message>

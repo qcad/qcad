@@ -280,7 +280,7 @@
         <translation type="unfinished">Zīmēšanas preferences</translation>
     </message>
     <message>
-        <location line="+322"/>
+        <location line="+323"/>
         <source>Apply preferences</source>
         <translation type="unfinished">Piemērot preferences</translation>
     </message>
@@ -9184,7 +9184,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>MolImport</name>
     <message>
-        <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+38"/>
+        <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+40"/>
         <source>Import MOL</source>
         <translation type="unfinished">Importēt MOL</translation>
     </message>
@@ -9328,7 +9328,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Formāts:</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+141"/>
         <source>Untitled %1</source>
         <translation type="unfinished">Bez nosaukuma %1</translation>
     </message>

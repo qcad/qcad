@@ -280,7 +280,7 @@
         <translation type="unfinished">그리기 기본 설정</translation>
     </message>
     <message>
-        <location line="+322"/>
+        <location line="+323"/>
         <source>Apply preferences</source>
         <translation type="unfinished">기본 설정 적용</translation>
     </message>
@@ -9177,7 +9177,7 @@ is already in the list.</source>
 <context>
     <name>MolImport</name>
     <message>
-        <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+38"/>
+        <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+40"/>
         <source>Import MOL</source>
         <translation type="unfinished">MOL 가져오기</translation>
     </message>
@@ -9321,7 +9321,7 @@ is already in the list.</source>
         <translation type="unfinished">형식:</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+141"/>
         <source>Untitled %1</source>
         <translation type="unfinished">제목 없음 %1</translation>
     </message>

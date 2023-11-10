@@ -280,7 +280,7 @@
         <translation>Preferencias del dibujo</translation>
     </message>
     <message>
-        <location line="+322"/>
+        <location line="+323"/>
         <source>Apply preferences</source>
         <translation>Aplicar preferencias</translation>
     </message>
@@ -9182,7 +9182,7 @@ ya está en la lista.</translation>
 <context>
     <name>MolImport</name>
     <message>
-        <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+38"/>
+        <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+40"/>
         <source>Import MOL</source>
         <translation>Importar MOL</translation>
     </message>
@@ -9326,7 +9326,7 @@ ya está en la lista.</translation>
         <translation>Formato:</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+141"/>
         <source>Untitled %1</source>
         <translation>Sin título %1</translation>
     </message>

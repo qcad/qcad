@@ -280,7 +280,7 @@
         <translation>Nastavenia Kreslenia</translation>
     </message>
     <message>
-        <location line="+322"/>
+        <location line="+323"/>
         <source>Apply preferences</source>
         <translation>Použiť nastavenia</translation>
     </message>
@@ -9187,7 +9187,7 @@ už existuje v zozname.</translation>
 <context>
     <name>MolImport</name>
     <message>
-        <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+38"/>
+        <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+40"/>
         <source>Import MOL</source>
         <translation>Importovať MOL</translation>
     </message>
@@ -9331,7 +9331,7 @@ už existuje v zozname.</translation>
         <translation>Formát:</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+141"/>
         <source>Untitled %1</source>
         <translation>Bez názvu %1</translation>
     </message>

@@ -280,7 +280,7 @@
         <translation type="unfinished">Предпочитания за рисуване</translation>
     </message>
     <message>
-        <location line="+322"/>
+        <location line="+323"/>
         <source>Apply preferences</source>
         <translation type="unfinished">Прилагане на преференции</translation>
     </message>
@@ -9180,7 +9180,7 @@ is already in the list.</source>
 <context>
     <name>MolImport</name>
     <message>
-        <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+38"/>
+        <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+40"/>
         <source>Import MOL</source>
         <translation type="unfinished">Внос на MOL</translation>
     </message>
@@ -9324,7 +9324,7 @@ is already in the list.</source>
         <translation type="unfinished">Формат:</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+141"/>
         <source>Untitled %1</source>
         <translation type="unfinished">Без заглавие %1</translation>
     </message>

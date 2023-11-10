@@ -280,7 +280,7 @@
         <translation>Preferenze Disegno</translation>
     </message>
     <message>
-        <location line="+322"/>
+        <location line="+323"/>
         <source>Apply preferences</source>
         <translation>Applica preferenze</translation>
     </message>
@@ -5123,7 +5123,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Explode/Explode.js" line="+30"/>
         <source>Modify</source>
-        <translation>Modifica</translation>
+        <translation>Modifica CAD</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -8920,7 +8920,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.js" line="+44"/>
         <source>Modify</source>
-        <translation>Modifica</translation>
+        <translation>Modifica CAD</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -9109,7 +9109,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Misc Modification Tools</source>
-        <translation>Strumenti di modifica vari</translation>
+        <translation>Strumenti di modifica CAD vari</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -9140,12 +9140,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Modify.js" line="+99"/>
         <source>Modification Tools</source>
-        <translation>Strumenti modifica</translation>
+        <translation>Strumenti modifica CAD</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;Modify</source>
-        <translation>&amp;Modifica</translation>
+        <translation>&amp;Modifica CAD</translation>
     </message>
 </context>
 <context>
@@ -9182,7 +9182,7 @@ is already in the list.</source>
 <context>
     <name>MolImport</name>
     <message>
-        <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+38"/>
+        <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+40"/>
         <source>Import MOL</source>
         <translation>Importa MOL</translation>
     </message>
@@ -9326,7 +9326,7 @@ is already in the list.</source>
         <translation>Formato:</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+141"/>
         <source>Untitled %1</source>
         <translation>Senza titolo %1</translation>
     </message>
@@ -10513,7 +10513,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.js" line="+47"/>
         <source>Modify</source>
-        <translation>Modifica</translation>
+        <translation>Modifica CAD</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -10937,7 +10937,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.js" line="+49"/>
         <source>Modify</source>
-        <translation>Modifica</translation>
+        <translation>Modifica CAD</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13009,7 +13009,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Translate/Translate.js" line="+44"/>
         <source>Modify</source>
-        <translation>Modifica</translation>
+        <translation>Modifica CAD</translation>
     </message>
     <message>
         <location line="+0"/>

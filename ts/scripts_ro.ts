@@ -280,7 +280,7 @@
         <translation type="unfinished">Preferințe de desenare</translation>
     </message>
     <message>
-        <location line="+322"/>
+        <location line="+323"/>
         <source>Apply preferences</source>
         <translation type="unfinished">Aplicați preferințele</translation>
     </message>
@@ -9184,7 +9184,7 @@ este deja în listă.</translation>
 <context>
     <name>MolImport</name>
     <message>
-        <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+38"/>
+        <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+40"/>
         <source>Import MOL</source>
         <translation type="unfinished">Import MOL</translation>
     </message>
@@ -9328,7 +9328,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Format:</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+141"/>
         <source>Untitled %1</source>
         <translation type="unfinished">Fără titlu %1</translation>
     </message>

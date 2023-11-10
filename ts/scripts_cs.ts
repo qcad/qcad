@@ -280,7 +280,7 @@
         <translation>Předvolby kreslení</translation>
     </message>
     <message>
-        <location line="+322"/>
+        <location line="+323"/>
         <source>Apply preferences</source>
         <translation>Použít předvolby</translation>
     </message>
@@ -9185,7 +9185,7 @@ již v seznamu je.</translation>
 <context>
     <name>MolImport</name>
     <message>
-        <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+38"/>
+        <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+40"/>
         <source>Import MOL</source>
         <translation>Importovat MOL</translation>
     </message>
@@ -9329,7 +9329,7 @@ již v seznamu je.</translation>
         <translation>Formát:</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+141"/>
         <source>Untitled %1</source>
         <translation>Nepojmenovaný %1</translation>
     </message>
