@@ -817,6 +817,7 @@ void RMainWindow::writeSettings() {
     RSettings::getQSettings()->setValue("Appearance/Position.Y", qMax(0, getPositionY()));
     RSettings::getQSettings()->setValue("Appearance/Width", getWidth());
     RSettings::getQSettings()->setValue("Appearance/Height", getHeight());
+    RSettings::getQSettings()->sync();
 }
 
 QVariant RMainWindow::eval(const QString& ext, const QString& script) {
