@@ -1234,7 +1234,7 @@ bool RGuiAction::slotTrigger(const QString& command) {
 
 
 
-/** 
+/**
  * Cleans up all GUI action objects.
  */
 void RGuiAction::clear() {
