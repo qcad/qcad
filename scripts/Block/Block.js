@@ -184,7 +184,7 @@ Block.editBlock = function(di, blockName) {
         view = views[i];
         var viewWidget = view.getWidget();
 
-        if (!isFunction(viewWidget.property)) {
+        if (isNull(viewWidget) || !isFunction(viewWidget.property)) {
             continue;
         }
 
@@ -202,7 +202,7 @@ Block.editBlock = function(di, blockName) {
         view = views[i];
         var viewWidget = view.getWidget();
 
-        if (!isFunction(viewWidget.property)) {
+        if (isNull(viewWidget) || !isFunction(viewWidget.property)) {
             continue;
         }
 
