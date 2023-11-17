@@ -249,6 +249,10 @@ void RGuiAction::updateIcon() {
 }
 
 void RGuiAction::setIcon(const QString& iconFile) {
+    QString previousIcon = this->iconFile;
+
+    // save the original icon file
+    // used to update icons on theme or dark mode change:
     this->iconFile = iconFile;
 
     // look up theme specific icon:
@@ -271,11 +275,13 @@ void RGuiAction::setIcon(const QString& iconFile) {
     }
 
     if (themeIconFile.isEmpty()) {
+        // no icon set and no theme icon found:
         QAction::setIcon(QIcon());
     }
     else {
         QString fileName = themeIconFile;
 
+        // change fileName to dark mode icon if available (-inverse postfix):
         if (RSettings::hasDarkGuiBackground()) {
             QFileInfo fi(themeIconFile);
             QString iconFileDark = fi.absolutePath() + QDir::separator() + fi.baseName() + "-inverse." + fi.suffix();
@@ -284,31 +290,42 @@ void RGuiAction::setIcon(const QString& iconFile) {
             }
         }
 
-        if (QFileInfo(fileName).suffix().toLower()=="svg" &&
-            !QCoreApplication::arguments().contains("-max-icon-res")) {
+        // fileName can be the an original icon file or an icon file of the theme
+        // either with or without -inverse postfix:
+        if (QFileInfo(fileName).exists()) {
+            // scale icon down to maximum required resolution:
+            if (QFileInfo(fileName).suffix().toLower()=="svg" &&
+                !QCoreApplication::arguments().contains("-max-icon-res")) {
 
-            int iconSize = RSettings::getIntValue("CadToolBar/IconSize", 32);
-            iconSize = qMax(iconSize, RSettings::getIntValue("ToolBar/IconSize", 32));
-            iconSize = qMax(iconSize, RSettings::getIntValue("CadToolMatrix/IconSize", 24));
+                int iconSize = RSettings::getIntValue("CadToolBar/IconSize", 32);
+                iconSize = qMax(iconSize, RSettings::getIntValue("ToolBar/IconSize", 32));
+                iconSize = qMax(iconSize, RSettings::getIntValue("CadToolMatrix/IconSize", 24));
 
-            // retina icons:
-            if (RSettings::getDevicePixelRatio()>1) {
-                iconSize*=RSettings::getDevicePixelRatio();
+                // retina icons:
+                if (RSettings::getDevicePixelRatio()>1) {
+                    iconSize = (int)(RSettings::getDevicePixelRatio()*iconSize);
+                }
+
+                QPixmap pm(iconSize,iconSize);
+                pm.fill(Qt::transparent);
+                QPainter p;
+                p.begin(&pm);
+                QSvgRenderer renderer(fileName);
+                renderer.render(&p, QRectF(0, 0, iconSize, iconSize));
+                p.end();
+
+                QIcon icon(pm);
+                QAction::setIcon(icon);
             }
-
-            QPixmap pm(iconSize,iconSize);
-            pm.fill(Qt::transparent);
-            QPainter p;
-            p.begin(&pm);
-            QSvgRenderer renderer(fileName);
-            renderer.render(&p, QRectF(0, 0, iconSize, iconSize));
-            p.end();
-
-            QIcon icon(pm);
-            QAction::setIcon(icon);
+            else {
+                QAction::setIcon(QIcon(fileName));
+            }
         }
         else {
-            QAction::setIcon(QIcon(themeIconFile));
+            // icon not found:
+            // this is not an error, icons are not required:
+            // revert to previous icon:
+            this->iconFile = previousIcon;
         }
     }
 }
