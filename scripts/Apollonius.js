@@ -178,11 +178,14 @@ Apollonius.getSolutionsCCC = function(c1, c2, c3, intersect) {
 
         // Get intersections of two concentric with the other circle and the locus:
         locus.setRadius(locus.getRadius() - rDiff / 2);
-        circle1.setRadius(circle1.getRadius() - Math.abs(rDiff / 2));
-        circle2 = circle1.clone();
-        circle2.setRadius(circle1.getRadius() + Math.abs(rDiff));
+        circle1.setRadius(circle1.getRadius() + Math.abs(rDiff / 2));
         var ips = locus.getIntersectionPoints(circle1);
-        ips = ips.concat(locus.getIntersectionPoints(circle2));
+        circle1.setRadius(circle1.getRadius() - Math.abs(rDiff));
+        // Avoid inversion through the center with negative radii:
+        if (circle1.getRadius() > 0) {
+          ips = ips.concat(locus.getIntersectionPoints(circle1));
+        }
+
 
         // If any, create tangent circles at intersections;
         if (ips.length === 0) {
