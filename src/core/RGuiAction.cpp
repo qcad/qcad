@@ -921,11 +921,18 @@ void RGuiAction::setScriptFile(const QString& sf, bool isSecondary) {
         relSf = dir.relativeFilePath(sf);
     }
     scriptFile = relSf;
-    setObjectName(QFileInfo(sf).completeBaseName() + "Action");
+    QFileInfo fi(sf);
+    setObjectName(fi.completeBaseName() + "Action");
 
     if (!isSecondary) {
         actionsByScriptFile[relSf] = this;
     }
+
+    // implicitely set icon file if available:
+    QString iconFilePath = fi.path() + QDir::separator() + fi.completeBaseName() + ".svg";
+    //if (QFileInfo(iconFilePath).exists()) {
+        setIcon(iconFilePath);
+    //}
 }
 
 void RGuiAction::setFactory(FactoryFunction f) {
