@@ -20,7 +20,6 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setRequiresSelection(false);
     action.setScriptFile(basePath + "/InfoCentroidsListener.js");
-    action.setIcon(basePath + "/InfoCentroidsListener.svg");
 //    action.setDefaultShortcut(new QKeySequence("a,b,c"));    // Ruled out (none required)
     action.setDefaultCommands(["centroidlistener"]);    // List as an Array!
     var tipShort = qsTranslate("InfoCentroidsListener", "(De-)Activate a transaction listener for 2D Centroids");

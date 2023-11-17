@@ -3,7 +3,6 @@ function init(basePath) {
     action.setToolTip(qsTranslate("RemoveBlock", "Delete selected block"));
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/RemoveBlock.js");
-    action.setIcon(basePath + "/RemoveBlock.svg");
     action.setDefaultShortcut(new QKeySequence("b,r"));
     action.setDefaultCommands(["blockremove", "br"]);
     action.setGroupSortOrder(14300);

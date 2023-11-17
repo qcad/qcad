@@ -72,7 +72,6 @@ Circle.getCadToolBarPanel = function() {
         action.setScriptFile(Circle.includeBasePath + "/Circle.js");
         action.objectName = actionName;
         action.setRequiresDocument(true);
-        action.setIcon(Circle.includeBasePath + "/Circle.svg");
         //action.setStatusTip(qsTr("Show circle tools"));
         action.setDefaultShortcut(new QKeySequence("w,c"));
         action.setNoState();

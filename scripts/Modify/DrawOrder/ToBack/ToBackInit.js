@@ -3,7 +3,6 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/ToBack.js");
-    action.setIcon(basePath + "/ToBack.svg");
     action.setDefaultShortcut(new QKeySequence("m,b"));
     action.setDefaultCommands(["toback", "mb"]);
     action.setGroupSortOrder(13600);

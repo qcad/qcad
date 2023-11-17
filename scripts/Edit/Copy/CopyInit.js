@@ -4,7 +4,6 @@ function init(basePath) {
     action.setRequiresSelection(true);
     action.setAllowInterrupt();
     action.setScriptFile(basePath + "/Copy.js");
-    action.setIcon(basePath + "/Copy.svg");
     action.setDefaultShortcuts([
         new QKeySequence(QKeySequence.Copy),
         new QKeySequence("c,p")

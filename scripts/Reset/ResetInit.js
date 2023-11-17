@@ -7,7 +7,6 @@ function init(basePath) {
     var action = new RGuiAction(qsTranslate("Reset", "&Reset / Idle"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/Reset.js");
-    action.setIcon(basePath + "/Reset.svg");
 
     // workaround for Linux/Qt bug
     // input of @ in command line not possible on German keyboard where

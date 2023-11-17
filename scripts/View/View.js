@@ -65,7 +65,6 @@ View.getCadToolBarPanel = function() {
         action.setScriptFile(View.includeBasePath + "/View.js");
         action.objectName = actionName;
         action.setRequiresDocument(false);
-        action.setIcon(View.includeBasePath + "/View.svg");
         //action.setStatusTip(qsTr("Show view tools"));
         action.setDefaultShortcut(new QKeySequence("w,v"));
         action.setNoState();

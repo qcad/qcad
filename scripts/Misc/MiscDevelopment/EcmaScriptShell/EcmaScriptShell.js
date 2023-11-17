@@ -113,7 +113,6 @@ EcmaScriptShell.init = function(basePath) {
     var action = new RGuiAction(qsTr("&Script Shell"), appWin);
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/EcmaScriptShell.js");
-    action.setIcon(basePath + "/EcmaScriptShell.svg");
     action.setDefaultShortcut(new QKeySequence("g,e"));
     action.setDefaultCommands(["ge"]);
     action.setGroupSortOrder(3800);

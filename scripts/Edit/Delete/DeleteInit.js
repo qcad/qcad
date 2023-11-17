@@ -4,7 +4,6 @@ function init(basePath) {
     action.setRequiresSelection(true);
     action.setAllowInterrupt();
     action.setScriptFile(basePath + "/Delete.js");
-    action.setIcon(basePath + "/Delete.svg");
     action.setDefaultShortcuts([
        new QKeySequence("Delete"),
        new QKeySequence("Backspace"),

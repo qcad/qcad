@@ -3,7 +3,6 @@ function init(basePath) {
         RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/ArcConcentricThrough.js");
-    action.setIcon(basePath + "/ArcConcentricThrough.svg");
     action.setStatusTip(qsTranslate("ArcConcentricThrough", "Draw concentric arc through point"));
     action.setDefaultShortcut(new QKeySequence("a,g"));
     action.setDefaultCommands(["arcconcentricthrough", "ag"]);

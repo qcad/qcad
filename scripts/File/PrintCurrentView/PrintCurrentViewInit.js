@@ -3,7 +3,6 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setForceGlobal(true);
     action.setScriptFile(basePath + "/PrintCurrentView.js");
-    action.setIcon(basePath + "/PrintCurrentView.svg");
     action.setDefaultShortcut(new QKeySequence("Ctrl+Alt+P"));
     action.setDefaultCommands(["printview"]);
     action.setStatusTip(qsTranslate("PrintCurrentView", "Print current view"));

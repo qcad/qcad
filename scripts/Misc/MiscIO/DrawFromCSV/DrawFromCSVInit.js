@@ -7,7 +7,6 @@ function init(basePath) {
     action.setRequiresDocument(true);    // Can't draw without a document
     action.setRequiresSelection(false);    // No selection required
     action.setScriptFile(basePath + "/DrawFromCSV.js");
-    action.setIcon(basePath + "/DrawFromCSV.svg");
 //    action.setDefaultShortcut(new QKeySequence("d,c,s,v"));    // Ruled out (no good option)
     action.setDefaultCommands(["drawcsv","dcsv"]);    // An Array!
     var tip = qsTranslate("DrawFromCSV", "Draws entities based on textual entries in a CSV file");

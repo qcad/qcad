@@ -44,7 +44,6 @@ DrawingPreferences.init = function(basePath) {
     action.setDefaultCommands(["drawingpreferences"]);
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/DrawingPreferences.js");
-    action.setIcon(basePath + "/DrawingPreferences.svg");
     action.setDefaultShortcut(new QKeySequence("Ctrl+I"));
     action.setDefaultCommands(["drawingpreferences"]);
     action.setNoState();

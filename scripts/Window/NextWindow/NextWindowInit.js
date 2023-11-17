@@ -2,7 +2,6 @@ function init(basePath) {
     var action = new RGuiAction(qsTranslate("NextWindow", "&Next"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/NextWindow.js");
-    action.setIcon(basePath + "/NextWindow.svg");
 
     var scs = [];
     if (RSettings.getQtVersion()>=0x060000) {

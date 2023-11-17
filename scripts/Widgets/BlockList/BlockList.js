@@ -556,7 +556,6 @@ BlockList.init = function(basePath) {
     var action = new RGuiAction(qsTr("Block List"), appWin);
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/BlockList.js");
-    action.setIcon(basePath + "/BlockList.svg");
     action.setDefaultShortcut(new QKeySequence("g,b"));
     action.setDefaultCommands(["gb"]);
     action.setGroupSortOrder(3600);

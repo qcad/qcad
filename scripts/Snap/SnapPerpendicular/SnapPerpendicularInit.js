@@ -2,7 +2,6 @@ function init(basePath) {
     var action = new RGuiAction(qsTranslate("SnapPerpendicular", "&Perpendicular"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/SnapPerpendicular.js");
-    action.setIcon(basePath + "/SnapPerpendicular.svg");
     action.setDefaultShortcut(new QKeySequence("s,u"));
     action.setDefaultCommands(["snapperpendicular", "su"]);
     action.setGroup("snaps");

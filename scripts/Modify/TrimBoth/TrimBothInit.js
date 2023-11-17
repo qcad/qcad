@@ -3,7 +3,6 @@ function init(basePath) {
         RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/TrimBoth.js");
-    action.setIcon(basePath + "/TrimBoth.svg");
     action.setDefaultShortcut(new QKeySequence("t,m"));
     action.setDefaultCommands(["trim2", "extend2", "tm"]);
     action.setGroupSortOrder(13200);

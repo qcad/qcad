@@ -68,7 +68,6 @@ Block.getCadToolBarPanel = function() {
         action.setScriptFile(Block.includeBasePath + "/Block.js");
         action.objectName = actionName;
         action.setRequiresDocument(true);
-        action.setIcon(Block.includeBasePath + "/Block.svg");
         //action.setStatusTip(qsTr("Show block tools"));
         action.setDefaultShortcut(new QKeySequence("w,b"));
         action.setNoState();

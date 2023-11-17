@@ -72,7 +72,6 @@ Point.getCadToolBarPanel = function() {
         action.setScriptFile(Point.includeBasePath + "/Point.js");
         action.objectName = actionName;
         action.setRequiresDocument(true);
-        action.setIcon(Point.includeBasePath + "/Point.svg");
         //action.setStatusTip(qsTr("Show point tools"));
         action.setDefaultShortcut(new QKeySequence("w,p"));
         action.setNoState();

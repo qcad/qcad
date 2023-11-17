@@ -21,7 +21,6 @@ function init(basePath) {
     // # Issue # Grayed but requirement not displayed without QKeySequence
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/InfoAreaCentroid.js");
-    action.setIcon(basePath + "/InfoAreaCentroid.svg");
 //    action.setDefaultShortcut(new QKeySequence("a,m"));    // 'Area center of Mass' ... Ruled out 
     action.setDefaultCommands(["acentroid", "getac"]);    // List as an Array!
     var tipShort = qsTranslate("InfoAreaCentroid", "Create an area 2D Centroid for a selected entity");

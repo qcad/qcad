@@ -2,7 +2,6 @@ function init(basePath) {
     var action = new RGuiAction(qsTranslate("SelectBlockReferences", "&Select Block References"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/SelectBlockReferences.js");
-    action.setIcon(basePath + "/SelectBlockReferences.svg");
     action.setDefaultShortcuts([
                             new QKeySequence("b,k")
                         ]);

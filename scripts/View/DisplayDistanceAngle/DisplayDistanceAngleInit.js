@@ -2,7 +2,6 @@ function init(basePath) {
     var action = new RGuiAction(qsTranslate("DisplayDistanceAngle", "Display &Distance/Angle"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/DisplayDistanceAngle.js");
-    action.setIcon(basePath + "/DisplayDistanceAngle.svg");
     if (RSettings.getQtVersion()>=0x060000) {
         action.setDefaultShortcuts([new QKeySequence(new QKeyCombination(Qt.Key_F8))]);
     }

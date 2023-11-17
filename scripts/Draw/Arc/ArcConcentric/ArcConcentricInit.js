@@ -3,7 +3,6 @@ function init(basePath) {
         RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/ArcConcentric.js");
-    action.setIcon(basePath + "/ArcConcentric.svg");
     action.setStatusTip(qsTranslate("ArcConcentric", "Draw concentric arc"));
     action.setDefaultShortcut(new QKeySequence("a,c"));
     action.setDefaultCommands(["arcconcentric", "ac"]);

@@ -3,7 +3,6 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/FlipHorizontal.js");
-    action.setIcon(basePath + "/FlipHorizontal.svg");
     action.setDefaultShortcut(new QKeySequence("f,h"));
     action.setDefaultCommands(["fliphorizontally", "fh"]);
     action.setGroupSortOrder(13100);

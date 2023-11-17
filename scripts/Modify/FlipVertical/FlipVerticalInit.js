@@ -3,7 +3,6 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/FlipVertical.js");
-    action.setIcon(basePath + "/FlipVertical.svg");
     action.setDefaultShortcut(new QKeySequence("f,v"));
     action.setDefaultCommands(["flipvertically", "fv"]);
     action.setGroupSortOrder(13100);

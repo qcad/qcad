@@ -3,7 +3,6 @@ function init(basePath) {
         RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/Leader.js");
-    action.setIcon(basePath + "/Leader.svg");
     action.setStatusTip(qsTranslate("Leader", "Draw leader (line sequence with arrow)"));
     action.setDefaultShortcuts([
                             new QKeySequence("d,e"),

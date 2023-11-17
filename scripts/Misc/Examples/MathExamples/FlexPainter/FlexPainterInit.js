@@ -12,7 +12,6 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/FlexPainter.js");
-    action.setIcon(basePath + "/FlexPainter.svg");
     action.setDefaultShortcut(new QKeySequence("f,p")); 
     action.setDefaultCommands(["flexpainter", "fp"]);    // A list array separated by comma + space
     action.setStatusTip(tip);    // Overtakes and displays left in the Status Bar

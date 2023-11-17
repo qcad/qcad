@@ -3,7 +3,6 @@ function init(basePath) {
         RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/CircleCP.js");
-    action.setIcon(basePath + "/CircleCP.svg");
     action.setStatusTip(qsTranslate("CircleCP", "Draw circle from center and point on circle"));
     action.setDefaultShortcut(new QKeySequence("c,i"));
     action.setDefaultCommands(["circle", "ci"]);

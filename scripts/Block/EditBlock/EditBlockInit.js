@@ -5,7 +5,6 @@ function init(basePath) {
     action.setToolTip(tip);
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/EditBlock.js");
-    action.setIcon(basePath + "/EditBlock.svg");
     action.setDefaultShortcut(new QKeySequence("b,e"));
     action.setDefaultCommands(["blockedit","be"]);
     action.setGroupSortOrder(14350);

@@ -3,7 +3,6 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/DimRegen.js");
-    action.setIcon(basePath + "/DimRegen.svg");
     action.setDefaultShortcut(new QKeySequence("d,s"));
     action.setDefaultCommands(["dimregen", "ds"]);
     action.setNoState();

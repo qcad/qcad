@@ -3,7 +3,6 @@ function init(basePath) {
         RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/Circle3T.js");
-    action.setIcon(basePath + "/Circle3T.svg");
     action.setStatusTip(qsTranslate("Circle3T", "Draw circle tangential to three entities"));
     action.setDefaultShortcut(new QKeySequence("c,t,3"));
     action.setDefaultCommands(["circletangent3", "ct3"]);

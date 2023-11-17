@@ -86,7 +86,6 @@ Ellipse.getCadToolBarPanel = function() {
         action.setScriptFile(Ellipse.includeBasePath + "/Ellipse.js");
         action.objectName = actionName;
         action.setRequiresDocument(true);
-        action.setIcon(Ellipse.includeBasePath + "/Ellipse.svg");
         //action.setStatusTip(qsTr("Show ellipse tools"));
         action.setDefaultShortcut(new QKeySequence("w,e"));
         action.setNoState();

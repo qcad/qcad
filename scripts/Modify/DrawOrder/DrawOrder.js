@@ -67,7 +67,6 @@ DrawOrder.getCadToolBarPanel = function() {
         action.setScriptFile(DrawOrder.includeBasePath + "/DrawOrder.js");
         action.objectName = actionName;
         action.setRequiresDocument(true);
-        action.setIcon(DrawOrder.includeBasePath + "/DrawOrder.svg");
         //action.setStatusTip(qsTr("Show projection tools"));
         action.setDefaultShortcut(new QKeySequence("w,j"));
         action.setNoState();

@@ -3,7 +3,6 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/ToFront.js");
-    action.setIcon(basePath + "/ToFront.svg");
     action.setDefaultShortcut(new QKeySequence("m,f"));
     action.setDefaultCommands(["tofront", "mf"]);
     action.setGroupSortOrder(13600);

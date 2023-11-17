@@ -21,7 +21,6 @@ function init(basePath) {
     // # Issue # Grayed but requirement not displayed without QKeySequence
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/InfoSumCentroidsWeighted.js");
-    action.setIcon(basePath + "/InfoSumCentroidsWeighted.svg");
 //    action.setDefaultShortcut(new QKeySequence("c,m"));    // 'Combine centers of Mass' ... Ruled out 
     action.setDefaultCommands(["sumcentroid", "sumc"]);    // List as an Array!
     var tipShort = qsTranslate("InfoSumCentroidsWeighted", "Combine selected 2D Centroid markers weighted");

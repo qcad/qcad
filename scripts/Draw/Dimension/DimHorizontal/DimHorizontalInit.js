@@ -3,7 +3,6 @@ function init(basePath) {
         RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/DimHorizontal.js");
-    action.setIcon(basePath + "/DimHorizontal.svg");
     action.setStatusTip(qsTranslate("DimHorizontal", "Draw horizontal dimension"));
     action.setDefaultShortcut(new QKeySequence("d,h"));
     action.setDefaultCommands(["dimhor", "dimhorizontal", "dh"]);

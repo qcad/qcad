@@ -104,7 +104,6 @@ ExThreePoints.init = function(basePath) {
     var action = new RGuiAction(qsTr("Three Points"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/ExThreePoints.js");
-    //action.setIcon(basePath + "/ExThreePoints.svg");
     action.setStatusTip(qsTr("Draw three points"));
     action.setDefaultShortcut(new QKeySequence("p,3"));
     action.setDefaultCommands(["point3"]);

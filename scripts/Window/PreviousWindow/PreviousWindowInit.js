@@ -2,7 +2,6 @@ function init(basePath) {
     var action = new RGuiAction(qsTranslate("PreviousWindow", "&Previous"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/PreviousWindow.js");
-    action.setIcon(basePath + "/PreviousWindow.svg");
 
     var scs = [];
     if (RSettings.getQtVersion()>=0x060000) {

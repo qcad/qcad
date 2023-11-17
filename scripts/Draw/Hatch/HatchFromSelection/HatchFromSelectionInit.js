@@ -3,7 +3,6 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/HatchFromSelection.js");
-    action.setIcon(basePath + "/HatchFromSelection.svg");
     action.setStatusTip(qsTranslate("HatchFromSelection", "Create hatch or solid fill from selected boundary"));
     action.setDefaultShortcut(new QKeySequence("h,a"));
     action.setDefaultCommands(["hatch", "ha"]);

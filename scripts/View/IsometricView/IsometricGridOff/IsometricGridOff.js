@@ -35,7 +35,6 @@ IsometricGridOff.init = function(basePath) {
     var action = new RGuiAction(qsTr("Isometric Grid &Off"), RMainWindowQt.getMainWindow());
     action.setScriptFile(basePath + "/IsometricGridOff.js");
     action.setRequiresDocument(true);
-    action.setIcon(basePath + "/IsometricGridOff.svg");
     action.setDefaultShortcut(new QKeySequence("j,o"));
     action.setDefaultCommands(["isometricgridoff", "jo"]);
     action.setGroup("isometricProjection");

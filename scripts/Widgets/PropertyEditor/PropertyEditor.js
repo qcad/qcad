@@ -1714,7 +1714,6 @@ PropertyEditor.init = function(basePath) {
     var action = new RGuiAction(qsTr("Property Editor"), appWin);
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/PropertyEditor.js");
-    action.setIcon(basePath + "/PropertyEditor.svg");
     action.setDefaultShortcut(new QKeySequence("g,p"));
     action.setDefaultCommands(["gp"]);
     action.setGroupSortOrder(3700);

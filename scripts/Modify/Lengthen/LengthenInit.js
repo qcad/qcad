@@ -3,7 +3,6 @@ function init(basePath) {
         RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/Lengthen.js");
-    action.setIcon(basePath + "/Lengthen.svg");
     action.setDefaultShortcut(new QKeySequence("l,e"));
     action.setDefaultCommands(["lengthen", "shorten", "trimamount", "le"]);
     action.setGroupSortOrder(13200);

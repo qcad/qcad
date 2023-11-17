@@ -3,7 +3,6 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/Scale.js");
-    action.setIcon(basePath + "/Scale.svg");
     action.setDefaultShortcut(new QKeySequence("s,z"));
     action.setDefaultCommands(["scale", "sz"]);
     action.setGroupSortOrder(13100);

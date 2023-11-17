@@ -90,7 +90,6 @@ ToggleGrid.init = function(basePath) {
     var action = new RGuiAction(qsTr("&Grid"), RMainWindowQt.getMainWindow());
     action.setScriptFile(basePath + "/ToggleGrid.js");
     action.setRequiresDocument(true);
-    action.setIcon(basePath + "/ToggleGrid.svg");
     action.setDefaultShortcut(new QKeySequence("g,r"));
     action.setNoState(true);
     action.setGroupSortOrder(3200);

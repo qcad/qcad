@@ -74,7 +74,6 @@ Polyline.getCadToolBarPanel = function() {
         action.setScriptFile(Polyline.includeBasePath + "/Polyline.js");
         action.objectName = actionName;
         action.setRequiresDocument(true);
-        action.setIcon(Polyline.includeBasePath + "/Polyline.svg");
         //action.setStatusTip(qsTr("Show polyline tools"));
         action.setDefaultShortcut(new QKeySequence("w,o"));
         action.setNoState();

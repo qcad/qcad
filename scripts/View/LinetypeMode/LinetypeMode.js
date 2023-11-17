@@ -86,7 +86,6 @@ LinetypeMode.init = function(basePath) {
     var action = new RGuiAction(qsTranslate("LinetypeMode", "Screen-based Line&types"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/LinetypeMode.js");
-    action.setIcon(basePath + "/LinetypeMode.svg");
     action.setDefaultShortcut(new QKeySequence("n,l"));
     action.setDefaultCommands(["screenlinetype", "nl"]);
     action.setGroup("viewmodes");

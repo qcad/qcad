@@ -4,7 +4,6 @@ function init(basePath) {
     action.setRequiresSelection(true);
     action.setAllowInterrupt();
     action.setScriptFile(basePath + "/CopyWithReference.js");
-    action.setIcon(basePath + "/CopyWithReference.svg");
     action.setDefaultShortcuts([
         new QKeySequence("Ctrl+Shift+C"),
         new QKeySequence("r,c")

@@ -3,7 +3,6 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/CreateBlock.js");
-    action.setIcon(basePath + "/CreateBlock.svg");
     action.setDefaultShortcut(new QKeySequence("b,c"));
     action.setDefaultCommands(["blockcreate", "bc"]);
     action.setGroupSortOrder(14200);

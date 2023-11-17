@@ -4,7 +4,6 @@ function init(basePath) {
     // attaching to document would break context menu (FS#1695):
     action.setForceGlobal(true);
     action.setScriptFile(basePath + "/PrintPreview.js");
-    action.setIcon(basePath + "/PrintPreview.svg");
     action.setDefaultShortcut(new QKeySequence("Ctrl+Shift+P"));
     action.setDefaultCommands(["printpreview"]);
     action.setStatusTip(qsTranslate("PrintPreview", "Preview how current drawing would be printed"));

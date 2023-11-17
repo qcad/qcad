@@ -4,7 +4,6 @@ function init(basePath) {
     action.setRequiresSelection(true);
     action.setAllowInterrupt();
     action.setScriptFile(basePath + "/CutWithReference.js");
-    action.setIcon(basePath + "/CutWithReference.svg");
     action.setDefaultShortcuts([
         new QKeySequence("Ctrl+Shift+X"),
         new QKeySequence("r,t")
