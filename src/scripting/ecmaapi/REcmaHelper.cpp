@@ -76,7 +76,7 @@ QScriptValue REcmaHelper::throwError(const QString& message, QScriptContext* con
 }
 
 QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, RGraphicsView* cppValue) {
-    RGraphicsViewQt* v = dynamic_cast<RGraphicsViewQt*>(cppValue);
+    RGraphicsViewImage* v = dynamic_cast<RGraphicsViewImage*>(cppValue);
     if (v!=NULL) {
         return qScriptValueFromValue(engine, v);
     }
