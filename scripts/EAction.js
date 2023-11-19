@@ -2168,7 +2168,7 @@ EAction.getEntityId = function(di, action, event, preview, selectable) {
     // multiple entities under cursor, offer context menu:
     var ret = RObject.INVALID_ID;
     var doc = di.getDocument();
-    var menu = new QMenu(EAction.getGraphicsView());
+    var menu = new QMenu(EAction.getGraphicsViewWidget());
     menu.objectName = "EntityContextMenu";
 
     // reacts to hovering and clicking of context menu items:
