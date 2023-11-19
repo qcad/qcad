@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 include("scripts/library.js");
+include("scripts/Tools/arguments.js");
 
 function printHelp() {
     print("Usage: " + args[1] + " [OPTIONS]... <input-file> <output-file>");
@@ -40,13 +41,7 @@ function main() {
         return;
     }
 
-    var opts = [ 
-                 [ "help", false, "h" ]
-               ];
-
-    var ret = getOpt(args, opts);
-
-    if (ret["h"] !== undefined) {
+    if (testArgument(args, "h", "help")) {
         printHelp();
         return;
     }
