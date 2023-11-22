@@ -71,13 +71,19 @@
        <string>General Properties</string>
       </property>
       <layout class="QGridLayout" name="GeneralLayout" columnstretch="0,1,0">
+       <property name="leftMargin">
+        <number>6</number>
+       </property>
        <property name="topMargin">
+        <number>6</number>
+       </property>
+       <property name="rightMargin">
         <number>6</number>
        </property>
        <property name="bottomMargin">
         <number>6</number>
        </property>
-       <property name="verticalSpacing">
+       <property name="spacing">
         <number>2</number>
        </property>
        <item row="0" column="0">
@@ -303,6 +309,11 @@
  </widget>
  <customwidgets>
   <customwidget>
+   <class>RMathLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>RMathLineEdit.h</header>
+  </customwidget>
+  <customwidget>
    <class>RLineweightCombo</class>
    <extends>QComboBox</extends>
    <header>RLineweightCombo.h</header>
@@ -316,11 +327,6 @@
    <class>RLinetypeCombo</class>
    <extends>QComboBox</extends>
    <header>RLinetypeCombo.h</header>
-  </customwidget>
-  <customwidget>
-   <class>RMathLineEdit</class>
-   <extends>QLineEdit</extends>
-   <header>RMathLineEdit.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>
