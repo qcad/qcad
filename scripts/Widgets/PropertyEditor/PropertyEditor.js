@@ -40,9 +40,6 @@ PropertyWatcher.prototype.propertyChanged = function(value) {
     // only do something if the value has actually changed
     // remember edited status of widgets
 
-//    qDebug("propertyChanged:", value);
-//    qDebug("propertyChanged: sender: ", this.sender);
-
     var attributes = this.propertyEditor.getPropertyAttributes(this.propertyType);
 
     var typeHint = RS.UnknownType;
@@ -228,7 +225,13 @@ function PropertyEditorImpl(basePath) {
     this.widget.findChild("LabelProtected").text = RSettings.translate("REntity", "Protected") + this.colon;
 
     var selectionCombo = this.widget.findChild("Selection");
-    selectionCombo["activated(int)"].connect(this, this.filterChanged);
+    if (RSettings.getOriginalArguments().contains("-gui-automation")) {
+        // GUI automation: react for programmatic changes:
+        selectionCombo["currentIndexChanged(int)"].connect(this, this.filterChanged);
+    }
+    else {
+        selectionCombo["activated(int)"].connect(this, this.filterChanged);
+    }
     selectionCombo.installEventFilter(new REventFilter(QEvent.Wheel.valueOf(), true));
     selectionCombo.focusPolicy = Qt.ClickFocus;
 
@@ -236,7 +239,12 @@ function PropertyEditorImpl(basePath) {
     var layerCombo = this.widget.findChild("Layer");
     if (RSettings.isQt(6)) {
         var pw = new PropertyWatcher(this, layerCombo, REntity.PropertyLayer);
-        layerCombo.textActivated.connect(pw, pw.propertyChanged);
+        if (RSettings.getOriginalArguments().contains("-gui-automation")) {
+            layerCombo.currentTextChanged.connect(pw, pw.propertyChanged);
+        }
+        else {
+            layerCombo.textActivated.connect(pw, pw.propertyChanged);
+        }
     }
     else {
         layerCombo['activated(QString)'].connect(
@@ -433,6 +441,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
         gridLayoutGeometry = new QGridLayout(this.geometryGroup);
         gridLayoutGeometry.setVerticalSpacing(2);
         gridLayoutGeometry.setHorizontalSpacing(2);
+        gridLayoutGeometry.setContentsMargins(6,6,6,6);
         // label:
         gridLayoutGeometry.setColumnStretch(0,0);
         // control:
@@ -1325,9 +1334,15 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
         control.objectName = objectName;
 
         if (isNull(choicesData)/* && propertyTypeId.getId()!==REntity.PropertyLayer.getId()*/) {
-            var pw = new PropertyWatcher(this, control, propertyTypeId)
+            var pw = new PropertyWatcher(this, control, propertyTypeId);
             if (RSettings.getQtVersion() >= 0x060000) {
-                control.textActivated.connect(pw, pw.propertyChanged);
+                if (RSettings.getOriginalArguments().contains("-gui-automation")) {
+                    // if GUI automation is enabled, react when text is changed programmatically:
+                    control.currentTextChanged.connect(pw, pw.propertyChanged);
+                }
+                else {
+                    control.textActivated.connect(pw, pw.propertyChanged);
+                }
             }
             else {
                 control['activated(QString)'].connect(pw, pw.propertyChanged);
