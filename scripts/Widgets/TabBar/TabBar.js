@@ -70,6 +70,7 @@ TabBar.initTabBar = function() {
     tabBar.tabsClosable = true;
     tabBar.usesScrollButtons = true;
     tabBar.contextMenuPolicy = Qt.NoContextMenu;
+    tabBar.objectName = "DocumentTabBar";
     // somewhat buggy:
     //tabBar.movable = true;
 
