@@ -3,7 +3,7 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/AddLayer.js");
     action.setDefaultShortcut(new QKeySequence("y,a"));
-    action.setDefaultCommands(["layeradd", "ya"]);
+    action.setDefaultCommands(["layeradd", "addlayer", "ya"]);
     action.setGroupSortOrder(14200);
     action.setSortOrder(100);
     action.setWidgetNames(["LayerMenu", "LayerToolBar", "LayerToolsPanel", "LayerMatrixPanel"]);
