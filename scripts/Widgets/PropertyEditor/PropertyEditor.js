@@ -58,6 +58,11 @@ PropertyWatcher.prototype.propertyChanged = function(value) {
         return;
     }
 
+    // value if QFont:
+    else if (isOfType(this.sender, QFontComboBox)) {
+        value = value.family();
+    }
+
     // value comes from a combo box:
     else if (isComboBox(this.sender)) {
         // value is index of combo box:
@@ -225,13 +230,7 @@ function PropertyEditorImpl(basePath) {
     this.widget.findChild("LabelProtected").text = RSettings.translate("REntity", "Protected") + this.colon;
 
     var selectionCombo = this.widget.findChild("Selection");
-    if (RSettings.getOriginalArguments().contains("-gui-automation")) {
-        // GUI automation: react for programmatic changes:
-        selectionCombo["currentIndexChanged(int)"].connect(this, this.filterChanged);
-    }
-    else {
-        selectionCombo["activated(int)"].connect(this, this.filterChanged);
-    }
+    selectionCombo["activated(int)"].connect(this, this.filterChanged);
     selectionCombo.installEventFilter(new REventFilter(QEvent.Wheel.valueOf(), true));
     selectionCombo.focusPolicy = Qt.ClickFocus;
 
@@ -239,12 +238,7 @@ function PropertyEditorImpl(basePath) {
     var layerCombo = this.widget.findChild("Layer");
     if (RSettings.isQt(6)) {
         var pw = new PropertyWatcher(this, layerCombo, REntity.PropertyLayer);
-        if (RSettings.getOriginalArguments().contains("-gui-automation")) {
-            layerCombo.currentTextChanged.connect(pw, pw.propertyChanged);
-        }
-        else {
-            layerCombo.textActivated.connect(pw, pw.propertyChanged);
-        }
+        layerCombo.textActivated.connect(pw, pw.propertyChanged);
     }
     else {
         layerCombo['activated(QString)'].connect(
@@ -1322,6 +1316,14 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
             control.installEventFilter(new REventFilter(QEvent.Wheel.valueOf(), true));
             control.focusPolicy = Qt.ClickFocus;
             initFontComboBox(control);
+            control.objectName = objectName;
+            var pw = new PropertyWatcher(this, control, propertyTypeId);
+            if (RSettings.getQtVersion() >= 0x060000) {
+                control.currentFontChanged.connect(pw, pw.propertyChanged);
+            }
+            else {
+                control.currentFontChanged.connect(pw, pw.propertyChanged);
+            }
         }
         else {
             control = new QComboBox(this.geometryGroup);
@@ -1329,34 +1331,29 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
             control.focusPolicy = Qt.ClickFocus;
             control.minimumWidth = 50;
             control.setSizePolicy(QSizePolicy.Ignored, QSizePolicy.Preferred);
-        }
 
-        control.objectName = objectName;
+            control.objectName = objectName;
 
-        if (isNull(choicesData)/* && propertyTypeId.getId()!==REntity.PropertyLayer.getId()*/) {
-            var pw = new PropertyWatcher(this, control, propertyTypeId);
-            if (RSettings.getQtVersion() >= 0x060000) {
-                if (RSettings.getOriginalArguments().contains("-gui-automation")) {
-                    // if GUI automation is enabled, react when text is changed programmatically:
-                    control.currentTextChanged.connect(pw, pw.propertyChanged);
-                }
-                else {
+            if (isNull(choicesData)/* && propertyTypeId.getId()!==REntity.PropertyLayer.getId()*/) {
+                var pw = new PropertyWatcher(this, control, propertyTypeId);
+                if (RSettings.getQtVersion() >= 0x060000) {
                     control.textActivated.connect(pw, pw.propertyChanged);
                 }
+                else {
+                    control['activated(QString)'].connect(pw, pw.propertyChanged);
+                }
             }
             else {
-                control['activated(QString)'].connect(pw, pw.propertyChanged);
+                var pw = new PropertyWatcher(this, control, propertyTypeId);
+                if (RSettings.getQtVersion() >= 0x060000) {
+                    control.activated.connect(pw, pw.propertyChanged);
+                }
+                else {
+                    control['activated(int)'].connect(pw, pw.propertyChanged);
+                }
             }
         }
-        else {
-            var pw = new PropertyWatcher(this, control, propertyTypeId);
-            if (RSettings.getQtVersion() >= 0x060000) {
-                control.activated.connect(pw, pw.propertyChanged);
-            }
-            else {
-                control['activated(int)'].connect(pw, pw.propertyChanged);
-            }
-        }
+
     }
 
     if (propertyTypeId.getId()===REntity.PropertyLayer.getId()) {
