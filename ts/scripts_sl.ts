@@ -325,7 +325,7 @@ da bodo spremembe začele delovat.</translation>
         <translation>&amp;Dodaj prazen blok</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Add new empty block</source>
         <translation>Dodaj prazen blok</translation>
     </message>
@@ -412,7 +412,7 @@ da bodo spremembe začele delovat.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1986"/>
+        <location filename="../scripts/Apollonius.js" line="+1989"/>
         <source>Invalid radius</source>
         <translation>Neveljavni polmer</translation>
     </message>
@@ -438,7 +438,7 @@ da bodo spremembe začele delovat.</translation>
         <translation>Orodjarna lokov</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Arc</source>
         <translation>&amp;Lok</translation>
     </message>
@@ -491,7 +491,7 @@ da bodo spremembe začele delovat.</translation>
         <translation>&amp;2 točki in kot</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and angle</source>
         <translation>Nariši lok iz dveh točk in kota</translation>
     </message>
@@ -544,7 +544,7 @@ da bodo spremembe začele delovat.</translation>
         <translation>2 točki ter &amp;Višina</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and height</source>
         <translation>Nariši lok iz 2 točk ter višine</translation>
     </message>
@@ -602,7 +602,7 @@ da bodo spremembe začele delovat.</translation>
         <translation>&amp;2 točki ter dolžina</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and length</source>
         <translation>Nariši lok iz 2 točk ter dolžine</translation>
     </message>
@@ -670,7 +670,7 @@ da bodo spremembe začele delovat.</translation>
         <translation>&amp;2 točki in polmer</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and radius</source>
         <translation>Nariši lok iz dveh točk in polmera</translation>
     </message>
@@ -698,7 +698,7 @@ da bodo spremembe začele delovat.</translation>
         <translation>&amp;3 točke</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 3 points</source>
         <translation>Nariši lok iz treh točk</translation>
     </message>
@@ -751,7 +751,7 @@ da bodo spremembe začele delovat.</translation>
         <translation>&amp;Središče, Točka, Koti</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from center, point on arc and angles</source>
         <translation>Nariši lok iz središča, točke na loku ter kotov</translation>
     </message>
@@ -774,7 +774,7 @@ da bodo spremembe začele delovat.</translation>
         <translation>&amp;Koncentrično (z razdaljo)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc</source>
         <translation>Nariši koncentrični lok</translation>
     </message>
@@ -792,7 +792,7 @@ da bodo spremembe začele delovat.</translation>
         <translation>Koncentrično (&amp;skozi točko)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc through point</source>
         <translation>Nariši koncentrični lok skozi točko</translation>
     </message>
@@ -831,7 +831,7 @@ da bodo spremembe začele delovat.</translation>
         <translation>&amp;Tangenta, točka, polmer</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to entity, through point with radius</source>
         <translation>Nariši lok tangencialno na entiteto, skozi točko s polmerom</translation>
     </message>
@@ -859,7 +859,7 @@ da bodo spremembe začele delovat.</translation>
         <translation>&amp;Tangencialno povezano</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to base entity</source>
         <translation>Izriši lok tangencialno na nosilni element</translation>
     </message>
@@ -1045,7 +1045,7 @@ Ali jo želite obnoviti?</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>&amp;Batch2Pdf visible layout blocks</source>
         <translation type="unfinished">Vidni bloki postavitve Batch2Pdf</translation>
     </message>
@@ -1241,7 +1241,7 @@ Ali jo želite obnoviti?</translation>
         <translation>Orodja bloka</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+109"/>
         <source>Cannot edit block while editing a block in-place</source>
         <translation type="unfinished">Ne morem urediti bloka med urejanjem bloka na mestu</translation>
     </message>
@@ -1316,12 +1316,12 @@ Ali jo želite obnoviti?</translation>
     <message>
         <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
         <location line="+63"/>
-        <location line="+44"/>
+        <location line="+43"/>
         <source>Block List</source>
         <translation>Seznam blokov</translation>
     </message>
     <message>
-        <location line="-107"/>
+        <location line="-106"/>
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>
@@ -1619,7 +1619,7 @@ Ali jo želite obnoviti?</translation>
         <translation>Orodja kroga</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Circle</source>
         <translation>&amp;Krog</translation>
     </message>
@@ -1647,7 +1647,7 @@ Ali jo želite obnoviti?</translation>
         <translation>&amp;2 Točki</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from 2 diametrically opposite points</source>
         <translation>Nariši krog iz 2 diametrično nasprotni točki</translation>
     </message>
@@ -1700,7 +1700,7 @@ Ali jo želite obnoviti?</translation>
         <translation>&amp;2 točki in polmer</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 2 points and radius</source>
         <translation>Nariši krog iz dveh točk in polmera</translation>
     </message>
@@ -1734,12 +1734,12 @@ Ali jo želite obnoviti?</translation>
         <translation>Ni rešitve</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Circle/Circle2TP/Circle2TPInit.js" line="+6"/>
+        <location filename="../scripts/Draw/Circle/Circle2TP/Circle2TPInit.js" line="+5"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation>Nariši krog tangencialno na dve entiteti, skozi točko</translation>
     </message>
     <message>
-        <location line="-4"/>
+        <location line="-3"/>
         <source>2 Tan&amp;gents and Point</source>
         <translation>2 Ta&amp;genti ter točka</translation>
     </message>
@@ -1777,7 +1777,7 @@ Ali jo želite obnoviti?</translation>
         <translation>2 &amp;Tangenti in polmer</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to two entities with given radius</source>
         <translation>Nariši krog tangecialen na dve entiteti z danim polmerom</translation>
     </message>
@@ -1805,7 +1805,7 @@ Ali jo želite obnoviti?</translation>
         <translation>&amp;3 točke</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 3 points</source>
         <translation>Nariši krog iz 3 točk</translation>
     </message>
@@ -1844,7 +1844,7 @@ Ali jo želite obnoviti?</translation>
         <translation>3 T&amp;angente</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to three entities</source>
         <translation>Nariši krog tangencialno na tri entitete</translation>
     </message>
@@ -1874,7 +1874,7 @@ Ali jo želite obnoviti?</translation>
         <translation>Središče, &amp;Premer</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and diameter</source>
         <translation>Nariši krog iz središča in premera</translation>
     </message>
@@ -1897,7 +1897,7 @@ Ali jo želite obnoviti?</translation>
         <translation>&amp;Središče, točka</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from center and point on circle</source>
         <translation>Nariši krog iz centra ter točke na krogu</translation>
     </message>
@@ -1927,7 +1927,7 @@ Ali jo želite obnoviti?</translation>
         <translation>Središče, &amp;Polmer</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and radius</source>
         <translation>Nariši krog iz središča ter polmera</translation>
     </message>
@@ -1950,7 +1950,7 @@ Ali jo želite obnoviti?</translation>
         <translation>&amp;Kocentrično (z razdaljo)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric circle</source>
         <translation>Nariši kocentrični krog</translation>
     </message>
@@ -1968,7 +1968,7 @@ Ali jo želite obnoviti?</translation>
         <translation>Kocentično (&amp;skozi točko)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw concentric circle through point</source>
         <translation>Nariši kocentrični krog, skozi točko</translation>
     </message>
@@ -2007,7 +2007,7 @@ Ali jo želite obnoviti?</translation>
         <translation>&amp;Tangenta in 2 točki</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle through two points and tangential to one entity</source>
         <translation>Nariši krog skozi dve točki ter tangencialno na eno entiteto</translation>
     </message>
@@ -2025,7 +2025,7 @@ Ali jo želite obnoviti?</translation>
         <translation>&amp;Tangenta, Točka, Polmer</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to entity, through point with radius</source>
         <translation>Nariši krog tangencialno na entiteto, skozi točko s polmerom</translation>
     </message>
@@ -2137,18 +2137,18 @@ Ali jo želite obnoviti?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+68"/>
+        <location line="+67"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Ukazna vrstica</translation>
     </message>
     <message>
-        <location line="-21"/>
+        <location line="-20"/>
         <source>&amp;Command Line</source>
         <translation>&amp;Ukazna vrstica</translation>
     </message>
     <message>
-        <location line="+208"/>
+        <location line="+207"/>
         <source>Invalid value:</source>
         <translation>Neveljavna vrednost:</translation>
     </message>
@@ -2280,7 +2280,7 @@ Ali jo želite obnoviti?</translation>
         <translation>Pretvori mersko &amp;enoto risbe</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Convert drawing to a different drawing unit</source>
         <translation>Pretvori risbo v drugačno mersko enoto</translation>
     </message>
@@ -2392,7 +2392,7 @@ Ali jo želite obnoviti?</translation>
         <translation>&amp;Števec</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Auto increment number</source>
         <translation>Številka samodejnega koraka</translation>
     </message>
@@ -2423,7 +2423,7 @@ Ali jo želite obnoviti?</translation>
         <translation>Križ središčnice</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
         <translation>Nariši križ središčnice loku, krogu ali elipsi</translation>
     </message>
@@ -2569,7 +2569,7 @@ Ali jo želite obnoviti?</translation>
         <translation>&amp;Razveljavi izbor</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Deselect all entities</source>
         <translation>Razveljavi izbor vseh entitet</translation>
     </message>
@@ -2710,7 +2710,7 @@ Ali jo želite obnoviti?</translation>
         <translation>&amp;Poravnano</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw aligned dimension</source>
         <translation>Nariši poravnano kotiranje</translation>
     </message>
@@ -2738,7 +2738,7 @@ Ali jo želite obnoviti?</translation>
         <translation>&amp;Kota</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angular dimension</source>
         <translation>Nariši kotiranje kota</translation>
     </message>
@@ -2766,7 +2766,7 @@ Ali jo želite obnoviti?</translation>
         <translation>&amp;Diametrično</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw diametric dimension</source>
         <translation>Nariši diametrično kotiranje</translation>
     </message>
@@ -2779,7 +2779,7 @@ Ali jo želite obnoviti?</translation>
         <translation>&amp;Vodoravno</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw horizontal dimension</source>
         <translation>Nariši kotiranje vodoravno</translation>
     </message>
@@ -2802,7 +2802,7 @@ Ali jo želite obnoviti?</translation>
         <translation>&amp;Ordinata (X/Y)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+3"/>
         <source>Draw ordinate dimension</source>
         <translation>Nariši ordinatno kotiranje</translation>
     </message>
@@ -2825,7 +2825,7 @@ Ali jo želite obnoviti?</translation>
         <translation>&amp;Radialno</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw radial dimension</source>
         <translation>Narši radialno kotiranje</translation>
     </message>
@@ -2881,7 +2881,7 @@ Ali jo želite obnoviti?</translation>
         <translation>&amp;Rotirana (linearno)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw linear dimension at a fixed angle</source>
         <translation>Nariši linearno kotiranje pod določenim kotom</translation>
     </message>
@@ -2894,7 +2894,7 @@ Ali jo želite obnoviti?</translation>
         <translation>&amp;Navpično</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw vertical dimension</source>
         <translation>Nariši kotiranje navpično</translation>
     </message>
@@ -2957,7 +2957,7 @@ Ali jo želite obnoviti?</translation>
         <translation>Orodja dimenzij</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>D&amp;imension</source>
         <translation>&amp;Dimenzija</translation>
     </message>
@@ -3478,7 +3478,7 @@ je že na seznamu.</translation>
         <translation type="unfinished">Risanje Fms Lanes</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
         <translation type="unfinished">Risanje pasov FMS (rebra)</translation>
     </message>
@@ -4079,7 +4079,7 @@ je že na seznamu.</translation>
         <translation type="unfinished">Črpanje iz CSV</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Draws entities based on textual entries in a CSV file</source>
         <translation type="unfinished">Riše entitete na podlagi besedilnih vnosov v datoteki CSV</translation>
     </message>
@@ -4087,7 +4087,7 @@ je že na seznamu.</translation>
 <context>
     <name>DrawOrder</name>
     <message>
-        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+92"/>
+        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
         <translation>&amp;Zaporedje</translation>
     </message>
@@ -4185,7 +4185,7 @@ je že na seznamu.</translation>
         <translation>&amp;Nariši lomljenko</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw polyline with line and arc segments</source>
         <translation>Nariši lomljenko sestavljeno iz segmentov črt ter lokov</translation>
     </message>
@@ -4374,7 +4374,7 @@ je že na seznamu.</translation>
         <translation>&amp;Ukazna lupina</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+34"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
         <translation>Ukazna lupina</translation>
@@ -4403,7 +4403,7 @@ je že na seznamu.</translation>
         <translation>Orodja urejanja</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Edit</source>
         <translation>&amp;Uredi</translation>
     </message>
@@ -4481,7 +4481,7 @@ je že na seznamu.</translation>
         <translation>Uredi te&amp;kst</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Edit text</source>
         <translation>Uredi tekst</translation>
     </message>
@@ -4494,7 +4494,7 @@ je že na seznamu.</translation>
         <translation>Orodja elipse</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Ellipse</source>
         <translation>&amp;Elipsa</translation>
     </message>
@@ -4592,7 +4592,7 @@ je že na seznamu.</translation>
         <translation>&amp;Lok elipse</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw ellipse arc from center, major point, ratio and angles</source>
         <translation>Nariši lok elipse s pomočjo središča, glavne točke, razmera in kotov</translation>
     </message>
@@ -4605,7 +4605,7 @@ je že na seznamu.</translation>
         <translation>&amp;Elipsa (Središče, Točka, Razmerje)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw full ellipse from center, major point and ratio</source>
         <translation>Nariši polno elipso iz centra, glavne točke ter razmerja</translation>
     </message>
@@ -4641,7 +4641,7 @@ je že na seznamu.</translation>
         <translation>Elipsa z &amp;premeri</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and diameters</source>
         <translation>Nariši elipso iz pozicije in premerov</translation>
     </message>
@@ -4674,7 +4674,7 @@ je že na seznamu.</translation>
         <translation>Včrtan v štirikotnik</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse inscribed in quadrilateral</source>
         <translation>Nariši elipso včrtano v štirikotnik</translation>
     </message>
@@ -4697,7 +4697,7 @@ je že na seznamu.</translation>
         <translation>&amp;Vzporedna krivulja (z razdaljo)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse</source>
         <translation>Nariši vzporedno krivuljo elipsi</translation>
     </message>
@@ -4715,7 +4715,7 @@ je že na seznamu.</translation>
         <translation>Vzporedna krivulja (&amp;skozi točko)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse through point</source>
         <translation>Nariši vzporedno krivuljo elipsi skozi točko</translation>
     </message>
@@ -4751,7 +4751,7 @@ je že na seznamu.</translation>
         <translation>Elipsa s &amp;polmeri</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and radii</source>
         <translation>Nariši elipso iz pozicije ter polmeroma</translation>
     </message>
@@ -4876,7 +4876,7 @@ je že na seznamu.</translation>
         <translation>&amp;Rogljičast spoj</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation>Nariši rogljičast spoj</translation>
     </message>
@@ -5044,7 +5044,7 @@ je že na seznamu.</translation>
         <translation>Tri točke</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw three points</source>
         <translation>Nariši tri točke</translation>
     </message>
@@ -5193,7 +5193,7 @@ je že na seznamu.</translation>
         <translation>Orodja datoteke</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;File</source>
         <translation>&amp;Datoteka</translation>
     </message>
@@ -6308,12 +6308,12 @@ je že na seznamu.</translation>
 <context>
     <name>Hatch</name>
     <message>
-        <location filename="../scripts/Draw/Hatch/Hatch.js" line="+99"/>
+        <location filename="../scripts/Draw/Hatch/Hatch.js" line="+98"/>
         <source>&amp;Hatch</source>
         <translation>Š&amp;rafura</translation>
     </message>
     <message>
-        <location line="-27"/>
+        <location line="-26"/>
         <source>Hatch Tools</source>
         <translation>Orodja šrafure</translation>
     </message>
@@ -6384,7 +6384,7 @@ je že na seznamu.</translation>
         <translation>Šrafura iz &amp;izbora</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Create hatch or solid fill from selected boundary</source>
         <translation>Ustvari šrafuro ali polnilo iz izbranih mej</translation>
     </message>
@@ -6623,7 +6623,7 @@ je že na seznamu.</translation>
         <translation type="unfinished">Dodajanje 2D centroidov po meri</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Create a customizable 2D Centroid marker</source>
         <translation type="unfinished">Ustvarjanje prilagodljivega 2D centroidnega označevalnika</translation>
     </message>
@@ -6953,7 +6953,7 @@ je že na seznamu.</translation>
         <translation type="unfinished">Območje Centroid</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create an area 2D Centroid for a selected entity</source>
         <translation type="unfinished">Ustvarite 2D centroid območja za izbrano entiteto</translation>
     </message>
@@ -7075,7 +7075,7 @@ je že na seznamu.</translation>
         <translation type="unfinished">Centroidni poslušalec</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
         <translation type="unfinished">(De-)aktiviranje poslušalca transakcije za 2D centroide</translation>
     </message>
@@ -7328,7 +7328,7 @@ je že na seznamu.</translation>
         <translation type="unfinished">Vsota 2D centroidov z utežmi</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Combine selected 2D Centroid markers weighted</source>
         <translation type="unfinished">Združevanje izbranih 2D centroidnih označevalcev z utežjo</translation>
     </message>
@@ -7428,7 +7428,7 @@ je že na seznamu.</translation>
         <translation type="unfinished">Centroid žice</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create a wire 2D Centroid for a selection</source>
         <translation type="unfinished">Ustvarjanje žičnega 2D-centroida za izbor</translation>
     </message>
@@ -7446,7 +7446,7 @@ je že na seznamu.</translation>
         <translation>Orodja informacij</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Info</source>
         <translation>&amp;Podatki</translation>
     </message>
@@ -7774,7 +7774,7 @@ je že na seznamu.</translation>
         <translation>&amp;Negiraj izbor</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Invert the current selection</source>
         <translation>Negiraj tretnutni izbor</translation>
     </message>
@@ -7981,7 +7981,7 @@ je že na seznamu.</translation>
         <translation>Orodja plasti</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Layer</source>
         <translation>P&amp;last</translation>
     </message>
@@ -8125,7 +8125,7 @@ je že na seznamu.</translation>
     </message>
     <message>
         <location line="-55"/>
-        <location line="+110"/>
+        <location line="+109"/>
         <source>Layer List</source>
         <translation>Seznam plasti</translation>
     </message>
@@ -8153,7 +8153,7 @@ je že na seznamu.</translation>
         <translation>&amp;Vodilo</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
         <translation>Nariši vodilo (zaporedje črt s puščico)</translation>
     </message>
@@ -8212,7 +8212,7 @@ je že na seznamu.</translation>
         <translation>Orodja črte</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Line</source>
         <translation>&amp;Črta</translation>
     </message>
@@ -8290,7 +8290,7 @@ je že na seznamu.</translation>
         <translation>Črta iz &amp;2 točk</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single line or sequence of lines</source>
         <translation>Nariši črto ali zaporedje črt</translation>
     </message>
@@ -8343,7 +8343,7 @@ je že na seznamu.</translation>
         <translation>Črta in &amp;kot</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line at a given absolute angle</source>
         <translation>Nariši črto na danem kotu</translation>
     </message>
@@ -8381,7 +8381,7 @@ je že na seznamu.</translation>
         <translation>&amp;Delitelj kota</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angle bisector, trisector, ...</source>
         <translation>Nariši delitev kota na polovice, tretjine, ...</translation>
     </message>
@@ -8439,7 +8439,7 @@ je že na seznamu.</translation>
         <translation>Škatlast&amp; spoj iz dveh točk</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
         <translation>Nariši škatlast spoj, razpoke, tetive</translation>
     </message>
@@ -8447,7 +8447,7 @@ je že na seznamu.</translation>
 <context>
     <name>LineDove</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+6"/>
+        <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+5"/>
         <source>Draw a dovetail joint</source>
         <translation>Nariši rogljičast spoj</translation>
     </message>
@@ -8462,7 +8462,7 @@ je že na seznamu.</translation>
         <translation>Druga točka</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="-4"/>
+        <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="-3"/>
         <source>&amp;Dovetail Joint from 2 Points</source>
         <translation>Spoj &amp;rogličenja iz 2 točk</translation>
     </message>
@@ -8505,7 +8505,7 @@ je že na seznamu.</translation>
         <translation>&amp;Prostoročna črta</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw freehand line</source>
         <translation>Nariši prostoročno črto</translation>
     </message>
@@ -8543,7 +8543,7 @@ je že na seznamu.</translation>
         <translation>&amp;Vodoravna črta</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal line</source>
         <translation>Nariši vodoravno črto</translation>
     </message>
@@ -8581,7 +8581,7 @@ je že na seznamu.</translation>
         <translation>&amp;Pravokotno</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to base entity</source>
         <translation>Nariši črto pravokotno na bazno entiteto</translation>
     </message>
@@ -8609,7 +8609,7 @@ je že na seznamu.</translation>
         <translation>Pravotkotno / Tange&amp;nta</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to line and tangent to circle, arc or ellipse</source>
         <translation>Nariši črto pravokotno na črto in tangentno na krog, lok ali elipso</translation>
     </message>
@@ -8632,7 +8632,7 @@ je že na seznamu.</translation>
         <translation>Vzpo&amp;redno (z razdaljo)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
         <translation>Nariši vzporednico obstoječi črti ali kocentrični lok, krog</translation>
     </message>
@@ -8650,7 +8650,7 @@ je že na seznamu.</translation>
         <translation>Vzpo&amp;redno (skozi točko)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
         <translation>Nariši vzporedno črto ali kocentrični krog skozi dano točko</translation>
     </message>
@@ -8726,7 +8726,7 @@ je že na seznamu.</translation>
         <translation>R&amp;elativni kot</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line with relative angle to base entity</source>
         <translation>Nariši črto z relativnim kotom na bazno entiteto</translation>
     </message>
@@ -8767,7 +8767,7 @@ je že na seznamu.</translation>
         <translation>&amp;Tangenta (točka, krog)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (point, circle)</source>
         <translation>Nariši tangento (točka, krog)</translation>
     </message>
@@ -8795,7 +8795,7 @@ je že na seznamu.</translation>
         <translation>Tan&amp;genta (dva kroga)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (circle, circle)</source>
         <translation>Nariši tangento (krog, krog)</translation>
     </message>
@@ -8808,7 +8808,7 @@ je že na seznamu.</translation>
         <translation>&amp;Navpična črta</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical line</source>
         <translation>Nariši navpično črto</translation>
     </message>
@@ -9000,7 +9000,7 @@ je že na seznamu.</translation>
         <translation>Razna orodja</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc</source>
         <translation>Razno</translation>
     </message>
@@ -9023,7 +9023,7 @@ je že na seznamu.</translation>
         <translation>Razna blokovna orodja</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Block</source>
         <translation>&amp;Blok</translation>
     </message>
@@ -9041,7 +9041,7 @@ je že na seznamu.</translation>
         <translation>Razna orodja razvoja</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>De&amp;velopment</source>
         <translation>Raz&amp;voj</translation>
     </message>
@@ -9059,7 +9059,7 @@ je že na seznamu.</translation>
         <translation>Razna orodja risbe</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc Draw</source>
         <translation>Razno risanje</translation>
     </message>
@@ -9082,7 +9082,7 @@ je že na seznamu.</translation>
         <translation>Orodja raznega uvoza/izvoza</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Import/Export</source>
         <translation>&amp;Uvozi/Izvozi</translation>
     </message>
@@ -9100,7 +9100,7 @@ je že na seznamu.</translation>
         <translation type="unfinished">Razna informacijska orodja</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Information</source>
         <translation type="unfinished">Informacije</translation>
     </message>
@@ -9118,7 +9118,7 @@ je že na seznamu.</translation>
         <translation>Razna orodja modifikacij</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Modify</source>
         <translation>&amp;Modificiraj</translation>
     </message>
@@ -9136,7 +9136,7 @@ je že na seznamu.</translation>
         <translation>Razna orodja izbire</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Select</source>
         <translation>&amp;Izberi</translation>
     </message>
@@ -9149,7 +9149,7 @@ je že na seznamu.</translation>
         <translation>Orodja za urejanje</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Modify</source>
         <translation>&amp;Uredi</translation>
     </message>
@@ -9383,7 +9383,7 @@ je že na seznamu.</translation>
         <translation>Odmik (z razdaljo)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse</source>
         <translation>Odmik črte, loka, kroga ali elipse</translation>
     </message>
@@ -9431,7 +9431,7 @@ je že na seznamu.</translation>
         <translation>Odmik (skozi točko)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse through point</source>
         <translation>Odmik črte, loka, kroga ali elipse skozi točko</translation>
     </message>
@@ -9459,7 +9459,7 @@ je že na seznamu.</translation>
         <translation>&amp;Odpri</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open an existing drawing</source>
         <translation>Odpri obstoječo risbo</translation>
     </message>
@@ -9669,7 +9669,7 @@ je že na seznamu.</translation>
         <translation>P&amp;DF izvoz</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Exports the current drawing as PDF</source>
         <translation>Izvozi trenutno risbo v PDF</translation>
     </message>
@@ -9703,7 +9703,7 @@ je že na seznamu.</translation>
         <translation>Orodja točke</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Point</source>
         <translation>&amp;Točka</translation>
     </message>
@@ -9721,7 +9721,7 @@ je že na seznamu.</translation>
         <translation>&amp;Točka</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single point</source>
         <translation>Nariši točko</translation>
     </message>
@@ -9794,7 +9794,7 @@ je že na seznamu.</translation>
         <translation>Orodja lomljenke</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Polyline</source>
         <translation>&amp;Lomljenka</translation>
     </message>
@@ -9909,7 +9909,7 @@ je že na seznamu.</translation>
         <translation type="unfinished">Simbol prekinitve poljske črte iz 2 točk</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a polyline break symbol from 2 points</source>
         <translation type="unfinished">Narišite simbol prekinitve poljske črte iz 2 točk</translation>
     </message>
@@ -9968,7 +9968,7 @@ je že na seznamu.</translation>
         <translation>&amp;Natisni</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current drawing</source>
         <translation>Natisni tretnuno risbo</translation>
     </message>
@@ -9981,7 +9981,7 @@ je že na seznamu.</translation>
         <translation>Natisni &amp;trenutni pogled</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current view</source>
         <translation>Natisni trenutni pogled</translation>
     </message>
@@ -10129,7 +10129,7 @@ je že na seznamu.</translation>
         <translation>Predogled &amp;tiskanja</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Preview how current drawing would be printed</source>
         <translation>Predoglek, kako bo trenutna risba natisnjena</translation>
     </message>
@@ -10142,7 +10142,7 @@ je že na seznamu.</translation>
         <translation>Orodja projekcij</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Projection</source>
         <translation>&amp;Projekcija</translation>
     </message>
@@ -10160,12 +10160,12 @@ je že na seznamu.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1654"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1666"/>
         <source>*VARIES*</source>
         <translation>*RAZLIČNO*</translation>
     </message>
     <message>
-        <location line="-1435"/>
+        <location line="-1445"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10180,7 +10180,7 @@ je že na seznamu.</translation>
         <translation>Specifične lastnosti</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+20"/>
         <source>Dependent Entities</source>
         <translation>Odvisne entitete</translation>
     </message>
@@ -10220,12 +10220,12 @@ je že na seznamu.</translation>
         <translation>Prikaži vse lasnosti</translation>
     </message>
     <message>
-        <location line="+772"/>
+        <location line="+781"/>
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>
     <message>
-        <location line="-637"/>
+        <location line="-646"/>
         <source>Auto</source>
         <translation>Samodejno</translation>
     </message>
@@ -10245,9 +10245,9 @@ je že na seznamu.</translation>
         <translation>Ne</translation>
     </message>
     <message>
-        <location line="+396"/>
+        <location line="+405"/>
         <location line="+57"/>
-        <location line="+11"/>
+        <location line="+10"/>
         <source>Property Editor</source>
         <translation>Urejevalec lastnosti</translation>
     </message>
@@ -10262,7 +10262,7 @@ je že na seznamu.</translation>
         <translation>Splošne lastnosti</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+31"/>
         <source>Color:</source>
         <translation>Barva:</translation>
     </message>
@@ -10761,7 +10761,7 @@ je že na seznamu.</translation>
         <translation>Z&amp;aženi skripto</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open and run a script file</source>
         <translation>Odpri in zaženi skriptno datoteko</translation>
     </message>
@@ -11098,7 +11098,7 @@ je že na seznamu.</translation>
         <translation>Orodja izbire</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+13"/>
         <source>Selection Tools Panel</source>
         <translation>Pano orodij izbire</translation>
     </message>
@@ -11116,7 +11116,7 @@ je že na seznamu.</translation>
         <translation>Izberi &amp;vse</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Select all visible entities</source>
         <translation>Izberi vse vidne entitete</translation>
     </message>
@@ -11234,7 +11234,7 @@ je že na seznamu.</translation>
         <translation>(Od-)Označi o&amp;bbris</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select connected entities</source>
         <translation>(Od-)Označi staknjene entitete</translation>
     </message>
@@ -11282,7 +11282,7 @@ je že na seznamu.</translation>
         <translation>(Od-)izberi eintitete v pres&amp;esečišču</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities intersected by a line</source>
         <translation>(Od-)izberi vse entitete presekane z črto</translation>
     </message>
@@ -11343,7 +11343,7 @@ je že na seznamu.</translation>
         <translation>(Od-)Izberi &amp;plast</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities on the same layer</source>
         <translation>(Od-)Izberi vse entitete na isti plasti</translation>
     </message>
@@ -11396,7 +11396,7 @@ je že na seznamu.</translation>
         <translation>(Od-)izberi &amp;pravokotno območje</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities inside a rectangle</source>
         <translation>(Od-)izberi vse entitete znotraj pravokotnika</translation>
     </message>
@@ -11487,7 +11487,7 @@ je že na seznamu.</translation>
         <translation>Orodja oblike</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Shape</source>
         <translation>&amp;Oblike</translation>
     </message>
@@ -11554,7 +11554,7 @@ je že na seznamu.</translation>
         <translation>Mn&amp;ogokotnik (Sredina, rob)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and middle point of side</source>
         <translation>Nariši standardni mnogokotnik iz središča ter sredine stranice</translation>
     </message>
@@ -11592,7 +11592,7 @@ je že na seznamu.</translation>
         <translation>M&amp;nogokotnik (Stranica, stranica)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from middle points of two opposite sides or two opposite corners</source>
         <translation>Nariši mnogokotnik iz središčnih točk dveh si nasprotnih stranic ali kotov</translation>
     </message>
@@ -11630,7 +11630,7 @@ je že na seznamu.</translation>
         <translation>Mn&amp;ogokotnik (središče, kot)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and corner point</source>
         <translation>Nariši navadni poligon iz središča in vogalne točke</translation>
     </message>
@@ -11658,7 +11658,7 @@ je že na seznamu.</translation>
         <translation>Mno&amp;gokotnik (2 točki stranice)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from end points of one side</source>
         <translation>Nariši navadni mnogokotnik iz krajiščnih točk ene stranice</translation>
     </message>
@@ -11671,7 +11671,7 @@ je že na seznamu.</translation>
         <translation>&amp;Pravotkotnik</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle from two corners</source>
         <translation>Nariši pravokotnik iz dveh kotov</translation>
     </message>
@@ -11689,7 +11689,7 @@ je že na seznamu.</translation>
         <translation>Pravokotnik z &amp;merami</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle with position and size</source>
         <translation>Nariši pravokotnik s pomočjo pozicije in mer</translation>
     </message>
@@ -11775,7 +11775,7 @@ je že na seznamu.</translation>
         <translation>Orodja pritrjevanja</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+25"/>
         <source>&amp;Snap</source>
         <translation>&amp;Pritrdi</translation>
     </message>
@@ -11923,7 +11923,7 @@ je že na seznamu.</translation>
         <translation>Raz&amp;dalja ročno</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Snap distance between 2 points</source>
         <translation>Zajemi razdaljo med dvema točkama</translation>
     </message>
@@ -12093,7 +12093,7 @@ je že na seznamu.</translation>
         <translation>Orodja krivulje</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Spline</source>
         <translation>&amp;Krivulja</translation>
     </message>
@@ -12141,7 +12141,7 @@ je že na seznamu.</translation>
         <translation>&amp;Krivulja (kontrolne točke)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw spline from control points</source>
         <translation>Nariši krivuljo iz kontrolnih točk</translation>
     </message>
@@ -12355,7 +12355,7 @@ je že na seznamu.</translation>
         <translation>&amp;Besedilo</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text</source>
         <translation>Vstavi besedilo</translation>
     </message>
@@ -12478,7 +12478,7 @@ je že na seznamu.</translation>
         <translation>&amp;Besedilo po entiteti</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text along an entity</source>
         <translation>Nariši besedilo po poti entitete</translation>
     </message>
@@ -13047,7 +13047,7 @@ je že na seznamu.</translation>
         <translation>Pre&amp;makni / Kopiraj</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+9"/>
         <source>Move or copy entities once or multiple times</source>
         <translation>Premakni ali kopiraj entitete enkrat ali mnogokrat</translation>
     </message>
@@ -13435,7 +13435,7 @@ je že na seznamu.</translation>
         <translation>Orodja prikaza</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>View</source>
         <translation>Pogled</translation>
     </message>
@@ -13909,7 +13909,7 @@ je že na seznamu.</translation>
         <translation>&amp;Vodorana pomožna črta</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal construction line</source>
         <translation>Nariši vodoravno pomožno/konstrukcijsko črto</translation>
     </message>
@@ -13922,7 +13922,7 @@ je že na seznamu.</translation>
         <translation>&amp;Navpična pomožna črta</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical construction line</source>
         <translation>Nariši navpišno pomožno/konstrukcijsko črto</translation>
     </message>
@@ -13940,7 +13940,7 @@ je že na seznamu.</translation>
         <translation>Orodja povečave</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Zoom</source>
         <translation>&amp;Povečava</translation>
     </message>

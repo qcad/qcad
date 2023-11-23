@@ -325,7 +325,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">빈 블록 추가</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Add new empty block</source>
         <translation type="unfinished">새 빈 블록 추가</translation>
     </message>
@@ -412,7 +412,7 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1986"/>
+        <location filename="../scripts/Apollonius.js" line="+1989"/>
         <source>Invalid radius</source>
         <translation type="unfinished">잘못된 반경</translation>
     </message>
@@ -438,7 +438,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">아크 도구</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Arc</source>
         <translation type="unfinished">아크</translation>
     </message>
@@ -491,7 +491,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">2 점과 각도</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and angle</source>
         <translation type="unfinished">두 점과 각도에서 호 그리기</translation>
     </message>
@@ -544,7 +544,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">2 포인트 및 높이</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and height</source>
         <translation type="unfinished">두 점과 높이에서 호를 그립니다</translation>
     </message>
@@ -602,7 +602,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">2 포인트 및 길이</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and length</source>
         <translation type="unfinished">두 점과 길이에서 호를 그립니다</translation>
     </message>
@@ -670,7 +670,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">2 점과 반경</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and radius</source>
         <translation type="unfinished">두 점과 반경에서 호 그리기</translation>
     </message>
@@ -698,7 +698,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">3 포인트</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 3 points</source>
         <translation type="unfinished">3점에서 호 그리기</translation>
     </message>
@@ -751,7 +751,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">중심, 점, 각도</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from center, point on arc and angles</source>
         <translation type="unfinished">중심에서 호를 그리고 호와 각도를 가리킵니다</translation>
     </message>
@@ -774,7 +774,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">동심원(거리 포함)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc</source>
         <translation type="unfinished">동심원 그리기</translation>
     </message>
@@ -792,7 +792,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">동심원(점 통과)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc through point</source>
         <translation type="unfinished">점을 통과하는 동심원 그리기</translation>
     </message>
@@ -831,7 +831,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">접선, 점, 반지름</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to entity, through point with radius</source>
         <translation type="unfinished">반경이 있는 점을 통과하여 엔티티에 접하는 호를 그립니다</translation>
     </message>
@@ -859,7 +859,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">접선 연결</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to base entity</source>
         <translation type="unfinished">기본 엔터티에 접하는 호를 그립니다</translation>
     </message>
@@ -1043,7 +1043,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>&amp;Batch2Pdf visible layout blocks</source>
         <translation type="unfinished">Batch2Pdf 표시 레이아웃 블록</translation>
     </message>
@@ -1239,7 +1239,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">차단 도구</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Block</source>
         <translation type="unfinished">블록</translation>
     </message>
@@ -1319,7 +1319,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+0"/>
         <location line="+63"/>
-        <location line="+44"/>
+        <location line="+43"/>
         <source>Block List</source>
         <translation type="unfinished">차단 목록</translation>
     </message>
@@ -1617,7 +1617,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">원형 도구</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Circle</source>
         <translation type="unfinished">서클</translation>
     </message>
@@ -1645,7 +1645,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">2 포인트</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from 2 diametrically opposite points</source>
         <translation type="unfinished">직경이 정반대인 두 지점에서 원을 그립니다</translation>
     </message>
@@ -1698,7 +1698,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">2 점과 반경</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 2 points and radius</source>
         <translation type="unfinished">두 점과 반경에서 원 그리기</translation>
     </message>
@@ -1737,7 +1737,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">2 탄젠트와 포인트</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation type="unfinished">두 엔티티에 접하는 원, 관통하는 점</translation>
     </message>
@@ -1775,7 +1775,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">2 탄젠트 및 반경</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to two entities with given radius</source>
         <translation type="unfinished">반지름이 지정된 두 엔티티에 접하는 원을 그립니다</translation>
     </message>
@@ -1803,7 +1803,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">3 포인트</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 3 points</source>
         <translation type="unfinished">3점에서 원 그리기</translation>
     </message>
@@ -1842,7 +1842,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">3 탄젠트</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to three entities</source>
         <translation type="unfinished">세 개체에 접하는 원을 그립니다</translation>
     </message>
@@ -1872,7 +1872,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">중심, 지름</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and diameter</source>
         <translation type="unfinished">중심과 지름에서 원 그리기</translation>
     </message>
@@ -1895,7 +1895,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">중앙, 포인트</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from center and point on circle</source>
         <translation type="unfinished">중앙에서 원을 그리고 원을 가리킵니다</translation>
     </message>
@@ -1925,7 +1925,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">중심, 반경</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and radius</source>
         <translation type="unfinished">중심과 반경에서 원 그리기</translation>
     </message>
@@ -1948,7 +1948,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">동심원(거리 포함)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric circle</source>
         <translation type="unfinished">동심원 그리기</translation>
     </message>
@@ -1966,7 +1966,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">동심원(점 통과)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw concentric circle through point</source>
         <translation type="unfinished">점을 통과하는 동심원 그리기</translation>
     </message>
@@ -2005,7 +2005,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">탄젠트 및 2점</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle through two points and tangential to one entity</source>
         <translation type="unfinished">두 점을 통과하고 하나의 엔티티에 접하는 원을 그립니다</translation>
     </message>
@@ -2028,7 +2028,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">접선, 점, 반지름</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to entity, through point with radius</source>
         <translation type="unfinished">반경이 있는 점을 통과하여 엔티티에 접하는 원을 그립니다</translation>
     </message>
@@ -2135,18 +2135,18 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+68"/>
+        <location line="+67"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation type="unfinished">명령줄</translation>
     </message>
     <message>
-        <location line="-21"/>
+        <location line="-20"/>
         <source>&amp;Command Line</source>
         <translation type="unfinished">명령줄</translation>
     </message>
     <message>
-        <location line="+208"/>
+        <location line="+207"/>
         <source>Invalid value:</source>
         <translation type="unfinished">잘못된 값입니다:</translation>
     </message>
@@ -2293,7 +2293,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">도면 단위 변환</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Convert drawing to a different drawing unit</source>
         <translation type="unfinished">도면을 다른 도면 단위로 변환</translation>
     </message>
@@ -2390,7 +2390,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">카운터</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Auto increment number</source>
         <translation type="unfinished">자동 증분 번호</translation>
     </message>
@@ -2421,7 +2421,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">중앙선 교차</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
         <translation type="unfinished">호, 원 또는 타원으로 중심선 십자 그리기</translation>
     </message>
@@ -2567,7 +2567,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">모두 선택 해제</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Deselect all entities</source>
         <translation type="unfinished">모든 엔티티 선택 해제</translation>
     </message>
@@ -2708,7 +2708,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">정렬됨</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw aligned dimension</source>
         <translation type="unfinished">정렬된 치수 그리기</translation>
     </message>
@@ -2741,7 +2741,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Angular</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angular dimension</source>
         <translation type="unfinished">각도 치수 그리기</translation>
     </message>
@@ -2764,7 +2764,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">직경</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw diametric dimension</source>
         <translation type="unfinished">지름 치수 그리기</translation>
     </message>
@@ -2777,7 +2777,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">수평</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw horizontal dimension</source>
         <translation type="unfinished">가로 치수 그리기</translation>
     </message>
@@ -2800,7 +2800,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">정사각형(X/Y)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+3"/>
         <source>Draw ordinate dimension</source>
         <translation type="unfinished">좌표 차원 그리기</translation>
     </message>
@@ -2823,7 +2823,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">방사형</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw radial dimension</source>
         <translation type="unfinished">방사형 치수 그리기</translation>
     </message>
@@ -2876,7 +2876,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">회전(선형)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw linear dimension at a fixed angle</source>
         <translation type="unfinished">고정된 각도로 선형 치수 그리기</translation>
     </message>
@@ -2889,7 +2889,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">세로</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw vertical dimension</source>
         <translation type="unfinished">세로 치수 그리기</translation>
     </message>
@@ -2952,7 +2952,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">치수 도구</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>D&amp;imension</source>
         <translation type="unfinished">차원</translation>
     </message>
@@ -3473,7 +3473,7 @@ is already in the list.</source>
         <translation type="unfinished">Fms 차선 그리기</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
         <translation type="unfinished">FMS 레인(리브) 그리기</translation>
     </message>
@@ -4074,7 +4074,7 @@ is already in the list.</source>
         <translation type="unfinished">CSV에서 그리기</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Draws entities based on textual entries in a CSV file</source>
         <translation type="unfinished">CSV 파일의 텍스트 항목을 기반으로 엔티티를 그립니다</translation>
     </message>
@@ -4082,7 +4082,7 @@ is already in the list.</source>
 <context>
     <name>DrawOrder</name>
     <message>
-        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+92"/>
+        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
         <translation type="unfinished">그리기 순서</translation>
     </message>
@@ -4180,7 +4180,7 @@ is already in the list.</source>
         <translation type="unfinished">폴리라인 그리기</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw polyline with line and arc segments</source>
         <translation type="unfinished">선과 호 세그먼트로 폴리라인 그리기</translation>
     </message>
@@ -4366,7 +4366,7 @@ is already in the list.</source>
         <translation type="unfinished">스크립트 셸</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+34"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
         <translation type="unfinished">스크립트 셸</translation>
@@ -4395,7 +4395,7 @@ is already in the list.</source>
         <translation type="unfinished">편집 도구</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Edit</source>
         <translation type="unfinished">편집</translation>
     </message>
@@ -4473,7 +4473,7 @@ is already in the list.</source>
         <translation type="unfinished">텍스트 편집</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Edit text</source>
         <translation type="unfinished">텍스트 편집</translation>
     </message>
@@ -4486,7 +4486,7 @@ is already in the list.</source>
         <translation type="unfinished">타원 도구</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Ellipse</source>
         <translation type="unfinished">타원</translation>
     </message>
@@ -4584,7 +4584,7 @@ is already in the list.</source>
         <translation type="unfinished">타원 호</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw ellipse arc from center, major point, ratio and angles</source>
         <translation type="unfinished">중심, 주요 점, 비율 및 각도에서 타원 호를 그립니다</translation>
     </message>
@@ -4597,7 +4597,7 @@ is already in the list.</source>
         <translation type="unfinished">타원(중심, 점, 비율)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw full ellipse from center, major point and ratio</source>
         <translation type="unfinished">중심, 주요 점 및 비율에서 전체 타원을 그립니다</translation>
     </message>
@@ -4633,7 +4633,7 @@ is already in the list.</source>
         <translation type="unfinished">지름이 있는 타원</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and diameters</source>
         <translation type="unfinished">위치와 지름이 있는 타원 그리기</translation>
     </message>
@@ -4666,7 +4666,7 @@ is already in the list.</source>
         <translation type="unfinished">사변형으로 새겨져 있습니다</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse inscribed in quadrilateral</source>
         <translation type="unfinished">사변형에 새겨진 타원을 그립니다</translation>
     </message>
@@ -4689,7 +4689,7 @@ is already in the list.</source>
         <translation type="unfinished">평행 커브(거리 포함)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse</source>
         <translation type="unfinished">타원에 평행 커브 그리기</translation>
     </message>
@@ -4707,7 +4707,7 @@ is already in the list.</source>
         <translation type="unfinished">평행 커브(점 통과)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse through point</source>
         <translation type="unfinished">점을 통과하는 타원에 평행 커브를 그립니다</translation>
     </message>
@@ -4743,7 +4743,7 @@ is already in the list.</source>
         <translation type="unfinished">반지름이 있는 타원</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and radii</source>
         <translation type="unfinished">위치와 반지름이 있는 타원 그리기</translation>
     </message>
@@ -4868,7 +4868,7 @@ is already in the list.</source>
         <translation type="unfinished">더브테일 조인트</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation type="unfinished">더브테일 조인트 그리기</translation>
     </message>
@@ -5036,7 +5036,7 @@ is already in the list.</source>
         <translation type="unfinished">세 점</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw three points</source>
         <translation type="unfinished">세 점 그리기</translation>
     </message>
@@ -5182,7 +5182,7 @@ is already in the list.</source>
         <translation type="unfinished">파일 도구</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;File</source>
         <translation type="unfinished">파일</translation>
     </message>
@@ -6302,7 +6302,7 @@ is already in the list.</source>
         <translation type="unfinished">해치 도구</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Hatch</source>
         <translation type="unfinished">해치</translation>
     </message>
@@ -6373,7 +6373,7 @@ is already in the list.</source>
         <translation type="unfinished">선택에서 해치</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Create hatch or solid fill from selected boundary</source>
         <translation type="unfinished">선택한 경계에서 해치 또는 솔리드 채우기 만들기</translation>
     </message>
@@ -6612,7 +6612,7 @@ is already in the list.</source>
         <translation type="unfinished">사용자 지정 2D 중심 추가</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Create a customizable 2D Centroid marker</source>
         <translation type="unfinished">사용자 지정 가능한 2D 중심 마커 만들기</translation>
     </message>
@@ -6942,7 +6942,7 @@ is already in the list.</source>
         <translation type="unfinished">영역 중심</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create an area 2D Centroid for a selected entity</source>
         <translation type="unfinished">선택한 엔터티에 대한 영역 2D 중심 만들기</translation>
     </message>
@@ -7064,7 +7064,7 @@ is already in the list.</source>
         <translation type="unfinished">중심 청취자</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
         <translation type="unfinished">2D 센트로이드에 대한 트랜잭션 리스너 (디)활성화</translation>
     </message>
@@ -7317,7 +7317,7 @@ is already in the list.</source>
         <translation type="unfinished">2D 센트로이드 가중치 합계</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Combine selected 2D Centroid markers weighted</source>
         <translation type="unfinished">선택한 2D 중심 마커 가중치 결합</translation>
     </message>
@@ -7417,7 +7417,7 @@ is already in the list.</source>
         <translation type="unfinished">와이어 중심</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create a wire 2D Centroid for a selection</source>
         <translation type="unfinished">선택 영역에 대한 와이어 2D 중심선 만들기</translation>
     </message>
@@ -7435,7 +7435,7 @@ is already in the list.</source>
         <translation type="unfinished">정보 도구</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Info</source>
         <translation type="unfinished">정보</translation>
     </message>
@@ -7763,7 +7763,7 @@ is already in the list.</source>
         <translation type="unfinished">반전 선택</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Invert the current selection</source>
         <translation type="unfinished">현재 선택 항목 반전</translation>
     </message>
@@ -7970,7 +7970,7 @@ is already in the list.</source>
         <translation type="unfinished">레이어 도구</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Layer</source>
         <translation type="unfinished">레이어</translation>
     </message>
@@ -8109,12 +8109,12 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+110"/>
+        <location line="+109"/>
         <source>Layer List</source>
         <translation type="unfinished">레이어 목록</translation>
     </message>
     <message>
-        <location line="-55"/>
+        <location line="-54"/>
         <source>&amp;Layer List</source>
         <translation type="unfinished">레이어 목록</translation>
     </message>
@@ -8152,7 +8152,7 @@ is already in the list.</source>
         <translation type="unfinished">리더</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
         <translation type="unfinished">리더 그리기(화살표가 있는 선 시퀀스)</translation>
     </message>
@@ -8201,7 +8201,7 @@ is already in the list.</source>
         <translation type="unfinished">라인 도구</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Line</source>
         <translation type="unfinished">라인</translation>
     </message>
@@ -8279,7 +8279,7 @@ is already in the list.</source>
         <translation type="unfinished">2점에서 선</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single line or sequence of lines</source>
         <translation type="unfinished">단일 선 또는 일련의 선 그리기</translation>
     </message>
@@ -8332,7 +8332,7 @@ is already in the list.</source>
         <translation type="unfinished">각도에서 선</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line at a given absolute angle</source>
         <translation type="unfinished">주어진 절대 각도로 선 그리기</translation>
     </message>
@@ -8370,7 +8370,7 @@ is already in the list.</source>
         <translation type="unfinished">각도 이등분선</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angle bisector, trisector, ...</source>
         <translation type="unfinished">각도 이등분선, 삼등분선 그리기, ...</translation>
     </message>
@@ -8428,7 +8428,7 @@ is already in the list.</source>
         <translation type="unfinished">2 포인트에서 박스 조인트</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
         <translation type="unfinished">박스 조인트 핑거, 슬롯 및 테논 그리기</translation>
     </message>
@@ -8471,7 +8471,7 @@ is already in the list.</source>
         <translation type="unfinished">2 포인트에서 도브테일 조인트</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation type="unfinished">더브테일 조인트 그리기</translation>
     </message>
@@ -8494,7 +8494,7 @@ is already in the list.</source>
         <translation type="unfinished">프리핸드 라인</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw freehand line</source>
         <translation type="unfinished">자유형 선 그리기</translation>
     </message>
@@ -8532,7 +8532,7 @@ is already in the list.</source>
         <translation type="unfinished">수평선</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal line</source>
         <translation type="unfinished">수평선 그리기</translation>
     </message>
@@ -8570,7 +8570,7 @@ is already in the list.</source>
         <translation type="unfinished">직교</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to base entity</source>
         <translation type="unfinished">기본 엔터티에 직교하는 선 그리기</translation>
     </message>
@@ -8598,7 +8598,7 @@ is already in the list.</source>
         <translation type="unfinished">직교/탄젠트</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to line and tangent to circle, arc or ellipse</source>
         <translation type="unfinished">선에 직교하고 원, 호 또는 타원에 접하는 선을 그립니다</translation>
     </message>
@@ -8621,7 +8621,7 @@ is already in the list.</source>
         <translation type="unfinished">평행(거리 포함)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
         <translation type="unfinished">기존 선 또는 동심원, 원에 평행하게 그리기</translation>
     </message>
@@ -8639,7 +8639,7 @@ is already in the list.</source>
         <translation type="unfinished">평행(포인트 통과)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
         <translation type="unfinished">주어진 점을 통해 평행선, 동심원 또는 원 그리기</translation>
     </message>
@@ -8715,7 +8715,7 @@ is already in the list.</source>
         <translation type="unfinished">상대 각도</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line with relative angle to base entity</source>
         <translation type="unfinished">기본 엔티티에 상대적인 각도로 선 그리기</translation>
     </message>
@@ -8756,7 +8756,7 @@ is already in the list.</source>
         <translation type="unfinished">탄젠트(점, 원)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (point, circle)</source>
         <translation type="unfinished">접선(점, 원) 그리기</translation>
     </message>
@@ -8784,7 +8784,7 @@ is already in the list.</source>
         <translation type="unfinished">탄젠트(두 원)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (circle, circle)</source>
         <translation type="unfinished">접선(원, 원) 그리기</translation>
     </message>
@@ -8797,7 +8797,7 @@ is already in the list.</source>
         <translation type="unfinished">수직선</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical line</source>
         <translation type="unfinished">수직선 그리기</translation>
     </message>
@@ -8989,7 +8989,7 @@ is already in the list.</source>
         <translation type="unfinished">기타 도구</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc</source>
         <translation type="unfinished">기타</translation>
     </message>
@@ -9012,7 +9012,7 @@ is already in the list.</source>
         <translation type="unfinished">기타 블록 도구</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Block</source>
         <translation type="unfinished">블록</translation>
     </message>
@@ -9030,7 +9030,7 @@ is already in the list.</source>
         <translation type="unfinished">기타 개발 도구</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>De&amp;velopment</source>
         <translation type="unfinished">개발</translation>
     </message>
@@ -9048,7 +9048,7 @@ is already in the list.</source>
         <translation type="unfinished">기타 그리기 도구</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc Draw</source>
         <translation type="unfinished">기타 추첨</translation>
     </message>
@@ -9071,7 +9071,7 @@ is already in the list.</source>
         <translation type="unfinished">기타 가져오기/내보내기 도구</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Import/Export</source>
         <translation type="unfinished">가져오기/내보내기</translation>
     </message>
@@ -9089,7 +9089,7 @@ is already in the list.</source>
         <translation type="unfinished">기타 정보 도구</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Information</source>
         <translation type="unfinished">정보</translation>
     </message>
@@ -9107,7 +9107,7 @@ is already in the list.</source>
         <translation type="unfinished">기타 수정 도구</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Modify</source>
         <translation type="unfinished">수정</translation>
     </message>
@@ -9125,7 +9125,7 @@ is already in the list.</source>
         <translation type="unfinished">기타 선택 도구</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Select</source>
         <translation type="unfinished">선택</translation>
     </message>
@@ -9138,7 +9138,7 @@ is already in the list.</source>
         <translation type="unfinished">수정 도구</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Modify</source>
         <translation type="unfinished">수정</translation>
     </message>
@@ -9391,7 +9391,7 @@ is already in the list.</source>
         <translation type="unfinished">오프셋(거리 포함)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse</source>
         <translation type="unfinished">오프셋 선, 호, 원 또는 타원</translation>
     </message>
@@ -9414,7 +9414,7 @@ is already in the list.</source>
         <translation type="unfinished">오프셋(포인트 통과)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse through point</source>
         <translation type="unfinished">오프셋 선, 호, 원 또는 타원 관통점</translation>
     </message>
@@ -9442,7 +9442,7 @@ is already in the list.</source>
         <translation type="unfinished">열기</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open an existing drawing</source>
         <translation type="unfinished">기존 도면 열기</translation>
     </message>
@@ -9652,7 +9652,7 @@ is already in the list.</source>
         <translation type="unfinished">PDF 내보내기</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Exports the current drawing as PDF</source>
         <translation type="unfinished">현재 도면을 PDF로 내보내기</translation>
     </message>
@@ -9686,7 +9686,7 @@ is already in the list.</source>
         <translation type="unfinished">포인트 도구</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Point</source>
         <translation type="unfinished">포인트</translation>
     </message>
@@ -9704,7 +9704,7 @@ is already in the list.</source>
         <translation type="unfinished">싱글 포인트</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single point</source>
         <translation type="unfinished">단일 점 그리기</translation>
     </message>
@@ -9777,7 +9777,7 @@ is already in the list.</source>
         <translation type="unfinished">폴리라인 도구</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Polyline</source>
         <translation type="unfinished">폴리라인</translation>
     </message>
@@ -9892,7 +9892,7 @@ is already in the list.</source>
         <translation type="unfinished">2점부터 폴리라인 나누기 기호</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a polyline break symbol from 2 points</source>
         <translation type="unfinished">두 지점에서 폴리라인 나누기 기호 그리기</translation>
     </message>
@@ -9951,7 +9951,7 @@ is already in the list.</source>
         <translation type="unfinished">인쇄</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current drawing</source>
         <translation type="unfinished">현재 도면 인쇄</translation>
     </message>
@@ -9964,7 +9964,7 @@ is already in the list.</source>
         <translation type="unfinished">현재 보기 인쇄</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current view</source>
         <translation type="unfinished">현재 보기 인쇄</translation>
     </message>
@@ -10112,7 +10112,7 @@ is already in the list.</source>
         <translation type="unfinished">인쇄 미리보기</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Preview how current drawing would be printed</source>
         <translation type="unfinished">현재 도면이 인쇄되는 방식 미리보기</translation>
     </message>
@@ -10125,7 +10125,7 @@ is already in the list.</source>
         <translation type="unfinished">프로젝션 도구</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Projection</source>
         <translation type="unfinished">프로젝션</translation>
     </message>
@@ -10178,7 +10178,7 @@ is already in the list.</source>
         <translation type="unfinished">표시되는 프로퍼티 값의 소수점/정밀도입니다:</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+219"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+221"/>
         <source>:</source>
         <translation type="unfinished">:</translation>
     </message>
@@ -10193,7 +10193,7 @@ is already in the list.</source>
         <translation type="unfinished">특정 속성</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+20"/>
         <source>Dependent Entities</source>
         <translation type="unfinished">종속 엔티티</translation>
     </message>
@@ -10253,7 +10253,7 @@ is already in the list.</source>
         <translation type="unfinished">아니요</translation>
     </message>
     <message>
-        <location line="+393"/>
+        <location line="+402"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*다양한*</translation>
     </message>
@@ -10265,7 +10265,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <location line="+57"/>
-        <location line="+11"/>
+        <location line="+10"/>
         <source>Property Editor</source>
         <translation type="unfinished">속성 편집기</translation>
     </message>
@@ -10280,7 +10280,7 @@ is already in the list.</source>
         <translation type="unfinished">일반 속성</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+31"/>
         <source>Color:</source>
         <translation type="unfinished">색상:</translation>
     </message>
@@ -10759,7 +10759,7 @@ is already in the list.</source>
         <translation type="unfinished">스크립트 실행</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open and run a script file</source>
         <translation type="unfinished">스크립트 파일 열기 및 실행</translation>
     </message>
@@ -11081,7 +11081,7 @@ is already in the list.</source>
         <translation type="unfinished">선택 도구</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+13"/>
         <source>Selection Tools Panel</source>
         <translation type="unfinished">선택 도구 패널</translation>
     </message>
@@ -11099,7 +11099,7 @@ is already in the list.</source>
         <translation type="unfinished">모두 선택</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Select all visible entities</source>
         <translation type="unfinished">보이는 모든 엔티티 선택</translation>
     </message>
@@ -11217,7 +11217,7 @@ is already in the list.</source>
         <translation type="unfinished">윤곽선 (선택 해제)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select connected entities</source>
         <translation type="unfinished">연결된 엔터티 (해제) 선택</translation>
     </message>
@@ -11265,7 +11265,7 @@ is already in the list.</source>
         <translation type="unfinished">교차된 엔티티 (해제) 선택</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities intersected by a line</source>
         <translation type="unfinished">선으로 교차하는 모든 엔티티를 (탈)선택</translation>
     </message>
@@ -11326,7 +11326,7 @@ is already in the list.</source>
         <translation type="unfinished">레이어 (선택 해제)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities on the same layer</source>
         <translation type="unfinished">동일한 레이어에 있는 모든 엔티티를 (선택 해제)합니다</translation>
     </message>
@@ -11379,7 +11379,7 @@ is already in the list.</source>
         <translation type="unfinished">직사각형 영역 (해제) 선택</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities inside a rectangle</source>
         <translation type="unfinished">직사각형 안의 모든 엔티티 (선택 해제)하기</translation>
     </message>
@@ -11461,7 +11461,7 @@ is already in the list.</source>
         <translation type="unfinished">도형 도구</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Shape</source>
         <translation type="unfinished">모양</translation>
     </message>
@@ -11533,7 +11533,7 @@ is already in the list.</source>
         <translation type="unfinished">다각형(중앙, 측면)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and middle point of side</source>
         <translation type="unfinished">측면의 중앙과 중간 지점에서 정사각형을 그립니다</translation>
     </message>
@@ -11576,7 +11576,7 @@ is already in the list.</source>
         <translation type="unfinished">다각형(측면, 측면)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from middle points of two opposite sides or two opposite corners</source>
         <translation type="unfinished">두 개의 반대쪽 또는 두 개의 반대쪽 모서리의 중간 점에서 정다각형을 그립니다</translation>
     </message>
@@ -11604,7 +11604,7 @@ is already in the list.</source>
         <translation type="unfinished">다각형(중앙, 모서리)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and corner point</source>
         <translation type="unfinished">중심점과 모서리점에서 정다각형을 그립니다</translation>
     </message>
@@ -11632,7 +11632,7 @@ is already in the list.</source>
         <translation type="unfinished">다각형(2변)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from end points of one side</source>
         <translation type="unfinished">한 변의 끝점에서 정다각형을 그립니다</translation>
     </message>
@@ -11650,7 +11650,7 @@ is already in the list.</source>
         <translation type="unfinished">직사각형</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle from two corners</source>
         <translation type="unfinished">두 모서리에서 직사각형 그리기</translation>
     </message>
@@ -11691,7 +11691,7 @@ is already in the list.</source>
         <translation type="unfinished">크기가 있는 직사각형</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle with position and size</source>
         <translation type="unfinished">위치와 크기가 있는 직사각형 그리기</translation>
     </message>
@@ -11749,7 +11749,7 @@ is already in the list.</source>
         <translation type="unfinished">스냅 도구</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+25"/>
         <source>&amp;Snap</source>
         <translation type="unfinished">스냅</translation>
     </message>
@@ -11917,7 +11917,7 @@ is already in the list.</source>
         <translation type="unfinished">거리 매뉴얼</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Snap distance between 2 points</source>
         <translation type="unfinished">두 지점 사이의 스냅 거리</translation>
     </message>
@@ -12067,7 +12067,7 @@ is already in the list.</source>
         <translation type="unfinished">스플라인 도구</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Spline</source>
         <translation type="unfinished">스플라인</translation>
     </message>
@@ -12115,7 +12115,7 @@ is already in the list.</source>
         <translation type="unfinished">스플라인(컨트롤 포인트)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw spline from control points</source>
         <translation type="unfinished">제어점에서 스플라인 그리기</translation>
     </message>
@@ -12329,7 +12329,7 @@ is already in the list.</source>
         <translation type="unfinished">텍스트</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text</source>
         <translation type="unfinished">텍스트 그리기</translation>
     </message>
@@ -12452,7 +12452,7 @@ is already in the list.</source>
         <translation type="unfinished">엔티티를 따라 텍스트</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text along an entity</source>
         <translation type="unfinished">엔티티를 따라 텍스트 그리기</translation>
     </message>
@@ -13041,7 +13041,7 @@ is already in the list.</source>
         <translation type="unfinished">이동/복사</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+9"/>
         <source>Move or copy entities once or multiple times</source>
         <translation type="unfinished">엔티티를 한 번 또는 여러 번 이동 또는 복사</translation>
     </message>
@@ -13409,7 +13409,7 @@ is already in the list.</source>
         <translation type="unfinished">도구 보기</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>View</source>
         <translation type="unfinished">보기</translation>
     </message>
@@ -13883,7 +13883,7 @@ is already in the list.</source>
         <translation type="unfinished">수평 구성 라인</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal construction line</source>
         <translation type="unfinished">수평 구성선 그리기</translation>
     </message>
@@ -13896,7 +13896,7 @@ is already in the list.</source>
         <translation type="unfinished">수직 구성 라인</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical construction line</source>
         <translation type="unfinished">수직 구성선 그리기</translation>
     </message>
@@ -13914,7 +13914,7 @@ is already in the list.</source>
         <translation type="unfinished">줌 도구</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Zoom</source>
         <translation type="unfinished">줌</translation>
     </message>

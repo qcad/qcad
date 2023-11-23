@@ -325,7 +325,7 @@ QCADを再起動してください。</translation>
         <translation>&amp;A ブロック追加</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Add new empty block</source>
         <translation>空のブロックを新規追加</translation>
     </message>
@@ -412,7 +412,7 @@ QCADを再起動してください。</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1986"/>
+        <location filename="../scripts/Apollonius.js" line="+1989"/>
         <source>Invalid radius</source>
         <translation>無効な半径</translation>
     </message>
@@ -438,7 +438,7 @@ QCADを再起動してください。</translation>
         <translation>弧ツール</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Arc</source>
         <translation>&amp;A 弧</translation>
     </message>
@@ -491,7 +491,7 @@ QCADを再起動してください。</translation>
         <translation>&amp;2点と角度</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and angle</source>
         <translation>２点及び角度から弧を描画</translation>
     </message>
@@ -544,7 +544,7 @@ QCADを再起動してください。</translation>
         <translation>２点と高さ</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and height</source>
         <translation>２点と高さから弧を描く</translation>
     </message>
@@ -602,7 +602,7 @@ QCADを再起動してください。</translation>
         <translation>２点と長さ</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and length</source>
         <translation>２点と長さから弧を描く</translation>
     </message>
@@ -670,7 +670,7 @@ QCADを再起動してください。</translation>
         <translation>&amp;2点及び半径</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and radius</source>
         <translation>２点及び半径から弧を描画</translation>
     </message>
@@ -698,7 +698,7 @@ QCADを再起動してください。</translation>
         <translation>&amp;3点</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 3 points</source>
         <translation>３点から弧を描画</translation>
     </message>
@@ -751,7 +751,7 @@ QCADを再起動してください。</translation>
         <translation>&amp;C 中心、点、角度</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from center, point on arc and angles</source>
         <translation>中心、弧上の点、角度から弧を描画</translation>
     </message>
@@ -774,7 +774,7 @@ QCADを再起動してください。</translation>
         <translation>&amp;C 同心の弧（距離指定）</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc</source>
         <translation>同心の弧を描画</translation>
     </message>
@@ -792,7 +792,7 @@ QCADを再起動してください。</translation>
         <translation>&amp;t 同心の弧（通過点指定）</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc through point</source>
         <translation>通過点を指定して同心の弧を描画</translation>
     </message>
@@ -831,7 +831,7 @@ QCADを再起動してください。</translation>
         <translation>正接,点,半径</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to entity, through point with radius</source>
         <translation>指定した半径で点を通る、エンティティに接する弧を描く</translation>
     </message>
@@ -859,7 +859,7 @@ QCADを再起動してください。</translation>
         <translation>&amp;T 接線的接続</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to base entity</source>
         <translation>ベースエントリから接線的接続の弧を描画</translation>
     </message>
@@ -1043,7 +1043,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>&amp;Batch2Pdf visible layout blocks</source>
         <translation type="unfinished">Batch2Pdf可視化レイアウトブロック</translation>
     </message>
@@ -1239,7 +1239,7 @@ Do you wish to recover it?</source>
         <translation>ブロックツール</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+109"/>
         <source>Cannot edit block while editing a block in-place</source>
         <translation type="unfinished">ブロックのインプレース編集中にブロックの編集ができない</translation>
     </message>
@@ -1314,12 +1314,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
         <location line="+63"/>
-        <location line="+44"/>
+        <location line="+43"/>
         <source>Block List</source>
         <translation>ブロックリスト</translation>
     </message>
     <message>
-        <location line="-107"/>
+        <location line="-106"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
@@ -1617,7 +1617,7 @@ Do you wish to recover it?</source>
         <translation>円ツール</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Circle</source>
         <translation>&amp;C 円</translation>
     </message>
@@ -1645,7 +1645,7 @@ Do you wish to recover it?</source>
         <translation>&amp;2点</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from 2 diametrically opposite points</source>
         <translation>直径となる２点を指定して円を描画</translation>
     </message>
@@ -1698,7 +1698,7 @@ Do you wish to recover it?</source>
         <translation>&amp;2点と半径</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 2 points and radius</source>
         <translation>２点及び半径から円を描画</translation>
     </message>
@@ -1732,12 +1732,12 @@ Do you wish to recover it?</source>
         <translation>解決法がありません</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Circle/Circle2TP/Circle2TPInit.js" line="+6"/>
+        <location filename="../scripts/Draw/Circle/Circle2TP/Circle2TPInit.js" line="+5"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation>２つのエンティティに接し１点を通る円を描画</translation>
     </message>
     <message>
-        <location line="-4"/>
+        <location line="-3"/>
         <source>2 Tan&amp;gents and Point</source>
         <translation>&amp;g 1点と2接線</translation>
     </message>
@@ -1775,7 +1775,7 @@ Do you wish to recover it?</source>
         <translation>&amp;T 2接線と半径</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to two entities with given radius</source>
         <translation>２つのエンティティに接する、与えられた半径の円を描画</translation>
     </message>
@@ -1803,7 +1803,7 @@ Do you wish to recover it?</source>
         <translation>&amp;3点</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 3 points</source>
         <translation>３点から円を描画</translation>
     </message>
@@ -1842,7 +1842,7 @@ Do you wish to recover it?</source>
         <translation>&amp;a 3接線</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to three entities</source>
         <translation>３つのエンティティに接する接する円を描画</translation>
     </message>
@@ -1872,7 +1872,7 @@ Do you wish to recover it?</source>
         <translation>&amp;D 中心、直径</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and diameter</source>
         <translation>中心及び半径直径から円を描画</translation>
     </message>
@@ -1895,7 +1895,7 @@ Do you wish to recover it?</source>
         <translation>&amp;C 中心、点</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from center and point on circle</source>
         <translation>中心と円上の点から円を描画</translation>
     </message>
@@ -1925,7 +1925,7 @@ Do you wish to recover it?</source>
         <translation>&amp;R 中心、半径</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and radius</source>
         <translation>中心及び半径半径から円を描画</translation>
     </message>
@@ -1948,7 +1948,7 @@ Do you wish to recover it?</source>
         <translation>&amp;C 同心円（距離指定）</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric circle</source>
         <translation>同心円を描画</translation>
     </message>
@@ -1966,7 +1966,7 @@ Do you wish to recover it?</source>
         <translation>&amp;t 同心円（通過点指定）</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw concentric circle through point</source>
         <translation>通過点を指定して同心円を描画</translation>
     </message>
@@ -2005,7 +2005,7 @@ Do you wish to recover it?</source>
         <translation>&amp;t ２点と接線</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle through two points and tangential to one entity</source>
         <translation>２点と１つのエンティティに接する円を描画</translation>
     </message>
@@ -2023,7 +2023,7 @@ Do you wish to recover it?</source>
         <translation>正接,点,半径</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to entity, through point with radius</source>
         <translation>指定した半径で点を通る、エンティティに接する円を描く</translation>
     </message>
@@ -2135,7 +2135,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="-47"/>
-        <location line="+68"/>
+        <location line="+67"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>コマンドライン</translation>
@@ -2166,12 +2166,12 @@ Do you wish to recover it?</source>
         <translation>ロックされたまたは不可視な画層のエンティティを描画、修正しようとしています。</translation>
     </message>
     <message>
-        <location line="-380"/>
+        <location line="-379"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
     <message>
-        <location line="+255"/>
+        <location line="+254"/>
         <source>Invalid value:</source>
         <translation>不正な値:</translation>
     </message>
@@ -2278,7 +2278,7 @@ Do you wish to recover it?</source>
         <translation>図面単位の変更</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Convert drawing to a different drawing unit</source>
         <translation>他の図面単位に変更する</translation>
     </message>
@@ -2365,7 +2365,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">カウンター</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Auto increment number</source>
         <translation type="unfinished">オートインクリメント数</translation>
     </message>
@@ -2421,7 +2421,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">センターラインクロス</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
         <translation type="unfinished">円弧、円、楕円の中心線クロス描画</translation>
     </message>
@@ -2567,7 +2567,7 @@ Do you wish to recover it?</source>
         <translation>&amp;D 全てを選択解除</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Deselect all entities</source>
         <translation>全てのエンティティを選択解除</translation>
     </message>
@@ -2708,7 +2708,7 @@ Do you wish to recover it?</source>
         <translation>&amp;A 位置合わせ</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw aligned dimension</source>
         <translation>位置合わせ寸法の描画</translation>
     </message>
@@ -2736,7 +2736,7 @@ Do you wish to recover it?</source>
         <translation>&amp;A 角度</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angular dimension</source>
         <translation>角度寸法の描画</translation>
     </message>
@@ -2764,7 +2764,7 @@ Do you wish to recover it?</source>
         <translation>&amp;D 直径</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw diametric dimension</source>
         <translation>直径寸法の描画</translation>
     </message>
@@ -2777,7 +2777,7 @@ Do you wish to recover it?</source>
         <translation>&amp;H 水平</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw horizontal dimension</source>
         <translation>水平寸法の描画</translation>
     </message>
@@ -2800,7 +2800,7 @@ Do you wish to recover it?</source>
         <translation>&amp;O 縦座標（X/Y）</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+3"/>
         <source>Draw ordinate dimension</source>
         <translation>縦座標寸法の描画</translation>
     </message>
@@ -2823,7 +2823,7 @@ Do you wish to recover it?</source>
         <translation>&amp;R 半径</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw radial dimension</source>
         <translation>半径寸法の描画</translation>
     </message>
@@ -2876,7 +2876,7 @@ Do you wish to recover it?</source>
         <translation>&amp;R 回転（線形）</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw linear dimension at a fixed angle</source>
         <translation>角度を指定して線形寸法を描画</translation>
     </message>
@@ -2889,7 +2889,7 @@ Do you wish to recover it?</source>
         <translation>&amp;V 垂直</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw vertical dimension</source>
         <translation>垂直寸法を描画</translation>
     </message>
@@ -2952,7 +2952,7 @@ Do you wish to recover it?</source>
         <translation>寸法ツール</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>D&amp;imension</source>
         <translation>&amp;i 寸法</translation>
     </message>
@@ -3473,7 +3473,7 @@ is already in the list.</source>
         <translation type="unfinished">ドローFmsレインズ</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
         <translation type="unfinished">ドローFMSレーン(リブ)</translation>
     </message>
@@ -4074,7 +4074,7 @@ is already in the list.</source>
         <translation type="unfinished">CSVからの描画</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Draws entities based on textual entries in a CSV file</source>
         <translation type="unfinished">CSVファイルのテキスト入力に基づくエンティティの描画</translation>
     </message>
@@ -4082,7 +4082,7 @@ is already in the list.</source>
 <context>
     <name>DrawOrder</name>
     <message>
-        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+92"/>
+        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
         <translation type="unfinished">ドローオーダー</translation>
     </message>
@@ -4180,7 +4180,7 @@ is already in the list.</source>
         <translation>&amp;D ポリライン描画</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw polyline with line and arc segments</source>
         <translation>線分と弧でポリラインを描画</translation>
     </message>
@@ -4366,7 +4366,7 @@ is already in the list.</source>
         <translation type="unfinished">スクリプトシェル</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+34"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
         <translation type="unfinished">スクリプトシェル</translation>
@@ -4395,7 +4395,7 @@ is already in the list.</source>
         <translation>編集ツール</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Edit</source>
         <translation>&amp;E 編集</translation>
     </message>
@@ -4473,7 +4473,7 @@ is already in the list.</source>
         <translation>&amp;x テキスト編集</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Edit text</source>
         <translation>テキスト編集</translation>
     </message>
@@ -4486,7 +4486,7 @@ is already in the list.</source>
         <translation>楕円ツール</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Ellipse</source>
         <translation>&amp;E 楕円</translation>
     </message>
@@ -4584,7 +4584,7 @@ is already in the list.</source>
         <translation>&amp;E 楕円弧</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw ellipse arc from center, major point, ratio and angles</source>
         <translation>中心、長軸点、比率と角度から楕円弧を描画</translation>
     </message>
@@ -4597,7 +4597,7 @@ is already in the list.</source>
         <translation>楕円（中心,点,比率）</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw full ellipse from center, major point and ratio</source>
         <translation>中心、長軸点と比率から楕円を描画</translation>
     </message>
@@ -4633,7 +4633,7 @@ is already in the list.</source>
         <translation>直径指定の楕円</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and diameters</source>
         <translation>位置と直径を指定して楕円を描く</translation>
     </message>
@@ -4666,7 +4666,7 @@ is already in the list.</source>
         <translation>四角形に内接</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse inscribed in quadrilateral</source>
         <translation>四角形に内接する楕円を描画</translation>
     </message>
@@ -4689,7 +4689,7 @@ is already in the list.</source>
         <translation>並行曲線（距離指定）</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse</source>
         <translation>楕円の並行曲線を描く</translation>
     </message>
@@ -4707,7 +4707,7 @@ is already in the list.</source>
         <translation>並行曲線（点を通過）</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse through point</source>
         <translation>点を通過する楕円の並行曲線を描く</translation>
     </message>
@@ -4743,7 +4743,7 @@ is already in the list.</source>
         <translation>半径指定の楕円</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and radii</source>
         <translation>位置と半径を指定して楕円を描く</translation>
     </message>
@@ -4868,7 +4868,7 @@ is already in the list.</source>
         <translation type="unfinished">ダブテールジョイント</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation type="unfinished">ダブテールジョイントを描く</translation>
     </message>
@@ -5036,7 +5036,7 @@ is already in the list.</source>
         <translation type="unfinished">3つのポイント</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw three points</source>
         <translation type="unfinished">ドロー3ポイント</translation>
     </message>
@@ -5182,7 +5182,7 @@ is already in the list.</source>
         <translation>ファイルツール</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;File</source>
         <translation>&amp;F ファイル</translation>
     </message>
@@ -6297,12 +6297,12 @@ is already in the list.</source>
 <context>
     <name>Hatch</name>
     <message>
-        <location filename="../scripts/Draw/Hatch/Hatch.js" line="+99"/>
+        <location filename="../scripts/Draw/Hatch/Hatch.js" line="+98"/>
         <source>&amp;Hatch</source>
         <translation>&amp;H ハッチング</translation>
     </message>
     <message>
-        <location line="-27"/>
+        <location line="-26"/>
         <source>Hatch Tools</source>
         <translation>ハッチングツール</translation>
     </message>
@@ -6373,7 +6373,7 @@ is already in the list.</source>
         <translation>選択からハッチング</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Create hatch or solid fill from selected boundary</source>
         <translation>選択された境界からハッチングまたは塗りつぶし</translation>
     </message>
@@ -6612,7 +6612,7 @@ is already in the list.</source>
         <translation type="unfinished">カスタム2Dセントロイドの追加</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Create a customizable 2D Centroid marker</source>
         <translation type="unfinished">カスタマイズ可能な2Dセントロイドマーカーの作成</translation>
     </message>
@@ -6942,7 +6942,7 @@ is already in the list.</source>
         <translation type="unfinished">面積セントロイド</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create an area 2D Centroid for a selected entity</source>
         <translation type="unfinished">選択されたエンティティのエリア2Dセントロイドを作成する</translation>
     </message>
@@ -7064,7 +7064,7 @@ is already in the list.</source>
         <translation type="unfinished">セントロイドリストナー</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
         <translation type="unfinished">(2次元セントロイドのトランザクションリスナーを（脱）アクティブ化する。</translation>
     </message>
@@ -7317,7 +7317,7 @@ is already in the list.</source>
         <translation type="unfinished">2次元セントロイドの重み付け和</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Combine selected 2D Centroid markers weighted</source>
         <translation type="unfinished">選択した2Dセントロイドマーカーを重み付けして合成する。</translation>
     </message>
@@ -7417,7 +7417,7 @@ is already in the list.</source>
         <translation type="unfinished">ワイヤーセントロイド</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create a wire 2D Centroid for a selection</source>
         <translation type="unfinished">選択範囲のワイヤ2Dセントロイドを作成する</translation>
     </message>
@@ -7435,7 +7435,7 @@ is already in the list.</source>
         <translation>情報ツール</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Info</source>
         <translation>&amp;I 情報</translation>
     </message>
@@ -7763,7 +7763,7 @@ is already in the list.</source>
         <translation>&amp;I 選択を反転</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Invert the current selection</source>
         <translation>現在の選択を反転</translation>
     </message>
@@ -7970,7 +7970,7 @@ is already in the list.</source>
         <translation>レイヤツール</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Layer</source>
         <translation>&amp;L 画層</translation>
     </message>
@@ -8114,7 +8114,7 @@ is already in the list.</source>
     </message>
     <message>
         <location line="-55"/>
-        <location line="+110"/>
+        <location line="+109"/>
         <source>Layer List</source>
         <translation>画層リスト</translation>
     </message>
@@ -8142,7 +8142,7 @@ is already in the list.</source>
         <translation>&amp;L 引出線</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
         <translation>引出線（矢つきの連続線分）</translation>
     </message>
@@ -8201,7 +8201,7 @@ is already in the list.</source>
         <translation>線分ツール</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Line</source>
         <translation>&amp;L 線分</translation>
     </message>
@@ -8279,7 +8279,7 @@ is already in the list.</source>
         <translation>&amp;2点間の線分</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single line or sequence of lines</source>
         <translation>単線または連続した線分を描画</translation>
     </message>
@@ -8332,7 +8332,7 @@ is already in the list.</source>
         <translation>&amp;A 角度指定の線分</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line at a given absolute angle</source>
         <translation>絶対角度から線分を描画</translation>
     </message>
@@ -8370,7 +8370,7 @@ is already in the list.</source>
         <translation>&amp;B 角の二等分線</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angle bisector, trisector, ...</source>
         <translation>角の二（または三、四...）等分線を描画</translation>
     </message>
@@ -8393,7 +8393,7 @@ is already in the list.</source>
         <translation type="unfinished">2ポイントからのボックスジョイント</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
         <translation type="unfinished">ドローボックスジョイントのフィンガー、スロット、テノン</translation>
     </message>
@@ -8451,7 +8451,7 @@ is already in the list.</source>
         <translation type="unfinished">2点支持のダブテールジョイント</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation type="unfinished">ダブテールジョイントを描く</translation>
     </message>
@@ -8494,7 +8494,7 @@ is already in the list.</source>
         <translation>&amp;F フリーハンド</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw freehand line</source>
         <translation>フリーハンドで描画</translation>
     </message>
@@ -8532,7 +8532,7 @@ is already in the list.</source>
         <translation>&amp;H 水平線</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal line</source>
         <translation>水平線を描画</translation>
     </message>
@@ -8570,7 +8570,7 @@ is already in the list.</source>
         <translation>&amp;O 直交線</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to base entity</source>
         <translation>基礎エンティティからの直交線を描画</translation>
     </message>
@@ -8598,7 +8598,7 @@ is already in the list.</source>
         <translation>&amp;n 垂線/接線</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to line and tangent to circle, arc or ellipse</source>
         <translation>円、弧、楕円に接する、線分への垂線を描画</translation>
     </message>
@@ -8621,7 +8621,7 @@ is already in the list.</source>
         <translation>&amp;l 平行線（距離指定）</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
         <translation>既存の線分または弧、円との平行線を描画</translation>
     </message>
@@ -8639,7 +8639,7 @@ is already in the list.</source>
         <translation>&amp;a 平行線（通過点指定）</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
         <translation>通過点を指定して平行線または同心弧、同心円を描画</translation>
     </message>
@@ -8715,7 +8715,7 @@ is already in the list.</source>
         <translation>&amp;e 相対角度</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line with relative angle to base entity</source>
         <translation>基礎エントリーとの相対角度で線分を描画</translation>
     </message>
@@ -8756,7 +8756,7 @@ is already in the list.</source>
         <translation>&amp;T 接線（点と円）</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (point, circle)</source>
         <translation>接線（点と円）を描画</translation>
     </message>
@@ -8784,7 +8784,7 @@ is already in the list.</source>
         <translation>&amp;g 接線（２つの円）</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (circle, circle)</source>
         <translation>接線（２つの円）を描画</translation>
     </message>
@@ -8797,7 +8797,7 @@ is already in the list.</source>
         <translation>&amp;V 垂直線</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical line</source>
         <translation>垂直線を描画</translation>
     </message>
@@ -8989,7 +8989,7 @@ is already in the list.</source>
         <translation>その他ツール</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc</source>
         <translation>その他</translation>
     </message>
@@ -9012,7 +9012,7 @@ is already in the list.</source>
         <translation type="unfinished">ブロック用工具</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Block</source>
         <translation type="unfinished">ブロック</translation>
     </message>
@@ -9030,7 +9030,7 @@ is already in the list.</source>
         <translation type="unfinished">その他の開発ツール</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>De&amp;velopment</source>
         <translation type="unfinished">開発</translation>
     </message>
@@ -9048,7 +9048,7 @@ is already in the list.</source>
         <translation type="unfinished">各種描画ツール</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc Draw</source>
         <translation type="unfinished">Misc Draw</translation>
     </message>
@@ -9071,7 +9071,7 @@ is already in the list.</source>
         <translation type="unfinished">その他のインポート/エクスポートツール</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Import/Export</source>
         <translation type="unfinished">インポート/エクスポート</translation>
     </message>
@@ -9089,7 +9089,7 @@ is already in the list.</source>
         <translation type="unfinished">その他の情報ツール</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Information</source>
         <translation type="unfinished">インフォメーション</translation>
     </message>
@@ -9107,7 +9107,7 @@ is already in the list.</source>
         <translation type="unfinished">その他の改造ツール</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Modify</source>
         <translation type="unfinished">修正</translation>
     </message>
@@ -9125,7 +9125,7 @@ is already in the list.</source>
         <translation type="unfinished">その他の選択ツール</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Select</source>
         <translation type="unfinished">選択</translation>
     </message>
@@ -9138,7 +9138,7 @@ is already in the list.</source>
         <translation>修正ツール</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Modify</source>
         <translation>&amp;M 修正</translation>
     </message>
@@ -9372,7 +9372,7 @@ is already in the list.</source>
         <translation>オフセット（距離）</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse</source>
         <translation>オフセット 線分、弧、円または楕円</translation>
     </message>
@@ -9414,7 +9414,7 @@ is already in the list.</source>
         <translation>オフセット（通過点）</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse through point</source>
         <translation>指定の点を通るオフセット 線分、弧、円または楕円</translation>
     </message>
@@ -9442,7 +9442,7 @@ is already in the list.</source>
         <translation>&amp;O 開く</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open an existing drawing</source>
         <translation>既存の図面を開く</translation>
     </message>
@@ -9652,7 +9652,7 @@ is already in the list.</source>
         <translation>&amp;D PDFエクスポート</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Exports the current drawing as PDF</source>
         <translation>現在の図面をPDFとしてエクスポート</translation>
     </message>
@@ -9686,7 +9686,7 @@ is already in the list.</source>
         <translation>点ツール</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Point</source>
         <translation>&amp;P 点</translation>
     </message>
@@ -9704,7 +9704,7 @@ is already in the list.</source>
         <translation>&amp;P 単一の点</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single point</source>
         <translation>単一の点を描画</translation>
     </message>
@@ -9777,7 +9777,7 @@ is already in the list.</source>
         <translation>ポリラインツール</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Polyline</source>
         <translation>&amp;P ポリライン</translation>
     </message>
@@ -9892,7 +9892,7 @@ is already in the list.</source>
         <translation type="unfinished">2点からのポリライン切断記号</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a polyline break symbol from 2 points</source>
         <translation type="unfinished">2点からポリラインの折れ線記号を描画する</translation>
     </message>
@@ -9951,7 +9951,7 @@ is already in the list.</source>
         <translation>&amp;P 印刷</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current drawing</source>
         <translation>現在の図面を印刷</translation>
     </message>
@@ -9964,7 +9964,7 @@ is already in the list.</source>
         <translation>現在のビューを印刷</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current view</source>
         <translation>現在のビューを印刷</translation>
     </message>
@@ -10112,7 +10112,7 @@ is already in the list.</source>
         <translation>&amp;v 印刷プレビュー</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Preview how current drawing would be printed</source>
         <translation>現在の図面がどのように印刷されるかプレビュー</translation>
     </message>
@@ -10125,7 +10125,7 @@ is already in the list.</source>
         <translation>投影ツール</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Projection</source>
         <translation>&amp;P 投影</translation>
     </message>
@@ -10143,12 +10143,12 @@ is already in the list.</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1654"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1666"/>
         <source>*VARIES*</source>
         <translation>*VARIES*</translation>
     </message>
     <message>
-        <location line="-1435"/>
+        <location line="-1445"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10163,7 +10163,7 @@ is already in the list.</source>
         <translation>固有のプロパティ</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+20"/>
         <source>Dependent Entities</source>
         <translation>依存エンティティ</translation>
     </message>
@@ -10198,12 +10198,12 @@ is already in the list.</source>
         <translation type="unfinished">すべての物件を表示する</translation>
     </message>
     <message>
-        <location line="+772"/>
+        <location line="+781"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
     <message>
-        <location line="-818"/>
+        <location line="-827"/>
         <source>Add custom property to selected objects</source>
         <translation>選択したオブジェクトにカスタムプロパティを追加</translation>
     </message>
@@ -10228,9 +10228,9 @@ is already in the list.</source>
         <translation>いいえ</translation>
     </message>
     <message>
-        <location line="+396"/>
+        <location line="+405"/>
         <location line="+57"/>
-        <location line="+11"/>
+        <location line="+10"/>
         <source>Property Editor</source>
         <translation>プロパティエディタ</translation>
     </message>
@@ -10245,7 +10245,7 @@ is already in the list.</source>
         <translation>一般プロパティ</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+31"/>
         <source>Color:</source>
         <translation>色:</translation>
     </message>
@@ -10744,7 +10744,7 @@ is already in the list.</source>
         <translation type="unfinished">実行スクリプト</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open and run a script file</source>
         <translation type="unfinished">スクリプトファイルを開いて実行する</translation>
     </message>
@@ -11081,7 +11081,7 @@ is already in the list.</source>
         <translation>選択ツール</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+13"/>
         <source>Selection Tools Panel</source>
         <translation>選択ツールパネル</translation>
     </message>
@@ -11099,7 +11099,7 @@ is already in the list.</source>
         <translation>&amp;A 全てを選択</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Select all visible entities</source>
         <translation>全ての可視エンティティを選択</translation>
     </message>
@@ -11217,7 +11217,7 @@ is already in the list.</source>
         <translation>&amp;C 輪郭選択（選択解除）</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select connected entities</source>
         <translation>結合したエンティティを選択（選択解除）</translation>
     </message>
@@ -11265,7 +11265,7 @@ is already in the list.</source>
         <translation>&amp;t 交差したエンティティを選択（選択解除）</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities intersected by a line</source>
         <translation>線分によって交差されるエンティティを選択（選択解除）</translation>
     </message>
@@ -11326,7 +11326,7 @@ is already in the list.</source>
         <translation>&amp;y 画層選択（選択解除）</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities on the same layer</source>
         <translation>同じ画層の全てのエンティティを選択（選択解除）</translation>
     </message>
@@ -11379,7 +11379,7 @@ is already in the list.</source>
         <translation>&amp;R 長方形範囲選択（選択解除）</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities inside a rectangle</source>
         <translation>四角形の内側のエンティティ全てを選択（選択解除）</translation>
     </message>
@@ -11461,7 +11461,7 @@ is already in the list.</source>
         <translation>成形ツール</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Shape</source>
         <translation>&amp;S 成形</translation>
     </message>
@@ -11528,7 +11528,7 @@ is already in the list.</source>
         <translation>多角形（中心、辺）</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and middle point of side</source>
         <translation>中心と辺の中心から正多角形を描く</translation>
     </message>
@@ -11566,7 +11566,7 @@ is already in the list.</source>
         <translation>多角形（辺、辺）</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from middle points of two opposite sides or two opposite corners</source>
         <translation>辺の中心と反対側の辺または頂点から正多角形を描く</translation>
     </message>
@@ -11604,7 +11604,7 @@ is already in the list.</source>
         <translation>&amp;y 多角形（中心、頂点）</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and corner point</source>
         <translation>中心と頂点から正多角形を描画</translation>
     </message>
@@ -11632,7 +11632,7 @@ is already in the list.</source>
         <translation>正多角形（２点の辺）</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from end points of one side</source>
         <translation>２点を１辺とする正多角形を描く</translation>
     </message>
@@ -11645,7 +11645,7 @@ is already in the list.</source>
         <translation>&amp;R 長方形</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle from two corners</source>
         <translation>２頂点から四角形を描画</translation>
     </message>
@@ -11663,7 +11663,7 @@ is already in the list.</source>
         <translation>&amp;S サイズ指定の四角形</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle with position and size</source>
         <translation>位置とサイズを指定して四角形を描画</translation>
     </message>
@@ -11749,7 +11749,7 @@ is already in the list.</source>
         <translation>スナップツール</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+25"/>
         <source>&amp;Snap</source>
         <translation>&amp;S スナップ</translation>
     </message>
@@ -11897,7 +11897,7 @@ is already in the list.</source>
         <translation>&amp;D 手動距離設定</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Snap distance between 2 points</source>
         <translation>2点間のスナップ距離</translation>
     </message>
@@ -12067,7 +12067,7 @@ is already in the list.</source>
         <translation>スプラインツール</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Spline</source>
         <translation>&amp;S スプライン</translation>
     </message>
@@ -12115,7 +12115,7 @@ is already in the list.</source>
         <translation>&amp;S スプライン（制御点）</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw spline from control points</source>
         <translation>制御点からスプラインを描画</translation>
     </message>
@@ -12329,7 +12329,7 @@ is already in the list.</source>
         <translation>&amp;T テキスト</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text</source>
         <translation>テキストを描画</translation>
     </message>
@@ -12452,7 +12452,7 @@ is already in the list.</source>
         <translation type="unfinished">エンティティに沿ったテキスト</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text along an entity</source>
         <translation type="unfinished">エンティティに沿ってテキストを描画する</translation>
     </message>
@@ -13021,7 +13021,7 @@ is already in the list.</source>
         <translation>&amp;M 移動/コピー</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+9"/>
         <source>Move or copy entities once or multiple times</source>
         <translation>１回または複数回の移動またはコピー</translation>
     </message>
@@ -13409,7 +13409,7 @@ is already in the list.</source>
         <translation>表示ツール</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>View</source>
         <translation type="unfinished">表示</translation>
     </message>
@@ -13883,7 +13883,7 @@ is already in the list.</source>
         <translation type="unfinished">横型コンストラクションライン</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal construction line</source>
         <translation type="unfinished">水平方向のコンストラクションラインを引く</translation>
     </message>
@@ -13896,7 +13896,7 @@ is already in the list.</source>
         <translation type="unfinished">縦型コンストラクションライン</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical construction line</source>
         <translation type="unfinished">垂直方向の工事線を引く</translation>
     </message>
@@ -13914,7 +13914,7 @@ is already in the list.</source>
         <translation>拡大ツール </translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Zoom</source>
         <translation>拡大 (&amp;Z)</translation>
     </message>

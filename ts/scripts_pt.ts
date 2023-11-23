@@ -325,7 +325,7 @@ para que as mudanças de preferências entrem em vigor.</translation>
         <translation>&amp;Adicione um Bloco Vazio</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Add new empty block</source>
         <translation>Adicionar novo bloco vazio</translation>
     </message>
@@ -412,7 +412,7 @@ para que as mudanças de preferências entrem em vigor.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1986"/>
+        <location filename="../scripts/Apollonius.js" line="+1989"/>
         <source>Invalid radius</source>
         <translation>Raio inválido</translation>
     </message>
@@ -438,7 +438,7 @@ para que as mudanças de preferências entrem em vigor.</translation>
         <translation>Ferramentas em Arco</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Arc</source>
         <translation>&amp;Arco</translation>
     </message>
@@ -471,7 +471,7 @@ para que as mudanças de preferências entrem em vigor.</translation>
         <translation>&amp;2 Pontos e Ângulo</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and angle</source>
         <translation>Desenhe um arco a partir de 2 pontos e ângulo</translation>
     </message>
@@ -544,7 +544,7 @@ para que as mudanças de preferências entrem em vigor.</translation>
         <translation>2 Pontos e &amp;altura</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and height</source>
         <translation>Desenhe um arco a partir de 2 pontos e altura</translation>
     </message>
@@ -602,7 +602,7 @@ para que as mudanças de preferências entrem em vigor.</translation>
         <translation>2 pontos e &amp;comprimento</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and length</source>
         <translation>Desenhe um arco a partir de 2 pontos e comprimento</translation>
     </message>
@@ -635,7 +635,7 @@ para que as mudanças de preferências entrem em vigor.</translation>
         <translation>&amp;2 Pontos e Raio</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and radius</source>
         <translation>Traçar arco a partir de 2 pontos e raio</translation>
     </message>
@@ -698,7 +698,7 @@ para que as mudanças de preferências entrem em vigor.</translation>
         <translation>&amp;3 Pontos</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 3 points</source>
         <translation>Traçar arco a partir de 3 pontos</translation>
     </message>
@@ -736,7 +736,7 @@ para que as mudanças de preferências entrem em vigor.</translation>
         <translation>&amp;Centro, Ponto, Ângulos</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from center, point on arc and angles</source>
         <translation>Traçar arco a partir do centro, apontar no arco e nos ângulos</translation>
     </message>
@@ -764,7 +764,7 @@ para que as mudanças de preferências entrem em vigor.</translation>
         <translation>&amp;Concêntricos (com distância)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc</source>
         <translation>Desenho de arco concêntrico</translation>
     </message>
@@ -787,7 +787,7 @@ para que as mudanças de preferências entrem em vigor.</translation>
         <translation>Concêntrico (&amp;através de Ponto)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc through point</source>
         <translation>Desenho de arco concêntrico através do ponto</translation>
     </message>
@@ -831,7 +831,7 @@ para que as mudanças de preferências entrem em vigor.</translation>
         <translation>&amp;Tangente, Ponto, Raio</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to entity, through point with radius</source>
         <translation>Desenhe um arco tangente a uma entidade, passando por um ponto, com raio</translation>
     </message>
@@ -854,7 +854,7 @@ para que as mudanças de preferências entrem em vigor.</translation>
         <translation>&amp;Tangencialmente Ligado</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to base entity</source>
         <translation>Desenho do arco tangencial à entidade base</translation>
     </message>
@@ -1045,7 +1045,7 @@ Você deseja recuperá-lo?</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>&amp;Batch2Pdf visible layout blocks</source>
         <translation>&amp;Batch2Pdf blocos de layout visíveis</translation>
     </message>
@@ -1241,7 +1241,7 @@ Você deseja recuperá-lo?</translation>
         <translation>Ferramentas de Bloco</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+109"/>
         <source>Cannot edit block while editing a block in-place</source>
         <translation>Não é possível editar um bloco durante a edição de um bloco in situ</translation>
     </message>
@@ -1316,12 +1316,12 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
         <location line="+63"/>
-        <location line="+44"/>
+        <location line="+43"/>
         <source>Block List</source>
         <translation>Lista de blocos</translation>
     </message>
     <message>
-        <location line="-107"/>
+        <location line="-106"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -1619,7 +1619,7 @@ Você deseja recuperá-lo?</translation>
         <translation>Ferramentas de Círculo</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Circle</source>
         <translation>&amp;Círculo</translation>
     </message>
@@ -1647,7 +1647,7 @@ Você deseja recuperá-lo?</translation>
         <translation>&amp;2 Pontos</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from 2 diametrically opposite points</source>
         <translation>Desenhe um círculo a partir de 2 pontos diametralmente opostos</translation>
     </message>
@@ -1680,7 +1680,7 @@ Você deseja recuperá-lo?</translation>
         <translation>&amp;2 Pontos e Raio</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 2 points and radius</source>
         <translation>Círculo de desenho a partir de 2 pontos e raio</translation>
     </message>
@@ -1734,12 +1734,12 @@ Você deseja recuperá-lo?</translation>
         <translation>Nenhuma solução</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Circle/Circle2TP/Circle2TPInit.js" line="+6"/>
+        <location filename="../scripts/Draw/Circle/Circle2TP/Circle2TPInit.js" line="+5"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation>Desenhe um círculo tangente a duas entidades, passando por um ponto</translation>
     </message>
     <message>
-        <location line="-4"/>
+        <location line="-3"/>
         <source>2 Tan&amp;gents and Point</source>
         <translation>2 Tan&amp;gentes e Ponto</translation>
     </message>
@@ -1777,7 +1777,7 @@ Você deseja recuperá-lo?</translation>
         <translation>2 &amp;Tangentes e Raio</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to two entities with given radius</source>
         <translation>Desenhe um círculo tangente a duas entidades, com um raio dado</translation>
     </message>
@@ -1805,7 +1805,7 @@ Você deseja recuperá-lo?</translation>
         <translation>&amp;3 Pontos</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 3 points</source>
         <translation>Círculo de desenho a partir de 3 pontos</translation>
     </message>
@@ -1844,7 +1844,7 @@ Você deseja recuperá-lo?</translation>
         <translation>3 T&amp;angentes</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to three entities</source>
         <translation>Desenhe um círculo tangente a três entidades</translation>
     </message>
@@ -1874,7 +1874,7 @@ Você deseja recuperá-lo?</translation>
         <translation>Centro, &amp;Diâmetro</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and diameter</source>
         <translation>Desenhe um círculo a partir do centro e do diâmetro</translation>
     </message>
@@ -1897,7 +1897,7 @@ Você deseja recuperá-lo?</translation>
         <translation>&amp;Centro, Ponto</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from center and point on circle</source>
         <translation>Desenhar círculo a partir do centro e ponto sobre círculo</translation>
     </message>
@@ -1910,7 +1910,7 @@ Você deseja recuperá-lo?</translation>
         <translation>Centro, &amp;Raio</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and radius</source>
         <translation>Desenhe o círculo a partir do centro e do raio</translation>
     </message>
@@ -1940,7 +1940,7 @@ Você deseja recuperá-lo?</translation>
         <translation>&amp;Concêntricos (com Distância)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric circle</source>
         <translation>Desenho de círculo concêntrico</translation>
     </message>
@@ -1963,7 +1963,7 @@ Você deseja recuperá-lo?</translation>
         <translation>Concêntrico (&amp;through Point)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw concentric circle through point</source>
         <translation>Desenho de círculo concêntrico através do ponto</translation>
     </message>
@@ -2007,7 +2007,7 @@ Você deseja recuperá-lo?</translation>
         <translation>Tangente e &amp;2 Pontos</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle through two points and tangential to one entity</source>
         <translation>Desenhe um círculo passando por dois pontos e tangente a uma entidade</translation>
     </message>
@@ -2025,7 +2025,7 @@ Você deseja recuperá-lo?</translation>
         <translation>&amp;Tangente, Ponto, Raio</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to entity, through point with radius</source>
         <translation>Desenhe um círculo tangente a uma entidade, passando por um ponto, com raio</translation>
     </message>
@@ -2132,18 +2132,18 @@ Você deseja recuperá-lo?</translation>
     <name>CommandLine</name>
     <message>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.js" line="+30"/>
-        <location line="+68"/>
+        <location line="+67"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Linha de Comando</translation>
     </message>
     <message>
-        <location line="-21"/>
+        <location line="-20"/>
         <source>&amp;Command Line</source>
         <translation>Linha de &amp;comando</translation>
     </message>
     <message>
-        <location line="+243"/>
+        <location line="+242"/>
         <source>Unknown command or invalid coordinate or value: &quot;%1&quot;</source>
         <translation>Comando desconhecido, ou coordenadas ou valor inválido: &quot;%1&quot;</translation>
     </message>
@@ -2168,12 +2168,12 @@ Você deseja recuperá-lo?</translation>
         <translation>Falha na transação. Por favor verifique por autorreferências em Blocos ou camadas bloqueadas ou invisíveis nos Blocos.</translation>
     </message>
     <message>
-        <location line="-380"/>
+        <location line="-379"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="+255"/>
+        <location line="+254"/>
         <source>Invalid value:</source>
         <translation>Valor inválido:</translation>
     </message>
@@ -2280,7 +2280,7 @@ Você deseja recuperá-lo?</translation>
         <translation>Converter &amp;unidade de desenho</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Convert drawing to a different drawing unit</source>
         <translation>Converter desenho para uma unidade de desenho diferente</translation>
     </message>
@@ -2392,7 +2392,7 @@ Você deseja recuperá-lo?</translation>
         <translation>&amp;Contador</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Auto increment number</source>
         <translation>Auto incrementa o número</translation>
     </message>
@@ -2423,7 +2423,7 @@ Você deseja recuperá-lo?</translation>
         <translation>Croce centrale</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
         <translation>Desenhar a linha de centro em arcos, círculos ou elipses</translation>
     </message>
@@ -2569,7 +2569,7 @@ Você deseja recuperá-lo?</translation>
         <translation>&amp;Deselecionar todos</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Deselect all entities</source>
         <translation>Desmarcar todas as entidades</translation>
     </message>
@@ -2710,7 +2710,7 @@ Você deseja recuperá-lo?</translation>
         <translation>&amp;Alinhado</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw aligned dimension</source>
         <translation>Desenhe cota alinhada</translation>
     </message>
@@ -2738,7 +2738,7 @@ Você deseja recuperá-lo?</translation>
         <translation>&amp;Angular</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angular dimension</source>
         <translation>Desenho cota angular</translation>
     </message>
@@ -2766,7 +2766,7 @@ Você deseja recuperá-lo?</translation>
         <translation>&amp;Diamétrico</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw diametric dimension</source>
         <translation>Desenho cota diamétrica</translation>
     </message>
@@ -2779,7 +2779,7 @@ Você deseja recuperá-lo?</translation>
         <translation>&amp;Horizontal</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw horizontal dimension</source>
         <translation>Desenho cota horizontal</translation>
     </message>
@@ -2802,7 +2802,7 @@ Você deseja recuperá-lo?</translation>
         <translation>&amp;Ordinato (X/Y)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+3"/>
         <source>Draw ordinate dimension</source>
         <translation>Desenho cota ordenada</translation>
     </message>
@@ -2825,7 +2825,7 @@ Você deseja recuperá-lo?</translation>
         <translation>&amp;Radial</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw radial dimension</source>
         <translation>Desenho cota radial</translation>
     </message>
@@ -2874,7 +2874,7 @@ Você deseja recuperá-lo?</translation>
         <translation>&amp;Rotated (Linear)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw linear dimension at a fixed angle</source>
         <translation>Desenhar cota linear em um ângulo fixo</translation>
     </message>
@@ -2892,7 +2892,7 @@ Você deseja recuperá-lo?</translation>
         <translation>&amp;Vertical</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw vertical dimension</source>
         <translation>Desenho cota vertical</translation>
     </message>
@@ -2955,7 +2955,7 @@ Você deseja recuperá-lo?</translation>
         <translation>Ferramentas de cota</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>D&amp;imension</source>
         <translation>D&amp;imensão</translation>
     </message>
@@ -3476,7 +3476,7 @@ já se encontra na lista.</translation>
         <translation>Desenho Fms Pistas</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
         <translation>Desenhar FMS Lanes (costelas)</translation>
     </message>
@@ -4077,7 +4077,7 @@ já se encontra na lista.</translation>
         <translation>&amp;Desenho de CSV</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Draws entities based on textual entries in a CSV file</source>
         <translation>Desenha entidades com base em entradas textuais em um arquivo CSV</translation>
     </message>
@@ -4085,7 +4085,7 @@ já se encontra na lista.</translation>
 <context>
     <name>DrawOrder</name>
     <message>
-        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+92"/>
+        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
         <translation>&amp;Ordem</translation>
     </message>
@@ -4133,7 +4133,7 @@ já se encontra na lista.</translation>
         <translation>&amp;Desenho polilinha</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw polyline with line and arc segments</source>
         <translation>Desenho de polilinha com segmentos de linha e arco</translation>
     </message>
@@ -4370,7 +4370,7 @@ já se encontra na lista.</translation>
         <translation>&amp;Script Shell</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+34"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
         <translation>Script Shell</translation>
@@ -4399,7 +4399,7 @@ já se encontra na lista.</translation>
         <translation>Ferramentas de Edição</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Edit</source>
         <translation>&amp;Editar</translation>
     </message>
@@ -4477,7 +4477,7 @@ já se encontra na lista.</translation>
         <translation>Editar Te&amp;xto</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Edit text</source>
         <translation>Editar texto</translation>
     </message>
@@ -4490,7 +4490,7 @@ já se encontra na lista.</translation>
         <translation>Ferramentas de Elipse</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Ellipse</source>
         <translation>&amp;Elipse</translation>
     </message>
@@ -4573,7 +4573,7 @@ já se encontra na lista.</translation>
         <translation>&amp;Ellipse Arc</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw ellipse arc from center, major point, ratio and angles</source>
         <translation>Desenhe o arco da elipse a partir do centro, ponto principal, proporção e ângulos</translation>
     </message>
@@ -4601,7 +4601,7 @@ já se encontra na lista.</translation>
         <translation>&amp;Elipse (Centro, Ponto, Razão)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw full ellipse from center, major point and ratio</source>
         <translation>Desenhe uma elipse completa a partir do centro, ponto maior e razão</translation>
     </message>
@@ -4637,7 +4637,7 @@ já se encontra na lista.</translation>
         <translation>Elipse com &amp;diâmetros</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and diameters</source>
         <translation>Desenhe uma elipse com posição e diâmetros</translation>
     </message>
@@ -4670,7 +4670,7 @@ já se encontra na lista.</translation>
         <translation>Inscrita em um Quadrilátero</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse inscribed in quadrilateral</source>
         <translation>Desenhe uma elipse inscrita em um quadrilátero</translation>
     </message>
@@ -4693,7 +4693,7 @@ já se encontra na lista.</translation>
         <translation>&amp;Curva Paralela (com Distância)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse</source>
         <translation>Desenhe uma curva paralela a uma elipse</translation>
     </message>
@@ -4711,7 +4711,7 @@ já se encontra na lista.</translation>
         <translation>Curva Paralela (&amp;passando por Ponto)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse through point</source>
         <translation>Desenhe uma curva paralela passando por um ponto</translation>
     </message>
@@ -4747,7 +4747,7 @@ já se encontra na lista.</translation>
         <translation>Elipse com &amp;raios</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and radii</source>
         <translation>Desenhe uma elipse com posição e raios</translation>
     </message>
@@ -4872,7 +4872,7 @@ já se encontra na lista.</translation>
         <translation>&amp;Junta de cauda de andorinha</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation>Desenho junta de cauda de andorinha</translation>
     </message>
@@ -5040,7 +5040,7 @@ já se encontra na lista.</translation>
         <translation>Três pontos</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw three points</source>
         <translation>Desenho três pontos</translation>
     </message>
@@ -5187,7 +5187,7 @@ já se encontra na lista.</translation>
         <translation>Ferramentas de arquivo</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;File</source>
         <translation>&amp;Arquivo</translation>
     </message>
@@ -6302,12 +6302,12 @@ já se encontra na lista.</translation>
 <context>
     <name>Hatch</name>
     <message>
-        <location filename="../scripts/Draw/Hatch/Hatch.js" line="+99"/>
+        <location filename="../scripts/Draw/Hatch/Hatch.js" line="+98"/>
         <source>&amp;Hatch</source>
         <translation>&amp;Hachura</translation>
     </message>
     <message>
-        <location line="-27"/>
+        <location line="-26"/>
         <source>Hatch Tools</source>
         <translation>Ferramentas de hachura</translation>
     </message>
@@ -6378,7 +6378,7 @@ já se encontra na lista.</translation>
         <translation>&amp;Hachura da seleção</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Create hatch or solid fill from selected boundary</source>
         <translation>Criar hachura ou preenchimento do limite selecionado</translation>
     </message>
@@ -6617,7 +6617,7 @@ já se encontra na lista.</translation>
         <translation>Adicionar centróide 2D personalizado</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Create a customizable 2D Centroid marker</source>
         <translation>Criar um marcador Centroid 2D personalizável</translation>
     </message>
@@ -6947,7 +6947,7 @@ já se encontra na lista.</translation>
         <translation>&amp;Área Centroid</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create an area 2D Centroid for a selected entity</source>
         <translation>Criar uma área 2D Centroid para uma entidade seleccionada</translation>
     </message>
@@ -7069,7 +7069,7 @@ já se encontra na lista.</translation>
         <translation>Ouvinte do Centroid</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
         <translation>(Des)Ativar um ouvinte de transação para Centroids 2D</translation>
     </message>
@@ -7322,7 +7322,7 @@ já se encontra na lista.</translation>
         <translation>Soma 2D Centroides ponderada</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Combine selected 2D Centroid markers weighted</source>
         <translation>Combinar marcadores Centróides 2D selecionados ponderados</translation>
     </message>
@@ -7422,7 +7422,7 @@ já se encontra na lista.</translation>
         <translation>&amp;Fio Centroid</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create a wire 2D Centroid for a selection</source>
         <translation>Criar um Centroid 2D de fio para uma seleção</translation>
     </message>
@@ -7440,7 +7440,7 @@ já se encontra na lista.</translation>
         <translation>Ferramentas de Informação</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Info</source>
         <translation>&amp;Info</translation>
     </message>
@@ -7768,7 +7768,7 @@ já se encontra na lista.</translation>
         <translation>&amp;Inverter a seleção</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Invert the current selection</source>
         <translation>Inverter a seleção atual</translation>
     </message>
@@ -7975,7 +7975,7 @@ já se encontra na lista.</translation>
         <translation>Ferramentas de Camada</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Layer</source>
         <translation>&amp;Camada</translation>
     </message>
@@ -8119,7 +8119,7 @@ já se encontra na lista.</translation>
     </message>
     <message>
         <location line="-55"/>
-        <location line="+110"/>
+        <location line="+109"/>
         <source>Layer List</source>
         <translation>Lista de camadas</translation>
     </message>
@@ -8147,7 +8147,7 @@ já se encontra na lista.</translation>
         <translation>&amp;Linha de chamada</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
         <translation>Desenho linha de chamada (sequência de linhas com seta)</translation>
     </message>
@@ -8206,7 +8206,7 @@ já se encontra na lista.</translation>
         <translation>Ferramentas de Linha</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Line</source>
         <translation>&amp;Linha</translation>
     </message>
@@ -8249,7 +8249,7 @@ já se encontra na lista.</translation>
         <translation>Linha de &amp;2 Pontos</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single line or sequence of lines</source>
         <translation>Desenho de uma linha ou sequência de linhas</translation>
     </message>
@@ -8307,7 +8307,7 @@ já se encontra na lista.</translation>
         <translation>Linha do &amp;ângulo</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line at a given absolute angle</source>
         <translation>Traçar linha em um determinado ângulo absoluto</translation>
     </message>
@@ -8365,7 +8365,7 @@ já se encontra na lista.</translation>
         <translation>&amp;Bissetriz angular</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angle bisector, trisector, ...</source>
         <translation>Bissetriz angular</translation>
     </message>
@@ -8433,7 +8433,7 @@ já se encontra na lista.</translation>
         <translation>&amp;Malhete de 2 pontos</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
         <translation>Montagem de cauda reta com dedos, fendas ou pinos</translation>
     </message>
@@ -8456,7 +8456,7 @@ já se encontra na lista.</translation>
         <translation>Ensambladura em cauda de andorinha a partir de 2 pontos</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation>Desenho ensambladura em cauda de andorinha</translation>
     </message>
@@ -8499,7 +8499,7 @@ já se encontra na lista.</translation>
         <translation>&amp;Linha de mão livre</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw freehand line</source>
         <translation>Desenhar linha à mão livre</translation>
     </message>
@@ -8512,7 +8512,7 @@ já se encontra na lista.</translation>
         <translation>Linha &amp;horizontal</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal line</source>
         <translation>Traçar linha horizontal</translation>
     </message>
@@ -8550,7 +8550,7 @@ já se encontra na lista.</translation>
         <translation>&amp;Orthogonal</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to base entity</source>
         <translation>Traçar linha ortogonal à entidade base</translation>
     </message>
@@ -8603,7 +8603,7 @@ já se encontra na lista.</translation>
         <translation>Ortogonal / Tange&amp;ncial</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to line and tangent to circle, arc or ellipse</source>
         <translation>Desenhe uma linha perpendicular a uma linha e tangente a um círculo, arco ou elipse</translation>
     </message>
@@ -8616,7 +8616,7 @@ já se encontra na lista.</translation>
         <translation>Para&amp;lelo (com Distância)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
         <translation>Desenho paralelo à linha existente ou arco concêntrico, círculo</translation>
     </message>
@@ -8639,7 +8639,7 @@ já se encontra na lista.</translation>
         <translation>Para&amp;lelo (através do Ponto)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
         <translation>Traçar linha paralela ou arco concêntrico ou círculo através de um determinado ponto</translation>
     </message>
@@ -8690,7 +8690,7 @@ já se encontra na lista.</translation>
         <translation>Ângulo r&amp;elativo</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line with relative angle to base entity</source>
         <translation>Linha de desenho com ângulo relativo à entidade base</translation>
     </message>
@@ -8761,7 +8761,7 @@ já se encontra na lista.</translation>
         <translation>&amp;Tangente (Ponto, Círculo)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (point, circle)</source>
         <translation>Desenho tangente (ponto, círculo)</translation>
     </message>
@@ -8789,7 +8789,7 @@ já se encontra na lista.</translation>
         <translation>Tan&amp;gente (Dois Círculos)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (circle, circle)</source>
         <translation>Desenhar tangente (círculo, círculo)</translation>
     </message>
@@ -8802,7 +8802,7 @@ já se encontra na lista.</translation>
         <translation>Linha &amp;vertical</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical line</source>
         <translation>Traçar linha vertical</translation>
     </message>
@@ -8994,7 +8994,7 @@ já se encontra na lista.</translation>
         <translation>Miscelânea de Ferramentas</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc</source>
         <translation>Miscelânea</translation>
     </message>
@@ -9017,7 +9017,7 @@ já se encontra na lista.</translation>
         <translation>Ferramentas variadas de bloco</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Block</source>
         <translation>&amp;Bloco</translation>
     </message>
@@ -9035,7 +9035,7 @@ já se encontra na lista.</translation>
         <translation>Ferramentas de desenvolvimento variadas</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>De&amp;velopment</source>
         <translation>&amp;Desenvolvimento</translation>
     </message>
@@ -9053,7 +9053,7 @@ já se encontra na lista.</translation>
         <translation>Ferramentas de desenho miscelânea</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc Draw</source>
         <translation>Miscelânea Desenho</translation>
     </message>
@@ -9076,7 +9076,7 @@ já se encontra na lista.</translation>
         <translation>Ferramentas diversas de importação / exportação</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Import/Export</source>
         <translation>&amp;Importar/Exportar</translation>
     </message>
@@ -9094,7 +9094,7 @@ já se encontra na lista.</translation>
         <translation>Ferramentas de Informação miscelânea</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Information</source>
         <translation>&amp;Informação</translation>
     </message>
@@ -9112,7 +9112,7 @@ já se encontra na lista.</translation>
         <translation>Ferramentas de modificação miscelânea</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Modify</source>
         <translation>&amp;Modificar</translation>
     </message>
@@ -9130,7 +9130,7 @@ já se encontra na lista.</translation>
         <translation>Ferramentas de seleção diversas</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Select</source>
         <translation>&amp;Selecione</translation>
     </message>
@@ -9143,7 +9143,7 @@ já se encontra na lista.</translation>
         <translation>Ferramentas de modificação</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Modify</source>
         <translation>&amp;Modificar</translation>
     </message>
@@ -9367,7 +9367,7 @@ já se encontra na lista.</translation>
         <translation>Offset (com Distância)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse</source>
         <translation>Offset de linha, arco, círculo ou elipse</translation>
     </message>
@@ -9421,7 +9421,7 @@ já se encontra na lista.</translation>
         <translation>Offset (passando por Ponto)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse through point</source>
         <translation>Offset de linha, arco, círculo ou elipse passando por um ponto</translation>
     </message>
@@ -9449,7 +9449,7 @@ já se encontra na lista.</translation>
         <translation>&amp;Abrir</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open an existing drawing</source>
         <translation>Abrir um desenho existente</translation>
     </message>
@@ -9659,7 +9659,7 @@ já se encontra na lista.</translation>
         <translation>Exporte para &amp;PDF</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Exports the current drawing as PDF</source>
         <translation>Exporte o desenho atual como PDF</translation>
     </message>
@@ -9693,7 +9693,7 @@ já se encontra na lista.</translation>
         <translation>Ferramentas de Ponto</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Point</source>
         <translation>&amp;Ponto</translation>
     </message>
@@ -9711,7 +9711,7 @@ já se encontra na lista.</translation>
         <translation>&amp;Ponto único</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single point</source>
         <translation>Desenho ponto único</translation>
     </message>
@@ -9784,7 +9784,7 @@ já se encontra na lista.</translation>
         <translation>Ferramentas Polilinha</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Polyline</source>
         <translation>&amp;Polilinha</translation>
     </message>
@@ -9899,7 +9899,7 @@ já se encontra na lista.</translation>
         <translation>Símbolo de quebra &amp;polilinha a partir de 2 pontos</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a polyline break symbol from 2 points</source>
         <translation>Desenhe um símbolo de quebra de polilinha a partir de 2 pontos</translation>
     </message>
@@ -9958,7 +9958,7 @@ já se encontra na lista.</translation>
         <translation>&amp;Imprimir</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current drawing</source>
         <translation>Imprimir desenho actual</translation>
     </message>
@@ -9971,7 +9971,7 @@ já se encontra na lista.</translation>
         <translation>Imprima a &amp;Exibição Atual</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current view</source>
         <translation>Imprima a exibição atual</translation>
     </message>
@@ -10034,7 +10034,7 @@ já se encontra na lista.</translation>
         <translation>Pré-&amp;visualização da impressão</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Preview how current drawing would be printed</source>
         <translation>Pré-visualizar como seria impresso o desenho actual</translation>
     </message>
@@ -10132,7 +10132,7 @@ já se encontra na lista.</translation>
         <translation>Ferramentas de Projeção</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Projection</source>
         <translation>&amp;Projeção</translation>
     </message>
@@ -10150,12 +10150,12 @@ já se encontra na lista.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1654"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1666"/>
         <source>*VARIES*</source>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1435"/>
+        <location line="-1445"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10170,7 +10170,7 @@ já se encontra na lista.</translation>
         <translation>Propriedades específicas</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+20"/>
         <source>Dependent Entities</source>
         <translation>Entidades Dependentes</translation>
     </message>
@@ -10205,12 +10205,12 @@ já se encontra na lista.</translation>
         <translation>Mostrar todas as propriedades</translation>
     </message>
     <message>
-        <location line="+772"/>
+        <location line="+781"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="-818"/>
+        <location line="-827"/>
         <source>Add custom property to selected objects</source>
         <translation>Adicione uma propriedade personalizada aos objetos selecionados</translation>
     </message>
@@ -10235,9 +10235,9 @@ já se encontra na lista.</translation>
         <translation>Não</translation>
     </message>
     <message>
-        <location line="+396"/>
+        <location line="+405"/>
         <location line="+57"/>
-        <location line="+11"/>
+        <location line="+10"/>
         <source>Property Editor</source>
         <translation>Editor de propriedade</translation>
     </message>
@@ -10252,7 +10252,7 @@ já se encontra na lista.</translation>
         <translation>Propriedades gerais</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+31"/>
         <source>Color:</source>
         <translation>Cor:</translation>
     </message>
@@ -10766,7 +10766,7 @@ já se encontra na lista.</translation>
         <translation>&amp;Executar script</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open and run a script file</source>
         <translation>Abra e execute um arquivo de script</translation>
     </message>
@@ -11088,7 +11088,7 @@ já se encontra na lista.</translation>
         <translation>Ferramentas de selecção</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+13"/>
         <source>Selection Tools Panel</source>
         <translation>Painel de Ferramentas de Seleção</translation>
     </message>
@@ -11106,7 +11106,7 @@ já se encontra na lista.</translation>
         <translation>Selecione &amp;todos</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Select all visible entities</source>
         <translation>Selecione todas as entidades visíveis</translation>
     </message>
@@ -11189,7 +11189,7 @@ já se encontra na lista.</translation>
         <translation>(De-)selecionar &amp;Contorno</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select connected entities</source>
         <translation>(De-)seleccionar entidades ligadas</translation>
     </message>
@@ -11247,7 +11247,7 @@ já se encontra na lista.</translation>
         <translation>(De-)selecionar Entidades In&amp;tersectadas</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities intersected by a line</source>
         <translation>(De-)seleccione todas as entidades intersectadas por uma linha</translation>
     </message>
@@ -11333,7 +11333,7 @@ já se encontra na lista.</translation>
         <translation>(Des-)Selecione Ca&amp;mada</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities on the same layer</source>
         <translation>(De-)Selecione todas as entidades da mesma camada</translation>
     </message>
@@ -11356,7 +11356,7 @@ já se encontra na lista.</translation>
         <translation>(De-)Selecione Área &amp;retangular</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities inside a rectangle</source>
         <translation>(De-)seleccione todas as entidades dentro de um rectângulo</translation>
     </message>
@@ -11471,7 +11471,7 @@ já se encontra na lista.</translation>
         <translation>Ferramentas de Forma</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Shape</source>
         <translation>&amp;Forma</translation>
     </message>
@@ -11538,7 +11538,7 @@ já se encontra na lista.</translation>
         <translation>Polí&amp;gono (Centro, Aresta)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and middle point of side</source>
         <translation>Desenhe polígono regular a partir do centro e de ponto do meio de aresta</translation>
     </message>
@@ -11576,7 +11576,7 @@ já se encontra na lista.</translation>
         <translation>Polí&amp;gono (Aresta, Aresta)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from middle points of two opposite sides or two opposite corners</source>
         <translation>Desenhe polígono regular a partir dos pontos de meio de duas arestas opostas ou de dois vértices opostos</translation>
     </message>
@@ -11614,7 +11614,7 @@ já se encontra na lista.</translation>
         <translation>Polí&amp;gono (Centro, Vértice)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and corner point</source>
         <translation>Desenhe um polígono regular a partir do centro e de vértice</translation>
     </message>
@@ -11642,7 +11642,7 @@ já se encontra na lista.</translation>
         <translation>Polígo&amp;no (2 Pontos de Aresta)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from end points of one side</source>
         <translation>Desenhe um polígono regular a partir das extremidades de uma aresta</translation>
     </message>
@@ -11655,7 +11655,7 @@ já se encontra na lista.</translation>
         <translation>&amp;Retângulo</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle from two corners</source>
         <translation>Desenhe um retângulo a partir de dois vértices</translation>
     </message>
@@ -11673,7 +11673,7 @@ já se encontra na lista.</translation>
         <translation>Retângulo com &amp;tamanho</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle with position and size</source>
         <translation>Desenhe um retângulo com posição e tamanho</translation>
     </message>
@@ -11759,7 +11759,7 @@ já se encontra na lista.</translation>
         <translation>Ferramentas Snap</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+25"/>
         <source>&amp;Snap</source>
         <translation>&amp;Snap</translation>
     </message>
@@ -11907,7 +11907,7 @@ já se encontra na lista.</translation>
         <translation>&amp;Distância Manualmente</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Snap distance between 2 points</source>
         <translation>Distância do salto entre 2 pontos</translation>
     </message>
@@ -12077,7 +12077,7 @@ já se encontra na lista.</translation>
         <translation>Ferramentas Spline</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Spline</source>
         <translation>&amp;Spline</translation>
     </message>
@@ -12100,7 +12100,7 @@ já se encontra na lista.</translation>
         <translation>&amp;Spline (Pontos de Controle)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw spline from control points</source>
         <translation>Desenho de estrias a partir dos pontos de controle</translation>
     </message>
@@ -12322,7 +12322,7 @@ já se encontra na lista.</translation>
         <translation>&amp;Texto</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text</source>
         <translation>Desenhar texto</translation>
     </message>
@@ -12462,7 +12462,7 @@ já se encontra na lista.</translation>
         <translation>&amp;Texto ao longo da entidade</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text along an entity</source>
         <translation>Desenho texto ao longo da entidade</translation>
     </message>
@@ -13031,7 +13031,7 @@ já se encontra na lista.</translation>
         <translation>&amp;Mover / Copiar</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+9"/>
         <source>Move or copy entities once or multiple times</source>
         <translation>Mover ou copiar entidades uma ou várias vezes</translation>
     </message>
@@ -13419,7 +13419,7 @@ já se encontra na lista.</translation>
         <translation>Ferramentas de Visualização</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>View</source>
         <translation>Exibir</translation>
     </message>
@@ -13893,7 +13893,7 @@ já se encontra na lista.</translation>
         <translation>Linha de construção horizontal</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal construction line</source>
         <translation>Desenho linha de construção horizontal</translation>
     </message>
@@ -13906,7 +13906,7 @@ já se encontra na lista.</translation>
         <translation>Linha de construção &amp;vertical</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical construction line</source>
         <translation>Desenho linha de construção vertical</translation>
     </message>
@@ -13924,7 +13924,7 @@ já se encontra na lista.</translation>
         <translation>Ferramentas de zoom</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Zoom</source>
         <translation>&amp;Ampliação</translation>
     </message>

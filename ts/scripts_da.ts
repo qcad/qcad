@@ -325,7 +325,7 @@ the preference changes to take effect.</source>
         <translation>&amp;Tilføj tom blok</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Add new empty block</source>
         <translation>Tilføj en ny tom blok</translation>
     </message>
@@ -412,7 +412,7 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1986"/>
+        <location filename="../scripts/Apollonius.js" line="+1989"/>
         <source>Invalid radius</source>
         <translation>Ugyldig radius</translation>
     </message>
@@ -438,7 +438,7 @@ the preference changes to take effect.</source>
         <translation>Værktøjer til buer</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Arc</source>
         <translation>&amp;Bue</translation>
     </message>
@@ -491,7 +491,7 @@ the preference changes to take effect.</source>
         <translation>&amp;2 punkter og vinkler</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and angle</source>
         <translation>Tegn en bue fra 2 punkter og en vinkel</translation>
     </message>
@@ -544,7 +544,7 @@ the preference changes to take effect.</source>
         <translation>2 punkter og &amp;højde</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and height</source>
         <translation>Tegn en bue fra 2 punkter og højde</translation>
     </message>
@@ -602,7 +602,7 @@ the preference changes to take effect.</source>
         <translation>&amp;2 punkter og længde</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and length</source>
         <translation>Tegn en bue fra 2 punkter og længde</translation>
     </message>
@@ -670,7 +670,7 @@ the preference changes to take effect.</source>
         <translation>&amp;2 punkter og radius</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and radius</source>
         <translation>Tegn en bue fra 2 punkter og radius</translation>
     </message>
@@ -698,7 +698,7 @@ the preference changes to take effect.</source>
         <translation>&amp;3 point</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 3 points</source>
         <translation>Tegn en bue fra 3 punkter</translation>
     </message>
@@ -751,7 +751,7 @@ the preference changes to take effect.</source>
         <translation>&amp;Centrum, punkt, vinkler</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from center, point on arc and angles</source>
         <translation>Tegn en bue fra centrum, punkt på buen og vinkler</translation>
     </message>
@@ -774,7 +774,7 @@ the preference changes to take effect.</source>
         <translation>&amp;Koncentrisk (med afstand)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc</source>
         <translation>Tegn koncentrisk bue</translation>
     </message>
@@ -792,7 +792,7 @@ the preference changes to take effect.</source>
         <translation>Koncentrisk (&amp;gennemgående punkt)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc through point</source>
         <translation>Tegn en koncentrisk bue gennem punktet</translation>
     </message>
@@ -831,7 +831,7 @@ the preference changes to take effect.</source>
         <translation>&amp;Tangent, punkt, radius</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to entity, through point with radius</source>
         <translation>Tegn en bue tangentielt til enheden, gennem et punkt med radius</translation>
     </message>
@@ -859,7 +859,7 @@ the preference changes to take effect.</source>
         <translation>&amp;Tangentielt forbundet</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to base entity</source>
         <translation>Tegn en bue tangentielt til basisenheden</translation>
     </message>
@@ -1045,7 +1045,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>&amp;Batch2Pdf visible layout blocks</source>
         <translation>&amp;Batch2Pdf synlige layoutblokke</translation>
     </message>
@@ -1241,7 +1241,7 @@ Do you wish to recover it?</source>
         <translation>Blokværktøj</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Block</source>
         <translation>&amp;Blok</translation>
     </message>
@@ -1321,7 +1321,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+0"/>
         <location line="+63"/>
-        <location line="+44"/>
+        <location line="+43"/>
         <source>Block List</source>
         <translation>Blokliste</translation>
     </message>
@@ -1619,7 +1619,7 @@ Do you wish to recover it?</source>
         <translation>Cirkelværktøjer</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Circle</source>
         <translation>&amp;Circle</translation>
     </message>
@@ -1647,7 +1647,7 @@ Do you wish to recover it?</source>
         <translation>&amp;2 point</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from 2 diametrically opposite points</source>
         <translation>Tegn en cirkel fra 2 diametralt modsatte punkter</translation>
     </message>
@@ -1700,7 +1700,7 @@ Do you wish to recover it?</source>
         <translation>&amp;2 punkter og radius</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 2 points and radius</source>
         <translation>Tegn cirkel fra 2 punkter og radius</translation>
     </message>
@@ -1739,7 +1739,7 @@ Do you wish to recover it?</source>
         <translation>2 &amp;tangenter og punkt</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation>Tegn en cirkel tangentielt til to enheder, gennem punktet</translation>
     </message>
@@ -1777,7 +1777,7 @@ Do you wish to recover it?</source>
         <translation>2 &amp;tangenter og radius</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to two entities with given radius</source>
         <translation>Tegn en cirkel tangentielt til to enheder med en given radius</translation>
     </message>
@@ -1805,7 +1805,7 @@ Do you wish to recover it?</source>
         <translation>&amp;3 point</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 3 points</source>
         <translation>Tegn en cirkel fra 3 punkter</translation>
     </message>
@@ -1844,7 +1844,7 @@ Do you wish to recover it?</source>
         <translation>3 t&amp;angenter</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to three entities</source>
         <translation>Tegn en cirkel tangentielt til tre enheder</translation>
     </message>
@@ -1874,7 +1874,7 @@ Do you wish to recover it?</source>
         <translation>Centrum, &amp;diameter</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and diameter</source>
         <translation>Tegn cirkel fra centrum og diameter</translation>
     </message>
@@ -1897,7 +1897,7 @@ Do you wish to recover it?</source>
         <translation>&amp;Centrum, punkt</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from center and point on circle</source>
         <translation>Tegn cirkel fra centrum og punkt på cirklen</translation>
     </message>
@@ -1927,7 +1927,7 @@ Do you wish to recover it?</source>
         <translation>Centrum, &amp;radius</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and radius</source>
         <translation>Tegn cirkel fra centrum og radius</translation>
     </message>
@@ -1950,7 +1950,7 @@ Do you wish to recover it?</source>
         <translation>&amp;Koncentrisk (med afstand)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric circle</source>
         <translation>Tegn en koncentrisk cirkel</translation>
     </message>
@@ -1968,7 +1968,7 @@ Do you wish to recover it?</source>
         <translation>Koncentrisk (&amp;gennemgående punkt)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw concentric circle through point</source>
         <translation>Tegn en koncentrisk cirkel gennem punktet</translation>
     </message>
@@ -2007,7 +2007,7 @@ Do you wish to recover it?</source>
         <translation>&amp;Tangent og 2 punkter</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle through two points and tangential to one entity</source>
         <translation>Tegn en cirkel gennem to punkter og tangentielt til den ene enhed</translation>
     </message>
@@ -2030,7 +2030,7 @@ Do you wish to recover it?</source>
         <translation>&amp;Tangent, punkt, radius</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to entity, through point with radius</source>
         <translation>Tegn en cirkel tangentielt til enheden, gennem punktet med radius</translation>
     </message>
@@ -2137,18 +2137,18 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+68"/>
+        <location line="+67"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Kommandolinje</translation>
     </message>
     <message>
-        <location line="-21"/>
+        <location line="-20"/>
         <source>&amp;Command Line</source>
         <translation>&amp;Kommandolinje</translation>
     </message>
     <message>
-        <location line="+208"/>
+        <location line="+207"/>
         <source>Invalid value:</source>
         <translation>Ugyldig værdi:</translation>
     </message>
@@ -2295,7 +2295,7 @@ Do you wish to recover it?</source>
         <translation>Konverter tegning&amp;enhed</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Convert drawing to a different drawing unit</source>
         <translation>Konverter tegning til en anden tegningsenhed</translation>
     </message>
@@ -2392,7 +2392,7 @@ Do you wish to recover it?</source>
         <translation>&amp;Tæller</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Auto increment number</source>
         <translation>Automatisk forøgelse af antal</translation>
     </message>
@@ -2423,7 +2423,7 @@ Do you wish to recover it?</source>
         <translation>Centrumlinjekryds</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
         <translation>Tegn centrumlinjekryds i buer, cirkler eller ellipser</translation>
     </message>
@@ -2569,7 +2569,7 @@ Do you wish to recover it?</source>
         <translation>&amp;Fravælg alle</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Deselect all entities</source>
         <translation>Fravælg alle enheder</translation>
     </message>
@@ -2710,7 +2710,7 @@ Do you wish to recover it?</source>
         <translation>&amp;Tilpasset</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw aligned dimension</source>
         <translation>Tegn en tilpasset dimension</translation>
     </message>
@@ -2743,7 +2743,7 @@ Do you wish to recover it?</source>
         <translation>&amp;Vinkel</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angular dimension</source>
         <translation>Tegn vinkeldimension</translation>
     </message>
@@ -2766,7 +2766,7 @@ Do you wish to recover it?</source>
         <translation>&amp;Diametrisk</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw diametric dimension</source>
         <translation>Tegn diametrisk dimension</translation>
     </message>
@@ -2779,7 +2779,7 @@ Do you wish to recover it?</source>
         <translation>&amp;Horisontal</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw horizontal dimension</source>
         <translation>Tegn vandret dimension</translation>
     </message>
@@ -2802,7 +2802,7 @@ Do you wish to recover it?</source>
         <translation>&amp;Ordinate (X/Y)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+3"/>
         <source>Draw ordinate dimension</source>
         <translation>Tegn ordinatdimensionen</translation>
     </message>
@@ -2825,7 +2825,7 @@ Do you wish to recover it?</source>
         <translation>&amp;Radial</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw radial dimension</source>
         <translation>Tegn radial dimension</translation>
     </message>
@@ -2879,7 +2879,7 @@ Do you wish to recover it?</source>
         <translation>&amp;Roteret (lineær)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw linear dimension at a fixed angle</source>
         <translation>Tegn lineær dimension i en fast vinkel</translation>
     </message>
@@ -2892,7 +2892,7 @@ Do you wish to recover it?</source>
         <translation>&amp;Lodret</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw vertical dimension</source>
         <translation>Tegn lodret dimension</translation>
     </message>
@@ -2955,7 +2955,7 @@ Do you wish to recover it?</source>
         <translation>Dimension Værktøjer</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>D&amp;imension</source>
         <translation>D&amp;imension</translation>
     </message>
@@ -3476,7 +3476,7 @@ er allerede på listen.</translation>
         <translation>Tegning Fms Lanes</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
         <translation>Træk FMS baner (ribber)</translation>
     </message>
@@ -4077,7 +4077,7 @@ er allerede på listen.</translation>
         <translation>&amp;Tegne fra CSV</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Draws entities based on textual entries in a CSV file</source>
         <translation>Tegner enheder baseret på tekstangivelser i en CSV-fil</translation>
     </message>
@@ -4085,7 +4085,7 @@ er allerede på listen.</translation>
 <context>
     <name>DrawOrder</name>
     <message>
-        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+92"/>
+        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
         <translation>&amp;Træk ordre</translation>
     </message>
@@ -4183,7 +4183,7 @@ er allerede på listen.</translation>
         <translation>&amp;Tegn polylinje</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw polyline with line and arc segments</source>
         <translation>Tegn polylinje med linje- og buesegmenter</translation>
     </message>
@@ -4370,7 +4370,7 @@ er allerede på listen.</translation>
         <translation>&amp;Script Shell</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+34"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
         <translation>Script Shell</translation>
@@ -4399,7 +4399,7 @@ er allerede på listen.</translation>
         <translation>Rediger værktøjer</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Edit</source>
         <translation>&amp;Rediger</translation>
     </message>
@@ -4477,7 +4477,7 @@ er allerede på listen.</translation>
         <translation>Rediger te&amp;kst</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Edit text</source>
         <translation>Rediger tekst</translation>
     </message>
@@ -4490,7 +4490,7 @@ er allerede på listen.</translation>
         <translation>Ellipse-værktøjer</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Ellipse</source>
         <translation>&amp;Ellipse</translation>
     </message>
@@ -4588,7 +4588,7 @@ er allerede på listen.</translation>
         <translation>&amp;Ellipsebuen</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw ellipse arc from center, major point, ratio and angles</source>
         <translation>Tegn ellipsebuen fra centrum, hovedpunkt, forhold og vinkler</translation>
     </message>
@@ -4601,7 +4601,7 @@ er allerede på listen.</translation>
         <translation>&amp;Ellipse (centrum, punkt, forhold)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw full ellipse from center, major point and ratio</source>
         <translation>Tegn en hel ellipse fra centrum, hovedpunkt og forhold</translation>
     </message>
@@ -4637,7 +4637,7 @@ er allerede på listen.</translation>
         <translation>Ellipse med &amp;diametre</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and diameters</source>
         <translation>Tegn en ellipse med position og diametre</translation>
     </message>
@@ -4670,7 +4670,7 @@ er allerede på listen.</translation>
         <translation>Indskrevet i kvadrilateral</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse inscribed in quadrilateral</source>
         <translation>Tegn en ellipse indskrevet i en firkant</translation>
     </message>
@@ -4693,7 +4693,7 @@ er allerede på listen.</translation>
         <translation>&amp;Parallelkurve (med afstand)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse</source>
         <translation>Tegn en parallelkurve til ellipse</translation>
     </message>
@@ -4711,7 +4711,7 @@ er allerede på listen.</translation>
         <translation>Parallelkurve (&amp;gennemgangspunkt)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse through point</source>
         <translation>Tegn en parallelkurve til ellipsen gennem punktet</translation>
     </message>
@@ -4747,7 +4747,7 @@ er allerede på listen.</translation>
         <translation>Ellipse med &amp;radius</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and radii</source>
         <translation>Tegn ellipse med position og radius</translation>
     </message>
@@ -4872,7 +4872,7 @@ er allerede på listen.</translation>
         <translation>&amp;Savskægssamling</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation>Tegn en skæreskifteforbindelse</translation>
     </message>
@@ -5040,7 +5040,7 @@ er allerede på listen.</translation>
         <translation>Tre punkter</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw three points</source>
         <translation>Tre uafgjorte point</translation>
     </message>
@@ -5187,7 +5187,7 @@ er allerede på listen.</translation>
         <translation>Filværktøjer</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;File</source>
         <translation>&amp;Fil</translation>
     </message>
@@ -6307,7 +6307,7 @@ er allerede på listen.</translation>
         <translation>Værktøj til skravering</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Hatch</source>
         <translation>&amp;Skravering</translation>
     </message>
@@ -6378,7 +6378,7 @@ er allerede på listen.</translation>
         <translation>&amp;Skravering fra valg</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Create hatch or solid fill from selected boundary</source>
         <translation>Opret skravering eller fast fyld fra den valgte grænse</translation>
     </message>
@@ -6617,7 +6617,7 @@ er allerede på listen.</translation>
         <translation>Tilføj brugerdefineret 2D-centroid</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Create a customizable 2D Centroid marker</source>
         <translation>Opret en brugerdefinerbar 2D Centroid-markør</translation>
     </message>
@@ -6947,7 +6947,7 @@ er allerede på listen.</translation>
         <translation>&amp;Område centroid</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create an area 2D Centroid for a selected entity</source>
         <translation>Opret et område 2D Centroid for en valgt enhed</translation>
     </message>
@@ -7069,7 +7069,7 @@ er allerede på listen.</translation>
         <translation>Centroid Listener</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
         <translation>(De-)aktiverer en transaktionslytter for 2D-centrifuger</translation>
     </message>
@@ -7322,7 +7322,7 @@ er allerede på listen.</translation>
         <translation>Sum 2D centroider vægtet</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Combine selected 2D Centroid markers weighted</source>
         <translation>Kombiner udvalgte 2D Centroid-markører vægtet</translation>
     </message>
@@ -7422,7 +7422,7 @@ er allerede på listen.</translation>
         <translation>&amp;Tråd centroid</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create a wire 2D Centroid for a selection</source>
         <translation>Opret en tråd 2D Centroid for et valg</translation>
     </message>
@@ -7440,7 +7440,7 @@ er allerede på listen.</translation>
         <translation>Informationsværktøjer</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Info</source>
         <translation>&amp;Info</translation>
     </message>
@@ -7768,7 +7768,7 @@ er allerede på listen.</translation>
         <translation>&amp;Invert valg</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Invert the current selection</source>
         <translation>Invertere det aktuelle valg</translation>
     </message>
@@ -7975,7 +7975,7 @@ er allerede på listen.</translation>
         <translation>Værktøjer til lag</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Layer</source>
         <translation>&amp;Lag</translation>
     </message>
@@ -8114,12 +8114,12 @@ er allerede på listen.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+110"/>
+        <location line="+109"/>
         <source>Layer List</source>
         <translation>Liste over lag</translation>
     </message>
     <message>
-        <location line="-55"/>
+        <location line="-54"/>
         <source>&amp;Layer List</source>
         <translation>&amp;Layer-liste</translation>
     </message>
@@ -8157,7 +8157,7 @@ er allerede på listen.</translation>
         <translation>&amp;Leder</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
         <translation>Tegn lederen (linjesekvens med pil)</translation>
     </message>
@@ -8206,7 +8206,7 @@ er allerede på listen.</translation>
         <translation>Linjeværktøj</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Line</source>
         <translation>&amp;Line</translation>
     </message>
@@ -8284,7 +8284,7 @@ er allerede på listen.</translation>
         <translation>Linje fra &amp;2 punkter</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single line or sequence of lines</source>
         <translation>Tegn en enkelt linje eller en sekvens af linjer</translation>
     </message>
@@ -8337,7 +8337,7 @@ er allerede på listen.</translation>
         <translation>Linje fra &amp;Vinkel</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line at a given absolute angle</source>
         <translation>Tegn en linje i en given absolut vinkel</translation>
     </message>
@@ -8375,7 +8375,7 @@ er allerede på listen.</translation>
         <translation>&amp;Vinkelhalvdel</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angle bisector, trisector, ...</source>
         <translation>Tegn vinkelbisektoren, trekantsisektoren, ...</translation>
     </message>
@@ -8433,7 +8433,7 @@ er allerede på listen.</translation>
         <translation>Box &amp;Joint fra 2 punkter</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
         <translation>Trækboksforbindelse Fingre, slidser og spidser</translation>
     </message>
@@ -8476,7 +8476,7 @@ er allerede på listen.</translation>
         <translation>&amp;Savskægsskifte fra 2 punkter</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation>Tegn en skæreskifteforbindelse</translation>
     </message>
@@ -8499,7 +8499,7 @@ er allerede på listen.</translation>
         <translation>&amp;Frihånd linje</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw freehand line</source>
         <translation>Tegn en linje i frihånd</translation>
     </message>
@@ -8537,7 +8537,7 @@ er allerede på listen.</translation>
         <translation>&amp;Horisontal linje</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal line</source>
         <translation>Tegn en vandret linje</translation>
     </message>
@@ -8575,7 +8575,7 @@ er allerede på listen.</translation>
         <translation>&amp;Orthogonal</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to base entity</source>
         <translation>Tegn en linje vinkelret på basisenheden</translation>
     </message>
@@ -8603,7 +8603,7 @@ er allerede på listen.</translation>
         <translation>Vinkelret / tange&amp;nt</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to line and tangent to circle, arc or ellipse</source>
         <translation>Tegn en linje vinkelret på en linje og tangent til en cirkel, bue eller ellipse</translation>
     </message>
@@ -8626,7 +8626,7 @@ er allerede på listen.</translation>
         <translation>Para&amp;llel (med afstand)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
         <translation>Tegn parallelt med eksisterende linje eller koncentrisk bue, cirkel</translation>
     </message>
@@ -8644,7 +8644,7 @@ er allerede på listen.</translation>
         <translation>Par&amp;allel (gennem punkt)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
         <translation>Tegn en parallel linje eller koncentrisk bue eller cirkel gennem et givet punkt</translation>
     </message>
@@ -8720,7 +8720,7 @@ er allerede på listen.</translation>
         <translation>R&amp;elativ vinkel</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line with relative angle to base entity</source>
         <translation>Tegn en linje med en relativ vinkel i forhold til basisenheden</translation>
     </message>
@@ -8761,7 +8761,7 @@ er allerede på listen.</translation>
         <translation>&amp;Tangent (punkt, cirkel)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (point, circle)</source>
         <translation>Tegn tangent (punkt, cirkel)</translation>
     </message>
@@ -8789,7 +8789,7 @@ er allerede på listen.</translation>
         <translation>Tan&amp;gent (to cirkler)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (circle, circle)</source>
         <translation>Tegn tangent (cirkel, cirkel)</translation>
     </message>
@@ -8802,7 +8802,7 @@ er allerede på listen.</translation>
         <translation>&amp;Lodret linje</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical line</source>
         <translation>Tegn en lodret linje</translation>
     </message>
@@ -8994,7 +8994,7 @@ er allerede på listen.</translation>
         <translation>Diverse værktøjer</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc</source>
         <translation>Diverse</translation>
     </message>
@@ -9017,7 +9017,7 @@ er allerede på listen.</translation>
         <translation>Diverse blokværktøj</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Block</source>
         <translation>&amp;Blok</translation>
     </message>
@@ -9035,7 +9035,7 @@ er allerede på listen.</translation>
         <translation>Diverse udviklingsværktøjer</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>De&amp;velopment</source>
         <translation>&amp;Udvikling</translation>
     </message>
@@ -9053,7 +9053,7 @@ er allerede på listen.</translation>
         <translation>Diverse tegneværktøjer</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc Draw</source>
         <translation>Diverse trækninger</translation>
     </message>
@@ -9076,7 +9076,7 @@ er allerede på listen.</translation>
         <translation>Diverse import/eksport-værktøjer</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Import/Export</source>
         <translation>&amp;Import/Eksport</translation>
     </message>
@@ -9094,7 +9094,7 @@ er allerede på listen.</translation>
         <translation>Diverse informationsværktøjer</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Information</source>
         <translation>Oplysninger</translation>
     </message>
@@ -9112,7 +9112,7 @@ er allerede på listen.</translation>
         <translation>Diverse ændringsværktøjer</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Modify</source>
         <translation>&amp;Modificere</translation>
     </message>
@@ -9130,7 +9130,7 @@ er allerede på listen.</translation>
         <translation>Diverse udvælgelsesværktøjer</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Select</source>
         <translation>&amp;Select</translation>
     </message>
@@ -9143,7 +9143,7 @@ er allerede på listen.</translation>
         <translation>Værktøjer til ændring</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Modify</source>
         <translation>&amp;Modificere</translation>
     </message>
@@ -9398,7 +9398,7 @@ er allerede på listen.</translation>
         <translation>Parallelforskydning (med afstand)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse</source>
         <translation>Forskudt linje, bue, cirkel eller ellipse</translation>
     </message>
@@ -9421,7 +9421,7 @@ er allerede på listen.</translation>
         <translation>Parallelforskydning (gennem punkt)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse through point</source>
         <translation>Forskydning af linje, bue, cirkel eller ellipse gennem punkt</translation>
     </message>
@@ -9449,7 +9449,7 @@ er allerede på listen.</translation>
         <translation>&amp;Open</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open an existing drawing</source>
         <translation>Åbn en eksisterende tegning</translation>
     </message>
@@ -9659,7 +9659,7 @@ er allerede på listen.</translation>
         <translation>P&amp;DF Eksport</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Exports the current drawing as PDF</source>
         <translation>Eksporterer den aktuelle tegning som PDF</translation>
     </message>
@@ -9693,7 +9693,7 @@ er allerede på listen.</translation>
         <translation>Punktværktøj</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Point</source>
         <translation>&amp;Punkt</translation>
     </message>
@@ -9711,7 +9711,7 @@ er allerede på listen.</translation>
         <translation>Enkelt &amp;Punkt</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single point</source>
         <translation>Tegn et enkelt punkt</translation>
     </message>
@@ -9784,7 +9784,7 @@ er allerede på listen.</translation>
         <translation>Værktøjer til polylinjer</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Polyline</source>
         <translation>&amp;Polyline</translation>
     </message>
@@ -9899,7 +9899,7 @@ er allerede på listen.</translation>
         <translation>&amp;Polylinje brud symbol fra 2 punkter</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a polyline break symbol from 2 points</source>
         <translation>Tegn et polylinebrudssymbol fra 2 punkter</translation>
     </message>
@@ -9958,7 +9958,7 @@ er allerede på listen.</translation>
         <translation>&amp;Udskriv</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current drawing</source>
         <translation>Udskriv den aktuelle tegning</translation>
     </message>
@@ -9971,7 +9971,7 @@ er allerede på listen.</translation>
         <translation>Udskriv &amp;aktuel visning</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current view</source>
         <translation>Udskriv den aktuelle visning</translation>
     </message>
@@ -10119,7 +10119,7 @@ er allerede på listen.</translation>
         <translation>Udskrifts&amp;forhåndsvisning</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Preview how current drawing would be printed</source>
         <translation>Vis et eksempel på, hvordan den aktuelle tegning vil blive udskrevet</translation>
     </message>
@@ -10132,7 +10132,7 @@ er allerede på listen.</translation>
         <translation>Projektionsværktøjer</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Projection</source>
         <translation>&amp;Projektion</translation>
     </message>
@@ -10185,7 +10185,7 @@ er allerede på listen.</translation>
         <translation>Vis avancerede dimensionsstilsoverstyringer</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+219"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+221"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10200,7 +10200,7 @@ er allerede på listen.</translation>
         <translation>Specifikke egenskaber</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+20"/>
         <source>Dependent Entities</source>
         <translation>Afhængige enheder</translation>
     </message>
@@ -10260,7 +10260,7 @@ er allerede på listen.</translation>
         <translation>Nej</translation>
     </message>
     <message>
-        <location line="+393"/>
+        <location line="+402"/>
         <source>*VARIES*</source>
         <translation>*VARIERER*</translation>
     </message>
@@ -10272,7 +10272,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+0"/>
         <location line="+57"/>
-        <location line="+11"/>
+        <location line="+10"/>
         <source>Property Editor</source>
         <translation>Egenskabseditor</translation>
     </message>
@@ -10287,7 +10287,7 @@ er allerede på listen.</translation>
         <translation>Generelle egenskaber</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+31"/>
         <source>Color:</source>
         <translation>Farve:</translation>
     </message>
@@ -10766,7 +10766,7 @@ er allerede på listen.</translation>
         <translation>R&amp;un-manuskript</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open and run a script file</source>
         <translation>Åbn og kør en scriptfil</translation>
     </message>
@@ -11088,7 +11088,7 @@ er allerede på listen.</translation>
         <translation>Værktøjer til udvælgelse</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+13"/>
         <source>Selection Tools Panel</source>
         <translation>Panel med udvælgelsesværktøjer</translation>
     </message>
@@ -11106,7 +11106,7 @@ er allerede på listen.</translation>
         <translation>Vælg &amp;All</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Select all visible entities</source>
         <translation>Vælg alle synlige enheder</translation>
     </message>
@@ -11224,7 +11224,7 @@ er allerede på listen.</translation>
         <translation>(De-)Vælg &amp;Contour</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select connected entities</source>
         <translation>(De-)vælge tilsluttede enheder</translation>
     </message>
@@ -11272,7 +11272,7 @@ er allerede på listen.</translation>
         <translation>(De-)Vælg ind&amp;skårne enheder</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities intersected by a line</source>
         <translation>(De-)Vælg alle enheder, der skæres af en linje</translation>
     </message>
@@ -11333,7 +11333,7 @@ er allerede på listen.</translation>
         <translation>(De-)Vælg La&amp;yer</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities on the same layer</source>
         <translation>(De-)Vælg alle enheder på det samme lag</translation>
     </message>
@@ -11386,7 +11386,7 @@ er allerede på listen.</translation>
         <translation>(De-)Vælg &amp;Rektangulært område</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities inside a rectangle</source>
         <translation>(De-)Vælg alle enheder inden for et rektangel</translation>
     </message>
@@ -11471,7 +11471,7 @@ er allerede på listen.</translation>
         <translation>Formværktøjer</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Shape</source>
         <translation>&amp;Form</translation>
     </message>
@@ -11543,7 +11543,7 @@ er allerede på listen.</translation>
         <translation>Pol&amp;ygon (centrum, side)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and middle point of side</source>
         <translation>Tegn en regelmæssig polygon fra centrum og det midterste punkt på siden</translation>
     </message>
@@ -11586,7 +11586,7 @@ er allerede på listen.</translation>
         <translation>Polygo&amp;n (side, side)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from middle points of two opposite sides or two opposite corners</source>
         <translation>Tegn en regulær polygon fra midtpunkterne på to modsatte sider eller to modsatte hjørner</translation>
     </message>
@@ -11614,7 +11614,7 @@ er allerede på listen.</translation>
         <translation>Pol&amp;ygon (centrum, hjørne)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and corner point</source>
         <translation>Tegn regelmæssig polygon fra centrum og hjørnepunkt</translation>
     </message>
@@ -11642,7 +11642,7 @@ er allerede på listen.</translation>
         <translation>Polygo&amp;n (2 sidegevinster)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from end points of one side</source>
         <translation>Tegn regelmæssig polygon fra endepunkterne på den ene side</translation>
     </message>
@@ -11655,7 +11655,7 @@ er allerede på listen.</translation>
         <translation>&amp;Rektangel</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle from two corners</source>
         <translation>Tegn et rektangel fra to hjørner</translation>
     </message>
@@ -11701,7 +11701,7 @@ er allerede på listen.</translation>
         <translation>Rektangel med &amp;Size</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle with position and size</source>
         <translation>Tegn rektangel med position og størrelse</translation>
     </message>
@@ -11759,7 +11759,7 @@ er allerede på listen.</translation>
         <translation>Snap-værktøj</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+25"/>
         <source>&amp;Snap</source>
         <translation>&amp;Snap</translation>
     </message>
@@ -11927,7 +11927,7 @@ er allerede på listen.</translation>
         <translation>&amp;Afstand manuelt</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Snap distance between 2 points</source>
         <translation>Snapafstand mellem 2 punkter</translation>
     </message>
@@ -12077,7 +12077,7 @@ er allerede på listen.</translation>
         <translation>Spline-værktøj</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Spline</source>
         <translation>&amp;Spline</translation>
     </message>
@@ -12125,7 +12125,7 @@ er allerede på listen.</translation>
         <translation>&amp;Spline (kontrolpunkter)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw spline from control points</source>
         <translation>Tegn spline fra kontrolpunkter</translation>
     </message>
@@ -12339,7 +12339,7 @@ er allerede på listen.</translation>
         <translation>&amp;Tekst</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text</source>
         <translation>Tegn tekst</translation>
     </message>
@@ -12462,7 +12462,7 @@ er allerede på listen.</translation>
         <translation>&amp;Text Langs Entitet</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text along an entity</source>
         <translation>Tegn tekst langs en enhed</translation>
     </message>
@@ -13051,7 +13051,7 @@ er allerede på listen.</translation>
         <translation>&amp;Flytte/kopiere</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+9"/>
         <source>Move or copy entities once or multiple times</source>
         <translation>Flyt eller kopier enheder én eller flere gange</translation>
     </message>
@@ -13419,7 +13419,7 @@ er allerede på listen.</translation>
         <translation>Værktøjer til visning</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>View</source>
         <translation>Visning</translation>
     </message>
@@ -13893,7 +13893,7 @@ er allerede på listen.</translation>
         <translation>&amp;Horisontal byggelinje</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal construction line</source>
         <translation>Tegn en vandret byggelinje</translation>
     </message>
@@ -13906,7 +13906,7 @@ er allerede på listen.</translation>
         <translation>&amp;Vertikal byggelinje</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical construction line</source>
         <translation>Tegn en lodret byggelinje</translation>
     </message>
@@ -13924,7 +13924,7 @@ er allerede på listen.</translation>
         <translation>Zoom-værktøjer</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Zoom</source>
         <translation>&amp;Zoom</translation>
     </message>

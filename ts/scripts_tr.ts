@@ -325,7 +325,7 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <translation>&amp;Boş Blok ekle</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Add new empty block</source>
         <translation>Yeni boş blok ekle</translation>
     </message>
@@ -412,7 +412,7 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1986"/>
+        <location filename="../scripts/Apollonius.js" line="+1989"/>
         <source>Invalid radius</source>
         <translation>Geçersiz yarıçap</translation>
     </message>
@@ -438,7 +438,7 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <translation>Yay Araçları</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Arc</source>
         <translation>&amp;Yay</translation>
     </message>
@@ -491,7 +491,7 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <translation>&amp;2 Nokta ve Açı</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and angle</source>
         <translation>2 noktadan ve açıdan yay çiz</translation>
     </message>
@@ -544,7 +544,7 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <translation>2 Nokta ve &amp;Yükseklik</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and height</source>
         <translation>2 noktadan ve yükseklikten yay çiz</translation>
     </message>
@@ -602,7 +602,7 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <translation>&amp;2 Nokta ve Uzunluk</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and length</source>
         <translation>2 noktadan ve uzunluktan yay çiz</translation>
     </message>
@@ -670,7 +670,7 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <translation>&amp;2 Nokta ve Yarıçap</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and radius</source>
         <translation>2 noktadan ve yarıçaptan yay çiz</translation>
     </message>
@@ -698,7 +698,7 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <translation>&amp; 3 Nokta</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 3 points</source>
         <translation>3 noktadan yay çiz</translation>
     </message>
@@ -751,7 +751,7 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <translation>&amp;Merkez, Nokta, Açılar</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from center, point on arc and angles</source>
         <translation>Merkezden yay çiz, yay ve açıları üzerinde nokta</translation>
     </message>
@@ -774,7 +774,7 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <translation>&amp;Eşmerkezli (Mesafeli)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc</source>
         <translation>Eşmerkezli yay çiz</translation>
     </message>
@@ -792,7 +792,7 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <translation>Eşmerkezli (&amp;Noktadan)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc through point</source>
         <translation>Eşmerkezli yayı noktadan çiz</translation>
     </message>
@@ -831,7 +831,7 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <translation>&amp;Teğet, Nokta, Yarıçap</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to entity, through point with radius</source>
         <translation>Yarıçaplı noktadan öğeye teğetsel yay çiz</translation>
     </message>
@@ -859,7 +859,7 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <translation>&amp;Teğetsel Bağlı</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to base entity</source>
         <translation>Temel öğeye teğet yay çiz</translation>
     </message>
@@ -1042,7 +1042,7 @@ Kurtarmak ister misiniz?</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>&amp;Batch2Pdf visible layout blocks</source>
         <translation type="unfinished">Batch2Pdf görünür düzen blokları</translation>
     </message>
@@ -1238,7 +1238,7 @@ Kurtarmak ister misiniz?</translation>
         <translation>Blok Araçları</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+109"/>
         <source>Cannot edit block while editing a block in-place</source>
         <translation type="unfinished">Bir bloğu yerinde düzenlerken blok düzenlenemiyor</translation>
     </message>
@@ -1318,7 +1318,7 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location line="+0"/>
         <location line="+63"/>
-        <location line="+44"/>
+        <location line="+43"/>
         <source>Block List</source>
         <translation type="unfinished">Blok Listesi</translation>
     </message>
@@ -1616,7 +1616,7 @@ Kurtarmak ister misiniz?</translation>
         <translation>Daire Araçları</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Circle</source>
         <translation>&amp;Daire</translation>
     </message>
@@ -1644,7 +1644,7 @@ Kurtarmak ister misiniz?</translation>
         <translation>&amp;2 Nokta</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from 2 diametrically opposite points</source>
         <translation>2 zıt noktadan daire çizin</translation>
     </message>
@@ -1697,7 +1697,7 @@ Kurtarmak ister misiniz?</translation>
         <translation>&amp;2 Nokta ve Yarıçap</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 2 points and radius</source>
         <translation>2 noktadan ve yarıçaptan daire çiz</translation>
     </message>
@@ -1736,7 +1736,7 @@ Kurtarmak ister misiniz?</translation>
         <translation>2 Te&amp;ğet ve Nokta</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation>Nokta aracılığıyla iki varlığa teğet daire çiz</translation>
     </message>
@@ -1774,7 +1774,7 @@ Kurtarmak ister misiniz?</translation>
         <translation>2 &amp;Teğet ve Yarıçap</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to two entities with given radius</source>
         <translation>Verilen yarıçaplı iki varlığa teğet daire çiz</translation>
     </message>
@@ -1802,7 +1802,7 @@ Kurtarmak ister misiniz?</translation>
         <translation>&amp;3 Nokta</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 3 points</source>
         <translation>3 noktadan daire çiz</translation>
     </message>
@@ -1841,7 +1841,7 @@ Kurtarmak ister misiniz?</translation>
         <translation>3 Teğet</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to three entities</source>
         <translation>Üç varlığa teğet daire çizin</translation>
     </message>
@@ -1871,7 +1871,7 @@ Kurtarmak ister misiniz?</translation>
         <translation>Merkez, &amp;Çap</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and diameter</source>
         <translation>Merkezden ve çaptan daire çiz</translation>
     </message>
@@ -1894,7 +1894,7 @@ Kurtarmak ister misiniz?</translation>
         <translation>&amp;Merkez, Nokta</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from center and point on circle</source>
         <translation>Merkezden daire çizin ve daireye işaret edin</translation>
     </message>
@@ -1924,7 +1924,7 @@ Kurtarmak ister misiniz?</translation>
         <translation>Merkez, &amp;Yarıçap</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and radius</source>
         <translation>Merkezden ve yarıçaptan daire çiz</translation>
     </message>
@@ -1947,7 +1947,7 @@ Kurtarmak ister misiniz?</translation>
         <translation>&amp;Konsantrik (Mesafeli)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric circle</source>
         <translation>Eşmerkezli daire çiz</translation>
     </message>
@@ -1965,7 +1965,7 @@ Kurtarmak ister misiniz?</translation>
         <translation>Eşmerkezili (&amp;Noktadan)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw concentric circle through point</source>
         <translation>Noktadan eşmerkezli daire çiz</translation>
     </message>
@@ -2004,7 +2004,7 @@ Kurtarmak ister misiniz?</translation>
         <translation>&amp;Teğet ve 2 Nokta</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle through two points and tangential to one entity</source>
         <translation>İki noktadan daire çizme ve bir varlığa teğetsel olarak çiz</translation>
     </message>
@@ -2027,7 +2027,7 @@ Kurtarmak ister misiniz?</translation>
         <translation>&amp;Teğet, Nokta, Yarıçap</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to entity, through point with radius</source>
         <translation>Yarıçap ile noktadan öğeye teğet daire çizin</translation>
     </message>
@@ -2134,18 +2134,18 @@ Kurtarmak ister misiniz?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+68"/>
+        <location line="+67"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Komut Satırı</translation>
     </message>
     <message>
-        <location line="-21"/>
+        <location line="-20"/>
         <source>&amp;Command Line</source>
         <translation>&amp;Komut Satırı</translation>
     </message>
     <message>
-        <location line="+208"/>
+        <location line="+207"/>
         <source>Invalid value:</source>
         <translation type="unfinished">Geçersiz değer:</translation>
     </message>
@@ -2292,7 +2292,7 @@ Kurtarmak ister misiniz?</translation>
         <translation>&amp;Çizim Birimini Dönüştür</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Convert drawing to a different drawing unit</source>
         <translation>Çizimi farklı bir çizim birimine dönüştürme</translation>
     </message>
@@ -2364,7 +2364,7 @@ Kurtarmak ister misiniz?</translation>
         <translation type="unfinished">Sayaç</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Auto increment number</source>
         <translation type="unfinished">Otomatik artış numarası</translation>
     </message>
@@ -2420,7 +2420,7 @@ Kurtarmak ister misiniz?</translation>
         <translation type="unfinished">Merkez Hattı Çapraz</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
         <translation type="unfinished">Yaylarda, dairelerde veya elipslerde merkez hattı çaprazını çizme</translation>
     </message>
@@ -2566,7 +2566,7 @@ Kurtarmak ister misiniz?</translation>
         <translation>&amp;Tüm Seçimi Kaldır</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Deselect all entities</source>
         <translation>Tüm varlıkların seçimini kaldır</translation>
     </message>
@@ -2707,7 +2707,7 @@ Kurtarmak ister misiniz?</translation>
         <translation>&amp;Hizalı</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw aligned dimension</source>
         <translation>Hizalanmış ölçü çiz</translation>
     </message>
@@ -2735,7 +2735,7 @@ Kurtarmak ister misiniz?</translation>
         <translation>&amp;Açısal</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angular dimension</source>
         <translation>Açısal boyut çiz</translation>
     </message>
@@ -2763,7 +2763,7 @@ Kurtarmak ister misiniz?</translation>
         <translation>&amp;Çap</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw diametric dimension</source>
         <translation>Çap boyutu çiz</translation>
     </message>
@@ -2776,7 +2776,7 @@ Kurtarmak ister misiniz?</translation>
         <translation>&amp;Yatay</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw horizontal dimension</source>
         <translation>Yatay boyut çiz</translation>
     </message>
@@ -2799,7 +2799,7 @@ Kurtarmak ister misiniz?</translation>
         <translation>&amp;Ordinat (X/Y)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+3"/>
         <source>Draw ordinate dimension</source>
         <translation>Ordinat boyutu çiz</translation>
     </message>
@@ -2822,7 +2822,7 @@ Kurtarmak ister misiniz?</translation>
         <translation>&amp;Işınsal</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw radial dimension</source>
         <translation>Işınsal boyut çiz</translation>
     </message>
@@ -2875,7 +2875,7 @@ Kurtarmak ister misiniz?</translation>
         <translation>&amp;Döndürülmüş (Doğrusal)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw linear dimension at a fixed angle</source>
         <translation>Sabit bir açıda doğrusal boyut çiz</translation>
     </message>
@@ -2888,7 +2888,7 @@ Kurtarmak ister misiniz?</translation>
         <translation>&amp;Dikey</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw vertical dimension</source>
         <translation>Dikey boyut çiz</translation>
     </message>
@@ -2951,7 +2951,7 @@ Kurtarmak ister misiniz?</translation>
         <translation>Boyut Araçları</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>D&amp;imension</source>
         <translation>Ö&amp;lçü</translation>
     </message>
@@ -3472,7 +3472,7 @@ zaten listede.</translation>
         <translation type="unfinished">Fms Şeritlerini Çizin</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
         <translation type="unfinished">FMS Şeritlerini Çizin (ribs)</translation>
     </message>
@@ -4073,7 +4073,7 @@ zaten listede.</translation>
         <translation type="unfinished">CSV&apos;den çizim</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Draws entities based on textual entries in a CSV file</source>
         <translation type="unfinished">CSV dosyasındaki metinsel girişlere dayalı olarak varlıkları çizer</translation>
     </message>
@@ -4081,7 +4081,7 @@ zaten listede.</translation>
 <context>
     <name>DrawOrder</name>
     <message>
-        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+92"/>
+        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
         <translation type="unfinished">Çekiliş Sırası</translation>
     </message>
@@ -4179,7 +4179,7 @@ zaten listede.</translation>
         <translation type="unfinished">Çoklu Çizgi Çiz</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw polyline with line and arc segments</source>
         <translation>Çizgi ve yay segmentleri ile polyline çizin</translation>
     </message>
@@ -4365,7 +4365,7 @@ zaten listede.</translation>
         <translation type="unfinished">Senaryo Kabuğu</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+34"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
         <translation type="unfinished">Senaryo Kabuğu</translation>
@@ -4394,7 +4394,7 @@ zaten listede.</translation>
         <translation>Düzenleme Araçları</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Edit</source>
         <translation>&amp;Düzen</translation>
     </message>
@@ -4467,7 +4467,7 @@ zaten listede.</translation>
         <translation>Metni D&amp;üzenle</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Edit text</source>
         <translation>Metni düzenle</translation>
     </message>
@@ -4485,7 +4485,7 @@ zaten listede.</translation>
         <translation>Elips Araçları</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Ellipse</source>
         <translation>&amp;Elips</translation>
     </message>
@@ -4583,7 +4583,7 @@ zaten listede.</translation>
         <translation>&amp;Elips Yay</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw ellipse arc from center, major point, ratio and angles</source>
         <translation>Elips yayını merkezden, ana noktadan, orandan ve açılardan çiz</translation>
     </message>
@@ -4596,7 +4596,7 @@ zaten listede.</translation>
         <translation>&amp;Elips (Merkez, Nokta, Oran)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw full ellipse from center, major point and ratio</source>
         <translation>Merkez, ana nokta ve orandan tam elips çiz</translation>
     </message>
@@ -4632,7 +4632,7 @@ zaten listede.</translation>
         <translation>Çaplı &amp;Elips</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and diameters</source>
         <translation>Konumlu ve çaplı elips çiz</translation>
     </message>
@@ -4665,7 +4665,7 @@ zaten listede.</translation>
         <translation>Dörtgen içinde yazılı</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse inscribed in quadrilateral</source>
         <translation>Dörtgen içinde yazılı elips çiz</translation>
     </message>
@@ -4688,7 +4688,7 @@ zaten listede.</translation>
         <translation>&amp;Paralel Eğri (Mesafe ile)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse</source>
         <translation>Elips için paralel eğri çiz</translation>
     </message>
@@ -4706,7 +4706,7 @@ zaten listede.</translation>
         <translation>Paralel Eğri (&amp;Noktadan)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse through point</source>
         <translation>Nokta boyunca elips yapmak için paralel eğri çiz</translation>
     </message>
@@ -4742,7 +4742,7 @@ zaten listede.</translation>
         <translation>Yuvarlatılmış Kenarlı Elips</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and radii</source>
         <translation>Elips&apos;i pozisyon ve yarıçapla çizin</translation>
     </message>
@@ -4867,7 +4867,7 @@ zaten listede.</translation>
         <translation type="unfinished">Kırlangıç Kuyruğu Mafsal</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation type="unfinished">Bir kırlangıç kuyruğu bağlantısı çizin</translation>
     </message>
@@ -5035,7 +5035,7 @@ zaten listede.</translation>
         <translation type="unfinished">Üç Nokta</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw three points</source>
         <translation type="unfinished">Üç puan çizin</translation>
     </message>
@@ -5181,7 +5181,7 @@ zaten listede.</translation>
         <translation>Dosya Araçları</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;File</source>
         <translation>&amp;Dosya</translation>
     </message>
@@ -6301,7 +6301,7 @@ zaten listede.</translation>
         <translation>Kapak Araçları</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Hatch</source>
         <translation>&amp;Kapak</translation>
     </message>
@@ -6372,7 +6372,7 @@ zaten listede.</translation>
         <translation>&amp;Seçimden Kapak</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Create hatch or solid fill from selected boundary</source>
         <translation>Seçilen sınırdan kapak veya katı dolgu oluştur</translation>
     </message>
@@ -6611,7 +6611,7 @@ zaten listede.</translation>
         <translation type="unfinished">Özel 2D centroid ekleyin</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Create a customizable 2D Centroid marker</source>
         <translation type="unfinished">Özelleştirilebilir bir 2D Centroid işaretleyici oluşturun</translation>
     </message>
@@ -6941,7 +6941,7 @@ zaten listede.</translation>
         <translation type="unfinished">Alan Centroidi</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create an area 2D Centroid for a selected entity</source>
         <translation type="unfinished">Seçilen bir varlık için 2D Centroid alanı oluşturma</translation>
     </message>
@@ -7063,7 +7063,7 @@ zaten listede.</translation>
         <translation type="unfinished">Centroid Dinleyici</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
         <translation type="unfinished">2D Centroids için bir işlem dinleyicisini (De-)Etkinleştirin</translation>
     </message>
@@ -7316,7 +7316,7 @@ zaten listede.</translation>
         <translation type="unfinished">Toplam 2D Ağırlıklandırılmış Merkezler</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Combine selected 2D Centroid markers weighted</source>
         <translation type="unfinished">Seçilen 2D Centroid işaretleyicileri ağırlıklı olarak birleştirin</translation>
     </message>
@@ -7416,7 +7416,7 @@ zaten listede.</translation>
         <translation type="unfinished">Tel Merkez</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create a wire 2D Centroid for a selection</source>
         <translation type="unfinished">Bir seçim için tel 2D Centroid oluşturma</translation>
     </message>
@@ -7434,7 +7434,7 @@ zaten listede.</translation>
         <translation>Bilgi Araçları</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Info</source>
         <translation>&amp;Bilgi</translation>
     </message>
@@ -7762,7 +7762,7 @@ zaten listede.</translation>
         <translation>&amp;Seçimi Ters Çevir</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Invert the current selection</source>
         <translation>Geçerli seçimi ters çevir</translation>
     </message>
@@ -7949,7 +7949,7 @@ zaten listede.</translation>
         <translation type="unfinished">Katman Araçları</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Layer</source>
         <translation type="unfinished">Katman</translation>
     </message>
@@ -8108,12 +8108,12 @@ zaten listede.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+110"/>
+        <location line="+109"/>
         <source>Layer List</source>
         <translation>Katman Listesi</translation>
     </message>
     <message>
-        <location line="-55"/>
+        <location line="-54"/>
         <source>&amp;Layer List</source>
         <translation type="unfinished">Katman Listesi</translation>
     </message>
@@ -8151,7 +8151,7 @@ zaten listede.</translation>
         <translation>&amp;Lider</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
         <translation>Lider çiz (ok ile satır dizisi)</translation>
     </message>
@@ -8200,7 +8200,7 @@ zaten listede.</translation>
         <translation>Çizgi Araçları</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Line</source>
         <translation>&amp;Çizgi</translation>
     </message>
@@ -8278,7 +8278,7 @@ zaten listede.</translation>
         <translation>&amp;2 Noktadan çizgi</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single line or sequence of lines</source>
         <translation>Tek satır veya satır sırasını çizin</translation>
     </message>
@@ -8331,7 +8331,7 @@ zaten listede.</translation>
         <translation>Açıdan &amp;Çizgi</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line at a given absolute angle</source>
         <translation>Verilen bir mutlak açıda çizgi çiz</translation>
     </message>
@@ -8369,7 +8369,7 @@ zaten listede.</translation>
         <translation>&amp;Açıortay</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angle bisector, trisector, ...</source>
         <translation>Açıortay, Trisector çiz ...</translation>
     </message>
@@ -8392,7 +8392,7 @@ zaten listede.</translation>
         <translation type="unfinished">2 Noktadan Kutu Eklemi</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
         <translation type="unfinished">Kutu Mafsal Parmaklarını, Yuvalarını ve Tennonlarını Çizin</translation>
     </message>
@@ -8450,7 +8450,7 @@ zaten listede.</translation>
         <translation type="unfinished">2 Noktadan Kırlangıç Kuyruğu Mafsal</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation type="unfinished">Bir kırlangıç kuyruğu bağlantısı çizin</translation>
     </message>
@@ -8493,7 +8493,7 @@ zaten listede.</translation>
         <translation>&amp;Serbest Çizgi</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw freehand line</source>
         <translation>Serbest çizgi çiz</translation>
     </message>
@@ -8531,7 +8531,7 @@ zaten listede.</translation>
         <translation>&amp;Yatay Çizgi</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal line</source>
         <translation>Yatay çizgi çiz</translation>
     </message>
@@ -8569,7 +8569,7 @@ zaten listede.</translation>
         <translation>&amp;Dikey</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to base entity</source>
         <translation>Tabana dikey çizgi çiz</translation>
     </message>
@@ -8597,7 +8597,7 @@ zaten listede.</translation>
         <translation>Dikey / T&amp;eğet</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to line and tangent to circle, arc or ellipse</source>
         <translation>Daire, yay ya da elipse teğet  dik bir çizgi çiz</translation>
     </message>
@@ -8620,7 +8620,7 @@ zaten listede.</translation>
         <translation>Paralel (Ara ile)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
         <translation>Mevcut çizgiye veya daire, eşmerkezli yaylara paralel çizin</translation>
     </message>
@@ -8638,7 +8638,7 @@ zaten listede.</translation>
         <translation>Paralel (Noktadan)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
         <translation>Belirli bir noktadan paralel çizgi veya eş merkezli yay veya daire çizin</translation>
     </message>
@@ -8714,7 +8714,7 @@ zaten listede.</translation>
         <translation>&amp;Bağıl Açı</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line with relative angle to base entity</source>
         <translation>Temel varlık için göreli açı ile çizgi çiz</translation>
     </message>
@@ -8755,7 +8755,7 @@ zaten listede.</translation>
         <translation type="unfinished">Teğet (Nokta, Daire)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (point, circle)</source>
         <translation type="unfinished">Teğet çizme (nokta, daire)</translation>
     </message>
@@ -8783,7 +8783,7 @@ zaten listede.</translation>
         <translation>Te&amp;ğet (İki Daire)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (circle, circle)</source>
         <translation>Teğet çiz (daire, daire)</translation>
     </message>
@@ -8796,7 +8796,7 @@ zaten listede.</translation>
         <translation>&amp;Dikey Çizgi</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical line</source>
         <translation>Dikey çizgi çiz</translation>
     </message>
@@ -8988,7 +8988,7 @@ zaten listede.</translation>
         <translation>Çeşitli Araçlar</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc</source>
         <translation>Çeşitli</translation>
     </message>
@@ -9011,7 +9011,7 @@ zaten listede.</translation>
         <translation type="unfinished">Çeşitli Blok Araçları</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Block</source>
         <translation type="unfinished">&amp;Blok</translation>
     </message>
@@ -9029,7 +9029,7 @@ zaten listede.</translation>
         <translation type="unfinished">Çeşitli Geliştirme Araçları</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>De&amp;velopment</source>
         <translation type="unfinished">Geliştirme</translation>
     </message>
@@ -9047,7 +9047,7 @@ zaten listede.</translation>
         <translation type="unfinished">Çeşitli Çizim Araçları</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc Draw</source>
         <translation type="unfinished">Çeşitli Çizim</translation>
     </message>
@@ -9070,7 +9070,7 @@ zaten listede.</translation>
         <translation type="unfinished">Çeşitli İthalat / İhracat Araçları</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Import/Export</source>
         <translation type="unfinished">İthalat/İhracat</translation>
     </message>
@@ -9088,7 +9088,7 @@ zaten listede.</translation>
         <translation type="unfinished">Çeşitli Bilgi Araçları</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Information</source>
         <translation type="unfinished">Bilgi</translation>
     </message>
@@ -9106,7 +9106,7 @@ zaten listede.</translation>
         <translation type="unfinished">Çeşitli Modifikasyon Araçları</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Modify</source>
         <translation type="unfinished">Değiştirmek</translation>
     </message>
@@ -9124,7 +9124,7 @@ zaten listede.</translation>
         <translation type="unfinished">Çeşitli Seçim Araçları</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Select</source>
         <translation type="unfinished">&amp;Seç</translation>
     </message>
@@ -9137,7 +9137,7 @@ zaten listede.</translation>
         <translation type="unfinished">Modifikasyon Araçları</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Modify</source>
         <translation type="unfinished">Değiştirmek</translation>
     </message>
@@ -9380,7 +9380,7 @@ zaten listede.</translation>
         <translation type="unfinished">Ofset (Mesafe ile)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse</source>
         <translation type="unfinished">Ofset çizgi, yay, daire veya elips</translation>
     </message>
@@ -9408,7 +9408,7 @@ zaten listede.</translation>
         <translation type="unfinished">Ofset (Nokta üzerinden)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse through point</source>
         <translation type="unfinished">Nokta üzerinden çizgi, yay, daire veya elips ofseti</translation>
     </message>
@@ -9441,7 +9441,7 @@ zaten listede.</translation>
         <translation>&amp;Aç</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open an existing drawing</source>
         <translation>Mevcut bir çizimi aç</translation>
     </message>
@@ -9651,7 +9651,7 @@ zaten listede.</translation>
         <translation>P&amp;DF Olarak Dışa Aktar</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Exports the current drawing as PDF</source>
         <translation>Mevcut çizimi PDF olarak dışa aktarır</translation>
     </message>
@@ -9685,7 +9685,7 @@ zaten listede.</translation>
         <translation type="unfinished">Nokta Araçları</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Point</source>
         <translation type="unfinished">Nokta</translation>
     </message>
@@ -9703,7 +9703,7 @@ zaten listede.</translation>
         <translation type="unfinished">Tek Nokta</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single point</source>
         <translation type="unfinished">Tek nokta çizin</translation>
     </message>
@@ -9776,7 +9776,7 @@ zaten listede.</translation>
         <translation type="unfinished">Çoklu Çizgi Araçları</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Polyline</source>
         <translation type="unfinished">Çoklu Çizgi</translation>
     </message>
@@ -9891,7 +9891,7 @@ zaten listede.</translation>
         <translation type="unfinished">Çoklu çizgi kesme sembolü 2 noktadan</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a polyline break symbol from 2 points</source>
         <translation type="unfinished">İki noktadan bir çoklu çizgi kesme sembolü çizme</translation>
     </message>
@@ -9950,7 +9950,7 @@ zaten listede.</translation>
         <translation>&amp;Yazdır</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current drawing</source>
         <translation>Geçerli çizimi yazdır</translation>
     </message>
@@ -9963,7 +9963,7 @@ zaten listede.</translation>
         <translation>&amp;Geçerli Görünümü Yazdır</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current view</source>
         <translation>Geçerli görünümü yazdır</translation>
     </message>
@@ -10111,7 +10111,7 @@ zaten listede.</translation>
         <translation>&amp;Baskı Önizleme</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Preview how current drawing would be printed</source>
         <translation>Mevcut çizim nasıl basılacak?</translation>
     </message>
@@ -10124,7 +10124,7 @@ zaten listede.</translation>
         <translation>Projeksiyon Araçları</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Projection</source>
         <translation>&amp;Projeksiyon</translation>
     </message>
@@ -10177,7 +10177,7 @@ zaten listede.</translation>
         <translation type="unfinished">Gelişmiş boyut stili geçersiz kılmalarını görüntüleme</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+219"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+221"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10192,7 +10192,7 @@ zaten listede.</translation>
         <translation>Özel Özellikler</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+20"/>
         <source>Dependent Entities</source>
         <translation>Bağımlı Varlıklar</translation>
     </message>
@@ -10252,7 +10252,7 @@ zaten listede.</translation>
         <translation>Hayır</translation>
     </message>
     <message>
-        <location line="+393"/>
+        <location line="+402"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*DEĞİŞKENLER*</translation>
     </message>
@@ -10264,7 +10264,7 @@ zaten listede.</translation>
     <message>
         <location line="+0"/>
         <location line="+57"/>
-        <location line="+11"/>
+        <location line="+10"/>
         <source>Property Editor</source>
         <translation type="unfinished">Emlak Editörü</translation>
     </message>
@@ -10279,7 +10279,7 @@ zaten listede.</translation>
         <translation>Genel Özellikler</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+31"/>
         <source>Color:</source>
         <translation type="unfinished">Renk:</translation>
     </message>
@@ -10743,7 +10743,7 @@ zaten listede.</translation>
         <translation type="unfinished">Komut Dosyasını Çalıştır</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open and run a script file</source>
         <translation type="unfinished">Bir komut dosyası açma ve çalıştırma</translation>
     </message>
@@ -11080,7 +11080,7 @@ zaten listede.</translation>
         <translation>Seçim Araçları</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+13"/>
         <source>Selection Tools Panel</source>
         <translation>Seçim Araçları Paneli</translation>
     </message>
@@ -11098,7 +11098,7 @@ zaten listede.</translation>
         <translation>&amp;Tümünü Seç</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Select all visible entities</source>
         <translation>Tüm görünür varlıkları seç</translation>
     </message>
@@ -11181,7 +11181,7 @@ zaten listede.</translation>
         <translation type="unfinished">(De-)Kontur Seçin</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select connected entities</source>
         <translation type="unfinished">bağlı varlıkları (De-)Seçin</translation>
     </message>
@@ -11239,7 +11239,7 @@ zaten listede.</translation>
         <translation type="unfinished">kesişen Varlıkları (De-)Seçin</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities intersected by a line</source>
         <translation type="unfinished">bir çizgi ile kesişen tüm varlıkları (De-)Seçme</translation>
     </message>
@@ -11300,7 +11300,7 @@ zaten listede.</translation>
         <translation type="unfinished">(De-)Select Layer</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities on the same layer</source>
         <translation type="unfinished">(De-)Aynı katmandaki tüm varlıkları seçin</translation>
     </message>
@@ -11348,7 +11348,7 @@ zaten listede.</translation>
         <translation type="unfinished">dikdörtgen Alanı (De-)Seçin</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities inside a rectangle</source>
         <translation type="unfinished">bir dikdörtgenin içindeki tüm varlıkları (De-)Seçme</translation>
     </message>
@@ -11460,7 +11460,7 @@ zaten listede.</translation>
         <translation type="unfinished">Şekil Araçları</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Shape</source>
         <translation type="unfinished">Şekil</translation>
     </message>
@@ -11532,7 +11532,7 @@ zaten listede.</translation>
         <translation type="unfinished">Çokgen (Merkez, Yan)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and middle point of side</source>
         <translation>Ortadan ve orta noktasından düzenli çokgen çiz</translation>
     </message>
@@ -11555,7 +11555,7 @@ zaten listede.</translation>
         <translation type="unfinished">Çokgen (Yan, Yan)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from middle points of two opposite sides or two opposite corners</source>
         <translation>İki karşıt tarafın orta noktalarından veya iki karşıt köşeden normal çokgen çizin</translation>
     </message>
@@ -11603,7 +11603,7 @@ zaten listede.</translation>
         <translation type="unfinished">Çokgen (Merkez, Köşe)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and corner point</source>
         <translation>Merkezden ve köşe noktasından düzenli çokgen çiz</translation>
     </message>
@@ -11631,7 +11631,7 @@ zaten listede.</translation>
         <translation type="unfinished">Çokgen (2 Kenar Noktası)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from end points of one side</source>
         <translation>Bir tarafın bitiş noktalarından düzenli çokgen çiz</translation>
     </message>
@@ -11644,7 +11644,7 @@ zaten listede.</translation>
         <translation type="unfinished">Dikdörtgen</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle from two corners</source>
         <translation type="unfinished">İki köşeden dikdörtgen çizin</translation>
     </message>
@@ -11685,7 +11685,7 @@ zaten listede.</translation>
         <translation type="unfinished">Boyutlu Dikdörtgen</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle with position and size</source>
         <translation type="unfinished">Konum ve boyut ile dikdörtgen çizme</translation>
     </message>
@@ -11748,7 +11748,7 @@ zaten listede.</translation>
         <translation type="unfinished">Çıtçıtlı Araçlar</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+25"/>
         <source>&amp;Snap</source>
         <translation type="unfinished">Çıtçıt</translation>
     </message>
@@ -11916,7 +11916,7 @@ zaten listede.</translation>
         <translation type="unfinished">Mesafe Kılavuzu</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Snap distance between 2 points</source>
         <translation type="unfinished">2 nokta arasındaki mesafeyi yakala</translation>
     </message>
@@ -12066,7 +12066,7 @@ zaten listede.</translation>
         <translation type="unfinished">Spline Aletleri</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Spline</source>
         <translation type="unfinished">Spline</translation>
     </message>
@@ -12114,7 +12114,7 @@ zaten listede.</translation>
         <translation type="unfinished">Spline (Kontrol Noktaları)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw spline from control points</source>
         <translation type="unfinished">Kontrol noktalarından spline çizme</translation>
     </message>
@@ -12353,7 +12353,7 @@ zaten listede.</translation>
         <translation type="unfinished">Metin</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text</source>
         <translation type="unfinished">Metin çizin</translation>
     </message>
@@ -12451,7 +12451,7 @@ zaten listede.</translation>
         <translation type="unfinished">Varlık Boyunca Metin</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text along an entity</source>
         <translation type="unfinished">Bir varlık boyunca metin çizme</translation>
     </message>
@@ -13020,7 +13020,7 @@ zaten listede.</translation>
         <translation type="unfinished">Taşı / Kopyala</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+9"/>
         <source>Move or copy entities once or multiple times</source>
         <translation>Varlıkları bir veya daha fazla kez taşıyın veya kopyalayın</translation>
     </message>
@@ -13408,7 +13408,7 @@ zaten listede.</translation>
         <translation>Görünüm Araçları</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>View</source>
         <translation>Görünüm</translation>
     </message>
@@ -13882,7 +13882,7 @@ zaten listede.</translation>
         <translation type="unfinished">Yatay İnşaat Hattı</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal construction line</source>
         <translation type="unfinished">Yatay inşaat çizgisi çizin</translation>
     </message>
@@ -13895,7 +13895,7 @@ zaten listede.</translation>
         <translation type="unfinished">Dikey İnşaat Hattı</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical construction line</source>
         <translation type="unfinished">Dikey inşaat çizgisi çizin</translation>
     </message>
@@ -13913,7 +13913,7 @@ zaten listede.</translation>
         <translation>Yakınlaştırma Araçları</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Zoom</source>
         <translation>&amp;Yakınlaştır</translation>
     </message>
