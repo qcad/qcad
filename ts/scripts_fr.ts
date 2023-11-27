@@ -10259,7 +10259,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+104"/>
         <source>Linetype Scale:</source>
-        <translation>Échelle du type de ligne :</translation>
+        <translation>Échelle du type :</translation>
     </message>
     <message>
         <location line="+52"/>
