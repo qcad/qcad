@@ -86,7 +86,6 @@ DraftMode.init = function(basePath) {
     var action = new RGuiAction(qsTranslate("DraftMode", "&Draft Mode"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/DraftMode.js");
-    action.setIcon(basePath + "/DraftMode.svg");
     action.setDefaultShortcut(new QKeySequence("d,f"));
     action.setDefaultCommands(["draftmode", "df"]);
     action.setGroup("viewmodes");

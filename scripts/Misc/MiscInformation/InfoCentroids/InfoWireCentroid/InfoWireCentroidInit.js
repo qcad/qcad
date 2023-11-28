@@ -21,7 +21,6 @@ function init(basePath) {
     // # Issue # Grayed but requirement not displayed without QKeySequence
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/InfoWireCentroid.js");
-    action.setIcon(basePath + "/InfoWireCentroid.svg");
 //    action.setDefaultShortcut(new QKeySequence("w,m"));    // Wire's center of Mass ... Ruled out (collision with ModifyToolsPanel (unlisted), no good option)
     action.setDefaultCommands(["wcentroid", "getwc"]);    // List as an Array!
     var tipShort = qsTranslate("InfoWireCentroid", "Create a wire 2D Centroid for a selection");

@@ -3,7 +3,6 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/Reverse.js");
-    action.setIcon(basePath + "/Reverse.svg");
     action.setDefaultShortcut(new QKeySequence("r,v"));
     action.setDefaultCommands(["reverse", "rv"]);
     action.setNoState();

@@ -325,7 +325,7 @@ a beállítások módosításai hatályba lépjenek.</translation>
         <translation>Üres blokk hozzáadása</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Add new empty block</source>
         <translation>Új üres blokk hozzáadása</translation>
     </message>
@@ -412,7 +412,7 @@ a beállítások módosításai hatályba lépjenek.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1986"/>
+        <location filename="../scripts/Apollonius.js" line="+1989"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Érvénytelen sugár</translation>
     </message>
@@ -438,7 +438,7 @@ a beállítások módosításai hatályba lépjenek.</translation>
         <translation>Ív eszköztár</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Arc</source>
         <translation>Körív</translation>
     </message>
@@ -491,7 +491,7 @@ a beállítások módosításai hatályba lépjenek.</translation>
         <translation>2 pont és szög</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and angle</source>
         <translation>Ív szerkesztése 2 pontból és szöggel</translation>
     </message>
@@ -524,7 +524,7 @@ a beállítások módosításai hatályba lépjenek.</translation>
         <translation type="unfinished">2 pont és magasság</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and height</source>
         <translation type="unfinished">Rajzolj ívet 2 pontból és magasságból</translation>
     </message>
@@ -582,7 +582,7 @@ a beállítások módosításai hatályba lépjenek.</translation>
         <translation type="unfinished">2 Pontok és hossz</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and length</source>
         <translation type="unfinished">Rajzolj ívet 2 pontból és hosszából</translation>
     </message>
@@ -670,7 +670,7 @@ a beállítások módosításai hatályba lépjenek.</translation>
         <translation>2 pont és sugár</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and radius</source>
         <translation>Ív szerkesztése 2 pontból sugárral</translation>
     </message>
@@ -698,7 +698,7 @@ a beállítások módosításai hatályba lépjenek.</translation>
         <translation>3 pont</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 3 points</source>
         <translation>Ív szerkesztése 3 pontból</translation>
     </message>
@@ -751,7 +751,7 @@ a beállítások módosításai hatályba lépjenek.</translation>
         <translation>Közép, Pont, Szögek</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from center, point on arc and angles</source>
         <translation>Ív szerkesztése középpontból, ív pontjából, szögekkel</translation>
     </message>
@@ -774,7 +774,7 @@ a beállítások módosításai hatályba lépjenek.</translation>
         <translation>Koncentrikus (távolsággal)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc</source>
         <translation>Koncentrikus ív szerkesztése</translation>
     </message>
@@ -792,7 +792,7 @@ a beállítások módosításai hatályba lépjenek.</translation>
         <translation>Koncentrikus (ponton átmenő)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc through point</source>
         <translation>Ponton átmenő koncentrikus ív szerkesztése</translation>
     </message>
@@ -826,7 +826,7 @@ a beállítások módosításai hatályba lépjenek.</translation>
         <translation type="unfinished">Tangens, pont, sugár</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to entity, through point with radius</source>
         <translation type="unfinished">Rajzoljon az egységre érintőleges ívet, egy ponton keresztül, sugarú ívvel</translation>
     </message>
@@ -859,7 +859,7 @@ a beállítások módosításai hatályba lépjenek.</translation>
         <translation type="unfinished">Tangenciálisan kapcsolódik</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to base entity</source>
         <translation>Bázis elemet érintő körív szerkesztése</translation>
     </message>
@@ -1043,7 +1043,7 @@ Szeretné visszaállítani?</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>&amp;Batch2Pdf visible layout blocks</source>
         <translation type="unfinished">Batch2Pdf látható elrendezési blokkok</translation>
     </message>
@@ -1239,7 +1239,7 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">Blokkoló eszközök</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Block</source>
         <translation>Blokk</translation>
     </message>
@@ -1319,7 +1319,7 @@ Szeretné visszaállítani?</translation>
     <message>
         <location line="+0"/>
         <location line="+63"/>
-        <location line="+44"/>
+        <location line="+43"/>
         <source>Block List</source>
         <translation type="unfinished">Blokk lista</translation>
     </message>
@@ -1617,7 +1617,7 @@ Szeretné visszaállítani?</translation>
         <translation>Kör eszköztár</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Circle</source>
         <translation>Kör</translation>
     </message>
@@ -1645,7 +1645,7 @@ Szeretné visszaállítani?</translation>
         <translation>2 pont</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from 2 diametrically opposite points</source>
         <translation>Kör szerkesztése 2 átellenes pontból</translation>
     </message>
@@ -1698,7 +1698,7 @@ Szeretné visszaállítani?</translation>
         <translation>2 pont és sugár</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 2 points and radius</source>
         <translation>Kör szerkesztése 2 pontból sugárral</translation>
     </message>
@@ -1737,7 +1737,7 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">2 Tangensek és pont</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation>Két elemet érintő ponton átmenő kör szerkesztése</translation>
     </message>
@@ -1775,7 +1775,7 @@ Szeretné visszaállítani?</translation>
         <translation>2 érintő és sugár</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to two entities with given radius</source>
         <translation>Két elemet érintő kör szerkesztése adott sugárral</translation>
     </message>
@@ -1803,7 +1803,7 @@ Szeretné visszaállítani?</translation>
         <translation>3 pont</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 3 points</source>
         <translation>Kör szerkesztése 3 pontból</translation>
     </message>
@@ -1842,7 +1842,7 @@ Szeretné visszaállítani?</translation>
         <translation>3 érintő</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to three entities</source>
         <translation>Három elemet érintő kör szerkesztése</translation>
     </message>
@@ -1855,7 +1855,7 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">Központ, átmérő</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and diameter</source>
         <translation type="unfinished">Rajzolj kört a középpontból és az átmérőből</translation>
     </message>
@@ -1895,7 +1895,7 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">Központ, pont</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from center and point on circle</source>
         <translation type="unfinished">Rajzolj kört a középpontból és a körön lévő pontból</translation>
     </message>
@@ -1908,7 +1908,7 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">Központ, sugár</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and radius</source>
         <translation type="unfinished">Kör rajzolása középpontból és sugárból</translation>
     </message>
@@ -1948,7 +1948,7 @@ Szeretné visszaállítani?</translation>
         <translation>Koncentrikus (távolsággal)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric circle</source>
         <translation>Koncentrikus kör szerkesztése</translation>
     </message>
@@ -1966,7 +1966,7 @@ Szeretné visszaállítani?</translation>
         <translation>Koncentrikus (ponton átmenő)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw concentric circle through point</source>
         <translation>Ponton átmenő koncentrikus kör szerkesztése</translation>
     </message>
@@ -2005,7 +2005,7 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">Tangens és 2 pont</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle through two points and tangential to one entity</source>
         <translation>Elemet érintő két ponton átmenő kör szerkesztése</translation>
     </message>
@@ -2023,7 +2023,7 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">Tangens, pont, sugár</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to entity, through point with radius</source>
         <translation type="unfinished">Rajzoljunk az egységre érintőleges kört a ponton keresztül, sugarú körrel</translation>
     </message>
@@ -2135,18 +2135,18 @@ Szeretné visszaállítani?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+68"/>
+        <location line="+67"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation type="unfinished">Parancssor</translation>
     </message>
     <message>
-        <location line="-21"/>
+        <location line="-20"/>
         <source>&amp;Command Line</source>
         <translation type="unfinished">Parancssor</translation>
     </message>
     <message>
-        <location line="+208"/>
+        <location line="+207"/>
         <source>Invalid value:</source>
         <translation type="unfinished">Érvénytelen érték:</translation>
     </message>
@@ -2278,7 +2278,7 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">Rajzolási egység átalakítása</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Convert drawing to a different drawing unit</source>
         <translation type="unfinished">Rajz átalakítása más rajzolási egységre</translation>
     </message>
@@ -2365,7 +2365,7 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">Counter</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Auto increment number</source>
         <translation type="unfinished">Automatikus növekményszám</translation>
     </message>
@@ -2421,7 +2421,7 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">Középvonal Kereszt</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
         <translation type="unfinished">Rajzoljon középvonali keresztet ívekben, körökben vagy ellipszisekben</translation>
     </message>
@@ -2567,7 +2567,7 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">Mindenki kijelölésének megszüntetése</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Deselect all entities</source>
         <translation type="unfinished">Törölje az összes entitás kijelölését</translation>
     </message>
@@ -2708,7 +2708,7 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">Kiegyenlített</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw aligned dimension</source>
         <translation type="unfinished">Igazított dimenzió rajzolása</translation>
     </message>
@@ -2736,7 +2736,7 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">Szögletes</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angular dimension</source>
         <translation type="unfinished">Szögméret rajzolása</translation>
     </message>
@@ -2764,7 +2764,7 @@ Szeretné visszaállítani?</translation>
         <translation>Átmérő</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw diametric dimension</source>
         <translation>Átmérő megadása</translation>
     </message>
@@ -2777,7 +2777,7 @@ Szeretné visszaállítani?</translation>
         <translation>Vízszintes</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw horizontal dimension</source>
         <translation>Vízszintes méret megadása</translation>
     </message>
@@ -2800,7 +2800,7 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">Ordináta (X/Y)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+3"/>
         <source>Draw ordinate dimension</source>
         <translation type="unfinished">Ordináta dimenzió rajzolása</translation>
     </message>
@@ -2823,7 +2823,7 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">Radiális</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw radial dimension</source>
         <translation type="unfinished">Rajzoljon radiális dimenziót</translation>
     </message>
@@ -2871,7 +2871,7 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">Forgatott (lineáris)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw linear dimension at a fixed angle</source>
         <translation type="unfinished">Lineáris dimenzió rajzolása rögzített szögben</translation>
     </message>
@@ -2889,7 +2889,7 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">Függőleges</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw vertical dimension</source>
         <translation type="unfinished">Függőleges dimenzió rajzolása</translation>
     </message>
@@ -2952,7 +2952,7 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">Dimenziós eszközök</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>D&amp;imension</source>
         <translation type="unfinished">Dimenzió</translation>
     </message>
@@ -3473,7 +3473,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Döntetlen Fms sávok</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
         <translation type="unfinished">FMS sávok rajzolása (bordák)</translation>
     </message>
@@ -4074,7 +4074,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Rajzolás CSV-ből</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Draws entities based on textual entries in a CSV file</source>
         <translation type="unfinished">Egy CSV fájl szöveges bejegyzései alapján rajzol entitásokat</translation>
     </message>
@@ -4082,7 +4082,7 @@ már szerepel a listában.</translation>
 <context>
     <name>DrawOrder</name>
     <message>
-        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+92"/>
+        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
         <translation type="unfinished">Sorsolási sorrend</translation>
     </message>
@@ -4130,7 +4130,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Polivonal rajzolása</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw polyline with line and arc segments</source>
         <translation type="unfinished">Polivonal rajzolása vonal- és ívszegmensekkel</translation>
     </message>
@@ -4366,7 +4366,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Script Shell</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+34"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
         <translation type="unfinished">Script Shell</translation>
@@ -4395,7 +4395,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Eszközök szerkesztése</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Edit</source>
         <translation type="unfinished">Szerkesztés</translation>
     </message>
@@ -4473,7 +4473,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Szöveg szerkesztése</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Edit text</source>
         <translation type="unfinished">Szöveg szerkesztése</translation>
     </message>
@@ -4486,7 +4486,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Ellipszis eszközök</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Ellipse</source>
         <translation type="unfinished">Ellipszis</translation>
     </message>
@@ -4569,7 +4569,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Ellipszis Arc</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw ellipse arc from center, major point, ratio and angles</source>
         <translation type="unfinished">Ellipszis ív rajzolása középpontból, főpontból, arányból és szögekből</translation>
     </message>
@@ -4597,7 +4597,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Ellipszis (középpont, pont, arány)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw full ellipse from center, major point and ratio</source>
         <translation type="unfinished">Teljes ellipszis rajzolása középpontból, főpontból és arányból</translation>
     </message>
@@ -4610,7 +4610,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Ellipszis átmérővel</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and diameters</source>
         <translation type="unfinished">Ellipszis rajzolása pozícióval és átmérővel</translation>
     </message>
@@ -4666,7 +4666,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Négyszögletű felirat</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse inscribed in quadrilateral</source>
         <translation type="unfinished">Négyszögbe írt ellipszis rajzolása</translation>
     </message>
@@ -4689,7 +4689,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Párhuzamos görbe (távolsággal)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse</source>
         <translation type="unfinished">Párhuzamos görbe rajzolása az ellipszishez</translation>
     </message>
@@ -4707,7 +4707,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Párhuzamos görbe (ponton keresztül)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse through point</source>
         <translation type="unfinished">Rajzoljon párhuzamos görbét az ellipszishez egy ponton keresztül</translation>
     </message>
@@ -4720,7 +4720,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Ellipszis sugarakkal</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and radii</source>
         <translation type="unfinished">Ellipszis rajzolása pozícióval és sugarakkal</translation>
     </message>
@@ -4868,7 +4868,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Fecskefarok közös</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation type="unfinished">Rajzoljon egy fecskefarok illesztést</translation>
     </message>
@@ -5036,7 +5036,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Három pont</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw three points</source>
         <translation type="unfinished">Három pont döntetlen</translation>
     </message>
@@ -5182,7 +5182,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Fájl eszközök</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;File</source>
         <translation type="unfinished">Fájl</translation>
     </message>
@@ -6302,7 +6302,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Hatch Tools</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Hatch</source>
         <translation type="unfinished">Hatch</translation>
     </message>
@@ -6373,7 +6373,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Sraffozás a kiválasztásból</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Create hatch or solid fill from selected boundary</source>
         <translation type="unfinished">Sraffozás vagy tömör kitöltés létrehozása a kijelölt határvonalból</translation>
     </message>
@@ -6612,7 +6612,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Egyéni 2D centroid hozzáadása</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Create a customizable 2D Centroid marker</source>
         <translation type="unfinished">Testreszabható 2D centroid marker létrehozása</translation>
     </message>
@@ -6942,7 +6942,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Terület Centroid</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create an area 2D Centroid for a selected entity</source>
         <translation type="unfinished">Terület 2D centroid létrehozása egy kijelölt entitáshoz</translation>
     </message>
@@ -7064,7 +7064,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Centroid Listener</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
         <translation type="unfinished">Tranzakcióhallgató aktiválása a 2D centroidokhoz</translation>
     </message>
@@ -7317,7 +7317,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Sum 2D centridek súlyozott összege</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Combine selected 2D Centroid markers weighted</source>
         <translation type="unfinished">Kijelölt 2D Centroid markerek súlyozott kombinálása</translation>
     </message>
@@ -7417,7 +7417,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Huzal középpontja</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create a wire 2D Centroid for a selection</source>
         <translation type="unfinished">2D-s huzal centroid létrehozása egy kijelöléshez</translation>
     </message>
@@ -7435,7 +7435,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Információs eszközök</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Info</source>
         <translation type="unfinished">Info</translation>
     </message>
@@ -7763,7 +7763,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Invertálás kiválasztás</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Invert the current selection</source>
         <translation type="unfinished">Az aktuális kiválasztás invertálása</translation>
     </message>
@@ -7950,7 +7950,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Réteg Eszközök</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Layer</source>
         <translation type="unfinished">Réteg</translation>
     </message>
@@ -8109,12 +8109,12 @@ már szerepel a listában.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+110"/>
+        <location line="+109"/>
         <source>Layer List</source>
         <translation type="unfinished">Réteglista</translation>
     </message>
     <message>
-        <location line="-55"/>
+        <location line="-54"/>
         <source>&amp;Layer List</source>
         <translation type="unfinished">Réteglista</translation>
     </message>
@@ -8142,7 +8142,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Vezető</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
         <translation type="unfinished">Rajzolj vezérfonalat (vonalsorozat nyíllal)</translation>
     </message>
@@ -8201,7 +8201,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Vonali eszközök</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Line</source>
         <translation type="unfinished">Vonal</translation>
     </message>
@@ -8244,7 +8244,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Vonal 2 pontból</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single line or sequence of lines</source>
         <translation type="unfinished">Egyetlen vonal vagy vonalsorozat rajzolása</translation>
     </message>
@@ -8302,7 +8302,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Vonal a szögből</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line at a given absolute angle</source>
         <translation type="unfinished">Egy adott abszolút szögben vonalat rajzolni</translation>
     </message>
@@ -8360,7 +8360,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Szögfelező</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angle bisector, trisector, ...</source>
         <translation type="unfinished">Szögfelező, háromszögfelező, ...</translation>
     </message>
@@ -8393,7 +8393,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Box Joint 2 pontból</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
         <translation type="unfinished">Draw Box Joint ujjak, nyílások és Tennonok</translation>
     </message>
@@ -8451,7 +8451,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Fecskefarkú kötés 2 pontból</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation type="unfinished">Rajzoljon egy fecskefarok illesztést</translation>
     </message>
@@ -8494,7 +8494,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Szabadkézi vonal</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw freehand line</source>
         <translation type="unfinished">Szabadkézi vonal rajzolása</translation>
     </message>
@@ -8507,7 +8507,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Vízszintes vonal</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal line</source>
         <translation type="unfinished">Vízszintes vonal húzása</translation>
     </message>
@@ -8545,7 +8545,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Ortogonális</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to base entity</source>
         <translation type="unfinished">Rajzolj egy vonalat a bázis entitással merőlegesen</translation>
     </message>
@@ -8598,7 +8598,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Ortogonális / Tangens</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to line and tangent to circle, arc or ellipse</source>
         <translation type="unfinished">Rajzoljon egyenesre merőleges és körre, ívre vagy ellipszisre érintő vonalat</translation>
     </message>
@@ -8611,7 +8611,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Párhuzamos (távolsággal)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
         <translation type="unfinished">Meglévő vonallal vagy koncentrikus ívvel, körrel párhuzamos rajzolás</translation>
     </message>
@@ -8634,7 +8634,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Párhuzamos (ponton keresztül)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
         <translation type="unfinished">Párhuzamos vonal vagy koncentrikus ív vagy kör rajzolása egy adott ponton keresztül</translation>
     </message>
@@ -8685,7 +8685,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Relatív szög</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line with relative angle to base entity</source>
         <translation type="unfinished">Rajzoljon vonalat a bázis entitáshoz viszonyított szöggel</translation>
     </message>
@@ -8756,7 +8756,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Tangens (pont, kör)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (point, circle)</source>
         <translation type="unfinished">Tangencia rajzolása (pont, kör)</translation>
     </message>
@@ -8784,7 +8784,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Tangens (két kör)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (circle, circle)</source>
         <translation type="unfinished">Tangens rajzolása (kör, kör)</translation>
     </message>
@@ -8797,7 +8797,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Függőleges vonal</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical line</source>
         <translation type="unfinished">Függőleges vonal húzása</translation>
     </message>
@@ -8989,7 +8989,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Egyéb eszközök</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc</source>
         <translation type="unfinished">Egyéb</translation>
     </message>
@@ -9012,7 +9012,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Egyéb blokk eszközök</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Block</source>
         <translation type="unfinished">Blokk</translation>
     </message>
@@ -9030,7 +9030,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Egyéb fejlesztési eszközök</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>De&amp;velopment</source>
         <translation type="unfinished">Fejlesztés</translation>
     </message>
@@ -9048,7 +9048,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Egyéb rajzeszközök</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc Draw</source>
         <translation type="unfinished">Egyéb sorsolás</translation>
     </message>
@@ -9071,7 +9071,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Egyéb import / export eszközök</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Import/Export</source>
         <translation type="unfinished">Import/Export</translation>
     </message>
@@ -9089,7 +9089,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Egyéb információs eszközök</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Information</source>
         <translation type="unfinished">Információ</translation>
     </message>
@@ -9107,7 +9107,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Egyéb módosítási eszközök</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Modify</source>
         <translation type="unfinished">Módosítsa a címet</translation>
     </message>
@@ -9125,7 +9125,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Egyéb kiválasztási eszközök</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Select</source>
         <translation type="unfinished">Válassza ki a címet</translation>
     </message>
@@ -9138,7 +9138,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Módosító eszközök</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Modify</source>
         <translation type="unfinished">Módosítsa a címet</translation>
     </message>
@@ -9381,7 +9381,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Offset (távolsággal)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse</source>
         <translation type="unfinished">Offset vonal, ív, kör vagy ellipszis</translation>
     </message>
@@ -9409,7 +9409,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Offset (ponton keresztül)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse through point</source>
         <translation type="unfinished">Ponton keresztül eltolt vonal, ív, kör vagy ellipszis</translation>
     </message>
@@ -9442,7 +9442,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Nyissa meg a címet</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open an existing drawing</source>
         <translation type="unfinished">Meglévő rajz megnyitása</translation>
     </message>
@@ -9652,7 +9652,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">PDF exportálás</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Exports the current drawing as PDF</source>
         <translation type="unfinished">Az aktuális rajz PDF formátumban történő exportálása</translation>
     </message>
@@ -9686,7 +9686,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Pont eszközök</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Point</source>
         <translation type="unfinished">Pont</translation>
     </message>
@@ -9704,7 +9704,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Egyetlen pont</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single point</source>
         <translation type="unfinished">Egyetlen pont rajzolása</translation>
     </message>
@@ -9777,7 +9777,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Sokvonalas eszközök</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Polyline</source>
         <translation type="unfinished">Polivonal</translation>
     </message>
@@ -9892,7 +9892,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">2 pontból álló polivonal törés szimbólum</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a polyline break symbol from 2 points</source>
         <translation type="unfinished">Rajzoljon egy polivonal törés szimbólumot 2 pontból</translation>
     </message>
@@ -9951,7 +9951,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Nyomtatás</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current drawing</source>
         <translation type="unfinished">Aktuális rajz nyomtatása</translation>
     </message>
@@ -9964,7 +9964,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Jelenlegi nézet nyomtatása</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current view</source>
         <translation type="unfinished">Jelenlegi nézet nyomtatása</translation>
     </message>
@@ -10027,7 +10027,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Nyomtatási előnézet</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Preview how current drawing would be printed</source>
         <translation type="unfinished">Az aktuális rajz nyomtatásának előnézete</translation>
     </message>
@@ -10125,7 +10125,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Vetítési eszközök</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Projection</source>
         <translation type="unfinished">Kivetítés</translation>
     </message>
@@ -10143,7 +10143,7 @@ már szerepel a listában.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+219"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+221"/>
         <source>:</source>
         <translation type="unfinished">:</translation>
     </message>
@@ -10158,7 +10158,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Különleges tulajdonságok</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+20"/>
         <source>Dependent Entities</source>
         <translation type="unfinished">Függő szervezetek</translation>
     </message>
@@ -10218,7 +10218,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Nem</translation>
     </message>
     <message>
-        <location line="+393"/>
+        <location line="+402"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*VÁLTOZÁSOK*</translation>
     </message>
@@ -10230,7 +10230,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+0"/>
         <location line="+57"/>
-        <location line="+11"/>
+        <location line="+10"/>
         <source>Property Editor</source>
         <translation type="unfinished">Tulajdon szerkesztő</translation>
     </message>
@@ -10280,7 +10280,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Általános tulajdonságok</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+31"/>
         <source>Color:</source>
         <translation type="unfinished">Szín:</translation>
     </message>
@@ -10744,7 +10744,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Script futtatása</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open and run a script file</source>
         <translation type="unfinished">Szkriptfájl megnyitása és futtatása</translation>
     </message>
@@ -11081,7 +11081,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Kiválasztási eszközök</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+13"/>
         <source>Selection Tools Panel</source>
         <translation type="unfinished">Kiválasztási eszközök panel</translation>
     </message>
@@ -11099,7 +11099,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Válasszon ki mindent</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Select all visible entities</source>
         <translation type="unfinished">Az összes látható entitás kiválasztása</translation>
     </message>
@@ -11182,7 +11182,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Kontúr kijelölése</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select connected entities</source>
         <translation type="unfinished">Összekapcsolt elemek kiválasztása</translation>
     </message>
@@ -11240,7 +11240,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Metszett entitások kiválasztása</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities intersected by a line</source>
         <translation type="unfinished">Egy vonal által metszett összes entitás kijelölése</translation>
     </message>
@@ -11301,7 +11301,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Réteg kiválasztása</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities on the same layer</source>
         <translation type="unfinished">Az ugyanazon a rétegen lévő összes entitás kiválasztása</translation>
     </message>
@@ -11349,7 +11349,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Téglalap alakú terület kiválasztása</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities inside a rectangle</source>
         <translation type="unfinished">Egy téglalapon belüli összes entitás kiválasztása</translation>
     </message>
@@ -11461,7 +11461,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Shape Tools</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Shape</source>
         <translation type="unfinished">Shape</translation>
     </message>
@@ -11528,7 +11528,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Sokszög (középpont, oldal)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and middle point of side</source>
         <translation type="unfinished">Rajzolj szabályos sokszöget a középpontból és az oldal középső pontjából</translation>
     </message>
@@ -11566,7 +11566,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Sokszög (oldal, oldal)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from middle points of two opposite sides or two opposite corners</source>
         <translation type="unfinished">Rajzoljon szabályos sokszöget két szemben lévő oldal vagy két szemben lévő sarok középső pontjaiból</translation>
     </message>
@@ -11599,7 +11599,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Sokszög (középpont, sarok)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and corner point</source>
         <translation type="unfinished">Szabályos sokszög rajzolása a középpontból és a sarokpontból</translation>
     </message>
@@ -11627,7 +11627,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Sokszög (2 oldalpont)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from end points of one side</source>
         <translation type="unfinished">Szabályos sokszög rajzolása az egyik oldal végpontjaiból</translation>
     </message>
@@ -11645,7 +11645,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Téglalap alakú</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle from two corners</source>
         <translation type="unfinished">Rajzolj téglalapot két sarokból</translation>
     </message>
@@ -11663,7 +11663,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Téglalap méret</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle with position and size</source>
         <translation type="unfinished">Téglalap rajzolása pozícióval és mérettel</translation>
     </message>
@@ -11749,7 +11749,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Snap Tools</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+25"/>
         <source>&amp;Snap</source>
         <translation type="unfinished">Snap</translation>
     </message>
@@ -11897,7 +11897,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Távolsági kézikönyv</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Snap distance between 2 points</source>
         <translation type="unfinished">Snap távolság 2 pont között</translation>
     </message>
@@ -12067,7 +12067,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Spline szerszámok</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Spline</source>
         <translation type="unfinished">Spline</translation>
     </message>
@@ -12090,7 +12090,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Spline (vezérlőpontok)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw spline from control points</source>
         <translation type="unfinished">Spline rajzolása vezérlőpontokból</translation>
     </message>
@@ -12312,7 +12312,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Szöveg</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text</source>
         <translation type="unfinished">Szöveg rajzolása</translation>
     </message>
@@ -12452,7 +12452,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Szöveg az entitás mentén</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text along an entity</source>
         <translation type="unfinished">Szöveg rajzolása egy entitás mentén</translation>
     </message>
@@ -13021,7 +13021,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Mozgatás / Másolás</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+9"/>
         <source>Move or copy entities once or multiple times</source>
         <translation type="unfinished">Az entitások egyszer vagy többször történő áthelyezése vagy másolása</translation>
     </message>
@@ -13409,7 +13409,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Eszközök megtekintése</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>View</source>
         <translation type="unfinished">A megtekintése</translation>
     </message>
@@ -13883,7 +13883,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Vízszintes építési vonal</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal construction line</source>
         <translation type="unfinished">Rajzoljon vízszintes építési vonalat</translation>
     </message>
@@ -13896,7 +13896,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Függőleges építési vonal</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical construction line</source>
         <translation type="unfinished">Rajzoljon függőleges építési vonalat</translation>
     </message>
@@ -13914,7 +13914,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Zoom eszközök</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Zoom</source>
         <translation type="unfinished">Nagyítás</translation>
     </message>

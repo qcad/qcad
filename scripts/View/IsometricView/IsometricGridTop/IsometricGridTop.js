@@ -143,7 +143,6 @@ IsometricGridTop.init = function(basePath) {
     var action = new RGuiAction(qsTr("&Top Projection"), RMainWindowQt.getMainWindow());
     action.setScriptFile(basePath + "/IsometricGridTop.js");
     action.setRequiresDocument(true);
-    action.setIcon(basePath + "/IsometricGridTop.svg");
     action.setDefaultShortcut(new QKeySequence("j,t"));
     action.setDefaultCommands(["isometricgridtop", "jt"]);
     action.setGroup("isometricProjection");

@@ -4,7 +4,6 @@ function init(basePath) {
     action.setRequiresSelection(true);
     action.setAllowInterrupt();
     action.setScriptFile(basePath + "/Cut.js");
-    action.setIcon(basePath + "/Cut.svg");
     action.setDefaultShortcuts([
         new QKeySequence(QKeySequence.Cut)
     ]);

@@ -325,7 +325,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">Додати порожній блок</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Add new empty block</source>
         <translation type="unfinished">Додати новий порожній блок</translation>
     </message>
@@ -412,7 +412,7 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1986"/>
+        <location filename="../scripts/Apollonius.js" line="+1989"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Неправильний радіус</translation>
     </message>
@@ -438,7 +438,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">Дугові інструменти</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Arc</source>
         <translation type="unfinished">Дуга</translation>
     </message>
@@ -491,7 +491,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">2 Точки і кут</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and angle</source>
         <translation type="unfinished">Побудувати дугу з 2 точок і кута</translation>
     </message>
@@ -544,7 +544,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">2 Точки і висота</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and height</source>
         <translation type="unfinished">Намалюйте дугу з 2 точок і висоту</translation>
     </message>
@@ -602,7 +602,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">2 Бали та довжина</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and length</source>
         <translation type="unfinished">Намалюйте дугу з 2 точок і довжину</translation>
     </message>
@@ -670,7 +670,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">2 Точки і радіус</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and radius</source>
         <translation type="unfinished">Намалюйте дугу з 2 точок і радіуса</translation>
     </message>
@@ -698,7 +698,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">3 бали</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 3 points</source>
         <translation type="unfinished">Намалюйте дугу з 3 точок</translation>
     </message>
@@ -751,7 +751,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">Центр, точка, кути</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from center, point on arc and angles</source>
         <translation type="unfinished">Намалюйте дугу з центру, точки на дузі та кути</translation>
     </message>
@@ -774,7 +774,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">Концентричний (з відстанню)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc</source>
         <translation type="unfinished">Намалювати концентричну дугу</translation>
     </message>
@@ -792,7 +792,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">Концентричний (наскрізний)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc through point</source>
         <translation type="unfinished">Проведіть концентричну дугу через точку</translation>
     </message>
@@ -831,7 +831,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">Дотична, Точка, Радіус</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to entity, through point with radius</source>
         <translation type="unfinished">Проведіть дугу, дотичну до сутності, через точку з радіусом</translation>
     </message>
@@ -859,7 +859,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">Дотично з&apos;єднані</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to base entity</source>
         <translation type="unfinished">Накреслити дугу по дотичній до базового елемента</translation>
     </message>
@@ -1044,7 +1044,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>&amp;Batch2Pdf visible layout blocks</source>
         <translation type="unfinished">Видимі блоки верстки Batch2Pdf</translation>
     </message>
@@ -1240,7 +1240,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Інструменти для блокування</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Block</source>
         <translation type="unfinished">Блок</translation>
     </message>
@@ -1320,7 +1320,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+0"/>
         <location line="+63"/>
-        <location line="+44"/>
+        <location line="+43"/>
         <source>Block List</source>
         <translation type="unfinished">Список блокування</translation>
     </message>
@@ -1618,7 +1618,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Кругові інструменти</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Circle</source>
         <translation type="unfinished">Коло</translation>
     </message>
@@ -1646,7 +1646,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">2 Бали</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from 2 diametrically opposite points</source>
         <translation type="unfinished">Намалюйте коло з 2 діаметрально протилежних точок</translation>
     </message>
@@ -1699,7 +1699,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">2 Точки і радіус</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 2 points and radius</source>
         <translation type="unfinished">Побудувати коло з 2 точок і радіуса</translation>
     </message>
@@ -1738,7 +1738,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">2 Дотичні та точка</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation type="unfinished">Проведіть коло, дотичне до двох сутностей, через точку</translation>
     </message>
@@ -1776,7 +1776,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">2 Дотичні та радіус</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to two entities with given radius</source>
         <translation type="unfinished">Побудувати коло по дотичній до двох об&apos;єктів із заданим радіусом</translation>
     </message>
@@ -1804,7 +1804,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">3 бали</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 3 points</source>
         <translation type="unfinished">Намалюйте коло з 3 точок</translation>
     </message>
@@ -1843,7 +1843,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">3 Тангенси</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to three entities</source>
         <translation type="unfinished">Проведіть коло по дотичній до трьох об&apos;єктів</translation>
     </message>
@@ -1873,7 +1873,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Центр, діаметр</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and diameter</source>
         <translation type="unfinished">Накресліть коло з центру та діаметру</translation>
     </message>
@@ -1896,7 +1896,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Центр, точка</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from center and point on circle</source>
         <translation type="unfinished">Намалюйте коло з центру і поставте точку на колі</translation>
     </message>
@@ -1926,7 +1926,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Центр, радіус</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and radius</source>
         <translation type="unfinished">Накресліть коло з центру та радіусу</translation>
     </message>
@@ -1949,7 +1949,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Концентричний (з відстанню)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric circle</source>
         <translation type="unfinished">Намалюйте концентричне коло</translation>
     </message>
@@ -1967,7 +1967,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Концентричний (наскрізний)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw concentric circle through point</source>
         <translation type="unfinished">Проведіть концентричне коло через точку</translation>
     </message>
@@ -2006,7 +2006,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Тангенс і 2 точки</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle through two points and tangential to one entity</source>
         <translation type="unfinished">Проведіть коло через дві точки і дотичну до одного об&apos;єкта</translation>
     </message>
@@ -2029,7 +2029,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Дотична, Точка, Радіус</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to entity, through point with radius</source>
         <translation type="unfinished">Побудувати коло, дотичне до сутності, через точку з радіусом</translation>
     </message>
@@ -2136,18 +2136,18 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+68"/>
+        <location line="+67"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation type="unfinished">Командний рядок</translation>
     </message>
     <message>
-        <location line="-21"/>
+        <location line="-20"/>
         <source>&amp;Command Line</source>
         <translation type="unfinished">Командний рядок</translation>
     </message>
     <message>
-        <location line="+208"/>
+        <location line="+207"/>
         <source>Invalid value:</source>
         <translation type="unfinished">Невірне значення:</translation>
     </message>
@@ -2294,7 +2294,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Переобладнати волочильний агрегат</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Convert drawing to a different drawing unit</source>
         <translation type="unfinished">Конвертувати креслення в іншу одиницю креслення</translation>
     </message>
@@ -2391,7 +2391,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Лічильник</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Auto increment number</source>
         <translation type="unfinished">Автоматичне збільшення числа</translation>
     </message>
@@ -2422,7 +2422,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Центральний хрест</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
         <translation type="unfinished">Намалюйте центральну лінію хреста дугами, колами або еліпсами</translation>
     </message>
@@ -2568,7 +2568,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Зніміть позначку з усіх пунктів</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Deselect all entities</source>
         <translation type="unfinished">Зніміть позначку з усіх об&apos;єктів</translation>
     </message>
@@ -2709,7 +2709,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Вирівняно</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw aligned dimension</source>
         <translation type="unfinished">Вирівняний розмір на кресленні</translation>
     </message>
@@ -2742,7 +2742,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Кутовий</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angular dimension</source>
         <translation type="unfinished">Накреслити кутовий розмір</translation>
     </message>
@@ -2765,7 +2765,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Діаметральний</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw diametric dimension</source>
         <translation type="unfinished">Намалювати діаметральний розмір</translation>
     </message>
@@ -2778,7 +2778,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Горизонтальні</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw horizontal dimension</source>
         <translation type="unfinished">Накреслити горизонтальний розмір</translation>
     </message>
@@ -2801,7 +2801,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Ордината (X/Y)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+3"/>
         <source>Draw ordinate dimension</source>
         <translation type="unfinished">Розмір ординат креслення</translation>
     </message>
@@ -2824,7 +2824,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Радіальний</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw radial dimension</source>
         <translation type="unfinished">Накреслити радіальний розмір</translation>
     </message>
@@ -2879,7 +2879,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Поворотний (лінійний)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw linear dimension at a fixed angle</source>
         <translation type="unfinished">Нанесення лінійного розміру під фіксованим кутом</translation>
     </message>
@@ -2892,7 +2892,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Вертикальний</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw vertical dimension</source>
         <translation type="unfinished">Накреслити вертикальний розмір</translation>
     </message>
@@ -2955,7 +2955,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Вимірювальні інструменти</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>D&amp;imension</source>
         <translation type="unfinished">Вимір</translation>
     </message>
@@ -3476,7 +3476,7 @@ is already in the list.</source>
         <translation type="unfinished">Намалювати смуги Fms</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
         <translation type="unfinished">Намалюйте смуги FMS (ребра)</translation>
     </message>
@@ -4077,7 +4077,7 @@ is already in the list.</source>
         <translation type="unfinished">Отримати з CSV</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Draws entities based on textual entries in a CSV file</source>
         <translation type="unfinished">Малює сутності на основі текстових записів у файлі CSV</translation>
     </message>
@@ -4085,7 +4085,7 @@ is already in the list.</source>
 <context>
     <name>DrawOrder</name>
     <message>
-        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+92"/>
+        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
         <translation type="unfinished">Замовлення на проведення жеребкування</translation>
     </message>
@@ -4183,7 +4183,7 @@ is already in the list.</source>
         <translation type="unfinished">Намалювати полілінію</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw polyline with line and arc segments</source>
         <translation type="unfinished">Побудова ламаної з відрізками та дугами</translation>
     </message>
@@ -4371,7 +4371,7 @@ is already in the list.</source>
         <translation type="unfinished">Скриптова оболонка</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+34"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
         <translation type="unfinished">Скриптова оболонка</translation>
@@ -4400,7 +4400,7 @@ is already in the list.</source>
         <translation type="unfinished">Інструменти редагування</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Edit</source>
         <translation type="unfinished">Редагувати</translation>
     </message>
@@ -4478,7 +4478,7 @@ is already in the list.</source>
         <translation type="unfinished">Редагувати текст</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Edit text</source>
         <translation type="unfinished">Редагувати текст</translation>
     </message>
@@ -4491,7 +4491,7 @@ is already in the list.</source>
         <translation type="unfinished">Ellipse Tools</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Ellipse</source>
         <translation type="unfinished">Еліпс</translation>
     </message>
@@ -4589,7 +4589,7 @@ is already in the list.</source>
         <translation type="unfinished">Дуга еліпса</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw ellipse arc from center, major point, ratio and angles</source>
         <translation type="unfinished">Побудувати дугу еліпса з центру, основної точки, відношення та кутів</translation>
     </message>
@@ -4602,7 +4602,7 @@ is already in the list.</source>
         <translation type="unfinished">Еліпс (Центр, Точка, Відношення)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw full ellipse from center, major point and ratio</source>
         <translation type="unfinished">Накресліть повний еліпс з центру, головної точки та відношення</translation>
     </message>
@@ -4638,7 +4638,7 @@ is already in the list.</source>
         <translation type="unfinished">Еліпс з діаметрами</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and diameters</source>
         <translation type="unfinished">Накреслити еліпс з положенням та діаметрами</translation>
     </message>
@@ -4671,7 +4671,7 @@ is already in the list.</source>
         <translation type="unfinished">Укладено чотиристоронню угоду</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse inscribed in quadrilateral</source>
         <translation type="unfinished">Накресліть еліпс, вписаний у чотирикутник</translation>
     </message>
@@ -4694,7 +4694,7 @@ is already in the list.</source>
         <translation type="unfinished">Паралельна крива (з відстанню)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse</source>
         <translation type="unfinished">Побудувати паралельну криву до еліпса</translation>
     </message>
@@ -4712,7 +4712,7 @@ is already in the list.</source>
         <translation type="unfinished">Паралельна крива (через точку)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse through point</source>
         <translation type="unfinished">Провести паралельну криву до еліпса через точку</translation>
     </message>
@@ -4748,7 +4748,7 @@ is already in the list.</source>
         <translation type="unfinished">Еліпс з радіусами</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and radii</source>
         <translation type="unfinished">Побудувати еліпс з позицією та радіусами</translation>
     </message>
@@ -4873,7 +4873,7 @@ is already in the list.</source>
         <translation type="unfinished">З&apos;єднання типу &quot;ластівчин хвіст</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation type="unfinished">Намалюйте з&apos;єднання &quot;ластівчин хвіст</translation>
     </message>
@@ -5041,7 +5041,7 @@ is already in the list.</source>
         <translation type="unfinished">Три точки</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw three points</source>
         <translation type="unfinished">Розіграш трьох очок</translation>
     </message>
@@ -5189,7 +5189,7 @@ is already in the list.</source>
         <translation type="unfinished">Файлові інструменти</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;File</source>
         <translation type="unfinished">Файл</translation>
     </message>
@@ -6309,7 +6309,7 @@ is already in the list.</source>
         <translation type="unfinished">Інструменти для люків</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Hatch</source>
         <translation type="unfinished">Люк</translation>
     </message>
@@ -6380,7 +6380,7 @@ is already in the list.</source>
         <translation type="unfinished">Виділення з вибору</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Create hatch or solid fill from selected boundary</source>
         <translation type="unfinished">Створити штрихування або суцільну заливку від виділеної межі</translation>
     </message>
@@ -6619,7 +6619,7 @@ is already in the list.</source>
         <translation type="unfinished">Додайте власний 2D центроїд</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Create a customizable 2D Centroid marker</source>
         <translation type="unfinished">Створення настроюваного 2D маркера центроїда</translation>
     </message>
@@ -6949,7 +6949,7 @@ is already in the list.</source>
         <translation type="unfinished">Центроїд області</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create an area 2D Centroid for a selected entity</source>
         <translation type="unfinished">Створити 2D центроїд області для вибраного об&apos;єкта</translation>
     </message>
@@ -7071,7 +7071,7 @@ is already in the list.</source>
         <translation type="unfinished">Слухач Центроїда</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
         <translation type="unfinished">(Де-)Активація слухача транзакцій для 2D центроїдів</translation>
     </message>
@@ -7324,7 +7324,7 @@ is already in the list.</source>
         <translation type="unfinished">Сума зважених 2D центроїдів</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Combine selected 2D Centroid markers weighted</source>
         <translation type="unfinished">Об&apos;єднати вибрані 2D центроїдні маркери зваженими</translation>
     </message>
@@ -7424,7 +7424,7 @@ is already in the list.</source>
         <translation type="unfinished">Дротяний центроїд</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create a wire 2D Centroid for a selection</source>
         <translation type="unfinished">Створення дротяного 2D центроїда для виділення</translation>
     </message>
@@ -7442,7 +7442,7 @@ is already in the list.</source>
         <translation type="unfinished">Інформаційні інструменти</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Info</source>
         <translation type="unfinished">Інформація</translation>
     </message>
@@ -7770,7 +7770,7 @@ is already in the list.</source>
         <translation type="unfinished">Інвертувати виділення</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Invert the current selection</source>
         <translation type="unfinished">Інвертувати поточний вибір</translation>
     </message>
@@ -7977,7 +7977,7 @@ is already in the list.</source>
         <translation type="unfinished">Інструменти шарів</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Layer</source>
         <translation type="unfinished">Шар</translation>
     </message>
@@ -8116,12 +8116,12 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+110"/>
+        <location line="+109"/>
         <source>Layer List</source>
         <translation type="unfinished">Список шарів</translation>
     </message>
     <message>
-        <location line="-55"/>
+        <location line="-54"/>
         <source>&amp;Layer List</source>
         <translation type="unfinished">Список шарів</translation>
     </message>
@@ -8159,7 +8159,7 @@ is already in the list.</source>
         <translation type="unfinished">Лідер</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
         <translation type="unfinished">Лідер розіграшу (послідовність ліній зі стрілкою)</translation>
     </message>
@@ -8208,7 +8208,7 @@ is already in the list.</source>
         <translation type="unfinished">Лінійні інструменти</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Line</source>
         <translation type="unfinished">Лінія</translation>
     </message>
@@ -8286,7 +8286,7 @@ is already in the list.</source>
         <translation type="unfinished">Лінія з 2 точок</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single line or sequence of lines</source>
         <translation type="unfinished">Намалюйте одну лінію або послідовність ліній</translation>
     </message>
@@ -8339,7 +8339,7 @@ is already in the list.</source>
         <translation type="unfinished">Лінія з кута</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line at a given absolute angle</source>
         <translation type="unfinished">Проведення лінії під заданим абсолютним кутом</translation>
     </message>
@@ -8377,7 +8377,7 @@ is already in the list.</source>
         <translation type="unfinished">Бісектриса кута</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angle bisector, trisector, ...</source>
         <translation type="unfinished">Побудова бісектриси кута, трисектриси, ...</translation>
     </message>
@@ -8435,7 +8435,7 @@ is already in the list.</source>
         <translation type="unfinished">Коробкове з&apos;єднання з 2 точок</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
         <translation type="unfinished">Суглобові пальці, прорізи та теніски Draw Box</translation>
     </message>
@@ -8478,7 +8478,7 @@ is already in the list.</source>
         <translation type="unfinished">З&apos;єднання &quot;ластівчин хвіст&quot; з 2 точок</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation type="unfinished">Намалюйте з&apos;єднання &quot;ластівчин хвіст</translation>
     </message>
@@ -8501,7 +8501,7 @@ is already in the list.</source>
         <translation type="unfinished">Freehand Line</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw freehand line</source>
         <translation type="unfinished">Намалюйте лінію від руки</translation>
     </message>
@@ -8539,7 +8539,7 @@ is already in the list.</source>
         <translation type="unfinished">Горизонтальна лінія</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal line</source>
         <translation type="unfinished">Проведіть горизонтальну лінію</translation>
     </message>
@@ -8577,7 +8577,7 @@ is already in the list.</source>
         <translation type="unfinished">Ортогональні</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to base entity</source>
         <translation type="unfinished">Проведіть лінію, ортогональну до базової сутності</translation>
     </message>
@@ -8605,7 +8605,7 @@ is already in the list.</source>
         <translation type="unfinished">Ортогональна / дотична</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to line and tangent to circle, arc or ellipse</source>
         <translation type="unfinished">Провести пряму, ортогональну до прямої і дотичну до кола, дуги або еліпса</translation>
     </message>
@@ -8628,7 +8628,7 @@ is already in the list.</source>
         <translation type="unfinished">Паралельно (з відстанню)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
         <translation type="unfinished">Провести паралельну до існуючої лінію або концентричну дугу, коло</translation>
     </message>
@@ -8646,7 +8646,7 @@ is already in the list.</source>
         <translation type="unfinished">Паралельно (через пункт)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
         <translation type="unfinished">Провести паралельну пряму або концентричну дугу чи коло через задану точку</translation>
     </message>
@@ -8722,7 +8722,7 @@ is already in the list.</source>
         <translation type="unfinished">Відносний кут</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line with relative angle to base entity</source>
         <translation type="unfinished">Провести лінію з відносним кутом до базової сутності</translation>
     </message>
@@ -8763,7 +8763,7 @@ is already in the list.</source>
         <translation type="unfinished">Дотична (точка, коло)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (point, circle)</source>
         <translation type="unfinished">Побудувати дотичну (точку, коло)</translation>
     </message>
@@ -8791,7 +8791,7 @@ is already in the list.</source>
         <translation type="unfinished">Дотична (два кола)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (circle, circle)</source>
         <translation type="unfinished">Провести дотичну (коло, окружність)</translation>
     </message>
@@ -8804,7 +8804,7 @@ is already in the list.</source>
         <translation type="unfinished">Вертикальна лінія</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical line</source>
         <translation type="unfinished">Проведіть вертикальну лінію</translation>
     </message>
@@ -8996,7 +8996,7 @@ is already in the list.</source>
         <translation type="unfinished">Різні інструменти</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc</source>
         <translation type="unfinished">Різне</translation>
     </message>
@@ -9019,7 +9019,7 @@ is already in the list.</source>
         <translation type="unfinished">Інші інструменти для блоків</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Block</source>
         <translation type="unfinished">Блок</translation>
     </message>
@@ -9037,7 +9037,7 @@ is already in the list.</source>
         <translation type="unfinished">Інші інструменти розробки</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>De&amp;velopment</source>
         <translation type="unfinished">Розвиток</translation>
     </message>
@@ -9055,7 +9055,7 @@ is already in the list.</source>
         <translation type="unfinished">Інші інструменти для малювання</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc Draw</source>
         <translation type="unfinished">Жеребкування</translation>
     </message>
@@ -9078,7 +9078,7 @@ is already in the list.</source>
         <translation type="unfinished">Інші інструменти імпорту/експорту</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Import/Export</source>
         <translation type="unfinished">Імпорт/експорт</translation>
     </message>
@@ -9096,7 +9096,7 @@ is already in the list.</source>
         <translation type="unfinished">Інші інформаційні інструменти</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Information</source>
         <translation type="unfinished">Інформація</translation>
     </message>
@@ -9114,7 +9114,7 @@ is already in the list.</source>
         <translation type="unfinished">Інші інструменти модифікації</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Modify</source>
         <translation type="unfinished">Змінити</translation>
     </message>
@@ -9132,7 +9132,7 @@ is already in the list.</source>
         <translation type="unfinished">Інші інструменти вибору</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Select</source>
         <translation type="unfinished">Виберіть</translation>
     </message>
@@ -9145,7 +9145,7 @@ is already in the list.</source>
         <translation type="unfinished">Інструменти модифікації</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Modify</source>
         <translation type="unfinished">Змінити</translation>
     </message>
@@ -9402,7 +9402,7 @@ is already in the list.</source>
         <translation type="unfinished">Зміщення (з відстанню)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse</source>
         <translation type="unfinished">Зміщення лінії, дуги, кола або еліпса</translation>
     </message>
@@ -9425,7 +9425,7 @@ is already in the list.</source>
         <translation type="unfinished">Зміщення (через точку)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse through point</source>
         <translation type="unfinished">Зміщення лінії, дуги, кола або еліпса через точку</translation>
     </message>
@@ -9453,7 +9453,7 @@ is already in the list.</source>
         <translation type="unfinished">Відкрито</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open an existing drawing</source>
         <translation type="unfinished">Відкрити існуюче креслення</translation>
     </message>
@@ -9663,7 +9663,7 @@ is already in the list.</source>
         <translation type="unfinished">Експорт PDF</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Exports the current drawing as PDF</source>
         <translation type="unfinished">Експорт поточного креслення в PDF</translation>
     </message>
@@ -9697,7 +9697,7 @@ is already in the list.</source>
         <translation type="unfinished">Точкові інструменти</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Point</source>
         <translation type="unfinished">Точка</translation>
     </message>
@@ -9715,7 +9715,7 @@ is already in the list.</source>
         <translation type="unfinished">Single Point</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single point</source>
         <translation type="unfinished">Намалювати одну точку</translation>
     </message>
@@ -9788,7 +9788,7 @@ is already in the list.</source>
         <translation type="unfinished">Polyline Tools</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Polyline</source>
         <translation type="unfinished">Полілайн</translation>
     </message>
@@ -9903,7 +9903,7 @@ is already in the list.</source>
         <translation type="unfinished">Символ розриву полілінії з 2 точок</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a polyline break symbol from 2 points</source>
         <translation type="unfinished">Намалюйте символ розриву полілінії з 2 точок</translation>
     </message>
@@ -9962,7 +9962,7 @@ is already in the list.</source>
         <translation type="unfinished">Друк</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current drawing</source>
         <translation type="unfinished">Друк поточного креслення</translation>
     </message>
@@ -9975,7 +9975,7 @@ is already in the list.</source>
         <translation type="unfinished">Роздрукувати поточний вигляд</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current view</source>
         <translation type="unfinished">Роздрукувати поточний вигляд</translation>
     </message>
@@ -10123,7 +10123,7 @@ is already in the list.</source>
         <translation type="unfinished">Попередній перегляд для друку</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Preview how current drawing would be printed</source>
         <translation type="unfinished">Перегляд того, як буде надруковано поточне креслення</translation>
     </message>
@@ -10136,7 +10136,7 @@ is already in the list.</source>
         <translation type="unfinished">Проекційні інструменти</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Projection</source>
         <translation type="unfinished">Прогнозування</translation>
     </message>
@@ -10189,7 +10189,7 @@ is already in the list.</source>
         <translation type="unfinished">Десяткові знаки / точність для відображуваних значень властивостей:</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+219"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+221"/>
         <source>:</source>
         <translation type="unfinished">:</translation>
     </message>
@@ -10204,7 +10204,7 @@ is already in the list.</source>
         <translation type="unfinished">Специфічні властивості</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+20"/>
         <source>Dependent Entities</source>
         <translation type="unfinished">Залежні підприємства</translation>
     </message>
@@ -10264,7 +10264,7 @@ is already in the list.</source>
         <translation type="unfinished">Ні</translation>
     </message>
     <message>
-        <location line="+393"/>
+        <location line="+402"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*ВАРІАНТИ*</translation>
     </message>
@@ -10276,7 +10276,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <location line="+57"/>
-        <location line="+11"/>
+        <location line="+10"/>
         <source>Property Editor</source>
         <translation type="unfinished">Редактор властивостей</translation>
     </message>
@@ -10291,7 +10291,7 @@ is already in the list.</source>
         <translation type="unfinished">Загальні властивості</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+31"/>
         <source>Color:</source>
         <translation type="unfinished">Колір:</translation>
     </message>
@@ -10770,7 +10770,7 @@ is already in the list.</source>
         <translation type="unfinished">Запустити скрипт</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open and run a script file</source>
         <translation type="unfinished">Відкрийте і запустіть файл скрипта</translation>
     </message>
@@ -11092,7 +11092,7 @@ is already in the list.</source>
         <translation type="unfinished">Інструменти вибору</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+13"/>
         <source>Selection Tools Panel</source>
         <translation type="unfinished">Панель інструментів вибору</translation>
     </message>
@@ -11110,7 +11110,7 @@ is already in the list.</source>
         <translation type="unfinished">Вибрати все</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Select all visible entities</source>
         <translation type="unfinished">Виділити всі видимі об&apos;єкти</translation>
     </message>
@@ -11228,7 +11228,7 @@ is already in the list.</source>
         <translation type="unfinished">(Вимкнення) виділення контуру</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select connected entities</source>
         <translation type="unfinished">(Де-)Вибір пов&apos;язаних організацій</translation>
     </message>
@@ -11276,7 +11276,7 @@ is already in the list.</source>
         <translation type="unfinished">(Виділення) перехресних сутностей</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities intersected by a line</source>
         <translation type="unfinished">(Де-)Виділити всі об&apos;єкти, які перетинаються лінією</translation>
     </message>
@@ -11337,7 +11337,7 @@ is already in the list.</source>
         <translation type="unfinished">(Вимкнення) виділення шару</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities on the same layer</source>
         <translation type="unfinished">(Де-)Виділення всіх об&apos;єктів на одному шарі</translation>
     </message>
@@ -11390,7 +11390,7 @@ is already in the list.</source>
         <translation type="unfinished">(Вимкнення) виділення прямокутної області</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities inside a rectangle</source>
         <translation type="unfinished">(Де-)Виділення всіх сутностей всередині прямокутника</translation>
     </message>
@@ -11478,7 +11478,7 @@ is already in the list.</source>
         <translation type="unfinished">Формотворчі інструменти</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Shape</source>
         <translation type="unfinished">Форма</translation>
     </message>
@@ -11550,7 +11550,7 @@ is already in the list.</source>
         <translation type="unfinished">Багатокутник (центр, сторона)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and middle point of side</source>
         <translation type="unfinished">Накресліть правильний багатокутник з центру і середньої точки сторони</translation>
     </message>
@@ -11593,7 +11593,7 @@ is already in the list.</source>
         <translation type="unfinished">Багатокутник (Сторона, сторона)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from middle points of two opposite sides or two opposite corners</source>
         <translation type="unfinished">Накресліть правильний багатокутник із середніх точок двох протилежних сторін або двох протилежних кутів</translation>
     </message>
@@ -11621,7 +11621,7 @@ is already in the list.</source>
         <translation type="unfinished">Багатокутник (Центр, Кут)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and corner point</source>
         <translation type="unfinished">Намалюйте правильний багатокутник з центру та кутової точки</translation>
     </message>
@@ -11649,7 +11649,7 @@ is already in the list.</source>
         <translation type="unfinished">Многокутник (2 сторони)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from end points of one side</source>
         <translation type="unfinished">Побудуйте правильний многокутник з кінцевих точок однієї сторони</translation>
     </message>
@@ -11667,7 +11667,7 @@ is already in the list.</source>
         <translation type="unfinished">Прямокутник</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle from two corners</source>
         <translation type="unfinished">Накресліть прямокутник з двох кутів</translation>
     </message>
@@ -11708,7 +11708,7 @@ is already in the list.</source>
         <translation type="unfinished">Прямокутник з розміром</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle with position and size</source>
         <translation type="unfinished">Намалюйте прямокутник із зазначенням положення та розміру</translation>
     </message>
@@ -11766,7 +11766,7 @@ is already in the list.</source>
         <translation type="unfinished">Snap Tools</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+25"/>
         <source>&amp;Snap</source>
         <translation type="unfinished">Snap</translation>
     </message>
@@ -11934,7 +11934,7 @@ is already in the list.</source>
         <translation type="unfinished">Посібник з дистанційного керування</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Snap distance between 2 points</source>
         <translation type="unfinished">Відстань між 2 точками прив&apos;язки</translation>
     </message>
@@ -12084,7 +12084,7 @@ is already in the list.</source>
         <translation type="unfinished">Сплайн-інструменти</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Spline</source>
         <translation type="unfinished">Сплайн</translation>
     </message>
@@ -12132,7 +12132,7 @@ is already in the list.</source>
         <translation type="unfinished">Сплайн (контрольні точки)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw spline from control points</source>
         <translation type="unfinished">Побудувати сплайн з контрольних точок</translation>
     </message>
@@ -12346,7 +12346,7 @@ is already in the list.</source>
         <translation type="unfinished">Текст</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text</source>
         <translation type="unfinished">Намалювати текст</translation>
     </message>
@@ -12469,7 +12469,7 @@ is already in the list.</source>
         <translation type="unfinished">Текст уздовж об&apos;єкта</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text along an entity</source>
         <translation type="unfinished">Намалюйте текст уздовж об&apos;єкта</translation>
     </message>
@@ -13058,7 +13058,7 @@ is already in the list.</source>
         <translation type="unfinished">Переміщення / Копіювання</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+9"/>
         <source>Move or copy entities once or multiple times</source>
         <translation type="unfinished">Переміщення або копіювання об&apos;єктів один або декілька разів</translation>
     </message>
@@ -13426,7 +13426,7 @@ is already in the list.</source>
         <translation type="unfinished">Перегляд інструментів</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>View</source>
         <translation type="unfinished">Вид</translation>
     </message>
@@ -13900,7 +13900,7 @@ is already in the list.</source>
         <translation type="unfinished">Горизонтальна лінія будівництва</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal construction line</source>
         <translation type="unfinished">Провести горизонтальну будівельну лінію</translation>
     </message>
@@ -13913,7 +13913,7 @@ is already in the list.</source>
         <translation type="unfinished">Вертикальна будівельна лінія</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical construction line</source>
         <translation type="unfinished">Накреслити вертикальну лінію будівництва</translation>
     </message>
@@ -13931,7 +13931,7 @@ is already in the list.</source>
         <translation type="unfinished">Інструменти масштабування</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Zoom</source>
         <translation type="unfinished">Збільшити</translation>
     </message>

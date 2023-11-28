@@ -3,7 +3,6 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/ZoomToSelection.js");
-    action.setIcon(basePath + "/ZoomToSelection.svg");
     action.setDefaultShortcut(new QKeySequence("z,s"));
     action.setDefaultCommands(["zoomselection", "zs"]);
     action.setGroupSortOrder(3300);

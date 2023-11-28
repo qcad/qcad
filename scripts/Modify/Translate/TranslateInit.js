@@ -3,7 +3,6 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/Translate.js");
-    action.setIcon(basePath + "/Translate.svg");
 
     // workaround for bug FS#709, cursor freezes 
     // after starting tool from docked toolbar

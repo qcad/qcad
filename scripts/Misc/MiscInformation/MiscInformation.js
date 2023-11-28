@@ -52,7 +52,6 @@ MiscInformation.getCadToolBarPanel = function() {
         action.setScriptFile(MiscInformation.includeBasePath + "/MiscInformation.js");
         action.objectName = actionName;
         action.setRequiresDocument(true);
-        //action.setIcon(MiscInformation.includeBasePath + "/MiscInformation.svg");
         //action.setStatusTip(qsTr("Show misc information tools"));
         action.setNoState();
         action.setDefaultCommands(["miscinfomenu"]);

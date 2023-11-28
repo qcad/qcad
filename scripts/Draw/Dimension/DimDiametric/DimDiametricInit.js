@@ -3,7 +3,6 @@ function init(basePath) {
         RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/DimDiametric.js");
-    action.setIcon(basePath + "/DimDiametric.svg");
     action.setStatusTip(qsTranslate("DimDiametric", "Draw diametric dimension"));
     action.setDefaultShortcut(new QKeySequence("d,d"));
     action.setDefaultCommands(["dimdia", "dimdiametric", "dd"]);

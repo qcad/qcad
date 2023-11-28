@@ -325,7 +325,7 @@ de wijzigingen door te voeren.</translation>
         <translation>Leeg blok &amp;toevoegen</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Add new empty block</source>
         <translation>Nieuw leeg blok toevoegen</translation>
     </message>
@@ -412,7 +412,7 @@ de wijzigingen door te voeren.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1986"/>
+        <location filename="../scripts/Apollonius.js" line="+1989"/>
         <source>Invalid radius</source>
         <translation>Ongeldig straal</translation>
     </message>
@@ -438,7 +438,7 @@ de wijzigingen door te voeren.</translation>
         <translation>Booggereedschappen</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Arc</source>
         <translation>&amp;Boog</translation>
     </message>
@@ -491,7 +491,7 @@ de wijzigingen door te voeren.</translation>
         <translation>&amp;2 punten en hoek</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and angle</source>
         <translation>Teken een boog door twee punten met hoek</translation>
     </message>
@@ -544,7 +544,7 @@ de wijzigingen door te voeren.</translation>
         <translation>2 punten en &amp;hoogte</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and height</source>
         <translation>Boog van 2 punten en hoogte tekenen</translation>
     </message>
@@ -602,7 +602,7 @@ de wijzigingen door te voeren.</translation>
         <translation>2 punten en &amp;lengte</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and length</source>
         <translation>Boog van twee punten en lengte tekenen</translation>
     </message>
@@ -670,7 +670,7 @@ de wijzigingen door te voeren.</translation>
         <translation>&amp;2 punten en straal</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and radius</source>
         <translation>Teken boog van 2 punten en straal</translation>
     </message>
@@ -698,7 +698,7 @@ de wijzigingen door te voeren.</translation>
         <translation>&amp;3 punten</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 3 points</source>
         <translation>Teken boog van drie punten</translation>
     </message>
@@ -751,7 +751,7 @@ de wijzigingen door te voeren.</translation>
         <translation>&amp;Middelpunt, punt, hoeken</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from center, point on arc and angles</source>
         <translation>Boog tekenen van middlepunt, punt op de boog en hoeken</translation>
     </message>
@@ -774,7 +774,7 @@ de wijzigingen door te voeren.</translation>
         <translation>&amp;Concentrisch (afstand)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc</source>
         <translation>Concentrische boog tekenen</translation>
     </message>
@@ -792,7 +792,7 @@ de wijzigingen door te voeren.</translation>
         <translation>Concentrisch (&amp;door punt)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc through point</source>
         <translation>Concentrisch boog door punt tekenen</translation>
     </message>
@@ -831,7 +831,7 @@ de wijzigingen door te voeren.</translation>
         <translation>&amp;Tangent, punt en straal</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to entity, through point with radius</source>
         <translation>Teken boog rakend aan object, door punt en met straal</translation>
     </message>
@@ -859,7 +859,7 @@ de wijzigingen door te voeren.</translation>
         <translation>&amp;Tangentiaal aansluitend</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to base entity</source>
         <translation>Tangentiaal aansluitend boog tekenen</translation>
     </message>
@@ -1045,7 +1045,7 @@ Wilt u deze herstellen?</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>&amp;Batch2Pdf visible layout blocks</source>
         <translation>&amp;Batch2Pdf zichtbare layout-blokken</translation>
     </message>
@@ -1241,7 +1241,7 @@ Wilt u deze herstellen?</translation>
         <translation>Blokgereedschap</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+109"/>
         <source>Cannot edit block while editing a block in-place</source>
         <translation>Kan blok niet bewerken tijdens het bewerken van een blok ter plaatse</translation>
     </message>
@@ -1316,12 +1316,12 @@ Wilt u deze herstellen?</translation>
     <message>
         <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
         <location line="+63"/>
-        <location line="+44"/>
+        <location line="+43"/>
         <source>Block List</source>
         <translation>Bloklijst</translation>
     </message>
     <message>
-        <location line="-107"/>
+        <location line="-106"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -1619,7 +1619,7 @@ Wilt u deze herstellen?</translation>
         <translation>Cirkelgereedschappen</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Circle</source>
         <translation>&amp;Cirkel</translation>
     </message>
@@ -1647,7 +1647,7 @@ Wilt u deze herstellen?</translation>
         <translation>&amp;2 punten</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from 2 diametrically opposite points</source>
         <translation>Cirkel tekenen van twee diagonaal tegenoverliggende punten</translation>
     </message>
@@ -1700,7 +1700,7 @@ Wilt u deze herstellen?</translation>
         <translation>&amp;2 punten en straal</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 2 points and radius</source>
         <translation>Cirkel van twee punten en straal</translation>
     </message>
@@ -1734,12 +1734,12 @@ Wilt u deze herstellen?</translation>
         <translation>Geen oplossing</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Circle/Circle2TP/Circle2TPInit.js" line="+6"/>
+        <location filename="../scripts/Draw/Circle/Circle2TP/Circle2TPInit.js" line="+5"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation>Cirkel tangentieel aan twee objecten, door punt</translation>
     </message>
     <message>
-        <location line="-4"/>
+        <location line="-3"/>
         <source>2 Tan&amp;gents and Point</source>
         <translation>2 tan&amp;genten en punt</translation>
     </message>
@@ -1777,7 +1777,7 @@ Wilt u deze herstellen?</translation>
         <translation>2 &amp;tangenten en straal</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to two entities with given radius</source>
         <translation>Cirkel tangentieel aan twee objecten met bepaalde straal</translation>
     </message>
@@ -1805,7 +1805,7 @@ Wilt u deze herstellen?</translation>
         <translation>&amp;3 punten</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 3 points</source>
         <translation>Cirkel van drie punten</translation>
     </message>
@@ -1844,7 +1844,7 @@ Wilt u deze herstellen?</translation>
         <translation>3 t&amp;angenten</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to three entities</source>
         <translation>Cirkel tangentieel aan drie objecten</translation>
     </message>
@@ -1874,7 +1874,7 @@ Wilt u deze herstellen?</translation>
         <translation>Middelpunt, &amp;diameter</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and diameter</source>
         <translation>Cirkel van middelpunt en diameter</translation>
     </message>
@@ -1897,7 +1897,7 @@ Wilt u deze herstellen?</translation>
         <translation>&amp;Middelpunt, punt</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from center and point on circle</source>
         <translation>Cirkel van middelpunt en punt op cirkel</translation>
     </message>
@@ -1927,7 +1927,7 @@ Wilt u deze herstellen?</translation>
         <translation>Middelpunt, &amp;straal</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and radius</source>
         <translation>Cirkel van middelpunt en straal</translation>
     </message>
@@ -1950,7 +1950,7 @@ Wilt u deze herstellen?</translation>
         <translation>&amp;Concentrisch (afstand)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric circle</source>
         <translation>Concentrisch cirkel</translation>
     </message>
@@ -1968,7 +1968,7 @@ Wilt u deze herstellen?</translation>
         <translation>Concentrisch (&amp;door punt)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw concentric circle through point</source>
         <translation>Concentrisch cirkel door punt</translation>
     </message>
@@ -2007,7 +2007,7 @@ Wilt u deze herstellen?</translation>
         <translation>Tangent en 2 punten</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle through two points and tangential to one entity</source>
         <translation>Cirkel door twee punten en tangentieel aan object</translation>
     </message>
@@ -2025,7 +2025,7 @@ Wilt u deze herstellen?</translation>
         <translation>&amp;Tangent, punt, straal</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to entity, through point with radius</source>
         <translation>Teken cirkel raakend aan object, door punt en met straal</translation>
     </message>
@@ -2137,18 +2137,18 @@ Wilt u deze herstellen?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+68"/>
+        <location line="+67"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Opdrachtregel</translation>
     </message>
     <message>
-        <location line="-21"/>
+        <location line="-20"/>
         <source>&amp;Command Line</source>
         <translation>&amp;Opdrachtregel</translation>
     </message>
     <message>
-        <location line="+208"/>
+        <location line="+207"/>
         <source>Invalid value:</source>
         <translation>Ongeldig waarde:</translation>
     </message>
@@ -2280,7 +2280,7 @@ Wilt u deze herstellen?</translation>
         <translation>Tekening &amp;eenheid omzetten</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Convert drawing to a different drawing unit</source>
         <translation>Tekening naar een andere eenheid converteren</translation>
     </message>
@@ -2392,7 +2392,7 @@ Wilt u deze herstellen?</translation>
         <translation>&amp;Teller</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Auto increment number</source>
         <translation>Automatisch verhogen van de teller</translation>
     </message>
@@ -2423,7 +2423,7 @@ Wilt u deze herstellen?</translation>
         <translation>Middellijn kruis</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
         <translation>Teken het middenlijn kruis in bogen, cirkels of ellipsen</translation>
     </message>
@@ -2569,7 +2569,7 @@ Wilt u deze herstellen?</translation>
         <translation>Alles &amp;deselecteren</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Deselect all entities</source>
         <translation>Alle objecten deselecteren</translation>
     </message>
@@ -2710,7 +2710,7 @@ Wilt u deze herstellen?</translation>
         <translation>&amp;Uitgelijnd</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw aligned dimension</source>
         <translation>Uitgelijnde maat</translation>
     </message>
@@ -2738,7 +2738,7 @@ Wilt u deze herstellen?</translation>
         <translation>&amp;Hoek</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angular dimension</source>
         <translation>Hoek maat</translation>
     </message>
@@ -2766,7 +2766,7 @@ Wilt u deze herstellen?</translation>
         <translation>&amp;Diametrisch</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw diametric dimension</source>
         <translation>Diametrische maat</translation>
     </message>
@@ -2779,7 +2779,7 @@ Wilt u deze herstellen?</translation>
         <translation>&amp;Horizontaal</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw horizontal dimension</source>
         <translation>Horizontale maat</translation>
     </message>
@@ -2802,7 +2802,7 @@ Wilt u deze herstellen?</translation>
         <translation>&amp;Ordinaat (X/Y)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+3"/>
         <source>Draw ordinate dimension</source>
         <translation>Ordinaat maat</translation>
     </message>
@@ -2825,7 +2825,7 @@ Wilt u deze herstellen?</translation>
         <translation>&amp;Radiaal</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw radial dimension</source>
         <translation>Radiale Maat</translation>
     </message>
@@ -2879,7 +2879,7 @@ Wilt u deze herstellen?</translation>
         <translation>&amp;Geroteerd (lineaire)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw linear dimension at a fixed angle</source>
         <translation>Lineaire bemating met vaste hoek</translation>
     </message>
@@ -2892,7 +2892,7 @@ Wilt u deze herstellen?</translation>
         <translation>&amp;Vertikaal</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw vertical dimension</source>
         <translation>Verticale bemating</translation>
     </message>
@@ -2955,7 +2955,7 @@ Wilt u deze herstellen?</translation>
         <translation>Bematinggereedschappen</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>D&amp;imension</source>
         <translation>&amp;Bemating</translation>
     </message>
@@ -3476,7 +3476,7 @@ is al in de lijst.</translation>
         <translation>Teken Fms Lanes</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
         <translation>Teken FMS Lanes (ribben)</translation>
     </message>
@@ -4077,7 +4077,7 @@ is al in de lijst.</translation>
         <translation>&amp;Tekenen van CSV</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Draws entities based on textual entries in a CSV file</source>
         <translation>Tekent objecten gebaseerd op tekstuele gegevens in een CSV-bestand</translation>
     </message>
@@ -4085,7 +4085,7 @@ is al in de lijst.</translation>
 <context>
     <name>DrawOrder</name>
     <message>
-        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+92"/>
+        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
         <translation>&amp;Volgorde</translation>
     </message>
@@ -4183,7 +4183,7 @@ is al in de lijst.</translation>
         <translation>Polylijn &amp;tekenen</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw polyline with line and arc segments</source>
         <translation>Polylijn met lijn en boog segmenten tekenen</translation>
     </message>
@@ -4370,7 +4370,7 @@ is al in de lijst.</translation>
         <translation>&amp;Script Shell</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+34"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
         <translation>Script Shell</translation>
@@ -4399,7 +4399,7 @@ is al in de lijst.</translation>
         <translation>Bewerkgereedschappen</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Edit</source>
         <translation>&amp;Bewerken</translation>
     </message>
@@ -4477,7 +4477,7 @@ is al in de lijst.</translation>
         <translation>Te&amp;kst bewerken</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Edit text</source>
         <translation>Tekst bewerken</translation>
     </message>
@@ -4490,7 +4490,7 @@ is al in de lijst.</translation>
         <translation>Ellipsgereedschappen</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Ellipse</source>
         <translation>&amp;Ellips</translation>
     </message>
@@ -4588,7 +4588,7 @@ is al in de lijst.</translation>
         <translation>&amp;Ellipsboog</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw ellipse arc from center, major point, ratio and angles</source>
         <translation>Ellipsboog van middelpunt, eindpunt eerste as, verhouding van assen en hoeken</translation>
     </message>
@@ -4601,7 +4601,7 @@ is al in de lijst.</translation>
         <translation>&amp;Ellips (middelpunt, punt, verhouding)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw full ellipse from center, major point and ratio</source>
         <translation>Ellips van middelpunt, punt, verhouding van assen</translation>
     </message>
@@ -4637,7 +4637,7 @@ is al in de lijst.</translation>
         <translation>Ellips met &amp;diameters</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and diameters</source>
         <translation>Ellips met positie en diameters</translation>
     </message>
@@ -4670,7 +4670,7 @@ is al in de lijst.</translation>
         <translation>Ingeschreven in vierhoek</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse inscribed in quadrilateral</source>
         <translation>Ellips, ingeschreven in vierhoek</translation>
     </message>
@@ -4693,7 +4693,7 @@ is al in de lijst.</translation>
         <translation>&amp;Parallelle curve (met afstand)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse</source>
         <translation>Parallelle curve aan ellips tekenen</translation>
     </message>
@@ -4711,7 +4711,7 @@ is al in de lijst.</translation>
         <translation>Parallelle curve (&amp;door punt)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse through point</source>
         <translation>Parallelle curve aan ellips door punt</translation>
     </message>
@@ -4747,7 +4747,7 @@ is al in de lijst.</translation>
         <translation>Ellips met &amp;straalen</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and radii</source>
         <translation>Ellips met positie en straalen</translation>
     </message>
@@ -4872,7 +4872,7 @@ is al in de lijst.</translation>
         <translation>&amp;Zwaluwstaartverbinding</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation>Zwaluwstaartverbinding tekenen</translation>
     </message>
@@ -5040,7 +5040,7 @@ is al in de lijst.</translation>
         <translation>Drie punten</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw three points</source>
         <translation>Drie punten tekenen</translation>
     </message>
@@ -5187,7 +5187,7 @@ is al in de lijst.</translation>
         <translation>Bestandgereedschappen</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;File</source>
         <translation>&amp;Bestand</translation>
     </message>
@@ -6302,12 +6302,12 @@ is al in de lijst.</translation>
 <context>
     <name>Hatch</name>
     <message>
-        <location filename="../scripts/Draw/Hatch/Hatch.js" line="+99"/>
+        <location filename="../scripts/Draw/Hatch/Hatch.js" line="+98"/>
         <source>&amp;Hatch</source>
         <translation>&amp;Arcering</translation>
     </message>
     <message>
-        <location line="-27"/>
+        <location line="-26"/>
         <source>Hatch Tools</source>
         <translation>Arceringgereedschappen</translation>
     </message>
@@ -6378,7 +6378,7 @@ is al in de lijst.</translation>
         <translation>&amp;Arcering van selectie</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Create hatch or solid fill from selected boundary</source>
         <translation>Arcering of vulling van geselecteerde begrenzing creëren</translation>
     </message>
@@ -6617,7 +6617,7 @@ is al in de lijst.</translation>
         <translation>Aangepaste 2D-centroïde toevoegen</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Create a customizable 2D Centroid marker</source>
         <translation>Maak een aanpasbare 2D-centroïde markering</translation>
     </message>
@@ -6947,7 +6947,7 @@ is al in de lijst.</translation>
         <translation>&amp;Centroïde van oppervlakte</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create an area 2D Centroid for a selected entity</source>
         <translation>Maak een 2D-centroïdegebied voor een geselecteerde object</translation>
     </message>
@@ -7069,7 +7069,7 @@ is al in de lijst.</translation>
         <translation>Centroïde Luisteraar</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
         <translation>(De-)activeer een transactie-luisteraar voor 2D-Centroïden</translation>
     </message>
@@ -7322,7 +7322,7 @@ is al in de lijst.</translation>
         <translation>Som 2D Centroïden gewogen</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Combine selected 2D Centroid markers weighted</source>
         <translation>Combineer geselecteerde 2D-centroïde markers gewogen</translation>
     </message>
@@ -7422,7 +7422,7 @@ is al in de lijst.</translation>
         <translation>&amp;Draad centroïde</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create a wire 2D Centroid for a selection</source>
         <translation>Creëer een 2D-draadkern voor een selectie</translation>
     </message>
@@ -7440,7 +7440,7 @@ is al in de lijst.</translation>
         <translation>Infogereedschappen</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Info</source>
         <translation>&amp;Informatie</translation>
     </message>
@@ -7768,7 +7768,7 @@ is al in de lijst.</translation>
         <translation>Selectie &amp;inverteren</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Invert the current selection</source>
         <translation>Huidige selectie inverteren</translation>
     </message>
@@ -7975,7 +7975,7 @@ is al in de lijst.</translation>
         <translation>Laaggereedschappen</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Layer</source>
         <translation>&amp;Laag</translation>
     </message>
@@ -8119,7 +8119,7 @@ is al in de lijst.</translation>
     </message>
     <message>
         <location line="-55"/>
-        <location line="+110"/>
+        <location line="+109"/>
         <source>Layer List</source>
         <translation>Lagenlijst</translation>
     </message>
@@ -8147,7 +8147,7 @@ is al in de lijst.</translation>
         <translation>&amp;Verwijslijn</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
         <translation>Verwijslijn (polylijn met pijl)</translation>
     </message>
@@ -8206,7 +8206,7 @@ is al in de lijst.</translation>
         <translation>Lijngereedschappen</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Line</source>
         <translation>&amp;Lijn</translation>
     </message>
@@ -8284,7 +8284,7 @@ is al in de lijst.</translation>
         <translation>Lijn van &amp;2 punten</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single line or sequence of lines</source>
         <translation>Enkele lijn of een reeks van lijnen tekenen</translation>
     </message>
@@ -8337,7 +8337,7 @@ is al in de lijst.</translation>
         <translation>Lijn van &amp;hoek</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line at a given absolute angle</source>
         <translation>Teken lijn met een gegeven absolute hoek</translation>
     </message>
@@ -8375,7 +8375,7 @@ is al in de lijst.</translation>
         <translation>&amp;Deellijn van hoek</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angle bisector, trisector, ...</source>
         <translation>Deellijn van een hoek tekenen</translation>
     </message>
@@ -8433,7 +8433,7 @@ is al in de lijst.</translation>
         <translation>&amp;Tandverbinding van 2 punten</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
         <translation>Teken tandverbinding met vingers, sleuven en tennons</translation>
     </message>
@@ -8456,7 +8456,7 @@ is al in de lijst.</translation>
         <translation>&amp;Zwaluwstaartverbinding van 2 punten</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation>Teken een zwaluwstaartverbinding</translation>
     </message>
@@ -8499,7 +8499,7 @@ is al in de lijst.</translation>
         <translation>Lijn uit de &amp;vrije hand</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw freehand line</source>
         <translation>Teken lijnen uit de vrije hand</translation>
     </message>
@@ -8537,7 +8537,7 @@ is al in de lijst.</translation>
         <translation>&amp;Horizontale lijn</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal line</source>
         <translation>Horizontale lijn tekenen</translation>
     </message>
@@ -8575,7 +8575,7 @@ is al in de lijst.</translation>
         <translation>&amp;Orthogonaal</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to base entity</source>
         <translation>Lijn loodrecht op basis object tekenen</translation>
     </message>
@@ -8603,7 +8603,7 @@ is al in de lijst.</translation>
         <translation>Orthogonaal / tange&amp;nt</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to line and tangent to circle, arc or ellipse</source>
         <translation>Lijn loodrecht op lijn en tangent aan cirkel, boog of ellips tekenen</translation>
     </message>
@@ -8626,7 +8626,7 @@ is al in de lijst.</translation>
         <translation>Para&amp;llel (met afstand)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
         <translation>Parallel aan de bestaande lijn of concentrische boog, cirkel tekenen</translation>
     </message>
@@ -8644,7 +8644,7 @@ is al in de lijst.</translation>
         <translation>Para&amp;llel (door punt)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
         <translation>Parallel lijn of concentrische boog of cirkel door een gegeven punt tekenen</translation>
     </message>
@@ -8720,7 +8720,7 @@ is al in de lijst.</translation>
         <translation>R&amp;elatieve hoek</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line with relative angle to base entity</source>
         <translation>Lijn met relatieve hoek naar het basis object tekenen</translation>
     </message>
@@ -8761,7 +8761,7 @@ is al in de lijst.</translation>
         <translation>&amp;Tangent (punt, cirkel)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (point, circle)</source>
         <translation>Tangent tekenen (punt, cirkel)</translation>
     </message>
@@ -8789,7 +8789,7 @@ is al in de lijst.</translation>
         <translation>Tan&amp;gent (twee cirkels)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (circle, circle)</source>
         <translation>Tangent tekenen (cirkel, cirkel)</translation>
     </message>
@@ -8802,7 +8802,7 @@ is al in de lijst.</translation>
         <translation>&amp;Verticale lijn</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical line</source>
         <translation>Verticale lijn tekenen</translation>
     </message>
@@ -8994,7 +8994,7 @@ is al in de lijst.</translation>
         <translation>Diverse gereedschappen</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc</source>
         <translation>Diverse</translation>
     </message>
@@ -9017,7 +9017,7 @@ is al in de lijst.</translation>
         <translation>Diverse blokgereedschappen</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Block</source>
         <translation>&amp;Blok</translation>
     </message>
@@ -9035,7 +9035,7 @@ is al in de lijst.</translation>
         <translation>Diverse ontwikkelingstools</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>De&amp;velopment</source>
         <translation>&amp;Ontwikkeling</translation>
     </message>
@@ -9053,7 +9053,7 @@ is al in de lijst.</translation>
         <translation>Diverse tekengereedschappen</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc Draw</source>
         <translation>Diverse Tekenen</translation>
     </message>
@@ -9076,7 +9076,7 @@ is al in de lijst.</translation>
         <translation>Diverse import- / exportfuncties</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Import/Export</source>
         <translation>&amp;Import/Export</translation>
     </message>
@@ -9094,7 +9094,7 @@ is al in de lijst.</translation>
         <translation>Hulpmiddelen voor schijfinformatie</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Information</source>
         <translation>&amp;Informatie</translation>
     </message>
@@ -9112,7 +9112,7 @@ is al in de lijst.</translation>
         <translation>Diverse modificatiegereedschappen</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Modify</source>
         <translation>&amp;Modificeren</translation>
     </message>
@@ -9130,7 +9130,7 @@ is al in de lijst.</translation>
         <translation>Diverse selectiegereedschappen</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Select</source>
         <translation>&amp;Selecteer</translation>
     </message>
@@ -9143,7 +9143,7 @@ is al in de lijst.</translation>
         <translation>Modificatiegereedschappen</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Modify</source>
         <translation>&amp;Modificeren</translation>
     </message>
@@ -9377,7 +9377,7 @@ is al in de lijst.</translation>
         <translation>Afzet (met afstand)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse</source>
         <translation>Lijn, boog, cirkel of ellips afzetten</translation>
     </message>
@@ -9421,7 +9421,7 @@ is al in de lijst.</translation>
         <translation>Afzet (door punt)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse through point</source>
         <translation>Lijn, boog, cirkel of ellips afzetten door punt</translation>
     </message>
@@ -9449,7 +9449,7 @@ is al in de lijst.</translation>
         <translation>&amp;Open</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open an existing drawing</source>
         <translation>Open een bestaande tekening</translation>
     </message>
@@ -9659,7 +9659,7 @@ is al in de lijst.</translation>
         <translation>&amp;PDF export</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Exports the current drawing as PDF</source>
         <translation>Exporteert de actieve tekening als PDF</translation>
     </message>
@@ -9693,7 +9693,7 @@ is al in de lijst.</translation>
         <translation>Puntgereedschappen</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Point</source>
         <translation>&amp;Punt</translation>
     </message>
@@ -9711,7 +9711,7 @@ is al in de lijst.</translation>
         <translation>Enkel &amp;punt</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single point</source>
         <translation>Enkel punt tekenen</translation>
     </message>
@@ -9784,7 +9784,7 @@ is al in de lijst.</translation>
         <translation>Polylijngereedschappen</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Polyline</source>
         <translation>&amp;Polylijn</translation>
     </message>
@@ -9899,7 +9899,7 @@ is al in de lijst.</translation>
         <translation>&amp;Polylijn breeksymbool van 2 punten</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a polyline break symbol from 2 points</source>
         <translation>Teken een polylijn breuksymbool vanuit 2 punten</translation>
     </message>
@@ -9958,7 +9958,7 @@ is al in de lijst.</translation>
         <translation>Af&amp;drukken</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current drawing</source>
         <translation>Actieve tekening afdrukken</translation>
     </message>
@@ -9971,7 +9971,7 @@ is al in de lijst.</translation>
         <translation>&amp;Huidige weergave afdrukken</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current view</source>
         <translation>Huidige weergave afdrukken</translation>
     </message>
@@ -10119,7 +10119,7 @@ is al in de lijst.</translation>
         <translation>Afdruk voor&amp;beeld</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Preview how current drawing would be printed</source>
         <translation>Voorbeeld hoe de huidige tekening zou worden afgedrukt</translation>
     </message>
@@ -10132,7 +10132,7 @@ is al in de lijst.</translation>
         <translation>Projectiegereedschappen</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Projection</source>
         <translation>&amp;Projectie</translation>
     </message>
@@ -10150,12 +10150,12 @@ is al in de lijst.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1654"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1666"/>
         <source>*VARIES*</source>
         <translation>*VARIEERT*</translation>
     </message>
     <message>
-        <location line="-1435"/>
+        <location line="-1445"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10170,7 +10170,7 @@ is al in de lijst.</translation>
         <translation>Specifieke eigenschappen</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+20"/>
         <source>Dependent Entities</source>
         <translation>Afhankelijke objecten</translation>
     </message>
@@ -10230,14 +10230,14 @@ is al in de lijst.</translation>
         <translation>Nee</translation>
     </message>
     <message>
-        <location line="+396"/>
+        <location line="+405"/>
         <location line="+57"/>
-        <location line="+11"/>
+        <location line="+10"/>
         <source>Property Editor</source>
         <translation>Eigenschappen-editor</translation>
     </message>
     <message>
-        <location line="-68"/>
+        <location line="-67"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -10252,7 +10252,7 @@ is al in de lijst.</translation>
         <translation>Algemeene eigenschappen</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+31"/>
         <source>Color:</source>
         <translation>Kleur:</translation>
     </message>
@@ -10766,7 +10766,7 @@ is al in de lijst.</translation>
         <translation>R&amp;un script</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open and run a script file</source>
         <translation>Een scriptbestand openen en uitvoeren</translation>
     </message>
@@ -11088,7 +11088,7 @@ is al in de lijst.</translation>
         <translation>Selectiegereedschappen</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+13"/>
         <source>Selection Tools Panel</source>
         <translation>Selectiegereedschappen</translation>
     </message>
@@ -11106,7 +11106,7 @@ is al in de lijst.</translation>
         <translation>&amp;Alles selecteren</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Select all visible entities</source>
         <translation>Alle zichtbare objecten selecteren</translation>
     </message>
@@ -11224,7 +11224,7 @@ is al in de lijst.</translation>
         <translation>&amp;Contour (de-)selecteren</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select connected entities</source>
         <translation>Verbonden objecten (de-)selecteren</translation>
     </message>
@@ -11272,7 +11272,7 @@ is al in de lijst.</translation>
         <translation>&amp;Kruisende objecten (de-)selecteren</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities intersected by a line</source>
         <translation>Alle objecten, die van een lijn gekruist worden (de-)selecteren</translation>
     </message>
@@ -11333,7 +11333,7 @@ is al in de lijst.</translation>
         <translation>Laag (de-)selecteren</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities on the same layer</source>
         <translation>Alle objecten op dezelfde laag (de-)selecteren</translation>
     </message>
@@ -11386,7 +11386,7 @@ is al in de lijst.</translation>
         <translation>Rechthoekig &amp;gebied (de-)selecteren</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities inside a rectangle</source>
         <translation>Alle objecten in een rechthoekig gebied (de-)selecteren</translation>
     </message>
@@ -11471,7 +11471,7 @@ is al in de lijst.</translation>
         <translation>Vormgereedschappen</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Shape</source>
         <translation>&amp;Vorm</translation>
     </message>
@@ -11538,7 +11538,7 @@ is al in de lijst.</translation>
         <translation>Pol&amp;ygoon (middelpunt, zijkant)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and middle point of side</source>
         <translation>Regelmatige polygoon van middelpunt en middelpunt van zijkant tekenen</translation>
     </message>
@@ -11576,7 +11576,7 @@ is al in de lijst.</translation>
         <translation>Polygoo&amp;n (zijkant, zijkant)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from middle points of two opposite sides or two opposite corners</source>
         <translation>Regelmatige polygoon van midden punten van twee tegenovergestelde zijden of twee tegenovergestelde hoeken tekenen</translation>
     </message>
@@ -11614,7 +11614,7 @@ is al in de lijst.</translation>
         <translation>Pol&amp;ygoon (middelpunt, hoek)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and corner point</source>
         <translation>Regelmatige polygoon van middelpunt en hoekpunt</translation>
     </message>
@@ -11642,7 +11642,7 @@ is al in de lijst.</translation>
         <translation>Polygoo&amp;n (2 punten van zijkant)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from end points of one side</source>
         <translation>Regelmatige polygoon van eindpunten van een zijkant</translation>
     </message>
@@ -11655,7 +11655,7 @@ is al in de lijst.</translation>
         <translation>&amp;Rechthoek</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle from two corners</source>
         <translation>Rechthoek van twee hoeken tekenen</translation>
     </message>
@@ -11673,7 +11673,7 @@ is al in de lijst.</translation>
         <translation>Rechthoek met af&amp;metingen</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle with position and size</source>
         <translation>Rechthoek met positie en afmetingen tekenen</translation>
     </message>
@@ -11759,7 +11759,7 @@ is al in de lijst.</translation>
         <translation>Vangfuncties</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+25"/>
         <source>&amp;Snap</source>
         <translation>&amp;Vang</translation>
     </message>
@@ -11927,7 +11927,7 @@ is al in de lijst.</translation>
         <translation>&amp;Afstand manueel</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Snap distance between 2 points</source>
         <translation>Vang afstand tussen twee punten</translation>
     </message>
@@ -12077,7 +12077,7 @@ is al in de lijst.</translation>
         <translation>Splinegereedschappen</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Spline</source>
         <translation>&amp;Spline</translation>
     </message>
@@ -12125,7 +12125,7 @@ is al in de lijst.</translation>
         <translation>&amp;Spline (controlepunten)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw spline from control points</source>
         <translation>Spline van controlepunten tekenen</translation>
     </message>
@@ -12339,7 +12339,7 @@ is al in de lijst.</translation>
         <translation>&amp;Tekst</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text</source>
         <translation>Tekst tekenen</translation>
     </message>
@@ -12462,7 +12462,7 @@ is al in de lijst.</translation>
         <translation>&amp;Text langs object</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text along an entity</source>
         <translation>Teken tekst langs een object</translation>
     </message>
@@ -13031,7 +13031,7 @@ is al in de lijst.</translation>
         <translation>&amp;Verplaatsen / kopiëren</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+9"/>
         <source>Move or copy entities once or multiple times</source>
         <translation>Objecten één of meerdere keren verplaatsen of kopiëren</translation>
     </message>
@@ -13419,7 +13419,7 @@ is al in de lijst.</translation>
         <translation>Aanzichtgereedschappen</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>View</source>
         <translation>Beeld</translation>
     </message>
@@ -13893,7 +13893,7 @@ is al in de lijst.</translation>
         <translation>&amp;Horizontale constructielijn</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal construction line</source>
         <translation>Teken horizontale constructielijn</translation>
     </message>
@@ -13906,7 +13906,7 @@ is al in de lijst.</translation>
         <translation>&amp;Verticale constructie lijn</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical construction line</source>
         <translation>Teken verticale constructie lijn</translation>
     </message>
@@ -13924,7 +13924,7 @@ is al in de lijst.</translation>
         <translation>Zoomgereedschappen</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Zoom</source>
         <translation>&amp;Zoomen</translation>
     </message>

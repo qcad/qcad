@@ -325,7 +325,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">添加空块</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Add new empty block</source>
         <translation type="unfinished">添加新的空块</translation>
     </message>
@@ -412,7 +412,7 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1986"/>
+        <location filename="../scripts/Apollonius.js" line="+1989"/>
         <source>Invalid radius</source>
         <translation type="unfinished">无效半径</translation>
     </message>
@@ -438,7 +438,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">弧形工具</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Arc</source>
         <translation type="unfinished">弧形</translation>
     </message>
@@ -471,7 +471,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">2点和角度</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and angle</source>
         <translation type="unfinished">从2个点和角度画弧</translation>
     </message>
@@ -524,7 +524,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">2分和高度</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and height</source>
         <translation type="unfinished">从2个点和高度画弧</translation>
     </message>
@@ -582,7 +582,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">2点和长度</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and length</source>
         <translation type="unfinished">从2个点画弧，长度为</translation>
     </message>
@@ -635,7 +635,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">2点和半径</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and radius</source>
         <translation type="unfinished">从2点和半径画弧</translation>
     </message>
@@ -698,7 +698,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">3分</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 3 points</source>
         <translation type="unfinished">从3个点画弧</translation>
     </message>
@@ -736,7 +736,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">中心、点、角</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from center, point on arc and angles</source>
         <translation type="unfinished">从中心、弧上的点和角度画弧</translation>
     </message>
@@ -764,7 +764,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">同心（有距离）</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc</source>
         <translation type="unfinished">绘制同心圆</translation>
     </message>
@@ -787,7 +787,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">同心 (通过点)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc through point</source>
         <translation type="unfinished">绘制通过点的同心圆</translation>
     </message>
@@ -826,7 +826,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">切线、点、半径</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to entity, through point with radius</source>
         <translation type="unfinished">绘制与实体相切的弧线，通过半径为0.5米的点。</translation>
     </message>
@@ -854,7 +854,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">相互联系的</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to base entity</source>
         <translation type="unfinished">绘制与基地实体相切的弧线</translation>
     </message>
@@ -1043,7 +1043,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>&amp;Batch2Pdf visible layout blocks</source>
         <translation type="unfinished">Batch2Pdf可见布局块</translation>
     </message>
@@ -1239,7 +1239,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">块状工具</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Block</source>
         <translation type="unfinished">区块</translation>
     </message>
@@ -1319,7 +1319,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+0"/>
         <location line="+63"/>
-        <location line="+44"/>
+        <location line="+43"/>
         <source>Block List</source>
         <translation type="unfinished">块状列表</translation>
     </message>
@@ -1617,7 +1617,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">圈子工具</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Circle</source>
         <translation type="unfinished">圆圈</translation>
     </message>
@@ -1645,7 +1645,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">2分</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from 2 diametrically opposite points</source>
         <translation type="unfinished">从两个截然相反的点画圆</translation>
     </message>
@@ -1678,7 +1678,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">2点和半径</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 2 points and radius</source>
         <translation type="unfinished">从2个点和半径画圆</translation>
     </message>
@@ -1737,7 +1737,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">2切线和点</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation type="unfinished">绘制与两个实体相切的圆，通过点</translation>
     </message>
@@ -1770,7 +1770,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">2切线和半径</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to two entities with given radius</source>
         <translation type="unfinished">以给定的半径画出与两个实体相切的圆</translation>
     </message>
@@ -1803,7 +1803,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">3分</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 3 points</source>
         <translation type="unfinished">从3个点画圆</translation>
     </message>
@@ -1842,7 +1842,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">3个切口</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to three entities</source>
         <translation type="unfinished">绘制与三个实体相切的圆</translation>
     </message>
@@ -1855,7 +1855,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">中心，直径</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and diameter</source>
         <translation type="unfinished">从中心和直径画圆</translation>
     </message>
@@ -1895,7 +1895,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">中心，点</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from center and point on circle</source>
         <translation type="unfinished">从中心和圆上的点画圆</translation>
     </message>
@@ -1908,7 +1908,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">中心，半径</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and radius</source>
         <translation type="unfinished">从中心和半径画圆</translation>
     </message>
@@ -1938,7 +1938,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">同心（有距离）</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric circle</source>
         <translation type="unfinished">绘制同心圆</translation>
     </message>
@@ -1961,7 +1961,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">同心 (通过点)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw concentric circle through point</source>
         <translation type="unfinished">绘制通过点的同心圆</translation>
     </message>
@@ -2005,7 +2005,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">切线和2点</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle through two points and tangential to one entity</source>
         <translation type="unfinished">绘制通过两点并与一个实体相切的圆</translation>
     </message>
@@ -2023,7 +2023,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">切线、点、半径</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to entity, through point with radius</source>
         <translation type="unfinished">绘制与实体相切的圆，通过点，半径为</translation>
     </message>
@@ -2135,18 +2135,18 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+68"/>
+        <location line="+67"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation type="unfinished">命令行</translation>
     </message>
     <message>
-        <location line="-21"/>
+        <location line="-20"/>
         <source>&amp;Command Line</source>
         <translation type="unfinished">命令行</translation>
     </message>
     <message>
-        <location line="+208"/>
+        <location line="+207"/>
         <source>Invalid value:</source>
         <translation type="unfinished">无效值：</translation>
     </message>
@@ -2278,7 +2278,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">转换绘图单位</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Convert drawing to a different drawing unit</source>
         <translation type="unfinished">将绘图转换为不同的绘图单位</translation>
     </message>
@@ -2365,7 +2365,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">计数器</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Auto increment number</source>
         <translation type="unfinished">自动递增数</translation>
     </message>
@@ -2421,7 +2421,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">中心线十字架</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
         <translation type="unfinished">以弧线、圆圈或椭圆绘制中心线十字架</translation>
     </message>
@@ -2567,7 +2567,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">取消选择所有</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Deselect all entities</source>
         <translation type="unfinished">取消选择所有实体</translation>
     </message>
@@ -2708,7 +2708,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">统一的</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw aligned dimension</source>
         <translation type="unfinished">绘制对齐的尺寸</translation>
     </message>
@@ -2736,7 +2736,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">角度</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angular dimension</source>
         <translation type="unfinished">绘制角度尺寸</translation>
     </message>
@@ -2764,7 +2764,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">二维码</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw diametric dimension</source>
         <translation type="unfinished">绘制直径尺寸</translation>
     </message>
@@ -2777,7 +2777,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">横向</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw horizontal dimension</source>
         <translation type="unfinished">绘制水平尺寸</translation>
     </message>
@@ -2800,7 +2800,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">奥德赛(X/Y)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+3"/>
         <source>Draw ordinate dimension</source>
         <translation type="unfinished">绘制纵坐标尺寸</translation>
     </message>
@@ -2823,7 +2823,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">径向</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw radial dimension</source>
         <translation type="unfinished">绘制径向尺寸</translation>
     </message>
@@ -2871,7 +2871,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">旋转的（线性）</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw linear dimension at a fixed angle</source>
         <translation type="unfinished">以固定的角度绘制线性尺寸</translation>
     </message>
@@ -2889,7 +2889,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">纵向</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw vertical dimension</source>
         <translation type="unfinished">绘制垂直尺寸</translation>
     </message>
@@ -2952,7 +2952,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">尺寸工具</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>D&amp;imension</source>
         <translation type="unfinished">尺寸</translation>
     </message>
@@ -3473,7 +3473,7 @@ is already in the list.</source>
         <translation type="unfinished">绘制Fms车道</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
         <translation type="unfinished">绘制FMS车道（肋骨）。</translation>
     </message>
@@ -4074,7 +4074,7 @@ is already in the list.</source>
         <translation type="unfinished">从CSV中提取</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Draws entities based on textual entries in a CSV file</source>
         <translation type="unfinished">根据CSV文件中的文本条目绘制实体</translation>
     </message>
@@ -4082,7 +4082,7 @@ is already in the list.</source>
 <context>
     <name>DrawOrder</name>
     <message>
-        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+92"/>
+        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
         <translation type="unfinished">抽签顺序</translation>
     </message>
@@ -4130,7 +4130,7 @@ is already in the list.</source>
         <translation type="unfinished">绘制折线</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw polyline with line and arc segments</source>
         <translation type="unfinished">用线段和弧段绘制折线</translation>
     </message>
@@ -4366,7 +4366,7 @@ is already in the list.</source>
         <translation type="unfinished">脚本外壳</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+34"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
         <translation type="unfinished">脚本外壳</translation>
@@ -4395,7 +4395,7 @@ is already in the list.</source>
         <translation type="unfinished">编辑工具</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Edit</source>
         <translation type="unfinished">编辑</translation>
     </message>
@@ -4473,7 +4473,7 @@ is already in the list.</source>
         <translation type="unfinished">编辑文本</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Edit text</source>
         <translation type="unfinished">编辑文本</translation>
     </message>
@@ -4486,7 +4486,7 @@ is already in the list.</source>
         <translation type="unfinished">椭圆工具</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Ellipse</source>
         <translation type="unfinished">椭圆</translation>
     </message>
@@ -4569,7 +4569,7 @@ is already in the list.</source>
         <translation type="unfinished">椭圆弧</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw ellipse arc from center, major point, ratio and angles</source>
         <translation type="unfinished">从中心、主要点、比率和角度绘制椭圆弧线</translation>
     </message>
@@ -4597,7 +4597,7 @@ is already in the list.</source>
         <translation type="unfinished">椭圆（中心、点、比率）</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw full ellipse from center, major point and ratio</source>
         <translation type="unfinished">从中心、主要点和比率画出全椭圆</translation>
     </message>
@@ -4610,7 +4610,7 @@ is already in the list.</source>
         <translation type="unfinished">有直径的椭圆</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and diameters</source>
         <translation type="unfinished">绘制带有位置和直径的椭圆</translation>
     </message>
@@ -4666,7 +4666,7 @@ is already in the list.</source>
         <translation type="unfinished">四边形刻字</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse inscribed in quadrilateral</source>
         <translation type="unfinished">绘制刻在四边形上的椭圆</translation>
     </message>
@@ -4679,7 +4679,7 @@ is already in the list.</source>
         <translation type="unfinished">平行曲线（含距离）</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse</source>
         <translation type="unfinished">绘制椭圆的平行曲线</translation>
     </message>
@@ -4702,7 +4702,7 @@ is already in the list.</source>
         <translation type="unfinished">平行的曲线（通过点）。</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse through point</source>
         <translation type="unfinished">绘制通过点的椭圆的平行曲线</translation>
     </message>
@@ -4720,7 +4720,7 @@ is already in the list.</source>
         <translation type="unfinished">带半径的椭圆</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and radii</source>
         <translation type="unfinished">绘制带有位置和半径的椭圆</translation>
     </message>
@@ -4868,7 +4868,7 @@ is already in the list.</source>
         <translation type="unfinished">燕尾式接头</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation type="unfinished">绘制一个燕尾榫</translation>
     </message>
@@ -5036,7 +5036,7 @@ is already in the list.</source>
         <translation type="unfinished">三点</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw three points</source>
         <translation type="unfinished">抽到三分</translation>
     </message>
@@ -5182,7 +5182,7 @@ is already in the list.</source>
         <translation type="unfinished">文件工具</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;File</source>
         <translation type="unfinished">文件</translation>
     </message>
@@ -6302,7 +6302,7 @@ is already in the list.</source>
         <translation type="unfinished">舱口工具</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Hatch</source>
         <translation type="unfinished">哈奇</translation>
     </message>
@@ -6373,7 +6373,7 @@ is already in the list.</source>
         <translation type="unfinished">从选择中孵化</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Create hatch or solid fill from selected boundary</source>
         <translation type="unfinished">从选定的边界创建舱口或实体填充</translation>
     </message>
@@ -6612,7 +6612,7 @@ is already in the list.</source>
         <translation type="unfinished">添加自定义2D中心点</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Create a customizable 2D Centroid marker</source>
         <translation type="unfinished">创建一个可定制的二维中心点标记</translation>
     </message>
@@ -6942,7 +6942,7 @@ is already in the list.</source>
         <translation type="unfinished">面积中心点</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create an area 2D Centroid for a selected entity</source>
         <translation type="unfinished">为一个选定的实体创建一个区域的2D Centroid</translation>
     </message>
@@ -7064,7 +7064,7 @@ is already in the list.</source>
         <translation type="unfinished">中心点监听器</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
         <translation type="unfinished">(取消)激活2D中心点的交易监听器</translation>
     </message>
@@ -7317,7 +7317,7 @@ is already in the list.</source>
         <translation type="unfinished">加权的二维中心点之和</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Combine selected 2D Centroid markers weighted</source>
         <translation type="unfinished">结合选定的二维中心点标记进行加权处理</translation>
     </message>
@@ -7417,7 +7417,7 @@ is already in the list.</source>
         <translation type="unfinished">线路中心点</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create a wire 2D Centroid for a selection</source>
         <translation type="unfinished">为一个选区创建一个线状的2D中心点</translation>
     </message>
@@ -7435,7 +7435,7 @@ is already in the list.</source>
         <translation type="unfinished">信息工具</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Info</source>
         <translation type="unfinished">信息</translation>
     </message>
@@ -7763,7 +7763,7 @@ is already in the list.</source>
         <translation type="unfinished">颠倒选择</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Invert the current selection</source>
         <translation type="unfinished">反转当前选择</translation>
     </message>
@@ -7950,7 +7950,7 @@ is already in the list.</source>
         <translation type="unfinished">图层工具</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Layer</source>
         <translation type="unfinished">层数</translation>
     </message>
@@ -8109,12 +8109,12 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+110"/>
+        <location line="+109"/>
         <source>Layer List</source>
         <translation type="unfinished">图层列表</translation>
     </message>
     <message>
-        <location line="-55"/>
+        <location line="-54"/>
         <source>&amp;Layer List</source>
         <translation type="unfinished">图层列表</translation>
     </message>
@@ -8142,7 +8142,7 @@ is already in the list.</source>
         <translation type="unfinished">领导人</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
         <translation type="unfinished">绘制领导者（带箭头的线序）。</translation>
     </message>
@@ -8201,7 +8201,7 @@ is already in the list.</source>
         <translation type="unfinished">线路工具</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Line</source>
         <translation type="unfinished">线路</translation>
     </message>
@@ -8244,7 +8244,7 @@ is already in the list.</source>
         <translation type="unfinished">从2点开始的线</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single line or sequence of lines</source>
         <translation type="unfinished">绘制单线或线序</translation>
     </message>
@@ -8302,7 +8302,7 @@ is already in the list.</source>
         <translation type="unfinished">角度的线</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line at a given absolute angle</source>
         <translation type="unfinished">在一个给定的绝对角度上画线</translation>
     </message>
@@ -8360,7 +8360,7 @@ is already in the list.</source>
         <translation type="unfinished">角度二分仪</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angle bisector, trisector, ...</source>
         <translation type="unfinished">绘制角平分线、三分线，...</translation>
     </message>
@@ -8393,7 +8393,7 @@ is already in the list.</source>
         <translation type="unfinished">从2点开始的盒式连接</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
         <translation type="unfinished">抽屉式箱形接头的指、槽和天窗</translation>
     </message>
@@ -8451,7 +8451,7 @@ is already in the list.</source>
         <translation type="unfinished">由2个点组成的燕尾榫头</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation type="unfinished">绘制一个燕尾榫</translation>
     </message>
@@ -8494,7 +8494,7 @@ is already in the list.</source>
         <translation type="unfinished">自由手绘线</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw freehand line</source>
         <translation type="unfinished">绘制徒手线</translation>
     </message>
@@ -8507,7 +8507,7 @@ is already in the list.</source>
         <translation type="unfinished">水平线</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal line</source>
         <translation type="unfinished">绘制水平线</translation>
     </message>
@@ -8545,7 +8545,7 @@ is already in the list.</source>
         <translation type="unfinished">正交</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to base entity</source>
         <translation type="unfinished">绘制与基地实体正交的线</translation>
     </message>
@@ -8598,7 +8598,7 @@ is already in the list.</source>
         <translation type="unfinished">正交/相切</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to line and tangent to circle, arc or ellipse</source>
         <translation type="unfinished">绘制与直线正交、与圆、弧或椭圆相切的直线</translation>
     </message>
@@ -8611,7 +8611,7 @@ is already in the list.</source>
         <translation type="unfinished">平行（有距离）</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
         <translation type="unfinished">绘制与现有直线或同心圆、圆的平行线</translation>
     </message>
@@ -8634,7 +8634,7 @@ is already in the list.</source>
         <translation type="unfinished">平行 (通过点)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
         <translation type="unfinished">绘制通过给定点的平行线或同心弧或圆</translation>
     </message>
@@ -8685,7 +8685,7 @@ is already in the list.</source>
         <translation type="unfinished">相对角度</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line with relative angle to base entity</source>
         <translation type="unfinished">绘制与基地实体相对角度的直线</translation>
     </message>
@@ -8756,7 +8756,7 @@ is already in the list.</source>
         <translation type="unfinished">切线（点、圆）</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (point, circle)</source>
         <translation type="unfinished">绘制切线（点、圆）。</translation>
     </message>
@@ -8784,7 +8784,7 @@ is already in the list.</source>
         <translation type="unfinished">相切（两个圆）</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (circle, circle)</source>
         <translation type="unfinished">绘制切线（圆，圆）。</translation>
     </message>
@@ -8797,7 +8797,7 @@ is already in the list.</source>
         <translation type="unfinished">垂直线</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical line</source>
         <translation type="unfinished">绘制垂直线</translation>
     </message>
@@ -8989,7 +8989,7 @@ is already in the list.</source>
         <translation type="unfinished">杂项工具</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc</source>
         <translation type="unfinished">杂项</translation>
     </message>
@@ -9012,7 +9012,7 @@ is already in the list.</source>
         <translation type="unfinished">杂项块状工具</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Block</source>
         <translation type="unfinished">区块</translation>
     </message>
@@ -9030,7 +9030,7 @@ is already in the list.</source>
         <translation type="unfinished">杂项开发工具</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>De&amp;velopment</source>
         <translation type="unfinished">发展</translation>
     </message>
@@ -9048,7 +9048,7 @@ is already in the list.</source>
         <translation type="unfinished">杂项绘图工具</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc Draw</source>
         <translation type="unfinished">杂项抽奖</translation>
     </message>
@@ -9071,7 +9071,7 @@ is already in the list.</source>
         <translation type="unfinished">杂项进口/出口工具</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Import/Export</source>
         <translation type="unfinished">进口/出口</translation>
     </message>
@@ -9089,7 +9089,7 @@ is already in the list.</source>
         <translation type="unfinished">杂项信息工具</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Information</source>
         <translation type="unfinished">信息</translation>
     </message>
@@ -9107,7 +9107,7 @@ is already in the list.</source>
         <translation type="unfinished">杂项修改工具</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Modify</source>
         <translation type="unfinished">修改</translation>
     </message>
@@ -9125,7 +9125,7 @@ is already in the list.</source>
         <translation type="unfinished">杂项选择工具</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Select</source>
         <translation type="unfinished">选择</translation>
     </message>
@@ -9138,7 +9138,7 @@ is already in the list.</source>
         <translation type="unfinished">修改工具</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Modify</source>
         <translation type="unfinished">修改</translation>
     </message>
@@ -9381,7 +9381,7 @@ is already in the list.</source>
         <translation type="unfinished">偏移量（含距离）</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse</source>
         <translation type="unfinished">偏移线、弧、圆或椭圆</translation>
     </message>
@@ -9409,7 +9409,7 @@ is already in the list.</source>
         <translation type="unfinished">偏移（通过点）。</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse through point</source>
         <translation type="unfinished">通过点偏移直线、弧线、圆或椭圆</translation>
     </message>
@@ -9442,7 +9442,7 @@ is already in the list.</source>
         <translation type="unfinished">开放式</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open an existing drawing</source>
         <translation type="unfinished">打开一个现有图纸</translation>
     </message>
@@ -9652,7 +9652,7 @@ is already in the list.</source>
         <translation type="unfinished">PDF输出</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Exports the current drawing as PDF</source>
         <translation type="unfinished">将当前图纸导出为PDF格式</translation>
     </message>
@@ -9686,7 +9686,7 @@ is already in the list.</source>
         <translation type="unfinished">点工具</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Point</source>
         <translation type="unfinished">观点</translation>
     </message>
@@ -9704,7 +9704,7 @@ is already in the list.</source>
         <translation type="unfinished">单点</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single point</source>
         <translation type="unfinished">绘制单点</translation>
     </message>
@@ -9777,7 +9777,7 @@ is already in the list.</source>
         <translation type="unfinished">多段线工具</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Polyline</source>
         <translation type="unfinished">多边形</translation>
     </message>
@@ -9892,7 +9892,7 @@ is already in the list.</source>
         <translation type="unfinished">从2点开始的折线断裂符号</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a polyline break symbol from 2 points</source>
         <translation type="unfinished">从2个点画一个折线断点符号</translation>
     </message>
@@ -9951,7 +9951,7 @@ is already in the list.</source>
         <translation type="unfinished">印刷品</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current drawing</source>
         <translation type="unfinished">打印当前图纸</translation>
     </message>
@@ -9964,7 +9964,7 @@ is already in the list.</source>
         <translation type="unfinished">打印当前视图</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current view</source>
         <translation type="unfinished">打印当前视图</translation>
     </message>
@@ -10027,7 +10027,7 @@ is already in the list.</source>
         <translation type="unfinished">打印预览</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Preview how current drawing would be printed</source>
         <translation type="unfinished">预览当前图纸的打印方式</translation>
     </message>
@@ -10125,7 +10125,7 @@ is already in the list.</source>
         <translation type="unfinished">投影工具</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Projection</source>
         <translation type="unfinished">投影</translation>
     </message>
@@ -10143,7 +10143,7 @@ is already in the list.</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+219"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+221"/>
         <source>:</source>
         <translation type="unfinished">:</translation>
     </message>
@@ -10158,7 +10158,7 @@ is already in the list.</source>
         <translation type="unfinished">具体属性</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+20"/>
         <source>Dependent Entities</source>
         <translation type="unfinished">附属实体</translation>
     </message>
@@ -10218,7 +10218,7 @@ is already in the list.</source>
         <translation type="unfinished">没有</translation>
     </message>
     <message>
-        <location line="+393"/>
+        <location line="+402"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*差异*</translation>
     </message>
@@ -10230,7 +10230,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <location line="+57"/>
-        <location line="+11"/>
+        <location line="+10"/>
         <source>Property Editor</source>
         <translation type="unfinished">财产编辑</translation>
     </message>
@@ -10280,7 +10280,7 @@ is already in the list.</source>
         <translation type="unfinished">一般属性</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+31"/>
         <source>Color:</source>
         <translation type="unfinished">颜色：</translation>
     </message>
@@ -10744,7 +10744,7 @@ is already in the list.</source>
         <translation type="unfinished">运行脚本</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open and run a script file</source>
         <translation type="unfinished">打开并运行一个脚本文件</translation>
     </message>
@@ -11081,7 +11081,7 @@ is already in the list.</source>
         <translation type="unfinished">选择工具</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+13"/>
         <source>Selection Tools Panel</source>
         <translation type="unfinished">选择工具面板</translation>
     </message>
@@ -11099,7 +11099,7 @@ is already in the list.</source>
         <translation type="unfinished">选择所有</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Select all visible entities</source>
         <translation type="unfinished">选择所有可见的实体</translation>
     </message>
@@ -11182,7 +11182,7 @@ is already in the list.</source>
         <translation type="unfinished">(去)选择轮廓线</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select connected entities</source>
         <translation type="unfinished">(取消)选择连接的实体</translation>
     </message>
@@ -11240,7 +11240,7 @@ is already in the list.</source>
         <translation type="unfinished">(解除）选择相交的实体</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities intersected by a line</source>
         <translation type="unfinished">(去掉）选择所有与直线相交的实体</translation>
     </message>
@@ -11301,7 +11301,7 @@ is already in the list.</source>
         <translation type="unfinished">(去)选择层</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities on the same layer</source>
         <translation type="unfinished">(解除）选择同一图层上的所有实体</translation>
     </message>
@@ -11349,7 +11349,7 @@ is already in the list.</source>
         <translation type="unfinished">(去)选择矩形区域</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities inside a rectangle</source>
         <translation type="unfinished">(去掉）选择一个矩形内的所有实体</translation>
     </message>
@@ -11461,7 +11461,7 @@ is already in the list.</source>
         <translation type="unfinished">塑形工具</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Shape</source>
         <translation type="unfinished">形状</translation>
     </message>
@@ -11528,7 +11528,7 @@ is already in the list.</source>
         <translation type="unfinished">多边形（中心，侧面）</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and middle point of side</source>
         <translation type="unfinished">从中心和边的中间点画出规则的多边形</translation>
     </message>
@@ -11566,7 +11566,7 @@ is already in the list.</source>
         <translation type="unfinished">多边形（侧面，侧面）</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from middle points of two opposite sides or two opposite corners</source>
         <translation type="unfinished">从两条对边或两个对角的中间点画出正多边形</translation>
     </message>
@@ -11599,7 +11599,7 @@ is already in the list.</source>
         <translation type="unfinished">多边形（中心，角落）</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and corner point</source>
         <translation type="unfinished">从中心点和角点绘制规则的多边形</translation>
     </message>
@@ -11627,7 +11627,7 @@ is already in the list.</source>
         <translation type="unfinished">多边形 (2个点的侧面)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from end points of one side</source>
         <translation type="unfinished">从一侧的端点画出规则的多边形</translation>
     </message>
@@ -11645,7 +11645,7 @@ is already in the list.</source>
         <translation type="unfinished">长方形</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle from two corners</source>
         <translation type="unfinished">从两个角开始画矩形</translation>
     </message>
@@ -11663,7 +11663,7 @@ is already in the list.</source>
         <translation type="unfinished">长方形与尺寸</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle with position and size</source>
         <translation type="unfinished">绘制带有位置和大小的矩形</translation>
     </message>
@@ -11749,7 +11749,7 @@ is already in the list.</source>
         <translation type="unfinished">卡扣工具</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+25"/>
         <source>&amp;Snap</source>
         <translation type="unfinished">捕捉</translation>
     </message>
@@ -11897,7 +11897,7 @@ is already in the list.</source>
         <translation type="unfinished">距离手册</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Snap distance between 2 points</source>
         <translation type="unfinished">2个点之间的卡口距离</translation>
     </message>
@@ -12067,7 +12067,7 @@ is already in the list.</source>
         <translation type="unfinished">花键工具</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Spline</source>
         <translation type="unfinished">花键</translation>
     </message>
@@ -12090,7 +12090,7 @@ is already in the list.</source>
         <translation type="unfinished">花键 (控制点)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw spline from control points</source>
         <translation type="unfinished">从控制点绘制花键</translation>
     </message>
@@ -12312,7 +12312,7 @@ is already in the list.</source>
         <translation type="unfinished">文本</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text</source>
         <translation type="unfinished">绘制文本</translation>
     </message>
@@ -12452,7 +12452,7 @@ is already in the list.</source>
         <translation type="unfinished">沿着实体的文本</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text along an entity</source>
         <translation type="unfinished">沿着一个实体绘制文本</translation>
     </message>
@@ -13021,7 +13021,7 @@ is already in the list.</source>
         <translation type="unfinished">移动/复制</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+9"/>
         <source>Move or copy entities once or multiple times</source>
         <translation type="unfinished">一次或多次移动或复制实体</translation>
     </message>
@@ -13409,7 +13409,7 @@ is already in the list.</source>
         <translation type="unfinished">查看工具</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>View</source>
         <translation type="unfinished">查看</translation>
     </message>
@@ -13883,7 +13883,7 @@ is already in the list.</source>
         <translation type="unfinished">水平施工线</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal construction line</source>
         <translation type="unfinished">绘制水平施工线</translation>
     </message>
@@ -13896,7 +13896,7 @@ is already in the list.</source>
         <translation type="unfinished">垂直施工线</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical construction line</source>
         <translation type="unfinished">绘制垂直施工线</translation>
     </message>
@@ -13914,7 +13914,7 @@ is already in the list.</source>
         <translation type="unfinished">缩放工具</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Zoom</source>
         <translation type="unfinished">缩放</translation>
     </message>

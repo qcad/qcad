@@ -3,7 +3,6 @@ function init(basePath) {
         RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/DimRotated.js");
-    action.setIcon(basePath + "/DimRotated.svg");
     action.setStatusTip(qsTranslate("DimRotated", "Draw linear dimension at a fixed angle"));
     action.setDefaultShortcut(new QKeySequence("d,l"));
     action.setDefaultCommands(["dimlinear", "dimrotated", "dl"]);

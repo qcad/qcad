@@ -58,7 +58,6 @@ Snap.getCadToolBarPanel = function() {
         action.setScriptFile(Snap.includeBasePath + "/Snap.js");
         action.objectName = actionName;
         action.setRequiresDocument(true);
-        action.setIcon(Snap.includeBasePath + "/Snap.svg");
         //action.setStatusTip(qsTr("Show snap tools"));
         action.setNoState();
         action.setDefaultCommands(["snapmenu"]);

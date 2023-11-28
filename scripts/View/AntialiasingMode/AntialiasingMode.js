@@ -74,7 +74,6 @@ AntialiasingMode.init = function(basePath) {
     var action = new RGuiAction(qsTranslate("AntialiasingMode", "&Anti-aliasing"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/AntialiasingMode.js");
-    action.setIcon(basePath + "/AntialiasingMode.svg");
     action.setDefaultShortcut(new QKeySequence("n,t"));
     action.setDefaultCommands(["antialiasing", "nt"]);
     action.setNoState(true);

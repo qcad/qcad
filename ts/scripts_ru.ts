@@ -325,7 +325,7 @@ the preference changes to take effect.</source>
         <translation>&amp;Добавить пустой блок</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Add new empty block</source>
         <translation>Добавить новый пустой блок</translation>
     </message>
@@ -412,7 +412,7 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1986"/>
+        <location filename="../scripts/Apollonius.js" line="+1989"/>
         <source>Invalid radius</source>
         <translation>Недопустимый радиус</translation>
     </message>
@@ -438,7 +438,7 @@ the preference changes to take effect.</source>
         <translation>Инструменты для работы с дугами</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Arc</source>
         <translation>&amp;Дуга</translation>
     </message>
@@ -491,7 +491,7 @@ the preference changes to take effect.</source>
         <translation>По &amp;2 точкам и углу</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and angle</source>
         <translation>Начертить дугу по 2 точкам и углу</translation>
     </message>
@@ -544,7 +544,7 @@ the preference changes to take effect.</source>
         <translation>По 2 точкам и &amp;высоте</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and height</source>
         <translation>Начертить дугу по 2 точкам и высоте</translation>
     </message>
@@ -602,7 +602,7 @@ the preference changes to take effect.</source>
         <translation>По &amp;2 точкам и длине</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and length</source>
         <translation>Начертить дугу по двум точкам и длине</translation>
     </message>
@@ -670,7 +670,7 @@ the preference changes to take effect.</source>
         <translation>По &amp;2 точкам и радиусу</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and radius</source>
         <translation>Начертить дугу по 2 точкам и радиусу</translation>
     </message>
@@ -698,7 +698,7 @@ the preference changes to take effect.</source>
         <translation>По &amp;3 точкам</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 3 points</source>
         <translation>Начертить дугу по 3 точкам</translation>
     </message>
@@ -751,7 +751,7 @@ the preference changes to take effect.</source>
         <translation>По &amp;центру, точке и углам</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from center, point on arc and angles</source>
         <translation>Начертить дугу по центру, точке и углам</translation>
     </message>
@@ -774,7 +774,7 @@ the preference changes to take effect.</source>
         <translation>Концентрический (&amp;с расстоянием)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc</source>
         <translation>Начертить концентрическую дугу</translation>
     </message>
@@ -792,7 +792,7 @@ the preference changes to take effect.</source>
         <translation>Концентрический (&amp;через точку)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc through point</source>
         <translation>Начертить концентрическую дугу через точку</translation>
     </message>
@@ -831,7 +831,7 @@ the preference changes to take effect.</source>
         <translation>&amp;По касательной, точке, радиусу</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to entity, through point with radius</source>
         <translation>Начертить дугу, касающуюся объекта, через точку с заданным радиусом</translation>
     </message>
@@ -859,7 +859,7 @@ the preference changes to take effect.</source>
         <translation>&amp;Связанный по касательной</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to base entity</source>
         <translation>Начертить дугу, касающуюся базового объекта</translation>
     </message>
@@ -1047,7 +1047,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>&amp;Batch2Pdf visible layout blocks</source>
         <translation>&amp;Batch2Pdf видимые блоки компоновки</translation>
     </message>
@@ -1243,7 +1243,7 @@ Do you wish to recover it?</source>
         <translation>Инструменты для работы с блоками</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+109"/>
         <source>Cannot edit block while editing a block in-place</source>
         <translation>Нельзя редактировать блок во время редактирования блока на месте</translation>
     </message>
@@ -1318,12 +1318,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
         <location line="+63"/>
-        <location line="+44"/>
+        <location line="+43"/>
         <source>Block List</source>
         <translation>Список блоков</translation>
     </message>
     <message>
-        <location line="-107"/>
+        <location line="-106"/>
         <source>Widgets</source>
         <translation>Виджеты</translation>
     </message>
@@ -1621,7 +1621,7 @@ Do you wish to recover it?</source>
         <translation>Инструменты для работы с окружностями</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Circle</source>
         <translation>&amp;Окружность</translation>
     </message>
@@ -1649,7 +1649,7 @@ Do you wish to recover it?</source>
         <translation>По &amp;2 точкам</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from 2 diametrically opposite points</source>
         <translation>Начертить окружность по 2 диаметрально противоположным точкам</translation>
     </message>
@@ -1702,7 +1702,7 @@ Do you wish to recover it?</source>
         <translation>По &amp;2 точкам и радиусу</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 2 points and radius</source>
         <translation>Начертить окружность по 2 точкам и радиусу</translation>
     </message>
@@ -1741,7 +1741,7 @@ Do you wish to recover it?</source>
         <translation>По 2 касател&amp;ьным и точке</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation>Начертить окружность, касающуюся двух объектов, через точку</translation>
     </message>
@@ -1779,7 +1779,7 @@ Do you wish to recover it?</source>
         <translation>По 2 &amp;касательным и радиусу</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to two entities with given radius</source>
         <translation>Начертить окружность, касающуюся двух объектов, с заданным радиусом</translation>
     </message>
@@ -1807,7 +1807,7 @@ Do you wish to recover it?</source>
         <translation>По &amp;3 точкам</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 3 points</source>
         <translation>Начертить окружность по 3 точкам</translation>
     </message>
@@ -1846,7 +1846,7 @@ Do you wish to recover it?</source>
         <translation>По &amp;3 касательным</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to three entities</source>
         <translation>Начертить окружность, касающуюся трёх объектов</translation>
     </message>
@@ -1876,7 +1876,7 @@ Do you wish to recover it?</source>
         <translation>По центру и &amp;диаметру</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and diameter</source>
         <translation>Начертить окружность из центра по заданному диаметру</translation>
     </message>
@@ -1899,7 +1899,7 @@ Do you wish to recover it?</source>
         <translation>По &amp;центру и точке</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from center and point on circle</source>
         <translation>Начертить окружность по центру и точке на окружности</translation>
     </message>
@@ -1929,7 +1929,7 @@ Do you wish to recover it?</source>
         <translation>По центру и &amp;радиусу</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and radius</source>
         <translation>Начертить окружность по центру и радиусу</translation>
     </message>
@@ -1952,7 +1952,7 @@ Do you wish to recover it?</source>
         <translation>Концентрическая (&amp;с расстоянием)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric circle</source>
         <translation>Начертить концентрическую окружность</translation>
     </message>
@@ -1970,7 +1970,7 @@ Do you wish to recover it?</source>
         <translation>Концентрическая (&amp;через точку)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw concentric circle through point</source>
         <translation>Начертить концентрическую окружность через точку</translation>
     </message>
@@ -2009,7 +2009,7 @@ Do you wish to recover it?</source>
         <translation>&amp;По 2 касательным и 2 точкам</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle through two points and tangential to one entity</source>
         <translation>Начертить окружность через две точки и касательную к одному объекту</translation>
     </message>
@@ -2027,7 +2027,7 @@ Do you wish to recover it?</source>
         <translation>&amp;По касательной, точке, радиусу</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to entity, through point with radius</source>
         <translation>Начертить окружность, касающуюся объекта, через точку с заданным радиусом</translation>
     </message>
@@ -2139,18 +2139,18 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+68"/>
+        <location line="+67"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Командная строка</translation>
     </message>
     <message>
-        <location line="-21"/>
+        <location line="-20"/>
         <source>&amp;Command Line</source>
         <translation>&amp;Командная строка</translation>
     </message>
     <message>
-        <location line="+208"/>
+        <location line="+207"/>
         <source>Invalid value:</source>
         <translation>Неверное значение:</translation>
     </message>
@@ -2282,7 +2282,7 @@ Do you wish to recover it?</source>
         <translation>Преобразовать &amp;чертёжную единицу</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Convert drawing to a different drawing unit</source>
         <translation>Преобразовать чертёж в другую чертёжную единицу</translation>
     </message>
@@ -2394,7 +2394,7 @@ Do you wish to recover it?</source>
         <translation>&amp;Счётчик</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Auto increment number</source>
         <translation>Автоматический прирост номеров</translation>
     </message>
@@ -2425,7 +2425,7 @@ Do you wish to recover it?</source>
         <translation>Осевой крест</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
         <translation>Начертить осевой крест в дугах, окружностях или эллипсах</translation>
     </message>
@@ -2571,7 +2571,7 @@ Do you wish to recover it?</source>
         <translation>&amp;Отменить выбор всех объектов</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Deselect all entities</source>
         <translation>Отменить выбор всех объектов</translation>
     </message>
@@ -2712,7 +2712,7 @@ Do you wish to recover it?</source>
         <translation>Вы&amp;ровненный</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw aligned dimension</source>
         <translation>Начертить выровненный размер</translation>
     </message>
@@ -2740,7 +2740,7 @@ Do you wish to recover it?</source>
         <translation>&amp;Угловой</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angular dimension</source>
         <translation>Начертить угловой размер</translation>
     </message>
@@ -2768,7 +2768,7 @@ Do you wish to recover it?</source>
         <translation>&amp;Диаметральный</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw diametric dimension</source>
         <translation>Начертить диаметральный размер</translation>
     </message>
@@ -2781,7 +2781,7 @@ Do you wish to recover it?</source>
         <translation>&amp;Горизонтальный</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw horizontal dimension</source>
         <translation>Начертить горизонтальный размер</translation>
     </message>
@@ -2804,7 +2804,7 @@ Do you wish to recover it?</source>
         <translation>&amp;Ордината (X/Y)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+3"/>
         <source>Draw ordinate dimension</source>
         <translation>Начертить размер ординаты</translation>
     </message>
@@ -2827,7 +2827,7 @@ Do you wish to recover it?</source>
         <translation>&amp;Радиальный</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw radial dimension</source>
         <translation>Начертить радиальный размер</translation>
     </message>
@@ -2882,7 +2882,7 @@ Do you wish to recover it?</source>
         <translation>С пово&amp;ротом (линейный)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw linear dimension at a fixed angle</source>
         <translation>Начертить линейный размер при фиксированном угле</translation>
     </message>
@@ -2895,7 +2895,7 @@ Do you wish to recover it?</source>
         <translation>&amp;Вертикальный</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw vertical dimension</source>
         <translation>Начертить вертикальный размер</translation>
     </message>
@@ -2958,7 +2958,7 @@ Do you wish to recover it?</source>
         <translation>Инструменты для работы с размерами</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>D&amp;imension</source>
         <translation>&amp;Размер</translation>
     </message>
@@ -3479,7 +3479,7 @@ is already in the list.</source>
         <translation type="unfinished">Draw Fms Lanes</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
         <translation type="unfinished">Рисунок FMS Полосы (ребра)</translation>
     </message>
@@ -4080,7 +4080,7 @@ is already in the list.</source>
         <translation>&amp;Чертить из CSV</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Draws entities based on textual entries in a CSV file</source>
         <translation>Чертить объекты на основе текстовых записей в файле CSV</translation>
     </message>
@@ -4088,7 +4088,7 @@ is already in the list.</source>
 <context>
     <name>DrawOrder</name>
     <message>
-        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+92"/>
+        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
         <translation>&amp;Порядок черчения</translation>
     </message>
@@ -4186,7 +4186,7 @@ is already in the list.</source>
         <translation>&amp;Начертить ломаную</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw polyline with line and arc segments</source>
         <translation>Начертить ломаную по линии и сегментам дуги</translation>
     </message>
@@ -4374,7 +4374,7 @@ is already in the list.</source>
         <translation>&amp;Оболочка сценария</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+34"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
         <translation>Оболочка сценария</translation>
@@ -4403,7 +4403,7 @@ is already in the list.</source>
         <translation>Инструменты редактирования</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Edit</source>
         <translation>&amp;Правка</translation>
     </message>
@@ -4481,7 +4481,7 @@ is already in the list.</source>
         <translation>Редактировать &amp;текст</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Edit text</source>
         <translation>Редактировать текст</translation>
     </message>
@@ -4494,7 +4494,7 @@ is already in the list.</source>
         <translation>Инструменты для работы с эллипсами</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Ellipse</source>
         <translation>&amp;Эллипс</translation>
     </message>
@@ -4592,7 +4592,7 @@ is already in the list.</source>
         <translation>&amp;Дуга эллипса</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw ellipse arc from center, major point, ratio and angles</source>
         <translation>Начертить дугу эллипса по центру, основной точке, отношению и углам</translation>
     </message>
@@ -4605,7 +4605,7 @@ is already in the list.</source>
         <translation>&amp;Эллипс по центру, точке, отношению</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw full ellipse from center, major point and ratio</source>
         <translation>Начертить полный эллипс по центру, основной точке и отношению</translation>
     </message>
@@ -4641,7 +4641,7 @@ is already in the list.</source>
         <translation>&amp;Эллипс с диаметрами</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and diameters</source>
         <translation>Начертить эллипс с позицией и диаметрами</translation>
     </message>
@@ -4674,7 +4674,7 @@ is already in the list.</source>
         <translation>Вписанный в четырёхугольник</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse inscribed in quadrilateral</source>
         <translation>Начертить эллипс, вписанный в четырёхугольник</translation>
     </message>
@@ -4697,7 +4697,7 @@ is already in the list.</source>
         <translation>&amp;Параллельная кривая (с расстоянием)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse</source>
         <translation>Начертить параллельную кривую к эллипсу</translation>
     </message>
@@ -4715,7 +4715,7 @@ is already in the list.</source>
         <translation>Параллельная кривая (&amp;через точку)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse through point</source>
         <translation>Начертить параллельную кривую до эллипса через точку</translation>
     </message>
@@ -4751,7 +4751,7 @@ is already in the list.</source>
         <translation>Э&amp;ллипс с радиусами</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and radii</source>
         <translation>Начертить эллипс с позицией и радиусами</translation>
     </message>
@@ -4876,7 +4876,7 @@ is already in the list.</source>
         <translation>&amp;Ласточкин хвост</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation>Начертить ласточкин хвост</translation>
     </message>
@@ -5044,7 +5044,7 @@ is already in the list.</source>
         <translation>Три точки</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw three points</source>
         <translation>Начертить три точки</translation>
     </message>
@@ -5192,7 +5192,7 @@ is already in the list.</source>
         <translation>Инструменты работы с файлами</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;File</source>
         <translation>&amp;Файл</translation>
     </message>
@@ -6312,7 +6312,7 @@ is already in the list.</source>
         <translation>Инструменты для работы со штриховкой</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Hatch</source>
         <translation>&amp;Штриховка</translation>
     </message>
@@ -6383,7 +6383,7 @@ is already in the list.</source>
         <translation>&amp;Штриховка из выделения</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Create hatch or solid fill from selected boundary</source>
         <translation>Создать штриховку или сплошную заливку на выбранной границе</translation>
     </message>
@@ -6622,7 +6622,7 @@ is already in the list.</source>
         <translation type="unfinished">Добавить пользовательский 2D центроид</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Create a customizable 2D Centroid marker</source>
         <translation type="unfinished">Создание настраиваемого 2D маркера центроида</translation>
     </message>
@@ -6952,7 +6952,7 @@ is already in the list.</source>
         <translation>&amp;Центроид области</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create an area 2D Centroid for a selected entity</source>
         <translation type="unfinished">Создать область 2D Centroid для выбранного объекта</translation>
     </message>
@@ -7074,7 +7074,7 @@ is already in the list.</source>
         <translation type="unfinished">Слушатель центроида</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
         <translation type="unfinished">(Де-)активация слушателя транзакций для 2D центроидов</translation>
     </message>
@@ -7327,7 +7327,7 @@ is already in the list.</source>
         <translation type="unfinished">Сумма взвешенных центроидов 2D</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Combine selected 2D Centroid markers weighted</source>
         <translation type="unfinished">Объединить выбранные двухмерные центроидные маркеры взвешенными</translation>
     </message>
@@ -7427,7 +7427,7 @@ is already in the list.</source>
         <translation>&amp;Центроид провода</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create a wire 2D Centroid for a selection</source>
         <translation type="unfinished">Создание проводного 2D центроида для выделения</translation>
     </message>
@@ -7445,7 +7445,7 @@ is already in the list.</source>
         <translation>Инструменты для работы с информацией</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Info</source>
         <translation>И&amp;нформация</translation>
     </message>
@@ -7773,7 +7773,7 @@ is already in the list.</source>
         <translation>&amp;Инвертировать выделение</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Invert the current selection</source>
         <translation>Инвертировать текущее выделение</translation>
     </message>
@@ -7980,7 +7980,7 @@ is already in the list.</source>
         <translation>Инструменты слоёв</translation>
     </message>
     <message>
-        <location line="+71"/>
+        <location line="+70"/>
         <source>Showing all layers</source>
         <translation>Показ всех слоёв</translation>
     </message>
@@ -8124,7 +8124,7 @@ is already in the list.</source>
     </message>
     <message>
         <location line="-55"/>
-        <location line="+110"/>
+        <location line="+109"/>
         <source>Layer List</source>
         <translation>Список слоёв</translation>
     </message>
@@ -8152,7 +8152,7 @@ is already in the list.</source>
         <translation>П&amp;олка-выноска</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
         <translation>Начертить полку-выноску (линию, чередующаяся стрелкой)</translation>
     </message>
@@ -8211,7 +8211,7 @@ is already in the list.</source>
         <translation>Инструменты для работы с линиями</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Line</source>
         <translation>&amp;Линия</translation>
     </message>
@@ -8289,7 +8289,7 @@ is already in the list.</source>
         <translation>Линия по &amp;2 точкам</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single line or sequence of lines</source>
         <translation>Начертить простую линию или последовательность линий</translation>
     </message>
@@ -8342,7 +8342,7 @@ is already in the list.</source>
         <translation>Линия по &amp;углу</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line at a given absolute angle</source>
         <translation>Начертить линию по заданному абсолютному углу</translation>
     </message>
@@ -8380,7 +8380,7 @@ is already in the list.</source>
         <translation>Угловая &amp;биссектриса</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angle bisector, trisector, ...</source>
         <translation>Начертить угловую биссектрису, трисектрису, ...</translation>
     </message>
@@ -8438,7 +8438,7 @@ is already in the list.</source>
         <translation>&amp;Ящичное соединение по 2 точкам</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
         <translation>Начертить ящичное соединение на основе зубцов, слотов и шипов</translation>
     </message>
@@ -8451,7 +8451,7 @@ is already in the list.</source>
         <translation>&amp;Ласточкин хвост по 2 точкам</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation>Начертить ласточкин хвост</translation>
     </message>
@@ -8504,7 +8504,7 @@ is already in the list.</source>
         <translation>&amp;Произвольная линия (кривая)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw freehand line</source>
         <translation>Начертить произвольный контур</translation>
     </message>
@@ -8542,7 +8542,7 @@ is already in the list.</source>
         <translation>&amp;Горизонтальная линия</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal line</source>
         <translation>Начертить горизонтальную линию</translation>
     </message>
@@ -8580,7 +8580,7 @@ is already in the list.</source>
         <translation>&amp;Ортогональная</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to base entity</source>
         <translation>Начертить линию, ортогональную базовому объекту</translation>
     </message>
@@ -8608,7 +8608,7 @@ is already in the list.</source>
         <translation>Ортогональная/Ка&amp;сательная</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to line and tangent to circle, arc or ellipse</source>
         <translation>Начертить линию, ортогональную к линии и касательную к окружности, дуге или эллипсу</translation>
     </message>
@@ -8631,7 +8631,7 @@ is already in the list.</source>
         <translation>&amp;Параллельная (с расстоянием)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
         <translation>Начертить параллельную к существующей линии, концентрической дуге, окружности</translation>
     </message>
@@ -8649,7 +8649,7 @@ is already in the list.</source>
         <translation>&amp;Параллельная (через точку)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
         <translation>Начертить параллельную линию или концентрическую дугу или окружность через данную точку</translation>
     </message>
@@ -8725,7 +8725,7 @@ is already in the list.</source>
         <translation>Отно&amp;сительный угол</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line with relative angle to base entity</source>
         <translation>Начертить линию под относительным углом к базовому объекту</translation>
     </message>
@@ -8766,7 +8766,7 @@ is already in the list.</source>
         <translation>&amp;Касательная (точка, окружность)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (point, circle)</source>
         <translation>Начертить касательную (точка, окружность)</translation>
     </message>
@@ -8794,7 +8794,7 @@ is already in the list.</source>
         <translation>Касат&amp;ельная (две окружности)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (circle, circle)</source>
         <translation>Начертить касательную (окружность, окружность)</translation>
     </message>
@@ -8807,7 +8807,7 @@ is already in the list.</source>
         <translation>&amp;Вертикальная линия</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical line</source>
         <translation>Начертить вертикальную линию</translation>
     </message>
@@ -8999,7 +8999,7 @@ is already in the list.</source>
         <translation>Разные инструменты</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc</source>
         <translation>Разное</translation>
     </message>
@@ -9022,7 +9022,7 @@ is already in the list.</source>
         <translation>Разные инструменты блоков</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Block</source>
         <translation>&amp;Блок</translation>
     </message>
@@ -9040,7 +9040,7 @@ is already in the list.</source>
         <translation>Разные инструменты разработки</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>De&amp;velopment</source>
         <translation>&amp;Разработка</translation>
     </message>
@@ -9058,7 +9058,7 @@ is already in the list.</source>
         <translation>Разные инструменты черчения</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc Draw</source>
         <translation>Разное для черчения</translation>
     </message>
@@ -9081,7 +9081,7 @@ is already in the list.</source>
         <translation>Разные утилиты импорта/экспорта</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Import/Export</source>
         <translation>&amp;Импорт/Экспорт</translation>
     </message>
@@ -9099,7 +9099,7 @@ is already in the list.</source>
         <translation>Разные информационные инструменты</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Information</source>
         <translation>&amp;Информация</translation>
     </message>
@@ -9117,7 +9117,7 @@ is already in the list.</source>
         <translation>Разные инструменты модификаций</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Modify</source>
         <translation>&amp;Модификация</translation>
     </message>
@@ -9135,7 +9135,7 @@ is already in the list.</source>
         <translation>Разные инструменты выделения</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Select</source>
         <translation>В&amp;ыделение</translation>
     </message>
@@ -9148,7 +9148,7 @@ is already in the list.</source>
         <translation>Инструменты модификаций</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Modify</source>
         <translation>&amp;Модификация</translation>
     </message>
@@ -9382,7 +9382,7 @@ is already in the list.</source>
         <translation>Смещение (с расстоянием)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse</source>
         <translation>Сместить линию, дугу, окружность или эллипс</translation>
     </message>
@@ -9428,7 +9428,7 @@ is already in the list.</source>
         <translation>Сместить (через точку)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse through point</source>
         <translation>Сместить линию, дугу, окружность или эллипс через точку</translation>
     </message>
@@ -9456,7 +9456,7 @@ is already in the list.</source>
         <translation>&amp;Открыть</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open an existing drawing</source>
         <translation>Открыть существующий чертёж</translation>
     </message>
@@ -9666,7 +9666,7 @@ is already in the list.</source>
         <translation>Э&amp;кспорт в PDF</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Exports the current drawing as PDF</source>
         <translation>Экспортировать текущий чертёж в PDF</translation>
     </message>
@@ -9700,7 +9700,7 @@ is already in the list.</source>
         <translation>Инструменты для работы с точками</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Point</source>
         <translation>&amp;Точка</translation>
     </message>
@@ -9718,7 +9718,7 @@ is already in the list.</source>
         <translation>Одиночная &amp;точка</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single point</source>
         <translation>Начертить одиночную точку</translation>
     </message>
@@ -9791,7 +9791,7 @@ is already in the list.</source>
         <translation>Инструменты для работы с ломаными</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Polyline</source>
         <translation>&amp;Ломаная</translation>
     </message>
@@ -9906,7 +9906,7 @@ is already in the list.</source>
         <translation>&amp;Символ разрыва ломаной из 2 точек</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a polyline break symbol from 2 points</source>
         <translation>Начертить символ разрыва ломаной из 2 точек</translation>
     </message>
@@ -9965,7 +9965,7 @@ is already in the list.</source>
         <translation>&amp;Печать</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current drawing</source>
         <translation>Печать текущего чертежа</translation>
     </message>
@@ -9978,7 +9978,7 @@ is already in the list.</source>
         <translation>Печать теку&amp;щего просмотра</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current view</source>
         <translation>Печать текущего просмотра</translation>
     </message>
@@ -10126,7 +10126,7 @@ is already in the list.</source>
         <translation>Предпро&amp;смотр перед печатью</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Preview how current drawing would be printed</source>
         <translation>Предпросмотр того, как текущий чертёж будет напечатан</translation>
     </message>
@@ -10139,7 +10139,7 @@ is already in the list.</source>
         <translation>Инструменты проекции</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Projection</source>
         <translation>&amp;Проекция</translation>
     </message>
@@ -10157,12 +10157,12 @@ is already in the list.</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1654"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1666"/>
         <source>*VARIES*</source>
         <translation>*ВАРЬИРОВАНИЕ*</translation>
     </message>
     <message>
-        <location line="-1435"/>
+        <location line="-1445"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10177,7 +10177,7 @@ is already in the list.</source>
         <translation>Специфичные свойства</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+20"/>
         <source>Dependent Entities</source>
         <translation>Зависимые объекты</translation>
     </message>
@@ -10237,14 +10237,14 @@ is already in the list.</source>
         <translation>Нет</translation>
     </message>
     <message>
-        <location line="+396"/>
+        <location line="+405"/>
         <location line="+57"/>
-        <location line="+11"/>
+        <location line="+10"/>
         <source>Property Editor</source>
         <translation>Редактор свойств</translation>
     </message>
     <message>
-        <location line="-68"/>
+        <location line="-67"/>
         <source>Widgets</source>
         <translation>Виджеты</translation>
     </message>
@@ -10259,7 +10259,7 @@ is already in the list.</source>
         <translation>Общие свойства</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+31"/>
         <source>Color:</source>
         <translation>Цвет:</translation>
     </message>
@@ -10758,7 +10758,7 @@ is already in the list.</source>
         <translation>&amp;Запустить сценарий</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open and run a script file</source>
         <translation>Открыть и запустить файл сценария</translation>
     </message>
@@ -11095,7 +11095,7 @@ is already in the list.</source>
         <translation>Инструменты выделения</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+13"/>
         <source>Selection Tools Panel</source>
         <translation>Панель инструментов выделения</translation>
     </message>
@@ -11113,7 +11113,7 @@ is already in the list.</source>
         <translation>Выде&amp;лить все</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Select all visible entities</source>
         <translation>Выделить все видимые объекты</translation>
     </message>
@@ -11231,7 +11231,7 @@ is already in the list.</source>
         <translation>Выбрать контур</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select connected entities</source>
         <translation>Выбрать связанные объекты</translation>
     </message>
@@ -11279,7 +11279,7 @@ is already in the list.</source>
         <translation>Выделить объекты &amp;секущей или снять выделение</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities intersected by a line</source>
         <translation>Отменяет выделение всех объектов, пересеченных линией, или выделяет их</translation>
     </message>
@@ -11340,7 +11340,7 @@ is already in the list.</source>
         <translation>Вы&amp;делить слой (отменить выделение)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities on the same layer</source>
         <translation>Выделить все объекты на одном слое или отменить их выделение</translation>
     </message>
@@ -11393,7 +11393,7 @@ is already in the list.</source>
         <translation>Выделить пр&amp;ямоугольную область или отменить её выделение</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities inside a rectangle</source>
         <translation>Выделить все объекты внутри прямоугольника или отменить их выделение</translation>
     </message>
@@ -11481,7 +11481,7 @@ is already in the list.</source>
         <translation>Инструменты для работы с фигурами</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Shape</source>
         <translation>&amp;Фигура</translation>
     </message>
@@ -11548,7 +11548,7 @@ is already in the list.</source>
         <translation>Многоу&amp;гольник (по центру и стороне)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and middle point of side</source>
         <translation>Начертить правильный многоугольник по центру и средней точке стороны</translation>
     </message>
@@ -11586,7 +11586,7 @@ is already in the list.</source>
         <translation>Многоу&amp;гольник (по стороне и стороне)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from middle points of two opposite sides or two opposite corners</source>
         <translation>Начертить правильный многоугольник из средних точек двух противоположных сторон или двух противоположных углов</translation>
     </message>
@@ -11624,7 +11624,7 @@ is already in the list.</source>
         <translation>Многоу&amp;гольник (по центру и углу)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and corner point</source>
         <translation>Начертить правильный многоугольник по центру и угловой точке</translation>
     </message>
@@ -11652,7 +11652,7 @@ is already in the list.</source>
         <translation>&amp;Многоугольник (по 2 точкам стороны)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from end points of one side</source>
         <translation>Начертить правильный многоугольник из конечных точек одной из сторон</translation>
     </message>
@@ -11665,7 +11665,7 @@ is already in the list.</source>
         <translation>&amp;Прямоугольник</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle from two corners</source>
         <translation>Начертить прямоугольник по двум углам</translation>
     </message>
@@ -11683,7 +11683,7 @@ is already in the list.</source>
         <translation>Прямоугольник с заданным &amp;размером</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle with position and size</source>
         <translation>Начертить прямоугольник в заданной позиции и с заданным размером</translation>
     </message>
@@ -11769,7 +11769,7 @@ is already in the list.</source>
         <translation>Инструменты прилипания</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+25"/>
         <source>&amp;Snap</source>
         <translation>Пр&amp;илипание</translation>
     </message>
@@ -11937,7 +11937,7 @@ is already in the list.</source>
         <translation>&amp;Ручное расстояние</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Snap distance between 2 points</source>
         <translation>Расстояние прилипания между 2 точками</translation>
     </message>
@@ -12087,7 +12087,7 @@ is already in the list.</source>
         <translation>Инструменты для работы со сплайнами</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Spline</source>
         <translation>&amp;Сплайн</translation>
     </message>
@@ -12135,7 +12135,7 @@ is already in the list.</source>
         <translation>&amp;Сплайн (контрольные точки)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw spline from control points</source>
         <translation>Начертить сплайн из контрольных точек</translation>
     </message>
@@ -12349,7 +12349,7 @@ is already in the list.</source>
         <translation>&amp;Текст</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text</source>
         <translation>Начертить текст</translation>
     </message>
@@ -12472,7 +12472,7 @@ is already in the list.</source>
         <translation>&amp;Текст вдоль объекта</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text along an entity</source>
         <translation>Начертить текст вдоль объекта</translation>
     </message>
@@ -13041,7 +13041,7 @@ is already in the list.</source>
         <translation>&amp;Переместить / Копировать</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+9"/>
         <source>Move or copy entities once or multiple times</source>
         <translation>Переместить или скопировать объекты один или несколько раз</translation>
     </message>
@@ -13429,7 +13429,7 @@ is already in the list.</source>
         <translation>Инструменты просмотра</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>View</source>
         <translation>Просмотр</translation>
     </message>
@@ -13903,7 +13903,7 @@ is already in the list.</source>
         <translation>&amp;Горизонтальная линия конструкции</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal construction line</source>
         <translation>Начертить горизонтальную линию конструкции</translation>
     </message>
@@ -13916,7 +13916,7 @@ is already in the list.</source>
         <translation>&amp;Вертикальная линия конструкции</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical construction line</source>
         <translation>Начертить вертикальную линию конструкции</translation>
     </message>
@@ -13934,7 +13934,7 @@ is already in the list.</source>
         <translation>Инструменты масштабирования</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Zoom</source>
         <translation>&amp;Масштаб</translation>
     </message>

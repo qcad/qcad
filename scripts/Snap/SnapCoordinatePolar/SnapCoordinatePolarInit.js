@@ -2,7 +2,6 @@ function init(basePath) {
     var action = new RGuiAction(qsTranslate("SnapCoordinatePolar", "&Polar Coordinate"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/SnapCoordinatePolar.js");
-    action.setIcon(basePath + "/SnapCoordinatePolar.svg");
     action.setDefaultShortcut(new QKeySequence("s,o"));
     action.setDefaultCommands(["snappolar", "so"]);
     action.setGroup("snaps");

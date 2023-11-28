@@ -8,7 +8,6 @@ function init(basePath) {
        new QKeySequence("u,u")
     ]);
     action.setDefaultCommands(["redo", "uu"]);
-    action.setIcon(basePath + "/Redo.svg");
     action.setNoState();
     action.setGroupSortOrder(2100);
     action.setSortOrder(200);

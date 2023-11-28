@@ -325,7 +325,7 @@ asetuksien muutokset astuvat voimaan.</translation>
         <translation>&amp;Lisää tyhjä lohko</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Add new empty block</source>
         <translation>Lisää uusi tyhjä lohko</translation>
     </message>
@@ -412,7 +412,7 @@ asetuksien muutokset astuvat voimaan.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1986"/>
+        <location filename="../scripts/Apollonius.js" line="+1989"/>
         <source>Invalid radius</source>
         <translation>Virheellinen säde</translation>
     </message>
@@ -438,7 +438,7 @@ asetuksien muutokset astuvat voimaan.</translation>
         <translation>Kaarityökalut</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Arc</source>
         <translation>Kaari</translation>
     </message>
@@ -491,7 +491,7 @@ asetuksien muutokset astuvat voimaan.</translation>
         <translation>&amp;2 Pistettä ja kulma</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and angle</source>
         <translation>Piirrä kaari 2 pisteellä ja kulmalla</translation>
     </message>
@@ -524,7 +524,7 @@ asetuksien muutokset astuvat voimaan.</translation>
         <translation>2 pistettä ja &amp;korkeus</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and height</source>
         <translation>Piirrä kaari 2 pisteestä ja korkeus</translation>
     </message>
@@ -582,7 +582,7 @@ asetuksien muutokset astuvat voimaan.</translation>
         <translation>&amp;2 Pistettä ja pituus</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and length</source>
         <translation>Piirrä kaari 2 pisteestä ja pituudesta</translation>
     </message>
@@ -670,7 +670,7 @@ asetuksien muutokset astuvat voimaan.</translation>
         <translation>&amp;2 pistettä ja säde</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and radius</source>
         <translation>Piirrä kaari 2:lla pisteellä ja säteellä</translation>
     </message>
@@ -698,7 +698,7 @@ asetuksien muutokset astuvat voimaan.</translation>
         <translation>&amp;3 pistettä</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 3 points</source>
         <translation>Piirrä kaari 3. pisteestä</translation>
     </message>
@@ -751,7 +751,7 @@ asetuksien muutokset astuvat voimaan.</translation>
         <translation>&amp;Keskipiste, piste, kulmat</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from center, point on arc and angles</source>
         <translation>Piirtää kaaren keskipisteellä, pisteellä kaaressa ja kulmilla</translation>
     </message>
@@ -774,7 +774,7 @@ asetuksien muutokset astuvat voimaan.</translation>
         <translation>&amp;Samankeskinen (etäisyyden kanssa)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc</source>
         <translation>Piirrä samankeskinen kaari</translation>
     </message>
@@ -792,7 +792,7 @@ asetuksien muutokset astuvat voimaan.</translation>
         <translation>Samankeskinen (&amp;pisteen kautta)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc through point</source>
         <translation>Piirrä samankeskinen kaari pisteen kautta</translation>
     </message>
@@ -826,7 +826,7 @@ asetuksien muutokset astuvat voimaan.</translation>
         <translation>&amp;Tangentti, piste, säde</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to entity, through point with radius</source>
         <translation>Piirrä kaari tangentiaalisesti kohteeseen, säteen pisteen läpi</translation>
     </message>
@@ -859,7 +859,7 @@ asetuksien muutokset astuvat voimaan.</translation>
         <translation>&amp;Tangentiaalisesti kytkettynä</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to base entity</source>
         <translation>Piirrä kaari tangentiaalisesti peruskohteeseen</translation>
     </message>
@@ -1045,7 +1045,7 @@ Haluatko palauttaa sen?</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>&amp;Batch2Pdf visible layout blocks</source>
         <translation type="unfinished">Batch2Pdf näkyvät ulkoasulohkot</translation>
     </message>
@@ -1241,7 +1241,7 @@ Haluatko palauttaa sen?</translation>
         <translation>Lohkotyökalut</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+109"/>
         <source>Cannot edit block while editing a block in-place</source>
         <translation type="unfinished">Lohkoa ei voi muokata, kun lohkoa muokataan paikan päällä</translation>
     </message>
@@ -1321,7 +1321,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location line="+0"/>
         <location line="+63"/>
-        <location line="+44"/>
+        <location line="+43"/>
         <source>Block List</source>
         <translation>Lohkoluettelo</translation>
     </message>
@@ -1619,7 +1619,7 @@ Haluatko palauttaa sen?</translation>
         <translation>Ympyrätyökalut</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Circle</source>
         <translation>&amp;Ympyrä</translation>
     </message>
@@ -1647,7 +1647,7 @@ Haluatko palauttaa sen?</translation>
         <translation>&amp;2 Pistettä</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from 2 diametrically opposite points</source>
         <translation>Piirrä ympyrä 2 pistellä halkaisijaltaan vastakkaisilta puolilta</translation>
     </message>
@@ -1700,7 +1700,7 @@ Haluatko palauttaa sen?</translation>
         <translation>&amp;2 Pistettä ja Säde</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 2 points and radius</source>
         <translation>Piirrä ympyrä 2:sta pisteestä ja säteestä</translation>
     </message>
@@ -1739,7 +1739,7 @@ Haluatko palauttaa sen?</translation>
         <translation>2 Tan&amp;genttia ja piste</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation>Piirrä ympyrä tangentiaalisesti kahteen kohteeseen, pisteen kautta</translation>
     </message>
@@ -1777,7 +1777,7 @@ Haluatko palauttaa sen?</translation>
         <translation>2 &amp;Tangenttia ja säde</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to two entities with given radius</source>
         <translation>Piirrä ympyrä tangentiaalisesti kahteen kohteeseen annetulla säteellä</translation>
     </message>
@@ -1805,7 +1805,7 @@ Haluatko palauttaa sen?</translation>
         <translation>&amp;3 pistettä</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 3 points</source>
         <translation>Piirrä ympyrä 3 pisteellä</translation>
     </message>
@@ -1844,7 +1844,7 @@ Haluatko palauttaa sen?</translation>
         <translation>3 T&amp;angenttia</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to three entities</source>
         <translation>Piirrä ympyrä tangentiaalisesti kolmeen kohteeseen</translation>
     </message>
@@ -1874,7 +1874,7 @@ Haluatko palauttaa sen?</translation>
         <translation>Keskipiste, &amp;halkaisija</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and diameter</source>
         <translation>Piirrä ympyrä keskipisteestä ja halkaisijalla</translation>
     </message>
@@ -1897,7 +1897,7 @@ Haluatko palauttaa sen?</translation>
         <translation>&amp;Keskipiste, piste</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from center and point on circle</source>
         <translation>Piirrä ympyrä keskipisteestä ja osoita ympyrälle</translation>
     </message>
@@ -1927,7 +1927,7 @@ Haluatko palauttaa sen?</translation>
         <translation>Keskipiste, &amp;säde</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and radius</source>
         <translation>Piirrä ympyrä keskipisteellä ja säteellä</translation>
     </message>
@@ -1950,7 +1950,7 @@ Haluatko palauttaa sen?</translation>
         <translation>&amp;Samankeskinen (etäisyydellä)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric circle</source>
         <translation>Piirrä samankeskeinen ympyrä</translation>
     </message>
@@ -1968,7 +1968,7 @@ Haluatko palauttaa sen?</translation>
         <translation>Samankeskinen (&amp;pisteen kautta)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw concentric circle through point</source>
         <translation>Piirrä samankeskinen ympyrä pisteen kautta</translation>
     </message>
@@ -2007,7 +2007,7 @@ Haluatko palauttaa sen?</translation>
         <translation>&amp;Tangentti ja 2 pistettä</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle through two points and tangential to one entity</source>
         <translation>Piirrä samankeskinen ympyrä kahden pisteen kautta ja yhteen kohteeseen tangentiaalisesti</translation>
     </message>
@@ -2025,7 +2025,7 @@ Haluatko palauttaa sen?</translation>
         <translation>&amp;Tangentti, piste, ja säde</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to entity, through point with radius</source>
         <translation>Piirrä ympyrä tangentiaalisesti kohteeseen, läpi säteen pisteen</translation>
     </message>
@@ -2137,18 +2137,18 @@ Haluatko palauttaa sen?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+68"/>
+        <location line="+67"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Komentorivi</translation>
     </message>
     <message>
-        <location line="-21"/>
+        <location line="-20"/>
         <source>&amp;Command Line</source>
         <translation>&amp;Komentorivi</translation>
     </message>
     <message>
-        <location line="+208"/>
+        <location line="+207"/>
         <source>Invalid value:</source>
         <translation>Virheellinen arvo:</translation>
     </message>
@@ -2280,7 +2280,7 @@ Haluatko palauttaa sen?</translation>
         <translation>Muunna piirros &amp;yksikkö</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Convert drawing to a different drawing unit</source>
         <translation>Muunna piirustus eri piirustusyksikköön</translation>
     </message>
@@ -2367,7 +2367,7 @@ Haluatko palauttaa sen?</translation>
         <translation>&amp;Laskuri</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Auto increment number</source>
         <translation>Automaattinen numeron lisäys</translation>
     </message>
@@ -2423,7 +2423,7 @@ Haluatko palauttaa sen?</translation>
         <translation>Keskiviivan risti</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
         <translation>Piirrä keskiviivan risti kaariin, ympyröihin tai ellipseihin</translation>
     </message>
@@ -2569,7 +2569,7 @@ Haluatko palauttaa sen?</translation>
         <translation>&amp;Poista kaikki valinnat</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Deselect all entities</source>
         <translation>Poista valinta kaikista kohteista</translation>
     </message>
@@ -2710,7 +2710,7 @@ Haluatko palauttaa sen?</translation>
         <translation>&amp;Kohdistettu</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw aligned dimension</source>
         <translation>Piirrä kohdistettu mitta</translation>
     </message>
@@ -2738,7 +2738,7 @@ Haluatko palauttaa sen?</translation>
         <translation>&amp;Kulmikas</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angular dimension</source>
         <translation>Piirrä kulmamitta</translation>
     </message>
@@ -2766,7 +2766,7 @@ Haluatko palauttaa sen?</translation>
         <translation>&amp;Vastakkaiset</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw diametric dimension</source>
         <translation>Piirrä vastakkainen mitta</translation>
     </message>
@@ -2779,7 +2779,7 @@ Haluatko palauttaa sen?</translation>
         <translation>&amp;Vaakasuuntainen</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw horizontal dimension</source>
         <translation>Piirrä vaakasuuntainen mitoitus</translation>
     </message>
@@ -2802,7 +2802,7 @@ Haluatko palauttaa sen?</translation>
         <translation>&amp;Ordinaatta (X/Y)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+3"/>
         <source>Draw ordinate dimension</source>
         <translation>Piirrä koordinaatin mittasuhde</translation>
     </message>
@@ -2825,7 +2825,7 @@ Haluatko palauttaa sen?</translation>
         <translation>&amp;Säteittäinen</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw radial dimension</source>
         <translation>Piirrä säteittäinen mitoitus</translation>
     </message>
@@ -2879,7 +2879,7 @@ Haluatko palauttaa sen?</translation>
         <translation>&amp;Kieretty (lineaarinen)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw linear dimension at a fixed angle</source>
         <translation>Piirrä lineaarinen mitoitus kiinteällä kulmalla</translation>
     </message>
@@ -2892,7 +2892,7 @@ Haluatko palauttaa sen?</translation>
         <translation>&amp;Pystysuuntainen</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw vertical dimension</source>
         <translation>Piirrä pystysuuntainen mitoitus</translation>
     </message>
@@ -2955,7 +2955,7 @@ Haluatko palauttaa sen?</translation>
         <translation>Mittatyökalut</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>D&amp;imension</source>
         <translation>M&amp;ittasuhde</translation>
     </message>
@@ -3476,7 +3476,7 @@ on jo luettelossa.</translation>
         <translation type="unfinished">Piirrä Fms Lanes</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
         <translation type="unfinished">Piirrä FMS-kaistat (kylkiluut)</translation>
     </message>
@@ -4077,7 +4077,7 @@ on jo luettelossa.</translation>
         <translation type="unfinished">Piirrä CSV:stä</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Draws entities based on textual entries in a CSV file</source>
         <translation type="unfinished">Piirtää kokonaisuuksia CSV-tiedoston tekstimerkintöjen perusteella</translation>
     </message>
@@ -4085,7 +4085,7 @@ on jo luettelossa.</translation>
 <context>
     <name>DrawOrder</name>
     <message>
-        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+92"/>
+        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
         <translation>&amp;Piirtojärjestys</translation>
     </message>
@@ -4183,7 +4183,7 @@ on jo luettelossa.</translation>
         <translation>&amp;Piirrä murtoviiva</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw polyline with line and arc segments</source>
         <translation>&amp;Piirrä murtoviiva linjan ja kaaren segmenteillä</translation>
     </message>
@@ -4370,7 +4370,7 @@ on jo luettelossa.</translation>
         <translation>&amp;Skripti shell</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+34"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
         <translation>Skripti Shell</translation>
@@ -4399,7 +4399,7 @@ on jo luettelossa.</translation>
         <translation>Muokkaustyökalut</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Edit</source>
         <translation>&amp;Muokkaa</translation>
     </message>
@@ -4477,7 +4477,7 @@ on jo luettelossa.</translation>
         <translation>Muokkaa te&amp;kstiä</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Edit text</source>
         <translation>Muokkaa tekstiä</translation>
     </message>
@@ -4490,7 +4490,7 @@ on jo luettelossa.</translation>
         <translation>Ellipsityökalut</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Ellipse</source>
         <translation>&amp;Ellipsi</translation>
     </message>
@@ -4588,7 +4588,7 @@ on jo luettelossa.</translation>
         <translation>&amp;Elliptinen kaari</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw ellipse arc from center, major point, ratio and angles</source>
         <translation>Piirrä elliptinen kaari keskeltä, pääpisteellä, suhteella ja kulmilla</translation>
     </message>
@@ -4601,7 +4601,7 @@ on jo luettelossa.</translation>
         <translation>&amp;Ellipsi (keskipiste, piste, suhde)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw full ellipse from center, major point and ratio</source>
         <translation>Piirrä elliptinen kaari keskeltä, pääpisteellä ja suhteella</translation>
     </message>
@@ -4637,7 +4637,7 @@ on jo luettelossa.</translation>
         <translation>Ellipsi &amp;halkaisijoilla</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and diameters</source>
         <translation>Piirrä ellipsi sijainnilla ja halkaisijoilla</translation>
     </message>
@@ -4670,7 +4670,7 @@ on jo luettelossa.</translation>
         <translation>Merkitty nelikulmaisena</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse inscribed in quadrilateral</source>
         <translation>Piirrä ellipsi merkittynä nelikulmiossa</translation>
     </message>
@@ -4693,7 +4693,7 @@ on jo luettelossa.</translation>
         <translation>&amp;Yhdensuuntainen käyrä (etäisyydellä)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse</source>
         <translation>Piirrä yhdensuuntainen käyrä ellipsiin</translation>
     </message>
@@ -4711,7 +4711,7 @@ on jo luettelossa.</translation>
         <translation>Yhdensuuntainen käyrä (&amp;pisteen kautta)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse through point</source>
         <translation>Piirrä yhdensuuntainen käyrä ellipsiin pisteen kautta</translation>
     </message>
@@ -4747,7 +4747,7 @@ on jo luettelossa.</translation>
         <translation>Ellipsi &amp;säteellä</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and radii</source>
         <translation>Piirrä ellipsi sijainnilla ja säteellä</translation>
     </message>
@@ -4872,7 +4872,7 @@ on jo luettelossa.</translation>
         <translation>&amp;Yhdistävä liitos</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation>Piirrä sovitusliitos</translation>
     </message>
@@ -5040,7 +5040,7 @@ on jo luettelossa.</translation>
         <translation>Kolme pistettä</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw three points</source>
         <translation>Piirrä kolme pistettä</translation>
     </message>
@@ -5187,7 +5187,7 @@ on jo luettelossa.</translation>
         <translation>Tiedostotyökalut</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;File</source>
         <translation>&amp;Tiedosto</translation>
     </message>
@@ -6307,7 +6307,7 @@ on jo luettelossa.</translation>
         <translation>Kuviointityökalut</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Hatch</source>
         <translation>&amp;Kuvionti</translation>
     </message>
@@ -6378,7 +6378,7 @@ on jo luettelossa.</translation>
         <translation>&amp;Kuviointi valinnasta</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Create hatch or solid fill from selected boundary</source>
         <translation>Luo kuviointi tai kiinteä täyttö valitusta kehyksestä</translation>
     </message>
@@ -6617,7 +6617,7 @@ on jo luettelossa.</translation>
         <translation type="unfinished">Lisää mukautettu 2D-keskipiste</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Create a customizable 2D Centroid marker</source>
         <translation type="unfinished">Luo muokattava 2D Centroid -merkki</translation>
     </message>
@@ -6947,7 +6947,7 @@ on jo luettelossa.</translation>
         <translation type="unfinished">Alueen keskipiste</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create an area 2D Centroid for a selected entity</source>
         <translation type="unfinished">Luo alueen 2D-keskipiste valitulle kohteelle</translation>
     </message>
@@ -7069,7 +7069,7 @@ on jo luettelossa.</translation>
         <translation type="unfinished">Centroid kuuntelija</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
         <translation type="unfinished">(De-)aktivoi 2D-keskipisteiden tapahtumakuuntelija</translation>
     </message>
@@ -7322,7 +7322,7 @@ on jo luettelossa.</translation>
         <translation type="unfinished">Summa 2D-keskipisteiden painotettu</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Combine selected 2D Centroid markers weighted</source>
         <translation type="unfinished">Yhdistää valitut 2D Centroid -merkinnät painotettuna</translation>
     </message>
@@ -7422,7 +7422,7 @@ on jo luettelossa.</translation>
         <translation type="unfinished">Langan keskipiste</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create a wire 2D Centroid for a selection</source>
         <translation type="unfinished">Luo langan 2D-keskipiste valinnalle</translation>
     </message>
@@ -7440,7 +7440,7 @@ on jo luettelossa.</translation>
         <translation>Tietotyökalut</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Info</source>
         <translation>&amp;Tietoja</translation>
     </message>
@@ -7768,7 +7768,7 @@ on jo luettelossa.</translation>
         <translation>&amp;Käännä valinta</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Invert the current selection</source>
         <translation>Käännä nykyinen valinta</translation>
     </message>
@@ -7955,7 +7955,7 @@ on jo luettelossa.</translation>
         <translation>Tasotyökalut</translation>
     </message>
     <message>
-        <location line="+71"/>
+        <location line="+70"/>
         <source>Showing all layers</source>
         <translation>Näytetään kaikki tasot</translation>
     </message>
@@ -8119,7 +8119,7 @@ on jo luettelossa.</translation>
     </message>
     <message>
         <location line="-55"/>
-        <location line="+110"/>
+        <location line="+109"/>
         <source>Layer List</source>
         <translation>Tasojen lista</translation>
     </message>
@@ -8157,7 +8157,7 @@ on jo luettelossa.</translation>
         <translation>&amp;Perusviiva</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
         <translation>Piirrä perusviiva (viiva nuolella)</translation>
     </message>
@@ -8206,7 +8206,7 @@ on jo luettelossa.</translation>
         <translation>Viivatyökalut</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Line</source>
         <translation>&amp;Viiva</translation>
     </message>
@@ -8284,7 +8284,7 @@ on jo luettelossa.</translation>
         <translation>Viiva &amp;2 pisteestä</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single line or sequence of lines</source>
         <translation>Piirrä yksittäinen viiva tai viivasarja</translation>
     </message>
@@ -8337,7 +8337,7 @@ on jo luettelossa.</translation>
         <translation>Viiva &amp;kulmasta</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line at a given absolute angle</source>
         <translation>Piirrä viiva annetulla absoluuttisella kulmalla</translation>
     </message>
@@ -8375,7 +8375,7 @@ on jo luettelossa.</translation>
         <translation>Kulman &amp;puolittaja</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angle bisector, trisector, ...</source>
         <translation>Piirrä kulman puolittaja, kolmasosittaja, ...</translation>
     </message>
@@ -8398,7 +8398,7 @@ on jo luettelossa.</translation>
         <translation>Laatikko &amp;yhdistä 2 pisteestä</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
         <translation>Piirrä laatikkoa yhdistävät sormet, aukot ja tapit</translation>
     </message>
@@ -8456,7 +8456,7 @@ on jo luettelossa.</translation>
         <translation>&amp;Sovitus yhdistä 2 pisteestä</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation>Piirrä yhdistämisliitos</translation>
     </message>
@@ -8499,7 +8499,7 @@ on jo luettelossa.</translation>
         <translation>&amp;Vapaamuotoinen viiva</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw freehand line</source>
         <translation>Piirrä vapaamuotoinen viiva</translation>
     </message>
@@ -8537,7 +8537,7 @@ on jo luettelossa.</translation>
         <translation>&amp;Vaakaviiva</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal line</source>
         <translation>Piirrä vaakaviiva</translation>
     </message>
@@ -8575,7 +8575,7 @@ on jo luettelossa.</translation>
         <translation>Kohtisuora</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to base entity</source>
         <translation>Piirrä viiva kohtisuorassa peruskohdasta</translation>
     </message>
@@ -8603,7 +8603,7 @@ on jo luettelossa.</translation>
         <translation>Kohtisuora / tange&amp;ntti</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to line and tangent to circle, arc or ellipse</source>
         <translation>Piirrä viiva kohtisuoraan linjasta ja sivua ympyrää, kaarta tai ellipsiä</translation>
     </message>
@@ -8626,7 +8626,7 @@ on jo luettelossa.</translation>
         <translation>Yhden&amp;suuntainen (etäisyyden kanssa)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
         <translation>Piirrä samansuuntaisena olemassa olevan viivan tai samankeskisen kaaren tai ympyrän kanssa</translation>
     </message>
@@ -8644,7 +8644,7 @@ on jo luettelossa.</translation>
         <translation>Yhden&amp;suuntainen (pisteen kautta)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
         <translation>Piirrä yhdensuuntainen viiva tai samankeskinen kaari tai ympyrä annetun pisteen kautta</translation>
     </message>
@@ -8720,7 +8720,7 @@ on jo luettelossa.</translation>
         <translation>S&amp;uhteellinen kulma</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line with relative angle to base entity</source>
         <translation>Piirrä viiva suhteellisella kulmalla perustasoon nähden</translation>
     </message>
@@ -8761,7 +8761,7 @@ on jo luettelossa.</translation>
         <translation>&amp;Tangentti (piste, ympyrä)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (point, circle)</source>
         <translation>Piirrä tangentti (piste, ympyrä)</translation>
     </message>
@@ -8789,7 +8789,7 @@ on jo luettelossa.</translation>
         <translation>Tan&amp;gentti (kaksi ympyrää)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (circle, circle)</source>
         <translation>Piirrä tangentti (ympyrä, ympyrä)</translation>
     </message>
@@ -8802,7 +8802,7 @@ on jo luettelossa.</translation>
         <translation>&amp;Pystyviiva</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical line</source>
         <translation>Piirrä pystyviiva</translation>
     </message>
@@ -8994,7 +8994,7 @@ on jo luettelossa.</translation>
         <translation>Muut työkalut</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc</source>
         <translation>Sekalaiset</translation>
     </message>
@@ -9017,7 +9017,7 @@ on jo luettelossa.</translation>
         <translation>Sekalaiset lohkotyökalut</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Block</source>
         <translation>&amp;Lohko</translation>
     </message>
@@ -9035,7 +9035,7 @@ on jo luettelossa.</translation>
         <translation>Sekalaiset kehitystyökalut</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>De&amp;velopment</source>
         <translation>Ke&amp;hitys</translation>
     </message>
@@ -9053,7 +9053,7 @@ on jo luettelossa.</translation>
         <translation>Muut piirustustyökalut</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc Draw</source>
         <translation>Muu piirros</translation>
     </message>
@@ -9076,7 +9076,7 @@ on jo luettelossa.</translation>
         <translation>Muut tuonti- ja vientityökalut</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Import/Export</source>
         <translation>&amp;Tuo/vie</translation>
     </message>
@@ -9094,7 +9094,7 @@ on jo luettelossa.</translation>
         <translation type="unfinished">Muut tietotyökalut</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Information</source>
         <translation type="unfinished">Tiedot</translation>
     </message>
@@ -9112,7 +9112,7 @@ on jo luettelossa.</translation>
         <translation>Muut muokkaustyökalut</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Modify</source>
         <translation>&amp;Muokkaa</translation>
     </message>
@@ -9130,7 +9130,7 @@ on jo luettelossa.</translation>
         <translation>Muut valintatyökalut</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Select</source>
         <translation>&amp;Valitse</translation>
     </message>
@@ -9143,7 +9143,7 @@ on jo luettelossa.</translation>
         <translation>Muunnostyökalut</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Modify</source>
         <translation>&amp;Muokkaa</translation>
     </message>
@@ -9377,7 +9377,7 @@ on jo luettelossa.</translation>
         <translation>Poikkeama (etäisyydellä)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse</source>
         <translation>Poikkeama viivassa, kaaressa, ympyrässä tai ellipsissä</translation>
     </message>
@@ -9421,7 +9421,7 @@ on jo luettelossa.</translation>
         <translation>Poikkeama (pisteen kautta)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse through point</source>
         <translation>Poikkeama viivassa, kaaressa, ympyrässä tai ellipsissä pisteen kautta</translation>
     </message>
@@ -9449,7 +9449,7 @@ on jo luettelossa.</translation>
         <translation>&amp;Avaa</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open an existing drawing</source>
         <translation>Avaa olemassa oleva piirros</translation>
     </message>
@@ -9659,7 +9659,7 @@ on jo luettelossa.</translation>
         <translation>P&amp;DF vienti</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Exports the current drawing as PDF</source>
         <translation>Tallentaa piirroksen PDF muodossa</translation>
     </message>
@@ -9693,7 +9693,7 @@ on jo luettelossa.</translation>
         <translation>Pistetyökalut</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Point</source>
         <translation>&amp;Piste</translation>
     </message>
@@ -9711,7 +9711,7 @@ on jo luettelossa.</translation>
         <translation>Yksittäinen &amp;piste</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single point</source>
         <translation>Piirrä yksittäinen piste</translation>
     </message>
@@ -9784,7 +9784,7 @@ on jo luettelossa.</translation>
         <translation>Murtoviivan työkalut</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Polyline</source>
         <translation>&amp;Murtoviiva</translation>
     </message>
@@ -9899,7 +9899,7 @@ on jo luettelossa.</translation>
         <translation type="unfinished">Polylinjan katkaisusymboli 2 pisteestä</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a polyline break symbol from 2 points</source>
         <translation type="unfinished">Piirrä polylinjan katkaisusymboli 2 pisteestä</translation>
     </message>
@@ -9958,7 +9958,7 @@ on jo luettelossa.</translation>
         <translation>&amp;Tulosta</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current drawing</source>
         <translation>Tulosta nykyinen piirros</translation>
     </message>
@@ -9971,7 +9971,7 @@ on jo luettelossa.</translation>
         <translation>Tulosta &amp;Nykyinen näkymä</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current view</source>
         <translation>Tulosta nykyinen näkymä</translation>
     </message>
@@ -10119,7 +10119,7 @@ on jo luettelossa.</translation>
         <translation>Tulostuksen esi&amp;katselu</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Preview how current drawing would be printed</source>
         <translation>Esikatselu, miltä nykyinen piirros näyttäisi tulostettuna</translation>
     </message>
@@ -10132,7 +10132,7 @@ on jo luettelossa.</translation>
         <translation>Projektiotyökalut</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Projection</source>
         <translation>&amp;Projektio</translation>
     </message>
@@ -10185,12 +10185,12 @@ on jo luettelossa.</translation>
         <translation type="unfinished">Näytä laajennetun ulottuvuuden tyylin ohitukset</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1654"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1666"/>
         <source>*VARIES*</source>
         <translation>*VAIHTELEVA*</translation>
     </message>
     <message>
-        <location line="-1435"/>
+        <location line="-1445"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10205,7 +10205,7 @@ on jo luettelossa.</translation>
         <translation>Erikoisominaisuudet</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+20"/>
         <source>Dependent Entities</source>
         <translation>Riippuvaiset kohteet</translation>
     </message>
@@ -10265,14 +10265,14 @@ on jo luettelossa.</translation>
         <translation>Ei</translation>
     </message>
     <message>
-        <location line="+396"/>
+        <location line="+405"/>
         <source>Widgets</source>
         <translation>Pienoisohjelmat</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+57"/>
-        <location line="+11"/>
+        <location line="+10"/>
         <source>Property Editor</source>
         <translation>Ominaisuuksien muokkaaminen</translation>
     </message>
@@ -10287,7 +10287,7 @@ on jo luettelossa.</translation>
         <translation>Yleiset ominaisuudet</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+31"/>
         <source>Color:</source>
         <translation>Väri:</translation>
     </message>
@@ -10751,7 +10751,7 @@ on jo luettelossa.</translation>
         <translation>A&amp;ja komentorivisarja</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open and run a script file</source>
         <translation>Avaa ja suorita komentorivisarjatiedosto</translation>
     </message>
@@ -11088,7 +11088,7 @@ on jo luettelossa.</translation>
         <translation>Valintatyökalut</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+13"/>
         <source>Selection Tools Panel</source>
         <translation>Valintatyökalujen paneeli</translation>
     </message>
@@ -11106,7 +11106,7 @@ on jo luettelossa.</translation>
         <translation>Valitse &amp;kaikki</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Select all visible entities</source>
         <translation>Valitse kaikki näkyvät kohteet</translation>
     </message>
@@ -11224,7 +11224,7 @@ on jo luettelossa.</translation>
         <translation>Valitse (peru) &amp;ääriviivat</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select connected entities</source>
         <translation>Valitse (peru) yhdistetyt kohteet</translation>
     </message>
@@ -11272,7 +11272,7 @@ on jo luettelossa.</translation>
         <translation>Valitse (peru) &amp;leikatuista kohteista</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities intersected by a line</source>
         <translation>Valitse (peru) kaikki kohteet, jotka ovat viivan leikkaamia</translation>
     </message>
@@ -11333,7 +11333,7 @@ on jo luettelossa.</translation>
         <translation>Valitse (peru valinta) ta&amp;so</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities on the same layer</source>
         <translation>Valitse (peru valinnat) kaikki kohteet samasta tasosta</translation>
     </message>
@@ -11386,7 +11386,7 @@ on jo luettelossa.</translation>
         <translation>Valitse (peru) suorakulmainen alue</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities inside a rectangle</source>
         <translation>Valitse (peru) kaikki kohteet suorakulmion sisältä</translation>
     </message>
@@ -11471,7 +11471,7 @@ on jo luettelossa.</translation>
         <translation>Muototyökalut</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Shape</source>
         <translation>&amp;Muoto</translation>
     </message>
@@ -11538,7 +11538,7 @@ on jo luettelossa.</translation>
         <translation>Moni&amp;kulmio (Keskikohta, sivu)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and middle point of side</source>
         <translation>Piirrä säännöllinen monikulmio keskeltä ja sivun keskipisteestä</translation>
     </message>
@@ -11576,7 +11576,7 @@ on jo luettelossa.</translation>
         <translation>Moni&amp;kulmio (sivu, sivu)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from middle points of two opposite sides or two opposite corners</source>
         <translation>Piirrä säännöllinen monikulmio kahden pisteen vastakkaiselta puolelta tai kahdelta vastakkaiselta kulmalta</translation>
     </message>
@@ -11614,7 +11614,7 @@ on jo luettelossa.</translation>
         <translation>Moni&amp;kulmio (keskusta, kulma)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and corner point</source>
         <translation>Piirrä säännöllinen monikulmio keskipisteestä ja kulmasta</translation>
     </message>
@@ -11642,7 +11642,7 @@ on jo luettelossa.</translation>
         <translation>Moni&amp;kulmio (2 pistettä sivulta)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from end points of one side</source>
         <translation>Piirrä säännöllinen monikulmio yhden sivun loppupisteistä</translation>
     </message>
@@ -11655,7 +11655,7 @@ on jo luettelossa.</translation>
         <translation>&amp;Suorakulmio</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle from two corners</source>
         <translation>Piirrä suorakulmio kahdesta kulmasta</translation>
     </message>
@@ -11673,7 +11673,7 @@ on jo luettelossa.</translation>
         <translation>Suorakulmio &amp;suuruudella</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle with position and size</source>
         <translation>Piirrä suorakulmio sijainnin sekä koon perusteella</translation>
     </message>
@@ -11759,7 +11759,7 @@ on jo luettelossa.</translation>
         <translation>Tartuntatyökalut</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+25"/>
         <source>&amp;Snap</source>
         <translation>&amp;Tartunta</translation>
     </message>
@@ -11927,7 +11927,7 @@ on jo luettelossa.</translation>
         <translation>&amp;Etäisyys käsin</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Snap distance between 2 points</source>
         <translation>Tartuntaetäisyys 2 pisteen välillä</translation>
     </message>
@@ -12077,7 +12077,7 @@ on jo luettelossa.</translation>
         <translation>Käyrätyökalut</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Spline</source>
         <translation>&amp;Käyrä</translation>
     </message>
@@ -12125,7 +12125,7 @@ on jo luettelossa.</translation>
         <translation>&amp;Käyrä (ohjauspisteet)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw spline from control points</source>
         <translation>Piirrä käyrä ohjauspisteillä</translation>
     </message>
@@ -12339,7 +12339,7 @@ on jo luettelossa.</translation>
         <translation>&amp;Teksti</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text</source>
         <translation>Piirrä teksti</translation>
     </message>
@@ -12462,7 +12462,7 @@ on jo luettelossa.</translation>
         <translation>&amp;Teksti kohteen suuntaisesti</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text along an entity</source>
         <translation>Piirrä teksti kohteen suuntaisesti</translation>
     </message>
@@ -13031,7 +13031,7 @@ on jo luettelossa.</translation>
         <translation>&amp;Siirrä / kopioi</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+9"/>
         <source>Move or copy entities once or multiple times</source>
         <translation>Siirrä tai kopioi kohteita kerran tai useita kertoja</translation>
     </message>
@@ -13419,7 +13419,7 @@ on jo luettelossa.</translation>
         <translation>Katselutyökalut</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>View</source>
         <translation>Näytä</translation>
     </message>
@@ -13893,7 +13893,7 @@ on jo luettelossa.</translation>
         <translation>&amp;Vaakasuuntainen rakenneviiva</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal construction line</source>
         <translation>Piirrä vaakasuora rakenneviiva</translation>
     </message>
@@ -13906,7 +13906,7 @@ on jo luettelossa.</translation>
         <translation>&amp;Pystysuora rakenneviiva</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical construction line</source>
         <translation>Piirrä pystysuora rakenneviiva</translation>
     </message>
@@ -13924,7 +13924,7 @@ on jo luettelossa.</translation>
         <translation>Suurennustyökalut</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Zoom</source>
         <translation>&amp;Muuta kokoa</translation>
     </message>

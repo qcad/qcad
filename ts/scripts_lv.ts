@@ -325,7 +325,7 @@ lai stātos spēkā preferenču izmaiņas.</translation>
         <translation type="unfinished">Tukša bloka pievienošana</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Add new empty block</source>
         <translation type="unfinished">Pievienot jaunu tukšu bloku</translation>
     </message>
@@ -412,7 +412,7 @@ lai stātos spēkā preferenču izmaiņas.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1986"/>
+        <location filename="../scripts/Apollonius.js" line="+1989"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Nederīgs rādiuss</translation>
     </message>
@@ -438,7 +438,7 @@ lai stātos spēkā preferenču izmaiņas.</translation>
         <translation type="unfinished">Loka darbarīki</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Arc</source>
         <translation type="unfinished">Arc</translation>
     </message>
@@ -491,7 +491,7 @@ lai stātos spēkā preferenču izmaiņas.</translation>
         <translation type="unfinished">2 punkti un leņķis</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and angle</source>
         <translation type="unfinished">Zīmēt loku no 2 punktiem un leņķa</translation>
     </message>
@@ -544,7 +544,7 @@ lai stātos spēkā preferenču izmaiņas.</translation>
         <translation type="unfinished">2 punkti un augstums</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and height</source>
         <translation type="unfinished">Zīmēt loku no 2 punktiem un augstumu</translation>
     </message>
@@ -602,7 +602,7 @@ lai stātos spēkā preferenču izmaiņas.</translation>
         <translation type="unfinished">2 punkti un garums</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and length</source>
         <translation type="unfinished">Zīmēt loku no 2 punktiem un garumu</translation>
     </message>
@@ -670,7 +670,7 @@ lai stātos spēkā preferenču izmaiņas.</translation>
         <translation type="unfinished">2 punkti un rādiuss</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and radius</source>
         <translation type="unfinished">Zīmēt loku no 2 punktiem un rādiusa</translation>
     </message>
@@ -698,7 +698,7 @@ lai stātos spēkā preferenču izmaiņas.</translation>
         <translation type="unfinished">3 punkti</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 3 points</source>
         <translation type="unfinished">Zīmēt loku no 3 punktiem</translation>
     </message>
@@ -751,7 +751,7 @@ lai stātos spēkā preferenču izmaiņas.</translation>
         <translation type="unfinished">Centrs, punkts, leņķi</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from center, point on arc and angles</source>
         <translation type="unfinished">Zīmēt loku no centra, punktu uz loka un leņķi</translation>
     </message>
@@ -774,7 +774,7 @@ lai stātos spēkā preferenču izmaiņas.</translation>
         <translation type="unfinished">Koncentriskais (ar attālumu)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc</source>
         <translation type="unfinished">Zīmēt koncentrisku loku</translation>
     </message>
@@ -792,7 +792,7 @@ lai stātos spēkā preferenču izmaiņas.</translation>
         <translation type="unfinished">Koncentriskais (caur punktu)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc through point</source>
         <translation type="unfinished">Zīmēt koncentrisku loku caur punktu</translation>
     </message>
@@ -831,7 +831,7 @@ lai stātos spēkā preferenču izmaiņas.</translation>
         <translation type="unfinished">Tangents, punkts, rādiuss</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to entity, through point with radius</source>
         <translation type="unfinished">Zīmēt loku, kas ir tangenciāls vienībai, caur punktu ar rādiusu</translation>
     </message>
@@ -859,7 +859,7 @@ lai stātos spēkā preferenču izmaiņas.</translation>
         <translation type="unfinished">Tangenciāli savienots</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to base entity</source>
         <translation type="unfinished">Zīmēt loku, kas ir tangenciāls bāzes vienībai</translation>
     </message>
@@ -1044,7 +1044,7 @@ Vai vēlaties to atjaunot?</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>&amp;Batch2Pdf visible layout blocks</source>
         <translation type="unfinished">Batch2Pdf redzamie izkārtojuma bloki</translation>
     </message>
@@ -1240,7 +1240,7 @@ Vai vēlaties to atjaunot?</translation>
         <translation type="unfinished">Bloku rīki</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Block</source>
         <translation type="unfinished">Bloķēt</translation>
     </message>
@@ -1320,7 +1320,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location line="+0"/>
         <location line="+63"/>
-        <location line="+44"/>
+        <location line="+43"/>
         <source>Block List</source>
         <translation type="unfinished">Bloku saraksts</translation>
     </message>
@@ -1618,7 +1618,7 @@ Vai vēlaties to atjaunot?</translation>
         <translation type="unfinished">Apļa rīki</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Circle</source>
         <translation type="unfinished">Aplis</translation>
     </message>
@@ -1646,7 +1646,7 @@ Vai vēlaties to atjaunot?</translation>
         <translation type="unfinished">2 punkti</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from 2 diametrically opposite points</source>
         <translation type="unfinished">Zīmēt apli no 2 diametrāli pretējiem punktiem</translation>
     </message>
@@ -1699,7 +1699,7 @@ Vai vēlaties to atjaunot?</translation>
         <translation type="unfinished">2 punkti un rādiuss</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 2 points and radius</source>
         <translation type="unfinished">Zīmēt apli no 2 punktiem un rādiusa</translation>
     </message>
@@ -1738,7 +1738,7 @@ Vai vēlaties to atjaunot?</translation>
         <translation type="unfinished">2 Tangenti un punkts</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation type="unfinished">Zīmēt apli tangenciāli divām vienībām, caur punktu</translation>
     </message>
@@ -1776,7 +1776,7 @@ Vai vēlaties to atjaunot?</translation>
         <translation type="unfinished">2 Tangenti un rādiuss</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to two entities with given radius</source>
         <translation type="unfinished">Zīmēt apli, kas ir tangenciāls divām vienībām ar norādīto rādiusu</translation>
     </message>
@@ -1804,7 +1804,7 @@ Vai vēlaties to atjaunot?</translation>
         <translation type="unfinished">3 punkti</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 3 points</source>
         <translation type="unfinished">Zīmēt apli no 3 punktiem</translation>
     </message>
@@ -1843,7 +1843,7 @@ Vai vēlaties to atjaunot?</translation>
         <translation type="unfinished">3 tangenti</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to three entities</source>
         <translation type="unfinished">Zīmēt apli tangenciāli trim vienībām</translation>
     </message>
@@ -1873,7 +1873,7 @@ Vai vēlaties to atjaunot?</translation>
         <translation type="unfinished">Centrs, diametrs</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and diameter</source>
         <translation type="unfinished">Zīmēt apli no centra un diametru</translation>
     </message>
@@ -1896,7 +1896,7 @@ Vai vēlaties to atjaunot?</translation>
         <translation type="unfinished">Centrs, punkts</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from center and point on circle</source>
         <translation type="unfinished">Zīmēt apli no centra un punktu uz apļa</translation>
     </message>
@@ -1926,7 +1926,7 @@ Vai vēlaties to atjaunot?</translation>
         <translation type="unfinished">Centrs, rādiuss</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and radius</source>
         <translation type="unfinished">Zīmēt apli no centra un rādiusa</translation>
     </message>
@@ -1949,7 +1949,7 @@ Vai vēlaties to atjaunot?</translation>
         <translation type="unfinished">Koncentriskais (ar attālumu)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric circle</source>
         <translation type="unfinished">Zīmēt koncentrisku apli</translation>
     </message>
@@ -1967,7 +1967,7 @@ Vai vēlaties to atjaunot?</translation>
         <translation type="unfinished">Koncentriskais (caur punktu)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw concentric circle through point</source>
         <translation type="unfinished">Zīmēt koncentrisku apli caur punktu</translation>
     </message>
@@ -2006,7 +2006,7 @@ Vai vēlaties to atjaunot?</translation>
         <translation type="unfinished">Tangents un 2 punkti</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle through two points and tangential to one entity</source>
         <translation type="unfinished">Zīmēt apli caur diviem punktiem un tangenciāli vienai vienībai</translation>
     </message>
@@ -2029,7 +2029,7 @@ Vai vēlaties to atjaunot?</translation>
         <translation type="unfinished">Tangents, punkts, rādiuss</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to entity, through point with radius</source>
         <translation type="unfinished">Zīmēt apli, kas ir tangenciāls vienībai, caur punktu ar rādiusu</translation>
     </message>
@@ -2136,18 +2136,18 @@ Vai vēlaties to atjaunot?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+68"/>
+        <location line="+67"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation type="unfinished">Komandrindas</translation>
     </message>
     <message>
-        <location line="-21"/>
+        <location line="-20"/>
         <source>&amp;Command Line</source>
         <translation type="unfinished">Komandrindas</translation>
     </message>
     <message>
-        <location line="+208"/>
+        <location line="+207"/>
         <source>Invalid value:</source>
         <translation type="unfinished">Nederīga vērtība:</translation>
     </message>
@@ -2294,7 +2294,7 @@ Vai vēlaties to atjaunot?</translation>
         <translation type="unfinished">Konvertēt zīmēšanas vienība</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Convert drawing to a different drawing unit</source>
         <translation type="unfinished">Konvertēt zīmējumu uz citu zīmēšanas vienību</translation>
     </message>
@@ -2391,7 +2391,7 @@ Vai vēlaties to atjaunot?</translation>
         <translation type="unfinished">Skaitītājs</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Auto increment number</source>
         <translation type="unfinished">Automātiskā skaita palielināšana</translation>
     </message>
@@ -2422,7 +2422,7 @@ Vai vēlaties to atjaunot?</translation>
         <translation type="unfinished">Centrālā līnija Krusts</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
         <translation type="unfinished">Zīmēt centrālās līnijas krustu lokos, apļos vai elipsēs</translation>
     </message>
@@ -2568,7 +2568,7 @@ Vai vēlaties to atjaunot?</translation>
         <translation type="unfinished">Atcelt visu</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Deselect all entities</source>
         <translation type="unfinished">Atcelt visu vienību atlasi</translation>
     </message>
@@ -2709,7 +2709,7 @@ Vai vēlaties to atjaunot?</translation>
         <translation type="unfinished">Saskaņots</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw aligned dimension</source>
         <translation type="unfinished">Zīmēt izlīdzinātu dimensiju</translation>
     </message>
@@ -2742,7 +2742,7 @@ Vai vēlaties to atjaunot?</translation>
         <translation type="unfinished">Angular</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angular dimension</source>
         <translation type="unfinished">Zīmēt leņķa dimensiju</translation>
     </message>
@@ -2765,7 +2765,7 @@ Vai vēlaties to atjaunot?</translation>
         <translation type="unfinished">Diametriskais</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw diametric dimension</source>
         <translation type="unfinished">Zīmēt diametrālo dimensiju</translation>
     </message>
@@ -2778,7 +2778,7 @@ Vai vēlaties to atjaunot?</translation>
         <translation type="unfinished">Horizontālā</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw horizontal dimension</source>
         <translation type="unfinished">Zīmēt horizontālo dimensiju</translation>
     </message>
@@ -2801,7 +2801,7 @@ Vai vēlaties to atjaunot?</translation>
         <translation type="unfinished">Ordināte (X/Y)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+3"/>
         <source>Draw ordinate dimension</source>
         <translation type="unfinished">Zīmēt ordinālo dimensiju</translation>
     </message>
@@ -2824,7 +2824,7 @@ Vai vēlaties to atjaunot?</translation>
         <translation type="unfinished">Radiālais</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw radial dimension</source>
         <translation type="unfinished">Zīmēt radiālo dimensiju</translation>
     </message>
@@ -2879,7 +2879,7 @@ Vai vēlaties to atjaunot?</translation>
         <translation type="unfinished">Pagriezts (lineārs)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw linear dimension at a fixed angle</source>
         <translation type="unfinished">Zīmēt lineāro dimensiju fiksētā leņķī</translation>
     </message>
@@ -2892,7 +2892,7 @@ Vai vēlaties to atjaunot?</translation>
         <translation type="unfinished">Vertikālais</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw vertical dimension</source>
         <translation type="unfinished">Zīmēt vertikālo dimensiju</translation>
     </message>
@@ -2955,7 +2955,7 @@ Vai vēlaties to atjaunot?</translation>
         <translation type="unfinished">Dimensiju rīki</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>D&amp;imension</source>
         <translation type="unfinished">Dimensija</translation>
     </message>
@@ -3476,7 +3476,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Zīmēt Fms celiņi</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
         <translation type="unfinished">Zīmēt FMS joslas (ribas)</translation>
     </message>
@@ -4077,7 +4077,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Zīmēt no CSV</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Draws entities based on textual entries in a CSV file</source>
         <translation type="unfinished">Zīmē vienības, pamatojoties uz teksta ierakstiem CSV failā</translation>
     </message>
@@ -4085,7 +4085,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>DrawOrder</name>
     <message>
-        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+92"/>
+        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
         <translation type="unfinished">Zīmēšanas kārtība</translation>
     </message>
@@ -4183,7 +4183,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Zīmēt daudzlīniju</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw polyline with line and arc segments</source>
         <translation type="unfinished">Zīmēt daudzlīniju ar līnijas un loka segmentiem</translation>
     </message>
@@ -4371,7 +4371,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Skriptu apvalks</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+34"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
         <translation type="unfinished">Skriptu apvalks</translation>
@@ -4400,7 +4400,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Rediģēšanas rīki</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Edit</source>
         <translation type="unfinished">Rediģēt</translation>
     </message>
@@ -4478,7 +4478,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Rediģēt tekstu</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Edit text</source>
         <translation type="unfinished">Rediģēt tekstu</translation>
     </message>
@@ -4491,7 +4491,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Elipses rīki</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Ellipse</source>
         <translation type="unfinished">Elipses</translation>
     </message>
@@ -4589,7 +4589,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Elipsveida loks</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw ellipse arc from center, major point, ratio and angles</source>
         <translation type="unfinished">Zīmēt elipses loku no centra, galvenā punkta, attiecība un leņķi</translation>
     </message>
@@ -4602,7 +4602,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Elipse (Centrs, Punkts, Attiecība)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw full ellipse from center, major point and ratio</source>
         <translation type="unfinished">Zīmēt pilnu elipsi no centra, galvenā punkta un attiecība</translation>
     </message>
@@ -4638,7 +4638,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Elipse ar diametriem</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and diameters</source>
         <translation type="unfinished">Zīmēt elipsi ar pozīciju un diametriem</translation>
     </message>
@@ -4671,7 +4671,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Uzrakstīts četrstūrī</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse inscribed in quadrilateral</source>
         <translation type="unfinished">Zīmēt elipsi, kas iegrāmatota četrstūrī</translation>
     </message>
@@ -4694,7 +4694,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Paralēlā līkne (ar attālumu)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse</source>
         <translation type="unfinished">Zīmēt paralēlo līkni elipsei</translation>
     </message>
@@ -4712,7 +4712,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Paralēlā līkne (caur punktu)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse through point</source>
         <translation type="unfinished">Zīmēt paralēlo līkni elipsei caur punktu</translation>
     </message>
@@ -4748,7 +4748,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Elipse ar rādiusiem</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and radii</source>
         <translation type="unfinished">Zīmēt elipsi ar pozīciju un rādiusiem</translation>
     </message>
@@ -4873,7 +4873,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Dovetail locītava</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation type="unfinished">Zīmēt Dovetail locītavu</translation>
     </message>
@@ -5041,7 +5041,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Trīs punkti</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw three points</source>
         <translation type="unfinished">Atvelciet trīs punktus</translation>
     </message>
@@ -5189,7 +5189,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Failu rīki</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;File</source>
         <translation type="unfinished">Faili</translation>
     </message>
@@ -6309,7 +6309,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Lūkas rīki</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Hatch</source>
         <translation type="unfinished">Lūka</translation>
     </message>
@@ -6380,7 +6380,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Lūkas no atlases</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Create hatch or solid fill from selected boundary</source>
         <translation type="unfinished">Izvēlētās robežas aizpildījuma vai vienlaidu aizpildījuma izveide</translation>
     </message>
@@ -6619,7 +6619,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Pievienot pielāgotu 2D centroidu</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Create a customizable 2D Centroid marker</source>
         <translation type="unfinished">Izveidot pielāgojamu 2D centroidu marķieri</translation>
     </message>
@@ -6949,7 +6949,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Platības centrods</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create an area 2D Centroid for a selected entity</source>
         <translation type="unfinished">Izvēlētās vienības apgabala 2D centroidu izveide</translation>
     </message>
@@ -7071,7 +7071,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Centroidu klausītājs</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
         <translation type="unfinished">(De-)aktivizēt darījuma klausītāju 2D centroidiem</translation>
     </message>
@@ -7324,7 +7324,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Summa 2D Centroids svērtie</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Combine selected 2D Centroid markers weighted</source>
         <translation type="unfinished">Apvieno atlasītos 2D centroidu marķierus, kas svērti</translation>
     </message>
@@ -7424,7 +7424,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Stieples centrods</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create a wire 2D Centroid for a selection</source>
         <translation type="unfinished">Izlases stieples 2D centroidu izveide</translation>
     </message>
@@ -7442,7 +7442,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Informācijas rīki</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Info</source>
         <translation type="unfinished">Informācija</translation>
     </message>
@@ -7770,7 +7770,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Invertēt atlasi</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Invert the current selection</source>
         <translation type="unfinished">Pašreizējās atlases apgriešana</translation>
     </message>
@@ -7977,7 +7977,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Slāņu rīki</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Layer</source>
         <translation type="unfinished">Slānis</translation>
     </message>
@@ -8116,12 +8116,12 @@ jau ir sarakstā.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+110"/>
+        <location line="+109"/>
         <source>Layer List</source>
         <translation type="unfinished">Slāņu saraksts</translation>
     </message>
     <message>
-        <location line="-55"/>
+        <location line="-54"/>
         <source>&amp;Layer List</source>
         <translation type="unfinished">Slāņu saraksts</translation>
     </message>
@@ -8159,7 +8159,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Leader</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
         <translation type="unfinished">Zīmēt līderi (līniju secība ar bultiņu)</translation>
     </message>
@@ -8208,7 +8208,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Līnijas rīki</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Line</source>
         <translation type="unfinished">Līnija</translation>
     </message>
@@ -8286,7 +8286,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Līnija no 2 punktiem</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single line or sequence of lines</source>
         <translation type="unfinished">Zīmēt vienu līniju vai līniju secību</translation>
     </message>
@@ -8339,7 +8339,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Līnija no leņķa</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line at a given absolute angle</source>
         <translation type="unfinished">Zīmēt līniju noteiktā absolūtajā leņķī</translation>
     </message>
@@ -8377,7 +8377,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Leņķa bisektrise</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angle bisector, trisector, ...</source>
         <translation type="unfinished">Zīmēt leņķa bisektrisektors, trisektors, ...</translation>
     </message>
@@ -8435,7 +8435,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Kaste savienojums no 2 punktiem</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
         <translation type="unfinished">Zīmējuma kastes savienojumu pirksti, spraugas un tapas</translation>
     </message>
@@ -8478,7 +8478,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Uzmavas savienojums no 2 punktiem</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation type="unfinished">Zīmēt Dovetail locītavu</translation>
     </message>
@@ -8501,7 +8501,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Brīvrokas līnija</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw freehand line</source>
         <translation type="unfinished">Zīmēt brīvrokas līniju</translation>
     </message>
@@ -8539,7 +8539,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Horizontālā līnija</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal line</source>
         <translation type="unfinished">Zīmēt horizontālu līniju</translation>
     </message>
@@ -8577,7 +8577,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Ortogonāls</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to base entity</source>
         <translation type="unfinished">Zīmēt līniju, kas ir perpendikulāra bāzes vienībai</translation>
     </message>
@@ -8605,7 +8605,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Ortogonāls / Tangents</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to line and tangent to circle, arc or ellipse</source>
         <translation type="unfinished">Zīmēt līniju, kas ir ortogonāla līnijai un pieskaras aplim, lokam vai elipsei</translation>
     </message>
@@ -8628,7 +8628,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Paralēli (ar attālumu)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
         <translation type="unfinished">Zīmēt paralēli esošajai līnijai vai koncentriskam lokam, aplim</translation>
     </message>
@@ -8646,7 +8646,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Paralēli (caur punktu)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
         <translation type="unfinished">Zīmēt paralēlo līniju vai koncentrisku loku vai apli caur doto punktu</translation>
     </message>
@@ -8722,7 +8722,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Relatīvais leņķis</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line with relative angle to base entity</source>
         <translation type="unfinished">Zīmēt līniju ar relatīvo leņķi pret bāzes vienību</translation>
     </message>
@@ -8763,7 +8763,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Tangents (Punkts, aplis)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (point, circle)</source>
         <translation type="unfinished">Zīmēt pieskares punktu (punkts, aplis)</translation>
     </message>
@@ -8791,7 +8791,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Tangents (divi apļi)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (circle, circle)</source>
         <translation type="unfinished">Zīmēt tangensu (aplis, aplis)</translation>
     </message>
@@ -8804,7 +8804,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Vertikālā līnija</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical line</source>
         <translation type="unfinished">Zīmēt vertikālu līniju</translation>
     </message>
@@ -8996,7 +8996,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Dažādi rīki</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc</source>
         <translation type="unfinished">Dažādi</translation>
     </message>
@@ -9019,7 +9019,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Dažādi bloka rīki</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Block</source>
         <translation type="unfinished">Bloķēt</translation>
     </message>
@@ -9037,7 +9037,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Dažādi izstrādes rīki</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>De&amp;velopment</source>
         <translation type="unfinished">Attīstība</translation>
     </message>
@@ -9055,7 +9055,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Dažādi zīmēšanas rīki</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc Draw</source>
         <translation type="unfinished">Dažādi zīmējumi</translation>
     </message>
@@ -9078,7 +9078,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Dažādi importēšanas / eksportēšanas rīki</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Import/Export</source>
         <translation type="unfinished">Importēšana/eksportēšana</translation>
     </message>
@@ -9096,7 +9096,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Dažādi informācijas rīki</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Information</source>
         <translation type="unfinished">Informācija</translation>
     </message>
@@ -9114,7 +9114,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Dažādi modificēšanas rīki</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Modify</source>
         <translation type="unfinished">Mainīt</translation>
     </message>
@@ -9132,7 +9132,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Dažādi atlases rīki</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Select</source>
         <translation type="unfinished">Atlasiet</translation>
     </message>
@@ -9145,7 +9145,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Modifikācijas rīki</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Modify</source>
         <translation type="unfinished">Mainīt</translation>
     </message>
@@ -9402,7 +9402,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Nobīde (ar attālumu)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse</source>
         <translation type="unfinished">Līnijas, loka, apļa vai elipses nobīde</translation>
     </message>
@@ -9425,7 +9425,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Nobīde (caur punktu)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse through point</source>
         <translation type="unfinished">Line, loka, apļa vai elipses nobīde caur punktu</translation>
     </message>
@@ -9453,7 +9453,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Atvērt</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open an existing drawing</source>
         <translation type="unfinished">Atvērt esošu rasējumu</translation>
     </message>
@@ -9663,7 +9663,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">PDF eksportēšana</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Exports the current drawing as PDF</source>
         <translation type="unfinished">Eksportē pašreizējo rasējumu PDF formātā</translation>
     </message>
@@ -9697,7 +9697,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Punktu rīki</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Point</source>
         <translation type="unfinished">Punkts</translation>
     </message>
@@ -9715,7 +9715,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Viens punkts</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single point</source>
         <translation type="unfinished">Zīmēt vienu punktu</translation>
     </message>
@@ -9788,7 +9788,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Daudzlīniju rīki</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Polyline</source>
         <translation type="unfinished">Polinērija</translation>
     </message>
@@ -9903,7 +9903,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Daudzlīnijas pārrāvuma simbols no 2 punktiem</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a polyline break symbol from 2 points</source>
         <translation type="unfinished">Zīmēt daudzlīniju pārtraukuma simbolu no 2 punktiem</translation>
     </message>
@@ -9962,7 +9962,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Drukāt</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current drawing</source>
         <translation type="unfinished">Izdrukāt pašreizējo rasējumu</translation>
     </message>
@@ -9975,7 +9975,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Pašreizējā skata drukāšana</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current view</source>
         <translation type="unfinished">Pašreizējā skata drukāšana</translation>
     </message>
@@ -10123,7 +10123,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Drukas priekšskatījums</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Preview how current drawing would be printed</source>
         <translation type="unfinished">Priekšskatījums, kā tiks drukāts pašreizējais zīmējums</translation>
     </message>
@@ -10136,7 +10136,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Projekcijas rīki</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Projection</source>
         <translation type="unfinished">Projekcija</translation>
     </message>
@@ -10189,7 +10189,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Attēloto īpašību vērtību decimāldaļas / precizitāte:</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+219"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+221"/>
         <source>:</source>
         <translation type="unfinished">:</translation>
     </message>
@@ -10204,7 +10204,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Īpašās īpašības</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+20"/>
         <source>Dependent Entities</source>
         <translation type="unfinished">Atkarīgie subjekti</translation>
     </message>
@@ -10264,7 +10264,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Nē</translation>
     </message>
     <message>
-        <location line="+393"/>
+        <location line="+402"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*VARIES*</translation>
     </message>
@@ -10276,7 +10276,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+0"/>
         <location line="+57"/>
-        <location line="+11"/>
+        <location line="+10"/>
         <source>Property Editor</source>
         <translation type="unfinished">Īpašuma redaktors</translation>
     </message>
@@ -10291,7 +10291,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Vispārīgās īpašības</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+31"/>
         <source>Color:</source>
         <translation type="unfinished">Krāsa:</translation>
     </message>
@@ -10770,7 +10770,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Palaist skriptu</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open and run a script file</source>
         <translation type="unfinished">Skripta faila atvēršana un palaišana</translation>
     </message>
@@ -11092,7 +11092,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Atlases rīki</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+13"/>
         <source>Selection Tools Panel</source>
         <translation type="unfinished">Atlases rīku panelis</translation>
     </message>
@@ -11110,7 +11110,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Atlasiet visus</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Select all visible entities</source>
         <translation type="unfinished">Atlasiet visas redzamās vienības</translation>
     </message>
@@ -11228,7 +11228,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">(De-)atlasīt kontūru</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select connected entities</source>
         <translation type="unfinished">(De-)atlasīt savienotās vienības</translation>
     </message>
@@ -11276,7 +11276,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">(De-)atlasīt krustojuma vienības</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities intersected by a line</source>
         <translation type="unfinished">(De-)atlasiet visas vienības, ko šķērso līnija</translation>
     </message>
@@ -11337,7 +11337,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">(De-)atlasīt slāni</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities on the same layer</source>
         <translation type="unfinished">(De-)atlasiet visas vienības vienā slānī</translation>
     </message>
@@ -11390,7 +11390,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">(De-)atlasiet taisnstūra laukumu</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities inside a rectangle</source>
         <translation type="unfinished">(De-)atlasīt visas vienības taisnstūra iekšpusē</translation>
     </message>
@@ -11478,7 +11478,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Formas rīki</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Shape</source>
         <translation type="unfinished">Forma</translation>
     </message>
@@ -11550,7 +11550,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Daudzstūris (Centrs, Sānu)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and middle point of side</source>
         <translation type="unfinished">Zīmēt regulāru daudzstūri no centra un viduspunkta pusē</translation>
     </message>
@@ -11593,7 +11593,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Daudzstūris (Sānu, sānu)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from middle points of two opposite sides or two opposite corners</source>
         <translation type="unfinished">Zīmēt regulāru daudzstūri no divu pretējo malu vai divu pretējo stūru viduspunktiem</translation>
     </message>
@@ -11621,7 +11621,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Daudzstūris (Centrs, Stūris)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and corner point</source>
         <translation type="unfinished">Zīmēt regulāru daudzstūri no centra un stūra punkta</translation>
     </message>
@@ -11649,7 +11649,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Daudzstūris (2 sānu punkti)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from end points of one side</source>
         <translation type="unfinished">Zīmēt regulāru daudzstūri no vienas puses gala punktiem</translation>
     </message>
@@ -11667,7 +11667,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Taisnstūris</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle from two corners</source>
         <translation type="unfinished">Zīmēt taisnstūri no diviem stūriem</translation>
     </message>
@@ -11708,7 +11708,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Taisnstūris ar izmēru</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle with position and size</source>
         <translation type="unfinished">Zīmēt taisnstūri ar pozīciju un izmēru</translation>
     </message>
@@ -11766,7 +11766,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Snap rīki</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+25"/>
         <source>&amp;Snap</source>
         <translation type="unfinished">Snap</translation>
     </message>
@@ -11934,7 +11934,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Distances rokasgrāmata</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Snap distance between 2 points</source>
         <translation type="unfinished">Snap attālums starp 2 punktiem</translation>
     </message>
@@ -12084,7 +12084,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Spline darbarīki</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Spline</source>
         <translation type="unfinished">Spline</translation>
     </message>
@@ -12132,7 +12132,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Spline (vadības punkti)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw spline from control points</source>
         <translation type="unfinished">Zīmēt spline no kontrolpunktiem</translation>
     </message>
@@ -12346,7 +12346,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Teksts</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text</source>
         <translation type="unfinished">Zīmēt tekstu</translation>
     </message>
@@ -12469,7 +12469,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Teksts gar vienību</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text along an entity</source>
         <translation type="unfinished">Zīmēt tekstu gar objektu</translation>
     </message>
@@ -13058,7 +13058,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Pārvietot / kopēt</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+9"/>
         <source>Move or copy entities once or multiple times</source>
         <translation type="unfinished">Vienreizēja vai vairākkārtēja vienību pārvietošana vai kopēšana</translation>
     </message>
@@ -13426,7 +13426,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Pārskatīt rīkus</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>View</source>
         <translation type="unfinished">Skatīt</translation>
     </message>
@@ -13900,7 +13900,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Horizontālā būvniecības līnija</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal construction line</source>
         <translation type="unfinished">Zīmēt horizontālo būvniecības līniju</translation>
     </message>
@@ -13913,7 +13913,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Vertikālā būvniecības līnija</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical construction line</source>
         <translation type="unfinished">Zīmēt vertikālo būvniecības līniju</translation>
     </message>
@@ -13931,7 +13931,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Palielināšanas rīki</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Zoom</source>
         <translation type="unfinished">Palielināt</translation>
     </message>

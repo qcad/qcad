@@ -3,7 +3,6 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setAllowInterrupt();
     action.setScriptFile(basePath + "/Paste.js");
-    action.setIcon(basePath + "/Paste.svg");
     action.setDefaultShortcuts([
         new QKeySequence(QKeySequence.Paste),
         new QKeySequence("p,s")

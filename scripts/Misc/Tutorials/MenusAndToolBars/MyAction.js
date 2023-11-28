@@ -59,11 +59,8 @@ MyAction.init = function(basePath) {
 
     // Define the script file that is executed when this action is
     // launched:
+    // The icon is implicitely set to MyAction.svg:
     action.setScriptFile(basePath + "/MyAction.js");
-
-    // Set the icon that is shown in the toolbar and on some platforms
-    // also in the menu:
-    action.setIcon(basePath + "/MyAction.svg");
 
     // Set the command(s) that can be used on the command line to 
     // launch this action:

@@ -325,7 +325,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">Добавяне на празен блок</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Add new empty block</source>
         <translation type="unfinished">Добавяне на нов празен блок</translation>
     </message>
@@ -412,7 +412,7 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1986"/>
+        <location filename="../scripts/Apollonius.js" line="+1989"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Невалиден радиус</translation>
     </message>
@@ -438,7 +438,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">Инструменти за дъга</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Arc</source>
         <translation type="unfinished">Дъга</translation>
     </message>
@@ -491,7 +491,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">2 точки и ъгъл</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and angle</source>
         <translation type="unfinished">Начертайте дъга от 2 точки и ъгъл</translation>
     </message>
@@ -544,7 +544,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">2 точки и височина</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and height</source>
         <translation type="unfinished">Начертайте дъга от 2 точки и височина</translation>
     </message>
@@ -602,7 +602,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">2 точки и дължина</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and length</source>
         <translation type="unfinished">Начертайте дъга от 2 точки и дължина</translation>
     </message>
@@ -670,7 +670,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">2 Точки и радиус</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and radius</source>
         <translation type="unfinished">Начертайте дъга от 2 точки и радиус</translation>
     </message>
@@ -698,7 +698,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">3 точки</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 3 points</source>
         <translation type="unfinished">Начертайте дъга от 3 точки</translation>
     </message>
@@ -751,7 +751,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">Център, точка, ъгли</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from center, point on arc and angles</source>
         <translation type="unfinished">Начертайте дъга от центъра, точка от дъгата и ъгли</translation>
     </message>
@@ -774,7 +774,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">Концентричен (с разстояние)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc</source>
         <translation type="unfinished">Начертайте концентрична дъга</translation>
     </message>
@@ -792,7 +792,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">Концентрична (през точка)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc through point</source>
         <translation type="unfinished">Начертайте концентрична дъга през точка</translation>
     </message>
@@ -831,7 +831,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">Тангенс, Точка, Радиус</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to entity, through point with radius</source>
         <translation type="unfinished">Начертайте дъга, допирателна към обекта, през точка с радиус</translation>
     </message>
@@ -859,7 +859,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">Тангенциално свързани</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to base entity</source>
         <translation type="unfinished">Начертайте дъга, допирателна към основната единица</translation>
     </message>
@@ -1043,7 +1043,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>&amp;Batch2Pdf visible layout blocks</source>
         <translation type="unfinished">Видими блокове за оформление на Batch2Pdf</translation>
     </message>
@@ -1239,7 +1239,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Инструменти за блокове</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Block</source>
         <translation type="unfinished">Блок</translation>
     </message>
@@ -1319,7 +1319,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+0"/>
         <location line="+63"/>
-        <location line="+44"/>
+        <location line="+43"/>
         <source>Block List</source>
         <translation type="unfinished">Списък с блокове</translation>
     </message>
@@ -1617,7 +1617,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Инструменти за кръга</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Circle</source>
         <translation type="unfinished">Кръг</translation>
     </message>
@@ -1645,7 +1645,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">2 точки</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from 2 diametrically opposite points</source>
         <translation type="unfinished">Начертайте окръжност от 2 диаметрално противоположни точки</translation>
     </message>
@@ -1698,7 +1698,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">2 Точки и радиус</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 2 points and radius</source>
         <translation type="unfinished">Начертайте окръжност от 2 точки и радиус</translation>
     </message>
@@ -1737,7 +1737,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">2 Тангенти и точка</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation type="unfinished">Начертайте окръжност, допирателна към две същности, през точка</translation>
     </message>
@@ -1775,7 +1775,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">2 Тангенти и радиус</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to two entities with given radius</source>
         <translation type="unfinished">Начертайте окръжност, допирателна към два обекта с даден радиус</translation>
     </message>
@@ -1803,7 +1803,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">3 точки</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 3 points</source>
         <translation type="unfinished">Начертайте кръг от 3 точки</translation>
     </message>
@@ -1842,7 +1842,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">3 тангенти</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to three entities</source>
         <translation type="unfinished">Начертайте окръжност, допирателна към три обекта</translation>
     </message>
@@ -1872,7 +1872,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Център, диаметър</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and diameter</source>
         <translation type="unfinished">Начертайте кръг от центъра и диаметъра</translation>
     </message>
@@ -1895,7 +1895,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Център, точка</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from center and point on circle</source>
         <translation type="unfinished">Начертайте кръг от центъра и точка на кръга</translation>
     </message>
@@ -1925,7 +1925,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Център, радиус</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and radius</source>
         <translation type="unfinished">Начертайте кръг от центъра и радиуса</translation>
     </message>
@@ -1948,7 +1948,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Концентричен (с разстояние)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric circle</source>
         <translation type="unfinished">Начертайте концентричен кръг</translation>
     </message>
@@ -1966,7 +1966,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Концентрична (през точка)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw concentric circle through point</source>
         <translation type="unfinished">Начертайте концентрична окръжност през точка</translation>
     </message>
@@ -2005,7 +2005,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Тангенс и 2 точки</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle through two points and tangential to one entity</source>
         <translation type="unfinished">Начертайте окръжност през две точки и допирателна към една единица</translation>
     </message>
@@ -2028,7 +2028,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Тангенс, Точка, Радиус</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to entity, through point with radius</source>
         <translation type="unfinished">Начертайте окръжност, допирателна към обекта, през точка с радиус</translation>
     </message>
@@ -2135,18 +2135,18 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+68"/>
+        <location line="+67"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation type="unfinished">Команден ред</translation>
     </message>
     <message>
-        <location line="-21"/>
+        <location line="-20"/>
         <source>&amp;Command Line</source>
         <translation type="unfinished">Команден ред</translation>
     </message>
     <message>
-        <location line="+208"/>
+        <location line="+207"/>
         <source>Invalid value:</source>
         <translation type="unfinished">Невалидна стойност:</translation>
     </message>
@@ -2293,7 +2293,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Преобразуване на единицата за чертане</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Convert drawing to a different drawing unit</source>
         <translation type="unfinished">Конвертиране на чертеж в друга единица за рисуване</translation>
     </message>
@@ -2390,7 +2390,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Брояч</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Auto increment number</source>
         <translation type="unfinished">Автоматично увеличаване на броя</translation>
     </message>
@@ -2421,7 +2421,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Централна линия Cross</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
         <translation type="unfinished">Начертайте кръст на осевата линия в дъги, кръгове или елипси</translation>
     </message>
@@ -2567,7 +2567,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Премахване на избора на всички</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Deselect all entities</source>
         <translation type="unfinished">Премахване на избора на всички обекти</translation>
     </message>
@@ -2708,7 +2708,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Изравнени</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw aligned dimension</source>
         <translation type="unfinished">Начертайте подравнено измерение</translation>
     </message>
@@ -2741,7 +2741,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Angular</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angular dimension</source>
         <translation type="unfinished">Начертайте ъглов размер</translation>
     </message>
@@ -2764,7 +2764,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Диаметричен</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw diametric dimension</source>
         <translation type="unfinished">Начертайте диаметрално измерение</translation>
     </message>
@@ -2777,7 +2777,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Хоризонтален</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw horizontal dimension</source>
         <translation type="unfinished">Начертайте хоризонтално измерение</translation>
     </message>
@@ -2800,7 +2800,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Ордината (X/Y)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+3"/>
         <source>Draw ordinate dimension</source>
         <translation type="unfinished">Начертайте измерение на ординатата</translation>
     </message>
@@ -2823,7 +2823,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Радиален</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw radial dimension</source>
         <translation type="unfinished">Начертайте радиалното измерение</translation>
     </message>
@@ -2877,7 +2877,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Завъртян (линеен)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw linear dimension at a fixed angle</source>
         <translation type="unfinished">Начертайте линейно измерение под фиксиран ъгъл</translation>
     </message>
@@ -2890,7 +2890,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Вертикален</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw vertical dimension</source>
         <translation type="unfinished">Начертайте вертикално измерение</translation>
     </message>
@@ -2953,7 +2953,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Инструменти за измерване</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>D&amp;imension</source>
         <translation type="unfinished">Размери</translation>
     </message>
@@ -3474,7 +3474,7 @@ is already in the list.</source>
         <translation type="unfinished">Рисунка Fms Lanes</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
         <translation type="unfinished">Рисуване на ленти за FMS (ребра)</translation>
     </message>
@@ -4075,7 +4075,7 @@ is already in the list.</source>
         <translation type="unfinished">Черпене от CSV</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Draws entities based on textual entries in a CSV file</source>
         <translation type="unfinished">Чертае обекти въз основа на текстови записи в CSV файл</translation>
     </message>
@@ -4083,7 +4083,7 @@ is already in the list.</source>
 <context>
     <name>DrawOrder</name>
     <message>
-        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+92"/>
+        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
         <translation type="unfinished">Ред за изтегляне</translation>
     </message>
@@ -4181,7 +4181,7 @@ is already in the list.</source>
         <translation type="unfinished">Draw Polyline</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw polyline with line and arc segments</source>
         <translation type="unfinished">Изготвяне на полилиния с линейни и дъговидни сегменти</translation>
     </message>
@@ -4368,7 +4368,7 @@ is already in the list.</source>
         <translation type="unfinished">Скрипт Shell</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+34"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
         <translation type="unfinished">Скрипт Shell</translation>
@@ -4397,7 +4397,7 @@ is already in the list.</source>
         <translation type="unfinished">Инструменти за редактиране</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Edit</source>
         <translation type="unfinished">Редактиране на</translation>
     </message>
@@ -4475,7 +4475,7 @@ is already in the list.</source>
         <translation type="unfinished">Редактиране на текст</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Edit text</source>
         <translation type="unfinished">Редактиране на текст</translation>
     </message>
@@ -4488,7 +4488,7 @@ is already in the list.</source>
         <translation type="unfinished">Инструменти за елипса</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Ellipse</source>
         <translation type="unfinished">Елипса</translation>
     </message>
@@ -4586,7 +4586,7 @@ is already in the list.</source>
         <translation type="unfinished">Елипса Arc</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw ellipse arc from center, major point, ratio and angles</source>
         <translation type="unfinished">Начертайте дъга на елипса от център, главна точка, съотношение и ъгли</translation>
     </message>
@@ -4599,7 +4599,7 @@ is already in the list.</source>
         <translation type="unfinished">Елипса (Център, Точка, Съотношение)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw full ellipse from center, major point and ratio</source>
         <translation type="unfinished">Начертайте пълна елипса от центъра, основната точка и съотношението</translation>
     </message>
@@ -4635,7 +4635,7 @@ is already in the list.</source>
         <translation type="unfinished">Елипса с диаметри</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and diameters</source>
         <translation type="unfinished">Начертайте елипса с позиция и диаметри</translation>
     </message>
@@ -4668,7 +4668,7 @@ is already in the list.</source>
         <translation type="unfinished">Вписано в Quadrilateral</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse inscribed in quadrilateral</source>
         <translation type="unfinished">Начертайте елипса, вписана в четириъгълник</translation>
     </message>
@@ -4691,7 +4691,7 @@ is already in the list.</source>
         <translation type="unfinished">Паралелна крива (с разстоянието)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse</source>
         <translation type="unfinished">Начертайте успоредна крива на елипса</translation>
     </message>
@@ -4709,7 +4709,7 @@ is already in the list.</source>
         <translation type="unfinished">Паралелна крива (през точка)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse through point</source>
         <translation type="unfinished">Начертайте успоредна крива на елипса през точка</translation>
     </message>
@@ -4745,7 +4745,7 @@ is already in the list.</source>
         <translation type="unfinished">Елипса с радиуси</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and radii</source>
         <translation type="unfinished">Изготвяне на елипса с позиция и радиуси</translation>
     </message>
@@ -4870,7 +4870,7 @@ is already in the list.</source>
         <translation type="unfinished">Съединение на опашка</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation type="unfinished">Начертайте съединение тип &quot;лястовича опашка</translation>
     </message>
@@ -5038,7 +5038,7 @@ is already in the list.</source>
         <translation type="unfinished">Три точки</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw three points</source>
         <translation type="unfinished">Равенство три точки</translation>
     </message>
@@ -5185,7 +5185,7 @@ is already in the list.</source>
         <translation type="unfinished">Инструменти за файлове</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;File</source>
         <translation type="unfinished">Файл</translation>
     </message>
@@ -6305,7 +6305,7 @@ is already in the list.</source>
         <translation type="unfinished">Инструменти за люк</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Hatch</source>
         <translation type="unfinished">Люк</translation>
     </message>
@@ -6376,7 +6376,7 @@ is already in the list.</source>
         <translation type="unfinished">Излюпване от селекция</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Create hatch or solid fill from selected boundary</source>
         <translation type="unfinished">Създаване на шлейф или плътно запълване от избрана граница</translation>
     </message>
@@ -6615,7 +6615,7 @@ is already in the list.</source>
         <translation type="unfinished">Добавяне на потребителски 2D центроид</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Create a customizable 2D Centroid marker</source>
         <translation type="unfinished">Създаване на персонализиран 2D центроиден маркер</translation>
     </message>
@@ -6945,7 +6945,7 @@ is already in the list.</source>
         <translation type="unfinished">Центроид на площта</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create an area 2D Centroid for a selected entity</source>
         <translation type="unfinished">Създаване на 2D центроид на област за избран обект</translation>
     </message>
@@ -7067,7 +7067,7 @@ is already in the list.</source>
         <translation type="unfinished">Слушател на центроиди</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
         <translation type="unfinished">(Де-)Активиране на слушател на транзакции за 2D центроиди</translation>
     </message>
@@ -7320,7 +7320,7 @@ is already in the list.</source>
         <translation type="unfinished">Сума на 2D центроидите, претеглена</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Combine selected 2D Centroid markers weighted</source>
         <translation type="unfinished">Комбиниране на избрани 2D центроидни маркери, претеглени</translation>
     </message>
@@ -7420,7 +7420,7 @@ is already in the list.</source>
         <translation type="unfinished">Центроид на тел</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create a wire 2D Centroid for a selection</source>
         <translation type="unfinished">Създаване на 2D центроид за селекция</translation>
     </message>
@@ -7438,7 +7438,7 @@ is already in the list.</source>
         <translation type="unfinished">Информационни инструменти</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Info</source>
         <translation type="unfinished">Информация</translation>
     </message>
@@ -7766,7 +7766,7 @@ is already in the list.</source>
         <translation type="unfinished">Инвертиране на избора</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Invert the current selection</source>
         <translation type="unfinished">Инвертиране на текущата селекция</translation>
     </message>
@@ -7973,7 +7973,7 @@ is already in the list.</source>
         <translation type="unfinished">Инструменти за слоеве</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Layer</source>
         <translation type="unfinished">Слой</translation>
     </message>
@@ -8112,12 +8112,12 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+110"/>
+        <location line="+109"/>
         <source>Layer List</source>
         <translation type="unfinished">Списък на слоевете</translation>
     </message>
     <message>
-        <location line="-55"/>
+        <location line="-54"/>
         <source>&amp;Layer List</source>
         <translation type="unfinished">Списък на слоевете</translation>
     </message>
@@ -8155,7 +8155,7 @@ is already in the list.</source>
         <translation type="unfinished">Лидер</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
         <translation type="unfinished">Начертайте лидер (последователност от линии със стрелка)</translation>
     </message>
@@ -8204,7 +8204,7 @@ is already in the list.</source>
         <translation type="unfinished">Инструменти за линии</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Line</source>
         <translation type="unfinished">Линия</translation>
     </message>
@@ -8282,7 +8282,7 @@ is already in the list.</source>
         <translation type="unfinished">Линия от 2 точки</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single line or sequence of lines</source>
         <translation type="unfinished">Начертайте една линия или поредица от линии</translation>
     </message>
@@ -8335,7 +8335,7 @@ is already in the list.</source>
         <translation type="unfinished">Линия от ъгъл</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line at a given absolute angle</source>
         <translation type="unfinished">Начертайте линия под даден абсолютен ъгъл</translation>
     </message>
@@ -8373,7 +8373,7 @@ is already in the list.</source>
         <translation type="unfinished">Бисектриса на ъглите</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angle bisector, trisector, ...</source>
         <translation type="unfinished">Начертайте бисектор на ъгъл, трисектор, ...</translation>
     </message>
@@ -8431,7 +8431,7 @@ is already in the list.</source>
         <translation type="unfinished">Кутия съвместно от 2 точки</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
         <translation type="unfinished">Пръсти, прорези и тенекии на шарнирната кутия</translation>
     </message>
@@ -8474,7 +8474,7 @@ is already in the list.</source>
         <translation type="unfinished">Щифт от 2 точки</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation type="unfinished">Начертайте съединение тип &quot;лястовича опашка</translation>
     </message>
@@ -8497,7 +8497,7 @@ is already in the list.</source>
         <translation type="unfinished">Свободна линия</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw freehand line</source>
         <translation type="unfinished">Начертайте линия със свободна ръка</translation>
     </message>
@@ -8535,7 +8535,7 @@ is already in the list.</source>
         <translation type="unfinished">Хоризонтална линия</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal line</source>
         <translation type="unfinished">Начертайте хоризонтална линия</translation>
     </message>
@@ -8573,7 +8573,7 @@ is already in the list.</source>
         <translation type="unfinished">Ортогонален</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to base entity</source>
         <translation type="unfinished">Начертайте линия, ортогонална на основната единица</translation>
     </message>
@@ -8601,7 +8601,7 @@ is already in the list.</source>
         <translation type="unfinished">Ортогонално / Тангенс</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to line and tangent to circle, arc or ellipse</source>
         <translation type="unfinished">Начертайте линия, ортогонална на линия и допирателна към окръжност, дъга или елипса</translation>
     </message>
@@ -8624,7 +8624,7 @@ is already in the list.</source>
         <translation type="unfinished">Паралелно (с разстоянието)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
         <translation type="unfinished">Начертайте паралел на съществуваща линия или концентрична дъга, кръг</translation>
     </message>
@@ -8642,7 +8642,7 @@ is already in the list.</source>
         <translation type="unfinished">Паралелно (през точка)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
         <translation type="unfinished">Начертайте успоредна линия или концентрична дъга или кръг през дадена точка</translation>
     </message>
@@ -8718,7 +8718,7 @@ is already in the list.</source>
         <translation type="unfinished">Относителен ъгъл</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line with relative angle to base entity</source>
         <translation type="unfinished">Начертайте линия с относителен ъгъл спрямо основната единица</translation>
     </message>
@@ -8759,7 +8759,7 @@ is already in the list.</source>
         <translation type="unfinished">Тангенс (Точка, окръжност)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (point, circle)</source>
         <translation type="unfinished">Начертайте допирателна (точка, окръжност)</translation>
     </message>
@@ -8787,7 +8787,7 @@ is already in the list.</source>
         <translation type="unfinished">Тангенс (две окръжности)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (circle, circle)</source>
         <translation type="unfinished">Начертайте допирателна (кръг, окръжност)</translation>
     </message>
@@ -8800,7 +8800,7 @@ is already in the list.</source>
         <translation type="unfinished">Вертикална линия</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical line</source>
         <translation type="unfinished">Начертайте вертикална линия</translation>
     </message>
@@ -8992,7 +8992,7 @@ is already in the list.</source>
         <translation type="unfinished">Различни инструменти</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc</source>
         <translation type="unfinished">Разни</translation>
     </message>
@@ -9015,7 +9015,7 @@ is already in the list.</source>
         <translation type="unfinished">Различни инструменти за блокове</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Block</source>
         <translation type="unfinished">Блок</translation>
     </message>
@@ -9033,7 +9033,7 @@ is already in the list.</source>
         <translation type="unfinished">Различни инструменти за разработка</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>De&amp;velopment</source>
         <translation type="unfinished">Развитие</translation>
     </message>
@@ -9051,7 +9051,7 @@ is already in the list.</source>
         <translation type="unfinished">Различни инструменти за рисуване</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc Draw</source>
         <translation type="unfinished">Различни рисунки</translation>
     </message>
@@ -9074,7 +9074,7 @@ is already in the list.</source>
         <translation type="unfinished">Различни инструменти за импортиране / експортиране</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Import/Export</source>
         <translation type="unfinished">Внос/износ</translation>
     </message>
@@ -9092,7 +9092,7 @@ is already in the list.</source>
         <translation type="unfinished">Различни информационни инструменти</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Information</source>
         <translation type="unfinished">Информация</translation>
     </message>
@@ -9110,7 +9110,7 @@ is already in the list.</source>
         <translation type="unfinished">Различни инструменти за модифициране</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Modify</source>
         <translation type="unfinished">Промяна на</translation>
     </message>
@@ -9128,7 +9128,7 @@ is already in the list.</source>
         <translation type="unfinished">Различни инструменти за избор</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Select</source>
         <translation type="unfinished">Изберете</translation>
     </message>
@@ -9141,7 +9141,7 @@ is already in the list.</source>
         <translation type="unfinished">Инструменти за модифициране</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Modify</source>
         <translation type="unfinished">Промяна на</translation>
     </message>
@@ -9396,7 +9396,7 @@ is already in the list.</source>
         <translation type="unfinished">Отместване (с разстоянието)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse</source>
         <translation type="unfinished">Отместване на линия, дъга, кръг или елипса</translation>
     </message>
@@ -9419,7 +9419,7 @@ is already in the list.</source>
         <translation type="unfinished">Отместване (през точка)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse through point</source>
         <translation type="unfinished">Отместване на линия, дъга, окръжност или елипса през точка</translation>
     </message>
@@ -9447,7 +9447,7 @@ is already in the list.</source>
         <translation type="unfinished">Отворете</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open an existing drawing</source>
         <translation type="unfinished">Отваряне на съществуващ чертеж</translation>
     </message>
@@ -9657,7 +9657,7 @@ is already in the list.</source>
         <translation type="unfinished">Експорт на PDF</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Exports the current drawing as PDF</source>
         <translation type="unfinished">Експортира текущия чертеж като PDF</translation>
     </message>
@@ -9691,7 +9691,7 @@ is already in the list.</source>
         <translation type="unfinished">Точкови инструменти</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Point</source>
         <translation type="unfinished">Точка</translation>
     </message>
@@ -9709,7 +9709,7 @@ is already in the list.</source>
         <translation type="unfinished">Единична точка</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single point</source>
         <translation type="unfinished">Начертайте една точка</translation>
     </message>
@@ -9782,7 +9782,7 @@ is already in the list.</source>
         <translation type="unfinished">Инструменти за полилинии</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Polyline</source>
         <translation type="unfinished">Полилиния</translation>
     </message>
@@ -9897,7 +9897,7 @@ is already in the list.</source>
         <translation type="unfinished">Символ за прекъсване на полилинията от 2 точки</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a polyline break symbol from 2 points</source>
         <translation type="unfinished">Начертайте символ за прекъсване на полилиния от 2 точки</translation>
     </message>
@@ -9956,7 +9956,7 @@ is already in the list.</source>
         <translation type="unfinished">Отпечатване</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current drawing</source>
         <translation type="unfinished">Отпечатване на текущия чертеж</translation>
     </message>
@@ -9969,7 +9969,7 @@ is already in the list.</source>
         <translation type="unfinished">Отпечатване на текущия изглед</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current view</source>
         <translation type="unfinished">Отпечатване на текущия изглед</translation>
     </message>
@@ -10117,7 +10117,7 @@ is already in the list.</source>
         <translation type="unfinished">Преглед за печат</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Preview how current drawing would be printed</source>
         <translation type="unfinished">Преглед на начина, по който ще се отпечата текущият чертеж</translation>
     </message>
@@ -10130,7 +10130,7 @@ is already in the list.</source>
         <translation type="unfinished">Инструменти за прожектиране</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Projection</source>
         <translation type="unfinished">Прожектиране</translation>
     </message>
@@ -10183,7 +10183,7 @@ is already in the list.</source>
         <translation type="unfinished">Десетични знаци/прецизност за показаните стойности на свойствата:</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+219"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+221"/>
         <source>:</source>
         <translation type="unfinished">:</translation>
     </message>
@@ -10198,7 +10198,7 @@ is already in the list.</source>
         <translation type="unfinished">Специфични свойства</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+20"/>
         <source>Dependent Entities</source>
         <translation type="unfinished">Зависими субекти</translation>
     </message>
@@ -10258,7 +10258,7 @@ is already in the list.</source>
         <translation type="unfinished">Не</translation>
     </message>
     <message>
-        <location line="+393"/>
+        <location line="+402"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*РАЗНООБРАЗИЕ*</translation>
     </message>
@@ -10270,7 +10270,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <location line="+57"/>
-        <location line="+11"/>
+        <location line="+10"/>
         <source>Property Editor</source>
         <translation type="unfinished">Редактор на свойства</translation>
     </message>
@@ -10285,7 +10285,7 @@ is already in the list.</source>
         <translation type="unfinished">Общи свойства</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+31"/>
         <source>Color:</source>
         <translation type="unfinished">Цвят:</translation>
     </message>
@@ -10764,7 +10764,7 @@ is already in the list.</source>
         <translation type="unfinished">Изпълнение на скрипт</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open and run a script file</source>
         <translation type="unfinished">Отваряне и стартиране на скриптов файл</translation>
     </message>
@@ -11086,7 +11086,7 @@ is already in the list.</source>
         <translation type="unfinished">Инструменти за избор</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+13"/>
         <source>Selection Tools Panel</source>
         <translation type="unfinished">Панел с инструменти за избор</translation>
     </message>
@@ -11104,7 +11104,7 @@ is already in the list.</source>
         <translation type="unfinished">Изберете всички</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Select all visible entities</source>
         <translation type="unfinished">Избиране на всички видими обекти</translation>
     </message>
@@ -11222,7 +11222,7 @@ is already in the list.</source>
         <translation type="unfinished">(Де-)Избор на контур</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select connected entities</source>
         <translation type="unfinished">(Де-)Избор на свързани обекти</translation>
     </message>
@@ -11270,7 +11270,7 @@ is already in the list.</source>
         <translation type="unfinished">(Де-)селектиране на пресечни обекти</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities intersected by a line</source>
         <translation type="unfinished">(Де-)Избиране на всички обекти, пресечени от линия</translation>
     </message>
@@ -11331,7 +11331,7 @@ is already in the list.</source>
         <translation type="unfinished">(Де-)Избор на слой</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities on the same layer</source>
         <translation type="unfinished">(Де-)Избиране на всички обекти в същия слой</translation>
     </message>
@@ -11384,7 +11384,7 @@ is already in the list.</source>
         <translation type="unfinished">(Де-)Избор на правоъгълна област</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities inside a rectangle</source>
         <translation type="unfinished">(Де-)Избиране на всички обекти в правоъгълник</translation>
     </message>
@@ -11469,7 +11469,7 @@ is already in the list.</source>
         <translation type="unfinished">Инструменти за формиране</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Shape</source>
         <translation type="unfinished">Форма</translation>
     </message>
@@ -11541,7 +11541,7 @@ is already in the list.</source>
         <translation type="unfinished">Многоъгълник (център, страна)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and middle point of side</source>
         <translation type="unfinished">Начертайте правилен многоъгълник от центъра и средната точка на страната</translation>
     </message>
@@ -11584,7 +11584,7 @@ is already in the list.</source>
         <translation type="unfinished">Многоъгълник (страна, страна)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from middle points of two opposite sides or two opposite corners</source>
         <translation type="unfinished">Начертайте правилен многоъгълник от средните точки на две противоположни страни или два противоположни ъгъла</translation>
     </message>
@@ -11612,7 +11612,7 @@ is already in the list.</source>
         <translation type="unfinished">Многоъгълник (център, ъгъл)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and corner point</source>
         <translation type="unfinished">Начертайте правилен многоъгълник от центъра и ъгъла</translation>
     </message>
@@ -11640,7 +11640,7 @@ is already in the list.</source>
         <translation type="unfinished">Многоъгълник (2 странични точки)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from end points of one side</source>
         <translation type="unfinished">Начертайте правилен многоъгълник от крайните точки на едната страна</translation>
     </message>
@@ -11658,7 +11658,7 @@ is already in the list.</source>
         <translation type="unfinished">Правоъгълник</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle from two corners</source>
         <translation type="unfinished">Начертайте правоъгълник от два ъгъла</translation>
     </message>
@@ -11699,7 +11699,7 @@ is already in the list.</source>
         <translation type="unfinished">Правоъгълник с размер</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle with position and size</source>
         <translation type="unfinished">Начертайте правоъгълник с позиция и размер</translation>
     </message>
@@ -11757,7 +11757,7 @@ is already in the list.</source>
         <translation type="unfinished">Инструменти Snap</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+25"/>
         <source>&amp;Snap</source>
         <translation type="unfinished">Snap</translation>
     </message>
@@ -11925,7 +11925,7 @@ is already in the list.</source>
         <translation type="unfinished">Ръководство за дистанция</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Snap distance between 2 points</source>
         <translation type="unfinished">Разстояние между 2 точки</translation>
     </message>
@@ -12075,7 +12075,7 @@ is already in the list.</source>
         <translation type="unfinished">Инструменти за шлиц</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Spline</source>
         <translation type="unfinished">Сплайн</translation>
     </message>
@@ -12123,7 +12123,7 @@ is already in the list.</source>
         <translation type="unfinished">Сплайн (контролни точки)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw spline from control points</source>
         <translation type="unfinished">Начертайте сплайн от контролни точки</translation>
     </message>
@@ -12337,7 +12337,7 @@ is already in the list.</source>
         <translation type="unfinished">Текст</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text</source>
         <translation type="unfinished">Рисуване на текст</translation>
     </message>
@@ -12460,7 +12460,7 @@ is already in the list.</source>
         <translation type="unfinished">Текст покрай субекта</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text along an entity</source>
         <translation type="unfinished">Рисуване на текст по протежение на обект</translation>
     </message>
@@ -13049,7 +13049,7 @@ is already in the list.</source>
         <translation type="unfinished">Преместване / копиране</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+9"/>
         <source>Move or copy entities once or multiple times</source>
         <translation type="unfinished">Преместване или копиране на обекти веднъж или няколко пъти</translation>
     </message>
@@ -13417,7 +13417,7 @@ is already in the list.</source>
         <translation type="unfinished">Преглед на инструменти</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>View</source>
         <translation type="unfinished">Вижте</translation>
     </message>
@@ -13891,7 +13891,7 @@ is already in the list.</source>
         <translation type="unfinished">Хоризонтална строителна линия</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal construction line</source>
         <translation type="unfinished">Начертайте хоризонтална строителна линия</translation>
     </message>
@@ -13904,7 +13904,7 @@ is already in the list.</source>
         <translation type="unfinished">Вертикална строителна линия</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical construction line</source>
         <translation type="unfinished">Начертайте вертикална строителна линия</translation>
     </message>
@@ -13922,7 +13922,7 @@ is already in the list.</source>
         <translation type="unfinished">Инструменти за мащабиране</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Zoom</source>
         <translation type="unfinished">Увеличаване</translation>
     </message>

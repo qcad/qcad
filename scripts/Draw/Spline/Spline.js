@@ -73,7 +73,6 @@ Spline.getCadToolBarPanel = function() {
         action.setScriptFile(Spline.includeBasePath + "/Spline.js");
         action.objectName = actionName;
         action.setRequiresDocument(true);
-        action.setIcon(Spline.includeBasePath + "/Spline.svg");
         //action.setStatusTip(qsTr("Show spline tools"));
         action.setDefaultShortcut(new QKeySequence("w,n"));
         action.setNoState();

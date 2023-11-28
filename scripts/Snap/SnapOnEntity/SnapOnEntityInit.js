@@ -2,7 +2,6 @@ function init(basePath) {
     var action = new RGuiAction(qsTranslate("SnapOnEntity", "&On Entity"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/SnapOnEntity.js");
-    action.setIcon(basePath + "/SnapOnEntity.svg");
     action.setDefaultShortcut(new QKeySequence("s,t"));
     action.setDefaultCommands(["snaponentity", "st"]);
     action.setGroup("snaps");

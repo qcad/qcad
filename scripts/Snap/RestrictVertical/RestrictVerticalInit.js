@@ -2,7 +2,6 @@ function init(basePath) {
     var action = new RGuiAction(qsTranslate("RestrictVertical", "Restrict &Vertically"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/RestrictVertical.js");
-    action.setIcon(basePath + "/RestrictVertical.svg");
     action.setDefaultShortcut(new QKeySequence("e,v"));
     action.setDefaultCommands(["restrictvertical", "ev"]);
     action.setGroup("snaprestrictions");

@@ -3,7 +3,6 @@ function init(basePath) {
         RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/DimRadial.js");
-    action.setIcon(basePath + "/DimRadial.svg");
     action.setStatusTip(qsTranslate("DimRadial", "Draw radial dimension"));
     action.setDefaultShortcut(new QKeySequence("d,r"));
     action.setDefaultCommands(["dimrad", "dimradial", "dr"]);

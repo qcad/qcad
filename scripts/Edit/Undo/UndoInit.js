@@ -3,7 +3,6 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setRequiresUndoableTransaction(true);
     action.setScriptFile(basePath + "/Undo.js");
-    action.setIcon(basePath + "/Undo.svg");
     action.setDefaultShortcuts([
        new QKeySequence(QKeySequence.Undo),
        new QKeySequence("o,o")

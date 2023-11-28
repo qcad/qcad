@@ -40,9 +40,6 @@ PropertyWatcher.prototype.propertyChanged = function(value) {
     // only do something if the value has actually changed
     // remember edited status of widgets
 
-//    qDebug("propertyChanged:", value);
-//    qDebug("propertyChanged: sender: ", this.sender);
-
     var attributes = this.propertyEditor.getPropertyAttributes(this.propertyType);
 
     var typeHint = RS.UnknownType;
@@ -59,6 +56,11 @@ PropertyWatcher.prototype.propertyChanged = function(value) {
         }
         this.propertyEditor.listPropertyChanged(this.propertyType, index, value);
         return;
+    }
+
+    // value if QFont:
+    else if (isOfType(this.sender, QFontComboBox)) {
+        value = value.family();
     }
 
     // value comes from a combo box:
@@ -433,6 +435,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
         gridLayoutGeometry = new QGridLayout(this.geometryGroup);
         gridLayoutGeometry.setVerticalSpacing(2);
         gridLayoutGeometry.setHorizontalSpacing(2);
+        gridLayoutGeometry.setContentsMargins(6,6,6,6);
         // label:
         gridLayoutGeometry.setColumnStretch(0,0);
         // control:
@@ -1313,6 +1316,14 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
             control.installEventFilter(new REventFilter(QEvent.Wheel.valueOf(), true));
             control.focusPolicy = Qt.ClickFocus;
             initFontComboBox(control);
+            control.objectName = objectName;
+            var pw = new PropertyWatcher(this, control, propertyTypeId);
+            if (RSettings.getQtVersion() >= 0x060000) {
+                control.currentFontChanged.connect(pw, pw.propertyChanged);
+            }
+            else {
+                control.currentFontChanged.connect(pw, pw.propertyChanged);
+            }
         }
         else {
             control = new QComboBox(this.geometryGroup);
@@ -1320,28 +1331,29 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
             control.focusPolicy = Qt.ClickFocus;
             control.minimumWidth = 50;
             control.setSizePolicy(QSizePolicy.Ignored, QSizePolicy.Preferred);
-        }
 
-        control.objectName = objectName;
+            control.objectName = objectName;
 
-        if (isNull(choicesData)/* && propertyTypeId.getId()!==REntity.PropertyLayer.getId()*/) {
-            var pw = new PropertyWatcher(this, control, propertyTypeId)
-            if (RSettings.getQtVersion() >= 0x060000) {
-                control.textActivated.connect(pw, pw.propertyChanged);
+            if (isNull(choicesData)/* && propertyTypeId.getId()!==REntity.PropertyLayer.getId()*/) {
+                var pw = new PropertyWatcher(this, control, propertyTypeId);
+                if (RSettings.getQtVersion() >= 0x060000) {
+                    control.textActivated.connect(pw, pw.propertyChanged);
+                }
+                else {
+                    control['activated(QString)'].connect(pw, pw.propertyChanged);
+                }
             }
             else {
-                control['activated(QString)'].connect(pw, pw.propertyChanged);
+                var pw = new PropertyWatcher(this, control, propertyTypeId);
+                if (RSettings.getQtVersion() >= 0x060000) {
+                    control.activated.connect(pw, pw.propertyChanged);
+                }
+                else {
+                    control['activated(int)'].connect(pw, pw.propertyChanged);
+                }
             }
         }
-        else {
-            var pw = new PropertyWatcher(this, control, propertyTypeId);
-            if (RSettings.getQtVersion() >= 0x060000) {
-                control.activated.connect(pw, pw.propertyChanged);
-            }
-            else {
-                control['activated(int)'].connect(pw, pw.propertyChanged);
-            }
-        }
+
     }
 
     if (propertyTypeId.getId()===REntity.PropertyLayer.getId()) {
@@ -1714,7 +1726,6 @@ PropertyEditor.init = function(basePath) {
     var action = new RGuiAction(qsTr("Property Editor"), appWin);
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/PropertyEditor.js");
-    action.setIcon(basePath + "/PropertyEditor.svg");
     action.setDefaultShortcut(new QKeySequence("g,p"));
     action.setDefaultCommands(["gp"]);
     action.setGroupSortOrder(3700);

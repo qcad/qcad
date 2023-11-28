@@ -3,7 +3,6 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setForceGlobal(true);
     action.setScriptFile(basePath + "/Print.js");
-    action.setIcon(basePath + "/Print.svg");
     action.setDefaultShortcut(new QKeySequence("Ctrl+P"));
     action.setDefaultCommands(["print"]);
     action.setStatusTip(qsTranslate("Print", "Print current drawing"));

@@ -324,7 +324,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">Lisa tühi plokk</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Add new empty block</source>
         <translation type="unfinished">Lisa uus tühi plokk</translation>
     </message>
@@ -411,7 +411,7 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1986"/>
+        <location filename="../scripts/Apollonius.js" line="+1989"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Vale raadius</translation>
     </message>
@@ -437,7 +437,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">Arc Tools</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Arc</source>
         <translation type="unfinished">Arc</translation>
     </message>
@@ -490,7 +490,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">2 punkti ja nurk</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and angle</source>
         <translation type="unfinished">Joonista kaar 2 punktist ja nurgast</translation>
     </message>
@@ -543,7 +543,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">2 punkti ja kõrgus</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and height</source>
         <translation type="unfinished">Joonista kaar 2 punktist ja kõrgusest</translation>
     </message>
@@ -601,7 +601,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">2 punktid ja pikkus</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and length</source>
         <translation type="unfinished">Joonista kaar 2 punktist ja pikkusest</translation>
     </message>
@@ -669,7 +669,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">2 punktid ja raadius</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and radius</source>
         <translation type="unfinished">Joonista kaar 2 punktist ja raadiusest</translation>
     </message>
@@ -697,7 +697,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">3 punkti</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 3 points</source>
         <translation type="unfinished">Joonista kaar 3 punktist</translation>
     </message>
@@ -750,7 +750,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">Keskpunkt, punkt, nurgad</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from center, point on arc and angles</source>
         <translation type="unfinished">Joonistage kaar keskpunktist, punktist ja nurkadest</translation>
     </message>
@@ -773,7 +773,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">Keskne (koos kaugusega)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc</source>
         <translation type="unfinished">Joonista kontsentriline kaar</translation>
     </message>
@@ -791,7 +791,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">Keskne (läbi punkti)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc through point</source>
         <translation type="unfinished">Joonista kontsentriline kaar läbi punkti</translation>
     </message>
@@ -830,7 +830,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">Tangent, punkt, raadius</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to entity, through point with radius</source>
         <translation type="unfinished">Joonistage objektiga tangentsiaalne kaar läbi punkti raadiusega</translation>
     </message>
@@ -858,7 +858,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">Tangentsiaalselt seotud</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to base entity</source>
         <translation type="unfinished">Joonistage baasobjektiga tangentsiaalne kaar</translation>
     </message>
@@ -1041,7 +1041,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>&amp;Batch2Pdf visible layout blocks</source>
         <translation type="unfinished">Batch2Pdf nähtavad kujundusplokid</translation>
     </message>
@@ -1237,7 +1237,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Blokeerimisvahendid</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Block</source>
         <translation type="unfinished">Plokk</translation>
     </message>
@@ -1317,7 +1317,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+0"/>
         <location line="+63"/>
-        <location line="+44"/>
+        <location line="+43"/>
         <source>Block List</source>
         <translation type="unfinished">Plokkide nimekiri</translation>
     </message>
@@ -1615,7 +1615,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Circle Tools</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Circle</source>
         <translation type="unfinished">Ring</translation>
     </message>
@@ -1643,7 +1643,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">2 punkti</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from 2 diametrically opposite points</source>
         <translation type="unfinished">Joonista ring 2 diametraalselt vastandlikust punktist</translation>
     </message>
@@ -1696,7 +1696,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">2 punktid ja raadius</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 2 points and radius</source>
         <translation type="unfinished">Joonista ring 2 punktist ja raadiusest</translation>
     </message>
@@ -1735,7 +1735,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">2 Tangendid ja punkt</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation type="unfinished">Joonistage kahe üksuse puutuja ring läbi punkti</translation>
     </message>
@@ -1773,7 +1773,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">2 Tangentsid ja raadius</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to two entities with given radius</source>
         <translation type="unfinished">Joonistage ring, mis puutub kahte antud raadiusega elementi puutumatult kokku</translation>
     </message>
@@ -1801,7 +1801,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">3 punkti</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 3 points</source>
         <translation type="unfinished">Joonista ring 3 punktist</translation>
     </message>
@@ -1840,7 +1840,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">3 Tangenti</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to three entities</source>
         <translation type="unfinished">Joonistage ring, mis puutub kokku kolme üksusega</translation>
     </message>
@@ -1870,7 +1870,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Keskus, läbimõõt</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and diameter</source>
         <translation type="unfinished">Joonista ring keskpunktist ja läbimõõdust</translation>
     </message>
@@ -1893,7 +1893,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Keskus, punkt</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from center and point on circle</source>
         <translation type="unfinished">Joonista ring keskpunktist ja punktist ringile</translation>
     </message>
@@ -1923,7 +1923,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Keskpunkt, raadius</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and radius</source>
         <translation type="unfinished">Joonista ring keskpunktist ja raadiusest</translation>
     </message>
@@ -1946,7 +1946,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Keskne (koos kaugusega)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric circle</source>
         <translation type="unfinished">Joonista kontsentriline ring</translation>
     </message>
@@ -1964,7 +1964,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Keskne (läbi punkti)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw concentric circle through point</source>
         <translation type="unfinished">Joonista kontsentriline ring läbi punkti</translation>
     </message>
@@ -2003,7 +2003,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Tangent ja 2 punkti</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle through two points and tangential to one entity</source>
         <translation type="unfinished">Joonistage ring läbi kahe punkti ja ühe punkti puutujate suhtes</translation>
     </message>
@@ -2026,7 +2026,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Tangent, punkt, raadius</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to entity, through point with radius</source>
         <translation type="unfinished">Joonistage üksuse suhtes puutuja ring, mis läbib punkti raadiusega</translation>
     </message>
@@ -2133,18 +2133,18 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+68"/>
+        <location line="+67"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation type="unfinished">Käsurea</translation>
     </message>
     <message>
-        <location line="-21"/>
+        <location line="-20"/>
         <source>&amp;Command Line</source>
         <translation type="unfinished">Käsurea</translation>
     </message>
     <message>
-        <location line="+208"/>
+        <location line="+207"/>
         <source>Invalid value:</source>
         <translation type="unfinished">Vale väärtus:</translation>
     </message>
@@ -2291,7 +2291,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Teisenda joonistusühik</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Convert drawing to a different drawing unit</source>
         <translation type="unfinished">Joonise teisendamine teise joonistusühikusse</translation>
     </message>
@@ -2388,7 +2388,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Counter</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Auto increment number</source>
         <translation type="unfinished">Automaatne suurendamise number</translation>
     </message>
@@ -2419,7 +2419,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Keskjoone rist</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
         <translation type="unfinished">Joonistage keskjoone rist kaarega, ringiga või ellipsiga</translation>
     </message>
@@ -2565,7 +2565,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Tühista valik kõik</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Deselect all entities</source>
         <translation type="unfinished">Tühista kõigi üksuste valik</translation>
     </message>
@@ -2706,7 +2706,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Kohandatud</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw aligned dimension</source>
         <translation type="unfinished">Joonista joondatud mõõde</translation>
     </message>
@@ -2739,7 +2739,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Nurgakujuline</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angular dimension</source>
         <translation type="unfinished">Joonistage nurgamõõtmed</translation>
     </message>
@@ -2762,7 +2762,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Diameetriline</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw diametric dimension</source>
         <translation type="unfinished">Joonistage diameetriline mõõde</translation>
     </message>
@@ -2775,7 +2775,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Horisontaalne</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw horizontal dimension</source>
         <translation type="unfinished">Joonista horisontaalne mõõde</translation>
     </message>
@@ -2798,7 +2798,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Ordinaat (X/Y)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+3"/>
         <source>Draw ordinate dimension</source>
         <translation type="unfinished">Joonista ordinaadimõõde</translation>
     </message>
@@ -2821,7 +2821,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Radiaalne</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw radial dimension</source>
         <translation type="unfinished">Joonista radiaalne mõõde</translation>
     </message>
@@ -2875,7 +2875,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Pööratud (lineaarne)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw linear dimension at a fixed angle</source>
         <translation type="unfinished">Joonista lineaarne mõõde fikseeritud nurga all</translation>
     </message>
@@ -2888,7 +2888,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Vertikaalne</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw vertical dimension</source>
         <translation type="unfinished">Joonista vertikaalne mõõde</translation>
     </message>
@@ -2951,7 +2951,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Mõõtmetööriistad</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>D&amp;imension</source>
         <translation type="unfinished">Mõõde</translation>
     </message>
@@ -3470,7 +3470,7 @@ is already in the list.</source>
         <translation type="unfinished">Joonistus Fms sõidurajad</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
         <translation type="unfinished">FMS-ribade joonistamine (ribid)</translation>
     </message>
@@ -4071,7 +4071,7 @@ is already in the list.</source>
         <translation type="unfinished">Joonistus CSV-st</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Draws entities based on textual entries in a CSV file</source>
         <translation type="unfinished">Joonistab üksused CSV-faili tekstiliste kirjete põhjal</translation>
     </message>
@@ -4079,7 +4079,7 @@ is already in the list.</source>
 <context>
     <name>DrawOrder</name>
     <message>
-        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+92"/>
+        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
         <translation type="unfinished">Joonistamise järjekord</translation>
     </message>
@@ -4177,7 +4177,7 @@ is already in the list.</source>
         <translation type="unfinished">Joonista polügoon</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw polyline with line and arc segments</source>
         <translation type="unfinished">Joonistage joone- ja kaarsegmentidega polügoon</translation>
     </message>
@@ -4364,7 +4364,7 @@ is already in the list.</source>
         <translation type="unfinished">Skripti kest</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+34"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
         <translation type="unfinished">Skripti kest</translation>
@@ -4393,7 +4393,7 @@ is already in the list.</source>
         <translation type="unfinished">Tööriistade redigeerimine</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Edit</source>
         <translation type="unfinished">Muuda</translation>
     </message>
@@ -4471,7 +4471,7 @@ is already in the list.</source>
         <translation type="unfinished">Teksti redigeerimine</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Edit text</source>
         <translation type="unfinished">Teksti muutmine</translation>
     </message>
@@ -4484,7 +4484,7 @@ is already in the list.</source>
         <translation type="unfinished">Ellipsi tööriistad</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Ellipse</source>
         <translation type="unfinished">Ellips</translation>
     </message>
@@ -4582,7 +4582,7 @@ is already in the list.</source>
         <translation type="unfinished">Ellipse Arc</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw ellipse arc from center, major point, ratio and angles</source>
         <translation type="unfinished">Joonista ellipsi kaar keskpunktist, peapunktist, suhtest ja nurkadest</translation>
     </message>
@@ -4595,7 +4595,7 @@ is already in the list.</source>
         <translation type="unfinished">Ellips (keskpunkt, punkt, suhe)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw full ellipse from center, major point and ratio</source>
         <translation type="unfinished">Joonista täielik ellips keskpunktist, peapunktist ja suhtest</translation>
     </message>
@@ -4631,7 +4631,7 @@ is already in the list.</source>
         <translation type="unfinished">Läbimõõduga ellips</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and diameters</source>
         <translation type="unfinished">Joonista ellips koos asukoha ja läbimõõduga</translation>
     </message>
@@ -4664,7 +4664,7 @@ is already in the list.</source>
         <translation type="unfinished">Kirjutatud nelinurkselt</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse inscribed in quadrilateral</source>
         <translation type="unfinished">Joonista ellips, mis on sisse kirjutatud nelinurka</translation>
     </message>
@@ -4687,7 +4687,7 @@ is already in the list.</source>
         <translation type="unfinished">Paralleelne kõver (koos kaugusega)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse</source>
         <translation type="unfinished">Joonistage ellipsiga paralleelne kõver</translation>
     </message>
@@ -4705,7 +4705,7 @@ is already in the list.</source>
         <translation type="unfinished">Paralleelne kõver (läbi punkti)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse through point</source>
         <translation type="unfinished">Joonista paralleelne kõver ellipsiga läbi punkti</translation>
     </message>
@@ -4741,7 +4741,7 @@ is already in the list.</source>
         <translation type="unfinished">Ellips koos raadiustega</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and radii</source>
         <translation type="unfinished">Joonista ellips koos asukoha ja raadiustega</translation>
     </message>
@@ -4866,7 +4866,7 @@ is already in the list.</source>
         <translation type="unfinished">Dovetail Joint</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation type="unfinished">Joonistage sakiline ühendus</translation>
     </message>
@@ -5034,7 +5034,7 @@ is already in the list.</source>
         <translation type="unfinished">Kolm punkti</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw three points</source>
         <translation type="unfinished">Kolme punktiga viik</translation>
     </message>
@@ -5181,7 +5181,7 @@ is already in the list.</source>
         <translation type="unfinished">Faili tööriistad</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;File</source>
         <translation type="unfinished">Faili</translation>
     </message>
@@ -6301,7 +6301,7 @@ is already in the list.</source>
         <translation type="unfinished">Luugi tööriistad</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Hatch</source>
         <translation type="unfinished">Luuk</translation>
     </message>
@@ -6372,7 +6372,7 @@ is already in the list.</source>
         <translation type="unfinished">Luuk valikust</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Create hatch or solid fill from selected boundary</source>
         <translation type="unfinished">Loo luuk või tahke täitmine valitud piirilt</translation>
     </message>
@@ -6611,7 +6611,7 @@ is already in the list.</source>
         <translation type="unfinished">Lisa kohandatud 2D tsentroid</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Create a customizable 2D Centroid marker</source>
         <translation type="unfinished">Looge kohandatav 2D Centroid marker</translation>
     </message>
@@ -6941,7 +6941,7 @@ is already in the list.</source>
         <translation type="unfinished">Pindala tsentroid</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create an area 2D Centroid for a selected entity</source>
         <translation type="unfinished">Looge valitud üksuse jaoks ala 2D Centroid</translation>
     </message>
@@ -7063,7 +7063,7 @@ is already in the list.</source>
         <translation type="unfinished">Centroid Kuulaja</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
         <translation type="unfinished">(De-)Aktiveerige tehingu kuulaja 2D Centroidide jaoks</translation>
     </message>
@@ -7316,7 +7316,7 @@ is already in the list.</source>
         <translation type="unfinished">Summa 2D keskpunktide kaalutud</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Combine selected 2D Centroid markers weighted</source>
         <translation type="unfinished">Kombineerib valitud 2D Centroid markerid kaalutud</translation>
     </message>
@@ -7416,7 +7416,7 @@ is already in the list.</source>
         <translation type="unfinished">Traadi tsentroid</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create a wire 2D Centroid for a selection</source>
         <translation type="unfinished">Loo traat 2D Centroid valiku jaoks</translation>
     </message>
@@ -7434,7 +7434,7 @@ is already in the list.</source>
         <translation type="unfinished">Teabevahendid</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Info</source>
         <translation type="unfinished">Info</translation>
     </message>
@@ -7762,7 +7762,7 @@ is already in the list.</source>
         <translation type="unfinished">Valiku inverteerimine</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Invert the current selection</source>
         <translation type="unfinished">Praeguse valiku inverteerimine</translation>
     </message>
@@ -7969,7 +7969,7 @@ is already in the list.</source>
         <translation type="unfinished">Kihi tööriistad</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Layer</source>
         <translation type="unfinished">Kiht</translation>
     </message>
@@ -8108,12 +8108,12 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+110"/>
+        <location line="+109"/>
         <source>Layer List</source>
         <translation type="unfinished">Kihtide nimekiri</translation>
     </message>
     <message>
-        <location line="-55"/>
+        <location line="-54"/>
         <source>&amp;Layer List</source>
         <translation type="unfinished">Kihtide nimekiri</translation>
     </message>
@@ -8151,7 +8151,7 @@ is already in the list.</source>
         <translation type="unfinished">Juht</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
         <translation type="unfinished">Joonistage juht (joonejada koos noolega)</translation>
     </message>
@@ -8200,7 +8200,7 @@ is already in the list.</source>
         <translation type="unfinished">Line Tools (liinitööriistad)</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Line</source>
         <translation type="unfinished">Rida</translation>
     </message>
@@ -8278,7 +8278,7 @@ is already in the list.</source>
         <translation type="unfinished">Joon 2 punktist</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single line or sequence of lines</source>
         <translation type="unfinished">Joonistage üks joon või joonte jada</translation>
     </message>
@@ -8331,7 +8331,7 @@ is already in the list.</source>
         <translation type="unfinished">Joon nurga alt</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line at a given absolute angle</source>
         <translation type="unfinished">Joonista joon antud absoluutse nurga all</translation>
     </message>
@@ -8369,7 +8369,7 @@ is already in the list.</source>
         <translation type="unfinished">Nurga poolitaja</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angle bisector, trisector, ...</source>
         <translation type="unfinished">Joonistage nurk poolitaja, kolmikpunkti, ...</translation>
     </message>
@@ -8427,7 +8427,7 @@ is already in the list.</source>
         <translation type="unfinished">Box Joint alates 2 punktist</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
         <translation type="unfinished">Draw Box Joint sõrmed, pesad ja Tennonid</translation>
     </message>
@@ -8470,7 +8470,7 @@ is already in the list.</source>
         <translation type="unfinished">2 punktist lähtuv labajalgliigend</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation type="unfinished">Joonistage sakiline ühendus</translation>
     </message>
@@ -8493,7 +8493,7 @@ is already in the list.</source>
         <translation type="unfinished">Vabakäeline joon</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw freehand line</source>
         <translation type="unfinished">Joonista vabakäe joon</translation>
     </message>
@@ -8531,7 +8531,7 @@ is already in the list.</source>
         <translation type="unfinished">Horisontaalne joon</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal line</source>
         <translation type="unfinished">Joonista horisontaalne joon</translation>
     </message>
@@ -8569,7 +8569,7 @@ is already in the list.</source>
         <translation type="unfinished">Ortogonaalne</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to base entity</source>
         <translation type="unfinished">Joonistage alusüksuse suhtes ortogonaalne joon</translation>
     </message>
@@ -8597,7 +8597,7 @@ is already in the list.</source>
         <translation type="unfinished">Ortogonaalne / Tangent</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to line and tangent to circle, arc or ellipse</source>
         <translation type="unfinished">Joonistage joonele ortogonaalne joon ja puutuja ringiga, kaarega või ellipsiga</translation>
     </message>
@@ -8620,7 +8620,7 @@ is already in the list.</source>
         <translation type="unfinished">Paralleelne (koos kaugusega)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
         <translation type="unfinished">Joonista paralleelselt olemasoleva joonega või kontsentrilise kaarega, ringiga</translation>
     </message>
@@ -8638,7 +8638,7 @@ is already in the list.</source>
         <translation type="unfinished">Paralleelne (läbi punkti)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
         <translation type="unfinished">Joonistage paralleelne joon või kontsentriline kaar või ring läbi antud punkti</translation>
     </message>
@@ -8714,7 +8714,7 @@ is already in the list.</source>
         <translation type="unfinished">Suhteline nurk</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line with relative angle to base entity</source>
         <translation type="unfinished">Joonistage joon, mille suhteline nurk on baasüksuse suhtes</translation>
     </message>
@@ -8755,7 +8755,7 @@ is already in the list.</source>
         <translation type="unfinished">Tangent (punkt, ring)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (point, circle)</source>
         <translation type="unfinished">Joonista puutuja (punkt, ring)</translation>
     </message>
@@ -8783,7 +8783,7 @@ is already in the list.</source>
         <translation type="unfinished">Tangent (kaks ringi)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (circle, circle)</source>
         <translation type="unfinished">Joonista puutuja (ring, ring)</translation>
     </message>
@@ -8796,7 +8796,7 @@ is already in the list.</source>
         <translation type="unfinished">Vertikaalne joon</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical line</source>
         <translation type="unfinished">Joonista vertikaalne joon</translation>
     </message>
@@ -8988,7 +8988,7 @@ is already in the list.</source>
         <translation type="unfinished">Mitmesugused tööriistad</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc</source>
         <translation type="unfinished">Muu</translation>
     </message>
@@ -9011,7 +9011,7 @@ is already in the list.</source>
         <translation type="unfinished">Mitmesugused plokitööriistad</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Block</source>
         <translation type="unfinished">Plokk</translation>
     </message>
@@ -9029,7 +9029,7 @@ is already in the list.</source>
         <translation type="unfinished">Mitmesugused arendusvahendid</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>De&amp;velopment</source>
         <translation type="unfinished">Arendus</translation>
     </message>
@@ -9047,7 +9047,7 @@ is already in the list.</source>
         <translation type="unfinished">Mitmesugused joonistustööriistad</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc Draw</source>
         <translation type="unfinished">Mitmesugused joonistused</translation>
     </message>
@@ -9070,7 +9070,7 @@ is already in the list.</source>
         <translation type="unfinished">Mitmesugused impordi/ekspordi tööriistad</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Import/Export</source>
         <translation type="unfinished">Import/eksport</translation>
     </message>
@@ -9088,7 +9088,7 @@ is already in the list.</source>
         <translation type="unfinished">Mitmesugused infovahendid</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Information</source>
         <translation type="unfinished">Teave</translation>
     </message>
@@ -9106,7 +9106,7 @@ is already in the list.</source>
         <translation type="unfinished">Mitmesugused muutmisvahendid</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Modify</source>
         <translation type="unfinished">Muuda</translation>
     </message>
@@ -9124,7 +9124,7 @@ is already in the list.</source>
         <translation type="unfinished">Mitmesugused valikuvahendid</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Select</source>
         <translation type="unfinished">Valige</translation>
     </message>
@@ -9137,7 +9137,7 @@ is already in the list.</source>
         <translation type="unfinished">Muutmise tööriistad</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Modify</source>
         <translation type="unfinished">Muuda</translation>
     </message>
@@ -9392,7 +9392,7 @@ is already in the list.</source>
         <translation type="unfinished">Offset (koos distantsiga)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse</source>
         <translation type="unfinished">Nihutatud joon, kaar, ring või ellips</translation>
     </message>
@@ -9415,7 +9415,7 @@ is already in the list.</source>
         <translation type="unfinished">Offset (läbi punkti)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse through point</source>
         <translation type="unfinished">Nihutatud joon, kaar, ring või ellips läbi punkti</translation>
     </message>
@@ -9443,7 +9443,7 @@ is already in the list.</source>
         <translation type="unfinished">Avatud</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open an existing drawing</source>
         <translation type="unfinished">Olemasoleva joonise avamine</translation>
     </message>
@@ -9653,7 +9653,7 @@ is already in the list.</source>
         <translation type="unfinished">PDF-eksport</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Exports the current drawing as PDF</source>
         <translation type="unfinished">Ekspordib praeguse joonise PDF-vormingus</translation>
     </message>
@@ -9687,7 +9687,7 @@ is already in the list.</source>
         <translation type="unfinished">Punkti tööriistad</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Point</source>
         <translation type="unfinished">Punkt</translation>
     </message>
@@ -9705,7 +9705,7 @@ is already in the list.</source>
         <translation type="unfinished">Üks punkt</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single point</source>
         <translation type="unfinished">Joonista üks punkt</translation>
     </message>
@@ -9778,7 +9778,7 @@ is already in the list.</source>
         <translation type="unfinished">Polüjoontööriistad</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Polyline</source>
         <translation type="unfinished">Polyline</translation>
     </message>
@@ -9893,7 +9893,7 @@ is already in the list.</source>
         <translation type="unfinished">Polüjoone murdmise sümbol 2 punktist</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a polyline break symbol from 2 points</source>
         <translation type="unfinished">Joonistage 2 punktist polügooni murdesümbol</translation>
     </message>
@@ -9952,7 +9952,7 @@ is already in the list.</source>
         <translation type="unfinished">Prindi</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current drawing</source>
         <translation type="unfinished">Prindi praegune joonis</translation>
     </message>
@@ -9965,7 +9965,7 @@ is already in the list.</source>
         <translation type="unfinished">Prindi praegune vaade</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current view</source>
         <translation type="unfinished">Prindi praegune vaade</translation>
     </message>
@@ -10113,7 +10113,7 @@ is already in the list.</source>
         <translation type="unfinished">Prindi eelvaade</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Preview how current drawing would be printed</source>
         <translation type="unfinished">Eelvaade, kuidas praegune joonis trükitakse</translation>
     </message>
@@ -10126,7 +10126,7 @@ is already in the list.</source>
         <translation type="unfinished">Projektsioonivahendid</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Projection</source>
         <translation type="unfinished">Projektsioon</translation>
     </message>
@@ -10179,7 +10179,7 @@ is already in the list.</source>
         <translation type="unfinished">Kuvatud omaduste väärtuste kümnendmärgid / täpsus:</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+219"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+221"/>
         <source>:</source>
         <translation type="unfinished">:</translation>
     </message>
@@ -10194,7 +10194,7 @@ is already in the list.</source>
         <translation type="unfinished">Konkreetsed omadused</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+20"/>
         <source>Dependent Entities</source>
         <translation type="unfinished">Sõltuvad üksused</translation>
     </message>
@@ -10254,7 +10254,7 @@ is already in the list.</source>
         <translation type="unfinished">Ei</translation>
     </message>
     <message>
-        <location line="+393"/>
+        <location line="+402"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*VARIES*</translation>
     </message>
@@ -10266,7 +10266,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <location line="+57"/>
-        <location line="+11"/>
+        <location line="+10"/>
         <source>Property Editor</source>
         <translation type="unfinished">Kinnisvara toimetaja</translation>
     </message>
@@ -10281,7 +10281,7 @@ is already in the list.</source>
         <translation type="unfinished">Üldised omadused</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+31"/>
         <source>Color:</source>
         <translation type="unfinished">Värv:</translation>
     </message>
@@ -10760,7 +10760,7 @@ is already in the list.</source>
         <translation type="unfinished">Skripti käivitamine</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open and run a script file</source>
         <translation type="unfinished">Avage ja käivitage skriptifail</translation>
     </message>
@@ -11082,7 +11082,7 @@ is already in the list.</source>
         <translation type="unfinished">Valiku tööriistad</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+13"/>
         <source>Selection Tools Panel</source>
         <translation type="unfinished">Valiku tööriistade paneel</translation>
     </message>
@@ -11100,7 +11100,7 @@ is already in the list.</source>
         <translation type="unfinished">Valige kõik</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Select all visible entities</source>
         <translation type="unfinished">Valige kõik nähtavad üksused</translation>
     </message>
@@ -11218,7 +11218,7 @@ is already in the list.</source>
         <translation type="unfinished">(De-)valige kontuur</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select connected entities</source>
         <translation type="unfinished">(De-)valige ühendatud üksused</translation>
     </message>
@@ -11266,7 +11266,7 @@ is already in the list.</source>
         <translation type="unfinished">(De-)valige ristuvad üksused</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities intersected by a line</source>
         <translation type="unfinished">(De-)valige kõik üksused, mida lõikab joon</translation>
     </message>
@@ -11327,7 +11327,7 @@ is already in the list.</source>
         <translation type="unfinished">(De-)valige kiht</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities on the same layer</source>
         <translation type="unfinished">(De-)valige kõik samal kihil olevad objektid</translation>
     </message>
@@ -11380,7 +11380,7 @@ is already in the list.</source>
         <translation type="unfinished">(De-)valige ristkülikukujuline ala</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities inside a rectangle</source>
         <translation type="unfinished">(De-)valib kõik ristküliku sees olevad objektid</translation>
     </message>
@@ -11464,7 +11464,7 @@ is already in the list.</source>
         <translation type="unfinished">Kuju tööriistad</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Shape</source>
         <translation type="unfinished">Kuju</translation>
     </message>
@@ -11536,7 +11536,7 @@ is already in the list.</source>
         <translation type="unfinished">Polügoon (keskus, külg)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and middle point of side</source>
         <translation type="unfinished">Joonista regulaarne hulknurk keskpunktist ja külje keskpunktist</translation>
     </message>
@@ -11579,7 +11579,7 @@ is already in the list.</source>
         <translation type="unfinished">Polügoon (külg, külg)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from middle points of two opposite sides or two opposite corners</source>
         <translation type="unfinished">Joonista regulaarne hulknurk kahe vastaskülje või kahe vastaskülje nurga keskpunktidest</translation>
     </message>
@@ -11607,7 +11607,7 @@ is already in the list.</source>
         <translation type="unfinished">Polügoon (keskus, nurk)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and corner point</source>
         <translation type="unfinished">Joonista regulaarne hulknurk keskpunktist ja nurgapunktist</translation>
     </message>
@@ -11635,7 +11635,7 @@ is already in the list.</source>
         <translation type="unfinished">Polügoon (2 külgpunkti)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from end points of one side</source>
         <translation type="unfinished">Joonista ühe külje otspunktidest korrapärane hulknurk</translation>
     </message>
@@ -11653,7 +11653,7 @@ is already in the list.</source>
         <translation type="unfinished">Ristkülikukujuline</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle from two corners</source>
         <translation type="unfinished">Joonista ristkülik kahest nurgast</translation>
     </message>
@@ -11694,7 +11694,7 @@ is already in the list.</source>
         <translation type="unfinished">Ristkülik koos suurusega</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle with position and size</source>
         <translation type="unfinished">Joonista ristkülik koos asukoha ja suurusega</translation>
     </message>
@@ -11752,7 +11752,7 @@ is already in the list.</source>
         <translation type="unfinished">Snap Tools</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+25"/>
         <source>&amp;Snap</source>
         <translation type="unfinished">Snap</translation>
     </message>
@@ -11920,7 +11920,7 @@ is already in the list.</source>
         <translation type="unfinished">Distance Manual</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Snap distance between 2 points</source>
         <translation type="unfinished">2 punkti vaheline kaugus</translation>
     </message>
@@ -12070,7 +12070,7 @@ is already in the list.</source>
         <translation type="unfinished">Spline tööriistad</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Spline</source>
         <translation type="unfinished">Spline</translation>
     </message>
@@ -12118,7 +12118,7 @@ is already in the list.</source>
         <translation type="unfinished">Spline (kontrollpunktid)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw spline from control points</source>
         <translation type="unfinished">Spline&apos;i joonistamine kontrollpunktidest</translation>
     </message>
@@ -12332,7 +12332,7 @@ is already in the list.</source>
         <translation type="unfinished">Tekst</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text</source>
         <translation type="unfinished">Joonista tekst</translation>
     </message>
@@ -12455,7 +12455,7 @@ is already in the list.</source>
         <translation type="unfinished">Tekst mööda üksust</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text along an entity</source>
         <translation type="unfinished">Teksti joonistamine piki üksust</translation>
     </message>
@@ -13043,7 +13043,7 @@ is already in the list.</source>
         <translation type="unfinished">Liikumine / kopeerimine</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+9"/>
         <source>Move or copy entities once or multiple times</source>
         <translation type="unfinished">Üksuste liigutamine või kopeerimine üks või mitu korda</translation>
     </message>
@@ -13411,7 +13411,7 @@ is already in the list.</source>
         <translation type="unfinished">Tööriistade vaatamine</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>View</source>
         <translation type="unfinished">Vaata</translation>
     </message>
@@ -13885,7 +13885,7 @@ is already in the list.</source>
         <translation type="unfinished">Horisontaalne ehitusliin</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal construction line</source>
         <translation type="unfinished">Joonistage horisontaalne ehitusjoon</translation>
     </message>
@@ -13898,7 +13898,7 @@ is already in the list.</source>
         <translation type="unfinished">Vertikaalne ehitusliin</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical construction line</source>
         <translation type="unfinished">Joonistage vertikaalne ehitusjoon</translation>
     </message>
@@ -13916,7 +13916,7 @@ is already in the list.</source>
         <translation type="unfinished">Zoom tööriistad</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Zoom</source>
         <translation type="unfinished">Zoom</translation>
     </message>

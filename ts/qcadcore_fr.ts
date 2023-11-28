@@ -227,7 +227,7 @@
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation>Échelle du type de la ligne</translation>
+        <translation>Échelle du type de ligne</translation>
     </message>
     <message>
         <location line="+1"/>

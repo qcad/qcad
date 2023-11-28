@@ -3,7 +3,6 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/TranslateRotate.js");
-    action.setIcon(basePath + "/TranslateRotate.svg");
     action.setDefaultShortcut(new QKeySequence("m,r"));
     action.setDefaultCommands(["moverotate", "mr"]);
     action.setGroupSortOrder(13100);

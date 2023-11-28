@@ -2,7 +2,6 @@ function init(basePath) {
     var action = new RGuiAction(qsTranslate("SnapDistance", "&Distance"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/SnapDistance.js");
-    action.setIcon(basePath + "/SnapDistance.svg");
     action.setDefaultShortcut(new QKeySequence("s,d"));
     action.setDefaultCommands(["snapdistance", "sd"]);
     action.setGroup("snaps");

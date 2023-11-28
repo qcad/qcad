@@ -2,7 +2,6 @@ function init(basePath) {
     var action = new RGuiAction(qsTranslate("SnapSelectionCenter", "Center of &Selection"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/SnapSelectionCenter.js");
-    action.setIcon(basePath + "/SnapSelectionCenter.svg");
     action.setDefaultShortcut(new QKeySequence("s,k"));
     action.setDefaultCommands(["snapselectioncenter", "sk"]);
     //action.setGroup("snaps");

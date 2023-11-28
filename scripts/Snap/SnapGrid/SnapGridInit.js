@@ -2,7 +2,6 @@ function init(basePath) {
     var action = new RGuiAction(qsTranslate("SnapGrid", "&Grid"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/SnapGrid.js");
-    action.setIcon(basePath + "/SnapGrid.svg");
     action.setDefaultShortcut(new QKeySequence("s,g"));
     action.setDefaultCommands(["snapgrid", "sg"]);
     action.setGroup("snaps");

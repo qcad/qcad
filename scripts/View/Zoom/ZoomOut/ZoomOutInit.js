@@ -2,7 +2,6 @@ function init(basePath) {
     var action = new RGuiAction(qsTranslate("ZoomOut", "Zoom &Out"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/ZoomOut.js");
-    action.setIcon(basePath + "/ZoomOut.svg");
     action.setDefaultShortcuts([
         new QKeySequence("-"),
         new QKeySequence(QKeySequence.ZoomOut)

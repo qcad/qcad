@@ -325,7 +325,7 @@ aby se změny předvoleb projevily.</translation>
         <translation>&amp;Přidat prázdný blok</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Add new empty block</source>
         <translation>Přidat nový prázdný blok</translation>
     </message>
@@ -412,7 +412,7 @@ aby se změny předvoleb projevily.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1986"/>
+        <location filename="../scripts/Apollonius.js" line="+1989"/>
         <source>Invalid radius</source>
         <translation>Neplatný poloměr</translation>
     </message>
@@ -438,7 +438,7 @@ aby se změny předvoleb projevily.</translation>
         <translation>Nástroje oblouku</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Arc</source>
         <translation>&amp;Oblouk</translation>
     </message>
@@ -491,7 +491,7 @@ aby se změny předvoleb projevily.</translation>
         <translation>&amp;2 Body a úhel</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and angle</source>
         <translation>Nakreslit oblouk z 2 bodů a úhlu</translation>
     </message>
@@ -544,7 +544,7 @@ aby se změny předvoleb projevily.</translation>
         <translation>2 body a &amp;Výška</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and height</source>
         <translation>Nakreslit oblouk z 2 bodů a výšky</translation>
     </message>
@@ -602,7 +602,7 @@ aby se změny předvoleb projevily.</translation>
         <translation>&amp;2 body a délka</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and length</source>
         <translation>Nakreslit oblouk z 2 bodů a délky</translation>
     </message>
@@ -670,7 +670,7 @@ aby se změny předvoleb projevily.</translation>
         <translation>&amp;2 Body a úhel</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and radius</source>
         <translation>Nakreslit oblouk z 2 bodů a úhlu</translation>
     </message>
@@ -698,7 +698,7 @@ aby se změny předvoleb projevily.</translation>
         <translation>&amp;3 body</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 3 points</source>
         <translation>Nakreslit oblouk ze 3 bodů</translation>
     </message>
@@ -751,7 +751,7 @@ aby se změny předvoleb projevily.</translation>
         <translation>&amp;Střed, bod, úhly</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from center, point on arc and angles</source>
         <translation>Nakreslit oblouk ze středu, bodu na oblouku a úhlech</translation>
     </message>
@@ -774,7 +774,7 @@ aby se změny předvoleb projevily.</translation>
         <translation>&amp;Soustředný (se vzdáleností)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc</source>
         <translation>Nakreslit soustředný oblouk</translation>
     </message>
@@ -792,7 +792,7 @@ aby se změny předvoleb projevily.</translation>
         <translation>&amp;Soustředný (skrz bod)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc through point</source>
         <translation>Nakreslit soustředný oblouk skrz bod</translation>
     </message>
@@ -831,7 +831,7 @@ aby se změny předvoleb projevily.</translation>
         <translation>&amp;Tečna, bod, poloměr</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to entity, through point with radius</source>
         <translation>Nakreslit oblouk pomocí bodu s poloměrem</translation>
     </message>
@@ -859,7 +859,7 @@ aby se změny předvoleb projevily.</translation>
         <translation>Spojení &amp;tečen</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to base entity</source>
         <translation>Nakreslit oblouk tangenciálně k základu</translation>
     </message>
@@ -1045,7 +1045,7 @@ Přejete si ho obnovit?</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>&amp;Batch2Pdf visible layout blocks</source>
         <translation type="unfinished">&amp;Batch2Pdf viditelné bloky rozvržení</translation>
     </message>
@@ -1241,7 +1241,7 @@ Přejete si ho obnovit?</translation>
         <translation>Nástroje bloku</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+109"/>
         <source>Cannot edit block while editing a block in-place</source>
         <translation type="unfinished">Nelze upravit blok při úpravě bloku na místě</translation>
     </message>
@@ -1321,7 +1321,7 @@ Přejete si ho obnovit?</translation>
     <message>
         <location line="+0"/>
         <location line="+63"/>
-        <location line="+44"/>
+        <location line="+43"/>
         <source>Block List</source>
         <translation>Seznam bloků</translation>
     </message>
@@ -1619,7 +1619,7 @@ Přejete si ho obnovit?</translation>
         <translation>Nástroje kružnice</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Circle</source>
         <translation>&amp;Kružnice</translation>
     </message>
@@ -1647,7 +1647,7 @@ Přejete si ho obnovit?</translation>
         <translation>&amp;2 Body</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from 2 diametrically opposite points</source>
         <translation>Nakreslit oblouk z 2 diametrálně protějších bodů</translation>
     </message>
@@ -1700,7 +1700,7 @@ Přejete si ho obnovit?</translation>
         <translation>&amp;2 Body a poloměr</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 2 points and radius</source>
         <translation>Nakreslit kružnici z 2 bodů a poloměru</translation>
     </message>
@@ -1739,7 +1739,7 @@ Přejete si ho obnovit?</translation>
         <translation>2 Tečny a bod</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation>Nakreslit kružnici dotýkající se dvou prvků skrz bod</translation>
     </message>
@@ -1777,7 +1777,7 @@ Přejete si ho obnovit?</translation>
         <translation>2 &amp;Tečny a poloměr</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to two entities with given radius</source>
         <translation>Nakreslit kružnici dotýkající se dvou prvků a daným poloměrem</translation>
     </message>
@@ -1805,7 +1805,7 @@ Přejete si ho obnovit?</translation>
         <translation>&amp;3 Body</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 3 points</source>
         <translation>Nakreslit kružnici pomocí 3 bodů</translation>
     </message>
@@ -1844,7 +1844,7 @@ Přejete si ho obnovit?</translation>
         <translation>3 Tečny</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to three entities</source>
         <translation>Nakreslit kružnici dotýkající se tří prvků</translation>
     </message>
@@ -1874,7 +1874,7 @@ Přejete si ho obnovit?</translation>
         <translation>Střed, &amp;průměr</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and diameter</source>
         <translation>Nakreslit kružnici pomocí středu a průměru</translation>
     </message>
@@ -1897,7 +1897,7 @@ Přejete si ho obnovit?</translation>
         <translation>&amp;Střed, bod</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from center and point on circle</source>
         <translation>Nakreslit kružnici pomocí středu a bodu na kružnici</translation>
     </message>
@@ -1927,7 +1927,7 @@ Přejete si ho obnovit?</translation>
         <translation>Střed, &amp;poloměr</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and radius</source>
         <translation>Nakreslit kružnici pomocí středu a poloměru</translation>
     </message>
@@ -1950,7 +1950,7 @@ Přejete si ho obnovit?</translation>
         <translation>&amp;Soustředná (se vzdáleností)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric circle</source>
         <translation>Nakreslit soustřednou kružnici</translation>
     </message>
@@ -1968,7 +1968,7 @@ Přejete si ho obnovit?</translation>
         <translation>Soustředná (skrz &amp;bod)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw concentric circle through point</source>
         <translation>Nakreslit soustřednou kružnici skrz bod</translation>
     </message>
@@ -2007,7 +2007,7 @@ Přejete si ho obnovit?</translation>
         <translation>&amp;Tečna a 2 body</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle through two points and tangential to one entity</source>
         <translation>Nakreslit kružnici skrz 2 body a dotýkající se jednoho prvku</translation>
     </message>
@@ -2030,7 +2030,7 @@ Přejete si ho obnovit?</translation>
         <translation>&amp;Tečna, bod, poloměr</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to entity, through point with radius</source>
         <translation>Nakreslit kružnici dotýkající se prvku, skrz bod a s poloměrem</translation>
     </message>
@@ -2137,18 +2137,18 @@ Přejete si ho obnovit?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+68"/>
+        <location line="+67"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Příkazový řádek</translation>
     </message>
     <message>
-        <location line="-21"/>
+        <location line="-20"/>
         <source>&amp;Command Line</source>
         <translation>&amp;Příkazový řádek</translation>
     </message>
     <message>
-        <location line="+208"/>
+        <location line="+207"/>
         <source>Invalid value:</source>
         <translation>Neplatná hodnota:</translation>
     </message>
@@ -2280,7 +2280,7 @@ Přejete si ho obnovit?</translation>
         <translation>Převést &amp;jednotku výkresu</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Convert drawing to a different drawing unit</source>
         <translation>Převést výkres na jinou jednotku</translation>
     </message>
@@ -2392,7 +2392,7 @@ Přejete si ho obnovit?</translation>
         <translation>&amp;Čítač</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Auto increment number</source>
         <translation>Automaticky zvýšit číslo</translation>
     </message>
@@ -2423,7 +2423,7 @@ Přejete si ho obnovit?</translation>
         <translation>Centrální kříž</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
         <translation>Nakreslit centrální kříž v obloucích, kružnicích nebo elipsách</translation>
     </message>
@@ -2569,7 +2569,7 @@ Přejete si ho obnovit?</translation>
         <translation>Zr&amp;ušit celý výběr</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Deselect all entities</source>
         <translation>Zrušit výběr objektů</translation>
     </message>
@@ -2710,7 +2710,7 @@ Přejete si ho obnovit?</translation>
         <translation>&amp;Zarovnaná</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw aligned dimension</source>
         <translation>Nakreslit zarovnanou kótu</translation>
     </message>
@@ -2738,7 +2738,7 @@ Přejete si ho obnovit?</translation>
         <translation>&amp;Úhlová</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angular dimension</source>
         <translation>Nakreslit úhlovou kótu</translation>
     </message>
@@ -2766,7 +2766,7 @@ Přejete si ho obnovit?</translation>
         <translation>&amp;Průměrová</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw diametric dimension</source>
         <translation>Nakreslit kótu průměru</translation>
     </message>
@@ -2779,7 +2779,7 @@ Přejete si ho obnovit?</translation>
         <translation>&amp;Vodorovná</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw horizontal dimension</source>
         <translation>Nakreslit vodorovnou kótu</translation>
     </message>
@@ -2802,7 +2802,7 @@ Přejete si ho obnovit?</translation>
         <translation>&amp;Souřadnicová (X/Y)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+3"/>
         <source>Draw ordinate dimension</source>
         <translation>Nakreslit souřadnicovou kótu</translation>
     </message>
@@ -2825,7 +2825,7 @@ Přejete si ho obnovit?</translation>
         <translation>&amp;Radiální</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw radial dimension</source>
         <translation>Nakreslit radiální kótu</translation>
     </message>
@@ -2880,7 +2880,7 @@ Přejete si ho obnovit?</translation>
         <translation>&amp;Natočená (lineární)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw linear dimension at a fixed angle</source>
         <translation>Nakreslit lineární kótu pod pevným úhlem</translation>
     </message>
@@ -2893,7 +2893,7 @@ Přejete si ho obnovit?</translation>
         <translation>&amp;Svislá</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw vertical dimension</source>
         <translation>Nakreslit svislou kótu</translation>
     </message>
@@ -2956,7 +2956,7 @@ Přejete si ho obnovit?</translation>
         <translation>Nástroje kót</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>D&amp;imension</source>
         <translation>&amp;Kóty</translation>
     </message>
@@ -3477,7 +3477,7 @@ již v seznamu je.</translation>
         <translation type="unfinished">Draw Fms Lanes</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
         <translation type="unfinished">Losování jízdních pruhů FMS (žebra)</translation>
     </message>
@@ -4078,7 +4078,7 @@ již v seznamu je.</translation>
         <translation type="unfinished">&amp;Kreslení z CSV</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Draws entities based on textual entries in a CSV file</source>
         <translation type="unfinished">Kreslí entity na základě textových záznamů v souboru CSV</translation>
     </message>
@@ -4086,7 +4086,7 @@ již v seznamu je.</translation>
 <context>
     <name>DrawOrder</name>
     <message>
-        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+92"/>
+        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
         <translation>Pořadí &amp;vykreslování</translation>
     </message>
@@ -4184,7 +4184,7 @@ již v seznamu je.</translation>
         <translation>&amp;Nakreslit lomenou čáru</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw polyline with line and arc segments</source>
         <translation>Nakreslit lomenou čáru s úsečkami a obloukovými segmenty</translation>
     </message>
@@ -4372,7 +4372,7 @@ již v seznamu je.</translation>
         <translation>&amp;Skript Shell</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+34"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
         <translation>Skript Shell</translation>
@@ -4401,7 +4401,7 @@ již v seznamu je.</translation>
         <translation>Editační nástroje</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Edit</source>
         <translation>Upr&amp;avit</translation>
     </message>
@@ -4479,7 +4479,7 @@ již v seznamu je.</translation>
         <translation>Upravit te&amp;xt</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Edit text</source>
         <translation>Upravit text</translation>
     </message>
@@ -4492,7 +4492,7 @@ již v seznamu je.</translation>
         <translation>Nástroje elipsy</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Ellipse</source>
         <translation>&amp;Elipsa</translation>
     </message>
@@ -4590,7 +4590,7 @@ již v seznamu je.</translation>
         <translation>&amp;Eliptický oblouk</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw ellipse arc from center, major point, ratio and angles</source>
         <translation>Nakreslit eliptický oblouk pomocí středu, hlavního bodu, poměru a úhlů</translation>
     </message>
@@ -4603,7 +4603,7 @@ již v seznamu je.</translation>
         <translation>&amp;Elipsa (střed, bod, poměr)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw full ellipse from center, major point and ratio</source>
         <translation>Nakreslit celou elipsu pomocí středu, hlavního bodu a poměru</translation>
     </message>
@@ -4639,7 +4639,7 @@ již v seznamu je.</translation>
         <translation>Elipsa s &amp;průměry</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and diameters</source>
         <translation>Nakreslit elipsu pomocí pozice a průměrů</translation>
     </message>
@@ -4672,7 +4672,7 @@ již v seznamu je.</translation>
         <translation>Vepsaná do čtyřúhelníku</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse inscribed in quadrilateral</source>
         <translation>Nakreslit elipsu vepsanou do čtyřúhelníku</translation>
     </message>
@@ -4695,7 +4695,7 @@ již v seznamu je.</translation>
         <translation>&amp;Paralelní křivka (se vzdáleností)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse</source>
         <translation>Nakreslit paralelní křivku k elipse</translation>
     </message>
@@ -4713,7 +4713,7 @@ již v seznamu je.</translation>
         <translation>Paralelní křivka (&amp;skrz bod)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse through point</source>
         <translation>Nakreslit paralelní křivku k elipse skrz bod</translation>
     </message>
@@ -4749,7 +4749,7 @@ již v seznamu je.</translation>
         <translation>Elipsa s polomě&amp;ry</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and radii</source>
         <translation>Nakreslit elipsu pomocí pozice a poloměrů</translation>
     </message>
@@ -4874,7 +4874,7 @@ již v seznamu je.</translation>
         <translation>&amp;Rybinový spoj</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation>Nakreslit rybinový spoj</translation>
     </message>
@@ -5042,7 +5042,7 @@ již v seznamu je.</translation>
         <translation>Tři body</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw three points</source>
         <translation>Nakreslit tři body</translation>
     </message>
@@ -5190,7 +5190,7 @@ již v seznamu je.</translation>
         <translation>Souborové nástroje</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;File</source>
         <translation>&amp;Soubor</translation>
     </message>
@@ -6310,7 +6310,7 @@ již v seznamu je.</translation>
         <translation>Nástroje šrafování</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Hatch</source>
         <translation>&amp;Šrafování</translation>
     </message>
@@ -6381,7 +6381,7 @@ již v seznamu je.</translation>
         <translation>&amp;Vyšrafovat výběr</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Create hatch or solid fill from selected boundary</source>
         <translation>Vytvořit šrafy nebo pevnou výplň z vybraných hranic</translation>
     </message>
@@ -6620,7 +6620,7 @@ již v seznamu je.</translation>
         <translation type="unfinished">Přidání vlastního 2D centroidu</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Create a customizable 2D Centroid marker</source>
         <translation type="unfinished">Vytvoření přizpůsobitelné 2D centroidní značky</translation>
     </message>
@@ -6950,7 +6950,7 @@ již v seznamu je.</translation>
         <translation type="unfinished">Centroid oblasti</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create an area 2D Centroid for a selected entity</source>
         <translation type="unfinished">Vytvoření plošného 2D centroidu pro vybranou entitu</translation>
     </message>
@@ -7072,7 +7072,7 @@ již v seznamu je.</translation>
         <translation type="unfinished">Posluchač centroidů</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
         <translation type="unfinished">(De-)aktivace posluchače transakcí pro 2D centroidy</translation>
     </message>
@@ -7325,7 +7325,7 @@ již v seznamu je.</translation>
         <translation type="unfinished">Součet 2D centroidů vážený</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Combine selected 2D Centroid markers weighted</source>
         <translation type="unfinished">Kombinovat vybrané 2D centroidní značky vážené</translation>
     </message>
@@ -7425,7 +7425,7 @@ již v seznamu je.</translation>
         <translation type="unfinished">Centroid drátu</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create a wire 2D Centroid for a selection</source>
         <translation type="unfinished">Vytvoření drátového 2D centroidu pro výběr</translation>
     </message>
@@ -7443,7 +7443,7 @@ již v seznamu je.</translation>
         <translation>Informační nástroje</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Info</source>
         <translation>&amp;Informace</translation>
     </message>
@@ -7771,7 +7771,7 @@ již v seznamu je.</translation>
         <translation>&amp;Invertovat výběr</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Invert the current selection</source>
         <translation>Invertovat aktuální výběr</translation>
     </message>
@@ -7978,7 +7978,7 @@ již v seznamu je.</translation>
         <translation>Nástroje vrstev</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Layer</source>
         <translation>&amp;Vrstva</translation>
     </message>
@@ -8117,12 +8117,12 @@ již v seznamu je.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+110"/>
+        <location line="+109"/>
         <source>Layer List</source>
         <translation>Seznam vrstev</translation>
     </message>
     <message>
-        <location line="-55"/>
+        <location line="-54"/>
         <source>&amp;Layer List</source>
         <translation>Seznam &amp;vrstev</translation>
     </message>
@@ -8160,7 +8160,7 @@ již v seznamu je.</translation>
         <translation>&amp;Odkazová čára</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
         <translation>Nakreslit odkazovou čáru (sekvence čar s šipkou)</translation>
     </message>
@@ -8209,7 +8209,7 @@ již v seznamu je.</translation>
         <translation>Nástroje čar</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Line</source>
         <translation>&amp;Čára</translation>
     </message>
@@ -8287,7 +8287,7 @@ již v seznamu je.</translation>
         <translation>Čára zadaná &amp;2 body</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single line or sequence of lines</source>
         <translation>Nakreslit jednu čáru nebo sekvenci čar</translation>
     </message>
@@ -8340,7 +8340,7 @@ již v seznamu je.</translation>
         <translation>Čára z Ú&amp;hlu</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line at a given absolute angle</source>
         <translation>Nakreslit čáru v daném absolutním úhlu</translation>
     </message>
@@ -8378,7 +8378,7 @@ již v seznamu je.</translation>
         <translation>Dělit úhel</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angle bisector, trisector, ...</source>
         <translation>Nakreslit dvojdělení, trojdělení úhlu, ...</translation>
     </message>
@@ -8436,7 +8436,7 @@ již v seznamu je.</translation>
         <translation>Spojení hranoly ze 2 bodů</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
         <translation>Nakreslit spojení hranoly</translation>
     </message>
@@ -8459,7 +8459,7 @@ již v seznamu je.</translation>
         <translation>&amp;Rybinový spoj ze 2 bodů</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation>Nakreslit rybinový spoj</translation>
     </message>
@@ -8502,7 +8502,7 @@ již v seznamu je.</translation>
         <translation>&amp;Čára volnou rukou</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw freehand line</source>
         <translation>Nakreslit čáru volnou rukou</translation>
     </message>
@@ -8540,7 +8540,7 @@ již v seznamu je.</translation>
         <translation>&amp;Vodorovná čára</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal line</source>
         <translation>Nakreslit vodorovnou čáru</translation>
     </message>
@@ -8578,7 +8578,7 @@ již v seznamu je.</translation>
         <translation>&amp;Kolmice</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to base entity</source>
         <translation>Nakreslit čáru kolmo k základnímu prvku</translation>
     </message>
@@ -8606,7 +8606,7 @@ již v seznamu je.</translation>
         <translation>Kolmice/teč&amp;na</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to line and tangent to circle, arc or ellipse</source>
         <translation>Nakreslit kolmici k čáře a tečnu ke kružnici, oblouku nebo elipsy</translation>
     </message>
@@ -8629,7 +8629,7 @@ již v seznamu je.</translation>
         <translation>&amp;Rovnoběžka (se vzdáleností)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
         <translation>Nakreslit rovnoběžně s existující čárou nebo soustředným obloukem, kružnicí</translation>
     </message>
@@ -8647,7 +8647,7 @@ již v seznamu je.</translation>
         <translation>R&amp;ovnoběžka (skrz bod)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
         <translation>Nakreslit rovnoběžku, soustředný oblouk nebo kružnici skrz daný bod</translation>
     </message>
@@ -8723,7 +8723,7 @@ již v seznamu je.</translation>
         <translation>R&amp;elativní úhel</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line with relative angle to base entity</source>
         <translation>Nakreslit čáru s relativním úhlem k základnímu prvku</translation>
     </message>
@@ -8764,7 +8764,7 @@ již v seznamu je.</translation>
         <translation>&amp;Tečna (bod, kružnice)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (point, circle)</source>
         <translation>Nakreslit tečnu (bod, kružnice)</translation>
     </message>
@@ -8792,7 +8792,7 @@ již v seznamu je.</translation>
         <translation>&amp;Tečna (dvě kružnice)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (circle, circle)</source>
         <translation>Nakreslit tečnu (kružnice, kružnice)</translation>
     </message>
@@ -8805,7 +8805,7 @@ již v seznamu je.</translation>
         <translation>&amp;Svislá čára</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical line</source>
         <translation>Nakreslit svislou čáru</translation>
     </message>
@@ -8997,7 +8997,7 @@ již v seznamu je.</translation>
         <translation>Různé nástroje</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc</source>
         <translation>Různé</translation>
     </message>
@@ -9020,7 +9020,7 @@ již v seznamu je.</translation>
         <translation>Různé nástroje pro bloky</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Block</source>
         <translation>&amp;Blok</translation>
     </message>
@@ -9038,7 +9038,7 @@ již v seznamu je.</translation>
         <translation>Různé nástroje vývojáře</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>De&amp;velopment</source>
         <translation>&amp;Vývoj</translation>
     </message>
@@ -9056,7 +9056,7 @@ již v seznamu je.</translation>
         <translation>Různé nástroje kreslení</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc Draw</source>
         <translation>Různé kreslení</translation>
     </message>
@@ -9079,7 +9079,7 @@ již v seznamu je.</translation>
         <translation>Různé nástroje Importu / Exportu</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Import/Export</source>
         <translation>&amp;Import/Export</translation>
     </message>
@@ -9097,7 +9097,7 @@ již v seznamu je.</translation>
         <translation type="unfinished">Různé informační nástroje</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Information</source>
         <translation type="unfinished">Informace</translation>
     </message>
@@ -9115,7 +9115,7 @@ již v seznamu je.</translation>
         <translation>Různé nástroje pro úpravy</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Modify</source>
         <translation>&amp;Úpravy</translation>
     </message>
@@ -9133,7 +9133,7 @@ již v seznamu je.</translation>
         <translation>Různé nástroje pro výběr</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Select</source>
         <translation>&amp;Výběr</translation>
     </message>
@@ -9146,7 +9146,7 @@ již v seznamu je.</translation>
         <translation>Nástroje úprav</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Modify</source>
         <translation>&amp;Úpravy</translation>
     </message>
@@ -9403,7 +9403,7 @@ již v seznamu je.</translation>
         <translation>Posunout (se vzdáleností)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse</source>
         <translation>Posunout čáru, oblouk, kružnici nebo elipsu</translation>
     </message>
@@ -9426,7 +9426,7 @@ již v seznamu je.</translation>
         <translation>Posunout (skrz bod)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse through point</source>
         <translation>Posunout čáru, oblouk, kružnici nebo elipsu skrz bod</translation>
     </message>
@@ -9454,7 +9454,7 @@ již v seznamu je.</translation>
         <translation>&amp;Otevřít</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open an existing drawing</source>
         <translation>Otevřít existující výkres</translation>
     </message>
@@ -9664,7 +9664,7 @@ již v seznamu je.</translation>
         <translation>P&amp;DF Export</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Exports the current drawing as PDF</source>
         <translation>Exportovat aktuální výkres jako PDF</translation>
     </message>
@@ -9698,7 +9698,7 @@ již v seznamu je.</translation>
         <translation>Nástroje bodu</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Point</source>
         <translation>&amp;Bod</translation>
     </message>
@@ -9716,7 +9716,7 @@ již v seznamu je.</translation>
         <translation>Samostatný &amp;Bod</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single point</source>
         <translation>Nakreslit samostatný bod</translation>
     </message>
@@ -9789,7 +9789,7 @@ již v seznamu je.</translation>
         <translation>Nástroje lomené čáry</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Polyline</source>
         <translation>&amp;Lomená čára</translation>
     </message>
@@ -9904,7 +9904,7 @@ již v seznamu je.</translation>
         <translation type="unfinished">&amp;Symbol přerušení polylinie ze 2 bodů</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a polyline break symbol from 2 points</source>
         <translation type="unfinished">Nakreslete symbol přerušení polylinie ze 2 bodů</translation>
     </message>
@@ -9963,7 +9963,7 @@ již v seznamu je.</translation>
         <translation>&amp;Tisk</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current drawing</source>
         <translation>Tisk aktuálního výkresu</translation>
     </message>
@@ -9976,7 +9976,7 @@ již v seznamu je.</translation>
         <translation>Tisk &amp;současného pohledu</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current view</source>
         <translation>Tisk současného pohledu</translation>
     </message>
@@ -10124,7 +10124,7 @@ již v seznamu je.</translation>
         <translation>Ná&amp;hled tisku</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Preview how current drawing would be printed</source>
         <translation>Náhled jak bude vytištěn aktuální výkres</translation>
     </message>
@@ -10137,7 +10137,7 @@ již v seznamu je.</translation>
         <translation>Nástroje projekce</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Projection</source>
         <translation>&amp;Projekce</translation>
     </message>
@@ -10190,7 +10190,7 @@ již v seznamu je.</translation>
         <translation type="unfinished">Zobrazení rozšířených předvoleb stylů rozměrů</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+219"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+221"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10205,7 +10205,7 @@ již v seznamu je.</translation>
         <translation>Specifické vlastnosti</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+20"/>
         <source>Dependent Entities</source>
         <translation>Závislé prvky</translation>
     </message>
@@ -10265,7 +10265,7 @@ již v seznamu je.</translation>
         <translation>Ne</translation>
     </message>
     <message>
-        <location line="+393"/>
+        <location line="+402"/>
         <source>*VARIES*</source>
         <translation>*RŮZNÉ*</translation>
     </message>
@@ -10277,7 +10277,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+0"/>
         <location line="+57"/>
-        <location line="+11"/>
+        <location line="+10"/>
         <source>Property Editor</source>
         <translation>Editor vlastností</translation>
     </message>
@@ -10292,7 +10292,7 @@ již v seznamu je.</translation>
         <translation>Všeobecné vlastnosti</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+31"/>
         <source>Color:</source>
         <translation>Barva:</translation>
     </message>
@@ -10771,7 +10771,7 @@ již v seznamu je.</translation>
         <translation>S&amp;pustit skript</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open and run a script file</source>
         <translation>Otevřít a spustit soubor skriptu</translation>
     </message>
@@ -11093,7 +11093,7 @@ již v seznamu je.</translation>
         <translation>Nástroje výběru</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+13"/>
         <source>Selection Tools Panel</source>
         <translation>Panel nástrojů výběru</translation>
     </message>
@@ -11111,7 +11111,7 @@ již v seznamu je.</translation>
         <translation>&amp;Vybrat vše</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Select all visible entities</source>
         <translation>Vybrat všechny viditelné objekty</translation>
     </message>
@@ -11229,7 +11229,7 @@ již v seznamu je.</translation>
         <translation>Vybrat &amp;obrys</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select connected entities</source>
         <translation>Vybrat propojené objekty</translation>
     </message>
@@ -11277,7 +11277,7 @@ již v seznamu je.</translation>
         <translation>Vybrat protínající se objekty</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities intersected by a line</source>
         <translation>Vybrat všechny objekty protínající se čárou</translation>
     </message>
@@ -11338,7 +11338,7 @@ již v seznamu je.</translation>
         <translation>Vybrat &amp;vrstvu</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities on the same layer</source>
         <translation>Vybrat všechny objekty na stejné &amp;vrstvě</translation>
     </message>
@@ -11391,7 +11391,7 @@ již v seznamu je.</translation>
         <translation>Vybrat &amp;obdélníkem</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities inside a rectangle</source>
         <translation>Vybrat všechny objekty v obdélníku</translation>
     </message>
@@ -11479,7 +11479,7 @@ již v seznamu je.</translation>
         <translation>Nástroje obrazce</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Shape</source>
         <translation>&amp;Obrazec</translation>
     </message>
@@ -11551,7 +11551,7 @@ již v seznamu je.</translation>
         <translation>Pol&amp;ygon (Střed, strana)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and middle point of side</source>
         <translation>Nakreslit pravidelný polygon pomocí středu a středu strany</translation>
     </message>
@@ -11594,7 +11594,7 @@ již v seznamu je.</translation>
         <translation>Polygo&amp;n (strana, strana)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from middle points of two opposite sides or two opposite corners</source>
         <translation>Nakreslit pravidelný polygon ze středových bodů dvou protilehlých stran nebo dvou protilehlých rohů</translation>
     </message>
@@ -11622,7 +11622,7 @@ již v seznamu je.</translation>
         <translation>Pol&amp;ygon (Střed, vrchol)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and corner point</source>
         <translation>Nakreslit pravidelný polygon pomocí středu a vrcholu</translation>
     </message>
@@ -11650,7 +11650,7 @@ již v seznamu je.</translation>
         <translation>Polygo&amp;n (2 Body strany)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from end points of one side</source>
         <translation>Nakreslit pravidelný polygon pomocí koncových bodů jedné strany</translation>
     </message>
@@ -11663,7 +11663,7 @@ již v seznamu je.</translation>
         <translation>&amp;Obdélník</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle from two corners</source>
         <translation>Nakreslit obdélník pomocí 2 vrcholů</translation>
     </message>
@@ -11709,7 +11709,7 @@ již v seznamu je.</translation>
         <translation>Obdélník s &amp;velikostí</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle with position and size</source>
         <translation>Nakreslit obdélník pomocí pozice a velikosti</translation>
     </message>
@@ -11767,7 +11767,7 @@ již v seznamu je.</translation>
         <translation>Nástroje přichycení</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+25"/>
         <source>&amp;Snap</source>
         <translation>&amp;Přichycení</translation>
     </message>
@@ -11935,7 +11935,7 @@ již v seznamu je.</translation>
         <translation>Vz&amp;dálenost ručně</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Snap distance between 2 points</source>
         <translation>Vzdálenost přichycení mezi 2 body</translation>
     </message>
@@ -12085,7 +12085,7 @@ již v seznamu je.</translation>
         <translation>Nástroje křivky</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Spline</source>
         <translation>&amp;Křivka</translation>
     </message>
@@ -12133,7 +12133,7 @@ již v seznamu je.</translation>
         <translation>&amp;Křivka (kontrolní body)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw spline from control points</source>
         <translation>Nakreslit křivku z kontrolních bodů</translation>
     </message>
@@ -12347,7 +12347,7 @@ již v seznamu je.</translation>
         <translation>&amp;Text</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text</source>
         <translation>Vykreslit text</translation>
     </message>
@@ -12470,7 +12470,7 @@ již v seznamu je.</translation>
         <translation>&amp;Text podél prvku</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text along an entity</source>
         <translation>Nakreslit text podél prvku</translation>
     </message>
@@ -13059,7 +13059,7 @@ již v seznamu je.</translation>
         <translation>&amp;Přesunout / Kopírovat</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+9"/>
         <source>Move or copy entities once or multiple times</source>
         <translation>Přesunout nebo kopírovat prvky jednou nebo vícekrát</translation>
     </message>
@@ -13427,7 +13427,7 @@ již v seznamu je.</translation>
         <translation>Nástroje zobrazení</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>View</source>
         <translation>Zobrazit</translation>
     </message>
@@ -13901,7 +13901,7 @@ již v seznamu je.</translation>
         <translation>&amp;Vodorovná konstrukční přímka</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal construction line</source>
         <translation>Nakreslit vodorovnou konstrukční přímku</translation>
     </message>
@@ -13914,7 +13914,7 @@ již v seznamu je.</translation>
         <translation>&amp;Svislá konstrukční přímka</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical construction line</source>
         <translation>Nakreslit svislou konstrukční přímku</translation>
     </message>
@@ -13932,7 +13932,7 @@ již v seznamu je.</translation>
         <translation>Nástroje přiblížení</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Zoom</source>
         <translation>&amp;Přiblížení</translation>
     </message>

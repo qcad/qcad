@@ -35,7 +35,6 @@ IsometricGridRight.init = function(basePath) {
     var action = new RGuiAction(qsTr("&Right Projection"), RMainWindowQt.getMainWindow());
     action.setScriptFile(basePath + "/IsometricGridRight.js");
     action.setRequiresDocument(true);
-    action.setIcon(basePath + "/IsometricGridRight.svg");
     action.setDefaultShortcut(new QKeySequence("j,r"));
     action.setDefaultCommands(["isometricgridright", "jr"]);
     action.setGroup("isometricProjection");

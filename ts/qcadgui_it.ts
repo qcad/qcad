@@ -82,7 +82,7 @@
 <context>
     <name>RMathLineEdit</name>
     <message>
-        <location filename="../src/gui/RMathLineEdit.cpp" line="+186"/>
+        <location filename="../src/gui/RMathLineEdit.cpp" line="+188"/>
         <source>Invalid</source>
         <translation>Non valido</translation>
     </message>

@@ -72,7 +72,6 @@ Arc.getCadToolBarPanel = function() {
         action.setScriptFile(Arc.includeBasePath + "/Arc.js");
         action.objectName = actionName;
         action.setRequiresDocument(true);
-        action.setIcon(Arc.includeBasePath + "/Arc.svg");
         //action.setStatusTip(qsTr("Show arc tools"));
         action.setDefaultShortcut(new QKeySequence("w,a"));
         action.setNoState();

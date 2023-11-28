@@ -2,7 +2,6 @@ function init(basePath) {
     var action = new RGuiAction(qsTranslate("SnapCoordinate", "&Coordinate"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/SnapCoordinate.js");
-    action.setIcon(basePath + "/SnapCoordinate.svg");
     action.setDefaultShortcut(new QKeySequence("s,x"));
     action.setDefaultCommands(["snapcoordinate", "sx"]);
     action.setGroup("snaps");

@@ -77,7 +77,6 @@ CommandLine.init = function(basePath) {
     var action = new RGuiAction(qsTr("&Command Line"), appWin);
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/CommandLine.js");
-    action.setIcon(basePath + "/CommandLine.svg");
     action.setDefaultShortcut(new QKeySequence("g,m"));
     action.setDefaultCommands(["gm"]);
     action.setGroupSortOrder(3800);

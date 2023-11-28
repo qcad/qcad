@@ -325,7 +325,7 @@ the preference changes to take effect.</source>
         <translation>&amp;Lägg till tomt block</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Add new empty block</source>
         <translation>Lägg till ny tomt block</translation>
     </message>
@@ -412,7 +412,7 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1986"/>
+        <location filename="../scripts/Apollonius.js" line="+1989"/>
         <source>Invalid radius</source>
         <translation>Ogiltig radie</translation>
     </message>
@@ -438,7 +438,7 @@ the preference changes to take effect.</source>
         <translation>Bågverktyg</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Arc</source>
         <translation>&amp;Båge</translation>
     </message>
@@ -491,7 +491,7 @@ the preference changes to take effect.</source>
         <translation>&amp;2 Punkter och vinkel</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and angle</source>
         <translation>Rita båge med 2 punkter och vinkel</translation>
     </message>
@@ -524,7 +524,7 @@ the preference changes to take effect.</source>
         <translation>2 punkter och höjd</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and height</source>
         <translation>Rita en cirkelbåge utifrån 2 punkter och höjd</translation>
     </message>
@@ -582,7 +582,7 @@ the preference changes to take effect.</source>
         <translation>&amp;2 punkter och längd</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and length</source>
         <translation>Rita en cirkelbåge utifrån 2 punkter och längd</translation>
     </message>
@@ -670,7 +670,7 @@ the preference changes to take effect.</source>
         <translation>&amp;2 Punkter och radie</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and radius</source>
         <translation>Rita båge med 2 punkter och radie</translation>
     </message>
@@ -698,7 +698,7 @@ the preference changes to take effect.</source>
         <translation>&amp;3 Punkter</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 3 points</source>
         <translation>Rita båge från 3 punkter</translation>
     </message>
@@ -751,7 +751,7 @@ the preference changes to take effect.</source>
         <translation>&amp;Centrum, punkt, vinklar</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from center, point on arc and angles</source>
         <translation>Rita båge från centrum, punkt på båge och vinklar</translation>
     </message>
@@ -774,7 +774,7 @@ the preference changes to take effect.</source>
         <translation>&amp;Koncentriskt (med avstånd)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc</source>
         <translation>Rita koncentrisk båge</translation>
     </message>
@@ -792,7 +792,7 @@ the preference changes to take effect.</source>
         <translation>Koncentrisk (&amp;genom punkt)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc through point</source>
         <translation>Rita koncentrisk båge genom punkt</translation>
     </message>
@@ -831,7 +831,7 @@ the preference changes to take effect.</source>
         <translation>&amp;Tangera, punkt, radie</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to entity, through point with radius</source>
         <translation>Rita båge tangerat mot objekt, genom punkt med radie</translation>
     </message>
@@ -859,7 +859,7 @@ the preference changes to take effect.</source>
         <translation>&amp;Tangentiellt kopplad</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to base entity</source>
         <translation>Rita båge tangerat mot basobjekt</translation>
     </message>
@@ -1043,7 +1043,7 @@ Vill du återställa den?</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>&amp;Batch2Pdf visible layout blocks</source>
         <translation>Batch2Pdf synliga layoutblock</translation>
     </message>
@@ -1239,7 +1239,7 @@ Vill du återställa den?</translation>
         <translation>Blockverktyg</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+109"/>
         <source>Cannot edit block while editing a block in-place</source>
         <translation>Det går inte att redigera block när ett block redigeras på plats</translation>
     </message>
@@ -1319,7 +1319,7 @@ Vill du återställa den?</translation>
     <message>
         <location line="+0"/>
         <location line="+63"/>
-        <location line="+44"/>
+        <location line="+43"/>
         <source>Block List</source>
         <translation>Lista över block</translation>
     </message>
@@ -1617,7 +1617,7 @@ Vill du återställa den?</translation>
         <translation>Cirkelverktyg</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Circle</source>
         <translation>Cirkel</translation>
     </message>
@@ -1645,7 +1645,7 @@ Vill du återställa den?</translation>
         <translation>&amp;2 punkter</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from 2 diametrically opposite points</source>
         <translation>Rita en cirkel från 2 diametralt motsatta punkter</translation>
     </message>
@@ -1698,7 +1698,7 @@ Vill du återställa den?</translation>
         <translation>&amp;2 Punkter och radier</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 2 points and radius</source>
         <translation>Rita cirkel från 2 punkter och radie</translation>
     </message>
@@ -1737,7 +1737,7 @@ Vill du återställa den?</translation>
         <translation>2 Tan&amp;geringar och punkt</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation>Rita cirkel tangerat mot två objekt, genom punkt.</translation>
     </message>
@@ -1775,7 +1775,7 @@ Vill du återställa den?</translation>
         <translation>2 &amp;Tangering och radie</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to two entities with given radius</source>
         <translation>Rita cirkel tangerad mot två objekt med vald radie</translation>
     </message>
@@ -1803,7 +1803,7 @@ Vill du återställa den?</translation>
         <translation>&amp;3 Punkter</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 3 points</source>
         <translation>Rita en cirkel från 3 punkter</translation>
     </message>
@@ -1842,7 +1842,7 @@ Vill du återställa den?</translation>
         <translation>3 tangenter</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to three entities</source>
         <translation>Rita cirkel tangerat mot tre objekt</translation>
     </message>
@@ -1872,7 +1872,7 @@ Vill du återställa den?</translation>
         <translation>Centrum, &amp;Diameter</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and diameter</source>
         <translation>Rita cirkel från centrum och diameter</translation>
     </message>
@@ -1895,7 +1895,7 @@ Vill du återställa den?</translation>
         <translation>&amp;Centrum, punkt</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from center and point on circle</source>
         <translation>Rita en cirkel från centrum och en punkt på cirkeln</translation>
     </message>
@@ -1908,7 +1908,7 @@ Vill du återställa den?</translation>
         <translation>Centrum, &amp;Radie</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and radius</source>
         <translation>Rita cirkel från centrum och radie</translation>
     </message>
@@ -1948,7 +1948,7 @@ Vill du återställa den?</translation>
         <translation>&amp;Koncentrisk (med distans)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric circle</source>
         <translation>Rita koncentrisk cirkel</translation>
     </message>
@@ -1966,7 +1966,7 @@ Vill du återställa den?</translation>
         <translation>Koncentriskt (&amp;genom punkt)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw concentric circle through point</source>
         <translation>Rita koncentrisk cirkel genom punkt</translation>
     </message>
@@ -2005,7 +2005,7 @@ Vill du återställa den?</translation>
         <translation>&amp;Tangering och 2 punkter</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle through two points and tangential to one entity</source>
         <translation>Rita cirkel genom två punkter och tangera mot ett objekt</translation>
     </message>
@@ -2018,7 +2018,7 @@ Vill du återställa den?</translation>
         <translation>Tangent, punkt, radie</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to entity, through point with radius</source>
         <translation>Rita en cirkel tangentiellt till enheten, genom en punkt med radie</translation>
     </message>
@@ -2135,18 +2135,18 @@ Vill du återställa den?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+68"/>
+        <location line="+67"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Kommandorad</translation>
     </message>
     <message>
-        <location line="-21"/>
+        <location line="-20"/>
         <source>&amp;Command Line</source>
         <translation>Kommandorad</translation>
     </message>
     <message>
-        <location line="+208"/>
+        <location line="+207"/>
         <source>Invalid value:</source>
         <translation>Ogiltigt värde:</translation>
     </message>
@@ -2278,7 +2278,7 @@ Vill du återställa den?</translation>
         <translation>Konvertera ritningsenhet</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Convert drawing to a different drawing unit</source>
         <translation>Konvertera ritningen till en annan ritningsenhet</translation>
     </message>
@@ -2365,7 +2365,7 @@ Vill du återställa den?</translation>
         <translation>Mottagningen</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Auto increment number</source>
         <translation>Automatisk ökning av antalet</translation>
     </message>
@@ -2421,7 +2421,7 @@ Vill du återställa den?</translation>
         <translation>Mittlinje kors</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
         <translation>Rita centrumlinjer i bågar, cirklar eller ellipser</translation>
     </message>
@@ -2567,7 +2567,7 @@ Vill du återställa den?</translation>
         <translation>Avmarkera alla</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Deselect all entities</source>
         <translation>Avmarkera alla enheter</translation>
     </message>
@@ -2708,7 +2708,7 @@ Vill du återställa den?</translation>
         <translation>&amp;Justerad</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw aligned dimension</source>
         <translation>Rita justerad dimension</translation>
     </message>
@@ -2736,7 +2736,7 @@ Vill du återställa den?</translation>
         <translation>&amp;Vinkelformad</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angular dimension</source>
         <translation>Rita vinkelformad dimension</translation>
     </message>
@@ -2764,7 +2764,7 @@ Vill du återställa den?</translation>
         <translation>Diametrisk</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw diametric dimension</source>
         <translation>Rita diametralt mått</translation>
     </message>
@@ -2777,7 +2777,7 @@ Vill du återställa den?</translation>
         <translation>Horisontell</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw horizontal dimension</source>
         <translation>Rita horisontell dimension</translation>
     </message>
@@ -2800,7 +2800,7 @@ Vill du återställa den?</translation>
         <translation>Ordinat (X/Y)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+3"/>
         <source>Draw ordinate dimension</source>
         <translation>Rita ordinatdimensionen</translation>
     </message>
@@ -2823,7 +2823,7 @@ Vill du återställa den?</translation>
         <translation>&amp;Radiell</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw radial dimension</source>
         <translation>Rita radiell dimension</translation>
     </message>
@@ -2872,7 +2872,7 @@ Vill du återställa den?</translation>
         <translation>Roterad (linjär)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw linear dimension at a fixed angle</source>
         <translation>Rita linjära dimensioner i en fast vinkel</translation>
     </message>
@@ -2890,7 +2890,7 @@ Vill du återställa den?</translation>
         <translation>Vertikal</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw vertical dimension</source>
         <translation>Rita vertikal dimension</translation>
     </message>
@@ -2953,7 +2953,7 @@ Vill du återställa den?</translation>
         <translation>Verktyg för dimensioner</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>D&amp;imension</source>
         <translation>D&amp;imension</translation>
     </message>
@@ -3474,7 +3474,7 @@ finns redan i listan.</translation>
         <translation>Dragning Fms Lanes</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
         <translation>Dragning av FMS-banor (ribbor)</translation>
     </message>
@@ -4075,7 +4075,7 @@ finns redan i listan.</translation>
         <translation>Dra från CSV</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Draws entities based on textual entries in a CSV file</source>
         <translation>Ritar enheter baserat på textposter i en CSV-fil</translation>
     </message>
@@ -4083,7 +4083,7 @@ finns redan i listan.</translation>
 <context>
     <name>DrawOrder</name>
     <message>
-        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+92"/>
+        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
         <translation>Dragningsordning</translation>
     </message>
@@ -4181,7 +4181,7 @@ finns redan i listan.</translation>
         <translation>Rita polylinje</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw polyline with line and arc segments</source>
         <translation>Rita polylinje med linje- och bågsegment</translation>
     </message>
@@ -4368,7 +4368,7 @@ finns redan i listan.</translation>
         <translation>Skriptskal</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+34"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
         <translation>Skriptskal</translation>
@@ -4397,7 +4397,7 @@ finns redan i listan.</translation>
         <translation>Redigera verktyg</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Edit</source>
         <translation>Redigera</translation>
     </message>
@@ -4475,7 +4475,7 @@ finns redan i listan.</translation>
         <translation>Redigera text</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Edit text</source>
         <translation>Redigera text</translation>
     </message>
@@ -4488,7 +4488,7 @@ finns redan i listan.</translation>
         <translation>Ellipsverktyg</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Ellipse</source>
         <translation>&amp;Ellips</translation>
     </message>
@@ -4586,7 +4586,7 @@ finns redan i listan.</translation>
         <translation>&amp;Ellips båge</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw ellipse arc from center, major point, ratio and angles</source>
         <translation>Rita en ellipsbåge från centrum, huvudpunkt, förhållande och vinklar</translation>
     </message>
@@ -4599,7 +4599,7 @@ finns redan i listan.</translation>
         <translation>Ellips (centrum, punkt, förhållande)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw full ellipse from center, major point and ratio</source>
         <translation>Rita en hel ellips från centrum, huvudpunkt och förhållande</translation>
     </message>
@@ -4612,7 +4612,7 @@ finns redan i listan.</translation>
         <translation>Ellips med diametrar</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and diameters</source>
         <translation>Rita en ellips med position och diametrar</translation>
     </message>
@@ -4668,7 +4668,7 @@ finns redan i listan.</translation>
         <translation>Inskrivet i fyrsidigt</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse inscribed in quadrilateral</source>
         <translation>Rita ellips inskrivet i fyrsidigt</translation>
     </message>
@@ -4691,7 +4691,7 @@ finns redan i listan.</translation>
         <translation>&amp;Paralellkurva (med distans)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse</source>
         <translation>Rita en parallell kurva till en ellips</translation>
     </message>
@@ -4704,7 +4704,7 @@ finns redan i listan.</translation>
         <translation>Parallellkurva (genom en punkt)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse through point</source>
         <translation>Rita en parallell kurva till ellipsen genom punkten</translation>
     </message>
@@ -4722,7 +4722,7 @@ finns redan i listan.</translation>
         <translation>Ellips med radier</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and radii</source>
         <translation>Rita ellips med position och radie</translation>
     </message>
@@ -4870,7 +4870,7 @@ finns redan i listan.</translation>
         <translation>Sågad svans</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation>Rita en svartsvansförbindelse</translation>
     </message>
@@ -5038,7 +5038,7 @@ finns redan i listan.</translation>
         <translation>Tre punkter</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw three points</source>
         <translation>Dra tre poäng</translation>
     </message>
@@ -5185,7 +5185,7 @@ finns redan i listan.</translation>
         <translation>Verktyg för filer</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;File</source>
         <translation>Fil</translation>
     </message>
@@ -6305,7 +6305,7 @@ finns redan i listan.</translation>
         <translation>Verktyg för luckor</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Hatch</source>
         <translation>&amp;Lucka</translation>
     </message>
@@ -6376,7 +6376,7 @@ finns redan i listan.</translation>
         <translation>Hatch från urvalet</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Create hatch or solid fill from selected boundary</source>
         <translation>Skapa skraffering eller fyllning med fasta material från den valda gränsen</translation>
     </message>
@@ -6615,7 +6615,7 @@ finns redan i listan.</translation>
         <translation>Lägg till anpassad 2D-centroid</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Create a customizable 2D Centroid marker</source>
         <translation>Skapa en anpassningsbar 2D Centroid-markör</translation>
     </message>
@@ -6945,7 +6945,7 @@ finns redan i listan.</translation>
         <translation>&amp;Område centroid</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create an area 2D Centroid for a selected entity</source>
         <translation>Skapa ett område 2D Centroid för en vald enhet</translation>
     </message>
@@ -7067,7 +7067,7 @@ finns redan i listan.</translation>
         <translation>Centroid-lyssnare</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
         <translation>(Av-)aktivera en transaktionslyssnare för 2D-centrerade enheter</translation>
     </message>
@@ -7320,7 +7320,7 @@ finns redan i listan.</translation>
         <translation>Summa 2D Centroids viktad</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Combine selected 2D Centroid markers weighted</source>
         <translation>Kombinera utvalda 2D Centroid-markörer viktade</translation>
     </message>
@@ -7420,7 +7420,7 @@ finns redan i listan.</translation>
         <translation>&amp;Trådcentroid</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create a wire 2D Centroid for a selection</source>
         <translation>Skapa en tråd 2D-centroid för ett urval</translation>
     </message>
@@ -7438,7 +7438,7 @@ finns redan i listan.</translation>
         <translation>Informationsverktyg</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Info</source>
         <translation>Info</translation>
     </message>
@@ -7766,7 +7766,7 @@ finns redan i listan.</translation>
         <translation>Invertera val</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Invert the current selection</source>
         <translation>Invertera det aktuella urvalet</translation>
     </message>
@@ -7953,7 +7953,7 @@ finns redan i listan.</translation>
         <translation>Verktyg för lager</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Layer</source>
         <translation>Skikt</translation>
     </message>
@@ -8112,12 +8112,12 @@ finns redan i listan.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+110"/>
+        <location line="+109"/>
         <source>Layer List</source>
         <translation>Lista över lager</translation>
     </message>
     <message>
-        <location line="-55"/>
+        <location line="-54"/>
         <source>&amp;Layer List</source>
         <translation>Lista över lager</translation>
     </message>
@@ -8155,7 +8155,7 @@ finns redan i listan.</translation>
         <translation>&amp;Ledare</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
         <translation>Rita ledare (linjesekvens med pil)</translation>
     </message>
@@ -8204,7 +8204,7 @@ finns redan i listan.</translation>
         <translation>Linjeverktyg</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Line</source>
         <translation>&amp;Linje</translation>
     </message>
@@ -8282,7 +8282,7 @@ finns redan i listan.</translation>
         <translation>Linje från &amp;2 punkter</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single line or sequence of lines</source>
         <translation>Rita enkel linje eller sekvens av linjer</translation>
     </message>
@@ -8335,7 +8335,7 @@ finns redan i listan.</translation>
         <translation>Linje från vinkel</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line at a given absolute angle</source>
         <translation>Rita en linje i en given absolut vinkel</translation>
     </message>
@@ -8373,7 +8373,7 @@ finns redan i listan.</translation>
         <translation>Vinkeldelning</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angle bisector, trisector, ...</source>
         <translation>Rita vinkeldelning, tredelning, ...</translation>
     </message>
@@ -8396,7 +8396,7 @@ finns redan i listan.</translation>
         <translation>Box Joint från 2 punkter</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
         <translation>Dragboxens fingrar, springor och tennon</translation>
     </message>
@@ -8454,7 +8454,7 @@ finns redan i listan.</translation>
         <translation>Sågad skarv från 2 punkter</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation>Rita en svartsvansförbindelse</translation>
     </message>
@@ -8497,7 +8497,7 @@ finns redan i listan.</translation>
         <translation>&amp;Frihandslinje</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw freehand line</source>
         <translation>Rita frihandslinje</translation>
     </message>
@@ -8535,7 +8535,7 @@ finns redan i listan.</translation>
         <translation>Horisontell linje</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal line</source>
         <translation>Rita en horisontell linje</translation>
     </message>
@@ -8573,7 +8573,7 @@ finns redan i listan.</translation>
         <translation>&amp;Rätvinklig</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to base entity</source>
         <translation>Rita linje rätvinklig mot basobjekt</translation>
     </message>
@@ -8601,7 +8601,7 @@ finns redan i listan.</translation>
         <translation>Rätvinklig/Tangering</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to line and tangent to circle, arc or ellipse</source>
         <translation>Rita linje rätvinklig mot linje och tangera mot cirkel, båge eller ellips</translation>
     </message>
@@ -8624,7 +8624,7 @@ finns redan i listan.</translation>
         <translation>Parallell (med avstånd)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
         <translation>Rita parallellt med befintlig linje eller koncentrisk båge, cirkel</translation>
     </message>
@@ -8637,7 +8637,7 @@ finns redan i listan.</translation>
         <translation>Parallell (genom punkt)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
         <translation>Rita en parallell linje eller en koncentrisk båge eller cirkel genom en given punkt</translation>
     </message>
@@ -8708,7 +8708,7 @@ finns redan i listan.</translation>
         <translation>R&amp;elativ vinkel</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line with relative angle to base entity</source>
         <translation>Rita linje med relativ vinkel mot basobjekt</translation>
     </message>
@@ -8759,7 +8759,7 @@ finns redan i listan.</translation>
         <translation>Tangent (punkt, cirkel)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (point, circle)</source>
         <translation>Rita tangenten (punkt, cirkel)</translation>
     </message>
@@ -8787,7 +8787,7 @@ finns redan i listan.</translation>
         <translation>Tangent (två cirklar)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (circle, circle)</source>
         <translation>Rita tangenten (cirkel, cirkel)</translation>
     </message>
@@ -8800,7 +8800,7 @@ finns redan i listan.</translation>
         <translation>&amp;Vertikal linje</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical line</source>
         <translation>Rita vertikal linje</translation>
     </message>
@@ -8992,7 +8992,7 @@ finns redan i listan.</translation>
         <translation>Diverse verktyg</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc</source>
         <translation>Diverse</translation>
     </message>
@@ -9015,7 +9015,7 @@ finns redan i listan.</translation>
         <translation>Diverse verktyg för blockering</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Block</source>
         <translation>Block</translation>
     </message>
@@ -9033,7 +9033,7 @@ finns redan i listan.</translation>
         <translation>Diverse utvecklingsverktyg</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>De&amp;velopment</source>
         <translation>Utveckling</translation>
     </message>
@@ -9051,7 +9051,7 @@ finns redan i listan.</translation>
         <translation>Diverse ritverktyg</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc Draw</source>
         <translation>Diverse dragning</translation>
     </message>
@@ -9074,7 +9074,7 @@ finns redan i listan.</translation>
         <translation>Diverse verktyg för import/export</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Import/Export</source>
         <translation>Import/export</translation>
     </message>
@@ -9092,7 +9092,7 @@ finns redan i listan.</translation>
         <translation>Diverse informationsverktyg</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Information</source>
         <translation>Information</translation>
     </message>
@@ -9110,7 +9110,7 @@ finns redan i listan.</translation>
         <translation>Diverse verktyg för modifiering</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Modify</source>
         <translation>Ändra</translation>
     </message>
@@ -9128,7 +9128,7 @@ finns redan i listan.</translation>
         <translation>Diverse urvalsverktyg</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Select</source>
         <translation>Välj</translation>
     </message>
@@ -9141,7 +9141,7 @@ finns redan i listan.</translation>
         <translation>Verktyg för ändringar</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Modify</source>
         <translation>Ändra</translation>
     </message>
@@ -9386,7 +9386,7 @@ finns redan i listan.</translation>
         <translation>Förskjutning (med avstånd)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse</source>
         <translation>Förskjutning av linje, båge, cirkel eller ellips</translation>
     </message>
@@ -9414,7 +9414,7 @@ finns redan i listan.</translation>
         <translation>Förskjutning (genom punkt)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse through point</source>
         <translation>Förskjuta linje, båge, cirkel eller ellips genom en punkt</translation>
     </message>
@@ -9447,7 +9447,7 @@ finns redan i listan.</translation>
         <translation>Öppna</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open an existing drawing</source>
         <translation>Öppna en befintlig ritning</translation>
     </message>
@@ -9657,7 +9657,7 @@ finns redan i listan.</translation>
         <translation>PDF-export</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Exports the current drawing as PDF</source>
         <translation>Exporterar den aktuella ritningen som PDF</translation>
     </message>
@@ -9691,7 +9691,7 @@ finns redan i listan.</translation>
         <translation>Punktverktyg</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Point</source>
         <translation>Punkt</translation>
     </message>
@@ -9709,7 +9709,7 @@ finns redan i listan.</translation>
         <translation>Enda punkt</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single point</source>
         <translation>Rita en enda punkt</translation>
     </message>
@@ -9782,7 +9782,7 @@ finns redan i listan.</translation>
         <translation>Verktyg för polylinjer</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Polyline</source>
         <translation>&amp;Polylinje</translation>
     </message>
@@ -9897,7 +9897,7 @@ finns redan i listan.</translation>
         <translation>Symbol för polylinjeavbrott från 2 punkter</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a polyline break symbol from 2 points</source>
         <translation>Rita en polylinje som bryts symboliskt från 2 punkter</translation>
     </message>
@@ -9956,7 +9956,7 @@ finns redan i listan.</translation>
         <translation>Skriv ut</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current drawing</source>
         <translation>Utskrift av aktuell ritning</translation>
     </message>
@@ -9969,7 +9969,7 @@ finns redan i listan.</translation>
         <translation>Skriva ut aktuell vy</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current view</source>
         <translation>Skriva ut aktuell vy</translation>
     </message>
@@ -10032,7 +10032,7 @@ finns redan i listan.</translation>
         <translation>Förhandsgranska utskrift</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Preview how current drawing would be printed</source>
         <translation>Förhandsgranska hur den aktuella ritningen skulle skrivas ut</translation>
     </message>
@@ -10130,7 +10130,7 @@ finns redan i listan.</translation>
         <translation>Verktyg för projektion</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Projection</source>
         <translation>Projektion</translation>
     </message>
@@ -10148,7 +10148,7 @@ finns redan i listan.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+219"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+221"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10163,7 +10163,7 @@ finns redan i listan.</translation>
         <translation>Specifika egenskaper</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+20"/>
         <source>Dependent Entities</source>
         <translation>Beroende enheter</translation>
     </message>
@@ -10223,7 +10223,7 @@ finns redan i listan.</translation>
         <translation>Ingen</translation>
     </message>
     <message>
-        <location line="+393"/>
+        <location line="+402"/>
         <source>*VARIES*</source>
         <translation>*VARIES*</translation>
     </message>
@@ -10235,7 +10235,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+0"/>
         <location line="+57"/>
-        <location line="+11"/>
+        <location line="+10"/>
         <source>Property Editor</source>
         <translation>Egenskapsredigerare</translation>
     </message>
@@ -10285,7 +10285,7 @@ finns redan i listan.</translation>
         <translation>Allmänna egenskaper</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+31"/>
         <source>Color:</source>
         <translation>Färg:</translation>
     </message>
@@ -10749,7 +10749,7 @@ finns redan i listan.</translation>
         <translation>Kör skriptet</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open and run a script file</source>
         <translation>Öppna och köra en skriptfil</translation>
     </message>
@@ -11086,7 +11086,7 @@ finns redan i listan.</translation>
         <translation>Verktyg för urval</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+13"/>
         <source>Selection Tools Panel</source>
         <translation>Panel för valverktyg</translation>
     </message>
@@ -11104,7 +11104,7 @@ finns redan i listan.</translation>
         <translation>Välj alla</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Select all visible entities</source>
         <translation>Markera alla synliga enheter</translation>
     </message>
@@ -11187,7 +11187,7 @@ finns redan i listan.</translation>
         <translation>(Av-)välja kontur</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select connected entities</source>
         <translation>(Av-)välja anslutna enheter</translation>
     </message>
@@ -11245,7 +11245,7 @@ finns redan i listan.</translation>
         <translation>(Av-)välja genomsökta enheter</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities intersected by a line</source>
         <translation>(Av-)välja alla enheter som skärs av en linje</translation>
     </message>
@@ -11306,7 +11306,7 @@ finns redan i listan.</translation>
         <translation>(Av-)välja lager</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities on the same layer</source>
         <translation>(Av-)välja alla enheter på samma lager</translation>
     </message>
@@ -11354,7 +11354,7 @@ finns redan i listan.</translation>
         <translation>(De-)Välj rektangulärt område</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities inside a rectangle</source>
         <translation>(Av-)välja alla enheter inom en rektangel</translation>
     </message>
@@ -11469,7 +11469,7 @@ finns redan i listan.</translation>
         <translation>Figurverktyg</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Shape</source>
         <translation>&amp;Form</translation>
     </message>
@@ -11541,7 +11541,7 @@ finns redan i listan.</translation>
         <translation>Pol&amp;ygon (centrum, sida)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and middle point of side</source>
         <translation>Rita vanlig polygon från centrum och mittpunkt av sida</translation>
     </message>
@@ -11574,7 +11574,7 @@ finns redan i listan.</translation>
         <translation>Polygon (sida, sida)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from middle points of two opposite sides or two opposite corners</source>
         <translation>Rita en regelbunden polygon från mittpunkterna på två motsatta sidor eller två motsatta hörn</translation>
     </message>
@@ -11612,7 +11612,7 @@ finns redan i listan.</translation>
         <translation>Pol&amp;ygon (centrum, hörn)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and corner point</source>
         <translation>Rita vanlig polygon från centrum och hörnpunkt</translation>
     </message>
@@ -11640,7 +11640,7 @@ finns redan i listan.</translation>
         <translation>Polygon (2 sidopunkter)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from end points of one side</source>
         <translation>Rita en regelbunden polygon från ändpunkterna på en sida</translation>
     </message>
@@ -11653,7 +11653,7 @@ finns redan i listan.</translation>
         <translation>Rektangel</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle from two corners</source>
         <translation>Rita en rektangel från två hörn</translation>
     </message>
@@ -11671,7 +11671,7 @@ finns redan i listan.</translation>
         <translation>Rektangel med &amp;Storlek</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle with position and size</source>
         <translation>RIta rektangel med position och storlek</translation>
     </message>
@@ -11757,7 +11757,7 @@ finns redan i listan.</translation>
         <translation>Snap-verktyg</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+25"/>
         <source>&amp;Snap</source>
         <translation>Snap</translation>
     </message>
@@ -11905,7 +11905,7 @@ finns redan i listan.</translation>
         <translation>Avståndshandbok</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Snap distance between 2 points</source>
         <translation>Snapsavstånd mellan 2 punkter</translation>
     </message>
@@ -12075,7 +12075,7 @@ finns redan i listan.</translation>
         <translation>Spline-verktyg</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Spline</source>
         <translation>&amp;Kurva</translation>
     </message>
@@ -12098,7 +12098,7 @@ finns redan i listan.</translation>
         <translation>Spline (kontrollpunkter)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw spline from control points</source>
         <translation>Rita en spline från kontrollpunkter</translation>
     </message>
@@ -12337,7 +12337,7 @@ finns redan i listan.</translation>
         <translation>&amp;Text</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text</source>
         <translation>Rita text</translation>
     </message>
@@ -12460,7 +12460,7 @@ finns redan i listan.</translation>
         <translation>Text Längs Entitet</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text along an entity</source>
         <translation>Rita text längs en enhet</translation>
     </message>
@@ -13029,7 +13029,7 @@ finns redan i listan.</translation>
         <translation>Flytta/kopiera</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+9"/>
         <source>Move or copy entities once or multiple times</source>
         <translation>Flytta eller kopiera enheter en eller flera gånger</translation>
     </message>
@@ -13417,7 +13417,7 @@ finns redan i listan.</translation>
         <translation>Visa verktyg</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>View</source>
         <translation>Visa</translation>
     </message>
@@ -13891,7 +13891,7 @@ finns redan i listan.</translation>
         <translation>Horisontell byggnadslinje</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal construction line</source>
         <translation>Rita en horisontell konstruktionslinje</translation>
     </message>
@@ -13904,7 +13904,7 @@ finns redan i listan.</translation>
         <translation>Vertikal byggnadslinje</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical construction line</source>
         <translation>Rita en vertikal konstruktionslinje</translation>
     </message>
@@ -13922,7 +13922,7 @@ finns redan i listan.</translation>
         <translation>Verktyg för zoomning</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Zoom</source>
         <translation>Zoom</translation>
     </message>

@@ -325,7 +325,7 @@ nuostatos pakeitimai įsigaliotų.</translation>
         <translation>&amp;Pridėti Tuščią Bloką</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Add new empty block</source>
         <translation>Pridėti naują tuščią bloką</translation>
     </message>
@@ -412,7 +412,7 @@ nuostatos pakeitimai įsigaliotų.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1986"/>
+        <location filename="../scripts/Apollonius.js" line="+1989"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Neteisingas spindulys</translation>
     </message>
@@ -438,7 +438,7 @@ nuostatos pakeitimai įsigaliotų.</translation>
         <translation type="unfinished">Įrankiai &quot;Arc Tools</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Arc</source>
         <translation type="unfinished">Arc</translation>
     </message>
@@ -471,7 +471,7 @@ nuostatos pakeitimai įsigaliotų.</translation>
         <translation type="unfinished">2 taškai ir kampas</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and angle</source>
         <translation type="unfinished">Nubraižykite lanką iš 2 taškų ir kampo</translation>
     </message>
@@ -524,7 +524,7 @@ nuostatos pakeitimai įsigaliotų.</translation>
         <translation type="unfinished">2 taškai ir aukštis</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and height</source>
         <translation type="unfinished">Nubraižykite lanką iš 2 taškų ir aukščio</translation>
     </message>
@@ -582,7 +582,7 @@ nuostatos pakeitimai įsigaliotų.</translation>
         <translation type="unfinished">2 taškai ir ilgis</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and length</source>
         <translation type="unfinished">Nubraižykite lanką iš 2 taškų ir ilgio</translation>
     </message>
@@ -635,7 +635,7 @@ nuostatos pakeitimai įsigaliotų.</translation>
         <translation type="unfinished">2 Taškai ir spindulys</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and radius</source>
         <translation type="unfinished">Nubraižykite lanką iš 2 taškų ir spindulio</translation>
     </message>
@@ -698,7 +698,7 @@ nuostatos pakeitimai įsigaliotų.</translation>
         <translation type="unfinished">3 taškai</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 3 points</source>
         <translation type="unfinished">Nubraižykite lanką iš 3 taškų</translation>
     </message>
@@ -736,7 +736,7 @@ nuostatos pakeitimai įsigaliotų.</translation>
         <translation type="unfinished">Centras, taškas, kampai</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from center, point on arc and angles</source>
         <translation type="unfinished">Nubraižykite lanką iš centro, taško ant lanko ir kampų</translation>
     </message>
@@ -764,7 +764,7 @@ nuostatos pakeitimai įsigaliotų.</translation>
         <translation type="unfinished">Koncentrinis (su atstumu)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc</source>
         <translation type="unfinished">Nubraižykite koncentrinį lanką</translation>
     </message>
@@ -787,7 +787,7 @@ nuostatos pakeitimai įsigaliotų.</translation>
         <translation type="unfinished">Koncentrinis (per tašką)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc through point</source>
         <translation type="unfinished">Nubraižykite koncentrinį lanką per tašką</translation>
     </message>
@@ -826,7 +826,7 @@ nuostatos pakeitimai įsigaliotų.</translation>
         <translation type="unfinished">Tangentas, taškas, spindulys</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to entity, through point with radius</source>
         <translation type="unfinished">Nubraižykite lanką, liečiantį subjektą ir einantį per tašką, kurio spindulys</translation>
     </message>
@@ -854,7 +854,7 @@ nuostatos pakeitimai įsigaliotų.</translation>
         <translation type="unfinished">Tangenciškai prijungtas</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to base entity</source>
         <translation type="unfinished">Nubraižykite lanką, liečiantį pagrindinę esybę</translation>
     </message>
@@ -1044,7 +1044,7 @@ Ar norite jį atkurti?</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>&amp;Batch2Pdf visible layout blocks</source>
         <translation type="unfinished">&quot;Batch2Pdf&quot; matomi išdėstymo blokai</translation>
     </message>
@@ -1240,7 +1240,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">Bloko įrankiai</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Block</source>
         <translation type="unfinished">Blokas</translation>
     </message>
@@ -1320,7 +1320,7 @@ Ar norite jį atkurti?</translation>
     <message>
         <location line="+0"/>
         <location line="+63"/>
-        <location line="+44"/>
+        <location line="+43"/>
         <source>Block List</source>
         <translation type="unfinished">Blokų sąrašas</translation>
     </message>
@@ -1618,7 +1618,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">Apskritimo įrankiai</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Circle</source>
         <translation type="unfinished">Apskritimas</translation>
     </message>
@@ -1646,7 +1646,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">2 taškai</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from 2 diametrically opposite points</source>
         <translation type="unfinished">Nubrėžti apskritimą iš 2 diametraliai priešingų taškų</translation>
     </message>
@@ -1679,7 +1679,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">2 Taškai ir spindulys</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 2 points and radius</source>
         <translation type="unfinished">Nubraižykite apskritimą iš 2 taškų ir spindulio</translation>
     </message>
@@ -1738,7 +1738,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">2 Tangentai ir taškas</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation type="unfinished">Nubraižykite apskritimą, liečiantį dvi esybes, per tašką</translation>
     </message>
@@ -1771,7 +1771,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">2 Tangentai ir spindulys</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to two entities with given radius</source>
         <translation type="unfinished">Nubrėžti apskritimą, liečiantį du subjektus, kurių spindulys nurodytas</translation>
     </message>
@@ -1804,7 +1804,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">3 taškai</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 3 points</source>
         <translation type="unfinished">Nubrėžti apskritimą iš 3 taškų</translation>
     </message>
@@ -1843,7 +1843,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">3 liestinės</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to three entities</source>
         <translation type="unfinished">Nubrėžti apskritimą, liečiantį tris subjektus</translation>
     </message>
@@ -1856,7 +1856,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">Centras, skersmuo</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and diameter</source>
         <translation type="unfinished">Nubrėžti apskritimą iš centro ir skersmens</translation>
     </message>
@@ -1896,7 +1896,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">Centras, taškas</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from center and point on circle</source>
         <translation type="unfinished">Nubrėžti apskritimą iš centro ir taško ant apskritimo</translation>
     </message>
@@ -1909,7 +1909,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">Centras, spindulys</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and radius</source>
         <translation type="unfinished">Nubrėžti apskritimą iš centro ir spindulio</translation>
     </message>
@@ -1939,7 +1939,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">Koncentrinis (su atstumu)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric circle</source>
         <translation type="unfinished">Nubraižykite koncentrinį ratą</translation>
     </message>
@@ -1962,7 +1962,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">Koncentrinis (per tašką)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw concentric circle through point</source>
         <translation type="unfinished">Nubraižykite koncentrinį apskritimą per tašką</translation>
     </message>
@@ -2006,7 +2006,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">Tangentas ir 2 taškai</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle through two points and tangential to one entity</source>
         <translation type="unfinished">Nubrėžti apskritimą per du taškus ir liestinę prie vieno subjekto</translation>
     </message>
@@ -2024,7 +2024,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">Tangentas, taškas, spindulys</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to entity, through point with radius</source>
         <translation type="unfinished">Nubraižykite apskritimą, liečiantį subjektą ir einantį per tašką, kurio spindulys</translation>
     </message>
@@ -2136,18 +2136,18 @@ Ar norite jį atkurti?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+68"/>
+        <location line="+67"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation type="unfinished">Komandinė eilutė</translation>
     </message>
     <message>
-        <location line="-21"/>
+        <location line="-20"/>
         <source>&amp;Command Line</source>
         <translation type="unfinished">Komandinė eilutė</translation>
     </message>
     <message>
-        <location line="+208"/>
+        <location line="+207"/>
         <source>Invalid value:</source>
         <translation type="unfinished">Netinkama reikšmė:</translation>
     </message>
@@ -2279,7 +2279,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">Konvertuoti brėžinio vienetą</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Convert drawing to a different drawing unit</source>
         <translation type="unfinished">Konvertuoti brėžinį į kitą braižymo vienetą</translation>
     </message>
@@ -2366,7 +2366,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">Skaitiklis</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Auto increment number</source>
         <translation type="unfinished">Automatinis skaičiaus didinimas</translation>
     </message>
@@ -2422,7 +2422,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">Centrinė linija Kryžius</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
         <translation type="unfinished">Nubrėžkite centrinės linijos kryžių lanku, apskritimu arba elipsėmis</translation>
     </message>
@@ -2568,7 +2568,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">Atšaukti visus</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Deselect all entities</source>
         <translation type="unfinished">Panaikinkite visų subjektų pasirinkimą</translation>
     </message>
@@ -2709,7 +2709,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">Suderinta</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw aligned dimension</source>
         <translation type="unfinished">Brėžti suderintą matmenį</translation>
     </message>
@@ -2737,7 +2737,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">Kampinis</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angular dimension</source>
         <translation type="unfinished">Brėžti kampinį matmenį</translation>
     </message>
@@ -2765,7 +2765,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">Diametrinis</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw diametric dimension</source>
         <translation type="unfinished">Nubraižykite skersmens matmenį</translation>
     </message>
@@ -2778,7 +2778,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">Horizontalus</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw horizontal dimension</source>
         <translation type="unfinished">Nubrėžti horizontalųjį matmenį</translation>
     </message>
@@ -2801,7 +2801,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">Ordinatas (X/Y)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+3"/>
         <source>Draw ordinate dimension</source>
         <translation type="unfinished">Brėžti ordinatinį matmenį</translation>
     </message>
@@ -2824,7 +2824,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">Radialinis</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw radial dimension</source>
         <translation type="unfinished">Brėžti radialinį matmenį</translation>
     </message>
@@ -2874,7 +2874,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">Pasuktas (linijinis)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw linear dimension at a fixed angle</source>
         <translation type="unfinished">Brėžti linijinį matmenį fiksuotu kampu</translation>
     </message>
@@ -2892,7 +2892,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">Vertikalus</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw vertical dimension</source>
         <translation type="unfinished">Nubrėžti vertikalųjį matmenį</translation>
     </message>
@@ -2955,7 +2955,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">Matmenų įrankiai</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>D&amp;imension</source>
         <translation type="unfinished">Matmenys</translation>
     </message>
@@ -3476,7 +3476,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Lygiosios Fms juostos</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
         <translation type="unfinished">Nubraižyti FMS juostos (šonkauliai)</translation>
     </message>
@@ -4077,7 +4077,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Piešimas iš CSV</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Draws entities based on textual entries in a CSV file</source>
         <translation type="unfinished">Piešia subjektus pagal tekstinius įrašus CSV faile</translation>
     </message>
@@ -4085,7 +4085,7 @@ jau yra sąraše.</translation>
 <context>
     <name>DrawOrder</name>
     <message>
-        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+92"/>
+        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
         <translation type="unfinished">Piešimo tvarka</translation>
     </message>
@@ -4133,7 +4133,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Brėžti poliliniją</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw polyline with line and arc segments</source>
         <translation type="unfinished">Braižyti daugiakampę liniją su linijos ir lanko segmentais</translation>
     </message>
@@ -4371,7 +4371,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Skriptų apvalkalas</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+34"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
         <translation type="unfinished">Skriptų apvalkalas</translation>
@@ -4400,7 +4400,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Redagavimo įrankiai</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Edit</source>
         <translation type="unfinished">Redaguoti</translation>
     </message>
@@ -4478,7 +4478,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Redaguoti tekstą</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Edit text</source>
         <translation type="unfinished">Redaguoti tekstą</translation>
     </message>
@@ -4491,7 +4491,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Elipsės įrankiai</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Ellipse</source>
         <translation type="unfinished">Elipsė</translation>
     </message>
@@ -4574,7 +4574,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Elipsės lankas</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw ellipse arc from center, major point, ratio and angles</source>
         <translation type="unfinished">Nubraižykite elipsės lanką iš centro, pagrindinio taško, santykio ir kampų</translation>
     </message>
@@ -4602,7 +4602,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Elipsė (Centras, Taškas, Santykis)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw full ellipse from center, major point and ratio</source>
         <translation type="unfinished">Nubraižykite visą elipsę iš centro, pagrindinio taško ir santykio</translation>
     </message>
@@ -4615,7 +4615,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Elipsė su skersmenimis</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and diameters</source>
         <translation type="unfinished">Nubraižykite elipsę su padėtimi ir skersmenimis</translation>
     </message>
@@ -4671,7 +4671,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Užrašyta keturkampiu</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse inscribed in quadrilateral</source>
         <translation type="unfinished">Nubraižykite elipsę, įrašytą į keturkampį</translation>
     </message>
@@ -4684,7 +4684,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Lygiagreti kreivė (su atstumu)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse</source>
         <translation type="unfinished">Nubrėžti lygiagrečią kreivę elipsei</translation>
     </message>
@@ -4707,7 +4707,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Lygiagreti kreivė (per tašką)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse through point</source>
         <translation type="unfinished">Nubrėžti lygiagrečią kreivę elipsei per tašką</translation>
     </message>
@@ -4725,7 +4725,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Elipsė su spinduliais</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and radii</source>
         <translation type="unfinished">Nubraižykite elipsę su padėtimi ir spinduliais</translation>
     </message>
@@ -4873,7 +4873,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">&quot;Dovetail&quot; jungtis</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation type="unfinished">Nubraižykite balandžių uodegos jungtį</translation>
     </message>
@@ -5041,7 +5041,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Trys taškai</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw three points</source>
         <translation type="unfinished">Lygiosios trys taškai</translation>
     </message>
@@ -5189,7 +5189,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Failų įrankiai</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;File</source>
         <translation type="unfinished">Failas</translation>
     </message>
@@ -6309,7 +6309,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Liuko įrankiai</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Hatch</source>
         <translation type="unfinished">Liukas</translation>
     </message>
@@ -6380,7 +6380,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Liukas iš atrankos</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Create hatch or solid fill from selected boundary</source>
         <translation type="unfinished">Sukurti lizdinį arba vientisą užpildą iš pasirinktos ribos</translation>
     </message>
@@ -6619,7 +6619,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Pridėti pasirinktinį 2D centroidą</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Create a customizable 2D Centroid marker</source>
         <translation type="unfinished">Sukurti pritaikomą 2D centroido žymeklį</translation>
     </message>
@@ -6949,7 +6949,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Plotas Centroidas</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create an area 2D Centroid for a selected entity</source>
         <translation type="unfinished">Sukurti pasirinktos srities 2D centroidą</translation>
     </message>
@@ -7071,7 +7071,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Centroido klausytojas</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
         <translation type="unfinished">Suaktyvinti sandorio klausytoją, skirtą 2D centroidams</translation>
     </message>
@@ -7324,7 +7324,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Svertinių 2D centroidų suma</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Combine selected 2D Centroid markers weighted</source>
         <translation type="unfinished">Sujungti pasirinktus 2D centroidinius žymeklius, pasvertus</translation>
     </message>
@@ -7424,7 +7424,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Vielos centroidas</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create a wire 2D Centroid for a selection</source>
         <translation type="unfinished">Sukurti vielinį 2D centroidą pasirinkimui</translation>
     </message>
@@ -7442,7 +7442,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Informacinės priemonės</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Info</source>
         <translation type="unfinished">Informacija</translation>
     </message>
@@ -7770,7 +7770,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Invertuoti pasirinkimą</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Invert the current selection</source>
         <translation type="unfinished">Invertuoti esamą pasirinkimą</translation>
     </message>
@@ -7957,7 +7957,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Sluoksnių įrankiai</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Layer</source>
         <translation type="unfinished">Sluoksnis</translation>
     </message>
@@ -8116,12 +8116,12 @@ jau yra sąraše.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+110"/>
+        <location line="+109"/>
         <source>Layer List</source>
         <translation type="unfinished">Sluoksnių sąrašas</translation>
     </message>
     <message>
-        <location line="-55"/>
+        <location line="-54"/>
         <source>&amp;Layer List</source>
         <translation type="unfinished">Sluoksnių sąrašas</translation>
     </message>
@@ -8149,7 +8149,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Lyderis</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
         <translation type="unfinished">Piešti lyderį (linijų seka su rodykle)</translation>
     </message>
@@ -8208,7 +8208,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Linijos įrankiai</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Line</source>
         <translation type="unfinished">Linija</translation>
     </message>
@@ -8251,7 +8251,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Linija iš 2 taškų</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single line or sequence of lines</source>
         <translation type="unfinished">Nubraižykite vieną liniją arba linijų seką</translation>
     </message>
@@ -8309,7 +8309,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Linija nuo kampo</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line at a given absolute angle</source>
         <translation type="unfinished">Nubrėžti liniją tam tikru absoliučiu kampu</translation>
     </message>
@@ -8367,7 +8367,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Kampų bisektrisė</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angle bisector, trisector, ...</source>
         <translation type="unfinished">Nubraižykite kampo bisektrisę, trisektrisę, ...</translation>
     </message>
@@ -8400,7 +8400,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Dėžutės sąnarys iš 2 taškų</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
         <translation type="unfinished">Brėžinių dėžutės sąnarių pirštai, lizdai ir danteliai</translation>
     </message>
@@ -8458,7 +8458,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Pjūklo sąnarys iš 2 taškų</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation type="unfinished">Nubraižykite balandžių uodegos jungtį</translation>
     </message>
@@ -8501,7 +8501,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Laisva linija</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw freehand line</source>
         <translation type="unfinished">Brėžti laisva ranka liniją</translation>
     </message>
@@ -8514,7 +8514,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Horizontali linija</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal line</source>
         <translation type="unfinished">Nubrėžti horizontalią liniją</translation>
     </message>
@@ -8552,7 +8552,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Ortogonali</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to base entity</source>
         <translation type="unfinished">Nubrėžti liniją, statmeną baziniam subjektui</translation>
     </message>
@@ -8605,7 +8605,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Ortogonalus / Tangentas</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to line and tangent to circle, arc or ellipse</source>
         <translation type="unfinished">Nubrėžkite liniją, kuri yra stačiakampė linijai ir liestinė apskritimui, lankui arba elipsei</translation>
     </message>
@@ -8618,7 +8618,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Lygiagrečiai (su atstumu)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
         <translation type="unfinished">Brėžti lygiagrečiai esamai linijai arba koncentriniam lankui, apskritimui</translation>
     </message>
@@ -8641,7 +8641,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Lygiagrečiai (per tašką)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
         <translation type="unfinished">Nubrėžti lygiagrečiąją liniją arba koncentrinį lanką ar apskritimą per duotą tašką</translation>
     </message>
@@ -8692,7 +8692,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Santykinis kampas</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line with relative angle to base entity</source>
         <translation type="unfinished">Nubrėžkite liniją, kurios santykinis kampas su pagrindine esybe</translation>
     </message>
@@ -8763,7 +8763,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Tangentas (Taškas, apskritimas)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (point, circle)</source>
         <translation type="unfinished">Nubrėžti liestinę (taškas, apskritimas)</translation>
     </message>
@@ -8791,7 +8791,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Tangentas (du apskritimai)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (circle, circle)</source>
         <translation type="unfinished">Nubrėžti liestinę (apskritimas, apskritimas)</translation>
     </message>
@@ -8804,7 +8804,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Vertikali linija</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical line</source>
         <translation type="unfinished">Nubrėžti vertikalią liniją</translation>
     </message>
@@ -8996,7 +8996,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Įvairūs įrankiai</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc</source>
         <translation type="unfinished">Įvairūs</translation>
     </message>
@@ -9019,7 +9019,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Įvairūs bloko įrankiai</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Block</source>
         <translation type="unfinished">Blokas</translation>
     </message>
@@ -9037,7 +9037,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Įvairūs kūrimo įrankiai</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>De&amp;velopment</source>
         <translation type="unfinished">Kūrimo įrankiai</translation>
     </message>
@@ -9055,7 +9055,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Įvairūs piešimo įrankiai</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc Draw</source>
         <translation type="unfinished">Įvairūs piešiniai</translation>
     </message>
@@ -9078,7 +9078,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Įvairūs importo / eksporto įrankiai</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Import/Export</source>
         <translation type="unfinished">Importas / eksportas</translation>
     </message>
@@ -9096,7 +9096,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Įvairūs informacijos įrankiai</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Information</source>
         <translation type="unfinished">Informacija</translation>
     </message>
@@ -9114,7 +9114,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Įvairūs modifikavimo įrankiai</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Modify</source>
         <translation type="unfinished">Keisti</translation>
     </message>
@@ -9132,7 +9132,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Įvairūs atrankos įrankiai</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Select</source>
         <translation type="unfinished">Pasirinkite</translation>
     </message>
@@ -9145,7 +9145,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Modifikavimo įrankiai</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Modify</source>
         <translation type="unfinished">Keisti</translation>
     </message>
@@ -9392,7 +9392,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Poslinkis (su atstumu)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse</source>
         <translation type="unfinished">Įstumta linija, lankas, apskritimas arba elipsė</translation>
     </message>
@@ -9420,7 +9420,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Poslinkis (per tašką)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse through point</source>
         <translation type="unfinished">Linijos, lanko, apskritimo arba elipsės poslinkis per tašką</translation>
     </message>
@@ -9453,7 +9453,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Atviras</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open an existing drawing</source>
         <translation type="unfinished">Atidaryti esamą brėžinį</translation>
     </message>
@@ -9663,7 +9663,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">PDF eksportas</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Exports the current drawing as PDF</source>
         <translation type="unfinished">Eksportuoja esamą brėžinį PDF formatu</translation>
     </message>
@@ -9697,7 +9697,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Taškiniai įrankiai</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Point</source>
         <translation type="unfinished">Taškas</translation>
     </message>
@@ -9715,7 +9715,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Vienas taškas</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single point</source>
         <translation type="unfinished">Nubrėžti vieną tašką</translation>
     </message>
@@ -9788,7 +9788,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Daugiakampės linijos įrankiai</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Polyline</source>
         <translation type="unfinished">Polinija</translation>
     </message>
@@ -9903,7 +9903,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Daugiakampės linijos pertraukos simbolis iš 2 taškų</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a polyline break symbol from 2 points</source>
         <translation type="unfinished">Nubraižykite polilinijos pertraukos simbolį iš 2 taškų</translation>
     </message>
@@ -9962,7 +9962,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Spausdinti</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current drawing</source>
         <translation type="unfinished">Spausdinti dabartinį brėžinį</translation>
     </message>
@@ -9975,7 +9975,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Spausdinti dabartinį vaizdą</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current view</source>
         <translation type="unfinished">Spausdinti dabartinį vaizdą</translation>
     </message>
@@ -10038,7 +10038,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Spausdinti peržiūrą</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Preview how current drawing would be printed</source>
         <translation type="unfinished">Peržiūrėti, kaip būtų spausdinamas dabartinis brėžinys</translation>
     </message>
@@ -10136,7 +10136,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Projekcijos įrankiai</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Projection</source>
         <translation type="unfinished">Projekcija</translation>
     </message>
@@ -10154,7 +10154,7 @@ jau yra sąraše.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+219"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+221"/>
         <source>:</source>
         <translation type="unfinished">:</translation>
     </message>
@@ -10169,7 +10169,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Specifinės savybės</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+20"/>
         <source>Dependent Entities</source>
         <translation type="unfinished">Priklausomi subjektai</translation>
     </message>
@@ -10229,7 +10229,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Ne</translation>
     </message>
     <message>
-        <location line="+393"/>
+        <location line="+402"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*VARIES*</translation>
     </message>
@@ -10241,7 +10241,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+0"/>
         <location line="+57"/>
-        <location line="+11"/>
+        <location line="+10"/>
         <source>Property Editor</source>
         <translation type="unfinished">Turto redaktorius</translation>
     </message>
@@ -10291,7 +10291,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Bendrosios savybės</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+31"/>
         <source>Color:</source>
         <translation type="unfinished">Spalva:</translation>
     </message>
@@ -10755,7 +10755,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Vykdyti scenarijų</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open and run a script file</source>
         <translation type="unfinished">Atidarykite ir paleiskite scenarijaus failą</translation>
     </message>
@@ -11092,7 +11092,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Atrankos įrankiai</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+13"/>
         <source>Selection Tools Panel</source>
         <translation type="unfinished">Atrankos įrankių skydelis</translation>
     </message>
@@ -11110,7 +11110,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Pasirinkite visus</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Select all visible entities</source>
         <translation type="unfinished">Pasirinkite visus matomus subjektus</translation>
     </message>
@@ -11193,7 +11193,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Pasirinkite kontūrą</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select connected entities</source>
         <translation type="unfinished">Pasirinkite sujungtus subjektus</translation>
     </message>
@@ -11251,7 +11251,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Pasirinkite susikertančius subjektus</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities intersected by a line</source>
         <translation type="unfinished">Pasirinkite visus subjektus, kuriuos kerta linija</translation>
     </message>
@@ -11312,7 +11312,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Pasirinkti sluoksnį</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities on the same layer</source>
         <translation type="unfinished">Pasirinkite visus to paties sluoksnio subjektus</translation>
     </message>
@@ -11360,7 +11360,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Pasirinkti stačiakampį plotą</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities inside a rectangle</source>
         <translation type="unfinished">Pasirinkite visus stačiakampio viduje esančius subjektus</translation>
     </message>
@@ -11478,7 +11478,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Formos įrankiai</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Shape</source>
         <translation type="unfinished">Forma</translation>
     </message>
@@ -11545,7 +11545,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Daugiakampiai (Centras, Šonas)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and middle point of side</source>
         <translation type="unfinished">Nubraižykite taisyklingą daugiakampį iš centro ir vidurio taško pusėje</translation>
     </message>
@@ -11583,7 +11583,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Daugiakampiai (Šalis, Šalis)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from middle points of two opposite sides or two opposite corners</source>
         <translation type="unfinished">Nubraižykite taisyklingą daugiakampį iš dviejų priešingų pusių arba dviejų priešingų kampų vidurio taškų</translation>
     </message>
@@ -11616,7 +11616,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Daugiakampiai (centras, kampas)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and corner point</source>
         <translation type="unfinished">Nubraižykite taisyklingą daugiakampį iš centro ir kampinio taško</translation>
     </message>
@@ -11644,7 +11644,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Daugiakampiai (2 kraštinės taškai)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from end points of one side</source>
         <translation type="unfinished">Nubraižykite taisyklingą daugiakampį iš vienos pusės galinių taškų</translation>
     </message>
@@ -11662,7 +11662,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Stačiakampis</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle from two corners</source>
         <translation type="unfinished">Nubraižykite stačiakampį iš dviejų kampų</translation>
     </message>
@@ -11680,7 +11680,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Stačiakampis su dydžiu</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle with position and size</source>
         <translation type="unfinished">Nubraižykite stačiakampį su padėtimi ir dydžiu</translation>
     </message>
@@ -11766,7 +11766,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">&quot;Snap&quot; įrankiai</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+25"/>
         <source>&amp;Snap</source>
         <translation type="unfinished">Snap</translation>
     </message>
@@ -11914,7 +11914,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Atstumo vadovas</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Snap distance between 2 points</source>
         <translation type="unfinished">Atstumas tarp 2 taškų</translation>
     </message>
@@ -12084,7 +12084,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Įrankiai Spline</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Spline</source>
         <translation type="unfinished">Spline</translation>
     </message>
@@ -12107,7 +12107,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Spline (valdymo taškai)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw spline from control points</source>
         <translation type="unfinished">Brėžti splainą iš kontrolinių taškų</translation>
     </message>
@@ -12329,7 +12329,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Tekstas</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text</source>
         <translation type="unfinished">Piešti tekstą</translation>
     </message>
@@ -12469,7 +12469,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Tekstas išilgai subjekto</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text along an entity</source>
         <translation type="unfinished">Teksto piešimas išilgai objekto</translation>
     </message>
@@ -13038,7 +13038,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Perkelti / kopijuoti</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+9"/>
         <source>Move or copy entities once or multiple times</source>
         <translation type="unfinished">Vieną ar kelis kartus perkelkite arba kopijuokite subjektus</translation>
     </message>
@@ -13426,7 +13426,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Peržiūrėti įrankius</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>View</source>
         <translation type="unfinished">Peržiūrėti</translation>
     </message>
@@ -13900,7 +13900,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Horizontalioji statybos linija</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal construction line</source>
         <translation type="unfinished">Nubrėžti horizontalią statybos liniją</translation>
     </message>
@@ -13913,7 +13913,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Vertikali statybos linija</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical construction line</source>
         <translation type="unfinished">Nubrėžti vertikalią statybos liniją</translation>
     </message>
@@ -13931,7 +13931,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Padidinimo įrankiai</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Zoom</source>
         <translation type="unfinished">Padidinti</translation>
     </message>

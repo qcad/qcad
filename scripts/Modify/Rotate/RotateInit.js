@@ -3,7 +3,6 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/Rotate.js");
-    action.setIcon(basePath + "/Rotate.svg");
     action.setDefaultShortcut(new QKeySequence("r,o"));
     action.setDefaultCommands(["rotate", "ro"]);
     action.setGroupSortOrder(13100);

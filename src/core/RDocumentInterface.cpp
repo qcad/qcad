@@ -640,6 +640,9 @@ void RDocumentInterface::setCursor(const QCursor& cursor, bool global) {
  * Registers a scene with this document interface.
  */
 void RDocumentInterface::registerScene(RGraphicsScene& scene) {
+    if (scenes.contains(&scene)) {
+        return;
+    }
     scenes.push_back(&scene);
 }
 

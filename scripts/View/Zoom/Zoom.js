@@ -66,7 +66,6 @@ Zoom.getCadToolBarPanel = function() {
         action.setScriptFile(Zoom.includeBasePath + "/Zoom.js");
         action.objectName = actionName;
         action.setRequiresDocument(false);
-        action.setIcon(Zoom.includeBasePath + "/Zoom.svg");
         //action.setStatusTip(qsTr("Show zoom tools"));
         action.setDefaultShortcut(new QKeySequence("w,z"));
         action.setNoState();

@@ -2,7 +2,6 @@ function init(basePath) {
     var action = new RGuiAction(qsTranslate("DeselectAll", "&Deselect All"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/DeselectAll.js");
-    action.setIcon(basePath + "/DeselectAll.svg");
     action.setStatusTip(qsTranslate("DeselectAll", "Deselect all entities"));
     action.setDefaultShortcuts([
         new QKeySequence("t,n"),

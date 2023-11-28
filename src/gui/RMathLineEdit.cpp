@@ -121,13 +121,15 @@ void RMathLineEdit::slotTextChanged(const QString& text) {
         setToolTip(str);
     }
 
-    if (isEnabled()) {
-        setTextColor(hasError);
-    }
-    else {
-        // update text color of line edit / math line combo:
-        setTextColor(false);
-        setPalette(oriPalette);
+    if (isVisible()) {
+        if (isEnabled()) {
+            setTextColor(hasError);
+        }
+        else {
+            // update text color of line edit / math line combo:
+            setTextColor(false);
+            setPalette(oriPalette);
+        }
     }
 
     if (!RMath::isNaN(value) && isAngle()) {

@@ -707,7 +707,24 @@ function main() {
         w.setFocus();
     }
 
-    if (!RSettings.hasQuitFlag()) {
+    if (RSettings.getQtVersion()<0x060000) {
+        if (!RSettings.hasQuitFlag()) {
+            // start and enter the main application loop:
+            QCoreApplication.exec();
+        }
+    }
+    else {
+        // Qt 6: always enter main application loop but quit immediately from the loop
+        // if -quit flag is given
+        if (RSettings.hasQuitFlag()) {
+            var singleShot = new QTimer(qApp);
+            singleShot.singleShot = true;
+            singleShot.timeout.connect(function() {
+                QCoreApplication.quit();
+            });
+            singleShot.start(100);
+        }
+
         // start and enter the main application loop:
         QCoreApplication.exec();
     }

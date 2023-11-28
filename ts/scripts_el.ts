@@ -325,7 +325,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">Προσθήκη κενού μπλοκ</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Add new empty block</source>
         <translation type="unfinished">Προσθήκη νέου άδειου μπλοκ</translation>
     </message>
@@ -412,7 +412,7 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1986"/>
+        <location filename="../scripts/Apollonius.js" line="+1989"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Μη έγκυρη ακτίνα</translation>
     </message>
@@ -438,7 +438,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">Εργαλεία Arc</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Arc</source>
         <translation type="unfinished">Arc</translation>
     </message>
@@ -491,7 +491,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">2 σημεία και γωνία</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and angle</source>
         <translation type="unfinished">Σχεδιάστε τόξο από 2 σημεία και γωνία</translation>
     </message>
@@ -544,7 +544,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">2 σημεία και ύψος</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and height</source>
         <translation type="unfinished">Σχεδιάστε τόξο από 2 σημεία και ύψος</translation>
     </message>
@@ -602,7 +602,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">2 Σημεία και μήκος</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and length</source>
         <translation type="unfinished">Σχεδιάστε τόξο από 2 σημεία και μήκος</translation>
     </message>
@@ -670,7 +670,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">2 Σημεία και ακτίνα</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and radius</source>
         <translation type="unfinished">Σχεδιάστε τόξο από 2 σημεία και ακτίνα</translation>
     </message>
@@ -698,7 +698,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">3 πόντοι</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 3 points</source>
         <translation type="unfinished">Σχεδιάστε τόξο από 3 σημεία</translation>
     </message>
@@ -751,7 +751,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">Κέντρο, σημείο, γωνίες</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from center, point on arc and angles</source>
         <translation type="unfinished">Σχεδιάστε τόξο από το κέντρο, σημείο στο τόξο και γωνίες</translation>
     </message>
@@ -774,7 +774,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">Ομόκεντρο (με απόσταση)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc</source>
         <translation type="unfinished">Σχεδιάστε ομόκεντρο τόξο</translation>
     </message>
@@ -792,7 +792,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">Ομόκεντρο (μέσω σημείου)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc through point</source>
         <translation type="unfinished">Σχεδιάστε ομόκεντρο τόξο μέσω του σημείου</translation>
     </message>
@@ -831,7 +831,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">Tangent, Σημείο, Ακτίνα</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to entity, through point with radius</source>
         <translation type="unfinished">Σχεδιάστε τόξο εφαπτόμενο στην οντότητα, μέσω σημείου με ακτίνα</translation>
     </message>
@@ -859,7 +859,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished">Διαμετρικά συνδεδεμένο</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to base entity</source>
         <translation type="unfinished">Σχεδιάστε τόξο εφαπτόμενο στη βασική οντότητα</translation>
     </message>
@@ -1043,7 +1043,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>&amp;Batch2Pdf visible layout blocks</source>
         <translation type="unfinished">Batch2Pdf ορατά μπλοκ διάταξης</translation>
     </message>
@@ -1239,7 +1239,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Εργαλεία μπλοκ</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Block</source>
         <translation type="unfinished">Μπλοκ</translation>
     </message>
@@ -1319,7 +1319,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+0"/>
         <location line="+63"/>
-        <location line="+44"/>
+        <location line="+43"/>
         <source>Block List</source>
         <translation type="unfinished">Λίστα μπλοκ</translation>
     </message>
@@ -1617,7 +1617,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Εργαλεία κύκλου</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Circle</source>
         <translation type="unfinished">Κύκλος</translation>
     </message>
@@ -1645,7 +1645,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">2 πόντοι</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from 2 diametrically opposite points</source>
         <translation type="unfinished">Σχεδιάστε κύκλο από 2 διαμετρικά αντίθετα σημεία</translation>
     </message>
@@ -1698,7 +1698,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">2 Σημεία και ακτίνα</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 2 points and radius</source>
         <translation type="unfinished">Σχεδιάστε κύκλο από 2 σημεία και ακτίνα</translation>
     </message>
@@ -1737,7 +1737,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">2 Γωνίες και σημείο</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation type="unfinished">Σχεδιάστε κύκλο εφαπτόμενο σε δύο οντότητες, μέσω του σημείου</translation>
     </message>
@@ -1775,7 +1775,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">2 Γωνίες και ακτίνες</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to two entities with given radius</source>
         <translation type="unfinished">Σχεδιάστε κύκλο εφαπτόμενο σε δύο οντότητες με δεδομένη ακτίνα</translation>
     </message>
@@ -1803,7 +1803,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">3 πόντοι</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 3 points</source>
         <translation type="unfinished">Σχεδιάστε κύκλο από 3 σημεία</translation>
     </message>
@@ -1842,7 +1842,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">3 Tangents</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to three entities</source>
         <translation type="unfinished">Σχεδιάστε κύκλο εφαπτόμενο σε τρεις οντότητες</translation>
     </message>
@@ -1872,7 +1872,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Κέντρο, Διάμετρος</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and diameter</source>
         <translation type="unfinished">Σχεδιάστε κύκλο από το κέντρο και τη διάμετρο</translation>
     </message>
@@ -1895,7 +1895,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Κέντρο, σημείο</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from center and point on circle</source>
         <translation type="unfinished">Σχεδιάστε κύκλο από το κέντρο και το σημείο του κύκλου</translation>
     </message>
@@ -1925,7 +1925,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Κέντρο, Ακτίνα</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and radius</source>
         <translation type="unfinished">Σχεδιάστε κύκλο από το κέντρο και την ακτίνα</translation>
     </message>
@@ -1948,7 +1948,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Ομόκεντρο (με απόσταση)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric circle</source>
         <translation type="unfinished">Σχεδιάστε ομόκεντρο κύκλο</translation>
     </message>
@@ -1966,7 +1966,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Ομόκεντρο (μέσω σημείου)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw concentric circle through point</source>
         <translation type="unfinished">Σχεδιάστε ομόκεντρο κύκλο μέσω του σημείου</translation>
     </message>
@@ -2005,7 +2005,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Tangent και 2 σημεία</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle through two points and tangential to one entity</source>
         <translation type="unfinished">Σχεδιάστε κύκλο μέσω δύο σημείων και εφαπτομενικά σε μία οντότητα</translation>
     </message>
@@ -2028,7 +2028,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Tangent, Σημείο, Ακτίνα</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to entity, through point with radius</source>
         <translation type="unfinished">Σχεδιάστε κύκλο εφαπτόμενο στην οντότητα, μέσω σημείου με ακτίνα</translation>
     </message>
@@ -2135,18 +2135,18 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+68"/>
+        <location line="+67"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation type="unfinished">Γραμμή εντολών</translation>
     </message>
     <message>
-        <location line="-21"/>
+        <location line="-20"/>
         <source>&amp;Command Line</source>
         <translation type="unfinished">Γραμμή εντολών</translation>
     </message>
     <message>
-        <location line="+208"/>
+        <location line="+207"/>
         <source>Invalid value:</source>
         <translation type="unfinished">Μη έγκυρη τιμή:</translation>
     </message>
@@ -2293,7 +2293,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Μετατροπή μονάδας σχεδίασης</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Convert drawing to a different drawing unit</source>
         <translation type="unfinished">Μετατροπή σχεδίου σε διαφορετική μονάδα σχεδίασης</translation>
     </message>
@@ -2390,7 +2390,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Μετρητής</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Auto increment number</source>
         <translation type="unfinished">Αριθμός αυτόματης αύξησης</translation>
     </message>
@@ -2421,7 +2421,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Κεντρική γραμμή Σταυρός</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
         <translation type="unfinished">Σχεδιάστε σταυρό κεντρικής γραμμής σε τόξα, κύκλους ή ελλείψεις</translation>
     </message>
@@ -2567,7 +2567,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Αποεπιλογή όλων</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Deselect all entities</source>
         <translation type="unfinished">Αποεπιλογή όλων των οντοτήτων</translation>
     </message>
@@ -2708,7 +2708,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Ευθυγραμμισμένο</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw aligned dimension</source>
         <translation type="unfinished">Σχεδιάστε ευθυγραμμισμένη διάσταση</translation>
     </message>
@@ -2741,7 +2741,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Γωνιακή</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angular dimension</source>
         <translation type="unfinished">Σχεδιάστε γωνιακή διάσταση</translation>
     </message>
@@ -2764,7 +2764,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Διαμετρική</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw diametric dimension</source>
         <translation type="unfinished">Σχεδιάστε τη διαμετρική διάσταση</translation>
     </message>
@@ -2777,7 +2777,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Οριζόντια</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw horizontal dimension</source>
         <translation type="unfinished">Σχεδιάστε οριζόντια διάσταση</translation>
     </message>
@@ -2800,7 +2800,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Διατεταγμένη (X/Y)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+3"/>
         <source>Draw ordinate dimension</source>
         <translation type="unfinished">Σχεδιάστε τη διάσταση ordinate</translation>
     </message>
@@ -2823,7 +2823,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Ακτινική</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw radial dimension</source>
         <translation type="unfinished">Σχεδιάστε ακτινική διάσταση</translation>
     </message>
@@ -2877,7 +2877,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Περιστρεφόμενο (γραμμικό)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw linear dimension at a fixed angle</source>
         <translation type="unfinished">Σχεδιάστε γραμμική διάσταση σε σταθερή γωνία</translation>
     </message>
@@ -2890,7 +2890,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Κατακόρυφο</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw vertical dimension</source>
         <translation type="unfinished">Σχεδιάστε την κατακόρυφη διάσταση</translation>
     </message>
@@ -2953,7 +2953,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Εργαλεία διάστασης</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>D&amp;imension</source>
         <translation type="unfinished">Διάσταση</translation>
     </message>
@@ -3474,7 +3474,7 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4075,7 +4075,7 @@ is already in the list.</source>
         <translation type="unfinished">Σχεδίαση από CSV</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Draws entities based on textual entries in a CSV file</source>
         <translation type="unfinished">Σχεδιάζει οντότητες με βάση καταχωρήσεις κειμένου σε ένα αρχείο CSV</translation>
     </message>
@@ -4083,7 +4083,7 @@ is already in the list.</source>
 <context>
     <name>DrawOrder</name>
     <message>
-        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+92"/>
+        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
         <translation type="unfinished">Σειρά κλήρωσης</translation>
     </message>
@@ -4181,7 +4181,7 @@ is already in the list.</source>
         <translation type="unfinished">Σχεδίαση πολυγραμμής</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw polyline with line and arc segments</source>
         <translation type="unfinished">Σχεδιάστε πολυγραμμή με τμήματα γραμμής και τόξου</translation>
     </message>
@@ -4368,7 +4368,7 @@ is already in the list.</source>
         <translation type="unfinished">Script Shell</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+34"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
         <translation type="unfinished">Script Shell</translation>
@@ -4397,7 +4397,7 @@ is already in the list.</source>
         <translation type="unfinished">Εργαλεία επεξεργασίας</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Edit</source>
         <translation type="unfinished">Επεξεργασία</translation>
     </message>
@@ -4475,7 +4475,7 @@ is already in the list.</source>
         <translation type="unfinished">Επεξεργασία κειμένου</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Edit text</source>
         <translation type="unfinished">Επεξεργασία κειμένου</translation>
     </message>
@@ -4488,7 +4488,7 @@ is already in the list.</source>
         <translation type="unfinished">Εργαλεία έλλειψης</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Ellipse</source>
         <translation type="unfinished">Έλλειψη</translation>
     </message>
@@ -4586,7 +4586,7 @@ is already in the list.</source>
         <translation type="unfinished">Ελλειψοειδές τόξο</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw ellipse arc from center, major point, ratio and angles</source>
         <translation type="unfinished">Σχεδιάστε τόξο έλλειψης από το κέντρο, το κύριο σημείο, την αναλογία και τις γωνίες</translation>
     </message>
@@ -4599,7 +4599,7 @@ is already in the list.</source>
         <translation type="unfinished">Έλλειψη (κέντρο, σημείο, αναλογία)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw full ellipse from center, major point and ratio</source>
         <translation type="unfinished">Σχεδιάστε πλήρη έλλειψη από το κέντρο, το κύριο σημείο και την αναλογία</translation>
     </message>
@@ -4635,7 +4635,7 @@ is already in the list.</source>
         <translation type="unfinished">Έλλειψη με διαμέτρους</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and diameters</source>
         <translation type="unfinished">Σχεδιάστε έλλειψη με θέση και διαμέτρους</translation>
     </message>
@@ -4668,7 +4668,7 @@ is already in the list.</source>
         <translation type="unfinished">Εγγεγραμμένο σε τετράπλευρο</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse inscribed in quadrilateral</source>
         <translation type="unfinished">Σχεδιάστε έλλειψη εγγεγραμμένη σε τετράπλευρο</translation>
     </message>
@@ -4691,7 +4691,7 @@ is already in the list.</source>
         <translation type="unfinished">Παράλληλη καμπύλη (με απόσταση)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse</source>
         <translation type="unfinished">Σχεδιάστε παράλληλη καμπύλη στην έλλειψη</translation>
     </message>
@@ -4709,7 +4709,7 @@ is already in the list.</source>
         <translation type="unfinished">Παράλληλη καμπύλη (μέσω σημείου)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse through point</source>
         <translation type="unfinished">Σχεδιάστε παράλληλη καμπύλη στην έλλειψη μέσω του σημείου</translation>
     </message>
@@ -4745,7 +4745,7 @@ is already in the list.</source>
         <translation type="unfinished">Έλλειψη με ακτίνες</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and radii</source>
         <translation type="unfinished">Σχεδιάστε έλλειψη με θέση και ακτίνες</translation>
     </message>
@@ -4870,7 +4870,7 @@ is already in the list.</source>
         <translation type="unfinished">Κοινή άρθρωση χελιδονοουράς</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation type="unfinished">Σχεδιάστε μια άρθρωση χελιδονοουράς</translation>
     </message>
@@ -5038,7 +5038,7 @@ is already in the list.</source>
         <translation type="unfinished">Τρία σημεία</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw three points</source>
         <translation type="unfinished">Τρεις βαθμοί ισοπαλίας</translation>
     </message>
@@ -5185,7 +5185,7 @@ is already in the list.</source>
         <translation type="unfinished">Εργαλεία αρχείων</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;File</source>
         <translation type="unfinished">Αρχείο</translation>
     </message>
@@ -6305,7 +6305,7 @@ is already in the list.</source>
         <translation type="unfinished">Εργαλεία καταπακτής</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Hatch</source>
         <translation type="unfinished">Καταπακτή</translation>
     </message>
@@ -6376,7 +6376,7 @@ is already in the list.</source>
         <translation type="unfinished">Hatch από την επιλογή</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Create hatch or solid fill from selected boundary</source>
         <translation type="unfinished">Δημιουργία καφασωτού ή στερεού γεμίσματος από επιλεγμένο όριο</translation>
     </message>
@@ -6615,7 +6615,7 @@ is already in the list.</source>
         <translation type="unfinished">Προσθήκη προσαρμοσμένου 2D κεντροειδούς</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Create a customizable 2D Centroid marker</source>
         <translation type="unfinished">Δημιουργήστε έναν παραμετροποιήσιμο δείκτη 2D Centroid</translation>
     </message>
@@ -6945,7 +6945,7 @@ is already in the list.</source>
         <translation type="unfinished">Εμβαδόν κεντροειδές</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create an area 2D Centroid for a selected entity</source>
         <translation type="unfinished">Δημιουργία μιας περιοχής 2D Centroid για μια επιλεγμένη οντότητα</translation>
     </message>
@@ -7067,7 +7067,7 @@ is already in the list.</source>
         <translation type="unfinished">Ακροατής κεντροειδούς</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
         <translation type="unfinished">(Απενεργοποίηση) ενός ακροατή συναλλαγών για 2D Centroids</translation>
     </message>
@@ -7320,7 +7320,7 @@ is already in the list.</source>
         <translation type="unfinished">Άθροισμα 2D Centroids σταθμισμένα</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Combine selected 2D Centroid markers weighted</source>
         <translation type="unfinished">Συνδυάζει επιλεγμένους δείκτες 2D Centroid σταθμισμένους</translation>
     </message>
@@ -7420,7 +7420,7 @@ is already in the list.</source>
         <translation type="unfinished">Εγκέφαλος σύρματος</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create a wire 2D Centroid for a selection</source>
         <translation type="unfinished">Δημιουργήστε ένα σύρμα 2D Centroid για μια επιλογή</translation>
     </message>
@@ -7438,7 +7438,7 @@ is already in the list.</source>
         <translation type="unfinished">Εργαλεία πληροφόρησης</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Info</source>
         <translation type="unfinished">Πληροφορίες</translation>
     </message>
@@ -7766,7 +7766,7 @@ is already in the list.</source>
         <translation type="unfinished">Αντιστροφή επιλογής</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Invert the current selection</source>
         <translation type="unfinished">Αντιστροφή της τρέχουσας επιλογής</translation>
     </message>
@@ -7973,7 +7973,7 @@ is already in the list.</source>
         <translation type="unfinished">Εργαλεία στρώματος</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Layer</source>
         <translation type="unfinished">Στρώμα</translation>
     </message>
@@ -8112,12 +8112,12 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+110"/>
+        <location line="+109"/>
         <source>Layer List</source>
         <translation type="unfinished">Λίστα επιπέδων</translation>
     </message>
     <message>
-        <location line="-55"/>
+        <location line="-54"/>
         <source>&amp;Layer List</source>
         <translation type="unfinished">Λίστα επιπέδων</translation>
     </message>
@@ -8155,7 +8155,7 @@ is already in the list.</source>
         <translation type="unfinished">Αρχηγός</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
         <translation type="unfinished">Σχεδιάστε τον αρχηγό (ακολουθία γραμμών με βέλος)</translation>
     </message>
@@ -8204,7 +8204,7 @@ is already in the list.</source>
         <translation type="unfinished">Εργαλεία γραμμής</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Line</source>
         <translation type="unfinished">Γραμμή</translation>
     </message>
@@ -8282,7 +8282,7 @@ is already in the list.</source>
         <translation type="unfinished">Γραμμή από 2 σημεία</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single line or sequence of lines</source>
         <translation type="unfinished">Σχεδιάστε μία γραμμή ή ακολουθία γραμμών</translation>
     </message>
@@ -8335,7 +8335,7 @@ is already in the list.</source>
         <translation type="unfinished">Γραμμή από γωνία</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line at a given absolute angle</source>
         <translation type="unfinished">Σχεδιάστε γραμμή σε δεδομένη απόλυτη γωνία</translation>
     </message>
@@ -8373,7 +8373,7 @@ is already in the list.</source>
         <translation type="unfinished">Διχοτόμος γωνίας</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angle bisector, trisector, ...</source>
         <translation type="unfinished">Σχεδιάστε διχοτόμο γωνίας, τριχοτόμο, ...</translation>
     </message>
@@ -8431,7 +8431,7 @@ is already in the list.</source>
         <translation type="unfinished">Box Joint από 2 σημεία</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
         <translation type="unfinished">Draw Box Joint δάχτυλα, αυλακώσεις και Tennons</translation>
     </message>
@@ -8474,7 +8474,7 @@ is already in the list.</source>
         <translation type="unfinished">Σύνδεση χελιδονοουράς από 2 σημεία</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation type="unfinished">Σχεδιάστε μια άρθρωση χελιδονοουράς</translation>
     </message>
@@ -8497,7 +8497,7 @@ is already in the list.</source>
         <translation type="unfinished">Γραμμή ελεύθερου χεριού</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw freehand line</source>
         <translation type="unfinished">Σχεδιάστε γραμμή ελεύθερου χεριού</translation>
     </message>
@@ -8535,7 +8535,7 @@ is already in the list.</source>
         <translation type="unfinished">Οριζόντια γραμμή</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal line</source>
         <translation type="unfinished">Σχεδιάστε οριζόντια γραμμή</translation>
     </message>
@@ -8573,7 +8573,7 @@ is already in the list.</source>
         <translation type="unfinished">Ορθογώνια</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to base entity</source>
         <translation type="unfinished">Σχεδιάστε γραμμή ορθογώνια προς τη βασική οντότητα</translation>
     </message>
@@ -8601,7 +8601,7 @@ is already in the list.</source>
         <translation type="unfinished">Ορθογώνια / εφαπτομένη</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to line and tangent to circle, arc or ellipse</source>
         <translation type="unfinished">Σχεδιάστε γραμμή ορθογώνια σε γραμμή και εφαπτόμενη σε κύκλο, τόξο ή έλλειψη</translation>
     </message>
@@ -8624,7 +8624,7 @@ is already in the list.</source>
         <translation type="unfinished">Παράλληλη (με απόσταση)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
         <translation type="unfinished">Σχεδιάστε παράλληλα με υπάρχουσα γραμμή ή ομόκεντρο τόξο, κύκλο</translation>
     </message>
@@ -8642,7 +8642,7 @@ is already in the list.</source>
         <translation type="unfinished">Παράλληλη (μέσω σημείου)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
         <translation type="unfinished">Σχεδιάστε παράλληλη γραμμή ή ομόκεντρο τόξο ή κύκλο μέσω ενός δεδομένου σημείου</translation>
     </message>
@@ -8718,7 +8718,7 @@ is already in the list.</source>
         <translation type="unfinished">Σχετική γωνία</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line with relative angle to base entity</source>
         <translation type="unfinished">Σχεδιάστε γραμμή με σχετική γωνία με τη βασική οντότητα</translation>
     </message>
@@ -8759,7 +8759,7 @@ is already in the list.</source>
         <translation type="unfinished">Εγκάρσια (σημείο, κύκλος)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (point, circle)</source>
         <translation type="unfinished">Σχεδιάστε εφαπτομένη (σημείο, κύκλος)</translation>
     </message>
@@ -8787,7 +8787,7 @@ is already in the list.</source>
         <translation type="unfinished">Tangent (Δύο κύκλοι)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (circle, circle)</source>
         <translation type="unfinished">Σχεδιάστε εφαπτομένη (κύκλος, κύκλος)</translation>
     </message>
@@ -8800,7 +8800,7 @@ is already in the list.</source>
         <translation type="unfinished">Κάθετη γραμμή</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical line</source>
         <translation type="unfinished">Σχεδιάστε κάθετη γραμμή</translation>
     </message>
@@ -8992,7 +8992,7 @@ is already in the list.</source>
         <translation type="unfinished">Διάφορα εργαλεία</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc</source>
         <translation type="unfinished">Διάφορα</translation>
     </message>
@@ -9015,7 +9015,7 @@ is already in the list.</source>
         <translation type="unfinished">Διάφορα εργαλεία μπλοκ</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Block</source>
         <translation type="unfinished">Μπλοκ</translation>
     </message>
@@ -9033,7 +9033,7 @@ is already in the list.</source>
         <translation type="unfinished">Διάφορα εργαλεία ανάπτυξης</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>De&amp;velopment</source>
         <translation type="unfinished">Ανάπτυξη</translation>
     </message>
@@ -9051,7 +9051,7 @@ is already in the list.</source>
         <translation type="unfinished">Διάφορα εργαλεία σχεδίασης</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc Draw</source>
         <translation type="unfinished">Διάφορα Κλήρωση</translation>
     </message>
@@ -9074,7 +9074,7 @@ is already in the list.</source>
         <translation type="unfinished">Διάφορα εργαλεία εισαγωγής/εξαγωγής</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Import/Export</source>
         <translation type="unfinished">Εισαγωγή/Εξαγωγή</translation>
     </message>
@@ -9092,7 +9092,7 @@ is already in the list.</source>
         <translation type="unfinished">Διάφορα εργαλεία πληροφοριών</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Information</source>
         <translation type="unfinished">Πληροφορίες</translation>
     </message>
@@ -9110,7 +9110,7 @@ is already in the list.</source>
         <translation type="unfinished">Διάφορα εργαλεία τροποποίησης</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Modify</source>
         <translation type="unfinished">Τροποποίηση</translation>
     </message>
@@ -9128,7 +9128,7 @@ is already in the list.</source>
         <translation type="unfinished">Διάφορα εργαλεία επιλογής</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Select</source>
         <translation type="unfinished">Επιλέξτε</translation>
     </message>
@@ -9141,7 +9141,7 @@ is already in the list.</source>
         <translation type="unfinished">Εργαλεία τροποποίησης</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Modify</source>
         <translation type="unfinished">Τροποποίηση</translation>
     </message>
@@ -9396,7 +9396,7 @@ is already in the list.</source>
         <translation type="unfinished">Μετατόπιση (με απόσταση)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse</source>
         <translation type="unfinished">Μετατόπιση γραμμής, τόξου, κύκλου ή έλλειψης</translation>
     </message>
@@ -9419,7 +9419,7 @@ is already in the list.</source>
         <translation type="unfinished">Μετατόπιση (μέσω σημείου)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse through point</source>
         <translation type="unfinished">Μετατόπιση γραμμής, τόξου, κύκλου ή έλλειψης μέσω σημείου</translation>
     </message>
@@ -9447,7 +9447,7 @@ is already in the list.</source>
         <translation type="unfinished">Ανοίξτε το</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open an existing drawing</source>
         <translation type="unfinished">Ανοίξτε ένα υπάρχον σχέδιο</translation>
     </message>
@@ -9657,7 +9657,7 @@ is already in the list.</source>
         <translation type="unfinished">Εξαγωγή PDF</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Exports the current drawing as PDF</source>
         <translation type="unfinished">Εξαγωγή του τρέχοντος σχεδίου ως PDF</translation>
     </message>
@@ -9691,7 +9691,7 @@ is already in the list.</source>
         <translation type="unfinished">Εργαλεία σημείου</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Point</source>
         <translation type="unfinished">Σημείο</translation>
     </message>
@@ -9709,7 +9709,7 @@ is already in the list.</source>
         <translation type="unfinished">Ενιαίο σημείο</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single point</source>
         <translation type="unfinished">Σχεδιάστε ένα μόνο σημείο</translation>
     </message>
@@ -9782,7 +9782,7 @@ is already in the list.</source>
         <translation type="unfinished">Εργαλεία πολυγραμμής</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Polyline</source>
         <translation type="unfinished">Πολυγραμμή</translation>
     </message>
@@ -9897,7 +9897,7 @@ is already in the list.</source>
         <translation type="unfinished">Σύμβολο διακοπής πολυγραμμής από 2 σημεία</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a polyline break symbol from 2 points</source>
         <translation type="unfinished">Σχεδιάστε ένα σύμβολο διακοπής πολυγραμμής από 2 σημεία</translation>
     </message>
@@ -9956,7 +9956,7 @@ is already in the list.</source>
         <translation type="unfinished">Εκτύπωση</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current drawing</source>
         <translation type="unfinished">Εκτύπωση τρέχοντος σχεδίου</translation>
     </message>
@@ -9969,7 +9969,7 @@ is already in the list.</source>
         <translation type="unfinished">Εκτύπωση τρέχουσας προβολής</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current view</source>
         <translation type="unfinished">Εκτύπωση τρέχουσας προβολής</translation>
     </message>
@@ -10117,7 +10117,7 @@ is already in the list.</source>
         <translation type="unfinished">Προεπισκόπηση εκτύπωσης</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Preview how current drawing would be printed</source>
         <translation type="unfinished">Προεπισκόπηση του τρόπου εκτύπωσης του τρέχοντος σχεδίου</translation>
     </message>
@@ -10130,7 +10130,7 @@ is already in the list.</source>
         <translation type="unfinished">Εργαλεία προβολής</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Projection</source>
         <translation type="unfinished">Προβολή</translation>
     </message>
@@ -10183,7 +10183,7 @@ is already in the list.</source>
         <translation type="unfinished">Δεκαδικά / ακρίβεια για τις εμφανιζόμενες τιμές ιδιοτήτων:</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+219"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+221"/>
         <source>:</source>
         <translation type="unfinished">:</translation>
     </message>
@@ -10198,7 +10198,7 @@ is already in the list.</source>
         <translation type="unfinished">Ειδικές ιδιότητες</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+20"/>
         <source>Dependent Entities</source>
         <translation type="unfinished">Εξαρτώμενες οντότητες</translation>
     </message>
@@ -10258,7 +10258,7 @@ is already in the list.</source>
         <translation type="unfinished">Όχι</translation>
     </message>
     <message>
-        <location line="+393"/>
+        <location line="+402"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*ΔΙΑΦΟΡΕΣ*</translation>
     </message>
@@ -10270,7 +10270,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <location line="+57"/>
-        <location line="+11"/>
+        <location line="+10"/>
         <source>Property Editor</source>
         <translation type="unfinished">Επεξεργαστής ιδιοτήτων</translation>
     </message>
@@ -10285,7 +10285,7 @@ is already in the list.</source>
         <translation type="unfinished">Γενικές ιδιότητες</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+31"/>
         <source>Color:</source>
         <translation type="unfinished">Χρώμα:</translation>
     </message>
@@ -10764,7 +10764,7 @@ is already in the list.</source>
         <translation type="unfinished">Εκτέλεση σεναρίου</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open and run a script file</source>
         <translation type="unfinished">Άνοιγμα και εκτέλεση ενός αρχείου δέσμης ενεργειών</translation>
     </message>
@@ -11086,7 +11086,7 @@ is already in the list.</source>
         <translation type="unfinished">Εργαλεία επιλογής</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+13"/>
         <source>Selection Tools Panel</source>
         <translation type="unfinished">Πίνακας εργαλείων επιλογής</translation>
     </message>
@@ -11104,7 +11104,7 @@ is already in the list.</source>
         <translation type="unfinished">Επιλέξτε όλα</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Select all visible entities</source>
         <translation type="unfinished">Επιλογή όλων των ορατών οντοτήτων</translation>
     </message>
@@ -11222,7 +11222,7 @@ is already in the list.</source>
         <translation type="unfinished">(Απο)επιλογή περιγράμματος</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select connected entities</source>
         <translation type="unfinished">(Απο)επιλογή συνδεδεμένων οντοτήτων</translation>
     </message>
@@ -11270,7 +11270,7 @@ is already in the list.</source>
         <translation type="unfinished">(Απο)επιλογή διασταυρούμενων οντοτήτων</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities intersected by a line</source>
         <translation type="unfinished">(Απο)επιλογή όλων των οντοτήτων που τέμνονται από μια γραμμή</translation>
     </message>
@@ -11331,7 +11331,7 @@ is already in the list.</source>
         <translation type="unfinished">(Απο)επιλογή στρώματος</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities on the same layer</source>
         <translation type="unfinished">(Απο)επιλογή όλων των οντοτήτων στο ίδιο επίπεδο</translation>
     </message>
@@ -11384,7 +11384,7 @@ is already in the list.</source>
         <translation type="unfinished">(Απο)επιλογή ορθογώνιας περιοχής</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities inside a rectangle</source>
         <translation type="unfinished">(Απο)επιλογή όλων των οντοτήτων μέσα σε ένα ορθογώνιο</translation>
     </message>
@@ -11469,7 +11469,7 @@ is already in the list.</source>
         <translation type="unfinished">Εργαλεία σχήματος</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Shape</source>
         <translation type="unfinished">Σχήμα</translation>
     </message>
@@ -11541,7 +11541,7 @@ is already in the list.</source>
         <translation type="unfinished">Πολύγωνο (κέντρο, πλευρά)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and middle point of side</source>
         <translation type="unfinished">Σχεδιάστε κανονικό πολύγωνο από το κέντρο και το μεσαίο σημείο της πλευράς</translation>
     </message>
@@ -11584,7 +11584,7 @@ is already in the list.</source>
         <translation type="unfinished">Πολύγωνο (πλευρά, πλευρά)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from middle points of two opposite sides or two opposite corners</source>
         <translation type="unfinished">Σχεδιάστε κανονικό πολύγωνο από τα μεσαία σημεία δύο αντίθετων πλευρών ή δύο αντίθετων γωνιών</translation>
     </message>
@@ -11612,7 +11612,7 @@ is already in the list.</source>
         <translation type="unfinished">Πολύγωνο (κέντρο, γωνία)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and corner point</source>
         <translation type="unfinished">Σχεδιάστε κανονικό πολύγωνο από το κέντρο και το γωνιακό σημείο</translation>
     </message>
@@ -11640,7 +11640,7 @@ is already in the list.</source>
         <translation type="unfinished">Πολύγωνο (2 σημεία πλευράς)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from end points of one side</source>
         <translation type="unfinished">Σχεδιάστε κανονικό πολύγωνο από τα τελικά σημεία της μιας πλευράς</translation>
     </message>
@@ -11658,7 +11658,7 @@ is already in the list.</source>
         <translation type="unfinished">Ορθογώνιο</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle from two corners</source>
         <translation type="unfinished">Σχεδιάστε ορθογώνιο από δύο γωνίες</translation>
     </message>
@@ -11699,7 +11699,7 @@ is already in the list.</source>
         <translation type="unfinished">Ορθογώνιο με μέγεθος</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle with position and size</source>
         <translation type="unfinished">Σχεδιάστε ορθογώνιο με θέση και μέγεθος</translation>
     </message>
@@ -11757,7 +11757,7 @@ is already in the list.</source>
         <translation type="unfinished">Εργαλεία Snap</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+25"/>
         <source>&amp;Snap</source>
         <translation type="unfinished">Snap</translation>
     </message>
@@ -11925,7 +11925,7 @@ is already in the list.</source>
         <translation type="unfinished">Εγχειρίδιο απόστασης</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Snap distance between 2 points</source>
         <translation type="unfinished">Απόσταση μεταξύ 2 σημείων</translation>
     </message>
@@ -12075,7 +12075,7 @@ is already in the list.</source>
         <translation type="unfinished">Εργαλεία Spline</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Spline</source>
         <translation type="unfinished">Spline</translation>
     </message>
@@ -12123,7 +12123,7 @@ is already in the list.</source>
         <translation type="unfinished">Spline (σημεία ελέγχου)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw spline from control points</source>
         <translation type="unfinished">Σχεδίαση spline από σημεία ελέγχου</translation>
     </message>
@@ -12337,7 +12337,7 @@ is already in the list.</source>
         <translation type="unfinished">Κείμενο</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text</source>
         <translation type="unfinished">Σχεδίαση κειμένου</translation>
     </message>
@@ -12460,7 +12460,7 @@ is already in the list.</source>
         <translation type="unfinished">Κείμενο κατά μήκος οντότητας</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text along an entity</source>
         <translation type="unfinished">Σχεδίαση κειμένου κατά μήκος μιας οντότητας</translation>
     </message>
@@ -13049,7 +13049,7 @@ is already in the list.</source>
         <translation type="unfinished">Μετακίνηση / Αντιγραφή</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+9"/>
         <source>Move or copy entities once or multiple times</source>
         <translation type="unfinished">Μετακίνηση ή αντιγραφή οντοτήτων μία ή περισσότερες φορές</translation>
     </message>
@@ -13417,7 +13417,7 @@ is already in the list.</source>
         <translation type="unfinished">Προβολή εργαλείων</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>View</source>
         <translation type="unfinished">Προβολή</translation>
     </message>
@@ -13891,7 +13891,7 @@ is already in the list.</source>
         <translation type="unfinished">Οριζόντια γραμμή κατασκευής</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal construction line</source>
         <translation type="unfinished">Σχεδιάστε οριζόντια γραμμή κατασκευής</translation>
     </message>
@@ -13904,7 +13904,7 @@ is already in the list.</source>
         <translation type="unfinished">Κάθετη γραμμή κατασκευής</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical construction line</source>
         <translation type="unfinished">Σχεδιάστε κάθετη γραμμή κατασκευής</translation>
     </message>
@@ -13922,7 +13922,7 @@ is already in the list.</source>
         <translation type="unfinished">Εργαλεία ζουμ</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Zoom</source>
         <translation type="unfinished">Ζουμ</translation>
     </message>

@@ -325,7 +325,7 @@ modificările preferințelor să intre în vigoare.</translation>
         <translation type="unfinished">Adăugați un bloc gol</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Add new empty block</source>
         <translation type="unfinished">Adăugați un nou bloc gol</translation>
     </message>
@@ -412,7 +412,7 @@ modificările preferințelor să intre în vigoare.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1986"/>
+        <location filename="../scripts/Apollonius.js" line="+1989"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Raza invalidă</translation>
     </message>
@@ -438,7 +438,7 @@ modificările preferințelor să intre în vigoare.</translation>
         <translation type="unfinished">Instrumente Arc</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Arc</source>
         <translation type="unfinished">Arc</translation>
     </message>
@@ -491,7 +491,7 @@ modificările preferințelor să intre în vigoare.</translation>
         <translation type="unfinished">2 Puncte și unghi</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and angle</source>
         <translation type="unfinished">Desenează un arc de cerc din 2 puncte și un unghi</translation>
     </message>
@@ -544,7 +544,7 @@ modificările preferințelor să intre în vigoare.</translation>
         <translation type="unfinished">2 Puncte și înălțime</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and height</source>
         <translation type="unfinished">Desenați un arc de la 2 puncte și înălțimea</translation>
     </message>
@@ -602,7 +602,7 @@ modificările preferințelor să intre în vigoare.</translation>
         <translation type="unfinished">2 Puncte și lungime</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and length</source>
         <translation type="unfinished">Desenați arcul de la 2 puncte și lungimea</translation>
     </message>
@@ -670,7 +670,7 @@ modificările preferințelor să intre în vigoare.</translation>
         <translation type="unfinished">2 Puncte și rază</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 2 points and radius</source>
         <translation type="unfinished">Desenează un arc de cerc din 2 puncte și raza</translation>
     </message>
@@ -698,7 +698,7 @@ modificările preferințelor să intre în vigoare.</translation>
         <translation type="unfinished">3 puncte</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from 3 points</source>
         <translation type="unfinished">Desenează un arc de cerc din 3 puncte</translation>
     </message>
@@ -751,7 +751,7 @@ modificările preferințelor să intre în vigoare.</translation>
         <translation type="unfinished">Centru, Punct, Unghiuri</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc from center, point on arc and angles</source>
         <translation type="unfinished">Desenați un arc de la centru, punctul de pe arc și unghiurile</translation>
     </message>
@@ -774,7 +774,7 @@ modificările preferințelor să intre în vigoare.</translation>
         <translation type="unfinished">Concentric (cu distanță)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc</source>
         <translation type="unfinished">Desenați un arc concentric</translation>
     </message>
@@ -792,7 +792,7 @@ modificările preferințelor să intre în vigoare.</translation>
         <translation type="unfinished">Concentric (prin punct)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric arc through point</source>
         <translation type="unfinished">Desenați un arc concentric prin punctul</translation>
     </message>
@@ -831,7 +831,7 @@ modificările preferințelor să intre în vigoare.</translation>
         <translation type="unfinished">Tangentă, Punct, Rază</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to entity, through point with radius</source>
         <translation type="unfinished">Desenați un arc de cerc tangențial la entitate, prin punctul cu raza</translation>
     </message>
@@ -859,7 +859,7 @@ modificările preferințelor să intre în vigoare.</translation>
         <translation type="unfinished">Conectat tangențial</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw arc tangential to base entity</source>
         <translation type="unfinished">Desenează un arc tangențial la entitatea de bază</translation>
     </message>
@@ -1044,7 +1044,7 @@ Doriți să îl recuperați?</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>&amp;Batch2Pdf visible layout blocks</source>
         <translation type="unfinished">Batch2Pdf blocuri de aspect vizibile Batch2Pdf</translation>
     </message>
@@ -1240,7 +1240,7 @@ Doriți să îl recuperați?</translation>
         <translation type="unfinished">Unelte de bloc</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Block</source>
         <translation type="unfinished">Bloc</translation>
     </message>
@@ -1320,7 +1320,7 @@ Doriți să îl recuperați?</translation>
     <message>
         <location line="+0"/>
         <location line="+63"/>
-        <location line="+44"/>
+        <location line="+43"/>
         <source>Block List</source>
         <translation type="unfinished">Lista de blocuri</translation>
     </message>
@@ -1618,7 +1618,7 @@ Doriți să îl recuperați?</translation>
         <translation type="unfinished">Unelte de cerc</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Circle</source>
         <translation type="unfinished">Cerc</translation>
     </message>
@@ -1646,7 +1646,7 @@ Doriți să îl recuperați?</translation>
         <translation type="unfinished">2 puncte</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from 2 diametrically opposite points</source>
         <translation type="unfinished">Desenează cercul din 2 puncte diametral opuse</translation>
     </message>
@@ -1699,7 +1699,7 @@ Doriți să îl recuperați?</translation>
         <translation type="unfinished">2 Puncte și rază</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 2 points and radius</source>
         <translation type="unfinished">Desenează un cerc din 2 puncte și raza</translation>
     </message>
@@ -1738,7 +1738,7 @@ Doriți să îl recuperați?</translation>
         <translation type="unfinished">2 Tangente și punct</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation type="unfinished">Se trasează un cerc tangent la două entități, prin punctul</translation>
     </message>
@@ -1776,7 +1776,7 @@ Doriți să îl recuperați?</translation>
         <translation type="unfinished">2 Tangente și raze</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to two entities with given radius</source>
         <translation type="unfinished">Desenează un cerc tangențial la două entități cu raza dată</translation>
     </message>
@@ -1804,7 +1804,7 @@ Doriți să îl recuperați?</translation>
         <translation type="unfinished">3 puncte</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 3 points</source>
         <translation type="unfinished">Desenează un cerc din 3 puncte</translation>
     </message>
@@ -1843,7 +1843,7 @@ Doriți să îl recuperați?</translation>
         <translation type="unfinished">3 Tangente</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle tangential to three entities</source>
         <translation type="unfinished">Desenați un cerc tangențial la trei entități</translation>
     </message>
@@ -1873,7 +1873,7 @@ Doriți să îl recuperați?</translation>
         <translation type="unfinished">Centru, Diametru</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and diameter</source>
         <translation type="unfinished">Desenați un cerc din centru și diametru</translation>
     </message>
@@ -1896,7 +1896,7 @@ Doriți să îl recuperați?</translation>
         <translation type="unfinished">Centru, Punct</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from center and point on circle</source>
         <translation type="unfinished">Desenați un cerc din centru și un punct pe cerc</translation>
     </message>
@@ -1926,7 +1926,7 @@ Doriți să îl recuperați?</translation>
         <translation type="unfinished">Centru, rază</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle from center and radius</source>
         <translation type="unfinished">Desenează un cerc din centru și rază</translation>
     </message>
@@ -1949,7 +1949,7 @@ Doriți să îl recuperați?</translation>
         <translation type="unfinished">Concentric (cu distanță)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric circle</source>
         <translation type="unfinished">Desenează cercuri concentrice</translation>
     </message>
@@ -1967,7 +1967,7 @@ Doriți să îl recuperați?</translation>
         <translation type="unfinished">Concentric (prin punct)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw concentric circle through point</source>
         <translation type="unfinished">Desenați un cerc concentric prin punctul</translation>
     </message>
@@ -2006,7 +2006,7 @@ Doriți să îl recuperați?</translation>
         <translation type="unfinished">Tangentă și 2 puncte</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle through two points and tangential to one entity</source>
         <translation type="unfinished">Desenează un cerc prin două puncte și tangent la o entitate</translation>
     </message>
@@ -2029,7 +2029,7 @@ Doriți să îl recuperați?</translation>
         <translation type="unfinished">Tangentă, Punct, Rază</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw circle tangential to entity, through point with radius</source>
         <translation type="unfinished">Desenați un cerc tangent la entitate, prin punctul cu raza</translation>
     </message>
@@ -2136,18 +2136,18 @@ Doriți să îl recuperați?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+68"/>
+        <location line="+67"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation type="unfinished">Linia de comandă</translation>
     </message>
     <message>
-        <location line="-21"/>
+        <location line="-20"/>
         <source>&amp;Command Line</source>
         <translation type="unfinished">Linia de comandă</translation>
     </message>
     <message>
-        <location line="+208"/>
+        <location line="+207"/>
         <source>Invalid value:</source>
         <translation type="unfinished">Valoare invalidă:</translation>
     </message>
@@ -2294,7 +2294,7 @@ Doriți să îl recuperați?</translation>
         <translation type="unfinished">Conversia unității de desen</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Convert drawing to a different drawing unit</source>
         <translation type="unfinished">Conversia desenului într-o altă unitate de desen</translation>
     </message>
@@ -2391,7 +2391,7 @@ Doriți să îl recuperați?</translation>
         <translation type="unfinished">Contorizare</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Auto increment number</source>
         <translation type="unfinished">Numărul de creștere automată</translation>
     </message>
@@ -2422,7 +2422,7 @@ Doriți să îl recuperați?</translation>
         <translation type="unfinished">Crucea de linie mediană</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
         <translation type="unfinished">Desenați linia mediană transversală în arce, cercuri sau elipse</translation>
     </message>
@@ -2568,7 +2568,7 @@ Doriți să îl recuperați?</translation>
         <translation type="unfinished">Deselectați toate</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Deselect all entities</source>
         <translation type="unfinished">Deselectați toate entitățile</translation>
     </message>
@@ -2709,7 +2709,7 @@ Doriți să îl recuperați?</translation>
         <translation type="unfinished">Aliniate</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw aligned dimension</source>
         <translation type="unfinished">Desenați dimensiunea aliniată</translation>
     </message>
@@ -2742,7 +2742,7 @@ Doriți să îl recuperați?</translation>
         <translation type="unfinished">Angular</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angular dimension</source>
         <translation type="unfinished">Desenați dimensiunea unghiulară</translation>
     </message>
@@ -2765,7 +2765,7 @@ Doriți să îl recuperați?</translation>
         <translation type="unfinished">Diametric</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw diametric dimension</source>
         <translation type="unfinished">Desenați dimensiunea diametrală</translation>
     </message>
@@ -2778,7 +2778,7 @@ Doriți să îl recuperați?</translation>
         <translation type="unfinished">Orizontal</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw horizontal dimension</source>
         <translation type="unfinished">Desenați dimensiunea orizontală</translation>
     </message>
@@ -2801,7 +2801,7 @@ Doriți să îl recuperați?</translation>
         <translation type="unfinished">Ordonata (X/Y)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+3"/>
         <source>Draw ordinate dimension</source>
         <translation type="unfinished">Desenați dimensiunea ordonatei</translation>
     </message>
@@ -2824,7 +2824,7 @@ Doriți să îl recuperați?</translation>
         <translation type="unfinished">Radial</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw radial dimension</source>
         <translation type="unfinished">Desenați dimensiunea radială</translation>
     </message>
@@ -2879,7 +2879,7 @@ Doriți să îl recuperați?</translation>
         <translation type="unfinished">Rotit (liniar)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw linear dimension at a fixed angle</source>
         <translation type="unfinished">Desenați dimensiunea liniară la un unghi fix</translation>
     </message>
@@ -2892,7 +2892,7 @@ Doriți să îl recuperați?</translation>
         <translation type="unfinished">Vertical</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw vertical dimension</source>
         <translation type="unfinished">Desenați dimensiunea verticală</translation>
     </message>
@@ -2955,7 +2955,7 @@ Doriți să îl recuperați?</translation>
         <translation type="unfinished">Instrumente de dimensionare</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>D&amp;imension</source>
         <translation type="unfinished">Dimensiune</translation>
     </message>
@@ -3476,7 +3476,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Trage Fms Lanes</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
         <translation type="unfinished">Desenați benzile FMS (coaste)</translation>
     </message>
@@ -4077,7 +4077,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Extragere din CSV</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Draws entities based on textual entries in a CSV file</source>
         <translation type="unfinished">Desenează entități pe baza intrărilor textuale dintr-un fișier CSV</translation>
     </message>
@@ -4085,7 +4085,7 @@ este deja în listă.</translation>
 <context>
     <name>DrawOrder</name>
     <message>
-        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+92"/>
+        <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+91"/>
         <source>&amp;Draw Order</source>
         <translation type="unfinished">Ordine de tragere</translation>
     </message>
@@ -4183,7 +4183,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Desenați polilinia</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw polyline with line and arc segments</source>
         <translation type="unfinished">Desenarea polilinii cu segmente de linie și de arc</translation>
     </message>
@@ -4371,7 +4371,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Script Shell</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+34"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
         <translation type="unfinished">Script Shell</translation>
@@ -4400,7 +4400,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Instrumente de editare</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Edit</source>
         <translation type="unfinished">Editați</translation>
     </message>
@@ -4478,7 +4478,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Editare text</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Edit text</source>
         <translation type="unfinished">Editare text</translation>
     </message>
@@ -4491,7 +4491,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Instrumente de elipsă</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Ellipse</source>
         <translation type="unfinished">Elipsă</translation>
     </message>
@@ -4589,7 +4589,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Arc de elipsă</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw ellipse arc from center, major point, ratio and angles</source>
         <translation type="unfinished">Desenează un arc de elipsă pornind de la centru, punct major, raport și unghiuri</translation>
     </message>
@@ -4602,7 +4602,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Elipsă (centru, punct, raport)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw full ellipse from center, major point and ratio</source>
         <translation type="unfinished">Desenați o elipsă completă de la centru, punctul principal și raportul</translation>
     </message>
@@ -4638,7 +4638,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Elipsă cu diametre</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and diameters</source>
         <translation type="unfinished">Desenați elipsa cu poziția și diametrele</translation>
     </message>
@@ -4671,7 +4671,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Inscripționat în cadrilater</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse inscribed in quadrilateral</source>
         <translation type="unfinished">Desenați elipsa înscrisă în cvadrilaterală</translation>
     </message>
@@ -4694,7 +4694,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Curbă paralelă (cu distanță)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse</source>
         <translation type="unfinished">Desenați o curbă paralelă cu elipsa</translation>
     </message>
@@ -4712,7 +4712,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Curbă paralelă (prin punct)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel curve to ellipse through point</source>
         <translation type="unfinished">Desenați curba paralelă cu elipsa prin punctul</translation>
     </message>
@@ -4748,7 +4748,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Elipsă cu raze</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw ellipse with position and radii</source>
         <translation type="unfinished">Desenați elipsa cu poziția și razele</translation>
     </message>
@@ -4873,7 +4873,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Îmbinare în coadă de rândunică</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation type="unfinished">Desenați o îmbinare în coadă de rândunică</translation>
     </message>
@@ -5041,7 +5041,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Trei puncte</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw three points</source>
         <translation type="unfinished">Trage trei puncte</translation>
     </message>
@@ -5189,7 +5189,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Instrumente de fișier</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;File</source>
         <translation type="unfinished">Fișier</translation>
     </message>
@@ -6309,7 +6309,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Unelte de trapă</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Hatch</source>
         <translation type="unfinished">Trapă</translation>
     </message>
@@ -6380,7 +6380,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Trapa din selecție</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Create hatch or solid fill from selected boundary</source>
         <translation type="unfinished">Crearea unei hașuri sau a unei umpleri solide din limita selectată</translation>
     </message>
@@ -6619,7 +6619,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Adăugați un centroid 2D personalizat</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Create a customizable 2D Centroid marker</source>
         <translation type="unfinished">Creați un marker 2D Centroid personalizabil</translation>
     </message>
@@ -6949,7 +6949,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Zona Centroid</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create an area 2D Centroid for a selected entity</source>
         <translation type="unfinished">Crearea unei zone 2D Centroid pentru o entitate selectată</translation>
     </message>
@@ -7071,7 +7071,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Ascultător centroid</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
         <translation type="unfinished">(De-)Activați un ascultător de tranzacții pentru centroizi 2D</translation>
     </message>
@@ -7324,7 +7324,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Suma centroizilor 2D ponderați</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Combine selected 2D Centroid markers weighted</source>
         <translation type="unfinished">Combină markerii Centroid 2D selectați și ponderați</translation>
     </message>
@@ -7424,7 +7424,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Centrul de sârmă</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Create a wire 2D Centroid for a selection</source>
         <translation type="unfinished">Creați un centroid 2D de sârmă pentru o selecție</translation>
     </message>
@@ -7442,7 +7442,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Instrumente de informare</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Info</source>
         <translation type="unfinished">Informații</translation>
     </message>
@@ -7770,7 +7770,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Selecție inversă</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Invert the current selection</source>
         <translation type="unfinished">Inversează selecția curentă</translation>
     </message>
@@ -7977,7 +7977,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Instrumente pentru straturi</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Layer</source>
         <translation type="unfinished">Stratul</translation>
     </message>
@@ -8116,12 +8116,12 @@ este deja în listă.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+110"/>
+        <location line="+109"/>
         <source>Layer List</source>
         <translation type="unfinished">Lista de straturi</translation>
     </message>
     <message>
-        <location line="-55"/>
+        <location line="-54"/>
         <source>&amp;Layer List</source>
         <translation type="unfinished">Lista de straturi</translation>
     </message>
@@ -8159,7 +8159,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Lider</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw leader (line sequence with arrow)</source>
         <translation type="unfinished">Desenați liderul (secvență de linii cu săgeată)</translation>
     </message>
@@ -8208,7 +8208,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Instrumente de linie</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Line</source>
         <translation type="unfinished">Linia</translation>
     </message>
@@ -8286,7 +8286,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Linia de la 2 puncte</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single line or sequence of lines</source>
         <translation type="unfinished">Desenați o singură linie sau o secvență de linii</translation>
     </message>
@@ -8339,7 +8339,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Linie din unghi</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line at a given absolute angle</source>
         <translation type="unfinished">Trasează o linie la un anumit unghi absolut</translation>
     </message>
@@ -8377,7 +8377,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Bisectoare de unghi</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw angle bisector, trisector, ...</source>
         <translation type="unfinished">Desenează bisectoarea unghiului, trisectoarea, ...</translation>
     </message>
@@ -8435,7 +8435,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Box Joint de la 2 puncte</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
         <translation type="unfinished">Degetele, fantele și tencuielile pentru articulații de tip &quot;Draw Box</translation>
     </message>
@@ -8478,7 +8478,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Îmbinare în coadă de rândunică din 2 puncte</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a dovetail joint</source>
         <translation type="unfinished">Desenați o îmbinare în coadă de rândunică</translation>
     </message>
@@ -8501,7 +8501,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Linie cu mâna liberă</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw freehand line</source>
         <translation type="unfinished">Desenați o linie cu mâna liberă</translation>
     </message>
@@ -8539,7 +8539,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Linie orizontală</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal line</source>
         <translation type="unfinished">Desenați o linie orizontală</translation>
     </message>
@@ -8577,7 +8577,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Ortogonal</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to base entity</source>
         <translation type="unfinished">Trasează o linie ortogonală la entitatea de bază</translation>
     </message>
@@ -8605,7 +8605,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Ortogonală / Tangentă</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line orthogonal to line and tangent to circle, arc or ellipse</source>
         <translation type="unfinished">Trasează o linie ortogonală la linie și tangentă la cerc, arc sau elipsă</translation>
     </message>
@@ -8628,7 +8628,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Paralelă (cu distanță)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
         <translation type="unfinished">Desenează o linie paralelă cu linia existentă sau un arc de cerc concentric, un cerc</translation>
     </message>
@@ -8646,7 +8646,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Paralelă (prin punct)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
         <translation type="unfinished">Desenează o linie paralelă sau un arc de cerc sau un cerc concentric care trece printr-un punct dat</translation>
     </message>
@@ -8722,7 +8722,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Unghiul relativ</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw line with relative angle to base entity</source>
         <translation type="unfinished">Trasează o linie cu un unghi relativ față de entitatea de bază</translation>
     </message>
@@ -8763,7 +8763,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Tangentă (punct, cerc)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (point, circle)</source>
         <translation type="unfinished">Desenează o tangentă (punct, cerc)</translation>
     </message>
@@ -8791,7 +8791,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Tangentă (două cercuri)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw tangent (circle, circle)</source>
         <translation type="unfinished">Desenează tangenta (cerc, cerc)</translation>
     </message>
@@ -8804,7 +8804,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Linie verticală</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical line</source>
         <translation type="unfinished">Trage o linie verticală</translation>
     </message>
@@ -8996,7 +8996,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Instrumente diverse</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc</source>
         <translation type="unfinished">Diverse</translation>
     </message>
@@ -9019,7 +9019,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Diverse instrumente de bloc</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Block</source>
         <translation type="unfinished">Bloc</translation>
     </message>
@@ -9037,7 +9037,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Diverse instrumente de dezvoltare</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>De&amp;velopment</source>
         <translation type="unfinished">Dezvoltare</translation>
     </message>
@@ -9055,7 +9055,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Diverse instrumente de desen</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Misc Draw</source>
         <translation type="unfinished">Diverse Tragere la sorți</translation>
     </message>
@@ -9078,7 +9078,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Diverse instrumente de import / export</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>&amp;Import/Export</source>
         <translation type="unfinished">Import/Export</translation>
     </message>
@@ -9096,7 +9096,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Diverse instrumente de informare</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Information</source>
         <translation type="unfinished">Informații</translation>
     </message>
@@ -9114,7 +9114,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Diverse instrumente de modificare</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Modify</source>
         <translation type="unfinished">Modificați</translation>
     </message>
@@ -9132,7 +9132,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Diverse instrumente de selecție</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Select</source>
         <translation type="unfinished">Selectați</translation>
     </message>
@@ -9145,7 +9145,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Instrumente de modificare</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Modify</source>
         <translation type="unfinished">Modificați</translation>
     </message>
@@ -9402,7 +9402,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Offset (cu distanța)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse</source>
         <translation type="unfinished">Linie, arc, cerc sau elipsă decalată</translation>
     </message>
@@ -9425,7 +9425,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Offset (prin punct)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Offset line, arc, circle or ellipse through point</source>
         <translation type="unfinished">Decalarea liniei, arcului, cercului sau elipsei prin punct</translation>
     </message>
@@ -9453,7 +9453,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Deschideți</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open an existing drawing</source>
         <translation type="unfinished">Deschideți un desen existent</translation>
     </message>
@@ -9663,7 +9663,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Export PDF</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Exports the current drawing as PDF</source>
         <translation type="unfinished">Exportă desenul curent în format PDF</translation>
     </message>
@@ -9697,7 +9697,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Instrumente de punct</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Point</source>
         <translation type="unfinished">Punct</translation>
     </message>
@@ -9715,7 +9715,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Punct unic</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw single point</source>
         <translation type="unfinished">Desenați un singur punct</translation>
     </message>
@@ -9788,7 +9788,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Instrumente poliliniare</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Polyline</source>
         <translation type="unfinished">Polilinie</translation>
     </message>
@@ -9903,7 +9903,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Simbol de întrerupere a polilinii din 2 puncte</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw a polyline break symbol from 2 points</source>
         <translation type="unfinished">Desenați un simbol de întrerupere a polilinii din 2 puncte</translation>
     </message>
@@ -9962,7 +9962,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Imprimare</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current drawing</source>
         <translation type="unfinished">Imprimă desenul curent</translation>
     </message>
@@ -9975,7 +9975,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Imprimă vizualizarea curentă</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Print current view</source>
         <translation type="unfinished">Imprimă vizualizarea curentă</translation>
     </message>
@@ -10123,7 +10123,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Previzualizare imprimare</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Preview how current drawing would be printed</source>
         <translation type="unfinished">Previzualizare a modului în care va fi tipărit desenul curent</translation>
     </message>
@@ -10136,7 +10136,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Instrumente de proiecție</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+22"/>
         <source>&amp;Projection</source>
         <translation type="unfinished">Proiecție</translation>
     </message>
@@ -10189,7 +10189,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Decimale / precizie pentru valorile afișate ale proprietăților:</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+219"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+221"/>
         <source>:</source>
         <translation type="unfinished">:</translation>
     </message>
@@ -10204,7 +10204,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Proprietăți specifice</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+20"/>
         <source>Dependent Entities</source>
         <translation type="unfinished">Entități dependente</translation>
     </message>
@@ -10264,7 +10264,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Nu</translation>
     </message>
     <message>
-        <location line="+393"/>
+        <location line="+402"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*VARIANTE*</translation>
     </message>
@@ -10276,7 +10276,7 @@ este deja în listă.</translation>
     <message>
         <location line="+0"/>
         <location line="+57"/>
-        <location line="+11"/>
+        <location line="+10"/>
         <source>Property Editor</source>
         <translation type="unfinished">Editor de proprietăți</translation>
     </message>
@@ -10291,7 +10291,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Proprietăți generale</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+31"/>
         <source>Color:</source>
         <translation type="unfinished">Culoare:</translation>
     </message>
@@ -10770,7 +10770,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Rulați scriptul</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Open and run a script file</source>
         <translation type="unfinished">Deschideți și rulați un fișier script</translation>
     </message>
@@ -11092,7 +11092,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Instrumente de selecție</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+13"/>
         <source>Selection Tools Panel</source>
         <translation type="unfinished">Panoul Instrumente de selecție</translation>
     </message>
@@ -11110,7 +11110,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Selectați toate</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Select all visible entities</source>
         <translation type="unfinished">Selectați toate entitățile vizibile</translation>
     </message>
@@ -11228,7 +11228,7 @@ este deja în listă.</translation>
         <translation type="unfinished">(De-)Selectarea conturului</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select connected entities</source>
         <translation type="unfinished">(De-)Selectarea entităților conectate</translation>
     </message>
@@ -11276,7 +11276,7 @@ este deja în listă.</translation>
         <translation type="unfinished">(De-)Selectarea entităților intersectate</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities intersected by a line</source>
         <translation type="unfinished">(De-)Selectarea tuturor entităților intersectate de o linie</translation>
     </message>
@@ -11337,7 +11337,7 @@ este deja în listă.</translation>
         <translation type="unfinished">(De-)Selectarea stratului</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities on the same layer</source>
         <translation type="unfinished">(De-)Selectarea tuturor entităților de pe același strat</translation>
     </message>
@@ -11390,7 +11390,7 @@ este deja în listă.</translation>
         <translation type="unfinished">(De-)Selectarea zonei dreptunghiulare</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>(De-)Select all entities inside a rectangle</source>
         <translation type="unfinished">(De-)Selectarea tuturor entităților din interiorul unui dreptunghi</translation>
     </message>
@@ -11478,7 +11478,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Instrumente de formă</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Shape</source>
         <translation type="unfinished">Formă</translation>
     </message>
@@ -11550,7 +11550,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Poligon (centru, latură)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and middle point of side</source>
         <translation type="unfinished">Desenează un poligon regulat din centrul și punctul median al laturii</translation>
     </message>
@@ -11593,7 +11593,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Poligon (Lateral, lateral)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from middle points of two opposite sides or two opposite corners</source>
         <translation type="unfinished">Desenează un poligon regulat din punctele din mijlocul a două laturi opuse sau două colțuri opuse</translation>
     </message>
@@ -11621,7 +11621,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Poligon (centru, colț)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from center and corner point</source>
         <translation type="unfinished">Desenează un poligon regulat de la centrul și punctul de colț</translation>
     </message>
@@ -11649,7 +11649,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Poligon (2 puncte de latură)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw regular polygon from end points of one side</source>
         <translation type="unfinished">Desenează un poligon regulat din punctele de capăt ale unei laturi</translation>
     </message>
@@ -11667,7 +11667,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Dreptunghi</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle from two corners</source>
         <translation type="unfinished">Desenați dreptunghiul din două colțuri</translation>
     </message>
@@ -11708,7 +11708,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Dreptunghi cu dimensiune</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw rectangle with position and size</source>
         <translation type="unfinished">Desenați un dreptunghi cu poziție și dimensiune</translation>
     </message>
@@ -11766,7 +11766,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Unelte Snap</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+25"/>
         <source>&amp;Snap</source>
         <translation type="unfinished">Snap</translation>
     </message>
@@ -11934,7 +11934,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Manualul de distanță</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Snap distance between 2 points</source>
         <translation type="unfinished">Distanța instantanee între 2 puncte</translation>
     </message>
@@ -12084,7 +12084,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Unelte Spline</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+26"/>
         <source>&amp;Spline</source>
         <translation type="unfinished">Spline</translation>
     </message>
@@ -12132,7 +12132,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Spline (puncte de control)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw spline from control points</source>
         <translation type="unfinished">Desenați spline din punctele de control</translation>
     </message>
@@ -12346,7 +12346,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Text</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text</source>
         <translation type="unfinished">Desenați text</translation>
     </message>
@@ -12469,7 +12469,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Text de-a lungul entității</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw text along an entity</source>
         <translation type="unfinished">Desenați text de-a lungul unei entități</translation>
     </message>
@@ -13058,7 +13058,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Mutare / Copiere</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+9"/>
         <source>Move or copy entities once or multiple times</source>
         <translation type="unfinished">Mutarea sau copierea entităților o dată sau de mai multe ori</translation>
     </message>
@@ -13426,7 +13426,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Vizualizați instrumentele</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>View</source>
         <translation type="unfinished">Vezi</translation>
     </message>
@@ -13900,7 +13900,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Linie de construcție orizontală</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw horizontal construction line</source>
         <translation type="unfinished">Desenați linia orizontală de construcție</translation>
     </message>
@@ -13913,7 +13913,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Linie de construcție verticală</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Draw vertical construction line</source>
         <translation type="unfinished">Desenați linia de construcție verticală</translation>
     </message>
@@ -13931,7 +13931,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Instrumente Zoom</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+27"/>
         <source>&amp;Zoom</source>
         <translation type="unfinished">Zoom</translation>
     </message>

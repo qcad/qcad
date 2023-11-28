@@ -255,7 +255,6 @@ LayerList.init = function(basePath) {
     var action = new RGuiAction(qsTr("&Layer List"), appWin);
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/LayerList.js");
-    action.setIcon(basePath + "/LayerList.svg");
     action.setDefaultShortcut(new QKeySequence("g,y"));
     action.setDefaultCommands(["gy"]);
     action.setGroupSortOrder(3600);

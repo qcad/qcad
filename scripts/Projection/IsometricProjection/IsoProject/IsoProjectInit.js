@@ -3,7 +3,6 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/IsoProject.js");
-    action.setIcon(basePath + "/IsoProject.svg");
     action.setDefaultShortcut(new QKeySequence("p,j"));
     action.setDefaultCommands(["isometric", "pj"]);
     action.setGroupSortOrder(18200);

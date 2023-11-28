@@ -66,7 +66,6 @@ File.getCadToolBarPanel = function() {
         action.setScriptFile(File.includeBasePath + "/File.js");
         action.objectName = actionName;
         action.setRequiresDocument(false);
-        action.setIcon(File.includeBasePath + "/File.svg");
         //action.setStatusTip(qsTr("Show file tools"));
         action.setNoState();
         action.setDefaultCommands(["filemenu"]);

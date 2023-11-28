@@ -3,7 +3,6 @@ function init(basePath) {
         RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/DimVertical.js");
-    action.setIcon(basePath + "/DimVertical.svg");
     action.setStatusTip(qsTranslate("DimVertical", "Draw vertical dimension"));
     action.setDefaultShortcut(new QKeySequence("d,v"));
     action.setDefaultCommands(["dimver", "dimvertical", "dv"]);

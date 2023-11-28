@@ -3,7 +3,6 @@ function init(basePath) {
         RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/Trim.js");
-    action.setIcon(basePath + "/Trim.svg");
     action.setDefaultShortcuts(
         [ new QKeySequence("r,m"),
           new QKeySequence("x,t") ]);

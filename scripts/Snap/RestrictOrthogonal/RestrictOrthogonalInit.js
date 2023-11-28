@@ -2,7 +2,6 @@ function init(basePath) {
     var action = new RGuiAction(qsTranslate("RestrictOrthogonal", "Restrict &Orthogonally"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/RestrictOrthogonal.js");
-    action.setIcon(basePath + "/RestrictOrthogonal.svg");
     action.setDefaultShortcut(new QKeySequence("e,o"));
     action.setDefaultCommands(["restrictorthogonal", "eo"]);
     action.setGroup("snaprestrictions");

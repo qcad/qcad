@@ -217,7 +217,6 @@ Select.getCadToolBarPanel = function() {
         action.setScriptFile(Select.includeBasePath + "/Select.js");
         action.objectName = actionName;
         action.setRequiresDocument(true);
-        action.setIcon(Select.includeBasePath + "/Select.svg");
         //action.setStatusTip(qsTr("Show selection tools"));
         action.setDefaultShortcut(new QKeySequence("w,s"));
         action.setNoState();

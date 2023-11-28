@@ -20,7 +20,6 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setRequiresSelection(false);
     action.setScriptFile(basePath + "/InfoAddCustomCentroid.js");
-    action.setIcon(basePath + "/InfoAddCustomCentroid.svg");
 //    action.setDefaultShortcut(new QKeySequence("a,b,c"));    // Ruled out (all Centroids)
     action.setDefaultCommands(["addcentroid", "addc"]);    // List as an Array!
     var tipShort = qsTranslate("InfoAddCustomCentroid", "Create a customizable 2D Centroid marker");
