@@ -52,6 +52,10 @@ else()
     set_target_properties(${PROJECT_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/../../debug)
 endif()
 
+if (UNIX)
+    set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME qcad-bin)
+endif()
+
 target_link_libraries(${PROJECT_NAME} PRIVATE
     Qt::Core
     Qt::Gui
