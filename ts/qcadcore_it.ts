@@ -379,7 +379,7 @@
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation>Scala del tipo di linea</translation>
+        <translation>Scala del tipo</translation>
     </message>
     <message>
         <location line="+1"/>

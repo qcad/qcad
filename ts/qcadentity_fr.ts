@@ -317,7 +317,7 @@
         <location filename="../src/entity/RSplineEntity.cpp" line="+1"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+1"/>
         <source>Total Length</source>
-        <translation>Longueur totale:</translation>
+        <translation>Longueur totale</translation>
     </message>
     <message>
         <location line="+1"/>
