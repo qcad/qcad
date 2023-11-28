@@ -222,7 +222,6 @@ void RGraphicsViewImage::updateImage() {
 
         showOnlyPlottable = RSettings::getBoolValue("PrintPreviewPro/ShowOnlyPlottable", false);
 
-
         //RDebug::startTimer();
         initWorkers();
         //RDebug::stopTimer("initWorkers");
@@ -794,10 +793,6 @@ void RGraphicsViewImage::updateTransformation() const {
  * port changes or document changes.
  */
 void RGraphicsViewImage::initWorkers() {
-    if (widget==NULL) {
-        return;
-    }
-
     //qDebug() << "RGraphicsViewImage::initWorkers";
 
     // not the right number of workers, re-init workers:
@@ -820,7 +815,13 @@ void RGraphicsViewImage::initWorkers() {
     }
 
     double dpr = getDevicePixelRatio();
-    QSize newSize(int(widget->width()*dpr), int(widget->height()*dpr));
+    QSize newSize;
+    if (widget!=NULL) {
+        newSize = QSize(int(widget->width()*dpr), int(widget->height()*dpr));
+    }
+    else {
+        newSize = lastSize;
+    }
 
     if (lastSize!=newSize && workers.first()->getImageSize()!=newSize) {
         for (int i=0; i<workers.length(); i++) {
@@ -2494,6 +2495,9 @@ int RGraphicsViewImage::getHeight() const {
 }
 
 void RGraphicsViewImage::resizeImage(int w, int h) {
+    if (workers.isEmpty()) {
+        initWorkers();
+    }
     for (int i=0; i<workers.length(); i++) {
         workers[i]->initImageBuffer(QSize(w,h));
     }
