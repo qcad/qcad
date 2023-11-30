@@ -252,6 +252,8 @@ void RGraphicsViewImage::updateImage() {
             paintDocument();
             //RDebug::stopTimer(700, "paintDocument");
 
+            workers.last()->setClipping(false);
+
             if (gridVisible) {
                 paintMetaGrid(workers.last());
                 paintGrid(workers.last());
@@ -1444,13 +1446,11 @@ void RGraphicsViewImage::paintEntityThread(RGraphicsViewWorker* worker, REntity:
     if (clipRectangle.isValid()) {
         clipRectangle.move(paintOffset);
 
-        // TODO: add function to RGraphicsViewImage:
         if (worker!=NULL) {
             worker->setClipRect(QRectF(clipRectangle.getMinimum().x, clipRectangle.getMinimum().y, clipRectangle.getWidth(), clipRectangle.getHeight()));
         }
     }
     else {
-        // TODO: add function to RGraphicsViewImage:
         if (worker!=NULL) {
             worker->setClipping(false);
         }
