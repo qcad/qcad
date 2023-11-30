@@ -761,7 +761,11 @@ QList<RVector> RShape::getIntersectionPointsLE(const RLine& line1,
     QList<RVector> res;
 
     // find out if line1 is (almost) a tangent:
-    QList<RLine> tangents = ellipse2.getTangents(line1.getMiddlePoint());
+    // find a good point on the line to lay a tangent on the ellipse (avoid points close to potential tangent point):
+    RVector p = line1.getClosestPointOnShape(ellipse2.getCenter(), false);
+    p = p + RVector::createPolar(qMax(ellipse2.getMinorRadius(), ellipse2.getMajorRadius())*2, line1.getDirection2());
+
+    QList<RLine> tangents = ellipse2.getTangents(p);
     for (int i=0; i<tangents.length(); i++) {
         double a = tangents[i].getAngle();
         double ad1 = fabs(RMath::getAngleDifference180(a, line1.getDirection1()));
@@ -2665,44 +2669,19 @@ QSharedPointer<RShape> RShape::transformArc(const RShape& shape, RShapeTransform
         c = circle.getCenter();
     }
 
+    // corners of bounding box of untransformed arc:
     RVector v1 = c + r1 + r2;
     RVector v2 = c + r1 - r2;
     RVector v3 = c - r1 - r2;
     RVector v4 = c - r1 + r2;
 
+    // transform conrners:
     v1 = transformation.transform(v1);
     v2 = transformation.transform(v2);
     v3 = transformation.transform(v3);
     v4 = transformation.transform(v4);
 
-    //var ret = [];
     REllipse ellipse = REllipse::createInscribed(v1, v2, v3, v4);
-    //var ellipse = ShapeAlgorithms.createEllipseInscribedFromVertices(v1, v2, v3, v4);
-    //ret.push(ellipse.copy());
-
-    if (isArcShape(shape) || isEllipseShape(shape)) {
-        RVector sp = shape.getStartPoint();
-        RVector ep = shape.getEndPoint();
-        RVector mp = shape.getMiddlePoint();
-
-        sp = transformation.transform(sp);
-        ep = transformation.transform(ep);
-        mp = transformation.transform(mp);
-
-        ellipse.setStartParam(ellipse.getParamTo(sp));
-        ellipse.setEndParam(ellipse.getParamTo(ep));
-
-        double d1 = ellipse.getMiddlePoint().getDistanceTo(mp);
-        ellipse.setReversed(true);
-        double d2 = ellipse.getMiddlePoint().getDistanceTo(mp);
-
-        if (d1<d2) {
-            ellipse.setReversed(false);
-        }
-    }
-
-    //ret.push(ShapeAlgorithms.ellipseToArcCircleEllipse(ellipse));
-    //ret = ret.concat([new RLine(v1, v2), new RLine(v2, v3), new RLine(v3, v4), new RLine(v4, v1)]);
 
     return RShape::ellipseToArcCircleEllipse(ellipse);
 }

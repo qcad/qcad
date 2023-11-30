@@ -162,7 +162,7 @@ REllipse REllipse::createInscribed(const RVector& p1, const RVector& p2, const R
 
     double angle;
 
-    if (b==0.0) {
+    if (RMath::fuzzyCompare(b, 0.0)) {
         angle = 0;
     }
     else {
@@ -174,7 +174,6 @@ REllipse REllipse::createInscribed(const RVector& p1, const RVector& p2, const R
     }
 
     RVector majorPoint = RVector::createPolar(axis1, angle);
-
     REllipse ellipse1(center, majorPoint, axis2/axis1, 0.0, 2*M_PI, false);
     REllipse ellipse2 = ellipse1;
     ellipse2.rotate(M_PI/2, ellipse2.getCenter());
