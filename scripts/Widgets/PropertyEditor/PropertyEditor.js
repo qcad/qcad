@@ -58,9 +58,14 @@ PropertyWatcher.prototype.propertyChanged = function(value) {
         return;
     }
 
-    // value if QFont:
+    // value is QFont:
     else if (isOfType(this.sender, QFontComboBox)) {
-        value = value.family();
+        var fontFamily = value.family();
+        if (fontFamily.length===0) {
+            // font varies:
+            return;
+        }
+        value = fontFamily;
     }
 
     // value comes from a combo box:
@@ -1318,12 +1323,7 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
             initFontComboBox(control);
             control.objectName = objectName;
             var pw = new PropertyWatcher(this, control, propertyTypeId);
-            if (RSettings.getQtVersion() >= 0x060000) {
-                control.currentFontChanged.connect(pw, pw.propertyChanged);
-            }
-            else {
-                control.currentFontChanged.connect(pw, pw.propertyChanged);
-            }
+            control.currentFontChanged.connect(pw, pw.propertyChanged);
         }
         else {
             control = new QComboBox(this.geometryGroup);
@@ -1489,7 +1489,9 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
         }
     }
     else {
+        var signalsBlocked = control.blockSignals(true);
         control.currentIndex = index;
+        control.blockSignals(signalsBlocked);
     }
 
     return [ control ];
