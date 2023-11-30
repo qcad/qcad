@@ -279,6 +279,8 @@ QList<RRefPoint> RTextBasedData::getReferencePoints(RS::ProjectionRenderingHint 
         case RS::HAlignRight:
             w=-w;
             break;
+        default:
+            break;
         }
         RVector vWidth = RVector::createPolar(w, angle);
         ret.append(alignmentPoint + vWidth);
