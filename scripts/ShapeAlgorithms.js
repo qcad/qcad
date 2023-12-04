@@ -1666,12 +1666,13 @@ ShapeAlgorithms.getQuadrilateral = function(line1, line2, line3, line4) {
  * Produces an ellipse inscribed in the quadrilateral defined by the
  * four given unordered / untrimmed edges (RLine shapes).
  */
-ShapeAlgorithms.createEllipseInscribedFromLines = function(line1, line2, line3, line4) {
+ShapeAlgorithms.createEllipseInscribedFromLines = function(line1, line2, line3, line4, pos) {
     var quad = ShapeAlgorithms.getQuadrilateral(line1, line2, line3, line4);
     if (isNull(quad)) {
         return undefined;
     }
-    return REllipse.createInscribed(quad[0], quad[1], quad[2], quad[3]);
+    var ret = REllipse.createInscribed(quad[0], quad[1], quad[2], quad[3], pos);
+    return ret[0];
 };
 
 
@@ -1680,7 +1681,8 @@ ShapeAlgorithms.createEllipseInscribedFromLines = function(line1, line2, line3, 
  * four given ordered vertices (RVector).
  */
 ShapeAlgorithms.createEllipseInscribedFromVertices = function(v1, v2, v3, v4) {
-    return REllipse.createInscribed(v1, v2, v3, v4);
+    var ret = REllipse.createInscribed(v1, v2, v3, v4);
+    return ret[0];
 };
 
 /**
@@ -1841,20 +1843,20 @@ ShapeAlgorithms.transformArc = function(arc, fun) {
         r2 = new RVector(0, arc.getRadius());
     }
 
-    // get vertices at extremities:
+    // get vertices at extremities (quad around full circle, ordered):
     var v1 = arc.getCenter().operator_add(r1).operator_add(r2);
     var v2 = arc.getCenter().operator_add(r1).operator_subtract(r2);
     var v3 = arc.getCenter().operator_subtract(r1).operator_subtract(r2);
     var v4 = arc.getCenter().operator_subtract(r1).operator_add(r2);
 
-    // project those vertices:
+    // project those vertices (project quad):
     fun(v1);
     fun(v2);
     fun(v3);
     fun(v4);
 
     //var ret = [];
-    // inscribe ellipse into vertices:
+    // inscribe ellipse into ordered vertices:
     var ellipse = ShapeAlgorithms.createEllipseInscribedFromVertices(v1, v2, v3, v4);
     //ret.push(ellipse.copy());
 
