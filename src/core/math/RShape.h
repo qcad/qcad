@@ -46,7 +46,7 @@ class RTriangle;
 class RShapeTransformation {
 public:
     virtual ~RShapeTransformation() {}
-    virtual RVector transform(const RVector& v) = 0;
+    virtual RVector transform(const RVector& v) const = 0;
 };
 
 class RShapeTransformationScale : public RShapeTransformation {
@@ -54,7 +54,7 @@ public:
     RShapeTransformationScale(const RVector& factors, const RVector& center) : factors(factors), center(center) {}
     virtual ~RShapeTransformationScale() {}
 
-    virtual RVector transform(const RVector& v) {
+    virtual RVector transform(const RVector& v) const {
         return v.getScaled(factors, center);
     }
 
