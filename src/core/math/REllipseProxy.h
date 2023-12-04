@@ -23,10 +23,12 @@
 #include "../core_global.h"
 
 #include <RS.h>
+#include <RVector.h>
 
 class REllipse;
 class RSpline;
 class RPolyline;
+class RShape;
 
 
 /**
@@ -41,6 +43,8 @@ public:
 
     virtual QList<RSpline> approximateWithSplines(const REllipse& ellipse) const = 0;
     virtual RPolyline approximateWithArcs(const REllipse& ellipse, int segments) const = 0;
+
+    virtual QList<QSharedPointer<RShape> > createInscribed(const RVector& pp1, const RVector& pp2, const RVector& pp3, const RVector& pp4, const RVector& centerHint = RVector::invalid) const = 0;
 };
 
 #endif

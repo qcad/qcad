@@ -23,7 +23,12 @@
 #include "RMath.h"
 #include "RMatrix.h"
 
+#include "RMainWindow.h"
+#include "RDocument.h"
+#include "RLineEntity.h"
+
 REllipseProxy* REllipse::ellipseProxy = NULL;
+
 
 /**
  * Creates an ellipse shape with invalid
@@ -54,159 +59,19 @@ REllipse::~REllipse() {
 }
 
 /**
- * Produces an ellipse inscribed in the quadrilateral defined by the
- * four given ordered vertices (RVector).
+ * Produces an ellipse inscribed in the quadrilateral defined by the four given ordered vertices (RVector).
  *
- * Based on:
- * http://chrisjones.id.au/Ellipses/ellipse.html
- * http://mathworld.wolfram.com/Ellipse.html
+ * \param centerHint Hint for the position of the center (e.g. mouse cursor for interactive tools) or invalid for maximum area solution.
+ * \return List of ellipse [0] and center line [1].
  */
-REllipse REllipse::createInscribed(const RVector& p1, const RVector& p2, const RVector& p3, const RVector& p4) {
-    double scale = RNANDOUBLE;
+QList<QSharedPointer<RShape> > REllipse::createInscribed(const RVector& p1, const RVector& p2, const RVector& p3, const RVector& p4, const RVector& centerHint) {
+    QList<QSharedPointer<RShape> > ret;
 
-    int i;
-
-    QList<RVector> quad;
-    quad.append(p1);
-    quad.append(p2);
-    quad.append(p3);
-    quad.append(p4);
-
-    RBox extr = RBox(RVector::getMinimum(quad), RVector::getMaximum(quad));
-
-    // offset to 0,0 to reduce magnitudes:
-    RVector offset = extr.getCenter().getNegated();
-
-    RVector::moveList(quad, offset);
-
-    // numbers in this algorithm can get extremely large, so we scale down here
-    // a bit if appropriate:
-    if (extr.getWidth()>100.0 || extr.getHeight()>100.0) {
-        scale = 100.0 / qMax(extr.getWidth(), extr.getHeight());
-        RVector::scaleList(quad, scale);
+    if (REllipse::hasProxy()) {
+        ret = REllipse::getEllipseProxy()->createInscribed(p1, p2, p3, p4, centerHint);
     }
 
-    QList<RLine> edges;
-    for (i=0; i<4; i++) {
-        edges.append(RLine(quad[i], quad[(i+1)%4]));
-    }
-
-    double x0 = quad[0].x;
-    double y0 = quad[0].y;
-    double x1 = quad[1].x;
-    double y1 = quad[1].y;
-    double x2 = quad[2].x;
-    double y2 = quad[2].y;
-    double x3 = quad[3].x;
-    double y3 = quad[3].y;
-
-    double ma =  x1 * x2 * y3 - x0 * x2 * y3 - x1 * y2 * x3 + x0 * y2 * x3 - x0 * y1 * x3 + y0 * x1 * x3 + x0 * y1 * x2 - y0 * x1 * x2;
-    double mb =  x0 * x2 * y3 - x0 * x1 * y3 - x1 * y2 * x3 + y1 * x2 * x3 - y0 * x2 * x3 + y0 * x1 * x3 + x0 * x1 * y2 - x0 * y1 * x2;
-    double mc =  x1 * x2 * y3 - x0 * x1 * y3 - x0 * y2 * x3 - y1 * x2 * x3 + y0 * x2 * x3 + x0 * y1 * x3 + x0 * x1 * y2 - y0 * x1 * x2;
-    double md =  y1 * x2 * y3 - y0 * x2 * y3 - x0 * y1 * y3 + y0 * x1 * y3 - y1 * y2 * x3 + y0 * y2 * x3 + x0 * y1 * y2 - y0 * x1 * y2;
-    double me = -x1 * y2 * y3 + x0 * y2 * y3 + y1 * x2 * y3 - x0 * y1 * y3 - y0 * y2 * x3 + y0 * y1 * x3 + y0 * x1 * y2 - y0 * y1 * x2;
-    double mf =  x1 * y2 * y3 - x0 * y2 * y3 + y0 * x2 * y3 - y0 * x1 * y3 - y1 * y2 * x3 + y0 * y1 * x3 + x0 * y1 * y2 - y0 * y1 * x2;
-    double mg =  x1 * y3 - x0 * y3 - y1 * x3 + y0 * x3 - x1 * y2 + x0 * y2 + y1 * x2 - y0 * x2;
-    double mh =  x2 * y3 - x1 * y3 - y2 * x3 + y1 * x3 + x0 * y2 - y0 * x2 - x0 * y1 + y0 * x1;
-    double mi =  x2 * y3 - x0 * y3 - y2 * x3 + y0 * x3 + x1 * y2 - y1 * x2 + x0 * y1 - y0 * x1;
-
-    RMatrix T = RMatrix::create3x3(
-        ma, mb, mc,
-        md, me, mf,
-        mg, mh, mi
-    );
-
-    RMatrix TI = T.getInverse();
-
-    double mj = TI.get(0, 0);
-    double mk = TI.get(0, 1);
-    double ml = TI.get(0, 2);
-    double mm = TI.get(1, 0);
-    double mn = TI.get(1, 1);
-    double mo = TI.get(1, 2);
-    double mp = TI.get(2, 0);
-    double mq = TI.get(2, 1);
-    double mr = TI.get(2, 2);
-
-    double a = mj*mj + mm*mm - mp*mp;
-    double b = mj*mk + mm*mn - mp*mq;
-    double c = mk*mk + mn*mn - mq*mq;
-    double d = mj*ml + mm*mo - mp*mr;
-    double f = mk*ml + mn*mo - mq*mr;
-    double g = ml*ml + mo*mo - mr*mr;
-
-    double term = (b*b - a*c);
-
-    double cx, cy, axis1, axis2;
-
-    // circle:
-    if (qAbs(term)<1e-50) {
-        cx = (p1.x + p3.x)/2;
-        cy = (p1.y + p3.y)/2;
-        axis1 = p1.getDistanceTo(p2)/2;
-        axis2 = axis1;
-    }
-    else {
-        cx = (c*d - b*f) / term;
-        cy = (a*f - b*d) / term;
-
-        double term1 = (2 * (a*f*f + c*d*d + g*b*b - 2*b*d*f - a*c*g));
-        double term2 = sqrt((a-c)*(a-c) + 4*b*b);
-        double term3 = (a + c);
-
-        axis1 = sqrt(term1 / (term * (term2-term3)));
-        axis2 = sqrt(term1 / (term * (-term2-term3)));
-    }
-
-    RVector center(cx, cy);
-
-    double angle;
-
-    if (RMath::fuzzyCompare(b, 0.0)) {
-        angle = 0;
-    }
-    else {
-        angle = 0.5 * (M_PI/2 - atan((a-c)/(2*b)));
-    }
-
-    if (a>c) {
-        angle += M_PI/2;
-    }
-
-    RVector majorPoint = RVector::createPolar(axis1, angle);
-    REllipse ellipse1(center, majorPoint, axis2/axis1, 0.0, 2*M_PI, false);
-    REllipse ellipse2 = ellipse1;
-    ellipse2.rotate(M_PI/2, ellipse2.getCenter());
-
-    REllipse canditates[2] = { ellipse1, ellipse2 };
-    int score[2] = { 0, 0 };
-
-    // workaround if the algorithm above does not produce the correct angle
-    // (90 degrees off):
-    // check which ellipse is _more likely_ the correct match:
-    for (i=0; i<4; i++) {
-        for (int k=0; k<2; k++) {
-            QList<RVector> ips = canditates[k].getIntersectionPoints(edges[i], false, false, true);
-            if (ips.length()==1 || (ips.length()==2 && ips[0].equalsFuzzy(ips[1], 0.001))) {
-                score[k]++;
-            }
-        }
-    }
-
-    REllipse ellipse;
-    if (score[0]>score[1]) {
-        ellipse = ellipse1;
-    }
-    else {
-        ellipse = ellipse2;
-    }
-
-    if (!RMath::isNaN(scale)) {
-        ellipse.scale(RVector(1.0/scale,1.0/scale));
-    }
-    ellipse.move(offset.getNegated());
-
-    return ellipse;
+    return ret;
 }
 
 bool REllipse::isValid() const {

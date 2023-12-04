@@ -49,7 +49,7 @@ public:
              bool reversed);
     virtual ~REllipse();
 
-    static REllipse createInscribed(const RVector& p1, const RVector& p2, const RVector& p3, const RVector& p4);
+    static QList<QSharedPointer<RShape> > createInscribed(const RVector& p1, const RVector& p2, const RVector& p3, const RVector& p4, const RVector& centerHint = RVector::invalid);
 
     virtual RShape::Type getShapeType() const {
         return Ellipse;
