@@ -302,6 +302,11 @@ File.getOpenFileName = function(parentWidget, caption, dir, filterStrings, noAll
  * \param version String from the file version drop down in the save as dialog.
  */
 File.isRecommendedVersion = function(version) {
+    if (!version.contains("*.dxf") && !version.contains("*.dwg")) {
+        // only dxf and dwg are recommended to save drawing files:
+        return false;
+    }
+
     if (version.indexOf("R2.5")!==-1) {
         return false;
     }
