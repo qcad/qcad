@@ -42,6 +42,10 @@ Ellipse.includeBasePath = includeBasePath;
  * \return ellipseShape or, if configured polyline.
  */
 Ellipse.postProcess = function(ellipseShape) {
+    if (!isEllipseShape(ellipseShape)) {
+        return ellipseShape;
+    }
+
     if (RSettings.getBoolValue("Ellipse/CreatePolyline", false)!==true) {
         return ellipseShape;
     }
