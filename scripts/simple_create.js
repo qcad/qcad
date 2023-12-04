@@ -519,9 +519,6 @@ function addObject(obj) {
 /**
  * Deletes the given RObject from the drawing.
  * \ingroup ecma_simple
- *
- * \return The added object. The object does not yet have a valid ID if it was added within a
- * transaction.
  */
 function deleteObject(obj) {
     if (isFunction(obj.data)) {
