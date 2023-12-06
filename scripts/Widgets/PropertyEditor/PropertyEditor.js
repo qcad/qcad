@@ -1671,6 +1671,20 @@ PropertyEditor.getPreferencesCategory = function() {
     return [ qsTr("Widgets"), qsTr("Property Editor") ];
 };
 
+PropertyEditor.initPreferences = function(pageWidget, calledByPrefDialog, document) {
+    var w = pageWidget.findChild("Decimals");
+    w.addItem("0", 0);
+    w.addItem("1 (1/2)", 1);
+    w.addItem("2 (1/4)", 2);
+    w.addItem("3 (1/8)", 3);
+    w.addItem("4 (1/16)", 4);
+    w.addItem("5 (1/32)", 5);
+    w.addItem("6 (1/64)", 6);
+    w.addItem("7 (1/128)", 7);
+    w.addItem("8 (1/256)", 8);
+    w.currentIndex = 8;
+};
+
 PropertyEditor.applyPreferences = function(doc, mdiChild) {
     var appWin = RMainWindowQt.getMainWindow();
     appWin.notifyPropertyListeners(EAction.getDocument());
