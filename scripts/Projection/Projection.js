@@ -564,6 +564,8 @@ Projection.prototype.projectShape = function(shape, preview, trim, rec) {
         // create polyline from ellipse:
         var ple = ShapeAlgorithms.approximateEllipse(shape, 16);
         return this.projectShape(ple, preview, trim);
+
+        // TODO: project ellipse bounding box and inscribe new ellipse (?)
     }
 
     if (isTriangleShape(shape)) {
