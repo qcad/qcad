@@ -1666,13 +1666,12 @@ ShapeAlgorithms.getQuadrilateral = function(line1, line2, line3, line4) {
  * Produces an ellipse inscribed in the quadrilateral defined by the
  * four given unordered / untrimmed edges (RLine shapes).
  */
-ShapeAlgorithms.createEllipseInscribedFromLines = function(line1, line2, line3, line4, pos) {
+ShapeAlgorithms.createEllipseInscribedFromLines = function(line1, line2, line3, line4) {
     var quad = ShapeAlgorithms.getQuadrilateral(line1, line2, line3, line4);
     if (isNull(quad)) {
         return undefined;
     }
-    var ret = REllipse.createInscribed(quad[0], quad[1], quad[2], quad[3], pos);
-    return ret[0];
+    return REllipse.createInscribed(quad[0], quad[1], quad[2], quad[3]);
 };
 
 
@@ -1681,8 +1680,7 @@ ShapeAlgorithms.createEllipseInscribedFromLines = function(line1, line2, line3, 
  * four given ordered vertices (RVector).
  */
 ShapeAlgorithms.createEllipseInscribedFromVertices = function(v1, v2, v3, v4) {
-    var ret = REllipse.createInscribed(v1, v2, v3, v4);
-    return ret[0];
+    return REllipse.createInscribed(v1, v2, v3, v4);
 };
 
 /**
@@ -1859,6 +1857,10 @@ ShapeAlgorithms.transformArc = function(arc, fun) {
     // inscribe ellipse into ordered vertices:
     var ellipse = ShapeAlgorithms.createEllipseInscribedFromVertices(v1, v2, v3, v4);
     //ret.push(ellipse.copy());
+
+    if (isNull(ellipse)) {
+        return arc;
+    }
 
     if (isArcShape(arc) || isEllipseShape(arc)) {
         var sp = arc.getStartPoint();

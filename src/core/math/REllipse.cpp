@@ -64,8 +64,8 @@ REllipse::~REllipse() {
  * \param centerHint Hint for the position of the center (e.g. mouse cursor for interactive tools) or invalid for maximum area solution.
  * \return List of ellipse [0] and center line [1].
  */
-QList<QSharedPointer<RShape> > REllipse::createInscribed(const RVector& p1, const RVector& p2, const RVector& p3, const RVector& p4, const RVector& centerHint) {
-    QList<QSharedPointer<RShape> > ret;
+REllipse REllipse::createInscribed(const RVector& p1, const RVector& p2, const RVector& p3, const RVector& p4, const RVector& centerHint) {
+    REllipse ret;
 
     if (REllipse::hasProxy()) {
         ret = REllipse::getEllipseProxy()->createInscribed(p1, p2, p3, p4, centerHint);

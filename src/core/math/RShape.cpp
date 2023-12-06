@@ -2681,18 +2681,7 @@ QSharedPointer<RShape> RShape::transformArc(const RShape& shape, RShapeTransform
     v3 = transformation.transform(v3);
     v4 = transformation.transform(v4);
 
-    QList<QSharedPointer<RShape> > inscribed = REllipse::createInscribed(v1, v2, v3, v4);
-
-    if (inscribed.isEmpty()) {
-        return QSharedPointer<RShape>();
-    }
-
-    QSharedPointer<REllipse> ellipseP = inscribed.first().dynamicCast<REllipse>();
-    if (ellipseP.isNull()) {
-        return QSharedPointer<RShape>();
-    }
-
-    REllipse ellipse = *ellipseP.data();
+    REllipse ellipse = REllipse::createInscribed(v1, v2, v3, v4);
 
     if (isArcShape(shape) || isEllipseShape(shape)) {
         RVector sp = shape.getStartPoint();
