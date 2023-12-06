@@ -470,12 +470,6 @@
     <file alias="scripts/Draw/Ellipse/EllipseDD/EllipseDDInit.js">../../scripts/Draw/Ellipse/EllipseDD/EllipseDDInit.js</file>
     <file alias="scripts/Draw/Ellipse/EllipseDD/Tests/EllipseDDTest00.js">../../scripts/Draw/Ellipse/EllipseDD/Tests/EllipseDDTest00.js</file>
     <file alias="scripts/Draw/Ellipse/EllipseDD/Tests/required/EllipseDDTest00_000.dxf">../../scripts/Draw/Ellipse/EllipseDD/Tests/required/EllipseDDTest00_000.dxf</file>
-    <file alias="scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuad-inverse.svg">../../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuad-inverse.svg</file>
-    <file alias="scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuad.js">../../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuad.js</file>
-    <file alias="scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuad.svg">../../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuad.svg</file>
-    <file alias="scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuadInit.js">../../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuadInit.js</file>
-    <file alias="scripts/Draw/Ellipse/EllipseInscribedQuad/Tests/EllipseInscribedQuadTest00.js">../../scripts/Draw/Ellipse/EllipseInscribedQuad/Tests/EllipseInscribedQuadTest00.js</file>
-    <file alias="scripts/Draw/Ellipse/EllipseInscribedQuad/Tests/required/EllipseInscribedQuadTest00_000.dxf">../../scripts/Draw/Ellipse/EllipseInscribedQuad/Tests/required/EllipseInscribedQuadTest00_000.dxf</file>
     <file alias="scripts/Draw/Ellipse/EllipseOffset/EllipseOffset-inverse.svg">../../scripts/Draw/Ellipse/EllipseOffset/EllipseOffset-inverse.svg</file>
     <file alias="scripts/Draw/Ellipse/EllipseOffset/EllipseOffset.js">../../scripts/Draw/Ellipse/EllipseOffset/EllipseOffset.js</file>
     <file alias="scripts/Draw/Ellipse/EllipseOffset/EllipseOffset.svg">../../scripts/Draw/Ellipse/EllipseOffset/EllipseOffset.svg</file>
@@ -827,6 +821,9 @@
     <file alias="scripts/Draw/Text/Tests/data/text01.dxf">../../scripts/Draw/Text/Tests/data/text01.dxf</file>
     <file alias="scripts/Draw/Text/Tests/data/text02.dxf">../../scripts/Draw/Text/Tests/data/text02.dxf</file>
     <file alias="scripts/Draw/Text/Tests/data/text03.dxf">../../scripts/Draw/Text/Tests/data/text03.dxf</file>
+    <file alias="scripts/Draw/Text/Tests/data/text04.bak000.dxf">../../scripts/Draw/Text/Tests/data/text04.bak000.dxf</file>
+    <file alias="scripts/Draw/Text/Tests/data/text04.bak001.dxf">../../scripts/Draw/Text/Tests/data/text04.bak001.dxf</file>
+    <file alias="scripts/Draw/Text/Tests/data/text04.bak002.dxf">../../scripts/Draw/Text/Tests/data/text04.bak002.dxf</file>
     <file alias="scripts/Draw/Text/Tests/data/text04.dxf">../../scripts/Draw/Text/Tests/data/text04.dxf</file>
     <file alias="scripts/Draw/Text/Tests/data/text05.dxf">../../scripts/Draw/Text/Tests/data/text05.dxf</file>
     <file alias="scripts/Draw/Text/Tests/data/text06.dxf">../../scripts/Draw/Text/Tests/data/text06.dxf</file>

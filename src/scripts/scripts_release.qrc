@@ -318,10 +318,6 @@
     <file alias="scripts/Draw/Ellipse/EllipseDD/EllipseDD.ui">../../scripts/Draw/Ellipse/EllipseDD/EllipseDD.ui</file>
     <file alias="scripts/Draw/Ellipse/EllipseDD/EllipseDDDialog.ui">../../scripts/Draw/Ellipse/EllipseDD/EllipseDDDialog.ui</file>
     <file alias="scripts/Draw/Ellipse/EllipseDD/EllipseDDInit.js">../../scripts/Draw/Ellipse/EllipseDD/EllipseDDInit.js</file>
-    <file alias="scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuad-inverse.svg">../../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuad-inverse.svg</file>
-    <file alias="scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuad.js">../../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuad.js</file>
-    <file alias="scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuad.svg">../../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuad.svg</file>
-    <file alias="scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuadInit.js">../../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuadInit.js</file>
     <file alias="scripts/Draw/Ellipse/EllipseOffset/EllipseOffset-inverse.svg">../../scripts/Draw/Ellipse/EllipseOffset/EllipseOffset-inverse.svg</file>
     <file alias="scripts/Draw/Ellipse/EllipseOffset/EllipseOffset.js">../../scripts/Draw/Ellipse/EllipseOffset/EllipseOffset.js</file>
     <file alias="scripts/Draw/Ellipse/EllipseOffset/EllipseOffset.svg">../../scripts/Draw/Ellipse/EllipseOffset/EllipseOffset.svg</file>
