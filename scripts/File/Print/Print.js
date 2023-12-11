@@ -574,7 +574,14 @@ Print.centerBox = function(di, bBox) {
  * \param painter QPainter object if we are printing, RPainterPath for print preview.
  */
 Print.drawCropMarks = function(document, painter, border, printing) {
-    var isPainter = isFunction(painter.drawLinesF);
+    var isPainter;
+
+    if (RSettings.getQtVersion()>=0x060000) {
+        isPainter = isFunction(painter.drawLines);
+    }
+    else {
+        isPainter = isFunction(painter.drawLinesF);
+    }
 
     var clipping = false;
     if (isPainter) {
@@ -613,10 +620,15 @@ Print.drawCropMarks = function(document, painter, border, printing) {
         for (var k=0; k<lines.length; ++k) {
             lines[k].translate(-offset.x, -offset.y);
         }
-        painter.drawLinesF(lines);
+        if (RSettings.getQtVersion()>=0x060000) {
+            painter.drawLines(lines);
+        }
+        else {
+            painter.drawLinesF(lines);
+        }
     }
 
-    // preview:
+    // preview (painter path):
     else {
         for (var i=0; i<lines.length; ++i) {
             painter.moveTo(new RVector(lines[i].x1(), lines[i].y1()));
