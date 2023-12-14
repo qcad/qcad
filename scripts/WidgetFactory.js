@@ -111,7 +111,7 @@ WidgetFactory.createWidget = function(basePath, uiFile, parent) {
         return undefined;
     }
 
-    //buf.open(new QIODevice.OpenMode(QIODevice.ReadOnly));
+    //buf.open(makeQIODeviceOpenMode(QIODevice.ReadOnly));
 
     var loader = new QUiLoader();
     loader.setWorkingDirectory(fileInfo.dir());
