@@ -74,6 +74,16 @@ REllipse REllipse::createInscribed(const RVector& p1, const RVector& p2, const R
     return ret;
 }
 
+REllipse REllipse::createFrom4Points(const RVector& p1, const RVector& p2, const RVector& p3, const RVector& p4) {
+    REllipse ret;
+
+    if (REllipse::hasProxy()) {
+        ret = REllipse::getEllipseProxy()->createFrom4Points(p1, p2, p3, p4);
+    }
+
+    return ret;
+}
+
 bool REllipse::isValid() const {
     return center.isValid() && majorPoint.isValid() && !RMath::isNaN(ratio) && !RMath::isNaN(startParam) && !RMath::isNaN(endParam);
 }

@@ -45,6 +45,7 @@ public:
     virtual RPolyline approximateWithArcs(const REllipse& ellipse, int segments) const = 0;
 
     virtual REllipse createInscribed(const RVector& pp1, const RVector& pp2, const RVector& pp3, const RVector& pp4, const RVector& centerHint = RVector::invalid) const = 0;
+    virtual REllipse createFrom4Points(const RVector& pp1, const RVector& pp2, const RVector& pp3, const RVector& pp4) const = 0;
 };
 
 #endif

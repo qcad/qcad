@@ -50,6 +50,7 @@ public:
     virtual ~REllipse();
 
     static REllipse createInscribed(const RVector& p1, const RVector& p2, const RVector& p3, const RVector& p4, const RVector& centerHint = RVector::invalid);
+    static REllipse createFrom4Points(const RVector& p1, const RVector& p2, const RVector& p3, const RVector& p4);
 
     virtual RShape::Type getShapeType() const {
         return Ellipse;
