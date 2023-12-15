@@ -101,6 +101,18 @@ void RGraphicsViewImage::clear() {
 //    }
 }
 
+void RGraphicsViewImage::setCursor(Qt::CursorShape cursorShape) {
+    if (widget!=NULL) {
+        widget->setCursor(QCursor(cursorShape));
+    }
+}
+
+void RGraphicsViewImage::setCursor(const QCursor& cursor) {
+    if (widget!=NULL) {
+        widget->setCursor(cursor);
+    }
+}
+
 void RGraphicsViewImage::setPaintOrigin(bool val) {
     doPaintOrigin = val;
 }
