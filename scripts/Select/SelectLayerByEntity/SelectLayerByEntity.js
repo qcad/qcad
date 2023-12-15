@@ -60,7 +60,7 @@ SelectLayerByEntity.prototype.beginEvent = function() {
 
 SelectLayerByEntity.prototype.setState = function(state) {
     Select.prototype.setState.call(this, state);
-    this.setCrosshairCursor();
+    //this.setCrosshairCursor();
 
     this.getDocumentInterface().setClickMode(RAction.PickEntity);
 
