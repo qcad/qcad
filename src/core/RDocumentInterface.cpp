@@ -1861,6 +1861,12 @@ void RDocumentInterface::addShapeToPreview(RShape& shape, const RColor& color,
         const QBrush& brush, RLineweight::Lineweight lineweight,
         Qt::PenStyle style, const QList<qreal>& dashes) {
 
+    int width = (RSettings::getHighResolutionGraphicsView() ? (int)RSettings::getDevicePixelRatio() : 1);
+
+    QPen pen(QBrush(color), width);
+    pen.setStyle(Qt::CustomDashLine);
+    pen.setDashPattern(dashes);
+
     // preview shapes are added to scene:
     QList<RGraphicsScene*>::iterator it;
     for (it = scenes.begin(); it != scenes.end(); it++) {
@@ -1870,14 +1876,18 @@ void RDocumentInterface::addShapeToPreview(RShape& shape, const RColor& color,
         scene->setColor(color);
         scene->setBrush(brush);
         scene->setLineweight(lineweight);
+        scene->setPen(pen);
+        scene->setPixelWidth(true);
         scene->setStyle(style);
         scene->setDashPattern(dashes.toVector());
         scene->setLinetypeId(document.getLinetypeId("CONTINUOUS"));
-        // ignore color mode for this preview (selection rectangle, zoom box, etc):
 
+        // ignore color mode for this preview (selection rectangle, zoom box, etc):
         scene->exportShape(QSharedPointer<RShape>(shape.clone()));
 
         scene->endNoColorMode();
+        scene->setPen(QPen());
+        scene->setPixelWidth(false);
         scene->endPreview();
     }
 }
