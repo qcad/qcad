@@ -152,6 +152,7 @@ Explode.explodeSelection = function(di, toolTitle) {
             op.deleteObject(entity);
         }
     }
+
     var t = di.applyOperation(op);
 
     // update block reference attributes:
@@ -166,15 +167,23 @@ Explode.explodeSelection = function(di, toolTitle) {
         // fix attribute links to block references:
         for (i=0; i<attributeEntities.length; i++) {
             var attributeEntity = attributeEntities[i].clone();
-            var newAttributeId = t.getNewObjectId(attributeEntity.getId());
-            storage.setObjectId(attributeEntity, newAttributeId);
+
+            if (RSettings.getQtVersion()>=0x060000) {
+                var newAttributeId = t.getNewObjectId(attributeEntity.getId());
+                storage.setObjectId(attributeEntity, newAttributeId);
+            }
 
             // find parent entity of attribute:
             var blockReferenceEntity = blockReferenceMap[attributeEntity.getParentId()];
             if (!isNull(blockReferenceEntity)) {
                 // update parent ID:
-                var newAttributeParentId = t.getNewObjectId(blockReferenceEntity.getId());
-                storage.setEntityParentId(attributeEntity, newAttributeParentId);
+                if (RSettings.getQtVersion()>=0x060000) {
+                    var newAttributeParentId = t.getNewObjectId(blockReferenceEntity.getId());
+                    storage.setEntityParentId(attributeEntity, newAttributeParentId);
+                }
+                else {
+                    storage.setEntityParentId(attributeEntity, blockReferenceEntity.getId());
+                }
                 op.addObject(attributeEntity, false);
             }
         }
