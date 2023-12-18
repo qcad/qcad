@@ -48,6 +48,7 @@ Print.defaultPrinter = undefined;
 
 Print.getDefaultPrinter = function() {
     if (isNull(Print.defaultPrinter)) {
+        // TODO: this can be extremely slow if the default printer is a network printer:
         Print.defaultPrinter = new QPrinter();
     }
     return Print.defaultPrinter;
