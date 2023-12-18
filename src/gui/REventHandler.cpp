@@ -275,6 +275,7 @@ void REventHandler::drawSnapLabel(RGraphicsViewWorker* worker, const RVector& po
             text);
     }
 
+    worker->setBrush(QBrush());
     worker->drawEllipse(QRectF(p.x-offset, p.y-offset, offset*2, offset*2));
 
     // restriction position:
