@@ -41,6 +41,7 @@ public:
     virtual QList<RSpline> splitEqual(const RSpline& spline, int pieces) = 0;
     virtual double getTAtPoint(const RSpline& spline, const RVector& point) = 0;
     virtual double getTAtDistance(const RSpline& spline, double dist) = 0;
+    virtual double getLength(const RSpline& spline) = 0;
     virtual double getDistanceAtT(const RSpline& spline, double t) = 0;
     virtual RVector getVectorTo(const RSpline& spline, const RVector& point, bool limited=true, double strictRange=RMAXDOUBLE) = 0;
     virtual RSpline simplify(const RSpline& spline, double tolerance) = 0;
