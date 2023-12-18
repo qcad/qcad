@@ -1024,7 +1024,7 @@ double RSpline::getLength() const {
     }
 
     if (hasProxy()) {
-        length = splineProxy->getDistanceAtT(*this, getTMax());
+        length = splineProxy->getLength(*this);
     }
     else {
         length = 0.0;
