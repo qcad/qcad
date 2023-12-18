@@ -129,15 +129,6 @@ LanguagePreferences.getLanguages = function(dirName) {
     
     var dir = new QDir(dirName);
     var sortFlags = makeQDirSortFlags(QDir.NoSort);
-    /*
-    var dirFilter = new QDir.Filters(QDir.NoDotAndDotDot, QDir.Readable,
-            QDir.Dirs);
-    var dirs = dir.entryInfoList(dirFilter, sortFlags);
-    
-    for (var i = 0; i < dirs.length; ++i) {
-        codes = codes.concat(LanguagePreferences.getLanguages(dirs[i].absoluteFilePath()));
-    }
-    */
     
     var fileFilter = makeQDirFilters(QDir.Readable, QDir.Files);
     var files = dir.entryInfoList(["*.qm"], fileFilter, sortFlags);
