@@ -4489,7 +4489,7 @@ už existuje v zozname.</translation>
 <context>
     <name>Ellipse</name>
     <message>
-        <location filename="../scripts/Draw/Ellipse/Ellipse.js" line="+85"/>
+        <location filename="../scripts/Draw/Ellipse/Ellipse.js" line="+89"/>
         <source>Ellipse Tools</source>
         <translation>Nástroje Elipsy</translation>
     </message>
@@ -4644,39 +4644,6 @@ už existuje v zozname.</translation>
         <location line="+4"/>
         <source>Draw ellipse with position and diameters</source>
         <translation>Nakresliť elipsu so zadanými rozmermi a určením polohy</translation>
-    </message>
-</context>
-<context>
-    <name>EllipseInscribedQuad</name>
-    <message>
-        <location filename="../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuad.js" line="+82"/>
-        <source>First line</source>
-        <translation>Prvá čiara</translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>Second line</source>
-        <translation>Druhá čiara</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Third line</source>
-        <translation>Tretia čiara</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Fourth line</source>
-        <translation>Štvrtá čiara</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuadInit.js" line="+2"/>
-        <source>Inscribed in Quadrilateral</source>
-        <translation>Elipsa vo Štvoruholníku</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Draw ellipse inscribed in quadrilateral</source>
-        <translation>Nakreslite elipsu vo štvoruholníku</translation>
     </message>
 </context>
 <context>
@@ -9986,7 +9953,7 @@ už existuje v zozname.</translation>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+94"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+96"/>
         <source>Auto Paper Size</source>
         <translation type="unfinished">Automatická veľkosť papiera</translation>
     </message>
@@ -10192,12 +10159,12 @@ už existuje v zozname.</translation>
         <translation type="unfinished">Zobrazenie rozšíreného štýlu dimenzie</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1666"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1668"/>
         <source>*VARIES*</source>
         <translation>*Rôzne*</translation>
     </message>
     <message>
-        <location line="-1445"/>
+        <location line="-1442"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10272,13 +10239,13 @@ už existuje v zozname.</translation>
         <translation>Nie</translation>
     </message>
     <message>
-        <location line="+405"/>
+        <location line="+402"/>
         <source>Widgets</source>
         <translation>Pomôcky</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+57"/>
+        <location line="+71"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation>Vlastnosti</translation>
@@ -14566,3 +14533,5 @@ už existuje v zozname.</translation>
     </message>
 </context>
 </TS>
+
+

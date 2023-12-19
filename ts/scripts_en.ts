@@ -4485,7 +4485,7 @@ is already in the list.</translation>
 <context>
     <name>Ellipse</name>
     <message>
-        <location filename="../scripts/Draw/Ellipse/Ellipse.js" line="+85"/>
+        <location filename="../scripts/Draw/Ellipse/Ellipse.js" line="+89"/>
         <source>Ellipse Tools</source>
         <translation>Ellipse Tools</translation>
     </message>
@@ -4640,39 +4640,6 @@ is already in the list.</translation>
         <location line="+4"/>
         <source>Draw ellipse with position and diameters</source>
         <translation>Draw ellipse with position and diameters</translation>
-    </message>
-</context>
-<context>
-    <name>EllipseInscribedQuad</name>
-    <message>
-        <location filename="../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuad.js" line="+82"/>
-        <source>First line</source>
-        <translation>First line</translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>Second line</source>
-        <translation>Second line</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Third line</source>
-        <translation>Third line</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Fourth line</source>
-        <translation>Fourth line</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuadInit.js" line="+2"/>
-        <source>Inscribed in Quadrilateral</source>
-        <translation>Inscribed in Quadrilateral</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Draw ellipse inscribed in quadrilateral</source>
-        <translation>Draw ellipse inscribed in quadrilateral</translation>
     </message>
 </context>
 <context>
@@ -9979,7 +9946,7 @@ is already in the list.</translation>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+94"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+96"/>
         <source>Auto Paper Size</source>
         <translation>Auto Paper Size</translation>
     </message>
@@ -10185,7 +10152,7 @@ is already in the list.</translation>
         <translation>Display advanced dimension style overrides</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+221"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+226"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10260,7 +10227,7 @@ is already in the list.</translation>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+402"/>
+        <location line="+399"/>
         <source>*VARIES*</source>
         <translation>*VARIES*</translation>
     </message>
@@ -10271,7 +10238,7 @@ is already in the list.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+57"/>
+        <location line="+71"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation>Property Editor</translation>

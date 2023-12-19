@@ -192,9 +192,6 @@ SOURCES = \
 ../scripts/Draw/Ellipse/EllipseDD/EllipseDD.js \
 ../scripts/Draw/Ellipse/EllipseDD/EllipseDDInit.js \
 ../scripts/Draw/Ellipse/EllipseDD/Tests/EllipseDDTest00.js \
-../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuad.js \
-../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuadInit.js \
-../scripts/Draw/Ellipse/EllipseInscribedQuad/Tests/EllipseInscribedQuadTest00.js \
 ../scripts/Draw/Ellipse/EllipseOffset/EllipseOffset.js \
 ../scripts/Draw/Ellipse/EllipseOffset/EllipseOffsetInit.js \
 ../scripts/Draw/Ellipse/EllipseOffset/Tests/EllipseOffsetTest00.js \

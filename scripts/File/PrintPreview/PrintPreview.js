@@ -61,7 +61,9 @@ PrintPreview.isRunning = function() {
  */
 PrintPreview.start = function(initialAction, instance) {
     var appWin = RMainWindowQt.getMainWindow();
-//    appWin.enabled = false;
+
+    // disable app window as this might be very slow on a system with a network printer as default printer:
+    appWin.enabled = false;
 
     var di = EAction.getDocumentInterface();
     var doc = di.getDocument();
@@ -146,7 +148,7 @@ PrintPreview.start = function(initialAction, instance) {
         ga.setChecked(true);
     }
 
-    //appWin.enabled = true;
+    appWin.enabled = true;
 
 };
 

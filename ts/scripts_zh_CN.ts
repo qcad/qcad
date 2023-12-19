@@ -4481,7 +4481,7 @@ is already in the list.</source>
 <context>
     <name>Ellipse</name>
     <message>
-        <location filename="../scripts/Draw/Ellipse/Ellipse.js" line="+85"/>
+        <location filename="../scripts/Draw/Ellipse/Ellipse.js" line="+89"/>
         <source>Ellipse Tools</source>
         <translation>椭圆工具</translation>
     </message>
@@ -4636,39 +4636,6 @@ is already in the list.</source>
         <location line="+4"/>
         <source>Draw ellipse with position and diameters</source>
         <translation>由位置及直径绘制椭圆</translation>
-    </message>
-</context>
-<context>
-    <name>EllipseInscribedQuad</name>
-    <message>
-        <location filename="../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuad.js" line="+82"/>
-        <source>First line</source>
-        <translation>第一条线</translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>Second line</source>
-        <translation>第二条线</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Third line</source>
-        <translation>第三条线</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Fourth line</source>
-        <translation>第四条线</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuadInit.js" line="+2"/>
-        <source>Inscribed in Quadrilateral</source>
-        <translation>内切于四边形</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Draw ellipse inscribed in quadrilateral</source>
-        <translation>绘制内切于四边形的椭圆</translation>
     </message>
 </context>
 <context>
@@ -6217,7 +6184,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Limit scrolling to vertical and horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">限制垂直和水平滚动</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -6227,7 +6194,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Panning speed:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">平移速度：</translation>
     </message>
     <message>
         <location line="-331"/>
@@ -9972,7 +9939,7 @@ is already in the list.</source>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+94"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+96"/>
         <source>Auto Paper Size</source>
         <translation type="unfinished">自动纸张尺寸</translation>
     </message>
@@ -10143,7 +10110,7 @@ is already in the list.</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+221"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+226"/>
         <source>:</source>
         <translation type="unfinished">:</translation>
     </message>
@@ -10218,7 +10185,7 @@ is already in the list.</source>
         <translation type="unfinished">没有</translation>
     </message>
     <message>
-        <location line="+402"/>
+        <location line="+399"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*差异*</translation>
     </message>
@@ -10229,7 +10196,7 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+57"/>
+        <location line="+71"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation>属性</translation>
@@ -10453,7 +10420,7 @@ is already in the list.</source>
         <location line="-37"/>
         <location line="+60"/>
         <source>Multiples</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">倍数</translation>
     </message>
     <message>
         <location line="-46"/>
@@ -14527,7 +14494,7 @@ is already in the list.</source>
         <location line="+66"/>
         <location line="+124"/>
         <source>ID does not refer to an entity:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ID 不指实体：</translation>
     </message>
     <message>
         <location line="-42"/>
@@ -14546,3 +14513,5 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
+
+

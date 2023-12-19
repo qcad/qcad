@@ -6,7 +6,7 @@
     <message>
         <location filename="../src/gui/RCadToolBar.cpp" line="+138"/>
         <source>Vertical/Horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Κάθετη/Οριζόντια</translation>
     </message>
 </context>
 <context>
@@ -15,7 +15,7 @@
         <location filename="../src/gui/RCadToolBarPanel.cpp" line="+21"/>
         <location line="+63"/>
         <source>Back</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Πίσω</translation>
     </message>
 </context>
 <context>
@@ -76,7 +76,7 @@
     <message>
         <location line="+3"/>
         <source>Distance</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Απόσταση</translation>
     </message>
 </context>
 <context>
@@ -88,3 +88,5 @@
     </message>
 </context>
 </TS>
+
+

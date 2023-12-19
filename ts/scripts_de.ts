@@ -4485,7 +4485,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>Ellipse</name>
     <message>
-        <location filename="../scripts/Draw/Ellipse/Ellipse.js" line="+85"/>
+        <location filename="../scripts/Draw/Ellipse/Ellipse.js" line="+89"/>
         <source>Ellipse Tools</source>
         <translation>Ellipsenwerkzeuge</translation>
     </message>
@@ -4640,39 +4640,6 @@ ist bereits in der Liste.</translation>
         <location line="+4"/>
         <source>Draw ellipse with position and diameters</source>
         <translation>Ellipse mit Position und Durchmessern</translation>
-    </message>
-</context>
-<context>
-    <name>EllipseInscribedQuad</name>
-    <message>
-        <location filename="../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuad.js" line="+82"/>
-        <source>First line</source>
-        <translation>Erste Linie</translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>Second line</source>
-        <translation>Zweite Linie</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Third line</source>
-        <translation>Dritte Linie</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Fourth line</source>
-        <translation>Vierte Linie</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuadInit.js" line="+2"/>
-        <source>Inscribed in Quadrilateral</source>
-        <translation>Eingeschrieben in Viereck</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Draw ellipse inscribed in quadrilateral</source>
-        <translation>Ellipse, eingeschrieben in Viereck (tangential zu vier Linien)</translation>
     </message>
 </context>
 <context>
@@ -9979,7 +9946,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+330"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+332"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
@@ -10150,12 +10117,12 @@ ist bereits in der Liste.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1666"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1668"/>
         <source>*VARIES*</source>
         <translation>*VARIIERT*</translation>
     </message>
     <message>
-        <location line="-1445"/>
+        <location line="-1442"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10200,12 +10167,12 @@ ist bereits in der Liste.</translation>
         <translation>Alle Eigenschaften anzeigen</translation>
     </message>
     <message>
-        <location line="+781"/>
+        <location line="+778"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="-827"/>
+        <location line="-824"/>
         <source>Add custom property to selected objects</source>
         <translation>Benutzerdefinierte Eigenschaft an ausgewählte Objekte hinzufügen</translation>
     </message>
@@ -10230,8 +10197,8 @@ ist bereits in der Liste.</translation>
         <translation>Nein</translation>
     </message>
     <message>
-        <location line="+405"/>
-        <location line="+57"/>
+        <location line="+402"/>
+        <location line="+71"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation>Eigenschafteneditor</translation>
@@ -10267,7 +10234,7 @@ ist bereits in der Liste.</translation>
         <translation>Farbe:</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1268"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1279"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>
@@ -14556,3 +14523,4 @@ ist bereits in der Liste.</translation>
     </message>
 </context>
 </TS>
+
