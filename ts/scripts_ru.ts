@@ -4489,7 +4489,7 @@ is already in the list.</source>
 <context>
     <name>Ellipse</name>
     <message>
-        <location filename="../scripts/Draw/Ellipse/Ellipse.js" line="+85"/>
+        <location filename="../scripts/Draw/Ellipse/Ellipse.js" line="+89"/>
         <source>Ellipse Tools</source>
         <translation>Инструменты для работы с эллипсами</translation>
     </message>
@@ -4644,39 +4644,6 @@ is already in the list.</source>
         <location line="+4"/>
         <source>Draw ellipse with position and diameters</source>
         <translation>Начертить эллипс с позицией и диаметрами</translation>
-    </message>
-</context>
-<context>
-    <name>EllipseInscribedQuad</name>
-    <message>
-        <location filename="../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuad.js" line="+82"/>
-        <source>First line</source>
-        <translation>Первая линия</translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>Second line</source>
-        <translation>Вторая линия</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Third line</source>
-        <translation>Третья линия</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Fourth line</source>
-        <translation>Четвёртая линия</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuadInit.js" line="+2"/>
-        <source>Inscribed in Quadrilateral</source>
-        <translation>Вписанный в четырёхугольник</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Draw ellipse inscribed in quadrilateral</source>
-        <translation>Начертить эллипс, вписанный в четырёхугольник</translation>
     </message>
 </context>
 <context>
@@ -9986,7 +9953,7 @@ is already in the list.</source>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+94"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+96"/>
         <source>Auto Paper Size</source>
         <translation type="unfinished">Автоматический размер бумаги</translation>
     </message>
@@ -10157,12 +10124,12 @@ is already in the list.</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1666"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1668"/>
         <source>*VARIES*</source>
         <translation>*ВАРЬИРОВАНИЕ*</translation>
     </message>
     <message>
-        <location line="-1445"/>
+        <location line="-1442"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10237,14 +10204,14 @@ is already in the list.</source>
         <translation>Нет</translation>
     </message>
     <message>
-        <location line="+405"/>
-        <location line="+57"/>
+        <location line="+402"/>
+        <location line="+71"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation>Редактор свойств</translation>
     </message>
     <message>
-        <location line="-67"/>
+        <location line="-81"/>
         <source>Widgets</source>
         <translation>Виджеты</translation>
     </message>
@@ -14566,3 +14533,5 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
+
+

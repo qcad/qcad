@@ -76,7 +76,7 @@
     <message>
         <location line="+3"/>
         <source>Distance</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">距离</translation>
     </message>
 </context>
 <context>
@@ -88,3 +88,5 @@
     </message>
 </context>
 </TS>
+
+

@@ -4486,7 +4486,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>Ellipse</name>
     <message>
-        <location filename="../scripts/Draw/Ellipse/Ellipse.js" line="+85"/>
+        <location filename="../scripts/Draw/Ellipse/Ellipse.js" line="+89"/>
         <source>Ellipse Tools</source>
         <translation type="unfinished">Elipses rīki</translation>
     </message>
@@ -4641,39 +4641,6 @@ jau ir sarakstā.</translation>
         <location line="+4"/>
         <source>Draw ellipse with position and diameters</source>
         <translation type="unfinished">Zīmēt elipsi ar pozīciju un diametriem</translation>
-    </message>
-</context>
-<context>
-    <name>EllipseInscribedQuad</name>
-    <message>
-        <location filename="../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuad.js" line="+82"/>
-        <source>First line</source>
-        <translation type="unfinished">Pirmā līnija</translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>Second line</source>
-        <translation type="unfinished">Otrā līnija</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Third line</source>
-        <translation type="unfinished">Trešā līnija</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Fourth line</source>
-        <translation type="unfinished">Ceturtā līnija</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuadInit.js" line="+2"/>
-        <source>Inscribed in Quadrilateral</source>
-        <translation type="unfinished">Uzrakstīts četrstūrī</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Draw ellipse inscribed in quadrilateral</source>
-        <translation type="unfinished">Zīmēt elipsi, kas iegrāmatota četrstūrī</translation>
     </message>
 </context>
 <context>
@@ -9983,7 +9950,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+94"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+96"/>
         <source>Auto Paper Size</source>
         <translation type="unfinished">Automātiskais papīra izmērs</translation>
     </message>
@@ -10189,7 +10156,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Attēloto īpašību vērtību decimāldaļas / precizitāte:</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+221"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+226"/>
         <source>:</source>
         <translation type="unfinished">:</translation>
     </message>
@@ -10264,7 +10231,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Nē</translation>
     </message>
     <message>
-        <location line="+402"/>
+        <location line="+399"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*VARIES*</translation>
     </message>
@@ -10275,7 +10242,7 @@ jau ir sarakstā.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+57"/>
+        <location line="+71"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation type="unfinished">Īpašuma redaktors</translation>
@@ -14563,3 +14530,4 @@ jau ir sarakstā.</translation>
     </message>
 </context>
 </TS>
+

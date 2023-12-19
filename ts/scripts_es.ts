@@ -4485,7 +4485,7 @@ ya está en la lista.</translation>
 <context>
     <name>Ellipse</name>
     <message>
-        <location filename="../scripts/Draw/Ellipse/Ellipse.js" line="+85"/>
+        <location filename="../scripts/Draw/Ellipse/Ellipse.js" line="+89"/>
         <source>Ellipse Tools</source>
         <translation>Herramientas de elipse</translation>
     </message>
@@ -4640,39 +4640,6 @@ ya está en la lista.</translation>
         <location line="+4"/>
         <source>Draw ellipse with position and diameters</source>
         <translation>Elipse con posición y diámetros</translation>
-    </message>
-</context>
-<context>
-    <name>EllipseInscribedQuad</name>
-    <message>
-        <location filename="../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuad.js" line="+82"/>
-        <source>First line</source>
-        <translation>Primera línea</translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>Second line</source>
-        <translation>Segunda línea</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Third line</source>
-        <translation>Tercera línea</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Fourth line</source>
-        <translation>Cuarta línea</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuadInit.js" line="+2"/>
-        <source>Inscribed in Quadrilateral</source>
-        <translation>Inscrita en el cuadrilátero</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Draw ellipse inscribed in quadrilateral</source>
-        <translation>Dibuja una elipse inscrita en un cuadrilátero</translation>
     </message>
 </context>
 <context>
@@ -9979,7 +9946,7 @@ ya está en la lista.</translation>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+94"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+96"/>
         <source>Auto Paper Size</source>
         <translation>Tamaño de papel automático</translation>
     </message>
@@ -10150,17 +10117,17 @@ ya está en la lista.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+842"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+847"/>
         <source>Add custom property to selected objects</source>
         <translation>Agregar una propiedad personalizada a los objetos seleccionados</translation>
     </message>
     <message>
-        <location line="+824"/>
+        <location line="+821"/>
         <source>*VARIES*</source>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1445"/>
+        <location line="-1442"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10210,12 +10177,12 @@ ya está en la lista.</translation>
         <translation>Mostrar todas las propiedades</translation>
     </message>
     <message>
-        <location line="+781"/>
+        <location line="+778"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="-646"/>
+        <location line="-643"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -10235,8 +10202,8 @@ ya está en la lista.</translation>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+405"/>
-        <location line="+57"/>
+        <location line="+402"/>
+        <location line="+71"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation>Editor de propiedades</translation>
@@ -14556,3 +14523,4 @@ ya está en la lista.</translation>
     </message>
 </context>
 </TS>
+
