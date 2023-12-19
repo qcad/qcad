@@ -1865,7 +1865,7 @@ void RDocumentInterface::addShapeToPreview(RShape& shape, const RColor& color,
 
     QPen pen(QBrush(color), width);
     pen.setStyle(Qt::CustomDashLine);
-    pen.setDashPattern(dashes);
+    pen.setDashPattern(dashes.toVector());
 
     // preview shapes are added to scene:
     QList<RGraphicsScene*>::iterator it;
