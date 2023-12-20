@@ -25,7 +25,6 @@
 
 #include "RMainWindow.h"
 #include "RDocument.h"
-#include "RLineEntity.h"
 
 REllipseProxy* REllipse::ellipseProxy = NULL;
 
@@ -1171,21 +1170,25 @@ RVector REllipse::getTangentPoint(const RLine& line) const {
 
     // calculate slope and y-intercept of the transformed line
     // check for vertical line:
-    if (line.isVertical()) {
+    if (lineNeutral.isVertical()) {
         // for vertical line, check if it passes through ellipse's major axis
-        if (RMath::fuzzyCompare(line.getStartPoint().x, getMajorRadius())) {
+        if (RMath::fuzzyCompare(lineNeutral.getStartPoint().x, getMajorRadius())) {
             return getCenter() + getMajorPoint();
         }
-        if (RMath::fuzzyCompare(line.getStartPoint().x, -getMajorRadius())) {
+
+        if (RMath::fuzzyCompare(lineNeutral.getStartPoint().x, -getMajorRadius())) {
             return getCenter() - getMajorPoint();
         }
+
+        return RVector::invalid;
     }
 
     // check if the transformed line is tangent to the axis-aligned ellipse:
     // slope of line:
-    double m = (line.getEndPoint().y - line.getStartPoint().y) / (line.getEndPoint().x - line.getStartPoint().x);
+    double m = (lineNeutral.getEndPoint().y - lineNeutral.getStartPoint().y) / (lineNeutral.getEndPoint().x - lineNeutral.getStartPoint().x);
+
     // y-intersept:
-    double c = line.getStartPoint().y - m * line.getStartPoint().x;
+    double c = lineNeutral.getStartPoint().y - m * lineNeutral.getStartPoint().x;
 
     double a = getMajorRadius();
     double b = getMinorRadius();
@@ -1195,12 +1198,16 @@ RVector REllipse::getTangentPoint(const RLine& line) const {
     double C = (a * a * c * c) - (a * a * b * b);
 
     double discriminant = B * B - 4 * A * C;
-    //qDebug() << "discriminant:" << discriminant;
 
-    if (RMath::fuzzyCompare(discriminant, 0.0)) {
+    // for a tangent line, discriminant should be zero (one real root):
+    if (RMath::fuzzyCompare(discriminant, 0.0, 0.001)) {
         double x = -B / (2 * A);
         double y = m * x + c;
-        return RVector(x, y);
+
+        RVector ret = RVector(x, y);
+        ret.rotate(getAngle());
+        ret.move(getCenter());
+        return ret;
     }
 
     return RVector::invalid;
