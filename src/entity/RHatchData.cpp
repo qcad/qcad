@@ -752,7 +752,13 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft, double pixelSizeHint
     bool hasDots = localPattern.hasDots();
 
     RBox boundaryBox = boundaryPath.getBoundingBox();
-    boundaryBox.grow(1.0);
+
+    // grow boundary by 1% of largest size:
+    double w = boundaryBox.getWidth();
+    double h = boundaryBox.getHeight();
+    double s = qMax(w, h);
+    boundaryBox.grow(s/100.0);
+
     QList<RLine> boundaryEdges = boundaryBox.getLines2d();
     QList<RVector> boundaryCorners = boundaryBox.getCorners2d();
 
@@ -908,12 +914,17 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft, double pixelSizeHint
             // line split up into segments, cut at contour intersections:
             QList<RLine> segments = getSegments(unclippedLine);
 
+            // untrimmed for debugging:
+            //QList<RLine> segments;
+            //segments.append(unclippedLine);
+
             RPainterPathExporter ppExporter;
             //ppExporter.setExportZeroLinesAsPoints(false);
             ppExporter.setExportZeroLinesAsPoints(true);
             // ignore zero lines if
             // line was split up into segments
             ppExporter.setIgnoreZeroLines(!hasDots);
+            // ensure pattern scale of 1:
             ppExporter.setLineweight(RLineweight::Weight100);
             if (!patternLine.dashes.isEmpty()) {
                 RLinetypePattern pat;

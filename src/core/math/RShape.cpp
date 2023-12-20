@@ -761,25 +761,10 @@ QList<RVector> RShape::getIntersectionPointsLE(const RLine& line1,
     QList<RVector> res;
 
     // find out if line1 is (almost) a tangent:
-    // find a good point on the line to lay a tangent on the ellipse (avoid points close to potential tangent point):
-    RVector p = line1.getClosestPointOnShape(ellipse2.getCenter(), false);
-    p = p + RVector::createPolar(qMax(ellipse2.getMinorRadius(), ellipse2.getMajorRadius())*2, line1.getDirection2());
-
-    QList<RLine> tangents = ellipse2.getTangents(p);
-    for (int i=0; i<tangents.length(); i++) {
-        double a = tangents[i].getAngle();
-        double ad1 = fabs(RMath::getAngleDifference180(a, line1.getDirection1()));
-        double ad2 = fabs(RMath::getAngleDifference180(a, line1.getDirection2()));
-
-        if (ad1 < 1.0e-2 || ad2 < 1.0e-2) {
-            RVector candidate = tangents[i].getEndPoint();
-            if (!limited1 || line1.isOnShape(candidate)) {
-                res.append(candidate);
-            }
-
-            // no need to continue: max. one tangent possible:
-            return res;
-        }
+    RVector tangentPoint = ellipse2.getTangentPoint(line1);
+    if (tangentPoint.isValid()) {
+        res.append(tangentPoint);
+        return res;
     }
 
     // rotate into normal position:
