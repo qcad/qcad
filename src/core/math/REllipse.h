@@ -184,6 +184,7 @@ public:
     QList<RVector> getBoxCorners();
 
     QList<RLine> getTangents(const RVector& point) const;
+    RVector getTangentPoint(const RLine& line) const;
 
     QList<RSpline> approximateWithSplines() const;
     RPolyline approximateWithArcs(int segments) const;
