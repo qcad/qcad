@@ -4485,7 +4485,7 @@ on jo luettelossa.</translation>
 <context>
     <name>Ellipse</name>
     <message>
-        <location filename="../scripts/Draw/Ellipse/Ellipse.js" line="+85"/>
+        <location filename="../scripts/Draw/Ellipse/Ellipse.js" line="+89"/>
         <source>Ellipse Tools</source>
         <translation>Ellipsityökalut</translation>
     </message>
@@ -4640,39 +4640,6 @@ on jo luettelossa.</translation>
         <location line="+4"/>
         <source>Draw ellipse with position and diameters</source>
         <translation>Piirrä ellipsi sijainnilla ja halkaisijoilla</translation>
-    </message>
-</context>
-<context>
-    <name>EllipseInscribedQuad</name>
-    <message>
-        <location filename="../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuad.js" line="+82"/>
-        <source>First line</source>
-        <translation>Ensimmäinen rivi</translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>Second line</source>
-        <translation>Toinen linja</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Third line</source>
-        <translation>Kolmas linja</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Fourth line</source>
-        <translation>Neljäs linja</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuadInit.js" line="+2"/>
-        <source>Inscribed in Quadrilateral</source>
-        <translation>Merkitty nelikulmaisena</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Draw ellipse inscribed in quadrilateral</source>
-        <translation>Piirrä ellipsi merkittynä nelikulmiossa</translation>
     </message>
 </context>
 <context>
@@ -9979,7 +9946,7 @@ on jo luettelossa.</translation>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+94"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+96"/>
         <source>Auto Paper Size</source>
         <translation type="unfinished">Automaattinen paperikoko</translation>
     </message>
@@ -10185,12 +10152,12 @@ on jo luettelossa.</translation>
         <translation type="unfinished">Näytä laajennetun ulottuvuuden tyylin ohitukset</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1666"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1668"/>
         <source>*VARIES*</source>
         <translation>*VAIHTELEVA*</translation>
     </message>
     <message>
-        <location line="-1445"/>
+        <location line="-1442"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10265,13 +10232,13 @@ on jo luettelossa.</translation>
         <translation>Ei</translation>
     </message>
     <message>
-        <location line="+405"/>
+        <location line="+402"/>
         <source>Widgets</source>
         <translation>Pienoisohjelmat</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+57"/>
+        <location line="+71"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation>Ominaisuuksien muokkaaminen</translation>
@@ -14556,3 +14523,4 @@ on jo luettelossa.</translation>
     </message>
 </context>
 </TS>
+

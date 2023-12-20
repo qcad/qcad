@@ -4481,7 +4481,7 @@ is already in the list.</source>
 <context>
     <name>Ellipse</name>
     <message>
-        <location filename="../scripts/Draw/Ellipse/Ellipse.js" line="+85"/>
+        <location filename="../scripts/Draw/Ellipse/Ellipse.js" line="+89"/>
         <source>Ellipse Tools</source>
         <translation type="unfinished">타원 도구</translation>
     </message>
@@ -4636,39 +4636,6 @@ is already in the list.</source>
         <location line="+4"/>
         <source>Draw ellipse with position and diameters</source>
         <translation type="unfinished">위치와 지름이 있는 타원 그리기</translation>
-    </message>
-</context>
-<context>
-    <name>EllipseInscribedQuad</name>
-    <message>
-        <location filename="../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuad.js" line="+82"/>
-        <source>First line</source>
-        <translation type="unfinished">첫 번째 줄</translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>Second line</source>
-        <translation type="unfinished">두 번째 줄</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Third line</source>
-        <translation type="unfinished">세 번째 줄</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Fourth line</source>
-        <translation type="unfinished">네 번째 줄</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuadInit.js" line="+2"/>
-        <source>Inscribed in Quadrilateral</source>
-        <translation type="unfinished">사변형으로 새겨져 있습니다</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Draw ellipse inscribed in quadrilateral</source>
-        <translation type="unfinished">사변형에 새겨진 타원을 그립니다</translation>
     </message>
 </context>
 <context>
@@ -9972,7 +9939,7 @@ is already in the list.</source>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+94"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+96"/>
         <source>Auto Paper Size</source>
         <translation type="unfinished">자동 용지 크기</translation>
     </message>
@@ -10178,7 +10145,7 @@ is already in the list.</source>
         <translation type="unfinished">표시되는 프로퍼티 값의 소수점/정밀도입니다:</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+221"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+226"/>
         <source>:</source>
         <translation type="unfinished">:</translation>
     </message>
@@ -10253,7 +10220,7 @@ is already in the list.</source>
         <translation type="unfinished">아니요</translation>
     </message>
     <message>
-        <location line="+402"/>
+        <location line="+399"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*다양한*</translation>
     </message>
@@ -10264,7 +10231,7 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+57"/>
+        <location line="+71"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation type="unfinished">속성 편집기</translation>
@@ -14546,3 +14513,4 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
+

@@ -216,7 +216,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Μέση</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -913,7 +913,9 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle Point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Μέσο σημείο</translation>
     </message>
 </context>
 </TS>
+
+

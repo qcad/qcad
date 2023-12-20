@@ -4489,7 +4489,7 @@ je že na seznamu.</translation>
 <context>
     <name>Ellipse</name>
     <message>
-        <location filename="../scripts/Draw/Ellipse/Ellipse.js" line="+85"/>
+        <location filename="../scripts/Draw/Ellipse/Ellipse.js" line="+89"/>
         <source>Ellipse Tools</source>
         <translation>Orodja elipse</translation>
     </message>
@@ -4644,39 +4644,6 @@ je že na seznamu.</translation>
         <location line="+4"/>
         <source>Draw ellipse with position and diameters</source>
         <translation>Nariši elipso iz pozicije in premerov</translation>
-    </message>
-</context>
-<context>
-    <name>EllipseInscribedQuad</name>
-    <message>
-        <location filename="../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuad.js" line="+82"/>
-        <source>First line</source>
-        <translation>Prva črta</translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>Second line</source>
-        <translation>Druga črta</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Third line</source>
-        <translation>Tretja črta</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Fourth line</source>
-        <translation>Četrta črta</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuadInit.js" line="+2"/>
-        <source>Inscribed in Quadrilateral</source>
-        <translation>Včrtan v štirikotnik</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Draw ellipse inscribed in quadrilateral</source>
-        <translation>Nariši elipso včrtano v štirikotnik</translation>
     </message>
 </context>
 <context>
@@ -9989,7 +9956,7 @@ je že na seznamu.</translation>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+94"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+96"/>
         <source>Auto Paper Size</source>
         <translation type="unfinished">Samodejna velikost papirja</translation>
     </message>
@@ -10160,12 +10127,12 @@ je že na seznamu.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1666"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1668"/>
         <source>*VARIES*</source>
         <translation>*RAZLIČNO*</translation>
     </message>
     <message>
-        <location line="-1445"/>
+        <location line="-1442"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10220,12 +10187,12 @@ je že na seznamu.</translation>
         <translation>Prikaži vse lasnosti</translation>
     </message>
     <message>
-        <location line="+781"/>
+        <location line="+778"/>
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>
     <message>
-        <location line="-646"/>
+        <location line="-643"/>
         <source>Auto</source>
         <translation>Samodejno</translation>
     </message>
@@ -10245,8 +10212,8 @@ je že na seznamu.</translation>
         <translation>Ne</translation>
     </message>
     <message>
-        <location line="+405"/>
-        <location line="+57"/>
+        <location line="+402"/>
+        <location line="+71"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation>Urejevalec lastnosti</translation>
@@ -14572,3 +14539,5 @@ je že na seznamu.</translation>
     </message>
 </context>
 </TS>
+
+
