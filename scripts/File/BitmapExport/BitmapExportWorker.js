@@ -152,8 +152,9 @@ function exportBitmap(doc, scene, fileName, properties, view) {
 
     if (properties["regen"]!==false) {
         scene.regenerate();
-        view.updateImage();
     }
+
+    view.updateImage();
 
     if (isFunction(properties["initView"])) {
         properties["initView"](view);
