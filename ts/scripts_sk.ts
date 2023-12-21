@@ -14534,4 +14534,3 @@ už existuje v zozname.</translation>
 </context>
 </TS>
 
-

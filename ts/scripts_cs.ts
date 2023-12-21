@@ -14532,4 +14532,3 @@ již v seznamu je.</translation>
 </context>
 </TS>
 
-

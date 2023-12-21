@@ -14540,4 +14540,3 @@ je že na seznamu.</translation>
 </context>
 </TS>
 
-
