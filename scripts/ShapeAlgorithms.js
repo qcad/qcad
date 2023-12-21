@@ -1825,11 +1825,28 @@ ShapeAlgorithms.ellipseToArcCircleEllipse = function(ellipse) {
  * Transforms the given arc, circle or ellipse into an ellipse
  * using the given function which projects an RVector to another RVector.
  *
- * \returns An REllipse or in special cases an RArc or RCircle.
+ * \returns An REllipse or in special cases an RArc or RCircle. A polyline if no ellipse proxy is available to generate inscribed ellipses.
  *
- * OBSOLETE use RShape::transformArc instead
+ * \todo use RShape::transformArc instead
  */
 ShapeAlgorithms.transformArc = function(arc, fun) {
+    var arcsAsPolylines = (RSettings.getStringValue("IsoProject/GroupArcHandling", "ArcsAsEllipses")==="ArcsAsPolylines");
+
+    if (!REllipse.hasProxy() || arcsAsPolylines) {
+        if (!isEllipseShape(arc)) {
+            var pl = arc.approximateWithLines(arc.getRadius()*2*Math.PI / 64, arc.getStartAngle());
+
+            var plProj = new RPolyline();
+            for (var i=0; i<pl.countVertices(); i++) {
+                var v = pl.getVertexAt(i);
+                fun(v);
+                plProj.appendVertex(v);
+            }
+
+            return plProj;
+        }
+    }
+
     var r1, r2;
 
     if (isEllipseShape(arc)) {
@@ -1853,10 +1870,7 @@ ShapeAlgorithms.transformArc = function(arc, fun) {
     fun(v3);
     fun(v4);
 
-    //var ret = [];
-    // inscribe ellipse into ordered vertices:
     var ellipse = ShapeAlgorithms.createEllipseInscribedFromVertices(v1, v2, v3, v4);
-    //ret.push(ellipse.copy());
 
     if (isNull(ellipse)) {
         return arc;
