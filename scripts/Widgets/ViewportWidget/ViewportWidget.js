@@ -350,7 +350,10 @@ EventHandler.prototype.drop = function(event) {
         appWin.raise();
         var view = EAction.getGraphicsView();
         if (!isNull(view)) {
-            view.setFocus(Qt.OtherFocusReason);
+            var viewWidget = view.getWidget();
+            if (!isNull(viewWidget)) {
+                viewWidget.setFocus(Qt.OtherFocusReason);
+            }
         }
         else {
             appWin.setFocus(Qt.OtherFocusReason);
