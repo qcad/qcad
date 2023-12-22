@@ -782,6 +782,7 @@ void RGraphicsViewImage::paintRelativeZero(RGraphicsViewWorker* worker) {
     double r = 5.0 * getDevicePixelRatio();
 
     //QPainter painter(&device);
+    worker->setBrush(QBrush());
     worker->setPen(
         QPen(RSettings::getColor("GraphicsViewColors/RelativeZeroColor", RColor(162,36,36)), 0)
     );
