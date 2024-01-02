@@ -208,7 +208,6 @@ void RGraphicsViewQt::mouseMoveEvent(QMouseEvent* event) {
         return;
     }
 
-
     if (event==NULL || imageView->getScene()==NULL) {
         return;
     }
@@ -458,18 +457,6 @@ bool RGraphicsViewQt::getSignalsBlocked() const {
 
 void RGraphicsViewQt::setSignalsBlocked(bool on) {
     blockSignals(on);
-}
-
-QCursor RGraphicsViewQt::getCursor() {
-    return QWidget::cursor();
-}
-
-void RGraphicsViewQt::setCursor(Qt::CursorShape cursorShape) {
-    QWidget::setCursor(cursorShape);
-}
-
-void RGraphicsViewQt::setCursor(const QCursor& cursor) {
-    QWidget::setCursor(cursor);
 }
 
 QSize RGraphicsViewQt::sizeHint() const {

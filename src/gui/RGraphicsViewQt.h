@@ -79,10 +79,6 @@ public:
     virtual bool getSignalsBlocked() const;
     virtual void setSignalsBlocked(bool on);
     
-    virtual QCursor getCursor();
-    virtual void setCursor(Qt::CursorShape cursorShape);
-    virtual void setCursor(const QCursor& cursor);
-
     void setFocusFrameWidget(QFrame* w);
 
     virtual void simulateMouseMoveEvent();
