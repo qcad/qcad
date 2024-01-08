@@ -94,22 +94,6 @@
         
     
     
-      QCursor getCursor(
-                
-            );
-        
-    
-    
-      void setCursor(
-                Qt::CursorShape cursorShape
-            );
-        
-      void setCursor(
-                const QCursor & cursor
-            );
-        
-    
-    
       void setFocusFrameWidget(
                 QFrame * w
             );

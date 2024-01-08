@@ -65,6 +65,9 @@
 
     <function_decl><type><name>void</name></type> <name>clear</name><parameter_list>()</parameter_list>;</function_decl>
 
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setCursor</name><parameter_list>(<param><decl><type><name><name>Qt</name>::<name>CursorShape</name></name></type> <name>cursorShape</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setCursor</name><parameter_list>(<param><decl><type><name>const</name> <name>QCursor</name>&amp;</type> <name>cursor</name></decl></param>)</parameter_list>;</function_decl>
+
     <comment type="line">// TODO: these methods are not found in RGraphicsViewQt, due to the</comment>
     <comment type="line">// multiple inheritance of RGraphicsViewQt (QWidget and RGraphicsViewImage)</comment>
     <comment type="line">// unless they are re-declared here again:</comment>

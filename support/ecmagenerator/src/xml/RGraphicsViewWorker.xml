@@ -123,6 +123,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="getAntialiasing" cppName="getAntialiasing"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="setBackground" cppName="setBackground"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

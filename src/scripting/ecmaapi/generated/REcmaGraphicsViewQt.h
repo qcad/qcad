@@ -75,12 +75,6 @@
         setSignalsBlocked
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getCursor
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setCursor
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         setFocusFrameWidget
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

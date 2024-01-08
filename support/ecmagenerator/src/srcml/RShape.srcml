@@ -47,7 +47,7 @@
 <class>class <name>RShapeTransformation</name> <block>{<private type="default">
 </private><public>public:
     <destructor><specifier>virtual</specifier> <name>~RShapeTransformation</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
-    <function_decl><type><name>virtual</name> <name>RVector</name></type> <name>transform</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>RVector</name></type> <name>transform</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
 </public>}</block>;</class>
 
 <class>class <name>RShapeTransformationScale</name> <super>: <specifier>public</specifier> <name>RShapeTransformation</name></super> <block>{<private type="default">
@@ -55,7 +55,7 @@
     <constructor><name>RShapeTransformationScale</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>factors</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>center</name></decl></param>)</parameter_list> <member_list>: <call><name>factors</name><argument_list>(<argument><expr><name>factors</name></expr></argument>)</argument_list></call>, <call><name>center</name><argument_list>(<argument><expr><name>center</name></expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
     <destructor><specifier>virtual</specifier> <name>~RShapeTransformationScale</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
 
-    <function><type><name>virtual</name> <name>RVector</name></type> <name>transform</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <block>{
+    <function><type><name>virtual</name> <name>RVector</name></type> <name>transform</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>v</name>.<call><name>getScaled</name><argument_list>(<argument><expr><name>factors</name></expr></argument>, <argument><expr><name>center</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 

@@ -196,9 +196,6 @@
         getCursor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        setCursor
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         getClosestReferencePoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -317,6 +314,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         clear
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setCursor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         simulateMouseMoveEvent

@@ -65,6 +65,9 @@
         createInscribed
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        createFrom4Points
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getShapeType
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -248,6 +251,9 @@
         getMiddlePoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getPointOnShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         move
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -285,6 +291,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getTangents
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getTangentPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         approximateWithSplines

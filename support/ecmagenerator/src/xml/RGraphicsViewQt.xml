@@ -71,21 +71,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
-    <method name="getCursor" cppName="getCursor" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="QCursor" isPureVirtual="false" />
-    </method>
-    <method name="setCursor" cppName="setCursor" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="Qt::CursorShape" typeName="Qt::CursorShape"
-        name="cursorShape" isConst="false" />
-      </variant>
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="QCursor &amp;" typeName="QCursor" name="cursor"
-        isConst="true" />
-      </variant>
-    </method>
     <method name="setFocusFrameWidget"
     cppName="setFocusFrameWidget" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

@@ -97,6 +97,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setAntialiasing, "setAntialiasing");
             
+            REcmaHelper::registerFunction(&engine, proto, getAntialiasing, "getAntialiasing");
+            
             REcmaHelper::registerFunction(&engine, proto, setBackground, "setBackground");
             
             REcmaHelper::registerFunction(&engine, proto, setCompositionMode, "setCompositionMode");
@@ -1161,6 +1163,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsViewWorker::setAntialiasing", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewWorker::getAntialiasing
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewWorker::getAntialiasing", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewWorker::getAntialiasing";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewWorker* self = 
+                        getSelf("getAntialiasing", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getAntialiasing();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewWorker.getAntialiasing().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewWorker::getAntialiasing", context, engine);
             return result;
         }
          QScriptValue

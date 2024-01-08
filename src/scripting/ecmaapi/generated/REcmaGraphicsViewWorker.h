@@ -99,6 +99,9 @@
         setAntialiasing
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getAntialiasing
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setBackground
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

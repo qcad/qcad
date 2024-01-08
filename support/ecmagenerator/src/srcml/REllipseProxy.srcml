@@ -24,10 +24,12 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"../core_global.h"</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;RS.h&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;RVector.h&gt;</cpp:file></cpp:include>
 
 <class_decl>class <name>REllipse</name>;</class_decl>
 <class_decl>class <name>RSpline</name>;</class_decl>
 <class_decl>class <name>RPolyline</name>;</class_decl>
+<class_decl>class <name>RShape</name>;</class_decl>
 
 
 <comment type="block">/**
@@ -42,6 +44,9 @@
 
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RSpline</name></argument>&gt;</argument_list></name></type> <name>approximateWithSplines</name><parameter_list>(<param><decl><type><name>const</name> <name>REllipse</name>&amp;</type> <name>ellipse</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>RPolyline</name></type> <name>approximateWithArcs</name><parameter_list>(<param><decl><type><name>const</name> <name>REllipse</name>&amp;</type> <name>ellipse</name></decl></param>, <param><decl><type><name>int</name></type> <name>segments</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>REllipse</name></type> <name>createInscribed</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>pp1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>pp2</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>pp3</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>pp4</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>centerHint</name> =<init> <expr><name><name>RVector</name>::<name>invalid</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>REllipse</name></type> <name>createFrom4Points</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>pp1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>pp2</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>pp3</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>pp4</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
 </public>}</block>;</class>
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>

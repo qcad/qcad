@@ -187,8 +187,6 @@
             
             REcmaHelper::registerFunction(&engine, proto, getCursor, "getCursor");
             
-            REcmaHelper::registerFunction(&engine, proto, setCursor, "setCursor");
-            
             REcmaHelper::registerFunction(&engine, proto, getClosestReferencePoint, "getClosestReferencePoint");
             
             REcmaHelper::registerFunction(&engine, proto, getClosestEntity, "getClosestEntity");
@@ -270,6 +268,8 @@
             REcmaHelper::registerFunction(&engine, proto, setNumThreads, "setNumThreads");
             
             REcmaHelper::registerFunction(&engine, proto, clear, "clear");
+            
+            REcmaHelper::registerFunction(&engine, proto, setCursor, "setCursor");
             
             REcmaHelper::registerFunction(&engine, proto, simulateMouseMoveEvent, "simulateMouseMoveEvent");
             
@@ -3979,98 +3979,6 @@
             return result;
         }
          QScriptValue
-        REcmaGraphicsViewImage::setCursor
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaGraphicsViewImage::setCursor", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::setCursor";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RGraphicsViewImage* self = 
-                        getSelf("setCursor", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isNumber()
-        ) /* type: Qt::CursorShape */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    Qt::CursorShape
-                    a0 =
-                    (Qt::CursorShape)
-                    (int)
-                    context->argument( 0 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->setCursor(a0);
-    } else
-
-
-        
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: QCursor */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument is reference
-                    QCursor*
-                    ap0 =
-                    qscriptvalue_cast<
-                    QCursor*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsView: Argument 0 is not of type QCursor*.",
-                               context);                    
-                    }
-                    QCursor& a0 = *ap0;
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->setCursor(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.setCursor().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::setCursor", context, engine);
-            return result;
-        }
-         QScriptValue
         REcmaGraphicsViewImage::getClosestReferencePoint
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -6395,6 +6303,98 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsViewImage::clear", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::setCursor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::setCursor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::setCursor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("setCursor", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: Qt::CursorShape */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    Qt::CursorShape
+                    a0 =
+                    (Qt::CursorShape)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setCursor(a0);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QCursor */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    QCursor*
+                    ap0 =
+                    qscriptvalue_cast<
+                    QCursor*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type QCursor*.",
+                               context);                    
+                    }
+                    QCursor& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setCursor(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.setCursor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::setCursor", context, engine);
             return result;
         }
          QScriptValue

@@ -36,6 +36,23 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
         <arg type="RVector &amp;" typeName="RVector" name="p4"
         isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="centerHint" hasDefault="true"
+        default="RVector :: invalid" isConst="true" />
+      </variant>
+    </method>
+    <method name="createFrom4Points" cppName="createFrom4Points"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="REllipse" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="p1"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="p2"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="p3"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="p4"
+        isConst="true" />
       </variant>
     </method>
     <method name="getShapeType" cppName="getShapeType"
@@ -440,6 +457,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false" />
     </method>
+    <method name="getPointOnShape" cppName="getPointOnShape"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
     <method name="move" cppName="move" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">
@@ -552,6 +574,14 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QList &lt; RLine &gt;"
       isPureVirtual="false">
         <arg type="RVector &amp;" typeName="RVector" name="point"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getTangentPoint" cppName="getTangentPoint"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RLine &amp;" typeName="RLine" name="line"
         isConst="true" />
       </variant>
     </method>
