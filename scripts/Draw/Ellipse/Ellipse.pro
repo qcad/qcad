@@ -6,5 +6,4 @@ SUBDIRS = \
     EllipseOffset \
     EllipseOffsetThrough \
     EllipseDD \
-    EllipseInscribedQuad \
     EllipseRR
