@@ -192,8 +192,8 @@ void RGraphicsViewQt::tabletEvent(QTabletEvent* event) {
 
 #if QT_VERSION < 0x050C00
     // Qt 5.12, 5.13 crashes:
-    RTabletEvent e(*event, *scene, *this);
-    RGraphicsView::handleTabletEvent(e);
+    RTabletEvent e(*event, *s, *imageView);
+    imageView->handleTabletEvent(e);
 #endif
 
     // needed for some types of Wacom tablets under Windows:
