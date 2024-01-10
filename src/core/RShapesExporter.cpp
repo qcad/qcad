@@ -156,6 +156,11 @@ void RShapesExporter::exportShapesBetween(int i1, const RVector& p1, int i2, con
             shape->trimEndPoint(p2);
         }
 
+        // invalid spline can cause artefacts when rendering splines with dashes:
+        if (!shape->isValid()) {
+            continue;
+        }
+
         exporter.exportShapeSegment(shape, angle);
     }
 }
