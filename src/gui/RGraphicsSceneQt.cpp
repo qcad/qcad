@@ -298,7 +298,6 @@ void RGraphicsSceneQt::transformAndApplyPatternPath(RPainterPath& path) const {
             }
             //qDebug() << "pattern offset:" << lp.getPatternOffset(length);
             RShapesExporter(ppe, pathShapes, lp.getPatternOffset(length));
-            //lp.getPatternOffset(length));
             RPainterPath p = ppe.getPainterPath();
             //qDebug() << "path with dashes:" << p;
             pathWithPattern.addPath(p);
