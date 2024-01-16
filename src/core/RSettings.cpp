@@ -1227,6 +1227,20 @@ QString RSettings::getCompilerVersion() {
         return "MSVC++ 12.0 (2013)";
 #   elif _MSC_VER==1900
         return "MSVC++ 14.0 (2015)";
+#   elif _MSC_VER==1910
+        return "MSVC++ 14.10 (2017)";
+#   elif _MSC_VER==1911
+        return "MSVC++ 14.11 (2017)";
+#   elif _MSC_VER==1912
+        return "MSVC++ 14.12 (2017)";
+#   elif _MSC_VER==1913
+        return "MSVC++ 14.13 (2017)";
+#   elif _MSC_VER==1914
+        return "MSVC++ 14.14 (2017)";
+#   elif _MSC_VER==1915
+        return "MSVC++ 14.15 (2017)";
+#   elif _MSC_VER==1916
+        return "MSVC++ 14.16 (2017)";
 #   elif _MSC_VER==1929
         return "MSVC++ 16.11 (2019)";
 #   endif
