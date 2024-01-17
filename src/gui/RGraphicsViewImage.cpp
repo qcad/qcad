@@ -1816,8 +1816,13 @@ void RGraphicsViewImage::paintDrawableThread(RGraphicsViewWorker* worker, RGraph
 
     if (pen.style() != Qt::NoPen) {
         if (path.getPixelWidth()) {
-            // use width of path pen
-            pen.setWidthF(pen.widthF() / getFactor());
+            // use width of path pen:
+            if (scene->getScreenBasedLinetypes() || path.getScreenBasedLinetype()) {
+                pen.setWidthF(pen.widthF());
+            }
+            else {
+                pen.setWidthF(pen.widthF() / getFactor());
+            }
         }
         else if (isPrinting()) {
             if (hairlineMode) {
