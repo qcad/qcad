@@ -169,8 +169,14 @@ bool RGraphicsSceneQt::beginPath() {
             else {
                 // screen based line weights:
                 localPen.setCosmetic(true);
-                // magic number 4.25 to scale approximately, so 1mm width is 1mm on screen:
-                localPen.setWidth(RUnit::convert(currentPen.widthF(), document->getUnit(), RS::Millimeter)*4.25);
+
+                if (pixelWidth) {
+                    localPen.setWidth(currentPen.width());
+                }
+                else {
+                    // magic number 4.25 to scale approximately, so 1mm width is 1mm on screen:
+                    localPen.setWidth(RUnit::convert(currentPen.widthF(), document->getUnit(), RS::Millimeter)*4.25);
+                }
             }
         }
         currentPainterPath.setPen(localPen);
