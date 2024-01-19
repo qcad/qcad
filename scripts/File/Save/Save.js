@@ -36,15 +36,22 @@ Save.includeBasePath = includeBasePath;
 Save.prototype.beginEvent = function() {
     File.prototype.beginEvent.call(this);
 
-    var fileName = this.getDocument().getFileName();
-    var fileVersion = this.getDocument().getFileVersion();
+    var doc = this.getDocument();
+    var fileName = doc.getFileName();
+    var fileVersion = doc.getFileVersion();
 
     // not yet saved or
     // loaded a backup file or
     // save failed:
     // launch save as instead:
-    if (fileName === "" || new QFileInfo(fileName).completeBaseName().startsWith("~") ||
+    if (fileName === "" ||
+        new QFileInfo(fileName).completeBaseName().startsWith("~") ||
+        doc.getVariable("ForceSaveAs")===true ||
         !this.save(fileName, fileVersion, false)) {
+
+        if (doc.getVariable("ForceSaveAs")===true) {
+            doc.removeVariable("ForceSaveAs");
+        }
 
         include(Save.includeBasePath + "/../SaveAs/SaveAs.js");
         var saveAsAction = new SaveAs();
