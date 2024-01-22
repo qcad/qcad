@@ -239,6 +239,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         typeName="RGraphicsSceneDrawable" name="drawable"
         isConst="false" />
       </variant>
+    </method>
+    <method name="addPathToPreview" cppName="addPathToPreview"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="REntity::Id" typeName="REntity::Id"
         name="entityId" isConst="false" />
