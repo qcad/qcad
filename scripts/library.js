@@ -161,7 +161,7 @@ function getPtr(p) {
 /**
  * Checks if the given object is undefined or null.
  *
- * \return true if the given object is defined and not null.
+ * \return false if the given object is defined and not null.
  * This method also supports shared pointers, i.e. obj.isNull()==true.
  */
 function isNull(obj) {
