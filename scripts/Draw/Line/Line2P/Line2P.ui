@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>243</width>
+    <width>432</width>
     <height>50</height>
    </rect>
   </property>
@@ -79,37 +79,59 @@
     </widget>
    </item>
    <item>
-    <widget class="Line" name="line_2">
+    <widget class="Line" name="SeparatorRestrictions">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QToolButton" name="Restrict">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
+    <widget class="QCheckBox" name="UseLength">
+     <property name="text">
+      <string>Length:</string>
      </property>
-     <property name="toolTip">
-      <string>Restrict length or angle</string>
+    </widget>
+   </item>
+   <item>
+    <widget class="RMathLineEdit" name="Length">
+     <property name="text">
+      <string>1</string>
      </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../../../Snap/RestrictAngleLength/RestrictAngleLength.svg</normaloff>../../../Snap/RestrictAngleLength/RestrictAngleLength.svg</iconset>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="SeparatorLengthAngle">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
      </property>
-     <property name="checkable">
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="UseAngle">
+     <property name="text">
+      <string>Angle:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="RMathLineEdit" name="Angle">
+     <property name="text">
+      <string>0</string>
+     </property>
+     <property name="angle" stdset="0">
       <bool>true</bool>
-     </property>
-     <property name="checked">
-      <bool>false</bool>
      </property>
     </widget>
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RMathLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>RMathLineEdit.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

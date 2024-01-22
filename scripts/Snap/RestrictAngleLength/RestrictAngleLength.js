@@ -18,6 +18,7 @@
  */
 
 include("scripts/Snap/Snap.js");
+include("scripts/Draw/Line/Line2P/Line2P.js");
 
 /**
  * RSnapRestriction implementation. Extends RRestrictAngleLength 
@@ -64,11 +65,15 @@ RRestrictAngleLengthExtension.prototype = new RRestrictAngleLength();
 RRestrictAngleLengthExtension.includeBasePath = includeBasePath;
 
 RRestrictAngleLengthExtension.prototype.showUiOptions = function() {
+    Line2P.hideRestrictingOptions();
+
     this.action.showUiOptions(false);
 };
 
 RRestrictAngleLengthExtension.prototype.hideUiOptions = function() {
     this.action.hideUiOptions();
+
+    Line2P.showRestrictingOptions();
 };
 
 
