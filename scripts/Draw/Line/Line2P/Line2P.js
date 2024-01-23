@@ -41,7 +41,7 @@ function Line2P(guiAction) {
     this.point2 = undefined;
 
     this.useLength = false;
-    this.length = 1.0;
+    this.len = 1.0;
     this.useAngle = false;
     this.angle = 0.0;
 
@@ -266,10 +266,10 @@ Line2P.prototype.getRestrictedEndPoint = function() {
         var angle = this.point1.getAngleTo(this.point2Cursor);
 
         if (this.useLength && this.useAngle) {
-            p2 = this.point1.operator_add(RVector.createPolar(this.length, this.angle));
+            p2 = this.point1.operator_add(RVector.createPolar(this.len, this.angle));
         }
         else if (this.useLength) {
-            p2 = this.point1.operator_add(RVector.createPolar(this.length, angle));
+            p2 = this.point1.operator_add(RVector.createPolar(this.len, angle));
         }
         else if (this.useAngle) {
             p2 = this.point1.operator_add(RVector.createPolar(length, this.angle));
@@ -474,7 +474,7 @@ Line2P.prototype.slotUseLengthChanged = function(v) {
 };
 
 Line2P.prototype.slotLengthChanged = function(v) {
-    this.length = v;
+    this.len = v;
     this.updatePreview(true);
 };
 
