@@ -134,7 +134,7 @@ public:
     virtual void addToPreview(REntity::Id entityId, QList<RGraphicsSceneDrawable>& drawables);
     virtual void addToPreview(REntity::Id entityId, RGraphicsSceneDrawable& drawable);
 
-    virtual void addToPreview(REntity::Id entityId, RPainterPath& pp) {
+    virtual void addPathToPreview(REntity::Id entityId, RPainterPath& pp) {
         RGraphicsSceneDrawable drw(pp);
         addToPreview(entityId, drw);
     }

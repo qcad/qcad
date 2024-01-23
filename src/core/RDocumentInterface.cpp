@@ -1823,38 +1823,12 @@ bool RDocumentInterface::hasSelection() {
  * while drawing a window to magnify an area.
  */
 void RDocumentInterface::addZoomBoxToPreview(const RBox& box) {
-    RPainterPath pp;
-    pp.moveTo(RVector(box.c1.x, box.c1.y));
-    pp.lineTo(RVector(box.c2.x, box.c1.y));
-    pp.lineTo(RVector(box.c2.x, box.c2.y));
-    pp.lineTo(RVector(box.c1.x, box.c2.y));
-    pp.lineTo(RVector(box.c1.x, box.c1.y));
-    pp.setPixelWidth(true);
-    int width = (RSettings::getHighResolutionGraphicsView() ? (int)RSettings::getDevicePixelRatio() : 1);
-    QPen pen(QBrush(RSettings::getColor("GraphicsViewColors/ZoomBoxColor", RColor(127,0,0))), width);
-    pen.setStyle(Qt::CustomDashLine);
-    QVector<qreal> dashPattern;
+    QList<qreal> dashPattern;
     dashPattern << 10 << 5;
-    pen.setDashPattern(dashPattern);
-    pp.setPen(pen);
-
-    QList<RGraphicsScene*>::iterator it;
-    for (it = scenes.begin(); it != scenes.end(); it++) {
-        RGraphicsScene* scene = *it;
-//        scene->beginPreview();
-//        scene->setColor(RSettings::getColor("GraphicsViewColors/ZoomBoxColor", RColor(127,0,0)));
-//        scene->setBrush(Qt::NoBrush);
-//        //scene->setLineweight(RLineweight::Weight000);
-//        scene->setLineweight(RLineweight::Weight200);
-//        scene->setStyle(Qt::DashLine);
-//        scene->setLinetypeId(document.getLinetypeId("CONTINUOUS"));
-//        scene->exportShape(QSharedPointer<RShape>(pl.clone()));
-//        //RPainterPath pp = scene->getCurrentPainterPath();
-//        scene->endPreview();
-
-        scene->addToPreview(REntity::INVALID_ID, pp);
-    }
-
+    RPolyline pl;
+    pl = box.getPolyline2d();
+    addShapeToPreview(pl, RSettings::getColor("GraphicsViewColors/ZoomBoxColor", RColor(127,0,0)),
+                      QBrush(Qt::NoBrush), RLineweight::Weight000, Qt::CustomDashLine, dashPattern);
 }
 
 void RDocumentInterface::addShapeToPreview(RShape& shape, const RColor& color,

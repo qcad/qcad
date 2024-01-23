@@ -313,12 +313,6 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="REntity::Id" typeName="REntity::Id"
         name="entityId" isConst="false" />
-        <arg type="RPainterPath &amp;" typeName="RPainterPath"
-        name="pp" isConst="false" />
-      </variant>
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="REntity::Id" typeName="REntity::Id"
-        name="entityId" isConst="false" />
         <arg type="QList &lt; RGraphicsSceneDrawable &gt; &amp;"
         typeName="QList &lt; RGraphicsSceneDrawable &gt;"
         name="drawables" isConst="false" />
@@ -329,6 +323,16 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RGraphicsSceneDrawable &amp;"
         typeName="RGraphicsSceneDrawable" name="drawable"
         isConst="false" />
+      </variant>
+    </method>
+    <method name="addPathToPreview" cppName="addPathToPreview"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="REntity::Id" typeName="REntity::Id"
+        name="entityId" isConst="false" />
+        <arg type="RPainterPath &amp;" typeName="RPainterPath"
+        name="pp" isConst="false" />
       </variant>
     </method>
     <method name="addTextToPreview" cppName="addTextToPreview"

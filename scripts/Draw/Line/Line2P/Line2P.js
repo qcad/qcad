@@ -18,7 +18,8 @@
  */
 
 include("scripts/Draw/Line/Line.js");
-include("scripts/Snap/RestrictAngleLength/RestrictAngleLength.js");
+
+//include("scripts/Snap/RestrictAngleLength/RestrictAngleLength.js");
 
 /**
  * \class Line2P
@@ -36,12 +37,20 @@ function Line2P(guiAction) {
     this.entityIdList = [];
 
     this.point1 = undefined;
+    this.point2Cursor = undefined;
     this.point2 = undefined;
+
+    this.useLength = false;
+    this.length = 1.0;
+    this.useAngle = false;
+    this.angle = 0.0;
 
     this.setUiOptions(["../Line.ui", "Line2P.ui"]);
 }
 
 Line2P.prototype = new Line();
+
+Line2P.RestrictingOptions = [ "SeparatorRestrictions", "UseLength", "Length", "SeparatorLengthAngle", "UseAngle", "Angle" ];
 
 Line2P.State = {
     SettingFirstPoint : 0,
@@ -87,12 +96,84 @@ Line2P.prototype.setState = function(state) {
 Line2P.prototype.showUiOptions = function(resume, restoreFromSettings) {
     Draw.prototype.showUiOptions.call(this, resume, restoreFromSettings);
 
-    var optionsToolBar = EAction.getOptionsToolBar();
-    var w = optionsToolBar.findChild("Restrict");
-    var guiAction = RGuiAction.getByScriptFile("scripts/Snap/RestrictAngleLength/RestrictAngleLength.js");
-    w.setDefaultAction(guiAction);
+//    var optionsToolBar = EAction.getOptionsToolBar();
+//    var w = optionsToolBar.findChild("Restrict");
+//    var guiAction = RGuiAction.getByScriptFile("scripts/Snap/RestrictAngleLength/RestrictAngleLength.js");
+//    w.setDefaultAction(guiAction);
 
     this.updateButtonStates();
+};
+
+Line2P.prototype.initUiOptions = function(resume, optionsToolBar) {
+    var leLength = optionsToolBar.findChild("Length");
+    var cbLength = optionsToolBar.findChild("UseLength");
+    var leAngle = optionsToolBar.findChild("Angle");
+    var cbAngle = optionsToolBar.findChild("UseAngle");
+
+    if (!resume) {
+        if (!isNull(cbLength)) {
+            cbLength.checked = false;
+            cbLength.setProperty("Loaded", true);
+            cbLength.setProperty("Saved", true);
+        }
+        if (!isNull(cbAngle)) {
+            cbAngle.checked = false;
+            cbAngle.setProperty("Loaded", true);
+            cbAngle.setProperty("Saved", true);
+        }
+
+        //if (!isNull(cbLength)) cbLength.checked = false;
+        //if (!isNull(cbAngle)) cbAngle.checked = false;
+
+        if (!isNull(leLength)) {
+            leLength.textEdited.connect(function() {
+                cbLength.checked = true;
+            });
+        }
+
+        if (!isNull(leAngle)) {
+            leAngle.textEdited.connect(function() {
+                cbAngle.checked = true;
+            });
+        }
+    }
+};
+
+/**
+ * Shows the restriction options for the line tool (length / angle).
+ * called from RestrictAngleLength to avoid redundant options.
+ */
+Line2P.showRestrictingOptions = function() {
+    var optionsToolBar = EAction.getOptionsToolBar();
+    for (var i=0; i<Line2P.RestrictingOptions.length; i++) {
+        var w = optionsToolBar.findChild(Line2P.RestrictingOptions[i] + "Action");
+        if (!isNull(w)) {
+            w.visible = true;
+        }
+    }
+
+};
+
+/**
+ * Hides the restriction options for the line tool (length / angle).
+ * called from RestrictAngleLength to avoid redundant options.
+ */
+Line2P.hideRestrictingOptions = function() {
+    var optionsToolBar = EAction.getOptionsToolBar();
+    for (var i=0; i<Line2P.RestrictingOptions.length; i++) {
+        var w = optionsToolBar.findChild(Line2P.RestrictingOptions[i] + "Action");
+        if (!isNull(w)) {
+            w.visible = false;
+        }
+    }
+    var cbLength = optionsToolBar.findChild("UseLength");
+    if (!isNull(cbLength)) {
+        cbLength.checked = false;
+    }
+    var cbAngle = optionsToolBar.findChild("UseAngle");
+    if (!isNull(cbAngle)) {
+        cbAngle.checked = false;
+    }
 };
 
 Line2P.prototype.escapeEvent = function() {
@@ -141,7 +222,8 @@ Line2P.prototype.pickCoordinate = function(event, preview) {
         break;
 
     case Line2P.State.SettingNextPoint:
-        this.point2 = event.getModelPosition();
+        this.point2Cursor = event.getModelPosition();
+        //this.point2 = this.getRestrictedEndPoint();
         if (preview) {
             this.updatePreview();
         }
@@ -176,12 +258,36 @@ Line2P.prototype.pickCoordinate = function(event, preview) {
     }
 };
 
+Line2P.prototype.getRestrictedEndPoint = function() {
+    var p2 = this.point2Cursor;
+
+    if (this.useLength || this.useAngle) {
+        var length = this.point1.getDistanceTo(this.point2Cursor);
+        var angle = this.point1.getAngleTo(this.point2Cursor);
+
+        if (this.useLength && this.useAngle) {
+            p2 = this.point1.operator_add(RVector.createPolar(this.length, this.angle));
+        }
+        else if (this.useLength) {
+            p2 = this.point1.operator_add(RVector.createPolar(this.length, angle));
+        }
+        else if (this.useAngle) {
+            p2 = this.point1.operator_add(RVector.createPolar(length, this.angle));
+        }
+    }
+
+    return p2;
+};
+
 Line2P.prototype.getOperation = function(preview) {
-    if (!isVector(this.point1) || !isVector(this.point2)) {
+    if (!isVector(this.point1) || !isVector(this.point2Cursor)) {
         return undefined;
     }
 
+    this.point2 = this.getRestrictedEndPoint();
+
     var e = this.createLineEntity(this.getDocument(), this.point1, this.point2);
+
     return new RAddObjectOperation(e, this.getToolTitle());
 };
 
@@ -293,6 +399,16 @@ Line2P.prototype.updateButtonStates = function() {
             w.enabled = false;
         }
     }
+
+    w = optionsToolBar.findChild("UseLength");
+    if (!isNull(w)) {
+        w.checked = false;
+    }
+
+    w = optionsToolBar.findChild("UseAngle");
+    if (!isNull(w)) {
+        w.checked = false;
+    }
 };
 
 Line2P.prototype.getLineEntityId = function(trans) {
@@ -350,4 +466,24 @@ Line2P.prototype.typeChanged = function() {
     this.pointListIndex = 0;
     this.entityIdList = [];
     this.updateButtonStates();
+};
+
+Line2P.prototype.slotUseLengthChanged = function(v) {
+    this.useLength = v;
+    this.updatePreview(true);
+};
+
+Line2P.prototype.slotLengthChanged = function(v) {
+    this.length = v;
+    this.updatePreview(true);
+};
+
+Line2P.prototype.slotUseAngleChanged = function(v) {
+    this.useAngle = v;
+    this.updatePreview(true);
+};
+
+Line2P.prototype.slotAngleChanged = function(v) {
+    this.angle = v;
+    this.updatePreview(true);
 };

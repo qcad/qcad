@@ -8201,7 +8201,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>Line2P</name>
     <message>
-        <location filename="../scripts/Draw/Line/Line2P/Line2P.js" line="+67"/>
+        <location filename="../scripts/Draw/Line/Line2P/Line2P.js" line="+76"/>
         <source>First point</source>
         <translation>Erster Punkt</translation>
     </message>
@@ -8251,9 +8251,14 @@ ist bereits in der Liste.</translation>
         <translation>,, R</translation>
     </message>
     <message>
-        <location line="+20"/>
-        <source>Restrict length or angle</source>
-        <translation>Länge oder Winkel einschränken</translation>
+        <location line="+14"/>
+        <source>Length:</source>
+        <translation>Länge:</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Angle:</source>
+        <translation>Winkel:</translation>
     </message>
 </context>
 <context>
@@ -10741,7 +10746,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>Save</name>
     <message>
-        <location filename="../scripts/File/Save/Save.js" line="+110"/>
+        <location filename="../scripts/File/Save/Save.js" line="+117"/>
         <source>File Format Version Not Recommended</source>
         <translation>Dateiversion nicht empfohlen</translation>
     </message>

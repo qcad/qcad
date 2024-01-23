@@ -8201,7 +8201,7 @@ já se encontra na lista.</translation>
 <context>
     <name>Line2P</name>
     <message>
-        <location filename="../scripts/Draw/Line/Line2P/Line2P.js" line="+67"/>
+        <location filename="../scripts/Draw/Line/Line2P/Line2P.js" line="+76"/>
         <source>First point</source>
         <translation>Primeiro ponto</translation>
     </message>
@@ -8251,9 +8251,14 @@ já se encontra na lista.</translation>
         <translation>,, R</translation>
     </message>
     <message>
-        <location line="+20"/>
-        <source>Restrict length or angle</source>
-        <translation>Restrinja o comprimento ou o ângulo</translation>
+        <location line="+14"/>
+        <source>Length:</source>
+        <translation>Comprimento:</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Angle:</source>
+        <translation>Ângulo:</translation>
     </message>
 </context>
 <context>
@@ -10741,7 +10746,7 @@ já se encontra na lista.</translation>
 <context>
     <name>Save</name>
     <message>
-        <location filename="../scripts/File/Save/Save.js" line="+92"/>
+        <location filename="../scripts/File/Save/Save.js" line="+99"/>
         <source>Overwrite File?</source>
         <translation>Sobreescrever arquivo?</translation>
     </message>

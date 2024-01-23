@@ -158,6 +158,9 @@
         addToPreview
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        addPathToPreview
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         addTextToPreview
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

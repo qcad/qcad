@@ -123,6 +123,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, addToPreview, "addToPreview");
             
+            REcmaHelper::registerFunction(&engine, proto, addPathToPreview, "addPathToPreview");
+            
             REcmaHelper::registerFunction(&engine, proto, beginNoColorMode, "beginNoColorMode");
             
             REcmaHelper::registerFunction(&engine, proto, endNoColorMode, "endNoColorMode");
@@ -2084,6 +2086,34 @@
 
 
         
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.addToPreview().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsScene::addToPreview", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsScene::addPathToPreview
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsScene::addPathToPreview", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::addPathToPreview";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsScene* self = 
+                        getSelf("addPathToPreview", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
     
     if( context->argumentCount() ==
     2 && (
@@ -2129,7 +2159,7 @@
     // call C++ function:
     // return type 'void'
     
-               self->addToPreview(a0
+               self->addPathToPreview(a0
         ,
     a1);
     } else
@@ -2137,10 +2167,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.addToPreview().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.addPathToPreview().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::addToPreview", context, engine);
+            //REcmaHelper::functionEnd("REcmaGraphicsScene::addPathToPreview", context, engine);
             return result;
         }
          QScriptValue

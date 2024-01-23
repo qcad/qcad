@@ -8206,7 +8206,7 @@ už existuje v zozname.</translation>
 <context>
     <name>Line2P</name>
     <message>
-        <location filename="../scripts/Draw/Line/Line2P/Line2P.js" line="+67"/>
+        <location filename="../scripts/Draw/Line/Line2P/Line2P.js" line="+76"/>
         <source>First point</source>
         <translation>Prvý bod</translation>
     </message>
@@ -8246,9 +8246,14 @@ už existuje v zozname.</translation>
         <translation>,, R</translation>
     </message>
     <message>
-        <location line="+20"/>
-        <source>Restrict length or angle</source>
-        <translation>Určiť dĺžku alebo uhol</translation>
+        <location line="+14"/>
+        <source>Length:</source>
+        <translation type="unfinished">Dĺžka:</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Angle:</source>
+        <translation type="unfinished">Uhol:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2PInit.js" line="+2"/>
@@ -10748,7 +10753,7 @@ už existuje v zozname.</translation>
 <context>
     <name>Save</name>
     <message>
-        <location filename="../scripts/File/Save/Save.js" line="+92"/>
+        <location filename="../scripts/File/Save/Save.js" line="+99"/>
         <source>Overwrite File?</source>
         <translation>Prepísať súbor?</translation>
     </message>

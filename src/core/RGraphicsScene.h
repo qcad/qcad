@@ -112,7 +112,7 @@ public:
         Q_UNUSED(entityId)
         Q_UNUSED(drawable)
     }
-    virtual void addToPreview(REntity::Id entityId, RPainterPath& pp) {
+    virtual void addPathToPreview(REntity::Id entityId, RPainterPath& pp) {
         Q_UNUSED(entityId)
         Q_UNUSED(pp)
     }

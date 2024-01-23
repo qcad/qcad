@@ -132,6 +132,9 @@
         addToPreview
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        addPathToPreview
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         beginNoColorMode
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
