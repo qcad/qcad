@@ -13453,7 +13453,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Data yang dijatuhkan tidak didukung</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
         <translation type="unfinished">Tidak dapat mengimpor file ke dalam gambar yang sudah ada:</translation>
     </message>
@@ -14513,4 +14513,3 @@ sudah ada dalam daftar.</translation>
     </message>
 </context>
 </TS>
-

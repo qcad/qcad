@@ -13452,7 +13452,7 @@ zaten listede.</translation>
         <translation>Bırakılan veriler desteklenmiyor</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
         <translation type="unfinished">Dosya mevcut çizime aktarılamıyor:</translation>
     </message>
@@ -14512,4 +14512,3 @@ zaten listede.</translation>
     </message>
 </context>
 </TS>
-

@@ -13463,7 +13463,7 @@ on jo luettelossa.</translation>
         <translation>Poistettuja tietoja ei tueta</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
         <translation type="unfinished">Tiedostoa ei voi tuoda olemassa olevaan piirustukseen:</translation>
     </message>
@@ -14523,4 +14523,3 @@ on jo luettelossa.</translation>
     </message>
 </context>
 </TS>
-

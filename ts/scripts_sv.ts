@@ -13461,7 +13461,7 @@ finns redan i listan.</translation>
         <translation>Uppgifter som tappats bort stöds inte</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
         <translation>Det går inte att importera filen till en befintlig ritning:</translation>
     </message>
@@ -14521,4 +14521,3 @@ finns redan i listan.</translation>
     </message>
 </context>
 </TS>
-

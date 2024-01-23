@@ -13473,7 +13473,7 @@ jest już na liście.</translation>
         <translation>Nie obsługiwane przeciągnięte dane </translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
         <translation type="unfinished">Nie można zaimportować pliku do istniejącego rysunku:</translation>
     </message>
@@ -14533,4 +14533,3 @@ jest już na liście.</translation>
     </message>
 </context>
 </TS>
-

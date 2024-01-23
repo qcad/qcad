@@ -13463,7 +13463,7 @@ est déjà dans la liste.</translation>
         <translation>Données insérées pas pris en charge</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
         <translation>Impossible d&apos;importer un fichier dans un dessin existant :</translation>
     </message>
@@ -14523,4 +14523,3 @@ est déjà dans la liste.</translation>
     </message>
 </context>
 </TS>
-

@@ -3280,7 +3280,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+4"/>
         <source>&amp;Draw</source>
-        <translation>&amp;Draw</translation>
+        <translation>&amp;Desenhe</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -11062,7 +11062,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+9"/>
         <source>&amp;Select</source>
-        <translation>&amp;Select</translation>
+        <translation>&amp;Selecione</translation>
     </message>
 </context>
 <context>
@@ -13463,7 +13463,7 @@ já se encontra na lista.</translation>
         <translation>Dados inseridos não suportados</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
         <translation>Não é possível importar ficheiro para o desenho existente:</translation>
     </message>
@@ -14523,4 +14523,3 @@ já se encontra na lista.</translation>
     </message>
 </context>
 </TS>
-

@@ -13464,7 +13464,7 @@ is already in the list.</source>
         <translation>I dati inseriti non sono supportati</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
         <translation>Impossibile importare il file in un disegno esistente:</translation>
     </message>
@@ -14524,4 +14524,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

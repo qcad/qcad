@@ -13453,7 +13453,7 @@ is already in the list.</source>
         <translation type="unfinished">삭제된 데이터는 지원되지 않습니다</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
         <translation type="unfinished">기존 도면으로 파일을 가져올 수 없습니다:</translation>
     </message>
@@ -14513,4 +14513,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

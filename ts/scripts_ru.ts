@@ -13473,7 +13473,7 @@ is already in the list.</source>
         <translation>Удалённые данные не поддерживаются</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
         <translation type="unfinished">Невозможно импортировать файл в существующий чертеж:</translation>
     </message>
@@ -14533,4 +14533,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

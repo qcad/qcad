@@ -13470,7 +13470,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Nu se acceptă date abandonate</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
         <translation type="unfinished">Nu se poate importa fișierul în desenul existent:</translation>
     </message>
@@ -14530,4 +14530,3 @@ este deja în listă.</translation>
     </message>
 </context>
 </TS>
-

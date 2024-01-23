@@ -13453,7 +13453,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">A megszakadt adatok nem támogatottak</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
         <translation type="unfinished">Nem lehet fájlt importálni a meglévő rajzba:</translation>
     </message>
@@ -14513,4 +14513,3 @@ már szerepel a listában.</translation>
     </message>
 </context>
 </TS>
-

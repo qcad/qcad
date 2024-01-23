@@ -13453,7 +13453,7 @@ is already in the list.</source>
         <translation type="unfinished">不支持掉线数据</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
         <translation type="unfinished">无法将文件导入到现有图纸中：</translation>
     </message>
@@ -14513,4 +14513,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

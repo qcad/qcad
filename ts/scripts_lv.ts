@@ -13470,7 +13470,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Nav atbalstīta datu atmešana</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
         <translation type="unfinished">Nevar importēt failu esošajā rasējumā:</translation>
     </message>
@@ -14530,4 +14530,3 @@ jau ir sarakstā.</translation>
     </message>
 </context>
 </TS>
-

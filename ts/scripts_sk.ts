@@ -13473,7 +13473,7 @@ už existuje v zozname.</translation>
         <translation>Vložené údaje nie sú podporované</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
         <translation type="unfinished">Nie je možné importovať súbor do existujúceho výkresu:</translation>
     </message>
@@ -14533,4 +14533,3 @@ už existuje v zozname.</translation>
     </message>
 </context>
 </TS>
-

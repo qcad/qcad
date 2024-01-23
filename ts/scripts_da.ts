@@ -13463,7 +13463,7 @@ er allerede på listen.</translation>
         <translation>Tabte data ikke understøttet</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
         <translation>Kan ikke importere filen til en eksisterende tegning:</translation>
     </message>
@@ -14523,4 +14523,3 @@ er allerede på listen.</translation>
     </message>
 </context>
 </TS>
-

@@ -13453,7 +13453,7 @@ is already in the list.</source>
         <translation>ドロップされたデータはサポートされていません</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
         <translation type="unfinished">既存の図面にファイルを読み込むことができない：</translation>
     </message>
@@ -14513,4 +14513,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

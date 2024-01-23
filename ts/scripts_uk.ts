@@ -13470,7 +13470,7 @@ is already in the list.</source>
         <translation type="unfinished">Скинуті дані не підтримуються</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
         <translation type="unfinished">Не вдається імпортувати файл до існуючого креслення:</translation>
     </message>
@@ -14530,4 +14530,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

@@ -13470,7 +13470,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Nepalaikomi nutolę duomenys</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
         <translation type="unfinished">Negalima importuoti failo į esamą brėžinį:</translation>
     </message>
@@ -14530,4 +14530,3 @@ jau yra sąraše.</translation>
     </message>
 </context>
 </TS>
-

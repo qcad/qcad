@@ -13479,7 +13479,7 @@ je že na seznamu.</translation>
         <translation>Odvrženi podatki niso podprti</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
         <translation type="unfinished">Datoteke ni mogoče uvoziti v obstoječo risbo:</translation>
     </message>
@@ -14539,4 +14539,3 @@ je že na seznamu.</translation>
     </message>
 </context>
 </TS>
-

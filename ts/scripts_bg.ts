@@ -13461,7 +13461,7 @@ is already in the list.</source>
         <translation type="unfinished">Не се поддържат отпаднали данни</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
         <translation type="unfinished">Не можете да импортирате файл в съществуващ чертеж:</translation>
     </message>
@@ -14521,4 +14521,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

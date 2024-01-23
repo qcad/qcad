@@ -13463,7 +13463,7 @@ ya está en la lista.</translation>
         <translation>Datos insertados no compatibles</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
         <translation>No se puede importar un archivo en un dibujo existente:</translation>
     </message>
@@ -14523,4 +14523,3 @@ ya está en la lista.</translation>
     </message>
 </context>
 </TS>
-
