@@ -8196,7 +8196,7 @@ sudah ada dalam daftar.</translation>
 <context>
     <name>Line2P</name>
     <message>
-        <location filename="../scripts/Draw/Line/Line2P/Line2P.js" line="+67"/>
+        <location filename="../scripts/Draw/Line/Line2P/Line2P.js" line="+76"/>
         <source>First point</source>
         <translation type="unfinished">Poin pertama</translation>
     </message>
@@ -8236,9 +8236,14 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">,, R</translation>
     </message>
     <message>
-        <location line="+20"/>
-        <source>Restrict length or angle</source>
-        <translation type="unfinished">Membatasi panjang atau sudut</translation>
+        <location line="+14"/>
+        <source>Length:</source>
+        <translation type="unfinished">Panjang:</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Angle:</source>
+        <translation type="unfinished">Angle:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2PInit.js" line="+2"/>
@@ -10734,7 +10739,7 @@ sudah ada dalam daftar.</translation>
 <context>
     <name>Save</name>
     <message>
-        <location filename="../scripts/File/Save/Save.js" line="+92"/>
+        <location filename="../scripts/File/Save/Save.js" line="+99"/>
         <source>Overwrite File?</source>
         <translation type="unfinished">Menimpa File?</translation>
     </message>
@@ -13453,7 +13458,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Data yang dijatuhkan tidak didukung</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
         <translation type="unfinished">Tidak dapat mengimpor file ke dalam gambar yang sudah ada:</translation>
     </message>
@@ -14513,4 +14518,3 @@ sudah ada dalam daftar.</translation>
     </message>
 </context>
 </TS>
-

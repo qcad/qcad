@@ -8203,7 +8203,7 @@ jau yra sąraše.</translation>
 <context>
     <name>Line2P</name>
     <message>
-        <location filename="../scripts/Draw/Line/Line2P/Line2P.js" line="+67"/>
+        <location filename="../scripts/Draw/Line/Line2P/Line2P.js" line="+76"/>
         <source>First point</source>
         <translation type="unfinished">Pirmas punktas</translation>
     </message>
@@ -8253,9 +8253,14 @@ jau yra sąraše.</translation>
         <translation type="unfinished">,, R</translation>
     </message>
     <message>
-        <location line="+20"/>
-        <source>Restrict length or angle</source>
-        <translation type="unfinished">Apriboti ilgį arba kampą</translation>
+        <location line="+14"/>
+        <source>Length:</source>
+        <translation type="unfinished">Ilgis:</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Angle:</source>
+        <translation type="unfinished">Kampas:</translation>
     </message>
 </context>
 <context>
@@ -10745,7 +10750,7 @@ jau yra sąraše.</translation>
 <context>
     <name>Save</name>
     <message>
-        <location filename="../scripts/File/Save/Save.js" line="+92"/>
+        <location filename="../scripts/File/Save/Save.js" line="+99"/>
         <source>Overwrite File?</source>
         <translation type="unfinished">Perrašyti failą?</translation>
     </message>
@@ -13470,7 +13475,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Nepalaikomi nutolę duomenys</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
         <translation type="unfinished">Negalima importuoti failo į esamą brėžinį:</translation>
     </message>
@@ -14530,4 +14535,3 @@ jau yra sąraše.</translation>
     </message>
 </context>
 </TS>
-

@@ -8203,7 +8203,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>Line2P</name>
     <message>
-        <location filename="../scripts/Draw/Line/Line2P/Line2P.js" line="+67"/>
+        <location filename="../scripts/Draw/Line/Line2P/Line2P.js" line="+76"/>
         <source>First point</source>
         <translation type="unfinished">Pirmais punkts</translation>
     </message>
@@ -8243,9 +8243,14 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">,, R</translation>
     </message>
     <message>
-        <location line="+20"/>
-        <source>Restrict length or angle</source>
-        <translation type="unfinished">Ierobežot garumu vai leņķi</translation>
+        <location line="+14"/>
+        <source>Length:</source>
+        <translation type="unfinished">Garums:</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Angle:</source>
+        <translation type="unfinished">Leņķis:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2PInit.js" line="+2"/>
@@ -10745,7 +10750,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>Save</name>
     <message>
-        <location filename="../scripts/File/Save/Save.js" line="+92"/>
+        <location filename="../scripts/File/Save/Save.js" line="+99"/>
         <source>Overwrite File?</source>
         <translation type="unfinished">Pārrakstīt failu?</translation>
     </message>
@@ -13470,7 +13475,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Nav atbalstīta datu atmešana</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
         <translation type="unfinished">Nevar importēt failu esošajā rasējumā:</translation>
     </message>
@@ -14530,4 +14535,3 @@ jau ir sarakstā.</translation>
     </message>
 </context>
 </TS>
-

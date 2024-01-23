@@ -8201,7 +8201,7 @@ est déjà dans la liste.</translation>
 <context>
     <name>Line2P</name>
     <message>
-        <location filename="../scripts/Draw/Line/Line2P/Line2P.js" line="+67"/>
+        <location filename="../scripts/Draw/Line/Line2P/Line2P.js" line="+76"/>
         <source>First point</source>
         <translation>Premier point</translation>
     </message>
@@ -8251,9 +8251,14 @@ est déjà dans la liste.</translation>
         <translation>,, R</translation>
     </message>
     <message>
-        <location line="+20"/>
-        <source>Restrict length or angle</source>
-        <translation>Limiter longueur ou angle</translation>
+        <location line="+14"/>
+        <source>Length:</source>
+        <translation>Longueur :</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Angle:</source>
+        <translation>Angle :</translation>
     </message>
 </context>
 <context>
@@ -10741,7 +10746,7 @@ est déjà dans la liste.</translation>
 <context>
     <name>Save</name>
     <message>
-        <location filename="../scripts/File/Save/Save.js" line="+92"/>
+        <location filename="../scripts/File/Save/Save.js" line="+99"/>
         <source>Overwrite File?</source>
         <translation>Écraser le fichier ?</translation>
     </message>
@@ -13463,7 +13468,7 @@ est déjà dans la liste.</translation>
         <translation>Données insérées pas pris en charge</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
         <translation>Impossible d&apos;importer un fichier dans un dessin existant :</translation>
     </message>
@@ -14523,4 +14528,3 @@ est déjà dans la liste.</translation>
     </message>
 </context>
 </TS>
-

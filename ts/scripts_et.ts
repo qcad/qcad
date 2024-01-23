@@ -293,6 +293,7 @@
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+86"/>
@@ -917,6 +918,7 @@ Do you wish to recover it/them?</source>
         <location line="+1"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+25"/>
@@ -3210,6 +3212,7 @@ Do you wish to recover it?</source>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -8192,7 +8195,7 @@ is already in the list.</source>
 <context>
     <name>Line2P</name>
     <message>
-        <location filename="../scripts/Draw/Line/Line2P/Line2P.js" line="+67"/>
+        <location filename="../scripts/Draw/Line/Line2P/Line2P.js" line="+76"/>
         <source>First point</source>
         <translation type="unfinished">Esimene punkt</translation>
     </message>
@@ -8232,9 +8235,14 @@ is already in the list.</source>
         <translation type="unfinished">,, R</translation>
     </message>
     <message>
-        <location line="+20"/>
-        <source>Restrict length or angle</source>
-        <translation type="unfinished">Pikkuse või nurga piiramine</translation>
+        <location line="+14"/>
+        <source>Length:</source>
+        <translation type="unfinished">Pikkus:</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Angle:</source>
+        <translation type="unfinished">Nurk:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2PInit.js" line="+2"/>
@@ -10732,7 +10740,7 @@ is already in the list.</source>
 <context>
     <name>Save</name>
     <message>
-        <location filename="../scripts/File/Save/Save.js" line="+92"/>
+        <location filename="../scripts/File/Save/Save.js" line="+99"/>
         <source>Overwrite File?</source>
         <translation type="unfinished">Faili ülekirjutamine?</translation>
     </message>
@@ -11399,6 +11407,7 @@ is already in the list.</source>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
@@ -12611,6 +12620,7 @@ is already in the list.</source>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+21"/>
@@ -13450,7 +13460,7 @@ is already in the list.</source>
         <translation type="unfinished">Andmete mahajäämine ei ole toetatud</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
         <translation type="unfinished">Faili ei saa importida olemasolevasse joonisesse:</translation>
     </message>
@@ -14510,4 +14520,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

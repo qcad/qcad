@@ -8196,7 +8196,7 @@ is already in the list.</source>
 <context>
     <name>Line2P</name>
     <message>
-        <location filename="../scripts/Draw/Line/Line2P/Line2P.js" line="+67"/>
+        <location filename="../scripts/Draw/Line/Line2P/Line2P.js" line="+76"/>
         <source>First point</source>
         <translation type="unfinished">第一点</translation>
     </message>
@@ -8236,9 +8236,14 @@ is already in the list.</source>
         <translation type="unfinished">,, R</translation>
     </message>
     <message>
-        <location line="+20"/>
-        <source>Restrict length or angle</source>
-        <translation>限制长度或角度</translation>
+        <location line="+14"/>
+        <source>Length:</source>
+        <translation type="unfinished">长度：</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Angle:</source>
+        <translation type="unfinished">角度：</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2PInit.js" line="+2"/>
@@ -10734,7 +10739,7 @@ is already in the list.</source>
 <context>
     <name>Save</name>
     <message>
-        <location filename="../scripts/File/Save/Save.js" line="+92"/>
+        <location filename="../scripts/File/Save/Save.js" line="+99"/>
         <source>Overwrite File?</source>
         <translation type="unfinished">覆盖文件？</translation>
     </message>
@@ -13453,7 +13458,7 @@ is already in the list.</source>
         <translation type="unfinished">不支持掉线数据</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
         <translation type="unfinished">无法将文件导入到现有图纸中：</translation>
     </message>
@@ -14513,4 +14518,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

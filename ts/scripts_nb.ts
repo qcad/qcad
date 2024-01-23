@@ -8201,7 +8201,7 @@ er allerede i listen.</translation>
 <context>
     <name>Line2P</name>
     <message>
-        <location filename="../scripts/Draw/Line/Line2P/Line2P.js" line="+67"/>
+        <location filename="../scripts/Draw/Line/Line2P/Line2P.js" line="+76"/>
         <source>First point</source>
         <translation type="unfinished">Første punkt</translation>
     </message>
@@ -8241,9 +8241,14 @@ er allerede i listen.</translation>
         <translation type="unfinished">,, R</translation>
     </message>
     <message>
-        <location line="+20"/>
-        <source>Restrict length or angle</source>
-        <translation type="unfinished">Begrense lengde eller vinkel</translation>
+        <location line="+14"/>
+        <source>Length:</source>
+        <translation type="unfinished">Lengde:</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Angle:</source>
+        <translation type="unfinished">Vinkel:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2PInit.js" line="+2"/>
@@ -10741,7 +10746,7 @@ er allerede i listen.</translation>
 <context>
     <name>Save</name>
     <message>
-        <location filename="../scripts/File/Save/Save.js" line="+92"/>
+        <location filename="../scripts/File/Save/Save.js" line="+99"/>
         <source>Overwrite File?</source>
         <translation type="unfinished">Overskrive fil?</translation>
     </message>
@@ -13463,7 +13468,7 @@ er allerede i listen.</translation>
         <translation type="unfinished">Tapte data støttes ikke</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
         <translation type="unfinished">Kan ikke importere fil til eksisterende tegning:</translation>
     </message>
@@ -14523,4 +14528,3 @@ er allerede i listen.</translation>
     </message>
 </context>
 </TS>
-
