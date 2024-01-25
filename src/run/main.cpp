@@ -300,6 +300,8 @@ int main(int argc, char *argv[]) {
 
     qRegisterMetaType<RVector>();
     qRegisterMetaTypeStreamOperators<RVector>("RVector");
+
+    qRegisterMetaType<QVector<int> >();
 #else
     // TODO #qt6 ?
 #endif
