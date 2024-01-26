@@ -1203,94 +1203,114 @@ WidgetFactory.initLineEditInfoTools = function(mathLineEdit) {
 WidgetFactory.initLineEdit = function(lineEdit, dimension) {
     lineEdit.contextMenuPolicy = Qt.CustomContextMenu;
     lineEdit.customContextMenuRequested.connect(function(pos) {
-        var menu = lineEdit.createStandardContextMenu();
-
-        var subMenu = new QMenu(qsTr("Insert Symbol"));
-
-        // TODO: split into submenus (math, greek, ...):
-        var symbols = [
-                    [0x00B0, qsTr("Degrees")],
-                    [0x00B1, qsTr("Plus/Minus")],
-                    [0x00F8, qsTr("Diameter")],
-                    [0x00F7, qsTr("Division")],
-                    [0x2248, qsTr("Almost Equal")],
-                    [0x2220, qsTr("Angle")],
-                    [0x2312, qsTr("Arc")],
-                    [0x2243, qsTr("Asymptotically Equal")],
-                    //[0xE100, qsTr("Boundary Line")],
-                    [0x2104, qsTr("Center Line")],
-                    [0x0394, qsTr("Delta")],
-                    [0x0278, qsTr("Electrical Phase")],
-                    //[0xE101, qsTr("Flow Line")],
-                    [0x2261, qsTr("Identity")],
-                    //[0xE200, qsTr("Initial Length")],
-                    //[0xE102, qsTr("Monument Line")],
-                    [0x00D7, qsTr("Multiplication")],
-                    [0x2260, qsTr("Not Equal")],
-                    [0x2126, qsTr("Ohm")],
-                    [0x03A9, qsTr("Omega")],
-                    [0x03C9, qsTr("omega")],
-                    [0x03A6, qsTr("Phi")],
-                    [0x0278, qsTr("phi")],
-                    [0x03C6, qsTr("Alt phi")],
-                    [0x03C0, qsTr("Pi")],
-                    [0x214A, qsTr("Property Line")],
-                    [0x2082, qsTr("Subscript 2")],
-                    [0x221A, qsTr("Square Root")],
-                    [0x25FB, qsTr("Square")],
-                    [0x00B2, qsTr("Squared")],
-                    [0x00B3, qsTr("Cubed")],
-                    ["\\SA^B;", qsTr("Stacked text"), "\\\\SA^B;"]
-        ];
-
-        if (dimension===true) {
-            symbols.unshift([]);
-            symbols.unshift(["<>", qsTr("Measured value")]);
-        }
-
-        for (var i=0; i<symbols.length; ++i) {
-            var symbol = symbols[i];
-
-            if (symbol.length===0) {
-                subMenu.addSeparator();
-                continue;
-            }
-
-            var symbolCode = symbol[0];
-            var symbolCodeStr;
-            var symbolSelf;
-            if (isNumber(symbolCode)) {
-                symbolCodeStr = symbolCode.toString(16);
-                while (symbolCodeStr.length<4) {
-                    symbolCodeStr = "0" + symbolCodeStr;
-                }
-                symbolCodeStr = ", \\U+" + symbolCodeStr;
-                symbolSelf = String.fromCharCode(symbolCode);
-            }
-            else {
-                symbolCodeStr = "";
-                symbolSelf = symbolCode;
-            }
-            var symbolText = symbol[1];
-            var insertion = String.fromCharCode(symbol[0]);
-            if (symbol.length===3) {
-                insertion = symbol[2];
-            }
-
-            var action = subMenu.addAction(symbolSelf + "\t(" + symbolText + symbolCodeStr + ")");
-            eval("action.triggered.connect(function() { lineEdit.setFocus(Qt.OtherFocusReason); lineEdit.insert(\"" + insertion + "\"); });");
-        }
-
-        var actions = menu.actions();
-        menu.removeAction(actions[actions.length-1]);
-        menu.removeAction(actions[actions.length-2]);
-        var separatorAction = menu.insertSeparator(actions[0]);
-        menu.insertMenu(separatorAction, subMenu);
+        var menu = WidgetFactory.createLineEditContextMenu(lineEdit, dimension);
         menu.exec(QCursor.pos());
         if (!isDeleted(menu)) {
             destr(menu);
         }
     });
+};
+
+WidgetFactory.createLineEditContextMenu = function(lineEdit, dimension) {
+    var menu = lineEdit.createStandardContextMenu();
+
+    var subMenu = new QMenu(qsTr("Insert Symbol"));
+
+    // TODO: split into submenus (math, greek, ...):
+    var symbols = [
+                [0x00B0, qsTr("Degrees")],
+                [0x00B1, qsTr("Plus/Minus")],
+                [0x00F8, qsTr("Diameter")],
+                [0x00F7, qsTr("Division")],
+                [0x2248, qsTr("Almost Equal")],
+                [0x2220, qsTr("Angle")],
+                [0x2312, qsTr("Arc")],
+                [0x2243, qsTr("Asymptotically Equal")],
+                //[0xE100, qsTr("Boundary Line")],
+                [0x2104, qsTr("Center Line")],
+                [0x0394, qsTr("Delta")],
+                [0x0278, qsTr("Electrical Phase")],
+                //[0xE101, qsTr("Flow Line")],
+                [0x2261, qsTr("Identity")],
+                //[0xE200, qsTr("Initial Length")],
+                //[0xE102, qsTr("Monument Line")],
+                [0x00D7, qsTr("Multiplication")],
+                [0x2260, qsTr("Not Equal")],
+                [0x2126, qsTr("Ohm")],
+                [0x03A9, qsTr("Omega")],
+                [0x03C9, qsTr("omega")],
+                [0x03A6, qsTr("Phi")],
+                [0x0278, qsTr("phi")],
+                [0x03C6, qsTr("Alt phi")],
+                [0x03C0, qsTr("Pi")],
+                [0x214A, qsTr("Property Line")],
+                [0x2082, qsTr("Subscript 2")],
+                [0x221A, qsTr("Square Root")],
+                [0x25FB, qsTr("Square")],
+                [0x00B2, qsTr("Squared")],
+                [0x00B3, qsTr("Cubed")],
+                ["\\SA^B;", qsTr("Stacked text"), "\\\\SA^B;"]
+    ];
+
+    if (dimension===true) {
+        symbols.unshift([]);
+        symbols.unshift(["<>", qsTr("Measured value")]);
+    }
+
+    for (var i=0; i<symbols.length; ++i) {
+        var symbol = symbols[i];
+
+        if (symbol.length===0) {
+            subMenu.addSeparator();
+            continue;
+        }
+
+        var symbolCode = symbol[0];
+        var symbolCodeStr;
+        var symbolSelf;
+
+        if (isNumber(symbolCode)) {
+            symbolCodeStr = symbolCode.toString(16);
+            // pad code string with zeroes: e.g. 03A9:
+            while (symbolCodeStr.length<4) {
+                symbolCodeStr = "0" + symbolCodeStr;
+            }
+            symbolCodeStr = " - \\U+" + symbolCodeStr;
+
+            symbolSelf = String.fromCharCode(symbolCode);
+        }
+        else {
+            symbolCodeStr = "";
+            symbolSelf = symbolCode;
+        }
+
+        var insertion;
+        if (symbol.length===3) {
+            // insertion from third column of list:
+            insertion = symbol[2];
+        }
+        else if (isNumber(symbolCode)) {
+            // insertion is single char:
+            insertion = String.fromCharCode(symbol[0]);
+        }
+        else {
+            // insertion is string (first column):
+            insertion = symbol[0];
+        }
+
+        var symbolText = symbol[1];
+
+        var action = subMenu.addAction(symbolSelf + "\t(" + symbolText + symbolCodeStr + ")");
+        eval("action.triggered.connect(function() { lineEdit.setFocus(Qt.OtherFocusReason); lineEdit.insert(\"" + insertion + "\"); });");
+    }
+
+    var actions = menu.actions();
+    menu.removeAction(actions[actions.length-1]);
+    menu.removeAction(actions[actions.length-2]);
+    var separatorAction = menu.insertSeparator(actions[0]);
+    menu.insertMenu(separatorAction, subMenu);
+
+    return menu;
 };
 
 WidgetFactory.initTextBrowser = function(textBrowser, slot) {
