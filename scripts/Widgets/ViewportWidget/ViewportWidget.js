@@ -188,18 +188,7 @@ ViewportWidget.prototype.init = function(uiFile, graphicsSceneClass) {
         return;
     }
 
-    var imageView;
-
-    if (false && !isNull(RGraphicsViewSkia)) {
-    //if (!isNull(RGraphicsViewSkia)) {
-        // skia view:
-        imageView = new RGraphicsViewSkia();
-        this.graphicsView.setImageView(imageView);
-    }
-    else {
-        imageView = this.graphicsView.getImageView();
-    }
-
+    var imageView = this.graphicsView.getImageView();
     imageView.setViewportNumber(this.vpNumber);
     if (isFunction(imageView.setFocusFrameWidget)) {
         imageView.setFocusFrameWidget(this.vpWidget);
