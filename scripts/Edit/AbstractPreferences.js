@@ -61,7 +61,7 @@ AbstractPreferences.prototype.beginEvent = function() {
     this.treeWidget.itemSelectionChanged.connect(this, this.showPage);
     this.filterWidget.textChanged.connect(this, this.filterTree);
 
-    var btApply = this.dialog.findChild("buttonBox").button(QDialogButtonBox.Apply);
+    var btApply = this.dialog.findChild("ButtonBox").button(QDialogButtonBox.Apply);
     btApply.clicked.connect(this, this.apply);
 
     this.addOns = AddOn.getAddOns();
