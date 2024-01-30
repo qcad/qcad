@@ -45,13 +45,11 @@ DimRegen.prototype.beginEvent = function() {
     op.setText(this.getToolTitle());
 
     // reset all text positions of all selected dimension entities:
-    for (i=0; i<ids.length; i++) {
+    for (var i=0; i<ids.length; i++) {
         var id = ids[i];
         var entity = document.queryEntity(id);
         if (isDimensionEntity(entity) && entity.hasCustomTextPosition()) {
             entity.setCustomTextPosition(false);
-            entity.getData().update();
-            entity.getData().getShapes();
             op.addObject(entity, false);
             counter++;
         }
