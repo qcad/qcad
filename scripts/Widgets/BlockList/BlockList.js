@@ -59,9 +59,6 @@ function RBlockListQt(parent, addListener, showHeader) {
         this.header().setResizeMode(BlockList.colEdit, QHeaderView.Interactive);
     }
 
-    this.setColumnWidth(BlockList.colVisible, 22);
-    this.setColumnWidth(BlockList.colEdit, 22);
-
     var self = this;
     if (addListener) {
         var appWin = EAction.getMainWindow();
@@ -602,7 +599,14 @@ BlockList.init = function(basePath) {
     dock.setWidget(formWidget);
     appWin.addDockWidget(Qt.RightDockWidgetArea, dock);
 
-    dock.shown.connect(function() { action.setChecked(true); });
+
+    dock.shown.connect(function() {
+        action.setChecked(true);
+
+        // Qt 6.6.1 workaround: this only works once widget is visible:
+        blockList.setColumnWidth(BlockList.colVisible, 22);
+        blockList.setColumnWidth(BlockList.colEdit, 22);
+    });
     dock.hidden.connect(function() { action.setChecked(false); });
 
     dock.visible = false;
