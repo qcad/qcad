@@ -301,7 +301,7 @@ WidgetFactory.saveState = function(widget, group, document, map) {
             isOfType(c, QToolButton) ||
             isOfType(c, QPushButton)) {
 
-            if (!c.group() && !c.autoExclusive) {
+            if (isNull(c.group()) && !c.autoExclusive) {
                 if (c.checkable) {
                     value = c.checked;
                 }
