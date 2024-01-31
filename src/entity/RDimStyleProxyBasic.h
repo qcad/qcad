@@ -66,10 +66,10 @@ protected:
         Q_UNUSED(dimArc)
     }
 
-    virtual void updateTextPosition(const QString& text, double textWidth, const RVector& dimLine1, const RVector& dimLine2, bool corrected);
+    virtual void updateTextPosition(const QString& text, double textWidth, const RVector& dimLine1, const RVector& dimLine2, bool corrected, double angleHint = RNANDOUBLE);
 
     virtual void updateOutsideArrow(const RVector& p1, const RVector& p2);
-    virtual QList<QSharedPointer<RShape> > getDimensionLineShapes(const RVector& p1, const RVector& p2, bool arrow1, bool arrow2) const;
+    virtual QList<QSharedPointer<RShape> > getDimensionLineShapes(const RVector& p1, const RVector& p2, bool arrow1, bool arrow2, double angleHint = RNANDOUBLE) const;
     virtual bool hasSpaceForArrows(double dimLineLength) const;
     virtual QList<QSharedPointer<RShape> > getArrow(const RVector& position, double direction) const;
     virtual void adjustExtensionLineFixLength(RLine& extLine1, RLine& extLine2, bool addDimExe = true) const;

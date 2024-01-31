@@ -114,7 +114,12 @@ void RDimStyleProxyBasic::renderDimRotated() {
         textAngle = 0.0;
     }
     else {
-        textAngle = RMath::makeAngleReadable(definitionPoint1.getAngleTo(definitionPoint2), true, &corrected);
+        if (definitionPoint1.equalsFuzzy(definitionPoint2)) {
+            textAngle = RMath::makeAngleReadable(data.getRotation(), true, &corrected);
+        }
+        else {
+            textAngle = RMath::makeAngleReadable(definitionPoint1.getAngleTo(definitionPoint2), true, &corrected);
+        }
     }
 
     updateOutsideArrow(definitionPoint1, definitionPoint2);
@@ -122,13 +127,13 @@ void RDimStyleProxyBasic::renderDimRotated() {
     // export text label:
     RTextData& textData = data.initTextData();
     double textWidth = textData.getWidth();
-    updateTextPosition(text, textWidth, definitionPoint1, definitionPoint2, corrected);
+    updateTextPosition(text, textWidth, definitionPoint1, definitionPoint2, corrected, data.getRotation());
     textData.rotate(textAngle, RVector(0,0));
     textData.move(dimensionData->getTextPosition());
     data.updateTextData(textData);
 
     // export lines and arrows:
-    QList<QSharedPointer<RShape> > shapes = getDimensionLineShapes(definitionPoint1, definitionPoint2, true, true);
+    QList<QSharedPointer<RShape> > shapes = getDimensionLineShapes(definitionPoint1, definitionPoint2, true, true, data.getRotation());
 
     RLine extLine1, extLine2;
 
@@ -948,7 +953,7 @@ void RDimStyleProxyBasic::renderDimAngular() {
 /**
  * \return Text position
  */
-void RDimStyleProxyBasic::updateTextPosition(const QString& text, double textWidth, const RVector& dimLine1, const RVector& dimLine2, bool corrected) {
+void RDimStyleProxyBasic::updateTextPosition(const QString& text, double textWidth, const RVector& dimLine1, const RVector& dimLine2, bool corrected, double angleHint) {
     if (!dimensionData->hasCustomTextPosition()) {
         double dimtxt = dimensionData->getDimtxt();
         double dimgap = dimensionData->getDimgap();
@@ -957,7 +962,13 @@ void RDimStyleProxyBasic::updateTextPosition(const QString& text, double textWid
         bool dimtih = dimensionData->getDimtih();
 
         RVector newTextPos = RVector::getAverage(dimLine1, dimLine2);
-        double dimAngle1 = dimLine1.getAngleTo(dimLine2);
+        double dimAngle1;
+        if (dimLine1.equalsFuzzy(dimLine2)) {
+            dimAngle1 = angleHint;
+        }
+        else {
+            dimAngle1 = dimLine1.getAngleTo(dimLine2);
+        }
 
         //bool corrected=false;
         //defaultAngle =
@@ -979,7 +990,13 @@ void RDimStyleProxyBasic::updateTextPosition(const QString& text, double textWid
         }
 
         double dimLineLength = dimLine1.getDistanceTo(dimLine2);
-        double angle = dimLine1.getAngleTo(dimLine2);
+        double angle;
+        if (dimLine1.equalsFuzzy(dimLine2)) {
+            angle = angleHint;
+        }
+        else {
+            angle = dimLine1.getAngleTo(dimLine2);
+        }
         RVector textPositionSide;
 
         // minimum space required for text:
@@ -1046,7 +1063,7 @@ void RDimStyleProxyBasic::updateOutsideArrow(const RVector& p1, const RVector& p
 /**
  * Creates a dimensioning line (line with one, two or no arrows).
  */
-QList<QSharedPointer<RShape> > RDimStyleProxyBasic::getDimensionLineShapes(const RVector& p1, const RVector& p2, bool arrow1, bool arrow2) const {
+QList<QSharedPointer<RShape> > RDimStyleProxyBasic::getDimensionLineShapes(const RVector& p1, const RVector& p2, bool arrow1, bool arrow2, double angleHint) const {
     QList<QSharedPointer<RShape> > ret;
 
     // arrow size:
@@ -1075,24 +1092,42 @@ QList<QSharedPointer<RShape> > RDimStyleProxyBasic::getDimensionLineShapes(const
 
     // Create dimension line:
     RLine dimensionLine(p1, p2);
+    bool zeroLine = dimensionLine.getLength()<RS::PointTolerance;
 
     if (outsideArrow1==false) {
         arrowAngle1 = dimensionLine.getDirection2();
     }
     else {
-        arrowAngle1 = dimensionLine.getDirection1();
+        if (zeroLine && !RMath::isNaN(angleHint)) {
+            arrowAngle1 = angleHint;
+        }
+        else {
+            arrowAngle1 = dimensionLine.getDirection1();
+        }
     }
 
     if (outsideArrow2==false) {
         arrowAngle2 = dimensionLine.getDirection1();
     }
     else {
-        arrowAngle2 = dimensionLine.getDirection2();
+        if (zeroLine && !RMath::isNaN(angleHint)) {
+            arrowAngle2 = angleHint + M_PI;
+        }
+        else {
+            arrowAngle2 = dimensionLine.getDirection2();
+        }
     }
 
     // extend dimension line outside arrows
     RVector dir;
-    dir.setPolar(dimensionData->getDimasz()*2, dimensionLine.getDirection1());
+    double dimLineAngle;
+    if (zeroLine) {
+        dimLineAngle = angleHint;
+    }
+    else {
+        dimLineAngle = dimensionLine.getDirection1();
+    }
+    dir.setPolar(dimensionData->getDimasz()*2, dimLineAngle);
     if (outsideArrow1) {
         if (arrow1) {
             dimensionLine.setStartPoint(p1 - dir);
