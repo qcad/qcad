@@ -57,6 +57,10 @@ RBox RDimAlignedData::getBoundingBox(bool ignoreEmpty) const {
     return boundingBox;
 }
 
+bool RDimAlignedData::isValid() const {
+    return RDimensionData::isValid() && !extensionPoint1.equalsFuzzy(extensionPoint2);
+}
+
 QList<RRefPoint> RDimAlignedData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
     Q_UNUSED(hint)
 

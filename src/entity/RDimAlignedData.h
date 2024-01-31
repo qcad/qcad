@@ -50,6 +50,8 @@ public:
     }
     virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
 
+    virtual bool isValid() const;
+
     virtual QList<RRefPoint> getReferencePoints(RS::ProjectionRenderingHint hint = RS::RenderTop) const;
 
     virtual bool moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint, Qt::KeyboardModifiers modifiers = Qt::NoModifier);
