@@ -3069,7 +3069,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+147"/>
         <source>Text height:</source>
-        <translation>Text Höhe:</translation>
+        <translation>Texthöhe:</translation>
     </message>
     <message>
         <location line="+10"/>
