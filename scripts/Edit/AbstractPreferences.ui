@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>807</width>
-    <height>533</height>
+    <width>887</width>
+    <height>577</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -25,12 +25,6 @@
         <layout class="QHBoxLayout" name="horizontalLayout">
          <item>
           <widget class="QLineEdit" name="Filter">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
            <property name="minimumSize">
             <size>
              <width>200</width>
@@ -89,12 +83,6 @@
        </item>
        <item>
         <widget class="QTreeWidget" name="Category">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="MinimumExpanding" vsizetype="Expanding">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
          <property name="minimumSize">
           <size>
            <width>200</width>
@@ -195,7 +183,7 @@
         <widget class="QStackedWidget" name="Page">
          <property name="minimumSize">
           <size>
-           <width>500</width>
+           <width>580</width>
            <height>0</height>
           </size>
          </property>
