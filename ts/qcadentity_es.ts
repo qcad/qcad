@@ -607,7 +607,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Line</source>
-        <translation>Línea de cota</translation>
+        <translation>Línea de acotación</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -656,7 +656,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Arc</source>
-        <translation>Arco dimensión</translation>
+        <translation>Arco de acotación</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="-6"/>
@@ -706,7 +706,7 @@
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+167"/>
         <source>Dimension Angle</source>
-        <translation>Ángulo cota</translation>
+        <translation>Ángulo de acotación</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="-8"/>

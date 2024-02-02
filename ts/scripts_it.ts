@@ -1314,7 +1314,7 @@ Vuoi recuperarlo?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+490"/>
         <location line="+63"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -2833,7 +2833,7 @@ Vuoi recuperarlo?</translation>
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
+        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+62"/>
         <source>No dimension entities with custom label positions selected.</source>
         <translation>Nessun quote selezionata con una posizione di testo personalizzato.</translation>
     </message>
@@ -3062,17 +3062,17 @@ Vuoi recuperarlo?</translation>
         <translation>L&quot;unità di disegno deve essere &quot;Inch&quot; per visualizzare le etichette in formati di dimensione &quot;architettonica&quot; o &quot;Engineering&quot;. Formato cambiato in &quot;decimale&quot;.</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+55"/>
+        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+68"/>
         <source>Sizes</source>
         <translation>Misure</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>Keep proportions</source>
         <translation>Mantiene proporzioni</translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+162"/>
         <source>Text height:</source>
         <translation>Altezza testo:</translation>
     </message>
@@ -3087,7 +3087,7 @@ Vuoi recuperarlo?</translation>
         <translation>Estensione della linea di estensione:</translation>
     </message>
     <message>
-        <location line="-115"/>
+        <location line="-145"/>
         <source>Dimension Style</source>
         <translation>Stile di quota</translation>
     </message>
@@ -3097,12 +3097,12 @@ Vuoi recuperarlo?</translation>
         <translation>Etichette di testo orizzontali</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+20"/>
         <source>Text above dimension line</source>
         <translation>Testo sopra la linea della dimensione</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+67"/>
         <source>Dimension line gap:</source>
         <translation>Distanza del testo dalla linea:</translation>
     </message>
@@ -9880,13 +9880,13 @@ is already in the list.</source>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.ui" line="+14"/>
-        <location line="+98"/>
+        <location line="+86"/>
         <location line="+20"/>
         <source>Preferences</source>
         <translation>Preferenze</translation>
     </message>
     <message>
-        <location line="-85"/>
+        <location line="-79"/>
         <source>Filter</source>
         <translation>Filtro</translation>
     </message>
@@ -9901,7 +9901,7 @@ is already in the list.</source>
         <translation>Crollo di navigazione</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+72"/>
         <source>Restore to Default Values</source>
         <translation>Ripristina predefinita</translation>
     </message>
@@ -13464,7 +13464,7 @@ is already in the list.</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+342"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
         <source>Dropped data not supported</source>
         <translation>I dati inseriti non sono supportati</translation>
     </message>
@@ -13500,7 +13500,7 @@ is already in the list.</source>
         <translation>Ripristina predefiniti</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+54"/>
         <source>Insert Symbol</source>
         <translation>Inserisci Simbolo</translation>
     </message>
@@ -13650,7 +13650,7 @@ is already in the list.</source>
         <translation>Valore misurato</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+162"/>
         <source>Left</source>
         <translation>Sinistra</translation>
     </message>
@@ -14148,22 +14148,22 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angular Dimensions (2 Line)</source>
+        <source>Angular Dimensions (2 Lines)</source>
         <translation>Quote angolari (2 linee)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Angular Dimension (2 Line)</source>
+        <source>Angular Dimension (2 Lines)</source>
         <translation>Quota angolare (2 linee)</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angular Dimensions (3 Point)</source>
+        <source>Angular Dimensions (3 Points)</source>
         <translation>Quote angolari (3 punti)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Angular Dimension (3 Point)</source>
+        <source>Angular Dimension (3 Points)</source>
         <translation>Quota angolare (3 punti)</translation>
     </message>
     <message>

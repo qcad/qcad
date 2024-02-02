@@ -232,7 +232,7 @@
     <message>
         <location line="+1"/>
         <source>Dimension Font</source>
-        <translation>Fuente de cota</translation>
+        <translation>Fuente acotada</translation>
     </message>
 </context>
 <context>
@@ -723,7 +723,7 @@
     <message>
         <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation>Distancia de la línea de cota</translation>
+        <translation>Distancia a la línea de acotación</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -733,7 +733,7 @@
     <message>
         <location line="+1"/>
         <source>Dimension line increment</source>
-        <translation>Incremento de la línea de cota</translation>
+        <translation>Incremento de la línea de acotación</translation>
     </message>
     <message>
         <location line="+1"/>

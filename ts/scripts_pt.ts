@@ -1314,7 +1314,7 @@ Você deseja recuperá-lo?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+490"/>
         <location line="+63"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -2833,7 +2833,7 @@ Você deseja recuperá-lo?</translation>
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
+        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+62"/>
         <source>No dimension entities with custom label positions selected.</source>
         <translation>Sem entidades de cota com posições de etiqueta personalizadas seleccionadas.</translation>
     </message>
@@ -3062,17 +3062,17 @@ Você deseja recuperá-lo?</translation>
         <translation>A unidade de desenho deve ser &quot;Polegada&quot; para exibir rótulos de cotas em formatos &quot;Arquitetura&quot; ou &quot;Engenharia&quot;. Formato alterado para &quot;Decimal&quot;.</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+55"/>
+        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+68"/>
         <source>Sizes</source>
         <translation>Tamanhos</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>Keep proportions</source>
         <translation>Manter proporções</translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+162"/>
         <source>Text height:</source>
         <translation>Altura do texto:</translation>
     </message>
@@ -3087,7 +3087,7 @@ Você deseja recuperá-lo?</translation>
         <translation>Extensão da linha de extensão:</translation>
     </message>
     <message>
-        <location line="-115"/>
+        <location line="-145"/>
         <source>Dimension Style</source>
         <translation>Estilo de cota</translation>
     </message>
@@ -3097,12 +3097,12 @@ Você deseja recuperá-lo?</translation>
         <translation>Etiquetas de texto horizontais</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+20"/>
         <source>Text above dimension line</source>
         <translation>Texto acima da linha de cota</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+67"/>
         <source>Dimension line gap:</source>
         <translation>Distância da linha de cota:</translation>
     </message>
@@ -9880,13 +9880,13 @@ já se encontra na lista.</translation>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.ui" line="+14"/>
-        <location line="+98"/>
+        <location line="+86"/>
         <location line="+20"/>
         <source>Preferences</source>
         <translation>Preferências</translation>
     </message>
     <message>
-        <location line="-85"/>
+        <location line="-79"/>
         <source>Filter</source>
         <translation>Filtro</translation>
     </message>
@@ -9901,7 +9901,7 @@ já se encontra na lista.</translation>
         <translation>Colapso da árvore</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+72"/>
         <source>Restore to Default Values</source>
         <translation>Redefinir para os valores por defeito</translation>
     </message>
@@ -13463,7 +13463,7 @@ já se encontra na lista.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+342"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
         <source>Dropped data not supported</source>
         <translation>Dados inseridos não suportados</translation>
     </message>
@@ -13499,7 +13499,7 @@ já se encontra na lista.</translation>
         <translation>Restaurar inadimplências</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+54"/>
         <source>Insert Symbol</source>
         <translation>Inserir Símbolo</translation>
     </message>
@@ -13649,7 +13649,7 @@ já se encontra na lista.</translation>
         <translation>Valor medido</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+162"/>
         <source>Left</source>
         <translation>Esquerda</translation>
     </message>
@@ -14147,23 +14147,23 @@ já se encontra na lista.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angular Dimensions (2 Line)</source>
-        <translation>Cotas angulares (2 linhas)</translation>
+        <source>Angular Dimensions (2 Lines)</source>
+        <translation>Dimensões angulares (2 linhas)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Angular Dimension (2 Line)</source>
-        <translation>Cota angular (2 linhas)</translation>
+        <source>Angular Dimension (2 Lines)</source>
+        <translation>Dimensão angular (2 linhas)</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angular Dimensions (3 Point)</source>
-        <translation>Cotas angulares (3 pontos)</translation>
+        <source>Angular Dimensions (3 Points)</source>
+        <translation>Dimensões angulares (3 pontos)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Angular Dimension (3 Point)</source>
-        <translation>Cota angular (3 pontos)</translation>
+        <source>Angular Dimension (3 Points)</source>
+        <translation>Dimensão angular (3 pontos)</translation>
     </message>
     <message>
         <location line="+2"/>

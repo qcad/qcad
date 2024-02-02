@@ -1312,7 +1312,7 @@ Vill du återställa den?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+490"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -2831,7 +2831,7 @@ Vill du återställa den?</translation>
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
+        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+62"/>
         <source>No dimension entities with custom label positions selected.</source>
         <translation>Inga dimensionsobjekt med anpassade etikettspositioner valda.</translation>
     </message>
@@ -3070,7 +3070,7 @@ Vill du återställa den?</translation>
         <translation>Horisontella textetiketter</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+20"/>
         <source>Text above dimension line</source>
         <translation>Text ovanför måtten</translation>
     </message>
@@ -3080,12 +3080,12 @@ Vill du återställa den?</translation>
         <translation>Storlekar</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>Keep proportions</source>
         <translation>Behåll proportioner</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+46"/>
         <source>Dimension line gap:</source>
         <translation>Mätningslinjeavstånd:</translation>
     </message>
@@ -9878,13 +9878,13 @@ finns redan i listan.</translation>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.ui" line="+14"/>
-        <location line="+98"/>
+        <location line="+86"/>
         <location line="+20"/>
         <source>Preferences</source>
         <translation>Inställningar</translation>
     </message>
     <message>
-        <location line="-85"/>
+        <location line="-79"/>
         <source>Filter</source>
         <translation>Filter</translation>
     </message>
@@ -9899,7 +9899,7 @@ finns redan i listan.</translation>
         <translation>Kollapsande träd</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+72"/>
         <source>Restore to Default Values</source>
         <translation>Återställa till standardvärden</translation>
     </message>
@@ -13461,7 +13461,7 @@ finns redan i listan.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+342"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
         <source>Dropped data not supported</source>
         <translation>Uppgifter som tappats bort stöds inte</translation>
     </message>
@@ -13497,7 +13497,7 @@ finns redan i listan.</translation>
         <translation>Återställa standardvärden</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+54"/>
         <source>Insert Symbol</source>
         <translation>Infoga symbol</translation>
     </message>
@@ -13647,7 +13647,7 @@ finns redan i listan.</translation>
         <translation>Uppmätt värde</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+162"/>
         <source>Left</source>
         <translation>Vänster</translation>
     </message>
@@ -14145,23 +14145,23 @@ finns redan i listan.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angular Dimensions (2 Line)</source>
+        <source>Angular Dimensions (2 Lines)</source>
         <translation>Vinkelmått (2 rader)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Angular Dimension (2 Line)</source>
-        <translation>Vinkelmått (2 rader)</translation>
+        <source>Angular Dimension (2 Lines)</source>
+        <translation>Vinkeldimension (2 rader)</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angular Dimensions (3 Point)</source>
-        <translation>Vinkelmått (3 punkter)</translation>
+        <source>Angular Dimensions (3 Points)</source>
+        <translation>Vinkelmått (3 poäng)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Angular Dimension (3 Point)</source>
-        <translation>Vinkelmått (3 punkter)</translation>
+        <source>Angular Dimension (3 Points)</source>
+        <translation>Vinkeldimension (3 poäng)</translation>
     </message>
     <message>
         <location line="+2"/>

@@ -1313,7 +1313,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+490"/>
         <source>Widgets</source>
         <translation type="unfinished">Віджети</translation>
     </message>
@@ -2832,7 +2832,7 @@ Do you wish to recover it?</source>
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
+        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+62"/>
         <source>No dimension entities with custom label positions selected.</source>
         <translation type="unfinished">Не вибрано жодного розмірного об&apos;єкта з нестандартними позиціями мітки.</translation>
     </message>
@@ -3072,7 +3072,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Горизонтальні текстові етикетки</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+20"/>
         <source>Text above dimension line</source>
         <translation type="unfinished">Текст над розмірною лінією</translation>
     </message>
@@ -3082,12 +3082,12 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Розміри</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>Keep proportions</source>
         <translation type="unfinished">Дотримуйтесь пропорцій</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+46"/>
         <source>Dimension line gap:</source>
         <translation type="unfinished">Зазор між габаритними лініями:</translation>
     </message>
@@ -9884,13 +9884,13 @@ is already in the list.</source>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.ui" line="+14"/>
-        <location line="+98"/>
+        <location line="+86"/>
         <location line="+20"/>
         <source>Preferences</source>
         <translation type="unfinished">Уподобання</translation>
     </message>
     <message>
-        <location line="-85"/>
+        <location line="-79"/>
         <source>Filter</source>
         <translation type="unfinished">Фільтр</translation>
     </message>
@@ -9905,7 +9905,7 @@ is already in the list.</source>
         <translation type="unfinished">Дерево обвалу</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+72"/>
         <source>Restore to Default Values</source>
         <translation type="unfinished">Відновлення до значень за замовчуванням</translation>
     </message>
@@ -13470,7 +13470,7 @@ is already in the list.</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+342"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished">Скинуті дані не підтримуються</translation>
     </message>
@@ -13506,7 +13506,7 @@ is already in the list.</source>
         <translation type="unfinished">Відновлення налаштувань за замовчуванням</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+54"/>
         <source>Insert Symbol</source>
         <translation type="unfinished">Вставити символ</translation>
     </message>
@@ -13656,7 +13656,7 @@ is already in the list.</source>
         <translation type="unfinished">Вимірювана величина</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+162"/>
         <source>Left</source>
         <translation type="unfinished">Ліворуч</translation>
     </message>
@@ -14154,23 +14154,23 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angular Dimensions (2 Line)</source>
-        <translation type="unfinished">Кутові розміри (2 лінії)</translation>
+        <source>Angular Dimensions (2 Lines)</source>
+        <translation type="unfinished">Кутові розміри (2 рядки)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Angular Dimension (2 Line)</source>
-        <translation type="unfinished">Кутовий розмір (2 лінії)</translation>
+        <source>Angular Dimension (2 Lines)</source>
+        <translation type="unfinished">Кутовий розмір (2 рядки)</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angular Dimensions (3 Point)</source>
-        <translation type="unfinished">Кутові розміри (3 точки)</translation>
+        <source>Angular Dimensions (3 Points)</source>
+        <translation type="unfinished">Кутові розміри (3 бали)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Angular Dimension (3 Point)</source>
-        <translation type="unfinished">Кутовий розмір (3 точки)</translation>
+        <source>Angular Dimension (3 Points)</source>
+        <translation type="unfinished">Кутовий розмір (3 бали)</translation>
     </message>
     <message>
         <location line="+2"/>

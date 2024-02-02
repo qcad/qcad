@@ -1316,7 +1316,7 @@ Prajete si ho obnoviť?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+490"/>
         <source>Widgets</source>
         <translation>Pomôcky</translation>
     </message>
@@ -2835,7 +2835,7 @@ Prajete si ho obnoviť?</translation>
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
+        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+62"/>
         <source>No dimension entities with custom label positions selected.</source>
         <translation>Žiadna kóta s vlastným nastavením pozície textu.</translation>
     </message>
@@ -3065,17 +3065,17 @@ Prajete si ho obnoviť?</translation>
         <translation>Pre zobrazenie kót vo formátoch &quot;Architektonický&quot; alebo &quot;Strojársky&quot; musia byť nastavené jednotky v &quot;Palcoch&quot;. Formát zmenený na &quot;Desatinný&quot;.</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+55"/>
+        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+68"/>
         <source>Sizes</source>
         <translation>Veľkosti</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>Keep proportions</source>
         <translation>Zachovať pomer</translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+162"/>
         <source>Text height:</source>
         <translation>Výška Textu:</translation>
     </message>
@@ -3090,7 +3090,7 @@ Prajete si ho obnoviť?</translation>
         <translation>Presah vynášacej čiary:</translation>
     </message>
     <message>
-        <location line="-115"/>
+        <location line="-145"/>
         <source>Dimension Style</source>
         <translation type="unfinished">Rozmer štýlu</translation>
     </message>
@@ -3100,12 +3100,12 @@ Prajete si ho obnoviť?</translation>
         <translation type="unfinished">Vodorovné textové štítky</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+20"/>
         <source>Text above dimension line</source>
         <translation type="unfinished">Text nad rozmerovou čiarou</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+67"/>
         <source>Dimension line gap:</source>
         <translation>Vzdialenosť textu od kótovacej čiary:</translation>
     </message>
@@ -9887,13 +9887,13 @@ už existuje v zozname.</translation>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.ui" line="+14"/>
-        <location line="+98"/>
+        <location line="+86"/>
         <location line="+20"/>
         <source>Preferences</source>
         <translation>Nastavenia</translation>
     </message>
     <message>
-        <location line="-85"/>
+        <location line="-79"/>
         <source>Filter</source>
         <translation>Filter</translation>
     </message>
@@ -9908,7 +9908,7 @@ už existuje v zozname.</translation>
         <translation>Zbaliť Strom</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+72"/>
         <source>Restore to Default Values</source>
         <translation>Obnoviť predvolené hodnoty</translation>
     </message>
@@ -13473,7 +13473,7 @@ už existuje v zozname.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+342"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
         <source>Dropped data not supported</source>
         <translation>Vložené údaje nie sú podporované</translation>
     </message>
@@ -13509,7 +13509,7 @@ už existuje v zozname.</translation>
         <translation>Obnoviť predvolené</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+54"/>
         <source>Insert Symbol</source>
         <translation>Vložiť znak</translation>
     </message>
@@ -13659,7 +13659,7 @@ už existuje v zozname.</translation>
         <translation>Nameraná hodnota</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+162"/>
         <source>Left</source>
         <translation>Vľavo</translation>
     </message>
@@ -14157,23 +14157,23 @@ už existuje v zozname.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angular Dimensions (2 Line)</source>
-        <translation>Uhlové kóty (2 čiary)</translation>
+        <source>Angular Dimensions (2 Lines)</source>
+        <translation type="unfinished">Uhlové rozmery (2 riadky)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Angular Dimension (2 Line)</source>
-        <translation>Uhlová kóta (2 čiary)</translation>
+        <source>Angular Dimension (2 Lines)</source>
+        <translation type="unfinished">Uhlový rozmer (2 riadky)</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angular Dimensions (3 Point)</source>
-        <translation>Uhlové kóty (3 body)</translation>
+        <source>Angular Dimensions (3 Points)</source>
+        <translation type="unfinished">Uhlové rozmery (3 body)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Angular Dimension (3 Point)</source>
-        <translation>Uhlová kóta (3 body)</translation>
+        <source>Angular Dimension (3 Points)</source>
+        <translation type="unfinished">Uhlový rozmer (3 body)</translation>
     </message>
     <message>
         <location line="+2"/>

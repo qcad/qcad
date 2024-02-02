@@ -1313,7 +1313,7 @@ Ar norite jį atkurti?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+490"/>
         <source>Widgets</source>
         <translation type="unfinished">Valdikliai</translation>
     </message>
@@ -2832,7 +2832,7 @@ Ar norite jį atkurti?</translation>
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
+        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+62"/>
         <source>No dimension entities with custom label positions selected.</source>
         <translation type="unfinished">Nėra matmenų subjektų su pasirinktomis etiketės pozicijomis.</translation>
     </message>
@@ -3072,7 +3072,7 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">Horizontalios teksto etiketės</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+20"/>
         <source>Text above dimension line</source>
         <translation type="unfinished">Tekstas virš matmenų linijos</translation>
     </message>
@@ -3082,12 +3082,12 @@ Ar norite jį atkurti?</translation>
         <translation type="unfinished">Dydžiai</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>Keep proportions</source>
         <translation type="unfinished">Išlaikykite proporcijas</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+46"/>
         <source>Dimension line gap:</source>
         <translation type="unfinished">Matmenų linijos tarpas:</translation>
     </message>
@@ -9884,13 +9884,13 @@ jau yra sąraše.</translation>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.ui" line="+14"/>
-        <location line="+98"/>
+        <location line="+86"/>
         <location line="+20"/>
         <source>Preferences</source>
         <translation type="unfinished">Nustatymai</translation>
     </message>
     <message>
-        <location line="-85"/>
+        <location line="-79"/>
         <source>Filter</source>
         <translation type="unfinished">Filtras</translation>
     </message>
@@ -9905,7 +9905,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Žlugimo medis</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+72"/>
         <source>Restore to Default Values</source>
         <translation type="unfinished">Numatytųjų verčių atkūrimas</translation>
     </message>
@@ -13470,7 +13470,7 @@ jau yra sąraše.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+342"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished">Nepalaikomi nutolę duomenys</translation>
     </message>
@@ -13506,7 +13506,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Atkurti numatytąsias nuostatas</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+54"/>
         <source>Insert Symbol</source>
         <translation type="unfinished">Įterpti simbolį</translation>
     </message>
@@ -13656,7 +13656,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Išmatuota vertė</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+162"/>
         <source>Left</source>
         <translation type="unfinished">Kairėje pusėje</translation>
     </message>
@@ -14154,23 +14154,23 @@ jau yra sąraše.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angular Dimensions (2 Line)</source>
+        <source>Angular Dimensions (2 Lines)</source>
         <translation type="unfinished">Kampiniai matmenys (2 eilutės)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Angular Dimension (2 Line)</source>
+        <source>Angular Dimension (2 Lines)</source>
         <translation type="unfinished">Kampinis matmuo (2 eilutės)</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angular Dimensions (3 Point)</source>
-        <translation type="unfinished">Kampiniai matmenys (3 taškų)</translation>
+        <source>Angular Dimensions (3 Points)</source>
+        <translation type="unfinished">Kampiniai matmenys (3 taškai)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Angular Dimension (3 Point)</source>
-        <translation type="unfinished">Kampinis matmuo (3 taškų)</translation>
+        <source>Angular Dimension (3 Points)</source>
+        <translation type="unfinished">Kampinis matmuo (3 taškai)</translation>
     </message>
     <message>
         <location line="+2"/>

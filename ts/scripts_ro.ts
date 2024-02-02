@@ -1313,7 +1313,7 @@ Doriți să îl recuperați?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+490"/>
         <source>Widgets</source>
         <translation type="unfinished">Widgeturi</translation>
     </message>
@@ -2832,7 +2832,7 @@ Doriți să îl recuperați?</translation>
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
+        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+62"/>
         <source>No dimension entities with custom label positions selected.</source>
         <translation type="unfinished">Nu există entități de dimensiuni cu poziții de etichete personalizate selectate.</translation>
     </message>
@@ -3072,7 +3072,7 @@ Doriți să îl recuperați?</translation>
         <translation type="unfinished">Etichete de text orizontale</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+20"/>
         <source>Text above dimension line</source>
         <translation type="unfinished">Text deasupra liniei de cotă</translation>
     </message>
@@ -3082,12 +3082,12 @@ Doriți să îl recuperați?</translation>
         <translation type="unfinished">Dimensiuni</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>Keep proportions</source>
         <translation type="unfinished">Păstrați proporțiile</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+46"/>
         <source>Dimension line gap:</source>
         <translation type="unfinished">Decalajul dintre liniile de dimensiuni:</translation>
     </message>
@@ -9884,13 +9884,13 @@ este deja în listă.</translation>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.ui" line="+14"/>
-        <location line="+98"/>
+        <location line="+86"/>
         <location line="+20"/>
         <source>Preferences</source>
         <translation type="unfinished">Preferințe</translation>
     </message>
     <message>
-        <location line="-85"/>
+        <location line="-79"/>
         <source>Filter</source>
         <translation type="unfinished">Filtru</translation>
     </message>
@@ -9905,7 +9905,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Copac de colaps</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+72"/>
         <source>Restore to Default Values</source>
         <translation type="unfinished">Restabilirea valorilor implicite</translation>
     </message>
@@ -13470,7 +13470,7 @@ este deja în listă.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+342"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished">Nu se acceptă date abandonate</translation>
     </message>
@@ -13506,7 +13506,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Restabilirea valorilor implicite</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+54"/>
         <source>Insert Symbol</source>
         <translation type="unfinished">Introduceți simbolul</translation>
     </message>
@@ -13656,7 +13656,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Valoarea măsurată</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+162"/>
         <source>Left</source>
         <translation type="unfinished">Stânga</translation>
     </message>
@@ -14154,22 +14154,22 @@ este deja în listă.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angular Dimensions (2 Line)</source>
+        <source>Angular Dimensions (2 Lines)</source>
         <translation type="unfinished">Dimensiuni unghiulare (2 linii)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Angular Dimension (2 Line)</source>
+        <source>Angular Dimension (2 Lines)</source>
         <translation type="unfinished">Dimensiunea unghiulară (2 linii)</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angular Dimensions (3 Point)</source>
+        <source>Angular Dimensions (3 Points)</source>
         <translation type="unfinished">Dimensiuni unghiulare (3 puncte)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Angular Dimension (3 Point)</source>
+        <source>Angular Dimension (3 Points)</source>
         <translation type="unfinished">Dimensiunea unghiulară (3 puncte)</translation>
     </message>
     <message>

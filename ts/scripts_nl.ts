@@ -1314,7 +1314,7 @@ Wilt u deze herstellen?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+490"/>
         <location line="+63"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -2833,7 +2833,7 @@ Wilt u deze herstellen?</translation>
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
+        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+62"/>
         <source>No dimension entities with custom label positions selected.</source>
         <translation>Geen bematingen met gebruiker gedefinieerde label posities geselecteerd.</translation>
     </message>
@@ -3062,17 +3062,17 @@ Wilt u deze herstellen?</translation>
         <translation>De tekening eenheid moet &quot;Inch&quot; zijn dat bematingen in het format &quot;Architectuur&quot; of &quot;Technisch&quot; kunnen worden weergegeven. Format teruggezet op &quot;Decimaal&quot;.</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+55"/>
+        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+68"/>
         <source>Sizes</source>
         <translation>Maten</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>Keep proportions</source>
         <translation>Houd verhoudingen</translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+162"/>
         <source>Text height:</source>
         <translation>Teksthoogte:</translation>
     </message>
@@ -3087,7 +3087,7 @@ Wilt u deze herstellen?</translation>
         <translation>Extensielijnverlenging:</translation>
     </message>
     <message>
-        <location line="-115"/>
+        <location line="-145"/>
         <source>Dimension Style</source>
         <translation>Bematingsstijl</translation>
     </message>
@@ -3097,12 +3097,12 @@ Wilt u deze herstellen?</translation>
         <translation>Horizontale tekstlabels</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+20"/>
         <source>Text above dimension line</source>
         <translation>Tekst boven de bematingslijn</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+67"/>
         <source>Dimension line gap:</source>
         <translation>Maatlijnafzet:</translation>
     </message>
@@ -9880,13 +9880,13 @@ is al in de lijst.</translation>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.ui" line="+14"/>
-        <location line="+98"/>
+        <location line="+86"/>
         <location line="+20"/>
         <source>Preferences</source>
         <translation>Voorkeuren</translation>
     </message>
     <message>
-        <location line="-85"/>
+        <location line="-79"/>
         <source>Filter</source>
         <translation>Filter</translation>
     </message>
@@ -9901,7 +9901,7 @@ is al in de lijst.</translation>
         <translation>Navigatiestructuur invouwen</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+72"/>
         <source>Restore to Default Values</source>
         <translation>Herstellen naar de standaardwaarden</translation>
     </message>
@@ -13463,7 +13463,7 @@ is al in de lijst.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+342"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
         <source>Dropped data not supported</source>
         <translation>Ingevoegd bestand niet ondersteund</translation>
     </message>
@@ -13499,7 +13499,7 @@ is al in de lijst.</translation>
         <translation>Standaardinstellingen herstellen</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+54"/>
         <source>Insert Symbol</source>
         <translation>Symbool invoegen</translation>
     </message>
@@ -13649,7 +13649,7 @@ is al in de lijst.</translation>
         <translation>Gemeten waarde</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+162"/>
         <source>Left</source>
         <translation>Links</translation>
     </message>
@@ -14147,23 +14147,23 @@ is al in de lijst.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angular Dimensions (2 Line)</source>
+        <source>Angular Dimensions (2 Lines)</source>
         <translation>Hoekbematingen (2 lijnen)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Angular Dimension (2 Line)</source>
+        <source>Angular Dimension (2 Lines)</source>
         <translation>Hoekbemating (2 lijnen)</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angular Dimensions (3 Point)</source>
-        <translation>Hoekbematingen (3 punt)</translation>
+        <source>Angular Dimensions (3 Points)</source>
+        <translation>Hoekbematingen (3 punten)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Angular Dimension (3 Point)</source>
-        <translation>Hoekbemating (3 punt)</translation>
+        <source>Angular Dimension (3 Points)</source>
+        <translation>Hoekbemating (3 punten)</translation>
     </message>
     <message>
         <location line="+2"/>

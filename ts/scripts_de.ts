@@ -1314,7 +1314,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+490"/>
         <location line="+63"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -2833,7 +2833,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
+        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+62"/>
         <source>No dimension entities with custom label positions selected.</source>
         <translation>Keine Bemassungen mit Benutzerdefinierter Beschriftungsposition ausgewählt.</translation>
     </message>
@@ -3057,17 +3057,17 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Die Zeichnungseinheit muss &quot;Inch&quot; sein, damit Bemassungsbeschriftungen in den Formaten &quot;Architektur&quot; oder &quot;Technisch&quot; angezeigt werden können. Format zurückgesetzt auf &quot;Dezimal&quot;.</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+55"/>
+        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+68"/>
         <source>Sizes</source>
         <translation>Grössen</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>Keep proportions</source>
         <translation>Proportional</translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+162"/>
         <source>Text height:</source>
         <translation>Texthöhe:</translation>
     </message>
@@ -3082,7 +3082,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Verlängerung der Begrenzungslinie:</translation>
     </message>
     <message>
-        <location line="-115"/>
+        <location line="-145"/>
         <source>Dimension Style</source>
         <translation>Bemassungsstil</translation>
     </message>
@@ -3092,12 +3092,12 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Horizontale Textbeschriftungen</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+20"/>
         <source>Text above dimension line</source>
         <translation>Text über Bemassungslinie</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+67"/>
         <source>Dimension line gap:</source>
         <translation>Bemassungslinien Abstand:</translation>
     </message>
@@ -9880,13 +9880,13 @@ ist bereits in der Liste.</translation>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.ui" line="+14"/>
-        <location line="+98"/>
+        <location line="+86"/>
         <location line="+20"/>
         <source>Preferences</source>
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location line="-85"/>
+        <location line="-79"/>
         <source>Filter</source>
         <translation>Filter</translation>
     </message>
@@ -9901,7 +9901,7 @@ ist bereits in der Liste.</translation>
         <translation>Übersicht zuklappen</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+72"/>
         <source>Restore to Default Values</source>
         <translation>Voreinstellungen wiederherstellen</translation>
     </message>
@@ -13463,7 +13463,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+342"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
         <source>Dropped data not supported</source>
         <translation>Eingefügte Daten nicht unterstützt</translation>
     </message>
@@ -13499,7 +13499,7 @@ ist bereits in der Liste.</translation>
         <translation>Standardwerte wieder herstellen</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+54"/>
         <source>Insert Symbol</source>
         <translation>Symbol einfügen</translation>
     </message>
@@ -13649,7 +13649,7 @@ ist bereits in der Liste.</translation>
         <translation>Gemessener Wert</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+162"/>
         <source>Left</source>
         <translation>Links</translation>
     </message>
@@ -14147,22 +14147,22 @@ ist bereits in der Liste.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angular Dimensions (2 Line)</source>
+        <source>Angular Dimensions (2 Lines)</source>
         <translation>Winkelbemassungen (2 Linien)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Angular Dimension (2 Line)</source>
+        <source>Angular Dimension (2 Lines)</source>
         <translation>Winkelbemassung (2 Linien)</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angular Dimensions (3 Point)</source>
+        <source>Angular Dimensions (3 Points)</source>
         <translation>Winkelbemassungen (3 Punkte)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Angular Dimension (3 Point)</source>
+        <source>Angular Dimension (3 Points)</source>
         <translation>Winkelbemassung (3 Punkte)</translation>
     </message>
     <message>

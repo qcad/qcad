@@ -1312,7 +1312,7 @@ Apakah Anda ingin memulihkannya?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+490"/>
         <source>Widgets</source>
         <translation type="unfinished">Widget</translation>
     </message>
@@ -2831,7 +2831,7 @@ Apakah Anda ingin memulihkannya?</translation>
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
+        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+62"/>
         <source>No dimension entities with custom label positions selected.</source>
         <translation type="unfinished">Tidak ada entitas dimensi dengan posisi label khusus yang dipilih.</translation>
     </message>
@@ -3069,7 +3069,7 @@ Apakah Anda ingin memulihkannya?</translation>
         <translation type="unfinished">Label teks horizontal</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+20"/>
         <source>Text above dimension line</source>
         <translation type="unfinished">Teks di atas garis dimensi</translation>
     </message>
@@ -3079,12 +3079,12 @@ Apakah Anda ingin memulihkannya?</translation>
         <translation type="unfinished">Ukuran</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>Keep proportions</source>
         <translation type="unfinished">Jaga proporsi</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+46"/>
         <source>Dimension line gap:</source>
         <translation type="unfinished">Celah garis dimensi:</translation>
     </message>
@@ -9873,13 +9873,13 @@ sudah ada dalam daftar.</translation>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.ui" line="+14"/>
-        <location line="+98"/>
+        <location line="+86"/>
         <location line="+20"/>
         <source>Preferences</source>
         <translation type="unfinished">Preferensi</translation>
     </message>
     <message>
-        <location line="-85"/>
+        <location line="-79"/>
         <source>Filter</source>
         <translation type="unfinished">Filter</translation>
     </message>
@@ -9894,7 +9894,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Pohon runtuh</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+72"/>
         <source>Restore to Default Values</source>
         <translation type="unfinished">Mengembalikan ke Nilai Default</translation>
     </message>
@@ -13453,7 +13453,7 @@ sudah ada dalam daftar.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+342"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished">Data yang dijatuhkan tidak didukung</translation>
     </message>
@@ -13489,7 +13489,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Memulihkan default</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+54"/>
         <source>Insert Symbol</source>
         <translation type="unfinished">Sisipkan Simbol</translation>
     </message>
@@ -13639,7 +13639,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Nilai yang diukur</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+162"/>
         <source>Left</source>
         <translation type="unfinished">Kiri</translation>
     </message>
@@ -14137,22 +14137,22 @@ sudah ada dalam daftar.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angular Dimensions (2 Line)</source>
+        <source>Angular Dimensions (2 Lines)</source>
         <translation type="unfinished">Dimensi Sudut (2 Garis)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Angular Dimension (2 Line)</source>
+        <source>Angular Dimension (2 Lines)</source>
         <translation type="unfinished">Dimensi Sudut (2 Garis)</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angular Dimensions (3 Point)</source>
+        <source>Angular Dimensions (3 Points)</source>
         <translation type="unfinished">Dimensi Sudut (3 Titik)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Angular Dimension (3 Point)</source>
+        <source>Angular Dimension (3 Points)</source>
         <translation type="unfinished">Dimensi Sudut (3 Titik)</translation>
     </message>
     <message>

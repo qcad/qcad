@@ -1312,7 +1312,7 @@ Szeretné visszaállítani?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+490"/>
         <source>Widgets</source>
         <translation type="unfinished">Widgetek</translation>
     </message>
@@ -2831,7 +2831,7 @@ Szeretné visszaállítani?</translation>
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
+        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+62"/>
         <source>No dimension entities with custom label positions selected.</source>
         <translation type="unfinished">Nincsenek olyan dimenzióegységek, amelyeknél egyéni címkepozíció van kijelölve.</translation>
     </message>
@@ -3069,7 +3069,7 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">Vízszintes szöveges címkék</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+20"/>
         <source>Text above dimension line</source>
         <translation type="unfinished">Szöveg a méretvonal felett</translation>
     </message>
@@ -3079,12 +3079,12 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">Méretek</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>Keep proportions</source>
         <translation type="unfinished">Tartsa meg az arányokat</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+46"/>
         <source>Dimension line gap:</source>
         <translation type="unfinished">Méretvonal hézag:</translation>
     </message>
@@ -9873,13 +9873,13 @@ már szerepel a listában.</translation>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.ui" line="+14"/>
-        <location line="+98"/>
+        <location line="+86"/>
         <location line="+20"/>
         <source>Preferences</source>
         <translation type="unfinished">Preferenciák</translation>
     </message>
     <message>
-        <location line="-85"/>
+        <location line="-79"/>
         <source>Filter</source>
         <translation type="unfinished">Szűrő</translation>
     </message>
@@ -9894,7 +9894,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Összeomló fa</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+72"/>
         <source>Restore to Default Values</source>
         <translation type="unfinished">Alapértelmezett értékek visszaállítása</translation>
     </message>
@@ -13453,7 +13453,7 @@ már szerepel a listában.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+342"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished">A megszakadt adatok nem támogatottak</translation>
     </message>
@@ -13489,7 +13489,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Alapértelmezett beállítások visszaállítása</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+54"/>
         <source>Insert Symbol</source>
         <translation type="unfinished">Szimbólum beillesztése</translation>
     </message>
@@ -13639,7 +13639,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Mérési érték</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+162"/>
         <source>Left</source>
         <translation type="unfinished">Balra</translation>
     </message>
@@ -14137,22 +14137,22 @@ már szerepel a listában.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angular Dimensions (2 Line)</source>
+        <source>Angular Dimensions (2 Lines)</source>
         <translation type="unfinished">Szögletes méretek (2 vonal)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Angular Dimension (2 Line)</source>
+        <source>Angular Dimension (2 Lines)</source>
         <translation type="unfinished">Szögletes dimenzió (2 vonal)</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angular Dimensions (3 Point)</source>
+        <source>Angular Dimensions (3 Points)</source>
         <translation type="unfinished">Szögletes méretek (3 pont)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Angular Dimension (3 Point)</source>
+        <source>Angular Dimension (3 Points)</source>
         <translation type="unfinished">Szögletes dimenzió (3 pont)</translation>
     </message>
     <message>

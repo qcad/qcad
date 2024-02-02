@@ -1316,7 +1316,7 @@ Czy chcesz go odzyskać?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+490"/>
         <location line="+63"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -2835,7 +2835,7 @@ Czy chcesz go odzyskać?</translation>
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
+        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+62"/>
         <source>No dimension entities with custom label positions selected.</source>
         <translation type="unfinished">Brak elementów wymiarów z wybranymi niestandardowymi pozycjami etykiet.</translation>
     </message>
@@ -3065,17 +3065,17 @@ Czy chcesz go odzyskać?</translation>
         <translation>Aby wyświetlać etykiety wymiarów w formacie „architektonicznym” lub „inżynierskim”, jednostką rysunku musi być „cal” lub „stopa”. Zmieniono format na „dziesiętny”.</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+55"/>
+        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+68"/>
         <source>Sizes</source>
         <translation type="unfinished">Rozmiary</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>Keep proportions</source>
         <translation type="unfinished">Zachowaj proporcje</translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+162"/>
         <source>Text height:</source>
         <translation type="unfinished">Wysokość tekstu:</translation>
     </message>
@@ -3090,7 +3090,7 @@ Czy chcesz go odzyskać?</translation>
         <translation type="unfinished">Przedłużenie linii:</translation>
     </message>
     <message>
-        <location line="-115"/>
+        <location line="-145"/>
         <source>Dimension Style</source>
         <translation type="unfinished">Wymiar Styl</translation>
     </message>
@@ -3100,12 +3100,12 @@ Czy chcesz go odzyskać?</translation>
         <translation type="unfinished">Poziome etykiety tekstowe</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+20"/>
         <source>Text above dimension line</source>
         <translation type="unfinished">Tekst nad linią wymiarową</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+67"/>
         <source>Dimension line gap:</source>
         <translation type="unfinished">Odstęp między liniami wymiarowymi:</translation>
     </message>
@@ -8248,7 +8248,7 @@ jest już na liście.</translation>
     <message>
         <location line="+14"/>
         <source>Length:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Długość:</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -9887,13 +9887,13 @@ jest już na liście.</translation>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.ui" line="+14"/>
-        <location line="+98"/>
+        <location line="+86"/>
         <location line="+20"/>
         <source>Preferences</source>
         <translation type="unfinished">Preferencje</translation>
     </message>
     <message>
-        <location line="-85"/>
+        <location line="-79"/>
         <source>Filter</source>
         <translation type="unfinished">Filtr</translation>
     </message>
@@ -9908,7 +9908,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Zawalić drzewo</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+72"/>
         <source>Restore to Default Values</source>
         <translation type="unfinished">Przywrócenie wartości domyślnych</translation>
     </message>
@@ -13473,7 +13473,7 @@ jest już na liście.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+342"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
         <source>Dropped data not supported</source>
         <translation>Nie obsługiwane przeciągnięte dane </translation>
     </message>
@@ -13509,7 +13509,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Przywróć ustawienia domyślne</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+54"/>
         <source>Insert Symbol</source>
         <translation type="unfinished">Wstaw symbol</translation>
     </message>
@@ -13659,7 +13659,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Wartość zmierzona</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+162"/>
         <source>Left</source>
         <translation>Lewo</translation>
     </message>
@@ -14157,23 +14157,23 @@ jest już na liście.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angular Dimensions (2 Line)</source>
+        <source>Angular Dimensions (2 Lines)</source>
         <translation type="unfinished">Wymiary kątowe (2 linie)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Angular Dimension (2 Line)</source>
+        <source>Angular Dimension (2 Lines)</source>
         <translation type="unfinished">Wymiar kątowy (2 linie)</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angular Dimensions (3 Point)</source>
-        <translation type="unfinished">Wymiary kątowe (3-punktowe)</translation>
+        <source>Angular Dimensions (3 Points)</source>
+        <translation type="unfinished">Wymiary kątowe (3 punkty)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Angular Dimension (3 Point)</source>
-        <translation type="unfinished">Wymiar kątowy (3-punktowy)</translation>
+        <source>Angular Dimension (3 Points)</source>
+        <translation type="unfinished">Wymiar kątowy (3 punkty)</translation>
     </message>
     <message>
         <location line="+2"/>

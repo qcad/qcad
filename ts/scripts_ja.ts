@@ -1312,7 +1312,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+490"/>
         <location line="+63"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -2831,7 +2831,7 @@ Do you wish to recover it?</source>
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
+        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+62"/>
         <source>No dimension entities with custom label positions selected.</source>
         <translation>ラベル位置の修正された寸法が選択されていません。</translation>
     </message>
@@ -3059,17 +3059,17 @@ Do you wish to recover it?</source>
         <translation type="unfinished">フォーマット「Architectural」または「Engineering」で寸法ラベルを表示するには、図面単位が「Inch」でなければならない。形式を &quot;Decimal &quot;に変更しました。</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+55"/>
+        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+68"/>
         <source>Sizes</source>
         <translation>サイズ</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>Keep proportions</source>
         <translation>比率を維持</translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+162"/>
         <source>Text height:</source>
         <translation>テキスト高さ:</translation>
     </message>
@@ -3084,7 +3084,7 @@ Do you wish to recover it?</source>
         <translation>延長線の拡張:</translation>
     </message>
     <message>
-        <location line="-115"/>
+        <location line="-145"/>
         <source>Dimension Style</source>
         <translation type="unfinished">ディメンションスタイル</translation>
     </message>
@@ -3094,12 +3094,12 @@ Do you wish to recover it?</source>
         <translation type="unfinished">水平方向のテキストラベル</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+20"/>
         <source>Text above dimension line</source>
         <translation type="unfinished">寸法線上の文字</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+67"/>
         <source>Dimension line gap:</source>
         <translation>寸法線のギャップ:</translation>
     </message>
@@ -8238,12 +8238,12 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Length:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">長さだ：</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">アングルだ：</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2PInit.js" line="+2"/>
@@ -9873,13 +9873,13 @@ is already in the list.</source>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.ui" line="+14"/>
-        <location line="+98"/>
+        <location line="+86"/>
         <location line="+20"/>
         <source>Preferences</source>
         <translation>設定</translation>
     </message>
     <message>
-        <location line="-85"/>
+        <location line="-79"/>
         <source>Filter</source>
         <translation>フィルタ</translation>
     </message>
@@ -9894,7 +9894,7 @@ is already in the list.</source>
         <translation>ツリーを折りたたむ</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+72"/>
         <source>Restore to Default Values</source>
         <translation>初期値に置き換える</translation>
     </message>
@@ -13453,7 +13453,7 @@ is already in the list.</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+342"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
         <source>Dropped data not supported</source>
         <translation>ドロップされたデータはサポートされていません</translation>
     </message>
@@ -13489,7 +13489,7 @@ is already in the list.</source>
         <translation>デフォルトを置き換え</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+54"/>
         <source>Insert Symbol</source>
         <translation>シンボルを挿入</translation>
     </message>
@@ -13639,7 +13639,7 @@ is already in the list.</source>
         <translation>測定値</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+162"/>
         <source>Left</source>
         <translation>左</translation>
     </message>
@@ -14137,22 +14137,22 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angular Dimensions (2 Line)</source>
-        <translation type="unfinished">角型寸法（2線）</translation>
+        <source>Angular Dimensions (2 Lines)</source>
+        <translation type="unfinished">角度寸法（2行）</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Angular Dimension (2 Line)</source>
-        <translation type="unfinished">角度寸法(2ライン)</translation>
+        <source>Angular Dimension (2 Lines)</source>
+        <translation type="unfinished">角度寸法（2行）</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angular Dimensions (3 Point)</source>
+        <source>Angular Dimensions (3 Points)</source>
         <translation type="unfinished">角度寸法（3点）</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Angular Dimension (3 Point)</source>
+        <source>Angular Dimension (3 Points)</source>
         <translation type="unfinished">角度寸法（3点）</translation>
     </message>
     <message>

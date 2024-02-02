@@ -232,7 +232,7 @@
     <message>
         <location line="+1"/>
         <source>Dimension Font</source>
-        <translation>Fonte da Fonte</translation>
+        <translation>Fonte de dimensão</translation>
     </message>
 </context>
 <context>

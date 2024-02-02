@@ -1311,7 +1311,7 @@ Kurtarmak ister misiniz?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+490"/>
         <source>Widgets</source>
         <translation type="unfinished">Widgetler</translation>
     </message>
@@ -2830,7 +2830,7 @@ Kurtarmak ister misiniz?</translation>
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
+        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+62"/>
         <source>No dimension entities with custom label positions selected.</source>
         <translation>Özel etiket konumlarına sahip hiçbir boyut öğesi seçilmedi.</translation>
     </message>
@@ -3058,12 +3058,12 @@ Kurtarmak ister misiniz?</translation>
         <translation type="unfinished">&quot;Mimari&quot; veya &quot;Mühendislik&quot; formatlarında boyut etiketlerini görüntülemek için çizim birimi &quot;İnç&quot; olmalıdır. Biçim &quot;Ondalık&quot; olarak değiştirildi.</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+55"/>
+        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+68"/>
         <source>Sizes</source>
         <translation>Boyutlar</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+170"/>
         <source>Text height:</source>
         <translation>Metin yüksekliği:</translation>
     </message>
@@ -3073,7 +3073,7 @@ Kurtarmak ister misiniz?</translation>
         <translation type="unfinished">Boyut çizgi aralığı:</translation>
     </message>
     <message>
-        <location line="-63"/>
+        <location line="-93"/>
         <source>Dimension Style</source>
         <translation type="unfinished">Boyut Stili</translation>
     </message>
@@ -3083,17 +3083,17 @@ Kurtarmak ister misiniz?</translation>
         <translation type="unfinished">Yatay metin etiketleri</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+20"/>
         <source>Text above dimension line</source>
         <translation type="unfinished">Boyut çizgisinin üzerindeki metin</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+21"/>
         <source>Keep proportions</source>
         <translation type="unfinished">Oranları koru</translation>
     </message>
     <message>
-        <location line="+73"/>
+        <location line="+88"/>
         <source>Arrow size:</source>
         <translation type="unfinished">Ok boyu:</translation>
     </message>
@@ -9872,13 +9872,13 @@ zaten listede.</translation>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.ui" line="+14"/>
-        <location line="+98"/>
+        <location line="+86"/>
         <location line="+20"/>
         <source>Preferences</source>
         <translation>Tercihler</translation>
     </message>
     <message>
-        <location line="-85"/>
+        <location line="-79"/>
         <source>Filter</source>
         <translation>Filtre</translation>
     </message>
@@ -9893,7 +9893,7 @@ zaten listede.</translation>
         <translation>Ağaç Daralt</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+72"/>
         <source>Restore to Default Values</source>
         <translation>Varsayılan Değerlere Geri Dön</translation>
     </message>
@@ -13452,7 +13452,7 @@ zaten listede.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+342"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
         <source>Dropped data not supported</source>
         <translation>Bırakılan veriler desteklenmiyor</translation>
     </message>
@@ -13488,7 +13488,7 @@ zaten listede.</translation>
         <translation type="unfinished">Varsayılanları geri yükle</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+54"/>
         <source>Insert Symbol</source>
         <translation type="unfinished">Sembol Ekle</translation>
     </message>
@@ -13638,7 +13638,7 @@ zaten listede.</translation>
         <translation type="unfinished">Ölçülen değer</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+162"/>
         <source>Left</source>
         <translation type="unfinished">Sol</translation>
     </message>
@@ -14136,23 +14136,23 @@ zaten listede.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angular Dimensions (2 Line)</source>
+        <source>Angular Dimensions (2 Lines)</source>
         <translation type="unfinished">Açısal Boyutlar (2 Satır)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Angular Dimension (2 Line)</source>
-        <translation type="unfinished">Açısal Boyut (2 Çizgi)</translation>
+        <source>Angular Dimension (2 Lines)</source>
+        <translation type="unfinished">Açısal Boyut (2 Satır)</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angular Dimensions (3 Point)</source>
-        <translation type="unfinished">Açısal Boyutlar (3 Nokta)</translation>
+        <source>Angular Dimensions (3 Points)</source>
+        <translation type="unfinished">Açısal Boyutlar (3 Puan)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Angular Dimension (3 Point)</source>
-        <translation type="unfinished">Açısal Boyut (3 Nokta)</translation>
+        <source>Angular Dimension (3 Points)</source>
+        <translation type="unfinished">Açısal Boyut (3 Puan)</translation>
     </message>
     <message>
         <location line="+2"/>

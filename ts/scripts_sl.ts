@@ -1314,7 +1314,7 @@ Ali jo želite obnoviti?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+490"/>
         <location line="+63"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -2833,7 +2833,7 @@ Ali jo želite obnoviti?</translation>
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
+        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+62"/>
         <source>No dimension entities with custom label positions selected.</source>
         <translation>Ni izbrana nobena kotirna entiteta z prilagojeno lokacijo napisa.</translation>
     </message>
@@ -3064,17 +3064,17 @@ Ali jo želite obnoviti?</translation>
         <translation>Enota risbe mora biti v inčih, za prikaz kotiranj ter napisov v arhitekturni ali inžinerski obliki. Zapis spremenljen v desetiški.</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+55"/>
+        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+68"/>
         <source>Sizes</source>
         <translation>Velikosti</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>Keep proportions</source>
         <translation>Ohrani razmerja</translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+162"/>
         <source>Text height:</source>
         <translation>Višina besedila:</translation>
     </message>
@@ -3089,7 +3089,7 @@ Ali jo želite obnoviti?</translation>
         <translation>Podaljšek podajšane črte:</translation>
     </message>
     <message>
-        <location line="-115"/>
+        <location line="-145"/>
         <source>Dimension Style</source>
         <translation type="unfinished">Dimenzija slog</translation>
     </message>
@@ -3099,12 +3099,12 @@ Ali jo želite obnoviti?</translation>
         <translation type="unfinished">Vodoravne besedilne oznake</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+20"/>
         <source>Text above dimension line</source>
         <translation type="unfinished">Besedilo nad dimenzijsko linijo</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+67"/>
         <source>Dimension line gap:</source>
         <translation>Odmik mere od kotirne črte:</translation>
     </message>
@@ -9890,13 +9890,13 @@ je že na seznamu.</translation>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.ui" line="+14"/>
-        <location line="+98"/>
+        <location line="+86"/>
         <location line="+20"/>
         <source>Preferences</source>
         <translation>Nastavitve</translation>
     </message>
     <message>
-        <location line="-85"/>
+        <location line="-79"/>
         <source>Filter</source>
         <translation>Filter</translation>
     </message>
@@ -9911,7 +9911,7 @@ je že na seznamu.</translation>
         <translation>Združi drevo</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+72"/>
         <source>Restore to Default Values</source>
         <translation>Obnovi na privzete vrednosti</translation>
     </message>
@@ -13479,7 +13479,7 @@ je že na seznamu.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+342"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
         <source>Dropped data not supported</source>
         <translation>Odvrženi podatki niso podprti</translation>
     </message>
@@ -13515,7 +13515,7 @@ je že na seznamu.</translation>
         <translation>Obnovi privzeto</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+54"/>
         <source>Insert Symbol</source>
         <translation>Vstavi simbol</translation>
     </message>
@@ -13665,7 +13665,7 @@ je že na seznamu.</translation>
         <translation>Izmerjena vrednost</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+162"/>
         <source>Left</source>
         <translation>Levo</translation>
     </message>
@@ -14163,23 +14163,23 @@ je že na seznamu.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angular Dimensions (2 Line)</source>
-        <translation>Dimenzije kota (2 črti)</translation>
+        <source>Angular Dimensions (2 Lines)</source>
+        <translation type="unfinished">Kotne dimenzije (2 vrstici)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Angular Dimension (2 Line)</source>
-        <translation>Dimenzija kota (2 črti)</translation>
+        <source>Angular Dimension (2 Lines)</source>
+        <translation type="unfinished">Kotna dimenzija (2 vrstici)</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angular Dimensions (3 Point)</source>
-        <translation>Dimenzije kotov (3 toke)</translation>
+        <source>Angular Dimensions (3 Points)</source>
+        <translation type="unfinished">Kotne dimenzije (3 točke)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Angular Dimension (3 Point)</source>
-        <translation>Dimenzija kota (3 točke)</translation>
+        <source>Angular Dimension (3 Points)</source>
+        <translation type="unfinished">Kotna dimenzija (3 točke)</translation>
     </message>
     <message>
         <location line="+2"/>

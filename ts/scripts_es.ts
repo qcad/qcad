@@ -1314,7 +1314,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+490"/>
         <location line="+63"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -2649,7 +2649,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+16"/>
         <source>Dimensions</source>
-        <translation>Dimensiones</translation>
+        <translation>Acotaciones</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2702,7 +2702,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>Dimension line location</source>
-        <translation>Posición de la línea de dimensión</translation>
+        <translation>Localización de la línea de acotación</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAligned/DimAlignedInit.js" line="+2"/>
@@ -2712,7 +2712,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+3"/>
         <source>Draw aligned dimension</source>
-        <translation>Dimensión alineada</translation>
+        <translation>Dibujar acotación alineada</translation>
     </message>
 </context>
 <context>
@@ -2730,7 +2730,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+9"/>
         <source>Dimension arc location</source>
-        <translation>Ubicación del arco dimensión</translation>
+        <translation>Localización del arco de acotación</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngularInit.js" line="+2"/>
@@ -2740,7 +2740,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+3"/>
         <source>Draw angular dimension</source>
-        <translation>Dimensión angular</translation>
+        <translation>Dibujar acotación angular</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
@@ -2758,7 +2758,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>Dimension line location or angle</source>
-        <translation>Ubicación de la línea de dimensión o el ángulo</translation>
+        <translation>Ubicación o ángulo de la línea de acotación</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimDiametric/DimDiametricInit.js" line="+2"/>
@@ -2768,7 +2768,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+4"/>
         <source>Draw diametric dimension</source>
-        <translation>Dimensión diámetro</translation>
+        <translation>Dibujar acotación diametral</translation>
     </message>
 </context>
 <context>
@@ -2781,7 +2781,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+4"/>
         <source>Draw horizontal dimension</source>
-        <translation>Dimensión horizontal</translation>
+        <translation>Dibujar acotación horizontal</translation>
     </message>
 </context>
 <context>
@@ -2804,7 +2804,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+3"/>
         <source>Draw ordinate dimension</source>
-        <translation>Dimensión ordinal</translation>
+        <translation>Dibujar la acotación de ordenadas</translation>
     </message>
 </context>
 <context>
@@ -2817,7 +2817,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>Dimension line location or angle</source>
-        <translation>Ubicación de la línea de dimensión o el ángulo</translation>
+        <translation>Ubicación o ángulo de la línea de acotación</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRadial/DimRadialInit.js" line="+2"/>
@@ -2827,22 +2827,22 @@ Do you wish to recover it?</source>
     <message>
         <location line="+4"/>
         <source>Draw radial dimension</source>
-        <translation>Dimensión radial</translation>
+        <translation>Dibujar acotación radial</translation>
     </message>
 </context>
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
+        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+62"/>
         <source>No dimension entities with custom label positions selected.</source>
-        <translation>No objetos de dimensión seleccionados con una posición de texto personalizado.</translation>
+        <translation>No hay entidades de acotación con posiciones de etiqueta personalizadas seleccionadas.</translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
         <translation>
-            <numerusform>Posición de la etiqueta de %n dimensión se ha restablecido.</numerusform>
-            <numerusform>Posición de la etiqueta de %n dimensiónes se ha restablecido.</numerusform>
+            <numerusform>Se ha restablecido la posición de la etiqueta de %n acotación.</numerusform>
+            <numerusform>Se ha restablecido la posición de las etiquetas de %n acotaciones.</numerusform>
         </translation>
     </message>
     <message>
@@ -2871,7 +2871,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>Dimension line location</source>
-        <translation>Posición de la línea de dimensión</translation>
+        <translation>Localización de la línea de acotación</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotatedInit.js" line="+2"/>
@@ -2881,7 +2881,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+4"/>
         <source>Draw linear dimension at a fixed angle</source>
-        <translation>Dibuja dimensión lineal en un ángulo fijo</translation>
+        <translation>Dibujar la acotación lineal en un ángulo fijo</translation>
     </message>
 </context>
 <context>
@@ -2894,7 +2894,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+4"/>
         <source>Draw vertical dimension</source>
-        <translation>Dimensión vertical</translation>
+        <translation>Dibujar la acotación vertical</translation>
     </message>
 </context>
 <context>
@@ -2952,12 +2952,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+122"/>
         <source>Dimension Tools</source>
-        <translation>Herramientas de dimensión</translation>
+        <translation>Herramientas de acotación</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>D&amp;imension</source>
-        <translation>D&amp;imensión</translation>
+        <translation>&amp;Acotación</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Dimension.ui" line="+29"/>
@@ -3005,12 +3005,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
         <source>Dimension Scale</source>
-        <translation>Escala de cotas</translation>
+        <translation>Escala de acotación</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>The scale for new dimensions is not 1:1. Dimension labels will show values that differ from the measured value in the drawing. You can correct the scale factor in the options toolbar at the top.</source>
-        <translation>La escala para las nuevas cotas no es de 1:1. Las etiquetas de las cotas mostrarán valores que difieren del valor medido en el dibujo. Puede corregir el factor de escala en la barra de opciones de la parte superior.</translation>
+        <translation>La escala para las nuevas acotaciones no es de 1:1. Las etiquetas acotadas mostrarán valores que difieren del valor medido en el dibujo. Puede corregir el factor de escala en la barra de opciones de la parte superior.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -3023,13 +3023,13 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/DimensionSettings.js" line="+29"/>
         <source>Dimension</source>
-        <translation>Dimensión</translation>
+        <translation>Acotación</translation>
     </message>
     <message>
         <location line="-2"/>
         <location line="+2"/>
         <source>Dimension Settings</source>
-        <translation>Configuración dimensión</translation>
+        <translation>Ajustes de acotación</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -3059,20 +3059,20 @@ Do you wish to recover it?</source>
     <message>
         <location line="+1"/>
         <source>The drawing unit must be &quot;Inch&quot; to display dimension labels in formats &quot;Architectural&quot; or &quot;Engineering&quot;. Format changed to &quot;Decimal&quot;.</source>
-        <translation>La unidad de dibujo debe ser &quot;Inch&quot; para mostrar las etiquetas de dimensión en los formatos &quot;Arquitectónico&quot; o &quot;Ingenieril&quot;. Formato cambiado a &quot;decimal&quot;.</translation>
+        <translation>La unidad de dibujo debe ser &quot;Inch&quot; para mostrar las etiquetas de acotación en los formatos &quot;Arquitectónico&quot; o &quot;Ingenieril&quot;. Formato cambiado a &quot;decimal&quot;.</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+55"/>
+        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+68"/>
         <source>Sizes</source>
         <translation>Tamaños</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>Keep proportions</source>
         <translation>Mantener proporciones</translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+162"/>
         <source>Text height:</source>
         <translation>Altura del texto:</translation>
     </message>
@@ -3087,9 +3087,9 @@ Do you wish to recover it?</source>
         <translation>Extensión línea de referencia:</translation>
     </message>
     <message>
-        <location line="-115"/>
+        <location line="-145"/>
         <source>Dimension Style</source>
-        <translation>Estilo de cota</translation>
+        <translation>Estilo de acotación</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -3097,14 +3097,14 @@ Do you wish to recover it?</source>
         <translation>Etiquetas de texto horizontales</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+20"/>
         <source>Text above dimension line</source>
-        <translation>Texto sobre la línea de cota</translation>
+        <translation>Texto sobre la línea de acotación</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+67"/>
         <source>Dimension line gap:</source>
-        <translation>Espacio línea de dimensión:</translation>
+        <translation>Distancia a la línea de acotación:</translation>
     </message>
     <message>
         <location line="+42"/>
@@ -3114,7 +3114,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+108"/>
         <source>Dimension line increment:</source>
-        <translation>Incremento de las líneas de dimensión:</translation>
+        <translation>Incremento de la línea de acotación:</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -3169,7 +3169,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+6"/>
         <source>Linear Dimensions</source>
-        <translation>Dimensión lineal</translation>
+        <translation>Acotaciones lineales</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3190,7 +3190,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="-50"/>
         <source>Angular Dimensions</source>
-        <translation>Dimensión angular</translation>
+        <translation>Acotaciones angulares</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -9880,13 +9880,13 @@ ya está en la lista.</translation>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.ui" line="+14"/>
-        <location line="+98"/>
+        <location line="+86"/>
         <location line="+20"/>
         <source>Preferences</source>
         <translation>Preferencias</translation>
     </message>
     <message>
-        <location line="-85"/>
+        <location line="-79"/>
         <source>Filter</source>
         <translation>Filtro</translation>
     </message>
@@ -9901,7 +9901,7 @@ ya está en la lista.</translation>
         <translation>Colapso de navegación</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+72"/>
         <source>Restore to Default Values</source>
         <translation>Restaurar los valores</translation>
     </message>
@@ -10276,7 +10276,7 @@ ya está en la lista.</translation>
     <message>
         <location line="-19"/>
         <source>Display advanced dimension style overrides</source>
-        <translation>Mostrar las anulaciones de estilo de las dimensiones avanzadas</translation>
+        <translation>Mostrar anulaciones de estilo de acotaciones avanzadas</translation>
     </message>
 </context>
 <context>
@@ -13463,7 +13463,7 @@ ya está en la lista.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+342"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
         <source>Dropped data not supported</source>
         <translation>Datos insertados no compatibles</translation>
     </message>
@@ -13499,7 +13499,7 @@ ya está en la lista.</translation>
         <translation>Restaurar los valores predeterminados</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+54"/>
         <source>Insert Symbol</source>
         <translation>Insertar símbolo</translation>
     </message>
@@ -13649,7 +13649,7 @@ ya está en la lista.</translation>
         <translation>Valor medido</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+162"/>
         <source>Left</source>
         <translation>Izquierda</translation>
     </message>
@@ -14028,12 +14028,12 @@ ya está en la lista.</translation>
     <message>
         <location line="+2"/>
         <source>Dimension Styles</source>
-        <translation>Estilos de dimensión</translation>
+        <translation>Estilos de acotación</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Dimension Style</source>
-        <translation>Estilo de cota</translation>
+        <translation>Estilo de acotación</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -14118,87 +14118,87 @@ ya está en la lista.</translation>
     <message>
         <location line="+2"/>
         <source>Dimensions</source>
-        <translation>Dimensiones</translation>
+        <translation>Acotaciones</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Dimension</source>
-        <translation>Dimensión</translation>
+        <translation>Acotación</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Aligned Dimension</source>
-        <translation>Cota alineada</translation>
+        <translation>Acotación alineada</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Aligned Dimensions</source>
-        <translation>Dimensiones alineadas</translation>
+        <translation>Acotaciones alineadas</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimension</source>
-        <translation>Cota angular</translation>
+        <translation>Acotación angular</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimensions</source>
-        <translation>Cotas angular</translation>
+        <translation>Acotaciones angulares</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angular Dimensions (2 Line)</source>
-        <translation>Cotas angulares (2 líneas)</translation>
+        <source>Angular Dimensions (2 Lines)</source>
+        <translation>Acotaciones angulares (2 líneas)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Angular Dimension (2 Line)</source>
-        <translation>Cota angular (2 líneas)</translation>
+        <source>Angular Dimension (2 Lines)</source>
+        <translation>Acotación angular (2 líneas)</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angular Dimensions (3 Point)</source>
-        <translation>Cotas angulares (3 puntos)</translation>
+        <source>Angular Dimensions (3 Points)</source>
+        <translation>Acotaciones angulares (3 puntos)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Angular Dimension (3 Point)</source>
-        <translation>Cota angular (3 puntos)</translation>
+        <source>Angular Dimension (3 Points)</source>
+        <translation>Acotación angular (3 puntos)</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Arc Dimension</source>
-        <translation>Dimensión del arco</translation>
+        <translation>Acotación del arco</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Diametric Dimension</source>
-        <translation>Cota diametral</translation>
+        <translation>Acotación diametral</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Diametric Dimensions</source>
-        <translation>Dimensiones diametricas</translation>
+        <translation>Acotaciones diametrales</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Ordinate Dimension</source>
-        <translation>Cota ordinal</translation>
+        <translation>Acotación ordenada</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ordinate Dimensions</source>
-        <translation>Dimensiones ordenadas</translation>
+        <translation>Acotaciones ordenadas</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Rotated Dimensions</source>
-        <translation>Dimensiones rotadas</translation>
+        <translation>Acotaciones giradas</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Rotated Dimension</source>
-        <translation>Dimensión rotada</translation>
+        <translation>Acotación girada</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14208,7 +14208,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+0"/>
         <source>Radial Dimensions</source>
-        <translation>Dimensiones radiales</translation>
+        <translation>Acotaciones radiales</translation>
     </message>
     <message>
         <location line="+2"/>

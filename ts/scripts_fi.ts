@@ -1314,7 +1314,7 @@ Haluatko palauttaa sen?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+490"/>
         <source>Widgets</source>
         <translation>Pienoisohjelmat</translation>
     </message>
@@ -2833,7 +2833,7 @@ Haluatko palauttaa sen?</translation>
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
+        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+62"/>
         <source>No dimension entities with custom label positions selected.</source>
         <translation>Ei ole valittu mittatietoja mukautetun selitteen sijainnille.</translation>
     </message>
@@ -3062,17 +3062,17 @@ Haluatko palauttaa sen?</translation>
         <translation>Piirroksen yksikön pitää olla &quot;tuuma&quot; tai &quot;jalka&quot; jotta näytetään mittaselitteet muodossa &quot;arkkitehtoninen&quot; tai &quot;tekninen&quot;. Muoto vaihdettu &quot;desimaaliseksi&quot;.</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+55"/>
+        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+68"/>
         <source>Sizes</source>
         <translation>Koot</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>Keep proportions</source>
         <translation>Pidä mittasuhteet</translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+162"/>
         <source>Text height:</source>
         <translation>Tekstin korkeus:</translation>
     </message>
@@ -3087,7 +3087,7 @@ Haluatko palauttaa sen?</translation>
         <translation>Jatkolinjan pidennys:</translation>
     </message>
     <message>
-        <location line="-115"/>
+        <location line="-145"/>
         <source>Dimension Style</source>
         <translation type="unfinished">Mitta Tyyli</translation>
     </message>
@@ -3097,12 +3097,12 @@ Haluatko palauttaa sen?</translation>
         <translation type="unfinished">Vaakasuorat tekstitarrat</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+20"/>
         <source>Text above dimension line</source>
         <translation type="unfinished">Teksti mittariviivan yläpuolella</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+67"/>
         <source>Dimension line gap:</source>
         <translation>Mittaviivan väli:</translation>
     </message>
@@ -9880,13 +9880,13 @@ on jo luettelossa.</translation>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.ui" line="+14"/>
-        <location line="+98"/>
+        <location line="+86"/>
         <location line="+20"/>
         <source>Preferences</source>
         <translation>Asetukset</translation>
     </message>
     <message>
-        <location line="-85"/>
+        <location line="-79"/>
         <source>Filter</source>
         <translation>Suodatin</translation>
     </message>
@@ -9901,7 +9901,7 @@ on jo luettelossa.</translation>
         <translation>Supista puu</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+72"/>
         <source>Restore to Default Values</source>
         <translation>Palauta oletusarvoihin</translation>
     </message>
@@ -13463,7 +13463,7 @@ on jo luettelossa.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+342"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
         <source>Dropped data not supported</source>
         <translation>Poistettuja tietoja ei tueta</translation>
     </message>
@@ -13499,7 +13499,7 @@ on jo luettelossa.</translation>
         <translation>Palauta oletusarvot</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+54"/>
         <source>Insert Symbol</source>
         <translation>Lisää symboli</translation>
     </message>
@@ -13649,7 +13649,7 @@ on jo luettelossa.</translation>
         <translation>Mitattu arvo</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+162"/>
         <source>Left</source>
         <translation>Vasen</translation>
     </message>
@@ -14147,23 +14147,23 @@ on jo luettelossa.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angular Dimensions (2 Line)</source>
-        <translation>Kulmamitat (2 viivaa)</translation>
+        <source>Angular Dimensions (2 Lines)</source>
+        <translation type="unfinished">Kulmamitat (2 riviä)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Angular Dimension (2 Line)</source>
-        <translation>Kulmamitta (2 viivaa)</translation>
+        <source>Angular Dimension (2 Lines)</source>
+        <translation type="unfinished">Kulmamitta (2 riviä)</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angular Dimensions (3 Point)</source>
-        <translation>Kulmamitat (3 pistettä)</translation>
+        <source>Angular Dimensions (3 Points)</source>
+        <translation type="unfinished">Kulmamitat (3 pistettä)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Angular Dimension (3 Point)</source>
-        <translation>Kulmamitta (3 pistettä)</translation>
+        <source>Angular Dimension (3 Points)</source>
+        <translation type="unfinished">Kulmaulottuvuus (3 pistettä)</translation>
     </message>
     <message>
         <location line="+2"/>
