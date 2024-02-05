@@ -50,6 +50,8 @@ DimRegen.prototype.beginEvent = function() {
         var entity = document.queryEntity(id);
         if (isDimensionEntity(entity) && entity.hasCustomTextPosition()) {
             entity.setCustomTextPosition(false);
+            entity.update();
+            entity.getShapes();
             op.addObject(entity, false);
             counter++;
         }

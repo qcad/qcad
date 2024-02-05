@@ -618,10 +618,6 @@ bool RDimensionData::hasCustomTextPosition() const {
 
 void RDimensionData::setCustomTextPosition(bool on) {
     autoTextPos = !on;
-
-    // make sure text position is reset to default:
-    update();
-    getShapes();
 }
 
 /**
