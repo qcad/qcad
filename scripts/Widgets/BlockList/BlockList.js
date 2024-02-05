@@ -59,6 +59,10 @@ function RBlockListQt(parent, addListener, showHeader) {
         this.header().setResizeMode(BlockList.colEdit, QHeaderView.Interactive);
     }
 
+    // Qt 6.6.1 workaround: this only works once widget is visible:
+    // for tests, we also need it here:
+    BlockList.initColumnWidths(this);
+
     var self = this;
     if (addListener) {
         var appWin = EAction.getMainWindow();
@@ -543,6 +547,10 @@ BlockList.prototype.finishEvent = function() {
     this.getGuiAction().setChecked(dock.visible);
 };
 
+BlockList.initColumnWidths = function(blockList) {
+    blockList.setColumnWidth(BlockList.colVisible, 22);
+    blockList.setColumnWidth(BlockList.colEdit, 22);
+};
 
 /**
  * Initializes the block list widget.
@@ -604,8 +612,7 @@ BlockList.init = function(basePath) {
         action.setChecked(true);
 
         // Qt 6.6.1 workaround: this only works once widget is visible:
-        blockList.setColumnWidth(BlockList.colVisible, 22);
-        blockList.setColumnWidth(BlockList.colEdit, 22);
+        BlockList.initColumnWidths(blockList);
     });
     dock.hidden.connect(function() { action.setChecked(false); });
 
