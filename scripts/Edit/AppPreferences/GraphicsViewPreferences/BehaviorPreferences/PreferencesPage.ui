@@ -224,6 +224,23 @@
            </item>
           </widget>
          </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Cursor range for picking entities:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0" colspan="2">
+          <widget class="QCheckBox" name="HighlightEntity">
+           <property name="text">
+            <string>Highlight entity within range</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
          <item row="0" column="1">
           <widget class="QComboBox" name="SnapRange">
            <property name="editable">
@@ -271,13 +288,6 @@
            </item>
           </widget>
          </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="label_2">
-           <property name="text">
-            <string>Cursor range for picking entities:</string>
-           </property>
-          </widget>
-         </item>
          <item row="0" column="0">
           <widget class="QLabel" name="label">
            <property name="text">
@@ -285,13 +295,10 @@
            </property>
           </widget>
          </item>
-         <item row="2" column="0" colspan="2">
-          <widget class="QCheckBox" name="HighlightEntity">
+         <item row="3" column="0" colspan="2">
+          <widget class="QCheckBox" name="HighlightImage">
            <property name="text">
-            <string>Highlight entity within range</string>
-           </property>
-           <property name="checked">
-            <bool>true</bool>
+            <string>Highlight (and raise) images within range</string>
            </property>
           </widget>
          </item>

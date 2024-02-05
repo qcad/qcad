@@ -1682,6 +1682,12 @@ void RDocumentInterface::highlightEntity(REntity::Id entityId) {
         return;
     }
 
+    if (RSettings::getBoolValue("GraphicsView/HighlightImage", false)==false) {
+        if (entity->getType()==RS::EntityImage) {
+            return;
+        }
+    }
+
     QList<RGraphicsScene*>::iterator it;
     for (it=scenes.begin(); it!=scenes.end(); it++) {
         (*it)->highlightEntity(*entity);
