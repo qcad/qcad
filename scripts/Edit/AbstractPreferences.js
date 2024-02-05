@@ -73,6 +73,8 @@ AbstractPreferences.prototype.beginEvent = function() {
         this.showPageFor(this.initialClassName);
     }
 
+    this.filterWidget.setFocus();
+
     if (this.dialog.exec() === QDialog.Accepted.valueOf()) {
         // apply calls save and apply:
         this.apply();
