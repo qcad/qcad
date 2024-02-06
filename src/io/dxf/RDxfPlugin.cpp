@@ -19,7 +19,7 @@ RPluginInfo RDxfPlugin::getPluginInfo() {
     RPluginInfo ret;
     ret.set("Version", QString("%1 (dxflib %2)").arg(RSettings::getVersionString()).arg(DL_VERSION));
     ret.set("ID", "DXF");
-    ret.set("Name", "QCAD DXF");
+    ret.set("Name", "QCAD");
     ret.set("Description",
         QString(
             "Import/export support for the DXF format. "
