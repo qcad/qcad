@@ -280,7 +280,7 @@
         <translation type="unfinished">Joonistamise eelistused</translation>
     </message>
     <message>
-        <location line="+323"/>
+        <location line="+325"/>
         <source>Apply preferences</source>
         <translation type="unfinished">Rakenda eelistusi</translation>
     </message>
@@ -293,7 +293,6 @@
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
-        <translation></translation>
     </message>
     <message>
         <location line="+86"/>
@@ -918,7 +917,6 @@ Do you wish to recover it/them?</source>
         <location line="+1"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
-        <translation></translation>
     </message>
     <message>
         <location line="+25"/>
@@ -1310,13 +1308,13 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+490"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
         <source>Widgets</source>
         <translation type="unfinished">Vidinad</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+63"/>
+        <location line="+67"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation type="unfinished">Plokkide nimekiri</translation>
@@ -2829,7 +2827,7 @@ Do you wish to recover it?</source>
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+62"/>
+        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
         <source>No dimension entities with custom label positions selected.</source>
         <translation type="unfinished">Ei ole valitud mõõteüksusi, mille puhul on valitud kohandatud sildi positsioonid.</translation>
     </message>
@@ -3212,7 +3210,6 @@ Do you wish to recover it?</source>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
-        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -5742,17 +5739,22 @@ is already in the list.</source>
         <translation type="unfinished">Kursori vahemik</translation>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+55"/>
         <source>Cursor range for picking entities:</source>
         <translation type="unfinished">Kursori vahemik üksuste valimiseks:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+64"/>
         <source>Cursor range for snap:</source>
         <translation type="unfinished">Kursori vahemik snap&apos;i jaoks:</translation>
     </message>
     <message>
         <location line="+7"/>
+        <source>Highlight (and raise) images within range</source>
+      <translation type="unfinished">Kauguses olevate piltide esiletõstmine (ja tõstmine)</translation>
+    </message>
+    <message>
+        <location line="-64"/>
         <source>Highlight entity within range</source>
         <translation type="unfinished">Rõhutage üksus vahemikus</translation>
     </message>
@@ -11407,7 +11409,6 @@ is already in the list.</source>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
-        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
@@ -12620,7 +12621,6 @@ is already in the list.</source>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
-        <translation></translation>
     </message>
     <message>
         <location line="+21"/>
@@ -14520,3 +14520,4 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
+

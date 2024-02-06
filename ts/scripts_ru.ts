@@ -280,7 +280,7 @@
         <translation>Предпочтения чертежа</translation>
     </message>
     <message>
-        <location line="+323"/>
+        <location line="+325"/>
         <source>Apply preferences</source>
         <translation>Применить предпочтения</translation>
     </message>
@@ -1316,14 +1316,14 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+490"/>
-        <location line="+63"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
+        <location line="+67"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>Список блоков</translation>
     </message>
     <message>
-        <location line="-106"/>
+        <location line="-110"/>
         <source>Widgets</source>
         <translation>Виджеты</translation>
     </message>
@@ -2835,7 +2835,7 @@ Do you wish to recover it?</source>
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+62"/>
+        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
         <source>No dimension entities with custom label positions selected.</source>
         <translation>Нет размерных объектов с выбранными положениями пользовательских меток.</translation>
     </message>
@@ -5733,12 +5733,17 @@ is already in the list.</source>
         <translation>Скрыть атрибуты, когда ссылки на блоки скрыты</translation>
     </message>
     <message>
-        <location line="+126"/>
+        <location line="+72"/>
         <source>Highlight entity within range</source>
         <translation>Выделить объект в пределах диапазона</translation>
     </message>
     <message>
-        <location line="-259"/>
+        <location line="+64"/>
+        <source>Highlight (and raise) images within range</source>
+      <translation type="unfinished">Выделяйте (и поднимайте) изображения в пределах досягаемости</translation>
+    </message>
+    <message>
+        <location line="-269"/>
         <source>Right-Click</source>
         <translation>Щелчок правой кнопкой</translation>
     </message>
@@ -5758,12 +5763,12 @@ is already in the list.</source>
         <translation>Диапазон курсора</translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+119"/>
         <source>Cursor range for snap:</source>
         <translation>Диапазон курсора для прилипания:</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="-64"/>
         <source>Cursor range for picking entities:</source>
         <translation>Диапазон курсора для подхвата объектов:</translation>
     </message>
@@ -14538,3 +14543,4 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
+

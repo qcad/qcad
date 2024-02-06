@@ -280,7 +280,7 @@
         <translation>Nastavenia Kreslenia</translation>
     </message>
     <message>
-        <location line="+323"/>
+        <location line="+325"/>
         <source>Apply preferences</source>
         <translation>Použiť nastavenia</translation>
     </message>
@@ -1316,13 +1316,13 @@ Prajete si ho obnoviť?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+490"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
         <source>Widgets</source>
         <translation>Pomôcky</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+63"/>
+        <location line="+67"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>Zoznam Blokov</translation>
@@ -2835,7 +2835,7 @@ Prajete si ho obnoviť?</translation>
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+62"/>
+        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
         <source>No dimension entities with custom label positions selected.</source>
         <translation>Žiadna kóta s vlastným nastavením pozície textu.</translation>
     </message>
@@ -5733,12 +5733,17 @@ už existuje v zozname.</translation>
         <translation>Skryť vlastnosti, keď sú referencie bloku skryté</translation>
     </message>
     <message>
-        <location line="+126"/>
+        <location line="+72"/>
         <source>Highlight entity within range</source>
         <translation>Zvýrazniť prvok v rozsahu</translation>
     </message>
     <message>
-        <location line="-259"/>
+        <location line="+64"/>
+        <source>Highlight (and raise) images within range</source>
+      <translation type="unfinished">Zvýraznenie (a zvýšenie) obrázkov v dosahu</translation>
+    </message>
+    <message>
+        <location line="-269"/>
         <source>Right-Click</source>
         <translation>Kliknutie pravým tlačidlom myši</translation>
     </message>
@@ -5758,12 +5763,12 @@ už existuje v zozname.</translation>
         <translation>Rozsah kurzoru</translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+119"/>
         <source>Cursor range for snap:</source>
         <translation>Rozsah pre prichytávanie:</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="-64"/>
         <source>Cursor range for picking entities:</source>
         <translation>Rozsah pre vyberanie prvkov:</translation>
     </message>
@@ -14538,3 +14543,4 @@ už existuje v zozname.</translation>
     </message>
 </context>
 </TS>
+

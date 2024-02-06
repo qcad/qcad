@@ -280,7 +280,7 @@
         <translation type="unfinished">Piešimo nuostatos</translation>
     </message>
     <message>
-        <location line="+323"/>
+        <location line="+325"/>
         <source>Apply preferences</source>
         <translation type="unfinished">Taikyti nuostatas</translation>
     </message>
@@ -1313,13 +1313,13 @@ Ar norite jį atkurti?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+490"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
         <source>Widgets</source>
         <translation type="unfinished">Valdikliai</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+63"/>
+        <location line="+67"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation type="unfinished">Blokų sąrašas</translation>
@@ -2832,7 +2832,7 @@ Ar norite jį atkurti?</translation>
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+62"/>
+        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
         <source>No dimension entities with custom label positions selected.</source>
         <translation type="unfinished">Nėra matmenų subjektų su pasirinktomis etiketės pozicijomis.</translation>
     </message>
@@ -5750,17 +5750,22 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Kursoriaus diapazonas</translation>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+55"/>
         <source>Cursor range for picking entities:</source>
         <translation type="unfinished">Kursoriaus diapazonas subjektams parinkti:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+64"/>
         <source>Cursor range for snap:</source>
         <translation type="unfinished">Kursoriaus spragtelėjimo diapazonas:</translation>
     </message>
     <message>
         <location line="+7"/>
+        <source>Highlight (and raise) images within range</source>
+      <translation type="unfinished">Išryškinkite (ir pakelkite) vaizdus, esančius diapazone</translation>
+    </message>
+    <message>
+        <location line="-64"/>
         <source>Highlight entity within range</source>
         <translation type="unfinished">Išryškinkite objektą, esantį diapazone</translation>
     </message>
@@ -14535,3 +14540,4 @@ jau yra sąraše.</translation>
     </message>
 </context>
 </TS>
+

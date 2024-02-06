@@ -280,7 +280,7 @@
         <translation>Préférences de dessin</translation>
     </message>
     <message>
-        <location line="+323"/>
+        <location line="+325"/>
         <source>Apply preferences</source>
         <translation>Appliquer préférences</translation>
     </message>
@@ -1314,14 +1314,14 @@ Voulez-vous le récupérer ?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+490"/>
-        <location line="+63"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
+        <location line="+67"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>Liste des blocs</translation>
     </message>
     <message>
-        <location line="-106"/>
+        <location line="-110"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -2833,7 +2833,7 @@ Voulez-vous le récupérer ?</translation>
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+62"/>
+        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
         <source>No dimension entities with custom label positions selected.</source>
         <translation>Aucun objets de dimension sélectionné avec une position de texte personnalisé.</translation>
     </message>
@@ -5728,12 +5728,17 @@ est déjà dans la liste.</translation>
         <translation>Masquer les attributs lorsque les références de blocs sont cachés</translation>
     </message>
     <message>
-        <location line="+126"/>
+        <location line="+72"/>
         <source>Highlight entity within range</source>
         <translation>Mettre en surbrillance l&apos;entité dans la plage</translation>
     </message>
     <message>
-        <location line="-259"/>
+        <location line="+64"/>
+        <source>Highlight (and raise) images within range</source>
+        <translation>Mettre en évidence (et augmenter) les images dans la gamme</translation>
+    </message>
+    <message>
+        <location line="-269"/>
         <source>Right-Click</source>
         <translation>Clic-droit</translation>
     </message>
@@ -5753,12 +5758,12 @@ est déjà dans la liste.</translation>
         <translation>Gamme de curseur de souris</translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+119"/>
         <source>Cursor range for snap:</source>
         <translation>Gamme de curseur de souris pour accrochage :</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="-64"/>
         <source>Cursor range for picking entities:</source>
         <translation>Gamme de curseur pour capter des entités :</translation>
     </message>

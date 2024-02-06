@@ -280,7 +280,7 @@
         <translation>Předvolby kreslení</translation>
     </message>
     <message>
-        <location line="+323"/>
+        <location line="+325"/>
         <source>Apply preferences</source>
         <translation>Použít předvolby</translation>
     </message>
@@ -1314,13 +1314,13 @@ Přejete si ho obnovit?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+490"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
         <source>Widgets</source>
         <translation>Widgety</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+63"/>
+        <location line="+67"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>Seznam bloků</translation>
@@ -2833,7 +2833,7 @@ Přejete si ho obnovit?</translation>
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+62"/>
+        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
         <source>No dimension entities with custom label positions selected.</source>
         <translation>Nebyly vybrány žádné kóty s vlastní pozicí popisku.</translation>
     </message>
@@ -5751,17 +5751,22 @@ již v seznamu je.</translation>
         <translation>Dosah kurzoru</translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+119"/>
         <source>Cursor range for snap:</source>
         <translation>Dosah kurzoru pro přichycení:</translation>
     </message>
     <message>
         <location line="+7"/>
+        <source>Highlight (and raise) images within range</source>
+      <translation type="unfinished">Zvýraznění (a zvednutí) obrázků v dosahu</translation>
+    </message>
+    <message>
+        <location line="-64"/>
         <source>Highlight entity within range</source>
         <translation>Zvýraznit prvek v dosahu</translation>
     </message>
     <message>
-        <location line="-14"/>
+        <location line="-7"/>
         <source>Cursor range for picking entities:</source>
         <translation>Dosah kurzoru pro vybírání prvků:</translation>
     </message>
@@ -14536,3 +14541,4 @@ již v seznamu je.</translation>
     </message>
 </context>
 </TS>
+

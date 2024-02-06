@@ -280,7 +280,7 @@
         <translation type="unfinished">Preferencje rysowania</translation>
     </message>
     <message>
-        <location line="+323"/>
+        <location line="+325"/>
         <source>Apply preferences</source>
         <translation type="unfinished">Zastosuj preferencje</translation>
     </message>
@@ -1316,14 +1316,14 @@ Czy chcesz go odzyskać?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+490"/>
-        <location line="+63"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
+        <location line="+67"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation type="unfinished">Lista bloków</translation>
     </message>
     <message>
-        <location line="-106"/>
+        <location line="-110"/>
         <source>Widgets</source>
         <translation>Widżety</translation>
     </message>
@@ -2835,7 +2835,7 @@ Czy chcesz go odzyskać?</translation>
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+62"/>
+        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
         <source>No dimension entities with custom label positions selected.</source>
         <translation type="unfinished">Brak elementów wymiarów z wybranymi niestandardowymi pozycjami etykiet.</translation>
     </message>
@@ -5733,12 +5733,17 @@ jest już na liście.</translation>
         <translation>Ukrywanie atrybutów, kiedy odniesienia bloku są ukryte</translation>
     </message>
     <message>
-        <location line="+126"/>
+        <location line="+72"/>
         <source>Highlight entity within range</source>
         <translation>Zaznaczanie obiektów w zasięgu</translation>
     </message>
     <message>
-        <location line="-259"/>
+        <location line="+64"/>
+        <source>Highlight (and raise) images within range</source>
+      <translation type="unfinished">Podświetlanie (i podnoszenie) obrazów w zasięgu</translation>
+    </message>
+    <message>
+        <location line="-269"/>
         <source>Right-Click</source>
         <translation>Kliknięcie prawym przyciskiem</translation>
     </message>
@@ -5758,12 +5763,12 @@ jest już na liście.</translation>
         <translation>Zasięg kursora</translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+119"/>
         <source>Cursor range for snap:</source>
         <translation>Zasięg przyciągania kursora:</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="-64"/>
         <source>Cursor range for picking entities:</source>
         <translation>Zasięg wybierania obiektów kursorem:</translation>
     </message>
@@ -14538,3 +14543,4 @@ jest już na liście.</translation>
     </message>
 </context>
 </TS>
+

@@ -280,7 +280,7 @@
         <translation>Piirroksen asetukset</translation>
     </message>
     <message>
-        <location line="+323"/>
+        <location line="+325"/>
         <source>Apply preferences</source>
         <translation>Käytä asetuksia</translation>
     </message>
@@ -1314,13 +1314,13 @@ Haluatko palauttaa sen?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+490"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
         <source>Widgets</source>
         <translation>Pienoisohjelmat</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+63"/>
+        <location line="+67"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>Lohkoluettelo</translation>
@@ -2833,7 +2833,7 @@ Haluatko palauttaa sen?</translation>
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+62"/>
+        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
         <source>No dimension entities with custom label positions selected.</source>
         <translation>Ei ole valittu mittatietoja mukautetun selitteen sijainnille.</translation>
     </message>
@@ -5748,17 +5748,22 @@ on jo luettelossa.</translation>
         <translation>Kohdistimen alue</translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+119"/>
         <source>Cursor range for snap:</source>
         <translation>Kohdistimen alue poiminnalle:</translation>
     </message>
     <message>
         <location line="+7"/>
+        <source>Highlight (and raise) images within range</source>
+      <translation type="unfinished">Korosta (ja nosta) kuvia kantaman sisällä</translation>
+    </message>
+    <message>
+        <location line="-64"/>
         <source>Highlight entity within range</source>
         <translation>Korosta alueen sisällä oleva kokonaisuus</translation>
     </message>
     <message>
-        <location line="-14"/>
+        <location line="-7"/>
         <source>Cursor range for picking entities:</source>
         <translation>Kohdistimen alue kohteiden poimintaan:</translation>
     </message>
@@ -14528,3 +14533,4 @@ on jo luettelossa.</translation>
     </message>
 </context>
 </TS>
+

@@ -280,7 +280,7 @@
         <translation type="unfinished">Предпочитания за рисуване</translation>
     </message>
     <message>
-        <location line="+323"/>
+        <location line="+325"/>
         <source>Apply preferences</source>
         <translation type="unfinished">Прилагане на преференции</translation>
     </message>
@@ -1312,13 +1312,13 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+490"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
         <source>Widgets</source>
         <translation type="unfinished">Уиджети</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+63"/>
+        <location line="+67"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation type="unfinished">Списък с блокове</translation>
@@ -2831,7 +2831,7 @@ Do you wish to recover it?</source>
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+62"/>
+        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
         <source>No dimension entities with custom label positions selected.</source>
         <translation type="unfinished">Няма размерни единици с избрани персонализирани позиции на етикетите.</translation>
     </message>
@@ -5746,17 +5746,22 @@ is already in the list.</source>
         <translation type="unfinished">Обхват на курсора</translation>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+55"/>
         <source>Cursor range for picking entities:</source>
         <translation type="unfinished">Обхват на курсора за избор на обекти:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+64"/>
         <source>Cursor range for snap:</source>
         <translation type="unfinished">Обхват на курсора за щракване:</translation>
     </message>
     <message>
         <location line="+7"/>
+        <source>Highlight (and raise) images within range</source>
+      <translation type="unfinished">Подчертаване (и повдигане) на изображения в обхвата</translation>
+    </message>
+    <message>
+        <location line="-64"/>
         <source>Highlight entity within range</source>
         <translation type="unfinished">Подчертаване на обект в обхвата</translation>
     </message>
@@ -14526,3 +14531,4 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
+

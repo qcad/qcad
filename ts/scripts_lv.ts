@@ -280,7 +280,7 @@
         <translation type="unfinished">Zīmēšanas preferences</translation>
     </message>
     <message>
-        <location line="+323"/>
+        <location line="+325"/>
         <source>Apply preferences</source>
         <translation type="unfinished">Piemērot preferences</translation>
     </message>
@@ -1313,13 +1313,13 @@ Vai vēlaties to atjaunot?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+490"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
         <source>Widgets</source>
         <translation type="unfinished">Logrīki</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+63"/>
+        <location line="+67"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation type="unfinished">Bloku saraksts</translation>
@@ -2832,7 +2832,7 @@ Vai vēlaties to atjaunot?</translation>
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+62"/>
+        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
         <source>No dimension entities with custom label positions selected.</source>
         <translation type="unfinished">Nav atlasītas dimensiju vienības ar pielāgotām etiķešu pozīcijām.</translation>
     </message>
@@ -5750,17 +5750,22 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Kursora diapazons</translation>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+55"/>
         <source>Cursor range for picking entities:</source>
         <translation type="unfinished">Kursora diapazons vienību atlasei:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+64"/>
         <source>Cursor range for snap:</source>
         <translation type="unfinished">Kursora diapazons snap:</translation>
     </message>
     <message>
         <location line="+7"/>
+        <source>Highlight (and raise) images within range</source>
+      <translation type="unfinished">Izcelt (un paaugstināt) attēlus diapazonā</translation>
+    </message>
+    <message>
+        <location line="-64"/>
         <source>Highlight entity within range</source>
         <translation type="unfinished">Izcelt objektu diapazonā</translation>
     </message>
@@ -14535,3 +14540,4 @@ jau ir sarakstā.</translation>
     </message>
 </context>
 </TS>
+

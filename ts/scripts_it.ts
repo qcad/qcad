@@ -280,7 +280,7 @@
         <translation>Preferenze Disegno</translation>
     </message>
     <message>
-        <location line="+323"/>
+        <location line="+325"/>
         <source>Apply preferences</source>
         <translation>Applica preferenze</translation>
     </message>
@@ -1314,14 +1314,14 @@ Vuoi recuperarlo?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+490"/>
-        <location line="+63"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
+        <location line="+67"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>Elenco dei blocchi</translation>
     </message>
     <message>
-        <location line="-106"/>
+        <location line="-110"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -2833,7 +2833,7 @@ Vuoi recuperarlo?</translation>
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+62"/>
+        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
         <source>No dimension entities with custom label positions selected.</source>
         <translation>Nessun quote selezionata con una posizione di testo personalizzato.</translation>
     </message>
@@ -5728,12 +5728,17 @@ is already in the list.</source>
         <translation>Nascondi gli attributi quando riferimenti di blocco sono nascosti</translation>
     </message>
     <message>
-        <location line="+126"/>
+        <location line="+72"/>
         <source>Highlight entity within range</source>
         <translation>Evidenziare entità entro il raggio</translation>
     </message>
     <message>
-        <location line="-259"/>
+        <location line="+64"/>
+        <source>Highlight (and raise) images within range</source>
+        <translation>Evidenzia (e solleva) le immagini nel raggio d&apos;azione</translation>
+    </message>
+    <message>
+        <location line="-269"/>
         <source>Right-Click</source>
         <translation>Pulsante destro del mouse</translation>
     </message>
@@ -5753,12 +5758,12 @@ is already in the list.</source>
         <translation>Intervallo del cursore</translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+119"/>
         <source>Cursor range for snap:</source>
         <translation>Intervallo del cursore per lo snap:</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="-64"/>
         <source>Cursor range for picking entities:</source>
         <translation>Intervallo del cursore per la selezione delle entità:</translation>
     </message>

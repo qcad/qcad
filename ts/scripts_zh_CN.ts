@@ -280,7 +280,7 @@
         <translation>绘图选项</translation>
     </message>
     <message>
-        <location line="+323"/>
+        <location line="+325"/>
         <source>Apply preferences</source>
         <translation>应用设置</translation>
     </message>
@@ -1312,13 +1312,13 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+490"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
         <source>Widgets</source>
         <translation type="unfinished">小工具</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+63"/>
+        <location line="+67"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>块列表</translation>
@@ -2831,7 +2831,7 @@ Do you wish to recover it?</source>
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+62"/>
+        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
         <source>No dimension entities with custom label positions selected.</source>
         <translation>没有选中具有自定义标签位置的标注实体。</translation>
     </message>
@@ -5743,17 +5743,22 @@ is already in the list.</source>
         <translation type="unfinished">游标范围</translation>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+55"/>
         <source>Cursor range for picking entities:</source>
         <translation type="unfinished">用于挑选实体的光标范围：</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+64"/>
         <source>Cursor range for snap:</source>
         <translation type="unfinished">捕捉的光标范围：</translation>
     </message>
     <message>
         <location line="+7"/>
+        <source>Highlight (and raise) images within range</source>
+      <translation type="unfinished">突出显示（和提升）范围内的图像</translation>
+    </message>
+    <message>
+        <location line="-64"/>
         <source>Highlight entity within range</source>
         <translation type="unfinished">突出显示范围内的实体</translation>
     </message>
@@ -14518,3 +14523,4 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
+

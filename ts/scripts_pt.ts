@@ -280,7 +280,7 @@
         <translation>Preferências do Desenho</translation>
     </message>
     <message>
-        <location line="+323"/>
+        <location line="+325"/>
         <source>Apply preferences</source>
         <translation>Aplicar preferências</translation>
     </message>
@@ -1314,14 +1314,14 @@ Você deseja recuperá-lo?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+490"/>
-        <location line="+63"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
+        <location line="+67"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>Lista de blocos</translation>
     </message>
     <message>
-        <location line="-106"/>
+        <location line="-110"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -2833,7 +2833,7 @@ Você deseja recuperá-lo?</translation>
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+62"/>
+        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
         <source>No dimension entities with custom label positions selected.</source>
         <translation>Sem entidades de cota com posições de etiqueta personalizadas seleccionadas.</translation>
     </message>
@@ -5728,12 +5728,17 @@ já se encontra na lista.</translation>
         <translation>Ocultar atributos quando as referências de blocos estão escondidos</translation>
     </message>
     <message>
-        <location line="+126"/>
+        <location line="+72"/>
         <source>Highlight entity within range</source>
         <translation>Realçar entidade dentro do intervalo</translation>
     </message>
     <message>
-        <location line="-259"/>
+        <location line="+64"/>
+        <source>Highlight (and raise) images within range</source>
+        <translation>Destacar (e aumentar) imagens dentro do alcance</translation>
+    </message>
+    <message>
+        <location line="-269"/>
         <source>Right-Click</source>
         <translation>Clique do Botão Direito</translation>
     </message>
@@ -5753,12 +5758,12 @@ já se encontra na lista.</translation>
         <translation>Limites do Cursor</translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+119"/>
         <source>Cursor range for snap:</source>
         <translation>Limites do cursor para salto:</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="-64"/>
         <source>Cursor range for picking entities:</source>
         <translation>Limites do cursor para escolher entidades:</translation>
     </message>

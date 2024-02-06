@@ -280,7 +280,7 @@
         <translation>Nastavitve risbe</translation>
     </message>
     <message>
-        <location line="+323"/>
+        <location line="+325"/>
         <source>Apply preferences</source>
         <translation>Uveljavi nastavitve</translation>
     </message>
@@ -1314,14 +1314,14 @@ Ali jo želite obnoviti?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+490"/>
-        <location line="+63"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
+        <location line="+67"/>
         <location line="+43"/>
         <source>Block List</source>
         <translation>Seznam blokov</translation>
     </message>
     <message>
-        <location line="-106"/>
+        <location line="-110"/>
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>
@@ -2833,7 +2833,7 @@ Ali jo želite obnoviti?</translation>
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+62"/>
+        <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
         <source>No dimension entities with custom label positions selected.</source>
         <translation>Ni izbrana nobena kotirna entiteta z prilagojeno lokacijo napisa.</translation>
     </message>
@@ -5734,12 +5734,17 @@ je že na seznamu.</translation>
         <translation>Skrij atribute, ko so skrite blokovne reference</translation>
     </message>
     <message>
-        <location line="+126"/>
+        <location line="+72"/>
         <source>Highlight entity within range</source>
         <translation>Označi entiteto znotraj območja</translation>
     </message>
     <message>
-        <location line="-259"/>
+        <location line="+64"/>
+        <source>Highlight (and raise) images within range</source>
+      <translation type="unfinished">Izrazite (in povečajte) slike v območju</translation>
+    </message>
+    <message>
+        <location line="-269"/>
         <source>Right-Click</source>
         <translation>Desni klik</translation>
     </message>
@@ -5759,12 +5764,12 @@ je že na seznamu.</translation>
         <translation>Območje kurzorja</translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+119"/>
         <source>Cursor range for snap:</source>
         <translation>Območje kurzorja za lepljenje:</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="-64"/>
         <source>Cursor range for picking entities:</source>
         <translation>Območje kurzorja za izbor entitet:</translation>
     </message>
@@ -14544,3 +14549,4 @@ je že na seznamu.</translation>
     </message>
 </context>
 </TS>
+
