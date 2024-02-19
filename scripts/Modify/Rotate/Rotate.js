@@ -154,6 +154,10 @@ Rotate.prototype.pickCoordinate = function(event, preview) {
                     di.setRelativeZero(this.centerPoint);
                     this.terminate();
                 }
+                else {
+                    EAction.handleUserWarning(qsTr("Invalid rotation angle"));
+                    this.terminate();
+                }
             }
         }
         break;

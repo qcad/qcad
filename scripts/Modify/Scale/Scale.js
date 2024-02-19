@@ -164,6 +164,10 @@ Scale.prototype.pickCoordinate = function(event, preview) {
                     di.applyOperation(op);
                     this.terminate();
                 }
+                else {
+                    EAction.handleUserWarning(qsTr("Invalid scale factor"));
+                    this.terminate();
+                }
             }
 
             di.setRelativeZero(this.focusPoint);
