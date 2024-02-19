@@ -5762,7 +5762,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) images within range</source>
-      <translation type="unfinished">Izcelt (un paaugstināt) attēlus diapazonā</translation>
+        <translation type="unfinished">Izcelt (un paaugstināt) attēlus diapazonā</translation>
     </message>
     <message>
         <location line="-64"/>
@@ -10522,6 +10522,11 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Mērķa punkts</translation>
     </message>
     <message>
+        <location line="+62"/>
+        <source>Invalid rotation angle</source>
+      <translation type="unfinished">Nederīgs rotācijas leņķis</translation>
+    </message>
+    <message>
         <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
         <source>Copy</source>
         <translation type="unfinished">Kopēt</translation>
@@ -10944,6 +10949,11 @@ jau ir sarakstā.</translation>
         <location line="+10"/>
         <source>Target point</source>
         <translation type="unfinished">Mērķa punkts</translation>
+    </message>
+    <message>
+        <location line="+66"/>
+        <source>Invalid scale factor</source>
+      <translation type="unfinished">Nederīgs mēroga koeficients</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>

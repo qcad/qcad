@@ -5755,7 +5755,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) images within range</source>
-      <translation type="unfinished">범위 내 이미지 강조 표시(및 올리기)</translation>
+        <translation type="unfinished">범위 내 이미지 강조 표시(및 올리기)</translation>
     </message>
     <message>
         <location line="-64"/>
@@ -10511,6 +10511,11 @@ is already in the list.</source>
         <translation type="unfinished">목표 지점</translation>
     </message>
     <message>
+        <location line="+62"/>
+        <source>Invalid rotation angle</source>
+      <translation type="unfinished">잘못된 회전 각도</translation>
+    </message>
+    <message>
         <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
         <source>Copy</source>
         <translation type="unfinished">복사</translation>
@@ -10933,6 +10938,11 @@ is already in the list.</source>
         <location line="+10"/>
         <source>Target point</source>
         <translation type="unfinished">목표 지점</translation>
+    </message>
+    <message>
+        <location line="+66"/>
+        <source>Invalid scale factor</source>
+      <translation type="unfinished">잘못된 배율 계수</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>

@@ -10511,6 +10511,11 @@ finns redan i listan.</translation>
         <translation>Målpunkt</translation>
     </message>
     <message>
+        <location line="+62"/>
+        <source>Invalid rotation angle</source>
+      <translation type="unfinished">Ogiltig rotationsvinkel</translation>
+    </message>
+    <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
         <source>&amp;Rotate</source>
         <translation>Rotera</translation>
@@ -10933,6 +10938,11 @@ finns redan i listan.</translation>
         <location line="+10"/>
         <source>Target point</source>
         <translation>Målpunkt</translation>
+    </message>
+    <message>
+        <location line="+66"/>
+        <source>Invalid scale factor</source>
+      <translation type="unfinished">Ogiltig skalfaktor</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
@@ -14531,3 +14541,4 @@ finns redan i listan.</translation>
     </message>
 </context>
 </TS>
+

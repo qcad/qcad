@@ -5760,7 +5760,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) images within range</source>
-      <translation type="unfinished">Fremheve (og heve) bilder innenfor rekkevidde</translation>
+        <translation type="unfinished">Fremheve (og heve) bilder innenfor rekkevidde</translation>
     </message>
     <message>
         <location line="-64"/>
@@ -10518,6 +10518,11 @@ er allerede i listen.</translation>
         <translation type="unfinished">Målpunkt</translation>
     </message>
     <message>
+        <location line="+62"/>
+        <source>Invalid rotation angle</source>
+      <translation type="unfinished">Ugyldig rotasjonsvinkel</translation>
+    </message>
+    <message>
         <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
         <source>Copy</source>
         <translation type="unfinished">Kopi</translation>
@@ -10940,6 +10945,11 @@ er allerede i listen.</translation>
         <location line="+10"/>
         <source>Target point</source>
         <translation type="unfinished">Målpunkt</translation>
+    </message>
+    <message>
+        <location line="+66"/>
+        <source>Invalid scale factor</source>
+      <translation type="unfinished">Ugyldig skaleringsfaktor</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>

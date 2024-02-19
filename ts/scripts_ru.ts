@@ -5740,7 +5740,7 @@ is already in the list.</source>
     <message>
         <location line="+64"/>
         <source>Highlight (and raise) images within range</source>
-      <translation type="unfinished">Выделяйте (и поднимайте) изображения в пределах досягаемости</translation>
+        <translation type="unfinished">Выделяйте (и поднимайте) изображения в пределах досягаемости</translation>
     </message>
     <message>
         <location line="-269"/>
@@ -10520,6 +10520,11 @@ is already in the list.</source>
         <translation>Точка назначения</translation>
     </message>
     <message>
+        <location line="+62"/>
+        <source>Invalid rotation angle</source>
+      <translation type="unfinished">Недопустимый угол поворота</translation>
+    </message>
+    <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
         <source>&amp;Rotate</source>
         <translation>&amp;Вращение</translation>
@@ -10942,6 +10947,11 @@ is already in the list.</source>
         <location line="+10"/>
         <source>Target point</source>
         <translation>Точка назначения</translation>
+    </message>
+    <message>
+        <location line="+66"/>
+        <source>Invalid scale factor</source>
+      <translation type="unfinished">Недопустимый масштабный коэффициент</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>

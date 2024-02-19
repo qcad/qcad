@@ -10513,6 +10513,11 @@ est déjà dans la liste.</translation>
         <translation>Point cible</translation>
     </message>
     <message>
+        <location line="+62"/>
+        <source>Invalid rotation angle</source>
+      <translation type="unfinished">Angle de rotation non valide</translation>
+    </message>
+    <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
         <source>&amp;Rotate</source>
         <translation>&amp;Rotation</translation>
@@ -10935,6 +10940,11 @@ est déjà dans la liste.</translation>
         <location line="+10"/>
         <source>Target point</source>
         <translation>Point cible</translation>
+    </message>
+    <message>
+        <location line="+66"/>
+        <source>Invalid scale factor</source>
+      <translation type="unfinished">Facteur d'échelle non valide</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
@@ -14533,3 +14543,4 @@ est déjà dans la liste.</translation>
     </message>
 </context>
 </TS>
+

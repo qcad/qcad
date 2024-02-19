@@ -10518,6 +10518,11 @@ er allerede på listen.</translation>
         <translation>Målpunkt</translation>
     </message>
     <message>
+        <location line="+62"/>
+        <source>Invalid rotation angle</source>
+      <translation type="unfinished">Ugyldig rotationsvinkel</translation>
+    </message>
+    <message>
         <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
         <source>Copy</source>
         <translation>Kopier</translation>
@@ -10940,6 +10945,11 @@ er allerede på listen.</translation>
         <location line="+10"/>
         <source>Target point</source>
         <translation>Målpunkt</translation>
+    </message>
+    <message>
+        <location line="+66"/>
+        <source>Invalid scale factor</source>
+      <translation type="unfinished">Ugyldig skalafaktor</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>
@@ -14533,3 +14543,4 @@ er allerede på listen.</translation>
     </message>
 </context>
 </TS>
+

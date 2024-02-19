@@ -10513,6 +10513,11 @@ is al in de lijst.</translation>
         <translation>Bestemmingspunt</translation>
     </message>
     <message>
+        <location line="+62"/>
+        <source>Invalid rotation angle</source>
+      <translation type="unfinished">Ongeldige rotatiehoek</translation>
+    </message>
+    <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
         <source>&amp;Rotate</source>
         <translation>&amp;Roteren</translation>
@@ -10935,6 +10940,11 @@ is al in de lijst.</translation>
         <location line="+10"/>
         <source>Target point</source>
         <translation>Bestemmingspunt</translation>
+    </message>
+    <message>
+        <location line="+66"/>
+        <source>Invalid scale factor</source>
+      <translation type="unfinished">Ongeldige schaalfactor</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
@@ -14533,3 +14543,4 @@ is al in de lijst.</translation>
     </message>
 </context>
 </TS>
+

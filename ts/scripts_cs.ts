@@ -5758,7 +5758,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) images within range</source>
-      <translation type="unfinished">Zvýraznění (a zvednutí) obrázků v dosahu</translation>
+        <translation type="unfinished">Zvýraznění (a zvednutí) obrázků v dosahu</translation>
     </message>
     <message>
         <location line="-64"/>
@@ -10518,6 +10518,11 @@ již v seznamu je.</translation>
         <translation>Cílový bod</translation>
     </message>
     <message>
+        <location line="+62"/>
+        <source>Invalid rotation angle</source>
+      <translation type="unfinished">Nesprávný úhel natočení</translation>
+    </message>
+    <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
         <source>&amp;Rotate</source>
         <translation>&amp;Natočit</translation>
@@ -10940,6 +10945,11 @@ již v seznamu je.</translation>
         <location line="+10"/>
         <source>Target point</source>
         <translation>Cílový bod</translation>
+    </message>
+    <message>
+        <location line="+66"/>
+        <source>Invalid scale factor</source>
+      <translation type="unfinished">Nesprávný faktor měřítka</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>

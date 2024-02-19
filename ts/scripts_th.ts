@@ -10506,6 +10506,11 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location line="+62"/>
+        <source>Invalid rotation angle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
         <source>Copy</source>
         <translation type="unfinished"></translation>
@@ -10927,6 +10932,11 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Target point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+66"/>
+        <source>Invalid scale factor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

@@ -5762,7 +5762,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) images within range</source>
-      <translation type="unfinished">Виділення (і підняття) зображень у межах діапазону</translation>
+        <translation type="unfinished">Виділення (і підняття) зображень у межах діапазону</translation>
     </message>
     <message>
         <location line="-64"/>
@@ -10522,6 +10522,11 @@ is already in the list.</source>
         <translation type="unfinished">Цільова точка</translation>
     </message>
     <message>
+        <location line="+62"/>
+        <source>Invalid rotation angle</source>
+      <translation type="unfinished">Неправильний кут повороту</translation>
+    </message>
+    <message>
         <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
         <source>Copy</source>
         <translation type="unfinished">Прийом</translation>
@@ -10944,6 +10949,11 @@ is already in the list.</source>
         <location line="+10"/>
         <source>Target point</source>
         <translation type="unfinished">Цільова точка</translation>
+    </message>
+    <message>
+        <location line="+66"/>
+        <source>Invalid scale factor</source>
+      <translation type="unfinished">Неправильний масштабний коефіцієнт</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>

@@ -10513,6 +10513,11 @@ já se encontra na lista.</translation>
         <translation>Ponto de destino</translation>
     </message>
     <message>
+        <location line="+62"/>
+        <source>Invalid rotation angle</source>
+      <translation type="unfinished">Ângulo de rotação inválido</translation>
+    </message>
+    <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
         <source>&amp;Rotate</source>
         <translation>&amp;Rodar</translation>
@@ -10935,6 +10940,11 @@ já se encontra na lista.</translation>
         <location line="+10"/>
         <source>Target point</source>
         <translation>Ponto de destino</translation>
+    </message>
+    <message>
+        <location line="+66"/>
+        <source>Invalid scale factor</source>
+      <translation type="unfinished">Fator de escala inválido</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
@@ -14533,3 +14543,4 @@ já se encontra na lista.</translation>
     </message>
 </context>
 </TS>
+

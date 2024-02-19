@@ -5755,7 +5755,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) images within range</source>
-      <translation type="unfinished">突出显示（和提升）范围内的图像</translation>
+        <translation type="unfinished">突出显示（和提升）范围内的图像</translation>
     </message>
     <message>
         <location line="-64"/>
@@ -10506,6 +10506,11 @@ is already in the list.</source>
         <translation type="unfinished">目标点</translation>
     </message>
     <message>
+        <location line="+62"/>
+        <source>Invalid rotation angle</source>
+      <translation type="unfinished">旋转角度无效</translation>
+    </message>
+    <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
         <source>&amp;Rotate</source>
         <translation type="unfinished">旋转</translation>
@@ -10928,6 +10933,11 @@ is already in the list.</source>
         <location line="+10"/>
         <source>Target point</source>
         <translation type="unfinished">目标点</translation>
+    </message>
+    <message>
+        <location line="+66"/>
+        <source>Invalid scale factor</source>
+      <translation type="unfinished">比例系数无效</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>

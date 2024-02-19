@@ -5751,7 +5751,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) images within range</source>
-      <translation type="unfinished">Kauguses olevate piltide esiletõstmine (ja tõstmine)</translation>
+        <translation type="unfinished">Kauguses olevate piltide esiletõstmine (ja tõstmine)</translation>
     </message>
     <message>
         <location line="-64"/>
@@ -10509,6 +10509,11 @@ is already in the list.</source>
         <translation type="unfinished">Sihtpunkt</translation>
     </message>
     <message>
+        <location line="+62"/>
+        <source>Invalid rotation angle</source>
+      <translation type="unfinished">Vale pöördenurk</translation>
+    </message>
+    <message>
         <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
         <source>Copy</source>
         <translation type="unfinished">Koopia</translation>
@@ -10931,6 +10936,11 @@ is already in the list.</source>
         <location line="+10"/>
         <source>Target point</source>
         <translation type="unfinished">Sihtpunkt</translation>
+    </message>
+    <message>
+        <location line="+66"/>
+        <source>Invalid scale factor</source>
+      <translation type="unfinished">Vale skaalategur</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>

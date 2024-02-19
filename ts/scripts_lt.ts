@@ -5762,7 +5762,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) images within range</source>
-      <translation type="unfinished">Išryškinkite (ir pakelkite) vaizdus, esančius diapazone</translation>
+        <translation type="unfinished">Išryškinkite (ir pakelkite) vaizdus, esančius diapazone</translation>
     </message>
     <message>
         <location line="-64"/>
@@ -10517,6 +10517,11 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Tikslinis taškas</translation>
     </message>
     <message>
+        <location line="+62"/>
+        <source>Invalid rotation angle</source>
+      <translation type="unfinished">Neteisingas pasukimo kampas</translation>
+    </message>
+    <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
         <source>&amp;Rotate</source>
         <translation type="unfinished">Pasukite</translation>
@@ -10939,6 +10944,11 @@ jau yra sąraše.</translation>
         <location line="+10"/>
         <source>Target point</source>
         <translation type="unfinished">Tikslinis taškas</translation>
+    </message>
+    <message>
+        <location line="+66"/>
+        <source>Invalid scale factor</source>
+      <translation type="unfinished">Netinkamas mastelio koeficientas</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>

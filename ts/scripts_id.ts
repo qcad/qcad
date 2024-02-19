@@ -5755,7 +5755,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) images within range</source>
-      <translation type="unfinished">Menyorot (dan membesarkan) gambar dalam jangkauan</translation>
+        <translation type="unfinished">Menyorot (dan membesarkan) gambar dalam jangkauan</translation>
     </message>
     <message>
         <location line="-64"/>
@@ -10511,6 +10511,11 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Titik target</translation>
     </message>
     <message>
+        <location line="+62"/>
+        <source>Invalid rotation angle</source>
+      <translation type="unfinished">Sudut rotasi tidak valid</translation>
+    </message>
+    <message>
         <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
         <source>Copy</source>
         <translation type="unfinished">Salin</translation>
@@ -10933,6 +10938,11 @@ sudah ada dalam daftar.</translation>
         <location line="+10"/>
         <source>Target point</source>
         <translation type="unfinished">Titik target</translation>
+    </message>
+    <message>
+        <location line="+66"/>
+        <source>Invalid scale factor</source>
+      <translation type="unfinished">Faktor skala tidak valid</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>

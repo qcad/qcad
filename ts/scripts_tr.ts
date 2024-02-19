@@ -5754,7 +5754,7 @@ zaten listede.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) images within range</source>
-      <translation type="unfinished">Menzil içindeki görüntüleri vurgulayın (ve yükseltin)</translation>
+        <translation type="unfinished">Menzil içindeki görüntüleri vurgulayın (ve yükseltin)</translation>
     </message>
     <message>
         <location line="-64"/>
@@ -10505,6 +10505,11 @@ zaten listede.</translation>
         <translation type="unfinished">Hedef nokta</translation>
     </message>
     <message>
+        <location line="+62"/>
+        <source>Invalid rotation angle</source>
+      <translation type="unfinished">Geçersiz dönüş açısı</translation>
+    </message>
+    <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
         <source>&amp;Rotate</source>
         <translation type="unfinished">Döndür</translation>
@@ -10927,6 +10932,11 @@ zaten listede.</translation>
         <location line="+10"/>
         <source>Target point</source>
         <translation type="unfinished">Hedef nokta</translation>
+    </message>
+    <message>
+        <location line="+66"/>
+        <source>Invalid scale factor</source>
+      <translation type="unfinished">Geçersiz ölçek faktörü</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>

@@ -10518,6 +10518,11 @@ ist bereits in der Liste.</translation>
         <translation>Zielpunkt</translation>
     </message>
     <message>
+        <location line="+62"/>
+        <source>Invalid rotation angle</source>
+      <translation type="unfinished">Ungültiger Drehwinkel</translation>
+    </message>
+    <message>
         <location filename="../scripts/Modify/Rotate/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
         <translation>Dialog verwenden für Werkzeugoptionen</translation>
@@ -10940,6 +10945,11 @@ ist bereits in der Liste.</translation>
         <location line="+21"/>
         <source>Target point</source>
         <translation>Zielpunkt</translation>
+    </message>
+    <message>
+        <location line="+66"/>
+        <source>Invalid scale factor</source>
+      <translation type="unfinished">Ungültiger Skalierungsfaktor</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/PreferencesPage.ui" line="+17"/>
@@ -14533,3 +14543,4 @@ ist bereits in der Liste.</translation>
     </message>
 </context>
 </TS>
+

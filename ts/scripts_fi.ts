@@ -5755,7 +5755,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) images within range</source>
-      <translation type="unfinished">Korosta (ja nosta) kuvia kantaman sisällä</translation>
+        <translation type="unfinished">Korosta (ja nosta) kuvia kantaman sisällä</translation>
     </message>
     <message>
         <location line="-64"/>
@@ -10513,6 +10513,11 @@ on jo luettelossa.</translation>
         <translation>Kohdepiste</translation>
     </message>
     <message>
+        <location line="+62"/>
+        <source>Invalid rotation angle</source>
+      <translation type="unfinished">Väärä kiertokulma</translation>
+    </message>
+    <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
         <source>&amp;Rotate</source>
         <translation>&amp;Kierrä</translation>
@@ -10935,6 +10940,11 @@ on jo luettelossa.</translation>
         <location line="+10"/>
         <source>Target point</source>
         <translation>Kohdepiste</translation>
+    </message>
+    <message>
+        <location line="+66"/>
+        <source>Invalid scale factor</source>
+      <translation type="unfinished">Väärä mittakaavakerroin</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>

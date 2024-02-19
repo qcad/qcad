@@ -5730,7 +5730,7 @@ is already in the list.</source>
     <message>
         <location line="+64"/>
         <source>Highlight (and raise) images within range</source>
-      <translation type="unfinished">範囲内の画像をハイライトする（上げる</translation>
+        <translation type="unfinished">範囲内の画像をハイライトする（上げる</translation>
     </message>
     <message>
         <location line="-269"/>
@@ -10506,6 +10506,11 @@ is already in the list.</source>
         <translation>ターゲット点</translation>
     </message>
     <message>
+        <location line="+62"/>
+        <source>Invalid rotation angle</source>
+      <translation type="unfinished">無効な回転角度</translation>
+    </message>
+    <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
         <source>&amp;Rotate</source>
         <translation>&amp;R 回転</translation>
@@ -10928,6 +10933,11 @@ is already in the list.</source>
         <location line="+10"/>
         <source>Target point</source>
         <translation>ターゲット点</translation>
+    </message>
+    <message>
+        <location line="+66"/>
+        <source>Invalid scale factor</source>
+      <translation type="unfinished">無効なスケールファクター</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>

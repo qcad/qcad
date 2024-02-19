@@ -5762,7 +5762,7 @@ este deja în listă.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) images within range</source>
-      <translation type="unfinished">Evidențiați (și ridicați) imaginile din raza de acțiune</translation>
+        <translation type="unfinished">Evidențiați (și ridicați) imaginile din raza de acțiune</translation>
     </message>
     <message>
         <location line="-64"/>
@@ -10522,6 +10522,11 @@ este deja în listă.</translation>
         <translation type="unfinished">Punct țintă</translation>
     </message>
     <message>
+        <location line="+62"/>
+        <source>Invalid rotation angle</source>
+      <translation type="unfinished">Unghi de rotație invalid</translation>
+    </message>
+    <message>
         <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
         <source>Copy</source>
         <translation type="unfinished">Copiați</translation>
@@ -10944,6 +10949,11 @@ este deja în listă.</translation>
         <location line="+10"/>
         <source>Target point</source>
         <translation type="unfinished">Punct țintă</translation>
+    </message>
+    <message>
+        <location line="+66"/>
+        <source>Invalid scale factor</source>
+      <translation type="unfinished">Factor de scară invalid</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>

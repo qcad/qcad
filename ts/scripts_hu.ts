@@ -5755,7 +5755,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) images within range</source>
-      <translation type="unfinished">Kiemeli (és kiemeli) a képeket a hatótávolságon belül</translation>
+        <translation type="unfinished">Kiemeli (és kiemeli) a képeket a hatótávolságon belül</translation>
     </message>
     <message>
         <location line="-64"/>
@@ -10506,6 +10506,11 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Célpont</translation>
     </message>
     <message>
+        <location line="+62"/>
+        <source>Invalid rotation angle</source>
+      <translation type="unfinished">Érvénytelen forgatási szög</translation>
+    </message>
+    <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
         <source>&amp;Rotate</source>
         <translation type="unfinished">Forgassa el a</translation>
@@ -10928,6 +10933,11 @@ már szerepel a listában.</translation>
         <location line="+10"/>
         <source>Target point</source>
         <translation type="unfinished">Célpont</translation>
+    </message>
+    <message>
+        <location line="+66"/>
+        <source>Invalid scale factor</source>
+      <translation type="unfinished">Érvénytelen méretezési tényező</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>

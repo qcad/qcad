@@ -5758,7 +5758,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) images within range</source>
-      <translation type="unfinished">Επισημάνετε (και αναδείξτε) εικόνες εντός εμβέλειας</translation>
+        <translation type="unfinished">Επισημάνετε (και αναδείξτε) εικόνες εντός εμβέλειας</translation>
     </message>
     <message>
         <location line="-64"/>
@@ -10516,6 +10516,11 @@ is already in the list.</source>
         <translation type="unfinished">Σημείο-στόχος</translation>
     </message>
     <message>
+        <location line="+62"/>
+        <source>Invalid rotation angle</source>
+      <translation type="unfinished">Μη έγκυρη γωνία περιστροφής</translation>
+    </message>
+    <message>
         <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
         <source>Copy</source>
         <translation type="unfinished">Αντιγραφή</translation>
@@ -10938,6 +10943,11 @@ is already in the list.</source>
         <location line="+10"/>
         <source>Target point</source>
         <translation type="unfinished">Σημείο-στόχος</translation>
+    </message>
+    <message>
+        <location line="+66"/>
+        <source>Invalid scale factor</source>
+      <translation type="unfinished">Μη έγκυρος παράγοντας κλίμακας</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>

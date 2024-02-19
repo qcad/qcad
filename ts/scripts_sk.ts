@@ -5740,7 +5740,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+64"/>
         <source>Highlight (and raise) images within range</source>
-      <translation type="unfinished">Zvýraznenie (a zvýšenie) obrázkov v dosahu</translation>
+        <translation type="unfinished">Zvýraznenie (a zvýšenie) obrázkov v dosahu</translation>
     </message>
     <message>
         <location line="-269"/>
@@ -10520,6 +10520,11 @@ už existuje v zozname.</translation>
         <translation>Cieľový bod</translation>
     </message>
     <message>
+        <location line="+62"/>
+        <source>Invalid rotation angle</source>
+      <translation type="unfinished">Neplatný uhol otočenia</translation>
+    </message>
+    <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
         <source>&amp;Rotate</source>
         <translation>&amp;Otočiť</translation>
@@ -10942,6 +10947,11 @@ už existuje v zozname.</translation>
         <location line="+10"/>
         <source>Target point</source>
         <translation>Cieľový bod</translation>
+    </message>
+    <message>
+        <location line="+66"/>
+        <source>Invalid scale factor</source>
+      <translation type="unfinished">Neplatný faktor mierky</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
