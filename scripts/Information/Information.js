@@ -39,6 +39,8 @@ function Information(guiAction) {
     this.textHeight = 1.0;
     this.mathLineEdit = undefined;
     this.autoTerminate = false;
+    this.di = undefined;
+    this.doc = undefined;
 }
 
 Information.prototype = new EAction();
@@ -51,30 +53,30 @@ Information.prototype.beginEvent = function() {
         EAction.showCadToolBarPanel("InformationToolsPanel");
         this.terminate();
     }
+
+    this.di = this.getDocumentInterface();
+    this.doc = this.di.getDocument();
 };
 
 Information.prototype.formatLinearResult = function(distance) {
-    var document = this.getDocument();
-    if (isNull(document)) {
+    if (isNull(this.doc)) {
         return "";
     }
 
     // use preference for label precision:
-    return RUnit.getLabel(distance, document, RSettings.getIntValue("Info/Precision", -1));
+    return RUnit.getLabel(distance, this.doc, RSettings.getIntValue("Info/Precision", -1));
 };
 
 Information.prototype.formatAngularResult = function(angle) {
-    var document = this.getDocument();
-    if (isNull(document)) {
+    if (isNull(this.doc)) {
         return "";
     }
 
-    return document.formatAngle(angle);
+    return this.doc.formatAngle(angle);
 };
 
 Information.prototype.formatAreaResult = function(area, rounded) {
-    var document = this.getDocument();
-    if (isNull(document)) {
+    if (isNull(this.doc)) {
         return "";
     }
 
@@ -84,13 +86,13 @@ Information.prototype.formatAreaResult = function(area, rounded) {
     }
 
     var areaText;
-    if (document.getUnit()===RS.Inch) {
+    if (this.doc.getUnit()===RS.Inch) {
         var sqft = Math.floor(area/144);
         var sqin = area-sqft*144;
         return "%1 (= %2ft² %3in²)".arg(area).arg(sqft, 0, 'f', prec).arg(sqin, 0, 'f', prec);
     }
     else {
-        return RUnit.doubleToStringDec(parseFloat(area), prec, true, false, document.getDecimalSeparator());
+        return RUnit.doubleToStringDec(parseFloat(area), prec, true, false, this.doc.getDecimalSeparator());
         //return "%1".arg(area, 0, 'f', prec);
     }
 };
@@ -128,11 +130,19 @@ Information.prototype.addInfoLine = function(op, point1, point2, preview) {
         return;
     }
 
-    var di = this.getDocumentInterface();
-    var view = di.getLastKnownViewWithFocus();
+    RDebug.startTimer(7);
+
+    //RDebug.startTimer(8);
+    //var di = this.getDocumentInterface();
+    //RDebug.stopTimer(8, "get di");
+
+    RDebug.startTimer(8);
+    var view = this.di.getLastKnownViewWithFocus();
     view = getRGraphicsView(view);
+    RDebug.stopTimer(8, "get view");
 
     // line
+    RDebug.startTimer(8);
     var line = new RLine(point1, point2);
     var angle = line.getAngle();
     this.addShape(op, line, preview);
@@ -140,16 +150,25 @@ Information.prototype.addInfoLine = function(op, point1, point2, preview) {
     this.addMajorTick(op, view, point1, angle, preview);
     this.addMajorTick(op, view, point2, angle, preview);
     this.addGridTicks(op, view, point1, point2, preview);
+    RDebug.stopTimer(8, "add line");
     
     // label
+    RDebug.startTimer(8);
     var lengthText = this.formatLinearResult(line.getLength());
     //var lengthText = sprintf("%0.3f", line.getLength());
     view.clearTextLabels();
     this.addTextLabel(op, view, point2, lengthText, preview);
+    RDebug.stopTimer(8, "add text");
+
+    RDebug.stopTimer(7, "addInfoLine");
 };
 
 Information.prototype.addTextLabel = function(op, view, pos, text, preview) {
     var dx, dy;
+
+    if (isNull(this.doc)) {
+        return;
+    }
 
     if (preview) {
         dx = view.mapDistanceFromView(10);
@@ -166,15 +185,15 @@ Information.prototype.addTextLabel = function(op, view, pos, text, preview) {
         td.setText(text);
         td.setTextHeight(this.textHeight);
         td.setFontName("standard");
-        op.addObject(new RTextEntity(this.getDocument(), td));
+        op.addObject(new RTextEntity(this.doc, td));
     }
 };
 
 Information.prototype.addGridTicks = function(op, view, point1, point2, preview) {
-    var doc = this.getDocument();
+    //var doc = this.getDocument();
     var minV = new RVector(0.001, 0.001);
-    if (!isNull(doc)) {
-        var linearFormat = doc.getLinearFormat();
+    if (!isNull(this.doc)) {
+        var linearFormat = this.doc.getLinearFormat();
         if (linearFormat==RS.ArchitecturalStacked ||
             linearFormat==RS.FractionalStacked ||
             linearFormat==RS.Architectural ||
@@ -195,18 +214,22 @@ Information.prototype.addGridTicks = function(op, view, point1, point2, preview)
     var b = new RVector(gridSpacing.x, 0); // assuming equal spacing for x / y
     b = b.rotate(a);
     var num = Math.ceil(dv.getMagnitude2D() / gridSpacing.x);
-    for (var i = 1; i < num; ++i) {
-        c = b.operator_multiply(i);
-        this.addMinorTick(op, view, point1.operator_add(c), a, preview);
+    if (num<500) {
+        for (var i = 1; i < num; ++i) {
+            c = b.operator_multiply(i);
+            this.addMinorTick(op, view, point1.operator_add(c), a, preview);
+        }
     }
 
     // major ticks
     b = new RVector(metaGridSpacing.x, 0); // assuming equal spacing for x / y
     b = b.rotate(a);
     num = Math.ceil(dv.getMagnitude2D() / metaGridSpacing.x);
-    for (i = 1; i < num; ++i) {
-        c = b.operator_multiply(i);
-        this.addMajorTick(op, view, point1.operator_add(c), a, preview);
+    if (num<500) {
+        for (i = 1; i < num; ++i) {
+            c = b.operator_multiply(i);
+            this.addMajorTick(op, view, point1.operator_add(c), a, preview);
+        }
     }
 };
 
@@ -229,18 +252,20 @@ Information.prototype.addTick = function(op, view, p, length, angle, preview) {
 };
 
 Information.prototype.addShape = function(op, shape, preview) {
-    var di = this.getDocumentInterface();
+    if (isNull(this.doc)) {
+        return;
+    }
 
     if (preview) {
         var clr = RSettings.getColor("GraphicsViewColors/MeasurementToolsColor", new RColor(155,220,112));
         var brush = new QBrush();
         var lw = RLineweight.Weight000;
         var dashes = [];
-        di.addShapeToPreview(shape, clr, brush, lw, Qt.SolidLine.valueOf(), dashes);
+        this.di.addShapeToPreview(shape, clr, brush, lw, Qt.SolidLine.valueOf(), dashes);
     }
     else {
         if (!isNull(op)) {
-            var e = shapeToEntity(this.getDocument(), shape);
+            var e = shapeToEntity(this.doc, shape);
             if (!isNull(e)) {
                 op.addObject(e);
             }
@@ -304,9 +329,9 @@ Information.prototype.updateLineEdit = function(value) {
         return;
     }
 
-    var di = this.getDocumentInterface();
-    var doc = di.getDocument();
-    var varName = doc.addAutoVariable(value);
+    //var di = this.getDocumentInterface();
+    //var doc = di.getDocument();
+    var varName = this.doc.addAutoVariable(value);
 
     if (isOfType(lineEdit, RMathComboBox)) {
         lineEdit.lineEdit().insert(varName);
