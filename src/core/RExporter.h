@@ -95,7 +95,7 @@ public:
     RS::ProjectionRenderingHint getProjectionRenderingHint();
 
     //virtual RBox getClipRectangle() const;
-    void setClipping(bool on);
+    virtual void setClipping(bool on);
     bool getClipping() const;
 
     virtual void setPen(const QPen& pen);
@@ -242,6 +242,7 @@ public:
     virtual void exportImage(const RImageData& image, bool forceSelected = false);
     virtual QList<RPainterPath> exportText(const RTextBasedData& text, bool forceSelected = false);
     virtual void exportClipRectangle(const RBox& clipRectangle, bool forceSelected = false);
+    virtual void clearClipRectangles();
     virtual void exportTransform(const RTransform& t);
     virtual void exportEndTransform();
 

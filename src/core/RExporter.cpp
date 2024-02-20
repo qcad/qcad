@@ -1639,6 +1639,9 @@ void RExporter::exportClipRectangle(const RBox& clipRectangle, bool forceSelecte
     Q_UNUSED(forceSelected)
 }
 
+void RExporter::clearClipRectangles() {
+}
+
 void RExporter::exportTransform(const RTransform& t) {
     Q_UNUSED(t)
 }

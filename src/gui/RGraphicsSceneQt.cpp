@@ -853,6 +853,11 @@ void RGraphicsSceneQt::exportClipRectangle(const RBox& clipRectangle, bool force
     }
 }
 
+void RGraphicsSceneQt::clearClipRectangles() {
+    previewClipRectangles.clear();
+    clipRectangles.clear();
+}
+
 void RGraphicsSceneQt::exportTransform(const RTransform& t) {
     RExporter::exportTransform(t);
 

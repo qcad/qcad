@@ -104,6 +104,7 @@ public:
     virtual void exportImage(const RImageData& image, bool forceSelected = false);
     virtual QList<RPainterPath> exportText(const RTextBasedData& text, bool forceSelected = false);
     virtual void exportClipRectangle(const RBox& clipRectangles, bool forceSelected = false);
+    virtual void clearClipRectangles();
     virtual void exportTransform(const RTransform& t);
     virtual void exportEndTransform();
 
