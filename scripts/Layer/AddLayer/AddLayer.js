@@ -19,6 +19,9 @@
 
 include("scripts/Layer/Layer.js");
 include("../LayerDialog.js");
+if (!hasPlugin("PROTOOLS")) {
+    include("scripts/Pro/Widgets/LayerListPro/LayerListPro.js");
+}
 
 /**
  * \class AddLayer
@@ -50,7 +53,10 @@ AddLayer.prototype.beginEvent = function() {
     var di = this.getDocumentInterface();
     di.setCurrentLayer(this.layer);
 
-    // TODO: make new item the active, selected item
+    // make new item the active, selected item
+    if (!hasPlugin("PROTOOLS")) {
+        LayerListPro.selectCurrentLayer(di.getDocument());
+    }
 
     this.terminate();
 };
