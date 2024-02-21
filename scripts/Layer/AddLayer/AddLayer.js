@@ -19,7 +19,7 @@
 
 include("scripts/Layer/Layer.js");
 include("../LayerDialog.js");
-if (!hasPlugin("PROTOOLS")) {
+if (hasPlugin("PROTOOLS")) {
     include("scripts/Pro/Widgets/LayerListPro/LayerListPro.js");
 }
 
@@ -54,7 +54,7 @@ AddLayer.prototype.beginEvent = function() {
     di.setCurrentLayer(this.layer);
 
     // make new item the active, selected item
-    if (!hasPlugin("PROTOOLS")) {
+    if (hasPlugin("PROTOOLS")) {
         LayerListPro.selectCurrentLayer(di.getDocument());
     }
 
