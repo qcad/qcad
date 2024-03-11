@@ -327,6 +327,13 @@
         <expr_stmt><expr><name>alphaEnabled</name> = <name>on</name></expr>;</expr_stmt>
     }</block></function>
 
+    <function><type><name>double</name></type> <name>getDrawingScale</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>drawingScale</name></expr>;</return>
+    }</block></function>
+    <function><type><name>void</name></type> <name>setDrawingScale</name><parameter_list>(<param><decl><type><name>double</name></type> <name>s</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>drawingScale</name> = <name>s</name></expr>;</expr_stmt>
+    }</block></function>
+
     <function><type><name>QImage</name></type> <name>getGraphicsBufferWithPreview</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>graphicsBufferWithPreview</name></expr>;</return>
     }</block></function>

@@ -229,6 +229,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, exportClipRectangle, "exportClipRectangle");
             
+            REcmaHelper::registerFunction(&engine, proto, clearClipRectangles, "clearClipRectangles");
+            
             REcmaHelper::registerFunction(&engine, proto, exportTransform, "exportTransform");
             
             REcmaHelper::registerFunction(&engine, proto, exportEndTransform, "exportEndTransform");
@@ -6538,6 +6540,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaExporter::exportClipRectangle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::clearClipRectangles
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::clearClipRectangles", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::clearClipRectangles";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("clearClipRectangles", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->clearClipRectangles();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.clearClipRectangles().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::clearClipRectangles", context, engine);
             return result;
         }
          QScriptValue

@@ -96,7 +96,7 @@
     <function_decl><type><name><name>RS</name>::<name>ProjectionRenderingHint</name></name></type> <name>getProjectionRenderingHint</name><parameter_list>()</parameter_list>;</function_decl>
 
     <comment type="line">//virtual RBox getClipRectangle() const;</comment>
-    <function_decl><type><name>void</name></type> <name>setClipping</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setClipping</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>getClipping</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setPen</name><parameter_list>(<param><decl><type><name>const</name> <name>QPen</name>&amp;</type> <name>pen</name></decl></param>)</parameter_list>;</function_decl>
@@ -243,6 +243,7 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportImage</name><parameter_list>(<param><decl><type><name>const</name> <name>RImageData</name>&amp;</type> <name>image</name></decl></param>, <param><decl><type><name>bool</name></type> <name>forceSelected</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>exportText</name><parameter_list>(<param><decl><type><name>const</name> <name>RTextBasedData</name>&amp;</type> <name>text</name></decl></param>, <param><decl><type><name>bool</name></type> <name>forceSelected</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportClipRectangle</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>clipRectangle</name></decl></param>, <param><decl><type><name>bool</name></type> <name>forceSelected</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>clearClipRectangles</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportTransform</name><parameter_list>(<param><decl><type><name>const</name> <name>RTransform</name>&amp;</type> <name>t</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportEndTransform</name><parameter_list>()</parameter_list>;</function_decl>
 

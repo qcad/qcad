@@ -128,6 +128,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, exportClipRectangle, "exportClipRectangle");
             
+            REcmaHelper::registerFunction(&engine, proto, clearClipRectangles, "clearClipRectangles");
+            
             REcmaHelper::registerFunction(&engine, proto, exportTransform, "exportTransform");
             
             REcmaHelper::registerFunction(&engine, proto, exportEndTransform, "exportEndTransform");
@@ -2810,6 +2812,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsSceneQt::exportClipRectangle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsSceneQt::clearClipRectangles
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsSceneQt::clearClipRectangles", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsSceneQt::clearClipRectangles";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsSceneQt* self = 
+                        getSelf("clearClipRectangles", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->clearClipRectangles();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneQt.clearClipRectangles().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsSceneQt::clearClipRectangles", context, engine);
             return result;
         }
          QScriptValue

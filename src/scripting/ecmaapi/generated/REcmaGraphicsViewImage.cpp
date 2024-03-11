@@ -363,6 +363,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setAlphaEnabled, "setAlphaEnabled");
             
+            REcmaHelper::registerFunction(&engine, proto, getDrawingScale, "getDrawingScale");
+            
+            REcmaHelper::registerFunction(&engine, proto, setDrawingScale, "setDrawingScale");
+            
             REcmaHelper::registerFunction(&engine, proto, getGraphicsBufferWithPreview, "getGraphicsBufferWithPreview");
             
             REcmaHelper::registerFunction(&engine, proto, getLastKnownScreenPosition, "getLastKnownScreenPosition");
@@ -9387,6 +9391,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsViewImage::setAlphaEnabled", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::getDrawingScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::getDrawingScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::getDrawingScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("getDrawingScale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getDrawingScale();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.getDrawingScale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::getDrawingScale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::setDrawingScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::setDrawingScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::setDrawingScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("setDrawingScale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDrawingScale(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.setDrawingScale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::setDrawingScale", context, engine);
             return result;
         }
          QScriptValue

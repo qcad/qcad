@@ -78,6 +78,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getBoundingBox, "getBoundingBox");
             
+            REcmaHelper::registerFunction(&engine, proto, isValid, "isValid");
+            
             REcmaHelper::registerFunction(&engine, proto, getReferencePoints, "getReferencePoints");
             
             REcmaHelper::registerFunction(&engine, proto, moveReferencePoint, "moveReferencePoint");
@@ -485,6 +487,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimAlignedData::getBoundingBox", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimAlignedData::isValid
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimAlignedData::isValid", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimAlignedData::isValid";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimAlignedData* self = 
+                        getSelf("isValid", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isValid();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimAlignedData.isValid().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimAlignedData::isValid", context, engine);
             return result;
         }
          QScriptValue

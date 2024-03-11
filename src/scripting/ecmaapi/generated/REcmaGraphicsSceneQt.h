@@ -134,6 +134,9 @@
         exportClipRectangle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        clearClipRectangles
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         exportTransform
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -29,6 +29,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
+    <method name="isValid" cppName="isValid" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="getReferencePoints" cppName="getReferencePoints"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

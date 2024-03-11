@@ -262,6 +262,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
+    <method name="clearClipRectangles"
+    cppName="clearClipRectangles" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
     <method name="exportTransform" cppName="exportTransform"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

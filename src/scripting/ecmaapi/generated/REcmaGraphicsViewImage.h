@@ -457,6 +457,12 @@
         setAlphaEnabled
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getDrawingScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDrawingScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getGraphicsBufferWithPreview
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -514,6 +514,11 @@
             );
         
     
+      void clearClipRectangles(
+                
+            );
+        
+    
       void exportTransform(
                 const RTransform & t
             );
