@@ -326,6 +326,13 @@ public:
         alphaEnabled = on;
     }
 
+    double getDrawingScale() const {
+        return drawingScale;
+    }
+    void setDrawingScale(double s) {
+        drawingScale = s;
+    }
+
     QImage getGraphicsBufferWithPreview() const {
         return graphicsBufferWithPreview;
     }
