@@ -1816,7 +1816,6 @@ void RGraphicsViewImage::paintDrawableThread(RGraphicsViewWorker* worker, RGraph
 
     if (pen.style() != Qt::NoPen) {
         if (path.getPixelWidth()) {
-            qDebug("using pixel width");
             // use width of path pen:
             if (scene->getScreenBasedLinetypes() || path.getScreenBasedLinetype()) {
                 pen.setWidthF(pen.widthF());
@@ -1826,7 +1825,6 @@ void RGraphicsViewImage::paintDrawableThread(RGraphicsViewWorker* worker, RGraph
             }
         }
         else if (isPrinting()) {
-            qDebug("using printing line weight");
             if (hairlineMode) {
                 //pen.setWidthF(0.05 / drawingScale);
                 pen.setWidthF(0.0);
@@ -1835,13 +1833,10 @@ void RGraphicsViewImage::paintDrawableThread(RGraphicsViewWorker* worker, RGraph
             else {
                 // printing: always use real, scaled line weight, no matter
                 // how thin:
-                qDebug() << "w: " << pen.widthF();
-                qDebug() << "drawingScale: " << drawingScale;
                 pen.setWidthF(pen.widthF() / drawingScale);
             }
         }
         else if (isPrintPreview()) {
-            qDebug("using print preview line weight");
             if (!pen.isCosmetic()) {
                 // print preview: optimize thin lines to 0 (1 pixel):
                 if (pen.widthF() * getFactor() / drawingScale < 1.5) {
@@ -1860,7 +1855,6 @@ void RGraphicsViewImage::paintDrawableThread(RGraphicsViewWorker* worker, RGraph
             }
         }
         else {
-            qDebug("using normal line weight");
             if (!pen.isCosmetic()) {
                 // for display, ignore drawing scale and optimize
                 // thin lines to 0:
