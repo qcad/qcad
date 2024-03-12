@@ -26,6 +26,7 @@
 #include <QSharedPointer>
 
 #include "RDimStyleProxy.h"
+#include "RMath.h"
 
 class RDimRotatedEntity;
 class RDocument;

@@ -22,8 +22,11 @@
 
 #include "../core_global.h"
 
-#include "RLayer.h"
+#include <QList>
+#include <QString>
 
+class RDocument;
+class RLayer;
 
 /**
  * Proxy for advanced layer functionality. May be implemented
