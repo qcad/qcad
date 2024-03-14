@@ -143,6 +143,11 @@ for (var i=0; i<pageNames.length; i++) {
     PageSettings.paperSizes.push([pageNames[i], RS.getPageSize(pageNames[i]), RS.getPageSizeId(pageNames[i])]);
 }
 
+PageSettings.getPreferencesScope = function() {
+    // page settings apply to the current layout block:
+    return "block";
+};
+
 /**
  * Called when the user changed the drawing / global paper unit in another
  * preference page.
@@ -161,18 +166,41 @@ PageSettings.updatePaperUnit = function(unit) {
     PageSettings.widgets["OffsetXUnit"].text = unitSymbol;
     PageSettings.widgets["OffsetYUnit"].text = unitSymbol;
 
+    PageSettings.widgets["LeftMarginUnit"].text = unitSymbol;
+    PageSettings.widgets["RightMarginUnit"].text = unitSymbol;
+    PageSettings.widgets["TopMarginUnit"].text = unitSymbol;
+    PageSettings.widgets["BottomMarginUnit"].text = unitSymbol;
+
     PageSettings.updatePaperSize(PageSettings.widgets["PaperSizeName"].currentIndex);
 
     //PageSettings.widgets["PaperWidth"].setValue();
 };
 
-PageSettings.getPreferencesScope = function() {
-    // page settings apply to the current layout block:
-    return "block";
+PageSettings.getPaperUnit = function(document) {
+    // update unit symbols beside paper size and offset inputs:
+    var paperUnit;
+
+    if (!isNull(document)) {
+        paperUnit = Print.getPaperUnit(document);
+    }
+    else {
+        // no document: use default paper unit:
+        paperUnit = Print.getDefaultPaperUnit();
+    }
+
+    // paper unit might have been changed by user:
+    var unitCombo = objectFromPath("MainWindow::PaperUnit");
+    if (isComboBox(unitCombo)) {
+        paperUnit = unitCombo.itemData(unitCombo.currentIndex);
+    }
+
+    return paperUnit;
 };
 
 PageSettings.initPreferences = function(pageWidget, calledByPrefDialog, document) {
     var widgets = PageSettings.widgets = getWidgets(pageWidget);
+    var paperUnit = PageSettings.getPaperUnit(document);
+    PageSettings.updatePaperUnit(paperUnit);
 
     var unit;
 
@@ -209,6 +237,15 @@ PageSettings.initPreferences = function(pageWidget, calledByPrefDialog, document
     if (isComboBox(unitCombo)) {
         paperUnit = unitCombo.itemData(unitCombo.currentIndex);
     }
+
+    // set glue margins to printer margins
+    widgets["btSetToPrinterMargins"].clicked.connect(this, function() {
+        var paperUnit = PageSettings.getPaperUnit(document);
+        widgets["MarginLeft"].text = Print.getDefaultPrintMarginLeft(document, paperUnit).toFixed(2).replace(/\.?0+$/, "");;
+        widgets["MarginRight"].text = Print.getDefaultPrintMarginRight(document, paperUnit).toFixed(2).replace(/\.?0+$/, "");;
+        widgets["MarginTop"].text = Print.getDefaultPrintMarginTop(document, paperUnit).toFixed(2).replace(/\.?0+$/, "");;
+        widgets["MarginBottom"].text = Print.getDefaultPrintMarginBottom(document, paperUnit).toFixed(2).replace(/\.?0+$/, "");;
+    });
 
     PageSettings.updatePaperUnit(paperUnit);
 };
@@ -302,7 +339,52 @@ PageSettings.postInitPreferences = function(pageWidget, calledByPrefDialog, docu
         paperSizeNameCombo.currentIndex = index;
         paperSizeNameCombo.blockSignals(false);
     }
+
+    // backwards compatibility:
+    // margins used to be stored in multi page settings tab:
+    if (!isNull(document)) {
+        widgets["MarginLeft"].text = PageSettings.getValueAsString(document.getVariable("MultiPageSettings/GlueMarginsLeft", "0", true));
+        widgets["MarginRight"].text = PageSettings.getValueAsString(document.getVariable("MultiPageSettings/GlueMarginsRight", "0", true));
+        widgets["MarginTop"].text = PageSettings.getValueAsString(document.getVariable("MultiPageSettings/GlueMarginsTop", "0", true));
+        widgets["MarginBottom"].text = PageSettings.getValueAsString(document.getVariable("MultiPageSettings/GlueMarginsBottom", "0", true));
+    }
+    else {
+        widgets["MarginLeft"].text = PageSettings.getValueAsString(RSettings.getDoubleValue("MultiPageSettings/GlueMarginsLeft", 0));
+        widgets["MarginRight"].text = PageSettings.getValueAsString(RSettings.getDoubleValue("MultiPageSettings/GlueMarginsRight", 0));
+        widgets["MarginTop"].text = PageSettings.getValueAsString(RSettings.getDoubleValue("MultiPageSettings/GlueMarginsTop", 0));
+        widgets["MarginBottom"].text = PageSettings.getValueAsString(RSettings.getDoubleValue("MultiPageSettings/GlueMarginsBottom", 0));
+    }
 };
+
+PageSettings.getValueAsString = function(val) {
+    if (isString(val)) {
+        return val;
+    }
+    else {
+        return val.toFixed(2).replace(/\.?0+$/, "");
+    }
+};
+
+PageSettings.savePreferences = function(pageWidget, calledByPrefDialog, document) {
+    var leMarginLeft = pageWidget.findChild("MarginLeft");
+    var leMarginRight = pageWidget.findChild("MarginRight");
+    var leMarginTop = pageWidget.findChild("MarginTop");
+    var leMarginBottom = pageWidget.findChild("MarginBottom");
+
+    if (!isNull(document)) {
+        document.setVariable("MultiPageSettings/GlueMarginsLeft", leMarginLeft.text);
+        document.setVariable("MultiPageSettings/GlueMarginsRight", leMarginRight.text);
+        document.setVariable("MultiPageSettings/GlueMarginsTop", leMarginTop.text);
+        document.setVariable("MultiPageSettings/GlueMarginsBottom", leMarginBottom.text);
+    }
+    else {
+        RSettings.setValue("MultiPageSettings/GlueMarginsLeft", leMarginLeft.text);
+        RSettings.setValue("MultiPageSettings/GlueMarginsRight", leMarginRight.text);
+        RSettings.setValue("MultiPageSettings/GlueMarginsTop", leMarginTop.text);
+        RSettings.setValue("MultiPageSettings/GlueMarginsBottom", leMarginBottom.text);
+    }
+};
+
 
 /**
  * Called when paper name changed. Enables width/height edits if
@@ -386,18 +468,3 @@ PageSettings.update = function(paperUnitIndex, widgets) {
     widgets["PaperHeight"].text = ph.toFixed(2);
 };
 */
-
-//PageSettings.savePreferences = function(pageWidget, calledByPrefDialog, document) {
-    // page size enum is not stored automatically:
-    //var paperSizeNameCombo = pageWidget.findChild("PaperSizeName");
-
-    //var paperSizeEnum = paperSizeNameCombo.itemData(paperSizeNameCombo.currentIndex, Qt.UserRole);
-    //debugger;
-
-//    if (isNull(document)) {
-//        RSettings.setValue("PageSettings/PaperSizeEnum", paperSizeEnum);
-//    }
-//    else {
-//        document.setVariable("PageSettings/PaperSizeEnum", paperSizeEnum);
-//    }
-//}
