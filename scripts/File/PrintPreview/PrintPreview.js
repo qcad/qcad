@@ -473,6 +473,13 @@ PrintPreviewImpl.prototype.mouseMoveEvent = function(event) {
     }
 };
 
+PrintPreviewImpl.prototype.showPageSettings = function() {
+    var action = RGuiAction.getByScriptFile("scripts/Edit/DrawingPreferences/DrawingPreferences.js");
+    var appWin = EAction.getMainWindow();
+    appWin.setProperty("PreferencesPage", "PageSettings");
+    action.trigger();
+};
+
 /**
  * Reimplementation from EAction. Implements initialization of options
  * toolbar from member variables.
@@ -512,7 +519,11 @@ PrintPreviewImpl.prototype.showUiOptions = function(resume) {
     scaleCombo.blockSignals(false);
 
     var action = RGuiAction.getByScriptFile("scripts/Edit/DrawingPreferences/DrawingPreferences.js");
-    widgets["ShowMoreOptions"].setDefaultAction(action);
+    //widgets["ShowMoreOptions"].setDefaultAction(action);
+    widgets["ShowMoreOptions"].setIcon(new QIcon(autoPath("scripts/Edit/DrawingPreferences/DrawingPreferences.svg")));
+    widgets["ShowMoreOptions"].setToolTip(qsTr("Page Settings"));
+    widgets["ShowMoreOptions"].clicked.disconnect(this, this.showPageSettings);
+    widgets["ShowMoreOptions"].clicked.connect(this, this.showPageSettings);
 
     switch(Print.getColorMode(document)) {
     case RGraphicsView.FullColor:
@@ -1051,7 +1062,7 @@ PrintPreviewImpl.prototype.getPaperBox = function() {
 PrintPreviewImpl.prototype.slotAutoZoomToPage = function() {
     if (!isNull(this.view)) {
         var pBox = this.getPaperBox();
-        this.view.zoomTo(pBox, 10);
+        this.view.zoomTo(pBox, 50);
     }
 };
 
