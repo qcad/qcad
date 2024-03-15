@@ -342,11 +342,16 @@ void RGraphicsView::zoomTo(const RBox& window, int margin) {
         return;
     }
 
+    int m = margin;
+    if (RSettings::getHighResolutionGraphicsView()) {
+        m*=2;
+    }
+
     if (w>1.0e-6) {
-        f.x = (getWidth() - 2 * margin) / w;
+        f.x = (getWidth() - 2 * m) / w;
     }
     if (h>1.0e-6) {
-        f.y = (getHeight() - 2 * margin) / h;
+        f.y = (getHeight() - 2 * m) / h;
     }
 
     f.x = f.y = qMin(f.x, f.y);
