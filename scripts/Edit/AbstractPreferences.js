@@ -92,6 +92,7 @@ AbstractPreferences.fillTreeWidget = function(addOns, treeWidget, appPreferences
 
     var appWin = EAction.getMainWindow();
     var defaultPage = appWin.property("PreferencesPage");
+    appWin.setProperty("PreferencesPage", "");
 
     for (var i = 0; i < addOns.length; ++i) {
         var addOn = addOns[i];
