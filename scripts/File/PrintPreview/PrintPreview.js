@@ -473,7 +473,7 @@ PrintPreviewImpl.prototype.mouseMoveEvent = function(event) {
     }
 };
 
-PrintPreviewImpl.prototype.showPageSettings = function() {
+PrintPreviewImpl.showPageSettings = function() {
     var action = RGuiAction.getByScriptFile("scripts/Edit/DrawingPreferences/DrawingPreferences.js");
     var appWin = EAction.getMainWindow();
     appWin.setProperty("PreferencesPage", "PageSettings");
@@ -520,10 +520,23 @@ PrintPreviewImpl.prototype.showUiOptions = function(resume) {
 
     var action = RGuiAction.getByScriptFile("scripts/Edit/DrawingPreferences/DrawingPreferences.js");
     //widgets["ShowMoreOptions"].setDefaultAction(action);
-    widgets["ShowMoreOptions"].setIcon(new QIcon(autoPath("scripts/Edit/DrawingPreferences/DrawingPreferences.svg")));
-    widgets["ShowMoreOptions"].setToolTip(qsTr("Page Settings"));
-    widgets["ShowMoreOptions"].clicked.disconnect(this, this.showPageSettings);
-    widgets["ShowMoreOptions"].clicked.connect(this, this.showPageSettings);
+    if (isFunction(widgets["ShowMoreOptions"].setIcon)) {
+        widgets["ShowMoreOptions"].setIcon(new QIcon(autoPath("scripts/Edit/DrawingPreferences/DrawingPreferences.svg")));
+    }
+    else {
+        widgets["ShowMoreOptions"].icon = new QIcon(autoPath("scripts/Edit/DrawingPreferences/DrawingPreferences.svg"));
+    }
+    if (isFunction(widgets["ShowMoreOptions"].setToolTip)) {
+        widgets["ShowMoreOptions"].setToolTip(qsTr("Page Settings"));
+    }
+    else {
+        widgets["ShowMoreOptions"].toolTip = qsTr("Page Settings");
+    }
+    try {
+        widgets["ShowMoreOptions"].clicked.disconnect(PrintPreviewImpl.showPageSettings);
+    }
+    catch (e) {}
+    widgets["ShowMoreOptions"].clicked.connect(PrintPreviewImpl.showPageSettings);
 
     switch(Print.getColorMode(document)) {
     case RGraphicsView.FullColor:
