@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>652</width>
-    <height>518</height>
+    <width>699</width>
+    <height>512</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,18 +21,18 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>635</width>
-     <height>654</height>
+     <width>682</width>
+     <height>656</height>
     </rect>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout_4">
+   <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <widget class="QGroupBox" name="PageOrientation">
       <property name="title">
        <string>Page Orientation</string>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout">
-       <item>
+      <layout class="QGridLayout" name="gridLayout_5">
+       <item row="0" column="0">
         <widget class="QRadioButton" name="Portrait">
          <property name="text">
           <string>Portrait</string>
@@ -42,7 +42,20 @@
          </property>
         </widget>
        </item>
-       <item>
+       <item row="0" column="1" rowspan="2">
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>526</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="1" column="0">
         <widget class="QRadioButton" name="Landscape">
          <property name="text">
           <string>Landscape</string>
@@ -103,7 +116,7 @@
          </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>229</width>
+           <width>253</width>
            <height>20</height>
           </size>
          </property>
@@ -137,7 +150,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QGroupBox" name="groupBox">
+     <widget class="QGroupBox" name="Margins">
       <property name="title">
        <string>Margins</string>
       </property>
@@ -447,13 +460,6 @@
        <string>Miscellaneous</string>
       </property>
       <layout class="QGridLayout" name="gridLayout_3">
-       <item row="1" column="0">
-        <widget class="QLabel" name="label_3">
-         <property name="text">
-          <string>Point size (mm):</string>
-         </property>
-        </widget>
-       </item>
        <item row="0" column="0" colspan="2">
         <widget class="QCheckBox" name="ShowPaperBorders">
          <property name="text">
@@ -461,6 +467,13 @@
          </property>
          <property name="checked">
           <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Point size (mm):</string>
          </property>
         </widget>
        </item>
@@ -476,6 +489,19 @@
           <number>0</number>
          </property>
         </widget>
+       </item>
+       <item row="1" column="2">
+        <spacer name="horizontalSpacer_7">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>253</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
        </item>
       </layout>
      </widget>
