@@ -386,7 +386,7 @@ agar perubahan preferensi dapat diterapkan.</translation>
 <context>
     <name>AddLayer</name>
     <message>
-        <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+35"/>
+        <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+38"/>
         <source>Layer</source>
         <translation type="unfinished">Lapisan</translation>
     </message>
@@ -7402,7 +7402,7 @@ sudah ada dalam daftar.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+335"/>
+        <location filename="../scripts/Information/Information.js" line="+360"/>
         <source>Information Tools</source>
         <translation type="unfinished">Alat Informasi</translation>
     </message>
@@ -10513,7 +10513,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+62"/>
         <source>Invalid rotation angle</source>
-      <translation type="unfinished">Sudut rotasi tidak valid</translation>
+        <translation type="unfinished">Sudut rotasi tidak valid</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
@@ -10942,7 +10942,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+66"/>
         <source>Invalid scale factor</source>
-      <translation type="unfinished">Faktor skala tidak valid</translation>
+        <translation type="unfinished">Faktor skala tidak valid</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>
@@ -14533,4 +14533,3 @@ sudah ada dalam daftar.</translation>
     </message>
 </context>
 </TS>
-

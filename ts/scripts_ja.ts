@@ -391,7 +391,7 @@ QCADを再起動してください。</translation>
         <translation>&amp;A 画層追加</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+35"/>
+        <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+38"/>
         <source>Layer</source>
         <translation>レイヤー</translation>
     </message>
@@ -7402,7 +7402,7 @@ is already in the list.</source>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+335"/>
+        <location filename="../scripts/Information/Information.js" line="+360"/>
         <source>Information Tools</source>
         <translation>情報ツール</translation>
     </message>
@@ -10508,7 +10508,7 @@ is already in the list.</source>
     <message>
         <location line="+62"/>
         <source>Invalid rotation angle</source>
-      <translation type="unfinished">無効な回転角度</translation>
+        <translation type="unfinished">無効な回転角度</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
@@ -10937,7 +10937,7 @@ is already in the list.</source>
     <message>
         <location line="+66"/>
         <source>Invalid scale factor</source>
-      <translation type="unfinished">無効なスケールファクター</translation>
+        <translation type="unfinished">無効なスケールファクター</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
@@ -14533,4 +14533,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

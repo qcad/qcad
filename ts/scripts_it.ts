@@ -391,7 +391,7 @@ applicare le modifiche.</translation>
         <translation>&amp;Aggiungi livello</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+35"/>
+        <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+38"/>
         <source>Layer</source>
         <translation>Livello</translation>
     </message>
@@ -7407,7 +7407,7 @@ is already in the list.</source>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+335"/>
+        <location filename="../scripts/Information/Information.js" line="+360"/>
         <source>Information Tools</source>
         <translation>Strumenti informazione</translation>
     </message>
@@ -10515,7 +10515,7 @@ is already in the list.</source>
     <message>
         <location line="+62"/>
         <source>Invalid rotation angle</source>
-      <translation type="unfinished">Angolo di rotazione non valido</translation>
+        <translation type="unfinished">Angolo di rotazione non valido</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
@@ -10944,7 +10944,7 @@ is already in the list.</source>
     <message>
         <location line="+66"/>
         <source>Invalid scale factor</source>
-      <translation type="unfinished">Fattore di scala non valido</translation>
+        <translation type="unfinished">Fattore di scala non valido</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
@@ -14544,4 +14544,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

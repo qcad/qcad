@@ -391,7 +391,7 @@ aby wprowadzić zmiany preferencji.</translation>
         <translation type="unfinished">Dodaj warstwę</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+35"/>
+        <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+38"/>
         <source>Layer</source>
         <translation>Warstwa</translation>
     </message>
@@ -7412,7 +7412,7 @@ jest już na liście.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+335"/>
+        <location filename="../scripts/Information/Information.js" line="+360"/>
         <source>Information Tools</source>
         <translation type="unfinished">Narzędzia informacyjne</translation>
     </message>
@@ -10522,7 +10522,7 @@ jest już na liście.</translation>
     <message>
         <location line="+62"/>
         <source>Invalid rotation angle</source>
-      <translation type="unfinished">Nieprawidłowy kąt obrotu</translation>
+        <translation type="unfinished">Nieprawidłowy kąt obrotu</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
@@ -10951,7 +10951,7 @@ jest już na liście.</translation>
     <message>
         <location line="+66"/>
         <source>Invalid scale factor</source>
-      <translation type="unfinished">Nieprawidłowy współczynnik skali</translation>
+        <translation type="unfinished">Nieprawidłowy współczynnik skali</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
@@ -14553,4 +14553,3 @@ jest już na liście.</translation>
     </message>
 </context>
 </TS>
-

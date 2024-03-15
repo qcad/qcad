@@ -386,7 +386,7 @@ the preference changes to take effect.</source>
 <context>
     <name>AddLayer</name>
     <message>
-        <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+35"/>
+        <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+38"/>
         <source>Layer</source>
         <translation type="unfinished">레이어</translation>
     </message>
@@ -7402,7 +7402,7 @@ is already in the list.</source>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+335"/>
+        <location filename="../scripts/Information/Information.js" line="+360"/>
         <source>Information Tools</source>
         <translation type="unfinished">정보 도구</translation>
     </message>
@@ -10513,7 +10513,7 @@ is already in the list.</source>
     <message>
         <location line="+62"/>
         <source>Invalid rotation angle</source>
-      <translation type="unfinished">잘못된 회전 각도</translation>
+        <translation type="unfinished">잘못된 회전 각도</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
@@ -10942,7 +10942,7 @@ is already in the list.</source>
     <message>
         <location line="+66"/>
         <source>Invalid scale factor</source>
-      <translation type="unfinished">잘못된 배율 계수</translation>
+        <translation type="unfinished">잘못된 배율 계수</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>
@@ -14533,4 +14533,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-
