@@ -386,7 +386,7 @@ preferanseendringene skal tre i kraft.</translation>
 <context>
     <name>AddLayer</name>
     <message>
-        <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+35"/>
+        <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+38"/>
         <source>Layer</source>
         <translation type="unfinished">Lag</translation>
     </message>
@@ -7407,7 +7407,7 @@ er allerede i listen.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+335"/>
+        <location filename="../scripts/Information/Information.js" line="+360"/>
         <source>Information Tools</source>
         <translation type="unfinished">Informasjonsverktøy</translation>
     </message>
@@ -10520,7 +10520,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+62"/>
         <source>Invalid rotation angle</source>
-      <translation type="unfinished">Ugyldig rotasjonsvinkel</translation>
+        <translation type="unfinished">Ugyldig rotasjonsvinkel</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
@@ -10949,7 +10949,7 @@ er allerede i listen.</translation>
     <message>
         <location line="+66"/>
         <source>Invalid scale factor</source>
-      <translation type="unfinished">Ugyldig skaleringsfaktor</translation>
+        <translation type="unfinished">Ugyldig skaleringsfaktor</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>
@@ -14543,4 +14543,3 @@ er allerede i listen.</translation>
     </message>
 </context>
 </TS>
-

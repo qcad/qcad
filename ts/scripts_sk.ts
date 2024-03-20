@@ -386,7 +386,7 @@ musíte znovu spustiť QCAD.</translation>
 <context>
     <name>AddLayer</name>
     <message>
-        <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+35"/>
+        <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+38"/>
         <source>Layer</source>
         <translation>Vrstva</translation>
     </message>
@@ -7412,7 +7412,7 @@ už existuje v zozname.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+335"/>
+        <location filename="../scripts/Information/Information.js" line="+360"/>
         <source>Information Tools</source>
         <translation>Informačné nástroje</translation>
     </message>
@@ -10522,7 +10522,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+62"/>
         <source>Invalid rotation angle</source>
-      <translation type="unfinished">Neplatný uhol otočenia</translation>
+        <translation type="unfinished">Neplatný uhol otočenia</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
@@ -10951,7 +10951,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+66"/>
         <source>Invalid scale factor</source>
-      <translation type="unfinished">Neplatný faktor mierky</translation>
+        <translation type="unfinished">Neplatný faktor mierky</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
@@ -14553,4 +14553,3 @@ už existuje v zozname.</translation>
     </message>
 </context>
 </TS>
-

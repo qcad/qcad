@@ -391,7 +391,7 @@ pour appliquer les modifications.</translation>
         <translation>&amp;Ajouter un calque</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+35"/>
+        <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+38"/>
         <source>Layer</source>
         <translation>Calque</translation>
     </message>
@@ -7407,7 +7407,7 @@ est déjà dans la liste.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+335"/>
+        <location filename="../scripts/Information/Information.js" line="+360"/>
         <source>Information Tools</source>
         <translation>Outils d&apos;information</translation>
     </message>
@@ -10515,7 +10515,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+62"/>
         <source>Invalid rotation angle</source>
-      <translation type="unfinished">Angle de rotation non valide</translation>
+        <translation type="unfinished">Angle de rotation non valide</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
@@ -10944,7 +10944,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+66"/>
         <source>Invalid scale factor</source>
-      <translation type="unfinished">Facteur d'échelle non valide</translation>
+        <translation type="unfinished">Facteur d&apos;échelle non valide</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
@@ -14543,4 +14543,3 @@ est déjà dans la liste.</translation>
     </message>
 </context>
 </TS>
-

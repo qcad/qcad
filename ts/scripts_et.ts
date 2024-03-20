@@ -293,6 +293,7 @@
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+86"/>
@@ -384,7 +385,7 @@ the preference changes to take effect.</source>
 <context>
     <name>AddLayer</name>
     <message>
-        <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+35"/>
+        <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+38"/>
         <source>Layer</source>
         <translation type="unfinished">Kiht</translation>
     </message>
@@ -917,6 +918,7 @@ Do you wish to recover it/them?</source>
         <location line="+1"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+25"/>
@@ -3210,6 +3212,7 @@ Do you wish to recover it?</source>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -7398,7 +7401,7 @@ is already in the list.</source>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+335"/>
+        <location filename="../scripts/Information/Information.js" line="+360"/>
         <source>Information Tools</source>
         <translation type="unfinished">Teabevahendid</translation>
     </message>
@@ -10511,7 +10514,7 @@ is already in the list.</source>
     <message>
         <location line="+62"/>
         <source>Invalid rotation angle</source>
-      <translation type="unfinished">Vale pöördenurk</translation>
+        <translation type="unfinished">Vale pöördenurk</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
@@ -10940,7 +10943,7 @@ is already in the list.</source>
     <message>
         <location line="+66"/>
         <source>Invalid scale factor</source>
-      <translation type="unfinished">Vale skaalategur</translation>
+        <translation type="unfinished">Vale skaalategur</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>
@@ -11419,6 +11422,7 @@ is already in the list.</source>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
@@ -12631,6 +12635,7 @@ is already in the list.</source>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+21"/>
@@ -14530,4 +14535,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

@@ -391,7 +391,7 @@ asetuksien muutokset astuvat voimaan.</translation>
         <translation>&amp;Lisää taso</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+35"/>
+        <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+38"/>
         <source>Layer</source>
         <translation>Taso</translation>
     </message>
@@ -7407,7 +7407,7 @@ on jo luettelossa.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+335"/>
+        <location filename="../scripts/Information/Information.js" line="+360"/>
         <source>Information Tools</source>
         <translation>Tietotyökalut</translation>
     </message>
@@ -10515,7 +10515,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+62"/>
         <source>Invalid rotation angle</source>
-      <translation type="unfinished">Väärä kiertokulma</translation>
+        <translation type="unfinished">Väärä kiertokulma</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
@@ -10944,7 +10944,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+66"/>
         <source>Invalid scale factor</source>
-      <translation type="unfinished">Väärä mittakaavakerroin</translation>
+        <translation type="unfinished">Väärä mittakaavakerroin</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
@@ -14543,4 +14543,3 @@ on jo luettelossa.</translation>
     </message>
 </context>
 </TS>
-

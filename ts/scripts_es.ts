@@ -391,7 +391,7 @@ para aplicar los cambios.</translation>
         <translation>&amp;Añadir capa</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+35"/>
+        <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+38"/>
         <source>Layer</source>
         <translation>Capa</translation>
     </message>
@@ -7407,7 +7407,7 @@ ya está en la lista.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+335"/>
+        <location filename="../scripts/Information/Information.js" line="+360"/>
         <source>Information Tools</source>
         <translation>Herramientas de información</translation>
     </message>
@@ -10515,7 +10515,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+62"/>
         <source>Invalid rotation angle</source>
-      <translation type="unfinished">Ángulo de rotación no válido</translation>
+        <translation type="unfinished">Ángulo de rotación no válido</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
@@ -10944,7 +10944,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+66"/>
         <source>Invalid scale factor</source>
-      <translation type="unfinished">Factor de escala no válido</translation>
+        <translation type="unfinished">Factor de escala no válido</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
@@ -14543,4 +14543,3 @@ ya está en la lista.</translation>
     </message>
 </context>
 </TS>
-

@@ -391,7 +391,7 @@ um die Änderungen zu übernehmen.</translation>
         <translation>Layer &amp;hinzufügen</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+35"/>
+        <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+38"/>
         <source>Layer</source>
         <translation>Layer</translation>
     </message>
@@ -7407,7 +7407,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+361"/>
+        <location filename="../scripts/Information/Information.js" line="+386"/>
         <source>&amp;Info</source>
         <translation>&amp;Info</translation>
     </message>
@@ -10520,7 +10520,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+62"/>
         <source>Invalid rotation angle</source>
-      <translation type="unfinished">Ungültiger Drehwinkel</translation>
+        <translation type="unfinished">Ungültiger Drehwinkel</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/PreferencesPage.ui" line="+17"/>
@@ -10949,7 +10949,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+66"/>
         <source>Invalid scale factor</source>
-      <translation type="unfinished">Ungültiger Skalierungsfaktor</translation>
+        <translation type="unfinished">Ungültiger Skalierungsfaktor</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/PreferencesPage.ui" line="+17"/>
@@ -14543,4 +14543,3 @@ ist bereits in der Liste.</translation>
     </message>
 </context>
 </TS>
-

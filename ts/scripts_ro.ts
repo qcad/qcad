@@ -386,7 +386,7 @@ modificările preferințelor să intre în vigoare.</translation>
 <context>
     <name>AddLayer</name>
     <message>
-        <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+35"/>
+        <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+38"/>
         <source>Layer</source>
         <translation type="unfinished">Stratul</translation>
     </message>
@@ -7409,7 +7409,7 @@ este deja în listă.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+335"/>
+        <location filename="../scripts/Information/Information.js" line="+360"/>
         <source>Information Tools</source>
         <translation type="unfinished">Instrumente de informare</translation>
     </message>
@@ -10524,7 +10524,7 @@ este deja în listă.</translation>
     <message>
         <location line="+62"/>
         <source>Invalid rotation angle</source>
-      <translation type="unfinished">Unghi de rotație invalid</translation>
+        <translation type="unfinished">Unghi de rotație invalid</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
@@ -10953,7 +10953,7 @@ este deja în listă.</translation>
     <message>
         <location line="+66"/>
         <source>Invalid scale factor</source>
-      <translation type="unfinished">Factor de scară invalid</translation>
+        <translation type="unfinished">Factor de scară invalid</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>
@@ -14550,4 +14550,3 @@ este deja în listă.</translation>
     </message>
 </context>
 </TS>
-

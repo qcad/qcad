@@ -391,7 +391,7 @@ para que as mudanças de preferências entrem em vigor.</translation>
         <translation>&amp;Adicione uma Camada</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+35"/>
+        <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+38"/>
         <source>Layer</source>
         <translation>Camada</translation>
     </message>
@@ -7407,7 +7407,7 @@ já se encontra na lista.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+335"/>
+        <location filename="../scripts/Information/Information.js" line="+360"/>
         <source>Information Tools</source>
         <translation>Ferramentas de Informação</translation>
     </message>
@@ -10515,7 +10515,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+62"/>
         <source>Invalid rotation angle</source>
-      <translation type="unfinished">Ângulo de rotação inválido</translation>
+        <translation type="unfinished">Ângulo de rotação inválido</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
@@ -10944,7 +10944,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+66"/>
         <source>Invalid scale factor</source>
-      <translation type="unfinished">Fator de escala inválido</translation>
+        <translation type="unfinished">Fator de escala inválido</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
@@ -14543,4 +14543,3 @@ já se encontra na lista.</translation>
     </message>
 </context>
 </TS>
-

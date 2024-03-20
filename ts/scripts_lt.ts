@@ -386,7 +386,7 @@ nuostatos pakeitimai įsigaliotų.</translation>
 <context>
     <name>AddLayer</name>
     <message>
-        <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+35"/>
+        <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+38"/>
         <source>Layer</source>
         <translation type="unfinished">Sluoksnis</translation>
     </message>
@@ -7409,7 +7409,7 @@ jau yra sąraše.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+335"/>
+        <location filename="../scripts/Information/Information.js" line="+360"/>
         <source>Information Tools</source>
         <translation type="unfinished">Informacinės priemonės</translation>
     </message>
@@ -10519,7 +10519,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+62"/>
         <source>Invalid rotation angle</source>
-      <translation type="unfinished">Neteisingas pasukimo kampas</translation>
+        <translation type="unfinished">Neteisingas pasukimo kampas</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
@@ -10948,7 +10948,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="+66"/>
         <source>Invalid scale factor</source>
-      <translation type="unfinished">Netinkamas mastelio koeficientas</translation>
+        <translation type="unfinished">Netinkamas mastelio koeficientas</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
@@ -14550,4 +14550,3 @@ jau yra sąraše.</translation>
     </message>
 </context>
 </TS>
-
