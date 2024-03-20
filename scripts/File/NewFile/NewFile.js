@@ -530,10 +530,15 @@ NewFile.getDefaultActionClass = function() {
 /**
  * Returns new default action as configured in settings ("NewFile/DefaultAction")
  * or instance of DefaultAction.
+ *
+ * @param creatingProto True if we are creating a prototype for a derrived class.
  */
-NewFile.getDefaultAction = function(useGuiAction) {
+NewFile.getDefaultAction = function(useGuiAction, creatingProto) {
     if (isNull(useGuiAction)) {
         useGuiAction = true;
+    }
+    if (isNull(creatingProto)) {
+        creatingProto = false;
     }
 
     // set up default action:
@@ -545,8 +550,10 @@ NewFile.getDefaultAction = function(useGuiAction) {
     var defaultAction = undefined;
     if (typeof(global[defaultActionClass])!=="undefined") {
         defaultAction = new global[defaultActionClass](defaultGuiAction);
-        if (isFunction(global[defaultActionClass].init)) {
-            global[defaultActionClass].init();
+        if (!creatingProto) {
+            if (isFunction(global[defaultActionClass].init)) {
+                global[defaultActionClass].init();
+            }
         }
     }
     return defaultAction;
