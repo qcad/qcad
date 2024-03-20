@@ -65,10 +65,10 @@ CharacterMapDialog.prototype.show = function() {
         singleShot.start(250);
     });
 
-    var scrollArea = dlg.getChild("ScrollArea");
-    var bZoomIn = dlg.getChild("ZoomIn");
-    var bZoomOut = dlg.getChild("ZoomOut");
-    var sZoomSlider = dlg.getChild("ZoomSlider");
+    var scrollArea = dlg.findChild("ScrollArea");
+    var bZoomIn = dlg.findChild("ZoomIn");
+    var bZoomOut = dlg.findChild("ZoomOut");
+    var sZoomSlider = dlg.findChild("ZoomSlider");
 
     scrollArea.setWidget(characterMap);
     bZoomIn.clicked.connect(this, function() {
