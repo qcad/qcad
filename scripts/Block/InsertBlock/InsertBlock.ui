@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1025</width>
+    <width>955</width>
     <height>50</height>
    </rect>
   </property>
@@ -22,7 +22,7 @@
     <widget class="RMathComboBox" name="Rotation">
      <property name="minimumSize">
       <size>
-       <width>50</width>
+       <width>80</width>
        <height>0</height>
       </size>
      </property>
@@ -151,7 +151,7 @@
     <widget class="RMathComboBox" name="ScaleX">
      <property name="minimumSize">
       <size>
-       <width>50</width>
+       <width>80</width>
        <height>0</height>
       </size>
      </property>
@@ -241,7 +241,7 @@
      </property>
      <property name="minimumSize">
       <size>
-       <width>50</width>
+       <width>80</width>
        <height>0</height>
       </size>
      </property>
@@ -457,7 +457,7 @@
     <widget class="QLineEdit" name="AttributeValue">
      <property name="minimumSize">
       <size>
-       <width>50</width>
+       <width>80</width>
        <height>0</height>
       </size>
      </property>
