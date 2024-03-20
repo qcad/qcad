@@ -768,12 +768,12 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
                 }
             }
             if (!isNull(value)) {
-                index = c.findText(value);
+                index = c.findText(value.toString());
                 if (index !== -1) {
                     c.currentIndex = index;
                     continue;
                 }
-                c.setEditText(value);
+                c.setEditText(value.toString());
             }
             continue;
         }
