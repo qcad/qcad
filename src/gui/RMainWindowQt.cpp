@@ -18,6 +18,7 @@
  */
 #include <QtGui>
 //#include <QDesktopWidget>
+#include <QComboBox>
 #include <QLabel>
 #include <QLineEdit>
 #include <QMenu>
@@ -669,12 +670,18 @@ bool RMainWindowQt::event(QEvent* e) {
                         dynamic_cast<QToolButton*>(w)!=NULL) {
 
                         emit enterPressed();
+                        e->accept();
                     }
+                    else {
+                        // enter pressed in toolbar but NOT in a line edit:
+                        QWidget* parent = w->parentWidget();
+                        if (dynamic_cast<QToolBar*>(parent)!=NULL &&
+                            dynamic_cast<QLineEdit*>(w)==NULL &&
+                            dynamic_cast<QComboBox*>(w)==NULL) {
 
-                    // enter pressed in toolbar but NOT in a line edit:
-                    QWidget* parent = w->parentWidget();
-                    if (dynamic_cast<QToolBar*>(parent)!=NULL && dynamic_cast<QLineEdit*>(w)==NULL) {
-                        emit enterPressed();
+                            emit enterPressed();
+                            e->accept();
+                        }
                     }
                 }
             }
