@@ -65,31 +65,35 @@ CharacterMapDialog.prototype.show = function() {
         singleShot.start(250);
     });
 
-    var widgets = getWidgets(dlg);
-    widgets["ScrollArea"].setWidget(characterMap);
-    widgets["ZoomIn"].clicked.connect(this, function() {
+    var scrollArea = dlg.getChild("ScrollArea");
+    var bZoomIn = dlg.getChild("ZoomIn");
+    var bZoomOut = dlg.getChild("ZoomOut");
+    var sZoomSlider = dlg.getChild("ZoomSlider");
+
+    scrollArea.setWidget(characterMap);
+    bZoomIn.clicked.connect(this, function() {
         font = characterMap.getDisplayFont();
         pointSize = font.pointSize();
         ++pointSize;
         characterMap.updateSize(pointSize.toString());
-        this.updateSlider(widgets["ZoomSlider"], pointSize);
+        this.updateSlider(sZoomSlider, pointSize);
     });
-    widgets["ZoomOut"].clicked.connect(this, function() {
+    bZoomOut.clicked.connect(this, function() {
         font = characterMap.getDisplayFont();
         pointSize = font.pointSize();
         pointSize = Math.max(1, --pointSize);
         characterMap.updateSize(pointSize.toString());
-        this.updateSlider(widgets["ZoomSlider"], pointSize);
+        this.updateSlider(sZoomSlider, pointSize);
     });
-    widgets["ZoomSlider"].valueChanged.connect(this, function(value) {
+    sZoomSlider.valueChanged.connect(this, function(value) {
         pointSize = Math.max(1, Math.round(value / 2));
         characterMap.updateSize(pointSize.toString());
     });
 
     font = characterMap.getDisplayFont();
     pointSize = font.pointSize();
-    this.updateSlider(widgets["ZoomSlider"], pointSize);
-    widgets["ScrollArea"].setFocus(Qt.MouseFocusReason);
+    this.updateSlider(sZoomSlider, pointSize);
+    scrollArea.setFocus(Qt.MouseFocusReason);
     dlg.show();
 };
 
