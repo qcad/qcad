@@ -82,6 +82,13 @@ QStringList RPluginLoader::getPluginFiles() {
             break;
         }
     }
+    for (int i=0; i<pluginFiles.length(); i++) {
+        if (pluginFiles[i].contains("dwg")) {
+            QString pf = pluginFiles.takeAt(i);
+            pluginFiles.append(pf);
+            break;
+        }
+    }
 
     return pluginFiles;
 }
