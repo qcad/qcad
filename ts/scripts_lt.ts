@@ -1253,13 +1253,13 @@ Ar norite jį atkurti?</translation>
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../scripts/Block/BlockDialog.js" line="+81"/>
+        <location filename="../scripts/Block/BlockDialog.js" line="+80"/>
         <source>block</source>
         <comment>default block name prefix</comment>
         <translation type="unfinished">blokas</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+51"/>
         <source>Leading or trailing spaces.</source>
         <translation type="unfinished">Pradiniai arba galiniai tarpai.</translation>
     </message>
@@ -9508,32 +9508,32 @@ jau yra sąraše.</translation>
     <message>
         <location line="+27"/>
         <source>Margins</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Maržos</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Left:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kairėje pusėje:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Top:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Į viršų:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Right:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Teisė:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Bottom:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Apačioje:</translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Set to Printer Margins</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nustatyti į spausdintuvo paraštes</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -10023,7 +10023,7 @@ jau yra sąraše.</translation>
         <location line="+198"/>
         <location line="+3"/>
         <source>Page Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Puslapio nustatymai</translation>
     </message>
     <message>
         <location line="+276"/>

@@ -1253,13 +1253,13 @@ Vai vēlaties to atjaunot?</translation>
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../scripts/Block/BlockDialog.js" line="+81"/>
+        <location filename="../scripts/Block/BlockDialog.js" line="+80"/>
         <source>block</source>
         <comment>default block name prefix</comment>
         <translation type="unfinished">bloks</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+51"/>
         <source>Leading or trailing spaces.</source>
         <translation type="unfinished">Vadošās vai aizmugurējās atstarpes.</translation>
     </message>
@@ -9508,32 +9508,32 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+27"/>
         <source>Margins</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Maržas</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Left:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kreisajā pusē:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Top:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uz augšu:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Right:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tiesības:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Bottom:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Apakšējā daļa:</translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Set to Printer Margins</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Iestatīt uz Printer Margins</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -10023,7 +10023,7 @@ jau ir sarakstā.</translation>
         <location line="+198"/>
         <location line="+3"/>
         <source>Page Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lapas iestatījumi</translation>
     </message>
     <message>
         <location line="+276"/>

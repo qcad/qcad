@@ -1252,13 +1252,13 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../scripts/Block/BlockDialog.js" line="+81"/>
+        <location filename="../scripts/Block/BlockDialog.js" line="+80"/>
         <source>block</source>
         <comment>default block name prefix</comment>
         <translation type="unfinished">块</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+51"/>
         <source>Leading or trailing spaces.</source>
         <translation>前导或尾随空格。</translation>
     </message>
@@ -9497,32 +9497,32 @@ is already in the list.</source>
     <message>
         <location line="+27"/>
         <source>Margins</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">边缘</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Left:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">左边</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Top:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">顶部：</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Right:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">对</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Bottom:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">底部：</translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Set to Printer Margins</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">设置为打印机页边距</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -10012,7 +10012,7 @@ is already in the list.</source>
         <location line="+198"/>
         <location line="+3"/>
         <source>Page Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">页面设置</translation>
     </message>
     <message>
         <location line="+276"/>

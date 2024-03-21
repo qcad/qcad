@@ -1254,13 +1254,13 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../scripts/Block/BlockDialog.js" line="+81"/>
+        <location filename="../scripts/Block/BlockDialog.js" line="+80"/>
         <source>block</source>
         <comment>default block name prefix</comment>
         <translation>blok</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+51"/>
         <source>Leading or trailing spaces.</source>
         <translation>Foran eller bagud stående mellemrum.</translation>
     </message>

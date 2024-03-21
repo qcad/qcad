@@ -188,7 +188,7 @@
     <message>
         <location line="+169"/>
         <source>Licenses</source>
-        <translation type="unfinished">Lisenssit</translation>
+        <translation>Lisenssit</translation>
     </message>
     <message>
         <location filename="../scripts/Help/About/AboutInit.js" line="+2"/>
@@ -211,7 +211,7 @@
     <message>
         <location line="+31"/>
         <source>Themes</source>
-        <translation type="unfinished">Teemat</translation>
+        <translation>Teemat</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -264,7 +264,7 @@
     <message>
         <location line="+23"/>
         <source>Licenses</source>
-        <translation type="unfinished">Lisenssit</translation>
+        <translation>Lisenssit</translation>
     </message>
 </context>
 <context>
@@ -335,34 +335,34 @@ asetuksien muutokset astuvat voimaan.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/AddCentroidDialog.ui" line="+14"/>
         <source>Add  point mass 2D Centroid</source>
-        <translation type="unfinished">Pistemassan lisääminen 2D Centroid</translation>
+        <translation>Pistemassan lisääminen 2D Centroid</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Position Y:</source>
-        <translation type="unfinished">Asento Y:</translation>
+        <translation>Asento Y:</translation>
     </message>
     <message>
         <location line="+7"/>
         <location line="+7"/>
         <location line="+49"/>
         <source>0.00</source>
-        <translation type="unfinished">0.00</translation>
+        <translation>0.00</translation>
     </message>
     <message>
         <location line="-42"/>
         <source>Position X:</source>
-        <translation type="unfinished">Asema X:</translation>
+        <translation>Asema X:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Point mass:</source>
-        <translation type="unfinished">Pistemassa:</translation>
+        <translation>Pistemassa:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Reset to &apos;Undefined&apos;</source>
-        <translation type="unfinished">Nollaus &apos;Undefined&apos;</translation>
+        <translation>Nollaus &apos;Undefined&apos;</translation>
     </message>
 </context>
 <context>
@@ -1041,13 +1041,13 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2Pdf.js" line="+30"/>
         <source>Export to PDF</source>
-        <translation type="unfinished">Vie PDF-tiedostoksi</translation>
+        <translation>Vie PDF-tiedostoksi</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
         <location line="+3"/>
         <source>&amp;Batch2Pdf visible layout blocks</source>
-        <translation type="unfinished">Batch2Pdf näkyvät ulkoasulohkot</translation>
+        <translation>Batch2Pdf näkyvät ulkoasulohkot</translation>
     </message>
 </context>
 <context>
@@ -1088,12 +1088,12 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location line="+17"/>
         <source>Length &amp;1:</source>
-        <translation type="unfinished">Pituus 1:</translation>
+        <translation>Pituus 1:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Length &amp;2:</source>
-        <translation type="unfinished">Pituus 2:</translation>
+        <translation>Pituus 2:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
@@ -1243,7 +1243,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location line="+109"/>
         <source>Cannot edit block while editing a block in-place</source>
-        <translation type="unfinished">Lohkoa ei voi muokata, kun lohkoa muokataan paikan päällä</translation>
+        <translation>Lohkoa ei voi muokata, kun lohkoa muokataan paikan päällä</translation>
     </message>
     <message>
         <location line="-82"/>
@@ -1254,13 +1254,13 @@ Haluatko palauttaa sen?</translation>
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../scripts/Block/BlockDialog.js" line="+81"/>
+        <location filename="../scripts/Block/BlockDialog.js" line="+80"/>
         <source>block</source>
         <comment>default block name prefix</comment>
         <translation>lohko</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+51"/>
         <source>Leading or trailing spaces.</source>
         <translation>Välit alussa tai lopussa.</translation>
     </message>
@@ -1382,17 +1382,17 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockRefExport/BlockRefExport.js" line="+97"/>
         <source>Export Block References List (CSV)</source>
-        <translation type="unfinished">Vienti lohkoviittausluettelo (CSV)</translation>
+        <translation>Vienti lohkoviittausluettelo (CSV)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>CSV</source>
-        <translation type="unfinished">CSV</translation>
+        <translation>CSV</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block References List</source>
-        <translation type="unfinished">Vie lohkon viiteluettelo</translation>
+        <translation>&amp;Vie lohkon viiteluettelo</translation>
     </message>
 </context>
 <context>
@@ -1502,7 +1502,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+20"/>
         <source>Icon size:</source>
-        <translation type="unfinished">Kuvakkeen koko:</translation>
+        <translation>Kuvakkeen koko:</translation>
     </message>
     <message>
         <location line="+71"/>
@@ -1556,7 +1556,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Widgets/CadToolMatrix/PreferencesPage.ui" line="+17"/>
         <source>Icon size:</source>
-        <translation type="unfinished">Kuvakkeen koko:</translation>
+        <translation>Kuvakkeen koko:</translation>
     </message>
     <message>
         <location line="+96"/>
@@ -2220,7 +2220,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Widgets/CommandLine/PreferencesPage.ui" line="+17"/>
         <source>History size:</source>
-        <translation type="unfinished">Historian koko:</translation>
+        <translation>Historian koko:</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -2384,7 +2384,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location line="+14"/>
         <source>Number Format:</source>
-        <translation type="unfinished">Numeromuoto:</translation>
+        <translation>Numeromuoto:</translation>
     </message>
     <message>
         <location line="+79"/>
@@ -3005,17 +3005,17 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
         <source>Dimension Scale</source>
-        <translation type="unfinished">Mitta-asteikko</translation>
+        <translation>Mitta-asteikko</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>The scale for new dimensions is not 1:1. Dimension labels will show values that differ from the measured value in the drawing. You can correct the scale factor in the options toolbar at the top.</source>
-        <translation type="unfinished">Uusien ulottuvuuksien mittakaava ei ole 1:1. Mittaesimerkit näyttävät arvot, jotka poikkeavat piirustuksen mitatusta arvosta. Voit korjata mittakaavakerrointa yläreunan asetustyökalurivillä.</translation>
+        <translation>Uusien ulottuvuuksien mittakaava ei ole 1:1. Mittaesimerkit näyttävät arvot, jotka poikkeavat piirustuksen mitatusta arvosta. Voit korjata mittakaavakerrointa yläreunan asetustyökalurivillä.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Don&apos;t show this warning again</source>
-        <translation type="unfinished">Älä näytä tätä varoitusta uudelleen</translation>
+        <translation>Älä näytä tätä varoitusta uudelleen</translation>
     </message>
 </context>
 <context>
@@ -3089,17 +3089,17 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location line="-145"/>
         <source>Dimension Style</source>
-        <translation type="unfinished">Mitta Tyyli</translation>
+        <translation>Mitta Tyyli</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Horizontal text labels</source>
-        <translation type="unfinished">Vaakasuorat tekstitarrat</translation>
+        <translation>Vaakasuorat tekstitarrat</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Text above dimension line</source>
-        <translation type="unfinished">Teksti mittariviivan yläpuolella</translation>
+        <translation>Teksti mittariviivan yläpuolella</translation>
     </message>
     <message>
         <location line="+67"/>
@@ -3134,22 +3134,22 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location line="+10"/>
         <source>Architectural tick</source>
-        <translation type="unfinished">Arkkitehtoninen rasti</translation>
+        <translation>Arkkitehtoninen rasti</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Label</source>
-        <translation type="unfinished">Tarra</translation>
+        <translation>Tarra</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Label font:</source>
-        <translation type="unfinished">Etiketin fontti:</translation>
+        <translation>Etiketin fontti:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Label color:</source>
-        <translation type="unfinished">Etiketin väri:</translation>
+        <translation>Etiketin väri:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -3393,92 +3393,92 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.js" line="+74"/>
         <source>First vertex</source>
-        <translation type="unfinished">Ensimmäinen kärkipiste</translation>
+        <translation>Ensimmäinen kärkipiste</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Next vertex</source>
-        <translation type="unfinished">Seuraava huippu</translation>
+        <translation>Seuraava huippu</translation>
     </message>
     <message>
         <location line="+532"/>
         <source>close</source>
-        <translation type="unfinished">sulje</translation>
+        <translation>sulje</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>undo</source>
-        <translation type="unfinished">kumoa</translation>
+        <translation>kumoa</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>redo</source>
-        <translation type="unfinished">tee uudelleen</translation>
+        <translation>tee uudelleen</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>arc</source>
-        <translation type="unfinished">kaari</translation>
+        <translation>kaari</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanes.ui" line="+23"/>
         <source>Close polyline</source>
-        <translation type="unfinished">Sulje murtoviiva</translation>
+        <translation>Sulje murtoviiva</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>,, C</source>
-        <translation type="unfinished">,, C</translation>
+        <translation>,, C</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Undo Previous Segment</source>
-        <translation type="unfinished">Edellisen segmentin peruuttaminen</translation>
+        <translation>Edellisen segmentin peruuttaminen</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>,, U</source>
-        <translation type="unfinished">,, U</translation>
+        <translation>,, U</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Redo Segment</source>
-        <translation type="unfinished">Redo Segmentti</translation>
+        <translation>Redo Segmentti</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>,, R</source>
-        <translation type="unfinished">,, R</translation>
+        <translation>,, R</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Arc with radius:</source>
-        <translation type="unfinished">Kaari radiuksilla:</translation>
+        <translation>Kaari radiuksilla:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>,, A</source>
-        <translation type="unfinished">,, A</translation>
+        <translation>,, A</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Sweep</source>
-        <translation type="unfinished">Pyyhintä</translation>
+        <translation>Pyyhintä</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Restrict length or angle</source>
-        <translation type="unfinished">Rajoita pituutta tai kulmaa</translation>
+        <translation>Rajoita pituutta tai kulmaa</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawFmsLanes/DrawFmsLanesInit.js" line="+2"/>
         <source>Draw &amp;Fms Lanes</source>
-        <translation type="unfinished">Piirrä Fms Lanes</translation>
+        <translation>Piirrä Fms Lanes</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw FMS Lanes (ribs)</source>
-        <translation type="unfinished">Piirrä FMS-kaistat (kylkiluut)</translation>
+        <translation>Piirrä FMS-kaistat (kylkiluut)</translation>
     </message>
 </context>
 <context>
@@ -3488,122 +3488,122 @@ on jo luettelossa.</translation>
         <location line="+15"/>
         <location line="+1275"/>
         <source>Command ended.</source>
-        <translation type="unfinished">Komento päättyi.</translation>
+        <translation>Komento päättyi.</translation>
     </message>
     <message>
         <location line="-1293"/>
         <source>No import file selected.</source>
-        <translation type="unfinished">Tuontitiedostoa ei ole valittu.</translation>
+        <translation>Tuontitiedostoa ei ole valittu.</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>No file opened.</source>
-        <translation type="unfinished">Tiedostoa ei ole avattu.</translation>
+        <translation>Tiedostoa ei ole avattu.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>DrawFromCSV script (v3.03) by CVH</source>
-        <translation type="unfinished">DrawFromCSV-skripti (v3.03) CVH:n toimesta</translation>
+        <translation>DrawFromCSV-skripti (v3.03) CVH:n toimesta</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Cast CSV</source>
-        <translation type="unfinished">Cast CSV</translation>
+        <translation>Cast CSV</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Reading from file: %1</source>
-        <translation type="unfinished">Lukeminen tiedostosta: %1</translation>
+        <translation>Lukeminen tiedostosta: %1</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Switched to comma/dot CSV style.</source>
-        <translation type="unfinished">Vaihdettu pilkku/piste CSV-tyyliin.</translation>
+        <translation>Vaihdettu pilkku/piste CSV-tyyliin.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Switched to semicolon/dot CSV style.</source>
-        <translation type="unfinished">Siirryttiin puolipiste/piste CSV-tyyliin.</translation>
+        <translation>Siirryttiin puolipiste/piste CSV-tyyliin.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Switched to semicolon/comma CSV style.</source>
-        <translation type="unfinished">Vaihdettu puolipiste/pilkku CSV-tyyliin.</translation>
+        <translation>Vaihdettu puolipiste/pilkku CSV-tyyliin.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Unsupported or invalid CSV style, ignored. Text line: %1</source>
-        <translation type="unfinished">Ei tuettu tai virheellinen CSV-tyyli, jätetään huomiotta. Tekstirivi: %1</translation>
+        <translation>Ei tuettu tai virheellinen CSV-tyyli, jätetään huomiotta. Tekstirivi: %1</translation>
     </message>
     <message>
         <location line="+82"/>
         <source>Setting new relative origin failed, ignored. Text line: %1</source>
-        <translation type="unfinished">Uuden suhteellisen alkuperän asettaminen epäonnistui, ei huomioitu. Tekstirivi: %1</translation>
+        <translation>Uuden suhteellisen alkuperän asettaminen epäonnistui, ei huomioitu. Tekstirivi: %1</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Setting new rounding radius failed, ignored. Text line: %1</source>
-        <translation type="unfinished">Uuden pyöristyssäteen asettaminen epäonnistui, ei huomioitu. Tekstirivi: %1</translation>
+        <translation>Uuden pyöristyssäteen asettaminen epäonnistui, ei huomioitu. Tekstirivi: %1</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Rounding polylines requires QCAD Professional, ignored. Text line: %1</source>
-        <translation type="unfinished">Moniviivojen pyöristäminen vaatii QCAD Professionalin, jota ei ole huomioitu. Tekstirivi: %1</translation>
+        <translation>Moniviivojen pyöristäminen vaatii QCAD Professionalin, jota ei ole huomioitu. Tekstirivi: %1</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Can not switch to non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished">Ei voi vaihtaa olemassa oleviin kerroksiin, ei huomioitu. Tekstirivi: %1%2 Kerros: %3</translation>
+        <translation>Ei voi vaihtaa olemassa oleviin kerroksiin, ei huomioitu. Tekstirivi: %1%2 Kerros: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct set active &apos;Layer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished">Ei oikein asetettu aktiivinen &apos;Layer&apos;-kytkin, ei huomioitu. Tekstirivi: %1</translation>
+        <translation>Ei oikein asetettu aktiivinen &apos;Layer&apos;-kytkin, ei huomioitu. Tekstirivi: %1</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Not a correct &apos;New layer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished">Ei oikea &apos;Uusi kerros&apos; -kytkin, ei huomioitu. Tekstirivi: %1</translation>
+        <translation>Ei oikea &apos;Uusi kerros&apos; -kytkin, ei huomioitu. Tekstirivi: %1</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Can not hide non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished">Ei voi piilottaa olemattomia kerroksia, ei huomioitu. Tekstirivi: %1%2 Kerros: %3</translation>
+        <translation>Ei voi piilottaa olemattomia kerroksia, ei huomioitu. Tekstirivi: %1%2 Kerros: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;HideLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished">Ei oikea &apos;HideLayer&apos;-kytkin, ei huomioitu. Tekstirivi: %1</translation>
+        <translation>Ei oikea &apos;HideLayer&apos;-kytkin, ei huomioitu. Tekstirivi: %1</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Can not freeze non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished">Ei voi jäädyttää olemassa olevia kerroksia, ei huomioitu. Tekstirivi: %1%2 Kerros: %3</translation>
+        <translation>Ei voi jäädyttää olemassa olevia kerroksia, ei huomioitu. Tekstirivi: %1%2 Kerros: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;FreezeLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished">Ei oikea &apos;FreezeLayer&apos;-kytkin, ei huomioitu. Tekstirivi: %1</translation>
+        <translation>Ei oikea &apos;FreezeLayer&apos;-kytkin, ei huomioitu. Tekstirivi: %1</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Can not lock non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished">Ei voi lukita ei-olevia kerroksia, ei huomioitu. Tekstirivi: %1%2 Kerros: %3</translation>
+        <translation>Ei voi lukita ei-olevia kerroksia, ei huomioitu. Tekstirivi: %1%2 Kerros: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;LockLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished">Ei oikea &apos;LockLayer&apos;-kytkin, ei huomioitu. Tekstirivi: %1</translation>
+        <translation>Ei oikea &apos;LockLayer&apos;-kytkin, ei huomioitu. Tekstirivi: %1</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Can not allow non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished">Ei voi sallia ei-olevia kerroksia, ei huomioitu. Tekstirivi: %1%2 Kerros: %3</translation>
+        <translation>Ei voi sallia ei-olevia kerroksia, ei huomioitu. Tekstirivi: %1%2 Kerros: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;AllowLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished">Ei oikea &apos;AllowLayer&apos;-kytkin, ei huomioitu. Tekstirivi: %1</translation>
+        <translation>Ei oikea &apos;AllowLayer&apos;-kytkin, ei huomioitu. Tekstirivi: %1</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -3628,7 +3628,7 @@ on jo luettelossa.</translation>
         <location line="+33"/>
         <location line="+135"/>
         <source>Low field count.</source>
-        <translation type="unfinished">Alhainen kenttien määrä.</translation>
+        <translation>Alhainen kenttien määrä.</translation>
     </message>
     <message>
         <location line="-656"/>
@@ -3657,7 +3657,7 @@ on jo luettelossa.</translation>
         <location line="+25"/>
         <location line="+23"/>
         <source>Odd field count.</source>
-        <translation type="unfinished">Pariton kenttien lukumäärä.</translation>
+        <translation>Pariton kenttien lukumäärä.</translation>
     </message>
     <message>
         <location line="-655"/>
@@ -3669,7 +3669,7 @@ on jo luettelossa.</translation>
         <location line="+188"/>
         <location line="+168"/>
         <source>Rv Invalid.</source>
-        <translation type="unfinished">Rv Virheellinen.</translation>
+        <translation>Rv Virheellinen.</translation>
     </message>
     <message>
         <location line="-640"/>
@@ -3685,7 +3685,7 @@ on jo luettelossa.</translation>
         <location line="+33"/>
         <location line="+62"/>
         <source>Rv1 Invalid.</source>
-        <translation type="unfinished">Rv1 Virheellinen.</translation>
+        <translation>Rv1 Virheellinen.</translation>
     </message>
     <message>
         <location line="-503"/>
@@ -3703,7 +3703,7 @@ on jo luettelossa.</translation>
         <location line="+33"/>
         <location line="+35"/>
         <source>Rv2 Invalid.</source>
-        <translation type="unfinished">Rv2 Invalid.</translation>
+        <translation>Rv2 Invalid.</translation>
     </message>
     <message>
         <location line="-510"/>
@@ -3716,7 +3716,7 @@ on jo luettelossa.</translation>
         <location line="+49"/>
         <location line="+67"/>
         <source>Equal positions.</source>
-        <translation type="unfinished">Tasa-arvoiset asemat.</translation>
+        <translation>Tasa-arvoiset asemat.</translation>
     </message>
     <message>
         <location line="-265"/>
@@ -3729,7 +3729,7 @@ on jo luettelossa.</translation>
         <location line="+22"/>
         <location line="+33"/>
         <source>Radius Invalid.</source>
-        <translation type="unfinished">Säde virheellinen.</translation>
+        <translation>Säde virheellinen.</translation>
     </message>
     <message>
         <location line="-298"/>
@@ -3739,22 +3739,22 @@ on jo luettelossa.</translation>
         <location line="+35"/>
         <location line="+150"/>
         <source>Angle Invalid.</source>
-        <translation type="unfinished">Kulma Virheellinen.</translation>
+        <translation>Kulma Virheellinen.</translation>
     </message>
     <message>
         <location line="-527"/>
         <source>Angle1 Invalid.</source>
-        <translation type="unfinished">Kulma1 Virheellinen.</translation>
+        <translation>Kulma1 Virheellinen.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angle2 Invalid.</source>
-        <translation type="unfinished">Kulma2 Virheellinen.</translation>
+        <translation>Kulma2 Virheellinen.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Equal angles.</source>
-        <translation type="unfinished">Yhtä suuret kulmat.</translation>
+        <translation>Yhtä suuret kulmat.</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -3764,7 +3764,7 @@ on jo luettelossa.</translation>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 1-2.</source>
-        <translation type="unfinished">Tasa-arvoiset paikat 1-2.</translation>
+        <translation>Tasa-arvoiset paikat 1-2.</translation>
     </message>
     <message>
         <location line="-286"/>
@@ -3776,7 +3776,7 @@ on jo luettelossa.</translation>
         <location line="+32"/>
         <location line="+35"/>
         <source>Rv3 Invalid.</source>
-        <translation type="unfinished">Rv3 Invalid.</translation>
+        <translation>Rv3 Invalid.</translation>
     </message>
     <message>
         <location line="-354"/>
@@ -3786,7 +3786,7 @@ on jo luettelossa.</translation>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 1-3.</source>
-        <translation type="unfinished">Tasa-arvoiset paikat 1-3.</translation>
+        <translation>Tasa-arvoiset paikat 1-3.</translation>
     </message>
     <message>
         <location line="-287"/>
@@ -3796,7 +3796,7 @@ on jo luettelossa.</translation>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 2-3.</source>
-        <translation type="unfinished">Tasa-arvoiset asemat 2-3.</translation>
+        <translation>Tasa-arvoiset asemat 2-3.</translation>
     </message>
     <message>
         <location line="-284"/>
@@ -3804,28 +3804,28 @@ on jo luettelossa.</translation>
         <location line="+168"/>
         <location line="+2"/>
         <source>Near co-linear positions.</source>
-        <translation type="unfinished">Lähellä yhteismitallisia kantoja.</translation>
+        <translation>Lähellä yhteismitallisia kantoja.</translation>
     </message>
     <message>
         <location line="-168"/>
         <source>Arc Invalid.</source>
-        <translation type="unfinished">Arc Invalid.</translation>
+        <translation>Arc Invalid.</translation>
     </message>
     <message>
         <location line="+46"/>
         <location line="+47"/>
         <source>Center Invalid.</source>
-        <translation type="unfinished">Keskusta Virheellinen.</translation>
+        <translation>Keskusta Virheellinen.</translation>
     </message>
     <message>
         <location line="-21"/>
         <source>Radius too small.</source>
-        <translation type="unfinished">Säde liian pieni.</translation>
+        <translation>Säde liian pieni.</translation>
     </message>
     <message>
         <location line="+98"/>
         <source>Circle Invalid.</source>
-        <translation type="unfinished">Circle Invalid.</translation>
+        <translation>Circle Invalid.</translation>
     </message>
     <message>
         <location line="+79"/>
@@ -3833,45 +3833,45 @@ on jo luettelossa.</translation>
         <location line="+30"/>
         <location line="+35"/>
         <source>Rv4 Invalid.</source>
-        <translation type="unfinished">Rv4 Invalid.</translation>
+        <translation>Rv4 Invalid.</translation>
     </message>
     <message>
         <location line="-97"/>
         <location line="+33"/>
         <source>Equal positions 1-4.</source>
-        <translation type="unfinished">Tasa-arvoiset paikat 1-4.</translation>
+        <translation>Tasa-arvoiset paikat 1-4.</translation>
     </message>
     <message>
         <location line="-32"/>
         <location line="+33"/>
         <source>Equal positions 2-4.</source>
-        <translation type="unfinished">Tasa-arvoiset asemat 2-4.</translation>
+        <translation>Tasa-arvoiset asemat 2-4.</translation>
     </message>
     <message>
         <location line="-32"/>
         <location line="+33"/>
         <source>Equal positions 3-4.</source>
-        <translation type="unfinished">Tasa-arvoiset asemat 3-4.</translation>
+        <translation>Tasa-arvoiset asemat 3-4.</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Size Invalid.</source>
-        <translation type="unfinished">Koko virheellinen.</translation>
+        <translation>Koko virheellinen.</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Size in X Invalid.</source>
-        <translation type="unfinished">Koko X:nä Väärin.</translation>
+        <translation>Koko X:nä Väärin.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Size in Y Invalid.</source>
-        <translation type="unfinished">Koko Y:ssä Virheellinen.</translation>
+        <translation>Koko Y:ssä Virheellinen.</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Polygon: less than 5 references.</source>
-        <translation type="unfinished">Monikulmio: alle 5 viitettä.</translation>
+        <translation>Monikulmio: alle 5 viitettä.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3879,207 +3879,207 @@ on jo luettelossa.</translation>
         <location line="+26"/>
         <location line="+28"/>
         <source>Rv%1 Invalid.</source>
-        <translation type="unfinished">Rv%1 Virheellinen.</translation>
+        <translation>Rv%1 Virheellinen.</translation>
     </message>
     <message>
         <location line="-61"/>
         <source>Polyline, less than 2 references.</source>
-        <translation type="unfinished">Polylinja, alle 2 viitettä.</translation>
+        <translation>Polylinja, alle 2 viitettä.</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Bulge%1 Invalid.</source>
-        <translation type="unfinished">Bulge%1 Virheellinen.</translation>
+        <translation>Bulge%1 Virheellinen.</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Unsupported QCAD Professional feature.</source>
-        <translation type="unfinished">QCAD Professionalin tukematon ominaisuus.</translation>
+        <translation>QCAD Professionalin tukematon ominaisuus.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>3th degree fit point Spline, less than 3 references.</source>
-        <translation type="unfinished">3. asteen sovituspiste Spline, alle 3 viitettä.</translation>
+        <translation>3. asteen sovituspiste Spline, alle 3 viitettä.</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>3th degree control point Spline, less than 4 references.</source>
-        <translation type="unfinished">3. asteen ohjauspiste Spline, alle 4 viitettä.</translation>
+        <translation>3. asteen ohjauspiste Spline, alle 4 viitettä.</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Height Invalid.</source>
-        <translation type="unfinished">Korkeus virheellinen.</translation>
+        <translation>Korkeus virheellinen.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Width Invalid.</source>
-        <translation type="unfinished">Leveys virheellinen.</translation>
+        <translation>Leveys virheellinen.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Vert. alignment Invalid.</source>
-        <translation type="unfinished">Vert. kohdistus Virheellinen.</translation>
+        <translation>Vert. kohdistus Virheellinen.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Horz. alignment Invalid.</source>
-        <translation type="unfinished">Horz. kohdistus Virheellinen.</translation>
+        <translation>Horz. kohdistus Virheellinen.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Drawing direction Invalid.</source>
-        <translation type="unfinished">Piirustussuunta Virheellinen.</translation>
+        <translation>Piirustussuunta Virheellinen.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Line spacing style Invalid.</source>
-        <translation type="unfinished">Rivivälin tyyli Virheellinen.</translation>
+        <translation>Rivivälin tyyli Virheellinen.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Line spacing Invalid.</source>
-        <translation type="unfinished">Riviväli Virheellinen.</translation>
+        <translation>Riviväli Virheellinen.</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Unsupported method. Text line: %1</source>
-        <translation type="unfinished">Ei tuettu menetelmä. Tekstirivi: %1</translation>
+        <translation>Ei tuettu menetelmä. Tekstirivi: %1</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Error with first optional list.</source>
-        <translation type="unfinished">Virhe ensimmäisessä valinnaisessa luettelossa.</translation>
+        <translation>Virhe ensimmäisessä valinnaisessa luettelossa.</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Error with second optional list.</source>
-        <translation type="unfinished">Virhe toisen valinnaisen luettelon kanssa.</translation>
+        <translation>Virhe toisen valinnaisen luettelon kanssa.</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Not a correct entry, ignored. Text line: %1 &gt; %2</source>
-        <translation type="unfinished">Ei oikea merkintä, ei huomioitu. Tekstirivi: %1 &gt; %2</translation>
+        <translation>Ei oikea merkintä, ei huomioitu. Tekstirivi: %1 &gt; %2</translation>
     </message>
     <message>
         <location line="+80"/>
         <source>Casted entries: %1 out of %2 text lines</source>
-        <translation type="unfinished">Valetut merkinnät: %1 %2 tekstirivistä %2 tekstiriviä</translation>
+        <translation>Valetut merkinnät: %1 %2 tekstirivistä %2 tekstiriviä</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Nothing casted.</source>
-        <translation type="unfinished">Mitään ei ole heitetty.</translation>
+        <translation>Mitään ei ole heitetty.</translation>
     </message>
     <message>
         <location line="+227"/>
         <source>Attributes empty. Text line: %1</source>
-        <translation type="unfinished">Attribuutit tyhjiä. Tekstirivi: %1</translation>
+        <translation>Attribuutit tyhjiä. Tekstirivi: %1</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Not a correct layer name, ignored. Text line: %1%2 Name: %3</source>
-        <translation type="unfinished">Ei oikea tason nimi, ei huomioitu. Tekstirivi: %1%2 Nimi: %3</translation>
+        <translation>Ei oikea tason nimi, ei huomioitu. Tekstirivi: %1%2 Nimi: %3</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Layer doesn&apos;t exist, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished">Kerros ei ole olemassa, ei huomioitu. Tekstirivi: %1%2 Kerros: %3</translation>
+        <translation>Kerros ei ole olemassa, ei huomioitu. Tekstirivi: %1%2 Kerros: %3</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Not a correct color, ignored. Text line: %1%2 Color: %3</source>
-        <translation type="unfinished">Ei oikea väri, ei huomioitu. Tekstirivi: %1%2 Väri: %3</translation>
+        <translation>Ei oikea väri, ei huomioitu. Tekstirivi: %1%2 Väri: %3</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</source>
-        <translation type="unfinished">Ei oikea Lineweight, ei huomioitu. Tekstirivi: %1%2 Paino: %3</translation>
+        <translation>Ei oikea Lineweight, ei huomioitu. Tekstirivi: %1%2 Paino: %3</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Not a correct Linetype, ignored. Text line: %1%2 Type: %3</source>
-        <translation type="unfinished">Ei oikea linjatyyppi, ei huomioitu. Tekstirivi: %1%2 Tyyppi: %3</translation>
+        <translation>Ei oikea linjatyyppi, ei huomioitu. Tekstirivi: %1%2 Tyyppi: %3</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype scale, ignored. Text line: %1%2 Scale: %3</source>
-        <translation type="unfinished">Ei oikea Linetype-asteikko, ei huomioitu. Tekstirivi: %1%2 Mittakaava: %3</translation>
+        <translation>Ei oikea Linetype-asteikko, ei huomioitu. Tekstirivi: %1%2 Mittakaava: %3</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Unsupported attribute, ignored. Text line: %1 &gt; %2</source>
-        <translation type="unfinished">Ei tuettu määrite, jätetään huomiotta. Tekstirivi: %1 &gt; %2</translation>
+        <translation>Ei tuettu määrite, jätetään huomiotta. Tekstirivi: %1 &gt; %2</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>Not a correct layer name. Text line: %1%2 Name: %3</source>
-        <translation type="unfinished">Ei oikea tason nimi. Tekstirivi: %1%2 Nimi: %3</translation>
+        <translation>Ei oikea tason nimi. Tekstirivi: %1%2 Nimi: %3</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Parent layer doesn&apos;t exist. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished">Vanhempaa kerrosta ei ole olemassa. Tekstirivi: %1%2 Kerros: %3</translation>
+        <translation>Vanhempaa kerrosta ei ole olemassa. Tekstirivi: %1%2 Kerros: %3</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Not a correct color. Text line: %1%2 Color: %3</source>
-        <translation type="unfinished">Ei oikea väri. Tekstirivi: %1%2 Väri: %3</translation>
+        <translation>Ei oikea väri. Tekstirivi: %1%2 Väri: %3</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Lineweight. Text line: %1%2 Weight: %3</source>
-        <translation type="unfinished">Ei oikea Lineweight. Tekstirivi: %1%2 Paino: %3</translation>
+        <translation>Ei oikea Lineweight. Tekstirivi: %1%2 Paino: %3</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype. Text line: %1%2 Type: %3</source>
-        <translation type="unfinished">Ei oikea linjatyyppi. Tekstirivi: %1%2 Tyyppi: %3</translation>
+        <translation>Ei oikea linjatyyppi. Tekstirivi: %1%2 Tyyppi: %3</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Add/Update layer ignored.</source>
-        <translation type="unfinished">Lisää/päivitä kerros huomioimatta.</translation>
+        <translation>Lisää/päivitä kerros huomioimatta.</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Updated layer: %1</source>
-        <translation type="unfinished">Päivitetty kerros: %1</translation>
+        <translation>Päivitetty kerros: %1</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Added new layer: %1</source>
-        <translation type="unfinished">Lisätty uusi kerros: %1</translation>
+        <translation>Lisätty uusi kerros: %1</translation>
     </message>
     <message>
         <location line="-447"/>
         <source>Importing CSV complete. Command ended.</source>
-        <translation type="unfinished">CSV-tuonti valmis. Komento päättyi.</translation>
+        <translation>CSV-tuonti valmis. Komento päättyi.</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Draw from CSV</source>
-        <translation type="unfinished">Piirrä CSV:stä</translation>
+        <translation>Piirrä CSV:stä</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>CSV</source>
-        <translation type="unfinished">CSV</translation>
+        <translation>CSV</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>All Files</source>
-        <translation type="unfinished">Kaikki tiedostot</translation>
+        <translation>Kaikki tiedostot</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
         <source>&amp;Draw from CSV</source>
-        <translation type="unfinished">Piirrä CSV:stä</translation>
+        <translation>Piirrä CSV:stä</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Draws entities based on textual entries in a CSV file</source>
-        <translation type="unfinished">Piirtää kokonaisuuksia CSV-tiedoston tekstimerkintöjen perusteella</translation>
+        <translation>Piirtää kokonaisuuksia CSV-tiedoston tekstimerkintöjen perusteella</translation>
     </message>
 </context>
 <context>
@@ -4259,12 +4259,12 @@ on jo luettelossa.</translation>
     <message>
         <location line="+577"/>
         <source>Invalid position</source>
-        <translation type="unfinished">Virheellinen sijainti</translation>
+        <translation>Virheellinen sijainti</translation>
     </message>
     <message>
         <location line="+175"/>
         <source>Entity is not in working set.</source>
-        <translation type="unfinished">Entiteetti ei ole työkokonaisuudessa.</translation>
+        <translation>Entiteetti ei ole työkokonaisuudessa.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4314,7 +4314,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, spline, ellipse arc or polyline.</source>
-        <translation type="unfinished">Entiteetti ei ole viiva, kaari, spline, ellipsikaari tai polyline.</translation>
+        <translation>Entiteetti ei ole viiva, kaari, spline, ellipsikaari tai polyline.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4354,7 +4354,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a spline with fit points.</source>
-        <translation type="unfinished">Entiteetti ei ole spline, jossa on sovituspisteitä.</translation>
+        <translation>Entiteetti ei ole spline, jossa on sovituspisteitä.</translation>
     </message>
 </context>
 <context>
@@ -5110,12 +5110,12 @@ on jo luettelossa.</translation>
     <message>
         <location line="+125"/>
         <source>Convert splines from texts to arcs or lines if appropriate</source>
-        <translation type="unfinished">Muunna splinit teksteistä tarvittaessa kaariksi tai viivoiksi</translation>
+        <translation>Muunna splinit teksteistä tarvittaessa kaariksi tai viivoiksi</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Explode circles into polylines with two half circles</source>
-        <translation type="unfinished">Räjäytä ympyrät polyviivoiksi kahdella puolikkaalla ympyrällä</translation>
+        <translation>Räjäytä ympyrät polyviivoiksi kahdella puolikkaalla ympyrällä</translation>
     </message>
     <message>
         <location line="+90"/>
@@ -5239,17 +5239,17 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1115"/>
         <source>Add Active SubLayer</source>
-        <translation type="unfinished">Lisää aktiivinen alikerros</translation>
+        <translation>Lisää aktiivinen alikerros</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>FP added layer:</source>
-        <translation type="unfinished">FP lisäsi kerroksen:</translation>
+        <translation>FP lisäsi kerroksen:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
         <source>Paints over selection mimicking a roller stamp</source>
-        <translation type="unfinished">Maalaa valinnan yli jäljittelemällä telaleimaa</translation>
+        <translation>Maalaa valinnan yli jäljittelemällä telaleimaa</translation>
     </message>
 </context>
 <context>
@@ -5262,7 +5262,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation type="unfinished">Maalareiden valuvaihtoehdot</translation>
+        <translation>Maalareiden valuvaihtoehdot</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -5302,42 +5302,42 @@ on jo luettelossa.</translation>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation type="unfinished">Peilimaalarit perusviivan yläpuolella.</translation>
+        <translation>Peilimaalarit perusviivan yläpuolella.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Group all castings to one operation.</source>
-        <translation type="unfinished">Ryhmittele kaikki valukappaleet yhteen toimintoon.</translation>
+        <translation>Ryhmittele kaikki valukappaleet yhteen toimintoon.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation type="unfinished">Aloita valamalla alku apex avoimiin muotoihin.</translation>
+        <translation>Aloita valamalla alku apex avoimiin muotoihin.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation type="unfinished">Päätä valamalla avoimiin lomakkeisiin päätepiste.</translation>
+        <translation>Päätä valamalla avoimiin lomakkeisiin päätepiste.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add insertions in between eg. spacers, knots. (Not implemented)</source>
-        <translation type="unfinished">Lisää väliin lisäyksiä, esim. välilevyjä, solmuja. (Ei toteutettu)</translation>
+        <translation>Lisää väliin lisäyksiä, esim. välilevyjä, solmuja. (Ei toteutettu)</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Preview of painters.</source>
-        <translation type="unfinished">Taidemaalareiden esikatselu.</translation>
+        <translation>Taidemaalareiden esikatselu.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation type="unfinished">Valitse maalarijoukko.</translation>
+        <translation>Valitse maalarijoukko.</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>CurtainRope</source>
-        <translation type="unfinished">CurtainRope</translation>
+        <translation>CurtainRope</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5397,7 +5397,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+5"/>
         <source>AllPainterDataTypes</source>
-        <translation type="unfinished">AllPainterDataTypes</translation>
+        <translation>AllPainterDataTypes</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5407,67 +5407,67 @@ on jo luettelossa.</translation>
     <message>
         <location line="+36"/>
         <source>Preview of insertion.</source>
-        <translation type="unfinished">Esikatselu lisäyksestä.</translation>
+        <translation>Esikatselu lisäyksestä.</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Select Insertion or Enter void space. (Not implemented)</source>
-        <translation type="unfinished">Valitse Insertion tai Enter void space. (Ei toteutettu)</translation>
+        <translation>Valitse Insertion tai Enter void space. (Ei toteutettu)</translation>
     </message>
     <message>
         <location line="+277"/>
         <source>Version</source>
-        <translation type="unfinished">Versio</translation>
+        <translation>Versio</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>FlexPainter Beta 0.42e © CVH 2020 </source>
-        <translation type="unfinished">FlexPainter Beta 0.42e © CVH 2020</translation>
+        <translation>FlexPainter Beta 0.42e © CVH 2020</translation>
     </message>
     <message>
         <location line="+272"/>
         <source>Document Units.</source>
-        <translation type="unfinished">Asiakirjan yksiköt.</translation>
+        <translation>Asiakirjan yksiköt.</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation type="unfinished">Syötä maalarin leveys. (+0)</translation>
+        <translation>Syötä maalarin leveys. (+0)</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation type="unfinished">Syötä päämaalarin askelkoko. (+0)</translation>
+        <translation>Syötä päämaalarin askelkoko. (+0)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Enter main painter length. (+)</source>
-        <translation type="unfinished">Syötä päämaalarin pituus. (+)</translation>
+        <translation>Syötä päämaalarin pituus. (+)</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Keep painters proportional.</source>
-        <translation type="unfinished">Pidä maalarit oikeasuhtaisina.</translation>
+        <translation>Pidä maalarit oikeasuhtaisina.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Select percentage of Stepsize.</source>
-        <translation type="unfinished">Valitse Stepsize-prosenttiosuus.</translation>
+        <translation>Valitse Stepsize-prosenttiosuus.</translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Adapt scaling f 1.00-0.90 to fit the whole form.</source>
-        <translation type="unfinished">Mukauta skaalaus f 1,00-0,90 koko lomakkeelle sopivaksi.</translation>
+        <translation>Mukauta skaalaus f 1,00-0,90 koko lomakkeelle sopivaksi.</translation>
     </message>
     <message>
         <location line="+92"/>
         <source>Verbose info. (persistent on)</source>
-        <translation type="unfinished">Tarkka tieto. (pysyvä päällä)</translation>
+        <translation>Tarkka tieto. (pysyvä päällä)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation type="unfinished">Poistettu maalattu pohjayksiköiden päälle. (Pysyvä pois päältä)</translation>
+        <translation>Poistettu maalattu pohjayksiköiden päälle. (Pysyvä pois päältä)</translation>
     </message>
     <message>
         <location line="-933"/>
@@ -5477,7 +5477,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+5"/>
         <source>Curtain Rope Knot</source>
-        <translation type="unfinished">Verho köysi solmu</translation>
+        <translation>Verho köysi solmu</translation>
     </message>
     <message>
         <location line="+543"/>
@@ -5555,7 +5555,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
         <source>&amp;FlexPainter</source>
-        <translation type="unfinished">FlexPainter</translation>
+        <translation>FlexPainter</translation>
     </message>
 </context>
 <context>
@@ -5710,7 +5710,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+38"/>
         <source>Edit block reference in-place</source>
-        <translation type="unfinished">Muokkaa lohkoviittausta paikan päällä</translation>
+        <translation>Muokkaa lohkoviittausta paikan päällä</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -5720,7 +5720,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+15"/>
         <source>Tolerance:</source>
-        <translation type="unfinished">Suvaitsevaisuus:</translation>
+        <translation>Suvaitsevaisuus:</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5755,7 +5755,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+7"/>
         <source>Highlight (and raise) images within range</source>
-        <translation type="unfinished">Korosta (ja nosta) kuvia kantaman sisällä</translation>
+        <translation>Korosta (ja nosta) kuvia kantaman sisällä</translation>
     </message>
     <message>
         <location line="-64"/>
@@ -5830,12 +5830,12 @@ on jo luettelossa.</translation>
     <message>
         <location line="+10"/>
         <source>This can be used if cursors are not visible on external monitors</source>
-        <translation type="unfinished">Tätä voidaan käyttää, jos kursorit eivät näy ulkoisissa näytöissä</translation>
+        <translation>Tätä voidaan käyttää, jos kursorit eivät näy ulkoisissa näytöissä</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use system cursors</source>
-        <translation type="unfinished">Käytä järjestelmän kursoreita</translation>
+        <translation>Käytä järjestelmän kursoreita</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5865,17 +5865,17 @@ on jo luettelossa.</translation>
     <message>
         <location line="+20"/>
         <source>Linetypes and Lineweights</source>
-        <translation type="unfinished">Linjatyypit ja linjapainot</translation>
+        <translation>Linjatyypit ja linjapainot</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Default lineweight:</source>
-        <translation type="unfinished">Oletusviivapaino:</translation>
+        <translation>Oletusviivapaino:</translation>
     </message>
     <message>
         <location line="+108"/>
         <source>Apply line weight to points</source>
-        <translation type="unfinished">Soveltaa viivapainoa pisteisiin</translation>
+        <translation>Soveltaa viivapainoa pisteisiin</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5885,42 +5885,42 @@ on jo luettelossa.</translation>
     <message>
         <location line="+7"/>
         <source>Use full resolution for Retina / high resolution display</source>
-        <translation type="unfinished">Käytä täyttä resoluutiota Retina / korkean resoluution näyttöä varten</translation>
+        <translation>Käytä täyttä resoluutiota Retina / korkean resoluution näyttöä varten</translation>
     </message>
     <message>
         <location line="+444"/>
         <source>Maximum selected entities with reference points:</source>
-        <translation type="unfinished">Valittujen kokonaisuuksien enimmäismäärä vertailupisteiden kanssa:</translation>
+        <translation>Valittujen kokonaisuuksien enimmäismäärä vertailupisteiden kanssa:</translation>
     </message>
     <message>
         <location line="+219"/>
         <source>Maximum selected entities with displayed reference points:</source>
-        <translation type="unfinished">Valittujen kohteiden enimmäismäärä näytetyillä vertailupisteillä:</translation>
+        <translation>Valittujen kohteiden enimmäismäärä näytetyillä vertailupisteillä:</translation>
     </message>
     <message>
         <location line="-149"/>
         <source>Reference point size (px):</source>
-        <translation type="unfinished">Viitepisteen koko (px):</translation>
+        <translation>Viitepisteen koko (px):</translation>
     </message>
     <message>
         <location line="+77"/>
         <source>Text height threshold (px):</source>
-        <translation type="unfinished">Tekstin korkeuskynnys (px):</translation>
+        <translation>Tekstin korkeuskynnys (px):</translation>
     </message>
     <message>
         <location line="+151"/>
         <source>Persistent selection</source>
-        <translation type="unfinished">Pysyvä valinta</translation>
+        <translation>Pysyvä valinta</translation>
     </message>
     <message>
         <location line="-724"/>
         <source>auto</source>
-        <translation type="unfinished">auto</translation>
+        <translation>auto</translation>
     </message>
     <message>
         <location line="-11"/>
         <source>Number of threads:</source>
-        <translation type="unfinished">Kierteiden määrä:</translation>
+        <translation>Kierteiden määrä:</translation>
     </message>
     <message>
         <location line="-195"/>
@@ -6128,7 +6128,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+30"/>
         <source>Working set fading factor:</source>
-        <translation type="unfinished">Työskentelysarjan häipymiskerroin:</translation>
+        <translation>Työskentelysarjan häipymiskerroin:</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -6156,17 +6156,17 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+50"/>
         <source>Ruler font:</source>
-        <translation type="unfinished">Viivaimen fontti:</translation>
+        <translation>Viivaimen fontti:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Snap label font:</source>
-        <translation type="unfinished">Snap label fontti:</translation>
+        <translation>Snap label fontti:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Info label font:</source>
-        <translation type="unfinished">Info label fontti:</translation>
+        <translation>Info label fontti:</translation>
     </message>
 </context>
 <context>
@@ -6199,7 +6199,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+7"/>
         <source>Limit scrolling to vertical and horizontal</source>
-        <translation type="unfinished">Rajoita vieritys pysty- ja vaakasuoraan</translation>
+        <translation>Rajoita vieritys pysty- ja vaakasuoraan</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -6209,7 +6209,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+7"/>
         <source>Panning speed:</source>
-        <translation type="unfinished">Panorointinopeus:</translation>
+        <translation>Panorointinopeus:</translation>
     </message>
     <message>
         <location line="-324"/>
@@ -6566,37 +6566,37 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroid.js" line="+78"/>
         <source>Position</source>
-        <translation type="unfinished">Asema</translation>
+        <translation>Asema</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Specify position</source>
-        <translation type="unfinished">Määritä asema</translation>
+        <translation>Määritä asema</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>2D point mass Centroid</source>
-        <translation type="unfinished">2D-pistemassa Centroid</translation>
+        <translation>2D-pistemassa Centroid</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Undefined</source>
-        <translation type="unfinished">Määrittelemätön</translation>
+        <translation>Määrittelemätön</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroidInit.js" line="+19"/>
         <source>Add &amp;custom 2D centroid</source>
-        <translation type="unfinished">Lisää mukautettu 2D-keskipiste</translation>
+        <translation>Lisää mukautettu 2D-keskipiste</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Create a customizable 2D Centroid marker</source>
-        <translation type="unfinished">Luo muokattava 2D Centroid -merkki</translation>
+        <translation>Luo muokattava 2D Centroid -merkki</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Creates a new point mass 2D Centroid marker customizable by dialog</source>
-        <translation type="unfinished">Luo uuden pistemassan 2D Centroid -merkki, jota voidaan muokata valintaikkunan avulla</translation>
+        <translation>Luo uuden pistemassan 2D Centroid -merkki, jota voidaan muokata valintaikkunan avulla</translation>
     </message>
 </context>
 <context>
@@ -6802,131 +6802,131 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroid.js" line="+123"/>
         <source>No selection.</source>
-        <translation type="unfinished">Ei valintaa.</translation>
+        <translation>Ei valintaa.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please, make a selection first. Command terminated.</source>
-        <translation type="unfinished">Tee ensin valinta. Komento lopetettu.</translation>
+        <translation>Tee ensin valinta. Komento lopetettu.</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Not implemented. Command terminated.</source>
-        <translation type="unfinished">Ei toteutettu. Komento lopetettu.</translation>
+        <translation>Ei toteutettu. Komento lopetettu.</translation>
     </message>
     <message>
         <location line="+5"/>
         <location line="+2"/>
         <source>Area 2D Centroid script (v0.32) by CVH</source>
-        <translation type="unfinished">Alue 2D Centroid käsikirjoitus (v0.32) jonka CVH</translation>
+        <translation>Alue 2D Centroid käsikirjoitus (v0.32) jonka CVH</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Arc sector mode</source>
-        <translation type="unfinished">Kaarisektorin tila</translation>
+        <translation>Kaarisektorin tila</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Enclosed area:</source>
-        <translation type="unfinished">Suljettu alue:</translation>
+        <translation>Suljettu alue:</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Approximated enclosed area:</source>
-        <translation type="unfinished">Arvioitu suljettu alue:</translation>
+        <translation>Arvioitu suljettu alue:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Hatched area:</source>
-        <translation type="unfinished">Luukutettu alue:</translation>
+        <translation>Luukutettu alue:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Total hatched area:</source>
-        <translation type="unfinished">Kokonaispinta-ala:</translation>
+        <translation>Kokonaispinta-ala:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Differential hatched area:</source>
-        <translation type="unfinished">Eriytetty alue:</translation>
+        <translation>Eriytetty alue:</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>2D area Centroid</source>
-        <translation type="unfinished">2D-alue Keskipiste</translation>
+        <translation>2D-alue Keskipiste</translation>
     </message>
     <message>
         <location line="-89"/>
         <source>Multiple entities in selection.</source>
-        <translation type="unfinished">Useita kokonaisuuksia valinnassa.</translation>
+        <translation>Useita kokonaisuuksia valinnassa.</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Centroid markers circle in selection. No results.</source>
-        <translation type="unfinished">Keskipistemerkkien ympyrä valinnassa. Ei tuloksia.</translation>
+        <translation>Keskipistemerkkien ympyrä valinnassa. Ei tuloksia.</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Unsupported entity type. No results.</source>
-        <translation type="unfinished">Ei tuettu oliotyyppi. Ei tuloksia.</translation>
+        <translation>Ei tuettu oliotyyppi. Ei tuloksia.</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>No results.</source>
-        <translation type="unfinished">Ei tuloksia.</translation>
+        <translation>Ei tuloksia.</translation>
     </message>
     <message>
         <location line="+49"/>
         <location line="+6"/>
         <source>(Incl. approximations)</source>
-        <translation type="unfinished">(Mukaan lukien likiarvot)</translation>
+        <translation>(Mukaan lukien likiarvot)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Approximated centroid:</source>
-        <translation type="unfinished">Likimääräinen keskipiste:</translation>
+        <translation>Likimääräinen keskipiste:</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Centroid:</source>
-        <translation type="unfinished">Keskipiste:</translation>
+        <translation>Keskipiste:</translation>
     </message>
     <message>
         <location line="+207"/>
         <location line="+578"/>
         <source>Encountered an unsupported polyline with custom widths</source>
-        <translation type="unfinished">Kohtasi tukemattoman polylinjan mukautetuilla leveyksillä</translation>
+        <translation>Kohtasi tukemattoman polylinjan mukautetuilla leveyksillä</translation>
     </message>
     <message>
         <location line="-488"/>
         <location line="+596"/>
         <source>Encountered an unsupported polygon with custom widths</source>
-        <translation type="unfinished">Kohtasi tukemattoman polygonin mukautetuilla leveyksillä</translation>
+        <translation>Kohtasi tukemattoman polygonin mukautetuilla leveyksillä</translation>
     </message>
     <message>
         <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation type="unfinished">Käsittelemätön muoto luukkusilmukasta.</translation>
+        <translation>Käsittelemätön muoto luukkusilmukasta.</translation>
     </message>
     <message>
         <location line="+70"/>
         <source>Self-intersecting shape near (%1). No Results.</source>
-        <translation type="unfinished">Itsestään leikkaava muoto lähellä (%1). Ei tuloksia.</translation>
+        <translation>Itsestään leikkaava muoto lähellä (%1). Ei tuloksia.</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+19"/>
         <source>&amp;Area Centroid</source>
-        <translation type="unfinished">Alueen keskipiste</translation>
+        <translation>Alueen keskipiste</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Create an area 2D Centroid for a selected entity</source>
-        <translation type="unfinished">Luo alueen 2D-keskipiste valitulle kohteelle</translation>
+        <translation>Luo alueen 2D-keskipiste valitulle kohteelle</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Creates a new uniform areal density 2D Centroid marker and value labels for a selected entity</source>
-        <translation type="unfinished">Luo uuden yhtenäisen pinta-alatiheyden 2D Centroid -merkinnän ja arvomerkinnät valitulle kohteelle</translation>
+        <translation>Luo uuden yhtenäisen pinta-alatiheyden 2D Centroid -merkinnän ja arvomerkinnät valitulle kohteelle</translation>
     </message>
 </context>
 <context>
@@ -6934,32 +6934,32 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoBearing/InfoBearing.js" line="+41"/>
         <source>Reference</source>
-        <translation type="unfinished">Viite</translation>
+        <translation>Viite</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Direction</source>
-        <translation type="unfinished">Suunta</translation>
+        <translation>Suunta</translation>
     </message>
     <message>
         <location line="+42"/>
         <source>Distance:</source>
-        <translation type="unfinished">Etäisyys:</translation>
+        <translation>Etäisyys:</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Bearing:</source>
-        <translation type="unfinished">Laakeri:</translation>
+        <translation>Laakeri:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Azimuth:</source>
-        <translation type="unfinished">Asimuutti:</translation>
+        <translation>Asimuutti:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>&amp;Bearing / Azimuth</source>
-        <translation type="unfinished">Suuntima / atsimuutti</translation>
+        <translation>Suuntima / atsimuutti</translation>
     </message>
 </context>
 <context>
@@ -6967,52 +6967,52 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroids.js" line="+52"/>
         <source>2D Centroid</source>
-        <translation type="unfinished">2D-keskipiste</translation>
+        <translation>2D-keskipiste</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Point mass</source>
-        <translation type="unfinished">Pistemassa</translation>
+        <translation>Pistemassa</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Area</source>
-        <translation type="unfinished">Alue</translation>
+        <translation>Alue</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Wire</source>
-        <translation type="unfinished">Lanka</translation>
+        <translation>Lanka</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>X position</source>
-        <translation type="unfinished">X-asento</translation>
+        <translation>X-asento</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Y position</source>
-        <translation type="unfinished">Y-asento</translation>
+        <translation>Y-asento</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Undefined</source>
-        <translation type="unfinished">Määrittelemätön</translation>
+        <translation>Määrittelemätön</translation>
     </message>
     <message>
         <location line="+428"/>
         <source>2D &amp;Centroids</source>
-        <translation type="unfinished">2D-keskipisteet</translation>
+        <translation>2D-keskipisteet</translation>
     </message>
     <message>
         <location line="-431"/>
         <source>Weighted</source>
-        <translation type="unfinished">Painotettu</translation>
+        <translation>Painotettu</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Density</source>
-        <translation type="unfinished">Tiheys</translation>
+        <translation>Tiheys</translation>
     </message>
 </context>
 <context>
@@ -7020,12 +7020,12 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListener.js" line="+191"/>
         <source>2D Centroids transaction listener active.</source>
-        <translation type="unfinished">2D Centroids -tapahtuman kuuntelija aktiivinen.</translation>
+        <translation>2D Centroids -tapahtuman kuuntelija aktiivinen.</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Deactivated/removed the 2D Centroids transaction listener.</source>
-        <translation type="unfinished">2D Centroids -tapahtuman kuuntelija poistettu käytöstä/poistettu.</translation>
+        <translation>2D Centroids -tapahtuman kuuntelija poistettu käytöstä/poistettu.</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -7033,22 +7033,22 @@ on jo luettelossa.</translation>
         <location line="+40"/>
         <location line="+5"/>
         <source>Syntax error: &apos;%1&apos; parse error</source>
-        <translation type="unfinished">Syntaksivirhe: &apos;%1&apos; parseerausvirhe</translation>
+        <translation>Syntaksivirhe: &apos;%1&apos; parseerausvirhe</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListenerInit.js" line="+19"/>
         <source>Centroid &amp;Listener</source>
-        <translation type="unfinished">Centroid kuuntelija</translation>
+        <translation>Centroid kuuntelija</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
-        <translation type="unfinished">(De-)aktivoi 2D-keskipisteiden tapahtumakuuntelija</translation>
+        <translation>(De-)aktivoi 2D-keskipisteiden tapahtumakuuntelija</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>(De-)Activate a transaction listener for binding changes applied to 2D Centroid markers</source>
-        <translation type="unfinished">(De-)aktivoi tapahtumakuuntelija 2D Centroid -merkkeihin tehtyjen sitovien muutosten kuuntelua varten</translation>
+        <translation>(De-)aktivoi tapahtumakuuntelija 2D Centroid -merkkeihin tehtyjen sitovien muutosten kuuntelua varten</translation>
     </message>
 </context>
 <context>
@@ -7177,131 +7177,131 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeighted.js" line="+105"/>
         <source>No selection.</source>
-        <translation type="unfinished">Ei valintaa.</translation>
+        <translation>Ei valintaa.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please, make a selection first. Command terminated.</source>
-        <translation type="unfinished">Tee ensin valinta. Komento lopetettu.</translation>
+        <translation>Tee ensin valinta. Komento lopetettu.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>2D Centroids weighted sum script (v0.24) by CVH.</source>
-        <translation type="unfinished">cVH:n 2D Centroids-painotetun summan käsikirjoitus (v0.24).</translation>
+        <translation>cVH:n 2D Centroids-painotetun summan käsikirjoitus (v0.24).</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Encountered a missing coordinate value.</source>
-        <translation type="unfinished">Koordinaattiarvo puuttuu.</translation>
+        <translation>Koordinaattiarvo puuttuu.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Encountered an invalid coordinate value.</source>
-        <translation type="unfinished">Kohtasi virheellisen koordinaattiarvon.</translation>
+        <translation>Kohtasi virheellisen koordinaattiarvon.</translation>
     </message>
     <message>
         <location line="+8"/>
         <location line="+11"/>
         <location line="+10"/>
         <source>Encountered a missing &apos;%1&apos; value.</source>
-        <translation type="unfinished">Puuttuva &apos;%1&apos;-arvo on havaittu.</translation>
+        <translation>Puuttuva &apos;%1&apos;-arvo on havaittu.</translation>
     </message>
     <message>
         <location line="-16"/>
         <location line="+11"/>
         <location line="+17"/>
         <source>Encountered an invalid &apos;%1&apos; value.</source>
-        <translation type="unfinished">Kohtasi virheellisen &apos;%1&apos;-arvon.</translation>
+        <translation>Kohtasi virheellisen &apos;%1&apos;-arvon.</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Encountered an unknown marker type.</source>
-        <translation type="unfinished">Tuntematon merkkityyppi.</translation>
+        <translation>Tuntematon merkkityyppi.</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>No result.</source>
-        <translation type="unfinished">Ei tulosta.</translation>
+        <translation>Ei tulosta.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>No 2D Centroid markers found in the selection.</source>
-        <translation type="unfinished">Valikoimasta ei löytynyt 2D Centroid -merkkejä.</translation>
+        <translation>Valikoimasta ei löytynyt 2D Centroid -merkkejä.</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Single marker selected, point mass = %1</source>
-        <translation type="unfinished">Yksittäinen merkki valittu, pisteen massa = %1</translation>
+        <translation>Yksittäinen merkki valittu, pisteen massa = %1</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Density is undefined</source>
-        <translation type="unfinished">Tiheys on määrittelemätön</translation>
+        <translation>Tiheys on määrittelemätön</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Results in a division by zero.</source>
-        <translation type="unfinished">Tuloksena on jako nollalla.</translation>
+        <translation>Tuloksena on jako nollalla.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Results in a NaN value.</source>
-        <translation type="unfinished">Tuloksena on NaN-arvo.</translation>
+        <translation>Tuloksena on NaN-arvo.</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Combined 2D Centroid</source>
-        <translation type="unfinished">Yhdistetty 2D-keskipiste</translation>
+        <translation>Yhdistetty 2D-keskipiste</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Combined uniform point mass (%1):</source>
-        <translation type="unfinished">Yhdistetty yhtenäinen pistemassa (%1):</translation>
+        <translation>Yhdistetty yhtenäinen pistemassa (%1):</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Combined point mass (%1):</source>
-        <translation type="unfinished">Yhdistetty pistemassa (%1):</translation>
+        <translation>Yhdistetty pistemassa (%1):</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>All densities are undefined</source>
-        <translation type="unfinished">Kaikki tiheydet ovat määrittelemättömiä</translation>
+        <translation>Kaikki tiheydet ovat määrittelemättömiä</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Some densities are undefined</source>
-        <translation type="unfinished">Jotkin tiheydet ovat määrittelemättömiä</translation>
+        <translation>Jotkin tiheydet ovat määrittelemättömiä</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>area (Informational):</source>
-        <translation type="unfinished">alue (informatiivinen):</translation>
+        <translation>alue (informatiivinen):</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>wire length (Informational):</source>
-        <translation type="unfinished">johtimen pituus (informatiivinen):</translation>
+        <translation>johtimen pituus (informatiivinen):</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Combined centroid:</source>
-        <translation type="unfinished">Yhdistetty keskipiste:</translation>
+        <translation>Yhdistetty keskipiste:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+19"/>
         <source>&amp;Sum 2D Centroids weighted</source>
-        <translation type="unfinished">Summa 2D-keskipisteiden painotettu</translation>
+        <translation>Summa 2D-keskipisteiden painotettu</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Combine selected 2D Centroid markers weighted</source>
-        <translation type="unfinished">Yhdistää valitut 2D Centroid -merkinnät painotettuna</translation>
+        <translation>Yhdistää valitut 2D Centroid -merkinnät painotettuna</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Combines selected 2D Centroid markers, summing all properties weighted</source>
-        <translation type="unfinished">Yhdistää valitut 2D Centroid -merkinnät ja laskee yhteen kaikki painotetut ominaisuudet</translation>
+        <translation>Yhdistää valitut 2D Centroid -merkinnät ja laskee yhteen kaikki painotetut ominaisuudet</translation>
     </message>
 </context>
 <context>
@@ -7309,99 +7309,99 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroid.js" line="+121"/>
         <source>No selection.</source>
-        <translation type="unfinished">Ei valintaa.</translation>
+        <translation>Ei valintaa.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please, make a selection first. Command terminated.</source>
-        <translation type="unfinished">Tee ensin valinta. Komento lopetettu.</translation>
+        <translation>Tee ensin valinta. Komento lopetettu.</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Length:</source>
-        <translation type="unfinished">Pituus:</translation>
+        <translation>Pituus:</translation>
     </message>
     <message>
         <location line="+35"/>
         <location line="+7"/>
         <source>Approximated length:</source>
-        <translation type="unfinished">Arvioitu pituus:</translation>
+        <translation>Arvioitu pituus:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Unsupported entity type. No results.</source>
-        <translation type="unfinished">Ei tuettu oliotyyppi. Ei tuloksia.</translation>
+        <translation>Ei tuettu oliotyyppi. Ei tuloksia.</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>No results.</source>
-        <translation type="unfinished">Ei tuloksia.</translation>
+        <translation>Ei tuloksia.</translation>
     </message>
     <message>
         <location line="-71"/>
         <source>Wire 2D Centroid script (v0.32) by CVH</source>
-        <translation type="unfinished">Lanka 2D Centroid käsikirjoitus (v0.32) by CVH</translation>
+        <translation>Lanka 2D Centroid käsikirjoitus (v0.32) by CVH</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>2D Centroid markers circle in selection. No results.</source>
-        <translation type="unfinished">2D Centroid markkerien ympyrä valinnassa. Ei tuloksia.</translation>
+        <translation>2D Centroid markkerien ympyrä valinnassa. Ei tuloksia.</translation>
     </message>
     <message>
         <location line="+55"/>
         <source>Results in a division by zero.</source>
-        <translation type="unfinished">Tuloksena on jako nollalla.</translation>
+        <translation>Tuloksena on jako nollalla.</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>2D wire Centroid</source>
-        <translation type="unfinished">2D-langan keskipiste</translation>
+        <translation>2D-langan keskipiste</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Total length:</source>
-        <translation type="unfinished">Kokonaispituus:</translation>
+        <translation>Kokonaispituus:</translation>
     </message>
     <message>
         <location line="+4"/>
         <location line="+6"/>
         <source>(Incl. approximations)</source>
-        <translation type="unfinished">(Mukaan lukien likiarvot)</translation>
+        <translation>(Mukaan lukien likiarvot)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Approximated centroid:</source>
-        <translation type="unfinished">Likimääräinen keskipiste:</translation>
+        <translation>Likimääräinen keskipiste:</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Centroid:</source>
-        <translation type="unfinished">Keskipiste:</translation>
+        <translation>Keskipiste:</translation>
     </message>
     <message>
         <location line="+125"/>
         <source>Encountered an unsupported polyline with custom widths</source>
-        <translation type="unfinished">Kohtasi tukemattoman polylinjan mukautetuilla leveyksillä</translation>
+        <translation>Kohtasi tukemattoman polylinjan mukautetuilla leveyksillä</translation>
     </message>
     <message>
         <location line="+105"/>
         <source>Encountered an unsupported polygon with custom widths</source>
-        <translation type="unfinished">Kohtasi tukemattoman polygonin mukautetuilla leveyksillä</translation>
+        <translation>Kohtasi tukemattoman polygonin mukautetuilla leveyksillä</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+19"/>
         <source>&amp;Wire Centroid</source>
-        <translation type="unfinished">Langan keskipiste</translation>
+        <translation>Langan keskipiste</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Create a wire 2D Centroid for a selection</source>
-        <translation type="unfinished">Luo langan 2D-keskipiste valinnalle</translation>
+        <translation>Luo langan 2D-keskipiste valinnalle</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Creates a new uniform linear density 2D Centroid marker and value labels for a selection of entities</source>
-        <translation type="unfinished">Luo uuden yhtenäisen lineaarisen tiheyden 2D Centroid-merkinnän ja arvomerkinnät valituille olioille</translation>
+        <translation>Luo uuden yhtenäisen lineaarisen tiheyden 2D Centroid-merkinnän ja arvomerkinnät valituille olioille</translation>
     </message>
 </context>
 <context>
@@ -7432,22 +7432,22 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/InputPreferences/PreferencesPage.ui" line="+19"/>
         <source>Decimal point:</source>
-        <translation type="unfinished">Desimaalipiste:</translation>
+        <translation>Desimaalipiste:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Cartesian coordinate separator:</source>
-        <translation type="unfinished">Kartesiankoordinaattien erotin:</translation>
+        <translation>Kartesiankoordinaattien erotin:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Polar coordinate separator:</source>
-        <translation type="unfinished">Polaarikoordinaattien erotin:</translation>
+        <translation>Polaarikoordinaattien erotin:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Relative coordinate prefix:</source>
-        <translation type="unfinished">Suhteellisen koordinaatin etuliite:</translation>
+        <translation>Suhteellisen koordinaatin etuliite:</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -7457,22 +7457,22 @@ on jo luettelossa.</translation>
     <message>
         <location line="+6"/>
         <source>Absolute Cartesian coordinate:</source>
-        <translation type="unfinished">Absoluuttinen kartesiankoordinaatti:</translation>
+        <translation>Absoluuttinen kartesiankoordinaatti:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Absolute polar coordinate:</source>
-        <translation type="unfinished">Absoluuttinen napakoordinaatti:</translation>
+        <translation>Absoluuttinen napakoordinaatti:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Relative Cartesian coordinate:</source>
-        <translation type="unfinished">Suhteellinen kartesiankoordinaatti:</translation>
+        <translation>Suhteellinen kartesiankoordinaatti:</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Relative polar coordinate:</source>
-        <translation type="unfinished">Suhteellinen polaarikoordinaatti:</translation>
+        <translation>Suhteellinen polaarikoordinaatti:</translation>
     </message>
 </context>
 <context>
@@ -7709,27 +7709,27 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Block/InsertScriptItem/InsertScriptItem.js" line="+85"/>
         <source>Cannot read file:</source>
-        <translation type="unfinished">Tiedostoa ei voi lukea:</translation>
+        <translation>Tiedostoa ei voi lukea:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No constructor found in file:</source>
-        <translation type="unfinished">Tiedostosta ei löytynyt konstruktoria:</translation>
+        <translation>Tiedostosta ei löytynyt konstruktoria:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No &apos;init&apos; function found in file:</source>
-        <translation type="unfinished">Tiedostosta ei löytynyt funktiota &apos;init&apos;:</translation>
+        <translation>Tiedostosta ei löytynyt funktiota &apos;init&apos;:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No &apos;generate&apos; function found in file:</source>
-        <translation type="unfinished">Tiedostosta ei löytynyt funktiota &apos;generate&apos;:</translation>
+        <translation>Tiedostosta ei löytynyt funktiota &apos;generate&apos;:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>No &apos;generatePreview&apos; function found in file:</source>
-        <translation type="unfinished">Tiedostosta ei löytynyt funktiota &apos;generatePreview&apos;:</translation>
+        <translation>Tiedostosta ei löytynyt funktiota &apos;generatePreview&apos;:</translation>
     </message>
 </context>
 <context>
@@ -7903,7 +7903,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/PreferencesPage.ui" line="+20"/>
         <source>Language of user interface:</source>
-        <translation type="unfinished">Käyttöliittymän kieli:</translation>
+        <translation>Käyttöliittymän kieli:</translation>
     </message>
 </context>
 <context>
@@ -8116,7 +8116,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
         <source>Undo Last Segment</source>
-        <translation type="unfinished">Viimeisen segmentin peruuttaminen</translation>
+        <translation>Viimeisen segmentin peruuttaminen</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -8139,12 +8139,12 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
         <source>Leader was created successfully</source>
-        <translation type="unfinished">Leader luotiin onnistuneesti</translation>
+        <translation>Leader luotiin onnistuneesti</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation type="unfinished">Leader valikoidusta tekstistä</translation>
+        <translation>Leader valikoidusta tekstistä</translation>
     </message>
 </context>
 <context>
@@ -8248,12 +8248,12 @@ on jo luettelossa.</translation>
     <message>
         <location line="+14"/>
         <source>Length:</source>
-        <translation type="unfinished">Pituus:</translation>
+        <translation>Pituus:</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Angle:</source>
-        <translation type="unfinished">Kulma:</translation>
+        <translation>Kulma:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2PInit.js" line="+2"/>
@@ -8590,7 +8590,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>Dist&amp;ance:</source>
-        <translation type="unfinished">Etäisyys:</translation>
+        <translation>Etäisyys:</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -8813,7 +8813,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/PreferencesPage.ui" line="+19"/>
         <source>Global linetype scale:</source>
-        <translation type="unfinished">Globaali linjatyypin asteikko:</translation>
+        <translation>Globaali linjatyypin asteikko:</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -9063,17 +9063,17 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscInformation/MiscInformation.js" line="+41"/>
         <source>Misc</source>
-        <translation type="unfinished">Misc</translation>
+        <translation>Misc</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Misc Information Tools</source>
-        <translation type="unfinished">Muut tietotyökalut</translation>
+        <translation>Muut tietotyökalut</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>&amp;Information</source>
-        <translation type="unfinished">Tiedot</translation>
+        <translation>Tiedot</translation>
     </message>
 </context>
 <context>
@@ -9504,32 +9504,32 @@ on jo luettelossa.</translation>
     <message>
         <location line="+27"/>
         <source>Margins</source>
-        <translation type="unfinished"></translation>
+        <translation>Marginaalit</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Left:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vasemmalle:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Top:</source>
-        <translation type="unfinished"></translation>
+        <translation>Top:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Right:</source>
-        <translation type="unfinished"></translation>
+        <translation>Aivan:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Bottom:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pohja:</translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Set to Printer Margins</source>
-        <translation type="unfinished"></translation>
+        <translation>Aseta tulostimen marginaalit</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -9744,7 +9744,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
         <source>Mode:</source>
-        <translation type="unfinished">Tila:</translation>
+        <translation>Tila:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -9801,114 +9801,114 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.js" line="+108"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation type="unfinished">Valitse viiva, kaari, ympyrä, ellipsi, spline tai polyline, jonka haluat jakaa</translation>
+        <translation>Valitse viiva, kaari, ympyrä, ellipsi, spline tai polyline, jonka haluat jakaa</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Choose line, arc, circle or ellipse to break up</source>
-        <translation type="unfinished">Valitse viiva, kaari, ympyrä tai ellipsi hajottaaksesi</translation>
+        <translation>Valitse viiva, kaari, ympyrä tai ellipsi hajottaaksesi</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Pick the first point</source>
-        <translation type="unfinished">Valitse ensimmäinen kohta</translation>
+        <translation>Valitse ensimmäinen kohta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pick the first break point</source>
-        <translation type="unfinished">Valitse ensimmäinen taukopiste</translation>
+        <translation>Valitse ensimmäinen taukopiste</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Pick the second point</source>
-        <translation type="unfinished">Valitse toinen kohta</translation>
+        <translation>Valitse toinen kohta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pick the second break point</source>
-        <translation type="unfinished">Valitse toinen taukopiste</translation>
+        <translation>Valitse toinen taukopiste</translation>
     </message>
     <message>
         <location line="+170"/>
         <source>Break Out Segment</source>
-        <translation type="unfinished">Break Out Segmentti</translation>
+        <translation>Break Out Segmentti</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
         <source>Remove line break segment</source>
-        <translation type="unfinished">Poista rivinvaihtosegmentti</translation>
+        <translation>Poista rivinvaihtosegmentti</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Remove the line segment between the break symbol</source>
-        <translation type="unfinished">Poista katkosymbolin välinen viivasegmentti</translation>
+        <translation>Poista katkosymbolin välinen viivasegmentti</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Remove Segment</source>
-        <translation type="unfinished">Poista segmentti</translation>
+        <translation>Poista segmentti</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Inherit entity properties</source>
-        <translation type="unfinished">Periytyvät entiteetin ominaisuudet</translation>
+        <translation>Periytyvät entiteetin ominaisuudet</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inherit all properties from the chosen entity</source>
-        <translation type="unfinished">Perii kaikki ominaisuudet valitulta entiteetiltä</translation>
+        <translation>Perii kaikki ominaisuudet valitulta entiteetiltä</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inherit</source>
-        <translation type="unfinished">Peritään</translation>
+        <translation>Peritään</translation>
     </message>
     <message>
         <location line="+17"/>
         <location line="+13"/>
         <source>Peak ratio</source>
-        <translation type="unfinished">Huippusuhde</translation>
+        <translation>Huippusuhde</translation>
     </message>
     <message>
         <location line="-10"/>
         <location line="+13"/>
         <source>The ratio of the peak height to the break width</source>
-        <translation type="unfinished">Huipun korkeuden suhde tauon leveyteen</translation>
+        <translation>Huipun korkeuden suhde tauon leveyteen</translation>
     </message>
     <message>
         <location line="-10"/>
         <source>Peak Ratio:</source>
-        <translation type="unfinished">Huippusuhde:</translation>
+        <translation>Huippusuhde:</translation>
     </message>
     <message>
         <location line="+78"/>
         <source>First/Last segment inclined</source>
-        <translation type="unfinished">Ensimmäinen/viimeinen segmentti kallistettu</translation>
+        <translation>Ensimmäinen/viimeinen segmentti kallistettu</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>The first and last segment of the break symbol are inclined</source>
-        <translation type="unfinished">Taukosymbolin ensimmäinen ja viimeinen segmentti ovat kaltevia</translation>
+        <translation>Taukosymbolin ensimmäinen ja viimeinen segmentti ovat kaltevia</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>First/Last segment vertical</source>
-        <translation type="unfinished">Ensimmäinen/viimeinen segmentti pystysuora</translation>
+        <translation>Ensimmäinen/viimeinen segmentti pystysuora</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>The first and last segment of the break symbol are vertical</source>
-        <translation type="unfinished">Taukosymbolin ensimmäinen ja viimeinen segmentti ovat pystysuorat</translation>
+        <translation>Taukosymbolin ensimmäinen ja viimeinen segmentti ovat pystysuorat</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js" line="+2"/>
         <source>&amp;Polyline break symbol from 2 points</source>
-        <translation type="unfinished">Polylinjan katkaisusymboli 2 pisteestä</translation>
+        <translation>Polylinjan katkaisusymboli 2 pisteestä</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw a polyline break symbol from 2 points</source>
-        <translation type="unfinished">Piirrä polylinjan katkaisusymboli 2 pisteestä</translation>
+        <translation>Piirrä polylinjan katkaisusymboli 2 pisteestä</translation>
     </message>
 </context>
 <context>
@@ -9988,22 +9988,22 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+96"/>
         <source>Auto Paper Size</source>
-        <translation type="unfinished">Automaattinen paperikoko</translation>
+        <translation>Automaattinen paperikoko</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The paper size is set to a custom size (%1x%2mm). Do you want to change it to the default paper size of your printer (%3)?</source>
-        <translation type="unfinished">Paperikoko on asetettu mukautettuun kokoon (%1x%2mm). Haluatko vaihtaa sen tulostimen oletuspaperikokoon (%3)?</translation>
+        <translation>Paperikoko on asetettu mukautettuun kokoon (%1x%2mm). Haluatko vaihtaa sen tulostimen oletuspaperikokoon (%3)?</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Auto fit</source>
-        <translation type="unfinished">Automaattinen sovitus</translation>
+        <translation>Automaattinen sovitus</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Auto fit drawing to paper?</source>
-        <translation type="unfinished">Sovita piirustus automaattisesti paperille?</translation>
+        <translation>Sovita piirustus automaattisesti paperille?</translation>
     </message>
     <message>
         <location line="+198"/>
@@ -10019,7 +10019,7 @@ on jo luettelossa.</translation>
         <location line="+198"/>
         <location line="+3"/>
         <source>Page Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Sivun asetukset</translation>
     </message>
     <message>
         <location line="+276"/>
@@ -10185,17 +10185,17 @@ on jo luettelossa.</translation>
     <message>
         <location line="+17"/>
         <source>Always format property values as decimal numbers</source>
-        <translation type="unfinished">Muotoile ominaisuuksien arvot aina desimaalilukuina</translation>
+        <translation>Muotoile ominaisuuksien arvot aina desimaalilukuina</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Decimals / precision for displayed property values:</source>
-        <translation type="unfinished">Näytettävien ominaisuuksien arvojen desimaalit / tarkkuus:</translation>
+        <translation>Näytettävien ominaisuuksien arvojen desimaalit / tarkkuus:</translation>
     </message>
     <message>
         <location line="-19"/>
         <source>Display advanced dimension style overrides</source>
-        <translation type="unfinished">Näytä laajennetun ulottuvuuden tyylin ohitukset</translation>
+        <translation>Näytä laajennetun ulottuvuuden tyylin ohitukset</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1668"/>
@@ -10468,7 +10468,7 @@ on jo luettelossa.</translation>
         <location line="-37"/>
         <location line="+60"/>
         <source>Multiples</source>
-        <translation type="unfinished">Multiples</translation>
+        <translation>Multiples</translation>
     </message>
     <message>
         <location line="-46"/>
@@ -10551,7 +10551,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+62"/>
         <source>Invalid rotation angle</source>
-        <translation type="unfinished">Väärä kiertokulma</translation>
+        <translation>Väärä kiertokulma</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
@@ -10733,7 +10733,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+17"/>
         <source>&amp;Radius:</source>
-        <translation type="unfinished">Säde:</translation>
+        <translation>Säde:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
@@ -10887,17 +10887,17 @@ on jo luettelossa.</translation>
     <message>
         <location line="+13"/>
         <source>Opening</source>
-        <translation type="unfinished">Avaaminen</translation>
+        <translation>Avaaminen</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Allow opening of zero size files (e.g. online files that are not synched to disk)</source>
-        <translation type="unfinished">Salli nollakokoisten tiedostojen avaaminen (esim. verkkotiedostot, joita ei synkronoida levylle)</translation>
+        <translation>Salli nollakokoisten tiedostojen avaaminen (esim. verkkotiedostot, joita ei synkronoida levylle)</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Decode strings in DXF/DWG as UTF-8 (experimental)</source>
-        <translation type="unfinished">DXF/DWG:n merkkijonojen dekoodaus UTF-8:ksi (kokeellinen)</translation>
+        <translation>DXF/DWG:n merkkijonojen dekoodaus UTF-8:ksi (kokeellinen)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -10980,7 +10980,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+66"/>
         <source>Invalid scale factor</source>
-        <translation type="unfinished">Väärä mittakaavakerroin</translation>
+        <translation>Väärä mittakaavakerroin</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
@@ -11016,7 +11016,7 @@ on jo luettelossa.</translation>
         <location line="+7"/>
         <location line="+14"/>
         <source>1</source>
-        <translation type="unfinished">1</translation>
+        <translation>1</translation>
     </message>
     <message>
         <location line="-7"/>
@@ -11239,7 +11239,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+27"/>
         <source>Same Layer</source>
-        <translation type="unfinished">Sama kerros</translation>
+        <translation>Sama kerros</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2"/>
@@ -11685,7 +11685,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
         <source>Rotate:</source>
-        <translation type="unfinished">Pyöritä:</translation>
+        <translation>Pyöritä:</translation>
     </message>
 </context>
 <context>
@@ -11823,7 +11823,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+1"/>
         <source>Enter</source>
-        <translation type="unfinished">Kirjoita</translation>
+        <translation>Kirjoita</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+17"/>
@@ -12166,7 +12166,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+47"/>
         <source>Status bar font:</source>
-        <translation type="unfinished">Tilapalkin fontti:</translation>
+        <translation>Tilapalkin fontti:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -12369,7 +12369,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+19"/>
         <source>Font size in text dialog preview:</source>
-        <translation type="unfinished">Fontin koko tekstin esikatselussa:</translation>
+        <translation>Fontin koko tekstin esikatselussa:</translation>
     </message>
     <message>
         <location line="+99"/>
@@ -12447,22 +12447,22 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeader.js" line="+41"/>
         <source>Arrow position</source>
-        <translation type="unfinished">Nuolen sijainti</translation>
+        <translation>Nuolen sijainti</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Choose text</source>
-        <translation type="unfinished">Valitse teksti</translation>
+        <translation>Valitse teksti</translation>
     </message>
     <message>
         <location line="+102"/>
         <source>Leader was created successfully</source>
-        <translation type="unfinished">Leader luotiin onnistuneesti</translation>
+        <translation>Leader luotiin onnistuneesti</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
         <source>&amp;Text Aligned Leader</source>
-        <translation type="unfinished">Tekstin mukainen johtaja</translation>
+        <translation>Tekstin mukainen johtaja</translation>
     </message>
 </context>
 <context>
@@ -12860,7 +12860,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ThemePreferences/PreferencesPage.ui" line="+20"/>
         <source>User interface theme:</source>
-        <translation type="unfinished">Käyttöliittymän teema:</translation>
+        <translation>Käyttöliittymän teema:</translation>
     </message>
 </context>
 <context>
@@ -12953,7 +12953,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ToolBarPreferences/PreferencesPage.ui" line="+19"/>
         <source>Icon size:</source>
-        <translation type="unfinished">Kuvakkeen koko:</translation>
+        <translation>Kuvakkeen koko:</translation>
     </message>
     <message>
         <location line="+72"/>
@@ -12973,7 +12973,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+6"/>
         <source>Shortcut prefix character:</source>
-        <translation type="unfinished">Lyhytvalintainen etuliitteen merkki:</translation>
+        <translation>Lyhytvalintainen etuliitteen merkki:</translation>
     </message>
 </context>
 <context>
@@ -13238,22 +13238,22 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui" line="+17"/>
         <source>These settings affect the resolution and scale of the QCAD user interface. These preferences can be adjusted if there are problems with the user interface of QCAD, such as very large or very small icons or text labels.</source>
-        <translation type="unfinished">Nämä asetukset vaikuttavat QCADin käyttöliittymän resoluutioon ja mittakaavaan. Näitä asetuksia voidaan säätää, jos QCADin käyttöliittymässä on ongelmia, kuten erittäin suuret tai erittäin pienet kuvakkeet tai tekstitarrat.</translation>
+        <translation>Nämä asetukset vaikuttavat QCADin käyttöliittymän resoluutioon ja mittakaavaan. Näitä asetuksia voidaan säätää, jos QCADin käyttöliittymässä on ongelmia, kuten erittäin suuret tai erittäin pienet kuvakkeet tai tekstitarrat.</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Auto screen scale factor</source>
-        <translation type="unfinished">Automaattinen näytön skaalauskerroin</translation>
+        <translation>Automaattinen näytön skaalauskerroin</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Enable high DPI scaling</source>
-        <translation type="unfinished">Ota käyttöön korkea DPI-skaalaus</translation>
+        <translation>Ota käyttöön korkea DPI-skaalaus</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Scale factor:</source>
-        <translation type="unfinished">Mittakaavakerroin:</translation>
+        <translation>Mittakaavakerroin:</translation>
     </message>
 </context>
 <context>
@@ -13261,12 +13261,12 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/UiPreferences.js" line="+29"/>
         <source>General</source>
-        <translation type="unfinished">Yleistä</translation>
+        <translation>Yleistä</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>User Interface</source>
-        <translation type="unfinished">Käyttöliittymä</translation>
+        <translation>Käyttöliittymä</translation>
     </message>
 </context>
 <context>
@@ -13413,17 +13413,17 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/PreferencesPage.ui" line="+17"/>
         <source>Drawing unit:</source>
-        <translation type="unfinished">Piirustusyksikkö:</translation>
+        <translation>Piirustusyksikkö:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Paper unit:</source>
-        <translation type="unfinished">Paperiyksikkö:</translation>
+        <translation>Paperiyksikkö:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Measurement system (for line types and hatch patterns):</source>
-        <translation type="unfinished">Mittausjärjestelmä (viivatyypeille ja luukkukuvioille):</translation>
+        <translation>Mittausjärjestelmä (viivatyypeille ja luukkukuvioille):</translation>
     </message>
 </context>
 <context>
@@ -13521,12 +13521,12 @@ on jo luettelossa.</translation>
     <message>
         <location line="+29"/>
         <source>Cannot import file into existing drawing:</source>
-        <translation type="unfinished">Tiedostoa ei voi tuoda olemassa olevaan piirustukseen:</translation>
+        <translation>Tiedostoa ei voi tuoda olemassa olevaan piirustukseen:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Importing file:</source>
-        <translation type="unfinished">Tiedoston tuominen:</translation>
+        <translation>Tiedoston tuominen:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -13622,72 +13622,72 @@ on jo luettelossa.</translation>
     <message>
         <location line="-10"/>
         <source>Degrees</source>
-        <translation type="unfinished">Tutkinnot</translation>
+        <translation>Tutkinnot</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Almost Equal</source>
-        <translation type="unfinished">Lähes tasavertainen</translation>
+        <translation>Lähes tasavertainen</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angle</source>
-        <translation type="unfinished">Kulma</translation>
+        <translation>Kulma</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Asymptotically Equal</source>
-        <translation type="unfinished">Asymptoottisesti yhtä suuri</translation>
+        <translation>Asymptoottisesti yhtä suuri</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Center Line</source>
-        <translation type="unfinished">Keskilinja</translation>
+        <translation>Keskilinja</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Electrical Phase</source>
-        <translation type="unfinished">Sähköinen vaihe</translation>
+        <translation>Sähköinen vaihe</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Identity</source>
-        <translation type="unfinished">Identiteetti</translation>
+        <translation>Identiteetti</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Not Equal</source>
-        <translation type="unfinished">Ei yhtäläinen</translation>
+        <translation>Ei yhtäläinen</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Omega</source>
-        <translation type="unfinished">Omega</translation>
+        <translation>Omega</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Property Line</source>
-        <translation type="unfinished">Kiinteistöraja</translation>
+        <translation>Kiinteistöraja</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Subscript 2</source>
-        <translation type="unfinished">Alaindeksi 2</translation>
+        <translation>Alaindeksi 2</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Square Root</source>
-        <translation type="unfinished">Neliöjuuri</translation>
+        <translation>Neliöjuuri</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Squared</source>
-        <translation type="unfinished">Squared</translation>
+        <translation>Squared</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation type="unfinished">Kuutioina</translation>
+        <translation>Kuutioina</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13748,69 +13748,69 @@ on jo luettelossa.</translation>
     <message>
         <location line="+5"/>
         <source>Scientific</source>
-        <translation type="unfinished">Tieteellinen</translation>
+        <translation>Tieteellinen</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal</source>
-        <translation type="unfinished">Desimaaliluku</translation>
+        <translation>Desimaaliluku</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Engineering</source>
-        <translation type="unfinished">Insinöörityö</translation>
+        <translation>Insinöörityö</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Architectural</source>
-        <translation type="unfinished">Arkkitehtoninen</translation>
+        <translation>Arkkitehtoninen</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fractional</source>
-        <translation type="unfinished">Murtoluku</translation>
+        <translation>Murtoluku</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Centered</source>
-        <translation type="unfinished">Keskitetty</translation>
+        <translation>Keskitetty</translation>
     </message>
     <message>
         <location line="+13"/>
         <location line="+38"/>
         <source>Show trailing zeroes</source>
-        <translation type="unfinished">Näytä perässä olevat nollat</translation>
+        <translation>Näytä perässä olevat nollat</translation>
     </message>
     <message>
         <location line="-9"/>
         <source>Decimal Degrees</source>
-        <translation type="unfinished">Desimaaliasteet</translation>
+        <translation>Desimaaliasteet</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Deg/min/sec</source>
-        <translation type="unfinished">Deg/min/sec</translation>
+        <translation>Deg/min/sec</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gradians</source>
-        <translation type="unfinished">Gradians</translation>
+        <translation>Gradians</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Radians</source>
-        <translation type="unfinished">Radians</translation>
+        <translation>Radians</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Surveyor&apos;s units</source>
-        <translation type="unfinished">Maanmittausyksiköt</translation>
+        <translation>Maanmittausyksiköt</translation>
     </message>
     <message>
         <location line="-28"/>
         <location line="+35"/>
         <source>Suppress trailing zeroes</source>
-        <translation type="unfinished">Jälkimmäisten nollien poistaminen</translation>
+        <translation>Jälkimmäisten nollien poistaminen</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -13838,7 +13838,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="-74"/>
         <source>Include 0&apos;0&quot;</source>
-        <translation type="unfinished">Sisältää 0&apos;0&quot;</translation>
+        <translation>Sisältää 0&apos;0&quot;</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13849,29 +13849,29 @@ on jo luettelossa.</translation>
         <location line="+33"/>
         <location line="+2"/>
         <source>(unsupported)</source>
-        <translation type="unfinished">(ei tuettu)</translation>
+        <translation>(ei tuettu)</translation>
     </message>
     <message>
         <location line="-39"/>
         <source>Include 0&apos;, suppress 0&quot;</source>
-        <translation type="unfinished">Sisällytä 0&apos;, tukahduta 0&quot;</translation>
+        <translation>Sisällytä 0&apos;, tukahduta 0&quot;</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Include 0&quot;, suppress 0&apos;</source>
-        <translation type="unfinished">Sisällytä 0&quot;, tukahduta 0&apos;</translation>
+        <translation>Sisällytä 0&quot;, tukahduta 0&apos;</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+35"/>
         <source>Suppress leading zeroes</source>
-        <translation type="unfinished">Johtavien nollien poistaminen</translation>
+        <translation>Johtavien nollien poistaminen</translation>
     </message>
     <message>
         <location line="-33"/>
         <location line="+35"/>
         <source>Suppress leading / trailing zeroes</source>
-        <translation type="unfinished">Johtavien ja perässä olevien nollien poistaminen</translation>
+        <translation>Johtavien ja perässä olevien nollien poistaminen</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -14079,12 +14079,12 @@ on jo luettelossa.</translation>
     <message>
         <location line="+2"/>
         <source>Dimension Styles</source>
-        <translation type="unfinished">Mitat Tyylit</translation>
+        <translation>Mitat Tyylit</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Dimension Style</source>
-        <translation type="unfinished">Mitta Tyyli</translation>
+        <translation>Mitta Tyyli</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -14199,22 +14199,22 @@ on jo luettelossa.</translation>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (2 Lines)</source>
-        <translation type="unfinished">Kulmamitat (2 riviä)</translation>
+        <translation>Kulmamitat (2 riviä)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (2 Lines)</source>
-        <translation type="unfinished">Kulmamitta (2 riviä)</translation>
+        <translation>Kulmamitta (2 riviä)</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (3 Points)</source>
-        <translation type="unfinished">Kulmamitat (3 pistettä)</translation>
+        <translation>Kulmamitat (3 pistettä)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (3 Points)</source>
-        <translation type="unfinished">Kulmaulottuvuus (3 pistettä)</translation>
+        <translation>Kulmaulottuvuus (3 pistettä)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14304,12 +14304,12 @@ on jo luettelossa.</translation>
     <message>
         <location line="+2"/>
         <source>Tolerances</source>
-        <translation type="unfinished">Toleranssit</translation>
+        <translation>Toleranssit</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Tolerance</source>
-        <translation type="unfinished">Suvaitsevaisuus</translation>
+        <translation>Suvaitsevaisuus</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14469,7 +14469,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+1"/>
         <source>PDF/A-1B File</source>
-        <translation type="unfinished">PDF/A-1B-tiedosto</translation>
+        <translation>PDF/A-1B-tiedosto</translation>
     </message>
 </context>
 <context>
@@ -14560,7 +14560,7 @@ on jo luettelossa.</translation>
         <location line="+66"/>
         <location line="+124"/>
         <source>ID does not refer to an entity:</source>
-        <translation type="unfinished">ID ei viittaa entiteettiin:</translation>
+        <translation>ID ei viittaa entiteettiin:</translation>
     </message>
     <message>
         <location line="-42"/>

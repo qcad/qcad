@@ -1264,13 +1264,13 @@ Voulez-vous le récupérer ?</translation>
         <translation>Nom du Bloc :</translation>
     </message>
     <message>
-        <location filename="../scripts/Block/BlockDialog.js" line="+81"/>
+        <location filename="../scripts/Block/BlockDialog.js" line="+80"/>
         <source>block</source>
         <comment>default block name prefix</comment>
         <translation>bloc</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+51"/>
         <source>Leading or trailing spaces.</source>
         <translation>Espaces avant ou après.</translation>
     </message>
