@@ -9471,7 +9471,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Pielāgots</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+32"/>
+        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+116"/>
         <source>Page Orientation</source>
         <translation type="unfinished">Lapas orientācija</translation>
     </message>
@@ -9486,7 +9486,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Ainava</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-113"/>
         <source>Paper</source>
         <translation type="unfinished">Papīrs</translation>
     </message>
@@ -9506,7 +9506,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Papīra augstums:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+66"/>
         <source>Margins</source>
         <translation type="unfinished">Maržas</translation>
     </message>
@@ -9537,8 +9537,8 @@ jau ir sarakstā.</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Viewport</source>
-        <translation type="unfinished">Skatuve</translation>
+        <source>Scale and Position</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>

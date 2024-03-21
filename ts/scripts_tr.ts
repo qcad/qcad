@@ -9459,7 +9459,7 @@ zaten listede.</translation>
         <translation type="unfinished">Özel</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+32"/>
+        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+116"/>
         <source>Page Orientation</source>
         <translation type="unfinished">Sayfa Yönlendirme</translation>
     </message>
@@ -9474,7 +9474,7 @@ zaten listede.</translation>
         <translation type="unfinished">Manzara</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-113"/>
         <source>Paper</source>
         <translation type="unfinished">Kağıt</translation>
     </message>
@@ -9494,7 +9494,7 @@ zaten listede.</translation>
         <translation type="unfinished">Kağıt yüksekliği:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+66"/>
         <source>Margins</source>
         <translation type="unfinished">Kenar Boşlukları</translation>
     </message>
@@ -9525,8 +9525,8 @@ zaten listede.</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Viewport</source>
-        <translation type="unfinished">Görünüm Alanı</translation>
+        <source>Scale and Position</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>

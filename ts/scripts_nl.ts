@@ -9467,7 +9467,7 @@ is al in de lijst.</translation>
         <translation>Gebruiker gedefinieerd</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+32"/>
+        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+116"/>
         <source>Page Orientation</source>
         <translation>Paginaoriëntatie</translation>
     </message>
@@ -9482,7 +9482,7 @@ is al in de lijst.</translation>
         <translation>Liggend</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-113"/>
         <source>Paper</source>
         <translation>Papier</translation>
     </message>
@@ -9502,7 +9502,7 @@ is al in de lijst.</translation>
         <translation>Papierhoogte:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+66"/>
         <source>Margins</source>
         <translation>Randen</translation>
     </message>
@@ -9533,8 +9533,8 @@ is al in de lijst.</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Viewport</source>
-        <translation>Weergavegebied</translation>
+        <source>Scale and Position</source>
+        <translation>Schaal en positie</translation>
     </message>
     <message>
         <location line="+8"/>

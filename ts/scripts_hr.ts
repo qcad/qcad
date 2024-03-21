@@ -9468,7 +9468,7 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+32"/>
+        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+116"/>
         <source>Page Orientation</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9483,7 +9483,7 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-113"/>
         <source>Paper</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9503,7 +9503,7 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+66"/>
         <source>Margins</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9534,7 +9534,7 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+25"/>
-        <source>Viewport</source>
+        <source>Scale and Position</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

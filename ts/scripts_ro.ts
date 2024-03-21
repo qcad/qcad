@@ -9471,7 +9471,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Personalizat</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+32"/>
+        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+116"/>
         <source>Page Orientation</source>
         <translation type="unfinished">Orientarea paginii</translation>
     </message>
@@ -9486,7 +9486,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Peisaj</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-113"/>
         <source>Paper</source>
         <translation type="unfinished">Hârtie</translation>
     </message>
@@ -9506,7 +9506,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Înălțimea hârtiei:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+66"/>
         <source>Margins</source>
         <translation type="unfinished">Marje</translation>
     </message>
@@ -9537,8 +9537,8 @@ este deja în listă.</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Viewport</source>
-        <translation type="unfinished">Viewport</translation>
+        <source>Scale and Position</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>

@@ -9474,7 +9474,7 @@ už existuje v zozname.</translation>
         <translation>Vlastné</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+32"/>
+        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+116"/>
         <source>Page Orientation</source>
         <translation>Orientácia</translation>
     </message>
@@ -9489,7 +9489,7 @@ už existuje v zozname.</translation>
         <translation>Na šírku</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-113"/>
         <source>Paper</source>
         <translation>Papier</translation>
     </message>
@@ -9509,7 +9509,7 @@ už existuje v zozname.</translation>
         <translation>Výška papiera:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+66"/>
         <source>Margins</source>
         <translation type="unfinished">Marže</translation>
     </message>
@@ -9540,8 +9540,8 @@ už existuje v zozname.</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Viewport</source>
-        <translation>Náhľad</translation>
+        <source>Scale and Position</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>

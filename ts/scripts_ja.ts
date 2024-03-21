@@ -9460,7 +9460,7 @@ is already in the list.</source>
         <translation>カスタム</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+32"/>
+        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+116"/>
         <source>Page Orientation</source>
         <translation>ページの向き</translation>
     </message>
@@ -9475,7 +9475,7 @@ is already in the list.</source>
         <translation>ランドスケープ（横）</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-113"/>
         <source>Paper</source>
         <translation>用紙</translation>
     </message>
@@ -9495,7 +9495,7 @@ is already in the list.</source>
         <translation>用紙高さ:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+66"/>
         <source>Margins</source>
         <translation type="unfinished">マージン</translation>
     </message>
@@ -9526,8 +9526,8 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+25"/>
-        <source>Viewport</source>
-        <translation>ビューポート</translation>
+        <source>Scale and Position</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>

@@ -9467,7 +9467,7 @@ er allerede på listen.</translation>
         <translation>Tilpasset</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+32"/>
+        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+116"/>
         <source>Page Orientation</source>
         <translation>Orientering af sider</translation>
     </message>
@@ -9482,7 +9482,7 @@ er allerede på listen.</translation>
         <translation>Landskab</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-113"/>
         <source>Paper</source>
         <translation>Papir</translation>
     </message>
@@ -9502,7 +9502,7 @@ er allerede på listen.</translation>
         <translation>Papirhøjde:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+66"/>
         <source>Margins</source>
         <translation>Margener</translation>
     </message>
@@ -9533,8 +9533,8 @@ er allerede på listen.</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Viewport</source>
-        <translation>Visionsvindue</translation>
+        <source>Scale and Position</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>

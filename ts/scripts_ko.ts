@@ -9460,7 +9460,7 @@ is already in the list.</source>
         <translation type="unfinished">사용자 지정</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+32"/>
+        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+116"/>
         <source>Page Orientation</source>
         <translation type="unfinished">페이지 방향</translation>
     </message>
@@ -9475,7 +9475,7 @@ is already in the list.</source>
         <translation type="unfinished">랜드스케이프</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-113"/>
         <source>Paper</source>
         <translation type="unfinished">종이</translation>
     </message>
@@ -9495,7 +9495,7 @@ is already in the list.</source>
         <translation type="unfinished">용지 높이:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+66"/>
         <source>Margins</source>
         <translation type="unfinished">여백</translation>
     </message>
@@ -9526,8 +9526,8 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+25"/>
-        <source>Viewport</source>
-        <translation type="unfinished">뷰포트</translation>
+        <source>Scale and Position</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
