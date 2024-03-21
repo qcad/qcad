@@ -50,8 +50,7 @@ BlockDialog.prototype.show = function() {
     
     this.dialog = WidgetFactory.createDialog(BlockDialog.includeBasePath, "BlockDialog.ui", EAction.getMainWindow());
 
-    var widgets = getWidgets(this.dialog);
-    var leBlockName = widgets["BlockName"];
+    var leBlockName = this.dialog.findChild("BlockName");
     var rx = new RegExp("[^<>/\\\\\":;\?\*|,=`]{1,255}");
     this.validator = new QRegExpValidator(rx, leBlockName);
     leBlockName.setValidator(this.validator);
@@ -111,21 +110,19 @@ BlockDialog.prototype.show = function() {
  * Block name validation.
  */
 BlockDialog.prototype.validate = function() {
-    var widgets = getWidgets(this.dialog);
-    var leBlockName = widgets["BlockName"];
+    var leBlockName = this.dialog.findChild("BlockName");
     return BlockDialog.validate(this.block, leBlockName.text, this.document, this.dialog, this.validator, this.allowOverwrite, this.allowSameName);
 };
 
 BlockDialog.validate = function(block, blockName, document, dialog, validator, allowOverwrite, allowSameName) {
     var creatingBlock = isNull(block);
-    var widgets = getWidgets(dialog);
 
-    var leBlockName = widgets["BlockName"];
+    var leBlockName = dialog.findChild("BlockName");
     if (isNull(leBlockName)) {
         return false;
     }
 
-    var message = widgets["Message"];
+    var message = dialog.findChild("Message");
     var pos = 0;
     var acceptable = true;
     message.clear();
@@ -163,8 +160,9 @@ BlockDialog.validate = function(block, blockName, document, dialog, validator, a
         ret = false;
     }
 
-    if (!isNull(widgets["ButtonBox"])) {
-        widgets["ButtonBox"].button(QDialogButtonBox.Ok).enabled = acceptable;
+    var buttonBox = dialog.findChild("ButtonBox");
+    if (!isNull(buttonBox)) {
+        buttonBox.button(QDialogButtonBox.Ok).enabled = acceptable;
     }
 
     return ret;

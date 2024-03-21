@@ -226,7 +226,7 @@ function PrintPreviewImpl(guiAction) {
     this.optOutRelativeZeroResume = true;
 }
 
-PrintPreviewImpl.prototype = NewFile.getDefaultAction(false);
+PrintPreviewImpl.prototype = NewFile.getDefaultAction(false, true);
 PrintPreviewImpl.includeBasePath = includeBasePath;
 
 PrintPreviewImpl.State = {
