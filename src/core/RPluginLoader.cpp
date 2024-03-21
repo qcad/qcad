@@ -75,20 +75,19 @@ QStringList RPluginLoader::getPluginFiles() {
 
     // make sure plugins which depend on other plugins are loaded last:
     pluginFiles.sort();
+    QStringList lastPlugins;
+    QStringList firstPlugins;
     for (int i=0; i<pluginFiles.length(); i++) {
-        if (pluginFiles[i].contains("nest")) {
-            QString pf = pluginFiles.takeAt(i);
-            pluginFiles.append(pf);
-            break;
+        if (pluginFiles[i].contains("nest") || pluginFiles[i].contains("dwg")) {
+            lastPlugins.append(pluginFiles[i]);
+        }
+        else {
+            firstPlugins.append(pluginFiles[i]);
         }
     }
-    for (int i=0; i<pluginFiles.length(); i++) {
-        if (pluginFiles[i].contains("dwg")) {
-            QString pf = pluginFiles.takeAt(i);
-            pluginFiles.append(pf);
-            break;
-        }
-    }
+
+    pluginFiles = firstPlugins;
+    pluginFiles.append(lastPlugins);
 
     return pluginFiles;
 }
