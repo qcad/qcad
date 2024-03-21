@@ -9474,7 +9474,7 @@ is already in the list.</source>
         <translation>Пользовательский</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+32"/>
+        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+116"/>
         <source>Page Orientation</source>
         <translation>Ориентация бумаги</translation>
     </message>
@@ -9489,7 +9489,7 @@ is already in the list.</source>
         <translation>Альбомная</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-113"/>
         <source>Paper</source>
         <translation>Бумага</translation>
     </message>
@@ -9509,7 +9509,7 @@ is already in the list.</source>
         <translation>Высота бумаги:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+66"/>
         <source>Margins</source>
         <translation type="unfinished">Поля</translation>
     </message>
@@ -9540,8 +9540,8 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+25"/>
-        <source>Viewport</source>
-        <translation>Видовой экран</translation>
+        <source>Scale and Position</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>

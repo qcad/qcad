@@ -9467,7 +9467,7 @@ ist bereits in der Liste.</translation>
         <translation>Benutzerdefiniert</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+32"/>
+        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+116"/>
         <source>Page Orientation</source>
         <translation>Seitenausrichtung</translation>
     </message>
@@ -9482,7 +9482,7 @@ ist bereits in der Liste.</translation>
         <translation>Querformat</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-113"/>
         <source>Paper</source>
         <translation>Papier</translation>
     </message>
@@ -9502,7 +9502,7 @@ ist bereits in der Liste.</translation>
         <translation>Papierhöhe:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+66"/>
         <source>Margins</source>
         <translation>Ränder</translation>
     </message>
@@ -9533,8 +9533,8 @@ ist bereits in der Liste.</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Viewport</source>
-        <translation>Anzeigebereich</translation>
+        <source>Scale and Position</source>
+        <translation>Skalierung und Position</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -9544,12 +9544,12 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+17"/>
         <source>Offset X:</source>
-        <translation>Verschiebung X:</translation>
+        <translation>Position X:</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Offset Y:</source>
-        <translation>Verschiebung Y:</translation>
+        <translation>Position Y:</translation>
     </message>
     <message>
         <location line="+28"/>

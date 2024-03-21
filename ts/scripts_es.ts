@@ -9442,7 +9442,7 @@ ya está en la lista.</translation>
 <context>
     <name>PageSettings</name>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+32"/>
+        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+116"/>
         <source>Page Orientation</source>
         <translation>Orientación</translation>
     </message>
@@ -9457,7 +9457,7 @@ ya está en la lista.</translation>
         <translation>Apaisado</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-113"/>
         <source>Paper</source>
         <translation>Papel</translation>
     </message>
@@ -9477,7 +9477,7 @@ ya está en la lista.</translation>
         <translation>Altura papel: </translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+66"/>
         <source>Margins</source>
         <translation>Márgenes</translation>
     </message>
@@ -9508,8 +9508,8 @@ ya está en la lista.</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Viewport</source>
-        <translation>Viewport</translation>
+        <source>Scale and Position</source>
+        <translation>Escala y posición</translation>
     </message>
     <message>
         <location line="+8"/>

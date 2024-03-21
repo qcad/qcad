@@ -9442,7 +9442,7 @@ is already in the list.</source>
 <context>
     <name>PageSettings</name>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+32"/>
+        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+116"/>
         <source>Page Orientation</source>
         <translation>Orientamento</translation>
     </message>
@@ -9457,7 +9457,7 @@ is already in the list.</source>
         <translation>Orizzontale</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-113"/>
         <source>Paper</source>
         <translation>Carta</translation>
     </message>
@@ -9477,7 +9477,7 @@ is already in the list.</source>
         <translation>Altezza carta:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+66"/>
         <source>Margins</source>
         <translation>Margini</translation>
     </message>
@@ -9508,8 +9508,8 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+25"/>
-        <source>Viewport</source>
-        <translation>Viewport</translation>
+        <source>Scale and Position</source>
+        <translation>Scala e posizione</translation>
     </message>
     <message>
         <location line="+8"/>
