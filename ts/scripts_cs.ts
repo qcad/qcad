@@ -280,7 +280,7 @@
         <translation>Předvolby kreslení</translation>
     </message>
     <message>
-        <location line="+325"/>
+        <location line="+326"/>
         <source>Apply preferences</source>
         <translation>Použít předvolby</translation>
     </message>
@@ -9472,7 +9472,7 @@ již v seznamu je.</translation>
         <translation>Vlastní</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+19"/>
+        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+32"/>
         <source>Page Orientation</source>
         <translation>Orientace stránky</translation>
     </message>
@@ -9482,12 +9482,12 @@ již v seznamu je.</translation>
         <translation>Na výšku</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+23"/>
         <source>Landscape</source>
         <translation>Na šířku</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+10"/>
         <source>Paper</source>
         <translation>Papír</translation>
     </message>
@@ -9502,12 +9502,42 @@ již v seznamu je.</translation>
         <translation>Šířka papíru:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+37"/>
         <source>Paper height:</source>
         <translation>Výška papíru:</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+27"/>
+        <source>Margins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Left:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Top:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Right:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Bottom:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+86"/>
+        <source>Set to Printer Margins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+25"/>
         <source>Viewport</source>
         <translation>Výřez</translation>
     </message>
@@ -9522,12 +9552,12 @@ již v seznamu je.</translation>
         <translation>Ofset X:</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+37"/>
         <source>Offset Y:</source>
         <translation>Ofset Y:</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+28"/>
         <source>Zero-Point</source>
         <translation>Vynulovat</translation>
     </message>
@@ -9537,12 +9567,12 @@ již v seznamu je.</translation>
         <translation>Různé</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+16"/>
         <source>Point size (mm):</source>
         <translation>Velikost bodu (mm):</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-10"/>
         <source>Show paper borders</source>
         <translation>Zobrazit okraje papíru</translation>
     </message>
@@ -9991,7 +10021,13 @@ již v seznamu je.</translation>
         <translation>Dokončit</translation>
     </message>
     <message>
-        <location line="+453"/>
+        <location line="+198"/>
+        <location line="+3"/>
+        <source>Page Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+276"/>
         <source>Export to PDF</source>
         <translation>Export do PDF</translation>
     </message>

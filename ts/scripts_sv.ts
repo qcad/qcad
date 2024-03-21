@@ -280,7 +280,7 @@
         <translation>Ritningsinställningar</translation>
     </message>
     <message>
-        <location line="+325"/>
+        <location line="+326"/>
         <source>Apply preferences</source>
         <translation>Verkställ ändringar</translation>
     </message>
@@ -9465,7 +9465,7 @@ finns redan i listan.</translation>
         <translation>Anpassad</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+19"/>
+        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+32"/>
         <source>Page Orientation</source>
         <translation>Orientering av sidan</translation>
     </message>
@@ -9475,12 +9475,12 @@ finns redan i listan.</translation>
         <translation>Porträtt</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+23"/>
         <source>Landscape</source>
         <translation>Landskap</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+10"/>
         <source>Paper</source>
         <translation>Papper</translation>
     </message>
@@ -9495,12 +9495,42 @@ finns redan i listan.</translation>
         <translation>Pappersbredd:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+37"/>
         <source>Paper height:</source>
         <translation>Pappershöjd:</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+27"/>
+        <source>Margins</source>
+        <translation>Marginaler</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Left:</source>
+        <translation>Vänster:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Top:</source>
+        <translation>Översta:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Right:</source>
+        <translation>Höger:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Bottom:</source>
+        <translation>Botten:</translation>
+    </message>
+    <message>
+        <location line="+86"/>
+        <source>Set to Printer Margins</source>
+        <translation>Ställ in till utskriftsmarginaler</translation>
+    </message>
+    <message>
+        <location line="+25"/>
         <source>Viewport</source>
         <translation>Visaport</translation>
     </message>
@@ -9515,12 +9545,12 @@ finns redan i listan.</translation>
         <translation>Offset X:</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+37"/>
         <source>Offset Y:</source>
         <translation>Förskjutning Y:</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+28"/>
         <source>Zero-Point</source>
         <translation>Nollpunkt</translation>
     </message>
@@ -9530,12 +9560,12 @@ finns redan i listan.</translation>
         <translation>Diverse</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+16"/>
         <source>Point size (mm):</source>
         <translation>Punktstorlek (mm):</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-10"/>
         <source>Show paper borders</source>
         <translation>Visa pappersgränser</translation>
     </message>
@@ -9984,7 +10014,13 @@ finns redan i listan.</translation>
         <translation>Klart</translation>
     </message>
     <message>
-        <location line="+453"/>
+        <location line="+198"/>
+        <location line="+3"/>
+        <source>Page Settings</source>
+        <translation>Sidinställningar</translation>
+    </message>
+    <message>
+        <location line="+276"/>
         <source>Export to PDF</source>
         <translation>Exportera till PDF</translation>
     </message>
@@ -10513,7 +10549,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+62"/>
         <source>Invalid rotation angle</source>
-        <translation type="unfinished">Ogiltig rotationsvinkel</translation>
+        <translation>Ogiltig rotationsvinkel</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
@@ -10942,7 +10978,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+66"/>
         <source>Invalid scale factor</source>
-        <translation type="unfinished">Ogiltig skalfaktor</translation>
+        <translation>Ogiltig skalfaktor</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>

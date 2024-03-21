@@ -280,7 +280,7 @@
         <translation type="unfinished">绘图首选项</translation>
     </message>
     <message>
-        <location line="+325"/>
+        <location line="+326"/>
         <source>Apply preferences</source>
         <translation type="unfinished">申请优先权</translation>
     </message>
@@ -9460,7 +9460,7 @@ is already in the list.</source>
         <translation type="unfinished">习俗</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+19"/>
+        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+32"/>
         <source>Page Orientation</source>
         <translation type="unfinished">页面定位</translation>
     </message>
@@ -9470,12 +9470,12 @@ is already in the list.</source>
         <translation type="unfinished">形象代言人</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+23"/>
         <source>Landscape</source>
         <translation type="unfinished">景观</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+10"/>
         <source>Paper</source>
         <translation type="unfinished">纸张</translation>
     </message>
@@ -9490,12 +9490,42 @@ is already in the list.</source>
         <translation type="unfinished">纸张宽度：</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+37"/>
         <source>Paper height:</source>
         <translation type="unfinished">纸张高度：</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+27"/>
+        <source>Margins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Left:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Top:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Right:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Bottom:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+86"/>
+        <source>Set to Printer Margins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+25"/>
         <source>Viewport</source>
         <translation type="unfinished">视口</translation>
     </message>
@@ -9510,12 +9540,12 @@ is already in the list.</source>
         <translation type="unfinished">偏移X：</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+37"/>
         <source>Offset Y:</source>
         <translation type="unfinished">偏移Y：</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+28"/>
         <source>Zero-Point</source>
         <translation type="unfinished">零点</translation>
     </message>
@@ -9525,12 +9555,12 @@ is already in the list.</source>
         <translation type="unfinished">杂项</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+16"/>
         <source>Point size (mm):</source>
         <translation type="unfinished">点尺寸（毫米）：</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-10"/>
         <source>Show paper borders</source>
         <translation type="unfinished">显示纸张边框</translation>
     </message>
@@ -9979,7 +10009,13 @@ is already in the list.</source>
         <translation type="unfinished">已完成</translation>
     </message>
     <message>
-        <location line="+453"/>
+        <location line="+198"/>
+        <location line="+3"/>
+        <source>Page Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+276"/>
         <source>Export to PDF</source>
         <translation type="unfinished">导出到PDF</translation>
     </message>

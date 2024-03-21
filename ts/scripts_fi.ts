@@ -280,7 +280,7 @@
         <translation>Piirroksen asetukset</translation>
     </message>
     <message>
-        <location line="+325"/>
+        <location line="+326"/>
         <source>Apply preferences</source>
         <translation>Käytä asetuksia</translation>
     </message>
@@ -9467,7 +9467,7 @@ on jo luettelossa.</translation>
         <translation>Muokattu</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+19"/>
+        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+32"/>
         <source>Page Orientation</source>
         <translation>Sivun suunta</translation>
     </message>
@@ -9477,12 +9477,12 @@ on jo luettelossa.</translation>
         <translation>Pystysuunta</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+23"/>
         <source>Landscape</source>
         <translation>Vaakasuora</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+10"/>
         <source>Paper</source>
         <translation>Paperi</translation>
     </message>
@@ -9497,12 +9497,42 @@ on jo luettelossa.</translation>
         <translation>Paperin leveys:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+37"/>
         <source>Paper height:</source>
         <translation>Paperin korkeus:</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+27"/>
+        <source>Margins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Left:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Top:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Right:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Bottom:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+86"/>
+        <source>Set to Printer Margins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+25"/>
         <source>Viewport</source>
         <translation>Näkymäalue</translation>
     </message>
@@ -9517,12 +9547,12 @@ on jo luettelossa.</translation>
         <translation>X-siirtymä:</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+37"/>
         <source>Offset Y:</source>
         <translation>Y-siirtymä:</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+28"/>
         <source>Zero-Point</source>
         <translation>Nollakohta</translation>
     </message>
@@ -9532,12 +9562,12 @@ on jo luettelossa.</translation>
         <translation>Sekalaiset</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+16"/>
         <source>Point size (mm):</source>
         <translation>Pisteen koko (mm):</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-10"/>
         <source>Show paper borders</source>
         <translation>Näytä paperin reunat</translation>
     </message>
@@ -9986,7 +10016,13 @@ on jo luettelossa.</translation>
         <translation>Valmis</translation>
     </message>
     <message>
-        <location line="+453"/>
+        <location line="+198"/>
+        <location line="+3"/>
+        <source>Page Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+276"/>
         <source>Export to PDF</source>
         <translation>Vie PDF:ksi</translation>
     </message>

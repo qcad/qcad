@@ -280,7 +280,7 @@
         <translation type="unfinished">Tegningspreferanser</translation>
     </message>
     <message>
-        <location line="+325"/>
+        <location line="+326"/>
         <source>Apply preferences</source>
         <translation type="unfinished">Bruk preferanser</translation>
     </message>
@@ -9467,7 +9467,7 @@ er allerede i listen.</translation>
         <translation type="unfinished">Tilpasset</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+19"/>
+        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+32"/>
         <source>Page Orientation</source>
         <translation type="unfinished">Side Orientering</translation>
     </message>
@@ -9477,12 +9477,12 @@ er allerede i listen.</translation>
         <translation type="unfinished">Portrett</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+23"/>
         <source>Landscape</source>
         <translation type="unfinished">Landskap</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+10"/>
         <source>Paper</source>
         <translation type="unfinished">Papir</translation>
     </message>
@@ -9497,12 +9497,42 @@ er allerede i listen.</translation>
         <translation type="unfinished">Papirbredde:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+37"/>
         <source>Paper height:</source>
         <translation type="unfinished">Papirhøyde:</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+27"/>
+        <source>Margins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Left:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Top:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Right:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Bottom:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+86"/>
+        <source>Set to Printer Margins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+25"/>
         <source>Viewport</source>
         <translation type="unfinished">Visningsvindu</translation>
     </message>
@@ -9517,12 +9547,12 @@ er allerede i listen.</translation>
         <translation type="unfinished">Offset X:</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+37"/>
         <source>Offset Y:</source>
         <translation type="unfinished">Offset Y:</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+28"/>
         <source>Zero-Point</source>
         <translation type="unfinished">Nullpunkt</translation>
     </message>
@@ -9532,12 +9562,12 @@ er allerede i listen.</translation>
         <translation type="unfinished">Diverse</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+16"/>
         <source>Point size (mm):</source>
         <translation type="unfinished">Punktstørrelse (mm):</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-10"/>
         <source>Show paper borders</source>
         <translation type="unfinished">Vis papirkanter</translation>
     </message>
@@ -9986,7 +10016,13 @@ er allerede i listen.</translation>
         <translation type="unfinished">Ferdig</translation>
     </message>
     <message>
-        <location line="+453"/>
+        <location line="+198"/>
+        <location line="+3"/>
+        <source>Page Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+276"/>
         <source>Export to PDF</source>
         <translation type="unfinished">Eksporter til PDF</translation>
     </message>

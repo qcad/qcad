@@ -280,7 +280,7 @@
         <translation>Préférences de dessin</translation>
     </message>
     <message>
-        <location line="+325"/>
+        <location line="+326"/>
         <source>Apply preferences</source>
         <translation>Appliquer préférences</translation>
     </message>
@@ -9467,7 +9467,7 @@ est déjà dans la liste.</translation>
         <translation>Personnalisé</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+19"/>
+        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+32"/>
         <source>Page Orientation</source>
         <translation>Orientation</translation>
     </message>
@@ -9477,12 +9477,12 @@ est déjà dans la liste.</translation>
         <translation>Portrait</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+23"/>
         <source>Landscape</source>
         <translation>Paysage</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+10"/>
         <source>Paper</source>
         <translation>Papier</translation>
     </message>
@@ -9497,12 +9497,42 @@ est déjà dans la liste.</translation>
         <translation>Largeur de page :</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+37"/>
         <source>Paper height:</source>
         <translation>Hauteur de page :</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+27"/>
+        <source>Margins</source>
+        <translation>Marges</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Left:</source>
+        <translation>Gauche :</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Top:</source>
+        <translation>En haut :</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Right:</source>
+        <translation>Droite :</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Bottom:</source>
+        <translation>En bas :</translation>
+    </message>
+    <message>
+        <location line="+86"/>
+        <source>Set to Printer Margins</source>
+        <translation>Défini sur marges de l&apos;imprimante</translation>
+    </message>
+    <message>
+        <location line="+25"/>
         <source>Viewport</source>
         <translation>Viewport</translation>
     </message>
@@ -9517,12 +9547,12 @@ est déjà dans la liste.</translation>
         <translation>Décalage X :</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+37"/>
         <source>Offset Y:</source>
         <translation>Décalage Y :</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+28"/>
         <source>Zero-Point</source>
         <translation>Zéro</translation>
     </message>
@@ -9532,12 +9562,12 @@ est déjà dans la liste.</translation>
         <translation>Divers</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+16"/>
         <source>Point size (mm):</source>
         <translation>Taille de la pointe (mm) :</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-10"/>
         <source>Show paper borders</source>
         <translation>Afficher les bordures papier</translation>
     </message>
@@ -9986,7 +10016,13 @@ est déjà dans la liste.</translation>
         <translation>Terminer</translation>
     </message>
     <message>
-        <location line="+453"/>
+        <location line="+198"/>
+        <location line="+3"/>
+        <source>Page Settings</source>
+        <translation>Propriétés de la page</translation>
+    </message>
+    <message>
+        <location line="+276"/>
         <source>Export to PDF</source>
         <translation>Exporter vers PDF</translation>
     </message>
@@ -10515,7 +10551,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+62"/>
         <source>Invalid rotation angle</source>
-        <translation type="unfinished">Angle de rotation non valide</translation>
+        <translation>Angle de rotation non valide</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
@@ -10944,7 +10980,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+66"/>
         <source>Invalid scale factor</source>
-        <translation type="unfinished">Facteur d&apos;échelle non valide</translation>
+        <translation>Facteur d&apos;échelle non valide</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>

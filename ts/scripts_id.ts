@@ -280,7 +280,7 @@
         <translation type="unfinished">Preferensi Menggambar</translation>
     </message>
     <message>
-        <location line="+325"/>
+        <location line="+326"/>
         <source>Apply preferences</source>
         <translation type="unfinished">Menerapkan preferensi</translation>
     </message>
@@ -9460,7 +9460,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Kustom</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+19"/>
+        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+32"/>
         <source>Page Orientation</source>
         <translation type="unfinished">Orientasi Halaman</translation>
     </message>
@@ -9470,12 +9470,12 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Potret</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+23"/>
         <source>Landscape</source>
         <translation type="unfinished">Lanskap</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+10"/>
         <source>Paper</source>
         <translation type="unfinished">Kertas</translation>
     </message>
@@ -9490,12 +9490,42 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Lebar kertas:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+37"/>
         <source>Paper height:</source>
         <translation type="unfinished">Tinggi kertas:</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+27"/>
+        <source>Margins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Left:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Top:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Right:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Bottom:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+86"/>
+        <source>Set to Printer Margins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+25"/>
         <source>Viewport</source>
         <translation type="unfinished">Viewport</translation>
     </message>
@@ -9510,12 +9540,12 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Offset X:</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+37"/>
         <source>Offset Y:</source>
         <translation type="unfinished">Offset Y:</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+28"/>
         <source>Zero-Point</source>
         <translation type="unfinished">Titik Nol</translation>
     </message>
@@ -9525,12 +9555,12 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Lain-lain</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+16"/>
         <source>Point size (mm):</source>
         <translation type="unfinished">Ukuran titik (mm):</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-10"/>
         <source>Show paper borders</source>
         <translation type="unfinished">Menampilkan batas kertas</translation>
     </message>
@@ -9979,7 +10009,13 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Selesai</translation>
     </message>
     <message>
-        <location line="+453"/>
+        <location line="+198"/>
+        <location line="+3"/>
+        <source>Page Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+276"/>
         <source>Export to PDF</source>
         <translation type="unfinished">Ekspor ke PDF</translation>
     </message>

@@ -280,7 +280,7 @@
         <translation type="unfinished">Налаштування малювання</translation>
     </message>
     <message>
-        <location line="+325"/>
+        <location line="+326"/>
         <source>Apply preferences</source>
         <translation type="unfinished">Застосувати преференції</translation>
     </message>
@@ -9471,7 +9471,7 @@ is already in the list.</source>
         <translation type="unfinished">Нестандартний</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+19"/>
+        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+32"/>
         <source>Page Orientation</source>
         <translation type="unfinished">Орієнтація сторінки</translation>
     </message>
@@ -9481,12 +9481,12 @@ is already in the list.</source>
         <translation type="unfinished">Портрет</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+23"/>
         <source>Landscape</source>
         <translation type="unfinished">Ландшафт</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+10"/>
         <source>Paper</source>
         <translation type="unfinished">Папір</translation>
     </message>
@@ -9501,12 +9501,42 @@ is already in the list.</source>
         <translation type="unfinished">Ширина паперу:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+37"/>
         <source>Paper height:</source>
         <translation type="unfinished">Висота паперу:</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+27"/>
+        <source>Margins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Left:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Top:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Right:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Bottom:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+86"/>
+        <source>Set to Printer Margins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+25"/>
         <source>Viewport</source>
         <translation type="unfinished">Вікно перегляду</translation>
     </message>
@@ -9521,12 +9551,12 @@ is already in the list.</source>
         <translation type="unfinished">Зміщення X:</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+37"/>
         <source>Offset Y:</source>
         <translation type="unfinished">Зміщення Y:</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+28"/>
         <source>Zero-Point</source>
         <translation type="unfinished">Нульова точка</translation>
     </message>
@@ -9536,12 +9566,12 @@ is already in the list.</source>
         <translation type="unfinished">Різне</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+16"/>
         <source>Point size (mm):</source>
         <translation type="unfinished">Розмір точки (мм):</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-10"/>
         <source>Show paper borders</source>
         <translation type="unfinished">Показати паперові бордюри</translation>
     </message>
@@ -9990,7 +10020,13 @@ is already in the list.</source>
         <translation type="unfinished">Зроблено</translation>
     </message>
     <message>
-        <location line="+453"/>
+        <location line="+198"/>
+        <location line="+3"/>
+        <source>Page Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+276"/>
         <source>Export to PDF</source>
         <translation type="unfinished">Експорт в PDF</translation>
     </message>

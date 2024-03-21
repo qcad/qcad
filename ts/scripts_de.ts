@@ -280,7 +280,7 @@
         <translation>Zeichnungseinstellungen</translation>
     </message>
     <message>
-        <location line="+325"/>
+        <location line="+326"/>
         <source>Apply preferences</source>
         <translation>Einstellungen anwenden</translation>
     </message>
@@ -9467,7 +9467,7 @@ ist bereits in der Liste.</translation>
         <translation>Benutzerdefiniert</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+19"/>
+        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+32"/>
         <source>Page Orientation</source>
         <translation>Seitenausrichtung</translation>
     </message>
@@ -9477,12 +9477,12 @@ ist bereits in der Liste.</translation>
         <translation>Hochformat</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+23"/>
         <source>Landscape</source>
         <translation>Querformat</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+10"/>
         <source>Paper</source>
         <translation>Papier</translation>
     </message>
@@ -9497,12 +9497,42 @@ ist bereits in der Liste.</translation>
         <translation>Papierbreite:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+37"/>
         <source>Paper height:</source>
         <translation>Papierhöhe:</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+27"/>
+        <source>Margins</source>
+        <translation>Ränder</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Left:</source>
+        <translation>Links:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Top:</source>
+        <translation>Oben:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Right:</source>
+        <translation>Rechts:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Bottom:</source>
+        <translation>Unten:</translation>
+    </message>
+    <message>
+        <location line="+86"/>
+        <source>Set to Printer Margins</source>
+        <translation>Druckerränder übernehmen</translation>
+    </message>
+    <message>
+        <location line="+25"/>
         <source>Viewport</source>
         <translation>Anzeigebereich</translation>
     </message>
@@ -9517,12 +9547,12 @@ ist bereits in der Liste.</translation>
         <translation>Verschiebung X:</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+37"/>
         <source>Offset Y:</source>
         <translation>Verschiebung Y:</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+28"/>
         <source>Zero-Point</source>
         <translation>Nullpunkt</translation>
     </message>
@@ -9532,12 +9562,12 @@ ist bereits in der Liste.</translation>
         <translation>Verschiedenes</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+16"/>
         <source>Point size (mm):</source>
         <translation>Punktgrösse (mm):</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-10"/>
         <source>Show paper borders</source>
         <translation>Papierrand anzeigen</translation>
     </message>
@@ -9981,7 +10011,7 @@ ist bereits in der Liste.</translation>
         <translation>Querformat</translation>
     </message>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+453"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+477"/>
         <source>Export to PDF</source>
         <translation>PDF exportieren</translation>
     </message>
@@ -9991,7 +10021,7 @@ ist bereits in der Liste.</translation>
         <translation>Drucken ...</translation>
     </message>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="-689"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="-713"/>
         <source>Auto Paper Size</source>
         <translation>Auto Papiergrösse</translation>
     </message>
@@ -10016,7 +10046,13 @@ ist bereits in der Liste.</translation>
         <translation>Ziehen zum Verschieben des Papiers</translation>
     </message>
     <message>
-        <location line="+467"/>
+        <location line="+199"/>
+        <location line="+3"/>
+        <source>Page Settings</source>
+        <translation>Seiteneinstellungen</translation>
+    </message>
+    <message>
+        <location line="+289"/>
         <source>Exporting to %1...</source>
         <translation>Exportiere nach %1...</translation>
     </message>
@@ -10520,7 +10556,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+62"/>
         <source>Invalid rotation angle</source>
-        <translation type="unfinished">Ungültiger Drehwinkel</translation>
+        <translation>Ungültiger Drehwinkel</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/PreferencesPage.ui" line="+17"/>
@@ -10949,7 +10985,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+66"/>
         <source>Invalid scale factor</source>
-        <translation type="unfinished">Ungültiger Skalierungsfaktor</translation>
+        <translation>Ungültiger Skalierungsfaktor</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/PreferencesPage.ui" line="+17"/>
