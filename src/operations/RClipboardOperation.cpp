@@ -149,6 +149,7 @@ void RClipboardOperation::copy(RDocument& src, RDocument& dest,
                 )
             );
             att->scale(unitScale);
+            att->setInvisible(attDef->isInvisible());
             refp->applyTransformationTo(*att);
 
             // assign values to attributes:

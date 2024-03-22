@@ -185,15 +185,16 @@ InsertBlock.prototype.getOperation = function(preview) {
     var blockRefId = doc.getStorage().getMaxObjectId();
     for (var i=0; i<ids.length; i++) {
         var id = ids[i];
-        var e = doc.queryEntity(id);
-        if (!isAttributeDefinitionEntity(e)) {
+        var attDef = doc.queryEntity(id);
+        if (!isAttributeDefinitionEntity(attDef)) {
             continue;
         }
         var att = new RAttributeEntity(
                     doc,
-                    new RAttributeData(e.getData(), blockRefId, e.getTag())
+                    new RAttributeData(attDef.getData(), blockRefId, attDef.getTag())
                     );
         att.setBlockId(doc.getCurrentBlockId());
+        att.setInvisible(attDef.isInvisible());
         blockRef.applyTransformationTo(att);
 
         // assign values to attributes:
