@@ -290,7 +290,6 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
     }
 
     e.setClipping(false);
-    e.clearClipRectangles();
 
     model->setOrigin(RVector(0,0));
 

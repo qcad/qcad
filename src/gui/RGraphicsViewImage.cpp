@@ -371,6 +371,10 @@ void RGraphicsViewImage::updateImage() {
     }
     //RDebug::stopTimer(77, "preview");
 
+    // painting the preview above might have enabled clipping
+    // switch off clipping:
+    decorationWorker->setClipping(false);
+
     //RDebug::startTimer(77);
     // paint reference points of selected entities:
     decorationWorker->save();
