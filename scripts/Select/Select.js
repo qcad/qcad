@@ -84,9 +84,9 @@ Select.previewSelectionPolygon = function(di, points, crossSelection) {
     var lw = RLineweight.Weight000;
     var c;
     if (crossSelection) {
-        c = RSettings.getColor("GraphicsViewColors/SelectionBoxBackgroundCrossColor", new RColor(0,0,255,30));
+        c = RSettings.getColor("GraphicsViewColors/SelectionBoxBackgroundCrossColor", new RColor(0,255,0,30));
     } else {
-        c = RSettings.getColor("GraphicsViewColors/SelectionBoxBackgroundColor", new RColor(0,255,0,30));
+        c = RSettings.getColor("GraphicsViewColors/SelectionBoxBackgroundColor", new RColor(0,0,255,30));
     }
     // TODO c.getQColor() doesn't work
     var bgColor = new QColor(c.red(), c.green(), c.blue(), c.alpha());
