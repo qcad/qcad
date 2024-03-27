@@ -73,8 +73,8 @@ OpenFile.prototype.beginEvent = function() {
             RSettings.getDocumentsLocation());
     var appWin = EAction.getMainWindow();
     var fileDialog = new QFileDialog(appWin, qsTr("Open Drawing"), lastOpenFileDir, "");
-    var allFilter = filterStrings[0];
     filterStrings = new Array(qsTr("All Files") + " (*)").concat(filterStrings);
+    var allFilter = filterStrings[0];
     fileDialog.setNameFilters(filterStrings);
     fileDialog.selectNameFilter(allFilter);
     fileDialog.setOption(QFileDialog.DontUseNativeDialog, getDontUseNativeDialog());
