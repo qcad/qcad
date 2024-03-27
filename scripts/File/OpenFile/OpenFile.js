@@ -68,9 +68,7 @@ OpenFile.prototype.beginEvent = function() {
         }
     }
     
-    var lastOpenFileDir = RSettings.getStringValue(
-            "OpenFile/Path",
-            RSettings.getDocumentsLocation());
+    var lastOpenFileDir = RSettings.getStringValue( "OpenFile/Path", RSettings.getDocumentsLocation());
     var appWin = EAction.getMainWindow();
     var fileDialog = new QFileDialog(appWin, qsTr("Open Drawing"), lastOpenFileDir, "");
     filterStrings = new Array(qsTr("All Files") + " (*)").concat(filterStrings);
