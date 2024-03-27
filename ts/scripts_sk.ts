@@ -347,7 +347,7 @@ musíte znovu spustiť QCAD.</translation>
         <location line="+7"/>
         <location line="+49"/>
         <source>0.00</source>
-        <translation type="unfinished">Rozostup medzi písmenami {0.00?}</translation>
+        <translation type="unfinished">0.00</translation>
     </message>
     <message>
         <location line="-42"/>
@@ -5497,7 +5497,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+16"/>
         <source>0</source>
-        <translation type="unfinished">Rozostup medzi písmenami {0?}</translation>
+        <translation type="unfinished">0</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -9221,7 +9221,7 @@ už existuje v zozname.</translation>
         <location line="+7"/>
         <location line="+14"/>
         <source>0.00</source>
-        <translation type="unfinished">Rozostup medzi písmenami {0.00?}</translation>
+        <translation type="unfinished">0.00</translation>
     </message>
     <message>
         <location line="-7"/>
@@ -11023,7 +11023,7 @@ už existuje v zozname.</translation>
         <location line="+7"/>
         <location line="+14"/>
         <source>1</source>
-        <translation type="unfinished">Rozostup medzi písmenami {1?}</translation>
+        <translation type="unfinished">1</translation>
     </message>
     <message>
         <location line="-7"/>
