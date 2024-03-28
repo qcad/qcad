@@ -720,17 +720,17 @@
     <message>
         <location line="+1"/>
         <source>Size 1</source>
-        <translation>尺寸1</translation>
+        <translation type="unfinished">尺寸 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Size 2</source>
-        <translation>尺寸2</translation>
+        <translation type="unfinished">尺寸 2</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Global Z</source>
-        <translation>全局Z</translation>
+        <translation type="unfinished">全局 Z</translation>
     </message>
     <message>
         <location filename="../src/entity/RRayEntity.cpp" line="-11"/>
@@ -779,7 +779,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 1</source>
-        <translation>点1</translation>
+        <translation type="unfinished">点 1</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -792,7 +792,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 2</source>
-        <translation>点2</translation>
+        <translation type="unfinished">点 2</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -805,7 +805,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 3</source>
-        <translation>点3</translation>
+        <translation type="unfinished">点 3</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -818,7 +818,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 4</source>
-        <translation>点4</translation>
+        <translation type="unfinished">点 4</translation>
     </message>
     <message>
         <location filename="../src/entity/RSplineEntity.cpp" line="-12"/>

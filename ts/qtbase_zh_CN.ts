@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="zh">
+<TS version="2.1" language="zh_CN">
 <context>
     <name>CloseButton</name>
     <message>
@@ -16,7 +16,7 @@
     </message>
     <message>
         <source>Hide %1</source>
-        <translation>隐藏%1</translation>
+        <translation type="unfinished">隐藏 %1</translation>
     </message>
     <message>
         <source>Hide Others</source>
@@ -28,7 +28,7 @@
     </message>
     <message>
         <source>Preferences...</source>
-        <translation>偏好设置…</translation>
+        <translation type="unfinished">首选项设置…</translation>
     </message>
     <message>
         <source>Quit %1</source>
@@ -47,7 +47,7 @@
     </message>
     <message>
         <source>Operation on socket is not supported</source>
-        <translation>Socket操作不被支持</translation>
+        <translation type="unfinished">不支持套接字操作</translation>
     </message>
     <message>
         <source>Host not found</source>
@@ -167,14 +167,14 @@
     </message>
     <message>
         <source>Incompatible Qt Library Error</source>
-        <translation>不兼容的Qt错误</translation>
+        <translation type="unfinished">Qt 库不兼容</translation>
     </message>
 </context>
 <context>
     <name>QCocoaMenuItem</name>
     <message>
         <source>About Qt</source>
-        <translation>关于Qt</translation>
+        <translation type="unfinished">关于 Qt</translation>
     </message>
     <message>
         <source>About</source>
@@ -236,7 +236,7 @@
     <name>QColorDialog</name>
     <message>
         <source>Hu&amp;e:</source>
-        <translation>色调(&amp;E)：</translation>
+        <translation type="unfinished">色相(&amp;E)：</translation>
     </message>
     <message>
         <source>&amp;Sat:</source>
@@ -260,7 +260,7 @@
     </message>
     <message>
         <source>A&amp;lpha channel:</source>
-        <translation>Alpha通道(&amp;A)：</translation>
+        <translation type="unfinished">Alpha 通道(&amp;A)：</translation>
     </message>
     <message>
         <source>&amp;HTML:</source>
@@ -269,8 +269,8 @@
     <message>
         <source>Cursor at %1, %2, color: %3
 Press ESC to cancel</source>
-        <translation>光标位置 (%1, %2), 颜色: %3
-按下ESC键取消</translation>
+        <translation type="unfinished">光标位置 (%1, %2), 颜色: %3
+按下 ESC 键取消</translation>
     </message>
     <message>
         <source>Select Color</source>
@@ -316,7 +316,7 @@ Press ESC to cancel</source>
     </message>
     <message>
         <source>Displays this help.</source>
-        <translation>显示这个帮助。</translation>
+        <translation type="unfinished">显示此帮助。</translation>
     </message>
     <message>
         <source>Unknown option &apos;%1&apos;.</source>
@@ -371,7 +371,7 @@ Press ESC to cancel</source>
     <message>
         <source>QT_LAYOUT_DIRECTION</source>
         <comment>Translate this string to the string &apos;LTR&apos; in left-to-right languages or to &apos;RTL&apos; in right-to-left languages (such as Hebrew and Arabic) to get proper widget layout.</comment>
-        <translation>LTR</translation>
+        <translation type="unfinished">LTR</translation>
     </message>
 </context>
 <context>
@@ -445,7 +445,7 @@ Press ESC to cancel</source>
     <message>
         <source>None</source>
         <comment>CUPS Banner page</comment>
-        <translation>空</translation>
+        <translation type="unfinished">无</translation>
     </message>
     <message>
         <source>Standard</source>
@@ -482,46 +482,46 @@ Press ESC to cancel</source>
     <name>QDB2Driver</name>
     <message>
         <source>Unable to connect</source>
-        <translation>不能连接</translation>
+        <translation type="unfinished">无法连接</translation>
     </message>
     <message>
         <source>Unable to commit transaction</source>
-        <translation>不能提交事务</translation>
+        <translation type="unfinished">无法提交事务</translation>
     </message>
     <message>
         <source>Unable to rollback transaction</source>
-        <translation>不能回滚事务</translation>
+        <translation type="unfinished">无法回滚事务</translation>
     </message>
     <message>
         <source>Unable to set autocommit</source>
-        <translation>不能设置自动提交</translation>
+        <translation type="unfinished">无法设置自动提交</translation>
     </message>
 </context>
 <context>
     <name>QDB2Result</name>
     <message>
         <source>Unable to execute statement</source>
-        <translation>不能执行语句</translation>
+        <translation type="unfinished">无法执行语句</translation>
     </message>
     <message>
         <source>Unable to prepare statement</source>
-        <translation>不能准备语句</translation>
+        <translation type="unfinished">无法准备语句</translation>
     </message>
     <message>
         <source>Unable to bind variable</source>
-        <translation>不能帮定变量</translation>
+        <translation type="unfinished">无法帮定变量</translation>
     </message>
     <message>
         <source>Unable to fetch record %1</source>
-        <translation>不能获取记录%1</translation>
+        <translation type="unfinished">无法获取记录 %1</translation>
     </message>
     <message>
         <source>Unable to fetch next</source>
-        <translation>不能获取下一个</translation>
+        <translation type="unfinished">无法获取下一个</translation>
     </message>
     <message>
         <source>Unable to fetch first</source>
-        <translation>不能获取第一个</translation>
+        <translation type="unfinished">无法获取第一个</translation>
     </message>
 </context>
 <context>
@@ -685,18 +685,20 @@ Press ESC to cancel</source>
     <message>
         <source>Float</source>
         <extracomment>Accessible name for button undocking a dock widget (floating state)</extracomment>
+        <translation type="unfinished">浮动</translation>
     </message>
     <message>
         <source>Undocks and re-attaches the dock widget</source>
-        <translation>接触停靠并重新附加在可停靠窗体上</translation>
+        <translation type="unfinished">卸载并重新附加停靠小部件</translation>
     </message>
     <message>
         <source>Close</source>
         <extracomment>Accessible name for button closing a dock widget</extracomment>
+        <translation type="unfinished">关闭</translation>
     </message>
     <message>
         <source>Closes the dock widget</source>
-        <translation>关闭可停靠窗体</translation>
+        <translation type="unfinished">关闭停靠小部件</translation>
     </message>
 </context>
 <context>
@@ -742,7 +744,7 @@ Press ESC to cancel</source>
     </message>
     <message>
         <source>Unable to restore from %1: %2</source>
-        <translation>无法从%1 恢复到 %2</translation>
+        <translation type="unfinished">无法从 %1 恢复到 %2</translation>
     </message>
     <message>
         <source>Will not rename sequential file using block copy</source>
@@ -774,7 +776,7 @@ Press ESC to cancel</source>
     <name>QFileDevice</name>
     <message>
         <source>No file engine available or engine does not support UnMapExtension</source>
-        <translation>没有可用的文件引擎或不支持UnMapExtension</translation>
+        <translation type="unfinished">没有可用的文件引擎或引擎不支持 UnMapExtension</translation>
     </message>
 </context>
 <context>
@@ -1703,6 +1705,7 @@ Do you want to delete it anyway?</source>
     <message>
         <source>%1, ...</source>
         <extracomment>This text is an &quot;unfinished&quot; shortcut, expands like &quot;Ctrl+A, ...&quot;</extracomment>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -2621,26 +2624,32 @@ Do you want to delete it anyway?</source>
     <message>
         <source>mm</source>
         <extracomment>Unit &apos;Millimeter&apos;</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>pt</source>
         <extracomment>Unit &apos;Points&apos;</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>in</source>
         <extracomment>Unit &apos;Inch&apos;</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>P̸</source>
         <extracomment>Unit &apos;Pica&apos;</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>DD</source>
         <extracomment>Unit &apos;Didot&apos;</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>CC</source>
         <extracomment>Unit &apos;Cicero&apos;</extracomment>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -2648,30 +2657,37 @@ Do you want to delete it anyway?</source>
     <message>
         <source>Custom (%1mm x %2mm)</source>
         <extracomment>Custom size name in millimeters</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>Custom (%1pt x %2pt)</source>
         <extracomment>Custom size name in points</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>Custom (%1in x %2in)</source>
         <extracomment>Custom size name in inches</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>Custom (%1pc x %2pc)</source>
         <extracomment>Custom size name in picas</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>Custom (%1DD x %2DD)</source>
         <extracomment>Custom size name in didots</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>Custom (%1CC x %2CC)</source>
         <extracomment>Custom size name in ciceros</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>%1 x %2 in</source>
         <extracomment>Page size in &apos;Inch&apos;.</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>A0</source>
@@ -4207,6 +4223,7 @@ Please turn one of those options off.</source>
     <message>
         <source>Space</source>
         <extracomment>This and all following &quot;incomprehensible&quot; strings in QShortcut context are key names. Please use the localized names appearing on actual keyboards or whatever is commonly used.</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>Esc</source>
@@ -4375,10 +4392,12 @@ Please turn one of those options off.</source>
     <message>
         <source>Media Pause</source>
         <extracomment>Media player pause button</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>Toggle Media Play/Pause</source>
         <extracomment>Media player button to toggle between playing and paused</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>Home Page</source>
@@ -4903,14 +4922,17 @@ Please turn one of those options off.</source>
     <message>
         <source>Call</source>
         <extracomment>Button to start a call (note: a separate button is used to end the call)</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>Hangup</source>
         <extracomment>Button to end a call (note: a separate button is used to start the call)</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>Toggle Call/Hangup</source>
         <extracomment>Button that will hang up if we&apos;re in call, or make a call if we&apos;re not.</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>Flip</source>
@@ -4919,18 +4941,22 @@ Please turn one of those options off.</source>
     <message>
         <source>Voice Dial</source>
         <extracomment>Button to trigger voice dialing</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>Last Number Redial</source>
         <extracomment>Button to redial the last number called</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>Camera Shutter</source>
         <extracomment>Button to trigger the camera shutter (take a picture)</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>Camera Focus</source>
         <extracomment>Button to focus the camera</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>Kanji</source>
@@ -5165,261 +5191,324 @@ Please turn one of those options off.</source>
     <message>
         <source>invalid role</source>
         <extracomment>Role of an accessible object - the object is in an invalid state or could not be constructed</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>title bar</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>menu bar</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>scroll bar</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>grip</source>
         <extracomment>Role of an accessible object - the grip is usually used for resizing another object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>sound</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>cursor</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>text caret</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>alert message</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>window</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>filler</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>popup menu</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>menu item</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>tool tip</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>application</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>document</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>panel</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>chart</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>dialog</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>frame</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>separator</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>tool bar</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>status bar</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>table</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>column header</source>
         <extracomment>Role of an accessible object - part of a table</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>row header</source>
         <extracomment>Role of an accessible object - part of a table</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>column</source>
         <extracomment>Role of an accessible object - part of a table</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>row</source>
         <extracomment>Role of an accessible object - part of a table</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>cell</source>
         <extracomment>Role of an accessible object - part of a table</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>link</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>help balloon</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>assistant</source>
         <extracomment>Role of an accessible object - a helper dialog</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>list</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>list item</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>tree</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>tree item</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>page tab</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>property page</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>indicator</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>graphic</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>label</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>text</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>push button</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>check box</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>radio button</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>combo box</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>progress bar</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>dial</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>hotkey field</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>slider</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>spin box</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>canvas</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>animation</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>equation</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>button with drop down</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>button menu</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>button with drop down grid</source>
         <extracomment>Role of an accessible object - a button that expands a grid.</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>space</source>
         <extracomment>Role of an accessible object - blank space between other objects.</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>page tab list</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>clock</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>splitter</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>layered pane</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
     <message>
         <source>unknown</source>
         <extracomment>Role of an accessible object</extracomment>
+        <translation></translation>
     </message>
 </context>
 <context>
     <name>QSslSocket</name>
     <message>
         <source>Error creating SSL context (%1)</source>
-        <translation>创建SSL上下文错误（%1）</translation>
+        <translation type="unfinished">创建 SSL 上下文错误（%1）</translation>
     </message>
     <message>
         <source>Invalid or empty cipher list (%1)</source>
@@ -5443,35 +5532,35 @@ Please turn one of those options off.</source>
     </message>
     <message>
         <source>No error</source>
-        <translation type="unfinished">No error</translation>
+        <translation type="unfinished">无错误</translation>
     </message>
     <message>
         <source>The issuer certificate could not be found</source>
-        <translation type="unfinished">The issuer certificate could not be found</translation>
+        <translation type="unfinished">找不到发行者证书</translation>
     </message>
     <message>
         <source>The certificate signature could not be decrypted</source>
-        <translation type="unfinished">The certificate signature could not be decrypted</translation>
+        <translation type="unfinished">无法解密证书签名</translation>
     </message>
     <message>
         <source>The public key in the certificate could not be read</source>
-        <translation type="unfinished">The public key in the certificate could not be read</translation>
+        <translation type="unfinished">无法读取证书中的公钥</translation>
     </message>
     <message>
         <source>The signature of the certificate is invalid</source>
-        <translation type="unfinished">The signature of the certificate is invalid</translation>
+        <translation type="unfinished">证书的签名无效</translation>
     </message>
     <message>
         <source>The certificate is not yet valid</source>
-        <translation type="unfinished">The certificate is not yet valid</translation>
+        <translation type="unfinished">证书尚未生效</translation>
     </message>
     <message>
         <source>The certificate has expired</source>
-        <translation type="unfinished">The certificate has expired</translation>
+        <translation type="unfinished">证书已过期</translation>
     </message>
     <message>
         <source>The certificate&apos;s notBefore field contains an invalid time</source>
-        <translation type="unfinished">The certificate&apos;s notBefore field contains an invalid time</translation>
+        <translation type="unfinished">证书的 notBefore 字段包含无效的时间</translation>
     </message>
     <message>
         <source>The certificate&apos;s notAfter field contains an invalid time</source>
@@ -5574,71 +5663,71 @@ Please turn one of those options off.</source>
     <name>QStandardPaths</name>
     <message>
         <source>Desktop</source>
-        <translation type="unfinished">Desktop</translation>
+        <translation type="unfinished">桌面</translation>
     </message>
     <message>
         <source>Documents</source>
-        <translation type="unfinished">Documents</translation>
+        <translation type="unfinished">文档</translation>
     </message>
     <message>
         <source>Fonts</source>
-        <translation type="unfinished">Fonts</translation>
+        <translation type="unfinished">字体</translation>
     </message>
     <message>
         <source>Applications</source>
-        <translation type="unfinished">Applications</translation>
+        <translation type="unfinished">应用程序</translation>
     </message>
     <message>
         <source>Music</source>
-        <translation type="unfinished">Music</translation>
+        <translation type="unfinished">音乐</translation>
     </message>
     <message>
         <source>Movies</source>
-        <translation type="unfinished">Movies</translation>
+        <translation type="unfinished">影片</translation>
     </message>
     <message>
         <source>Pictures</source>
-        <translation type="unfinished">Pictures</translation>
+        <translation type="unfinished">图片</translation>
     </message>
     <message>
         <source>Temporary Directory</source>
-        <translation type="unfinished">Temporary Directory</translation>
+        <translation type="unfinished">临时目录</translation>
     </message>
     <message>
         <source>Home</source>
-        <translation type="unfinished">Home</translation>
+        <translation type="unfinished">首页</translation>
     </message>
     <message>
         <source>Application Data</source>
-        <translation type="unfinished">Application Data</translation>
+        <translation type="unfinished">应用程序数据</translation>
     </message>
     <message>
         <source>Cache</source>
-        <translation type="unfinished">Cache</translation>
+        <translation type="unfinished">缓存</translation>
     </message>
     <message>
         <source>Shared Data</source>
-        <translation type="unfinished">Shared Data</translation>
+        <translation type="unfinished">共享数据</translation>
     </message>
     <message>
         <source>Runtime</source>
-        <translation type="unfinished">Runtime</translation>
+        <translation type="unfinished">运行时</translation>
     </message>
     <message>
         <source>Configuration</source>
-        <translation type="unfinished">Configuration</translation>
+        <translation type="unfinished">配置</translation>
     </message>
     <message>
         <source>Shared Configuration</source>
-        <translation type="unfinished">Shared Configuration</translation>
+        <translation type="unfinished">共享配置</translation>
     </message>
     <message>
         <source>Shared Cache</source>
-        <translation type="unfinished">Shared Cache</translation>
+        <translation type="unfinished">共享缓存</translation>
     </message>
     <message>
         <source>Download</source>
-        <translation type="unfinished">Download</translation>
+        <translation type="unfinished">下载</translation>
     </message>
 </context>
 <context>
@@ -6202,12 +6291,3 @@ Please turn one of those options off.</source>
     </message>
 </context>
 </TS>
-
-
-
-
-
-
-
-
-

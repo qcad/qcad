@@ -15,7 +15,7 @@
         <location filename="../src/gui/RCadToolBarPanel.cpp" line="+21"/>
         <location line="+63"/>
         <source>Back</source>
-        <translation type="unfinished">溯源</translation>
+        <translation type="unfinished">返回</translation>
     </message>
 </context>
 <context>
@@ -41,7 +41,7 @@
     <message>
         <location line="+3"/>
         <source>On Entity</source>
-        <translation>在图元上</translation>
+        <translation type="unfinished">在实体</translation>
     </message>
     <message>
         <location line="+3"/>
