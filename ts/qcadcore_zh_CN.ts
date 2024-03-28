@@ -6,7 +6,7 @@
     <message>
         <location filename="../src/core/RUnit.cpp" line="+273"/>
         <source>None</source>
-        <translation>空</translation>
+        <translation type="unfinished">无</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -96,7 +96,7 @@
     <message>
         <location line="+3"/>
         <source>Astro</source>
-        <translation>天体的</translation>
+        <translation type="unfinished">天体</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -217,7 +217,7 @@
     <message>
         <location filename="../src/core/RDocumentVariables.cpp" line="+48"/>
         <source>Current Layer ID</source>
-        <translation>当前图层ID</translation>
+        <translation type="unfinished">当前图层 ID</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -839,7 +839,7 @@
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+54"/>
         <source>Name</source>
-        <translation>名字</translation>
+        <translation type="unfinished">名称</translation>
     </message>
     <message>
         <location line="+1"/>
