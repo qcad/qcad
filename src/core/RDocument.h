@@ -72,7 +72,7 @@ class RStorage;
  */
 class QCADCORE_EXPORT RDocument : public RRequireHeap, RNonCopyable {
 public:
-    RDocument(RStorage& storage, RSpatialIndex& spatialIndex);
+    RDocument(RStorage& storage, RSpatialIndex& spatialIndex, bool beforeLoad = false);
     virtual ~RDocument();
 
     void init(bool beforeLoad=false);

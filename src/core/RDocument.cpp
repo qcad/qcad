@@ -50,9 +50,7 @@ RDocument* RDocument::clipboard = NULL;
  * A new document contains one layer ("0") and a number of default
  * line types. The default unit is Millimeter.
  */
-RDocument::RDocument(
-    RStorage& storage,
-    RSpatialIndex& spatialIndex)
+RDocument::RDocument(RStorage& storage, RSpatialIndex& spatialIndex, bool beforeLoad)
     : storage(storage),
       spatialIndex(spatialIndex),
       disableSpatialIndicesByBlock(false),
@@ -62,7 +60,7 @@ RDocument::RDocument(
       autoTransactionGroup(false) {
 
     storage.setDocument(this);
-    init();
+    init(beforeLoad);
     RDebug::incCounter("RDocument");
 }
 
