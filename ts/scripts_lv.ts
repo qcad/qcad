@@ -9415,12 +9415,12 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Importa filtri nav atrasti. Pārtraucam...</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+26"/>
         <source>Open Drawing</source>
         <translation type="unfinished">Atvērt zīmējumu</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
         <source>All Files</source>
         <translation type="unfinished">Visi faili</translation>
     </message>

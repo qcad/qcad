@@ -9421,12 +9421,12 @@ je že na seznamu.</translation>
         <translation>Ni najden noben filter za uvoz. Prekinjam...</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+26"/>
         <source>Open Drawing</source>
         <translation>Odpri risbo</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
         <source>All Files</source>
         <translation>Vse datoteke</translation>
     </message>

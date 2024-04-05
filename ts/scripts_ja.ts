@@ -9404,12 +9404,12 @@ is already in the list.</source>
         <translation>インポートフィルタがみつかりません。中断します...</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+26"/>
         <source>Open Drawing</source>
         <translation>図面を開く</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
         <source>All Files</source>
         <translation>全てのファイル</translation>
     </message>

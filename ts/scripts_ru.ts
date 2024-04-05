@@ -9418,12 +9418,12 @@ is already in the list.</source>
         <translation>Фильтры для импорта не найдены. Прервано...</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+26"/>
         <source>Open Drawing</source>
         <translation>Открыть чертёж</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
         <source>All Files</source>
         <translation>Все файлы</translation>
     </message>

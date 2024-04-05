@@ -9404,12 +9404,12 @@ is already in the list.</source>
         <translation type="unfinished">没有发现进口过滤器。终止...</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+26"/>
         <source>Open Drawing</source>
         <translation type="unfinished">开放式绘图</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
         <source>All Files</source>
         <translation type="unfinished">所有文件</translation>
     </message>

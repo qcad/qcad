@@ -9404,12 +9404,12 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Nem találtunk import szűrőket. Megszakítás...</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+26"/>
         <source>Open Drawing</source>
         <translation type="unfinished">Nyílt rajz</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
         <source>All Files</source>
         <translation type="unfinished">Minden fájl</translation>
     </message>
@@ -9527,7 +9527,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+25"/>
         <source>Scale and Position</source>
-        <translation type="unfinished"></translation>
+      <translation type="unfinished">Méretarány és helyzet</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -14569,3 +14569,4 @@ már szerepel a listában.</translation>
     </message>
 </context>
 </TS>
+

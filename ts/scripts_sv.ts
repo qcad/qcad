@@ -9409,12 +9409,12 @@ finns redan i listan.</translation>
         <translation>Inga importfilter har hittats. Avbryter...</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+26"/>
         <source>Open Drawing</source>
         <translation>Öppen ritning</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
         <source>All Files</source>
         <translation>Alla filer</translation>
     </message>

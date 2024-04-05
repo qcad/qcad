@@ -9404,12 +9404,12 @@ is already in the list.</source>
         <translation type="unfinished">没有找到导入筛选器。正在中止…</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+26"/>
         <source>Open Drawing</source>
         <translation type="unfinished">打开绘图</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
         <source>All Files</source>
         <translation type="unfinished">全部文件</translation>
     </message>

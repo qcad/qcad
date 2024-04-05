@@ -9415,12 +9415,12 @@ este deja în listă.</translation>
         <translation type="unfinished">Nu au fost găsite filtre de import. Abandonarea...</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+26"/>
         <source>Open Drawing</source>
         <translation type="unfinished">Deschis Desen</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
         <source>All Files</source>
         <translation type="unfinished">Toate fișierele</translation>
     </message>

@@ -9411,12 +9411,12 @@ er allerede i listen.</translation>
         <translation type="unfinished">Det er ikke funnet noen importfiltre. Avbryt...</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+26"/>
         <source>Open Drawing</source>
         <translation type="unfinished">Åpne tegning</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
         <source>All Files</source>
         <translation type="unfinished">Alle filer</translation>
     </message>

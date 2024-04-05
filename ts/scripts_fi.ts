@@ -9411,12 +9411,12 @@ on jo luettelossa.</translation>
         <translation>Tuontisuodattimia ei löydetty. Keskeytetään...</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+26"/>
         <source>Open Drawing</source>
         <translation>Avaa piirros</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
         <source>All Files</source>
         <translation>Kaikki tiedostot</translation>
     </message>

@@ -9403,12 +9403,12 @@ zaten listede.</translation>
         <translation>Hiçbir içe alma filtresi bulunamadı. Durduruluyor...</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+26"/>
         <source>Open Drawing</source>
         <translation>Çizim Aç</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
         <source>All Files</source>
         <translation>Tüm Dosyalar</translation>
     </message>

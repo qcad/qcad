@@ -9409,12 +9409,12 @@ is already in the list.</source>
         <translation type="unfinished">Δεν έχουν βρεθεί φίλτρα εισαγωγής. Διακοπή...</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+26"/>
         <source>Open Drawing</source>
         <translation type="unfinished">Ανοιχτό σχέδιο</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
         <source>All Files</source>
         <translation type="unfinished">Όλα τα αρχεία</translation>
     </message>
