@@ -4,7 +4,7 @@
 <context>
     <name>RCadToolBar</name>
     <message>
-        <location filename="../src/gui/RCadToolBar.cpp" line="+138"/>
+        <location filename="../src/gui/RCadToolBar.cpp" line="138"/>
         <source>Vertical/Horizontal</source>
         <translation type="unfinished">Függőleges/horizontális</translation>
     </message>
@@ -12,8 +12,8 @@
 <context>
     <name>RCadToolBarPanel</name>
     <message>
-        <location filename="../src/gui/RCadToolBarPanel.cpp" line="+21"/>
-        <location line="+63"/>
+        <location filename="../src/gui/RCadToolBarPanel.cpp" line="21"/>
+        <location filename="../src/gui/RCadToolBarPanel.cpp" line="84"/>
         <source>Back</source>
         <translation type="unfinished">Vissza</translation>
     </message>
@@ -21,7 +21,7 @@
 <context>
     <name>RColorCombo</name>
     <message>
-        <location filename="../src/gui/RColorCombo.cpp" line="+157"/>
+        <location filename="../src/gui/RColorCombo.cpp" line="157"/>
         <source>Custom</source>
         <translation type="unfinished">Egyedi</translation>
     </message>
@@ -29,52 +29,52 @@
 <context>
     <name>REventHandler</name>
     <message>
-        <location filename="../src/gui/REventHandler.cpp" line="+210"/>
+        <location filename="../src/gui/REventHandler.cpp" line="210"/>
         <source>Grid</source>
         <translation type="unfinished">Rács</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location filename="../src/gui/REventHandler.cpp" line="213"/>
         <source>End</source>
         <translation type="unfinished">Vége</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location filename="../src/gui/REventHandler.cpp" line="216"/>
         <source>On Entity</source>
         <translation type="unfinished">On Entitás</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location filename="../src/gui/REventHandler.cpp" line="219"/>
         <source>Perpendicular</source>
         <translation type="unfinished">Merőleges</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location filename="../src/gui/REventHandler.cpp" line="222"/>
         <source>Tangential</source>
         <translation type="unfinished">Tangenciális</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location filename="../src/gui/REventHandler.cpp" line="225"/>
         <source>Center</source>
         <translation type="unfinished">Központ</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location filename="../src/gui/REventHandler.cpp" line="228"/>
         <source>Middle</source>
         <translation type="unfinished">Középső</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location filename="../src/gui/REventHandler.cpp" line="231"/>
         <source>Intersection</source>
         <translation type="unfinished">Kereszteződés</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location filename="../src/gui/REventHandler.cpp" line="234"/>
         <source>Reference</source>
         <translation type="unfinished">Hivatkozás</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location filename="../src/gui/REventHandler.cpp" line="237"/>
         <source>Distance</source>
         <translation type="unfinished">Távolság</translation>
     </message>
@@ -82,10 +82,9 @@
 <context>
     <name>RMathLineEdit</name>
     <message>
-        <location filename="../src/gui/RMathLineEdit.cpp" line="+188"/>
+        <location filename="../src/gui/RMathLineEdit.cpp" line="188"/>
         <source>Invalid</source>
         <translation type="unfinished">Érvénytelen</translation>
     </message>
 </context>
 </TS>
-

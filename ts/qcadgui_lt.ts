@@ -4,7 +4,7 @@
 <context>
     <name>RCadToolBar</name>
     <message>
-        <location filename="../src/gui/RCadToolBar.cpp" line="+138"/>
+        <location filename="../src/gui/RCadToolBar.cpp" line="138"/>
         <source>Vertical/Horizontal</source>
         <translation type="unfinished">Vertikalus / horizontalus</translation>
     </message>
@@ -12,8 +12,8 @@
 <context>
     <name>RCadToolBarPanel</name>
     <message>
-        <location filename="../src/gui/RCadToolBarPanel.cpp" line="+21"/>
-        <location line="+63"/>
+        <location filename="../src/gui/RCadToolBarPanel.cpp" line="21"/>
+        <location filename="../src/gui/RCadToolBarPanel.cpp" line="84"/>
         <source>Back</source>
         <translation type="unfinished">Atgal</translation>
     </message>
@@ -21,7 +21,7 @@
 <context>
     <name>RColorCombo</name>
     <message>
-        <location filename="../src/gui/RColorCombo.cpp" line="+157"/>
+        <location filename="../src/gui/RColorCombo.cpp" line="157"/>
         <source>Custom</source>
         <translation type="unfinished">Pasirinktinis</translation>
     </message>
@@ -29,52 +29,52 @@
 <context>
     <name>REventHandler</name>
     <message>
-        <location filename="../src/gui/REventHandler.cpp" line="+210"/>
+        <location filename="../src/gui/REventHandler.cpp" line="210"/>
         <source>Grid</source>
         <translation type="unfinished">Tinklelis</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location filename="../src/gui/REventHandler.cpp" line="213"/>
         <source>End</source>
         <translation type="unfinished">Pabaiga</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location filename="../src/gui/REventHandler.cpp" line="216"/>
         <source>On Entity</source>
         <translation type="unfinished">Apie subjektą</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location filename="../src/gui/REventHandler.cpp" line="219"/>
         <source>Perpendicular</source>
         <translation type="unfinished">Statmenas</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location filename="../src/gui/REventHandler.cpp" line="222"/>
         <source>Tangential</source>
         <translation type="unfinished">Tangentinis</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location filename="../src/gui/REventHandler.cpp" line="225"/>
         <source>Center</source>
         <translation type="unfinished">Centras</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location filename="../src/gui/REventHandler.cpp" line="228"/>
         <source>Middle</source>
         <translation type="unfinished">Vidurio</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location filename="../src/gui/REventHandler.cpp" line="231"/>
         <source>Intersection</source>
         <translation type="unfinished">Sankryža</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location filename="../src/gui/REventHandler.cpp" line="234"/>
         <source>Reference</source>
         <translation type="unfinished">Nuoroda</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location filename="../src/gui/REventHandler.cpp" line="237"/>
         <source>Distance</source>
         <translation type="unfinished">Atstumas</translation>
     </message>
@@ -82,7 +82,7 @@
 <context>
     <name>RMathLineEdit</name>
     <message>
-        <location filename="../src/gui/RMathLineEdit.cpp" line="+188"/>
+        <location filename="../src/gui/RMathLineEdit.cpp" line="188"/>
         <source>Invalid</source>
         <translation type="unfinished">Negaliojantis</translation>
     </message>
