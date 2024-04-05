@@ -4,7 +4,7 @@
 <context>
     <name>RCadToolBar</name>
     <message>
-        <location filename="../src/gui/RCadToolBar.cpp" line="138"/>
+        <location filename="../src/gui/RCadToolBar.cpp" line="+138"/>
         <source>Vertical/Horizontal</source>
         <translation>Lodret/Horisontal</translation>
     </message>
@@ -12,8 +12,8 @@
 <context>
     <name>RCadToolBarPanel</name>
     <message>
-        <location filename="../src/gui/RCadToolBarPanel.cpp" line="21"/>
-        <location filename="../src/gui/RCadToolBarPanel.cpp" line="84"/>
+        <location filename="../src/gui/RCadToolBarPanel.cpp" line="+21"/>
+        <location line="+63"/>
         <source>Back</source>
         <translation>Tilbage</translation>
     </message>
@@ -21,7 +21,7 @@
 <context>
     <name>RColorCombo</name>
     <message>
-        <location filename="../src/gui/RColorCombo.cpp" line="157"/>
+        <location filename="../src/gui/RColorCombo.cpp" line="+157"/>
         <source>Custom</source>
         <translation>Tilpasset</translation>
     </message>
@@ -29,52 +29,52 @@
 <context>
     <name>REventHandler</name>
     <message>
-        <location filename="../src/gui/REventHandler.cpp" line="210"/>
+        <location filename="../src/gui/REventHandler.cpp" line="+210"/>
         <source>Grid</source>
         <translation>Gitter</translation>
     </message>
     <message>
-        <location filename="../src/gui/REventHandler.cpp" line="213"/>
+        <location line="+3"/>
         <source>End</source>
         <translation>Slut</translation>
     </message>
     <message>
-        <location filename="../src/gui/REventHandler.cpp" line="216"/>
+        <location line="+3"/>
         <source>On Entity</source>
         <translation>På enheden</translation>
     </message>
     <message>
-        <location filename="../src/gui/REventHandler.cpp" line="219"/>
+        <location line="+3"/>
         <source>Perpendicular</source>
         <translation>Lodret</translation>
     </message>
     <message>
-        <location filename="../src/gui/REventHandler.cpp" line="222"/>
+        <location line="+3"/>
         <source>Tangential</source>
         <translation>Tangentielt</translation>
     </message>
     <message>
-        <location filename="../src/gui/REventHandler.cpp" line="225"/>
+        <location line="+3"/>
         <source>Center</source>
         <translation>Center</translation>
     </message>
     <message>
-        <location filename="../src/gui/REventHandler.cpp" line="228"/>
+        <location line="+3"/>
         <source>Middle</source>
         <translation>Midt</translation>
     </message>
     <message>
-        <location filename="../src/gui/REventHandler.cpp" line="231"/>
+        <location line="+3"/>
         <source>Intersection</source>
         <translation>Krydsningspunkt</translation>
     </message>
     <message>
-        <location filename="../src/gui/REventHandler.cpp" line="234"/>
+        <location line="+3"/>
         <source>Reference</source>
         <translation>Henvisning</translation>
     </message>
     <message>
-        <location filename="../src/gui/REventHandler.cpp" line="237"/>
+        <location line="+3"/>
         <source>Distance</source>
         <translation>Afstand</translation>
     </message>
@@ -82,7 +82,7 @@
 <context>
     <name>RMathLineEdit</name>
     <message>
-        <location filename="../src/gui/RMathLineEdit.cpp" line="188"/>
+        <location filename="../src/gui/RMathLineEdit.cpp" line="+188"/>
         <source>Invalid</source>
         <translation>Ugyldig</translation>
     </message>
