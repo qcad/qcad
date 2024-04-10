@@ -27,6 +27,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QSharedPointer&gt;</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDimStyleProxy.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMath.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>RDimRotatedEntity</name>;</class_decl>
 <class_decl>class <name>RDocument</name>;</class_decl>

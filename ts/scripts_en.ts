@@ -9411,12 +9411,12 @@ is already in the list.</translation>
         <translation>No import filters have been found. Aborting...</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+26"/>
         <source>Open Drawing</source>
         <translation>Open Drawing</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
         <source>All Files</source>
         <translation>All Files</translation>
     </message>

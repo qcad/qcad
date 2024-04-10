@@ -645,6 +645,114 @@
                 
     } else 
 
+    if( context->argumentCount() ==
+        3
+                && (
+                
+                        context->argument(
+                        0
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isNull()
+                ) /* type: RStorage */
+            
+                && (
+                
+                        context->argument(
+                        1
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        1
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        1
+                        ).isNull()
+                ) /* type: RSpatialIndex */
+            
+                && (
+                
+                        context->argument(
+                        2
+                        ).isBool()
+                ) /* type: bool */
+            
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RStorage*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RStorage*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type RStorage*.",
+                               context);                    
+                    }
+                    RStorage& a0 = *ap0;
+                
+                    // argument is reference
+                    RSpatialIndex*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RSpatialIndex*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if( ap1 == NULL ){
+                           return REcmaHelper::throwError("RDocument: Argument 1 is not of type RSpatialIndex*.",
+                               context);                    
+                    }
+                    RSpatialIndex& a1 = *ap1;
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // non-copyable class:
+            RDocument
+                    * cppResult =
+                    new
+                    RDocument
+                    (
+                    a0
+        ,
+    a1
+        ,
+    a2
+                    );
+                
+                    // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
+                    result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
+                
+    } else 
+
     {
        return REcmaHelper::throwError(
        QString::fromLatin1("RDocument(): no matching constructor found."),

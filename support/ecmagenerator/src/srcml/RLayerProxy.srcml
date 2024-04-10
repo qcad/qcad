@@ -23,8 +23,11 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"../core_global.h"</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLayer.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
 
+<class_decl>class <name>RDocument</name>;</class_decl>
+<class_decl>class <name>RLayer</name>;</class_decl>
 
 <comment type="block">/**
  * Proxy for advanced layer functionality. May be implemented

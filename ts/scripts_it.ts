@@ -9411,12 +9411,12 @@ is already in the list.</source>
         <translation>Non sono stati trovati filtri di importazione. Interruzione...</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+26"/>
         <source>Open Drawing</source>
         <translation>Apri il Disegno</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
         <source>All Files</source>
         <translation>Tutti i file</translation>
     </message>

@@ -9405,12 +9405,12 @@ is already in the list.</source>
         <translation type="unfinished">Ühtegi impordifiltrit ei ole leitud. Katkestus...</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+26"/>
         <source>Open Drawing</source>
         <translation type="unfinished">Avatud joonistus</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
         <source>All Files</source>
         <translation type="unfinished">Kõik failid</translation>
     </message>

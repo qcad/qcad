@@ -9404,12 +9404,12 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Tidak ada filter impor yang ditemukan. Membatalkan...</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+26"/>
         <source>Open Drawing</source>
         <translation type="unfinished">Buka Gambar</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
         <source>All Files</source>
         <translation type="unfinished">Semua File</translation>
     </message>

@@ -9416,12 +9416,12 @@ již v seznamu je.</translation>
         <translation>Nebyly nalezeny žádné filtry pro import. Rušení...</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+26"/>
         <source>Open Drawing</source>
         <translation>Otevřít výkres</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
         <source>All Files</source>
         <translation>Všechny soubory</translation>
     </message>

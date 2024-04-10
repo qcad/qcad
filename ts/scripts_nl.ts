@@ -9411,12 +9411,12 @@ is al in de lijst.</translation>
         <translation>Geen import filters zijn gevonden. Afgebroken...</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+26"/>
         <source>Open Drawing</source>
         <translation>Open tekening</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
         <source>All Files</source>
         <translation>Alle bestanden</translation>
     </message>

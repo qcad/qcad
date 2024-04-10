@@ -9415,12 +9415,12 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Importo filtrų nerasta. Nutraukiama...</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+26"/>
         <source>Open Drawing</source>
         <translation type="unfinished">Atviras brėžinys</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
         <source>All Files</source>
         <translation type="unfinished">Visi failai</translation>
     </message>

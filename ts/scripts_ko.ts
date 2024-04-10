@@ -9404,12 +9404,12 @@ is already in the list.</source>
         <translation type="unfinished">가져오기 필터를 찾을 수 없습니다. 중단 중...</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+26"/>
         <source>Open Drawing</source>
         <translation type="unfinished">도면 열기</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
         <source>All Files</source>
         <translation type="unfinished">모든 파일</translation>
     </message>
