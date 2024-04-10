@@ -56,17 +56,17 @@
     <message>
         <location line="+3"/>
         <source>Center</source>
-        <translation>Middelpunt</translation>
+        <translation>Centrum</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Middle</source>
-        <translation>Midden</translation>
+        <translation>Middelpunt</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Intersection</source>
-        <translation>Intersectie</translation>
+        <translation>Snijpunt</translation>
     </message>
     <message>
         <location line="+3"/>
