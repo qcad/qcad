@@ -1492,6 +1492,11 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
         var signalsBlocked = control.blockSignals(true);
         control.currentIndex = index;
         control.blockSignals(signalsBlocked);
+
+        if (isOfType(control, RColorCombo)) {
+            // make sure color combo is aware of current (custom) color:
+            control.setColor(value);
+        }
     }
 
     return [ control ];
