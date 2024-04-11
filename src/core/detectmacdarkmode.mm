@@ -38,7 +38,7 @@ bool isMacDarkMode() {
     else {
         // no value in plist file
         // use system setting
-        qDebug() << "no dark mode value in plist file: use app defaults or system setting";
+        //qDebug() << "no dark mode value in plist file: use app defaults or system setting";
     }
 
     // read value from "defaults":
