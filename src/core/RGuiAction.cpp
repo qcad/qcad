@@ -244,6 +244,17 @@ void RGuiAction::updateIcons() {
     }
 }
 
+void RGuiAction::updateToolTips() {
+    QList<RGuiAction*> actions = getActions();
+    for (int i=0; i<actions.length(); i++) {
+        RGuiAction* action = actions[i];
+        if (action==NULL) {
+            continue;
+        }
+        action->initTexts();
+    }
+}
+
 void RGuiAction::updateIcon() {
     setIcon(iconFile);
 }

@@ -260,6 +260,9 @@ public:
     static QSettings* getQSettings();
 
     static void resetCache();
+    static void resetDarkModeCache() {
+        darkMode = -1;
+    }
 
     static void setXDataEnabled(bool on);
     static bool isXDataEnabled();

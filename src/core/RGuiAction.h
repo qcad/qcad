@@ -33,6 +33,7 @@
 #include "RTransactionListener.h"
 #include "RFocusListener.h"
 #include "RSelectionListener.h"
+#include "RPaletteListener.h"
 
 class QToolBar;
 
@@ -132,6 +133,8 @@ public:
 
     static void updateIcons();
     void updateIcon();
+
+    static void updateToolTips();
 
     /**
      * Sets the action icon to the given icon file.

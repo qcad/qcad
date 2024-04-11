@@ -647,11 +647,19 @@ bool RMainWindowQt::event(QEvent* e) {
 //        return true;
 //    }
 
-    if (e->type()==QEvent::PaletteChange) {
-        RSettings::resetCache();
-        RGuiAction::updateIcons();
-        notifyPaletteListeners();
-        update();
+    if (e->type()==QEvent::PaletteChange || e->type()==QEvent::ApplicationPaletteChange) {
+        RSettings::resetDarkModeCache();
+
+        static int darkMode = -1;
+        if (darkMode!=(int)RSettings::isDarkMode()) {
+            // mode has changed from dark to light or vice versa:
+            RSettings::resetCache();
+            RGuiAction::updateIcons();
+            RGuiAction::updateToolTips();
+            notifyPaletteListeners();
+            update();
+            darkMode = (int)RSettings::isDarkMode();
+        }
     }
 
     if (e->type()==QEvent::KeyPress) {
