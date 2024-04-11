@@ -71,6 +71,53 @@ CommandLine.prototype.finishEvent = function() {
 //    frame.repaint();
 //}
 
+CommandLine.blue = "";
+CommandLine.infoBlue = "";
+CommandLine.red = "";
+
+CommandLine.initColors = function() {
+    var oldBlue = CommandLine.blue;
+    var oldInfoBlue = CommandLine.infoBlue;
+    var oldRed = CommandLine.red;
+
+    if (RSettings.hasDarkGuiBackground()) {
+        CommandLine.blue = "#2E9AFF";
+        CommandLine.infoBlue = "#91c1ff";
+        CommandLine.red = "#FF6060";
+    }
+    else {
+        CommandLine.blue = "#0000CC";
+        CommandLine.infoBlue = "#0066CC";
+        CommandLine.red = "#CC0000";
+    }
+
+    var replacements = [];
+
+    if (oldBlue!==CommandLine.blue && oldBlue.length>0) {
+        replacements.push([oldBlue, CommandLine.blue]);
+    }
+    if (oldInfoBlue!==CommandLine.infoBlue && oldInfoBlue.length>0) {
+        replacements.push([oldInfoBlue, CommandLine.infoBlue]);
+    }
+    if (oldRed!==CommandLine.red && oldRed.length>0) {
+        replacements.push([oldRed, CommandLine.red]);
+    }
+
+    var appWin = RMainWindowQt.getMainWindow();
+    var formWidget = appWin.findChild("CommandLine");
+    var teHistory = formWidget.findChild("History");
+
+    if (replacements.length>0) {
+        var s = teHistory.html;
+        for (var i=0; i<replacements.length; i++) {
+            var replacement = replacements[i];
+            qDebug("replacing:" + replacement[0] + " with " + replacement[1]);
+            s = s.replace(new RegExp(replacement[0], "gi"), replacement[1]);
+        }
+        teHistory.html = s;
+    }
+};
+
 CommandLine.init = function(basePath) {
     var appWin = EAction.getMainWindow();
 
@@ -102,15 +149,7 @@ CommandLine.init = function(basePath) {
     dock.shown.connect(function() { action.setChecked(true); });
     dock.hidden.connect(function() { action.setChecked(false); });
 
-    var blue = "#0000cc";
-    var infoBlue = "#0066cc";
-    var red = "#cc0000";
-
-    if (RSettings.hasDarkGuiBackground()) {
-        blue = "#2E9AFF";
-        infoBlue = "#91c1ff";
-        red = "#FF6060";
-    }
+    CommandLine.initColors();
 
     // open fragment links of format "#<entity ID>,<entity ID>" by selecting
     // the entities with the given IDs:
@@ -415,7 +454,7 @@ CommandLine.init = function(basePath) {
             message = message.replace(/&quot;/g, "\"");
         }
 
-        appendAndScroll("<span style='color:" + red + ";'>" + message + "</span>");
+        appendAndScroll("<span style='color:" + CommandLine.red + ";'>" + message + "</span>");
         if (RSettings.getBoolValue("CommandLine/WarningsAsDialog", false) || messageBox) {
             QMessageBox.warning(appWin, qsTr("Warning"), message);
         }
@@ -427,7 +466,7 @@ CommandLine.init = function(basePath) {
             message = RS.escape(message);
         }
 
-        appendAndScroll("<span style='color:" + infoBlue + ";'>" + message + "</span>");
+        appendAndScroll("<span style='color:" + CommandLine.infoBlue + ";'>" + message + "</span>");
         if (RSettings.getBoolValue("CommandLine/InfoAsDialog", false)) {
             QMessageBox.information(appWin, qsTr("Info"), message);
         }
@@ -459,7 +498,7 @@ CommandLine.init = function(basePath) {
         }
         leCommand.appendCommand(message);
         appendAndScroll(
-            "<span style='color:" + blue + ";'>"
+            "<span style='color:" + CommandLine.blue + ";'>"
             + "<i>" + what + ": </i>"
             + msgEsc + "</span>");
     });
@@ -507,7 +546,7 @@ CommandLine.init = function(basePath) {
                 .arg(RS.getBuildCpuArchitecture())
                 );
 
-//    var pl = new RPaletteListenerAdapter();
-//    appWin.addPaletteListener(pl);
-//    pl.paletteChanged.connect(CommandLine.initStyle);
+    var pl = new RPaletteListenerAdapter();
+    appWin.addPaletteListener(pl);
+    pl.paletteChanged.connect(CommandLine.initColors);
 };
