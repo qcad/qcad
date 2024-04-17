@@ -1318,7 +1318,7 @@ Wilt u deze herstellen?</translation>
         <location line="+67"/>
         <location line="+43"/>
         <source>Block List</source>
-        <translation>Bloklijst</translation>
+        <translation>Blokkenlijst</translation>
     </message>
     <message>
         <location line="-110"/>
@@ -1364,7 +1364,7 @@ Wilt u deze herstellen?</translation>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+93"/>
         <source>Export Block List (CSV)</source>
-        <translation>Bloklijst exporteren (CSV)</translation>
+        <translation>Blokkenlijst exporteren (CSV)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1374,7 +1374,7 @@ Wilt u deze herstellen?</translation>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block List</source>
-        <translation>Bloklijst &amp;exporteren</translation>
+        <translation>Blokkenlijst &amp;exporteren</translation>
     </message>
 </context>
 <context>
@@ -10074,7 +10074,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+17"/>
         <source>Auto fit drawing to page(s)</source>
-        <translation>Tekening Automatisch aanpassen aan pagina(s)</translation>
+        <translation>Tekening automatisch aanpassen aan pagina(s)</translation>
     </message>
     <message>
         <location line="+11"/>
