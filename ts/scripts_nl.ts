@@ -1202,7 +1202,7 @@ Wilt u deze herstellen?</translation>
     <message>
         <location line="+9"/>
         <source>Add extra margin to compensate for line weight</source>
-        <translation>Voeg extra marge toe voor lijndikte</translation>
+        <translation>Voeg extra afstand toe voor lijndikte</translation>
     </message>
     <message>
         <location line="-170"/>
@@ -9529,7 +9529,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+86"/>
         <source>Set to Printer Margins</source>
-        <translation>Instellen op printer marges</translation>
+        <translation>Instellen op printer randen</translation>
     </message>
     <message>
         <location line="+25"/>
