@@ -95,6 +95,8 @@ QString RTextRenderer::rxTrackChangeStr = "\\\\T(\\d*\\.?\\d*);";
 QRegularExpression RTextRenderer::rxTrackChange(rxTrackChangeStr);
 QString RTextRenderer::rxAlignmentChangeStr = "\\\\A(\\d+);";
 QRegularExpression RTextRenderer::rxAlignmentChange(rxAlignmentChangeStr);
+QString RTextRenderer::rxAlignmentChangeBlockStr = "\\\\A(\\d+)";
+QRegularExpression RTextRenderer::rxAlignmentChangeBlock(rxAlignmentChangeStr);
 QString RTextRenderer::rxFontChangeCadStr = "\\\\F([^|;]*)"    // \Ffont
                                          "[^;]*"            // ignore anything except ";"
                                          ";";               // require ";"
@@ -176,6 +178,7 @@ QString rxAllTmp =
     + RTextRenderer::rxObliqueAngleChangeStr + "|"
     + RTextRenderer::rxTrackChangeStr + "|"
     + RTextRenderer::rxAlignmentChangeStr + "|"
+    + RTextRenderer::rxAlignmentChangeBlockStr + "|"
     + RTextRenderer::rxFontChangeCadStr + "|"
     + RTextRenderer::rxFontChangeTtfStr + "|"
     + RTextRenderer::rxBeginBlockStr + "|"
