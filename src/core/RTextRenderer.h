@@ -298,6 +298,8 @@ public:
     static QRegularExpression rxTrackChange;
     static QString rxAlignmentChangeStr;
     static QRegularExpression rxAlignmentChange;
+    static QString rxAlignmentChangeBlockStr;
+    static QRegularExpression rxAlignmentChangeBlock;
     static QString rxFontChangeCadStr;
     static QRegularExpression rxFontChangeCad;
     static QString rxFontChangeTtfStr;
