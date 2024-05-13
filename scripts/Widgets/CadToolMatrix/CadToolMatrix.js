@@ -78,7 +78,7 @@ RCadToolMatrixTreePanel.prototype.actionEvent = function(event) {
     switch (event.type()) {
     case QEvent.ActionAdded:
         index = layout.count();
-        if (event.before()) {
+        if (!isNull(event.before())) {
             if (RSettings.getQtVersion()>0x060000) {
                 index = layout.indexOf(event.before());
             }
