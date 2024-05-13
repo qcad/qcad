@@ -2188,7 +2188,7 @@ Szeretné visszaállítani?</translation>
     <message>
         <location line="+12"/>
         <source>Info</source>
-        <translation type="unfinished">Info</translation>
+        <translation type="unfinished">Infó</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -3272,12 +3272,12 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Draw/Draw.js" line="+61"/>
         <source>Draw</source>
-        <translation type="unfinished">Draw</translation>
+        <translation type="unfinished">Rajzol</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Draw</source>
-        <translation type="unfinished">Draw</translation>
+        <translation type="unfinished">&amp;Rajzol</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -3382,7 +3382,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/DrawExamples.js" line="+51"/>
         <source>&amp;Draw</source>
-        <translation type="unfinished">Draw</translation>
+        <translation type="unfinished">&amp;Rajzol</translation>
     </message>
 </context>
 <context>
@@ -4908,7 +4908,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+84"/>
         <source>Info</source>
-        <translation type="unfinished">Info</translation>
+        <translation type="unfinished">Infó</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4936,7 +4936,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+35"/>
         <source>Info</source>
-        <translation type="unfinished">Info</translation>
+        <translation type="unfinished">Infó</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7409,7 +7409,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+26"/>
         <source>&amp;Info</source>
-        <translation type="unfinished">Info</translation>
+        <translation type="unfinished">Infó</translation>
     </message>
     <message>
         <location filename="../scripts/Information/Information.ui" line="+17"/>
@@ -9032,7 +9032,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+4"/>
         <source>&amp;Draw</source>
-        <translation type="unfinished">Draw</translation>
+        <translation type="unfinished">&amp;Rajzol</translation>
     </message>
 </context>
 <context>
@@ -12837,7 +12837,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/TextPreferences.js" line="+30"/>
         <source>Draw</source>
-        <translation type="unfinished">Draw</translation>
+        <translation type="unfinished">Rajzol</translation>
     </message>
     <message>
         <location line="+0"/>
