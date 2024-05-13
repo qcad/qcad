@@ -192,7 +192,7 @@ QLineEdit::disabled
 QTextEdit
 {
     background-color: #FFFFC5;
-    color: #fffff;
+    color: #ffffff;
     border: 1px groove #EE977F;
     border-radius: 3px;
 }

@@ -186,6 +186,7 @@ InfoCentroidsListener.prototype.register = function() {
     }); // End Connect
 
     // Force button active, in normal conditions it toggles already:
+    this.getGuiAction().setIcon(InfoCentroidsListener.includeBasePath + "/InfoCentroidsListenerActive.svg");
     this.getGuiAction().setChecked(true);
     // Report activation:
     EAction.handleUserInfo(qsTr("2D Centroids transaction listener active."));
@@ -205,6 +206,7 @@ InfoCentroidsListener.prototype.remove = function() {
     appWin.setProperty("InfoCentroidsListenerAdapter", undefined);
 
     // Force button inactive, in normal conditions it toggles already:
+    this.getGuiAction().setIcon(InfoCentroidsListener.includeBasePath + "/InfoCentroidsListenerInactive.svg");
     this.getGuiAction().setChecked(false);
     // Report deactivation:
     EAction.handleUserInfo(qsTr("Deactivated/removed the 2D Centroids transaction listener."));
