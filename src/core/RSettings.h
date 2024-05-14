@@ -277,6 +277,7 @@ public:
 
     static int getMouseThreshold();
     static bool getPositionByMousePress();
+    static void setAllowMouseMoveInterruptionsOverride(bool on);
     static bool getAllowMouseMoveInterruptions();
 
     static bool isTextRenderedAsText();

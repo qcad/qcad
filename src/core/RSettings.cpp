@@ -1902,6 +1902,10 @@ bool RSettings::getPositionByMousePress() {
     return (bool)positionByMousePress;
 }
 
+void RSettings::setAllowMouseMoveInterruptionsOverride(bool on) {
+    allowMouseMoveInterruptions = (int)on;
+}
+
 bool RSettings::getAllowMouseMoveInterruptions() {
     if (allowMouseMoveInterruptions==-1) {
         allowMouseMoveInterruptions = getValue("GraphicsView/AllowMouseMoveInterruptions", QVariant(true)).toBool();
