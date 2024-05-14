@@ -261,6 +261,9 @@
     <function_decl><type><name>static</name> <name>QSettings</name>*</type> <name>getQSettings</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>static</name> <name>void</name></type> <name>resetCache</name><parameter_list>()</parameter_list>;</function_decl>
+    <function><type><name>static</name> <name>void</name></type> <name>resetDarkModeCache</name><parameter_list>()</parameter_list> <block>{
+        <expr_stmt><expr><name>darkMode</name> = -1</expr>;</expr_stmt>
+    }</block></function>
 
     <function_decl><type><name>static</name> <name>void</name></type> <name>setXDataEnabled</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>isXDataEnabled</name><parameter_list>()</parameter_list>;</function_decl>
@@ -275,6 +278,7 @@
 
     <function_decl><type><name>static</name> <name>int</name></type> <name>getMouseThreshold</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>getPositionByMousePress</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>setAllowMouseMoveInterruptionsOverride</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>getAllowMouseMoveInterruptions</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>static</name> <name>bool</name></type> <name>isTextRenderedAsText</name><parameter_list>()</parameter_list>;</function_decl>

@@ -307,6 +307,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, resetCache, "resetCache");
             
+            REcmaHelper::registerFunction(&engine, &ctor, resetDarkModeCache, "resetDarkModeCache");
+            
             REcmaHelper::registerFunction(&engine, &ctor, setXDataEnabled, "setXDataEnabled");
             
             REcmaHelper::registerFunction(&engine, &ctor, isXDataEnabled, "isXDataEnabled");
@@ -326,6 +328,8 @@
             REcmaHelper::registerFunction(&engine, &ctor, getMouseThreshold, "getMouseThreshold");
             
             REcmaHelper::registerFunction(&engine, &ctor, getPositionByMousePress, "getPositionByMousePress");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, setAllowMouseMoveInterruptionsOverride, "setAllowMouseMoveInterruptionsOverride");
             
             REcmaHelper::registerFunction(&engine, &ctor, getAllowMouseMoveInterruptions, "getAllowMouseMoveInterruptions");
             
@@ -6782,6 +6786,40 @@
             return result;
         }
          QScriptValue
+        REcmaSettings::resetDarkModeCache
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::resetDarkModeCache", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::resetDarkModeCache";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RSettings::
+       resetDarkModeCache();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.resetDarkModeCache().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::resetDarkModeCache", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSettings::setXDataEnabled
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -7181,6 +7219,51 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getPositionByMousePress", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::setAllowMouseMoveInterruptionsOverride
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::setAllowMouseMoveInterruptionsOverride", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::setAllowMouseMoveInterruptionsOverride";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RSettings::
+       setAllowMouseMoveInterruptionsOverride(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.setAllowMouseMoveInterruptionsOverride().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::setAllowMouseMoveInterruptionsOverride", context, engine);
             return result;
         }
          QScriptValue

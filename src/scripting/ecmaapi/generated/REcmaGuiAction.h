@@ -180,6 +180,9 @@
         updateIcon
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        updateToolTips
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setIcon
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

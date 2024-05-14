@@ -293,6 +293,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, updateIcons, "updateIcons");
             
+            REcmaHelper::registerFunction(&engine, &ctor, updateToolTips, "updateToolTips");
+            
             REcmaHelper::registerFunction(&engine, &ctor, triggerGroupDefault, "triggerGroupDefault");
             
             REcmaHelper::registerFunction(&engine, &ctor, triggerGroupDefaults, "triggerGroupDefaults");
@@ -2897,6 +2899,40 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGuiAction::updateIcon", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGuiAction::updateToolTips
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGuiAction::updateToolTips", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::updateToolTips";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RGuiAction::
+       updateToolTips();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.updateToolTips().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGuiAction::updateToolTips", context, engine);
             return result;
         }
          QScriptValue

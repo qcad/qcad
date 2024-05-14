@@ -184,6 +184,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="rxAlignmentChange" type="QRegularExpression"
     isConst="false" isStatic="true" />
+    <property name="rxAlignmentChangeBlockStr" type="QString"
+    isConst="false" isStatic="true" />
+    <property name="rxAlignmentChangeBlock"
+    type="QRegularExpression" isConst="false" isStatic="true" />
     <property name="rxFontChangeCadStr" type="QString"
     isConst="false" isStatic="true" />
     <property name="rxFontChangeCad" type="QRegularExpression"

@@ -824,6 +824,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
+    <method name="resetDarkModeCache" cppName="resetDarkModeCache"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
     <method name="setXDataEnabled" cppName="setXDataEnabled"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
@@ -879,6 +884,15 @@ xmlns:rs="http://www.ribbonsoft.com">
     cppName="getPositionByMousePress" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setAllowMouseMoveInterruptionsOverride"
+    cppName="setAllowMouseMoveInterruptionsOverride"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
     </method>
     <method name="getAllowMouseMoveInterruptions"
     cppName="getAllowMouseMoveInterruptions" specifier="public"

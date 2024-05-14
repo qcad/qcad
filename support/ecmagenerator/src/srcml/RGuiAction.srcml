@@ -34,6 +34,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTransactionListener.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RFocusListener.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RSelectionListener.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPaletteListener.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>QToolBar</name>;</class_decl>
 
@@ -133,6 +134,8 @@
 
     <function_decl><type><name>static</name> <name>void</name></type> <name>updateIcons</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>updateIcon</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>void</name></type> <name>updateToolTips</name><parameter_list>()</parameter_list>;</function_decl>
 
     <comment type="block">/**
      * Sets the action icon to the given icon file.

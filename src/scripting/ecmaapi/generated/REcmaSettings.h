@@ -421,6 +421,9 @@
         resetCache
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        resetDarkModeCache
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setXDataEnabled
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -449,6 +452,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getPositionByMousePress
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setAllowMouseMoveInterruptionsOverride
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getAllowMouseMoveInterruptions

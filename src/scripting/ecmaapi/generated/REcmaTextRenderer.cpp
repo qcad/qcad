@@ -304,6 +304,14 @@
                 qScriptValueFromValue(&engine, RTextRenderer::rxAlignmentChange),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("rxAlignmentChangeBlockStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxAlignmentChangeBlockStr),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("rxAlignmentChangeBlock",
+                qScriptValueFromValue(&engine, RTextRenderer::rxAlignmentChangeBlock),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("rxFontChangeCadStr",
                 qScriptValueFromValue(&engine, RTextRenderer::rxFontChangeCadStr),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
