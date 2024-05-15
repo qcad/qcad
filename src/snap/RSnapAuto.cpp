@@ -48,11 +48,6 @@ RSnapAuto::Modes RSnapAuto::modes = RSnapAuto::None;
 RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double range) {
     entityIds.clear();
 
-    if (RMath::isNaN(range)) {
-        int rangePixels = RSettings::getSnapRange();
-        range = view.mapDistanceFromView(rangePixels);
-    }
-
     RDocument* document = view.getDocument();
     if (document==NULL) {
         lastSnap = position;
