@@ -1197,6 +1197,8 @@
     <file alias="scripts/Misc/MiscInformation/InfoCentroids/InfoCentroids.svg">../../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroids.svg</file>
     <file alias="scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListener.js">../../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListener.js</file>
     <file alias="scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListener.svg">../../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListener.svg</file>
+    <file alias="scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListenerActive.svg">../../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListenerActive.svg</file>
+    <file alias="scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListenerInactive.svg">../../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListenerInactive.svg</file>
     <file alias="scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListenerInit.js">../../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListenerInit.js</file>
     <file alias="scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeighted-inverse.svg">../../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeighted-inverse.svg</file>
     <file alias="scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeighted.js">../../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeighted.js</file>
@@ -1213,8 +1215,10 @@
     <file alias="scripts/Misc/MiscModify/SplineToLine/SplineToLine.js">../../scripts/Misc/MiscModify/SplineToLine/SplineToLine.js</file>
     <file alias="scripts/Misc/MiscSelect/MiscSelect.js">../../scripts/Misc/MiscSelect/MiscSelect.js</file>
     <file alias="scripts/Misc/MiscSelect/SelectByColor/SelectByColor.js">../../scripts/Misc/MiscSelect/SelectByColor/SelectByColor.js</file>
+    <file alias="scripts/Misc/MiscSelect/SelectByColor/SelectByColor.svg">../../scripts/Misc/MiscSelect/SelectByColor/SelectByColor.svg</file>
     <file alias="scripts/Misc/MiscSelect/SelectByColor/SelectByColorInit.js">../../scripts/Misc/MiscSelect/SelectByColor/SelectByColorInit.js</file>
     <file alias="scripts/Misc/MiscSelect/SelectByHandle/SelectByHandle.js">../../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandle.js</file>
+    <file alias="scripts/Misc/MiscSelect/SelectByHandle/SelectByHandle.svg">../../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandle.svg</file>
     <file alias="scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleDialog.ui">../../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleDialog.ui</file>
     <file alias="scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js">../../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js</file>
     <file alias="scripts/Misc/Tutorials/CommandLineTools/CommandLineTools.js">../../scripts/Misc/Tutorials/CommandLineTools/CommandLineTools.js</file>
