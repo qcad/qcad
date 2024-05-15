@@ -51,7 +51,6 @@ ToolBarPreferences.applyPreferences = function(doc) {
 ToolBarPreferences.initPreferences = function(pageWidget, calledByPrefDialog, document) {
     var widgets = getWidgets(pageWidget);
     var prefixChar = widgets["PrefixChar"];
-    var rx = new RegExp("[^ \\+\\-]");
-    this.validator = new QRegExpValidator(rx, prefixChar);
+    this.validator = createValidator("[^ \\+\\-]", prefixChar);
     prefixChar.setValidator(this.validator);
 };

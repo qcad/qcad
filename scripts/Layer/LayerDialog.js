@@ -69,14 +69,7 @@ LayerDialog.prototype.show = function() {
 
     var widgets = getWidgets(this.dialog);
     var leLayerName = widgets["LayerName"];
-    var rx = new RegExp("[^<>/\\\\\":;\?\*|,=`]{1,255}");
-    if (RSettings.getQtVersion()>=0x060000) {
-        this.validator = new QRegularExpressionValidator(rx, leLayerName);
-    }
-    else {
-        this.validator = new QRegExpValidator(rx, leLayerName);
-    }
-
+    this.validator = createValidator("[^<>/\\\\\":;\?\*|,=`]{1,255}", leLayerName);
     leLayerName.setValidator(this.validator);
     var cbColor = widgets["Color"];
     cbColor.setColor(this.defaultColor);

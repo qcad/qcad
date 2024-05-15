@@ -51,8 +51,7 @@ BlockDialog.prototype.show = function() {
     this.dialog = WidgetFactory.createDialog(BlockDialog.includeBasePath, "BlockDialog.ui", EAction.getMainWindow());
 
     var leBlockName = this.dialog.findChild("BlockName");
-    var rx = new RegExp("[^<>/\\\\\":;\?\*|,=`]{1,255}");
-    this.validator = new QRegExpValidator(rx, leBlockName);
+    this.validator = createValidator("[^<>/\\\\\":;\?\*|,=`]{1,255}", leBlockName);
     leBlockName.setValidator(this.validator);
     leBlockName.textChanged.connect(this, this.validate);
     var creatingBlock = isNull(this.block);

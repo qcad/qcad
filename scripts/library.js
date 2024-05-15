@@ -3496,6 +3496,15 @@ function openFiles(args, createNew, close) {
     }
 }
 
+function createValidator(rx, parent) {
+    if (RSettings.getQtVersion()>=0x060000) {
+        return new QRegularExpressionValidator(new QRegularExpression(rx), parent);
+    }
+    else {
+        return new QRegExpValidator(new RegExp(rx), parent);
+    }
+}
+
 // fix QPlainTextEdit API for Qt 5:
 if (!isFunction(QPlainTextEdit.prototype.toPlainText)) {
     QPlainTextEdit.prototype.toPlainText = function() {
