@@ -3,7 +3,7 @@
    viewBox="0 0 512 512"
    version="1.1"
    id="svg1087"
-   sodipodi:docname="SelectByHandle.svg"
+   sodipodi:docname="SelectByHandle-inverse.svg"
    inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -47,7 +47,7 @@
      style="fill:none;stroke:#ff0000;stroke-width:16;stroke-linecap:square"
      id="path1079" />
   <rect
-     style="fill:#ffffff;stroke:#000000;stroke-width:7.46559;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+     style="fill:#ffffff;stroke:#b3b3b3;stroke-width:7.46559;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
      id="rect1173"
      width="415.09784"
      height="156.54793"
