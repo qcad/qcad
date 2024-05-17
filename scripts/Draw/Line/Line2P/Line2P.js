@@ -94,7 +94,7 @@ Line2P.prototype.setState = function(state) {
 };
 
 Line2P.prototype.showUiOptions = function(resume, restoreFromSettings) {
-    Draw.prototype.showUiOptions.call(this, resume, restoreFromSettings);
+    Line.prototype.showUiOptions.call(this, resume, restoreFromSettings);
 
 //    var optionsToolBar = EAction.getOptionsToolBar();
 //    var w = optionsToolBar.findChild("Restrict");
@@ -105,6 +105,8 @@ Line2P.prototype.showUiOptions = function(resume, restoreFromSettings) {
 };
 
 Line2P.prototype.initUiOptions = function(resume, optionsToolBar) {
+    Line.prototype.initUiOptions.call(this, resume, optionsToolBar);
+
     var leLength = optionsToolBar.findChild("Length");
     var cbLength = optionsToolBar.findChild("UseLength");
     var leAngle = optionsToolBar.findChild("Angle");
