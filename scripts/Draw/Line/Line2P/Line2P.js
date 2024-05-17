@@ -297,10 +297,11 @@ Line2P.prototype.slotClose = function() {
     }
 
     if (this.pointList.length >= 3) {
-        this.point2 = this.pointList[0];
-        this.getDocumentInterface().applyOperation(this.getOperation(false));
-        this.pointList.push(this.point2);
         var di = this.getDocumentInterface();
+        this.point2 = this.pointList[0];
+        var e = this.createLineEntity(this.getDocument(), this.point1, this.point2);
+        di.applyOperation(new RAddObjectOperation(e, this.getToolTitle()));
+        this.pointList.push(this.point2);
         di.setRelativeZero(this.point2);
         this.setState(Line2P.State.SettingFirstPoint);
     }
