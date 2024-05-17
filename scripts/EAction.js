@@ -382,9 +382,9 @@ EAction.prototype.showUiOptions = function(resume, restoreFromSettings) {
 
         // show:
         this.settingsGroup = wOptions.objectName;
-        this.optionWidgetActions = this.optionWidgetActions
-                .concat(WidgetFactory.moveChildren(wOptions, optionsToolBar,
-                        this.settingsGroup));
+        var movedWidgets = WidgetFactory.moveChildren(wOptions, optionsToolBar, this.settingsGroup);
+
+        this.optionWidgetActions = this.optionWidgetActions.concat(movedWidgets);
 
         // required for undocked options tool bar:
         if (optionsToolBar.floating) {
@@ -399,7 +399,9 @@ EAction.prototype.showUiOptions = function(resume, restoreFromSettings) {
 
         // give action a chance to initialize toolbar widgets that cannot
         // be initialized in Qt Designer:
-        this.initUiOptions(resume, optionsToolBar);
+        if (i===this.uiFile.length-1) {
+            this.initUiOptions(resume, optionsToolBar);
+        }
 
         // restore previously stored state:
         if (restoreFromSettings===true) {
@@ -413,6 +415,23 @@ EAction.prototype.showUiOptions = function(resume, restoreFromSettings) {
     this.resuming = false;
 };
 
+EAction.updateToolTip = function(widget, scStr, prefixChar) {
+    // if first key is Ctrl then the string starts with Ctrl+
+    // so check for a + sign, which indicates a modifier key has been used
+    // '+' and '-' should not be used as prefix, as they zoom in and out
+    if (scStr.indexOf('+') === -1) {                       // no plus sign (i.e. no modifier)
+        var firstChar = scStr[0];
+        if (firstChar >= '!' && firstChar <= '~') {      // isgraph()
+            // replace first character (,) with configured alternative:
+            scStr = scStr.replace(firstChar, prefixChar);
+            widget.shortcut = new QKeySequence(scStr);
+            if (!widget.toolTip.contains("font-size:")) {
+                widget.toolTip = RGuiAction.formatToolTip(widget.toolTip, scStr);
+            }
+        }
+    }
+};
+
 /**
  * Overwrite to initialize combo boxes and other UI elements of the options tool
  * bar.
@@ -424,6 +443,10 @@ EAction.prototype.initUiOptions = function(resume, optionsToolBar) {
         return;
     }
 
+    var autoFocusWidget;
+    var autoFocusWidgetName;
+    var scStr;
+
     var children = optionsToolBar.children();
     for (var i=0; i<children.length; i++) {
         var child = children[i];
@@ -431,20 +454,59 @@ EAction.prototype.initUiOptions = function(resume, optionsToolBar) {
             continue;
         }
 
+        // widgets with shortcut property:
         var shortCut = child.shortcut;
         if (!isNull(shortCut) && !shortCut.isEmpty()) {
-            var str = shortCut.toString();
-            var firstChar = str[0];
+            scStr = shortCut.toString();
 
-            // if first key is Ctrl then the string starts with Ctrl+
-            // so check for a + sign, which indicates a modifier key has been used
-            // '+' and '-' should not be used as prefix, as they zoom in and out
-            if (str.indexOf('+') === -1) {                       // no plus sign
-                if (firstChar >= '!' && firstChar <= '~') {      // isgraph()
-                    str = str.replace(firstChar, prefixChar);
-                    child.shortcut = new QKeySequence(str);
-                    child.toolTip = RGuiAction.formatToolTip(child.toolTip, str);
+            EAction.updateToolTip(child, scStr, prefixChar);
+
+            // initialize auto focus widget (shortcut triggers focus to another widget):
+            // e.g. "[x] Length: [1      ]", shortcut of checkbox triggers focus on line edit
+            autoFocusWidgetName = child.property("AutoFocusWidget");
+            if (!isNull(autoFocusWidgetName)) {
+                autoFocusWidget = optionsToolBar.findChild(autoFocusWidgetName);
+                if (isOfType(child, QCheckBox)) {
+                    //var focusHandler = new FocusHandler(autoFocusWidget);
+                    var focusHandler = {};
+                    focusHandler.autoFocusWidget = autoFocusWidget;
+                    focusHandler.autoFocusWidgetName = autoFocusWidgetName;
+
+                    // disable tab focus (focus frame off under macOS:
+                    child.focusPolicy = Qt.NoFocus;
+
+                    child.toggled.connect(focusHandler, function(checked) {
+                        if (checked) {
+                            this.autoFocusWidget.setFocus(Qt.ShortcutFocusReason);
+                            if (isFunction(this.autoFocusWidget.selectAll)) {
+                                this.autoFocusWidget.selectAll();
+                            }
+                        }
+                    });
                 }
+            }
+        }
+
+        // widgets with custom shortcut property:
+        scStr = child.property("Shortcut");
+        if (!isNull(scStr)) {
+            EAction.updateToolTip(child, scStr, prefixChar);
+
+            autoFocusWidgetName = child.property("AutoFocusWidget");
+            if (!isNull(autoFocusWidgetName)) {
+                autoFocusWidget = optionsToolBar.findChild(autoFocusWidgetName);
+
+                // add shortcut for line edit:
+                var shortcut = new QShortcut(autoFocusWidget);
+                shortcut.key = new QKeySequence(scStr);
+
+                var scHandler = {};
+                scHandler.widget = autoFocusWidget;
+
+                shortcut.activated.connect(scHandler, function() {
+                    this.widget.selectAll();
+                    this.widget.setFocus(Qt.ShortcutFocusReason);
+                });
             }
         }
     }
