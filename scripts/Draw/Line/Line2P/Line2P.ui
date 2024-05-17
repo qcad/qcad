@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>432</width>
+    <width>494</width>
     <height>50</height>
    </rect>
   </property>
@@ -87,8 +87,17 @@
    </item>
    <item>
     <widget class="QCheckBox" name="UseLength">
+     <property name="toolTip">
+      <string>Use fixed length for line</string>
+     </property>
      <property name="text">
       <string>Length:</string>
+     </property>
+     <property name="shortcut">
+      <string>,, L</string>
+     </property>
+     <property name="AutoFocusWidget" stdset="0">
+      <string>Length</string>
      </property>
     </widget>
    </item>
@@ -108,8 +117,17 @@
    </item>
    <item>
     <widget class="QCheckBox" name="UseAngle">
+     <property name="toolTip">
+      <string>Use fixed angle for line</string>
+     </property>
      <property name="text">
       <string>Angle:</string>
+     </property>
+     <property name="shortcut">
+      <string>,, N</string>
+     </property>
+     <property name="AutoFocusWidget" stdset="0">
+      <string>Angle</string>
      </property>
     </widget>
    </item>

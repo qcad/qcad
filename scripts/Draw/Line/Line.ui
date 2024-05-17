@@ -20,6 +20,9 @@
       <iconset>
        <normaloff>TypeAuto.svg</normaloff>TypeAuto.svg</iconset>
      </property>
+     <property name="shortcut">
+      <string>,, A</string>
+     </property>
      <property name="checkable">
       <bool>true</bool>
      </property>
@@ -42,6 +45,9 @@
      <property name="icon">
       <iconset>
        <normaloff>TypeSegment.svg</normaloff>TypeSegment.svg</iconset>
+     </property>
+     <property name="shortcut">
+      <string>,, S</string>
      </property>
      <property name="checkable">
       <bool>true</bool>
@@ -66,6 +72,9 @@
       <iconset>
        <normaloff>TypeXLine.svg</normaloff>TypeXLine.svg</iconset>
      </property>
+     <property name="shortcut">
+      <string>,, X</string>
+     </property>
      <property name="checkable">
       <bool>true</bool>
      </property>
@@ -82,6 +91,9 @@
      <property name="icon">
       <iconset>
        <normaloff>TypeRay.svg</normaloff>TypeRay.svg</iconset>
+     </property>
+     <property name="shortcut">
+      <string>,, R</string>
      </property>
      <property name="checkable">
       <bool>true</bool>
