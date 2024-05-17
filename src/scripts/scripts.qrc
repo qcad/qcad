@@ -1720,6 +1720,7 @@
     <file alias="scripts/Misc/MiscSelect/SelectByColor/SelectByColor.js">../../scripts/Misc/MiscSelect/SelectByColor/SelectByColor.js</file>
     <file alias="scripts/Misc/MiscSelect/SelectByColor/SelectByColor.svg">../../scripts/Misc/MiscSelect/SelectByColor/SelectByColor.svg</file>
     <file alias="scripts/Misc/MiscSelect/SelectByColor/SelectByColorInit.js">../../scripts/Misc/MiscSelect/SelectByColor/SelectByColorInit.js</file>
+    <file alias="scripts/Misc/MiscSelect/SelectByHandle/SelectByHandle-inverse.svg">../../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandle-inverse.svg</file>
     <file alias="scripts/Misc/MiscSelect/SelectByHandle/SelectByHandle.js">../../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandle.js</file>
     <file alias="scripts/Misc/MiscSelect/SelectByHandle/SelectByHandle.svg">../../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandle.svg</file>
     <file alias="scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleDialog.ui">../../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleDialog.ui</file>
