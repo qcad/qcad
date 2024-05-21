@@ -36,6 +36,12 @@ function LineAngle(guiAction) {
     if (!isNull(guiAction)) {
         this.setUiOptions(["../Line.ui", "LineAngle.ui"]);
     }
+
+    this.referencePoints = [
+        [ qsTr("Start"), LineAngle.ReferencePoint.Start ],
+        [ qsTr("Middle"), LineAngle.ReferencePoint.Middle ],
+        [ qsTr("End"), LineAngle.ReferencePoint.End ]
+    ];
 }
 
 LineAngle.State = {
@@ -68,6 +74,56 @@ LineAngle.prototype.setState = function(state) {
     EAction.showSnapTools();
 
     this.typeChanged();
+};
+
+LineAngle.prototype.initUiOptions = function(resume, restoreFromSettings) {
+    Line.prototype.initUiOptions.call(this, resume, restoreFromSettings);
+
+    this.referencePointIndex = RSettings.getIntValue(this.settingsGroup + "/ReferencePoint", 0);
+
+    var optionsToolBar = EAction.getOptionsToolBar();
+    var refPointCombo = optionsToolBar.findChild("ReferencePoint");
+
+    if (isNull(refPointCombo)) {
+        return;
+    }
+
+    refPointCombo.blockSignals(true);
+    refPointCombo.clear();
+    if (isNull(this.shortcuts)) {
+        this.shortcuts = [];
+    }
+
+    for (var i=0; i<this.referencePoints.length; i++) {
+        var shortcut = "Ctrl+%1".arg(i+1);
+        var shortcutLabel = shortcut;
+        if (RS.getSystemId()==="osx") {
+            shortcutLabel = shortcutLabel.replace("Ctrl+", "\u2318");
+        }
+        refPointCombo.addItem(
+            this.referencePoints[i][0] + " (" + shortcutLabel + ")",
+            this.referencePoints[i][1]
+        );
+        if (isNull(this.shortcuts[i])) {
+            this.shortcuts[i] = new QShortcut(new QKeySequence(shortcut), refPointCombo, 0, 0, Qt.WindowShortcut);
+            var keyReactor = {};
+            keyReactor.index = i;
+            this.shortcuts[i].activated.connect(keyReactor, function() {
+                refPointCombo.currentIndex = this.index;
+            });
+        }
+    }
+
+    if (isNull(this.referencePointIndex) ||
+        this.referencePointIndex<0 ||
+        this.referencePointIndex>this.referencePoints.length-1) {
+
+        this.referencePointIndex = 1;
+    }
+
+    refPointCombo.blockSignals(false);
+
+    refPointCombo.currentIndex = this.referencePointIndex;
 };
 
 LineAngle.prototype.coordinateEvent = function(event) {
