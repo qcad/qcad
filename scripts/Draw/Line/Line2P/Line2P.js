@@ -127,15 +127,23 @@ Line2P.prototype.initUiOptions = function(resume, optionsToolBar) {
         //if (!isNull(cbLength)) cbLength.checked = false;
         //if (!isNull(cbAngle)) cbAngle.checked = false;
 
+        var self = this;
         if (!isNull(leLength)) {
             leLength.textEdited.connect(function() {
+                // prevent selection and overwriting of text when typing numbers:
+                cbLength.blockSignals(true);
                 cbLength.checked = true;
+                self.useLength = true;
+                cbLength.blockSignals(false);
             });
         }
 
         if (!isNull(leAngle)) {
             leAngle.textEdited.connect(function() {
+                cbAngle.blockSignals(true);
                 cbAngle.checked = true;
+                self.useAngle = true;
+                cbAngle.blockSignals(false);
             });
         }
     }

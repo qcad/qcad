@@ -22,6 +22,7 @@ endif()
 add_library(qcadcustomwidgets SHARED
     RCharacterWidgetPlugin.cpp RCharacterWidgetPlugin.h
     RColorComboPlugin.cpp RColorComboPlugin.h
+    RComboBoxPlugin.cpp RComboBoxPlugin.h
     RCommandLinePlugin.cpp RCommandLinePlugin.h
     RCustomWidgets.cpp RCustomWidgets.h
     RFontChooserWidgetPlugin.cpp RFontChooserWidgetPlugin.h

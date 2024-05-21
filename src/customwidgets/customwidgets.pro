@@ -9,6 +9,7 @@ SOURCES = RShortcutLineEditPlugin.cpp \
     RLinetypeComboPlugin.cpp \
     RLineweightComboPlugin.cpp \
     RColorComboPlugin.cpp \
+    RComboBoxPlugin.cpp \
     RCustomWidgets.cpp \
     RCommandLinePlugin.cpp \
     RMdiChildQtPlugin.cpp \
@@ -24,6 +25,7 @@ HEADERS = RShortcutLineEditPlugin.h \
     RLinetypeComboPlugin.h \
     RLineweightComboPlugin.h \
     RColorComboPlugin.h \
+    RComboBoxPlugin.h \
     RCustomWidgets.h \
     RCommandLinePlugin.h \
     RMdiChildQtPlugin.h \
