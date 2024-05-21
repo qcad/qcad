@@ -110,6 +110,10 @@ protected:
     virtual void keyReleaseEvent(QKeyEvent* event);
     virtual void dragEnterEvent(QDragEnterEvent* event);
     virtual void dropEvent(QDropEvent* event);
+    virtual bool focusNextPrevChild(bool next) {
+        // ignore tab key:
+        return false;
+    }
 
 private slots:
     void imageViewDeleted();
