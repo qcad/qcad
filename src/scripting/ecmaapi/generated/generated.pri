@@ -30,6 +30,7 @@ HEADERS += \
     $$PWD/REcmaColor.h \
     $$PWD/REcmaColorCombo.h \
     $$PWD/REcmaColumnLayout.h \
+    $$PWD/REcmaComboBox.h \
     $$PWD/REcmaCommandEvent.h \
     $$PWD/REcmaCommandLine.h \
     $$PWD/REcmaCoordinateEvent.h \
@@ -418,6 +419,7 @@ SOURCES += \
     $$PWD/REcmaColor.cpp \
     $$PWD/REcmaColorCombo.cpp \
     $$PWD/REcmaColumnLayout.cpp \
+    $$PWD/REcmaComboBox.cpp \
     $$PWD/REcmaCommandEvent.cpp \
     $$PWD/REcmaCommandLine.cpp \
     $$PWD/REcmaCoordinateEvent.cpp \
