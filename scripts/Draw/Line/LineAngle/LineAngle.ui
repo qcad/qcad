@@ -13,11 +13,17 @@
   <layout class="QHBoxLayout">
    <item>
     <widget class="QLabel" name="AngleLabel">
+     <property name="toolTip">
+      <string>Line angle</string>
+     </property>
      <property name="text">
-      <string>&amp;Angle:</string>
+      <string>Angle:</string>
      </property>
      <property name="buddy">
       <cstring>Angle</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,,n</string>
      </property>
     </widget>
    </item>
@@ -39,11 +45,17 @@
    </item>
    <item>
     <widget class="QLabel" name="LengthLabel">
+     <property name="toolTip">
+      <string>Line length</string>
+     </property>
      <property name="text">
-      <string>&amp;Length:</string>
+      <string>Length:</string>
      </property>
      <property name="buddy">
       <cstring>Length</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,,l</string>
      </property>
     </widget>
    </item>
@@ -63,10 +75,13 @@
    <item>
     <widget class="QLabel" name="ReferencePointLabel">
      <property name="text">
-      <string>&amp;Reference Point:</string>
+      <string>Reference Point:</string>
      </property>
      <property name="buddy">
       <cstring>ReferencePoint</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,,r</string>
      </property>
     </widget>
    </item>
