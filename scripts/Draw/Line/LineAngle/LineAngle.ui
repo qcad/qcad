@@ -73,6 +73,13 @@
     </widget>
    </item>
    <item>
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QLabel" name="ReferencePointLabel">
      <property name="text">
       <string>Reference Point:</string>
@@ -81,28 +88,12 @@
       <cstring>ReferencePoint</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,,r</string>
+      <string>,,p</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QComboBox" name="ReferencePoint">
-     <item>
-      <property name="text">
-       <string>Start</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Middle</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>End</string>
-      </property>
-     </item>
-    </widget>
+    <widget class="RComboBox" name="ReferencePoint"/>
    </item>
   </layout>
  </widget>
@@ -111,6 +102,11 @@
    <class>RMathLineEdit</class>
    <extends>QLineEdit</extends>
    <header>RMathLineEdit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>RComboBox</class>
+   <extends>QComboBox</extends>
+   <header>RComboBox.h</header>
   </customwidget>
  </customwidgets>
  <resources/>
