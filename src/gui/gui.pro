@@ -9,6 +9,7 @@ SOURCES += \
     RColumnLayout.cpp \
     RCharacterWidget.cpp \
     RColorCombo.cpp \
+    RComboBox.cpp \
     RCommandLine.cpp \
     RDockWidget.cpp \
     REventFilter.cpp \
@@ -47,6 +48,7 @@ HEADERS += \
     RCharacterWidget.h \
     RCloseCurrentEvent.h \
     RColorCombo.h \
+    RComboBox.h \
     RCommandLine.h \
     RDockWidget.h \
     REventFilter.h \
