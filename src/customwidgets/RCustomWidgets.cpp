@@ -25,6 +25,7 @@
 #include "RMathLineEditPlugin.h"
 #include "RMdiChildQtPlugin.h"
 #include "RColorComboPlugin.h"
+#include "RComboBoxPlugin.h"
 #include "RLineweightComboPlugin.h"
 #include "RLinetypeComboPlugin.h"
 #include "RRulerQtPlugin.h"
@@ -43,6 +44,7 @@ RCustomWidgets::RCustomWidgets(QObject *parent) :
     widgets.append(new RMathLineEditPlugin(this));
     widgets.append(new RMdiChildQtPlugin(this));
     widgets.append(new RColorComboPlugin(this));
+    widgets.append(new RComboBoxPlugin(this));
     widgets.append(new RLineweightComboPlugin(this));
     widgets.append(new RLinetypeComboPlugin(this));
     widgets.append(new RRulerQtPlugin(this));
