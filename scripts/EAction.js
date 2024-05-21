@@ -420,18 +420,6 @@ EAction.autoFocusOptionsWidget = function(widget) {
     if (isFunction(widget.selectAll)) {
         widget.selectAll();
     }
-
-    // enter releases focus:
-    if (isFunction(widget.returnPressed)) {
-        var focusHandler = {};
-        focusHandler.widget = widget;
-
-        widget.returnPressed.connect(focusHandler, function() {
-            if (isFunction(this.widget.clearFocus)) {
-                this.widget.clearFocus();
-            }
-        });
-    }
 };
 
 EAction.updateToolTip = function(widget, scStr, prefixChar) {
@@ -504,7 +492,7 @@ EAction.prototype.initUiOptions = function(resume, optionsToolBar) {
             }
         }
 
-        // widgets with custom shortcut property:
+        // widgets with custom shortcut property (e.g. QLabel):
         scStr = child.property("Shortcut");
         if (!isNull(scStr)) {
             EAction.updateToolTip(child, scStr, prefixChar);
@@ -531,12 +519,27 @@ EAction.prototype.initUiOptions = function(resume, optionsToolBar) {
                 focusHandler = {};
                 focusHandler.autoFocusWidget = autoFocusWidget;
 
-                shortcut.activated.connect(function() { qDebug("blah"); });
-
                 shortcut.activated.connect(focusHandler, function() {
                     EAction.autoFocusOptionsWidget(this.autoFocusWidget);
                 });
             }
+        }
+
+        // for all line edits:
+        // enter releases focus:
+        if (isFunction(child.returnPressed)) {
+            focusHandler = {};
+            focusHandler.widget = child;
+
+            child.returnPressed.connect(focusHandler, function() {
+                if (isFunction(this.widget.clearFocus)) {
+                    this.widget.clearFocus();
+                }
+            });
+        }
+
+        if (isOfType(child, QComboBox)) {
+            child.focusPolicy = Qt.StrongFocus;
         }
     }
 };
@@ -822,13 +825,25 @@ EAction.prototype.keyPressEvent = function(event) {
     // prevent focus shift when entering keycode (e.g. "D2"):
     var appWin = EAction.getMainWindow();
     if (appWin.getKeyLog().length===0) {
-        if ((event.key() >= Qt.Key_0.valueOf() && event.key() <= Qt.Key_9.valueOf()) || event.key() === Qt.Key_Period.valueOf()) {
-            // number or dot entered:
+        if ((event.key() >= Qt.Key_0.valueOf() && event.key() <= Qt.Key_9.valueOf()) ||
+             event.key() === Qt.Key_Period.valueOf() ||
+             event.key() === Qt.Key_Tab.valueOf()) {
+
+            // number or dot or tab entered:
             // give focus to first input widget in options tool bar and set text to number entered:
             var w = OptionsToolBar.getFirstInputWidget();
             if (!isNull(w)) {
-                w.setFocus(Qt.OtherFocusReason);
-                w.text = String.fromCharCode(event.key());
+                if (event.key() === Qt.Key_Tab.valueOf()) {
+                    w.setFocus(Qt.TabFocusReason);
+                    if (isFunction(w.selectAll)) {
+                        w.selectAll();
+                    }
+                }
+                else {
+                    w.setFocus(Qt.OtherFocusReason);
+                    w.text = String.fromCharCode(event.key());
+                }
+
                 event.accept();
                 return;
             }
