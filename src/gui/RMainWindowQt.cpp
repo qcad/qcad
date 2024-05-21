@@ -694,12 +694,12 @@ bool RMainWindowQt::event(QEvent* e) {
                 }
             }
             else {
+                // shortcut handling:
                 if (ke->key()<128) {
                     if (keyTimeOut.elapsed()>RSettings::getIntValue("Keyboard/Timeout", 2000)) {
                         keyLog.clear();
                     }
                     keyLog += QChar(ke->key());
-                    //qDebug() << "keyLog" << keyLog;
                     if (RGuiAction::triggerByShortcut(keyLog)) {
                         keyLog.clear();
                     }
