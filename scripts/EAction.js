@@ -415,6 +415,25 @@ EAction.prototype.showUiOptions = function(resume, restoreFromSettings) {
     this.resuming = false;
 };
 
+EAction.autoFocusOptionsWidget = function(widget) {
+    widget.setFocus(Qt.ShortcutFocusReason);
+    if (isFunction(widget.selectAll)) {
+        widget.selectAll();
+    }
+
+    // enter releases focus:
+    if (isFunction(widget.returnPressed)) {
+        var focusHandler = {};
+        focusHandler.widget = widget;
+
+        widget.returnPressed.connect(focusHandler, function() {
+            if (isFunction(this.widget.clearFocus)) {
+                this.widget.clearFocus();
+            }
+        });
+    }
+};
+
 EAction.updateToolTip = function(widget, scStr, prefixChar) {
     // if first key is Ctrl then the string starts with Ctrl+
     // so check for a + sign, which indicates a modifier key has been used
@@ -446,6 +465,7 @@ EAction.prototype.initUiOptions = function(resume, optionsToolBar) {
     var autoFocusWidget;
     var autoFocusWidgetName;
     var scStr;
+    var focusHandler;
 
     var children = optionsToolBar.children();
     for (var i=0; i<children.length; i++) {
@@ -454,7 +474,7 @@ EAction.prototype.initUiOptions = function(resume, optionsToolBar) {
             continue;
         }
 
-        // widgets with shortcut property:
+        // widgets with shortcut property (e.g. QCheckbox used as a label):
         var shortCut = child.shortcut;
         if (!isNull(shortCut) && !shortCut.isEmpty()) {
             scStr = shortCut.toString();
@@ -468,7 +488,7 @@ EAction.prototype.initUiOptions = function(resume, optionsToolBar) {
                 autoFocusWidget = optionsToolBar.findChild(autoFocusWidgetName);
                 if (isOfType(child, QCheckBox)) {
                     //var focusHandler = new FocusHandler(autoFocusWidget);
-                    var focusHandler = {};
+                    focusHandler = {};
                     focusHandler.autoFocusWidget = autoFocusWidget;
                     focusHandler.autoFocusWidgetName = autoFocusWidgetName;
 
@@ -477,10 +497,7 @@ EAction.prototype.initUiOptions = function(resume, optionsToolBar) {
 
                     child.toggled.connect(focusHandler, function(checked) {
                         if (checked) {
-                            this.autoFocusWidget.setFocus(Qt.ShortcutFocusReason);
-                            if (isFunction(this.autoFocusWidget.selectAll)) {
-                                this.autoFocusWidget.selectAll();
-                            }
+                            EAction.autoFocusOptionsWidget(this.autoFocusWidget);
                         }
                     });
                 }
@@ -492,20 +509,32 @@ EAction.prototype.initUiOptions = function(resume, optionsToolBar) {
         if (!isNull(scStr)) {
             EAction.updateToolTip(child, scStr, prefixChar);
 
-            autoFocusWidgetName = child.property("AutoFocusWidget");
-            if (!isNull(autoFocusWidgetName)) {
-                autoFocusWidget = optionsToolBar.findChild(autoFocusWidgetName);
+            // find out which widget gets the focus when the shortcut is triggered:
+            // either the widget buddy in case of a label or the widget defined in the AutoFocusWidget property:
+            autoFocusWidget = undefined;
+            var buddy = child.buddy();
+            if (!isNull(buddy)) {
+                autoFocusWidget = buddy;
+            }
+            else {
+                autoFocusWidgetName = child.property("AutoFocusWidget");
+                if (!isNull(autoFocusWidgetName)) {
+                    autoFocusWidget = optionsToolBar.findChild(autoFocusWidgetName);
+                }
+            }
 
+            if (!isNull(autoFocusWidget)) {
                 // add shortcut for line edit:
                 var shortcut = new QShortcut(autoFocusWidget);
                 shortcut.key = new QKeySequence(scStr);
 
-                var scHandler = {};
-                scHandler.widget = autoFocusWidget;
+                focusHandler = {};
+                focusHandler.autoFocusWidget = autoFocusWidget;
 
-                shortcut.activated.connect(scHandler, function() {
-                    this.widget.selectAll();
-                    this.widget.setFocus(Qt.ShortcutFocusReason);
+                shortcut.activated.connect(function() { qDebug("blah"); });
+
+                shortcut.activated.connect(focusHandler, function() {
+                    EAction.autoFocusOptionsWidget(this.autoFocusWidget);
                 });
             }
         }
