@@ -345,6 +345,7 @@ HEADERS += \
     $$PWD/REcmaSplineEntity.h \
     $$PWD/REcmaStemmer.h \
     $$PWD/REcmaStorage.h \
+    $$PWD/REcmaTabEventFilter.h \
     $$PWD/REcmaTabletEvent.h \
     $$PWD/REcmaTerminateEvent.h \
     $$PWD/REcmaTextBasedData.h \
@@ -360,6 +361,7 @@ HEADERS += \
     $$PWD/REcmaToleranceEntity.h \
     $$PWD/REcmaToolButton.h \
     $$PWD/REcmaToolMatrixItemDelegate.h \
+    $$PWD/REcmaToolOptionEventFilter.h \
     $$PWD/REcmaTraceData.h \
     $$PWD/REcmaTraceEntity.h \
     $$PWD/REcmaTransaction.h \
@@ -734,6 +736,7 @@ SOURCES += \
     $$PWD/REcmaSplineEntity.cpp \
     $$PWD/REcmaStemmer.cpp \
     $$PWD/REcmaStorage.cpp \
+    $$PWD/REcmaTabEventFilter.cpp \
     $$PWD/REcmaTabletEvent.cpp \
     $$PWD/REcmaTerminateEvent.cpp \
     $$PWD/REcmaTextBasedData.cpp \
@@ -749,6 +752,7 @@ SOURCES += \
     $$PWD/REcmaToleranceEntity.cpp \
     $$PWD/REcmaToolButton.cpp \
     $$PWD/REcmaToolMatrixItemDelegate.cpp \
+    $$PWD/REcmaToolOptionEventFilter.cpp \
     $$PWD/REcmaTraceData.cpp \
     $$PWD/REcmaTraceEntity.cpp \
     $$PWD/REcmaTransaction.cpp \

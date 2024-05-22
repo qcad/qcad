@@ -13,6 +13,7 @@ SOURCES += \
     RCommandLine.cpp \
     RDockWidget.cpp \
     REventFilter.cpp \
+    RToolOptionEventFilter.cpp \
     REventHandler.cpp \
     RFileSystemModel.cpp \
     RFlowLayout.cpp \
@@ -52,6 +53,7 @@ HEADERS += \
     RCommandLine.h \
     RDockWidget.h \
     REventFilter.h \
+    RToolOptionEventFilter.h \
     REventHandler.h \
     RFileSystemModel.h \
     RFlowLayout.h \

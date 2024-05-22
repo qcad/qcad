@@ -215,5 +215,13 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="event" isConst="false" />
       </variant>
     </method>
+    <method name="focusNextPrevChild" cppName="focusNextPrevChild"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="next"
+        isConst="false" />
+      </variant>
+    </method>
   </class>
 </unit>
