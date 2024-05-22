@@ -16,6 +16,12 @@
      <property name="text">
       <string>Direction:</string>
      </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, D</string>
+     </property>
+     <property name="AutoFocusWidget" stdset="0">
+      <string>Direction</string>
+     </property>
     </widget>
    </item>
    <item>
