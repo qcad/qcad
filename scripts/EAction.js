@@ -416,7 +416,33 @@ EAction.prototype.showUiOptions = function(resume, restoreFromSettings) {
 };
 
 EAction.autoFocusOptionsWidget = function(widget) {
-    widget.setFocus(Qt.ShortcutFocusReason);
+    if (isOfType(widget, QButtonGroup)) {
+        // target widget is group box:
+        // check next button in group:
+        var buttons = widget.buttons();
+        var checkNext = false;
+        var found = false;
+        for (var i=0; i<buttons.length; i++) {
+            var button = buttons[i];
+            if (button.checked) {
+                checkNext = true;
+                continue;
+            }
+            if (checkNext) {
+                button.checked = true;
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            buttons[0].checked = true;
+        }
+    }
+
+    if (isFunction(widget.setFocus)) {
+        widget.setFocus(Qt.ShortcutFocusReason);
+    }
     if (isFunction(widget.selectAll)) {
         widget.selectAll();
     }
@@ -502,9 +528,11 @@ EAction.prototype.initUiOptions = function(resume, optionsToolBar) {
             autoFocusWidget = undefined;
             var buddy = child.buddy();
             if (!isNull(buddy)) {
+                // for QLabel labels, use buddy:
                 autoFocusWidget = buddy;
             }
             else {
+                // for QCheckBox labels, use property:
                 autoFocusWidgetName = child.property("AutoFocusWidget");
                 if (!isNull(autoFocusWidgetName)) {
                     autoFocusWidget = optionsToolBar.findChild(autoFocusWidgetName);
@@ -513,7 +541,7 @@ EAction.prototype.initUiOptions = function(resume, optionsToolBar) {
 
             if (!isNull(autoFocusWidget)) {
                 // add shortcut for line edit:
-                var shortcut = new QShortcut(autoFocusWidget);
+                var shortcut = new QShortcut(child);
                 shortcut.key = new QKeySequence(scStr);
 
                 focusHandler = {};
