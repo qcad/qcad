@@ -35,6 +35,8 @@ function Line(guiAction) {
 
     this.showAutoLineType = false;
     this.lineType = Line.LineType.Line;
+
+    this.referencePoints = [];
 }
 
 Line.prototype = new Draw();
@@ -243,6 +245,54 @@ Line.slotTypeXLineChanged = function(obj, checked) {
 
 Line.prototype.isRayOrXLine = function() {
     return this.lineType===Line.LineType.Ray || this.lineType===Line.LineType.XLine;
+};
+
+Line.prototype.initStartMidEndCombo = function(combo) {
+    this.referencePointIndex = RSettings.getIntValue(this.settingsGroup + "/ReferencePoint", 0);
+
+    //var optionsToolBar = EAction.getOptionsToolBar();
+    var refPointCombo = combo;
+
+    if (isNull(refPointCombo)) {
+        return;
+    }
+
+    refPointCombo.blockSignals(true);
+    refPointCombo.clear();
+    if (isNull(this.shortcuts)) {
+        this.shortcuts = [];
+    }
+
+    for (var i=0; i<this.referencePoints.length; i++) {
+        var shortcut = "Ctrl+%1".arg(i+1);
+        var shortcutLabel = shortcut;
+        if (RS.getSystemId()==="osx") {
+            shortcutLabel = shortcutLabel.replace("Ctrl+", "\u2318");
+        }
+        refPointCombo.addItem(
+            this.referencePoints[i][0] + " (" + shortcutLabel + ")",
+            this.referencePoints[i][1]
+        );
+        if (isNull(this.shortcuts[i])) {
+            this.shortcuts[i] = new QShortcut(new QKeySequence(shortcut), refPointCombo, 0, 0, Qt.WindowShortcut);
+            var keyReactor = {};
+            keyReactor.index = i;
+            this.shortcuts[i].activated.connect(keyReactor, function() {
+                refPointCombo.currentIndex = this.index;
+            });
+        }
+    }
+
+    if (isNull(this.referencePointIndex) ||
+        this.referencePointIndex<0 ||
+        this.referencePointIndex>this.referencePoints.length-1) {
+
+        this.referencePointIndex = 1;
+    }
+
+    refPointCombo.blockSignals(false);
+
+    refPointCombo.currentIndex = this.referencePointIndex;
 };
 
 Line.init = function() {

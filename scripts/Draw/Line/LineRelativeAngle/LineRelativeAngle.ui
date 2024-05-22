@@ -16,6 +16,12 @@
      <property name="text">
       <string>Relative Angle:</string>
      </property>
+     <property name="buddy">
+      <cstring>Angle</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, A</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -36,6 +42,15 @@
      <property name="text">
       <string>Length:</string>
      </property>
+     <property name="buddy">
+      <cstring>Length</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, L</string>
+     </property>
+     <property name=",, R" stdset="0">
+      <string/>
+     </property>
     </widget>
    </item>
    <item>
@@ -54,10 +69,13 @@
    <item>
     <widget class="QLabel" name="ReferencePointLabel">
      <property name="text">
-      <string>&amp;Reference Point:</string>
+      <string>Reference Point:</string>
      </property>
      <property name="buddy">
       <cstring>ReferencePoint</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, R</string>
      </property>
     </widget>
    </item>

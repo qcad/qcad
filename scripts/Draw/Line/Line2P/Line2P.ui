@@ -124,7 +124,7 @@
       <string>Angle:</string>
      </property>
      <property name="shortcut">
-      <string>,, N</string>
+      <string>,, A</string>
      </property>
      <property name="AutoFocusWidget" stdset="0">
       <string>Angle</string>

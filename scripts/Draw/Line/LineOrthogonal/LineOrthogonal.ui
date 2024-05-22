@@ -16,6 +16,12 @@
      <property name="text">
       <string>Length:</string>
      </property>
+     <property name="buddy">
+      <cstring>Length</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, L</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -34,31 +40,18 @@
    <item>
     <widget class="QLabel" name="ReferencePointLabel">
      <property name="text">
-      <string>&amp;Reference Point:</string>
+      <string>Reference Point:</string>
      </property>
      <property name="buddy">
       <cstring>ReferencePoint</cstring>
      </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, R</string>
+     </property>
     </widget>
    </item>
    <item>
-    <widget class="QComboBox" name="ReferencePoint">
-     <item>
-      <property name="text">
-       <string>Start</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Middle</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>End</string>
-      </property>
-     </item>
-    </widget>
+    <widget class="QComboBox" name="ReferencePoint"/>
    </item>
   </layout>
  </widget>

@@ -21,7 +21,7 @@
        <normaloff>TypeAuto.svg</normaloff>TypeAuto.svg</iconset>
      </property>
      <property name="shortcut">
-      <string>,, A</string>
+      <string>,, ,</string>
      </property>
      <property name="checkable">
       <bool>true</bool>

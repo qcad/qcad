@@ -37,6 +37,12 @@ function LineRelativeAngle(guiAction) {
     if (!isNull(guiAction)) {
         this.setUiOptions(["../Line.ui", "LineRelativeAngle.ui"]);
     }
+
+    this.referencePoints = [
+        [ qsTr("Start"), LineRelativeAngle.ReferencePoint.Start ],
+        [ qsTr("Middle"), LineRelativeAngle.ReferencePoint.Middle ],
+        [ qsTr("End"), LineRelativeAngle.ReferencePoint.End ]
+    ];
 }
 
 LineRelativeAngle.prototype = new Line();
@@ -87,6 +93,14 @@ LineRelativeAngle.prototype.setState = function(state) {
     }
 
     this.typeChanged();
+};
+
+LineRelativeAngle.prototype.initUiOptions = function(resume, restoreFromSettings) {
+    Line.prototype.initUiOptions.call(this, resume, restoreFromSettings);
+
+    var optionsToolBar = EAction.getOptionsToolBar();
+    var refPointCombo = optionsToolBar.findChild("ReferencePoint");
+    this.initStartMidEndCombo(refPointCombo);
 };
 
 LineRelativeAngle.prototype.escapeEvent = function() {
