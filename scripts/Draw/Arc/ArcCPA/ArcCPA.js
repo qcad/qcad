@@ -232,6 +232,8 @@ ArcCPA.prototype.slotDirectionChanged = function(button) {
     else {
         this.reversed = false;
     }
+
+    this.updatePreview(true);
 };
 
 ArcCPA.prototype.applyCommand = function(event, preview) {
