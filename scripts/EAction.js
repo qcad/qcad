@@ -831,7 +831,16 @@ EAction.prototype.keyPressEvent = function(event) {
                 }
                 else {
                     w.setFocus(Qt.OtherFocusReason);
-                    w.text = String.fromCharCode(event.key());
+                    if (!isNull(w.text)) {
+                        // line edit:
+                        w.text = String.fromCharCode(event.key());
+                    }
+                    if (isOfType(w, QSpinBox)) {
+                        if (event.key() >= Qt.Key_0.valueOf() && event.key() <= Qt.Key_9.valueOf()) {
+                            w.setValue(parseInt(String.fromCharCode(event.key())));
+                        }
+                    }
+
                 }
 
                 event.accept();
