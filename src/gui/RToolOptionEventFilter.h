@@ -31,16 +31,16 @@
  * \scriptable
  * \ingroup gui
  */
-class QCADGUI_EXPORT RTabEventFilter : public QObject {
+class QCADGUI_EXPORT RToolOptionEventFilter : public QObject {
     Q_OBJECT
 
 public:
-    RTabEventFilter(QObject *parent = nullptr);
+    RToolOptionEventFilter(QObject *parent = nullptr);
 
 protected:
-    bool eventFilter(QObject* obj, QEvent* e);
+    bool eventFilter(QObject* obj, QEvent* event);
 };
 
-Q_DECLARE_METATYPE(RTabEventFilter*)
+Q_DECLARE_METATYPE(RToolOptionEventFilter*)
 
 #endif

@@ -19,20 +19,39 @@
 #include <QCoreApplication>
 #include <QWheelEvent>
 
-#include "RTabEventFilter.h"
+#include "RToolOptionEventFilter.h"
+#include "RMainWindowQt.h"
 
 /**
  * Event filter. If type is QEvent::None, all events are filtered.
  */
-RTabEventFilter::RTabEventFilter(QObject* parent) {
+RToolOptionEventFilter::RToolOptionEventFilter(QObject* parent) {
 }
 
-bool RTabEventFilter::eventFilter(QObject* obj, QEvent* e) {
+bool RToolOptionEventFilter::eventFilter(QObject* obj, QEvent* event) {
     if (event->type() == QEvent::KeyPress || event->type() == QEvent::KeyRelease) {
         QKeyEvent* keyEvent = static_cast<QKeyEvent*>(event);
         if (keyEvent->key() == Qt::Key_Tab || keyEvent->key() == Qt::Key_Backtab) {
 
             // ignore the Tab and Shift+Tab keys
+            //event->accept();
+            if (event->type() == QEvent::KeyPress) {
+                RMainWindowQt* appWin = RMainWindowQt::getMainWindow();
+                if (appWin!=NULL) {
+                    appWin->handleTabKey(obj, keyEvent->key()==Qt::Key_Backtab);
+                }
+            }
+            return true;
+            //return QObject::eventFilter(obj, event);
+        }
+
+        if (keyEvent->key() == Qt::Key_Enter || keyEvent->key() == Qt::Key_Return) {
+            if (event->type() == QEvent::KeyPress) {
+                RMainWindowQt* appWin = RMainWindowQt::getMainWindow();
+                if (appWin!=NULL) {
+                    appWin->handleEnterKey(obj);
+                }
+            }
             return true;
         }
     }
