@@ -12,9 +12,15 @@
   </property>
   <layout class="QHBoxLayout">
    <item>
-    <widget class="QLabel" name="label">
+    <widget class="QLabel" name="DirectionLabel">
      <property name="text">
       <string>Direction:</string>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, D</string>
+     </property>
+     <property name="AutoFocusWidget" stdset="0">
+      <string>Direction</string>
      </property>
     </widget>
    </item>
@@ -26,6 +32,9 @@
      <property name="icon">
       <iconset>
        <normaloff>CounterClockwise.svg</normaloff>CounterClockwise.svg</iconset>
+     </property>
+     <property name="shortcut">
+      <string>,, T</string>
      </property>
      <property name="checkable">
       <bool>true</bool>
@@ -46,6 +55,9 @@
      <property name="icon">
       <iconset>
        <normaloff>Clockwise.svg</normaloff>Clockwise.svg</iconset>
+     </property>
+     <property name="shortcut">
+      <string>,, C</string>
      </property>
      <property name="checkable">
       <bool>true</bool>

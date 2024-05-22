@@ -416,7 +416,46 @@ EAction.prototype.showUiOptions = function(resume, restoreFromSettings) {
 };
 
 EAction.autoFocusOptionsWidget = function(widget) {
-    widget.setFocus(Qt.ShortcutFocusReason);
+    if (isOfType(widget, QButtonGroup)) {
+        // target widget is group box:
+        // check next button in group:
+        var buttons = widget.buttons();
+        var checkNext = false;
+        var found = false;
+        for (var i=0; i<buttons.length; i++) {
+            var button = buttons[i];
+            if (button.checked) {
+                checkNext = true;
+                continue;
+            }
+            if (checkNext) {
+                button.checked = true;
+                // signal should be triggered according to Qt doc, but isn't:
+                if (isFunction(widget["buttonClicked(QAbstractButton*)"])) {
+                    widget["buttonClicked(QAbstractButton*)"](button);
+                }
+                else {
+                    widget.buttonClicked(button);
+                }
+                found = true;
+                break;
+            }
+        }
+
+        if (!found && buttons.length>0) {
+            buttons[0].checked = true;
+            if (isFunction(widget["buttonClicked(QAbstractButton*)"])) {
+                widget["buttonClicked(QAbstractButton*)"](buttons[0]);
+            }
+            else {
+                widget.buttonClicked(buttons[0]);
+            }
+        }
+    }
+
+    if (isFunction(widget.setFocus)) {
+        widget.setFocus(Qt.ShortcutFocusReason);
+    }
     if (isFunction(widget.selectAll)) {
         widget.selectAll();
     }
@@ -502,9 +541,11 @@ EAction.prototype.initUiOptions = function(resume, optionsToolBar) {
             autoFocusWidget = undefined;
             var buddy = child.buddy();
             if (!isNull(buddy)) {
+                // for QLabel labels, use buddy:
                 autoFocusWidget = buddy;
             }
             else {
+                // for QCheckBox labels, use property:
                 autoFocusWidgetName = child.property("AutoFocusWidget");
                 if (!isNull(autoFocusWidgetName)) {
                     autoFocusWidget = optionsToolBar.findChild(autoFocusWidgetName);
@@ -513,7 +554,7 @@ EAction.prototype.initUiOptions = function(resume, optionsToolBar) {
 
             if (!isNull(autoFocusWidget)) {
                 // add shortcut for line edit:
-                var shortcut = new QShortcut(autoFocusWidget);
+                var shortcut = new QShortcut(child);
                 shortcut.key = new QKeySequence(scStr);
 
                 focusHandler = {};
@@ -831,7 +872,16 @@ EAction.prototype.keyPressEvent = function(event) {
                 }
                 else {
                     w.setFocus(Qt.OtherFocusReason);
-                    w.text = String.fromCharCode(event.key());
+                    if (!isNull(w.text)) {
+                        // line edit:
+                        w.text = String.fromCharCode(event.key());
+                    }
+                    if (isOfType(w, QSpinBox)) {
+                        if (event.key() >= Qt.Key_0.valueOf() && event.key() <= Qt.Key_9.valueOf()) {
+                            w.setValue(parseInt(String.fromCharCode(event.key())));
+                        }
+                    }
+
                 }
 
                 event.accept();

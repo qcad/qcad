@@ -14,10 +14,13 @@
    <item>
     <widget class="QLabel" name="label">
      <property name="text">
-      <string>Dist&amp;ance:</string>
+      <string>Distance:</string>
      </property>
      <property name="buddy">
       <cstring>Distance</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, D</string>
      </property>
     </widget>
    </item>
@@ -37,10 +40,13 @@
    <item>
     <widget class="QLabel" name="label_2">
      <property name="text">
-      <string>&amp;Number:</string>
+      <string>Number:</string>
      </property>
      <property name="buddy">
       <cstring>Number</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, N</string>
      </property>
     </widget>
    </item>

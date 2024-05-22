@@ -16,6 +16,12 @@
      <property name="text">
       <string>Radius:</string>
      </property>
+     <property name="buddy">
+      <cstring>Radius</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, R</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -43,6 +49,12 @@
      <property name="text">
       <string>Direction:</string>
      </property>
+     <property name="AutoFocusWidget" stdset="0">
+      <string>Direction</string>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, D</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -53,6 +65,9 @@
      <property name="icon">
       <iconset>
        <normaloff>CounterClockwise.svg</normaloff>CounterClockwise.svg</iconset>
+     </property>
+     <property name="shortcut">
+      <string>,, T</string>
      </property>
      <property name="checkable">
       <bool>true</bool>
@@ -74,6 +89,9 @@
       <iconset>
        <normaloff>Clockwise.svg</normaloff>Clockwise.svg</iconset>
      </property>
+     <property name="shortcut">
+      <string>,, C</string>
+     </property>
      <property name="checkable">
       <bool>true</bool>
      </property>
@@ -94,6 +112,12 @@
      <property name="text">
       <string>Solution:</string>
      </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, S</string>
+     </property>
+     <property name="AutoFocusWidget" stdset="0">
+      <string>Solution</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -104,6 +128,9 @@
      <property name="icon">
       <iconset>
        <normaloff>Solution1.svg</normaloff>Solution1.svg</iconset>
+     </property>
+     <property name="shortcut">
+      <string>,, 1</string>
      </property>
      <property name="checkable">
       <bool>true</bool>
@@ -125,6 +152,9 @@
       <iconset>
        <normaloff>Solution2.svg</normaloff>Solution2.svg</iconset>
      </property>
+     <property name="shortcut">
+      <string>,, 2</string>
+     </property>
      <property name="checkable">
       <bool>true</bool>
      </property>
@@ -145,7 +175,7 @@
  <resources/>
  <connections/>
  <buttongroups>
-  <buttongroup name="Direction"/>
   <buttongroup name="Solution"/>
+  <buttongroup name="Direction"/>
  </buttongroups>
 </ui>
