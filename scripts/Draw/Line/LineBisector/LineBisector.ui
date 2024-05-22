@@ -16,6 +16,12 @@
      <property name="text">
       <string>Length:</string>
      </property>
+     <property name="buddy">
+      <cstring>Length</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, L</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -35,6 +41,12 @@
     <widget class="QLabel" name="NumberLabel">
      <property name="text">
       <string>Number:</string>
+     </property>
+     <property name="buddy">
+      <cstring>Number</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, N</string>
      </property>
     </widget>
    </item>

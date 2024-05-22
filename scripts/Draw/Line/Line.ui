@@ -93,7 +93,7 @@
        <normaloff>TypeRay.svg</normaloff>TypeRay.svg</iconset>
      </property>
      <property name="shortcut">
-      <string>,, R</string>
+      <string>,, Y</string>
      </property>
      <property name="checkable">
       <bool>true</bool>

@@ -20,7 +20,7 @@
       <cstring>Length</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,,l</string>
+      <string>,, L</string>
      </property>
     </widget>
    </item>
@@ -40,28 +40,12 @@
       <cstring>ReferencePoint</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,,p</string>
+      <string>,, R</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QComboBox" name="ReferencePoint">
-     <item>
-      <property name="text">
-       <string>Start</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Middle</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>End</string>
-      </property>
-     </item>
-    </widget>
+    <widget class="RComboBox" name="ReferencePoint"/>
    </item>
   </layout>
  </widget>
@@ -70,6 +54,11 @@
    <class>RMathLineEdit</class>
    <extends>QLineEdit</extends>
    <header>RMathLineEdit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>RComboBox</class>
+   <extends>QComboBox</extends>
+   <header>RComboBox.h</header>
   </customwidget>
  </customwidgets>
  <resources/>
