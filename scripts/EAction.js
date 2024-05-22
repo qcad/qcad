@@ -525,18 +525,8 @@ EAction.prototype.initUiOptions = function(resume, optionsToolBar) {
             }
         }
 
-        // for all line edits:
-        // enter releases focus:
-        if (isFunction(child.returnPressed)) {
-            focusHandler = {};
-            focusHandler.widget = child;
-
-            child.returnPressed.connect(focusHandler, function() {
-                if (isFunction(this.widget.clearFocus)) {
-                    this.widget.clearFocus();
-                }
-            });
-        }
+        // disable tab:
+        child.installEventFilter(new RToolOptionEventFilter(child));
 
         if (isOfType(child, QComboBox)) {
             child.focusPolicy = Qt.StrongFocus;
