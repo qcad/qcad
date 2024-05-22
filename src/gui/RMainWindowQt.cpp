@@ -19,6 +19,7 @@
 #include <QtGui>
 //#include <QDesktopWidget>
 #include <QComboBox>
+#include <QSpinBox>
 #include <QLabel>
 #include <QLineEdit>
 #include <QMenu>
@@ -131,6 +132,106 @@ void RMainWindowQt::handleUserWarning(const QString& message, bool messageBox, b
 
 void RMainWindowQt::handleUserCommand(const QString& message, bool escape) {
     emit userCommand(message, escape);
+}
+
+/**
+ * Handle enter key when pressed from widget in the options toolbar.
+ */
+void RMainWindowQt::handleEnterKey(QObject* obj) {
+    // hand keyboard focus to graphics view:
+    RDocumentInterface* di = getDocumentInterface();
+    if (di!=NULL) {
+        RGraphicsView* gv = di->getLastKnownViewWithFocus();
+        if (gv!=NULL) {
+            QWidget* w = gv->getWidget();
+            if (w!=NULL) {
+                // deselect text in widget:
+                QLineEdit* le = qobject_cast<QLineEdit*>(obj);
+                if (le!=NULL) {
+                    //le->deselect();
+                    le->clearFocus();
+                }
+
+                QSpinBox* sb = qobject_cast<QSpinBox*>(obj);
+                if (sb!=NULL) {
+                    sb->clearFocus();
+                }
+
+                // set focus to graphics view:
+                w->setFocus(Qt::ActiveWindowFocusReason);
+            }
+        }
+    }
+}
+
+/**
+ * Handle tab key that was suppressed and ignored by a child widget (e.g. line edit in options toolar).
+ */
+void RMainWindowQt::handleTabKey(QObject* obj, bool backTab) {
+    if (obj==NULL) {
+        return;
+    }
+
+    QWidget* objWidget = qobject_cast<QWidget*>(obj);
+    if (objWidget==NULL) {
+        return;
+    }
+
+    QObject* parent = obj->parent();
+    QWidget* parentWidget = qobject_cast<QWidget*>(parent);
+    if (parentWidget==NULL) {
+        return;
+    }
+
+    int bestPos = -1;
+    QWidget* nextWidget = NULL;
+    QPoint pos = objWidget->mapToParent(QPoint(0,0));
+
+    // find next child that can handle keyboard focus:
+    QObjectList siblings = parent->children();
+    for (int i=0; i<siblings.length(); i++) {
+        QObject* sibling = siblings[i];
+        if (sibling==obj) {
+            // object self
+            continue;
+        }
+
+        QWidget* siblingWidget = qobject_cast<QWidget*>(sibling);
+        if (siblingWidget==NULL) {
+            // sibling is not a widget:
+            continue;
+        }
+
+        if (qobject_cast<QLineEdit*>(siblingWidget)==NULL &&
+            qobject_cast<QComboBox*>(siblingWidget)==NULL &&
+            qobject_cast<QSpinBox*>(siblingWidget)==NULL) {
+            continue;
+        }
+
+        // position of sibling:
+        QPoint siblingPos = siblingWidget->mapToParent(QPoint(0,0));
+
+        if (backTab) {
+            if (siblingPos.x() < pos.x()) {
+                if (siblingPos.x() > bestPos || bestPos==-1) {
+                    bestPos = siblingPos.x();
+                    nextWidget = siblingWidget;
+                }
+            }
+        }
+        else {
+            if (siblingPos.x() > pos.x()) {
+                if (siblingPos.x() < bestPos || bestPos==-1) {
+                    bestPos = siblingPos.x();
+                    nextWidget = siblingWidget;
+                }
+            }
+        }
+    }
+
+    if (nextWidget!=NULL) {
+        nextWidget->setFocus(Qt::TabFocusReason);
+    }
 }
 
 void RMainWindowQt::postSelectionChangedEvent() {
@@ -639,6 +740,20 @@ bool RMainWindowQt::event(QEvent* e) {
         return false;
     }
 
+    if (e->type()==QEvent::WindowActivate) {
+        // hand keyboard focus to grphics view for various key events (tab, entering number, options shortcuts):
+        RDocumentInterface* di = getDocumentInterface();
+        if (di!=NULL) {
+            RGraphicsView* gv = di->getLastKnownViewWithFocus();
+            if (gv!=NULL) {
+                QWidget* w = gv->getWidget();
+                if (w!=NULL) {
+                    w->setFocus(Qt::ActiveWindowFocusReason);
+                }
+            }
+        }
+    }
+
     // TODO: never triggered on macOS when dragging title bar icon
 //    QIconDragEvent* ide = dynamic_cast<QIconDragEvent*>(e);
 //    if (ide!=NULL) {
@@ -670,9 +785,12 @@ bool RMainWindowQt::event(QEvent* e) {
             // e.g. for up / down / left / right keys
             notifyKeyListeners(ke);
 
+            // enter:
             if (ke->key()==Qt::Key_Enter || ke->key()==Qt::Key_Return) {
                 QWidget* w = QApplication::focusWidget();
                 if (w!=NULL) {
+                    // focus with view, main window or tool button:
+                    // repeat last command:
                     if (dynamic_cast<RGraphicsViewQt*>(w)!=NULL ||
                         dynamic_cast<RMainWindowQt*>(w)!=NULL ||
                         dynamic_cast<QToolButton*>(w)!=NULL) {
@@ -690,11 +808,28 @@ bool RMainWindowQt::event(QEvent* e) {
                             emit enterPressed();
                             e->accept();
                         }
+                        else {
+                            if (dynamic_cast<QLineEdit*>(w)!=NULL) {
+                                // move focus from options toolbar line edit to graphics view:
+                                RDocumentInterface* di = getDocumentInterface();
+                                if (di!=NULL) {
+                                    RGraphicsView* gv = di->getLastKnownViewWithFocus();
+                                    if (gv!=NULL) {
+                                        QWidget* gvWidget = gv->getWidget();
+                                        if (gvWidget!=NULL) {
+                                            gvWidget->setFocus(Qt::OtherFocusReason);
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
                     }
                 }
             }
+
+            // shortcut handling:
             else {
-                // shortcut handling:
                 if (ke->key()<128) {
                     if (keyTimeOut.elapsed()>RSettings::getIntValue("Keyboard/Timeout", 2000)) {
                         keyLog.clear();

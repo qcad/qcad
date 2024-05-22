@@ -86,6 +86,9 @@ public:
     virtual void handleUserWarning(const QString& message, bool messageBox = false, bool escape = true);
     virtual void handleUserCommand(const QString& message, bool escape = true);
 
+    virtual void handleEnterKey(QObject* obj);
+    virtual void handleTabKey(QObject* obj, bool backTab = false);
+
     virtual void postSelectionChangedEvent();
     virtual void postTransactionEvent(
         RTransaction& t,
