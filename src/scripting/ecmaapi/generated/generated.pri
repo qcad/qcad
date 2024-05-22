@@ -345,6 +345,7 @@ HEADERS += \
     $$PWD/REcmaSplineEntity.h \
     $$PWD/REcmaStemmer.h \
     $$PWD/REcmaStorage.h \
+    $$PWD/REcmaTabEventFilter.h \
     $$PWD/REcmaTabletEvent.h \
     $$PWD/REcmaTerminateEvent.h \
     $$PWD/REcmaTextBasedData.h \
@@ -734,6 +735,7 @@ SOURCES += \
     $$PWD/REcmaSplineEntity.cpp \
     $$PWD/REcmaStemmer.cpp \
     $$PWD/REcmaStorage.cpp \
+    $$PWD/REcmaTabEventFilter.cpp \
     $$PWD/REcmaTabletEvent.cpp \
     $$PWD/REcmaTerminateEvent.cpp \
     $$PWD/REcmaTextBasedData.cpp \

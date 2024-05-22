@@ -111,6 +111,10 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>keyReleaseEvent</name><parameter_list>(<param><decl><type><name>QKeyEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>dragEnterEvent</name><parameter_list>(<param><decl><type><name>QDragEnterEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>dropEvent</name><parameter_list>(<param><decl><type><name>QDropEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
+    <function><type><name>virtual</name> <name>bool</name></type> <name>focusNextPrevChild</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>next</name></decl></param>)</parameter_list> <block>{
+        <comment type="line">// ignore tab key:</comment>
+        <return>return <expr><name>false</name></expr>;</return>
+    }</block></function>
 
 </protected><private>private slots:
     <function_decl><type><name>void</name></type> <name>imageViewDeleted</name><parameter_list>()</parameter_list>;</function_decl>
