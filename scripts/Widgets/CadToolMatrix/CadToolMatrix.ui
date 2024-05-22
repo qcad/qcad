@@ -33,6 +33,9 @@
      </property>
      <item>
       <widget class="QLineEdit" name="FilterEdit">
+       <property name="focusPolicy">
+        <enum>Qt::ClickFocus</enum>
+       </property>
        <property name="placeholderText">
         <string>Filter</string>
        </property>

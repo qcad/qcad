@@ -119,7 +119,7 @@
       <item>
        <widget class="QLabel" name="label_3">
         <property name="text">
-         <string>Shortcut prefix character:</string>
+         <string>Shortcut prefix key:</string>
         </property>
        </widget>
       </item>
