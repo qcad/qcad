@@ -430,13 +430,26 @@ EAction.autoFocusOptionsWidget = function(widget) {
             }
             if (checkNext) {
                 button.checked = true;
+                // signal should be triggered according to Qt doc, but isn't:
+                if (isFunction(widget["buttonClicked(QAbstractButton*)"])) {
+                    widget["buttonClicked(QAbstractButton*)"](button);
+                }
+                else {
+                    widget.buttonClicked(button);
+                }
                 found = true;
                 break;
             }
         }
 
-        if (!found) {
+        if (!found && buttons.length>0) {
             buttons[0].checked = true;
+            if (isFunction(widget["buttonClicked(QAbstractButton*)"])) {
+                widget["buttonClicked(QAbstractButton*)"](buttons[0]);
+            }
+            else {
+                widget.buttonClicked(buttons[0]);
+            }
         }
     }
 
