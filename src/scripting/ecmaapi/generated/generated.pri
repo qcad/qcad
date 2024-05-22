@@ -361,6 +361,7 @@ HEADERS += \
     $$PWD/REcmaToleranceEntity.h \
     $$PWD/REcmaToolButton.h \
     $$PWD/REcmaToolMatrixItemDelegate.h \
+    $$PWD/REcmaToolOptionEventFilter.h \
     $$PWD/REcmaTraceData.h \
     $$PWD/REcmaTraceEntity.h \
     $$PWD/REcmaTransaction.h \
@@ -751,6 +752,7 @@ SOURCES += \
     $$PWD/REcmaToleranceEntity.cpp \
     $$PWD/REcmaToolButton.cpp \
     $$PWD/REcmaToolMatrixItemDelegate.cpp \
+    $$PWD/REcmaToolOptionEventFilter.cpp \
     $$PWD/REcmaTraceData.cpp \
     $$PWD/REcmaTraceEntity.cpp \
     $$PWD/REcmaTransaction.cpp \
