@@ -16,6 +16,12 @@
      <property name="text">
       <string>Number:</string>
      </property>
+     <property name="buddy">
+      <cstring>Number</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, N</string>
+     </property>
     </widget>
    </item>
    <item>
