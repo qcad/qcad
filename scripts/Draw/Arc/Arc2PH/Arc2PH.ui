@@ -16,6 +16,12 @@
      <property name="text">
       <string>Height:</string>
      </property>
+     <property name="buddy">
+      <cstring>Height</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, H</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -43,6 +49,12 @@
      <property name="text">
       <string>Direction:</string>
      </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, D</string>
+     </property>
+     <property name="AutoFocusWidget" stdset="0">
+      <string>Direction</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -53,6 +65,9 @@
      <property name="icon">
       <iconset>
        <normaloff>CounterClockwise.svg</normaloff>CounterClockwise.svg</iconset>
+     </property>
+     <property name="shortcut">
+      <string>,, T</string>
      </property>
      <property name="checkable">
       <bool>true</bool>
@@ -73,6 +88,9 @@
      <property name="icon">
       <iconset>
        <normaloff>Clockwise.svg</normaloff>Clockwise.svg</iconset>
+     </property>
+     <property name="shortcut">
+      <string>,, C</string>
      </property>
      <property name="checkable">
       <bool>true</bool>
