@@ -256,31 +256,11 @@ EllipseArcCPPA.prototype.pickCoordinate = function(event, preview) {
 };
 
 EllipseArcCPPA.prototype.getOperation = function(preview) {
-//    if (isNull(this.center) || isNull(this.majorPoint)) {
-//        return undefined;
-//    }
-
-//    var reversed = this.reversed;
-//    if (!isBoolean(reversed) || this.state<=EllipseArcCPPA.State.SettingRatio) {
-//        reversed = false;
-//    }
-
-//    var ratio = this.ratio;
-//    if (!isNumber(ratio)) {
-//        ratio = 0.5;
-//    }
-
-//    var param1 = this.param1;
-//    if (!isNumber(param1)) {
-//        param1 = 0.0;
-//    }
-
-//    var param2 = this.param2;
-//    if (!isNumber(param2)) {
-//        param2 = 2*Math.PI;
-//    }
-
     var shape = Ellipse.postProcess(this.getEllipse());
+    if (isNull(shape)) {
+        return undefined;
+    }
+
     var entity = shapeToEntity(this.getDocument(), shape);
 
     return new RAddObjectOperation(entity, this.getToolTitle());
@@ -349,6 +329,8 @@ EllipseArcCPPA.prototype.slotDirectionChanged = function(button) {
     else {
         this.reversed = false;
     }
+
+    this.updatePreview(true);
 };
 
 EllipseArcCPPA.prototype.applyCommand = function(event, preview) {
