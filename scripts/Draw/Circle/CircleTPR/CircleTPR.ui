@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>311</width>
+    <width>190</width>
     <height>50</height>
    </rect>
   </property>
@@ -16,11 +16,17 @@
      <property name="text">
       <string>Radius:</string>
      </property>
+     <property name="buddy">
+      <cstring>Radius</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, R</string>
+     </property>
     </widget>
    </item>
    <item>
-    <widget class="RMathLineEdit" name="Radius" native="true">
-     <property name="text" stdset="0">
+    <widget class="RMathLineEdit" name="Radius">
+     <property name="text">
       <string notr="true">1</string>
      </property>
      <property name="angle" stdset="0">
@@ -36,8 +42,8 @@
  <customwidgets>
   <customwidget>
    <class>RMathLineEdit</class>
-   <extends>QWidget</extends>
-   <header>rmathlineedit.h</header>
+   <extends>QLineEdit</extends>
+   <header>RMathLineEdit.h</header>
   </customwidget>
  </customwidgets>
  <resources/>
