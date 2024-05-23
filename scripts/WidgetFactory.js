@@ -1130,6 +1130,9 @@ WidgetFactory.moveChildren = function(sourceWidget, targetWidget, settingsGroup)
                 !w.toString().startsWith("QVariantAnimation")) {
 
                 w.setParent(targetWidget);
+
+                // make sure QButtonGroup is cleaned up when tool exits:
+                ret.push(w);
             }
         }
 

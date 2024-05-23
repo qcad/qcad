@@ -424,6 +424,7 @@ EAction.autoFocusOptionsWidget = function(widget) {
         var found = false;
         for (var i=0; i<buttons.length; i++) {
             var button = buttons[i];
+
             if (button.checked) {
                 checkNext = true;
                 continue;
@@ -501,6 +502,10 @@ EAction.prototype.initUiOptions = function(resume, optionsToolBar) {
             continue;
         }
 
+        if (isFunction(child.setAttribute)) {
+            child.setAttribute(Qt.WA_MacShowFocusRect, true);
+        }
+
         // widgets with shortcut property (e.g. QCheckbox used as a label):
         var shortCut = child.shortcut;
         if (!isNull(shortCut) && !shortCut.isEmpty()) {
@@ -513,14 +518,13 @@ EAction.prototype.initUiOptions = function(resume, optionsToolBar) {
             autoFocusWidgetName = child.property("AutoFocusWidget");
             if (!isNull(autoFocusWidgetName)) {
                 autoFocusWidget = optionsToolBar.findChild(autoFocusWidgetName);
-                if (isOfType(child, QCheckBox)) {
+                if (isOfType(child, QCheckBox) && !isNull(autoFocusWidget)) {
                     //var focusHandler = new FocusHandler(autoFocusWidget);
                     focusHandler = {};
                     focusHandler.autoFocusWidget = autoFocusWidget;
-                    focusHandler.autoFocusWidgetName = autoFocusWidgetName;
 
                     // disable tab focus (focus frame off under macOS:
-                    child.focusPolicy = Qt.NoFocus;
+                    //child.focusPolicy = Qt.NoFocus;
 
                     child.toggled.connect(focusHandler, function(checked) {
                         if (checked) {
@@ -605,8 +609,8 @@ EAction.prototype.hideUiOptions = function(saveToSettings) {
 
     // automatically reset icon of current action from toolbar:
     if (!isNull(this.getGuiAction()) &&
-            this.getGuiAction().getGroup() !== "snaps" &&
-            this.getGuiAction().getGroup() !== "snaprestrictions") {
+        this.getGuiAction().getGroup() !== "snaps" &&
+        this.getGuiAction().getGroup() !== "snaprestrictions") {
 
         if (!this.getGuiAction().icon.isNull()) {
             var iconLabel = optionsToolBar.findChild("Icon");
@@ -621,7 +625,8 @@ EAction.prototype.hideUiOptions = function(saveToSettings) {
     var i;
     while (this.optionWidgetActions.length>0) {
         var a = this.optionWidgetActions.pop();
-        if (!isNull(optionsToolBar)) {
+        // QButtonGroup objects are not actions that can be removed but need to be destroyed:
+        if (!isNull(optionsToolBar) && !isOfType(a, QButtonGroup)) {
             optionsToolBar.removeAction(a);
         }
         destr(a);
