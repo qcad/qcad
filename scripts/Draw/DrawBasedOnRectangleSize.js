@@ -127,20 +127,34 @@ DrawBasedOnRectangleSize.prototype.initUiOptions = function(resume, restoreFromS
         this.shortcuts = [];
     }
 
+    var prefixChar = RSettings.getStringValue("ToolBar/PrefixChar", ",");
+
     for (var i=0; i<this.referencePoints.length; i++) {
-        var shortcut = "Ctrl+%1".arg(i+1);
-        var shortcutLabel = shortcut;
-        if (RS.getSystemId()==="osx") {
-            shortcutLabel = shortcutLabel.replace("Ctrl+", "\u2318");
-        }
+        var shortcuts = [
+            "%1, %2".arg(prefixChar).arg(i+1),
+            "Ctrl+%1".arg(i+1)
+        ];
+
+        var shortcutLabel = shortcuts[0];
+        shortcutLabel = shortcutLabel.replace(", ", "");
+
         refPointCombo.addItem(
             this.referencePoints[i][1] + " (" + shortcutLabel + ")",
             this.referencePoints[i][2]
         );
         if (isNull(this.shortcuts[i])) {
-            this.shortcuts[i] = new QShortcut(new QKeySequence(shortcut), refPointCombo, 0, 0, Qt.WindowShortcut);
-            var keyReactor = new KeyReactor(i);
-            this.shortcuts[i].activated.connect(keyReactor, keyReactor.activated);
+//            this.shortcuts[i] = new QShortcut(new QKeySequence(shortcut), refPointCombo, 0, 0, Qt.WindowShortcut);
+//            var keyReactor = new KeyReactor(i);
+//            this.shortcuts[i].activated.connect(keyReactor, keyReactor.activated);
+
+            for (var k=0; k<shortcuts.length; k++) {
+                this.shortcuts[i] = new QShortcut(new QKeySequence(shortcuts[k]), refPointCombo, 0, 0, Qt.WindowShortcut);
+                var keyReactor = {};
+                keyReactor.index = i;
+                this.shortcuts[i].activated.connect(keyReactor, function() {
+                    refPointCombo.currentIndex = this.index;
+                });
+            }
         }
     }
 
@@ -306,15 +320,15 @@ DrawBasedOnRectangleSize.prototype.updateOkButton = function() {
 
 
 
-/**
- * Reacts to an assigned shortcut for the given index of the reference point combo box.
- */
-function KeyReactor(i) {
-    this.i = i;
-}
+///**
+// * Reacts to an assigned shortcut for the given index of the reference point combo box.
+// */
+//function KeyReactor(i) {
+//    this.i = i;
+//}
 
-KeyReactor.prototype.activated = function() {
-    var optionsToolBar = EAction.getOptionsToolBar();
-    var refPointCombo = optionsToolBar.findChild("ReferencePoint");
-    refPointCombo.currentIndex = this.i;
-};
+//KeyReactor.prototype.activated = function() {
+//    var optionsToolBar = EAction.getOptionsToolBar();
+//    var refPointCombo = optionsToolBar.findChild("ReferencePoint");
+//    refPointCombo.currentIndex = this.i;
+//};
