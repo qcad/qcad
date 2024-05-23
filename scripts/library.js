@@ -278,6 +278,15 @@ function isQWidget(obj) {
 }
 
 /**
+ * Checks if the given object is a valid QAction.
+ *
+ * \return true if the given object is a QAction.
+ */
+function isQAction(obj) {
+    return (isQObject(obj) && typeof(obj.actionGroup)==="function");
+}
+
+/**
  * \return true if the given object is a separator (a frame of type vertical line).
  */
 function isSeparator(obj) {

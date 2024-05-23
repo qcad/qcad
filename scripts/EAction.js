@@ -626,7 +626,7 @@ EAction.prototype.hideUiOptions = function(saveToSettings) {
     while (this.optionWidgetActions.length>0) {
         var a = this.optionWidgetActions.pop();
         // QButtonGroup objects are not actions that can be removed but need to be destroyed:
-        if (!isNull(optionsToolBar) && !isOfType(a, QButtonGroup)) {
+        if (!isNull(optionsToolBar) && isQAction(a)) {
             optionsToolBar.removeAction(a);
         }
         destr(a);

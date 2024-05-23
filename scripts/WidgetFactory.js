@@ -1132,7 +1132,9 @@ WidgetFactory.moveChildren = function(sourceWidget, targetWidget, settingsGroup)
                 w.setParent(targetWidget);
 
                 // make sure QButtonGroup is cleaned up when tool exits:
-                ret.push(w);
+                if (w.toString().startsWith("QButtonGroup")) {
+                    ret.push(w);
+                }
             }
         }
 
