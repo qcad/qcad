@@ -16,6 +16,12 @@
      <property name="text">
       <string>Radius:</string>
      </property>
+     <property name="buddy">
+      <cstring>Radius</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, R</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -40,6 +46,12 @@
      <property name="text">
       <string>Solution:</string>
      </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, S</string>
+     </property>
+     <property name="AutoFocusWidget" stdset="0">
+      <string>Solution</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -50,6 +62,9 @@
      <property name="icon">
       <iconset>
        <normaloff>Solution1.svg</normaloff>Solution1.svg</iconset>
+     </property>
+     <property name="shortcut">
+      <string>,, 1</string>
      </property>
      <property name="checkable">
       <bool>true</bool>
@@ -70,6 +85,9 @@
      <property name="icon">
       <iconset>
        <normaloff>Solution2.svg</normaloff>Solution2.svg</iconset>
+     </property>
+     <property name="shortcut">
+      <string>,, 2</string>
      </property>
      <property name="checkable">
       <bool>true</bool>
