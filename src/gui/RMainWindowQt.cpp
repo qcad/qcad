@@ -792,8 +792,8 @@ bool RMainWindowQt::event(QEvent* e) {
                     // focus with view, main window or tool button:
                     // repeat last command:
                     if (dynamic_cast<RGraphicsViewQt*>(w)!=NULL ||
-                        dynamic_cast<RMainWindowQt*>(w)!=NULL ||
-                        dynamic_cast<QToolButton*>(w)!=NULL) {
+                            dynamic_cast<RMainWindowQt*>(w)!=NULL ||
+                            dynamic_cast<QToolButton*>(w)!=NULL) {
 
                         emit enterPressed();
                         e->accept();
@@ -802,13 +802,14 @@ bool RMainWindowQt::event(QEvent* e) {
                         // enter pressed in toolbar but NOT in a line edit:
                         QWidget* parent = w->parentWidget();
                         if (dynamic_cast<QToolBar*>(parent)!=NULL &&
-                            dynamic_cast<QLineEdit*>(w)==NULL &&
-                            dynamic_cast<QComboBox*>(w)==NULL) {
+                                dynamic_cast<QLineEdit*>(w)==NULL &&
+                                dynamic_cast<QComboBox*>(w)==NULL) {
 
                             emit enterPressed();
                             e->accept();
                         }
                         else {
+                            // TODO: never reached?
                             if (dynamic_cast<QLineEdit*>(w)!=NULL) {
                                 // move focus from options toolbar line edit to graphics view:
                                 RDocumentInterface* di = getDocumentInterface();
