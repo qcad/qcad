@@ -1166,6 +1166,8 @@
     <file alias="scripts/Edit/Esc/Tests/required/EActionTest08_000.dxf">../../scripts/Edit/Esc/Tests/required/EActionTest08_000.dxf</file>
     <file alias="scripts/Edit/Expand-inverse.svg">../../scripts/Edit/Expand-inverse.svg</file>
     <file alias="scripts/Edit/Expand.svg">../../scripts/Edit/Expand.svg</file>
+    <file alias="scripts/Edit/LeftClick/LeftClick.js">../../scripts/Edit/LeftClick/LeftClick.js</file>
+    <file alias="scripts/Edit/LeftClick/LeftClickInit.js">../../scripts/Edit/LeftClick/LeftClickInit.js</file>
     <file alias="scripts/Edit/Paste/FlipHorizontal-inverse.svg">../../scripts/Edit/Paste/FlipHorizontal-inverse.svg</file>
     <file alias="scripts/Edit/Paste/FlipHorizontal.svg">../../scripts/Edit/Paste/FlipHorizontal.svg</file>
     <file alias="scripts/Edit/Paste/FlipVertical-inverse.svg">../../scripts/Edit/Paste/FlipVertical-inverse.svg</file>
