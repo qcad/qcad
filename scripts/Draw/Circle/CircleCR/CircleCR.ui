@@ -16,14 +16,20 @@
      <property name="text">
       <string>Radius:</string>
      </property>
+     <property name="buddy">
+      <cstring>Radius</cstring>
+     </property>
      <property name="MoveToDialog" stdset="0">
       <bool>true</bool>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, R</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="RMathLineEdit" name="Radius" native="true">
-     <property name="text" stdset="0">
+    <widget class="RMathLineEdit" name="Radius">
+     <property name="text">
       <string notr="true">1</string>
      </property>
      <property name="angle" stdset="0">
@@ -49,20 +55,26 @@
      <property name="text">
       <string>Angle:</string>
      </property>
+     <property name="buddy">
+      <cstring>Angle</cstring>
+     </property>
      <property name="MoveToDialog" stdset="0">
       <bool>true</bool>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, A</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="RMathLineEdit" name="Angle" native="true">
+    <widget class="RMathLineEdit" name="Angle">
      <property name="maximumSize">
       <size>
        <width>100</width>
        <height>16777215</height>
       </size>
      </property>
-     <property name="text" stdset="0">
+     <property name="text">
       <string notr="true">0</string>
      </property>
      <property name="angle" stdset="0">
@@ -84,6 +96,12 @@
     <widget class="QLabel" name="ReferencePointLabel">
      <property name="text">
       <string>Reference Point:</string>
+     </property>
+     <property name="buddy">
+      <cstring>ReferencePoint</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, P</string>
      </property>
     </widget>
    </item>
@@ -119,8 +137,8 @@
  <customwidgets>
   <customwidget>
    <class>RMathLineEdit</class>
-   <extends>QWidget</extends>
-   <header>rmathlineedit.h</header>
+   <extends>QLineEdit</extends>
+   <header>RMathLineEdit.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

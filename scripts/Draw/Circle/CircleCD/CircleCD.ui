@@ -22,8 +22,8 @@
     </widget>
    </item>
    <item>
-    <widget class="RMathLineEdit" name="Diameter" native="true">
-     <property name="text" stdset="0">
+    <widget class="RMathLineEdit" name="Diameter">
+     <property name="text">
       <string notr="true">1</string>
      </property>
      <property name="angle" stdset="0">
@@ -55,14 +55,14 @@
     </widget>
    </item>
    <item>
-    <widget class="RMathLineEdit" name="Angle" native="true">
+    <widget class="RMathLineEdit" name="Angle">
      <property name="maximumSize">
       <size>
        <width>100</width>
        <height>16777215</height>
       </size>
      </property>
-     <property name="text" stdset="0">
+     <property name="text">
       <string notr="true">0</string>
      </property>
      <property name="angle" stdset="0">
@@ -84,6 +84,9 @@
     <widget class="QLabel" name="ReferencePointLabel">
      <property name="text">
       <string>Reference Point:</string>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, P</string>
      </property>
     </widget>
    </item>
@@ -119,8 +122,8 @@
  <customwidgets>
   <customwidget>
    <class>RMathLineEdit</class>
-   <extends>QWidget</extends>
-   <header>rmathlineedit.h</header>
+   <extends>QLineEdit</extends>
+   <header>RMathLineEdit.h</header>
   </customwidget>
  </customwidgets>
  <resources/>
