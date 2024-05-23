@@ -154,6 +154,7 @@ Arc2PH.prototype.getArc2PH = function(preview) {
         if (!preview) {
             this.error = qsTr("Invalid height");
         }
+        this.center = RVector.invalid;
         return undefined;
     }
 
@@ -161,6 +162,7 @@ Arc2PH.prototype.getArc2PH = function(preview) {
         if (!preview) {
             this.error = qsTr("The two points are identical");
         }
+        this.center = RVector.invalid;
         return undefined;
     }
 
@@ -239,8 +241,10 @@ Arc2PH.prototype.getAuxPreview = function() {
     var ret = [];
 
     if (this.state==Arc2PH.State.SettingPoint2) {
-        ret.push(new RLine(this.center, this.point1));
-        ret.push(new RLine(this.center, this.point2));
+        if (this.center.isValid()) {
+            ret.push(new RLine(this.center, this.point1));
+            ret.push(new RLine(this.center, this.point2));
+        }
         ret.push(new RLine(this.point1, this.point2));
 
         // visualize height:
