@@ -57,11 +57,24 @@ LeftClick.prototype.beginEvent = function() {
 
     var globalCursorPos = QCursor.pos();
     var cursorPos = gvWidget.mapFromGlobal(globalCursorPos);
+    var cursorPosF = new QPointF(cursorPos.x(), cursorPos.y());
 
-    var nevt = new QMouseEvent(QEvent.MouseButtonPress, cursorPos, Qt.LeftButton, Qt.LeftButton, Qt.NoModifier);
-    QCoreApplication.postEvent(gvWidget, nevt);
+    var nevt1;
+    if (RSettings.getQtVersion() >= 0x060000) {
+        nevt1 = new QMouseEvent(QEvent.MouseButtonPress, cursorPosF, cursorPosF, Qt.LeftButton, Qt.LeftButton, Qt.NoModifier);
+    }
+    else {
+        nevt1 = new QMouseEvent(QEvent.MouseButtonPress, cursorPos, Qt.LeftButton, Qt.LeftButton, Qt.NoModifier);
+    }
+    QCoreApplication.postEvent(gvWidget, nevt1);
 
-    var nevt2 = new QMouseEvent(QEvent.MouseButtonRelease, cursorPos, Qt.LeftButton, Qt.LeftButton, Qt.NoModifier);
+    var nevt2;
+    if (RSettings.getQtVersion() >= 0x060000) {
+        nevt2 = new QMouseEvent(QEvent.MouseButtonRelease, cursorPosF, cursorPosF, Qt.LeftButton, Qt.LeftButton, Qt.NoModifier);
+    }
+    else {
+        nevt2 = new QMouseEvent(QEvent.MouseButtonRelease, cursorPos, Qt.LeftButton, Qt.LeftButton, Qt.NoModifier);
+    }
     QCoreApplication.postEvent(gvWidget, nevt2);
 
     this.terminate();
