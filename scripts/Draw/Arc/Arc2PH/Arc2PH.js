@@ -245,7 +245,9 @@ Arc2PH.prototype.getAuxPreview = function() {
 
         // visualize height:
         var shape = this.getArc2PH(true);
-        ret.push(new RLine(RVector.getAverage(this.point1, this.point2), shape.getMiddlePoint()));
+        if (!isNull(shape)) {
+            ret.push(new RLine(RVector.getAverage(this.point1, this.point2), shape.getMiddlePoint()));
+        }
     }
 
     return ret;
