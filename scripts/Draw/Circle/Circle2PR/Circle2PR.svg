@@ -1,1 +1,62 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="translate(0 464)"><g style="fill:none"><path d="m408 248a176 176 0 1 1 -352 0 176 176 0 1 1 352 0z" transform="translate(24-456)" style="stroke:#000;stroke-linecap:square;stroke-linejoin:round;stroke-width:16"/><path d="m256.9-208.19l111.1-143.81" style="stroke:#f00;stroke-width:8"/></g><g style="fill:#f00"><path d="m16.5 4.5a1 1 0 1 1 -2 0 1 1 0 1 1 2 0" transform="matrix(-32 0 0-32 840 88)" id="0"/><use transform="translate(-240-64)" xlink:href="#0"/></g></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg1157"
+   sodipodi:docname="Circle2PR.svg"
+   inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1161" />
+  <sodipodi:namedview
+     id="namedview1159"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="1.2617188"
+     inkscape:cx="148.60681"
+     inkscape:cy="271.05882"
+     inkscape:window-width="1277"
+     inkscape:window-height="847"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g1148" />
+  <g
+     transform="translate(0 464)"
+     id="g1155">
+    <g
+       style="fill:none"
+       id="g1148">
+      <path
+         d="m408 248a176 176 0 1 1 -352 0 176 176 0 1 1 352 0z"
+         transform="translate(24-456)"
+         style="stroke:#000;stroke-linecap:square;stroke-linejoin:round;stroke-width:16"
+         id="path1144" />
+      <path
+         d="m256.9-208.19l111.1-143.81"
+         style="stroke:#f00;stroke-width:16;stroke-miterlimit:4;stroke-dasharray:none"
+         id="path1146" />
+    </g>
+    <g
+       style="fill:#f00"
+       id="g1153">
+      <path
+         d="m16.5 4.5a1 1 0 1 1 -2 0 1 1 0 1 1 2 0"
+         transform="matrix(-32 0 0-32 840 88)"
+         id="0" />
+      <use
+         transform="translate(-240-64)"
+         xlink:href="#0"
+         id="use1151" />
+    </g>
+  </g>
+</svg>

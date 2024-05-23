@@ -1,1 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g style="stroke-linecap:round;stroke-width:16"><path d="m72 488v-448" style="fill:#f00;stroke:#f00"/><path d="M408 64A336 336 0 0 0 72.00341 400" style="fill:none;stroke:#000"/></g><path d="m376 64c0-17.674 14.326-32 32-32 17.674 0 32 14.326 32 32 0 17.674-14.326 32-32 32-17.674 0-32-14.326-32-32" style="fill:#f00"/><path d="m408 400l-240-240" style="fill:none;stroke:#f00;stroke-linecap:round;stroke-width:8"/></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg2098"
+   sodipodi:docname="ArcTPR.svg"
+   inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2102" />
+  <sodipodi:namedview
+     id="namedview2100"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="1.2617188"
+     inkscape:cx="309.49845"
+     inkscape:cy="263.9257"
+     inkscape:window-width="1277"
+     inkscape:window-height="847"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2098" />
+  <g
+     style="stroke-linecap:round;stroke-width:16"
+     id="g2092">
+    <path
+       d="m72 488v-448"
+       style="fill:#f00;stroke:#f00"
+       id="path2088" />
+    <path
+       d="M408 64A336 336 0 0 0 72.00341 400"
+       style="fill:none;stroke:#000"
+       id="path2090" />
+  </g>
+  <path
+     d="m376 64c0-17.674 14.326-32 32-32 17.674 0 32 14.326 32 32 0 17.674-14.326 32-32 32-17.674 0-32-14.326-32-32"
+     style="fill:#f00"
+     id="path2094" />
+  <path
+     d="m408 400l-240-240"
+     style="fill:none;stroke:#f00;stroke-linecap:round;stroke-width:16;stroke-miterlimit:4;stroke-dasharray:none"
+     id="path2096" />
+</svg>

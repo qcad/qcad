@@ -1,1 +1,61 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g style="fill:none;stroke-linecap:round;stroke-linejoin:round"><g style="stroke:#f00;stroke-width:16"><path d="m97.96 455.28c10.649-17.18 19.03-36.17 24.632-56.66 26.17-95.78-16.783-194.13-98.56-241.99"/><path d="m55.48 78.32l118.83 365.27"/></g><circle cx="40" cy="40" r="10" transform="matrix(15.22871 4.16295 4.16178-15.23302-505.85 669.47)" style="stroke:#000;stroke-width:1.013"/></g><path d="M375.97267 296.01367A32 32 0 1 1 439.97267 296.01367 32 32 0 0 1 375.97267 296.01367" style="fill:#f00"/><path d="m272 224l56-144" style="fill:none;stroke:#f00;stroke-linecap:round;stroke-linejoin:round;stroke-width:8"/></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg1595"
+   sodipodi:docname="CircleTPR.svg"
+   inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1599" />
+  <sodipodi:namedview
+     id="namedview1597"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="1.2617188"
+     inkscape:cx="319.00929"
+     inkscape:cy="265.51084"
+     inkscape:window-width="1277"
+     inkscape:window-height="847"
+     inkscape:window-x="596"
+     inkscape:window-y="99"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg1595" />
+  <g
+     style="fill:none;stroke-linecap:round;stroke-linejoin:round"
+     id="g1589">
+    <g
+       style="stroke:#f00;stroke-width:16"
+       id="g1585">
+      <path
+         d="m97.96 455.28c10.649-17.18 19.03-36.17 24.632-56.66 26.17-95.78-16.783-194.13-98.56-241.99"
+         id="path1581" />
+      <path
+         d="m55.48 78.32l118.83 365.27"
+         id="path1583" />
+    </g>
+    <circle
+       cx="40"
+       cy="40"
+       r="10"
+       transform="matrix(15.22871 4.16295 4.16178-15.23302-505.85 669.47)"
+       style="stroke:#000;stroke-width:1.013"
+       id="circle1587" />
+  </g>
+  <path
+     d="M375.97267 296.01367A32 32 0 1 1 439.97267 296.01367 32 32 0 0 1 375.97267 296.01367"
+     style="fill:#f00"
+     id="path1591" />
+  <path
+     d="m272 224l56-144"
+     style="fill:none;stroke:#f00;stroke-linecap:round;stroke-linejoin:round;stroke-width:16;stroke-miterlimit:4;stroke-dasharray:none"
+     id="path1593" />
+</svg>
