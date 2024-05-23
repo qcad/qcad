@@ -29,6 +29,9 @@
       <iconset>
        <normaloff>Undo.svg</normaloff>Undo.svg</iconset>
      </property>
+     <property name="shortcut">
+      <string>,, U</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -42,6 +45,12 @@
     <widget class="QLabel" name="label">
      <property name="text">
       <string>Degree:</string>
+     </property>
+     <property name="buddy">
+      <cstring>Degree</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, D</string>
      </property>
     </widget>
    </item>
@@ -122,6 +131,9 @@
      </property>
      <property name="text">
       <string>Closed</string>
+     </property>
+     <property name="shortcut">
+      <string>,, C</string>
      </property>
     </widget>
    </item>

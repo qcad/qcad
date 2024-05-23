@@ -105,6 +105,9 @@
      <property name="text">
       <string>Reference Point:</string>
      </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, P</string>
+     </property>
     </widget>
    </item>
    <item>
