@@ -16,6 +16,12 @@
      <property name="text">
       <string>Radius:</string>
      </property>
+     <property name="buddy">
+      <cstring>Radius</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, R</string>
+     </property>
     </widget>
    </item>
    <item>
