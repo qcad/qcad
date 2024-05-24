@@ -282,7 +282,10 @@ Line.prototype.initStartMidEndCombo = function(combo) {
         );
         if (isNull(this.shortcuts[i])) {
             for (var k=0; k<shortcuts.length; k++) {
-                this.shortcuts[i] = new QShortcut(new QKeySequence(shortcuts[k]), refPointCombo, 0, 0, Qt.WindowShortcut);
+                this.shortcuts[i] = new QShortcut(refPointCombo);
+                var ks = new QKeySequence(shortcuts[k]);
+                this.shortcuts[i].setKey(ks);
+
                 var keyReactor = {};
                 keyReactor.index = i;
                 this.shortcuts[i].activated.connect(keyReactor, function() {
