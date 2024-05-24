@@ -84,7 +84,7 @@
       <cstring>BreakRatio</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, R</string>
+      <string>,, P</string>
      </property>
     </widget>
    </item>
