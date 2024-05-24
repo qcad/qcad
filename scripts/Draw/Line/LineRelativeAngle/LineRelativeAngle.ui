@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>548</width>
-    <height>46</height>
+    <height>50</height>
    </rect>
   </property>
   <layout class="QHBoxLayout">
@@ -80,23 +80,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QComboBox" name="ReferencePoint">
-     <item>
-      <property name="text">
-       <string>Start</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Middle</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>End</string>
-      </property>
-     </item>
-    </widget>
+    <widget class="QComboBox" name="ReferencePoint"/>
    </item>
   </layout>
  </widget>

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>435</width>
-    <height>46</height>
+    <height>50</height>
    </rect>
   </property>
   <layout class="QHBoxLayout">
@@ -45,7 +45,7 @@
     </widget>
    </item>
    <item>
-    <widget class="RComboBox" name="ReferencePoint"/>
+    <widget class="QComboBox" name="ReferencePoint"/>
    </item>
   </layout>
  </widget>
@@ -54,11 +54,6 @@
    <class>RMathLineEdit</class>
    <extends>QLineEdit</extends>
    <header>RMathLineEdit.h</header>
-  </customwidget>
-  <customwidget>
-   <class>RComboBox</class>
-   <extends>QComboBox</extends>
-   <header>RComboBox.h</header>
   </customwidget>
  </customwidgets>
  <resources/>
