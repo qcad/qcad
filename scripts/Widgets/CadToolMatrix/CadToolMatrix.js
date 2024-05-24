@@ -128,7 +128,7 @@ function RCadToolMatrixTree(parent) {
     this.indentation = 0;
     this.rootIsDecorated = false;
     this.columnCount = 1;
-    this.setAttribute(Qt.WA_MacShowFocusRect, false);
+    //this.setAttribute(Qt.WA_MacShowFocusRect, false);
     this.selectionMode = QAbstractItemView.NoSelection;
     this.verticalScrollMode = QAbstractItemView.ScrollPerPixel;
     if (RSettings.getQtVersion()>0x050000) {
