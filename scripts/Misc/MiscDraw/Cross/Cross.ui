@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>490</width>
-    <height>48</height>
+    <height>50</height>
    </rect>
   </property>
   <layout class="QHBoxLayout">
@@ -15,6 +15,12 @@
     <widget class="QLabel" name="label">
      <property name="text">
       <string>X:</string>
+     </property>
+     <property name="buddy">
+      <cstring>ExtendX</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, X</string>
      </property>
     </widget>
    </item>
@@ -44,9 +50,22 @@
     </widget>
    </item>
    <item>
+    <widget class="Line" name="line_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QLabel" name="label_2">
      <property name="text">
       <string>Y:</string>
+     </property>
+     <property name="buddy">
+      <cstring>ExtendY</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, Y</string>
      </property>
     </widget>
    </item>
@@ -66,6 +85,26 @@
      </property>
      <property name="text">
       <string notr="true">0</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line_3">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string>Mode:</string>
+     </property>
+     <property name="buddy">
+      <cstring>Modes</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, M</string>
      </property>
     </widget>
    </item>
@@ -130,20 +169,26 @@
      <property name="text">
       <string>Angle:</string>
      </property>
+     <property name="buddy">
+      <cstring>Orientation</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, A</string>
+     </property>
     </widget>
    </item>
    <item>
-   <widget class="RMathLineEdit" name="Orientation">
-    <property name="text">
-     <string notr="true">0</string>
-    </property>
-    <property name="angle" stdset="0">
-     <bool>true</bool>
-    </property>
-    <property name="defaultValue" stdset="0">
-     <double>0</double>
-    </property>
-   </widget>
+    <widget class="RMathLineEdit" name="Orientation">
+     <property name="text">
+      <string notr="true">0</string>
+     </property>
+     <property name="angle" stdset="0">
+      <bool>true</bool>
+     </property>
+     <property name="defaultValue" stdset="0">
+      <double>0.000000000000000</double>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>

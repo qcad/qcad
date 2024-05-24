@@ -16,6 +16,12 @@
      <property name="text">
       <string>Start:</string>
      </property>
+     <property name="buddy">
+      <cstring>Start</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, S</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -26,9 +32,22 @@
     </widget>
    </item>
    <item>
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QLabel" name="IncrementLabel">
      <property name="text">
       <string>Increment:</string>
+     </property>
+     <property name="buddy">
+      <cstring>Increment</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, I</string>
      </property>
     </widget>
    </item>
@@ -40,9 +59,22 @@
     </widget>
    </item>
    <item>
+    <widget class="Line" name="line_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QLabel" name="label">
      <property name="text">
       <string>Number Format:</string>
+     </property>
+     <property name="buddy">
+      <cstring>NumberFormat</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, N</string>
      </property>
     </widget>
    </item>
@@ -119,9 +151,22 @@
     </widget>
    </item>
    <item>
+    <widget class="Line" name="line_3">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QLabel" name="PrefixLabel">
      <property name="text">
       <string>Prefix:</string>
+     </property>
+     <property name="buddy">
+      <cstring>Prefix</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, P</string>
      </property>
     </widget>
    </item>
@@ -139,9 +184,22 @@
     </widget>
    </item>
    <item>
+    <widget class="Line" name="line_4">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QLabel" name="SuffixLabel">
      <property name="text">
       <string>Suffix:</string>
+     </property>
+     <property name="buddy">
+      <cstring>Suffix</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, U</string>
      </property>
     </widget>
    </item>

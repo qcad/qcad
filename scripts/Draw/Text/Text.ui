@@ -14,13 +14,13 @@
    <item>
     <widget class="QLabel" name="label">
      <property name="text">
-      <string>Contents:</string>
+      <string>Text:</string>
      </property>
      <property name="buddy">
       <cstring>Contents</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, C</string>
+      <string>,, T</string>
      </property>
     </widget>
    </item>

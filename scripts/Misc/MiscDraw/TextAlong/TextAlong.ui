@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>658</width>
+    <width>663</width>
     <height>50</height>
    </rect>
   </property>
@@ -14,7 +14,13 @@
    <item>
     <widget class="QLabel" name="ContentsLabel">
      <property name="text">
-      <string>Contents:</string>
+      <string>Text:</string>
+     </property>
+     <property name="buddy">
+      <cstring>Contents</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, X</string>
      </property>
     </widget>
    </item>
@@ -35,9 +41,22 @@
     </widget>
    </item>
    <item>
+    <widget class="Line" name="line_3">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QLabel" name="HeightLabel">
      <property name="text">
       <string>Height:</string>
+     </property>
+     <property name="buddy">
+      <cstring>Height</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, H</string>
      </property>
     </widget>
    </item>
@@ -58,9 +77,22 @@
     </widget>
    </item>
    <item>
+    <widget class="Line" name="line_4">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QLabel" name="SpacingLabel">
      <property name="text">
       <string>Spacing</string>
+     </property>
+     <property name="buddy">
+      <cstring>Spacing</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, S</string>
      </property>
     </widget>
    </item>
@@ -106,6 +138,9 @@
       <iconset>
        <normaloff>CounterClockwise.svg</normaloff>CounterClockwise.svg</iconset>
      </property>
+     <property name="shortcut">
+      <string>,, T</string>
+     </property>
      <property name="checkable">
       <bool>true</bool>
      </property>
@@ -125,6 +160,9 @@
      <property name="icon">
       <iconset>
        <normaloff>Clockwise.svg</normaloff>Clockwise.svg</iconset>
+     </property>
+     <property name="shortcut">
+      <string>,, C</string>
      </property>
      <property name="checkable">
       <bool>true</bool>
@@ -151,6 +189,9 @@
      </property>
      <property name="text">
       <string>Fit</string>
+     </property>
+     <property name="shortcut">
+      <string>,, F</string>
      </property>
     </widget>
    </item>
