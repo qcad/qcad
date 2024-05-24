@@ -112,61 +112,8 @@ DrawBasedOnRectangleSize.prototype.setState = function(state) {
 DrawBasedOnRectangleSize.prototype.initUiOptions = function(resume, restoreFromSettings) {
     EAction.prototype.initUiOptions.call(this, resume, restoreFromSettings);
 
-    this.referencePointIndex = RSettings.getIntValue(this.settingsGroup + "/ReferencePoint", 4);
-    
     var optionsToolBar = EAction.getOptionsToolBar();
-    var refPointCombo = optionsToolBar.findChild("ReferencePoint");
-
-    if (isNull(refPointCombo)) {
-        return;
-    }
-
-    refPointCombo.blockSignals(true);
-    refPointCombo.clear();
-    if (isNull(this.shortcuts)) {
-        this.shortcuts = [];
-    }
-
-    var prefixChar = RSettings.getStringValue("ToolBar/PrefixChar", ",");
-
-    for (var i=0; i<this.referencePoints.length; i++) {
-        var shortcuts = [
-            "%1, %2".arg(prefixChar).arg(i+1),
-            "Ctrl+%1".arg(i+1)
-        ];
-
-        var shortcutLabel = shortcuts[0];
-        shortcutLabel = shortcutLabel.replace(", ", "");
-
-        refPointCombo.addItem(
-            this.referencePoints[i][1] + " (" + shortcutLabel + ")",
-            this.referencePoints[i][2]
-        );
-        if (isNull(this.shortcuts[i])) {
-//            this.shortcuts[i] = new QShortcut(new QKeySequence(shortcut), refPointCombo, 0, 0, Qt.WindowShortcut);
-//            var keyReactor = new KeyReactor(i);
-//            this.shortcuts[i].activated.connect(keyReactor, keyReactor.activated);
-
-            for (var k=0; k<shortcuts.length; k++) {
-                this.shortcuts[i] = new QShortcut(new QKeySequence(shortcuts[k]), refPointCombo, 0, 0, Qt.WindowShortcut);
-                var keyReactor = {};
-                keyReactor.index = i;
-                this.shortcuts[i].activated.connect(keyReactor, function() {
-                    refPointCombo.currentIndex = this.index;
-                });
-            }
-        }
-    }
-
-    if (isNull(this.referencePointIndex) ||
-        this.referencePointIndex<0 ||
-        this.referencePointIndex>this.referencePoints.length-1) {
-
-        this.referencePointIndex = 4;
-    }
-
-    refPointCombo.blockSignals(false);
-    refPointCombo.currentIndex = this.referencePointIndex;
+    OptionsToolBar.initReferencePointCombo9(optionsToolBar, this);
 };
 
 DrawBasedOnRectangleSize.prototype.pickCoordinate = function(event, preview) {

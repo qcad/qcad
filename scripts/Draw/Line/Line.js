@@ -247,66 +247,6 @@ Line.prototype.isRayOrXLine = function() {
     return this.lineType===Line.LineType.Ray || this.lineType===Line.LineType.XLine;
 };
 
-Line.prototype.initStartMidEndCombo = function(combo) {
-    this.referencePointIndex = RSettings.getIntValue(this.settingsGroup + "/ReferencePoint", 0);
-
-    //var optionsToolBar = EAction.getOptionsToolBar();
-    var refPointCombo = combo;
-
-    if (isNull(refPointCombo)) {
-        return;
-    }
-
-    refPointCombo.blockSignals(true);
-    refPointCombo.clear();
-    if (isNull(this.shortcuts)) {
-        this.shortcuts = [];
-    }
-
-    var prefixChar = RSettings.getStringValue("ToolBar/PrefixChar", ",");
-
-    for (var i=0; i<this.referencePoints.length; i++) {
-        var shortcuts = [
-            "%1, %2".arg(prefixChar).arg(i+1),
-            "Ctrl+%1".arg(i+1)
-        ];
-
-        var shortcutLabel = shortcuts[0];
-        shortcutLabel = shortcutLabel.replace(", ", "");
-//        if (RS.getSystemId()==="osx") {
-//            shortcutLabel = shortcutLabel.replace("Ctrl+", "\u2318");
-//        }
-        refPointCombo.addItem(
-            this.referencePoints[i][0] + " (" + shortcutLabel + ")",
-            this.referencePoints[i][1]
-        );
-        if (isNull(this.shortcuts[i])) {
-            for (var k=0; k<shortcuts.length; k++) {
-                this.shortcuts[i] = new QShortcut(refPointCombo);
-                var ks = new QKeySequence(shortcuts[k]);
-                this.shortcuts[i].setKey(ks);
-
-                var keyReactor = {};
-                keyReactor.index = i;
-                this.shortcuts[i].activated.connect(keyReactor, function() {
-                    refPointCombo.currentIndex = this.index;
-                });
-            }
-        }
-    }
-
-    if (isNull(this.referencePointIndex) ||
-        this.referencePointIndex<0 ||
-        this.referencePointIndex>this.referencePoints.length-1) {
-
-        this.referencePointIndex = 1;
-    }
-
-    refPointCombo.blockSignals(false);
-
-    refPointCombo.currentIndex = this.referencePointIndex;
-};
-
 Line.init = function() {
     Line.getMenu();
     Line.getToolBar();

@@ -22,6 +22,9 @@
      <property name="MoveToDialog" stdset="0">
       <bool>true</bool>
      </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, W</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -35,6 +38,13 @@
     </widget>
    </item>
    <item>
+    <widget class="Line" name="line_3">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QLabel" name="HeightLabel">
      <property name="text">
       <string>&amp;Height:</string>
@@ -44,6 +54,9 @@
      </property>
      <property name="MoveToDialog" stdset="0">
       <bool>true</bool>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, H</string>
      </property>
     </widget>
    </item>
@@ -69,8 +82,14 @@
      <property name="text">
       <string>Angle:</string>
      </property>
+     <property name="buddy">
+      <cstring>Angle</cstring>
+     </property>
      <property name="MoveToDialog" stdset="0">
       <bool>true</bool>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, A</string>
      </property>
     </widget>
    </item>
@@ -104,6 +123,9 @@
     <widget class="QLabel" name="ReferencePointLabel">
      <property name="text">
       <string>Reference Point:</string>
+     </property>
+     <property name="buddy">
+      <cstring>ReferencePoint</cstring>
      </property>
      <property name="Shortcut" stdset="0">
       <string>,, P</string>

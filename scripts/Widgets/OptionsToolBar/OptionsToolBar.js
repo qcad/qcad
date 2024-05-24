@@ -17,6 +17,10 @@
  * along with QCAD.
  */
 
+if (hasPlugin("PROTOOLS")) {
+    include("scripts/Pro/Widgets/OptionsToolBarPro/OptionsToolBarPro.js");
+}
+
 /**
  * The options toolbar is created and initialized here.
  */
@@ -201,4 +205,98 @@ OptionsToolBar.setIcon = function(fileNameOrIcon) {
 //    p.end();
 
 
+};
+
+OptionsToolBar.initShortcuts = function(optionsToolBar) {
+    if (hasPlugin("PROTOOLS")) {
+        OptionsToolBarPro.initShortcuts(optionsToolBar);
+    }
+    else {
+        // for consistency, remove checkbox shortcuts:
+        var children = optionsToolBar.children();
+        for (var i=0; i<children.length; i++) {
+            var child = children[i];
+            if (isNull(child)) {
+                continue;
+            }
+
+            // widgets with shortcut property (e.g. QCheckbox used as a label):
+            child.shortcut = new QKeySequence();
+        }
+    }
+};
+
+OptionsToolBar.handleKeyPressEvent = function(event) {
+    if (hasPlugin("PROTOOLS")) {
+        OptionsToolBarPro.handleKeyPressEvent(event);
+    }
+};
+
+OptionsToolBar.initReferencePointCombo9 = function(optionsToolBar, action) {
+    action.referencePointIndex = RSettings.getIntValue(action.settingsGroup + "/ReferencePoint", 4);
+
+    var refPointCombo = optionsToolBar.findChild("ReferencePoint");
+
+    if (isNull(refPointCombo)) {
+        return;
+    }
+
+    refPointCombo.blockSignals(true);
+    refPointCombo.clear();
+
+    for (var i=0; i<action.referencePoints.length; i++) {
+        refPointCombo.addItem(
+            action.referencePoints[i][1],
+            action.referencePoints[i][2]
+        );
+    }
+
+    if (isNull(action.referencePointIndex) ||
+        action.referencePointIndex<0 ||
+        action.referencePointIndex>action.referencePoints.length-1) {
+
+        action.referencePointIndex = 4;
+    }
+
+    refPointCombo.blockSignals(false);
+    refPointCombo.currentIndex = action.referencePointIndex;
+
+    if (hasPlugin("PROTOOLS")) {
+        OptionsToolBarPro.initReferencePointCombo9(optionsToolBar, action);
+    }
+};
+
+OptionsToolBar.initReferencePointCombo3 = function(optionsToolBar, action) {
+    action.referencePointIndex = RSettings.getIntValue(action.settingsGroup + "/ReferencePoint", 0);
+
+    var refPointCombo = optionsToolBar.findChild("ReferencePoint");
+
+    if (isNull(refPointCombo)) {
+        return;
+    }
+
+    refPointCombo.blockSignals(true);
+    refPointCombo.clear();
+
+    for (var i=0; i<action.referencePoints.length; i++) {
+        refPointCombo.addItem(
+            action.referencePoints[i][0],
+            action.referencePoints[i][1]
+        );
+    }
+
+    if (isNull(action.referencePointIndex) ||
+        action.referencePointIndex<0 ||
+        action.referencePointIndex>action.referencePoints.length-1) {
+
+        action.referencePointIndex = 1;
+    }
+
+    refPointCombo.blockSignals(false);
+
+    refPointCombo.currentIndex = action.referencePointIndex;
+
+    if (hasPlugin("PROTOOLS")) {
+        OptionsToolBarPro.initReferencePointCombo3(optionsToolBar, action);
+    }
 };

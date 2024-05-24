@@ -12,6 +12,42 @@
   </property>
   <layout class="QHBoxLayout">
    <item>
+    <widget class="QLabel" name="LengthLabel">
+     <property name="toolTip">
+      <string>Line length</string>
+     </property>
+     <property name="text">
+      <string>Length:</string>
+     </property>
+     <property name="buddy">
+      <cstring>Length</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, L</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="RMathLineEdit" name="Length">
+     <property name="maximumSize">
+      <size>
+       <width>100</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="text">
+      <string notr="true">100</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QLabel" name="AngleLabel">
      <property name="toolTip">
       <string>Line angle</string>
@@ -40,35 +76,6 @@
      </property>
      <property name="angle" stdset="0">
       <bool>true</bool>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QLabel" name="LengthLabel">
-     <property name="toolTip">
-      <string>Line length</string>
-     </property>
-     <property name="text">
-      <string>Length:</string>
-     </property>
-     <property name="buddy">
-      <cstring>Length</cstring>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,, L</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="RMathLineEdit" name="Length">
-     <property name="maximumSize">
-      <size>
-       <width>100</width>
-       <height>16777215</height>
-      </size>
-     </property>
-     <property name="text">
-      <string notr="true">100</string>
      </property>
     </widget>
    </item>

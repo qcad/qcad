@@ -484,8 +484,6 @@ EAction.updateToolTip = function(widget, scStr, prefixChar) {
  * bar.
  */
 EAction.prototype.initUiOptions = function(resume, optionsToolBar) {
-    var prefixChar = RSettings.getStringValue("ToolBar/PrefixChar", ",");
-
     if (isNull(optionsToolBar)) {
         return;
     }
@@ -772,44 +770,7 @@ EAction.prototype.keyPressEvent = function(event) {
         return;
     }
 
-    // prevent focus shift when entering keycode (e.g. "D2"):
-    var appWin = EAction.getMainWindow();
-    if (appWin.getKeyLog().length===0) {
-        if ((event.key() >= Qt.Key_0.valueOf() && event.key() <= Qt.Key_9.valueOf()) ||
-             event.key() === Qt.Key_Period.valueOf() ||
-             event.key() === Qt.Key_Tab.valueOf()) {
-
-            // number or dot or tab entered:
-            // give focus to first input widget in options tool bar and set text to number entered:
-            var w = OptionsToolBar.getFirstInputWidget();
-            if (!isNull(w)) {
-                if (event.key() === Qt.Key_Tab.valueOf()) {
-                    w.setFocus(Qt.TabFocusReason);
-                    if (isFunction(w.selectAll)) {
-                        w.selectAll();
-                    }
-                }
-                else {
-                    w.setFocus(Qt.OtherFocusReason);
-                    if (!isNull(w.text)) {
-                        // line edit:
-                        w.text = String.fromCharCode(event.key());
-                    }
-                    if (isOfType(w, QSpinBox)) {
-                        if (event.key() >= Qt.Key_0.valueOf() && event.key() <= Qt.Key_9.valueOf()) {
-                            w.setValue(parseInt(String.fromCharCode(event.key())));
-                        }
-                    }
-
-                }
-
-                event.accept();
-                return;
-            }
-        }
-    }
-
-    event.ignore();
+    OptionsToolBar.handleKeyPressEvent(event);
 };
 
 /**

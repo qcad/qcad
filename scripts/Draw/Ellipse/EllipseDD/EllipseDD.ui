@@ -38,6 +38,13 @@
     </widget>
    </item>
    <item>
+    <widget class="Line" name="line_4">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QLabel" name="YDiameterLabel">
      <property name="text">
       <string>Y Diameter:</string>

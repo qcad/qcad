@@ -80,8 +80,10 @@ LineAngle.prototype.initUiOptions = function(resume, restoreFromSettings) {
     Line.prototype.initUiOptions.call(this, resume, restoreFromSettings);
 
     var optionsToolBar = EAction.getOptionsToolBar();
-    var refPointCombo = optionsToolBar.findChild("ReferencePoint");
-    this.initStartMidEndCombo(refPointCombo);
+    //var refPointCombo = optionsToolBar.findChild("ReferencePoint");
+    //this.initStartMidEndCombo(refPointCombo);
+
+    OptionsToolBar.initReferencePointCombo3(optionsToolBar, this);
 };
 
 LineAngle.prototype.coordinateEvent = function(event) {
