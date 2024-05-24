@@ -74,22 +74,30 @@ ShapeRectangleSize.prototype.initUiOptions = function(resume, optionsToolBar) {
 
     w = optionsToolBar.findChild("CreatePolyline");
     if (!isNull(w)) {
+        w.blockSignals(true);
         w.checked = this.createPolyline;
+        w.blockSignals(false);
     }
 
     w = optionsToolBar.findChild("Fill");
     if (!isNull(w)) {
+        w.blockSignals(true);
         w.checked = this.fill;
+        w.blockSignals(false);
     }
 
     w = optionsToolBar.findChild("RoundCorners");
     if (!isNull(w)) {
+        w.blockSignals(true);
         w.checked = this.roundCorners;
+        w.blockSignals(false);
     }
 
     w = optionsToolBar.findChild("Radius");
     if (!isNull(w)) {
+        w.blockSignals(true);
         w.setValue(this.radius);
+        w.blockSignals(false);
     }
 };
 
