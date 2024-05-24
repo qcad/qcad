@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>551</width>
-    <height>49</height>
+    <height>50</height>
    </rect>
   </property>
   <layout class="QHBoxLayout">
@@ -18,6 +18,9 @@
      </property>
      <property name="buddy">
       <cstring>FingerHeight</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, D</string>
      </property>
     </widget>
    </item>
@@ -35,12 +38,22 @@
     </widget>
    </item>
    <item>
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QLabel" name="labelFingerLength">
      <property name="text">
       <string>Finger Width:</string>
      </property>
      <property name="buddy">
       <cstring>FingerLength</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, W</string>
      </property>
     </widget>
    </item>
@@ -58,12 +71,22 @@
     </widget>
    </item>
    <item>
+    <widget class="Line" name="line_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QLabel" name="labelSlotRatio">
      <property name="text">
       <string>Finger/Slot Ratio:</string>
      </property>
      <property name="buddy">
       <cstring>SlotRatio</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, R</string>
      </property>
     </widget>
    </item>
@@ -81,12 +104,22 @@
     </widget>
    </item>
    <item>
+    <widget class="Line" name="line_3">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QLabel" name="labelFingerStyle">
      <property name="text">
       <string>&amp;Style:</string>
      </property>
      <property name="buddy">
       <cstring>FingerStyle</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, S</string>
      </property>
     </widget>
    </item>

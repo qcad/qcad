@@ -6,12 +6,11 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>494</width>
+    <width>710</width>
     <height>49</height>
    </rect>
   </property>
   <layout class="QHBoxLayout">
-
    <item>
     <widget class="QLabel" name="labelDovetailAmount">
      <property name="text">
@@ -20,22 +19,31 @@
      <property name="buddy">
       <cstring>DovetailNumber</cstring>
      </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, N</string>
+     </property>
     </widget>
    </item>
    <item>
-    <widget class="RMathLineEdit" name="DovetailNumber" native="true">
+    <widget class="RMathLineEdit" name="DovetailNumber">
      <property name="maximumSize">
       <size>
        <width>100</width>
        <height>16777215</height>
       </size>
      </property>
-     <property name="text" stdset="0">
+     <property name="text">
       <string notr="true">5</string>
      </property>
     </widget>
    </item>
-
+   <item>
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
    <item>
     <widget class="QLabel" name="labelDovetailHeight">
      <property name="text">
@@ -44,23 +52,31 @@
      <property name="buddy">
       <cstring>DovetailHeight</cstring>
      </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, H</string>
+     </property>
     </widget>
    </item>
    <item>
-    <widget class="RMathLineEdit" name="DovetailHeight" native="true">
+    <widget class="RMathLineEdit" name="DovetailHeight">
      <property name="maximumSize">
       <size>
        <width>100</width>
        <height>16777215</height>
       </size>
      </property>
-     <property name="text" stdset="0">
+     <property name="text">
       <string notr="true">20</string>
      </property>
     </widget>
    </item>
-   
-   
+   <item>
+    <widget class="Line" name="line_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
    <item>
     <widget class="QLabel" name="labelDovetailGradient">
      <property name="text">
@@ -69,23 +85,34 @@
      <property name="buddy">
       <cstring>DovetailGradient</cstring>
      </property>
+     <property name=",, G" stdset="0">
+      <string/>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, G</string>
+     </property>
     </widget>
    </item>
    <item>
-    <widget class="RMathLineEdit" name="DovetailGradient" native="true">
+    <widget class="RMathLineEdit" name="DovetailGradient">
      <property name="maximumSize">
       <size>
        <width>100</width>
        <height>16777215</height>
       </size>
      </property>
-     <property name="text" stdset="0">
+     <property name="text">
       <string notr="true">7</string>
      </property>
     </widget>
    </item>
-   
-   
+   <item>
+    <widget class="Line" name="line_3">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
    <item>
     <widget class="QLabel" name="labelPinRatio">
      <property name="text">
@@ -94,29 +121,34 @@
      <property name="buddy">
       <cstring>PinRatio</cstring>
      </property>
+     <property name=",, R" stdset="0">
+      <string/>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, R</string>
+     </property>
     </widget>
    </item>
    <item>
-    <widget class="RMathLineEdit" name="PinRatio" native="true">
+    <widget class="RMathLineEdit" name="PinRatio">
      <property name="maximumSize">
       <size>
        <width>100</width>
        <height>16777215</height>
       </size>
      </property>
-     <property name="text" stdset="0">
+     <property name="text">
       <string notr="true">1</string>
      </property>
     </widget>
    </item>
-   
   </layout>
  </widget>
  <customwidgets>
   <customwidget>
    <class>RMathLineEdit</class>
-   <extends>QWidget</extends>
-   <header>rmathlineedit.h</header>
+   <extends>QLineEdit</extends>
+   <header>RMathLineEdit.h</header>
   </customwidget>
  </customwidgets>
  <resources/>
