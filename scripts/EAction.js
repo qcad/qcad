@@ -543,7 +543,10 @@ EAction.prototype.initUiOptions = function(resume, optionsToolBar) {
             // find out which widget gets the focus when the shortcut is triggered:
             // either the widget buddy in case of a label or the widget defined in the AutoFocusWidget property:
             autoFocusWidget = undefined;
-            var buddy = child.buddy();
+            var buddy = undefined;
+            if (isFunction(child.buddy)) {
+                buddy = child.buddy();
+            }
             if (!isNull(buddy)) {
                 // for QLabel labels, use buddy:
                 autoFocusWidget = buddy;
