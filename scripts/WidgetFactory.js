@@ -753,7 +753,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
                 }
             }
         }
-        if (isOfType(c, QComboBox) && c.editable) {
+        if ((isOfType(c, QComboBox) || isOfType(c, RComboBox)) && c.editable) {
             if (!reset) {
                 WidgetFactory.connect(c.editTextChanged, signalReceiver, c.objectName);
                 WidgetFactory.connect(c.editTextChanged, WidgetFactory.topLevelWidget, "Setting");
@@ -777,7 +777,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             }
             continue;
         }
-        if ((isOfType(c, QComboBox) && !c.editable) || isOfType(c, QFontComboBox)) {
+        if (((isOfType(c, QComboBox) || isOfType(c, RComboBox)) && !c.editable) || isOfType(c, QFontComboBox)) {
             if (!reset) {
                 WidgetFactory.connect(c['currentIndexChanged(int)'], signalReceiver, c.objectName);
                 WidgetFactory.connect(c['currentIndexChanged(int)'], WidgetFactory.topLevelWidget, "Setting");
