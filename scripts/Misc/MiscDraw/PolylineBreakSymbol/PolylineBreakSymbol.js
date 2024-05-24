@@ -366,16 +366,20 @@ PolylineBreakSymbol.prototype.getBreakOutOperation = function(preview) {    // U
 
 PolylineBreakSymbol.prototype.slotRemoveSegmentChanged = function(bool) {
     this.removeSegment = bool;
+    this.updatePreview(true);
 };
 
 PolylineBreakSymbol.prototype.slotBreakRatioChanged = function(index) {
     this.breakRatio = index + 1;
+    this.updatePreview(true);
 };
 
 PolylineBreakSymbol.prototype.slotIncSegChanged = function(bool) {
     this.inclinedSegment = bool;
+    this.updatePreview(true);
 };
 
 PolylineBreakSymbol.prototype.slotInheritChanged = function(bool) {
     this.inherit = bool;
+    this.updatePreview(true);
 };
