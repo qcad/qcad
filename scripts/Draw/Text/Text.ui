@@ -16,6 +16,12 @@
      <property name="text">
       <string>Contents:</string>
      </property>
+     <property name="buddy">
+      <cstring>Contents</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, C</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -32,9 +38,22 @@
     </widget>
    </item>
    <item>
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QLabel" name="HeightLabel">
      <property name="text">
       <string>Height:</string>
+     </property>
+     <property name="buddy">
+      <cstring>Height</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, H</string>
      </property>
     </widget>
    </item>
@@ -52,9 +71,22 @@
     </widget>
    </item>
    <item>
+    <widget class="Line" name="line_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QLabel" name="AngleLabel">
      <property name="text">
       <string>Angle:</string>
+     </property>
+     <property name="buddy">
+      <cstring>Angle</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, A</string>
      </property>
     </widget>
    </item>

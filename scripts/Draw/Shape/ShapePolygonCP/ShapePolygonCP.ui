@@ -16,6 +16,12 @@
      <property name="text">
       <string>Corners:</string>
      </property>
+     <property name="buddy">
+      <cstring>Corners</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, C</string>
+     </property>
     </widget>
    </item>
    <item>
