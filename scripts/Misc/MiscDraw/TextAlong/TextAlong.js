@@ -243,6 +243,7 @@ TextAlong.prototype.slotContentsChanged = function(value) {
     // change list of char widths
     this.getCharWidths();
 
+    this.updatePreview(true);
 };
 
 TextAlong.prototype.slotHeightChanged = function(value) {
@@ -255,11 +256,14 @@ TextAlong.prototype.slotHeightChanged = function(value) {
     // change list of char widths
     this.getCharWidths();
 
+    this.updatePreview(true);
 };
 
 TextAlong.prototype.slotSpacingChanged = function(value) {
     this.spacing = value;
     this.getCharWidths();
+
+    this.updatePreview(true);
 };
 
 TextAlong.prototype.slotDirectionChanged = function(button) {
@@ -273,10 +277,14 @@ TextAlong.prototype.slotDirectionChanged = function(button) {
     else {
         this.ccw = true;
     }
+
+    this.updatePreview(true);
 };
 
 TextAlong.prototype.slotFitChanged = function(value) {
     this.fit = value;
+
+    this.updatePreview(true);
 };
 
 TextAlong.prototype.alongLine = function() {

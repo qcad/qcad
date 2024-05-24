@@ -95,6 +95,10 @@ Cross.prototype.pickEntity = function(event, preview) {
 };
 
 Cross.prototype.getOperation = function() {
+    if (isNull(this.shape)) {
+        return undefined;
+    }
+
     var lengthX, lengthY;
 
     var ellipseangle = 0.0;
@@ -204,4 +208,20 @@ Cross.prototype.getOperation = function() {
     if (!empty) {
         return op;
     }
+};
+
+Cross.prototype.slotExtendXChanged = function(v) {
+    this.updatePreview(true);
+};
+
+Cross.prototype.slotExtendYChanged = function(v) {
+    this.updatePreview(true);
+};
+
+Cross.prototype.slotModesChanged = function(v) {
+    this.updatePreview(true);
+};
+
+Cross.prototype.slotOrientationChanged = function(v) {
+    this.updatePreview(true);
 };
