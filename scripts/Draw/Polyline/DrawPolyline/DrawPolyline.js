@@ -422,6 +422,7 @@ DrawPolyline.prototype.slotRedo = function() {
  */
 DrawPolyline.prototype.slotArcSegmentChanged = function(value) {
     this.arcSegment = value;
+    this.updatePreview(true);
 };
 
 /**
@@ -429,6 +430,7 @@ DrawPolyline.prototype.slotArcSegmentChanged = function(value) {
  */
 DrawPolyline.prototype.slotRadiusChanged = function(value) {
     this.radius = value;
+    this.updatePreview(true);
 };
 
 /**
@@ -436,6 +438,7 @@ DrawPolyline.prototype.slotRadiusChanged = function(value) {
  */
 DrawPolyline.prototype.slotSweepChanged = function(value) {
     this.sweep = value;
+    this.updatePreview(true);
 };
 
 /**
