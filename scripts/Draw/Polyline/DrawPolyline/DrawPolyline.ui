@@ -96,6 +96,9 @@
      <property name="shortcut">
       <string>,, A</string>
      </property>
+     <property name="AutoFocusWidget" stdset="0">
+      <string>Radius</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -120,7 +123,13 @@
       <bool>false</bool>
      </property>
      <property name="text">
-      <string>Sweep</string>
+      <string>Sweep:</string>
+     </property>
+     <property name="buddy">
+      <cstring>Sweep</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, S</string>
      </property>
     </widget>
    </item>
@@ -161,6 +170,9 @@
      <property name="icon">
       <iconset>
        <normaloff>../../../Snap/RestrictAngleLength/RestrictAngleLength.svg</normaloff>../../../Snap/RestrictAngleLength/RestrictAngleLength.svg</iconset>
+     </property>
+     <property name="shortcut">
+      <string>,, R</string>
      </property>
      <property name="checkable">
       <bool>true</bool>

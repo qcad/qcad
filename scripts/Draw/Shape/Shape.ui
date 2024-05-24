@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>459</width>
+    <width>377</width>
     <height>50</height>
    </rect>
   </property>
@@ -15,6 +15,9 @@
     <widget class="QCheckBox" name="CreatePolyline">
      <property name="text">
       <string>Create polyline</string>
+     </property>
+     <property name="shortcut">
+      <string>,, P</string>
      </property>
      <property name="MoveToDialog" stdset="0">
       <bool>true</bool>
@@ -25,6 +28,9 @@
     <widget class="QCheckBox" name="Fill">
      <property name="text">
       <string>Fill</string>
+     </property>
+     <property name="shortcut">
+      <string>,, F</string>
      </property>
     </widget>
    </item>
@@ -39,6 +45,12 @@
     <widget class="QCheckBox" name="RoundCorners">
      <property name="text">
       <string>Radius:</string>
+     </property>
+     <property name="shortcut">
+      <string>,, R</string>
+     </property>
+     <property name="AutoFocusWidget" stdset="0">
+      <string>Radius</string>
      </property>
     </widget>
    </item>
