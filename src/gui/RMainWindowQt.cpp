@@ -202,6 +202,11 @@ void RMainWindowQt::handleTabKey(QObject* obj, bool backTab) {
             continue;
         }
 
+        if (!siblingWidget->isVisible()) {
+            // sibling is not visible:
+            continue;
+        }
+
         if (qobject_cast<QLineEdit*>(siblingWidget)==NULL &&
             qobject_cast<QComboBox*>(siblingWidget)==NULL &&
             qobject_cast<QSpinBox*>(siblingWidget)==NULL) {
