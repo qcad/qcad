@@ -80,6 +80,7 @@ function RBlockListQt(parent, addListener, showHeader) {
 
     this.currentBlockItem = undefined;
 
+    this.installEventFilter(new RToolOptionEventFilter(this));
 }
 
 RBlockListQt.prototype = new RTreeWidget();
