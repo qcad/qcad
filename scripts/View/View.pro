@@ -7,7 +7,6 @@ SUBDIRS = \
     DraftMode \
     IsometricView \
     LinetypeMode \
-    OptionsToolBarFocus \
     ShowToolDialog \
     ToggleGrid \
     ViewToolBars \
