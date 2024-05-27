@@ -405,7 +405,10 @@ EAction.prototype.showUiOptions = function(resume, restoreFromSettings) {
 
         // restore previously stored state:
         if (restoreFromSettings===true) {
+            // make sure auto focus widgets are not activated while restoring:
+            optionsToolBar.setProperty("Restoring", true);
             WidgetFactory.restoreState(optionsToolBar, this.settingsGroup, this);
+            optionsToolBar.setProperty("Restoring", false);
         }
     }
 
