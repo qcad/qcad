@@ -16,6 +16,12 @@
      <property name="text">
       <string>Angle:</string>
      </property>
+     <property name="buddy">
+      <cstring>Angle</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, A</string>
+     </property>
     </widget>
    </item>
    <item>
