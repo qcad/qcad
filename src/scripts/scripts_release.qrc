@@ -1619,8 +1619,6 @@
     <file alias="scripts/View/LinetypeMode/LinetypeMode-inverse.svg">../../scripts/View/LinetypeMode/LinetypeMode-inverse.svg</file>
     <file alias="scripts/View/LinetypeMode/LinetypeMode.js">../../scripts/View/LinetypeMode/LinetypeMode.js</file>
     <file alias="scripts/View/LinetypeMode/LinetypeMode.svg">../../scripts/View/LinetypeMode/LinetypeMode.svg</file>
-    <file alias="scripts/View/OptionsToolBarFocus/OptionsToolBarFocus.js">../../scripts/View/OptionsToolBarFocus/OptionsToolBarFocus.js</file>
-    <file alias="scripts/View/OptionsToolBarFocus/OptionsToolBarFocusInit.js">../../scripts/View/OptionsToolBarFocus/OptionsToolBarFocusInit.js</file>
     <file alias="scripts/View/ShowToolDialog/ShowToolDialog.js">../../scripts/View/ShowToolDialog/ShowToolDialog.js</file>
     <file alias="scripts/View/ToggleGrid/ToggleGrid-inverse.svg">../../scripts/View/ToggleGrid/ToggleGrid-inverse.svg</file>
     <file alias="scripts/View/ToggleGrid/ToggleGrid.js">../../scripts/View/ToggleGrid/ToggleGrid.js</file>
