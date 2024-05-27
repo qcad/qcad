@@ -29,12 +29,18 @@
       <iconset>
        <normaloff>Undo.svg</normaloff>Undo.svg</iconset>
      </property>
+     <property name="shortcut">
+      <string>,, U</string>
+     </property>
     </widget>
    </item>
    <item>
     <widget class="QCheckBox" name="ArrowHead">
      <property name="text">
       <string>Arrow head</string>
+     </property>
+     <property name="shortcut">
+      <string>,, A</string>
      </property>
      <property name="checked">
       <bool>true</bool>
