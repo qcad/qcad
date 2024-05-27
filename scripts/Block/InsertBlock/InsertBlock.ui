@@ -16,6 +16,12 @@
      <property name="text">
       <string>Rotation:</string>
      </property>
+     <property name="buddy">
+      <cstring>Rotation</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, R</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -145,6 +151,12 @@
      <property name="text">
       <string>Scale X:</string>
      </property>
+     <property name="buddy">
+      <cstring>ScaleX</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, X</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -231,6 +243,12 @@
      </property>
      <property name="text">
       <string>Y:</string>
+     </property>
+     <property name="buddy">
+      <cstring>ScaleY</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, Y</string>
      </property>
     </widget>
    </item>
@@ -323,6 +341,9 @@
       <iconset>
        <normaloff>KeepProportionsOn.svg</normaloff>KeepProportionsOn.svg</iconset>
      </property>
+     <property name="shortcut">
+      <string>,, K</string>
+     </property>
      <property name="checkable">
       <bool>true</bool>
      </property>
@@ -347,6 +368,9 @@
       <iconset>
        <normaloff>FlipHorizontal.svg</normaloff>FlipHorizontal.svg</iconset>
      </property>
+     <property name="shortcut">
+      <string>,, H</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -357,6 +381,9 @@
      <property name="icon">
       <iconset>
        <normaloff>FlipVertical.svg</normaloff>FlipVertical.svg</iconset>
+     </property>
+     <property name="shortcut">
+      <string>,, V</string>
      </property>
     </widget>
    </item>
@@ -376,6 +403,9 @@
       <iconset>
        <normaloff>SingleBlock.svg</normaloff>SingleBlock.svg</iconset>
      </property>
+     <property name="shortcut">
+      <string>,, 1</string>
+     </property>
      <property name="checkable">
       <bool>false</bool>
      </property>
@@ -392,6 +422,9 @@
      <property name="icon">
       <iconset>
        <normaloff>ArrayOfBlocks.svg</normaloff>ArrayOfBlocks.svg</iconset>
+     </property>
+     <property name="shortcut">
+      <string>,, 2</string>
      </property>
      <property name="checkable">
       <bool>false</bool>
@@ -412,6 +445,12 @@
     <widget class="QLabel" name="AttributeLabel">
      <property name="text">
       <string notr="true">Attributes:</string>
+     </property>
+     <property name="buddy">
+      <cstring>AttributeTag</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, A</string>
      </property>
     </widget>
    </item>
@@ -450,6 +489,9 @@
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
+     </property>
+     <property name="buddy">
+      <cstring>AttributeValue</cstring>
      </property>
     </widget>
    </item>
