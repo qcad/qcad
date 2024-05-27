@@ -28,6 +28,12 @@
      <property name="text">
       <string>Label:</string>
      </property>
+     <property name="buddy">
+      <cstring>Text</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, L</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -96,6 +102,9 @@
        <height>22</height>
       </size>
      </property>
+     <property name="shortcut">
+      <string>,, T</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -150,6 +159,9 @@
        <height>22</height>
       </size>
      </property>
+     <property name="shortcut">
+      <string>,, O</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -195,6 +207,12 @@
      <property name="text">
       <string>Scale</string>
      </property>
+     <property name="buddy">
+      <cstring>Scale</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, S</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -226,6 +244,9 @@
      <property name="text">
       <string>Auto</string>
      </property>
+     <property name="shortcut">
+      <string>,, A</string>
+     </property>
     </widget>
    </item>
   </layout>
@@ -252,6 +273,38 @@
     <hint type="destinationlabel">
      <x>605</x>
      <y>21</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>UpperToleranceIcon</sender>
+   <signal>clicked()</signal>
+   <receiver>UpperTolerance</receiver>
+   <slot>setFocus()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>325</x>
+     <y>26</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>369</x>
+     <y>29</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>LowerToleranceIcon</sender>
+   <signal>clicked()</signal>
+   <receiver>LowerTolerance</receiver>
+   <slot>setFocus()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>422</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>470</x>
+     <y>24</y>
     </hint>
    </hints>
   </connection>
