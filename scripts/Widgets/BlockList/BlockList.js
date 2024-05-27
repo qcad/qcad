@@ -480,15 +480,31 @@ BlockList.colVisible=0;
 BlockList.colEdit=1;
 BlockList.colName=2;
 
-BlockList.iconVisible = [
-    new QIcon(autoIconPath(BlockList.includeBasePath + "/Visible0.svg")),
-    new QIcon(autoIconPath(BlockList.includeBasePath + "/Visible1.svg"))
-];
+BlockList.iconVisible = [];
+BlockList.iconEdit = [];
 
-BlockList.iconEdit = [
-    new QIcon(autoIconPath(BlockList.includeBasePath + "/Edit0.svg")),
-    new QIcon(autoIconPath(BlockList.includeBasePath + "/Edit1.svg"))
-];
+BlockList.initStyle = function(upd) {
+    if (isNull(upd)) {
+        upd = true;
+    }
+
+    BlockList.iconVisible = [
+        new QIcon(autoIconPath(BlockList.includeBasePath + "/Visible0.svg")),
+        new QIcon(autoIconPath(BlockList.includeBasePath + "/Visible1.svg"))
+    ];
+
+    BlockList.iconEdit = [
+        new QIcon(autoIconPath(BlockList.includeBasePath + "/Edit0.svg")),
+        new QIcon(autoIconPath(BlockList.includeBasePath + "/Edit1.svg"))
+    ];
+
+    if (upd) {
+        var appWin = EAction.getMainWindow();
+        appWin.notifyBlockListeners(EAction.getDocumentInterface());
+    }
+};
+
+BlockList.initStyle(false);
 
 BlockList.getPreferencesCategory = function() {
     return [ qsTr("Widgets"), qsTr("Block List") ];
@@ -617,4 +633,8 @@ BlockList.init = function(basePath) {
     dock.hidden.connect(function() { action.setChecked(false); });
 
     dock.visible = false;
+
+    var pl = new RPaletteListenerAdapter();
+    appWin.addPaletteListener(pl);
+    pl.paletteChanged.connect(BlockList.initStyle);
 };
