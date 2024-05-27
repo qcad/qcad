@@ -227,6 +227,8 @@ InsertBlock.prototype.slotKeepProportionsChanged = function(value) {
         scaleYLabel.enabled = true;
         keepProportionsSwitch.icon = new QIcon(InsertBlock.includeBasePath + "/KeepProportionsOff.svg");
     }
+
+    this.updatePreview(true);
 }
 
 InsertBlock.prototype.slotScaleXChanged = function(value) {
@@ -253,6 +255,8 @@ InsertBlock.prototype.slotScaleXChanged = function(value) {
     }
 
     this.blockReferenceData.setScaleFactors(new RVector(scaleX, scaleY));
+
+    this.updatePreview(true);
 };
 
 InsertBlock.prototype.slotScaleYChanged = function(value) {
@@ -261,6 +265,8 @@ InsertBlock.prototype.slotScaleYChanged = function(value) {
     } else {
         this.blockReferenceData.setScaleFactors(new RVector(this.blockReferenceData.getScaleFactors().x, 1.0));
     }
+
+    this.updatePreview(true);
 };
 
 InsertBlock.prototype.slotRotationChanged = function(value) {
@@ -273,13 +279,19 @@ InsertBlock.prototype.slotRotationChanged = function(value) {
 };
 
 InsertBlock.prototype.slotFlipHorizontal = function() {
+    var pos = this.blockReferenceData.getPosition();
     this.blockReferenceData.flipHorizontal();
+    this.blockReferenceData.setPosition(pos);
     this.updateOptionsToolBar();
+    this.updatePreview(true);
 };
 
 InsertBlock.prototype.slotFlipVertical = function() {
+    var pos = this.blockReferenceData.getPosition();
     this.blockReferenceData.flipVertical();
+    this.blockReferenceData.setPosition(pos);
     this.updateOptionsToolBar();
+    this.updatePreview(true);
 };
 
 InsertBlock.prototype.slotSingle = function() {
@@ -287,7 +299,7 @@ InsertBlock.prototype.slotSingle = function() {
     this.blockReferenceData.setRowCount(1);
     this.blockReferenceData.setColumnSpacing(0);
     this.blockReferenceData.setRowSpacing(0);
-    this.updatePreview();
+    this.updatePreview(true);
 };
 
 InsertBlock.prototype.slotArray = function() {
@@ -299,6 +311,7 @@ InsertBlock.prototype.slotArray = function() {
     WidgetFactory.saveState(dialog, this.settingsGroup);
     destr(dialog);
     EAction.activateMainWindow();
+    this.updatePreview(true);
 };
 
 InsertBlock.prototype.slotColumnCountChanged = function(value) {
