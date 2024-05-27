@@ -172,6 +172,7 @@ void RMainWindowQt::handleEnterKey(QObject* obj) {
  * Handle tab key that was suppressed and ignored by a child widget (e.g. line edit in options toolar).
  */
 void RMainWindowQt::handleTabKey(QObject* obj, bool backTab) {
+    qDebug() << "RMainWindowQt::handleTabKey";
     if (obj==NULL) {
         return;
     }
@@ -187,12 +188,17 @@ void RMainWindowQt::handleTabKey(QObject* obj, bool backTab) {
         return;
     }
 
+    QWidget* optionsToolBarWidget = findChild<QWidget*>("Options");
+    if (optionsToolBarWidget==NULL) {
+        return;
+    }
+
     int bestPos = -1;
     QWidget* nextWidget = NULL;
     QPoint pos = objWidget->mapToParent(QPoint(0,0));
 
     // find next child that can handle keyboard focus:
-    QObjectList siblings = parent->children();
+    QObjectList siblings = optionsToolBarWidget->children();
     for (int i=0; i<siblings.length(); i++) {
         QObject* sibling = siblings[i];
         if (sibling==obj) {

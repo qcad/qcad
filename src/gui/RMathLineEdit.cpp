@@ -46,7 +46,7 @@ RMathLineEdit::RMathLineEdit(QWidget* parent) :
 
     connect(this, SIGNAL(textChanged(QString)), this, SLOT(slotTextChanged(QString)));
     connect(this, SIGNAL(textEdited(QString)), this, SLOT(slotTextEdited(QString)));
-    connect(this, SIGNAL(returnPressed()), this, SLOT(slotEnterKeyPressed()));
+    //connect(this, SIGNAL(returnPressed()), this, SLOT(slotEnterKeyPressed()));
 }
 
 //int RMathLineEdit::getDefaultUnit() {

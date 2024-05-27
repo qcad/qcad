@@ -17,8 +17,8 @@
  * along with QCAD.
  */
 
-#ifndef RTABEVENTFILTER_H
-#define RTABEVENTFILTER_H
+#ifndef RTOOLOPTIONEVENTFILTER_H
+#define RTOOLOPTIONEVENTFILTER_H
 
 #include "gui_global.h"
 
