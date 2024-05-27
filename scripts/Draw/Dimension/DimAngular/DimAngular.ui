@@ -14,7 +14,10 @@
    <item>
     <widget class="QCheckBox" name="UseMaxAngle">
      <property name="text">
-      <string>Use maximum angle</string>
+      <string>Use Maximum Angle</string>
+     </property>
+     <property name="shortcut">
+      <string>,, M</string>
      </property>
     </widget>
    </item>
