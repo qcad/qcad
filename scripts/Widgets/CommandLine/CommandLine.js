@@ -111,7 +111,6 @@ CommandLine.initColors = function() {
         var s = teHistory.html;
         for (var i=0; i<replacements.length; i++) {
             var replacement = replacements[i];
-            qDebug("replacing:" + replacement[0] + " with " + replacement[1]);
             s = s.replace(new RegExp(replacement[0], "gi"), replacement[1]);
         }
         teHistory.html = s;
