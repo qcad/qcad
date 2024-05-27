@@ -16,6 +16,9 @@
      <property name="text">
       <string>Copy</string>
      </property>
+     <property name="shortcut">
+      <string>,, C</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -29,6 +32,12 @@
     <widget class="QLabel" name="LabelNumberOfCopies">
      <property name="text">
       <string>Number of Copies:</string>
+     </property>
+     <property name="buddy">
+      <cstring>NumberOfCopies</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, N</string>
      </property>
     </widget>
    </item>
@@ -58,7 +67,10 @@
    <item>
     <widget class="QCheckBox" name="UseCurrentAttributes">
      <property name="text">
-      <string>Use current layer and &amp;attributes</string>
+      <string>Use Current Layer and Attributes</string>
+     </property>
+     <property name="shortcut">
+      <string>,, L</string>
      </property>
     </widget>
    </item>
@@ -74,6 +86,12 @@
      <property name="text">
       <string>Factor x:</string>
      </property>
+     <property name="buddy">
+      <cstring>FactorX</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, X</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -87,6 +105,15 @@
     <widget class="QLabel" name="FactorY_Label">
      <property name="text">
       <string>Factor y:</string>
+     </property>
+     <property name="buddy">
+      <cstring>FactorY</cstring>
+     </property>
+     <property name=",, Y" stdset="0">
+      <string/>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, Y</string>
      </property>
     </widget>
    </item>
@@ -106,6 +133,9 @@
       <iconset>
        <normaloff>KeepProportionsOnSq.svg</normaloff>KeepProportionsOnSq.svg</iconset>
      </property>
+     <property name="shortcut">
+      <string>,, K</string>
+     </property>
      <property name="checkable">
       <bool>true</bool>
      </property>
@@ -122,6 +152,9 @@
      <property name="icon">
       <iconset>
        <normaloff>ByMouseSq.svg</normaloff>ByMouseSq.svg</iconset>
+     </property>
+     <property name="shortcut">
+      <string>,, M</string>
      </property>
      <property name="checkable">
       <bool>true</bool>
