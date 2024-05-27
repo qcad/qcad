@@ -37,19 +37,23 @@ RMathComboBox::RMathComboBox(QWidget* parent) :
     setLineEdit(me);
 
     connect(me, SIGNAL(valueChanged(double,QString)), this, SLOT(slotValueChanged(double,QString)));
-    connect(me, SIGNAL(enterKeyPressed()), this, SLOT(slotEnterKeyPressed()));
+    //connect(me, SIGNAL(enterKeyPressed()), this, SLOT(slotEnterKeyPressed()));
+    //connect(me, SIGNAL(editingFinished()), this, SLOT(slotEnterKeyPressed()));
 }
 
-//void RMathComboBox::keyPressEvent(QKeyEvent* event) {
-//    if (event->key()==Qt::Key_Enter || event->key()==Qt::Key_Return) {
-//        emit enterKeyPressed();
-//        QLineEdit::keyPressEvent(event);
-//    }
-//    else {
-//        QLineEdit::keyPressEvent(event);
-//    }
-//}
+/*
+void RMathComboBox::keyPressEvent(QKeyEvent* event) {
+    qDebug() << "RMathComboBox::keyPressEvent";
+    if (event->key()==Qt::Key_Enter || event->key()==Qt::Key_Return) {
+        emit enterKeyPressed();
+        QComboBox::keyPressEvent(event);
+    }
+    else {
+        QComboBox::keyPressEvent(event);
+    }
+}
 
-//void RMathComboBox::keyReleaseEvent(QKeyEvent* event) {
-//    QLineEdit::keyReleaseEvent(event);
-//}
+void RMathComboBox::keyReleaseEvent(QKeyEvent* event) {
+    QComboBox::keyReleaseEvent(event);
+}
+*/

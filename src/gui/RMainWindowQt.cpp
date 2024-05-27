@@ -148,13 +148,17 @@ void RMainWindowQt::handleEnterKey(QObject* obj) {
                 // deselect text in widget:
                 QLineEdit* le = qobject_cast<QLineEdit*>(obj);
                 if (le!=NULL) {
-                    //le->deselect();
                     le->clearFocus();
                 }
 
                 QSpinBox* sb = qobject_cast<QSpinBox*>(obj);
                 if (sb!=NULL) {
                     sb->clearFocus();
+                }
+
+                QComboBox* cb = qobject_cast<QComboBox*>(obj);
+                if (cb!=NULL) {
+                    cb->clearFocus();
                 }
 
                 // set focus to graphics view:

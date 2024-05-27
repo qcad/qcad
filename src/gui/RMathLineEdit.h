@@ -106,12 +106,16 @@ protected:
 public slots:
     void slotTextChanged(const QString& text);
     void slotTextEdited(const QString& text);
+    //void slotEnterKeyPressed() {
+    //    qDebug() << "RMathLineEdit::slotEnterKeyPressed";
+    //    emit enterKeyPressed();
+    //}
 
 signals:
     void valueChanged(double value, const QString& error);
     void upKeyPressed();
     void downKeyPressed();
-    void enterKeyPressed();
+    //void enterKeyPressed();
 
 private:
     QPalette oriPalette;
