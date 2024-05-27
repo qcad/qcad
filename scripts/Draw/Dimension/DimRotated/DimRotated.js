@@ -212,6 +212,7 @@ DimRotated.prototype.slotAngleChanged = function(value) {
         }
 
         this.data.setRotation(value);
+        this.updatePreview(true);
     }
 };
 
