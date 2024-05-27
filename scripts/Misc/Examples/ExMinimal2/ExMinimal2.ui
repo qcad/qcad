@@ -2,6 +2,14 @@
 <ui version="4.0">
  <class>ExMinimal2</class>
  <widget class="QWidget" name="ExMinimal2">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>201</width>
+    <height>45</height>
+   </rect>
+  </property>
   <layout class="QHBoxLayout">
    <item>
     <widget class="QLabel" name="RadiusLabel">
@@ -10,6 +18,9 @@
      </property>
      <property name="buddy">
       <cstring>Radius</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,, R</string>
      </property>
     </widget>
    </item>
