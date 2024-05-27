@@ -234,6 +234,7 @@ Dimension.init = function() {
  */
 Dimension.prototype.slotTextChanged = function() {
     this.updateText();
+    this.updatePreview(true);
 };
 
 /**
@@ -241,6 +242,7 @@ Dimension.prototype.slotTextChanged = function() {
  */
 Dimension.prototype.slotPrefixChanged = function(prefix) {
     this.updateText();
+    this.updatePreview(true);
 };
 
 /**
@@ -277,6 +279,11 @@ Dimension.prototype.slotUpperToleranceChanged = function(text) {
     if (!isNull(this.data)) {
         this.data.setUpperTolerance(text);
     }
+    this.updatePreview(true);
+};
+
+Dimension.prototype.slotScaleChanged = function(v) {
+    this.updatePreview(true);
 };
 
 /**
@@ -286,6 +293,7 @@ Dimension.prototype.slotLowerToleranceChanged = function(text) {
     if (!isNull(this.data)) {
         this.data.setLowerTolerance(text);
     }
+    this.updatePreview(true);
 };
 
 Dimension.prototype.getScaleString = function() {
