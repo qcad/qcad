@@ -373,4 +373,5 @@ DimAngular.prototype.getHighlightedEntities = function() {
 
 DimAngular.prototype.slotUseMaxAngleChanged = function(v) {
     this.useMaxAngle = v;
+    this.updatePreview(true);
 };
