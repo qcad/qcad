@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>304</width>
+    <width>306</width>
     <height>50</height>
    </rect>
   </property>
@@ -15,6 +15,9 @@
     <widget class="QCheckBox" name="Copy">
      <property name="text">
       <string>Copy</string>
+     </property>
+     <property name="shortcut">
+      <string>,, C</string>
      </property>
     </widget>
    </item>
@@ -28,7 +31,10 @@
    <item>
     <widget class="QCheckBox" name="UseCurrentAttributes">
      <property name="text">
-      <string>Use current layer and &amp;attributes</string>
+      <string>Use Current Layer and Attributes</string>
+     </property>
+     <property name="shortcut">
+      <string>,, L</string>
      </property>
     </widget>
    </item>
