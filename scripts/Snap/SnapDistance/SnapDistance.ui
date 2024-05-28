@@ -20,7 +20,7 @@
       <cstring>Distance</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, 0</string>
+      <string>,,D</string>
      </property>
     </widget>
    </item>

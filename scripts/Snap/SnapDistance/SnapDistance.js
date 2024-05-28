@@ -34,6 +34,7 @@ function RSnapDistanceExtension() {
     var snap = this;
     this.action.slotDistanceChanged = function(value) {
         snap.setDistance(value);
+        // TODO: update preview of current action
     };
 }
 
