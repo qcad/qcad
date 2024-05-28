@@ -209,12 +209,6 @@ OptionsToolBar.initShortcuts = function(optionsToolBar) {
     }
 };
 
-OptionsToolBar.handleKeyPressEvent = function(event) {
-    if (hasPlugin("PROTOOLS")) {
-        OptionsToolBarPro.handleKeyPressEvent(event);
-    }
-};
-
 OptionsToolBar.initReferencePointCombo9 = function(optionsToolBar, action) {
     action.referencePointIndex = RSettings.getIntValue(action.settingsGroup + "/ReferencePoint", 4);
 
