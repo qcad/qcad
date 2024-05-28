@@ -88,6 +88,9 @@ public:
 
     virtual void handleEnterKey(QObject* obj);
     virtual void handleTabKey(QObject* obj, bool backTab = false);
+    virtual bool handleOptionsShortcut(const QString& shortcut);
+
+    virtual bool focusOnOptionsWidget(QObject* obj, bool backTab = false, const QString& shortcut = "");
 
     virtual void postSelectionChangedEvent();
     virtual void postTransactionEvent(

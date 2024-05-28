@@ -18,6 +18,7 @@
  */
 #include <QtGui>
 //#include <QDesktopWidget>
+#include <QCheckBox>
 #include <QComboBox>
 #include <QSpinBox>
 #include <QLabel>
@@ -172,81 +173,161 @@ void RMainWindowQt::handleEnterKey(QObject* obj) {
  * Handle tab key that was suppressed and ignored by a child widget (e.g. line edit in options toolar).
  */
 void RMainWindowQt::handleTabKey(QObject* obj, bool backTab) {
-    qDebug() << "RMainWindowQt::handleTabKey";
-    if (obj==NULL) {
-        return;
-    }
+    focusOnOptionsWidget(obj, backTab);
+}
+
+bool RMainWindowQt::handleOptionsShortcut(const QString& shortcut) {
+    return focusOnOptionsWidget(NULL, false, shortcut);
+}
+
+bool RMainWindowQt::focusOnOptionsWidget(QObject* obj, bool backTab, const QString& shortcut) {
 
     QWidget* objWidget = qobject_cast<QWidget*>(obj);
-    if (objWidget==NULL) {
-        return;
-    }
-
-    QObject* parent = obj->parent();
-    QWidget* parentWidget = qobject_cast<QWidget*>(parent);
-    if (parentWidget==NULL) {
-        return;
-    }
 
     QWidget* optionsToolBarWidget = findChild<QWidget*>("Options");
     if (optionsToolBarWidget==NULL) {
-        return;
+        return false;
     }
 
-    int bestPos = -1;
+    // ,0 ,1 ,2 ... shortcut:
+    // look for ReferencePoint combo:
+    if (!shortcut.isEmpty() && shortcut[shortcut.length()-1].isDigit()) {
+        QComboBox* cbReferencePoint = optionsToolBarWidget->findChild<QComboBox*>("ReferencePoint");
+        if (cbReferencePoint!=NULL) {
+            int index = shortcut[shortcut.length()-1].digitValue() - 1;
+            cbReferencePoint->setCurrentIndex(index);
+            return true;
+        }
+    }
+
     QWidget* nextWidget = NULL;
-    QPoint pos = objWidget->mapToParent(QPoint(0,0));
+
+    // best candidate so far:
+    int bestPos = -1;
+    // reference position for tab navigation:
+    int refPos = (backTab ? 10000 : 0);
+
+    if (objWidget!=NULL) {
+        refPos = objWidget->mapToParent(QPoint(0,0)).x();
+    }
 
     // find next child that can handle keyboard focus:
-    QObjectList siblings = optionsToolBarWidget->children();
-    for (int i=0; i<siblings.length(); i++) {
-        QObject* sibling = siblings[i];
-        if (sibling==obj) {
+    QObjectList children = optionsToolBarWidget->children();
+    for (int i=0; i<children.length(); i++) {
+        QObject* child = children[i];
+        if (child==obj) {
             // object self
             continue;
         }
 
-        QWidget* siblingWidget = qobject_cast<QWidget*>(sibling);
-        if (siblingWidget==NULL) {
-            // sibling is not a widget:
+        QWidget* childWidget = qobject_cast<QWidget*>(child);
+        if (childWidget==NULL) {
+            // child is not a widget:
             continue;
         }
 
-        if (!siblingWidget->isVisible()) {
-            // sibling is not visible:
+        if (!childWidget->isVisible()) {
+            // child is not visible:
             continue;
         }
 
-        if (qobject_cast<QLineEdit*>(siblingWidget)==NULL &&
-            qobject_cast<QComboBox*>(siblingWidget)==NULL &&
-            qobject_cast<QSpinBox*>(siblingWidget)==NULL) {
-            continue;
+        QVariant scVariant = childWidget->property("Shortcut");
+        QString sc;
+
+        if (scVariant.isValid()) {
+            sc = scVariant.toString();
         }
 
-        // position of sibling:
-        QPoint siblingPos = siblingWidget->mapToParent(QPoint(0,0));
+        if (!shortcut.isEmpty()) {
+            if (shortcut!=sc) {
+                // shortcut does not match:
+                continue;
+            }
+            else {
+                qDebug() << "found shortcut match:" << sc;
+
+                QLabel* label = qobject_cast<QLabel*>(childWidget);
+                if (label!=NULL) {
+                    // widget is label with buddy:
+                    // find out which widget gets the focus when the shortcut is triggered:
+                    // either the widget buddy in case of a label or the widget defined in the AutoFocusWidget property:
+                    QWidget* buddy = label->buddy();
+                    if (buddy!=NULL) {
+                        nextWidget = buddy;
+                    }
+                }
+
+                if (nextWidget==NULL) {
+                    // widget is checkbox which references other widget:
+                    QCheckBox* checkBox = qobject_cast<QCheckBox*>(childWidget);
+                    if (checkBox!=NULL) {
+                        // for QCheckBox labels, use property:
+                        QString autoFocusWidgetName = checkBox->property("AutoFocusWidget").toString();
+                        if (!autoFocusWidgetName.isEmpty()) {
+                            nextWidget = optionsToolBarWidget->findChild<QWidget*>(autoFocusWidgetName);
+                        }
+                    }
+                }
+
+                if (nextWidget==NULL) {
+                    // widget is tool button:
+                    QToolButton* toolButton = qobject_cast<QToolButton*>(childWidget);
+                    if (toolButton!=NULL) {
+                        toolButton->click();
+                    }
+                }
+
+                if (nextWidget==NULL) {
+                    // widget self gets focus:
+                    nextWidget = childWidget;
+                }
+                break;
+            }
+        }
+        else {
+            // for tabbing, ignore widgets without keyboard focus:
+            if (qobject_cast<QLineEdit*>(childWidget)==NULL &&
+                qobject_cast<QComboBox*>(childWidget)==NULL &&
+                qobject_cast<QSpinBox*>(childWidget)==NULL) {
+
+                // widget does not accept keyboard focus (e.g. button, etc.)
+                continue;
+            }
+        }
+
+
+        // position of child:
+        int childPos = childWidget->mapToParent(QPoint(0,0)).x();
 
         if (backTab) {
-            if (siblingPos.x() < pos.x()) {
-                if (siblingPos.x() > bestPos || bestPos==-1) {
-                    bestPos = siblingPos.x();
-                    nextWidget = siblingWidget;
+            if (childPos < refPos) {
+                if (childPos > bestPos || bestPos==-1) {
+                    bestPos = childPos;
+                    nextWidget = childWidget;
                 }
             }
         }
         else {
-            if (siblingPos.x() > pos.x()) {
-                if (siblingPos.x() < bestPos || bestPos==-1) {
-                    bestPos = siblingPos.x();
-                    nextWidget = siblingWidget;
+            if (childPos > refPos) {
+                if (childPos < bestPos || bestPos==-1) {
+                    bestPos = childPos;
+                    nextWidget = childWidget;
                 }
             }
         }
     }
 
     if (nextWidget!=NULL) {
-        nextWidget->setFocus(Qt::TabFocusReason);
+        if (!shortcut.isEmpty()) {
+            nextWidget->setFocus(Qt::ShortcutFocusReason);
+        }
+        else {
+            nextWidget->setFocus(Qt::TabFocusReason);
+        }
+        return true;
     }
+
+    return false;
 }
 
 void RMainWindowQt::postSelectionChangedEvent() {
@@ -846,15 +927,22 @@ bool RMainWindowQt::event(QEvent* e) {
 
             // shortcut handling:
             else {
+                qDebug() << "key:" << QChar(ke->key());
                 if (ke->key()<128) {
                     if (keyTimeOut.elapsed()>RSettings::getIntValue("Keyboard/Timeout", 2000)) {
                         keyLog.clear();
                     }
                     keyLog += QChar(ke->key());
-                    if (RGuiAction::triggerByShortcut(keyLog)) {
+                    if (handleOptionsShortcut(keyLog)) {
+                        // shortcut for options toolbar:
+                        keyLog.clear();
+                    }
+                    else if (RGuiAction::triggerByShortcut(keyLog)) {
+                        // shortcut for tool:
                         keyLog.clear();
                     }
                     else {
+                        // wait for additional keystrokes:
                         keyTimeOut.restart();
                     }
                 }
