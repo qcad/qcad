@@ -19,6 +19,9 @@
      <property name="buddy">
       <cstring>PrimaryAngle</cstring>
      </property>
+     <property name="Shortcut" stdset="0">
+      <string>,P</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -32,9 +35,22 @@
     </widget>
    </item>
    <item>
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QLabel" name="label">
      <property name="text">
       <string>Secondary Angle:</string>
+     </property>
+     <property name="buddy">
+      <cstring>SecondaryAngle</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,S</string>
      </property>
     </widget>
    </item>
@@ -49,9 +65,22 @@
     </widget>
    </item>
    <item>
+    <widget class="Line" name="line_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QLabel" name="label_2">
      <property name="text">
       <string>Copies:</string>
+     </property>
+     <property name="buddy">
+      <cstring>NumberOfCopies</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,C</string>
      </property>
     </widget>
    </item>
