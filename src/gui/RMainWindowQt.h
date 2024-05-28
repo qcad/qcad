@@ -92,10 +92,11 @@ public:
         }
     }
 
-    void handleTabKey(QObject* obj, bool backTab = false) {
+    bool handleTabKey(QObject* obj, bool backTab = false) {
         if (mainWindowProxy) {
-            mainWindowProxy->handleTabKey(obj, backTab);
+            return mainWindowProxy->handleTabKey(obj, backTab);
         }
+        return false;
     }
 
     virtual void postSelectionChangedEvent();

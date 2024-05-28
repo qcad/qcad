@@ -27,6 +27,7 @@
 #include "RGraphicsScene.h"
 #include "RGraphicsViewQt.h"
 #include "RMainWindow.h"
+#include "RMainWindowQt.h"
 #include "RMouseEvent.h"
 #include "RSettings.h"
 #include "RTerminateEvent.h"
@@ -388,6 +389,8 @@ void RGraphicsViewQt::wheelEvent(QWheelEvent* event) {
 }
 
 void RGraphicsViewQt::keyPressEvent(QKeyEvent* event) {
+    qDebug() << "RGraphicsViewQt::keyPressEvent";
+
     if (imageView==NULL) {
         return;
     }
@@ -398,6 +401,15 @@ void RGraphicsViewQt::keyPressEvent(QKeyEvent* event) {
     event->ignore();
 
     imageView->handleKeyPressEvent(*event);
+
+    if (event->key()==Qt::Key_Tab) {
+        RMainWindowQt* appWin = RMainWindowQt::getMainWindow();
+        if (appWin!=NULL) {
+            if (appWin->handleTabKey(NULL)) {
+                event->accept();
+            }
+        }
+    }
 
     // we're NOT accepting the event here to make sure the
     // event handler of the main window has a chance to
