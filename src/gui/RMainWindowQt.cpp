@@ -244,8 +244,6 @@ bool RMainWindowQt::focusOnOptionsWidget(QObject* obj, bool backTab, const QStri
                 continue;
             }
             else {
-                qDebug() << "found shortcut match:" << sc;
-
                 QLabel* label = qobject_cast<QLabel*>(childWidget);
                 if (label!=NULL) {
                     // widget is label with buddy:
@@ -927,7 +925,6 @@ bool RMainWindowQt::event(QEvent* e) {
 
             // shortcut handling:
             else {
-                qDebug() << "key:" << QChar(ke->key());
                 if (ke->key()<128) {
                     if (keyTimeOut.elapsed()>RSettings::getIntValue("Keyboard/Timeout", 2000)) {
                         keyLog.clear();
