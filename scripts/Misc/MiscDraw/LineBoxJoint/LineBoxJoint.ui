@@ -20,7 +20,7 @@
       <cstring>FingerHeight</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, D</string>
+      <string>,D</string>
      </property>
     </widget>
    </item>
@@ -53,7 +53,7 @@
       <cstring>FingerLength</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, W</string>
+      <string>,W</string>
      </property>
     </widget>
    </item>
@@ -86,7 +86,7 @@
       <cstring>SlotRatio</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, R</string>
+      <string>,R</string>
      </property>
     </widget>
    </item>
@@ -119,7 +119,7 @@
       <cstring>FingerStyle</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, S</string>
+      <string>,S</string>
      </property>
     </widget>
    </item>

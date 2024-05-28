@@ -16,8 +16,8 @@
      <property name="text">
       <string>Create polyline</string>
      </property>
-     <property name="shortcut">
-      <string>,, Y</string>
+     <property name="Shortcut">
+      <string>,Y</string>
      </property>
      <property name="MoveToDialog" stdset="0">
       <bool>true</bool>
@@ -36,8 +36,8 @@
      <property name="text">
       <string>Fill</string>
      </property>
-     <property name="shortcut">
-      <string>,, F</string>
+     <property name="Shortcut">
+      <string>,F</string>
      </property>
     </widget>
    </item>
@@ -53,8 +53,8 @@
      <property name="text">
       <string>Radius:</string>
      </property>
-     <property name="shortcut">
-      <string>,, R</string>
+     <property name="Shortcut">
+      <string>,R</string>
      </property>
      <property name="AutoFocusWidget" stdset="0">
       <string>Radius</string>

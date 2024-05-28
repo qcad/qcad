@@ -20,7 +20,7 @@
       <cstring>Radius</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, R</string>
+      <string>,R</string>
      </property>
     </widget>
    </item>
@@ -47,7 +47,7 @@
       <string>Solution:</string>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, S</string>
+      <string>,S</string>
      </property>
      <property name="AutoFocusWidget" stdset="0">
       <string>Solution</string>
@@ -63,7 +63,7 @@
       <iconset>
        <normaloff>Solution1.svg</normaloff>Solution1.svg</iconset>
      </property>
-     <property name="shortcut">
+     <property name="Shortcut">
       <string>,, 1</string>
      </property>
      <property name="checkable">
@@ -86,7 +86,7 @@
       <iconset>
        <normaloff>Solution2.svg</normaloff>Solution2.svg</iconset>
      </property>
-     <property name="shortcut">
+     <property name="Shortcut">
       <string>,, 2</string>
      </property>
      <property name="checkable">

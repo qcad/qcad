@@ -20,7 +20,7 @@
       <cstring>Length</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, L</string>
+      <string>,L</string>
      </property>
     </widget>
    </item>
@@ -53,7 +53,7 @@
       <cstring>Number</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, N</string>
+      <string>,N</string>
      </property>
     </widget>
    </item>

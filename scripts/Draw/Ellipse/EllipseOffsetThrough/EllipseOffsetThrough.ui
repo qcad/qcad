@@ -20,7 +20,7 @@
       <cstring>Number</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, N</string>
+      <string>,N</string>
      </property>
     </widget>
    </item>

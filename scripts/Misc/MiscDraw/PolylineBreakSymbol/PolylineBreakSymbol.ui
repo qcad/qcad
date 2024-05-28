@@ -28,8 +28,8 @@
      <property name="text">
       <string>Remove Segment</string>
      </property>
-     <property name="shortcut">
-      <string>,, R</string>
+     <property name="Shortcut">
+      <string>,R</string>
      </property>
      <property name="checked">
       <bool>true</bool>
@@ -54,8 +54,8 @@
      <property name="text">
       <string>Inherit</string>
      </property>
-     <property name="shortcut">
-      <string>,, I</string>
+     <property name="Shortcut">
+      <string>,I</string>
      </property>
      <property name="checked">
       <bool>true</bool>
@@ -84,7 +84,7 @@
       <cstring>BreakRatio</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, P</string>
+      <string>,P</string>
      </property>
     </widget>
    </item>
@@ -174,7 +174,7 @@
       <iconset>
        <normaloff>IncSeg.svg</normaloff>IncSeg.svg</iconset>
      </property>
-     <property name="shortcut">
+     <property name="Shortcut">
       <string>,, 1</string>
      </property>
      <property name="checkable">
@@ -203,7 +203,7 @@
       <iconset>
        <normaloff>VertSeg.svg</normaloff>VertSeg.svg</iconset>
      </property>
-     <property name="shortcut">
+     <property name="Shortcut">
       <string>,, 2</string>
      </property>
      <property name="checkable">

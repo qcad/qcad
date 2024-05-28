@@ -20,7 +20,7 @@
       <cstring>Length</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, L</string>
+      <string>,L</string>
      </property>
     </widget>
    </item>
@@ -53,7 +53,7 @@
       <cstring>ReferencePoint</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, P</string>
+      <string>,P</string>
      </property>
     </widget>
    </item>
