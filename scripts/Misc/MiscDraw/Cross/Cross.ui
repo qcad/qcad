@@ -20,7 +20,7 @@
       <cstring>ExtendX</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, X</string>
+      <string>,X</string>
      </property>
     </widget>
    </item>
@@ -65,7 +65,7 @@
       <cstring>ExtendY</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, Y</string>
+      <string>,Y</string>
      </property>
     </widget>
    </item>
@@ -104,7 +104,7 @@
       <cstring>Modes</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, M</string>
+      <string>,M</string>
      </property>
     </widget>
    </item>
@@ -173,7 +173,7 @@
       <cstring>Orientation</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, A</string>
+      <string>,A</string>
      </property>
     </widget>
    </item>

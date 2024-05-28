@@ -63,14 +63,14 @@
       <iconset>
        <normaloff>Solution1.svg</normaloff>Solution1.svg</iconset>
      </property>
-     <property name="Shortcut">
-      <string>,, 1</string>
-     </property>
      <property name="checkable">
       <bool>true</bool>
      </property>
      <property name="checked">
       <bool>true</bool>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,1</string>
      </property>
      <attribute name="buttonGroup">
       <string notr="true">Solution</string>
@@ -86,11 +86,11 @@
       <iconset>
        <normaloff>Solution2.svg</normaloff>Solution2.svg</iconset>
      </property>
-     <property name="Shortcut">
-      <string>,, 2</string>
-     </property>
      <property name="checkable">
       <bool>true</bool>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,2</string>
      </property>
      <attribute name="buttonGroup">
       <string notr="true">Solution</string>

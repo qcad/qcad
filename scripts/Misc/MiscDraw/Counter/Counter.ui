@@ -20,7 +20,7 @@
       <cstring>Start</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, S</string>
+      <string>,S</string>
      </property>
     </widget>
    </item>
@@ -47,7 +47,7 @@
       <cstring>Increment</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, I</string>
+      <string>,I</string>
      </property>
     </widget>
    </item>
@@ -74,7 +74,7 @@
       <cstring>NumberFormat</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, N</string>
+      <string>,N</string>
      </property>
     </widget>
    </item>
@@ -166,7 +166,7 @@
       <cstring>Prefix</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, P</string>
+      <string>,P</string>
      </property>
     </widget>
    </item>
@@ -199,7 +199,7 @@
       <cstring>Suffix</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, U</string>
+      <string>,U</string>
      </property>
     </widget>
    </item>
