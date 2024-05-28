@@ -121,19 +121,9 @@ public slots:
         // forward signal from RMathLineEdit:
         emit valueChanged(value, error);
     }
-    //void slotEnterKeyPressed() {
-    //    qDebug() << "slotEnterKeyPressed";
-    //    // forward signal from RMathLineEdit:
-    //    emit enterKeyPressed();
-    //}
 
 signals:
     void valueChanged(double value, const QString& error);
-    //void enterKeyPressed();
-
-//protected:
-    //virtual void keyPressEvent(QKeyEvent* event);
-    //virtual void keyReleaseEvent(QKeyEvent* event);
 };
 
 Q_DECLARE_METATYPE(RMathComboBox*)
