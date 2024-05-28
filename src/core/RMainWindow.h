@@ -31,6 +31,7 @@ class QKeyEvent;
 #include "RInterTransactionListener.h"
 #include "RTransactionListener.h"
 #include "RPropertyEvent.h"
+#include "RMainWindowProxy.h"
 #include "RMessageHandler.h"
 #include "RProgressHandler.h"
 #include "RS.h"
@@ -293,6 +294,27 @@ public:
 
     QVariant eval(const QString& ext, const QString& script);
 
+    static bool hasProxy() {
+        return mainWindowProxy!=NULL;
+    }
+
+    /**
+     * \nonscriptable
+     */
+    static void setMainWindowProxy(RMainWindowProxy* p) {
+        if (mainWindowProxy!=NULL) {
+            delete mainWindowProxy;
+        }
+        mainWindowProxy = p;
+    }
+
+    /**
+     * \nonscriptable
+     */
+    static RMainWindowProxy* getMainWindowProxy() {
+        return mainWindowProxy;
+    }
+
 protected:
     virtual bool readSettings();
     virtual void writeSettings();
@@ -322,6 +344,8 @@ protected:
     QList<RPreferencesListener*> preferencesListeners;
 
     QMutex mutex;
+
+    static RMainWindowProxy* mainWindowProxy;
 };
 
 Q_DECLARE_METATYPE(RMainWindow*)

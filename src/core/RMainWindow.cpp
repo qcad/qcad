@@ -55,6 +55,7 @@
 
 
 RMainWindow* RMainWindow::mainWindow = NULL;
+RMainWindowProxy* RMainWindow::mainWindowProxy = NULL;
 
 RMainWindow::RMainWindow() {
     mainWindow = this;

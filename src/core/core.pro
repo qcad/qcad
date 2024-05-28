@@ -126,6 +126,8 @@ HEADERS = \
     RArcExporter.h \
     RBlock.h \
     RBlockListener.h \
+    RKeyListener.h \
+    RMainWindowProxy.h \
     RBlockReferenceData.h \
     RBlockReferenceEntity.h \
     RColor.h \
