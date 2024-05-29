@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>114</width>
+    <width>84</width>
     <height>50</height>
    </rect>
   </property>
@@ -23,6 +23,9 @@
       <iconset>
        <normaloff>Calculate.svg</normaloff>Calculate.svg</iconset>
      </property>
+     <property name="Shortcut">
+      <string>,C</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -36,6 +39,9 @@
      <property name="icon">
       <iconset>
        <normaloff>Close.svg</normaloff>Close.svg</iconset>
+     </property>
+     <property name="Shortcut">
+      <string>,Q</string>
      </property>
     </widget>
    </item>

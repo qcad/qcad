@@ -85,9 +85,6 @@
      <property name="buddy">
       <cstring>DovetailGradient</cstring>
      </property>
-     <property name=",, G" stdset="0">
-      <string/>
-     </property>
      <property name="Shortcut" stdset="0">
       <string>,G</string>
      </property>
@@ -120,9 +117,6 @@
      </property>
      <property name="buddy">
       <cstring>PinRatio</cstring>
-     </property>
-     <property name=",, R" stdset="0">
-      <string/>
      </property>
      <property name="Shortcut" stdset="0">
       <string>,R</string>
