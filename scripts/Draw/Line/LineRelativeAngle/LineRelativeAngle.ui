@@ -55,9 +55,6 @@
      <property name="Shortcut" stdset="0">
       <string>,L</string>
      </property>
-     <property name=",, R" stdset="0">
-      <string/>
-     </property>
     </widget>
    </item>
    <item>
