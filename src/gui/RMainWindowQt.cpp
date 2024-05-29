@@ -650,6 +650,16 @@ bool RMainWindowQt::event(QEvent* e) {
         return false;
     }
 
+    if (e->type()==QEvent::ScreenChangeInternal) {
+        RDocumentInterface* di = getDocumentInterface();
+        if (di!=NULL) {
+            RGraphicsView* gv = di->getLastKnownViewWithFocus();
+            if (gv!=NULL) {
+                gv->regenerate();
+            }
+        }
+    }
+
     if (e->type()==QEvent::WindowActivate) {
         // hand keyboard focus to grphics view for various key events (tab, entering number, options shortcuts):
         RDocumentInterface* di = getDocumentInterface();
