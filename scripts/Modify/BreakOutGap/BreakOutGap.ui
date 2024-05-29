@@ -10,11 +10,20 @@
     <height>46</height>
    </rect>
   </property>
+  <property name="Shortcut" stdset="0">
+   <string>,G</string>
+  </property>
   <layout class="QHBoxLayout">
    <item>
     <widget class="QLabel" name="label_2">
      <property name="text">
       <string>Gap:</string>
+     </property>
+     <property name="buddy">
+      <cstring>Offset</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,G</string>
      </property>
     </widget>
    </item>
