@@ -19,6 +19,9 @@
      <property name="buddy">
       <cstring>Amount</cstring>
      </property>
+     <property name="Shortcut" stdset="0">
+      <string>,A</string>
+     </property>
     </widget>
    </item>
    <item>
