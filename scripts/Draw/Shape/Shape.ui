@@ -14,9 +14,9 @@
    <item>
     <widget class="QCheckBox" name="CreatePolyline">
      <property name="text">
-      <string>Create polyline</string>
+      <string>Create Polyline</string>
      </property>
-     <property name="Shortcut">
+     <property name="Shortcut" stdset="0">
       <string>,Y</string>
      </property>
      <property name="MoveToDialog" stdset="0">
@@ -36,7 +36,7 @@
      <property name="text">
       <string>Fill</string>
      </property>
-     <property name="Shortcut">
+     <property name="Shortcut" stdset="0">
       <string>,F</string>
      </property>
     </widget>
@@ -53,11 +53,8 @@
      <property name="text">
       <string>Radius:</string>
      </property>
-     <property name="Shortcut">
-      <string>,R</string>
-     </property>
-     <property name="AutoFocusWidget" stdset="0">
-      <string>Radius</string>
+     <property name="Shortcut" stdset="0">
+      <string>,A</string>
      </property>
     </widget>
    </item>
@@ -65,6 +62,9 @@
     <widget class="RMathLineEdit" name="Radius">
      <property name="text">
       <string notr="true">1</string>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,R</string>
      </property>
     </widget>
    </item>
