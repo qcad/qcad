@@ -20,7 +20,7 @@
       <cstring>Angle</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, A</string>
+      <string>,A</string>
      </property>
     </widget>
    </item>
