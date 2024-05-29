@@ -17,7 +17,7 @@
       <string>Direction:</string>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, D</string>
+      <string>,D</string>
      </property>
      <property name="AutoFocusWidget" stdset="0">
       <string>Direction</string>
@@ -33,8 +33,8 @@
       <iconset>
        <normaloff>CounterClockwise.svg</normaloff>CounterClockwise.svg</iconset>
      </property>
-     <property name="shortcut">
-      <string>,, T</string>
+     <property name="Shortcut">
+      <string>,T</string>
      </property>
      <property name="checkable">
       <bool>true</bool>
@@ -56,8 +56,8 @@
       <iconset>
        <normaloff>Clockwise.svg</normaloff>Clockwise.svg</iconset>
      </property>
-     <property name="shortcut">
-      <string>,, C</string>
+     <property name="Shortcut">
+      <string>,C</string>
      </property>
      <property name="checkable">
       <bool>true</bool>

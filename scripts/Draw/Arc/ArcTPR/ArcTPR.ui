@@ -20,7 +20,7 @@
       <cstring>Radius</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, R</string>
+      <string>,R</string>
      </property>
     </widget>
    </item>

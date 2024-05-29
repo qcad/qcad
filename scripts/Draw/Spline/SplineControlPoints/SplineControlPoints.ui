@@ -29,8 +29,8 @@
       <iconset>
        <normaloff>Undo.svg</normaloff>Undo.svg</iconset>
      </property>
-     <property name="shortcut">
-      <string>,, U</string>
+     <property name="Shortcut">
+      <string>,U</string>
      </property>
     </widget>
    </item>
@@ -50,7 +50,7 @@
       <cstring>Degree</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, D</string>
+      <string>,D</string>
      </property>
     </widget>
    </item>
@@ -132,8 +132,8 @@
      <property name="text">
       <string>Closed</string>
      </property>
-     <property name="shortcut">
-      <string>,, C</string>
+     <property name="Shortcut">
+      <string>,C</string>
      </property>
     </widget>
    </item>

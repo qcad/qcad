@@ -32,7 +32,7 @@
       <cstring>Text</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, L</string>
+      <string>,L</string>
      </property>
     </widget>
    </item>
@@ -102,8 +102,8 @@
        <height>22</height>
       </size>
      </property>
-     <property name="shortcut">
-      <string>,, T</string>
+     <property name="Shortcut">
+      <string>,T</string>
      </property>
     </widget>
    </item>
@@ -159,8 +159,8 @@
        <height>22</height>
       </size>
      </property>
-     <property name="shortcut">
-      <string>,, O</string>
+     <property name="Shortcut">
+      <string>,O</string>
      </property>
     </widget>
    </item>
@@ -211,7 +211,7 @@
       <cstring>Scale</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, S</string>
+      <string>,S</string>
      </property>
     </widget>
    </item>
@@ -244,8 +244,8 @@
      <property name="text">
       <string>Auto</string>
      </property>
-     <property name="shortcut">
-      <string>,, A</string>
+     <property name="Shortcut">
+      <string>,A</string>
      </property>
     </widget>
    </item>

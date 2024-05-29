@@ -29,6 +29,8 @@ add_library(qcadcore SHARED
     RArcExporter.cpp RArcExporter.h
     RBlock.cpp RBlock.h
     RBlockListener.h
+    RKeyListener.h
+    RMainWindowProxy.h
     RBlockReferenceData.cpp RBlockReferenceData.h
     RBlockReferenceEntity.cpp RBlockReferenceEntity.h
     RColor.cpp RColor.h

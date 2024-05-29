@@ -705,11 +705,7 @@ EAction.prototype.escapeEvent = function() {
  * Called when the user presses a key. By default, the event is ignored.
  */
 EAction.prototype.keyPressEvent = function(event) {
-    if (isNull(event)) {
-        return;
-    }
-
-    OptionsToolBar.handleKeyPressEvent(event);
+    event.ignore();
 };
 
 /**

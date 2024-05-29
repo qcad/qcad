@@ -19,6 +19,12 @@
      <property name="text">
       <string>From:</string>
      </property>
+     <property name="buddy">
+      <cstring>From</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,F</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -72,6 +78,12 @@
      <property name="text">
       <string>To:</string>
      </property>
+     <property name="buddy">
+      <cstring>To</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,T</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -109,6 +121,9 @@
      <property name="icon">
       <iconset>
        <normaloff>Tick.svg</normaloff>Tick.svg</iconset>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,C</string>
      </property>
     </widget>
    </item>

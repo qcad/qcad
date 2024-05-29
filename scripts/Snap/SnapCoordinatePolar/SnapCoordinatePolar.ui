@@ -19,6 +19,9 @@
      <property name="buddy">
       <cstring>R</cstring>
      </property>
+     <property name="Shortcut" stdset="0">
+      <string>,,R</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -51,6 +54,9 @@
      <property name="buddy">
       <cstring>A</cstring>
      </property>
+     <property name="Shortcut" stdset="0">
+      <string>,,A</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -81,7 +87,10 @@
       <string>Tick for Relative Coordinate</string>
      </property>
      <property name="text">
-      <string>Relati&amp;ve</string>
+      <string>Relative</string>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,,R</string>
      </property>
     </widget>
    </item>

@@ -23,7 +23,7 @@
       <bool>true</bool>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, R</string>
+      <string>,R</string>
      </property>
     </widget>
    </item>
@@ -62,7 +62,7 @@
       <bool>true</bool>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, A</string>
+      <string>,A</string>
      </property>
     </widget>
    </item>
@@ -101,7 +101,7 @@
       <cstring>ReferencePoint</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, P</string>
+      <string>,P</string>
      </property>
     </widget>
    </item>

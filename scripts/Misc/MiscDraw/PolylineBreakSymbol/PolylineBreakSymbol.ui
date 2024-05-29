@@ -28,11 +28,11 @@
      <property name="text">
       <string>Remove Segment</string>
      </property>
-     <property name="shortcut">
-      <string>,, R</string>
-     </property>
      <property name="checked">
       <bool>true</bool>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,R</string>
      </property>
     </widget>
    </item>
@@ -54,11 +54,11 @@
      <property name="text">
       <string>Inherit</string>
      </property>
-     <property name="shortcut">
-      <string>,, I</string>
-     </property>
      <property name="checked">
       <bool>true</bool>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,I</string>
      </property>
     </widget>
    </item>
@@ -84,7 +84,7 @@
       <cstring>BreakRatio</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, P</string>
+      <string>,P</string>
      </property>
     </widget>
    </item>
@@ -174,14 +174,14 @@
       <iconset>
        <normaloff>IncSeg.svg</normaloff>IncSeg.svg</iconset>
      </property>
-     <property name="shortcut">
-      <string>,, 1</string>
-     </property>
      <property name="checkable">
       <bool>true</bool>
      </property>
      <property name="checked">
       <bool>true</bool>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,1</string>
      </property>
      <attribute name="buttonGroup">
       <string notr="true">IncVert</string>
@@ -203,11 +203,11 @@
       <iconset>
        <normaloff>VertSeg.svg</normaloff>VertSeg.svg</iconset>
      </property>
-     <property name="shortcut">
-      <string>,, 2</string>
-     </property>
      <property name="checkable">
       <bool>true</bool>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,2</string>
      </property>
      <attribute name="buttonGroup">
       <string notr="true">IncVert</string>

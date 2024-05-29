@@ -14,7 +14,10 @@
    <item>
     <widget class="QCheckBox" name="AddToDrawing">
      <property name="text">
-      <string>Add measurement to drawing</string>
+      <string>Add Measurement to Drawing</string>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,A</string>
      </property>
     </widget>
    </item>
@@ -31,7 +34,13 @@
       <bool>false</bool>
      </property>
      <property name="text">
-      <string>Text height:</string>
+      <string>Text Height:</string>
+     </property>
+     <property name="buddy">
+      <cstring>TextHeight</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,H</string>
      </property>
     </widget>
    </item>

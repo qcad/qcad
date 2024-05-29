@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>965</width>
+    <width>1009</width>
     <height>50</height>
    </rect>
   </property>
@@ -15,6 +15,12 @@
     <widget class="QLabel" name="label_2">
      <property name="text">
       <string>Rotation:</string>
+     </property>
+     <property name="buddy">
+      <cstring>Rotation</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,R</string>
      </property>
     </widget>
    </item>
@@ -134,9 +140,22 @@
     </widget>
    </item>
    <item>
+    <widget class="Line" name="line_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QLabel" name="label">
      <property name="text">
       <string>Scale:</string>
+     </property>
+     <property name="buddy">
+      <cstring>Scale</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,S</string>
      </property>
     </widget>
    </item>
@@ -229,6 +248,9 @@
      <property name="checkable">
       <bool>true</bool>
      </property>
+     <property name="Shortcut" stdset="0">
+      <string>,H</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -243,6 +265,16 @@
      <property name="checkable">
       <bool>true</bool>
      </property>
+     <property name="Shortcut" stdset="0">
+      <string>,V</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line_3">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
     </widget>
    </item>
    <item>
@@ -251,7 +283,10 @@
       <string>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</string>
      </property>
      <property name="text">
-      <string>Overwrite layers</string>
+      <string>Overwrite Layers</string>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,O</string>
      </property>
     </widget>
    </item>
@@ -261,7 +296,10 @@
       <string>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</string>
      </property>
      <property name="text">
-      <string>Overwrite blocks</string>
+      <string>Overwrite Blocks</string>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,B</string>
      </property>
     </widget>
    </item>
@@ -276,6 +314,12 @@
     <widget class="QLabel" name="AttributeLabel">
      <property name="text">
       <string notr="true">Attributes:</string>
+     </property>
+     <property name="buddy">
+      <cstring>AttributeTag</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,A</string>
      </property>
     </widget>
    </item>
@@ -292,6 +336,28 @@
        <width>120</width>
        <height>16777215</height>
       </size>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="AttributeEqualLabel">
+     <property name="maximumSize">
+      <size>
+       <width>20</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="text">
+      <string notr="true">=</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="buddy">
+      <cstring>AttributeValue</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,=</string>
      </property>
     </widget>
    </item>
@@ -319,7 +385,11 @@
     </widget>
    </item>
    <item>
-    <widget class="QToolButton" name="Reset"/>
+    <widget class="QToolButton" name="Reset">
+     <property name="Shortcut" stdset="0">
+      <string>,Q</string>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>

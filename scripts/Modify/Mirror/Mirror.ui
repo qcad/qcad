@@ -16,8 +16,8 @@
      <property name="text">
       <string>Copy</string>
      </property>
-     <property name="shortcut">
-      <string>,, C</string>
+     <property name="Shortcut">
+      <string>,C</string>
      </property>
     </widget>
    </item>
@@ -33,8 +33,8 @@
      <property name="text">
       <string>Use Current Layer and Attributes</string>
      </property>
-     <property name="shortcut">
-      <string>,, L</string>
+     <property name="Shortcut">
+      <string>,L</string>
      </property>
     </widget>
    </item>

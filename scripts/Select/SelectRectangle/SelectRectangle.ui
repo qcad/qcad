@@ -16,6 +16,12 @@
      <property name="text">
       <string>Mode:</string>
      </property>
+     <property name="Shortcut" stdset="0">
+      <string>,M</string>
+     </property>
+     <property name="AutoFocusWidget" stdset="0">
+      <string>SelectionMode</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -26,6 +32,9 @@
      <property name="icon">
       <iconset>
        <normaloff>../SelectionModeReplace.svg</normaloff>../SelectionModeReplace.svg</iconset>
+     </property>
+     <property name="Shortcut">
+      <string>,R</string>
      </property>
      <property name="checkable">
       <bool>true</bool>
@@ -50,6 +59,9 @@
       <iconset>
        <normaloff>../SelectionModeAdd.svg</normaloff>../SelectionModeAdd.svg</iconset>
      </property>
+     <property name="Shortcut">
+      <string>,A</string>
+     </property>
      <property name="checkable">
       <bool>true</bool>
      </property>
@@ -70,6 +82,9 @@
       <iconset>
        <normaloff>../SelectionModeRemove.svg</normaloff>../SelectionModeRemove.svg</iconset>
      </property>
+     <property name="Shortcut">
+      <string>,S</string>
+     </property>
      <property name="checkable">
       <bool>true</bool>
      </property>
@@ -89,6 +104,9 @@
      <property name="icon">
       <iconset>
        <normaloff>../SelectionModeIntersect.svg</normaloff>../SelectionModeIntersect.svg</iconset>
+     </property>
+     <property name="Shortcut">
+      <string>,I</string>
      </property>
      <property name="checkable">
       <bool>true</bool>
@@ -113,6 +131,9 @@
      <property name="text">
       <string>Cross Selection</string>
      </property>
+     <property name="Shortcut">
+      <string>,C</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -123,7 +144,11 @@
     </widget>
    </item>
    <item>
-    <widget class="QToolButton" name="Reset"/>
+    <widget class="QToolButton" name="Reset">
+     <property name="Shortcut">
+      <string>,Q</string>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>

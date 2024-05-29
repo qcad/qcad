@@ -97,6 +97,8 @@ PrintPreview.start = function(initialAction, instance) {
             qsTr("The paper size is set to a custom size (%1x%2mm). Do you want to change it to the default paper size of your printer (%3)?").arg(paperSizeMM.width()).arg(paperSizeMM.height()).arg(defaultPaperSizeName),
             buttons
         );
+        // workaround for Qt keyboard focus bug:
+        appWin.activateWindow();
         if (ret===QMessageBox.Yes) {
             var paperUnit = Print.getPaperUnit(doc);
             var defPaperSize = Print.getDefaultPaperSizeMM();
@@ -132,6 +134,8 @@ PrintPreview.start = function(initialAction, instance) {
                 qsTr("Auto fit"),
                 qsTr("Auto fit drawing to paper?"),
                 buttons);
+            // workaround for Qt keyboard focus bug:
+            appWin.activateWindow();
             if (ret===QMessageBox.Yes) {
                 appWin.setProperty("PrintPreview/InitialZoom", "Auto");
             }
@@ -149,7 +153,6 @@ PrintPreview.start = function(initialAction, instance) {
     }
 
     appWin.enabled = true;
-
 };
 
 /**
@@ -582,8 +585,7 @@ PrintPreviewImpl.prototype.showUiOptions = function(resume) {
  * Initializes the scale combo box in the options toolbar with defaults.
  */
 PrintPreviewImpl.prototype.initUiOptions = function(resume, optionsToolBar) {
-    //EAction.prototype.initUiOptions.call(this, resume, optionsToolBar);
-
+    EAction.prototype.initUiOptions.call(this, resume, optionsToolBar);
     this.initScaleCombo();
 };
 

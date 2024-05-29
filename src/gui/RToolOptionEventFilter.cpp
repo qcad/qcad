@@ -31,7 +31,6 @@ RToolOptionEventFilter::RToolOptionEventFilter(QObject* parent) {
 
 bool RToolOptionEventFilter::eventFilter(QObject* obj, QEvent* event) {
     if (event->type() == QEvent::KeyPress || event->type() == QEvent::KeyRelease) {
-        qDebug() << "RToolOptionEventFilter::eventFilter";
         QKeyEvent* keyEvent = static_cast<QKeyEvent*>(event);
         if (keyEvent->key() == Qt::Key_Tab || keyEvent->key() == Qt::Key_Backtab) {
 
@@ -40,7 +39,6 @@ bool RToolOptionEventFilter::eventFilter(QObject* obj, QEvent* event) {
             if (event->type() == QEvent::KeyPress) {
                 RMainWindowQt* appWin = RMainWindowQt::getMainWindow();
                 if (appWin!=NULL) {
-                    qDebug() << "fwd to main win";
                     appWin->handleTabKey(obj, keyEvent->key()==Qt::Key_Backtab);
                 }
             }

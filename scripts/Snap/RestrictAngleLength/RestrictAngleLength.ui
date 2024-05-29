@@ -6,75 +6,18 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>674</width>
-    <height>46</height>
+    <width>707</width>
+    <height>45</height>
    </rect>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
-    <widget class="QCheckBox" name="RestrictAngle">
-     <property name="text">
-      <string>Angle:</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="RMathLineEdit" name="Angle">
-     <property name="text">
-      <string notr="true">1</string>
-     </property>
-     <property name="angle" stdset="0">
-      <bool>true</bool>
-     </property>
-     <property name="defaultValue" stdset="0">
-      <double>1.000000000000000</double>
-     </property>
-     <property name="nomeasurements" stdset="0">
-      <bool>true</bool>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QLabel" name="label">
-     <property name="text">
-      <string>Base:</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="RMathLineEdit" name="BaseAngle">
-     <property name="text">
-      <string notr="true">0</string>
-     </property>
-     <property name="angle" stdset="0">
-      <bool>true</bool>
-     </property>
-     <property name="defaultValue" stdset="0">
-      <double>1.000000000000000</double>
-     </property>
-     <property name="nomeasurements" stdset="0">
-      <bool>true</bool>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QCheckBox" name="RepeatAngle">
-     <property name="text">
-      <string>Multiples</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="Line" name="line">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-    </widget>
-   </item>
-   <item>
     <widget class="QCheckBox" name="RestrictLength">
      <property name="text">
       <string>Distance:</string>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,,D</string>
      </property>
     </widget>
    </item>
@@ -99,6 +42,12 @@
      <property name="text">
       <string>Base:</string>
      </property>
+     <property name="buddy">
+      <cstring>BaseLength</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,,B</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -121,6 +70,84 @@
     <widget class="QCheckBox" name="RepeatLength">
      <property name="text">
       <string>Multiples</string>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,,M</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="RestrictAngle">
+     <property name="text">
+      <string>Angle:</string>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,,A</string>
+     </property>
+     <property name="AutoFocusWidget" stdset="0">
+      <string>Angle</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="RMathLineEdit" name="Angle">
+     <property name="text">
+      <string notr="true">1</string>
+     </property>
+     <property name="angle" stdset="0">
+      <bool>true</bool>
+     </property>
+     <property name="defaultValue" stdset="0">
+      <double>1.000000000000000</double>
+     </property>
+     <property name="nomeasurements" stdset="0">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Base:</string>
+     </property>
+     <property name="buddy">
+      <cstring>BaseAngle</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,,E</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="RMathLineEdit" name="BaseAngle">
+     <property name="text">
+      <string notr="true">0</string>
+     </property>
+     <property name="angle" stdset="0">
+      <bool>true</bool>
+     </property>
+     <property name="defaultValue" stdset="0">
+      <double>1.000000000000000</double>
+     </property>
+     <property name="nomeasurements" stdset="0">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="RepeatAngle">
+     <property name="text">
+      <string>Multiples</string>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,,T</string>
      </property>
     </widget>
    </item>

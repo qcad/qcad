@@ -20,7 +20,7 @@
       <cstring>DovetailNumber</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, N</string>
+      <string>,N</string>
      </property>
     </widget>
    </item>
@@ -53,7 +53,7 @@
       <cstring>DovetailHeight</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, H</string>
+      <string>,H</string>
      </property>
     </widget>
    </item>
@@ -85,11 +85,8 @@
      <property name="buddy">
       <cstring>DovetailGradient</cstring>
      </property>
-     <property name=",, G" stdset="0">
-      <string/>
-     </property>
      <property name="Shortcut" stdset="0">
-      <string>,, G</string>
+      <string>,G</string>
      </property>
     </widget>
    </item>
@@ -121,11 +118,8 @@
      <property name="buddy">
       <cstring>PinRatio</cstring>
      </property>
-     <property name=",, R" stdset="0">
-      <string/>
-     </property>
      <property name="Shortcut" stdset="0">
-      <string>,, R</string>
+      <string>,R</string>
      </property>
     </widget>
    </item>

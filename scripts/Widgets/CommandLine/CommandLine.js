@@ -456,6 +456,8 @@ CommandLine.init = function(basePath) {
         appendAndScroll("<span style='color:" + CommandLine.red + ";'>" + message + "</span>");
         if (RSettings.getBoolValue("CommandLine/WarningsAsDialog", false) || messageBox) {
             QMessageBox.warning(appWin, qsTr("Warning"), message);
+            // workaround for Qt keyboard focus bug:
+            appWin.activateWindow();
         }
     });
 
@@ -468,6 +470,8 @@ CommandLine.init = function(basePath) {
         appendAndScroll("<span style='color:" + CommandLine.infoBlue + ";'>" + message + "</span>");
         if (RSettings.getBoolValue("CommandLine/InfoAsDialog", false)) {
             QMessageBox.information(appWin, qsTr("Info"), message);
+            // workaround for Qt keyboard focus bug:
+            appWin.activateWindow();
         }
     });
 

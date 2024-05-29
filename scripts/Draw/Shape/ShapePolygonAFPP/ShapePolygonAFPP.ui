@@ -20,7 +20,7 @@
       <cstring>Corners</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, C</string>
+      <string>,C</string>
      </property>
     </widget>
    </item>
@@ -43,8 +43,8 @@
      <property name="text">
       <string>Corner to Corner</string>
      </property>
-     <property name="shortcut">
-      <string>,, T</string>
+     <property name="Shortcut">
+      <string>,T</string>
      </property>
     </widget>
    </item>

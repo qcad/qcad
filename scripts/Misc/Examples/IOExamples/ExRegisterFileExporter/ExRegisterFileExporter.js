@@ -121,6 +121,8 @@ ExRegisterFileExporter.prototype.beginEvent = function() {
         qsTr("Info"),
         qsTr("Registered a file exporter for file type \".example\". Use File > Save As to see the filter in action.")
     );
+    // workaround for Qt keyboard focus bug:
+    appWin.activateWindow();
 };
 
 

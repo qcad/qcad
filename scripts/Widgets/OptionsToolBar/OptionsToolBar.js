@@ -203,15 +203,11 @@ OptionsToolBar.initShortcuts = function(optionsToolBar) {
                 continue;
             }
 
-            // widgets with shortcut property (e.g. QCheckbox used as a label):
-            child.shortcut = new QKeySequence();
+            if (!isNull(child.shortcut)) {
+                // widgets with shortcut property (e.g. QCheckbox used as a label):
+                child.shortcut = new QKeySequence();
+            }
         }
-    }
-};
-
-OptionsToolBar.handleKeyPressEvent = function(event) {
-    if (hasPlugin("PROTOOLS")) {
-        OptionsToolBarPro.handleKeyPressEvent(event);
     }
 };
 

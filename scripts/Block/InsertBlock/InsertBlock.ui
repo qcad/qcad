@@ -20,7 +20,7 @@
       <cstring>Rotation</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, R</string>
+      <string>,R</string>
      </property>
     </widget>
    </item>
@@ -155,7 +155,7 @@
       <cstring>ScaleX</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, X</string>
+      <string>,X</string>
      </property>
     </widget>
    </item>
@@ -248,7 +248,7 @@
       <cstring>ScaleY</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, Y</string>
+      <string>,Y</string>
      </property>
     </widget>
    </item>
@@ -341,14 +341,14 @@
       <iconset>
        <normaloff>KeepProportionsOn.svg</normaloff>KeepProportionsOn.svg</iconset>
      </property>
-     <property name="shortcut">
-      <string>,, K</string>
-     </property>
      <property name="checkable">
       <bool>true</bool>
      </property>
      <property name="checked">
       <bool>true</bool>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,K</string>
      </property>
     </widget>
    </item>
@@ -368,8 +368,8 @@
       <iconset>
        <normaloff>FlipHorizontal.svg</normaloff>FlipHorizontal.svg</iconset>
      </property>
-     <property name="shortcut">
-      <string>,, H</string>
+     <property name="Shortcut" stdset="0">
+      <string>,H</string>
      </property>
     </widget>
    </item>
@@ -382,8 +382,8 @@
       <iconset>
        <normaloff>FlipVertical.svg</normaloff>FlipVertical.svg</iconset>
      </property>
-     <property name="shortcut">
-      <string>,, V</string>
+     <property name="Shortcut" stdset="0">
+      <string>,V</string>
      </property>
     </widget>
    </item>
@@ -403,14 +403,14 @@
       <iconset>
        <normaloff>SingleBlock.svg</normaloff>SingleBlock.svg</iconset>
      </property>
-     <property name="shortcut">
-      <string>,, 1</string>
-     </property>
      <property name="checkable">
       <bool>false</bool>
      </property>
      <property name="checked">
       <bool>false</bool>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,1</string>
      </property>
     </widget>
    </item>
@@ -423,14 +423,14 @@
       <iconset>
        <normaloff>ArrayOfBlocks.svg</normaloff>ArrayOfBlocks.svg</iconset>
      </property>
-     <property name="shortcut">
-      <string>,, 2</string>
-     </property>
      <property name="checkable">
       <bool>false</bool>
      </property>
      <property name="checked">
       <bool>false</bool>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,2</string>
      </property>
     </widget>
    </item>
@@ -450,7 +450,7 @@
       <cstring>AttributeTag</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, A</string>
+      <string>,A</string>
      </property>
     </widget>
    </item>
@@ -519,7 +519,11 @@
     </widget>
    </item>
    <item>
-    <widget class="QToolButton" name="Reset"/>
+    <widget class="QToolButton" name="Reset">
+     <property name="Shortcut" stdset="0">
+      <string>,Q</string>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>

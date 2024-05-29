@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>141</width>
+    <width>143</width>
     <height>37</height>
    </rect>
   </property>
@@ -15,6 +15,9 @@
     <widget class="QCheckBox" name="RemoveSegment">
      <property name="text">
       <string>Remove Segment</string>
+     </property>
+     <property name="Shortcut">
+      <string>,R</string>
      </property>
      <property name="checked">
       <bool>true</bool>

@@ -20,7 +20,7 @@
       <cstring>Radius</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, R</string>
+      <string>,R</string>
      </property>
     </widget>
    </item>
@@ -53,7 +53,7 @@
       <string>Direction</string>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, D</string>
+      <string>,D</string>
      </property>
     </widget>
    </item>
@@ -66,14 +66,14 @@
       <iconset>
        <normaloff>CounterClockwise.svg</normaloff>CounterClockwise.svg</iconset>
      </property>
-     <property name="shortcut">
-      <string>,, T</string>
-     </property>
      <property name="checkable">
       <bool>true</bool>
      </property>
      <property name="checked">
       <bool>true</bool>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,T</string>
      </property>
      <attribute name="buttonGroup">
       <string notr="true">Direction</string>
@@ -89,11 +89,11 @@
       <iconset>
        <normaloff>Clockwise.svg</normaloff>Clockwise.svg</iconset>
      </property>
-     <property name="shortcut">
-      <string>,, C</string>
-     </property>
      <property name="checkable">
       <bool>true</bool>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,C</string>
      </property>
      <attribute name="buttonGroup">
       <string notr="true">Direction</string>
@@ -113,7 +113,7 @@
       <string>Solution:</string>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, S</string>
+      <string>,S</string>
      </property>
      <property name="AutoFocusWidget" stdset="0">
       <string>Solution</string>
@@ -129,14 +129,14 @@
       <iconset>
        <normaloff>Solution1.svg</normaloff>Solution1.svg</iconset>
      </property>
-     <property name="shortcut">
-      <string>,, 1</string>
-     </property>
      <property name="checkable">
       <bool>true</bool>
      </property>
      <property name="checked">
       <bool>true</bool>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,1</string>
      </property>
      <attribute name="buttonGroup">
       <string notr="true">Solution</string>
@@ -152,11 +152,11 @@
       <iconset>
        <normaloff>Solution2.svg</normaloff>Solution2.svg</iconset>
      </property>
-     <property name="shortcut">
-      <string>,, 2</string>
-     </property>
      <property name="checkable">
       <bool>true</bool>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,2</string>
      </property>
      <attribute name="buttonGroup">
       <string notr="true">Solution</string>
@@ -175,7 +175,7 @@
  <resources/>
  <connections/>
  <buttongroups>
-  <buttongroup name="Solution"/>
   <buttongroup name="Direction"/>
+  <buttongroup name="Solution"/>
  </buttongroups>
 </ui>

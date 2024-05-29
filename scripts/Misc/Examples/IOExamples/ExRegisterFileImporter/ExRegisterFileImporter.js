@@ -126,6 +126,8 @@ ExRegisterFileImporter.prototype.beginEvent = function() {
         qsTr("Info"),
         qsTr("Registered a file importer for file type \".example\". Use File > Open to see the filter in action.")
     );
+    // workaround for Qt keyboard focus bug:
+    appWin.activateWindow();
 };
 
 

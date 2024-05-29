@@ -46,7 +46,6 @@ RMathLineEdit::RMathLineEdit(QWidget* parent) :
 
     connect(this, SIGNAL(textChanged(QString)), this, SLOT(slotTextChanged(QString)));
     connect(this, SIGNAL(textEdited(QString)), this, SLOT(slotTextEdited(QString)));
-    //connect(this, SIGNAL(returnPressed()), this, SLOT(slotEnterKeyPressed()));
 }
 
 //int RMathLineEdit::getDefaultUnit() {
@@ -309,18 +308,12 @@ void RMathLineEdit::setTextColor(bool error) {
 }
 
 void RMathLineEdit::keyPressEvent(QKeyEvent* event) {
-    qDebug() << "RMathLineEdit::keyPressEvent";
     if (event->key()==Qt::Key_Up) {
         emit upKeyPressed();
     }
     else if (event->key()==Qt::Key_Down) {
         emit downKeyPressed();
     }
-    //else if (event->key()==Qt::Key_Enter || event->key()==Qt::Key_Return) {
-    //    deselect();
-    //    emit enterKeyPressed();
-    //    QLineEdit::keyPressEvent(event);
-    //}
     else {
         QLineEdit::keyPressEvent(event);
     }

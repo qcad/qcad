@@ -19,6 +19,9 @@
      <property name="buddy">
       <cstring>X</cstring>
      </property>
+     <property name="Shortcut" stdset="0">
+      <string>,,X</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -51,6 +54,9 @@
      <property name="buddy">
       <cstring>Y</cstring>
      </property>
+     <property name="Shortcut" stdset="0">
+      <string>,,Y</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -82,6 +88,9 @@
      </property>
      <property name="text">
       <string>Relati&amp;ve</string>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,,R</string>
      </property>
     </widget>
    </item>

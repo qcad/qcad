@@ -18,6 +18,7 @@
  */
 #include <QtGui>
 //#include <QDesktopWidget>
+#include <QCheckBox>
 #include <QComboBox>
 #include <QSpinBox>
 #include <QLabel>
@@ -132,121 +133,6 @@ void RMainWindowQt::handleUserWarning(const QString& message, bool messageBox, b
 
 void RMainWindowQt::handleUserCommand(const QString& message, bool escape) {
     emit userCommand(message, escape);
-}
-
-/**
- * Handle enter key when pressed from widget in the options toolbar.
- */
-void RMainWindowQt::handleEnterKey(QObject* obj) {
-    // hand keyboard focus to graphics view:
-    RDocumentInterface* di = getDocumentInterface();
-    if (di!=NULL) {
-        RGraphicsView* gv = di->getLastKnownViewWithFocus();
-        if (gv!=NULL) {
-            QWidget* w = gv->getWidget();
-            if (w!=NULL) {
-                // deselect text in widget:
-                QLineEdit* le = qobject_cast<QLineEdit*>(obj);
-                if (le!=NULL) {
-                    le->clearFocus();
-                }
-
-                QSpinBox* sb = qobject_cast<QSpinBox*>(obj);
-                if (sb!=NULL) {
-                    sb->clearFocus();
-                }
-
-                QComboBox* cb = qobject_cast<QComboBox*>(obj);
-                if (cb!=NULL) {
-                    cb->clearFocus();
-                }
-
-                // set focus to graphics view:
-                w->setFocus(Qt::ActiveWindowFocusReason);
-            }
-        }
-    }
-}
-
-/**
- * Handle tab key that was suppressed and ignored by a child widget (e.g. line edit in options toolar).
- */
-void RMainWindowQt::handleTabKey(QObject* obj, bool backTab) {
-    qDebug() << "RMainWindowQt::handleTabKey";
-    if (obj==NULL) {
-        return;
-    }
-
-    QWidget* objWidget = qobject_cast<QWidget*>(obj);
-    if (objWidget==NULL) {
-        return;
-    }
-
-    QObject* parent = obj->parent();
-    QWidget* parentWidget = qobject_cast<QWidget*>(parent);
-    if (parentWidget==NULL) {
-        return;
-    }
-
-    QWidget* optionsToolBarWidget = findChild<QWidget*>("Options");
-    if (optionsToolBarWidget==NULL) {
-        return;
-    }
-
-    int bestPos = -1;
-    QWidget* nextWidget = NULL;
-    QPoint pos = objWidget->mapToParent(QPoint(0,0));
-
-    // find next child that can handle keyboard focus:
-    QObjectList siblings = optionsToolBarWidget->children();
-    for (int i=0; i<siblings.length(); i++) {
-        QObject* sibling = siblings[i];
-        if (sibling==obj) {
-            // object self
-            continue;
-        }
-
-        QWidget* siblingWidget = qobject_cast<QWidget*>(sibling);
-        if (siblingWidget==NULL) {
-            // sibling is not a widget:
-            continue;
-        }
-
-        if (!siblingWidget->isVisible()) {
-            // sibling is not visible:
-            continue;
-        }
-
-        if (qobject_cast<QLineEdit*>(siblingWidget)==NULL &&
-            qobject_cast<QComboBox*>(siblingWidget)==NULL &&
-            qobject_cast<QSpinBox*>(siblingWidget)==NULL) {
-            continue;
-        }
-
-        // position of sibling:
-        QPoint siblingPos = siblingWidget->mapToParent(QPoint(0,0));
-
-        if (backTab) {
-            if (siblingPos.x() < pos.x()) {
-                if (siblingPos.x() > bestPos || bestPos==-1) {
-                    bestPos = siblingPos.x();
-                    nextWidget = siblingWidget;
-                }
-            }
-        }
-        else {
-            if (siblingPos.x() > pos.x()) {
-                if (siblingPos.x() < bestPos || bestPos==-1) {
-                    bestPos = siblingPos.x();
-                    nextWidget = siblingWidget;
-                }
-            }
-        }
-    }
-
-    if (nextWidget!=NULL) {
-        nextWidget->setFocus(Qt::TabFocusReason);
-    }
 }
 
 void RMainWindowQt::postSelectionChangedEvent() {
@@ -393,12 +279,12 @@ void RMainWindowQt::updateScenes(QMdiSubWindow* mdiChild) {
 }
 
 void RMainWindowQt::closeEvent(QCloseEvent* e) {
-    // Part 2 of workaround for Qt 5.6.1, 5.6.2, 5.15.0 bug:
+    // Part 2 of workaround for Qt 5.6.1, 5.6.2, 5.15.0, 6.x bug:
     // dock widget closes before close dialog is shown
     // dock widget state not persistent between sessions
     // dock widget closes if user cancels close dialog
 #ifdef Q_OS_MAC
-#if (QT_VERSION >= 0x050601 && QT_VERSION <= 0x050602) || (QT_VERSION >= 0x050F00 && QT_VERSION < 0x060000)
+#if (QT_VERSION >= 0x050601 && QT_VERSION <= 0x050602) || (QT_VERSION >= 0x050F00/* && QT_VERSION < 0x060000*/)
     // restore dock widgets that were already closed by the same event due to
     // a Qt bug:
     QString eventAddr = QString("0x%1").arg((qlonglong)e, 0, 16);
@@ -406,10 +292,17 @@ void RMainWindowQt::closeEvent(QCloseEvent* e) {
     for (int i=0; i<closedDocks.length(); i++) {
         QString closedDock = closedDocks[i];
         if (closedDock.startsWith(eventAddr + "|")) {
-            QString objName = closedDock.split("|").at(1);
+            QStringList tuples = closedDock.split("|");
+            if (tuples.length()!=3) {
+                qWarning() << "unexpected value in ClosedDocks:" << closedDocks;
+                continue;
+            }
+            QString objName = tuples.at(1);
+            int x = tuples.at(2).toInt();
             QWidget* w = findChild<QWidget*>(objName);
             if (w) {
                 w->setVisible(true);
+                w->move(x, w->y());
             }
         }
     }
@@ -696,23 +589,24 @@ bool RMainWindowQt::readSettings() {
         statusBar()->hide();
     }
 
-    // get total available width on all screens:
-    int totalWidth = 0;
-    for (int i=0; i<RS::getScreenCount(); i++) {
-        totalWidth+=RS::getAvailableGeometry(i).width();
-    }
+    // sanity check:
+    const QList<QScreen*> screens = QGuiApplication::screens();
+    const QList<QWidget*> topLevelWidgets = QApplication::topLevelWidgets();
 
-    // sanity check for x:
-    if (x()>totalWidth-100) {
-        move(totalWidth-width(), y());
-    }
+    for (int i=0; i<topLevelWidgets.length(); i++) {
+        bool sane = false;
+        QWidget* widget = topLevelWidgets[i];
 
-    // make sure all tool bars are visible:
-    QList<QToolBar*> tbs = findChildren<QToolBar*>();
-    for (int i=0; i<tbs.length(); i++) {
-        QToolBar* tb = tbs[i];
-        if (tb->x()>totalWidth-50) {
-            tb->move(totalWidth - tb->width(), tb->y());
+        QRect widgetRect = widget->frameGeometry();
+        for (int k=0; k<screens.length(); k++) {
+            QScreen* screen = screens[k];
+            if (screen->geometry().intersects(widgetRect)) {
+                sane = true;
+            }
+        }
+
+        if (!sane) {
+            widget->move(0,0);
         }
     }
 
@@ -724,6 +618,7 @@ bool RMainWindowQt::readSettings() {
  */
 void RMainWindowQt::writeSettings() {
     RMainWindow::writeSettings();
+
     RSettings::getQSettings()->setValue("Appearance/DockappWindows", saveState());
     RSettings::getQSettings()->setValue("Appearance/FullScreen", isFullScreen());
     RSettings::getQSettings()->setValue("Appearance/Maximized", isMaximized());
@@ -753,6 +648,16 @@ void RMainWindowQt::clearKeyLog() {
 bool RMainWindowQt::event(QEvent* e) {
     if (e==NULL) {
         return false;
+    }
+
+    if (e->type()==QEvent::ScreenChangeInternal) {
+        RDocumentInterface* di = getDocumentInterface();
+        if (di!=NULL) {
+            RGraphicsView* gv = di->getLastKnownViewWithFocus();
+            if (gv!=NULL) {
+                gv->regenerate();
+            }
+        }
     }
 
     if (e->type()==QEvent::WindowActivate) {
@@ -851,10 +756,18 @@ bool RMainWindowQt::event(QEvent* e) {
                         keyLog.clear();
                     }
                     keyLog += QChar(ke->key());
-                    if (RGuiAction::triggerByShortcut(keyLog)) {
+                    //qDebug() << "keyLog:" << keyLog;
+
+                    if (mainWindowProxy && mainWindowProxy->handleOptionsShortcut(keyLog)) {
+                        // shortcut for options toolbar:
+                        keyLog.clear();
+                    }
+                    else if (RGuiAction::triggerByShortcut(keyLog)) {
+                        // shortcut for tool:
                         keyLog.clear();
                     }
                     else {
+                        // wait for additional keystrokes:
                         keyTimeOut.restart();
                     }
                 }
