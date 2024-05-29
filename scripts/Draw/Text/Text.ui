@@ -20,7 +20,7 @@
       <cstring>Contents</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, T</string>
+      <string>,T</string>
      </property>
     </widget>
    </item>
@@ -34,6 +34,9 @@
      </property>
      <property name="text">
       <string notr="true"/>
+     </property>
+     <property name="NoNumberHint" stdset="0">
+      <bool>true</bool>
      </property>
     </widget>
    </item>
@@ -53,7 +56,7 @@
       <cstring>Height</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, H</string>
+      <string>,H</string>
      </property>
     </widget>
    </item>
@@ -86,7 +89,7 @@
       <cstring>Angle</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,, A</string>
+      <string>,A</string>
      </property>
     </widget>
    </item>
