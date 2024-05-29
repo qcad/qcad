@@ -29,8 +29,8 @@
       <iconset>
        <normaloff>Undo.svg</normaloff>Undo.svg</iconset>
      </property>
-     <property name="shortcut">
-      <string>,, U</string>
+     <property name="Shortcut">
+      <string>,U</string>
      </property>
     </widget>
    </item>
@@ -39,8 +39,8 @@
      <property name="text">
       <string>Arrow head</string>
      </property>
-     <property name="shortcut">
-      <string>,, A</string>
+     <property name="Shortcut">
+      <string>,A</string>
      </property>
      <property name="checked">
       <bool>true</bool>
