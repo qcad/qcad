@@ -16,6 +16,9 @@
      <property name="text">
       <string>Trim</string>
      </property>
+     <property name="Shortcut">
+      <string>,T</string>
+     </property>
      <property name="checked">
       <bool>true</bool>
      </property>
@@ -35,6 +38,9 @@
      </property>
      <property name="buddy">
       <cstring>Radius</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,R</string>
      </property>
     </widget>
    </item>
