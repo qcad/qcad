@@ -98,6 +98,10 @@ Save.prototype.save = function(fileName, fileVersion, overwriteWarning) {
                         appWin,
                         qsTr("Overwrite File?"),
                         qsTr("The file \"%1\" already exists. Do you wish to overwrite it?").arg(fileName), buttons);
+
+            // workaround for Qt keyboard focus bug:
+            appWin.activateWindow();
+
             if (ret!=QMessageBox.Yes) {
                 saveAs = true;
             }

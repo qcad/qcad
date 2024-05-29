@@ -34,12 +34,15 @@ FlushBackLog.prototype.beginEvent = function() {
     var di = this.getDocumentInterface();
     if (!isNull(di)) {
         var buttons = makeQMessageBoxStandardButtons(QMessageBox.Yes, QMessageBox.Cancel);
-        var ret = QMessageBox.warning(EAction.getMainWindow(),
+        var appWin = EAction.getMainWindow();
+        var ret = QMessageBox.warning(appWin,
             qsTr("Flush Undo History"),
             qsTr("Are you sure that you want to flush the undo / redo transaction history?") + " " +
             qsTr("This cannot be undone."),
             buttons
         );
+        // workaround for Qt keyboard focus bug:
+        appWin.activateWindow();
         if (ret===QMessageBox.Yes) {
             di.flushTransactions();
         }

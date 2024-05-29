@@ -84,6 +84,8 @@ DirectoryList.prototype.doInit = function(pageWidget, listWidgetName, fileDlgTit
             var text = qsTr("The folder\n\"%1\"\nis already in the list.").arg(dir);
             var appWin = EAction.getMainWindow();
             QMessageBox.information(appWin, qsTr("Folder not added"), text);
+            // workaround for Qt keyboard focus bug:
+            appWin.activateWindow();
         }
         this.checkButtonStatus(listWidget, widgets);
     });
