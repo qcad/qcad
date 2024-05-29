@@ -368,6 +368,7 @@ private:
     static int maxReferencePointEntitiesDisplay;
     static int propertyEditorShowOnRequest;
     static int simpleTextAlignLeft;
+    static double devicePixelRatio;
     static QString polarCoordinateSeparator;
     static QString cartesianCoordinateSeparator;
     static QString relativeCoordinatePrefix;

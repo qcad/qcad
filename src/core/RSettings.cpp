@@ -102,6 +102,7 @@ int RSettings::maxReferencePointEntities = -1;
 int RSettings::maxReferencePointEntitiesDisplay = -1;
 int RSettings::propertyEditorShowOnRequest = -1;
 int RSettings::simpleTextAlignLeft = -1;
+double RSettings::devicePixelRatio = -1.0;
 QString RSettings::polarCoordinateSeparator = QString();
 QString RSettings::cartesianCoordinateSeparator = QString();
 QString RSettings::relativeCoordinatePrefix = QString();
@@ -142,18 +143,36 @@ QString RSettings::getAppId() {
  * \return Device pixel ratio of the display. Usually 1 or 2 (for retina/high res displays).
  */
 double RSettings::getDevicePixelRatio() {
+    if (devicePixelRatio>0.0) {
+        return devicePixelRatio;
+    }
+
     // DPR can be overridden in settings:
-    int dpr = RSettings::getIntValue("Appearance/DevicePixelRatio", 0);
-    if (dpr>0) {
-        return dpr;
+    devicePixelRatio = RSettings::getIntValue("Appearance/DevicePixelRatio", -1.0);
+    if (devicePixelRatio>0.0) {
+        return devicePixelRatio;
     }
 
 #if QT_VERSION >= 0x050000
-    QWindow* window = QGuiApplication::focusWindow();
-    if (window!=NULL) {
-        return window->devicePixelRatio();
+//    QWindow* window = QGuiApplication::focusWindow();
+//    if (window!=NULL) {
+//        return window->devicePixelRatio();
+//    }
+    QWindowList windowList = QGuiApplication::topLevelWindows();
+    for (int i=0; i<windowList.length(); i++) {
+        QWindow* window = windowList[i];
+        if (window->type()==Qt::Window) {
+            devicePixelRatio = window->devicePixelRatio();
+            return devicePixelRatio;
+        }
     }
-    return qApp->devicePixelRatio();
+
+//    QWindow* window = QGuiApplication::focusWindow();
+//    if (window!=NULL) {
+//        return window->devicePixelRatio();
+//    }
+    devicePixelRatio = qApp->devicePixelRatio();
+    return devicePixelRatio;
 #else
     return 1.0;
 #endif
