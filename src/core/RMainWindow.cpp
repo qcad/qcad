@@ -796,17 +796,11 @@ bool RMainWindow::readSettings() {
     int y = RSettings::getQSettings()->value("Appearance/Position.Y", -1).toInt();
     width = RSettings::getQSettings()->value("Appearance/Width", width).toInt();
     height = RSettings::getQSettings()->value("Appearance/Height", height).toInt();
-    if (x>=0 && y>=0) {
-        move(x, y);
-        ret = true;
-    }
-    else {
-        x = desktopRect.width()*((1.0-factor)/2);
-        y = desktopRect.height()*((1.0-factor)/2);
-        move(x,y);
-    }
 
+    move(x, y);
     resize(width, height);
+    ret = true;
+
     return ret;
 }
 
@@ -814,8 +808,8 @@ bool RMainWindow::readSettings() {
  * Stores the application window settings (size, position, ...).
  */
 void RMainWindow::writeSettings() {
-    RSettings::getQSettings()->setValue("Appearance/Position.X", qMax(0, getPositionX()));
-    RSettings::getQSettings()->setValue("Appearance/Position.Y", qMax(0, getPositionY()));
+    RSettings::getQSettings()->setValue("Appearance/Position.X", getPositionX());
+    RSettings::getQSettings()->setValue("Appearance/Position.Y", getPositionY());
     RSettings::getQSettings()->setValue("Appearance/Width", getWidth());
     RSettings::getQSettings()->setValue("Appearance/Height", getHeight());
     RSettings::getQSettings()->sync();

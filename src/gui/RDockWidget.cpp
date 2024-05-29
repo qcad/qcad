@@ -48,7 +48,7 @@ void RDockWidget::hideEvent(QHideEvent* event) {
     QDockWidget::hideEvent(event);
 }
 
-// Part 2 of workaround for Qt 5.6.1, 5.6.2, 5.15.0 bug:
+// Part 1 of workaround for Qt 5.6.1, 5.6.2, 5.15.0, 6.x bug:
 // dock widget closes before close dialog is shown
 // dock widget state not persistent between sessions
 // dock widget closes if user cancels close dialog
@@ -58,8 +58,17 @@ void RDockWidget::closeEvent(QCloseEvent* event) {
     // remember that this dock was closed by this event:
     RMainWindowQt* mw = RMainWindowQt::getMainWindow();
     if (mw) {
+        // create ClosedDocks property with format:
+        // 0x...|WidgetName1|x, 0x...|WidgetName2|x, ...
+        // 0x... is the address of the close event
+        // x is the X coordinate of the dock widget
         QStringList closedDocks = mw->property("ClosedDocks").toStringList();
-        closedDocks.append(QString("0x%1|%2").arg((qulonglong)event, 0, 16).arg(objectName()));
+        closedDocks.append(
+            QString("0x%1|%2|%3")
+                .arg((qulonglong)event, 0, 16)
+                .arg(objectName())
+                .arg(x())
+        );
         mw->setProperty("ClosedDocks", closedDocks);
     }
     QDockWidget::closeEvent(event);
