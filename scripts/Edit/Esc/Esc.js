@@ -35,7 +35,7 @@ Esc.prototype.beginEvent = function() {
 
     // focus in RMathLineEdit (e.g. in options toolbar)
     // return focus to graphics view:
-    if (isOfType(w, RMathLineEdit) || isOfType(w, QSpinBox)) {
+    if (isOfType(w, RMathLineEdit) || isOfType(w, RMathComboBox) || isOfType(w, QLineEdit) || isOfType(w, QSpinBox) || (isOfType(w, QComboBox) && w.editable===true)) {
         if (w.ignoreEscape===true) {
             // ignore escape and use standard action for escape
             // this is for some actions to make sure esc triggers step back
