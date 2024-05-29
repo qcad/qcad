@@ -14,12 +14,19 @@
    <item>
     <widget class="QCheckBox" name="AsBlock">
      <property name="text">
-      <string>As block:</string>
+      <string>As Block:</string>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,B</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="BlockName"/>
+    <widget class="QLineEdit" name="BlockName">
+     <property name="Shortcut" stdset="0">
+      <string>,N</string>
+     </property>
+    </widget>
    </item>
    <item>
     <widget class="Line" name="line_5">
@@ -32,6 +39,12 @@
     <widget class="QLabel" name="label_2">
      <property name="text">
       <string>Rotation:</string>
+     </property>
+     <property name="buddy">
+      <cstring>Rotation</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,R</string>
      </property>
     </widget>
    </item>
@@ -162,6 +175,12 @@
      <property name="text">
       <string>Scale:</string>
      </property>
+     <property name="buddy">
+      <cstring>Scale</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,S</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -260,6 +279,9 @@
      <property name="checkable">
       <bool>true</bool>
      </property>
+     <property name="Shortcut" stdset="0">
+      <string>,H</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -273,6 +295,9 @@
      </property>
      <property name="checkable">
       <bool>true</bool>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,V</string>
      </property>
     </widget>
    </item>
@@ -289,7 +314,10 @@
       <string>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</string>
      </property>
      <property name="text">
-      <string>To current layer</string>
+      <string>To Current Layer</string>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,L</string>
      </property>
     </widget>
    </item>
@@ -299,7 +327,10 @@
       <string>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</string>
      </property>
      <property name="text">
-      <string>Overwrite layers</string>
+      <string>Overwrite Layers</string>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,O</string>
      </property>
     </widget>
    </item>
@@ -309,7 +340,10 @@
       <string>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</string>
      </property>
      <property name="text">
-      <string>Overwrite blocks</string>
+      <string>Overwrite Blocks</string>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,B</string>
      </property>
     </widget>
    </item>
@@ -321,7 +355,11 @@
     </widget>
    </item>
    <item>
-    <widget class="QToolButton" name="Reset"/>
+    <widget class="QToolButton" name="Reset">
+     <property name="Shortcut" stdset="0">
+      <string>,Q</string>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>
