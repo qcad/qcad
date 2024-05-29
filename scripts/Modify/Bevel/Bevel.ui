@@ -19,6 +19,9 @@
      <property name="checked">
       <bool>true</bool>
      </property>
+     <property name="Shortcut" stdset="0">
+      <string>,T</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -36,6 +39,9 @@
      <property name="buddy">
       <cstring>Length1</cstring>
      </property>
+     <property name="Shortcut" stdset="0">
+      <string>,1</string>
+     </property>
     </widget>
    </item>
    <item>
@@ -46,12 +52,22 @@
     </widget>
    </item>
    <item>
+    <widget class="Line" name="line_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QLabel" name="Length2Label">
      <property name="text">
       <string>Length &amp;2:</string>
      </property>
      <property name="buddy">
       <cstring>Length2</cstring>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,2</string>
      </property>
     </widget>
    </item>
