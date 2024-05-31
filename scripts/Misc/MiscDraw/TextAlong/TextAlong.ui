@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>663</width>
+    <width>729</width>
     <height>50</height>
    </rect>
   </property>
@@ -138,11 +138,11 @@
       <iconset>
        <normaloff>CounterClockwise.svg</normaloff>CounterClockwise.svg</iconset>
      </property>
-     <property name="Shortcut">
-      <string>,T</string>
-     </property>
      <property name="checkable">
       <bool>true</bool>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,T</string>
      </property>
      <attribute name="buttonGroup">
       <string notr="true">Direction</string>
@@ -161,14 +161,14 @@
       <iconset>
        <normaloff>Clockwise.svg</normaloff>Clockwise.svg</iconset>
      </property>
-     <property name="Shortcut">
-      <string>,C</string>
-     </property>
      <property name="checkable">
       <bool>true</bool>
      </property>
      <property name="checked">
       <bool>true</bool>
+     </property>
+     <property name="Shortcut" stdset="0">
+      <string>,C</string>
      </property>
      <attribute name="buttonGroup">
       <string notr="true">Direction</string>
@@ -190,7 +190,7 @@
      <property name="text">
       <string>Fit</string>
      </property>
-     <property name="Shortcut">
+     <property name="Shortcut" stdset="0">
       <string>,F</string>
      </property>
     </widget>
