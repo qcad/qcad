@@ -71,9 +71,6 @@
      <property name="buddy">
       <cstring>Scale</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,S</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -109,9 +106,6 @@
       <iconset>
        <normaloff>CursorHand.svg</normaloff>CursorHand.svg</iconset>
      </property>
-     <property name="Shortcut">
-      <string>,M</string>
-     </property>
      <property name="checkable">
       <bool>true</bool>
      </property>
@@ -129,9 +123,6 @@
       <iconset>
        <normaloff>AutoFitDrawing.svg</normaloff>AutoFitDrawing.svg</iconset>
      </property>
-     <property name="Shortcut">
-      <string>,A</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -142,9 +133,6 @@
      <property name="icon">
       <iconset>
        <normaloff>AutoCenter.svg</normaloff>AutoCenter.svg</iconset>
-     </property>
-     <property name="Shortcut">
-      <string>,C</string>
      </property>
     </widget>
    </item>
@@ -163,9 +151,6 @@
      <property name="icon">
       <iconset>
        <normaloff>Portrait.svg</normaloff>Portrait.svg</iconset>
-     </property>
-     <property name="Shortcut">
-      <string>,P</string>
      </property>
      <property name="checkable">
       <bool>true</bool>
@@ -186,9 +171,6 @@
      <property name="icon">
       <iconset>
        <normaloff>Landscape.svg</normaloff>Landscape.svg</iconset>
-     </property>
-     <property name="Shortcut">
-      <string>,L</string>
      </property>
      <property name="checkable">
       <bool>true</bool>
@@ -217,9 +199,6 @@
       <iconset>
        <normaloff>AutoZoomToPage.svg</normaloff>AutoZoomToPage.svg</iconset>
      </property>
-     <property name="Shortcut">
-      <string>,Z</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -237,9 +216,6 @@
      <property name="icon">
       <iconset>
        <normaloff>ColorModeFullColor.svg</normaloff>ColorModeFullColor.svg</iconset>
-     </property>
-     <property name="Shortcut">
-      <string>,R</string>
      </property>
      <property name="checkable">
       <bool>true</bool>
@@ -264,9 +240,6 @@
       <iconset>
        <normaloff>ColorModeGrayscale.svg</normaloff>ColorModeGrayscale.svg</iconset>
      </property>
-     <property name="Shortcut">
-      <string>,G</string>
-     </property>
      <property name="checkable">
       <bool>true</bool>
      </property>
@@ -286,9 +259,6 @@
      <property name="icon">
       <iconset>
        <normaloff>ColorModeBlackWhite.svg</normaloff>ColorModeBlackWhite.svg</iconset>
-     </property>
-     <property name="Shortcut">
-      <string>,B</string>
      </property>
      <property name="checkable">
       <bool>true</bool>
@@ -317,9 +287,6 @@
       <iconset>
        <normaloff>ShowPaperBorders.svg</normaloff>ShowPaperBorders.svg</iconset>
      </property>
-     <property name="Shortcut">
-      <string>,D</string>
-     </property>
      <property name="checkable">
       <bool>true</bool>
      </property>
@@ -339,9 +306,6 @@
      <property name="icon">
       <iconset>
        <normaloff>CropMarks.svg</normaloff>CropMarks.svg</iconset>
-     </property>
-     <property name="Shortcut">
-      <string>,O</string>
      </property>
      <property name="checkable">
       <bool>true</bool>
