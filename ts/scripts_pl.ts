@@ -35,12 +35,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+427"/>
+        <location line="+449"/>
         <source>Plugin:</source>
         <translation>Wtyczka:</translation>
     </message>
     <message>
-        <location line="-402"/>
+        <location line="-424"/>
         <source>ID:</source>
         <translation>Identyfikator:</translation>
     </message>
@@ -471,19 +471,39 @@ aby wprowadzić zmiany preferencji.</translation>
         <translation type="unfinished">Kąt:</translation>
     </message>
     <message>
+        <location line="+6"/>
+        <source>,A</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+27"/>
         <source>Direction:</source>
         <translation type="unfinished">Kierunek:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+3"/>
+        <source>,D</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Counter Clockwise (Positive)</source>
         <translation type="unfinished">Przeciwnie do ruchu wskazówek zegara (dodatnie)</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+13"/>
+        <source>,T</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Clockwise (Negative)</source>
         <translation type="unfinished">Zgodnie z ruchem wskazówek zegara (ujemny)</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>,C</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PA/Arc2PAInit.js" line="+2"/>
@@ -514,7 +534,7 @@ aby wprowadzić zmiany preferencji.</translation>
         <translation>Nieprawidłowa wysokość</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+8"/>
         <source>The two points are identical</source>
         <translation>Te dwa punkty są takie same</translation>
     </message>
@@ -524,19 +544,39 @@ aby wprowadzić zmiany preferencji.</translation>
         <translation>Wysokość:</translation>
     </message>
     <message>
+        <location line="+6"/>
+        <source>,H</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+27"/>
         <source>Direction:</source>
         <translation>Kierunek:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+3"/>
+        <source>,D</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Counter Clockwise (Positive)</source>
         <translation>Przeciwnie do ruchu wskazówek zegara (w lewo)</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+7"/>
+        <source>,T</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Clockwise (Negative)</source>
         <translation>Zgodnie z ruchem wskazówek zegara (w prawo)</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>,C</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PHInit.js" line="+2"/>
@@ -582,19 +622,39 @@ aby wprowadzić zmiany preferencji.</translation>
         <translation>Odległość:</translation>
     </message>
     <message>
+        <location line="+6"/>
+        <source>,L</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+27"/>
         <source>Direction:</source>
         <translation>Kierunek</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+3"/>
+        <source>,D</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Counter Clockwise (Positive)</source>
         <translation>Przeciwnie do ruchu wskazówek zegara (w lewo)</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+7"/>
+        <source>,T</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Clockwise (Negative)</source>
         <translation>Zgodnie z ruchem wskazówek zegara (w prawo)</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>,C</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PLInit.js" line="+2"/>
@@ -635,9 +695,19 @@ aby wprowadzić zmiany preferencji.</translation>
         <translation type="unfinished">Promień:</translation>
     </message>
     <message>
+        <location line="+6"/>
+        <source>,R</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+27"/>
         <source>Direction:</source>
         <translation type="unfinished">Kierunek:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,D</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
@@ -645,24 +715,49 @@ aby wprowadzić zmiany preferencji.</translation>
         <translation type="unfinished">Przeciwnie do ruchu wskazówek zegara (dodatnie)</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+13"/>
+        <source>,T</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Clockwise (Negative)</source>
         <translation type="unfinished">Zgodnie z ruchem wskazówek zegara (ujemny)</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+10"/>
+        <source>,C</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Solution:</source>
         <translation type="unfinished">Rozwiązanie:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+3"/>
+        <source>,S</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Shorter Arc</source>
         <translation type="unfinished">Krótszy łuk</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+13"/>
+        <source>,1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Longer Arc</source>
         <translation type="unfinished">Dłuższy łuk</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>,2</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PR/Arc2PRInit.js" line="+2"/>
@@ -736,14 +831,29 @@ aby wprowadzić zmiany preferencji.</translation>
         <translation type="unfinished">Kierunek:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+3"/>
+        <source>,D</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Counter Clockwise (positive)</source>
         <translation type="unfinished">Przeciwnie do ruchu wskazówek zegara (dodatni)</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+7"/>
+        <source>,T</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Clockwise (Negative)</source>
         <translation type="unfinished">Zgodnie z ruchem wskazówek zegara (ujemny)</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>,C</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPAInit.js" line="+2"/>
@@ -764,9 +874,19 @@ aby wprowadzić zmiany preferencji.</translation>
         <translation type="unfinished">Odległość:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+6"/>
+        <source>,D</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+27"/>
         <source>Number:</source>
         <translation type="unfinished">Liczba:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,N</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentric/ArcConcentricInit.js" line="+2"/>
@@ -785,6 +905,11 @@ aby wprowadzić zmiany preferencji.</translation>
         <location filename="../scripts/Draw/Arc/ArcConcentricThrough/ArcConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
         <translation type="unfinished">Liczba:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,N</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentricThrough/ArcConcentricThroughInit.js" line="+2"/>
@@ -826,6 +951,11 @@ aby wprowadzić zmiany preferencji.</translation>
         <translation>Promień:</translation>
     </message>
     <message>
+        <location line="+6"/>
+        <source>,R</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../scripts/Draw/Arc/ArcTPR/ArcTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
         <translation>&amp;Styczna, punkt, promień</translation>
@@ -852,6 +982,11 @@ aby wprowadzić zmiany preferencji.</translation>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.ui" line="+17"/>
         <source>Radius:</source>
         <translation type="unfinished">Promień:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,R</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangentialInit.js" line="+2"/>
@@ -1088,14 +1223,29 @@ Czy chcesz go odzyskać?</translation>
         <translation type="unfinished">Trim</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+6"/>
+        <source>,T</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
         <source>Length &amp;1:</source>
         <translation type="unfinished">Długość 1:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+6"/>
+        <source>,1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+21"/>
         <source>Length &amp;2:</source>
         <translation type="unfinished">Długość 2:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,2</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
@@ -1256,7 +1406,7 @@ Czy chcesz go odzyskać?</translation>
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../scripts/Block/BlockDialog.js" line="+80"/>
+        <location filename="../scripts/Block/BlockDialog.js" line="+79"/>
         <source>block</source>
         <comment>default block name prefix</comment>
         <translation type="unfinished">blok</translation>
@@ -1288,6 +1438,7 @@ Czy chcesz go odzyskać?</translation>
     </message>
     <message>
         <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
+        <location filename="../scripts/File/PrintPreview/Test.ui" line="+17"/>
         <source>Block</source>
         <translation type="unfinished">Blok</translation>
     </message>
@@ -1316,7 +1467,7 @@ Czy chcesz go odzyskać?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+511"/>
         <location line="+67"/>
         <location line="+43"/>
         <source>Block List</source>
@@ -1415,6 +1566,11 @@ Czy chcesz go odzyskać?</translation>
         <translation type="unfinished">Usuń segment</translation>
     </message>
     <message>
+        <location line="+3"/>
+        <source>,R</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../scripts/Modify/BreakOut/BreakOutInit.js" line="+2"/>
         <source>&amp;Break out Segment</source>
         <translation type="unfinished">Podział na segmenty</translation>
@@ -1433,7 +1589,13 @@ Czy chcesz go odzyskać?</translation>
         <translation>Proszę wskazać punkt</translation>
     </message>
     <message>
-        <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.ui" line="+17"/>
+        <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.ui" line="+14"/>
+        <location line="+12"/>
+        <source>,G</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-6"/>
         <source>Gap:</source>
         <translation>Przerwa:</translation>
     </message>
@@ -1474,6 +1636,11 @@ Czy chcesz go odzyskać?</translation>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.ui" line="+17"/>
         <source>Remove Segment</source>
         <translation>Usunięcie segmentu</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>,R</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManualInit.js" line="+2"/>
@@ -1682,19 +1849,39 @@ Czy chcesz go odzyskać?</translation>
         <translation type="unfinished">Promień:</translation>
     </message>
     <message>
+        <location line="+6"/>
+        <source>,R</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+24"/>
         <source>Solution:</source>
         <translation type="unfinished">Rozwiązanie:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+3"/>
+        <source>,S</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Center Left of Line P1 - P2</source>
         <translation type="unfinished">Środek lewej strony linii P1 - P2</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+13"/>
+        <source>,1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Center Right of Line P1 - P2</source>
         <translation type="unfinished">Środek prawej strony linii P1 - P2</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>,2</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PRInit.js" line="+2"/>
@@ -1772,6 +1959,11 @@ Czy chcesz go odzyskać?</translation>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TR.ui" line="+17"/>
         <source>Radius:</source>
         <translation>Promień:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,R</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TRInit.js" line="+2"/>
@@ -1860,15 +2052,30 @@ Czy chcesz go odzyskać?</translation>
         <translation>Średnica:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+9"/>
+        <source>,D</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
         <location filename="../scripts/Draw/Circle/CircleCD/CircleCDDialog.ui" line="-60"/>
         <source>Angle:</source>
         <translation>Kąt:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+9"/>
+        <source>,A</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
         <source>Reference Point:</source>
         <translation>Punkt odniesienia:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,P</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCD/CircleCDInit.js" line="+2"/>
@@ -1913,15 +2120,30 @@ Czy chcesz go odzyskać?</translation>
         <translation type="unfinished">Promień:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+9"/>
+        <source>,R</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
         <location filename="../scripts/Draw/Circle/CircleCR/CircleCRDialog.ui" line="-60"/>
         <source>Angle:</source>
         <translation>Kąt:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+9"/>
+        <source>,A</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
         <source>Reference Point:</source>
         <translation>Punkt odniesienia:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,P</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCR/CircleCRInit.js" line="+2"/>
@@ -1942,9 +2164,19 @@ Czy chcesz go odzyskać?</translation>
         <translation type="unfinished">Odległość:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+6"/>
+        <source>,D</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+27"/>
         <source>Number:</source>
         <translation type="unfinished">Liczba:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,N</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentric/CircleConcentricInit.js" line="+2"/>
@@ -1963,6 +2195,11 @@ Czy chcesz go odzyskać?</translation>
         <location filename="../scripts/Draw/Circle/CircleConcentricThrough/CircleConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
         <translation type="unfinished">Liczba:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,N</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentricThrough/CircleConcentricThroughInit.js" line="+2"/>
@@ -2035,6 +2272,11 @@ Czy chcesz go odzyskać?</translation>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPR.ui" line="+17"/>
         <source>Radius:</source>
         <translation>Promień:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,R</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2133,19 +2375,19 @@ Czy chcesz go odzyskać?</translation>
 <context>
     <name>CommandLine</name>
     <message>
-        <location filename="../scripts/Widgets/CommandLine/CommandLine.js" line="+77"/>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.js" line="+123"/>
         <source>&amp;Command Line</source>
         <translation type="unfinished">Wiersz poleceń</translation>
     </message>
     <message>
-        <location line="-47"/>
-        <location line="+67"/>
+        <location line="-93"/>
+        <location line="+113"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation type="unfinished">Wiersz poleceń</translation>
     </message>
     <message>
-        <location line="+222"/>
+        <location line="+214"/>
         <source>Unknown command or invalid coordinate or value: &quot;%1&quot;</source>
         <translation type="unfinished">Nieznane polecenie lub nieprawidłowa współrzędna lub wartość: &quot;%1&quot;</translation>
     </message>
@@ -2170,12 +2412,12 @@ Czy chcesz go odzyskać?</translation>
         <translation>Nieudana transakcja. Proszę sprawdzić rekurencję bloku oraz zablokowane lub niewidoczne warstwy lub bloki.</translation>
     </message>
     <message>
-        <location line="-379"/>
+        <location line="-417"/>
         <source>Widgets</source>
         <translation>Widżety</translation>
     </message>
     <message>
-        <location line="+254"/>
+        <location line="+292"/>
         <source>Invalid value:</source>
         <translation>Nieprawidłowa wartość:</translation>
     </message>
@@ -2190,12 +2432,12 @@ Czy chcesz go odzyskać?</translation>
         <translation type="unfinished">Ostrzeżenie</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+14"/>
         <source>Info</source>
         <translation type="unfinished">Info</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+22"/>
         <source>Expression</source>
         <translation>Wyrażenie</translation>
     </message>
@@ -2292,14 +2534,29 @@ Czy chcesz go odzyskać?</translation>
         <translation>Z:</translation>
     </message>
     <message>
+        <location line="+6"/>
+        <source>,F</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+53"/>
         <source>To:</source>
         <translation>Na:</translation>
     </message>
     <message>
+        <location line="+6"/>
+        <source>,T</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+30"/>
         <source>Convert:</source>
         <translation>Skonwertuj:</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>,C</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2379,24 +2636,49 @@ Czy chcesz go odzyskać?</translation>
         <translation type="unfinished">Zaczynaj:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+6"/>
+        <source>,S</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+21"/>
         <source>Increment:</source>
         <translation type="unfinished">Zwiększenie:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+6"/>
+        <source>,I</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+21"/>
         <source>Number Format:</source>
         <translation type="unfinished">Format liczbowy:</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+6"/>
+        <source>,N</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+86"/>
         <source>Prefix:</source>
         <translation type="unfinished">Prefiks:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+6"/>
+        <source>,P</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+27"/>
         <source>Suffix:</source>
         <translation type="unfinished">Sufiks:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,U</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2438,12 +2720,32 @@ Czy chcesz go odzyskać?</translation>
         <translation type="unfinished">X:</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+6"/>
+        <source>,X</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+39"/>
         <source>Y:</source>
         <translation type="unfinished">Y:</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+6"/>
+        <source>,Y</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Mode:</source>
+        <translation type="unfinished">Tryb:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,M</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+38"/>
         <source>Extension</source>
         <translation type="unfinished">Rozszerzenie</translation>
     </message>
@@ -2461,6 +2763,11 @@ Czy chcesz go odzyskać?</translation>
         <location line="+15"/>
         <source>Angle:</source>
         <translation type="unfinished">Kąt:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,A</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2746,8 +3053,13 @@ Czy chcesz go odzyskać?</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
-        <source>Use maximum angle</source>
-        <translation type="unfinished">Użyj maksymalnego kąta</translation>
+        <source>Use Maximum Angle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>,M</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2877,6 +3189,11 @@ Czy chcesz go odzyskać?</translation>
         <translation type="unfinished">Kąt:</translation>
     </message>
     <message>
+        <location line="+6"/>
+        <source>,A</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotatedInit.js" line="+2"/>
         <source>&amp;Rotated (Linear)</source>
         <translation type="unfinished">Obrócone (liniowe)</translation>
@@ -2968,6 +3285,11 @@ Czy chcesz go odzyskać?</translation>
         <translation type="unfinished">Etykieta:</translation>
     </message>
     <message>
+        <location line="+6"/>
+        <source>,L</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+13"/>
         <source>Prefix</source>
         <translation type="unfinished">Prefiks</translation>
@@ -2978,12 +3300,22 @@ Czy chcesz go odzyskać?</translation>
         <translation type="unfinished">Wprowadź stałą etykietę lub pozostaw puste pole dla etykiety automatycznej</translation>
     </message>
     <message>
-        <location line="+61"/>
+        <location line="+39"/>
+        <source>,T</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+25"/>
         <source>Upper tolerance</source>
         <translation type="unfinished">Górna tolerancja</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+32"/>
+        <source>,O</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+25"/>
         <source>Lower tolerance</source>
         <translation type="unfinished">Niższa tolerancja</translation>
     </message>
@@ -2991,6 +3323,11 @@ Czy chcesz go odzyskać?</translation>
         <location line="+20"/>
         <source>Scale</source>
         <translation>Podziałka</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,S</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
@@ -3001,6 +3338,11 @@ Czy chcesz go odzyskać?</translation>
         <location line="+18"/>
         <source>Auto</source>
         <translation>Automatycznie</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>,A</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3429,44 +3771,49 @@ jest już na liście.</translation>
         <translation type="unfinished">Zamknij polilinię</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,, C</source>
-        <translation type="unfinished">,, C</translation>
-    </message>
-    <message>
-        <location line="+20"/>
+        <location line="+30"/>
         <source>Undo Previous Segment</source>
         <translation type="unfinished">Cofnij poprzedni segment</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,, U</source>
-        <translation type="unfinished">,, U</translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="+20"/>
         <source>Redo Segment</source>
         <translation type="unfinished">Ponów segment</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,, R</source>
-        <translation type="unfinished">,, R</translation>
+        <location line="-40"/>
+        <source>,C</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>,U</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>,R</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
-        <source>Arc with radius:</source>
-        <translation type="unfinished">Łuk z promieniem:</translation>
+        <source>Arc with Radius:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>,, A</source>
-        <translation type="unfinished">,A</translation>
+        <source>,A</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Sweep</source>
         <translation type="unfinished">Rozwarcie</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,S</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+36"/>
@@ -4111,7 +4458,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Następny wierzchołek</translation>
     </message>
     <message>
-        <location line="+428"/>
+        <location line="+431"/>
         <source>close</source>
         <translation>zamknij</translation>
     </message>
@@ -4137,46 +4484,59 @@ jest już na liście.</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>,, C</source>
-        <translation>,, C</translation>
+        <source>,C</source>
+        <extracomment>Close</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>,U</source>
+        <extracomment>Undo</extracomment>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+20"/>
+        <location line="+108"/>
+        <source>,R</source>
+        <extracomment>Redo
+----------
+Restrict</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-94"/>
+        <source>Arc with Radius:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>,A</source>
+        <extracomment>Arc</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Sweep:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,S</source>
+        <extracomment>Sweep</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-86"/>
         <source>Undo Previous Segment</source>
         <translation type="unfinished">Cofnij poprzedni segment</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,, U</source>
-        <translation>,, U</translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="+20"/>
         <source>Redo Segment</source>
         <translation>Ponów segment</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,, R</source>
-        <translation>,, R</translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>Arc with radius:</source>
-        <translation>Łuk z promieniem:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,, A</source>
-        <translation>,A</translation>
-    </message>
-    <message>
-        <location line="+26"/>
-        <source>Sweep</source>
-        <translation>Rozwarcie</translation>
-    </message>
-    <message>
-        <location line="+36"/>
+        <location line="+102"/>
         <source>Restrict length or angle</source>
         <translation>Ogranicz długość lub kąt</translation>
     </message>
@@ -4225,18 +4585,18 @@ jest już na liście.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2150"/>
+        <location line="+2111"/>
         <source>Cancel</source>
         <translation type="unfinished">Anuluj</translation>
     </message>
     <message>
-        <location line="-2149"/>
+        <location line="-2110"/>
         <source>Done</source>
         <translation type="unfinished">Gotowe</translation>
     </message>
     <message>
         <location line="+280"/>
-        <location line="+144"/>
+        <location line="+124"/>
         <source>Active Tool:</source>
         <translation type="unfinished">Aktywne narzędzie:</translation>
     </message>
@@ -4246,7 +4606,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Brak</translation>
     </message>
     <message>
-        <location line="+687"/>
+        <location line="+668"/>
         <source>Options</source>
         <translation type="unfinished">Opcje</translation>
     </message>
@@ -4542,7 +4902,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Parametr końcowy</translation>
     </message>
     <message>
-        <location line="+267"/>
+        <location line="+249"/>
         <source>Invalid major radius.</source>
         <translation type="unfinished">Nieprawidłowy promień główny.</translation>
     </message>
@@ -4577,14 +4937,29 @@ jest już na liście.</translation>
         <translation type="unfinished">Kierunek:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+3"/>
+        <source>,D</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Counter Clockwise (positive)</source>
         <translation type="unfinished">Przeciwnie do ruchu wskazówek zegara (dodatni)</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+7"/>
+        <source>,T</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Clockwise (Negative)</source>
         <translation type="unfinished">Zgodnie z ruchem wskazówek zegara (ujemny)</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>,C</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPAInit.js" line="+2"/>
@@ -4619,21 +4994,41 @@ jest już na liście.</translation>
         <translation>Średnica X:</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+9"/>
+        <source>,X</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDDialog.ui" line="+80"/>
         <source>Y Diameter:</source>
         <translation>Średnica Y:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+9"/>
+        <source>,Y</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDDialog.ui" line="-23"/>
         <source>Angle:</source>
         <translation>Kąt:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+9"/>
+        <source>,A</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
         <source>Reference Point:</source>
         <translation>Punkt odniesienia:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,P</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDInit.js" line="+2"/>
@@ -4654,9 +5049,19 @@ jest już na liście.</translation>
         <translation>Odległość:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+6"/>
+        <source>,D</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+27"/>
         <source>Number:</source>
         <translation>Ilość:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,N</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffset/EllipseOffsetInit.js" line="+2"/>
@@ -4675,6 +5080,11 @@ jest już na liście.</translation>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThrough.ui" line="+17"/>
         <source>Number:</source>
         <translation>Ilość:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,N</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThroughInit.js" line="+2"/>
@@ -4696,21 +5106,41 @@ jest już na liście.</translation>
         <translation>Promień X:</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+9"/>
+        <source>,X</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRDialog.ui" line="-10"/>
         <source>Y Radius:</source>
         <translation>Promień Y:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+9"/>
+        <source>,Y</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRDialog.ui" line="-90"/>
         <source>Angle:</source>
         <translation>Kąt:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+9"/>
+        <source>,A</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
         <source>Reference Point:</source>
         <translation>Punkt odniesienia:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,P</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRInit.js" line="+2"/>
@@ -4893,9 +5323,14 @@ jest już na liście.</translation>
         <translation type="unfinished">Przykład minimalny 2</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+9"/>
+        <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+17"/>
         <source>&amp;Radius:</source>
         <translation type="unfinished">Promień:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,R</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4924,7 +5359,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Zarejestrowano eksporter plików dla typu pliku &quot;.example&quot;. Użyj Plik &gt; Zapisz jako, aby zobaczyć filtr w akcji.</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+12"/>
         <source>&amp;Register File Exporter</source>
         <translation type="unfinished">Eksporter plików rejestrowych</translation>
     </message>
@@ -4952,7 +5387,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Zarejestrowany importer plików dla typu pliku &quot;.example&quot;. Użyj polecenia Plik &gt; Otwórz, aby zobaczyć filtr w działaniu.</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+12"/>
         <source>&amp;Register File Importer</source>
         <translation type="unfinished">Importer plików rejestrowych</translation>
     </message>
@@ -5582,7 +6017,7 @@ jest już na liście.</translation>
 <context>
     <name>FlushBackLog</name>
     <message>
-        <location filename="../scripts/Misc/MiscModify/FlushBackLog/FlushBackLog.js" line="+38"/>
+        <location filename="../scripts/Misc/MiscModify/FlushBackLog/FlushBackLog.js" line="+39"/>
         <source>Flush Undo History</source>
         <translation type="unfinished">Wyczyść historię cofnięć</translation>
     </message>
@@ -5597,7 +6032,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Tego nie da się cofnąć.</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+14"/>
         <source>Flush &amp;Undo History</source>
         <translation type="unfinished">Wyczyść historię cofnięć</translation>
     </message>
@@ -6430,19 +6865,39 @@ jest już na liście.</translation>
         <translation type="unfinished">Szerokość:</translation>
     </message>
     <message>
+        <location line="+6"/>
+        <source>,W</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+20"/>
         <source>Keep proportions</source>
         <translation type="unfinished">Zachowaj proporcje</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+7"/>
+        <source>,K</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Height:</source>
         <translation type="unfinished">Wysokość:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,H</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Angle:</source>
         <translation type="unfinished">Kąt:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,A</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Image/ImageInit.js" line="+2"/>
@@ -6484,13 +6939,29 @@ jest już na liście.</translation>
     </message>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
-        <source>As block:</source>
-        <translation type="unfinished">Jako blok:</translation>
+        <source>As Block:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+3"/>
+        <location line="+326"/>
+        <source>,B</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-319"/>
+        <source>,N</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
         <source>Rotation:</source>
         <translation type="unfinished">Rotacja:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,R</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+19"/>
@@ -6503,6 +6974,11 @@ jest już na liście.</translation>
         <translation type="unfinished">Skala:</translation>
     </message>
     <message>
+        <location line="+6"/>
+        <source>,S</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
         <translation type="unfinished">Skaluj wklejane elementy&lt;br&gt;o ten współczynnik</translation>
@@ -6513,39 +6989,64 @@ jest już na liście.</translation>
         <translation type="unfinished">Przerzuć wklejone elementy&lt;br&gt;poziomo</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+10"/>
+        <source>,H</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
         <translation type="unfinished">Przerzuć wklejone elementy&lt;br&gt;pionowo</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+10"/>
+        <source>,V</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
         <translation type="unfinished">Wklej wszystkie encje&lt;br&gt;do bieżącej warstwy&lt;br&gt;zamiast oryginalnej warstwy</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>To current layer</source>
-        <translation type="unfinished">Do bieżącej warstwy</translation>
+        <source>To Current Layer</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+3"/>
+        <source>,L</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Overwrite Layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>,O</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Overwrite Blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>,Q</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-33"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
         <translation type="unfinished">Nadpisywanie istniejących warstw&lt;br&gt;w rysunku warstwami ze schowka</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Overwrite layers</source>
-        <translation type="unfinished">Nadpisywanie warstw</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+13"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
         <translation type="unfinished">Nadpisywanie istniejących bloków&lt;br&gt;w rysunku blokami ze schowka</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Overwrite blocks</source>
-        <translation type="unfinished">Nadpisywanie bloków</translation>
     </message>
 </context>
 <context>
@@ -6718,17 +7219,32 @@ jest już na liście.</translation>
         <translation>Tryb:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+39"/>
         <source>Calculate Area of Sector</source>
         <translation>Oblicz pole powierzchni wycinka</translation>
     </message>
     <message>
-        <location line="-23"/>
+        <location line="-26"/>
         <source>Calculate Area of Segment</source>
         <translation>Oblicz pole powierzchni odcinka</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="-10"/>
+        <source>,M</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>,G</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>,T</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+20"/>
         <source>Add:</source>
         <translation>Dodanie:</translation>
     </message>
@@ -6743,14 +7259,29 @@ jest już na liście.</translation>
         <translation>Obiekt</translation>
     </message>
     <message>
+        <location line="+6"/>
+        <source>,E</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>,C</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>,L</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="-96"/>
         <location line="+67"/>
-        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="+13"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-25"/>
         <source>Chord</source>
         <translation>Cięciwa</translation>
     </message>
     <message>
-        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="+13"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="+16"/>
         <source>Add lengths/circumference to drawing</source>
         <translation>Dodaje długość/obwód do rysunku</translation>
     </message>
@@ -6792,9 +7323,19 @@ jest już na liście.</translation>
         <translation type="unfinished">Obliczyć długość i zamknąć narzędzie.</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+10"/>
+        <source>,C</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Close Tool.</source>
         <translation type="unfinished">Zamknij narzędzie.</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>,Q</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoAreaInit.js" line="+2"/>
@@ -7023,12 +7564,12 @@ jest już na liście.</translation>
 <context>
     <name>InfoCentroidsListener</name>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListener.js" line="+191"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListener.js" line="+192"/>
         <source>2D Centroids transaction listener active.</source>
         <translation type="unfinished">aktywna lista transakcji centroidów 2D.</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+20"/>
         <source>Deactivated/removed the 2D Centroids transaction listener.</source>
         <translation type="unfinished">Dezaktywacja/usunięcie listenera transakcji centroidów 2D.</translation>
     </message>
@@ -7046,7 +7587,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Słuchacz Centroidów</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>(De-)Activate a transaction listener for 2D Centroids</source>
         <translation type="unfinished">Aktywacja słuchacza transakcji dla centroidów 2D</translation>
     </message>
@@ -7423,13 +7964,23 @@ jest już na liście.</translation>
     </message>
     <message>
         <location filename="../scripts/Information/Information.ui" line="+17"/>
-        <source>Add measurement to drawing</source>
-        <translation>Dodanie pomiaru do rysunku</translation>
+        <source>Add Measurement to Drawing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>,A</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>Text height:</source>
-        <translation>Wysokość tekstu:</translation>
+        <source>Text Height:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,H</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7560,6 +8111,11 @@ jest już na liście.</translation>
         <translation>Obrót:</translation>
     </message>
     <message>
+        <location line="+6"/>
+        <source>,R</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+19"/>
         <source>Rotate block&lt;br&gt;by this angle</source>
         <translation>Obraca blok&lt;br&gt;o zadany kąt</translation>
@@ -7568,6 +8124,11 @@ jest już na liście.</translation>
         <location line="+110"/>
         <source>Scale X:</source>
         <translation>Skala X:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,X</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+19"/>
@@ -7580,6 +8141,11 @@ jest już na liście.</translation>
         <translation>Skala Y:</translation>
     </message>
     <message>
+        <location line="+6"/>
+        <source>,Y</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+22"/>
         <source>Scale block in Y&lt;br&gt;by this factor</source>
         <translation>Skaluje blok wzdłuż osi Y przez zadany współczynnik</translation>
@@ -7590,25 +8156,60 @@ jest już na liście.</translation>
         <translation>Zachowaj proporcje</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+13"/>
+        <source>,K</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
         <source>Flip block&lt;br&gt;horizontally</source>
         <translation>Odbij blok lustrzanie w poziomie</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+7"/>
+        <source>,H</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Flip block&lt;br&gt;vertically</source>
         <translation>Odbij blok lustrzanie w pionie</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+7"/>
+        <source>,V</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
         <source>Single Block</source>
         <translation>Wstaw pojedynczy blok</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+13"/>
+        <source>,1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <location filename="../scripts/Block/InsertBlock/InsertBlockDialog.ui" line="+14"/>
         <source>Array of Blocks</source>
         <translation>Wstaw tablicę bloków</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>,2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>,A</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+71"/>
+        <source>,Q</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlockDialog.ui" line="+8"/>
@@ -7654,14 +8255,24 @@ jest już na liście.</translation>
         <translation type="unfinished">Rotacja:</translation>
     </message>
     <message>
+        <location line="+6"/>
+        <source>,R</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
         <translation type="unfinished">Obróć wklejone obiekty&lt;br&gt;o ten kąt</translation>
     </message>
     <message>
-        <location line="+103"/>
+        <location line="+110"/>
         <source>Scale:</source>
         <translation type="unfinished">Skala:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,S</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+19"/>
@@ -7674,9 +8285,19 @@ jest już na liście.</translation>
         <translation type="unfinished">Przerzuć wklejone elementy&lt;br&gt;poziomo</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+10"/>
+        <source>,H</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
         <translation type="unfinished">Przerzuć wklejone elementy&lt;br&gt;pionowo</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>,V</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
@@ -7685,18 +8306,43 @@ jest już na liście.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Overwrite layers</source>
-        <translation type="unfinished">Nadpisywanie warstw</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation type="unfinished">Nadpisywanie istniejących bloków&lt;br&gt;w rysunku blokami ze schowka</translation>
+        <source>Overwrite Layers</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Overwrite blocks</source>
-        <translation type="unfinished">Nadpisywanie bloków</translation>
+        <source>,O</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Overwrite Blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>,B</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>,A</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>,=</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>,Q</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-94"/>
+        <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
+        <translation type="unfinished">Nadpisywanie istniejących bloków&lt;br&gt;w rysunku blokami ze schowka</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlockItem/InsertBlockItemInit.js" line="+2"/>
@@ -7758,39 +8404,89 @@ jest już na liście.</translation>
         <translation type="unfinished">Top</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+13"/>
+        <source>,1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Bottom</source>
         <translation type="unfinished">Na dole</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+10"/>
+        <source>,2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Left</source>
         <translation type="unfinished">Lewa</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+10"/>
+        <source>,3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Left back</source>
         <translation type="unfinished">Lewy tylny</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+10"/>
+        <source>,4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Right</source>
         <translation type="unfinished">Prawo</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+10"/>
+        <source>,5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Right back</source>
         <translation type="unfinished">W prawo z powrotem</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+10"/>
+        <source>,6</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Rotate selection counter-clockwise before projection</source>
         <translation type="unfinished">Przed projekcją obrócić wybór w kierunku przeciwnym do ruchu wskazówek zegara</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+7"/>
+        <source>,T</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Rotate selection clockwise before projection</source>
         <translation type="unfinished">Przed projekcją obrócić wybór w prawo</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>,C</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Method:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,M</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProjectInit.js" line="+2"/>
@@ -8029,7 +8725,7 @@ jest już na liście.</translation>
         <translation type="unfinished">warstwa</translation>
     </message>
     <message>
-        <location line="+156"/>
+        <location line="+149"/>
         <source>Leading or trailing spaces.</source>
         <translation>Poprzedzające lub końcowe odstępy.</translation>
     </message>
@@ -8134,9 +8830,19 @@ jest już na liście.</translation>
         <translation type="unfinished">Cofnij ostatni segment</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+10"/>
+        <source>,U</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Arrow head</source>
         <translation>Grot strzałki</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>,A</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -8165,7 +8871,12 @@ jest już na liście.</translation>
         <translation type="unfinished">Kwota:</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+6"/>
+        <source>,A</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Amount to lengthen or shorten (negative)</source>
         <translation type="unfinished">Ilość do wydłużenia lub skrócenia (ujemna)</translation>
     </message>
@@ -8178,7 +8889,7 @@ jest już na liście.</translation>
 <context>
     <name>Line</name>
     <message>
-        <location filename="../scripts/Draw/Line/Line.js" line="+81"/>
+        <location filename="../scripts/Draw/Line/Line.js" line="+83"/>
         <source>Line Tools</source>
         <translation type="unfinished">Narzędzia liniowe</translation>
     </message>
@@ -8193,19 +8904,39 @@ jest już na liście.</translation>
         <translation>Ten sam obiekt co pierwotny</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+7"/>
+        <source>,0</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>Line Segment</source>
         <translation>Odcinek</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+7"/>
+        <source>,S</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>Infinite Line</source>
         <translation>Prosta</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+7"/>
+        <source>,X</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Ray</source>
         <translation>Półprosta</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>,Y</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -8226,39 +8957,64 @@ jest już na liście.</translation>
         <translation type="unfinished">Zamknij sekwencję</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,, C</source>
-        <translation>,, C</translation>
-    </message>
-    <message>
-        <location line="+20"/>
+        <location line="+27"/>
         <source>Undo Previous Segment</source>
         <translation type="unfinished">Cofnij poprzedni segment</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,, U</source>
-        <translation>,, U</translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="+20"/>
         <source>Redo Segment</source>
         <translation>Ponów segment</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,, R</source>
-        <translation>,, R</translation>
+        <location line="-40"/>
+        <source>,C</source>
+        <extracomment>Close</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>,U</source>
+        <extracomment>Undo</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>,R</source>
+        <extracomment>Redo</extracomment>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
+        <source>Use fixed length for line</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Length:</source>
         <translation type="unfinished">Długość:</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+3"/>
+        <source>,L</source>
+        <extracomment>Length</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Use fixed angle for line</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Angle:</source>
         <translation type="unfinished">Kąt:</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>,A</source>
+        <extracomment>Angle</extracomment>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2PInit.js" line="+2"/>
@@ -8274,7 +9030,7 @@ jest już na liście.</translation>
 <context>
     <name>LineAngle</name>
     <message>
-        <location filename="../scripts/Draw/Line/LineAngle/LineAngle.js" line="+65"/>
+        <location filename="../scripts/Draw/Line/LineAngle/LineAngle.js" line="+71"/>
         <source>Position</source>
         <translation type="unfinished">Pozycja</translation>
     </message>
@@ -8284,32 +9040,17 @@ jest już na liście.</translation>
         <translation type="unfinished">Określić stanowisko</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Line/LineAngle/LineAngle.ui" line="+17"/>
-        <source>&amp;Angle:</source>
-        <translation type="unfinished">Kąt:</translation>
-    </message>
-    <message>
-        <location line="+26"/>
-        <source>&amp;Length:</source>
-        <translation type="unfinished">Długość:</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>&amp;Reference Point:</source>
-        <translation type="unfinished">Punkt odniesienia:</translation>
-    </message>
-    <message>
-        <location line="+11"/>
+        <location line="-31"/>
         <source>Start</source>
         <translation type="unfinished">Start</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+1"/>
         <source>Middle</source>
         <translation type="unfinished">Środek</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+1"/>
         <source>End</source>
         <translation type="unfinished">Koniec</translation>
     </message>
@@ -8322,6 +9063,46 @@ jest już na liście.</translation>
         <location line="+3"/>
         <source>Draw line at a given absolute angle</source>
         <translation type="unfinished">Narysuj linię przy danym kącie bezwzględnym</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Line/LineAngle/LineAngle.ui" line="+17"/>
+        <source>Line length</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Length:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,L</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Line angle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Angle:</source>
+        <translation type="unfinished">Kąt:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,A</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Reference Point:</source>
+        <translation type="unfinished">Punkt odniesienia:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,P</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -8347,9 +9128,19 @@ jest już na liście.</translation>
         <translation type="unfinished">Długość:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+6"/>
+        <source>,L</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+27"/>
         <source>Number:</source>
         <translation type="unfinished">Liczba:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,N</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisectorInit.js" line="+2"/>
@@ -8390,22 +9181,42 @@ jest już na liście.</translation>
         <translation type="unfinished">Głębokość:</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+6"/>
+        <source>,D</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+27"/>
         <source>Finger Width:</source>
         <translation type="unfinished">Szerokość palców:</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+6"/>
+        <source>,W</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+27"/>
         <source>Finger/Slot Ratio:</source>
         <translation type="unfinished">Stosunek palców do szczeliny:</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+6"/>
+        <source>,R</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+27"/>
         <source>&amp;Style:</source>
         <translation type="unfinished">Styl:</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+6"/>
+        <source>,S</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
         <source>Finger first</source>
         <translation type="unfinished">Palec pierwszy</translation>
     </message>
@@ -8443,24 +9254,44 @@ jest już na liście.</translation>
         <translation type="unfinished">Narysuj połączenie na jaskółczy ogon</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.ui" line="+18"/>
+        <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.ui" line="+17"/>
         <source>Number of Dovetails:</source>
         <translation type="unfinished">Liczba jaskółczych ogonów:</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+6"/>
+        <source>,N</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+27"/>
         <source>Dovetail Height:</source>
         <translation type="unfinished">Wysokość dovetail:</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+6"/>
+        <source>,H</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+27"/>
         <source>Dovetail Gradient:</source>
         <translation type="unfinished">Gradient jaskółczego ogona:</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+6"/>
+        <source>,G</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+27"/>
         <source>Dovetail/Pin Ratio:</source>
         <translation type="unfinished">Współczynnik dovetail/Pin:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,R</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -8489,31 +9320,6 @@ jest już na liście.</translation>
 <context>
     <name>LineHorizontal</name>
     <message>
-        <location filename="../scripts/Draw/Line/LineHorizontal/LineHorizontal.ui" line="+17"/>
-        <source>&amp;Length:</source>
-        <translation type="unfinished">Długość:</translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>&amp;Reference Point:</source>
-        <translation type="unfinished">Punkt odniesienia:</translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>Start</source>
-        <translation type="unfinished">Start</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Middle</source>
-        <translation type="unfinished">Środek</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>End</source>
-        <translation type="unfinished">Koniec</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Line/LineHorizontal/LineHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal Line</source>
         <translation type="unfinished">Linia pozioma</translation>
@@ -8522,6 +9328,26 @@ jest już na liście.</translation>
         <location line="+3"/>
         <source>Draw horizontal line</source>
         <translation type="unfinished">Narysuj linię poziomą</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Line/LineHorizontal/LineHorizontal.ui" line="+17"/>
+        <source>Length:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,L</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Reference Point:</source>
+        <translation type="unfinished">Punkt odniesienia:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,P</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -8532,24 +9358,19 @@ jest już na liście.</translation>
         <translation type="unfinished">Długość:</translation>
     </message>
     <message>
-        <location line="+20"/>
-        <source>&amp;Reference Point:</source>
-        <translation>Punkt &amp;odniesienia:</translation>
+        <location line="+6"/>
+        <source>,L</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+11"/>
-        <source>Start</source>
-        <translation>Początek</translation>
+        <location line="+27"/>
+        <source>Reference Point:</source>
+        <translation type="unfinished">Punkt odniesienia:</translation>
     </message>
     <message>
-        <location line="+5"/>
-        <source>Middle</source>
-        <translation>Środek</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>End</source>
-        <translation>Koniec</translation>
+        <location line="+6"/>
+        <source>,P</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonal/LineOrthogonalInit.js" line="+2"/>
@@ -8593,16 +9414,6 @@ jest już na liście.</translation>
 <context>
     <name>LineParallel</name>
     <message>
-        <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
-        <source>Dist&amp;ance:</source>
-        <translation type="unfinished">Odległość:</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>&amp;Number:</source>
-        <translation type="unfinished">Liczba:</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallelInit.js" line="+2"/>
         <source>Para&amp;llel (with Distance)</source>
         <translation type="unfinished">Równoległe (z odległością)</translation>
@@ -8612,6 +9423,26 @@ jest już na liście.</translation>
         <source>Draw parallel to existing line or concentric arc, circle</source>
         <translation type="unfinished">Rysuj równolegle do istniejącej linii lub łuku koncentrycznego, okręgu</translation>
     </message>
+    <message>
+        <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
+        <source>Distance:</source>
+        <translation type="unfinished">Odległość:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,D</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Number:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,N</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>LineParallelThrough</name>
@@ -8619,6 +9450,11 @@ jest już na liście.</translation>
         <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThrough.ui" line="+17"/>
         <source>Number:</source>
         <translation type="unfinished">Liczba:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,N</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThroughInit.js" line="+2"/>
@@ -8653,11 +9489,16 @@ jest już na liście.</translation>
         <source>Length:</source>
         <translation type="unfinished">Długość:</translation>
     </message>
+    <message>
+        <location line="+6"/>
+        <source>,L</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>LineRelativeAngle</name>
     <message>
-        <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="+71"/>
+        <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="+77"/>
         <source>Choose base line, arc, circle, ellipse or polyline</source>
         <translation>Proszę wskazać linię, łuk, okrąg, elipsę lub linię łamaną</translation>
     </message>
@@ -8672,27 +9513,42 @@ jest już na liście.</translation>
         <translation type="unfinished">Kąt względny:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+6"/>
+        <source>,A</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+27"/>
         <source>Length:</source>
         <translation type="unfinished">Długość:</translation>
     </message>
     <message>
-        <location line="+20"/>
-        <source>&amp;Reference Point:</source>
-        <translation>Punkt &amp;odniesienia:</translation>
+        <location line="+6"/>
+        <source>,L</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+27"/>
+        <source>Reference Point:</source>
+        <translation type="unfinished">Punkt odniesienia:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,P</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="-45"/>
         <source>Start</source>
         <translation>Początek</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+1"/>
         <source>Middle</source>
         <translation>Środek</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+1"/>
         <source>End</source>
         <translation>Koniec</translation>
     </message>
@@ -8930,9 +9786,19 @@ jest już na liście.</translation>
         <translation type="unfinished">Kopia</translation>
     </message>
     <message>
+        <location line="+3"/>
+        <source>,C</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+14"/>
-        <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">Użyj bieżącej warstwy i atrybutów</translation>
+        <source>Use Current Layer and Attributes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>,L</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/PreferencesPage.ui" line="+17"/>
@@ -9349,9 +10215,19 @@ jest już na liście.</translation>
         <translation type="unfinished">Odległość:</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+6"/>
+        <source>,D</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+20"/>
         <source>&amp;Number:</source>
         <translation type="unfinished">Liczba:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,N</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Offset/OffsetInit.js" line="+2"/>
@@ -9400,6 +10276,11 @@ jest już na liście.</translation>
         <translation>Liczba kopii:</translation>
     </message>
     <message>
+        <location line="+6"/>
+        <source>,N</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThroughInit.js" line="+2"/>
         <source>Offset (through Point)</source>
         <translation>Odsuń przez punkt</translation>
@@ -9436,14 +10317,6 @@ jest już na liście.</translation>
         <location line="+5"/>
         <source>Open an existing drawing</source>
         <translation type="unfinished">Otwórz istniejący rysunek</translation>
-    </message>
-</context>
-<context>
-    <name>OptionsToolBarFocus</name>
-    <message>
-        <location filename="../scripts/View/OptionsToolBarFocus/OptionsToolBarFocusInit.js" line="+2"/>
-        <source>&amp;Focus on Options Toolbar</source>
-        <translation>U&amp;aktywnij pasek narzędziowy opcji</translation>
     </message>
 </context>
 <context>
@@ -9610,9 +10483,19 @@ jest już na liście.</translation>
         <translation type="unfinished">Pozycja</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/Paste/Paste.ui" line="+126"/>
+        <location filename="../scripts/Edit/Paste/Paste.ui" line="+6"/>
+        <source>,R</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+126"/>
         <source>Scale:</source>
         <translation type="unfinished">Skala:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,S</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+88"/>
@@ -9620,39 +10503,69 @@ jest już na liście.</translation>
         <translation type="unfinished">Przerzuć wklejone elementy&lt;br&gt;poziomo</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+7"/>
+        <source>,H</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
         <translation type="unfinished">Przerzuć wklejone elementy&lt;br&gt;pionowo</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+7"/>
+        <source>,V</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
         <translation type="unfinished">Wklej wszystkie encje&lt;br&gt;do bieżącej warstwy&lt;br&gt;zamiast oryginalnej warstwy</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>To current layer</source>
-        <translation type="unfinished">Do bieżącej warstwy</translation>
+        <source>To Current Layer</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+3"/>
+        <source>,L</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Overwrite Layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>,O</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Overwrite Blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>,B</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>,Q</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-33"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
         <translation type="unfinished">Nadpisywanie istniejących warstw&lt;br&gt;w rysunku warstwami ze schowka</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Overwrite layers</source>
-        <translation type="unfinished">Nadpisywanie warstw</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+13"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
         <translation type="unfinished">Nadpisywanie istniejących bloków&lt;br&gt;w rysunku blokami ze schowka</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Overwrite blocks</source>
-        <translation type="unfinished">Nadpisywanie bloków</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/PasteInit.js" line="+2"/>
@@ -9856,7 +10769,12 @@ jest już na liście.</translation>
         <translation type="unfinished">Usuń segment</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+6"/>
+        <source>,R</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
         <source>Inherit entity properties</source>
         <translation type="unfinished">Dziedziczenie właściwości encji</translation>
     </message>
@@ -9871,21 +10789,31 @@ jest już na liście.</translation>
         <translation type="unfinished">Dziedziczą</translation>
     </message>
     <message>
-        <location line="+17"/>
-        <location line="+13"/>
+        <location line="+6"/>
+        <source>,I</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <location line="+19"/>
         <source>Peak ratio</source>
         <translation type="unfinished">Wskaźnik szczytowy</translation>
     </message>
     <message>
-        <location line="-10"/>
-        <location line="+13"/>
+        <location line="-16"/>
+        <location line="+19"/>
         <source>The ratio of the peak height to the break width</source>
         <translation type="unfinished">Stosunek wysokości piku do szerokości przerwy</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="-16"/>
         <source>Peak Ratio:</source>
         <translation type="unfinished">Współczynnik szczytu:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,P</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+78"/>
@@ -9898,7 +10826,12 @@ jest już na liście.</translation>
         <translation type="unfinished">Pierwszy i ostatni segment symbolu przerwy są nachylone</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+16"/>
+        <source>,1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>First/Last segment vertical</source>
         <translation type="unfinished">Pierwszy/ostatni segment pionowo</translation>
     </message>
@@ -9906,6 +10839,11 @@ jest już na liście.</translation>
         <location line="+3"/>
         <source>The first and last segment of the break symbol are vertical</source>
         <translation type="unfinished">Pierwszy i ostatni segment symbolu przerwy są pionowe</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>,2</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js" line="+2"/>
@@ -10003,7 +10941,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Rozmiar papieru jest ustawiony na rozmiar niestandardowy (%1x%2mm). Czy chcesz zmienić go na domyślny rozmiar papieru drukarki (%3)?</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+37"/>
         <source>Auto fit</source>
         <translation type="unfinished">Automatyczne dopasowanie</translation>
     </message>
@@ -10013,7 +10951,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Automatyczne dopasowywanie rysunku do papieru?</translation>
     </message>
     <message>
-        <location line="+198"/>
+        <location line="+199"/>
         <source>Drag to move paper</source>
         <translation type="unfinished">Przeciągnij, aby przesunąć papier</translation>
     </message>
@@ -10029,7 +10967,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Ustawienia strony</translation>
     </message>
     <message>
-        <location line="+276"/>
+        <location line="+277"/>
         <source>Export to PDF</source>
         <translation type="unfinished">Eksport do PDF</translation>
     </message>
@@ -10069,7 +11007,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Skala:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Drawing Scale</source>
         <translation type="unfinished">Skala rysunkowa</translation>
     </message>
@@ -10170,12 +11108,12 @@ jest już na liście.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1668"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1672"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*VARIES*</translation>
     </message>
     <message>
-        <location line="-1442"/>
+        <location line="-1446"/>
         <source>:</source>
         <translation type="unfinished">:</translation>
     </message>
@@ -10225,12 +11163,12 @@ jest już na liście.</translation>
         <translation type="unfinished">Pokaż wszystkie nieruchomości</translation>
     </message>
     <message>
-        <location line="+778"/>
+        <location line="+782"/>
         <source>Widgets</source>
         <translation>Widżety</translation>
     </message>
     <message>
-        <location line="-824"/>
+        <location line="-828"/>
         <source>Add custom property to selected objects</source>
         <translation>Dodaj dostosowaną właściwość do zaznaczonych obiektów</translation>
     </message>
@@ -10255,7 +11193,7 @@ jest już na liście.</translation>
         <translation type="unfinished">Nie</translation>
     </message>
     <message>
-        <location line="+402"/>
+        <location line="+406"/>
         <location line="+71"/>
         <location line="+10"/>
         <source>Property Editor</source>
@@ -10461,24 +11399,54 @@ jest już na liście.</translation>
 <context>
     <name>RestrictAngleLength</name>
     <message>
-        <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLength.ui" line="+17"/>
+        <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLength.ui" line="+89"/>
         <source>Angle:</source>
         <translation>Kąt:</translation>
     </message>
     <message>
-        <location line="+23"/>
-        <location line="+60"/>
+        <location line="-46"/>
+        <location line="+75"/>
         <source>Base:</source>
         <translation>Wartość początkowa:</translation>
     </message>
     <message>
-        <location line="-37"/>
-        <location line="+60"/>
+        <location line="-98"/>
+        <source>,,D</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>,,B</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <location line="+75"/>
         <source>Multiples</source>
         <translation type="unfinished">Wielokrotności</translation>
     </message>
     <message>
-        <location line="-46"/>
+        <location line="-72"/>
+        <source>,,M</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>,,A</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>,,E</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>,,T</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-133"/>
         <source>Distance:</source>
         <translation>Odległość:</translation>
     </message>
@@ -10576,19 +11544,39 @@ jest już na liście.</translation>
         <translation type="unfinished">Kopia</translation>
     </message>
     <message>
+        <location line="+3"/>
+        <source>,C</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
         <translation type="unfinished">Liczba egzemplarzy:</translation>
     </message>
     <message>
+        <location line="+6"/>
+        <source>,N</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+30"/>
-        <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">Użyj bieżącej warstwy i atrybutów</translation>
+        <source>Use Current Layer and Attributes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>,L</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Angle:</source>
         <translation type="unfinished">Kąt:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,A</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+23"/>
@@ -10619,14 +11607,29 @@ jest już na liście.</translation>
         <translation>Główny kąt:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+6"/>
+        <source>,P</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
         <source>Secondary Angle:</source>
         <translation>Wtórny kąt</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+6"/>
+        <source>,S</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
         <source>Copies:</source>
         <translation>Liczba kopii:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,C</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10738,9 +11741,19 @@ jest już na liście.</translation>
         <translation type="unfinished">Trim</translation>
     </message>
     <message>
+        <location line="+3"/>
+        <source>,T</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+17"/>
         <source>&amp;Radius:</source>
         <translation type="unfinished">Promień:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,R</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
@@ -10804,17 +11817,17 @@ jest już na liście.</translation>
         <translation type="unfinished">Nadpisać plik?</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+22"/>
         <source>File Format Version Not Recommended</source>
         <translation type="unfinished">Format pliku Wersja niezalecana</translation>
     </message>
     <message>
-        <location line="-17"/>
+        <location line="-21"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
         <translation>Plik „%1” już istnieje. Zastąpić go?</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+22"/>
         <source>The file format version you are using is not recommended: &quot;%1&quot;.</source>
         <translation>Używany format pliku nie jest zalecany: „%1”.</translation>
     </message>
@@ -11005,14 +12018,29 @@ jest już na liście.</translation>
         <translation type="unfinished">Kopia</translation>
     </message>
     <message>
+        <location line="+3"/>
+        <source>,C</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
         <translation type="unfinished">Liczba egzemplarzy:</translation>
     </message>
     <message>
+        <location line="+6"/>
+        <source>,N</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+30"/>
-        <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">Użyj bieżącej warstwy i atrybutów</translation>
+        <source>Use Current Layer and Attributes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>,L</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11020,15 +12048,25 @@ jest już na liście.</translation>
         <translation type="unfinished">Czynnik x:</translation>
     </message>
     <message>
+        <location line="+6"/>
+        <source>,X</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+7"/>
-        <location line="+14"/>
+        <location line="+20"/>
         <source>1</source>
         <translation type="unfinished">1</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="-13"/>
         <source>Factor y:</source>
         <translation type="unfinished">Czynnik y:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,Y</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11036,9 +12074,19 @@ jest już na liście.</translation>
         <translation type="unfinished">Proporcjonalne</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+13"/>
+        <source>,K</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Define factor using mouse cursor</source>
         <translation type="unfinished">Definiowanie współczynnika za pomocą kursora myszy</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>,M</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -11219,34 +12267,74 @@ jest już na liście.</translation>
         <translation type="unfinished">Tryb:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+3"/>
+        <source>,M</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Replace the current selection</source>
         <translation type="unfinished">Zastąpić bieżący wybór</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+16"/>
+        <source>,R</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Add to the current selection</source>
         <translation type="unfinished">Dodaj do bieżącego wyboru</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+13"/>
+        <source>,A</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Subtract from the current selection</source>
         <translation type="unfinished">Odejmij od bieżącego zaznaczenia</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+13"/>
+        <source>,S</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Intersect with the current selection</source>
         <translation type="unfinished">Przecięcie z bieżącym zaznaczeniem</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+13"/>
+        <source>,I</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Tolerance:</source>
         <translation type="unfinished">Tolerancja:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,T</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Same Layer</source>
         <translation type="unfinished">Ta sama warstwa</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>,L</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>,Q</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2"/>
@@ -11277,24 +12365,54 @@ jest już na liście.</translation>
         <translation type="unfinished">Tryb:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+3"/>
+        <source>,M</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Replace the current selection</source>
         <translation type="unfinished">Zastąpić bieżący wybór</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+7"/>
+        <source>,R</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>Add to the current selection</source>
         <translation type="unfinished">Dodaj do bieżącego wyboru</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+7"/>
+        <source>,A</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Subtract from the current selection</source>
         <translation type="unfinished">Odejmij od bieżącego zaznaczenia</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+7"/>
+        <source>,S</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Intersect with the current selection</source>
         <translation type="unfinished">Przecięcie z bieżącym zaznaczeniem</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>,I</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>,Q</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntitiesInit.js" line="+2"/>
@@ -11338,24 +12456,54 @@ jest już na liście.</translation>
         <translation>Tryb:</translation>
     </message>
     <message>
+        <location line="+6"/>
+        <source>,M</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+7"/>
         <source>Replace the current selection</source>
         <translation>Zamień aktualne zaznaczenie</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+7"/>
+        <source>,R</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>Add to the current selection</source>
         <translation>Dodaj do aktualnego zaznaczenia</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+7"/>
+        <source>,A</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Subtract from the current selection</source>
         <translation>Odejmij od aktualnego zaznaczenia</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+7"/>
+        <source>,S</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Intersect with the current selection</source>
         <translation>Wyznacz część wspólną z aktualnym zaznaczeniem</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>,I</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>,Q</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntityInit.js" line="+2"/>
@@ -11386,29 +12534,64 @@ jest już na liście.</translation>
         <translation type="unfinished">Tryb:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+3"/>
+        <source>,M</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Replace the current selection</source>
         <translation type="unfinished">Zastąpić bieżący wybór</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+7"/>
+        <source>,R</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>Add to the current selection</source>
         <translation type="unfinished">Dodaj do bieżącego wyboru</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+7"/>
+        <source>,A</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Subtract from the current selection</source>
         <translation type="unfinished">Odejmij od bieżącego zaznaczenia</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+7"/>
+        <source>,S</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Intersect with the current selection</source>
         <translation type="unfinished">Przecięcie z bieżącym zaznaczeniem</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+7"/>
+        <source>,I</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
         <source>Cross Selection</source>
         <translation type="unfinished">Wybór krzyża</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>,C</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>,Q</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangleInit.js" line="+2"/>
@@ -11510,18 +12693,33 @@ jest już na liście.</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/Shape.ui" line="+17"/>
-        <source>Create polyline</source>
-        <translation>Utworzenie linii łamanej</translation>
+        <source>Create Polyline</source>
+        <translation type="unfinished">Utworzenie linii łamanej</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+3"/>
+        <source>,Y</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Fill</source>
         <translation>Wypełnienie</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>,F</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Radius:</source>
         <translation type="unfinished">Promień:</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>,R</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -11580,6 +12778,11 @@ jest już na liście.</translation>
         <source>Corners:</source>
         <translation>Liczba narożników:</translation>
     </message>
+    <message>
+        <location line="+6"/>
+        <source>,C</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ShapePolygonAFPP</name>
@@ -11619,9 +12822,19 @@ jest już na liście.</translation>
         <translation>Liczba narożników:</translation>
     </message>
     <message>
+        <location line="+6"/>
+        <source>,C</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+21"/>
         <source>Corner to Corner</source>
         <translation>Od narożnika do narożnika</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>,T</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -11640,6 +12853,11 @@ jest już na liście.</translation>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.ui" line="+17"/>
         <source>Corners:</source>
         <translation>Liczba narożników:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,C</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCPInit.js" line="+2"/>
@@ -11670,6 +12888,11 @@ jest już na liście.</translation>
         <translation>Liczba narożników:</translation>
     </message>
     <message>
+        <location line="+6"/>
+        <source>,C</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPPInit.js" line="+2"/>
         <source>Polygo&amp;n (2 Points of Side)</source>
         <translation>Wie&amp;lokąt (2 punkty boku)</translation>
@@ -11694,8 +12917,13 @@ jest już na liście.</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
-        <source>Rotate:</source>
-        <translation type="unfinished">Obróć:</translation>
+        <source>Angle:</source>
+        <translation type="unfinished">Kąt:</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>,A</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -11717,21 +12945,41 @@ jest już na liście.</translation>
         <translation>&amp;Szerokość:</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+9"/>
+        <source>,W</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+30"/>
         <source>&amp;Height:</source>
         <translation>&amp;Wysokość:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+9"/>
+        <source>,H</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="-10"/>
         <source>Angle:</source>
         <translation>Kąt:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+9"/>
+        <source>,A</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
         <source>Reference Point:</source>
         <translation>Punkt odniesienia:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,P</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+101"/>
@@ -11841,7 +13089,12 @@ jest już na liście.</translation>
         <translation type="unfinished">x:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+6"/>
+        <source>,,X</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>X Coordinate</source>
         <translation type="unfinished">X Współrzędna</translation>
     </message>
@@ -11851,7 +13104,12 @@ jest już na liście.</translation>
         <translation type="unfinished">y:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+6"/>
+        <source>,,Y</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Y Coordinate</source>
         <translation type="unfinished">Współrzędna Y</translation>
     </message>
@@ -11864,6 +13122,11 @@ jest już na liście.</translation>
         <location line="+3"/>
         <source>Relati&amp;ve</source>
         <translation type="unfinished">Relatywnie</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>,,R</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinateInit.js" line="+2"/>
@@ -11879,7 +13142,13 @@ jest już na liście.</translation>
         <translation type="unfinished">r:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+6"/>
+        <location line="+70"/>
+        <source>,,R</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-57"/>
         <source>Radius (Distance)</source>
         <translation type="unfinished">Promień (odległość)</translation>
     </message>
@@ -11889,7 +13158,12 @@ jest już na liście.</translation>
         <translation type="unfinished">&lt;:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+6"/>
+        <source>,,A</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Angle</source>
         <translation type="unfinished">Kąt</translation>
     </message>
@@ -11900,8 +13174,8 @@ jest już na liście.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Relati&amp;ve</source>
-        <translation type="unfinished">Relatywnie</translation>
+        <source>Relative</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js" line="+2"/>
@@ -11912,14 +13186,19 @@ jest już na liście.</translation>
 <context>
     <name>SnapDistance</name>
     <message>
-        <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
-        <source>Snap distance:</source>
-        <translation type="unfinished">Odcinek migawki:</translation>
-    </message>
-    <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistanceInit.js" line="+2"/>
         <source>&amp;Distance</source>
         <translation type="unfinished">Odległość</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
+        <source>Snap Distance:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,,D</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -11946,8 +13225,13 @@ jest już na liście.</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
-        <source>Snap distance:</source>
-        <translation>Odległość przyciągania:</translation>
+        <source>Snap Distance:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,,D</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+72"/>
@@ -12133,9 +13417,19 @@ jest już na liście.</translation>
         <translation type="unfinished">Cofnij ostatni punkt kontrolny</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+10"/>
+        <source>,U</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
         <source>Degree:</source>
         <translation type="unfinished">Stopień naukowy:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,D</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
@@ -12151,6 +13445,11 @@ jest już na liście.</translation>
         <location line="+3"/>
         <source>Closed</source>
         <translation type="unfinished">Zamknięte</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>,C</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPointsInit.js" line="+2"/>
@@ -12352,19 +13651,36 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Draw/Text/Text.ui" line="+17"/>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+17"/>
-        <source>Contents:</source>
-        <translation type="unfinished">Zawartość:</translation>
+        <source>Text:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+20"/>
-        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+23"/>
+        <location line="+6"/>
+        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+128"/>
+        <source>,T</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-92"/>
         <source>Height:</source>
         <translation type="unfinished">Wysokość:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+6"/>
+        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+6"/>
+        <source>,H</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+27"/>
         <source>Angle:</source>
         <translation type="unfinished">Kąt:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,A</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Text/TextInit.js" line="+2"/>
@@ -12402,19 +13718,29 @@ jest już na liście.</translation>
         <translation>Zaznacz wszystkie</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-10"/>
+        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-36"/>
+        <source>,X</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Text</source>
         <translation type="unfinished">Tekst</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+30"/>
         <source>Text height</source>
         <translation type="unfinished">Wysokość tekstu</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+23"/>
         <source>Spacing</source>
         <translation type="unfinished">Odstępy</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,S</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
@@ -12432,17 +13758,27 @@ jest już na liście.</translation>
         <translation type="unfinished">Kierunek:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+3"/>
+        <source>,D</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Counter Clockwise</source>
         <translation type="unfinished">Przeciwnie do ruchu wskazówek zegara</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+23"/>
         <source>Clockwise</source>
         <translation type="unfinished">Zgodnie z ruchem wskazówek zegara</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+16"/>
+        <source>,C</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Fit text to line, arc or circle</source>
         <translation type="unfinished">Dopasuj tekst do linii, łuku lub okręgu</translation>
     </message>
@@ -12450,6 +13786,11 @@ jest już na liście.</translation>
         <location line="+3"/>
         <source>Fit</source>
         <translation type="unfinished">Fit</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>,F</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -12975,16 +14316,6 @@ jest już na liście.</translation>
         <source>px</source>
         <translation>piks.</translation>
     </message>
-    <message>
-        <location line="+22"/>
-        <source>Options Toolbar</source>
-        <translation>Pasek narzędziowy opcji</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Shortcut prefix character:</source>
-        <translation type="unfinished">Znak prefiksu skrótu:</translation>
-    </message>
 </context>
 <context>
     <name>ToolBarContextMenu</name>
@@ -13023,7 +14354,7 @@ jest już na liście.</translation>
 <context>
     <name>ToolMatrixWidget</name>
     <message>
-        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.ui" line="+37"/>
+        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.ui" line="+40"/>
         <source>Filter</source>
         <translation>Filtr</translation>
     </message>
@@ -13079,14 +14410,29 @@ jest już na liście.</translation>
         <translation>Skopiowanie</translation>
     </message>
     <message>
+        <location line="+3"/>
+        <source>,C</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
         <translation>Liczba kopii:</translation>
     </message>
     <message>
+        <location line="+6"/>
+        <source>,N</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+30"/>
-        <source>Use current layer and &amp;attributes</source>
-        <translation>Użycie aktualnej warstwy i &amp;atrybutów</translation>
+        <source>Use Current Layer and Attributes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>,L</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -13128,6 +14474,11 @@ jest już na liście.</translation>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.ui" line="+17"/>
         <source>Angle:</source>
         <translation type="unfinished">Kąt:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>,A</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateInit.js" line="+2"/>
@@ -13555,7 +14906,7 @@ jest już na liście.</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1163"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1168"/>
         <source>Restore defaults</source>
         <translation type="unfinished">Przywróć ustawienia domyślne</translation>
     </message>
@@ -14017,7 +15368,7 @@ jest już na liście.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1250"/>
+        <location filename="../scripts/library.js" line="+1259"/>
         <source>Objects</source>
         <translation type="unfinished">Obiekty</translation>
     </message>

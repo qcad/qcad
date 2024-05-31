@@ -984,8 +984,6 @@ SOURCES = \
 ../scripts/View/IsometricView/IsometricGridTop/IsometricGridTop.js \
 ../scripts/View/IsometricView/IsometricView.js \
 ../scripts/View/LinetypeMode/LinetypeMode.js \
-../scripts/View/OptionsToolBarFocus/OptionsToolBarFocus.js \
-../scripts/View/OptionsToolBarFocus/OptionsToolBarFocusInit.js \
 ../scripts/View/ShowToolDialog/ShowToolDialog.js \
 ../scripts/View/ToggleGrid/ToggleGrid.js \
 ../scripts/View/ToolMatrixFocus/ToolMatrixFocus.js \
@@ -1148,6 +1146,7 @@ SOURCES = \
 ../scripts/File/NewFile/CloseDialog.ui \
 ../scripts/File/NewFile/MdiChildEmpty.ui \
 ../scripts/File/PrintPreview/PrintPreview.ui \
+../scripts/File/PrintPreview/Test.ui \
 ../scripts/File/RecentFiles/PreferencesPage.ui \
 ../scripts/File/SaveAs/PreferencesPage.ui \
 ../scripts/File/SvgImport/PreferencesPage.ui \
