@@ -63,8 +63,8 @@ bool RToolOptionEventFilter::eventFilter(QObject* obj, QEvent* event) {
                 // math line edit with focus and all text selected, keycode entered
                 mle->clearFocus();
                 event->ignore();
+                return true;
             }
-            return true;
         }
     }
 
