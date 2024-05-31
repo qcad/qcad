@@ -57,10 +57,10 @@ bool RToolOptionEventFilter::eventFilter(QObject* obj, QEvent* event) {
             return true;
         }
 
-        if (keyEvent->key() == Qt::Key_Comma) {
-            RMathLineEdit* mle = qobject_cast<RMathLineEdit*>(obj);
-            if (mle!=NULL) {
-                // math line edit with focus, all text selected, keycode entered
+        RMathLineEdit* mle = qobject_cast<RMathLineEdit*>(obj);
+        if (mle!=NULL) {
+            if (keyEvent->key() == Qt::Key_Comma && mle->selectedText()==mle->text()) {
+                // math line edit with focus and all text selected, keycode entered
                 mle->clearFocus();
                 event->ignore();
             }
