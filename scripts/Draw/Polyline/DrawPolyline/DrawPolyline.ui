@@ -30,7 +30,7 @@
        <normaloff>Close.svg</normaloff>Close.svg</iconset>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,C</string>
+      <string extracomment="Close">,C</string>
      </property>
     </widget>
    </item>
@@ -57,7 +57,7 @@
        <normaloff>Undo.svg</normaloff>Undo.svg</iconset>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,U</string>
+      <string extracomment="Undo">,U</string>
      </property>
     </widget>
    </item>
@@ -77,7 +77,7 @@
        <normaloff>Redo.svg</normaloff>Redo.svg</iconset>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,R</string>
+      <string extracomment="Redo">,R</string>
      </property>
     </widget>
    </item>
@@ -94,7 +94,7 @@
       <string>Arc with Radius:</string>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,A</string>
+      <string extracomment="Arc">,A</string>
      </property>
      <property name="AutoFocusWidget" stdset="0">
       <string>Radius</string>
@@ -136,7 +136,7 @@
       <cstring>Sweep</cstring>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,S</string>
+      <string extracomment="Sweep">,S</string>
      </property>
     </widget>
    </item>
@@ -185,7 +185,7 @@
       <bool>false</bool>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,R</string>
+      <string extracomment="Restrict">,R</string>
      </property>
     </widget>
    </item>
