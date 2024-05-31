@@ -17,10 +17,11 @@
  * along with QCAD.
  */
 #include <QCoreApplication>
-#include <QWheelEvent>
+#include <QLineEdit>
 
 #include "RToolOptionEventFilter.h"
 #include "RMainWindowQt.h"
+#include "RMathLineEdit.h"
 
 /**
  * Event filter to catch enter and tab pressed in widgets.
@@ -52,6 +53,16 @@ bool RToolOptionEventFilter::eventFilter(QObject* obj, QEvent* event) {
                 if (appWin!=NULL) {
                     appWin->handleEnterKey(obj);
                 }
+            }
+            return true;
+        }
+
+        if (keyEvent->key() == Qt::Key_Comma) {
+            RMathLineEdit* mle = qobject_cast<RMathLineEdit*>(obj);
+            if (mle!=NULL) {
+                // math line edit with focus, all text selected, keycode entered
+                mle->clearFocus();
+                event->ignore();
             }
             return true;
         }
