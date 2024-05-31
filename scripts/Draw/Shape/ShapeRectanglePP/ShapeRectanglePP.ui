@@ -17,7 +17,7 @@
       <string>Angle:</string>
      </property>
      <property name="Shortcut" stdset="0">
-      <string>,N</string>
+      <string>,A</string>
      </property>
      <property name="AutoFocusWidget" stdset="0">
       <string>Rotation</string>
@@ -31,9 +31,6 @@
      </property>
      <property name="angle" stdset="0">
       <bool>true</bool>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,A</string>
      </property>
     </widget>
    </item>
