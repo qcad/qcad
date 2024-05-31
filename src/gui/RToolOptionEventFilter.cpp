@@ -31,8 +31,9 @@ RToolOptionEventFilter::RToolOptionEventFilter(QObject* parent) {
 }
 
 bool RToolOptionEventFilter::eventFilter(QObject* obj, QEvent* event) {
-    if (event->type() == QEvent::KeyPress || event->type() == QEvent::KeyRelease) {
+    if (event->type() == QEvent::KeyPress) {
         QKeyEvent* keyEvent = static_cast<QKeyEvent*>(event);
+
         if (keyEvent->key() == Qt::Key_Tab || keyEvent->key() == Qt::Key_Backtab) {
 
             // ignore the Tab and Shift+Tab keys
@@ -59,8 +60,14 @@ bool RToolOptionEventFilter::eventFilter(QObject* obj, QEvent* event) {
 
         RMathLineEdit* mle = qobject_cast<RMathLineEdit*>(obj);
         if (mle!=NULL) {
-            if (keyEvent->key() == Qt::Key_Comma && mle->selectedText()==mle->text()) {
+            QString prefixStr = RSettings::getStringValue("OptionsToolBar/PrefixChar", ",");
+            QChar prefixChar = ',';
+            if (prefixStr.length()==1) {
+                prefixChar = prefixStr[0];
+            }
+            if (keyEvent->key() == prefixChar.unicode() && mle->selectedText()==mle->text()) {
                 // math line edit with focus and all text selected, keycode entered
+                qDebug() << "clear focus";
                 mle->clearFocus();
                 event->ignore();
                 return true;
