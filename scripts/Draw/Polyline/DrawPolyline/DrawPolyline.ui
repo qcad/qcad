@@ -97,7 +97,7 @@
       <string extracomment="Arc">,A</string>
      </property>
      <property name="AutoFocusWidget" stdset="0">
-      <string>Radius</string>
+      <string notr="true">Radius</string>
      </property>
     </widget>
    </item>

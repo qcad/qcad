@@ -97,7 +97,7 @@
       <string extracomment="Length">,L</string>
      </property>
      <property name="AutoFocusWidget" stdset="0">
-      <string>Length</string>
+      <string notr="true">Length</string>
      </property>
     </widget>
    </item>
@@ -127,7 +127,7 @@
       <string extracomment="Angle">,A</string>
      </property>
      <property name="AutoFocusWidget" stdset="0">
-      <string>Angle</string>
+      <string notr="true">Angle</string>
      </property>
     </widget>
    </item>

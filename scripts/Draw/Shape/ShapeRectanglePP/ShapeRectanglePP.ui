@@ -20,7 +20,7 @@
       <string>,A</string>
      </property>
      <property name="AutoFocusWidget" stdset="0">
-      <string>Rotation</string>
+      <string notr="true">Rotation</string>
      </property>
     </widget>
    </item>

@@ -50,7 +50,7 @@
       <string>,S</string>
      </property>
      <property name="AutoFocusWidget" stdset="0">
-      <string>Solution</string>
+      <string notr="true">Solution</string>
      </property>
     </widget>
    </item>

@@ -20,7 +20,7 @@
       <string>,M</string>
      </property>
      <property name="AutoFocusWidget" stdset="0">
-      <string>Mode</string>
+      <string notr="true">Mode</string>
      </property>
     </widget>
    </item>

@@ -50,7 +50,7 @@
       <string>Direction:</string>
      </property>
      <property name="AutoFocusWidget" stdset="0">
-      <string>Direction</string>
+      <string notr="true">Direction</string>
      </property>
      <property name="Shortcut" stdset="0">
       <string>,D</string>
@@ -116,7 +116,7 @@
       <string>,S</string>
      </property>
      <property name="AutoFocusWidget" stdset="0">
-      <string>Solution</string>
+      <string notr="true">Solution</string>
      </property>
     </widget>
    </item>
