@@ -36,7 +36,7 @@ LineAngle02.prototype.test00 = function() {
     this.clickOnWidget('MainWindow::LineToolsPanel::LineAngleButton');
     this.setToolOption('LineAngle/Angle',  [ 33, 0 ] );
     this.setToolOption('LineAngle/Length',  [ 15, 0 ] );
-    this.setToolOption('LineAngle/ReferencePoint', 'Start');
+    this.setToolOption('LineAngle/ReferencePoint', '0');
     this.updateToolOptions();
     this.zoomTo(-28.95, -21.449999999999996, 28.950000000000003, 21.450000000000006);
     var p = new RVector(0, 0);
@@ -44,7 +44,7 @@ LineAngle02.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setToolOption('LineAngle/Angle',  [ 33, 0 ] );
     this.setToolOption('LineAngle/Length',  [ 15, 0 ] );
-    this.setToolOption('LineAngle/ReferencePoint', 'Middle');
+    this.setToolOption('LineAngle/ReferencePoint', '1');
     this.updateToolOptions();
     this.zoomTo(-28.95, -21.449999999999996, 28.950000000000003, 21.450000000000006);
     var p = new RVector(0, 2);
@@ -52,7 +52,7 @@ LineAngle02.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setToolOption('LineAngle/Angle',  [ 33, 0 ] );
     this.setToolOption('LineAngle/Length',  [ 15, 0 ] );
-    this.setToolOption('LineAngle/ReferencePoint', 'End');
+    this.setToolOption('LineAngle/ReferencePoint', '2');
     this.updateToolOptions();
     this.zoomTo(-28.95, -21.449999999999996, 28.950000000000003, 21.450000000000006);
     var p = new RVector(0, 4);

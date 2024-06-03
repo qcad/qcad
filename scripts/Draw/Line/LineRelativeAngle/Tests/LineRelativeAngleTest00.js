@@ -38,7 +38,7 @@ LineRelativeAngleTest00.prototype.test00 = function() {
     this.setToolOption('Line/Type', 'TypeSegment');
     this.setToolOption('LineRelativeAngle/Angle', '30');
     this.setToolOption('LineRelativeAngle/Length', '10');
-    this.setToolOption('LineRelativeAngle/ReferencePoint', 'Start');
+    this.setToolOption('LineRelativeAngle/ReferencePoint', '0');
     this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(7.1, 11.9);
@@ -51,7 +51,7 @@ LineRelativeAngleTest00.prototype.test00 = function() {
     this.setToolOption('Line/Type', 'TypeSegment');
     this.setToolOption('LineRelativeAngle/Angle', '30');
     this.setToolOption('LineRelativeAngle/Length', '10');
-    this.setToolOption('LineRelativeAngle/ReferencePoint', 'Middle');
+    this.setToolOption('LineRelativeAngle/ReferencePoint', '2');
     this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(20.1, 15.3);
@@ -60,7 +60,7 @@ LineRelativeAngleTest00.prototype.test00 = function() {
     this.setToolOption('Line/Type', 'TypeSegment');
     this.setToolOption('LineRelativeAngle/Angle', '30');
     this.setToolOption('LineRelativeAngle/Length', '10');
-    this.setToolOption('LineRelativeAngle/ReferencePoint', 'End');
+    this.setToolOption('LineRelativeAngle/ReferencePoint', '3');
     this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(39.5, 19.6);
@@ -69,7 +69,7 @@ LineRelativeAngleTest00.prototype.test00 = function() {
     this.setToolOption('Line/Type', 'TypeSegment');
     this.setToolOption('LineRelativeAngle/Angle', '90');
     this.setToolOption('LineRelativeAngle/Length', '5');
-    this.setToolOption('LineRelativeAngle/ReferencePoint', 'Middle');
+    this.setToolOption('LineRelativeAngle/ReferencePoint', '2');
     this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(7.2, 16.7);

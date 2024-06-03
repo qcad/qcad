@@ -35,7 +35,7 @@ LineVerticalTest00.prototype.test00 = function() {
     this.clickOnWidget('MainWindow::MainToolsPanel::LineToolsPanelButton');
     this.clickOnWidget('MainWindow::LineToolsPanel::LineVerticalButton');
     this.setToolOption('LineHorizontal/Length',  [ 10, 0 ] );
-    this.setToolOption('LineHorizontal/ReferencePoint', 'Start');
+    this.setToolOption('LineHorizontal/ReferencePoint', '0');
     this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0) );
     var p = new RVector(0, 9.8);
@@ -43,7 +43,7 @@ LineVerticalTest00.prototype.test00 = function() {
     var p = new RVector(0, 9.8);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setToolOption('LineHorizontal/Length',  [ 10, 0 ] );
-    this.setToolOption('LineHorizontal/ReferencePoint', 'Middle');
+    this.setToolOption('LineHorizontal/ReferencePoint', '1');
     this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0) );
     var p = new RVector(10.1, 9.9);
@@ -51,7 +51,7 @@ LineVerticalTest00.prototype.test00 = function() {
     var p = new RVector(10.1, 9.9);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setToolOption('LineHorizontal/Length',  [ 10, 0 ] );
-    this.setToolOption('LineHorizontal/ReferencePoint', 'End');
+    this.setToolOption('LineHorizontal/ReferencePoint', '2');
     this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0) );
     var p = new RVector(19.9, 10);
@@ -59,7 +59,7 @@ LineVerticalTest00.prototype.test00 = function() {
     var p = new RVector(19.9, 10);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setToolOption('LineHorizontal/Length',  [ 20, 0 ] );
-    this.setToolOption('LineHorizontal/ReferencePoint', 'Start');
+    this.setToolOption('LineHorizontal/ReferencePoint', '0');
     this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0) );
     var p = new RVector(29.8, 9.9);
@@ -67,7 +67,7 @@ LineVerticalTest00.prototype.test00 = function() {
     var p = new RVector(29.8, 9.9);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setToolOption('LineHorizontal/Length',  [ 20, 0 ] );
-    this.setToolOption('LineHorizontal/ReferencePoint', 'Middle');
+    this.setToolOption('LineHorizontal/ReferencePoint', '1');
     this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0) );
     var p = new RVector(39.9, 10.1);
@@ -79,7 +79,7 @@ LineVerticalTest00.prototype.test00 = function() {
     var p = new RVector(41.9, 11.7);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.MidButton, 0, 0);
     this.setToolOption('LineHorizontal/Length',  [ 20, 0 ] );
-    this.setToolOption('LineHorizontal/ReferencePoint', 'End');
+    this.setToolOption('LineHorizontal/ReferencePoint', '2');
     this.updateToolOptions();
     this.setZoom(10, new RVector(-2.6, 4.6, 0) );
     var p = new RVector(50, 10);

@@ -129,25 +129,6 @@ Print.prototype.createPrinter = function(pdfFile, printerName, pdfVersion) {
         printer.setOrientation(Print.getPageOrientationEnum(this.document));
     }
 
-
-
-
-    {
-        var o = printer.orientation();
-        if (o.valueOf()===1) {
-            o = "Landscape";
-        }
-        else {
-            o = "Portrait";
-        }
-        var s = printer.paperSize(QPrinter.Millimeter);
-        EAction.handleUserMessage("Page size before dialog:" + s.width() + "/" + s.height());
-        EAction.handleUserMessage("Page orientation before dialog:" + o);
-    }
-
-
-
-
     var colorMode = Print.getColorMode(this.document);
     if (colorMode == RGraphicsView.FullColor) {
         printer.setColorMode(QPrinter.Color);
@@ -207,29 +188,6 @@ Print.prototype.createPrinter = function(pdfFile, printerName, pdfVersion) {
             return undefined;
         }
     }
-
-
-
-
-
-    {
-        var o = printer.orientation();
-        if (o.valueOf()===1) {
-            o = "Landscape";
-        }
-        else {
-            o = "Portrait";
-        }
-        var s = printer.paperSize(QPrinter.Millimeter);
-        EAction.handleUserMessage("Page size after dialog:" + s.width() + "/" + s.height());
-        EAction.handleUserMessage("Page orientation after dialog:" + o);
-
-        // TODO: force page settings again?
-    }
-
-
-
-
 
     return printer;
 };
