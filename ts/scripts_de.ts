@@ -14412,17 +14412,17 @@ Restrict</extracomment>
     <message>
         <location line="+6"/>
         <source>,N</source>
-        <translation type="unfinished"></translation>
+        <translation>,N</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished">Aktueller Layer / Attribute</translation>
+        <translation>Aktueller Layer / Attribute</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>,L</source>
-        <translation type="unfinished"></translation>
+        <translation>,L</translation>
     </message>
 </context>
 <context>
@@ -14473,7 +14473,7 @@ Restrict</extracomment>
     <message>
         <location line="+6"/>
         <source>,A</source>
-        <translation type="unfinished"></translation>
+        <translation>,W</translation>
     </message>
 </context>
 <context>
