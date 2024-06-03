@@ -389,8 +389,6 @@ void RGraphicsViewQt::wheelEvent(QWheelEvent* event) {
 }
 
 void RGraphicsViewQt::keyPressEvent(QKeyEvent* event) {
-    qDebug() << "RGraphicsViewQt::keyPressEvent";
-
     if (imageView==NULL) {
         return;
     }
