@@ -22,6 +22,7 @@
  * Merges multiple drawing files (DWG, DXF) into one.
  */
 
+include("scripts/library.js");
 include("scripts/Tools/arguments.js");
 
 function printHelp() {
