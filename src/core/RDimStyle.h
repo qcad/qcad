@@ -94,7 +94,7 @@ public:
     void updateDocumentVariables();
     void updateFromDocumentVariables();
 
-    QPair<QVariant, RPropertyAttributes> getProperty(RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes, bool showOnRequest);
+    QPair<QVariant, RPropertyAttributes> getProperty(RPropertyTypeId& propertyTypeId, bool humanReadable=false, bool noAttributes=false, bool showOnRequest=false);
     bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, RTransaction* transaction);
 
     void render(const REntityData& entityData, bool preview, bool forceSelected) {
