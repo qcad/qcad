@@ -1436,7 +1436,6 @@ Wilt u deze herstellen?</translation>
     </message>
     <message>
         <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
-        <location filename="../scripts/File/PrintPreview/Test.ui" line="+17"/>
         <source>Block</source>
         <translation>Blok</translation>
     </message>

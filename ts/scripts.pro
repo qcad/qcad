@@ -1146,7 +1146,6 @@ SOURCES = \
 ../scripts/File/NewFile/CloseDialog.ui \
 ../scripts/File/NewFile/MdiChildEmpty.ui \
 ../scripts/File/PrintPreview/PrintPreview.ui \
-../scripts/File/PrintPreview/Test.ui \
 ../scripts/File/RecentFiles/PreferencesPage.ui \
 ../scripts/File/SaveAs/PreferencesPage.ui \
 ../scripts/File/SvgImport/PreferencesPage.ui \

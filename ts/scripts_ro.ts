@@ -1435,7 +1435,6 @@ Doriți să îl recuperați?</translation>
     </message>
     <message>
         <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
-        <location filename="../scripts/File/PrintPreview/Test.ui" line="+17"/>
         <source>Block</source>
         <translation type="unfinished">Bloc</translation>
     </message>

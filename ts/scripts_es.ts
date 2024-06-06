@@ -1405,7 +1405,6 @@ Do you wish to recover it?</source>
     <name>BlockDialog</name>
     <message>
         <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
-        <location filename="../scripts/File/PrintPreview/Test.ui" line="+17"/>
         <source>Block</source>
         <translation>Bloque</translation>
     </message>

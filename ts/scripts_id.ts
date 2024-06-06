@@ -1434,7 +1434,6 @@ Apakah Anda ingin memulihkannya?</translation>
     </message>
     <message>
         <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
-        <location filename="../scripts/File/PrintPreview/Test.ui" line="+17"/>
         <source>Block</source>
         <translation type="unfinished">Blokir</translation>
     </message>
