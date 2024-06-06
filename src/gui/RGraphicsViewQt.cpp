@@ -286,7 +286,6 @@ void RGraphicsViewQt::mousePressEvent(QMouseEvent* event) {
 //    }
 //#endif
 
-
     RMouseEvent e(*event, *s, *imageView, imageView->getDevicePixelRatio());
     mousePressScreenPosition = e.getScreenPosition();
     mousePressModelPosition = e.getModelPosition();
