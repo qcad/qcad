@@ -8893,39 +8893,19 @@ Restrict</extracomment>
         <translation type="unfinished">与原来的实体类型相同</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,0</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+23"/>
         <source>Line Segment</source>
         <translation type="unfinished">线段</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+23"/>
         <source>Infinite Line</source>
         <translation type="unfinished">无限线</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,X</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="+17"/>
         <source>Ray</source>
         <translation type="unfinished">雷</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>,Y</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -8956,35 +8936,17 @@ Restrict</extracomment>
         <translation type="unfinished">关闭序列</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+24"/>
         <source>Undo Previous Segment</source>
         <translation type="unfinished">撤销上一节内容</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+17"/>
         <source>Redo Segment</source>
         <translation type="unfinished">重做部分</translation>
     </message>
     <message>
-        <location line="-40"/>
-        <source>,C</source>
-        <extracomment>Close</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>,U</source>
-        <extracomment>Undo</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>,R</source>
-        <extracomment>Redo</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+18"/>
         <source>Use fixed length for line</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8992,12 +8954,6 @@ Restrict</extracomment>
         <location line="+3"/>
         <source>Length:</source>
         <translation type="unfinished">长度：</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,L</source>
-        <extracomment>Length</extracomment>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+24"/>
@@ -9008,12 +8964,6 @@ Restrict</extracomment>
         <location line="+3"/>
         <source>Angle:</source>
         <translation type="unfinished">角度：</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,A</source>
-        <extracomment>Angle</extracomment>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

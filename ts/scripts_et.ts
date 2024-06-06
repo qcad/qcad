@@ -8892,39 +8892,19 @@ Restrict</extracomment>
         <translation type="unfinished">Sama üksuse tüüp nagu originaal</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,0</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+23"/>
         <source>Line Segment</source>
         <translation type="unfinished">Liinisegment</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+23"/>
         <source>Infinite Line</source>
         <translation type="unfinished">Lõpmatu rida</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,X</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="+17"/>
         <source>Ray</source>
         <translation type="unfinished">Ray</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>,Y</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -8945,35 +8925,17 @@ Restrict</extracomment>
         <translation type="unfinished">Sulge järjestus</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+24"/>
         <source>Undo Previous Segment</source>
         <translation type="unfinished">Eelmise segmendi tühistamine</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+17"/>
         <source>Redo Segment</source>
         <translation type="unfinished">Redo segment</translation>
     </message>
     <message>
-        <location line="-40"/>
-        <source>,C</source>
-        <extracomment>Close</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>,U</source>
-        <extracomment>Undo</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>,R</source>
-        <extracomment>Redo</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+18"/>
         <source>Use fixed length for line</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8981,12 +8943,6 @@ Restrict</extracomment>
         <location line="+3"/>
         <source>Length:</source>
         <translation type="unfinished">Pikkus:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,L</source>
-        <extracomment>Length</extracomment>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+24"/>
@@ -8997,12 +8953,6 @@ Restrict</extracomment>
         <location line="+3"/>
         <source>Angle:</source>
         <translation type="unfinished">Nurk:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,A</source>
-        <extracomment>Angle</extracomment>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2PInit.js" line="+2"/>

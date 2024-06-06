@@ -8898,39 +8898,19 @@ Restrict</extracomment>
         <translation>Gleicher Objekttyp wie Original</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,0</source>
-        <translation>,0</translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+23"/>
         <source>Line Segment</source>
         <translation>Liniensegment</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,S</source>
-        <translation>,S</translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+23"/>
         <source>Infinite Line</source>
         <translation>Unendliche Linie</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,X</source>
-        <translation>,X</translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="+17"/>
         <source>Ray</source>
         <translation>Strahl</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>,Y</source>
-        <translation>,Y</translation>
     </message>
 </context>
 <context>
@@ -8961,35 +8941,17 @@ Restrict</extracomment>
         <translation>Sequenz schliessen</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+24"/>
         <source>Undo Previous Segment</source>
         <translation>Letztes Segment rückgängig</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+17"/>
         <source>Redo Segment</source>
         <translation>Letztes Segment wiederherstellen</translation>
     </message>
     <message>
-        <location line="-40"/>
-        <source>,C</source>
-        <extracomment>Close</extracomment>
-        <translation>,C</translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>,U</source>
-        <extracomment>Undo</extracomment>
-        <translation>,R</translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>,R</source>
-        <extracomment>Redo</extracomment>
-        <translation>,W</translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+18"/>
         <source>Use fixed length for line</source>
         <translation>Fixe Länge benutzen für Linie</translation>
     </message>
@@ -8997,12 +8959,6 @@ Restrict</extracomment>
         <location line="+3"/>
         <source>Length:</source>
         <translation>Länge:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,L</source>
-        <extracomment>Length</extracomment>
-        <translation>,L</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -9013,12 +8969,6 @@ Restrict</extracomment>
         <location line="+3"/>
         <source>Angle:</source>
         <translation>Winkel:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,A</source>
-        <extracomment>Angle</extracomment>
-        <translation>,W</translation>
     </message>
 </context>
 <context>
