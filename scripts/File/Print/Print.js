@@ -138,6 +138,7 @@ Print.prototype.createPrinter = function(pdfFile, printerName, pdfVersion) {
 
     // show printer dialog if we are not printing to a PDF file
     // or running as command line tool:
+    var appWin = EAction.getMainWindow();
     if (!isString(pdfFile) && !isNull(appWin) && isNull(printerName)) {
         Print.cancel = false;
         Print.printDialog = new QPrintDialog(printer, appWin);
