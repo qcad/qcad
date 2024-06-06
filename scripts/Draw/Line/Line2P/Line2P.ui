@@ -26,9 +26,6 @@
       <iconset>
        <normaloff>Close.svg</normaloff>Close.svg</iconset>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string extracomment="Close">,C</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -53,9 +50,6 @@
       <iconset>
        <normaloff>Undo.svg</normaloff>Undo.svg</iconset>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string extracomment="Undo">,U</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -73,9 +67,6 @@
       <iconset>
        <normaloff>Redo.svg</normaloff>Redo.svg</iconset>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string extracomment="Redo">,R</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -92,9 +83,6 @@
      </property>
      <property name="text">
       <string>Length:</string>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string extracomment="Length">,L</string>
      </property>
      <property name="AutoFocusWidget" stdset="0">
       <string notr="true">Length</string>
@@ -122,9 +110,6 @@
      </property>
      <property name="text">
       <string>Angle:</string>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string extracomment="Angle">,A</string>
      </property>
      <property name="AutoFocusWidget" stdset="0">
       <string notr="true">Angle</string>
