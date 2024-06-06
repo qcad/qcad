@@ -1954,7 +1954,7 @@ Array.prototype.clone = function() {
  */
 Array.prototype.sortNumerical = function() {
     Array.prototype.sort.call(this, function(a,b) { return a - b });
-}
+};
 
 Array.alphaNumericalSorter = function(a, b) {
     return RS.compareAlphanumerical(a, b);
