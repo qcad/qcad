@@ -216,7 +216,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished">Middle</translation>
+        <translation>Middle</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -284,7 +284,7 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+3"/>
         <source>Area</source>
-        <translation type="unfinished">Obszar</translation>
+        <translation>Obszar</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -304,21 +304,21 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Line</source>
-        <translation type="unfinished">Linia wymiarowa</translation>
+        <translation>Linia wymiarowa</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Extension Point 1</source>
-        <translation type="unfinished">Punkt przedłużenia 1</translation>
+        <translation>Punkt przedłużenia 1</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Extension Point 2</source>
-        <translation type="unfinished">Punkt przedłużenia 2</translation>
+        <translation>Punkt przedłużenia 2</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngular2LEntity.cpp" line="-14"/>
@@ -353,7 +353,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Arc</source>
-        <translation type="unfinished">Wymiar Łuk</translation>
+        <translation>Wymiar Łuk</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="-6"/>
@@ -363,14 +363,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Chord Point</source>
-        <translation type="unfinished">Punkt cięciwy</translation>
+        <translation>Punkt cięciwy</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Far Chord Point</source>
-        <translation type="unfinished">Punkt cięciwy dalekiej</translation>
+        <translation>Punkt cięciwy dalekiej</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimOrdinateEntity.cpp" line="-10"/>
@@ -379,7 +379,7 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="-11"/>
         <location line="+1"/>
         <source>Origin</source>
-        <translation type="unfinished">Pochodzenie</translation>
+        <translation>Pochodzenie</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -391,19 +391,19 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Defining Point</source>
-        <translation type="unfinished">Określenie punktu</translation>
+        <translation>Określenie punktu</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Leader End Point</source>
-        <translation type="unfinished">Punkt końcowy lidera</translation>
+        <translation>Punkt końcowy lidera</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+167"/>
         <source>Dimension Angle</source>
-        <translation type="unfinished">Wymiar Kąt</translation>
+        <translation>Wymiar Kąt</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="-8"/>
@@ -419,46 +419,46 @@
     <message>
         <location line="-1"/>
         <source>Upper Limit</source>
-        <translation type="unfinished">Górna granica</translation>
+        <translation>Górna granica</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Lower Limit</source>
-        <translation type="unfinished">Dolna granica</translation>
+        <translation>Dolna granica</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Definition Point</source>
-        <translation type="unfinished">Definicja Punkt</translation>
+        <translation>Definicja Punkt</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>
-        <translation type="unfinished">Pozycja tekstu</translation>
+        <translation>Pozycja tekstu</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Flip First Arrow</source>
-        <translation type="unfinished">Odwróć pierwszą strzałkę</translation>
+        <translation>Odwróć pierwszą strzałkę</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Flip Second Arrow</source>
-        <translation type="unfinished">Przerzuć drugą strzałę</translation>
+        <translation>Przerzuć drugą strzałę</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Fixed Extension Line</source>
-        <translation type="unfinished">Stała linia przedłużająca</translation>
+        <translation>Stała linia przedłużająca</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension Line Length</source>
-        <translation type="unfinished">Długość przewodu przedłużającego</translation>
+        <translation>Długość przewodu przedłużającego</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -485,7 +485,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Major Point</source>
-        <translation type="unfinished">Główny punkt</translation>
+        <translation>Główny punkt</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -530,7 +530,7 @@
     <message>
         <location line="+1"/>
         <source>Alpha</source>
-        <translation type="unfinished">Alfa</translation>
+        <translation>Alfa</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -611,23 +611,23 @@
         <location line="+2"/>
         <location line="+1"/>
         <source>U</source>
-        <translation type="unfinished">U</translation>
+        <translation>U</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <source>V</source>
-        <translation type="unfinished">V</translation>
+        <translation>V</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Width Factor</source>
-        <translation type="unfinished">Współczynnik szerokości</translation>
+        <translation>Współczynnik szerokości</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Height Factor</source>
-        <translation type="unfinished">Czynnik wysokości</translation>
+        <translation>Czynnik wysokości</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -652,7 +652,7 @@
     <message>
         <location line="+1"/>
         <source>Spline</source>
-        <translation type="unfinished">Spline</translation>
+        <translation>Spline</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -662,7 +662,7 @@
     <message>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>
         <source>Polyline Pattern</source>
-        <translation type="unfinished">Wzór polilinii</translation>
+        <translation>Wzór polilinii</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -672,7 +672,7 @@
     <message>
         <location line="+4"/>
         <source>Bulge</source>
-        <translation type="unfinished">Bulge</translation>
+        <translation>Bulge</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -704,22 +704,22 @@
     <message>
         <location line="-2"/>
         <source>Base Angle</source>
-        <translation type="unfinished">Kąt nachylenia podstawy</translation>
+        <translation>Kąt nachylenia podstawy</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Size 1</source>
-        <translation type="unfinished">Wielkość 1</translation>
+        <translation>Wielkość 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Size 2</source>
-        <translation type="unfinished">Rozmiar 2</translation>
+        <translation>Rozmiar 2</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Global Z</source>
-        <translation type="unfinished">Globalny Z</translation>
+        <translation>Globalny Z</translation>
     </message>
     <message>
         <location filename="../src/entity/RFaceEntity.cpp" line="-14"/>
@@ -788,14 +788,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Control Point</source>
-        <translation type="unfinished">Punkt kontrolny</translation>
+        <translation>Punkt kontrolny</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Fit Point</source>
-        <translation type="unfinished">Fit Point</translation>
+        <translation>Fit Point</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -810,40 +810,40 @@
     <message>
         <location line="+6"/>
         <source>Use Start Tangent</source>
-        <translation type="unfinished">Użyj stycznej początkowej</translation>
+        <translation>Użyj stycznej początkowej</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Start Tangent</source>
-        <translation type="unfinished">Początek stycznej</translation>
+        <translation>Początek stycznej</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Use End Tangent</source>
-        <translation type="unfinished">Wykorzystanie stycznej końcowej</translation>
+        <translation>Wykorzystanie stycznej końcowej</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>End Tangent</source>
-        <translation type="unfinished">Styczna końcowa</translation>
+        <translation>Styczna końcowa</translation>
     </message>
     <message>
         <location filename="../src/entity/RToleranceEntity.cpp" line="-5"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Location</source>
-        <translation type="unfinished">Lokalizacja</translation>
+        <translation>Lokalizacja</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Direction</source>
-        <translation type="unfinished">Kierunek</translation>
+        <translation>Kierunek</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -906,14 +906,14 @@
     <message>
         <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+185"/>
         <source>Arc Symbol Type</source>
-        <translation type="unfinished">Symbol łuku Typ</translation>
+        <translation>Symbol łuku Typ</translation>
     </message>
     <message>
         <location filename="../src/entity/RLineEntity.cpp" line="-7"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Middle Point</source>
-        <translation type="unfinished">Middle Point</translation>
+        <translation>Middle Point</translation>
     </message>
 </context>
 </TS>

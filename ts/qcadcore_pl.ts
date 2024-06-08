@@ -718,112 +718,112 @@
     <message>
         <location line="+1"/>
         <source>Linear measurement factor</source>
-        <translation type="unfinished">Współczynnik pomiaru liniowego</translation>
+        <translation>Współczynnik pomiaru liniowego</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text height</source>
-        <translation type="unfinished">Wysokość tekstu</translation>
+        <translation>Wysokość tekstu</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation type="unfinished">Odstęp między liniami wymiarowymi</translation>
+        <translation>Odstęp między liniami wymiarowymi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow size</source>
-        <translation type="unfinished">Rozmiar strzałki</translation>
+        <translation>Rozmiar strzałki</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension line increment</source>
-        <translation type="unfinished">Przyrost linii wymiarowej</translation>
+        <translation>Przyrost linii wymiarowej</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line extension</source>
-        <translation type="unfinished">Przedłużenie linii przedłużającej</translation>
+        <translation>Przedłużenie linii przedłużającej</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line offset</source>
-        <translation type="unfinished">Przesunięcie linii przedłużającej</translation>
+        <translation>Przesunięcie linii przedłużającej</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text position vertical</source>
-        <translation type="unfinished">Pozycja tekstu w pionie</translation>
+        <translation>Pozycja tekstu w pionie</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text horizontal</source>
-        <translation type="unfinished">Tekst poziomy</translation>
+        <translation>Tekst poziomy</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tick size</source>
-        <translation type="unfinished">Rozmiar kleszcza</translation>
+        <translation>Rozmiar kleszcza</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linear format</source>
-        <translation type="unfinished">Format liniowy</translation>
+        <translation>Format liniowy</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal places</source>
-        <translation type="unfinished">Miejsca dziesiętne</translation>
+        <translation>Miejsca dziesiętne</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal separator</source>
-        <translation type="unfinished">Separator dziesiętny</translation>
+        <translation>Separator dziesiętny</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Zero suppression</source>
-        <translation type="unfinished">Tłumienie zerowe</translation>
+        <translation>Tłumienie zerowe</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular format</source>
-        <translation type="unfinished">Format kątowy</translation>
+        <translation>Format kątowy</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular decimal places</source>
-        <translation type="unfinished">Kątowe miejsca dziesiętne</translation>
+        <translation>Kątowe miejsca dziesiętne</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular zero suppression</source>
-        <translation type="unfinished">Tłumienie zera kątowego</translation>
+        <translation>Tłumienie zera kątowego</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation type="unfinished">Architectur tick</translation>
+        <translation>Architectur tick</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text color</source>
-        <translation type="unfinished">Kolor tekstu</translation>
+        <translation>Kolor tekstu</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block</source>
-        <translation type="unfinished">Blok strzałek</translation>
+        <translation>Blok strzałek</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 1</source>
-        <translation type="unfinished">Strzałka blok 1</translation>
+        <translation>Strzałka blok 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 2</source>
-        <translation type="unfinished">Strzałka blok 2</translation>
+        <translation>Strzałka blok 2</translation>
     </message>
 </context>
 <context>
@@ -1043,7 +1043,7 @@
     <message>
         <location line="+2"/>
         <source>Water</source>
-        <translation type="unfinished">Woda</translation>
+        <translation>Woda</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1058,37 +1058,37 @@
     <message>
         <location line="+2"/>
         <source>Communication</source>
-        <translation type="unfinished">Komunikacja</translation>
+        <translation>Komunikacja</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Electric</source>
-        <translation type="unfinished">Elektryczny</translation>
+        <translation>Elektryczny</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Low Voltage</source>
-        <translation type="unfinished">Niskie napięcie</translation>
+        <translation>Niskie napięcie</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>High Voltage</source>
-        <translation type="unfinished">Wysokie napięcie</translation>
+        <translation>Wysokie napięcie</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Overhead Power</source>
-        <translation type="unfinished">Moc napowietrzna</translation>
+        <translation>Moc napowietrzna</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Foul</source>
-        <translation type="unfinished">Foul</translation>
+        <translation>Foul</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foul Rising</source>
-        <translation type="unfinished">Foul Rising</translation>
+        <translation>Foul Rising</translation>
     </message>
 </context>
 <context>
