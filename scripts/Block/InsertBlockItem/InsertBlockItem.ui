@@ -19,9 +19,6 @@
      <property name="buddy">
       <cstring>Rotation</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,R</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -154,9 +151,6 @@
      <property name="buddy">
       <cstring>Scale</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,S</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -248,9 +242,6 @@
      <property name="checkable">
       <bool>true</bool>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,H</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -264,9 +255,6 @@
      </property>
      <property name="checkable">
       <bool>true</bool>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,V</string>
      </property>
     </widget>
    </item>
@@ -285,9 +273,6 @@
      <property name="text">
       <string>Overwrite Layers</string>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,O</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -297,9 +282,6 @@
      </property>
      <property name="text">
       <string>Overwrite Blocks</string>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,B</string>
      </property>
     </widget>
    </item>
@@ -317,9 +299,6 @@
      </property>
      <property name="buddy">
       <cstring>AttributeTag</cstring>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,A</string>
      </property>
     </widget>
    </item>
@@ -356,9 +335,6 @@
      <property name="buddy">
       <cstring>AttributeValue</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,=</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -386,9 +362,6 @@
    </item>
    <item>
     <widget class="QToolButton" name="Reset">
-     <property name="Shortcut" stdset="0">
-      <string>,Q</string>
-     </property>
     </widget>
    </item>
   </layout>
