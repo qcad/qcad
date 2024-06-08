@@ -19,9 +19,6 @@
      <property name="buddy">
       <cstring>Rotation</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,R</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -154,9 +151,6 @@
      <property name="buddy">
       <cstring>ScaleX</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,X</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -246,9 +240,6 @@
      </property>
      <property name="buddy">
       <cstring>ScaleY</cstring>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,Y</string>
      </property>
     </widget>
    </item>
@@ -347,9 +338,6 @@
      <property name="checked">
       <bool>true</bool>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,K</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -368,9 +356,6 @@
       <iconset>
        <normaloff>FlipHorizontal.svg</normaloff>FlipHorizontal.svg</iconset>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,H</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -381,9 +366,6 @@
      <property name="icon">
       <iconset>
        <normaloff>FlipVertical.svg</normaloff>FlipVertical.svg</iconset>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,V</string>
      </property>
     </widget>
    </item>
@@ -409,9 +391,6 @@
      <property name="checked">
       <bool>false</bool>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,1</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -429,9 +408,6 @@
      <property name="checked">
       <bool>false</bool>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,2</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -448,9 +424,6 @@
      </property>
      <property name="buddy">
       <cstring>AttributeTag</cstring>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,A</string>
      </property>
     </widget>
    </item>
@@ -520,9 +493,6 @@
    </item>
    <item>
     <widget class="QToolButton" name="Reset">
-     <property name="Shortcut" stdset="0">
-      <string>,Q</string>
-     </property>
     </widget>
    </item>
   </layout>
