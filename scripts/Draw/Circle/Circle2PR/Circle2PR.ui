@@ -19,9 +19,6 @@
      <property name="buddy">
       <cstring>Radius</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,R</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -46,9 +43,6 @@
      <property name="text">
       <string>Solution:</string>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,S</string>
-     </property>
      <property name="AutoFocusWidget" stdset="0">
       <string notr="true">Solution</string>
      </property>
@@ -69,9 +63,6 @@
      <property name="checked">
       <bool>true</bool>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,1</string>
-     </property>
      <attribute name="buttonGroup">
       <string notr="true">Solution</string>
      </attribute>
@@ -88,9 +79,6 @@
      </property>
      <property name="checkable">
       <bool>true</bool>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,2</string>
      </property>
      <attribute name="buttonGroup">
       <string notr="true">Solution</string>

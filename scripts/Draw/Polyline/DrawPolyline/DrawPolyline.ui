@@ -29,9 +29,6 @@
       <iconset>
        <normaloff>Close.svg</normaloff>Close.svg</iconset>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string extracomment="Close">,C</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -56,9 +53,6 @@
       <iconset>
        <normaloff>Undo.svg</normaloff>Undo.svg</iconset>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string extracomment="Undo">,U</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -76,9 +70,6 @@
       <iconset>
        <normaloff>Redo.svg</normaloff>Redo.svg</iconset>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string extracomment="Redo">,R</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -92,9 +83,6 @@
     <widget class="QCheckBox" name="ArcSegment">
      <property name="text">
       <string>Arc with Radius:</string>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string extracomment="Arc">,A</string>
      </property>
      <property name="AutoFocusWidget" stdset="0">
       <string notr="true">Radius</string>
@@ -134,9 +122,6 @@
      </property>
      <property name="buddy">
       <cstring>Sweep</cstring>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string extracomment="Sweep">,S</string>
      </property>
     </widget>
    </item>
@@ -183,9 +168,6 @@
      </property>
      <property name="checked">
       <bool>false</bool>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string extracomment="Restrict">,R</string>
      </property>
     </widget>
    </item>

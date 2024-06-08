@@ -125,9 +125,6 @@
      <property name="buddy">
       <cstring>Sweep</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,S</string>
-     </property>
     </widget>
    </item>
    <item>

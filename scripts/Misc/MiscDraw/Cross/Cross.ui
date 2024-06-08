@@ -19,9 +19,6 @@
      <property name="buddy">
       <cstring>ExtendX</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,X</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -64,9 +61,6 @@
      <property name="buddy">
       <cstring>ExtendY</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,Y</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -102,9 +96,6 @@
      </property>
      <property name="buddy">
       <cstring>Modes</cstring>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,M</string>
      </property>
     </widget>
    </item>
@@ -171,9 +162,6 @@
      </property>
      <property name="buddy">
       <cstring>Orientation</cstring>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,A</string>
      </property>
     </widget>
    </item>

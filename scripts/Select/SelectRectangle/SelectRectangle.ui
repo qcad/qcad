@@ -16,9 +16,6 @@
      <property name="text">
       <string>Mode:</string>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,M</string>
-     </property>
      <property name="AutoFocusWidget" stdset="0">
       <string notr="true">SelectionMode</string>
      </property>

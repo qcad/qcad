@@ -19,9 +19,6 @@
      <property name="buddy">
       <cstring>Length</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,L</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -48,9 +45,6 @@
     <widget class="QLabel" name="label">
      <property name="text">
       <string>Direction:</string>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,D</string>
      </property>
      <property name="AutoFocusWidget" stdset="0">
       <string notr="true">Direction</string>

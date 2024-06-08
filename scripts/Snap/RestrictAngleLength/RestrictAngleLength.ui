@@ -16,9 +16,6 @@
      <property name="text">
       <string>Distance:</string>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,,D</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -45,9 +42,6 @@
      <property name="buddy">
       <cstring>BaseLength</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,,B</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -71,9 +65,6 @@
      <property name="text">
       <string>Multiples</string>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,,M</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -87,9 +78,6 @@
     <widget class="QCheckBox" name="RestrictAngle">
      <property name="text">
       <string>Angle:</string>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,,A</string>
      </property>
      <property name="AutoFocusWidget" stdset="0">
       <string notr="true">Angle</string>
@@ -120,9 +108,6 @@
      <property name="buddy">
       <cstring>BaseAngle</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,,E</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -145,9 +130,6 @@
     <widget class="QCheckBox" name="RepeatAngle">
      <property name="text">
       <string>Multiples</string>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,,T</string>
      </property>
     </widget>
    </item>

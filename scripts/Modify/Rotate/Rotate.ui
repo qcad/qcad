@@ -36,9 +36,6 @@
      <property name="buddy">
       <cstring>NumberOfCopies</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,N</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -88,9 +85,6 @@
      </property>
      <property name="buddy">
       <cstring>Angle</cstring>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,A</string>
      </property>
     </widget>
    </item>

@@ -16,9 +16,6 @@
      <property name="text">
       <string>Add Measurement to Drawing</string>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,A</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -38,9 +35,6 @@
      </property>
      <property name="buddy">
       <cstring>TextHeight</cstring>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,H</string>
      </property>
     </widget>
    </item>

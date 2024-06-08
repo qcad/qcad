@@ -19,9 +19,6 @@
      <property name="buddy">
       <cstring>DovetailNumber</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,N</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -51,9 +48,6 @@
      </property>
      <property name="buddy">
       <cstring>DovetailHeight</cstring>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,H</string>
      </property>
     </widget>
    </item>
@@ -85,9 +79,6 @@
      <property name="buddy">
       <cstring>DovetailGradient</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,G</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -117,9 +108,6 @@
      </property>
      <property name="buddy">
       <cstring>PinRatio</cstring>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,R</string>
      </property>
     </widget>
    </item>

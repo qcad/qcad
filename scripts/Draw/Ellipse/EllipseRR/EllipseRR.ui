@@ -22,9 +22,6 @@
      <property name="MoveToDialog" stdset="0">
       <bool>true</bool>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,X</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -47,9 +44,6 @@
      </property>
      <property name="MoveToDialog" stdset="0">
       <bool>true</bool>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,Y</string>
      </property>
     </widget>
    </item>
@@ -80,9 +74,6 @@
      </property>
      <property name="MoveToDialog" stdset="0">
       <bool>true</bool>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,A</string>
      </property>
     </widget>
    </item>
@@ -119,9 +110,6 @@
      </property>
      <property name="buddy">
       <cstring>ReferencePoint</cstring>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,P</string>
      </property>
     </widget>
    </item>

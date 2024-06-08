@@ -19,9 +19,6 @@
      <property name="buddy">
       <cstring>Rotation</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,R</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -150,9 +147,6 @@
      </property>
      <property name="buddy">
       <cstring>Scale</cstring>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,S</string>
      </property>
     </widget>
    </item>

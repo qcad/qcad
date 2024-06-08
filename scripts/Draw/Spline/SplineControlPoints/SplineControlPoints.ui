@@ -49,9 +49,6 @@
      <property name="buddy">
       <cstring>Degree</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,D</string>
-     </property>
     </widget>
    </item>
    <item>

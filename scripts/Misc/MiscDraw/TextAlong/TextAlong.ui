@@ -19,9 +19,6 @@
      <property name="buddy">
       <cstring>Contents</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,X</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -54,9 +51,6 @@
      </property>
      <property name="buddy">
       <cstring>Height</cstring>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,H</string>
      </property>
     </widget>
    </item>
@@ -91,9 +85,6 @@
      <property name="buddy">
       <cstring>Spacing</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,S</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -118,9 +109,6 @@
      <property name="text">
       <string>Direction:</string>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,D</string>
-     </property>
      <property name="AutoFocusWidget" stdset="0">
       <string notr="true">Direction</string>
      </property>
@@ -140,9 +128,6 @@
      </property>
      <property name="checkable">
       <bool>true</bool>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,T</string>
      </property>
      <attribute name="buttonGroup">
       <string notr="true">Direction</string>
@@ -167,9 +152,6 @@
      <property name="checked">
       <bool>true</bool>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,C</string>
-     </property>
      <attribute name="buttonGroup">
       <string notr="true">Direction</string>
      </attribute>
@@ -189,9 +171,6 @@
      </property>
      <property name="text">
       <string>Fit</string>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,F</string>
      </property>
     </widget>
    </item>

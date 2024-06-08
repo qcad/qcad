@@ -19,9 +19,6 @@
      <property name="buddy">
       <cstring>Radius</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,R</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -52,9 +49,6 @@
      <property name="AutoFocusWidget" stdset="0">
       <string notr="true">Direction</string>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,D</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -71,9 +65,6 @@
      </property>
      <property name="checked">
       <bool>true</bool>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,T</string>
      </property>
      <attribute name="buttonGroup">
       <string notr="true">Direction</string>
@@ -92,9 +83,6 @@
      <property name="checkable">
       <bool>true</bool>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,C</string>
-     </property>
      <attribute name="buttonGroup">
       <string notr="true">Direction</string>
      </attribute>
@@ -111,9 +99,6 @@
     <widget class="QLabel" name="label_3">
      <property name="text">
       <string>Solution:</string>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,S</string>
      </property>
      <property name="AutoFocusWidget" stdset="0">
       <string notr="true">Solution</string>
@@ -135,9 +120,6 @@
      <property name="checked">
       <bool>true</bool>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,1</string>
-     </property>
      <attribute name="buttonGroup">
       <string notr="true">Solution</string>
      </attribute>
@@ -154,9 +136,6 @@
      </property>
      <property name="checkable">
       <bool>true</bool>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,2</string>
      </property>
      <attribute name="buttonGroup">
       <string notr="true">Solution</string>

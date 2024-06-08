@@ -19,9 +19,6 @@
      <property name="buddy">
       <cstring>PrimaryAngle</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,P</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -49,9 +46,6 @@
      <property name="buddy">
       <cstring>SecondaryAngle</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,S</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -78,9 +72,6 @@
      </property>
      <property name="buddy">
       <cstring>NumberOfCopies</cstring>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,C</string>
      </property>
     </widget>
    </item>

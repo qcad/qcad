@@ -19,9 +19,6 @@
      <property name="buddy">
       <cstring>Start</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,S</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -46,9 +43,6 @@
      <property name="buddy">
       <cstring>Increment</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,I</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -72,9 +66,6 @@
      </property>
      <property name="buddy">
       <cstring>NumberFormat</cstring>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,N</string>
      </property>
     </widget>
    </item>
@@ -165,9 +156,6 @@
      <property name="buddy">
       <cstring>Prefix</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,P</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -197,9 +185,6 @@
      </property>
      <property name="buddy">
       <cstring>Suffix</cstring>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,U</string>
      </property>
     </widget>
    </item>

@@ -19,9 +19,6 @@
      <property name="buddy">
       <cstring>Length</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,L</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -51,9 +48,6 @@
      </property>
      <property name="buddy">
       <cstring>ReferencePoint</cstring>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,P</string>
      </property>
     </widget>
    </item>

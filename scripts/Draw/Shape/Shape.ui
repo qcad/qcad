@@ -16,9 +16,6 @@
      <property name="text">
       <string>Create Polyline</string>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,Y</string>
-     </property>
      <property name="MoveToDialog" stdset="0">
       <bool>true</bool>
      </property>
@@ -36,9 +33,6 @@
      <property name="text">
       <string>Fill</string>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,F</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -52,9 +46,6 @@
     <widget class="QCheckBox" name="RoundCorners">
      <property name="text">
       <string>Radius:</string>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,R</string>
      </property>
      <property name="AutoFocusWidget" stdset="0">
       <string notr="true">Radius</string>

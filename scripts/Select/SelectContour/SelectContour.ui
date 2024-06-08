@@ -16,9 +16,6 @@
      <property name="text">
       <string>Mode:</string>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,M</string>
-     </property>
      <property name="AutoFocusWidget" stdset="0">
       <string notr="true">SelectionMode</string>
      </property>
@@ -42,9 +39,6 @@
      <property name="autoExclusive">
       <bool>true</bool>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,R</string>
-     </property>
      <attribute name="buttonGroup">
       <string notr="true">SelectionMode</string>
      </attribute>
@@ -64,9 +58,6 @@
      </property>
      <property name="autoExclusive">
       <bool>true</bool>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,A</string>
      </property>
      <attribute name="buttonGroup">
       <string notr="true">SelectionMode</string>
@@ -88,9 +79,6 @@
      <property name="autoExclusive">
       <bool>true</bool>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,S</string>
-     </property>
      <attribute name="buttonGroup">
       <string notr="true">SelectionMode</string>
      </attribute>
@@ -111,9 +99,6 @@
      <property name="autoExclusive">
       <bool>true</bool>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,I</string>
-     </property>
      <attribute name="buttonGroup">
       <string notr="true">SelectionMode</string>
      </attribute>
@@ -133,9 +118,6 @@
      </property>
      <property name="buddy">
       <cstring>Tolerance</cstring>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,T</string>
      </property>
     </widget>
    </item>
@@ -164,9 +146,6 @@
      <property name="text">
       <string>Same Layer</string>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,L</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -178,9 +157,6 @@
    </item>
    <item>
     <widget class="QToolButton" name="Reset">
-     <property name="Shortcut" stdset="0">
-      <string>,Q</string>
-     </property>
     </widget>
    </item>
   </layout>

@@ -16,9 +16,6 @@
      <property name="text">
       <string>Copy</string>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,C</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -35,9 +32,6 @@
      </property>
      <property name="buddy">
       <cstring>NumberOfCopies</cstring>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,N</string>
      </property>
     </widget>
    </item>
@@ -69,9 +63,6 @@
      <property name="text">
       <string>Use Current Layer and Attributes</string>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,L</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -89,9 +80,6 @@
      <property name="buddy">
       <cstring>FactorX</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,X</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -108,9 +96,6 @@
      </property>
      <property name="buddy">
       <cstring>FactorY</cstring>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,Y</string>
      </property>
     </widget>
    </item>
@@ -136,9 +121,6 @@
      <property name="checked">
       <bool>true</bool>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,K</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -152,9 +134,6 @@
      </property>
      <property name="checkable">
       <bool>true</bool>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,M</string>
      </property>
     </widget>
    </item>

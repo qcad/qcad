@@ -19,9 +19,6 @@
      <property name="buddy">
       <cstring>Angle</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,A</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -49,9 +46,6 @@
      <property name="text">
       <string>Direction:</string>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,D</string>
-     </property>
      <property name="AutoFocusWidget" stdset="0">
       <string notr="true">Direction</string>
      </property>
@@ -72,9 +66,6 @@
      <property name="checked">
       <bool>true</bool>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,T</string>
-     </property>
      <attribute name="buttonGroup">
       <string notr="true">Direction</string>
      </attribute>
@@ -91,9 +82,6 @@
      </property>
      <property name="checkable">
       <bool>true</bool>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,C</string>
      </property>
      <attribute name="buttonGroup">
       <string notr="true">Direction</string>

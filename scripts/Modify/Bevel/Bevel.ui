@@ -19,9 +19,6 @@
      <property name="checked">
       <bool>true</bool>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,T</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -38,9 +35,6 @@
      </property>
      <property name="buddy">
       <cstring>Length1</cstring>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,1</string>
      </property>
     </widget>
    </item>
@@ -65,9 +59,6 @@
      </property>
      <property name="buddy">
       <cstring>Length2</cstring>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,2</string>
      </property>
     </widget>
    </item>

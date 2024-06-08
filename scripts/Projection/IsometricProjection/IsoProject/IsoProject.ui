@@ -26,9 +26,6 @@
      <property name="checked">
       <bool>true</bool>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,1</string>
-     </property>
      <attribute name="buttonGroup">
       <string notr="true">ProjectionType</string>
      </attribute>
@@ -45,9 +42,6 @@
      </property>
      <property name="checkable">
       <bool>true</bool>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,2</string>
      </property>
      <attribute name="buttonGroup">
       <string notr="true">ProjectionType</string>
@@ -73,9 +67,6 @@
      <property name="checkable">
       <bool>true</bool>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,3</string>
-     </property>
      <attribute name="buttonGroup">
       <string notr="true">ProjectionType</string>
      </attribute>
@@ -92,9 +83,6 @@
      </property>
      <property name="checkable">
       <bool>true</bool>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,4</string>
      </property>
      <attribute name="buttonGroup">
       <string notr="true">ProjectionType</string>
@@ -120,9 +108,6 @@
      <property name="checkable">
       <bool>true</bool>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,5</string>
-     </property>
      <attribute name="buttonGroup">
       <string notr="true">ProjectionType</string>
      </attribute>
@@ -139,9 +124,6 @@
      </property>
      <property name="checkable">
       <bool>true</bool>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,6</string>
      </property>
      <attribute name="buttonGroup">
       <string notr="true">ProjectionType</string>
@@ -164,9 +146,6 @@
       <iconset>
        <normaloff>RotateCCW.svg</normaloff>RotateCCW.svg</iconset>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,T</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -177,9 +156,6 @@
      <property name="icon">
       <iconset>
        <normaloff>RotateCW.svg</normaloff>RotateCW.svg</iconset>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,C</string>
      </property>
     </widget>
    </item>
@@ -197,9 +173,6 @@
      </property>
      <property name="buddy">
       <cstring>Method</cstring>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,M</string>
      </property>
     </widget>
    </item>

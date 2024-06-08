@@ -19,9 +19,6 @@
      <property name="buddy">
       <cstring>Contents</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,T</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -55,9 +52,6 @@
      <property name="buddy">
       <cstring>Height</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,H</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -87,9 +81,6 @@
      </property>
      <property name="buddy">
       <cstring>Angle</cstring>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,A</string>
      </property>
     </widget>
    </item>

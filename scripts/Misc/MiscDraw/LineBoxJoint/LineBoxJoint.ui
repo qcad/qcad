@@ -19,9 +19,6 @@
      <property name="buddy">
       <cstring>FingerHeight</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,D</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -51,9 +48,6 @@
      </property>
      <property name="buddy">
       <cstring>FingerLength</cstring>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,W</string>
      </property>
     </widget>
    </item>
@@ -85,9 +79,6 @@
      <property name="buddy">
       <cstring>SlotRatio</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,R</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -117,9 +108,6 @@
      </property>
      <property name="buddy">
       <cstring>FingerStyle</cstring>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,S</string>
      </property>
     </widget>
    </item>

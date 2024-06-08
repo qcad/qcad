@@ -31,9 +31,6 @@
      <property name="checked">
       <bool>true</bool>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,R</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -57,9 +54,6 @@
      <property name="checked">
       <bool>true</bool>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,I</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -82,9 +76,6 @@
      </property>
      <property name="buddy">
       <cstring>BreakRatio</cstring>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,P</string>
      </property>
     </widget>
    </item>
@@ -180,9 +171,6 @@
      <property name="checked">
       <bool>true</bool>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,1</string>
-     </property>
      <attribute name="buttonGroup">
       <string notr="true">IncVert</string>
      </attribute>
@@ -205,9 +193,6 @@
      </property>
      <property name="checkable">
       <bool>true</bool>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,2</string>
      </property>
      <attribute name="buttonGroup">
       <string notr="true">IncVert</string>

@@ -19,9 +19,6 @@
      <property name="buddy">
       <cstring>Distance</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,D</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -51,9 +48,6 @@
      </property>
      <property name="buddy">
       <cstring>Number</cstring>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,N</string>
      </property>
     </widget>
    </item>

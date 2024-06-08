@@ -31,9 +31,6 @@
      <property name="buddy">
       <cstring>Text</cstring>
      </property>
-     <property name="Shortcut" stdset="0">
-      <string>,L</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -209,9 +206,6 @@
      </property>
      <property name="buddy">
       <cstring>Scale</cstring>
-     </property>
-     <property name="Shortcut" stdset="0">
-      <string>,S</string>
      </property>
     </widget>
    </item>
