@@ -2443,7 +2443,7 @@ Vuoi recuperarlo?</translation>
     <message>
         <location line="+36"/>
         <source>Mode:</source>
-        <translation type="unfinished">Modalità:</translation>
+        <translation>Modalità:</translation>
     </message>
     <message>
         <location line="+41"/>
@@ -2750,7 +2750,7 @@ Vuoi recuperarlo?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
         <source>Use Maximum Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilizzare l&apos;angolo massimo</translation>
     </message>
 </context>
 <context>

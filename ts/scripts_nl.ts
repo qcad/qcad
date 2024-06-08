@@ -2443,7 +2443,7 @@ Wilt u deze herstellen?</translation>
     <message>
         <location line="+36"/>
         <source>Mode:</source>
-        <translation type="unfinished">Modus:</translation>
+        <translation>Modus:</translation>
     </message>
     <message>
         <location line="+41"/>
@@ -2750,7 +2750,7 @@ Wilt u deze herstellen?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
         <source>Use Maximum Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Gebruik maximale hoek</translation>
     </message>
 </context>
 <context>
