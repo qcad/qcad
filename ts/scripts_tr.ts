@@ -471,19 +471,9 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <translation>Açı:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Direction:</source>
         <translation>Yön:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -491,19 +481,9 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <translation>Saat Yönünün Tersi (Pozitif)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Saat Yönünde (Negatif)</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PA/Arc2PAInit.js" line="+2"/>
@@ -544,19 +524,9 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <translation>Yükseklik:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,H</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Direction:</source>
         <translation>Yön:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -564,19 +534,9 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <translation>Saat Yönünün Tersine (Pozitif)</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Saat Yönünde (Negatif)</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PHInit.js" line="+2"/>
@@ -622,19 +582,9 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <translation>Uzunluk:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Direction:</source>
         <translation>Yön:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -642,19 +592,9 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <translation>Saat Yönünün Tersine (Pozitif)</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Saat Yönünde (Negatif)</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PLInit.js" line="+2"/>
@@ -695,49 +635,24 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <translation>Yarıçap:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Direction:</source>
         <translation>Yön:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>Counter Clockwise (Positive)</source>
         <translation>Saat Yönünün Tersine (Pozitif)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Saat Yönünde (Negatif)</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+24"/>
         <source>Solution:</source>
         <translation>Çözüm:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -745,19 +660,9 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <translation>Daha kısa Yay</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+20"/>
         <source>Longer Arc</source>
         <translation>Daha uzun Yay</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>,2</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PR/Arc2PRInit.js" line="+2"/>
@@ -831,29 +736,14 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <translation>Yön:</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Counter Clockwise (positive)</source>
         <translation>Saat yönünün tersine (pozitif)</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Saat yönünde (Negatif)</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPAInit.js" line="+2"/>
@@ -874,19 +764,9 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <translation>Ara:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Number:</source>
         <translation>Sayı:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentric/ArcConcentricInit.js" line="+2"/>
@@ -905,11 +785,6 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <location filename="../scripts/Draw/Arc/ArcConcentricThrough/ArcConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
         <translation>Numara:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentricThrough/ArcConcentricThroughInit.js" line="+2"/>
@@ -951,11 +826,6 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <translation>Yarıçap:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Arc/ArcTPR/ArcTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
         <translation>&amp;Teğet, Nokta, Yarıçap</translation>
@@ -982,11 +852,6 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.ui" line="+17"/>
         <source>Radius:</source>
         <translation>Yarıçap:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangentialInit.js" line="+2"/>
@@ -1223,29 +1088,14 @@ Kurtarmak ister misiniz?</translation>
         <translation type="unfinished">Döşeme</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>Length &amp;1:</source>
         <translation type="unfinished">Uzunluk 1:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+21"/>
+        <location line="+24"/>
         <source>Length &amp;2:</source>
         <translation type="unfinished">Uzunluk 2:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,2</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1564,11 +1414,6 @@ Kurtarmak ister misiniz?</translation>
         <source>Remove Segment</source>
         <translation type="unfinished">Segmenti Kaldır</translation>
     </message>
-    <message>
-        <location line="+3"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>BreakOutGap</name>
@@ -1588,13 +1433,7 @@ Kurtarmak ister misiniz?</translation>
         <translation type="unfinished">Kopma Boşluğu</translation>
     </message>
     <message>
-        <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.ui" line="+14"/>
-        <location line="+12"/>
-        <source>,G</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-6"/>
+        <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.ui" line="+17"/>
         <source>Gap:</source>
         <translation type="unfinished">Boşluk:</translation>
     </message>
@@ -1605,11 +1444,6 @@ Kurtarmak ister misiniz?</translation>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.ui" line="+17"/>
         <source>Remove Segment</source>
         <translation>Segmenti Kaldır</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManualInit.js" line="+2"/>
@@ -1843,19 +1677,9 @@ Kurtarmak ister misiniz?</translation>
         <translation>Yarıçap:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+24"/>
+        <location line="+27"/>
         <source>Solution:</source>
         <translation>Çözüm:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1863,19 +1687,9 @@ Kurtarmak ister misiniz?</translation>
         <translation>P1 - P2 Hattının Merkez Solu</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+20"/>
         <source>Center Right of Line P1 - P2</source>
         <translation>P1 - P2 Hattının Merkezi Sağı</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>,2</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PRInit.js" line="+2"/>
@@ -1953,11 +1767,6 @@ Kurtarmak ister misiniz?</translation>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TR.ui" line="+17"/>
         <source>Radius:</source>
         <translation>Yarıçap:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TRInit.js" line="+2"/>
@@ -2046,30 +1855,15 @@ Kurtarmak ister misiniz?</translation>
         <translation>Çap:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+30"/>
+        <location line="+36"/>
         <location filename="../scripts/Draw/Circle/CircleCD/CircleCDDialog.ui" line="-60"/>
         <source>Angle:</source>
         <translation>Açı:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+33"/>
+        <location line="+39"/>
         <source>Reference Point:</source>
         <translation>Referans Noktası:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCD/CircleCDInit.js" line="+2"/>
@@ -2114,30 +1908,15 @@ Kurtarmak ister misiniz?</translation>
         <translation>Yarıçap:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+30"/>
+        <location line="+36"/>
         <location filename="../scripts/Draw/Circle/CircleCR/CircleCRDialog.ui" line="-60"/>
         <source>Angle:</source>
         <translation>Açı:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+33"/>
+        <location line="+39"/>
         <source>Reference Point:</source>
         <translation>Referans Noktası:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCR/CircleCRInit.js" line="+2"/>
@@ -2158,19 +1937,9 @@ Kurtarmak ister misiniz?</translation>
         <translation>Ara:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Number:</source>
         <translation>Sayı:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentric/CircleConcentricInit.js" line="+2"/>
@@ -2189,11 +1958,6 @@ Kurtarmak ister misiniz?</translation>
         <location filename="../scripts/Draw/Circle/CircleConcentricThrough/CircleConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
         <translation>Sayı:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentricThrough/CircleConcentricThroughInit.js" line="+2"/>
@@ -2256,11 +2020,6 @@ Kurtarmak ister misiniz?</translation>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPR.ui" line="+17"/>
         <source>Radius:</source>
         <translation>Yarıçap:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPRInit.js" line="+2"/>
@@ -2518,29 +2277,14 @@ Kurtarmak ister misiniz?</translation>
         <translation>...den:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,F</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+53"/>
+        <location line="+56"/>
         <source>To:</source>
         <translation>...a</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Convert:</source>
         <translation>Dönüştür:</translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnitInit.js" line="+2"/>
@@ -2630,49 +2374,24 @@ Kurtarmak ister misiniz?</translation>
         <translation type="unfinished">Başla:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+21"/>
+        <location line="+24"/>
         <source>Increment:</source>
         <translation type="unfinished">Artış:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,I</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+21"/>
+        <location line="+24"/>
         <source>Number Format:</source>
         <translation type="unfinished">Sayı Formatı:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+86"/>
+        <location line="+89"/>
         <source>Prefix:</source>
         <translation type="unfinished">Önek:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Suffix:</source>
         <translation type="unfinished">Son ek:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,U</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2714,32 +2433,17 @@ Kurtarmak ister misiniz?</translation>
         <translation type="unfinished">X:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,X</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+39"/>
+        <location line="+42"/>
         <source>Y:</source>
         <translation type="unfinished">Y:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,Y</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+33"/>
+        <location line="+36"/>
         <source>Mode:</source>
         <translation type="unfinished">Mod:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,M</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+38"/>
+        <location line="+41"/>
         <source>Extension</source>
         <translation type="unfinished">Uzatma</translation>
     </message>
@@ -2757,11 +2461,6 @@ Kurtarmak ister misiniz?</translation>
         <location line="+15"/>
         <source>Angle:</source>
         <translation type="unfinished">Açı:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3050,11 +2749,6 @@ Kurtarmak ister misiniz?</translation>
         <source>Use Maximum Angle</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <location line="+3"/>
-        <source>,M</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>DimDiametric</name>
@@ -3181,11 +2875,6 @@ Kurtarmak ister misiniz?</translation>
         <translation>Açı:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotatedInit.js" line="+2"/>
         <source>&amp;Rotated (Linear)</source>
         <translation>&amp;Döndürülmüş (Doğrusal)</translation>
@@ -3277,12 +2966,7 @@ Kurtarmak ister misiniz?</translation>
         <translation>Etiket:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Prefix</source>
         <translation>Örnek</translation>
     </message>
@@ -3292,22 +2976,12 @@ Kurtarmak ister misiniz?</translation>
         <translation>Sabit etiket girin veya otomatik etiket için boş bırakın</translation>
     </message>
     <message>
-        <location line="+39"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+25"/>
+        <location line="+61"/>
         <source>Upper tolerance</source>
         <translation>Üst hata payı</translation>
     </message>
     <message>
-        <location line="+32"/>
-        <source>,O</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+25"/>
+        <location line="+54"/>
         <source>Lower tolerance</source>
         <translation>Alt hata payı</translation>
     </message>
@@ -3317,12 +2991,7 @@ Kurtarmak ister misiniz?</translation>
         <translation>Ölçek</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Drawing Scale</source>
         <translation>Çizim ölçeği</translation>
     </message>
@@ -3330,11 +2999,6 @@ Kurtarmak ister misiniz?</translation>
         <location line="+18"/>
         <source>Auto</source>
         <translation>Oto</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3763,38 +3427,18 @@ zaten listede.</translation>
         <translation type="unfinished">Çoklu çizgiyi kapat</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+27"/>
         <source>Undo Previous Segment</source>
         <translation type="unfinished">Önceki Segmenti Geri Al</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+17"/>
         <source>Redo Segment</source>
         <translation type="unfinished">Segmenti Yenile</translation>
     </message>
     <message>
-        <location line="-40"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>,U</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+18"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,A</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3803,12 +3447,7 @@ zaten listede.</translation>
         <translation type="unfinished">Süpürme</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+36"/>
+        <location line="+39"/>
         <source>Restrict length or angle</source>
         <translation type="unfinished">Uzunluk veya açıyı sınırla</translation>
     </message>
@@ -4475,35 +4114,8 @@ zaten listede.</translation>
         <translation>Çoklu çizgiyi kapat</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,C</source>
-        <extracomment>Close</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>,U</source>
-        <extracomment>Undo</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <location line="+108"/>
-        <source>,R</source>
-        <extracomment>Redo
-----------
-Restrict</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-94"/>
+        <location line="+62"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,A</source>
-        <extracomment>Arc</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4512,23 +4124,17 @@ Restrict</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <extracomment>Sweep</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-86"/>
+        <location line="-71"/>
         <source>Undo Previous Segment</source>
         <translation>Önceki Segmenti Geri Al</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+17"/>
         <source>Redo Segment</source>
         <translation type="unfinished">Segmenti Yenile</translation>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+93"/>
         <source>Restrict length or angle</source>
         <translation>Uzunluk veya açıyı sınırla</translation>
     </message>
@@ -4927,29 +4533,14 @@ Restrict</extracomment>
         <translation>Yön:</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Counter Clockwise (positive)</source>
         <translation>Saat Yönünün Tersi (pozitif)</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Saat Yönünde (Negatif)</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPAInit.js" line="+2"/>
@@ -4984,41 +4575,21 @@ Restrict</extracomment>
         <translation>X Çapı:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,X</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+24"/>
+        <location line="+30"/>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDDialog.ui" line="+80"/>
         <source>Y Diameter:</source>
         <translation>Y Çapı:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,Y</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+24"/>
+        <location line="+30"/>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDDialog.ui" line="-23"/>
         <source>Angle:</source>
         <translation>Açı:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+33"/>
+        <location line="+39"/>
         <source>Reference Point:</source>
         <translation>Referans Nokta:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDInit.js" line="+2"/>
@@ -5039,19 +4610,9 @@ Restrict</extracomment>
         <translation>Ara:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Number:</source>
         <translation>Sayı:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffset/EllipseOffsetInit.js" line="+2"/>
@@ -5070,11 +4631,6 @@ Restrict</extracomment>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThrough.ui" line="+17"/>
         <source>Number:</source>
         <translation>Sayı:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThroughInit.js" line="+2"/>
@@ -5096,41 +4652,21 @@ Restrict</extracomment>
         <translation>X Yarıçapı:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,X</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+23"/>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRDialog.ui" line="-10"/>
         <source>Y Radius:</source>
         <translation>Y Yarıçapı:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,Y</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+24"/>
+        <location line="+30"/>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRDialog.ui" line="-90"/>
         <source>Angle:</source>
         <translation>Açı:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+33"/>
+        <location line="+39"/>
         <source>Reference Point:</source>
         <translation>Referans Noktası:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRInit.js" line="+2"/>
@@ -5316,11 +4852,6 @@ Restrict</extracomment>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+17"/>
         <source>&amp;Radius:</source>
         <translation type="unfinished">Yarıçap:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6853,39 +6384,19 @@ Restrict</extracomment>
         <translation>Genişlik:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,W</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+20"/>
+        <location line="+23"/>
         <source>Keep proportions</source>
         <translation>Oranları koru</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,K</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="+17"/>
         <source>Height:</source>
         <translation>Yükseklik:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,H</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Angle:</source>
         <translation>Açı:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Image/ImageInit.js" line="+2"/>
@@ -6931,28 +6442,12 @@ Restrict</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
-        <location line="+326"/>
-        <source>,B</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-319"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+18"/>
         <source>Rotation:</source>
         <translation type="unfinished">Rotasyon:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+22"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
         <translation type="unfinished">Bu açıdan yapıştırılmış&lt;br&gt;varlıkları döndür</translation>
     </message>
@@ -6962,12 +6457,7 @@ Restrict</extracomment>
         <translation type="unfinished">Ölçek:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+22"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
         <translation type="unfinished">Bu etkenle yapıştırılan&lt;br&gt;varlıkları ölçeklendir</translation>
     </message>
@@ -6977,22 +6467,12 @@ Restrict</extracomment>
         <translation type="unfinished">Yapıştırılmış varlıkları&lt;br&gt;yatay olarak çevir</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,H</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
         <translation type="unfinished">Yapıştırılan varlıkları çevir&lt;br&gt;dikey</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,V</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
         <translation type="unfinished">Tüm varlıkları&lt;br&gt;orijinal katman yerine&lt;br&gt;geçerli katmana yapıştırın</translation>
     </message>
@@ -7002,18 +6482,8 @@ Restrict</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,O</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7022,17 +6492,12 @@ Restrict</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+17"/>
-        <source>,Q</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-33"/>
+        <location line="-13"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
         <translation type="unfinished">Panodaki katmanlarla&lt;br&gt;çizimdeki mevcut&lt;br&gt;katmanların üzerine yaz</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+10"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
         <translation type="unfinished">Panodaki bloklarla&lt;br&gt;çizimdeki mevcut&lt;br&gt;blokların üzerine yaz</translation>
     </message>
@@ -7155,14 +6620,14 @@ Restrict</extracomment>
         <location line="+24"/>
         <location line="+43"/>
         <location line="+22"/>
-        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="+137"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="+122"/>
         <source>Length</source>
         <translation>Uzunluk</translation>
     </message>
     <message>
         <location line="-88"/>
         <location line="+67"/>
-        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-19"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-16"/>
         <source>Chord</source>
         <translation>Ton</translation>
     </message>
@@ -7218,37 +6683,22 @@ Restrict</extracomment>
         <translation>yarıçap:</translation>
     </message>
     <message>
-        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-101"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-89"/>
         <source>Mode:</source>
         <translation>Mod:</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+33"/>
         <source>Calculate Area of Sector</source>
         <translation>Sektör Alanını Hesapla</translation>
     </message>
     <message>
-        <location line="-26"/>
+        <location line="-23"/>
         <source>Calculate Area of Segment</source>
         <translation>Segment Alanını Hesapla</translation>
     </message>
     <message>
-        <location line="-10"/>
-        <source>,M</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+26"/>
-        <source>,G</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+20"/>
+        <location line="+53"/>
         <source>Add:</source>
         <translation>Ekle:</translation>
     </message>
@@ -7263,24 +6713,9 @@ Restrict</extracomment>
         <translation>Varlık</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,E</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+26"/>
         <source>Add lengths/circumference to drawing</source>
         <translation>Çizim için uzunluk/çevre ekle</translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleAreaInit.js" line="+2"/>
@@ -7311,19 +6746,9 @@ Restrict</extracomment>
         <translation>Uzunluk hesapla ve aracı kapat.</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>Close Tool.</source>
         <translation>Kapatma Aracı.</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>,Q</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoAreaInit.js" line="+2"/>
@@ -7956,18 +7381,8 @@ Restrict</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+17"/>
         <source>Text Height:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,H</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -8094,12 +7509,7 @@ Restrict</extracomment>
         <translation>Döndür:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+22"/>
         <source>Rotate block&lt;br&gt;by this angle</source>
         <translation>Bloğu döndür&lt;br&gt;bu açıya göre</translation>
     </message>
@@ -8109,12 +7519,7 @@ Restrict</extracomment>
         <translation>Ölçek X:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,X</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+22"/>
         <source>Scale block in X&lt;br&gt;by this factor</source>
         <translation>X&apos;de blok ölçeği&lt;br&gt;bu faktöre göre</translation>
     </message>
@@ -8124,12 +7529,7 @@ Restrict</extracomment>
         <translation>Y:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,Y</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+22"/>
+        <location line="+25"/>
         <source>Scale block in Y&lt;br&gt;by this factor</source>
         <translation>Y&apos;de blok ölçeği&lt;br&gt;bu faktöre göre</translation>
     </message>
@@ -8139,60 +7539,25 @@ Restrict</extracomment>
         <translation>Oranları koru</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,K</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+24"/>
         <source>Flip block&lt;br&gt;horizontally</source>
         <translation>Bloğu&lt;br&gt;yatay olarak çevir</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,H</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+11"/>
         <source>Flip block&lt;br&gt;vertically</source>
         <translation>Bloğu&lt;br&gt;dikey olarak çevir</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,V</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+18"/>
         <source>Single Block</source>
         <translation>Tek blok</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+17"/>
         <location filename="../scripts/Block/InsertBlock/InsertBlockDialog.ui" line="+14"/>
         <source>Array of Blocks</source>
         <translation>Blok Dizisi</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>,2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+71"/>
-        <source>,Q</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlockDialog.ui" line="+8"/>
@@ -8243,12 +7608,7 @@ Restrict</extracomment>
         <translation>Döndür:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+22"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
         <translation>Bu açıdan yapıştırılmış&lt;br&gt;varlıkları döndür</translation>
     </message>
@@ -8258,12 +7618,7 @@ Restrict</extracomment>
         <translation>Ölçek:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+22"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
         <translation>Bu etkenle yapıştırılan&lt;br&gt;varlıkları ölçeklendir</translation>
     </message>
@@ -8273,22 +7628,12 @@ Restrict</extracomment>
         <translation>Yapıştırılmış varlıkları&lt;br&gt;yatay olarak çevir</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,H</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
         <translation>Yapıştırılan varlıkları çevir&lt;br&gt;dikey</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,V</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+21"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
         <translation>Panodaki katmanlarla&lt;br&gt;çizimdeki mevcut&lt;br&gt;katmanların üzerine yaz</translation>
     </message>
@@ -8298,37 +7643,12 @@ Restrict</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,O</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,B</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+38"/>
-        <source>,=</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+30"/>
-        <source>,Q</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-94"/>
+        <location line="-3"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
         <translation>Panodaki bloklarla&lt;br&gt;çizimdeki mevcut&lt;br&gt;blokların üzerine yaz</translation>
     </message>
@@ -8423,88 +7743,43 @@ Restrict</extracomment>
         <translation>Üst</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+20"/>
         <source>Bottom</source>
         <translation>Alt</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+24"/>
         <source>Left</source>
         <translation>Sol</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+17"/>
         <source>Left back</source>
         <translation>Sol arka</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,4</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+24"/>
         <source>Right</source>
         <translation>Sağ</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+17"/>
         <source>Right back</source>
         <translation>Sağ arka</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,6</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+24"/>
         <source>Rotate selection counter-clockwise before projection</source>
         <translation>Projeksiyondan önce seçimi saat yönünün tersine döndür</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+11"/>
         <source>Rotate selection clockwise before projection</source>
         <translation>Projeksiyondan önce seçimi saat yönünde döndür</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+18"/>
         <source>Method:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,M</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8808,19 +8083,9 @@ Restrict</extracomment>
         <translation type="unfinished">Son Segmenti Geri Al</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,U</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>Arrow head</source>
         <translation>Ok başı</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
@@ -8864,12 +8129,7 @@ Restrict</extracomment>
         <translation type="unfinished">Miktar:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>Amount to lengthen or shorten (negative)</source>
         <translation type="unfinished">Uzatılacak veya kısaltılacak miktar (negatif)</translation>
     </message>
@@ -9013,12 +8273,7 @@ Restrict</extracomment>
         <translation type="unfinished">Uzunluk:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Line angle</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9028,18 +8283,8 @@ Restrict</extracomment>
         <translation type="unfinished">Açı:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -9066,19 +8311,9 @@ Restrict</extracomment>
         <translation>Uzunluk:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Number:</source>
         <translation>Sayı:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisectorInit.js" line="+2"/>
@@ -9119,42 +8354,22 @@ Restrict</extracomment>
         <translation type="unfinished">Derinlik:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Finger Width:</source>
         <translation type="unfinished">Parmak Genişliği:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,W</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Finger/Slot Ratio:</source>
         <translation type="unfinished">Parmak/Yuva Oranı:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>&amp;Style:</source>
         <translation type="unfinished">Stil:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+8"/>
+        <location line="+11"/>
         <source>Finger first</source>
         <translation type="unfinished">Önce parmak</translation>
     </message>
@@ -9197,39 +8412,19 @@ Restrict</extracomment>
         <translation type="unfinished">Kırlangıç Kuyruğu Sayısı:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Dovetail Height:</source>
         <translation type="unfinished">Kırlangıç Kuyruğu Yüksekliği:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,H</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Dovetail Gradient:</source>
         <translation type="unfinished">Dovetail Gradient:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,G</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Dovetail/Pin Ratio:</source>
         <translation type="unfinished">Kırlangıç Kuyruğu/Pim Oranı:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -9273,18 +8468,8 @@ Restrict</extracomment>
         <translation type="unfinished">Uzunluk:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+21"/>
+        <location line="+24"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -9296,18 +8481,8 @@ Restrict</extracomment>
         <translation>Uzunluk:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -9367,18 +8542,8 @@ Restrict</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -9388,11 +8553,6 @@ Restrict</extracomment>
         <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThrough.ui" line="+17"/>
         <source>Number:</source>
         <translation>Sayı:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThroughInit.js" line="+2"/>
@@ -9427,11 +8587,6 @@ Restrict</extracomment>
         <source>Length:</source>
         <translation type="unfinished">Uzunluk:</translation>
     </message>
-    <message>
-        <location line="+6"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>LineRelativeAngle</name>
@@ -9451,28 +8606,13 @@ Restrict</extracomment>
         <translation>Bağıl Açı:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Length:</source>
         <translation>Uzunluk:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -9724,18 +8864,8 @@ Restrict</extracomment>
         <translation type="unfinished">Kopyala</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+14"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,L</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -10182,19 +9312,9 @@ Restrict</extracomment>
         <translation type="unfinished">&amp;Ara</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+20"/>
+        <location line="+23"/>
         <source>&amp;Number:</source>
         <translation type="unfinished">&amp;Sayı</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10218,11 +9338,6 @@ Restrict</extracomment>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.ui" line="+17"/>
         <source>Number:</source>
         <translation type="unfinished">Numara:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10417,42 +9532,22 @@ Restrict</extracomment>
         <translation>Döndürme:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+126"/>
+        <location line="+129"/>
         <source>Scale:</source>
         <translation>Ölçek:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+88"/>
+        <location line="+91"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
         <translation type="unfinished">Yapıştırılmış varlıkları&lt;br&gt;yatay olarak çevir</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,H</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
         <translation type="unfinished">Yapıştırılan varlıkları çevir&lt;br&gt;dikey</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,V</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
         <translation type="unfinished">Tüm varlıkları&lt;br&gt;orijinal katman yerine&lt;br&gt;geçerli katmana yapıştırın</translation>
     </message>
@@ -10462,18 +9557,8 @@ Restrict</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,O</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -10482,22 +9567,12 @@ Restrict</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,B</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>,Q</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-33"/>
+        <location line="-13"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
         <translation type="unfinished">Panodaki katmanlarla&lt;br&gt;çizimdeki mevcut&lt;br&gt;katmanların üzerine yaz</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+10"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
         <translation type="unfinished">Panodaki bloklarla&lt;br&gt;çizimdeki mevcut&lt;br&gt;blokların üzerine yaz</translation>
     </message>
@@ -10703,12 +9778,7 @@ Restrict</extracomment>
         <translation type="unfinished">Segmenti Kaldır</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>Inherit entity properties</source>
         <translation type="unfinished">Varlık özelliklerini devralma</translation>
     </message>
@@ -10723,34 +9793,24 @@ Restrict</extracomment>
         <translation type="unfinished">Miras</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,I</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <location line="+19"/>
+        <location line="+17"/>
+        <location line="+16"/>
         <source>Peak ratio</source>
         <translation type="unfinished">Tepe oranı</translation>
     </message>
     <message>
-        <location line="-16"/>
-        <location line="+19"/>
+        <location line="-13"/>
+        <location line="+16"/>
         <source>The ratio of the peak height to the break width</source>
         <translation type="unfinished">Pik yüksekliğinin kırılma genişliğine oranı</translation>
     </message>
     <message>
-        <location line="-16"/>
+        <location line="-13"/>
         <source>Peak Ratio:</source>
         <translation type="unfinished">Tepe Oranı:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+78"/>
+        <location line="+81"/>
         <source>First/Last segment inclined</source>
         <translation type="unfinished">İlk/Son segment eğimli</translation>
     </message>
@@ -10760,12 +9820,7 @@ Restrict</extracomment>
         <translation type="unfinished">Kesme sembolünün ilk ve son segmenti eğimlidir</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>,1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+23"/>
         <source>First/Last segment vertical</source>
         <translation type="unfinished">İlk/Son segment dikey</translation>
     </message>
@@ -10773,11 +9828,6 @@ Restrict</extracomment>
         <location line="+3"/>
         <source>The first and last segment of the break symbol are vertical</source>
         <translation type="unfinished">Kesme sembolünün ilk ve son segmenti dikeydir</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>,2</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js" line="+2"/>
@@ -11333,54 +10383,24 @@ Restrict</extracomment>
 <context>
     <name>RestrictAngleLength</name>
     <message>
-        <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLength.ui" line="+89"/>
+        <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLength.ui" line="+80"/>
         <source>Angle:</source>
         <translation>Açı:</translation>
     </message>
     <message>
-        <location line="-46"/>
-        <location line="+75"/>
+        <location line="-40"/>
+        <location line="+66"/>
         <source>Base:</source>
         <translation>Temel:</translation>
     </message>
     <message>
-        <location line="-98"/>
-        <source>,,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+29"/>
-        <source>,,B</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <location line="+75"/>
+        <location line="-40"/>
+        <location line="+66"/>
         <source>Multiples</source>
         <translation type="unfinished">Multiples</translation>
     </message>
     <message>
-        <location line="-72"/>
-        <source>,,M</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>,,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+32"/>
-        <source>,,E</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+26"/>
-        <source>,,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-133"/>
+        <location line="-115"/>
         <source>Distance:</source>
         <translation>Ara:</translation>
     </message>
@@ -11478,28 +10498,13 @@ Restrict</extracomment>
         <translation type="unfinished">Kopyala</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
         <translation type="unfinished">Kopya Sayısı:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,L</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -11508,12 +10513,7 @@ Restrict</extracomment>
         <translation type="unfinished">Açı:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+23"/>
+        <location line="+26"/>
         <source>Define angle using mouse cursor</source>
         <translation type="unfinished">Fare imlecini kullanarak açı tanımlama</translation>
     </message>
@@ -11541,29 +10541,14 @@ Restrict</extracomment>
         <translation type="unfinished">Birincil Açı:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+24"/>
+        <location line="+27"/>
         <source>Secondary Angle:</source>
         <translation type="unfinished">İkincil Açı:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+24"/>
+        <location line="+27"/>
         <source>Copies:</source>
         <translation type="unfinished">Kopyalar:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -11680,19 +10665,9 @@ Restrict</extracomment>
         <translation type="unfinished">Döşeme</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+17"/>
         <source>&amp;Radius:</source>
         <translation type="unfinished">Yarıçap:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -11952,28 +10927,13 @@ Restrict</extracomment>
         <translation type="unfinished">Kopyala</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
         <translation type="unfinished">Kopya Sayısı:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,L</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -11982,45 +10942,25 @@ Restrict</extracomment>
         <translation type="unfinished">Faktör x:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,X</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <location line="+20"/>
+        <location line="+10"/>
+        <location line="+17"/>
         <source>1</source>
         <translation type="unfinished">1</translation>
     </message>
     <message>
-        <location line="-13"/>
+        <location line="-10"/>
         <source>Factor y:</source>
         <translation type="unfinished">Faktör y:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,Y</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>Proportional</source>
         <translation type="unfinished">Orantılı</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,K</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+17"/>
         <source>Define factor using mouse cursor</source>
         <translation type="unfinished">Fare imlecini kullanarak faktör tanımlama</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>,M</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -12211,74 +11151,34 @@ Restrict</extracomment>
         <translation type="unfinished">Mod:</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,M</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Replace the current selection</source>
         <translation type="unfinished">Geçerli seçimi değiştir</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation type="unfinished">Geçerli seçime ekle</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+20"/>
         <source>Subtract from the current selection</source>
         <translation type="unfinished">Geçerli seçimden çıkarma</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+20"/>
         <source>Intersect with the current selection</source>
         <translation type="unfinished">Geçerli seçimle kesişir</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,I</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+27"/>
         <source>Tolerance:</source>
         <translation type="unfinished">Tolerans:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Same Layer</source>
         <translation type="unfinished">Aynı Katman</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>,Q</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -12309,54 +11209,24 @@ Restrict</extracomment>
         <translation type="unfinished">Mod:</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,M</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Replace the current selection</source>
         <translation type="unfinished">Geçerli seçimi değiştir</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation type="unfinished">Geçerli seçime ekle</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Subtract from the current selection</source>
         <translation type="unfinished">Geçerli seçimden çıkarma</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Intersect with the current selection</source>
         <translation type="unfinished">Geçerli seçimle kesişir</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>,I</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>,Q</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -12400,54 +11270,24 @@ Restrict</extracomment>
         <translation type="unfinished">Mod:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,M</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>Replace the current selection</source>
         <translation type="unfinished">Geçerli seçimi değiştir</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation type="unfinished">Geçerli seçime ekle</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Subtract from the current selection</source>
         <translation type="unfinished">Geçerli seçimden çıkarma</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Intersect with the current selection</source>
         <translation type="unfinished">Geçerli seçimle kesişir</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>,I</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>,Q</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -12478,64 +11318,29 @@ Restrict</extracomment>
         <translation type="unfinished">Mod:</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,M</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Replace the current selection</source>
         <translation type="unfinished">Geçerli seçimi değiştir</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation type="unfinished">Geçerli seçime ekle</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Subtract from the current selection</source>
         <translation type="unfinished">Geçerli seçimden çıkarma</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Intersect with the current selection</source>
         <translation type="unfinished">Geçerli seçimle kesişir</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,I</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+23"/>
+        <location line="+27"/>
         <source>Cross Selection</source>
         <translation type="unfinished">Çapraz Seçim</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>,Q</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -12625,29 +11430,14 @@ Restrict</extracomment>
         <translation type="unfinished">Çoklu Çizgi Oluştur</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,Y</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+17"/>
         <source>Fill</source>
         <translation type="unfinished">Doldur</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,F</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+14"/>
         <source>Radius:</source>
         <translation type="unfinished">Yarıçap:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -12697,11 +11487,6 @@ Restrict</extracomment>
         <translation>Köşeler:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Side)</source>
         <translation type="unfinished">Çokgen (Merkez, Yan)</translation>
@@ -12720,19 +11505,9 @@ Restrict</extracomment>
         <translation>Köşeler:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+21"/>
+        <location line="+24"/>
         <source>Corner to Corner</source>
         <translation>Köşeden Köşeye</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
@@ -12783,11 +11558,6 @@ Restrict</extracomment>
         <translation>Köşeler:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Corner)</source>
         <translation type="unfinished">Çokgen (Merkez, Köşe)</translation>
@@ -12814,11 +11584,6 @@ Restrict</extracomment>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.ui" line="+17"/>
         <source>Corners:</source>
         <translation>Köşeler:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPPInit.js" line="+2"/>
@@ -12848,11 +11613,6 @@ Restrict</extracomment>
         <source>Angle:</source>
         <translation type="unfinished">Açı:</translation>
     </message>
-    <message>
-        <location line="+3"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>ShapeRectangleSize</name>
@@ -12863,41 +11623,21 @@ Restrict</extracomment>
         <translation type="unfinished">Genişlik:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,W</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+24"/>
+        <location line="+30"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+30"/>
         <source>&amp;Height:</source>
         <translation type="unfinished">Yükseklik:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,H</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+24"/>
+        <location line="+30"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="-10"/>
         <source>Angle:</source>
         <translation>Açı:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+33"/>
+        <location line="+39"/>
         <source>Reference Point:</source>
         <translation>Referans Noktası:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeInit.js" line="+2"/>
@@ -13017,12 +11757,7 @@ Restrict</extracomment>
         <translation>&amp;x:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,,X</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>X Coordinate</source>
         <translation>X Koordinatı</translation>
     </message>
@@ -13032,12 +11767,7 @@ Restrict</extracomment>
         <translation>&amp;y:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,,Y</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Y Coordinate</source>
         <translation>Y Koordinatı </translation>
     </message>
@@ -13050,11 +11780,6 @@ Restrict</extracomment>
         <location line="+3"/>
         <source>Relati&amp;ve</source>
         <translation type="unfinished">Bağıl</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,,R</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinateInit.js" line="+2"/>
@@ -13070,13 +11795,7 @@ Restrict</extracomment>
         <translation type="unfinished">r:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <location line="+70"/>
-        <source>,,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-57"/>
+        <location line="+16"/>
         <source>Radius (Distance)</source>
         <translation type="unfinished">Yarıçap (Mesafe)</translation>
     </message>
@@ -13086,12 +11805,7 @@ Restrict</extracomment>
         <translation type="unfinished">&lt;:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Angle</source>
         <translation>Açı</translation>
     </message>
@@ -13123,11 +11837,6 @@ Restrict</extracomment>
         <source>Snap Distance:</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <location line="+6"/>
-        <source>,,D</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>SnapDistanceManual</name>
@@ -13147,12 +11856,7 @@ Restrict</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+72"/>
+        <location line="+75"/>
         <source>Distance</source>
         <translation type="unfinished">Ara</translation>
     </message>
@@ -13335,22 +12039,12 @@ Restrict</extracomment>
         <translation type="unfinished">Son Kontrol Noktasını Geri Al</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,U</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+21"/>
         <source>Degree:</source>
         <translation type="unfinished">Derece:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>Choose Spline Degree</source>
         <translation type="unfinished">Spline Derecesini Seçin</translation>
     </message>
@@ -13363,11 +12057,6 @@ Restrict</extracomment>
         <location line="+3"/>
         <source>Closed</source>
         <translation>Kapalı</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.js" line="+60"/>
@@ -13583,32 +12272,15 @@ Restrict</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+6"/>
-        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+128"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+30"/>
-        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-92"/>
+        <location line="+33"/>
+        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+33"/>
         <source>Height:</source>
         <translation type="unfinished">Yükseklik:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+6"/>
-        <source>,H</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Angle:</source>
         <translation type="unfinished">Açı:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+19"/>
@@ -13646,17 +12318,12 @@ Restrict</extracomment>
         <translation type="unfinished">Metin çizin</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-36"/>
-        <source>,X</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-17"/>
         <source>Text</source>
         <translation type="unfinished">Metin</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+27"/>
         <source>Text height</source>
         <translation type="unfinished">Metin yüksekliği</translation>
     </message>
@@ -13666,12 +12333,7 @@ Restrict</extracomment>
         <translation type="unfinished">Aralık</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>Letter spacing</source>
         <translation type="unfinished">Harf aralığı</translation>
     </message>
@@ -13686,27 +12348,17 @@ Restrict</extracomment>
         <translation type="unfinished">Yön:</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Counter Clockwise</source>
         <translation type="unfinished">Saat Yönünün Tersine</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+20"/>
         <source>Clockwise</source>
         <translation type="unfinished">Saat yönünde</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+30"/>
         <source>Fit text to line, arc or circle</source>
         <translation type="unfinished">Metni çizgiye, yaya veya daireye sığdırma</translation>
     </message>
@@ -13714,11 +12366,6 @@ Restrict</extracomment>
         <location line="+3"/>
         <source>Fit</source>
         <translation type="unfinished">Fit</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,F</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -14338,28 +12985,13 @@ Restrict</extracomment>
         <translation type="unfinished">Kopyala</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
         <translation type="unfinished">Kopya Sayısı:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,L</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -14407,11 +13039,6 @@ Restrict</extracomment>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.ui" line="+17"/>
         <source>Angle:</source>
         <translation type="unfinished">Açı:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

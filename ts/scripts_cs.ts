@@ -471,19 +471,9 @@ aby se změny předvoleb projevily.</translation>
         <translation>Úhel:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Direction:</source>
         <translation>Směr:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -491,19 +481,9 @@ aby se změny předvoleb projevily.</translation>
         <translation>Směr otočení (Kladně)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Otočení (Záporné)</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PA/Arc2PAInit.js" line="+2"/>
@@ -544,19 +524,9 @@ aby se změny předvoleb projevily.</translation>
         <translation>Výška:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,H</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Direction:</source>
         <translation>Směr:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -564,19 +534,9 @@ aby se změny předvoleb projevily.</translation>
         <translation>Směr otáčení (Kladný)</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Směr otáčení (Záporný)</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PHInit.js" line="+2"/>
@@ -622,19 +582,9 @@ aby se změny předvoleb projevily.</translation>
         <translation>Délka:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Direction:</source>
         <translation>Směr:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -642,19 +592,9 @@ aby se změny předvoleb projevily.</translation>
         <translation>Směr otáčebí (Kladný)</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Směr otáčení (Záporný)</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PLInit.js" line="+2"/>
@@ -695,49 +635,24 @@ aby se změny předvoleb projevily.</translation>
         <translation>Poloměr:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Direction:</source>
         <translation>Směr:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>Counter Clockwise (Positive)</source>
         <translation>Směr otáčení (Kladný)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Směr otáčení (Záporný)</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+24"/>
         <source>Solution:</source>
         <translation>Řešení:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -745,19 +660,9 @@ aby se změny předvoleb projevily.</translation>
         <translation>Malý oblouk</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+20"/>
         <source>Longer Arc</source>
         <translation>Dlouhý oblouk</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>,2</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PR/Arc2PRInit.js" line="+2"/>
@@ -831,29 +736,14 @@ aby se změny předvoleb projevily.</translation>
         <translation>Směr:</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Counter Clockwise (positive)</source>
         <translation>Proti směru hodinových ručiček (pozitivní)</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Směr otáčení (Negativní)</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPAInit.js" line="+2"/>
@@ -874,19 +764,9 @@ aby se změny předvoleb projevily.</translation>
         <translation>Vzdálenost:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Number:</source>
         <translation>Počet:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentric/ArcConcentricInit.js" line="+2"/>
@@ -905,11 +785,6 @@ aby se změny předvoleb projevily.</translation>
         <location filename="../scripts/Draw/Arc/ArcConcentricThrough/ArcConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
         <translation>Počet:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentricThrough/ArcConcentricThroughInit.js" line="+2"/>
@@ -951,11 +826,6 @@ aby se změny předvoleb projevily.</translation>
         <translation>Poloměr:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Arc/ArcTPR/ArcTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
         <translation>&amp;Tečna, bod, poloměr</translation>
@@ -982,11 +852,6 @@ aby se změny předvoleb projevily.</translation>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.ui" line="+17"/>
         <source>Radius:</source>
         <translation>Poloměr:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangentialInit.js" line="+2"/>
@@ -1221,29 +1086,14 @@ Přejete si ho obnovit?</translation>
         <translation>Ořez</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>Length &amp;1:</source>
         <translation type="unfinished">Délka &amp;1:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+21"/>
+        <location line="+24"/>
         <source>Length &amp;2:</source>
         <translation type="unfinished">Délka &amp;2:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,2</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
@@ -1563,11 +1413,6 @@ Přejete si ho obnovit?</translation>
         <translation>Odebrat segment</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../scripts/Modify/BreakOut/BreakOutInit.js" line="+2"/>
         <source>&amp;Break out Segment</source>
         <translation>&amp;Vyříznout segment</translation>
@@ -1586,13 +1431,7 @@ Přejete si ho obnovit?</translation>
         <translation>Určete bod</translation>
     </message>
     <message>
-        <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.ui" line="+14"/>
-        <location line="+12"/>
-        <source>,G</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-6"/>
+        <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.ui" line="+17"/>
         <source>Gap:</source>
         <translation>Mezera:</translation>
     </message>
@@ -1633,11 +1472,6 @@ Přejete si ho obnovit?</translation>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.ui" line="+17"/>
         <source>Remove Segment</source>
         <translation>Odebrat segment</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManualInit.js" line="+2"/>
@@ -1846,19 +1680,9 @@ Přejete si ho obnovit?</translation>
         <translation>Poloměr:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+24"/>
+        <location line="+27"/>
         <source>Solution:</source>
         <translation>Řešení:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1866,19 +1690,9 @@ Přejete si ho obnovit?</translation>
         <translation>Střed nalevo od úsečky P1 - P2</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+20"/>
         <source>Center Right of Line P1 - P2</source>
         <translation>Střed napravo od úsečky P1 - P2</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>,2</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PRInit.js" line="+2"/>
@@ -1956,11 +1770,6 @@ Přejete si ho obnovit?</translation>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TR.ui" line="+17"/>
         <source>Radius:</source>
         <translation>Poloměr:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TRInit.js" line="+2"/>
@@ -2049,30 +1858,15 @@ Přejete si ho obnovit?</translation>
         <translation>Průměr:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+30"/>
+        <location line="+36"/>
         <location filename="../scripts/Draw/Circle/CircleCD/CircleCDDialog.ui" line="-60"/>
         <source>Angle:</source>
         <translation>Úhel:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+33"/>
+        <location line="+39"/>
         <source>Reference Point:</source>
         <translation>Referenční bod:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCD/CircleCDInit.js" line="+2"/>
@@ -2117,30 +1911,15 @@ Přejete si ho obnovit?</translation>
         <translation>Poloměr:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+30"/>
+        <location line="+36"/>
         <location filename="../scripts/Draw/Circle/CircleCR/CircleCRDialog.ui" line="-60"/>
         <source>Angle:</source>
         <translation>Úhel:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+33"/>
+        <location line="+39"/>
         <source>Reference Point:</source>
         <translation>Referenční bod:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCR/CircleCRInit.js" line="+2"/>
@@ -2161,19 +1940,9 @@ Přejete si ho obnovit?</translation>
         <translation>Vzdálenost:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Number:</source>
         <translation>Počet:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentric/CircleConcentricInit.js" line="+2"/>
@@ -2192,11 +1961,6 @@ Přejete si ho obnovit?</translation>
         <location filename="../scripts/Draw/Circle/CircleConcentricThrough/CircleConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
         <translation>Počet:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentricThrough/CircleConcentricThroughInit.js" line="+2"/>
@@ -2259,11 +2023,6 @@ Přejete si ho obnovit?</translation>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPR.ui" line="+17"/>
         <source>Radius:</source>
         <translation>Poloměr:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPRInit.js" line="+2"/>
@@ -2531,29 +2290,14 @@ Přejete si ho obnovit?</translation>
         <translation>Z:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,F</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+53"/>
+        <location line="+56"/>
         <source>To:</source>
         <translation>Na:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Convert:</source>
         <translation>Převést:</translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2623,49 +2367,24 @@ Přejete si ho obnovit?</translation>
         <translation>Start:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+21"/>
+        <location line="+24"/>
         <source>Increment:</source>
         <translation>Přírůstek:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,I</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+21"/>
+        <location line="+24"/>
         <source>Number Format:</source>
         <translation type="unfinished">Formát čísla:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+86"/>
+        <location line="+89"/>
         <source>Prefix:</source>
         <translation>Předpona:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Suffix:</source>
         <translation>Přípona:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,U</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Counter/CounterInit.js" line="+2"/>
@@ -2717,32 +2436,17 @@ Přejete si ho obnovit?</translation>
         <translation>X:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,X</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+39"/>
+        <location line="+42"/>
         <source>Y:</source>
         <translation>Y:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,Y</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+33"/>
+        <location line="+36"/>
         <source>Mode:</source>
         <translation type="unfinished">Režim:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,M</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+38"/>
+        <location line="+41"/>
         <source>Extension</source>
         <translation>Rozšíření</translation>
     </message>
@@ -2760,11 +2464,6 @@ Přejete si ho obnovit?</translation>
         <location line="+15"/>
         <source>Angle:</source>
         <translation>Úhel:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3053,11 +2752,6 @@ Přejete si ho obnovit?</translation>
         <source>Use Maximum Angle</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <location line="+3"/>
-        <source>,M</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>DimDiametric</name>
@@ -3186,11 +2880,6 @@ Přejete si ho obnovit?</translation>
         <translation>Úhel:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotatedInit.js" line="+2"/>
         <source>&amp;Rotated (Linear)</source>
         <translation>&amp;Natočená (lineární)</translation>
@@ -3282,12 +2971,7 @@ Přejete si ho obnovit?</translation>
         <translation>Popisek:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Prefix</source>
         <translation>Předpona</translation>
     </message>
@@ -3297,22 +2981,12 @@ Přejete si ho obnovit?</translation>
         <translation>Zadejte pevný popisek nebo nechte prázdné pro automatický popisek</translation>
     </message>
     <message>
-        <location line="+39"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+25"/>
+        <location line="+61"/>
         <source>Upper tolerance</source>
         <translation>Horní tolerance</translation>
     </message>
     <message>
-        <location line="+32"/>
-        <source>,O</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+25"/>
+        <location line="+54"/>
         <source>Lower tolerance</source>
         <translation>Dolní tolerance</translation>
     </message>
@@ -3322,12 +2996,7 @@ Přejete si ho obnovit?</translation>
         <translation>Měřítko</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Drawing Scale</source>
         <translation>Měřítko výkresu</translation>
     </message>
@@ -3335,11 +3004,6 @@ Přejete si ho obnovit?</translation>
         <location line="+18"/>
         <source>Auto</source>
         <translation>Auto</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3768,38 +3432,18 @@ již v seznamu je.</translation>
         <translation type="unfinished">Uzavřít lomenou čáru</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+27"/>
         <source>Undo Previous Segment</source>
         <translation type="unfinished">Zrušit předchozí segment</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+17"/>
         <source>Redo Segment</source>
         <translation type="unfinished">Segment Redo</translation>
     </message>
     <message>
-        <location line="-40"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>,U</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+18"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,A</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3808,12 +3452,7 @@ již v seznamu je.</translation>
         <translation type="unfinished">Dosah</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+36"/>
+        <location line="+39"/>
         <source>Restrict length or angle</source>
         <translation type="unfinished">Omezit délku nebo úhel</translation>
     </message>
@@ -4480,35 +4119,8 @@ již v seznamu je.</translation>
         <translation>Uzavřít lomenou čáru</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,C</source>
-        <extracomment>Close</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>,U</source>
-        <extracomment>Undo</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <location line="+108"/>
-        <source>,R</source>
-        <extracomment>Redo
-----------
-Restrict</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-94"/>
+        <location line="+62"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,A</source>
-        <extracomment>Arc</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4517,23 +4129,17 @@ Restrict</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <extracomment>Sweep</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-86"/>
+        <location line="-71"/>
         <source>Undo Previous Segment</source>
         <translation>Zrušit předchozí segment</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+17"/>
         <source>Redo Segment</source>
         <translation>Obnovit segment</translation>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+93"/>
         <source>Restrict length or angle</source>
         <translation>Omezit délku nebo úhel</translation>
     </message>
@@ -4934,29 +4540,14 @@ Restrict</extracomment>
         <translation>Směr:</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Counter Clockwise (positive)</source>
         <translation>Proti směru hodinových ručiček (kladný)</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Po směru hodinových ručiček (záporný)</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPAInit.js" line="+2"/>
@@ -4991,41 +4582,21 @@ Restrict</extracomment>
         <translation>X průměr:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,X</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+24"/>
+        <location line="+30"/>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDDialog.ui" line="+80"/>
         <source>Y Diameter:</source>
         <translation>Y průměr:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,Y</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+24"/>
+        <location line="+30"/>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDDialog.ui" line="-23"/>
         <source>Angle:</source>
         <translation>Úhel:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+33"/>
+        <location line="+39"/>
         <source>Reference Point:</source>
         <translation>Referenční bod:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDInit.js" line="+2"/>
@@ -5046,19 +4617,9 @@ Restrict</extracomment>
         <translation>Vzdálenost:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Number:</source>
         <translation>Počet:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffset/EllipseOffsetInit.js" line="+2"/>
@@ -5077,11 +4638,6 @@ Restrict</extracomment>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThrough.ui" line="+17"/>
         <source>Number:</source>
         <translation>Počet:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThroughInit.js" line="+2"/>
@@ -5103,41 +4659,21 @@ Restrict</extracomment>
         <translation>X Poloměr:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,X</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+23"/>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRDialog.ui" line="-10"/>
         <source>Y Radius:</source>
         <translation>Y Poloměr:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,Y</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+24"/>
+        <location line="+30"/>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRDialog.ui" line="-90"/>
         <source>Angle:</source>
         <translation>Úhel:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+33"/>
+        <location line="+39"/>
         <source>Reference Point:</source>
         <translation>Referenční bod:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRInit.js" line="+2"/>
@@ -5323,11 +4859,6 @@ Restrict</extracomment>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+17"/>
         <source>&amp;Radius:</source>
         <translation>&amp;Poloměr:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6862,39 +6393,19 @@ Restrict</extracomment>
         <translation>Šířka:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,W</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+20"/>
+        <location line="+23"/>
         <source>Keep proportions</source>
         <translation>Zachovat poměr stran</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,K</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="+17"/>
         <source>Height:</source>
         <translation>Výška:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,H</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Angle:</source>
         <translation>Úhel:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Image/ImageInit.js" line="+2"/>
@@ -6940,28 +6451,12 @@ Restrict</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
-        <location line="+326"/>
-        <source>,B</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-319"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+18"/>
         <source>Rotation:</source>
         <translation>Natočení:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+22"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
         <translation>Natočit vložené prvky&lt;br&gt;v tomto úhlu</translation>
     </message>
@@ -6971,12 +6466,7 @@ Restrict</extracomment>
         <translation>Měřítko:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+22"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
         <translation>Změnit měřítko vložených prvků&lt;br&gt;tímto faktorem</translation>
     </message>
@@ -6986,22 +6476,12 @@ Restrict</extracomment>
         <translation>Překlopit vložené prvky&lt;br&gt;horizontálně</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,H</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
         <translation>Překlopit vložené prvky&lt;br&gt;vertikálně</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,V</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
         <translation>Vložit všechny prvky do aktuální vrstvy&lt;br&gt;namísto původní vrstvy</translation>
     </message>
@@ -7011,18 +6491,8 @@ Restrict</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,O</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7031,17 +6501,12 @@ Restrict</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+17"/>
-        <source>,Q</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-33"/>
+        <location line="-13"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
         <translation>Překreslit existující vrstvy&lt;br&gt;ve výkresu&lt;br&gt;vrstvami ze schránky</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+10"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
         <translation>Překreslit existující bloky&lt;br&gt;ve výkresu&lt;br&gt;bloky ze schránky</translation>
     </message>
@@ -7164,14 +6629,14 @@ Restrict</extracomment>
         <location line="+24"/>
         <location line="+43"/>
         <location line="+22"/>
-        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="+137"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="+122"/>
         <source>Length</source>
         <translation>Délka</translation>
     </message>
     <message>
         <location line="-88"/>
         <location line="+67"/>
-        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-19"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-16"/>
         <source>Chord</source>
         <translation>Tětiva</translation>
     </message>
@@ -7227,37 +6692,22 @@ Restrict</extracomment>
         <translation>poloměr:</translation>
     </message>
     <message>
-        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-101"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-89"/>
         <source>Mode:</source>
         <translation>Režim:</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+33"/>
         <source>Calculate Area of Sector</source>
         <translation>Vypočítat plochu výseče</translation>
     </message>
     <message>
-        <location line="-26"/>
+        <location line="-23"/>
         <source>Calculate Area of Segment</source>
         <translation>Vypočítat plochu segmentu</translation>
     </message>
     <message>
-        <location line="-10"/>
-        <source>,M</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+26"/>
-        <source>,G</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+20"/>
+        <location line="+53"/>
         <source>Add:</source>
         <translation>Přidat:</translation>
     </message>
@@ -7272,24 +6722,9 @@ Restrict</extracomment>
         <translation>Prvky</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,E</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+26"/>
         <source>Add lengths/circumference to drawing</source>
         <translation>Přidat na výkres délky/obvod</translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleAreaInit.js" line="+2"/>
@@ -7320,19 +6755,9 @@ Restrict</extracomment>
         <translation>Vypočte délku a zavře nástroj.</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>Close Tool.</source>
         <translation>Zavřít nástroj.</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>,Q</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoAreaInit.js" line="+2"/>
@@ -7965,18 +7390,8 @@ Restrict</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+17"/>
         <source>Text Height:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,H</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -8103,12 +7518,7 @@ Restrict</extracomment>
         <translation>Natočení:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+22"/>
         <source>Rotate block&lt;br&gt;by this angle</source>
         <translation>Natočit blok&lt;br&gt;v tomto úhlu</translation>
     </message>
@@ -8118,12 +7528,7 @@ Restrict</extracomment>
         <translation>Měřítko X:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,X</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+22"/>
         <source>Scale block in X&lt;br&gt;by this factor</source>
         <translation>Měřítko bloku v X&lt;br&gt;dle tohoto faktoru</translation>
     </message>
@@ -8133,12 +7538,7 @@ Restrict</extracomment>
         <translation>Y:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,Y</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+22"/>
+        <location line="+25"/>
         <source>Scale block in Y&lt;br&gt;by this factor</source>
         <translation>Měřítko bloku v Y&lt;br&gt;dle tohoto faktoru</translation>
     </message>
@@ -8148,60 +7548,25 @@ Restrict</extracomment>
         <translation>Zachovat proporce</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,K</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+24"/>
         <source>Flip block&lt;br&gt;horizontally</source>
         <translation>Překlopit blok&lt;br&gt;horizontálně</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,H</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+11"/>
         <source>Flip block&lt;br&gt;vertically</source>
         <translation>Překlopit blok&lt;br&gt;vertikálně</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,V</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+18"/>
         <source>Single Block</source>
         <translation>Samostatný blok</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+17"/>
         <location filename="../scripts/Block/InsertBlock/InsertBlockDialog.ui" line="+14"/>
         <source>Array of Blocks</source>
         <translation>Pole bloků</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>,2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+71"/>
-        <source>,Q</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlockDialog.ui" line="+8"/>
@@ -8252,12 +7617,7 @@ Restrict</extracomment>
         <translation>Natočení:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+22"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
         <translation>Natočit vložené prvky&lt;br&gt;v tomto úhlu</translation>
     </message>
@@ -8267,12 +7627,7 @@ Restrict</extracomment>
         <translation>Měřítko:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+22"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
         <translation>Změnit měřítko vložených prvků&lt;br&gt;tímto faktorem</translation>
     </message>
@@ -8282,22 +7637,12 @@ Restrict</extracomment>
         <translation>Překlopit vložené prvky&lt;br&gt;horizontálně</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,H</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
         <translation>Překlopit vložené prvky&lt;br&gt;vertikálně</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,V</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+21"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
         <translation>Překreslit existující vrstvy&lt;br&gt;ve výkresu&lt;br&gt;vrstvami ze schránky</translation>
     </message>
@@ -8307,37 +7652,12 @@ Restrict</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,O</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,B</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+38"/>
-        <source>,=</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+30"/>
-        <source>,Q</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-94"/>
+        <location line="-3"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
         <translation>Překreslit existující bloky&lt;br&gt;ve výkresu&lt;br&gt;bloky ze schránky</translation>
     </message>
@@ -8401,88 +7721,43 @@ Restrict</extracomment>
         <translation>Horní</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+20"/>
         <source>Bottom</source>
         <translation>Dolní</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+24"/>
         <source>Left</source>
         <translation>Levý</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+17"/>
         <source>Left back</source>
         <translation>Levý zadní</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,4</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+24"/>
         <source>Right</source>
         <translation>Pravý</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+17"/>
         <source>Right back</source>
         <translation>Pravý zadní</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,6</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+24"/>
         <source>Rotate selection counter-clockwise before projection</source>
         <translation>Natočit výběr proti směru hodinových ručiček</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+11"/>
         <source>Rotate selection clockwise before projection</source>
         <translation>Natočit výběr ve směru hodinových ručiček</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+18"/>
         <source>Method:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,M</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8817,19 +8092,9 @@ Restrict</extracomment>
         <translation type="unfinished">Zrušení posledního segmentu</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,U</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>Arrow head</source>
         <translation>Hrot šipky</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
@@ -8868,12 +8133,7 @@ Restrict</extracomment>
         <translation>Rozsah:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>Amount to lengthen or shorten (negative)</source>
         <translation>Rozsah k prodloužení nebo zkrácení (negativní)</translation>
     </message>
@@ -9022,12 +8282,7 @@ Restrict</extracomment>
         <translation type="unfinished">Délka:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Line angle</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9037,19 +8292,9 @@ Restrict</extracomment>
         <translation type="unfinished">Úhel:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Reference Point:</source>
         <translation type="unfinished">Referenční bod:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -9075,19 +8320,9 @@ Restrict</extracomment>
         <translation>Délka:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Number:</source>
         <translation>Počet:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisectorInit.js" line="+2"/>
@@ -9118,42 +8353,22 @@ Restrict</extracomment>
         <translation>Hloubka:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Finger Width:</source>
         <translation>Šířka zubu:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,W</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Finger/Slot Ratio:</source>
         <translation>Poměr zub/díra:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>&amp;Style:</source>
         <translation>&amp;Styl:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+8"/>
+        <location line="+11"/>
         <source>Finger first</source>
         <translation>Zub první</translation>
     </message>
@@ -9206,39 +8421,19 @@ Restrict</extracomment>
         <translation type="unfinished">Počet závitů:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Dovetail Height:</source>
         <translation>Rybinová výška:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,H</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Dovetail Gradient:</source>
         <translation type="unfinished">Dovetail Gradient:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,G</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Dovetail/Pin Ratio:</source>
         <translation type="unfinished">Poměr závitnice a čepu:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -9282,19 +8477,9 @@ Restrict</extracomment>
         <translation type="unfinished">Délka:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+21"/>
+        <location line="+24"/>
         <source>Reference Point:</source>
         <translation type="unfinished">Referenční bod:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -9305,19 +8490,9 @@ Restrict</extracomment>
         <translation>Délka:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Reference Point:</source>
         <translation type="unfinished">Referenční bod:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonal/LineOrthogonalInit.js" line="+2"/>
@@ -9376,19 +8551,9 @@ Restrict</extracomment>
         <translation type="unfinished">Vzdálenost:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Number:</source>
         <translation type="unfinished">Počet:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -9397,11 +8562,6 @@ Restrict</extracomment>
         <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThrough.ui" line="+17"/>
         <source>Number:</source>
         <translation>Počet:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThroughInit.js" line="+2"/>
@@ -9432,11 +8592,6 @@ Restrict</extracomment>
         <translation>Délka:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxisInit.js" line="+2"/>
         <source>Radical Axis of 2 Circles</source>
         <translation>Základní osa 2 kružnic</translation>
@@ -9460,29 +8615,14 @@ Restrict</extracomment>
         <translation>Relativní úhel:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Length:</source>
         <translation>Délka:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Reference Point:</source>
         <translation type="unfinished">Referenční bod:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="-45"/>
@@ -9738,18 +8878,8 @@ Restrict</extracomment>
         <translation>Kopírovat</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+14"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,L</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -10185,19 +9315,9 @@ Restrict</extracomment>
         <translation>&amp;Vzdálenost:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+20"/>
+        <location line="+23"/>
         <source>&amp;Number:</source>
         <translation>&amp;Počet:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Offset/OffsetInit.js" line="+2"/>
@@ -10221,11 +9341,6 @@ Restrict</extracomment>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.ui" line="+17"/>
         <source>Number:</source>
         <translation>Počet:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThroughInit.js" line="+2"/>
@@ -10430,42 +9545,22 @@ Restrict</extracomment>
         <translation>Natočení:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+126"/>
+        <location line="+129"/>
         <source>Scale:</source>
         <translation>Měřítko:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+88"/>
+        <location line="+91"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
         <translation>Překlopit vložené prvky&lt;br&gt;horizontálně</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,H</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
         <translation>Překlopit vložené prvky&lt;br&gt;vertikálně</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,V</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
         <translation>Vložit všechny prvky do aktuální vrstvy&lt;br&gt;namísto původní vrstvy</translation>
     </message>
@@ -10475,18 +9570,8 @@ Restrict</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,O</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -10495,22 +9580,12 @@ Restrict</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,B</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>,Q</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-33"/>
+        <location line="-13"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
         <translation>Přepsat existující vrstvy&lt;br&gt;ve výkresu s vrstvami&lt;br&gt;ze schránky</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+10"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
         <translation>Přepsat existující bloky&lt;br&gt;ve výkresu s bloky&lt;br&gt;ze schránky</translation>
     </message>
@@ -10716,12 +9791,7 @@ Restrict</extracomment>
         <translation type="unfinished">Odstranění segmentu</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>Inherit entity properties</source>
         <translation type="unfinished">Zdědění vlastností entity</translation>
     </message>
@@ -10736,34 +9806,24 @@ Restrict</extracomment>
         <translation type="unfinished">Zdědit</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,I</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <location line="+19"/>
+        <location line="+17"/>
+        <location line="+16"/>
         <source>Peak ratio</source>
         <translation type="unfinished">Špičkový poměr</translation>
     </message>
     <message>
-        <location line="-16"/>
-        <location line="+19"/>
+        <location line="-13"/>
+        <location line="+16"/>
         <source>The ratio of the peak height to the break width</source>
         <translation type="unfinished">Poměr výšky píku a šířky zlomu</translation>
     </message>
     <message>
-        <location line="-16"/>
+        <location line="-13"/>
         <source>Peak Ratio:</source>
         <translation type="unfinished">Špičkový poměr:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+78"/>
+        <location line="+81"/>
         <source>First/Last segment inclined</source>
         <translation type="unfinished">První/poslední segment nakloněný</translation>
     </message>
@@ -10773,12 +9833,7 @@ Restrict</extracomment>
         <translation type="unfinished">První a poslední segment symbolu zlomu jsou nakloněny</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>,1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+23"/>
         <source>First/Last segment vertical</source>
         <translation type="unfinished">První/poslední segment vertikální</translation>
     </message>
@@ -10786,11 +9841,6 @@ Restrict</extracomment>
         <location line="+3"/>
         <source>The first and last segment of the break symbol are vertical</source>
         <translation type="unfinished">První a poslední segment symbolu přerušení je svislý</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>,2</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js" line="+2"/>
@@ -11346,54 +10396,24 @@ Restrict</extracomment>
 <context>
     <name>RestrictAngleLength</name>
     <message>
-        <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLength.ui" line="+89"/>
+        <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLength.ui" line="+80"/>
         <source>Angle:</source>
         <translation>Úhel:</translation>
     </message>
     <message>
-        <location line="-46"/>
-        <location line="+75"/>
+        <location line="-40"/>
+        <location line="+66"/>
         <source>Base:</source>
         <translation>Základ:</translation>
     </message>
     <message>
-        <location line="-98"/>
-        <source>,,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+29"/>
-        <source>,,B</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <location line="+75"/>
+        <location line="-40"/>
+        <location line="+66"/>
         <source>Multiples</source>
         <translation type="unfinished">Násobky</translation>
     </message>
     <message>
-        <location line="-72"/>
-        <source>,,M</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>,,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+32"/>
-        <source>,,E</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+26"/>
-        <source>,,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-133"/>
+        <location line="-115"/>
         <source>Distance:</source>
         <translation>Vzdálenost:</translation>
     </message>
@@ -11491,28 +10511,13 @@ Restrict</extracomment>
         <translation>Kopírovat</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
         <translation>Počet kopií:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,L</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -11521,12 +10526,7 @@ Restrict</extracomment>
         <translation>Úhel:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+23"/>
+        <location line="+26"/>
         <source>Define angle using mouse cursor</source>
         <translation>Určete úhel pomocí kurzoru myši</translation>
     </message>
@@ -11549,29 +10549,14 @@ Restrict</extracomment>
         <translation>Primární úhel:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+24"/>
+        <location line="+27"/>
         <source>Secondary Angle:</source>
         <translation>Sekundární úhel:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+24"/>
+        <location line="+27"/>
         <source>Copies:</source>
         <translation>Kopie:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Init.js" line="+2"/>
@@ -11688,19 +10673,9 @@ Restrict</extracomment>
         <translation>Ořez</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+17"/>
         <source>&amp;Radius:</source>
         <translation type="unfinished">&amp;Radius:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
@@ -11965,28 +10940,13 @@ Restrict</extracomment>
         <translation>Kopírovat</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
         <translation>Počet kopií:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,L</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -11995,45 +10955,25 @@ Restrict</extracomment>
         <translation>Faktor x:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,X</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <location line="+20"/>
+        <location line="+10"/>
+        <location line="+17"/>
         <source>1</source>
         <translation>1</translation>
     </message>
     <message>
-        <location line="-13"/>
+        <location line="-10"/>
         <source>Factor y:</source>
         <translation>Faktor y:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,Y</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>Proportional</source>
         <translation>Úměrně</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,K</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+17"/>
         <source>Define factor using mouse cursor</source>
         <translation>Definujte faktor pomocí kurzoru myši</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>,M</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -12214,74 +11154,34 @@ Restrict</extracomment>
         <translation>Režim:</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,M</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Replace the current selection</source>
         <translation>Nahradit aktuální výběr</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Přidat do aktuálního výběru</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+20"/>
         <source>Subtract from the current selection</source>
         <translation>Odečíst od aktuálního výběru</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+20"/>
         <source>Intersect with the current selection</source>
         <translation>Společné se s aktuálním výběrem</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,I</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+27"/>
         <source>Tolerance:</source>
         <translation>Tolerance:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Same Layer</source>
         <translation type="unfinished">Stejná vrstva</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>,Q</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2"/>
@@ -12312,54 +11212,24 @@ Restrict</extracomment>
         <translation>Režim:</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,M</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Replace the current selection</source>
         <translation>Nahradit aktuální výběr</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Přidat do aktuálního výběru</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Subtract from the current selection</source>
         <translation>Odečíst od aktuálního výběru</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Intersect with the current selection</source>
         <translation>Společné s aktuálním výběrem</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>,I</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>,Q</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntitiesInit.js" line="+2"/>
@@ -12403,54 +11273,24 @@ Restrict</extracomment>
         <translation>Režim:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,M</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>Replace the current selection</source>
         <translation>Nahradit aktuální výběr</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Přidat k aktuálnímu výběru</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Subtract from the current selection</source>
         <translation>Ubrat z aktuálního výběru</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Intersect with the current selection</source>
         <translation>Průnik s aktuálním výběrem</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>,I</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>,Q</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntityInit.js" line="+2"/>
@@ -12481,64 +11321,29 @@ Restrict</extracomment>
         <translation>Režim:</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,M</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Replace the current selection</source>
         <translation>Nahradit aktuální výběr</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Přidat k aktuálnímu výběru</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Subtract from the current selection</source>
         <translation>Ubrat z aktuálního výběru</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Intersect with the current selection</source>
         <translation>Průnik s aktuálním výběrem</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,I</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+23"/>
+        <location line="+27"/>
         <source>Cross Selection</source>
         <translation>Křížový výběr</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>,Q</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangleInit.js" line="+2"/>
@@ -12644,29 +11449,14 @@ Restrict</extracomment>
         <translation type="unfinished">Vytvořit lomenou čáru</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,Y</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+17"/>
         <source>Fill</source>
         <translation>Vyplnit</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,F</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+14"/>
         <source>Radius:</source>
         <translation>Poloměr:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -12716,11 +11506,6 @@ Restrict</extracomment>
         <translation>Vrcholy:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Side)</source>
         <translation>Pol&amp;ygon (Střed, strana)</translation>
@@ -12759,19 +11544,9 @@ Restrict</extracomment>
         <translation>Vrcholy:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+21"/>
+        <location line="+24"/>
         <source>Corner to Corner</source>
         <translation>Z rohu do rohu</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
@@ -12802,11 +11577,6 @@ Restrict</extracomment>
         <translation>Vrcholy:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Corner)</source>
         <translation>Pol&amp;ygon (Střed, vrchol)</translation>
@@ -12833,11 +11603,6 @@ Restrict</extracomment>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.ui" line="+17"/>
         <source>Corners:</source>
         <translation>Vrcholy:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPPInit.js" line="+2"/>
@@ -12867,11 +11632,6 @@ Restrict</extracomment>
         <source>Angle:</source>
         <translation type="unfinished">Úhel:</translation>
     </message>
-    <message>
-        <location line="+3"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>ShapeRectangleSize</name>
@@ -12882,41 +11642,21 @@ Restrict</extracomment>
         <translation>&amp;Šířka:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,W</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+24"/>
+        <location line="+30"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+30"/>
         <source>&amp;Height:</source>
         <translation>&amp;Výška:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,H</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+24"/>
+        <location line="+30"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="-10"/>
         <source>Angle:</source>
         <translation>Úhel:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+33"/>
+        <location line="+39"/>
         <source>Reference Point:</source>
         <translation>Referenční bod:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+101"/>
@@ -13036,12 +11776,7 @@ Restrict</extracomment>
         <translation>&amp;x:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,,X</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>X Coordinate</source>
         <translation>Souřadnice X</translation>
     </message>
@@ -13051,12 +11786,7 @@ Restrict</extracomment>
         <translation>&amp;y:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,,Y</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Y Coordinate</source>
         <translation>Souřadnice Y</translation>
     </message>
@@ -13069,11 +11799,6 @@ Restrict</extracomment>
         <location line="+3"/>
         <source>Relati&amp;ve</source>
         <translation>Relati&amp;vní</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,,R</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinateInit.js" line="+2"/>
@@ -13089,13 +11814,7 @@ Restrict</extracomment>
         <translation>&amp;r:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <location line="+70"/>
-        <source>,,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-57"/>
+        <location line="+16"/>
         <source>Radius (Distance)</source>
         <translation>Poloměr (vzdálenost)</translation>
     </message>
@@ -13105,12 +11824,7 @@ Restrict</extracomment>
         <translation>&amp;&lt;:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Angle</source>
         <translation>Úhel</translation>
     </message>
@@ -13142,11 +11856,6 @@ Restrict</extracomment>
         <source>Snap Distance:</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <location line="+6"/>
-        <source>,,D</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>SnapDistanceManual</name>
@@ -13166,12 +11875,7 @@ Restrict</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+72"/>
+        <location line="+75"/>
         <source>Distance</source>
         <translation>Vzdálenost</translation>
     </message>
@@ -13364,22 +12068,12 @@ Restrict</extracomment>
         <translation>Odebrat poslední kontrolní bod</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,U</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+21"/>
         <source>Degree:</source>
         <translation>Stupeň:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>Choose Spline Degree</source>
         <translation>Vyberte stupeň křivky</translation>
     </message>
@@ -13392,11 +12086,6 @@ Restrict</extracomment>
         <location line="+3"/>
         <source>Closed</source>
         <translation>Uzavřeno</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPointsInit.js" line="+2"/>
@@ -13602,32 +12291,15 @@ Restrict</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+6"/>
-        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+128"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+30"/>
-        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-92"/>
+        <location line="+33"/>
+        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+33"/>
         <source>Height:</source>
         <translation>Výška:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+6"/>
-        <source>,H</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Angle:</source>
         <translation>Úhel:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Text/TextInit.js" line="+2"/>
@@ -13665,17 +12337,12 @@ Restrict</extracomment>
         <translation>Zaškrtnout vše</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-36"/>
-        <source>,X</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-17"/>
         <source>Text</source>
         <translation>Text</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+27"/>
         <source>Text height</source>
         <translation>Výška textu</translation>
     </message>
@@ -13685,12 +12352,7 @@ Restrict</extracomment>
         <translation>Řádkování</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>Letter spacing</source>
         <translation>Rozpětí písmen</translation>
     </message>
@@ -13705,27 +12367,17 @@ Restrict</extracomment>
         <translation>Směr:</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Counter Clockwise</source>
         <translation>Proti směru hodinových ručiček</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+20"/>
         <source>Clockwise</source>
         <translation>Po směru hodinových ručiček</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+30"/>
         <source>Fit text to line, arc or circle</source>
         <translation>Přizpůsobit text na čáru, oblouk nebo kružnici</translation>
     </message>
@@ -13733,11 +12385,6 @@ Restrict</extracomment>
         <location line="+3"/>
         <source>Fit</source>
         <translation>Přizpůsobit</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,F</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -14347,28 +12994,13 @@ Restrict</extracomment>
         <translation>Kopírovat</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
         <translation>Počet kopií:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,L</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -14421,11 +13053,6 @@ Restrict</extracomment>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.ui" line="+17"/>
         <source>Angle:</source>
         <translation>Úhel:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateInit.js" line="+2"/>

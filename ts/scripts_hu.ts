@@ -471,19 +471,9 @@ a beállítások módosításai hatályba lépjenek.</translation>
         <translation>Szög:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Direction:</source>
         <translation>Irány:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -491,19 +481,9 @@ a beállítások módosításai hatályba lépjenek.</translation>
         <translation>Balra (Pozitív)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Jobbra (Negatív)</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PA/Arc2PAInit.js" line="+2"/>
@@ -554,19 +534,9 @@ a beállítások módosításai hatályba lépjenek.</translation>
         <translation type="unfinished">Magasság:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,H</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Direction:</source>
         <translation type="unfinished">Irány:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -574,19 +544,9 @@ a beállítások módosításai hatályba lépjenek.</translation>
         <translation type="unfinished">Balra (Pozitív)</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation type="unfinished">Az óramutató járásával megegyezően (negatív)</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -632,19 +592,9 @@ a beállítások módosításai hatályba lépjenek.</translation>
         <translation type="unfinished">Hosszúság:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Direction:</source>
         <translation type="unfinished">Irány:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -652,19 +602,9 @@ a beállítások módosításai hatályba lépjenek.</translation>
         <translation type="unfinished">Balra (Pozitív)</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation type="unfinished">Az óramutató járásával megegyezően (negatív)</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -695,49 +635,24 @@ a beállítások módosításai hatályba lépjenek.</translation>
         <translation>Sugár:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Direction:</source>
         <translation>Irány:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>Counter Clockwise (Positive)</source>
         <translation>Balra (Pozitív)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Jobbra (Negatív)</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+24"/>
         <source>Solution:</source>
         <translation>Megoldás:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -745,19 +660,9 @@ a beállítások módosításai hatályba lépjenek.</translation>
         <translation>Rövidebb ív</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+20"/>
         <source>Longer Arc</source>
         <translation>Hosszabb ív</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>,2</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PR/Arc2PRInit.js" line="+2"/>
@@ -831,29 +736,14 @@ a beállítások módosításai hatályba lépjenek.</translation>
         <translation>Irány:</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Counter Clockwise (positive)</source>
         <translation>Balra (pozitív)</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Jobbra (negatív)</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPAInit.js" line="+2"/>
@@ -874,19 +764,9 @@ a beállítások módosításai hatályba lépjenek.</translation>
         <translation>Távolság:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Number:</source>
         <translation>Szám:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentric/ArcConcentricInit.js" line="+2"/>
@@ -905,11 +785,6 @@ a beállítások módosításai hatályba lépjenek.</translation>
         <location filename="../scripts/Draw/Arc/ArcConcentricThrough/ArcConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
         <translation>Szám:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentricThrough/ArcConcentricThroughInit.js" line="+2"/>
@@ -960,11 +835,6 @@ a beállítások módosításai hatályba lépjenek.</translation>
         <source>Radius:</source>
         <translation type="unfinished">Sugár:</translation>
     </message>
-    <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>ArcTangential</name>
@@ -982,11 +852,6 @@ a beállítások módosításai hatályba lépjenek.</translation>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.ui" line="+17"/>
         <source>Radius:</source>
         <translation>Sugár:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangentialInit.js" line="+2"/>
@@ -1224,29 +1089,14 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">Trim</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>Length &amp;1:</source>
         <translation type="unfinished">Hosszúság 1:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+21"/>
+        <location line="+24"/>
         <source>Length &amp;2:</source>
         <translation type="unfinished">Hosszúság 2:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,2</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1565,11 +1415,6 @@ Szeretné visszaállítani?</translation>
         <source>Remove Segment</source>
         <translation type="unfinished">Szegmens eltávolítása</translation>
     </message>
-    <message>
-        <location line="+3"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>BreakOutGap</name>
@@ -1589,13 +1434,7 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">Kitörés Gap</translation>
     </message>
     <message>
-        <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.ui" line="+14"/>
-        <location line="+12"/>
-        <source>,G</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-6"/>
+        <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.ui" line="+17"/>
         <source>Gap:</source>
         <translation type="unfinished">Hézag:</translation>
     </message>
@@ -1636,11 +1475,6 @@ Szeretné visszaállítani?</translation>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.ui" line="+17"/>
         <source>Remove Segment</source>
         <translation type="unfinished">Szegmens eltávolítása</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1844,19 +1678,9 @@ Szeretné visszaállítani?</translation>
         <translation>Sugár:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+24"/>
+        <location line="+27"/>
         <source>Solution:</source>
         <translation>Megoldás:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1864,19 +1688,9 @@ Szeretné visszaállítani?</translation>
         <translation>P1 - P2 vonal bal közép</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+20"/>
         <source>Center Right of Line P1 - P2</source>
         <translation>P1 - P2 vonal jobb közép</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>,2</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PRInit.js" line="+2"/>
@@ -1954,11 +1768,6 @@ Szeretné visszaállítani?</translation>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TR.ui" line="+17"/>
         <source>Radius:</source>
         <translation>Sugár:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TRInit.js" line="+2"/>
@@ -2057,30 +1866,15 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">Átmérő:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+30"/>
+        <location line="+36"/>
         <location filename="../scripts/Draw/Circle/CircleCD/CircleCDDialog.ui" line="-60"/>
         <source>Angle:</source>
         <translation type="unfinished">Szög:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+33"/>
+        <location line="+39"/>
         <source>Reference Point:</source>
         <translation type="unfinished">Referenciapont:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2125,30 +1919,15 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">Sugár:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+30"/>
+        <location line="+36"/>
         <location filename="../scripts/Draw/Circle/CircleCR/CircleCRDialog.ui" line="-60"/>
         <source>Angle:</source>
         <translation type="unfinished">Szög:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+33"/>
+        <location line="+39"/>
         <source>Reference Point:</source>
         <translation type="unfinished">Referenciapont:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2159,19 +1938,9 @@ Szeretné visszaállítani?</translation>
         <translation>Távolság:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Number:</source>
         <translation>Szám:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentric/CircleConcentricInit.js" line="+2"/>
@@ -2190,11 +1959,6 @@ Szeretné visszaállítani?</translation>
         <location filename="../scripts/Draw/Circle/CircleConcentricThrough/CircleConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
         <translation>Szám:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentricThrough/CircleConcentricThroughInit.js" line="+2"/>
@@ -2267,11 +2031,6 @@ Szeretné visszaállítani?</translation>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPR.ui" line="+17"/>
         <source>Radius:</source>
         <translation type="unfinished">Sugár:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2529,29 +2288,14 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">From:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,F</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+53"/>
+        <location line="+56"/>
         <source>To:</source>
         <translation type="unfinished">To:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Convert:</source>
         <translation type="unfinished">Átváltoztatni:</translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2631,49 +2375,24 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">Indulás:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+21"/>
+        <location line="+24"/>
         <source>Increment:</source>
         <translation type="unfinished">Fokozás:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,I</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+21"/>
+        <location line="+24"/>
         <source>Number Format:</source>
         <translation type="unfinished">Számformátum:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+86"/>
+        <location line="+89"/>
         <source>Prefix:</source>
         <translation type="unfinished">Előtag:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Suffix:</source>
         <translation type="unfinished">Utótag:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,U</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2715,32 +2434,17 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">X:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,X</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+39"/>
+        <location line="+42"/>
         <source>Y:</source>
         <translation type="unfinished">Y:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,Y</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+33"/>
+        <location line="+36"/>
         <source>Mode:</source>
         <translation type="unfinished">Mód:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,M</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+38"/>
+        <location line="+41"/>
         <source>Extension</source>
         <translation type="unfinished">Hosszabbítás</translation>
     </message>
@@ -2758,11 +2462,6 @@ Szeretné visszaállítani?</translation>
         <location line="+15"/>
         <source>Angle:</source>
         <translation type="unfinished">Szög:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3051,11 +2750,6 @@ Szeretné visszaállítani?</translation>
         <source>Use Maximum Angle</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <location line="+3"/>
-        <source>,M</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>DimDiametric</name>
@@ -3191,11 +2885,6 @@ Szeretné visszaállítani?</translation>
         <source>Angle:</source>
         <translation type="unfinished">Szög:</translation>
     </message>
-    <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>DimVertical</name>
@@ -3278,12 +2967,7 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">Címke:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Prefix</source>
         <translation type="unfinished">Előtag</translation>
     </message>
@@ -3293,22 +2977,12 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">Fix címke megadása vagy üresen hagyása automatikus címke esetén</translation>
     </message>
     <message>
-        <location line="+39"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+25"/>
+        <location line="+61"/>
         <source>Upper tolerance</source>
         <translation type="unfinished">Felső tűréshatár</translation>
     </message>
     <message>
-        <location line="+32"/>
-        <source>,O</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+25"/>
+        <location line="+54"/>
         <source>Lower tolerance</source>
         <translation type="unfinished">Alacsonyabb tolerancia</translation>
     </message>
@@ -3318,12 +2992,7 @@ Szeretné visszaállítani?</translation>
         <translation type="unfinished">Skála</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Drawing Scale</source>
         <translation type="unfinished">Rajzolás Méretarány</translation>
     </message>
@@ -3331,11 +3000,6 @@ Szeretné visszaállítani?</translation>
         <location line="+18"/>
         <source>Auto</source>
         <translation type="unfinished">Auto</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3764,38 +3428,18 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Bezár polivonal</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+27"/>
         <source>Undo Previous Segment</source>
         <translation type="unfinished">Előző szegmens visszavonása</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+17"/>
         <source>Redo Segment</source>
         <translation type="unfinished">Redo szegmens</translation>
     </message>
     <message>
-        <location line="-40"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>,U</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+18"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,A</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3804,12 +3448,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Sweep</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+36"/>
+        <location line="+39"/>
         <source>Restrict length or angle</source>
         <translation type="unfinished">Hossz vagy szög korlátozása</translation>
     </message>
@@ -4486,35 +4125,8 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Bezár polivonal</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,C</source>
-        <extracomment>Close</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>,U</source>
-        <extracomment>Undo</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <location line="+108"/>
-        <source>,R</source>
-        <extracomment>Redo
-----------
-Restrict</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-94"/>
+        <location line="+62"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,A</source>
-        <extracomment>Arc</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4523,23 +4135,17 @@ Restrict</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <extracomment>Sweep</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-86"/>
+        <location line="-71"/>
         <source>Undo Previous Segment</source>
         <translation type="unfinished">Előző szegmens visszavonása</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+17"/>
         <source>Redo Segment</source>
         <translation type="unfinished">Redo szegmens</translation>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+93"/>
         <source>Restrict length or angle</source>
         <translation type="unfinished">Hossz vagy szög korlátozása</translation>
     </message>
@@ -4938,29 +4544,14 @@ Restrict</extracomment>
         <translation type="unfinished">Irány:</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Counter Clockwise (positive)</source>
         <translation type="unfinished">Balra (pozitív)</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation type="unfinished">Az óramutató járásával megegyezően (negatív)</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4995,41 +4586,21 @@ Restrict</extracomment>
         <translation type="unfinished">X átmérő:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,X</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+24"/>
+        <location line="+30"/>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDDialog.ui" line="+80"/>
         <source>Y Diameter:</source>
         <translation type="unfinished">Y átmérő:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,Y</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+24"/>
+        <location line="+30"/>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDDialog.ui" line="-23"/>
         <source>Angle:</source>
         <translation type="unfinished">Szög:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+33"/>
+        <location line="+39"/>
         <source>Reference Point:</source>
         <translation type="unfinished">Referenciapont:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5040,19 +4611,9 @@ Restrict</extracomment>
         <translation type="unfinished">Távolság:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Number:</source>
         <translation type="unfinished">Szám:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffset/EllipseOffsetInit.js" line="+2"/>
@@ -5071,11 +4632,6 @@ Restrict</extracomment>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThrough.ui" line="+17"/>
         <source>Number:</source>
         <translation type="unfinished">Szám:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThroughInit.js" line="+2"/>
@@ -5107,41 +4663,21 @@ Restrict</extracomment>
         <translation type="unfinished">X sugár:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,X</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+23"/>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRDialog.ui" line="-10"/>
         <source>Y Radius:</source>
         <translation type="unfinished">Y sugár:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,Y</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+24"/>
+        <location line="+30"/>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRDialog.ui" line="-90"/>
         <source>Angle:</source>
         <translation type="unfinished">Szög:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+33"/>
+        <location line="+39"/>
         <source>Reference Point:</source>
         <translation type="unfinished">Referenciapont:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5317,11 +4853,6 @@ Restrict</extracomment>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+17"/>
         <source>&amp;Radius:</source>
         <translation type="unfinished">Sugár:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6859,39 +6390,19 @@ Restrict</extracomment>
         <translation type="unfinished">Szélesség:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,W</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+20"/>
+        <location line="+23"/>
         <source>Keep proportions</source>
         <translation type="unfinished">Tartsa meg az arányokat</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,K</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="+17"/>
         <source>Height:</source>
         <translation type="unfinished">Magasság:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,H</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Angle:</source>
         <translation type="unfinished">Szög:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6932,28 +6443,12 @@ Restrict</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
-        <location line="+326"/>
-        <source>,B</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-319"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+18"/>
         <source>Rotation:</source>
         <translation type="unfinished">Forgatás:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+22"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
         <translation type="unfinished">Beillesztett elemek forgatása&lt;br&gt;ezzel a szöggel</translation>
     </message>
@@ -6963,12 +6458,7 @@ Restrict</extracomment>
         <translation type="unfinished">Arány:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+22"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
         <translation type="unfinished">Beillesztett elemek nagyítása&lt;br&gt;ezzel az aránnyal</translation>
     </message>
@@ -6978,22 +6468,12 @@ Restrict</extracomment>
         <translation type="unfinished">Beillesztett elemek tükrözése&lt;br&gt;vízszintesen</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,H</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
         <translation type="unfinished">Beillesztett elemek tükrözése&lt;br&gt;függőlegesen</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,V</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
         <translation type="unfinished">Az összes entitás beillesztése az aktuális rétegre az eredeti réteg helyett</translation>
     </message>
@@ -7003,18 +6483,8 @@ Restrict</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,O</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7023,17 +6493,12 @@ Restrict</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+17"/>
-        <source>,Q</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-33"/>
+        <location line="-13"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
         <translation type="unfinished">Létező fóliák felülírása&lt;br&gt;a vágólapról</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+10"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
         <translation type="unfinished">Létező blokkok felülírása&lt;br&gt;a vágólapról</translation>
     </message>
@@ -7156,14 +6621,14 @@ Restrict</extracomment>
         <location line="+24"/>
         <location line="+43"/>
         <location line="+22"/>
-        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="+137"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="+122"/>
         <source>Length</source>
         <translation type="unfinished">Hosszúság</translation>
     </message>
     <message>
         <location line="-88"/>
         <location line="+67"/>
-        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-19"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-16"/>
         <source>Chord</source>
         <translation type="unfinished">Akkord</translation>
     </message>
@@ -7224,14 +6689,9 @@ Restrict</extracomment>
         <translation type="unfinished">Ív/kör/ellipszis terület</translation>
     </message>
     <message>
-        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-101"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-89"/>
         <source>Mode:</source>
         <translation type="unfinished">Mód:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,M</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -7239,22 +6699,12 @@ Restrict</extracomment>
         <translation type="unfinished">A szegmens területének kiszámítása</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>,G</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+23"/>
         <source>Calculate Area of Sector</source>
         <translation type="unfinished">A szektor területének kiszámítása</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+20"/>
+        <location line="+30"/>
         <source>Add:</source>
         <translation type="unfinished">Add:</translation>
     </message>
@@ -7269,24 +6719,9 @@ Restrict</extracomment>
         <translation type="unfinished">Entitás</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,E</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+26"/>
         <source>Add lengths/circumference to drawing</source>
         <translation type="unfinished">Hosszúságok/körfogat hozzáadása a rajzhoz</translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7317,19 +6752,9 @@ Restrict</extracomment>
         <translation type="unfinished">Számítsa ki a hosszúságot és zárja be a szerszámot.</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>Close Tool.</source>
         <translation type="unfinished">Eszköz bezárása.</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>,Q</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7957,18 +7382,8 @@ Restrict</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+17"/>
         <source>Text Height:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,H</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -8095,12 +7510,7 @@ Restrict</extracomment>
         <translation>Forgatás:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+22"/>
         <source>Rotate block&lt;br&gt;by this angle</source>
         <translation>Blokk forgatása&lt;br&gt;ezzel a szöggel</translation>
     </message>
@@ -8110,12 +7520,7 @@ Restrict</extracomment>
         <translation>X skála:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,X</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+22"/>
         <source>Scale block in X&lt;br&gt;by this factor</source>
         <translation>Blokk nagyítása X irányba&lt;br&gt;ezzel az aránnyal</translation>
     </message>
@@ -8125,12 +7530,7 @@ Restrict</extracomment>
         <translation>Y:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,Y</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+22"/>
+        <location line="+25"/>
         <source>Scale block in Y&lt;br&gt;by this factor</source>
         <translation>Blokk nagyítása Y iránya&lt;br&gt;ezzel az aránnyal</translation>
     </message>
@@ -8140,60 +7540,25 @@ Restrict</extracomment>
         <translation>Arányok megtartása</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,K</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+24"/>
         <source>Flip block&lt;br&gt;horizontally</source>
         <translation>Blokk tükrözése&lt;br&gt;vízszintesen</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,H</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+11"/>
         <source>Flip block&lt;br&gt;vertically</source>
         <translation>Blokk tükrözése&lt;br&gt;függőlegesen</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,V</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+18"/>
         <source>Single Block</source>
         <translation type="unfinished">Egyetlen blokk</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+17"/>
         <location filename="../scripts/Block/InsertBlock/InsertBlockDialog.ui" line="+14"/>
         <source>Array of Blocks</source>
         <translation type="unfinished">Blokkok tömbjei</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>,2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+71"/>
-        <source>,Q</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlockInit.js" line="+2"/>
@@ -8244,12 +7609,7 @@ Restrict</extracomment>
         <translation>Forgatás:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+22"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
         <translation>Beillesztett elemek forgatása&lt;br&gt;ezzel a szöggel</translation>
     </message>
@@ -8259,12 +7619,7 @@ Restrict</extracomment>
         <translation>Arány:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+22"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
         <translation>Beillesztett elemek nagyítása&lt;br&gt;ezzel az aránnyal</translation>
     </message>
@@ -8274,22 +7629,12 @@ Restrict</extracomment>
         <translation>Beillesztett elemek tükrözése&lt;br&gt;vízszintesen</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,H</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
         <translation>Beillesztett elemek tükrözése&lt;br&gt;függőlegesen</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,V</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+21"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
         <translation>Létező fóliák felülírása&lt;br&gt;a vágólapról</translation>
     </message>
@@ -8299,37 +7644,12 @@ Restrict</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,O</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,B</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+38"/>
-        <source>,=</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+30"/>
-        <source>,Q</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-94"/>
+        <location line="-3"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
         <translation>Létező blokkok felülírása&lt;br&gt;a vágólapról</translation>
     </message>
@@ -8429,88 +7749,43 @@ Restrict</extracomment>
         <translation type="unfinished">Top</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+20"/>
         <source>Bottom</source>
         <translation type="unfinished">Alul</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+24"/>
         <source>Left</source>
         <translation type="unfinished">Balra</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+17"/>
         <source>Left back</source>
         <translation type="unfinished">Bal hátvéd</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,4</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+24"/>
         <source>Right</source>
         <translation type="unfinished">Jobbra</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+17"/>
         <source>Right back</source>
         <translation type="unfinished">Jobbra vissza</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,6</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+24"/>
         <source>Rotate selection counter-clockwise before projection</source>
         <translation type="unfinished">Forgassa el a kijelölést az óramutató járásával ellentétes irányba a vetítés előtt</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+11"/>
         <source>Rotate selection clockwise before projection</source>
         <translation type="unfinished">Forgassa el a kijelölést az óramutató járásával megegyező irányba vetítés előtt</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+18"/>
         <source>Method:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,M</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -8819,19 +8094,9 @@ Restrict</extracomment>
         <translation type="unfinished">Utolsó szegmens visszavonása</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,U</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>Arrow head</source>
         <translation type="unfinished">Nyílfej</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -8865,12 +8130,7 @@ Restrict</extracomment>
         <translation type="unfinished">Összeg:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>Amount to lengthen or shorten (negative)</source>
         <translation type="unfinished">Hosszabbítandó vagy rövidítendő összeg (negatív)</translation>
     </message>
@@ -9014,12 +8274,7 @@ Restrict</extracomment>
         <translation type="unfinished">Hosszúság:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Line angle</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9029,19 +8284,9 @@ Restrict</extracomment>
         <translation type="unfinished">Szög:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Reference Point:</source>
         <translation type="unfinished">Referenciapont:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -9077,19 +8322,9 @@ Restrict</extracomment>
         <translation type="unfinished">Hosszúság:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Number:</source>
         <translation type="unfinished">Szám:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -9120,42 +8355,22 @@ Restrict</extracomment>
         <translation type="unfinished">Mélység:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Finger Width:</source>
         <translation type="unfinished">Ujj szélessége:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,W</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Finger/Slot Ratio:</source>
         <translation type="unfinished">Ujj/nyílás arány:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>&amp;Style:</source>
         <translation type="unfinished">Stílus:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+8"/>
+        <location line="+11"/>
         <source>Finger first</source>
         <translation type="unfinished">Ujj először</translation>
     </message>
@@ -9198,39 +8413,19 @@ Restrict</extracomment>
         <translation type="unfinished">A fecskefarkúak száma:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Dovetail Height:</source>
         <translation type="unfinished">Fecskefarok magassága:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,H</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Dovetail Gradient:</source>
         <translation type="unfinished">Dovetail Gradient:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,G</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Dovetail/Pin Ratio:</source>
         <translation type="unfinished">Fecskefarok/csap arány:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -9274,19 +8469,9 @@ Restrict</extracomment>
         <translation type="unfinished">Hosszúság:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+21"/>
+        <location line="+24"/>
         <source>Reference Point:</source>
         <translation type="unfinished">Referenciapont:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -9307,19 +8492,9 @@ Restrict</extracomment>
         <translation type="unfinished">Hosszúság:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Reference Point:</source>
         <translation type="unfinished">Referenciapont:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -9368,19 +8543,9 @@ Restrict</extracomment>
         <translation type="unfinished">Távolság:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Number:</source>
         <translation type="unfinished">Szám:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -9399,11 +8564,6 @@ Restrict</extracomment>
         <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThrough.ui" line="+17"/>
         <source>Number:</source>
         <translation type="unfinished">Szám:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -9427,11 +8587,6 @@ Restrict</extracomment>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.ui" line="+17"/>
         <source>Length:</source>
         <translation type="unfinished">Hosszúság:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -9462,29 +8617,14 @@ Restrict</extracomment>
         <translation type="unfinished">Relatív szög:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Length:</source>
         <translation type="unfinished">Hosszúság:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Reference Point:</source>
         <translation type="unfinished">Referenciapont:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="-45"/>
@@ -9725,18 +8865,8 @@ Restrict</extracomment>
         <translation type="unfinished">Másolás</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+14"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,L</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -10183,19 +9313,9 @@ Restrict</extracomment>
         <translation type="unfinished">Távolság:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+20"/>
+        <location line="+23"/>
         <source>&amp;Number:</source>
         <translation type="unfinished">Szám:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10219,11 +9339,6 @@ Restrict</extracomment>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.ui" line="+17"/>
         <source>Number:</source>
         <translation type="unfinished">Szám:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10423,42 +9538,22 @@ Restrict</extracomment>
         <translation type="unfinished">Forgatás:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+126"/>
+        <location line="+129"/>
         <source>Scale:</source>
         <translation type="unfinished">Arány:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+88"/>
+        <location line="+91"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
         <translation type="unfinished">Beillesztett elemek tükrözése&lt;br&gt;vízszintesen</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,H</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
         <translation type="unfinished">Beillesztett elemek tükrözése&lt;br&gt;függőlegesen</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,V</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
         <translation type="unfinished">Az összes entitás beillesztése az aktuális rétegre az eredeti réteg helyett</translation>
     </message>
@@ -10468,18 +9563,8 @@ Restrict</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,O</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -10488,22 +9573,12 @@ Restrict</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,B</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>,Q</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-33"/>
+        <location line="-13"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
         <translation type="unfinished">Létező fóliák felülírása&lt;br&gt;a vágólapról</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+10"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
         <translation type="unfinished">Létező blokkok felülírása&lt;br&gt;a vágólapról</translation>
     </message>
@@ -10704,12 +9779,7 @@ Restrict</extracomment>
         <translation type="unfinished">Szegmens eltávolítása</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>Inherit entity properties</source>
         <translation type="unfinished">Az entitás tulajdonságainak öröklése</translation>
     </message>
@@ -10724,34 +9794,24 @@ Restrict</extracomment>
         <translation type="unfinished">Örökölni</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,I</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <location line="+19"/>
+        <location line="+17"/>
+        <location line="+16"/>
         <source>Peak ratio</source>
         <translation type="unfinished">Csúcsarány</translation>
     </message>
     <message>
-        <location line="-16"/>
-        <location line="+19"/>
+        <location line="-13"/>
+        <location line="+16"/>
         <source>The ratio of the peak height to the break width</source>
         <translation type="unfinished">A csúcs magasságának és a törésszélességnek az aránya</translation>
     </message>
     <message>
-        <location line="-16"/>
+        <location line="-13"/>
         <source>Peak Ratio:</source>
         <translation type="unfinished">Csúcsarány:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+78"/>
+        <location line="+81"/>
         <source>First/Last segment inclined</source>
         <translation type="unfinished">Első/utolsó szegmens ferde</translation>
     </message>
@@ -10761,12 +9821,7 @@ Restrict</extracomment>
         <translation type="unfinished">A szünetjel első és utolsó szegmense ferde</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>,1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+23"/>
         <source>First/Last segment vertical</source>
         <translation type="unfinished">Első/utolsó szegmens függőleges</translation>
     </message>
@@ -10774,11 +9829,6 @@ Restrict</extracomment>
         <location line="+3"/>
         <source>The first and last segment of the break symbol are vertical</source>
         <translation type="unfinished">A szünetjel első és utolsó szegmense függőlegesen áll</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>,2</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js" line="+2"/>
@@ -11339,54 +10389,24 @@ Restrict</extracomment>
         <translation type="unfinished">Szög vagy hossz korlátozása</translation>
     </message>
     <message>
-        <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLength.ui" line="+89"/>
+        <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLength.ui" line="+80"/>
         <source>Angle:</source>
         <translation type="unfinished">Szög:</translation>
     </message>
     <message>
-        <location line="-46"/>
-        <location line="+75"/>
+        <location line="-40"/>
+        <location line="+66"/>
         <source>Base:</source>
         <translation type="unfinished">Bázis:</translation>
     </message>
     <message>
-        <location line="-98"/>
-        <source>,,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+29"/>
-        <source>,,B</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <location line="+75"/>
+        <location line="-40"/>
+        <location line="+66"/>
         <source>Multiples</source>
         <translation type="unfinished">Multiples</translation>
     </message>
     <message>
-        <location line="-72"/>
-        <source>,,M</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>,,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+32"/>
-        <source>,,E</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+26"/>
-        <source>,,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-133"/>
+        <location line="-115"/>
         <source>Distance:</source>
         <translation type="unfinished">Távolság:</translation>
     </message>
@@ -11479,28 +10499,13 @@ Restrict</extracomment>
         <translation type="unfinished">Másolás</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
         <translation type="unfinished">A példányszám:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,L</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -11509,12 +10514,7 @@ Restrict</extracomment>
         <translation type="unfinished">Szög:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+23"/>
+        <location line="+26"/>
         <source>Define angle using mouse cursor</source>
         <translation type="unfinished">Szög meghatározása az egérkurzor segítségével</translation>
     </message>
@@ -11542,29 +10542,14 @@ Restrict</extracomment>
         <translation type="unfinished">Elsődleges szög:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+24"/>
+        <location line="+27"/>
         <source>Secondary Angle:</source>
         <translation type="unfinished">Másodlagos szög:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+24"/>
+        <location line="+27"/>
         <source>Copies:</source>
         <translation type="unfinished">Másolatok:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -11681,19 +10666,9 @@ Restrict</extracomment>
         <translation type="unfinished">Trim</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+17"/>
         <source>&amp;Radius:</source>
         <translation type="unfinished">Sugár:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -11953,28 +10928,13 @@ Restrict</extracomment>
         <translation type="unfinished">Másolás</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
         <translation type="unfinished">A példányszám:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,L</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -11983,45 +10943,25 @@ Restrict</extracomment>
         <translation type="unfinished">X tényező:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,X</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <location line="+20"/>
+        <location line="+10"/>
+        <location line="+17"/>
         <source>1</source>
         <translation type="unfinished">1</translation>
     </message>
     <message>
-        <location line="-13"/>
+        <location line="-10"/>
         <source>Factor y:</source>
         <translation type="unfinished">Y tényező:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,Y</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>Proportional</source>
         <translation type="unfinished">Arányos</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,K</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+17"/>
         <source>Define factor using mouse cursor</source>
         <translation type="unfinished">Tényező meghatározása az egérkurzor segítségével</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>,M</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -12212,74 +11152,34 @@ Restrict</extracomment>
         <translation type="unfinished">Mód:</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,M</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Replace the current selection</source>
         <translation type="unfinished">Az aktuális kiválasztás cseréje</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation type="unfinished">Hozzáadás az aktuális kiválasztáshoz</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+20"/>
         <source>Subtract from the current selection</source>
         <translation type="unfinished">Kivonás az aktuális kijelölésből</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+20"/>
         <source>Intersect with the current selection</source>
         <translation type="unfinished">Metszi az aktuális kijelölést</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,I</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+27"/>
         <source>Tolerance:</source>
         <translation type="unfinished">Tolerancia:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Same Layer</source>
         <translation type="unfinished">Ugyanaz a réteg</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,L</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>,Q</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -12310,54 +11210,24 @@ Restrict</extracomment>
         <translation type="unfinished">Mód:</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,M</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Replace the current selection</source>
         <translation type="unfinished">Az aktuális kiválasztás cseréje</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation type="unfinished">Hozzáadás az aktuális kiválasztáshoz</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Subtract from the current selection</source>
         <translation type="unfinished">Kivonás az aktuális kijelölésből</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Intersect with the current selection</source>
         <translation type="unfinished">Metszi az aktuális kijelölést</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>,I</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>,Q</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -12401,54 +11271,24 @@ Restrict</extracomment>
         <translation type="unfinished">Mód:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,M</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>Replace the current selection</source>
         <translation type="unfinished">Az aktuális kiválasztás cseréje</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation type="unfinished">Hozzáadás az aktuális kiválasztáshoz</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Subtract from the current selection</source>
         <translation type="unfinished">Kivonás az aktuális kijelölésből</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Intersect with the current selection</source>
         <translation type="unfinished">Metszi az aktuális kijelölést</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>,I</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>,Q</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -12479,64 +11319,29 @@ Restrict</extracomment>
         <translation type="unfinished">Mód:</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,M</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Replace the current selection</source>
         <translation type="unfinished">Az aktuális kiválasztás cseréje</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation type="unfinished">Hozzáadás az aktuális kiválasztáshoz</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Subtract from the current selection</source>
         <translation type="unfinished">Kivonás az aktuális kijelölésből</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Intersect with the current selection</source>
         <translation type="unfinished">Metszi az aktuális kijelölést</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,I</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+23"/>
+        <location line="+27"/>
         <source>Cross Selection</source>
         <translation type="unfinished">Cross Selection</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>,Q</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -12626,29 +11431,14 @@ Restrict</extracomment>
         <translation type="unfinished">Polivonal létrehozása</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,Y</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+17"/>
         <source>Fill</source>
         <translation type="unfinished">Töltse ki a címet</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,F</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+14"/>
         <source>Radius:</source>
         <translation type="unfinished">Sugár:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,R</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -12707,11 +11497,6 @@ Restrict</extracomment>
         <source>Corners:</source>
         <translation type="unfinished">Sarkok:</translation>
     </message>
-    <message>
-        <location line="+6"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>ShapePolygonAFPP</name>
@@ -12751,19 +11536,9 @@ Restrict</extracomment>
         <translation type="unfinished">Sarkok:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+21"/>
+        <location line="+24"/>
         <source>Corner to Corner</source>
         <translation type="unfinished">Saroktól sarokig</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -12793,11 +11568,6 @@ Restrict</extracomment>
         <source>Corners:</source>
         <translation type="unfinished">Sarkok:</translation>
     </message>
-    <message>
-        <location line="+6"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>ShapePolygonPP</name>
@@ -12826,11 +11596,6 @@ Restrict</extracomment>
         <source>Corners:</source>
         <translation type="unfinished">Sarkok:</translation>
     </message>
-    <message>
-        <location line="+6"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>ShapeRectanglePP</name>
@@ -12848,11 +11613,6 @@ Restrict</extracomment>
         <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
         <source>Angle:</source>
         <translation type="unfinished">Szög:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -12874,41 +11634,21 @@ Restrict</extracomment>
         <translation type="unfinished">Szélesség:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,W</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+24"/>
+        <location line="+30"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+30"/>
         <source>&amp;Height:</source>
         <translation type="unfinished">Magasság:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,H</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+24"/>
+        <location line="+30"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="-10"/>
         <source>Angle:</source>
         <translation type="unfinished">Szög:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+33"/>
+        <location line="+39"/>
         <source>Reference Point:</source>
         <translation type="unfinished">Referenciapont:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+101"/>
@@ -13023,12 +11763,7 @@ Restrict</extracomment>
         <translation type="unfinished">x:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,,X</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>X Coordinate</source>
         <translation type="unfinished">X koordináta</translation>
     </message>
@@ -13038,12 +11773,7 @@ Restrict</extracomment>
         <translation type="unfinished">y:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,,Y</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Y Coordinate</source>
         <translation type="unfinished">Y koordináta</translation>
     </message>
@@ -13056,11 +11786,6 @@ Restrict</extracomment>
         <location line="+3"/>
         <source>Relati&amp;ve</source>
         <translation type="unfinished">Relatív</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,,R</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -13076,13 +11801,7 @@ Restrict</extracomment>
         <translation type="unfinished">r:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <location line="+70"/>
-        <source>,,R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-57"/>
+        <location line="+16"/>
         <source>Radius (Distance)</source>
         <translation type="unfinished">Sugár (távolság)</translation>
     </message>
@@ -13092,12 +11811,7 @@ Restrict</extracomment>
         <translation type="unfinished">&lt;:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,,A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Angle</source>
         <translation type="unfinished">Szög</translation>
     </message>
@@ -13122,11 +11836,6 @@ Restrict</extracomment>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,,D</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -13158,12 +11867,7 @@ Restrict</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+72"/>
+        <location line="+75"/>
         <source>Distance</source>
         <translation type="unfinished">Távolság</translation>
     </message>
@@ -13356,22 +12060,12 @@ Restrict</extracomment>
         <translation type="unfinished">Utolsó ellenőrzési pont visszavonása</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,U</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+21"/>
         <source>Degree:</source>
         <translation type="unfinished">Fokozat:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>Choose Spline Degree</source>
         <translation type="unfinished">Válassza ki a Spline fokot</translation>
     </message>
@@ -13384,11 +12078,6 @@ Restrict</extracomment>
         <location line="+3"/>
         <source>Closed</source>
         <translation type="unfinished">Zárt</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -13594,32 +12283,15 @@ Restrict</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+6"/>
-        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+128"/>
-        <source>,T</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+30"/>
-        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-92"/>
+        <location line="+33"/>
+        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+33"/>
         <source>Height:</source>
         <translation type="unfinished">Magasság:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+6"/>
-        <source>,H</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Angle:</source>
         <translation type="unfinished">Szög:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+19"/>
@@ -13647,17 +12319,12 @@ Restrict</extracomment>
         <translation type="unfinished">Ellenőrizze az összeset</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-36"/>
-        <source>,X</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-17"/>
         <source>Text</source>
         <translation type="unfinished">Szöveg</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+27"/>
         <source>Text height</source>
         <translation type="unfinished">Szöveg magassága</translation>
     </message>
@@ -13667,12 +12334,7 @@ Restrict</extracomment>
         <translation type="unfinished">Távolságtartás</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>Letter spacing</source>
         <translation type="unfinished">Betűtávolság</translation>
     </message>
@@ -13687,27 +12349,17 @@ Restrict</extracomment>
         <translation type="unfinished">Irány:</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Counter Clockwise</source>
         <translation type="unfinished">Az óramutató járásával ellentétes irányban</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+20"/>
         <source>Clockwise</source>
         <translation type="unfinished">Az óramutató járásával megegyező irányban</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+30"/>
         <source>Fit text to line, arc or circle</source>
         <translation type="unfinished">Szöveg illesztése vonalhoz, ívhez vagy körhöz</translation>
     </message>
@@ -13715,11 +12367,6 @@ Restrict</extracomment>
         <location line="+3"/>
         <source>Fit</source>
         <translation type="unfinished">Fit</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,F</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -14339,28 +12986,13 @@ Restrict</extracomment>
         <translation type="unfinished">Másolás</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
         <translation type="unfinished">A példányszám:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,L</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -14408,11 +13040,6 @@ Restrict</extracomment>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.ui" line="+17"/>
         <source>Angle:</source>
         <translation type="unfinished">Szög:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

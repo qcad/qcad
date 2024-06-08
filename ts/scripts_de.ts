@@ -481,19 +481,9 @@ um die Änderungen zu übernehmen.</translation>
         <translation>Winkel:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation>,W</translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Direction:</source>
         <translation>Richtung:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,D</source>
-        <translation>,R</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -501,19 +491,9 @@ um die Änderungen zu übernehmen.</translation>
         <translation>Gegenuhrzeigersinn (positiv)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,T</source>
-        <translation>,G</translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Uhrzeigersinn (negativ)</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>,C</source>
-        <translation>,U</translation>
     </message>
 </context>
 <context>
@@ -544,19 +524,9 @@ um die Änderungen zu übernehmen.</translation>
         <translation>Höhe:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,H</source>
-        <translation>,H</translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Direction:</source>
         <translation>Richtung:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,D</source>
-        <translation>,R</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -564,19 +534,9 @@ um die Änderungen zu übernehmen.</translation>
         <translation>Gegenuhrzeigersinn (positiv)</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,T</source>
-        <translation>,G</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Uhrzeigersinn (negativ)</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>,C</source>
-        <translation>,U</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PHInit.js" line="+2"/>
@@ -622,19 +582,9 @@ um die Änderungen zu übernehmen.</translation>
         <translation>Länge:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,L</source>
-        <translation>,L</translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Direction:</source>
         <translation>Richtung:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,D</source>
-        <translation>,R</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -642,19 +592,9 @@ um die Änderungen zu übernehmen.</translation>
         <translation>Gegenuhrzeigersinn (positiv)</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,T</source>
-        <translation>,G</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Uhrzeigersinn (negativ)</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>,C</source>
-        <translation>,U</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PLInit.js" line="+2"/>
@@ -705,49 +645,24 @@ um die Änderungen zu übernehmen.</translation>
         <translation>Radius:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation>,R</translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Direction:</source>
         <translation>Richtung:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,D</source>
-        <translation>,R</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>Counter Clockwise (Positive)</source>
         <translation>Gegenuhrzeigersinn (positiv)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,T</source>
-        <translation>,G</translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Uhrzeigersinn (negativ)</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,C</source>
-        <translation>,U</translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+24"/>
         <source>Solution:</source>
         <translation>Variante:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,S</source>
-        <translation>,V</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -755,19 +670,9 @@ um die Änderungen zu übernehmen.</translation>
         <translation>Kurzer Bogen</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,1</source>
-        <translation>,1</translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+20"/>
         <source>Longer Arc</source>
         <translation>Langer Bogen</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>,2</source>
-        <translation>,2</translation>
     </message>
 </context>
 <context>
@@ -841,29 +746,14 @@ um die Änderungen zu übernehmen.</translation>
         <translation>Richtung:</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,D</source>
-        <translation>,R</translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Counter Clockwise (positive)</source>
         <translation>Gegenuhrzeigersinn (positiv)</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,T</source>
-        <translation>,G</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Uhrzeigersinn (negativ)</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>,C</source>
-        <translation>,U</translation>
     </message>
 </context>
 <context>
@@ -884,19 +774,9 @@ um die Änderungen zu übernehmen.</translation>
         <translation>Abstand:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,D</source>
-        <translation>,A</translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Number:</source>
         <translation>Anzahl:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation>,N</translation>
     </message>
 </context>
 <context>
@@ -915,11 +795,6 @@ um die Änderungen zu übernehmen.</translation>
         <location filename="../scripts/Draw/Arc/ArcConcentricThrough/ArcConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
         <translation>Anzahl:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation>,N</translation>
     </message>
 </context>
 <context>
@@ -949,11 +824,6 @@ um die Änderungen zu übernehmen.</translation>
         <location filename="../scripts/Draw/Arc/ArcTPR/ArcTPR.ui" line="+17"/>
         <source>Radius:</source>
         <translation>Radius:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation>,R</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTPR/ArcTPRInit.js" line="+2"/>
@@ -992,11 +862,6 @@ um die Änderungen zu übernehmen.</translation>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.ui" line="+17"/>
         <source>Radius:</source>
         <translation>Radius:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation>,R</translation>
     </message>
 </context>
 <context>
@@ -1206,29 +1071,14 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Trimmen</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,T</source>
-        <translation>,T</translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>Length &amp;1:</source>
         <translation>Länge &amp;1:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,1</source>
-        <translation>,1</translation>
-    </message>
-    <message>
-        <location line="+21"/>
+        <location line="+24"/>
         <source>Length &amp;2:</source>
         <translation>Länge &amp;2:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,2</source>
-        <translation>,2</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
@@ -1553,11 +1403,6 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Segment entfernen</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,R</source>
-        <translation>,E</translation>
-    </message>
-    <message>
         <location filename="../scripts/Modify/BreakOut/BreakOutInit.js" line="+2"/>
         <source>&amp;Break out Segment</source>
         <translation>&amp;Segment heraustrennen</translation>
@@ -1586,13 +1431,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Punkt angeben</translation>
     </message>
     <message>
-        <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.ui" line="+14"/>
-        <location line="+12"/>
-        <source>,G</source>
-        <translation>,Z</translation>
-    </message>
-    <message>
-        <location line="-6"/>
+        <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.ui" line="+17"/>
         <source>Gap:</source>
         <translation>Zwischenraum:</translation>
     </message>
@@ -1633,11 +1472,6 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.ui" line="+17"/>
         <source>Remove Segment</source>
         <translation>Segment entfernen</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,R</source>
-        <translation>,E</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManualInit.js" line="+2"/>
@@ -1851,44 +1685,24 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Kreis von zwei Punkten und Radius</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PR.ui" line="+60"/>
+        <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PR.ui" line="+54"/>
         <source>Center Left of Line P1 - P2</source>
         <translation>Zentrum links der Linie P1-P2</translation>
     </message>
     <message>
-        <location line="-43"/>
+        <location line="-37"/>
         <source>Radius:</source>
         <translation>Radius:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation>,R</translation>
-    </message>
-    <message>
-        <location line="+24"/>
+        <location line="+27"/>
         <source>Solution:</source>
         <translation>Variante:</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,S</source>
-        <translation>,V</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>,1</source>
-        <translation>,1</translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+30"/>
         <source>Center Right of Line P1 - P2</source>
         <translation>Zentrum rechts der Linie P1-P2</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>,2</source>
-        <translation>,2</translation>
     </message>
 </context>
 <context>
@@ -1956,11 +1770,6 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TR.ui" line="+17"/>
         <source>Radius:</source>
         <translation>Radius:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation>,R</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TRInit.js" line="+2"/>
@@ -2049,30 +1858,15 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Durchmesser:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,D</source>
-        <translation>,D</translation>
-    </message>
-    <message>
-        <location line="+30"/>
+        <location line="+36"/>
         <location filename="../scripts/Draw/Circle/CircleCD/CircleCDDialog.ui" line="-60"/>
         <source>Angle:</source>
         <translation>Winkel:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,A</source>
-        <translation>,W</translation>
-    </message>
-    <message>
-        <location line="+33"/>
+        <location line="+39"/>
         <source>Reference Point:</source>
         <translation>Referenzpunkt:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation>,P</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCD/CircleCDInit.js" line="+2"/>
@@ -2127,30 +1921,15 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Radius:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,R</source>
-        <translation>,R</translation>
-    </message>
-    <message>
-        <location line="+30"/>
+        <location line="+36"/>
         <location filename="../scripts/Draw/Circle/CircleCR/CircleCRDialog.ui" line="-60"/>
         <source>Angle:</source>
         <translation>Winkel:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,A</source>
-        <translation>,W</translation>
-    </message>
-    <message>
-        <location line="+33"/>
+        <location line="+39"/>
         <source>Reference Point:</source>
         <translation>Referenzpunkt:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation>,P</translation>
     </message>
 </context>
 <context>
@@ -2171,19 +1950,9 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Distanz:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,D</source>
-        <translation>,D</translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Number:</source>
         <translation>Anzahl:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation>,N</translation>
     </message>
 </context>
 <context>
@@ -2202,11 +1971,6 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <location filename="../scripts/Draw/Circle/CircleConcentricThrough/CircleConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
         <translation>Anzahl:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation>,N</translation>
     </message>
 </context>
 <context>
@@ -2269,11 +2033,6 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPR.ui" line="+17"/>
         <source>Radius:</source>
         <translation>Radius:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation>,R</translation>
     </message>
 </context>
 <context>
@@ -2531,29 +2290,14 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Von:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,F</source>
-        <translation>,V</translation>
-    </message>
-    <message>
-        <location line="+53"/>
+        <location line="+56"/>
         <source>To:</source>
         <translation>In:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,T</source>
-        <translation>,I</translation>
-    </message>
-    <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Convert:</source>
         <translation>Konvertieren:</translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>,C</source>
-        <translation>,K</translation>
     </message>
 </context>
 <context>
@@ -2623,49 +2367,24 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Start:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation>,S</translation>
-    </message>
-    <message>
-        <location line="+21"/>
+        <location line="+24"/>
         <source>Increment:</source>
         <translation>Schrittweite:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,I</source>
-        <translation>,W</translation>
-    </message>
-    <message>
-        <location line="+21"/>
+        <location line="+24"/>
         <source>Number Format:</source>
         <translation>Zahlenformat:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation>,Z</translation>
-    </message>
-    <message>
-        <location line="+86"/>
+        <location line="+89"/>
         <source>Prefix:</source>
         <translation>Präfix:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation>,P</translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Suffix:</source>
         <translation>Suffix:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,U</source>
-        <translation>,U</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Counter/CounterInit.js" line="+2"/>
@@ -2717,32 +2436,17 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>X:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,X</source>
-        <translation>,X</translation>
-    </message>
-    <message>
-        <location line="+39"/>
+        <location line="+42"/>
         <source>Y:</source>
         <translation>Y:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,Y</source>
-        <translation>,Y</translation>
-    </message>
-    <message>
-        <location line="+33"/>
+        <location line="+36"/>
         <source>Mode:</source>
         <translation>Modus:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,M</source>
-        <translation>,M</translation>
-    </message>
-    <message>
-        <location line="+38"/>
+        <location line="+41"/>
         <source>Extension</source>
         <translation>Verlängerung</translation>
     </message>
@@ -2760,11 +2464,6 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <location line="+15"/>
         <source>Angle:</source>
         <translation>Winkel:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation>,W</translation>
     </message>
 </context>
 <context>
@@ -3053,11 +2752,6 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <source>Use Maximum Angle</source>
         <translation>Maximalen Winkel verwenden</translation>
     </message>
-    <message>
-        <location line="+3"/>
-        <source>,M</source>
-        <translation>,M</translation>
-    </message>
 </context>
 <context>
     <name>DimDiametric</name>
@@ -3194,11 +2888,6 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <source>Angle:</source>
         <translation>Winkel:</translation>
     </message>
-    <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation>,W</translation>
-    </message>
 </context>
 <context>
     <name>DimVertical</name>
@@ -3281,12 +2970,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Beschriftung:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,L</source>
-        <translation>,B</translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Prefix</source>
         <translation>Präfix</translation>
     </message>
@@ -3296,22 +2980,12 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Fixes Mass eingeben oder leer lassen für automatisches Mass</translation>
     </message>
     <message>
-        <location line="+39"/>
-        <source>,T</source>
-        <translation>,T</translation>
-    </message>
-    <message>
-        <location line="+25"/>
+        <location line="+61"/>
         <source>Upper tolerance</source>
         <translation>Obere Toleranz</translation>
     </message>
     <message>
-        <location line="+32"/>
-        <source>,O</source>
-        <translation>,O</translation>
-    </message>
-    <message>
-        <location line="+25"/>
+        <location line="+54"/>
         <source>Lower tolerance</source>
         <translation>Untere Toleranz</translation>
     </message>
@@ -3321,12 +2995,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Skalierung</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation>,S</translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Drawing Scale</source>
         <translation>Zeichnungsskalierung</translation>
     </message>
@@ -3334,11 +3003,6 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <location line="+18"/>
         <source>Auto</source>
         <translation>Auto</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,A</source>
-        <translation>,A</translation>
     </message>
 </context>
 <context>
@@ -3767,39 +3431,19 @@ ist bereits in der Liste.</translation>
         <translation>Polylinie schliessen</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+27"/>
         <source>Undo Previous Segment</source>
         <translation>Letztes Segment rückgängig</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+17"/>
         <source>Redo Segment</source>
         <translation>Letztes Segment wiederherstellen</translation>
     </message>
     <message>
-        <location line="-40"/>
-        <source>,C</source>
-        <translation>,C</translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>,U</source>
-        <translation>,U</translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>,R</source>
-        <translation>,R</translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+18"/>
         <source>Arc with Radius:</source>
         <translation>Bogen mit Radius:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,A</source>
-        <translation>,A</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -3807,12 +3451,7 @@ ist bereits in der Liste.</translation>
         <translation>Sweep</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation>,S</translation>
-    </message>
-    <message>
-        <location line="+36"/>
+        <location line="+39"/>
         <source>Restrict length or angle</source>
         <translation>Länge oder Winkel einschränken</translation>
     </message>
@@ -4489,36 +4128,9 @@ ist bereits in der Liste.</translation>
         <translation>Polylinie schliessen</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,C</source>
-        <extracomment>Close</extracomment>
-        <translation>,C</translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>,U</source>
-        <extracomment>Undo</extracomment>
-        <translation>,R</translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <location line="+108"/>
-        <source>,R</source>
-        <extracomment>Redo
-----------
-Restrict</extracomment>
-        <translation>,W</translation>
-    </message>
-    <message>
-        <location line="-94"/>
+        <location line="+62"/>
         <source>Arc with Radius:</source>
         <translation>Bogen mit Radius:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,A</source>
-        <extracomment>Arc</extracomment>
-        <translation>,B</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -4526,23 +4138,17 @@ Restrict</extracomment>
         <translation>Sweep:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <extracomment>Sweep</extracomment>
-        <translation>,E</translation>
-    </message>
-    <message>
-        <location line="-86"/>
+        <location line="-71"/>
         <source>Undo Previous Segment</source>
         <translation>Letztes Segment rückgängig</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+17"/>
         <source>Redo Segment</source>
         <translation>Letztes Segment wiederherstellen</translation>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+93"/>
         <source>Restrict length or angle</source>
         <translation>Länge oder Winkel einschränken</translation>
     </message>
@@ -4942,29 +4548,14 @@ Restrict</extracomment>
         <translation>Richtung:</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,D</source>
-        <translation>,R</translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Counter Clockwise (positive)</source>
         <translation>Gegenuhrzeigersinn (positiv)</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,T</source>
-        <translation>,G</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Uhrzeigersinn (negativ)</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>,C</source>
-        <translation>,U</translation>
     </message>
 </context>
 <context>
@@ -4989,41 +4580,21 @@ Restrict</extracomment>
         <translation>X Durchmesser:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,X</source>
-        <translation>,X</translation>
-    </message>
-    <message>
-        <location line="+24"/>
+        <location line="+30"/>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDDialog.ui" line="+80"/>
         <source>Y Diameter:</source>
         <translation>Y Durchmesser:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,Y</source>
-        <translation>,Y</translation>
-    </message>
-    <message>
-        <location line="+24"/>
+        <location line="+30"/>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDDialog.ui" line="-23"/>
         <source>Angle:</source>
         <translation>Winkel:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,A</source>
-        <translation>,W</translation>
-    </message>
-    <message>
-        <location line="+33"/>
+        <location line="+39"/>
         <source>Reference Point:</source>
         <translation>Referenzpunkt:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation>,P</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDInit.js" line="+2"/>
@@ -5044,19 +4615,9 @@ Restrict</extracomment>
         <translation>Distanz:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,D</source>
-        <translation>,A</translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Number:</source>
         <translation>Anzahl:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation>,N</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffset/EllipseOffsetInit.js" line="+2"/>
@@ -5075,11 +4636,6 @@ Restrict</extracomment>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThrough.ui" line="+17"/>
         <source>Number:</source>
         <translation>Anzahl:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation>,N</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThroughInit.js" line="+2"/>
@@ -5101,41 +4657,21 @@ Restrict</extracomment>
         <translation>X Radius:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,X</source>
-        <translation>,X</translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+23"/>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRDialog.ui" line="-10"/>
         <source>Y Radius:</source>
         <translation>Y Radius:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,Y</source>
-        <translation>,Y</translation>
-    </message>
-    <message>
-        <location line="+24"/>
+        <location line="+30"/>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRDialog.ui" line="-90"/>
         <source>Angle:</source>
         <translation>Winkel:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,A</source>
-        <translation>,W</translation>
-    </message>
-    <message>
-        <location line="+33"/>
+        <location line="+39"/>
         <source>Reference Point:</source>
         <translation>Referenzpunkt:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation>,P</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRInit.js" line="+2"/>
@@ -5321,11 +4857,6 @@ Restrict</extracomment>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+17"/>
         <source>&amp;Radius:</source>
         <translation>&amp;Radius:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation>,R</translation>
     </message>
 </context>
 <context>
@@ -6859,39 +6390,19 @@ Restrict</extracomment>
         <translation>Breite:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,W</source>
-        <translation>,B</translation>
-    </message>
-    <message>
-        <location line="+20"/>
+        <location line="+23"/>
         <source>Keep proportions</source>
         <translation>Proportional</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,K</source>
-        <translation>,P</translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="+17"/>
         <source>Height:</source>
         <translation>Höhe:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,H</source>
-        <translation>,H</translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Angle:</source>
         <translation>Winkel:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation>,A</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Image/ImageInit.js" line="+2"/>
@@ -6937,28 +6448,12 @@ Restrict</extracomment>
         <translation>Als Block:</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <location line="+326"/>
-        <source>,B</source>
-        <translation>,B</translation>
-    </message>
-    <message>
-        <location line="-319"/>
-        <source>,N</source>
-        <translation>,N</translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+18"/>
         <source>Rotation:</source>
         <translation>Rotation:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation>,R</translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+22"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
         <translation>Eingefügte Objekte um&lt;br&gt;diesen Winkel rotieren</translation>
     </message>
@@ -6968,12 +6463,7 @@ Restrict</extracomment>
         <translation>Skalierung:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation>,S</translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+22"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
         <translation>Eingefügte Objekte um&lt;br&gt;diesen Faktor skalieren</translation>
     </message>
@@ -6983,22 +6473,12 @@ Restrict</extracomment>
         <translation>Eingefügte Objekte&lt;br&gt;horizontal spiegeln</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,H</source>
-        <translation>,H</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
         <translation>Eingefügte Objekte&lt;br&gt;vertikal spiegeln</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,V</source>
-        <translation>,V</translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
         <translation>Alle Objekte auf&lt;br&gt;aktuellen Layer einfügen&lt;br&gt;statt auf originalen Layer</translation>
     </message>
@@ -7008,19 +6488,9 @@ Restrict</extracomment>
         <translation>Auf aktuellen Layer</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,L</source>
-        <translation>,L</translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
         <translation>Layer überschreiben</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,O</source>
-        <translation>,U</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -7028,17 +6498,12 @@ Restrict</extracomment>
         <translation>Blöcke überschreiben</translation>
     </message>
     <message>
-        <location line="+17"/>
-        <source>,Q</source>
-        <translation>,Q</translation>
-    </message>
-    <message>
-        <location line="-33"/>
+        <location line="-13"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
         <translation>Existierende Layer der&lt;br&gt;Zeichnung mit Layern aus&lt;br&gt;der Zwischenablage überschreiben</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+10"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
         <translation>Existierende Blöcke der&lt;br&gt;Zeichnung mit Blöcken aus&lt;br&gt;der Zwischenablage überschreiben</translation>
     </message>
@@ -7213,32 +6678,17 @@ Restrict</extracomment>
         <translation>Modus:</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+33"/>
         <source>Calculate Area of Sector</source>
         <translation>Sektorfläche berechnen</translation>
     </message>
     <message>
-        <location line="-26"/>
+        <location line="-23"/>
         <source>Calculate Area of Segment</source>
         <translation>Segmentfläche berechnen</translation>
     </message>
     <message>
-        <location line="-10"/>
-        <source>,M</source>
-        <translation>,M</translation>
-    </message>
-    <message>
-        <location line="+26"/>
-        <source>,G</source>
-        <translation>,G</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>,T</source>
-        <translation>,T</translation>
-    </message>
-    <message>
-        <location line="+20"/>
+        <location line="+53"/>
         <source>Add:</source>
         <translation>Hinzufügen:</translation>
     </message>
@@ -7253,29 +6703,14 @@ Restrict</extracomment>
         <translation>Objekt</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,E</source>
-        <translation>,O</translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>,C</source>
-        <translation>,S</translation>
-    </message>
-    <message>
-        <location line="+19"/>
-        <source>,L</source>
-        <translation>,L</translation>
-    </message>
-    <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="-96"/>
         <location line="+67"/>
-        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-25"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="+13"/>
         <source>Chord</source>
         <translation>Sehne</translation>
     </message>
     <message>
-        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="+16"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="+13"/>
         <source>Add lengths/circumference to drawing</source>
         <translation>Längen/Umfang zur Zeichnung hinzufügen</translation>
     </message>
@@ -7322,19 +6757,9 @@ Restrict</extracomment>
         <translation>Länge berechnen und Werkzeug beenden.</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,C</source>
-        <translation>,B</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>Close Tool.</source>
         <translation>Werkzeug beenden.</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>,Q</source>
-        <translation>,Q</translation>
     </message>
 </context>
 <context>
@@ -7962,19 +7387,9 @@ Restrict</extracomment>
         <translation>Resultat der Zeichnung hinzufügen</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,A</source>
-        <translation>,R</translation>
-    </message>
-    <message>
         <location line="+17"/>
         <source>Text Height:</source>
         <translation>Text Höhe:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,H</source>
-        <translation>,H</translation>
     </message>
 </context>
 <context>
@@ -8105,12 +7520,7 @@ Restrict</extracomment>
         <translation>Rotation:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation>,R</translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+22"/>
         <source>Rotate block&lt;br&gt;by this angle</source>
         <translation>Block rotieren&lt;br&gt;um diesen Winkel</translation>
     </message>
@@ -8120,12 +7530,7 @@ Restrict</extracomment>
         <translation>Skalierung X:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,X</source>
-        <translation>,X</translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+22"/>
         <source>Scale block in X&lt;br&gt;by this factor</source>
         <translation>Block skalieren in X&lt;br&gt;um diesen Faktor</translation>
     </message>
@@ -8135,12 +7540,7 @@ Restrict</extracomment>
         <translation>Y:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,Y</source>
-        <translation>,Y</translation>
-    </message>
-    <message>
-        <location line="+22"/>
+        <location line="+25"/>
         <source>Scale block in Y&lt;br&gt;by this factor</source>
         <translation>Block skalieren in Y&lt;br&gt;um diesen Faktor</translation>
     </message>
@@ -8150,60 +7550,25 @@ Restrict</extracomment>
         <translation>Proportional</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,K</source>
-        <translation>,P</translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+24"/>
         <source>Flip block&lt;br&gt;horizontally</source>
         <translation>Block horizontal&lt;br&gt;spiegeln</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,H</source>
-        <translation>,H</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+11"/>
         <source>Flip block&lt;br&gt;vertically</source>
         <translation>Block vertikal&lt;br&gt;spiegeln</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,V</source>
-        <translation>,V</translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+18"/>
         <source>Single Block</source>
         <translation>Einzelner Block</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,1</source>
-        <translation>,1</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+17"/>
         <location filename="../scripts/Block/InsertBlock/InsertBlockDialog.ui" line="+14"/>
         <source>Array of Blocks</source>
         <translation>Anordnung von Blöcken</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>,2</source>
-        <translation>,2</translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>,A</source>
-        <translation>,A</translation>
-    </message>
-    <message>
-        <location line="+71"/>
-        <source>,Q</source>
-        <translation>,Q</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlockDialog.ui" line="+8"/>
@@ -8234,12 +7599,7 @@ Restrict</extracomment>
         <translation>Rotation:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation>,R</translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+22"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
         <translation>Eingefügte Objekte um&lt;br&gt;diesen Winkel rotieren</translation>
     </message>
@@ -8249,12 +7609,7 @@ Restrict</extracomment>
         <translation>Skalierung:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation>,S</translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+22"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
         <translation>Eingefügte Objekte um&lt;br&gt;diesen Faktor skalieren</translation>
     </message>
@@ -8264,22 +7619,12 @@ Restrict</extracomment>
         <translation>Eingefügte Objekte&lt;br&gt;horizontal spiegeln</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,H</source>
-        <translation>,H</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
         <translation>Eingefügte Objekte&lt;br&gt;vertikal spiegeln</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,V</source>
-        <translation>,V</translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+21"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
         <translation>Existierende Layer der&lt;br&gt;Zeichnung mit Layern aus&lt;br&gt;der Zwischenablage überschreiben</translation>
     </message>
@@ -8289,37 +7634,12 @@ Restrict</extracomment>
         <translation>Layer überschreiben</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,O</source>
-        <translation>,U</translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
         <translation>Blöcke überschreiben</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,B</source>
-        <translation>,B</translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>,A</source>
-        <translation>,A</translation>
-    </message>
-    <message>
-        <location line="+38"/>
-        <source>,=</source>
-        <translation>,=</translation>
-    </message>
-    <message>
-        <location line="+30"/>
-        <source>,Q</source>
-        <translation>,Q</translation>
-    </message>
-    <message>
-        <location line="-94"/>
+        <location line="-3"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
         <translation>Existierende Blöcke der&lt;br&gt;Zeichnung mit Blöcken aus&lt;br&gt;der Zwischenablage überschreiben</translation>
     </message>
@@ -8403,87 +7723,42 @@ Restrict</extracomment>
         <translation>Oben</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,1</source>
-        <translation>,1</translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+20"/>
         <source>Bottom</source>
         <translation>Unten</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,2</source>
-        <translation>,2</translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>,3</source>
-        <translation>,3</translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+41"/>
         <source>Left back</source>
         <translation>Links hinten</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,4</source>
-        <translation>,4</translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+24"/>
         <source>Right</source>
         <translation>Rechts</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,5</source>
-        <translation>,5</translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+17"/>
         <source>Right back</source>
         <translation>Rechts hinten</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,6</source>
-        <translation>,6</translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+24"/>
         <source>Rotate selection counter-clockwise before projection</source>
         <translation>Im Gegenuhrzeigersinn rotieren vor Projektion</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,T</source>
-        <translation>,G</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+11"/>
         <source>Rotate selection clockwise before projection</source>
         <translation>Im Uhrzeigersinn rotieren vor Projektion</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,C</source>
-        <translation>,U</translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+18"/>
         <source>Method:</source>
         <translation>Methode:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,M</source>
-        <translation>,M</translation>
-    </message>
-    <message>
-        <location line="-135"/>
+        <location line="-111"/>
         <source>Left</source>
         <translation>Links</translation>
     </message>
@@ -8824,19 +8099,9 @@ Restrict</extracomment>
         <translation>Letztes Segment rückgängig</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,U</source>
-        <translation>,U</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>Arrow head</source>
         <translation>Pfeil</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,A</source>
-        <translation>,P</translation>
     </message>
 </context>
 <context>
@@ -8860,12 +8125,7 @@ Restrict</extracomment>
         <translation>Betrag:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation>,B</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>Amount to lengthen or shorten (negative)</source>
         <translation>Betrag um zu verlängern oder verkürzen (negativ)</translation>
     </message>
@@ -9019,12 +8279,7 @@ Restrict</extracomment>
         <translation>Länge:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,L</source>
-        <translation>,L</translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Line angle</source>
         <translation>Linienwinkel</translation>
     </message>
@@ -9034,19 +8289,9 @@ Restrict</extracomment>
         <translation>Winkel:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation>,W</translation>
-    </message>
-    <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Reference Point:</source>
         <translation>Referenzpunkt:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation>,P</translation>
     </message>
 </context>
 <context>
@@ -9062,19 +8307,9 @@ Restrict</extracomment>
         <translation>Länge:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,L</source>
-        <translation>,L</translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Number:</source>
         <translation>Anzahl:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation>,N</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisector.js" line="-6"/>
@@ -9125,42 +8360,22 @@ Restrict</extracomment>
         <translation>Tiefe:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,D</source>
-        <translation>,T</translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Finger Width:</source>
         <translation>Zapfenbreite:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,W</source>
-        <translation>,B</translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Finger/Slot Ratio:</source>
         <translation>Zapfen- zu Nutbreite:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation>,Z</translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>&amp;Style:</source>
         <translation>&amp;Art:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation>,A</translation>
-    </message>
-    <message>
-        <location line="+8"/>
+        <location line="+11"/>
         <source>Finger first</source>
         <translation>Zapfen zuerst</translation>
     </message>
@@ -9203,39 +8418,19 @@ Restrict</extracomment>
         <translation>Anzahl Schwalbenschwänze:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation>,N</translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Dovetail Height:</source>
         <translation>Schwalbenschwanzhöhe:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,H</source>
-        <translation>,H</translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Dovetail Gradient:</source>
         <translation>Schwalbenschwanz-Gradient:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,G</source>
-        <translation>,G</translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Dovetail/Pin Ratio:</source>
         <translation>Verhältnis von Schwalbenschwanz zu Stift:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation>,Z</translation>
     </message>
 </context>
 <context>
@@ -9279,19 +8474,9 @@ Restrict</extracomment>
         <translation>Länge:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,L</source>
-        <translation>,L</translation>
-    </message>
-    <message>
-        <location line="+21"/>
+        <location line="+24"/>
         <source>Reference Point:</source>
         <translation>Referenzpunkt:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation>,P</translation>
     </message>
 </context>
 <context>
@@ -9312,19 +8497,9 @@ Restrict</extracomment>
         <translation>Länge:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,L</source>
-        <translation>,L</translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Reference Point:</source>
         <translation>Referenzpunkt:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation>,P</translation>
     </message>
 </context>
 <context>
@@ -9373,19 +8548,9 @@ Restrict</extracomment>
         <translation>Abstand:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,D</source>
-        <translation>,A</translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Number:</source>
         <translation>Anzahl:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation>,N</translation>
     </message>
 </context>
 <context>
@@ -9394,11 +8559,6 @@ Restrict</extracomment>
         <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThrough.ui" line="+17"/>
         <source>Number:</source>
         <translation>Anzahl:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation>,N</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThroughInit.js" line="+2"/>
@@ -9433,11 +8593,6 @@ Restrict</extracomment>
         <source>Length:</source>
         <translation>Länge:</translation>
     </message>
-    <message>
-        <location line="+6"/>
-        <source>,L</source>
-        <translation>,L</translation>
-    </message>
 </context>
 <context>
     <name>LineRelativeAngle</name>
@@ -9467,29 +8622,14 @@ Restrict</extracomment>
         <translation>Relativer Winkel:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation>,W</translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Length:</source>
         <translation>Länge:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,L</source>
-        <translation>,L</translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Reference Point:</source>
         <translation>Referenzpunkt:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation>,P</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="-45"/>
@@ -9735,19 +8875,9 @@ Restrict</extracomment>
         <translation>Kopieren</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,C</source>
-        <translation>,K</translation>
-    </message>
-    <message>
         <location line="+14"/>
         <source>Use Current Layer and Attributes</source>
         <translation>Aktueller Layer / Attribute</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,L</source>
-        <translation>,L</translation>
     </message>
 </context>
 <context>
@@ -10169,19 +9299,9 @@ Restrict</extracomment>
         <translation>&amp;Abstand:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,D</source>
-        <translation>,A</translation>
-    </message>
-    <message>
-        <location line="+20"/>
+        <location line="+23"/>
         <source>&amp;Number:</source>
         <translation>&amp;Anzahl:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation>,N</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Offset/Offset.js" line="+77"/>
@@ -10216,11 +9336,6 @@ Restrict</extracomment>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.ui" line="+17"/>
         <source>Number:</source>
         <translation>Anzahl:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation>,N</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThroughInit.js" line="+2"/>
@@ -10410,12 +9525,7 @@ Restrict</extracomment>
         <translation>Rotation:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation>,R</translation>
-    </message>
-    <message>
-        <location line="+126"/>
+        <location line="+129"/>
         <source>Scale:</source>
         <translation>Skalierung:</translation>
     </message>
@@ -10440,32 +9550,17 @@ Restrict</extracomment>
         <translation>Ein&amp;fügen</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/Paste/Paste.ui" line="+6"/>
-        <source>,S</source>
-        <translation>,S</translation>
-    </message>
-    <message>
-        <location line="+88"/>
+        <location filename="../scripts/Edit/Paste/Paste.ui" line="+91"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
         <translation>Eingefügte Elemente&lt;br&gt;horizontal spiegeln</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,H</source>
-        <translation>,H</translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
         <translation>Eingefügte Elemente&lt;br&gt;vertikal spiegeln</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,V</source>
-        <translation>,V</translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
         <translation>Alle Elemente auf&lt;br&gt;aktuellen Layer einfügen&lt;br&gt;statt auf originalen Layer</translation>
     </message>
@@ -10473,11 +9568,6 @@ Restrict</extracomment>
         <location line="+3"/>
         <source>To Current Layer</source>
         <translation>Auf aktuellen Layer</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,L</source>
-        <translation>,L</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -10490,27 +9580,12 @@ Restrict</extracomment>
         <translation>Layer überschreiben</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,O</source>
-        <translation>,U</translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
         <translation>Blöcke überschreiben</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,B</source>
-        <translation>,B</translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>,Q</source>
-        <translation>,Q</translation>
-    </message>
-    <message>
-        <location line="-20"/>
+        <location line="-3"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
         <translation>Existierende Blöcke der&lt;br&gt;Zeichnung mit Blöcken aus&lt;br&gt;der Zwischenablage überschreiben</translation>
     </message>
@@ -10711,12 +9786,7 @@ Restrict</extracomment>
         <translation>Segment entfernen</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation>,E</translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>Inherit entity properties</source>
         <translation>Objekteigenschaften erben</translation>
     </message>
@@ -10731,34 +9801,24 @@ Restrict</extracomment>
         <translation>Vererben</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,I</source>
-        <translation>,V</translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <location line="+19"/>
+        <location line="+17"/>
+        <location line="+16"/>
         <source>Peak ratio</source>
         <translation>Spitzenwertverhältnis</translation>
     </message>
     <message>
-        <location line="-16"/>
-        <location line="+19"/>
+        <location line="-13"/>
+        <location line="+16"/>
         <source>The ratio of the peak height to the break width</source>
         <translation>Das Verhältnis der Peakhöhe zur Bruchbreite</translation>
     </message>
     <message>
-        <location line="-16"/>
+        <location line="-13"/>
         <source>Peak Ratio:</source>
         <translation>Spitzenwertverhältnis:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation>,P</translation>
-    </message>
-    <message>
-        <location line="+78"/>
+        <location line="+81"/>
         <source>First/Last segment inclined</source>
         <translation>Erstes/letztes Segment geneigt</translation>
     </message>
@@ -10768,12 +9828,7 @@ Restrict</extracomment>
         <translation>Das erste und letzte Segment des Symbols sind geneigt</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>,1</source>
-        <translation>,1</translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+23"/>
         <source>First/Last segment vertical</source>
         <translation>Erstes/letztes Segment vertikal</translation>
     </message>
@@ -10781,11 +9836,6 @@ Restrict</extracomment>
         <location line="+3"/>
         <source>The first and last segment of the break symbol are vertical</source>
         <translation>Das erste und letzte Segment des Unterbrechungssymbols sind vertikal</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>,2</source>
-        <translation>,2</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js" line="+2"/>
@@ -11341,54 +10391,24 @@ Restrict</extracomment>
 <context>
     <name>RestrictAngleLength</name>
     <message>
-        <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLength.ui" line="+89"/>
+        <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLength.ui" line="+80"/>
         <source>Angle:</source>
         <translation>Winkel:</translation>
     </message>
     <message>
-        <location line="-46"/>
-        <location line="+75"/>
+        <location line="-40"/>
+        <location line="+66"/>
         <source>Base:</source>
         <translation>Basis:</translation>
     </message>
     <message>
-        <location line="-98"/>
-        <source>,,D</source>
-        <translation>,,A</translation>
-    </message>
-    <message>
-        <location line="+29"/>
-        <source>,,B</source>
-        <translation>,,B</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <location line="+75"/>
+        <location line="-40"/>
+        <location line="+66"/>
         <source>Multiples</source>
         <translation>Vielfache</translation>
     </message>
     <message>
-        <location line="-72"/>
-        <source>,,M</source>
-        <translation>,,V</translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>,,A</source>
-        <translation>,,W</translation>
-    </message>
-    <message>
-        <location line="+32"/>
-        <source>,,E</source>
-        <translation>,,S</translation>
-    </message>
-    <message>
-        <location line="+26"/>
-        <source>,,T</source>
-        <translation>,,E</translation>
-    </message>
-    <message>
-        <location line="-133"/>
+        <location line="-115"/>
         <source>Distance:</source>
         <translation>Abstand:</translation>
     </message>
@@ -11486,29 +10506,14 @@ Restrict</extracomment>
         <translation>Kopieren</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,C</source>
-        <translation>,K</translation>
-    </message>
-    <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
         <translation>Anzahl Kopien:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation>,N</translation>
-    </message>
-    <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
         <translation>Aktueller Layer / Attribute</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,L</source>
-        <translation>,L</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11516,12 +10521,7 @@ Restrict</extracomment>
         <translation>Winkel:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation>,W</translation>
-    </message>
-    <message>
-        <location line="+23"/>
+        <location line="+26"/>
         <source>Define angle using mouse cursor</source>
         <translation>Winkel mit dem Mauszeiger definieren</translation>
     </message>
@@ -11549,29 +10549,14 @@ Restrict</extracomment>
         <translation>Hauptwinkel:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation>,H</translation>
-    </message>
-    <message>
-        <location line="+24"/>
+        <location line="+27"/>
         <source>Secondary Angle:</source>
         <translation>Nebenwinkel:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation>,N</translation>
-    </message>
-    <message>
-        <location line="+24"/>
+        <location line="+27"/>
         <source>Copies:</source>
         <translation>Kopien:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,C</source>
-        <translation>,K</translation>
     </message>
 </context>
 <context>
@@ -11688,19 +10673,9 @@ Restrict</extracomment>
         <translation>Trimmen</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,T</source>
-        <translation>,T</translation>
-    </message>
-    <message>
         <location line="+17"/>
         <source>&amp;Radius:</source>
         <translation>&amp;Radius:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,R</source>
-        <translation>,R</translation>
     </message>
 </context>
 <context>
@@ -11960,29 +10935,14 @@ Restrict</extracomment>
         <translation>Kopieren</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,C</source>
-        <translation>,K</translation>
-    </message>
-    <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
         <translation>Anzahl Kopien:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation>,N</translation>
-    </message>
-    <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
         <translation>Aktueller Layer / Attribute</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,L</source>
-        <translation>,L</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11990,45 +10950,25 @@ Restrict</extracomment>
         <translation>Faktor X:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,X</source>
-        <translation>,X</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <location line="+20"/>
+        <location line="+10"/>
+        <location line="+17"/>
         <source>1</source>
         <translation>1</translation>
     </message>
     <message>
-        <location line="-13"/>
+        <location line="-10"/>
         <source>Factor y:</source>
         <translation>Faktor Y:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,Y</source>
-        <translation>,Y</translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>Proportional</source>
         <translation>Proportional</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,K</source>
-        <translation>,P</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+17"/>
         <source>Define factor using mouse cursor</source>
         <translation>Faktor mit dem Mauszeiger definieren</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>,M</source>
-        <translation>,M</translation>
     </message>
 </context>
 <context>
@@ -12219,74 +11159,34 @@ Restrict</extracomment>
         <translation>Modus:</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,M</source>
-        <translation>,M</translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Replace the current selection</source>
         <translation>Aktuelle Selektion ersetzen</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>,R</source>
-        <translation>,E</translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Zur aktuellen Selektion hinzufügen</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,A</source>
-        <translation>,H</translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+20"/>
         <source>Subtract from the current selection</source>
         <translation>Von der aktuellen Selektion entfernen</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,S</source>
-        <translation>,F</translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+20"/>
         <source>Intersect with the current selection</source>
         <translation>Schnittmenge mit aktueller Selektion</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>,I</source>
-        <translation>,S</translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+27"/>
         <source>Tolerance:</source>
         <translation>Toleranz:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,T</source>
-        <translation>,T</translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Same Layer</source>
         <translation>Gleicher Layer</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,L</source>
-        <translation>,L</translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>,Q</source>
-        <translation>,Q</translation>
     </message>
 </context>
 <context>
@@ -12317,54 +11217,24 @@ Restrict</extracomment>
         <translation>Modus:</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,M</source>
-        <translation>,M</translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Replace the current selection</source>
         <translation>Aktuelle Selektion ersetzen</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,R</source>
-        <translation>,E</translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Zur aktuellen Selektion hinzufügen</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,A</source>
-        <translation>,H</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Subtract from the current selection</source>
         <translation>Von der aktuellen Selektion entfernen</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,S</source>
-        <translation>,F</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Intersect with the current selection</source>
         <translation>Schnittmenge mit aktueller Selektion</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>,I</source>
-        <translation>,S</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>,Q</source>
-        <translation>,Q</translation>
     </message>
 </context>
 <context>
@@ -12408,54 +11278,24 @@ Restrict</extracomment>
         <translation>Modus:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,M</source>
-        <translation>,M</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>Replace the current selection</source>
         <translation>Aktuelle Selektion ersetzen</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,R</source>
-        <translation>,E</translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Zur aktuellen Selektion hinzufügen</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,A</source>
-        <translation>,H</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Subtract from the current selection</source>
         <translation>Von der aktuellen Selektion entfernen</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,S</source>
-        <translation>,F</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Intersect with the current selection</source>
         <translation>Schnittmenge mit aktueller Selektion</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>,I</source>
-        <translation>,S</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>,Q</source>
-        <translation>,Q</translation>
     </message>
 </context>
 <context>
@@ -12486,64 +11326,29 @@ Restrict</extracomment>
         <translation>Modus:</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,M</source>
-        <translation>,M</translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Replace the current selection</source>
         <translation>Aktuelle Selektion ersetzen</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,R</source>
-        <translation>,E</translation>
-    </message>
-    <message>
-        <location line="+19"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Zur aktuellen Selektion hinzufügen</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,A</source>
-        <translation>,H</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Subtract from the current selection</source>
         <translation>Von der aktuellen Selektion entfernen</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,S</source>
-        <translation>,F</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Intersect with the current selection</source>
         <translation>Schnittmenge mit aktueller Selektion</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>,I</source>
-        <translation>,S</translation>
-    </message>
-    <message>
-        <location line="+23"/>
+        <location line="+27"/>
         <source>Cross Selection</source>
         <translation>Kreuzende Selektion</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,C</source>
-        <translation>,K</translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>,Q</source>
-        <translation>,Q</translation>
     </message>
 </context>
 <context>
@@ -12636,29 +11441,14 @@ Restrict</extracomment>
         <translation>Polylinie konstruieren</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,Y</source>
-        <translation>,Y</translation>
-    </message>
-    <message>
         <location line="+17"/>
         <source>Fill</source>
         <translation>Füllung</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,F</source>
-        <translation>,F</translation>
-    </message>
-    <message>
         <location line="+14"/>
         <source>Radius:</source>
         <translation>Radius:</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,R</source>
-        <translation>,R</translation>
     </message>
 </context>
 <context>
@@ -12717,11 +11507,6 @@ Restrict</extracomment>
         <source>Corners:</source>
         <translation>Ecken:</translation>
     </message>
-    <message>
-        <location line="+6"/>
-        <source>,C</source>
-        <translation>,E</translation>
-    </message>
 </context>
 <context>
     <name>ShapePolygonAFPP</name>
@@ -12761,19 +11546,9 @@ Restrict</extracomment>
         <translation>Ecken:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,C</source>
-        <translation>,E</translation>
-    </message>
-    <message>
-        <location line="+21"/>
+        <location line="+24"/>
         <source>Corner to Corner</source>
         <translation>Ecke zu Ecke</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,T</source>
-        <translation>,Z</translation>
     </message>
 </context>
 <context>
@@ -12792,11 +11567,6 @@ Restrict</extracomment>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.ui" line="+17"/>
         <source>Corners:</source>
         <translation>Ecken:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,C</source>
-        <translation>,E</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCPInit.js" line="+2"/>
@@ -12827,11 +11597,6 @@ Restrict</extracomment>
         <translation>Ecken:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,C</source>
-        <translation>,E</translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPPInit.js" line="+2"/>
         <source>Polygo&amp;n (2 Points of Side)</source>
         <translation>Polygo&amp;n (2 Punkte einer Seite)</translation>
@@ -12859,11 +11624,6 @@ Restrict</extracomment>
         <source>Angle:</source>
         <translation>Winkel:</translation>
     </message>
-    <message>
-        <location line="+3"/>
-        <source>,A</source>
-        <translation>,W</translation>
-    </message>
 </context>
 <context>
     <name>ShapeRectangleSize</name>
@@ -12884,41 +11644,21 @@ Restrict</extracomment>
         <translation>&amp;Breite:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,W</source>
-        <translation>,B</translation>
-    </message>
-    <message>
-        <location line="+24"/>
+        <location line="+30"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+30"/>
         <source>&amp;Height:</source>
         <translation>&amp;Höhe:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,H</source>
-        <translation>,H</translation>
-    </message>
-    <message>
-        <location line="+24"/>
+        <location line="+30"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="-10"/>
         <source>Angle:</source>
         <translation>Winkel:</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>,A</source>
-        <translation>,W</translation>
-    </message>
-    <message>
-        <location line="+33"/>
+        <location line="+39"/>
         <source>Reference Point:</source>
         <translation>Referenzpunkt:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,P</source>
-        <translation>,P</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+101"/>
@@ -13013,12 +11753,12 @@ Restrict</extracomment>
 <context>
     <name>SnapCoordinate</name>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+36"/>
+        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+33"/>
         <source>X Coordinate</source>
         <translation>X Koordinate</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+32"/>
         <source>Y Coordinate</source>
         <translation>Y Koordinate</translation>
     </message>
@@ -13043,45 +11783,30 @@ Restrict</extracomment>
         <translation>&amp;Koordinate</translation>
     </message>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="-70"/>
+        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="-64"/>
         <source>&amp;x:</source>
         <translation>&amp;x:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,,X</source>
-        <translation>,,X</translation>
-    </message>
-    <message>
-        <location line="+29"/>
+        <location line="+32"/>
         <source>&amp;y:</source>
         <translation>&amp;y:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,,Y</source>
-        <translation>,,Y</translation>
-    </message>
-    <message>
-        <location line="+32"/>
+        <location line="+35"/>
         <source>Relati&amp;ve</source>
         <translation>Relati&amp;v</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,,R</source>
-        <translation>,,R</translation>
     </message>
 </context>
 <context>
     <name>SnapCoordinatePolar</name>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+36"/>
+        <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+33"/>
         <source>Radius (Distance)</source>
         <translation>Radius (Distanz)</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+32"/>
         <source>Angle</source>
         <translation>Winkel</translation>
     </message>
@@ -13091,28 +11816,17 @@ Restrict</extracomment>
         <translation>P&amp;olare Koordinate</translation>
     </message>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="-54"/>
+        <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="-48"/>
         <source>&amp;r:</source>
         <translation>&amp;r:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <location line="+70"/>
-        <source>,,R</source>
-        <translation>,,R</translation>
-    </message>
-    <message>
-        <location line="-41"/>
+        <location line="+32"/>
         <source>&amp;&lt;:</source>
         <translation>&amp;&lt;:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,,A</source>
-        <translation>,,W</translation>
-    </message>
-    <message>
-        <location line="+29"/>
+        <location line="+32"/>
         <source>Tick for Relative Coordinate</source>
         <translation>Relative Koordinate</translation>
     </message>
@@ -13133,11 +11847,6 @@ Restrict</extracomment>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap Distance:</source>
         <translation>Fangabstand:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,,D</source>
-        <translation>,,A</translation>
     </message>
 </context>
 <context>
@@ -13168,12 +11877,7 @@ Restrict</extracomment>
         <translation>Fangabstand:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,,D</source>
-        <translation>,,A</translation>
-    </message>
-    <message>
-        <location line="+72"/>
+        <location line="+75"/>
         <source>Distance</source>
         <translation>Abstand</translation>
     </message>
@@ -13346,29 +12050,14 @@ Restrict</extracomment>
         <translation>Letzter Kontrollpunkt zurücknehmen</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>,U</source>
-        <translation>,U</translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+21"/>
         <source>Degree:</source>
         <translation>Grad:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,D</source>
-        <translation>,G</translation>
-    </message>
-    <message>
-        <location line="+80"/>
+        <location line="+83"/>
         <source>Closed</source>
         <translation>Geschlossen</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,C</source>
-        <translation>,S</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.js" line="+60"/>
@@ -13391,7 +12080,7 @@ Restrict</extracomment>
         <translation>Spline von Kontrollpunkten</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.ui" line="-76"/>
+        <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.ui" line="-73"/>
         <source>Choose Spline Degree</source>
         <translation>Spline Grad wählen</translation>
     </message>
@@ -13599,32 +12288,15 @@ Restrict</extracomment>
         <translation>Text:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+128"/>
-        <source>,T</source>
-        <translation>,T</translation>
-    </message>
-    <message>
-        <location line="+30"/>
-        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-92"/>
+        <location line="+33"/>
+        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+33"/>
         <source>Height:</source>
         <translation>Höhe:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+6"/>
-        <source>,H</source>
-        <translation>,H</translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+30"/>
         <source>Angle:</source>
         <translation>Winkel:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation>,W</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+46"/>
@@ -13662,17 +12334,12 @@ Restrict</extracomment>
         <translation>Alle aktivieren</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-82"/>
-        <source>,X</source>
-        <translation>,X</translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-63"/>
         <source>Text</source>
         <translation>Text</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+27"/>
         <source>Text height</source>
         <translation>Texthöhe</translation>
     </message>
@@ -13682,12 +12349,7 @@ Restrict</extracomment>
         <translation>Abstand</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,S</source>
-        <translation>,A</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>Letter spacing</source>
         <translation>Buchstabenabstand</translation>
     </message>
@@ -13697,27 +12359,17 @@ Restrict</extracomment>
         <translation>Richtung:</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,D</source>
-        <translation>,R</translation>
-    </message>
-    <message>
         <location line="+10"/>
         <source>Counter Clockwise</source>
         <translation>Gegenuhrzeigersinn</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+20"/>
         <source>Clockwise</source>
         <translation>Uhrzeigersinn</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>,C</source>
-        <translation>,U</translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+30"/>
         <source>Fit text to line, arc or circle</source>
         <translation>Text an Line, Bogen oder Kreis ausrichten</translation>
     </message>
@@ -13725,11 +12377,6 @@ Restrict</extracomment>
         <location line="+3"/>
         <source>Fit</source>
         <translation>Anpassen</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,F</source>
-        <translation>,P</translation>
     </message>
 </context>
 <context>
@@ -14349,29 +12996,14 @@ Restrict</extracomment>
         <translation>Kopieren</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>,C</source>
-        <translation>,K</translation>
-    </message>
-    <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
         <translation>Anzahl Kopien:</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>,N</source>
-        <translation>,N</translation>
-    </message>
-    <message>
-        <location line="+30"/>
+        <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
         <translation>Aktueller Layer / Attribute</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>,L</source>
-        <translation>,L</translation>
     </message>
 </context>
 <context>
@@ -14418,11 +13050,6 @@ Restrict</extracomment>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.ui" line="+17"/>
         <source>Angle:</source>
         <translation>Winkel:</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>,A</source>
-        <translation>,W</translation>
     </message>
 </context>
 <context>
