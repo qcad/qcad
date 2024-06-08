@@ -2750,7 +2750,7 @@ Přejete si ho obnovit?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
         <source>Use Maximum Angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Použití maximálního úhlu</translation>
     </message>
 </context>
 <context>
@@ -3444,7 +3444,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+18"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Oblouk s poloměrem:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -4121,12 +4121,12 @@ již v seznamu je.</translation>
     <message>
         <location line="+62"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Oblouk s poloměrem:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Sweep:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zametání:</translation>
     </message>
     <message>
         <location line="-71"/>
@@ -6448,7 +6448,7 @@ již v seznamu je.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As Block:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Jako blok:</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -6488,17 +6488,17 @@ již v seznamu je.</translation>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Na aktuální vrstvu</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Přepsání vrstev</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Přepsání bloků</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -7387,12 +7387,12 @@ již v seznamu je.</translation>
     <message>
         <location filename="../scripts/Information/Information.ui" line="+17"/>
         <source>Add Measurement to Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Přidání měření do výkresu</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Text Height:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Výška textu:</translation>
     </message>
 </context>
 <context>
@@ -7649,12 +7649,12 @@ již v seznamu je.</translation>
     <message>
         <location line="+3"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Přepsání vrstev</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Přepsání bloků</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -7758,7 +7758,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+18"/>
         <source>Method:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Metoda:</translation>
     </message>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProjectInit.js" line="+2"/>
@@ -8206,7 +8206,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+18"/>
         <source>Use fixed length for line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Použití pevné délky pro řádek</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8216,7 +8216,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+24"/>
         <source>Use fixed angle for line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Použití pevného úhlu pro čáru</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8274,7 +8274,7 @@ již v seznamu je.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngle.ui" line="+17"/>
         <source>Line length</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Délka řádku</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8284,7 +8284,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+30"/>
         <source>Line angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Úhel čáry</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8880,7 +8880,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+14"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Použití aktuální vrstvy a atributů</translation>
     </message>
 </context>
 <context>
@@ -9476,7 +9476,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+25"/>
         <source>Scale and Position</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Měřítko a poloha</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -9567,17 +9567,17 @@ již v seznamu je.</translation>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Na aktuální vrstvu</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Přepsání vrstev</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Přepsání bloků</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -10518,7 +10518,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Použití aktuální vrstvy a atributů</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -10947,7 +10947,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Použití aktuální vrstvy a atributů</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11836,7 +11836,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+3"/>
         <source>Relative</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Relativní</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js" line="+2"/>
@@ -11854,7 +11854,7 @@ již v seznamu je.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Snap Distance:</translation>
     </message>
 </context>
 <context>
@@ -11872,7 +11872,7 @@ již v seznamu je.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Snap Distance:</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -12288,7 +12288,7 @@ již v seznamu je.</translation>
         <location filename="../scripts/Draw/Text/Text.ui" line="+17"/>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+17"/>
         <source>Text:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Text:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -13001,7 +13001,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Použití aktuální vrstvy a atributů</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Translate/TranslateInit.js" line="+2"/>

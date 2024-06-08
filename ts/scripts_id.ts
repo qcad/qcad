@@ -2748,7 +2748,7 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
         <source>Use Maximum Angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gunakan Sudut Maksimum</translation>
     </message>
 </context>
 <context>
@@ -3440,7 +3440,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+18"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Busur dengan Radius:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -4117,12 +4117,12 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+62"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Busur dengan Radius:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Sweep:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sapu:</translation>
     </message>
     <message>
         <location line="-71"/>
@@ -6435,7 +6435,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As Block:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sebagai Block:</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -6475,17 +6475,17 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ke Lapisan Saat Ini</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Menimpa Lapisan</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Menimpa Blok</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -7379,12 +7379,12 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Information/Information.ui" line="+17"/>
         <source>Add Measurement to Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Menambahkan Pengukuran ke Gambar</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Text Height:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tinggi Teks:</translation>
     </message>
 </context>
 <context>
@@ -7641,12 +7641,12 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+3"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Menimpa Lapisan</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Menimpa Blok</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -7781,7 +7781,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+18"/>
         <source>Method:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Metode:</translation>
     </message>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProjectInit.js" line="+2"/>
@@ -8198,7 +8198,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+18"/>
         <source>Use fixed length for line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gunakan panjang tetap untuk garis</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8208,7 +8208,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+24"/>
         <source>Use fixed angle for line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gunakan sudut tetap untuk garis</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8266,7 +8266,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngle.ui" line="+17"/>
         <source>Line length</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Panjang garis</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8276,7 +8276,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+30"/>
         <source>Line angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sudut garis</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8862,7 +8862,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+14"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gunakan Layer dan Atribut Saat Ini</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorInit.js" line="+2"/>
@@ -9464,7 +9464,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+25"/>
         <source>Scale and Position</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skala dan Posisi</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -9555,17 +9555,17 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ke Lapisan Saat Ini</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Menimpa Lapisan</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Menimpa Blok</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -10501,7 +10501,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gunakan Layer dan Atribut Saat Ini</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -10930,7 +10930,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gunakan Layer dan Atribut Saat Ini</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11818,7 +11818,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+3"/>
         <source>Relative</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Relatif</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js" line="+2"/>
@@ -11836,7 +11836,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Jarak Jepret:</translation>
     </message>
 </context>
 <context>
@@ -11854,7 +11854,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Jarak Jepret:</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -12270,7 +12270,7 @@ sudah ada dalam daftar.</translation>
         <location filename="../scripts/Draw/Text/Text.ui" line="+17"/>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+17"/>
         <source>Text:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Teks:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -12983,7 +12983,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gunakan Layer dan Atribut Saat Ini</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Translate/TranslateInit.js" line="+2"/>

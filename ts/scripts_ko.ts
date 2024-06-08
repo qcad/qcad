@@ -2748,7 +2748,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
         <source>Use Maximum Angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">최대 각도 사용</translation>
     </message>
 </context>
 <context>
@@ -3440,7 +3440,7 @@ is already in the list.</source>
     <message>
         <location line="+18"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">반경이 있는 호:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -4117,12 +4117,12 @@ is already in the list.</source>
     <message>
         <location line="+62"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">반경이 있는 호:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Sweep:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">스윕:</translation>
     </message>
     <message>
         <location line="-71"/>
@@ -6435,7 +6435,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As Block:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">블록으로:</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -6475,17 +6475,17 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">현재 레이어로</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">레이어 덮어쓰기</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">블록 덮어쓰기</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -7379,12 +7379,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Information/Information.ui" line="+17"/>
         <source>Add Measurement to Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">도면에 측정값 추가</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Text Height:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">텍스트 높이:</translation>
     </message>
 </context>
 <context>
@@ -7641,12 +7641,12 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">레이어 덮어쓰기</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">블록 덮어쓰기</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -7781,7 +7781,7 @@ is already in the list.</source>
     <message>
         <location line="+18"/>
         <source>Method:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">방법:</translation>
     </message>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProjectInit.js" line="+2"/>
@@ -8198,7 +8198,7 @@ is already in the list.</source>
     <message>
         <location line="+18"/>
         <source>Use fixed length for line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">라인에 고정 길이 사용</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8208,7 +8208,7 @@ is already in the list.</source>
     <message>
         <location line="+24"/>
         <source>Use fixed angle for line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">선에 고정 각도 사용</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8266,7 +8266,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngle.ui" line="+17"/>
         <source>Line length</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">라인 길이</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8276,7 +8276,7 @@ is already in the list.</source>
     <message>
         <location line="+30"/>
         <source>Line angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">선 각도</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8862,7 +8862,7 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">현재 레이어 및 속성 사용</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorInit.js" line="+2"/>
@@ -9464,7 +9464,7 @@ is already in the list.</source>
     <message>
         <location line="+25"/>
         <source>Scale and Position</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">규모 및 위치</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -9555,17 +9555,17 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">현재 레이어로</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">레이어 덮어쓰기</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">블록 덮어쓰기</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -10501,7 +10501,7 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">현재 레이어 및 속성 사용</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -10930,7 +10930,7 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">현재 레이어 및 속성 사용</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11818,7 +11818,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Relative</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">상대</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js" line="+2"/>
@@ -11836,7 +11836,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">스냅 거리:</translation>
     </message>
 </context>
 <context>
@@ -11854,7 +11854,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">스냅 거리:</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -12270,7 +12270,7 @@ is already in the list.</source>
         <location filename="../scripts/Draw/Text/Text.ui" line="+17"/>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+17"/>
         <source>Text:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">텍스트:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -12983,7 +12983,7 @@ is already in the list.</source>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">현재 레이어 및 속성 사용</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Translate/TranslateInit.js" line="+2"/>

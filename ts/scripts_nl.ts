@@ -3443,7 +3443,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+18"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Boog met straal:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -4120,12 +4120,12 @@ is al in de lijst.</translation>
     <message>
         <location line="+62"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Boog met straal:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Sweep:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sweep:</translation>
     </message>
     <message>
         <location line="-71"/>
@@ -6445,7 +6445,7 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As Block:</source>
-        <translation type="unfinished"></translation>
+        <translation>Als blok:</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -6485,17 +6485,17 @@ is al in de lijst.</translation>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Op huidige laag</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Lagen overschrijven</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Blokken overschrijven</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -7384,12 +7384,12 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Information/Information.ui" line="+17"/>
         <source>Add Measurement to Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Meting toevoegen aan tekening</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Text Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Teksthoogte:</translation>
     </message>
 </context>
 <context>
@@ -7646,12 +7646,12 @@ is al in de lijst.</translation>
     <message>
         <location line="+3"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Lagen overschrijven</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Blokken overschrijven</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -7755,7 +7755,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+18"/>
         <source>Method:</source>
-        <translation type="unfinished"></translation>
+        <translation>Methode:</translation>
     </message>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProjectInit.js" line="+2"/>
@@ -8203,7 +8203,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+18"/>
         <source>Use fixed length for line</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaste lengte voor lijn gebruiken</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8213,7 +8213,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+24"/>
         <source>Use fixed angle for line</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaste hoek voor lijn gebruiken</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8271,27 +8271,27 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngle.ui" line="+17"/>
         <source>Line length</source>
-        <translation type="unfinished"></translation>
+        <translation>Lijnlengte</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lengte:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Line angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Lijn hoek</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Angle:</source>
-        <translation type="unfinished">Hoek:</translation>
+        <translation>Hoek:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Referentiepunt:</translation>
+        <translation>Referentiepunt:</translation>
     </message>
 </context>
 <context>
@@ -8471,12 +8471,12 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineHorizontal/LineHorizontal.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lengte:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Referentiepunt:</translation>
+        <translation>Referentiepunt:</translation>
     </message>
 </context>
 <context>
@@ -8489,7 +8489,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+30"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Referentiepunt:</translation>
+        <translation>Referentiepunt:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonal/LineOrthogonalInit.js" line="+2"/>
@@ -8545,12 +8545,12 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>Distance:</source>
-        <translation type="unfinished">Afstand:</translation>
+        <translation>Afstand:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation type="unfinished">Aantal:</translation>
+        <translation>Aantal:</translation>
     </message>
 </context>
 <context>
@@ -8619,7 +8619,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+30"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Referentiepunt:</translation>
+        <translation>Referentiepunt:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="-45"/>
@@ -8877,7 +8877,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+14"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Huidige laag en attributen gebruiken</translation>
     </message>
 </context>
 <context>
@@ -9562,17 +9562,17 @@ is al in de lijst.</translation>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Naar huidige laag</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Lagen overschrijven</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Blokken overschrijven</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -10513,7 +10513,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Huidige laag en attributen gebruiken</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -10942,7 +10942,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Huidige laag en attributen gebruiken</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11438,7 +11438,7 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/Shape.ui" line="+17"/>
         <source>Create Polyline</source>
-        <translation type="unfinished">Polylijn tekenen</translation>
+        <translation>Polylijn tekenen</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -11622,7 +11622,7 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
         <source>Angle:</source>
-        <translation type="unfinished">Hoek:</translation>
+        <translation>Hoek:</translation>
     </message>
 </context>
 <context>
@@ -11828,7 +11828,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+3"/>
         <source>Relative</source>
-        <translation type="unfinished"></translation>
+        <translation>Relatief</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js" line="+2"/>
@@ -11846,7 +11846,7 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vang afstand:</translation>
     </message>
 </context>
 <context>
@@ -11864,7 +11864,7 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vang afstand:</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -12280,7 +12280,7 @@ is al in de lijst.</translation>
         <location filename="../scripts/Draw/Text/Text.ui" line="+17"/>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+17"/>
         <source>Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekst:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -13003,7 +13003,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Huidige laag en attributen gebruiken</translation>
     </message>
 </context>
 <context>

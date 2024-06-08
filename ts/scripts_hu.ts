@@ -2748,7 +2748,7 @@ Szeretné visszaállítani?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
         <source>Use Maximum Angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Maximális szög használata</translation>
     </message>
 </context>
 <context>
@@ -3440,7 +3440,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+18"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sugárral ellátott ív:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -4127,12 +4127,12 @@ már szerepel a listában.</translation>
     <message>
         <location line="+62"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sugárral ellátott ív:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Sweep:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Söprés:</translation>
     </message>
     <message>
         <location line="-71"/>
@@ -6440,7 +6440,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As Block:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mint Block:</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -6480,17 +6480,17 @@ már szerepel a listában.</translation>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Az aktuális réteghez</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rétegek felülírása</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blokkok felülírása</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -7379,12 +7379,12 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Information/Information.ui" line="+17"/>
         <source>Add Measurement to Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mérés hozzáadása a rajzhoz</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Text Height:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Szövegmagasság:</translation>
     </message>
 </context>
 <context>
@@ -7641,12 +7641,12 @@ már szerepel a listában.</translation>
     <message>
         <location line="+3"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rétegek felülírása</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blokkok felülírása</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -7786,7 +7786,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+18"/>
         <source>Method:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Módszer:</translation>
     </message>
 </context>
 <context>
@@ -8208,7 +8208,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+18"/>
         <source>Use fixed length for line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fix hosszúságú vonal használata</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8218,7 +8218,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+24"/>
         <source>Use fixed angle for line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Használjon fix szöget a vonalhoz</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8266,7 +8266,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngle.ui" line="+17"/>
         <source>Line length</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vonal hossza</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8276,7 +8276,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+30"/>
         <source>Line angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vonalszög</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8867,7 +8867,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+14"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Aktuális réteg és attribútumok használata</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/PreferencesPage.ui" line="+17"/>
@@ -9560,17 +9560,17 @@ már szerepel a listában.</translation>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Az aktuális réteghez</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rétegek felülírása</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blokkok felülírása</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -10506,7 +10506,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Aktuális réteg és attribútumok használata</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -10935,7 +10935,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Aktuális réteg és attribútumok használata</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11823,7 +11823,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+3"/>
         <source>Relative</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Relatív</translation>
     </message>
 </context>
 <context>
@@ -11836,7 +11836,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Snap távolság:</translation>
     </message>
 </context>
 <context>
@@ -11864,7 +11864,7 @@ már szerepel a listában.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Snap távolság:</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -12280,7 +12280,7 @@ már szerepel a listában.</translation>
         <location filename="../scripts/Draw/Text/Text.ui" line="+17"/>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+17"/>
         <source>Text:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Szöveg:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -12993,7 +12993,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Aktuális réteg és attribútumok használata</translation>
     </message>
 </context>
 <context>

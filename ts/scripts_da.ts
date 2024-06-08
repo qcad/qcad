@@ -2443,7 +2443,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+36"/>
         <source>Mode:</source>
-        <translation type="unfinished">Tilstand:</translation>
+        <translation>Tilstand:</translation>
     </message>
     <message>
         <location line="+41"/>
@@ -2750,7 +2750,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
         <source>Use Maximum Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Brug maksimal vinkel</translation>
     </message>
 </context>
 <context>
@@ -3443,7 +3443,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+18"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bue med radius:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -4120,12 +4120,12 @@ er allerede på listen.</translation>
     <message>
         <location line="+62"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bue med radius:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Sweep:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sweep:</translation>
     </message>
     <message>
         <location line="-71"/>
@@ -6440,7 +6440,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As Block:</source>
-        <translation type="unfinished"></translation>
+        <translation>Som Block:</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -6480,17 +6480,17 @@ er allerede på listen.</translation>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Til nuværende lag</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Overskriv lag</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Overskriv blokke</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -7384,12 +7384,12 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Information/Information.ui" line="+17"/>
         <source>Add Measurement to Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Tilføj måling til tegning</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Text Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Teksthøjde:</translation>
     </message>
 </context>
 <context>
@@ -7646,12 +7646,12 @@ er allerede på listen.</translation>
     <message>
         <location line="+3"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Overskriv lag</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Overskriv blokke</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -7786,7 +7786,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+18"/>
         <source>Method:</source>
-        <translation type="unfinished"></translation>
+        <translation>Metode:</translation>
     </message>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProjectInit.js" line="+2"/>
@@ -8203,7 +8203,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+18"/>
         <source>Use fixed length for line</source>
-        <translation type="unfinished"></translation>
+        <translation>Brug fast længde for linje</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8213,7 +8213,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+24"/>
         <source>Use fixed angle for line</source>
-        <translation type="unfinished"></translation>
+        <translation>Brug fast vinkel for linje</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8271,27 +8271,27 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngle.ui" line="+17"/>
         <source>Line length</source>
-        <translation type="unfinished"></translation>
+        <translation>Linjens længde</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Length:</source>
-        <translation type="unfinished">Længde:</translation>
+        <translation>Længde:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Line angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Linjevinkel</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Angle:</source>
-        <translation type="unfinished">Vinkel:</translation>
+        <translation>Vinkel:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Referencepunkt:</translation>
+        <translation>Referencepunkt:</translation>
     </message>
 </context>
 <context>
@@ -8471,12 +8471,12 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineHorizontal/LineHorizontal.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="unfinished">Længde:</translation>
+        <translation>Længde:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Referencepunkt:</translation>
+        <translation>Referencepunkt:</translation>
     </message>
 </context>
 <context>
@@ -8489,7 +8489,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+30"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Referencepunkt:</translation>
+        <translation>Referencepunkt:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonal/LineOrthogonalInit.js" line="+2"/>
@@ -8545,12 +8545,12 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>Distance:</source>
-        <translation type="unfinished">Afstand:</translation>
+        <translation>Afstand:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation type="unfinished">Nummer:</translation>
+        <translation>Nummer:</translation>
     </message>
 </context>
 <context>
@@ -8619,7 +8619,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+30"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Referencepunkt:</translation>
+        <translation>Referencepunkt:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="-45"/>
@@ -8867,7 +8867,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+14"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Brug nuværende lag og attributter</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorInit.js" line="+2"/>
@@ -9471,7 +9471,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+25"/>
         <source>Scale and Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Skala og position</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -9562,17 +9562,17 @@ er allerede på listen.</translation>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Til nuværende lag</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Overskriv lag</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Overskriv blokke</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -10508,7 +10508,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Brug nuværende lag og attributter</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -10937,7 +10937,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Brug nuværende lag og attributter</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11438,7 +11438,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/Shape.ui" line="+17"/>
         <source>Create Polyline</source>
-        <translation type="unfinished">Opret polylinje</translation>
+        <translation>Opret polylinje</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -11622,7 +11622,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
         <source>Angle:</source>
-        <translation type="unfinished">Vinkel:</translation>
+        <translation>Vinkel:</translation>
     </message>
 </context>
 <context>
@@ -11828,7 +11828,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+3"/>
         <source>Relative</source>
-        <translation type="unfinished"></translation>
+        <translation>Relativ</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js" line="+2"/>
@@ -11846,7 +11846,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Snap afstand:</translation>
     </message>
 </context>
 <context>
@@ -11864,7 +11864,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Snap afstand:</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -12280,7 +12280,7 @@ er allerede på listen.</translation>
         <location filename="../scripts/Draw/Text/Text.ui" line="+17"/>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+17"/>
         <source>Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekst:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -12993,7 +12993,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Brug nuværende lag og attributter</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Translate/TranslateInit.js" line="+2"/>

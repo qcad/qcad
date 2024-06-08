@@ -2749,7 +2749,7 @@ Vai vēlaties to atjaunot?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
         <source>Use Maximum Angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Izmantot maksimālo leņķi</translation>
     </message>
 </context>
 <context>
@@ -3443,7 +3443,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+18"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Loks ar rādiusu:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -4120,12 +4120,12 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+62"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Loks ar rādiusu:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Sweep:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pārslaucīšana:</translation>
     </message>
     <message>
         <location line="-71"/>
@@ -6442,7 +6442,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As Block:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kā bloķēt:</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -6482,17 +6482,17 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uz pašreizējo slāni</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pārrakstīt slāņus</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bloku pārrakstīšana</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -7386,12 +7386,12 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Information/Information.ui" line="+17"/>
         <source>Add Measurement to Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mērījumu pievienošana rasējumam</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Text Height:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Teksta augstums:</translation>
     </message>
 </context>
 <context>
@@ -7648,12 +7648,12 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+3"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pārrakstīt slāņus</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bloku pārrakstīšana</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -7788,7 +7788,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+18"/>
         <source>Method:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Metode:</translation>
     </message>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProjectInit.js" line="+2"/>
@@ -8205,7 +8205,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+18"/>
         <source>Use fixed length for line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fiksēta garuma līnijas izmantošana</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8215,7 +8215,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+24"/>
         <source>Use fixed angle for line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Izmanto fiksētu leņķi līnijai</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8273,7 +8273,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngle.ui" line="+17"/>
         <source>Line length</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Līnijas garums</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8283,7 +8283,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+30"/>
         <source>Line angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Līnijas leņķis</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8869,7 +8869,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+14"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pašreizējā slāņa un atribūtu izmantošana</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorInit.js" line="+2"/>
@@ -9475,7 +9475,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+25"/>
         <source>Scale and Position</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mērogs un pozīcija</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -9566,17 +9566,17 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uz pašreizējo slāni</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pārrakstīt slāņus</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bloku pārrakstīšana</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -10512,7 +10512,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pašreizējā slāņa un atribūtu izmantošana</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -10941,7 +10941,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pašreizējā slāņa un atribūtu izmantošana</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11835,7 +11835,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+3"/>
         <source>Relative</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Relatīvais</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js" line="+2"/>
@@ -11853,7 +11853,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Snap distance:</translation>
     </message>
 </context>
 <context>
@@ -11871,7 +11871,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Snap distance:</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -12287,7 +12287,7 @@ jau ir sarakstā.</translation>
         <location filename="../scripts/Draw/Text/Text.ui" line="+17"/>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+17"/>
         <source>Text:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Teksts:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -13000,7 +13000,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pašreizējā slāņa un atribūtu izmantošana</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Translate/TranslateInit.js" line="+2"/>

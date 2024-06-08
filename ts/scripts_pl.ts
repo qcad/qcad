@@ -2752,7 +2752,7 @@ Czy chcesz go odzyskać?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
         <source>Use Maximum Angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Użyj maksymalnego kąta</translation>
     </message>
 </context>
 <context>
@@ -3446,7 +3446,7 @@ jest już na liście.</translation>
     <message>
         <location line="+18"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Łuk z promieniem:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -4123,12 +4123,12 @@ jest już na liście.</translation>
     <message>
         <location line="+62"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Łuk z promieniem:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Sweep:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sweep:</translation>
     </message>
     <message>
         <location line="-71"/>
@@ -6450,7 +6450,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As Block:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">As Block:</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -6490,17 +6490,17 @@ jest już na liście.</translation>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Do bieżącej warstwy</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nadpisywanie warstw</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nadpisywanie bloków</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -7389,12 +7389,12 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Information/Information.ui" line="+17"/>
         <source>Add Measurement to Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dodaj pomiar do rysunku</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Text Height:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wysokość tekstu:</translation>
     </message>
 </context>
 <context>
@@ -7651,12 +7651,12 @@ jest już na liście.</translation>
     <message>
         <location line="+3"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nadpisywanie warstw</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nadpisywanie bloków</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -7760,7 +7760,7 @@ jest już na liście.</translation>
     <message>
         <location line="+18"/>
         <source>Method:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Metoda:</translation>
     </message>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProjectInit.js" line="+2"/>
@@ -8208,7 +8208,7 @@ jest już na liście.</translation>
     <message>
         <location line="+18"/>
         <source>Use fixed length for line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Użyj stałej długości linii</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8218,7 +8218,7 @@ jest już na liście.</translation>
     <message>
         <location line="+24"/>
         <source>Use fixed angle for line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Użyj stałego kąta dla linii</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8276,17 +8276,17 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngle.ui" line="+17"/>
         <source>Line length</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Długość linii</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Length:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Długość:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Line angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kąt linii</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8476,7 +8476,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineHorizontal/LineHorizontal.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Długość:</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -8555,7 +8555,7 @@ jest już na liście.</translation>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Numer:</translation>
     </message>
 </context>
 <context>
@@ -8877,7 +8877,7 @@ jest już na liście.</translation>
     <message>
         <location line="+14"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Użyj bieżącej warstwy i atrybutów</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/PreferencesPage.ui" line="+17"/>
@@ -9478,7 +9478,7 @@ jest już na liście.</translation>
     <message>
         <location line="+25"/>
         <source>Scale and Position</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skala i pozycja</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -9569,17 +9569,17 @@ jest już na liście.</translation>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Do bieżącej warstwy</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nadpisywanie warstw</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nadpisywanie bloków</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -10520,7 +10520,7 @@ jest już na liście.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Użyj bieżącej warstwy i atrybutów</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -10949,7 +10949,7 @@ jest już na liście.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Użyj bieżącej warstwy i atrybutów</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11838,7 +11838,7 @@ jest już na liście.</translation>
     <message>
         <location line="+3"/>
         <source>Relative</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Względny</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js" line="+2"/>
@@ -11856,7 +11856,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Snap Distance:</translation>
     </message>
 </context>
 <context>
@@ -11884,7 +11884,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Snap Distance:</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -12290,7 +12290,7 @@ jest już na liście.</translation>
         <location filename="../scripts/Draw/Text/Text.ui" line="+17"/>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+17"/>
         <source>Text:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tekst:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -13013,7 +13013,7 @@ jest już na liście.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Użyj bieżącej warstwy i atrybutów</translation>
     </message>
 </context>
 <context>

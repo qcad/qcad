@@ -3443,7 +3443,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+18"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Arco com raio:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -4130,12 +4130,12 @@ já se encontra na lista.</translation>
     <message>
         <location line="+62"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Arco com raio:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Sweep:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sweep:</translation>
     </message>
     <message>
         <location line="-71"/>
@@ -6445,7 +6445,7 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As Block:</source>
-        <translation type="unfinished"></translation>
+        <translation>Como bloco:</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -6485,17 +6485,17 @@ já se encontra na lista.</translation>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Para a camada atual</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Substituir camadas</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Substituir blocos</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -7384,12 +7384,12 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Information/Information.ui" line="+17"/>
         <source>Add Measurement to Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Adicionar medida ao desenho</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Text Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Altura do texto:</translation>
     </message>
 </context>
 <context>
@@ -7631,12 +7631,12 @@ já se encontra na lista.</translation>
     <message>
         <location line="+3"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Substituir camadas</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Substituir blocos</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -7755,7 +7755,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+18"/>
         <source>Method:</source>
-        <translation type="unfinished"></translation>
+        <translation>Método:</translation>
     </message>
     <message>
         <location line="-111"/>
@@ -8213,7 +8213,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+18"/>
         <source>Use fixed length for line</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilizar comprimento fixo para a linha</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8223,7 +8223,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+24"/>
         <source>Use fixed angle for line</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilizar um ângulo fixo para a linha</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8271,27 +8271,27 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngle.ui" line="+17"/>
         <source>Line length</source>
-        <translation type="unfinished"></translation>
+        <translation>Comprimento da linha</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Length:</source>
-        <translation type="unfinished">Comprimento:</translation>
+        <translation>Comprimento:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Line angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Ângulo da linha</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Angle:</source>
-        <translation type="unfinished">Ângulo:</translation>
+        <translation>Ângulo:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Ponto de Referência:</translation>
+        <translation>Ponto de Referência:</translation>
     </message>
 </context>
 <context>
@@ -8471,12 +8471,12 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineHorizontal/LineHorizontal.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="unfinished">Comprimento:</translation>
+        <translation>Comprimento:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Ponto de Referência:</translation>
+        <translation>Ponto de Referência:</translation>
     </message>
 </context>
 <context>
@@ -8499,7 +8499,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+30"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Ponto de Referência:</translation>
+        <translation>Ponto de Referência:</translation>
     </message>
 </context>
 <context>
@@ -8545,12 +8545,12 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>Distance:</source>
-        <translation type="unfinished">Distância:</translation>
+        <translation>Distância:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation type="unfinished">Número:</translation>
+        <translation>Número:</translation>
     </message>
 </context>
 <context>
@@ -8629,7 +8629,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+30"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Ponto de Referência:</translation>
+        <translation>Ponto de Referência:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="-45"/>
@@ -8877,7 +8877,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+14"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilizar a camada e os atributos actuais</translation>
     </message>
 </context>
 <context>
@@ -9567,17 +9567,17 @@ já se encontra na lista.</translation>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Para a camada atual</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Substituir camadas</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Substituir blocos</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -10513,7 +10513,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilizar a camada e os atributos actuais</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -10942,7 +10942,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilizar a camada e os atributos actuais</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11438,7 +11438,7 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/Shape.ui" line="+17"/>
         <source>Create Polyline</source>
-        <translation type="unfinished">Crie uma Polilinha</translation>
+        <translation>Crie uma Polilinha</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -11622,7 +11622,7 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
         <source>Angle:</source>
-        <translation type="unfinished">Ângulo:</translation>
+        <translation>Ângulo:</translation>
     </message>
 </context>
 <context>
@@ -11833,7 +11833,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+3"/>
         <source>Relative</source>
-        <translation type="unfinished"></translation>
+        <translation>Relativo</translation>
     </message>
 </context>
 <context>
@@ -11846,7 +11846,7 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Distância do salto:</translation>
     </message>
 </context>
 <context>
@@ -11874,7 +11874,7 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Distância do salto:</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -12290,7 +12290,7 @@ já se encontra na lista.</translation>
         <location filename="../scripts/Draw/Text/Text.ui" line="+17"/>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+17"/>
         <source>Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Texto:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -13003,7 +13003,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilizar a camada e os atributos actuais</translation>
     </message>
 </context>
 <context>

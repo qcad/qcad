@@ -2441,7 +2441,7 @@ Vill du återställa den?</translation>
     <message>
         <location line="+36"/>
         <source>Mode:</source>
-        <translation type="unfinished">Läge:</translation>
+        <translation>Läge:</translation>
     </message>
     <message>
         <location line="+41"/>
@@ -2748,7 +2748,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
         <source>Use Maximum Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Använd maximal vinkel</translation>
     </message>
 </context>
 <context>
@@ -3441,7 +3441,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+18"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Båge med radie:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -4118,12 +4118,12 @@ finns redan i listan.</translation>
     <message>
         <location line="+62"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Båge med radie:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Sweep:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sopa:</translation>
     </message>
     <message>
         <location line="-71"/>
@@ -6443,7 +6443,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As Block:</source>
-        <translation type="unfinished"></translation>
+        <translation>Som Block:</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -6483,17 +6483,17 @@ finns redan i listan.</translation>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Till aktuellt lager</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Skriva över lager</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Skriva över block</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -7382,12 +7382,12 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Information/Information.ui" line="+17"/>
         <source>Add Measurement to Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Lägg till mätning på ritning</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Text Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Höjd på texten:</translation>
     </message>
 </context>
 <context>
@@ -7644,12 +7644,12 @@ finns redan i listan.</translation>
     <message>
         <location line="+3"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Skriva över lager</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Skriva över block</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -7789,7 +7789,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+18"/>
         <source>Method:</source>
-        <translation type="unfinished"></translation>
+        <translation>Metod:</translation>
     </message>
 </context>
 <context>
@@ -8201,7 +8201,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+18"/>
         <source>Use fixed length for line</source>
-        <translation type="unfinished"></translation>
+        <translation>Använd fast längd för linjen</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8211,7 +8211,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+24"/>
         <source>Use fixed angle for line</source>
-        <translation type="unfinished"></translation>
+        <translation>Använd fast vinkel för linje</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8269,27 +8269,27 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngle.ui" line="+17"/>
         <source>Line length</source>
-        <translation type="unfinished"></translation>
+        <translation>Linjens längd</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Length:</source>
-        <translation type="unfinished">Längd:</translation>
+        <translation>Längd:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Line angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Linjevinkel</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Angle:</source>
-        <translation type="unfinished">Vinkel:</translation>
+        <translation>Vinkel:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Referenspunkt:</translation>
+        <translation>Referenspunkt:</translation>
     </message>
 </context>
 <context>
@@ -8469,12 +8469,12 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineHorizontal/LineHorizontal.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="unfinished">Längd:</translation>
+        <translation>Längd:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Referenspunkt:</translation>
+        <translation>Referenspunkt:</translation>
     </message>
 </context>
 <context>
@@ -8487,7 +8487,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+30"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Referenspunkt:</translation>
+        <translation>Referenspunkt:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonal/LineOrthogonalInit.js" line="+2"/>
@@ -8543,12 +8543,12 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>Distance:</source>
-        <translation type="unfinished">Avstånd:</translation>
+        <translation>Avstånd:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation type="unfinished">Nummer:</translation>
+        <translation>Nummer:</translation>
     </message>
 </context>
 <context>
@@ -8607,7 +8607,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+30"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Referenspunkt:</translation>
+        <translation>Referenspunkt:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="+42"/>
@@ -8870,7 +8870,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+14"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Använd nuvarande lager och attribut</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/PreferencesPage.ui" line="+17"/>
@@ -9469,7 +9469,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+25"/>
         <source>Scale and Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Skala och position</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -9565,17 +9565,17 @@ finns redan i listan.</translation>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Till aktuellt lager</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Skriva över lager</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Skriva över block</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -10511,7 +10511,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Använd nuvarande lager och attribut</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -10940,7 +10940,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Använd nuvarande lager och attribut</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11436,7 +11436,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/Shape.ui" line="+17"/>
         <source>Create Polyline</source>
-        <translation type="unfinished">Skapa polylinje</translation>
+        <translation>Skapa polylinje</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -11620,7 +11620,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
         <source>Angle:</source>
-        <translation type="unfinished">Vinkel:</translation>
+        <translation>Vinkel:</translation>
     </message>
 </context>
 <context>
@@ -11831,7 +11831,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+3"/>
         <source>Relative</source>
-        <translation type="unfinished"></translation>
+        <translation>Relativ</translation>
     </message>
 </context>
 <context>
@@ -11844,7 +11844,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Snap Distance:</translation>
     </message>
 </context>
 <context>
@@ -11872,7 +11872,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Snap Distance:</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -12278,7 +12278,7 @@ finns redan i listan.</translation>
         <location filename="../scripts/Draw/Text/Text.ui" line="+17"/>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+17"/>
         <source>Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Text:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -13001,7 +13001,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Använd nuvarande lager och attribut</translation>
     </message>
 </context>
 <context>

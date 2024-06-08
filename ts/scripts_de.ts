@@ -7389,7 +7389,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+17"/>
         <source>Text Height:</source>
-        <translation>Text Höhe:</translation>
+        <translation>Texthöhe:</translation>
     </message>
 </context>
 <context>

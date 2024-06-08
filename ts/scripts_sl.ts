@@ -2750,7 +2750,7 @@ Ali jo želite obnoviti?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
         <source>Use Maximum Angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uporaba največjega kota</translation>
     </message>
 </context>
 <context>
@@ -3445,7 +3445,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+18"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Oblok s polmerom:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -4122,12 +4122,12 @@ je že na seznamu.</translation>
     <message>
         <location line="+62"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Oblok s polmerom:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Sweep:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pometanje:</translation>
     </message>
     <message>
         <location line="-71"/>
@@ -6451,7 +6451,7 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As Block:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kot blok:</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -6491,17 +6491,17 @@ je že na seznamu.</translation>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Na trenutni sloj</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Prepisovanje slojev</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Prepisovanje blokov</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -7390,12 +7390,12 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Information/Information.ui" line="+17"/>
         <source>Add Measurement to Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dodajanje meritev v risbo</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Text Height:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Višina besedila:</translation>
     </message>
 </context>
 <context>
@@ -7652,12 +7652,12 @@ je že na seznamu.</translation>
     <message>
         <location line="+3"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Prepisovanje slojev</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Prepisovanje blokov</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -7761,7 +7761,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+18"/>
         <source>Method:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Metoda:</translation>
     </message>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProjectInit.js" line="+2"/>
@@ -8209,7 +8209,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+18"/>
         <source>Use fixed length for line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uporaba fiksne dolžine vrstice</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8219,7 +8219,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+24"/>
         <source>Use fixed angle for line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uporaba fiksnega kota za črto</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8277,7 +8277,7 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngle.ui" line="+17"/>
         <source>Line length</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dolžina črte</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8287,7 +8287,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+30"/>
         <source>Line angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kot črte</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8878,7 +8878,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+14"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uporaba trenutnega sloja in atributov</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/PreferencesPage.ui" line="+17"/>
@@ -9481,7 +9481,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+25"/>
         <source>Scale and Position</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lestvica in položaj</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -9572,17 +9572,17 @@ je že na seznamu.</translation>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Na trenutni sloj</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Prepisovanje slojev</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Prepisovanje blokov</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -10523,7 +10523,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uporaba trenutnega sloja in atributov</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -10952,7 +10952,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uporaba trenutnega sloja in atributov</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11844,7 +11844,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+3"/>
         <source>Relative</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Relativni</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js" line="+2"/>
@@ -11862,7 +11862,7 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Razdalja Snap:</translation>
     </message>
 </context>
 <context>
@@ -11890,7 +11890,7 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Razdalja Snap:</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -12296,7 +12296,7 @@ je že na seznamu.</translation>
         <location filename="../scripts/Draw/Text/Text.ui" line="+17"/>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+17"/>
         <source>Text:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Besedilo:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -13019,7 +13019,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uporaba trenutnega sloja in atributov</translation>
     </message>
 </context>
 <context>

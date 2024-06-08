@@ -2747,7 +2747,7 @@ Kurtarmak ister misiniz?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
         <source>Use Maximum Angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Maksimum Açıyı Kullanın</translation>
     </message>
 </context>
 <context>
@@ -3439,7 +3439,7 @@ zaten listede.</translation>
     <message>
         <location line="+18"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yarıçaplı Yay:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -4116,12 +4116,12 @@ zaten listede.</translation>
     <message>
         <location line="+62"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yarıçaplı Yay:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Sweep:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Süpürün:</translation>
     </message>
     <message>
         <location line="-71"/>
@@ -6439,7 +6439,7 @@ zaten listede.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As Block:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">As Block:</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -6479,17 +6479,17 @@ zaten listede.</translation>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçerli Katmana</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Katmanların Üzerine Yazma</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blokların Üzerine Yazma</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -7378,12 +7378,12 @@ zaten listede.</translation>
     <message>
         <location filename="../scripts/Information/Information.ui" line="+17"/>
         <source>Add Measurement to Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çizime Ölçüm Ekleme</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Text Height:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Metin Yüksekliği:</translation>
     </message>
 </context>
 <context>
@@ -7640,12 +7640,12 @@ zaten listede.</translation>
     <message>
         <location line="+3"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Katmanların Üzerine Yazma</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blokların Üzerine Yazma</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -7780,7 +7780,7 @@ zaten listede.</translation>
     <message>
         <location line="+18"/>
         <source>Method:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Yöntem:</translation>
     </message>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProjectInit.js" line="+2"/>
@@ -8197,7 +8197,7 @@ zaten listede.</translation>
     <message>
         <location line="+18"/>
         <source>Use fixed length for line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Hat için sabit uzunluk kullanın</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8207,7 +8207,7 @@ zaten listede.</translation>
     <message>
         <location line="+24"/>
         <source>Use fixed angle for line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Hat için sabit açı kullanın</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8265,7 +8265,7 @@ zaten listede.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngle.ui" line="+17"/>
         <source>Line length</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Hat uzunluğu</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8275,7 +8275,7 @@ zaten listede.</translation>
     <message>
         <location line="+30"/>
         <source>Line angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çizgi açısı</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8285,7 +8285,7 @@ zaten listede.</translation>
     <message>
         <location line="+33"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Referans Noktası:</translation>
     </message>
 </context>
 <context>
@@ -8470,7 +8470,7 @@ zaten listede.</translation>
     <message>
         <location line="+24"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Referans Noktası:</translation>
     </message>
 </context>
 <context>
@@ -8483,7 +8483,7 @@ zaten listede.</translation>
     <message>
         <location line="+30"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Referans Noktası:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonal/LineOrthogonalInit.js" line="+2"/>
@@ -8539,12 +8539,12 @@ zaten listede.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mesafe:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Numara:</translation>
     </message>
 </context>
 <context>
@@ -8613,7 +8613,7 @@ zaten listede.</translation>
     <message>
         <location line="+30"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Referans Noktası:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="-45"/>
@@ -8866,7 +8866,7 @@ zaten listede.</translation>
     <message>
         <location line="+14"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçerli Katmanı ve Öznitelikleri Kullan</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/PreferencesPage.ui" line="+17"/>
@@ -9463,7 +9463,7 @@ zaten listede.</translation>
     <message>
         <location line="+25"/>
         <source>Scale and Position</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ölçek ve Konum</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -9554,17 +9554,17 @@ zaten listede.</translation>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçerli Katmana</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Katmanların Üzerine Yazma</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blokların Üzerine Yazma</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -10505,7 +10505,7 @@ zaten listede.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçerli Katmanı ve Öznitelikleri Kullan</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -10934,7 +10934,7 @@ zaten listede.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçerli Katmanı ve Öznitelikleri Kullan</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11817,7 +11817,7 @@ zaten listede.</translation>
     <message>
         <location line="+3"/>
         <source>Relative</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Göreceli</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js" line="+2"/>
@@ -11835,7 +11835,7 @@ zaten listede.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çekim mesafesi:</translation>
     </message>
 </context>
 <context>
@@ -11853,7 +11853,7 @@ zaten listede.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Çekim mesafesi:</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -12269,7 +12269,7 @@ zaten listede.</translation>
         <location filename="../scripts/Draw/Text/Text.ui" line="+17"/>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+17"/>
         <source>Text:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Metin:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -12992,7 +12992,7 @@ zaten listede.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Geçerli Katmanı ve Öznitelikleri Kullan</translation>
     </message>
 </context>
 <context>

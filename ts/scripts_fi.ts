@@ -2443,7 +2443,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location line="+36"/>
         <source>Mode:</source>
-        <translation type="unfinished">Tila:</translation>
+        <translation>Tila:</translation>
     </message>
     <message>
         <location line="+41"/>
@@ -2750,7 +2750,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
         <source>Use Maximum Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytä maksimikulmaa</translation>
     </message>
 </context>
 <context>
@@ -3443,7 +3443,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+18"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Arc with Radius:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -4120,12 +4120,12 @@ on jo luettelossa.</translation>
     <message>
         <location line="+62"/>
         <source>Arc with Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Arc with Radius:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Sweep:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pyyhkäise:</translation>
     </message>
     <message>
         <location line="-71"/>
@@ -6445,7 +6445,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As Block:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lohkona:</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -6485,17 +6485,17 @@ on jo luettelossa.</translation>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Nykyiselle tasolle</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Ylikirjoita tasot</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Lohkojen ylikirjoittaminen</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -7384,12 +7384,12 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Information/Information.ui" line="+17"/>
         <source>Add Measurement to Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisää mittaus piirustukseen</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Text Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekstin korkeus:</translation>
     </message>
 </context>
 <context>
@@ -7646,12 +7646,12 @@ on jo luettelossa.</translation>
     <message>
         <location line="+3"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Ylikirjoita tasot</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Lohkojen ylikirjoittaminen</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -7755,7 +7755,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+18"/>
         <source>Method:</source>
-        <translation type="unfinished"></translation>
+        <translation>Menetelmä:</translation>
     </message>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProjectInit.js" line="+2"/>
@@ -8203,7 +8203,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+18"/>
         <source>Use fixed length for line</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytä kiinteää rivin pituutta</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8213,7 +8213,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+24"/>
         <source>Use fixed angle for line</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytä kiinteää kulmaa linjalle</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8271,27 +8271,27 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngle.ui" line="+17"/>
         <source>Line length</source>
-        <translation type="unfinished"></translation>
+        <translation>Rivin pituus</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Length:</source>
-        <translation type="unfinished">Pituus:</translation>
+        <translation>Pituus:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Line angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Viivan kulma</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Angle:</source>
-        <translation type="unfinished">Kulma:</translation>
+        <translation>Kulma:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Viitepiste:</translation>
+        <translation>Viitepiste:</translation>
     </message>
 </context>
 <context>
@@ -8471,12 +8471,12 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineHorizontal/LineHorizontal.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="unfinished">Pituus:</translation>
+        <translation>Pituus:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Viitepiste:</translation>
+        <translation>Viitepiste:</translation>
     </message>
 </context>
 <context>
@@ -8489,7 +8489,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+30"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Viitepiste:</translation>
+        <translation>Viitepiste:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonal/LineOrthogonalInit.js" line="+2"/>
@@ -8545,12 +8545,12 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>Distance:</source>
-        <translation type="unfinished">Etäisyys:</translation>
+        <translation>Etäisyys:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Number:</source>
-        <translation type="unfinished">Numero:</translation>
+        <translation>Numero:</translation>
     </message>
 </context>
 <context>
@@ -8619,7 +8619,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+30"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Viitepiste:</translation>
+        <translation>Viitepiste:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="-45"/>
@@ -8872,7 +8872,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+14"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytä nykyistä tasoa ja attribuutteja</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/PreferencesPage.ui" line="+17"/>
@@ -9471,7 +9471,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+25"/>
         <source>Scale and Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Mittakaava ja sijainti</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -9562,17 +9562,17 @@ on jo luettelossa.</translation>
     <message>
         <location line="+3"/>
         <source>To Current Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Nykyiselle tasolle</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Ylikirjoita tasot</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Overwrite Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Lohkojen ylikirjoittaminen</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -10513,7 +10513,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytä nykyistä tasoa ja attribuutteja</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -10942,7 +10942,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytä nykyistä tasoa ja attribuutteja</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11438,7 +11438,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/Shape.ui" line="+17"/>
         <source>Create Polyline</source>
-        <translation type="unfinished">Luo murtoviiva</translation>
+        <translation>Luo murtoviiva</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -11622,7 +11622,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
         <source>Angle:</source>
-        <translation type="unfinished">Kulma:</translation>
+        <translation>Kulma:</translation>
     </message>
 </context>
 <context>
@@ -11828,7 +11828,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+3"/>
         <source>Relative</source>
-        <translation type="unfinished"></translation>
+        <translation>Suhteellinen</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js" line="+2"/>
@@ -11846,7 +11846,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Snap Distance:</translation>
     </message>
 </context>
 <context>
@@ -11864,7 +11864,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Snap Distance:</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -12280,7 +12280,7 @@ on jo luettelossa.</translation>
         <location filename="../scripts/Draw/Text/Text.ui" line="+17"/>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+17"/>
         <source>Text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Teksti:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -12998,7 +12998,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+33"/>
         <source>Use Current Layer and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytä nykyistä tasoa ja attribuutteja</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Translate/PreferencesPage.ui" line="+17"/>
