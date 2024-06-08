@@ -30,9 +30,6 @@
       <iconset>
        <normaloff>CounterClockwise.svg</normaloff>CounterClockwise.svg</iconset>
      </property>
-     <property name="Shortcut">
-      <string>,T</string>
-     </property>
      <property name="checkable">
       <bool>true</bool>
      </property>
@@ -52,9 +49,6 @@
      <property name="icon">
       <iconset>
        <normaloff>Clockwise.svg</normaloff>Clockwise.svg</iconset>
-     </property>
-     <property name="Shortcut">
-      <string>,C</string>
      </property>
      <property name="checkable">
       <bool>true</bool>

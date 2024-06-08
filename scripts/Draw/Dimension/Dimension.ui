@@ -99,9 +99,6 @@
        <height>22</height>
       </size>
      </property>
-     <property name="Shortcut">
-      <string>,T</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -155,9 +152,6 @@
        <width>22</width>
        <height>22</height>
       </size>
-     </property>
-     <property name="Shortcut">
-      <string>,O</string>
      </property>
     </widget>
    </item>
@@ -237,9 +231,6 @@
     <widget class="QCheckBox" name="AutoScale">
      <property name="text">
       <string>Auto</string>
-     </property>
-     <property name="Shortcut">
-      <string>,A</string>
      </property>
     </widget>
    </item>

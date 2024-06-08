@@ -16,9 +16,6 @@
      <property name="text">
       <string>Copy</string>
      </property>
-     <property name="Shortcut">
-      <string>,C</string>
-     </property>
     </widget>
    </item>
    <item>

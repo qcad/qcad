@@ -16,9 +16,6 @@
      <property name="text">
       <string>Use Maximum Angle</string>
      </property>
-     <property name="Shortcut">
-      <string>,M</string>
-     </property>
     </widget>
    </item>
   </layout>

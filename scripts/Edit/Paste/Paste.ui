@@ -240,9 +240,6 @@
       <iconset>
        <normaloff>FlipHorizontal.svg</normaloff>FlipHorizontal.svg</iconset>
      </property>
-     <property name="Shortcut">
-      <string>,H</string>
-     </property>
      <property name="checkable">
       <bool>true</bool>
      </property>
@@ -256,9 +253,6 @@
      <property name="icon">
       <iconset>
        <normaloff>FlipVertical.svg</normaloff>FlipVertical.svg</iconset>
-     </property>
-     <property name="Shortcut">
-      <string>,V</string>
      </property>
      <property name="checkable">
       <bool>true</bool>
@@ -280,9 +274,6 @@
      <property name="text">
       <string>To Current Layer</string>
      </property>
-     <property name="Shortcut">
-      <string>,L</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -293,9 +284,6 @@
      <property name="text">
       <string>Overwrite Layers</string>
      </property>
-     <property name="Shortcut">
-      <string>,O</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -305,9 +293,6 @@
      </property>
      <property name="text">
       <string>Overwrite Blocks</string>
-     </property>
-     <property name="Shortcut">
-      <string>,B</string>
      </property>
     </widget>
    </item>
@@ -320,9 +305,6 @@
    </item>
    <item>
     <widget class="QToolButton" name="Reset">
-     <property name="Shortcut">
-      <string>,Q</string>
-     </property>
     </widget>
    </item>
   </layout>

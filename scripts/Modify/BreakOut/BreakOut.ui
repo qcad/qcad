@@ -16,9 +16,6 @@
      <property name="text">
       <string>Remove Segment</string>
      </property>
-     <property name="Shortcut">
-      <string>,R</string>
-     </property>
      <property name="checked">
       <bool>true</bool>
      </property>

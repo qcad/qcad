@@ -43,9 +43,6 @@
       <iconset>
        <normaloff>KeepProportionsOn.svg</normaloff>KeepProportionsOn.svg</iconset>
      </property>
-     <property name="Shortcut">
-      <string>,K</string>
-     </property>
      <property name="checkable">
       <bool>true</bool>
      </property>

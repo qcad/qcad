@@ -29,9 +29,6 @@
       <iconset>
        <normaloff>Undo.svg</normaloff>Undo.svg</iconset>
      </property>
-     <property name="Shortcut">
-      <string>,U</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -128,9 +125,6 @@
      </property>
      <property name="text">
       <string>Closed</string>
-     </property>
-     <property name="Shortcut">
-      <string>,C</string>
      </property>
     </widget>
    </item>

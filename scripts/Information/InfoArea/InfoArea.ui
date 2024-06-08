@@ -23,9 +23,6 @@
       <iconset>
        <normaloff>Calculate.svg</normaloff>Calculate.svg</iconset>
      </property>
-     <property name="Shortcut">
-      <string>,C</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -39,9 +36,6 @@
      <property name="icon">
       <iconset>
        <normaloff>Close.svg</normaloff>Close.svg</iconset>
-     </property>
-     <property name="Shortcut">
-      <string>,Q</string>
      </property>
     </widget>
    </item>

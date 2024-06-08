@@ -40,9 +40,6 @@
      <property name="text">
       <string>Corner to Corner</string>
      </property>
-     <property name="Shortcut">
-      <string>,T</string>
-     </property>
     </widget>
    </item>
   </layout>

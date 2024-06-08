@@ -16,9 +16,6 @@
      <property name="text">
       <string>Trim</string>
      </property>
-     <property name="Shortcut">
-      <string>,T</string>
-     </property>
      <property name="checked">
       <bool>true</bool>
      </property>

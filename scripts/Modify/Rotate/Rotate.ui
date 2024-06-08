@@ -16,9 +16,6 @@
      <property name="text">
       <string>Copy</string>
      </property>
-     <property name="Shortcut">
-      <string>,C</string>
-     </property>
     </widget>
    </item>
    <item>
@@ -65,9 +62,6 @@
     <widget class="QCheckBox" name="UseCurrentAttributes">
      <property name="text">
       <string>Use Current Layer and Attributes</string>
-     </property>
-     <property name="Shortcut">
-      <string>,L</string>
      </property>
     </widget>
    </item>
