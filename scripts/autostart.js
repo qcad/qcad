@@ -476,7 +476,7 @@ function main() {
 
     // splash:
     var splash = undefined;
-    if (RSettings.getBoolValue("Startup/EnableSplashScreen", true)) {
+    if (RSettings.getBoolValue("Startup/EnableSplashScreen", true) && !args.contains("-no-show")) {
         var fn;
         var key;
         if (RSettings.getDevicePixelRatio()===2) {
@@ -515,9 +515,7 @@ function main() {
         var pixmap = new QPixmap(fn);
         splash = new QSplashScreen(pixmap);
         splash.objectName = "Splash";
-        if (!args.contains("-no-show")) {
-            splash.show();
-        }
+        splash.show();
     }
 
     RFontList.initSubstitutions();
