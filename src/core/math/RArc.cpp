@@ -1025,8 +1025,6 @@ QList<QSharedPointer<RShape> > RArc::splitAt(const QList<RVector>& points) const
         sortedPoints.append(endPoint);
     }
 
-    //qDebug() << "sortedPoints: " << sortedPoints;
-
     for (int i=0; i<sortedPoints.length()-1; i++) {
         if (sortedPoints[i].equalsFuzzy(sortedPoints[i+1])) {
             continue;
