@@ -35,7 +35,7 @@ class QCADGUI_EXPORT RToolOptionEventFilter : public QObject {
     Q_OBJECT
 
 public:
-    RToolOptionEventFilter(QObject *parent = nullptr);
+    RToolOptionEventFilter(QObject *parent = NULL);
 
 protected:
     bool eventFilter(QObject* obj, QEvent* event);

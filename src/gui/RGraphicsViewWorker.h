@@ -36,7 +36,7 @@ class QCADGUI_EXPORT RGraphicsViewWorker : public QThread {
     Q_OBJECT
 
 public:
-    RGraphicsViewWorker(RGraphicsViewImage& imageView, int threadId) : imageView(imageView), threadId(threadId), list(nullptr), startIndex(-1), endIndex(-1) {}
+    RGraphicsViewWorker(RGraphicsViewImage& imageView, int threadId) : imageView(imageView), threadId(threadId), list(NULL), startIndex(-1), endIndex(-1) {}
     virtual ~RGraphicsViewWorker();
 
     enum ClearMode {
