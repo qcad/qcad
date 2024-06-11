@@ -1200,7 +1200,7 @@ QList<RVector> RVector::getSortedLeftRightTopBottom(const QList<RVector>& list) 
 }
 
 /**
- * \return List of same vectors as given, ordered by shortes angle difference to given reference angle.
+ * \return List of same vectors as given, ordered by shortest angle difference to given reference angle.
  */
 QList<RVector> RVector::getSortedByAngle(const QList<RVector>& list, const RVector& center, double angle) {
     RVectorAngleSort::center = center;
@@ -1260,5 +1260,14 @@ bool RVector::RVectorLeftRightTopBottomSort::lessThan(const RVector& v1, const R
 bool RVector::RVectorAngleSort::lessThan(const RVector& v1, const RVector& v2) {
     double a1 = center.getAngleTo(v1);
     double a2 = center.getAngleTo(v2);
-    return RMath::getAngleDifference(angle, a1) < RMath::getAngleDifference(angle, a2);
+
+    double diff1 = RMath::getAngleDifference(angle, a1);
+    if (RMath::fuzzyAngleCompare(diff1, M_PI*2)) {
+        diff1 = 0.0;
+    }
+    double diff2 = RMath::getAngleDifference(angle, a2);
+    if (RMath::fuzzyAngleCompare(diff2, M_PI*2)) {
+        diff2 = 0.0;
+    }
+    return diff1 < diff2;
 }
