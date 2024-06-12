@@ -14,10 +14,16 @@
    <item>
     <widget class="QLabel" name="labelR">
      <property name="text">
-      <string>&amp;r:</string>
+      <string>r:</string>
      </property>
      <property name="buddy">
       <cstring>R</cstring>
+     </property>
+     <property name="ExtendedShortcut" stdset="0">
+      <bool>true</bool>
+     </property>
+     <property name="ShortcutHint" stdset="0">
+      <string>Radius</string>
      </property>
     </widget>
    </item>
@@ -46,10 +52,16 @@
    <item>
     <widget class="QLabel" name="labelA">
      <property name="text">
-      <string>&amp;&lt;:</string>
+      <string>&lt;:</string>
      </property>
      <property name="buddy">
       <cstring>A</cstring>
+     </property>
+     <property name="ExtendedShortcut" stdset="0">
+      <bool>true</bool>
+     </property>
+     <property name="ShortcutHint" stdset="0">
+      <string notr="true">Angle</string>
      </property>
     </widget>
    </item>
@@ -83,6 +95,9 @@
      <property name="text">
       <string>Relative</string>
      </property>
+     <property name="ExtendedShortcut" stdset="0">
+      <bool>true</bool>
+     </property>
     </widget>
    </item>
    <item>
@@ -90,6 +105,9 @@
      <property name="icon">
       <iconset>
        <normaloff>Tick.svg</normaloff>Tick.svg</iconset>
+     </property>
+     <property name="ExtendedShortcut" stdset="0">
+      <bool>true</bool>
      </property>
     </widget>
    </item>

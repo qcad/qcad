@@ -12,12 +12,15 @@
   </property>
   <layout class="QHBoxLayout">
    <item>
-    <widget class="QLabel" name="labelX">
+    <widget class="QLabel" name="XLabel">
      <property name="text">
-      <string>&amp;x:</string>
+      <string>x:</string>
      </property>
      <property name="buddy">
       <cstring>X</cstring>
+     </property>
+     <property name="ExtendedShortcut" stdset="0">
+      <bool>true</bool>
      </property>
     </widget>
    </item>
@@ -44,12 +47,15 @@
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="labelY">
+    <widget class="QLabel" name="YLabel">
      <property name="text">
-      <string>&amp;y:</string>
+      <string>y:</string>
      </property>
      <property name="buddy">
       <cstring>Y</cstring>
+     </property>
+     <property name="ExtendedShortcut" stdset="0">
+      <bool>true</bool>
      </property>
     </widget>
    </item>
@@ -81,7 +87,10 @@
       <string>Tick for Relative Coordinate</string>
      </property>
      <property name="text">
-      <string>Relati&amp;ve</string>
+      <string>Relative</string>
+     </property>
+     <property name="ExtendedShortcut" stdset="0">
+      <bool>true</bool>
      </property>
     </widget>
    </item>
@@ -90,6 +99,9 @@
      <property name="icon">
       <iconset>
        <normaloff>Tick.svg</normaloff>Tick.svg</iconset>
+     </property>
+     <property name="ExtendedShortcut" stdset="0">
+      <bool>true</bool>
      </property>
     </widget>
    </item>
