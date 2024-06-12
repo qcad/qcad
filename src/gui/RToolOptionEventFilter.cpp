@@ -67,7 +67,6 @@ bool RToolOptionEventFilter::eventFilter(QObject* obj, QEvent* event) {
             }
             if (keyEvent->key() == prefixChar.unicode() && mle->selectedText()==mle->text()) {
                 // math line edit with focus and all text selected, keycode entered
-                qDebug() << "clear focus";
                 mle->clearFocus();
                 event->ignore();
                 return true;
