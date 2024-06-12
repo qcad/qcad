@@ -19,6 +19,9 @@
      <property name="AutoFocusWidget" stdset="0">
       <string notr="true">Rotation</string>
      </property>
+     <property name="ShortcutHint" stdset="0">
+      <string notr="true">Angle</string>
+     </property>
     </widget>
    </item>
    <item>
