@@ -18,7 +18,7 @@
  */
 
 include("scripts/Snap/Snap.js");
-include("../../WidgetFactory.js");
+include("scripts/WidgetFactory.js");
 
 /**
  * RSnap implementation for coordinate snap.
