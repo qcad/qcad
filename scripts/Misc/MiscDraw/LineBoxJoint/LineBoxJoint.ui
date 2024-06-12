@@ -104,7 +104,7 @@
    <item>
     <widget class="QLabel" name="labelFingerStyle">
      <property name="text">
-      <string>&amp;Style:</string>
+      <string>Style:</string>
      </property>
      <property name="buddy">
       <cstring>FingerStyle</cstring>

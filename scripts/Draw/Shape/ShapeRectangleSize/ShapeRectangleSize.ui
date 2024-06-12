@@ -14,7 +14,7 @@
    <item>
     <widget class="QLabel" name="WidthLabel">
      <property name="text">
-      <string>&amp;Width:</string>
+      <string>Width:</string>
      </property>
      <property name="buddy">
       <cstring>Width</cstring>
@@ -44,7 +44,7 @@
    <item>
     <widget class="QLabel" name="HeightLabel">
      <property name="text">
-      <string>&amp;Height:</string>
+      <string>Height:</string>
      </property>
      <property name="buddy">
       <cstring>Height</cstring>

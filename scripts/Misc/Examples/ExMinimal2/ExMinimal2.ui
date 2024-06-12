@@ -14,7 +14,7 @@
    <item>
     <widget class="QLabel" name="RadiusLabel">
      <property name="text">
-      <string>&amp;Radius:</string>
+      <string>Radius:</string>
      </property>
      <property name="buddy">
       <cstring>Radius</cstring>

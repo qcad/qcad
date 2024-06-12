@@ -31,7 +31,7 @@
    <item>
     <widget class="QLabel" name="Length1Label">
      <property name="text">
-      <string>Length &amp;1:</string>
+      <string>Length 1:</string>
      </property>
      <property name="buddy">
       <cstring>Length1</cstring>
@@ -55,7 +55,7 @@
    <item>
     <widget class="QLabel" name="Length2Label">
      <property name="text">
-      <string>Length &amp;2:</string>
+      <string>Length 2:</string>
      </property>
      <property name="buddy">
       <cstring>Length2</cstring>

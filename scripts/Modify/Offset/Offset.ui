@@ -14,7 +14,7 @@
    <item>
     <widget class="QLabel" name="label">
      <property name="text">
-      <string>&amp;Distance:</string>
+      <string>Distance:</string>
      </property>
      <property name="buddy">
       <cstring>Distance</cstring>
@@ -37,7 +37,7 @@
    <item>
     <widget class="QLabel" name="label_2">
      <property name="text">
-      <string>&amp;Number:</string>
+      <string>Number:</string>
      </property>
      <property name="buddy">
       <cstring>Number</cstring>
