@@ -1086,12 +1086,12 @@ Apakah Anda ingin memulihkannya?</translation>
     <message>
         <location line="+17"/>
         <source>Length 1:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Panjang 1:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Length 2:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Panjang 2:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
@@ -8357,7 +8357,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+30"/>
         <source>Style:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gaya:</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -11760,12 +11760,12 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="-19"/>
         <source>x:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">x:</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>y:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">y:</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -11798,7 +11798,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="-22"/>
         <source>r:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">r:</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -11808,7 +11808,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+29"/>
         <source>&lt;:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;:</translation>
     </message>
     <message>
         <location line="+22"/>

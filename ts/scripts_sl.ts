@@ -1088,12 +1088,12 @@ Ali jo želite obnoviti?</translation>
     <message>
         <location line="+17"/>
         <source>Length 1:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dolžina 1:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Length 2:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dolžina 2:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
@@ -8368,7 +8368,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+30"/>
         <source>Style:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Slog:</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -11786,12 +11786,12 @@ je že na seznamu.</translation>
     <message>
         <location line="-19"/>
         <source>x:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">x:</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>y:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">y:</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -11824,17 +11824,17 @@ je že na seznamu.</translation>
     <message>
         <location line="-22"/>
         <source>r:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">r:</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Radius</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Radij</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>&lt;:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;:</translation>
     </message>
     <message>
         <location line="+22"/>
