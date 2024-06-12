@@ -194,21 +194,6 @@ OptionsToolBar.initShortcuts = function(optionsToolBar) {
     if (hasPlugin("PROTOOLS")) {
         OptionsToolBarPro.initShortcuts(optionsToolBar);
     }
-    else {
-        // for consistency, remove checkbox shortcuts:
-        var children = optionsToolBar.children();
-        for (var i=0; i<children.length; i++) {
-            var child = children[i];
-            if (isNull(child)) {
-                continue;
-            }
-
-            if (!isNull(child.shortcut)) {
-                // widgets with shortcut property (e.g. QCheckbox used as a label):
-                child.shortcut = new QKeySequence();
-            }
-        }
-    }
 };
 
 OptionsToolBar.initReferencePointCombo9 = function(optionsToolBar, action) {
