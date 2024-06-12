@@ -1072,13 +1072,13 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>Length &amp;1:</source>
-        <translation>Länge &amp;1:</translation>
+        <source>Length 1:</source>
+        <translation>Länge 1:</translation>
     </message>
     <message>
         <location line="+24"/>
-        <source>Length &amp;2:</source>
-        <translation>Länge &amp;2:</translation>
+        <source>Length 2:</source>
+        <translation>Länge 2:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
@@ -4855,8 +4855,8 @@ ist bereits in der Liste.</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+17"/>
-        <source>&amp;Radius:</source>
-        <translation>&amp;Radius:</translation>
+        <source>Radius:</source>
+        <translation>Radius:</translation>
     </message>
 </context>
 <context>
@@ -8371,8 +8371,8 @@ ist bereits in der Liste.</translation>
     </message>
     <message>
         <location line="+30"/>
-        <source>&amp;Style:</source>
-        <translation>&amp;Art:</translation>
+        <source>Style:</source>
+        <translation>Stil:</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -9294,16 +9294,6 @@ ist bereits in der Liste.</translation>
         <translation>Linie, Bogen, Kreis oder Ellipse versetzen</translation>
     </message>
     <message>
-        <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
-        <source>&amp;Distance:</source>
-        <translation>&amp;Abstand:</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>&amp;Number:</source>
-        <translation>&amp;Anzahl:</translation>
-    </message>
-    <message>
         <location filename="../scripts/Modify/Offset/Offset.js" line="+77"/>
         <source>Choose line, arc, circle or ellipse</source>
         <translation>Linie, Bogen, Kreis oder Ellipse wählen</translation>
@@ -9323,6 +9313,16 @@ ist bereits in der Liste.</translation>
             <numerusform>Radius kleiner als 0.0 nach einem konzentrischen Kreisbogen.</numerusform>
             <numerusform>Radius kleiner als 0.0 nach %n konzentrischen Kreisbögen.</numerusform>
         </translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
+        <source>Distance:</source>
+        <translation>Abstand:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Number:</source>
+        <translation>Anzahl:</translation>
     </message>
 </context>
 <context>
@@ -10674,8 +10674,8 @@ ist bereits in der Liste.</translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>&amp;Radius:</source>
-        <translation>&amp;Radius:</translation>
+        <source>Radius:</source>
+        <translation>Radius:</translation>
     </message>
 </context>
 <context>
@@ -11640,14 +11640,14 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSize.ui" line="+17"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+19"/>
-        <source>&amp;Width:</source>
-        <translation>&amp;Breite:</translation>
+        <source>Width:</source>
+        <translation>Breite:</translation>
     </message>
     <message>
         <location line="+30"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+30"/>
-        <source>&amp;Height:</source>
-        <translation>&amp;Höhe:</translation>
+        <source>Height:</source>
+        <translation>Höhe:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -11753,12 +11753,22 @@ ist bereits in der Liste.</translation>
 <context>
     <name>SnapCoordinate</name>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+33"/>
+        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+17"/>
+        <source>x:</source>
+        <translation>x:</translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>X Coordinate</source>
         <translation>X Koordinate</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+16"/>
+        <source>y:</source>
+        <translation>y:</translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>Y Coordinate</source>
         <translation>Y Koordinate</translation>
     </message>
@@ -11766,6 +11776,11 @@ ist bereits in der Liste.</translation>
         <location line="+16"/>
         <source>Tick for Relative Coordinate</source>
         <translation>Relative Koordinate</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Relative</source>
+        <translation>Relativ</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.js" line="+88"/>
@@ -11782,31 +11797,31 @@ ist bereits in der Liste.</translation>
         <source>&amp;Coordinate</source>
         <translation>&amp;Koordinate</translation>
     </message>
-    <message>
-        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="-64"/>
-        <source>&amp;x:</source>
-        <translation>&amp;x:</translation>
-    </message>
-    <message>
-        <location line="+32"/>
-        <source>&amp;y:</source>
-        <translation>&amp;y:</translation>
-    </message>
-    <message>
-        <location line="+35"/>
-        <source>Relati&amp;ve</source>
-        <translation>Relati&amp;v</translation>
-    </message>
 </context>
 <context>
     <name>SnapCoordinatePolar</name>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+33"/>
+        <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+17"/>
+        <source>r:</source>
+        <translation>r:</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Radius</source>
+        <translation>Radius</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Radius (Distance)</source>
         <translation>Radius (Distanz)</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+16"/>
+        <source>&lt;:</source>
+        <translation>&lt;:</translation>
+    </message>
+    <message>
+        <location line="+22"/>
         <source>Angle</source>
         <translation>Winkel</translation>
     </message>
@@ -11816,17 +11831,7 @@ ist bereits in der Liste.</translation>
         <translation>P&amp;olare Koordinate</translation>
     </message>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="-48"/>
-        <source>&amp;r:</source>
-        <translation>&amp;r:</translation>
-    </message>
-    <message>
-        <location line="+32"/>
-        <source>&amp;&lt;:</source>
-        <translation>&amp;&lt;:</translation>
-    </message>
-    <message>
-        <location line="+32"/>
+        <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+16"/>
         <source>Tick for Relative Coordinate</source>
         <translation>Relative Koordinate</translation>
     </message>

@@ -1085,13 +1085,13 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+17"/>
-        <source>Length &amp;1:</source>
-        <translation type="unfinished">Μήκος 1:</translation>
+        <source>Length 1:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+24"/>
-        <source>Length &amp;2:</source>
-        <translation type="unfinished">Μήκος 2:</translation>
+        <source>Length 2:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
@@ -4853,7 +4853,7 @@ is already in the list.</source>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+17"/>
-        <source>&amp;Radius:</source>
+        <source>Radius:</source>
         <translation type="unfinished">Ακτίνα:</translation>
     </message>
 </context>
@@ -8359,8 +8359,8 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+30"/>
-        <source>&amp;Style:</source>
-        <translation type="unfinished">Στυλ:</translation>
+        <source>Style:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+11"/>
@@ -9303,16 +9303,6 @@ is already in the list.</source>
         </translation>
     </message>
     <message>
-        <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
-        <source>&amp;Distance:</source>
-        <translation type="unfinished">Απόσταση:</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>&amp;Number:</source>
-        <translation type="unfinished">Αριθμός:</translation>
-    </message>
-    <message>
         <location filename="../scripts/Modify/Offset/OffsetInit.js" line="+2"/>
         <source>Offset (with Distance)</source>
         <translation type="unfinished">Μετατόπιση (με απόσταση)</translation>
@@ -9321,6 +9311,16 @@ is already in the list.</source>
         <location line="+3"/>
         <source>Offset line, arc, circle or ellipse</source>
         <translation type="unfinished">Μετατόπιση γραμμής, τόξου, κύκλου ή έλλειψης</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
+        <source>Distance:</source>
+        <translation type="unfinished">Απόσταση:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Number:</source>
+        <translation type="unfinished">Αριθμός:</translation>
     </message>
 </context>
 <context>
@@ -10667,7 +10667,7 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+17"/>
-        <source>&amp;Radius:</source>
+        <source>Radius:</source>
         <translation type="unfinished">Ακτίνα:</translation>
     </message>
     <message>
@@ -11628,13 +11628,13 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSize.ui" line="+17"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+19"/>
-        <source>&amp;Width:</source>
+        <source>Width:</source>
         <translation type="unfinished">Πλάτος:</translation>
     </message>
     <message>
         <location line="+30"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+30"/>
-        <source>&amp;Height:</source>
+        <source>Height:</source>
         <translation type="unfinished">Ύψος:</translation>
     </message>
     <message>
@@ -11761,22 +11761,22 @@ is already in the list.</source>
         <translation type="unfinished">Εισάγετε το</translation>
     </message>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+17"/>
-        <source>&amp;x:</source>
-        <translation type="unfinished">x:</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+36"/>
         <source>X Coordinate</source>
         <translation type="unfinished">Συντεταγμένη Χ</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>&amp;y:</source>
-        <translation type="unfinished">y:</translation>
+        <location line="-19"/>
+        <source>x:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+35"/>
+        <source>y:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>Y Coordinate</source>
         <translation type="unfinished">Συντεταγμένη Υ</translation>
     </message>
@@ -11787,7 +11787,7 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+3"/>
-        <source>Relati&amp;ve</source>
+        <source>Relative</source>
         <translation type="unfinished">Σχετικό</translation>
     </message>
     <message>
@@ -11799,22 +11799,27 @@ is already in the list.</source>
 <context>
     <name>SnapCoordinatePolar</name>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+17"/>
-        <source>&amp;r:</source>
-        <translation type="unfinished">r:</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+39"/>
         <source>Radius (Distance)</source>
         <translation type="unfinished">Ακτίνα (απόσταση)</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>&amp;&lt;:</source>
-        <translation type="unfinished">&lt;:</translation>
+        <location line="-22"/>
+        <source>r:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+9"/>
+        <source>Radius</source>
+        <translation type="unfinished">Ακτίνα</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>&lt;:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+22"/>
         <source>Angle</source>
         <translation type="unfinished">Γωνία</translation>
     </message>

@@ -1085,13 +1085,13 @@ Apakah Anda ingin memulihkannya?</translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>Length &amp;1:</source>
-        <translation type="unfinished">Panjang 1:</translation>
+        <source>Length 1:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+24"/>
-        <source>Length &amp;2:</source>
-        <translation type="unfinished">Panjang 2:</translation>
+        <source>Length 2:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
@@ -4851,7 +4851,7 @@ sudah ada dalam daftar.</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+17"/>
-        <source>&amp;Radius:</source>
+        <source>Radius:</source>
         <translation type="unfinished">Radius:</translation>
     </message>
 </context>
@@ -8356,8 +8356,8 @@ sudah ada dalam daftar.</translation>
     </message>
     <message>
         <location line="+30"/>
-        <source>&amp;Style:</source>
-        <translation type="unfinished">Gaya:</translation>
+        <source>Style:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+11"/>
@@ -9298,16 +9298,6 @@ sudah ada dalam daftar.</translation>
         </translation>
     </message>
     <message>
-        <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
-        <source>&amp;Distance:</source>
-        <translation type="unfinished">Jarak:</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>&amp;Number:</source>
-        <translation type="unfinished">Nomor:</translation>
-    </message>
-    <message>
         <location filename="../scripts/Modify/Offset/OffsetInit.js" line="+2"/>
         <source>Offset (with Distance)</source>
         <translation type="unfinished">Offset (dengan Jarak)</translation>
@@ -9316,6 +9306,16 @@ sudah ada dalam daftar.</translation>
         <location line="+3"/>
         <source>Offset line, arc, circle or ellipse</source>
         <translation type="unfinished">Garis offset, busur, lingkaran, atau elips</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
+        <source>Distance:</source>
+        <translation type="unfinished">Jarak:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Number:</source>
+        <translation type="unfinished">Nomor:</translation>
     </message>
 </context>
 <context>
@@ -10662,7 +10662,7 @@ sudah ada dalam daftar.</translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>&amp;Radius:</source>
+        <source>Radius:</source>
         <translation type="unfinished">Radius:</translation>
     </message>
     <message>
@@ -11620,13 +11620,13 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSize.ui" line="+17"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+19"/>
-        <source>&amp;Width:</source>
+        <source>Width:</source>
         <translation type="unfinished">Lebar:</translation>
     </message>
     <message>
         <location line="+30"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+30"/>
-        <source>&amp;Height:</source>
+        <source>Height:</source>
         <translation type="unfinished">Tinggi:</translation>
     </message>
     <message>
@@ -11753,22 +11753,22 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Masukkan</translation>
     </message>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+17"/>
-        <source>&amp;x:</source>
-        <translation type="unfinished">x:</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+36"/>
         <source>X Coordinate</source>
         <translation type="unfinished">Koordinat X</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>&amp;y:</source>
-        <translation type="unfinished">y:</translation>
+        <location line="-19"/>
+        <source>x:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+35"/>
+        <source>y:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>Y Coordinate</source>
         <translation type="unfinished">Koordinat Y</translation>
     </message>
@@ -11779,7 +11779,7 @@ sudah ada dalam daftar.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Relati&amp;ve</source>
+        <source>Relative</source>
         <translation type="unfinished">Relatif</translation>
     </message>
     <message>
@@ -11791,22 +11791,27 @@ sudah ada dalam daftar.</translation>
 <context>
     <name>SnapCoordinatePolar</name>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+17"/>
-        <source>&amp;r:</source>
-        <translation type="unfinished">r:</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+39"/>
         <source>Radius (Distance)</source>
         <translation type="unfinished">Radius (Jarak)</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>&amp;&lt;:</source>
-        <translation type="unfinished">&lt;:</translation>
+        <location line="-22"/>
+        <source>r:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+9"/>
+        <source>Radius</source>
+        <translation type="unfinished">Radius</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>&lt;:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+22"/>
         <source>Angle</source>
         <translation type="unfinished">Sudut</translation>
     </message>

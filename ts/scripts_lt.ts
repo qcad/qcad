@@ -1091,13 +1091,13 @@ Ar norite jį atkurti?</translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>Length &amp;1:</source>
-        <translation type="unfinished">Ilgis 1:</translation>
+        <source>Length 1:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+24"/>
-        <source>Length &amp;2:</source>
-        <translation type="unfinished">Ilgis 2:</translation>
+        <source>Length 2:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4856,7 +4856,7 @@ jau yra sąraše.</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+17"/>
-        <source>&amp;Radius:</source>
+        <source>Radius:</source>
         <translation type="unfinished">Spindulys:</translation>
     </message>
 </context>
@@ -8373,8 +8373,8 @@ jau yra sąraše.</translation>
     </message>
     <message>
         <location line="+30"/>
-        <source>&amp;Style:</source>
-        <translation type="unfinished">Stilius:</translation>
+        <source>Style:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+11"/>
@@ -9320,12 +9320,12 @@ jau yra sąraše.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
-        <source>&amp;Distance:</source>
+        <source>Distance:</source>
         <translation type="unfinished">Atstumas:</translation>
     </message>
     <message>
         <location line="+23"/>
-        <source>&amp;Number:</source>
+        <source>Number:</source>
         <translation type="unfinished">Numeris:</translation>
     </message>
 </context>
@@ -10678,7 +10678,7 @@ jau yra sąraše.</translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>&amp;Radius:</source>
+        <source>Radius:</source>
         <translation type="unfinished">Spindulys:</translation>
     </message>
 </context>
@@ -11647,13 +11647,13 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSize.ui" line="+17"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+19"/>
-        <source>&amp;Width:</source>
+        <source>Width:</source>
         <translation type="unfinished">Plotis:</translation>
     </message>
     <message>
         <location line="+30"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+30"/>
-        <source>&amp;Height:</source>
+        <source>Height:</source>
         <translation type="unfinished">Aukštis:</translation>
     </message>
     <message>
@@ -11775,22 +11775,22 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Koordinatės</translation>
     </message>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+17"/>
-        <source>&amp;x:</source>
-        <translation type="unfinished">x:</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+36"/>
         <source>X Coordinate</source>
         <translation type="unfinished">X koordinatė</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>&amp;y:</source>
-        <translation type="unfinished">y:</translation>
+        <location line="-19"/>
+        <source>x:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+35"/>
+        <source>y:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>Y Coordinate</source>
         <translation type="unfinished">Y koordinatė</translation>
     </message>
@@ -11801,7 +11801,7 @@ jau yra sąraše.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Relati&amp;ve</source>
+        <source>Relative</source>
         <translation type="unfinished">Santykinis</translation>
     </message>
 </context>
@@ -11813,22 +11813,27 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Poliarinės koordinatės</translation>
     </message>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+17"/>
-        <source>&amp;r:</source>
-        <translation type="unfinished">r:</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+39"/>
         <source>Radius (Distance)</source>
         <translation type="unfinished">Spindulys (atstumas)</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>&amp;&lt;:</source>
-        <translation type="unfinished">&lt;:</translation>
+        <location line="-22"/>
+        <source>r:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+9"/>
+        <source>Radius</source>
+        <translation type="unfinished">Spindulys</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>&lt;:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+22"/>
         <source>Angle</source>
         <translation type="unfinished">Kampas</translation>
     </message>

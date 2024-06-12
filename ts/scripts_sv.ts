@@ -1090,12 +1090,12 @@ Vill du återställa den?</translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>Length &amp;1:</source>
+        <source>Length 1:</source>
         <translation>Längd 1:</translation>
     </message>
     <message>
         <location line="+24"/>
-        <source>Length &amp;2:</source>
+        <source>Length 2:</source>
         <translation>Längd 2:</translation>
     </message>
 </context>
@@ -4853,7 +4853,7 @@ finns redan i listan.</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+17"/>
-        <source>&amp;Radius:</source>
+        <source>Radius:</source>
         <translation>Radie:</translation>
     </message>
 </context>
@@ -8369,7 +8369,7 @@ finns redan i listan.</translation>
     </message>
     <message>
         <location line="+30"/>
-        <source>&amp;Style:</source>
+        <source>Style:</source>
         <translation>Stil:</translation>
     </message>
     <message>
@@ -9314,12 +9314,12 @@ finns redan i listan.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
-        <source>&amp;Distance:</source>
+        <source>Distance:</source>
         <translation>Avstånd:</translation>
     </message>
     <message>
         <location line="+23"/>
-        <source>&amp;Number:</source>
+        <source>Number:</source>
         <translation>Nummer:</translation>
     </message>
 </context>
@@ -10672,7 +10672,7 @@ finns redan i listan.</translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>&amp;Radius:</source>
+        <source>Radius:</source>
         <translation>Radie:</translation>
     </message>
 </context>
@@ -11638,13 +11638,13 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSize.ui" line="+17"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+19"/>
-        <source>&amp;Width:</source>
+        <source>Width:</source>
         <translation>Bredd:</translation>
     </message>
     <message>
         <location line="+30"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+30"/>
-        <source>&amp;Height:</source>
+        <source>Height:</source>
         <translation>Höjd:</translation>
     </message>
     <message>
@@ -11766,22 +11766,22 @@ finns redan i listan.</translation>
         <translation>Koordinera</translation>
     </message>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+17"/>
-        <source>&amp;x:</source>
-        <translation>x:</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+36"/>
         <source>X Coordinate</source>
         <translation>X-koordinat</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>&amp;y:</source>
+        <location line="-19"/>
+        <source>x:</source>
+        <translation>x:</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>y:</source>
         <translation>y:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+19"/>
         <source>Y Coordinate</source>
         <translation>Y-koordinat</translation>
     </message>
@@ -11792,7 +11792,7 @@ finns redan i listan.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Relati&amp;ve</source>
+        <source>Relative</source>
         <translation>Relativ</translation>
     </message>
 </context>
@@ -11804,22 +11804,27 @@ finns redan i listan.</translation>
         <translation>Polarkoordinat</translation>
     </message>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+17"/>
-        <source>&amp;r:</source>
-        <translation>r:</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+39"/>
         <source>Radius (Distance)</source>
         <translation>Radius (avstånd)</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>&amp;&lt;:</source>
+        <location line="-22"/>
+        <source>r:</source>
+        <translation>r:</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Radius</source>
+        <translation>Radie</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>&lt;:</source>
         <translation>&lt;:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+22"/>
         <source>Angle</source>
         <translation>Vinkel</translation>
     </message>

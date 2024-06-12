@@ -1089,13 +1089,13 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+17"/>
-        <source>Length &amp;1:</source>
-        <translation>Длина &amp;1:</translation>
+        <source>Length 1:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+24"/>
-        <source>Length &amp;2:</source>
-        <translation>Длина &amp;2:</translation>
+        <source>Length 2:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
@@ -4859,8 +4859,8 @@ is already in the list.</source>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+17"/>
-        <source>&amp;Radius:</source>
-        <translation>&amp;Радиус:</translation>
+        <source>Radius:</source>
+        <translation type="unfinished">Радиус:</translation>
     </message>
 </context>
 <context>
@@ -8366,8 +8366,8 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+30"/>
-        <source>&amp;Style:</source>
-        <translation>&amp;Стиль:</translation>
+        <source>Style:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+11"/>
@@ -9289,16 +9289,6 @@ is already in the list.</source>
 <context>
     <name>Offset</name>
     <message>
-        <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
-        <source>&amp;Distance:</source>
-        <translation>&amp;Расстояние:</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>&amp;Number:</source>
-        <translation>&amp;Количество:</translation>
-    </message>
-    <message>
         <location filename="../scripts/Modify/Offset/OffsetInit.js" line="+2"/>
         <source>Offset (with Distance)</source>
         <translation>Смещение (с расстоянием)</translation>
@@ -9330,6 +9320,16 @@ is already in the list.</source>
             <numerusform>Радиус упал ниже 0,0 после %n концентрических дуг.</numerusform>
             <numerusform>Радиус упал ниже 0,0 после %n концентрических дуг.</numerusform>
         </translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
+        <source>Distance:</source>
+        <translation type="unfinished">Расстояние:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Number:</source>
+        <translation type="unfinished">Количество:</translation>
     </message>
 </context>
 <context>
@@ -10676,8 +10676,8 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+17"/>
-        <source>&amp;Radius:</source>
-        <translation>&amp;Радиус:</translation>
+        <source>Radius:</source>
+        <translation type="unfinished">Радиус:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
@@ -11650,14 +11650,14 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSize.ui" line="+17"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+19"/>
-        <source>&amp;Width:</source>
-        <translation>&amp;Ширина:</translation>
+        <source>Width:</source>
+        <translation type="unfinished">Ширина:</translation>
     </message>
     <message>
         <location line="+30"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+30"/>
-        <source>&amp;Height:</source>
-        <translation>&amp;Высота:</translation>
+        <source>Height:</source>
+        <translation type="unfinished">Высота:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -11773,22 +11773,22 @@ is already in the list.</source>
         <translation>Ввод</translation>
     </message>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+17"/>
-        <source>&amp;x:</source>
-        <translation>&amp;x:</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+36"/>
         <source>X Coordinate</source>
         <translation>Координата X</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>&amp;y:</source>
-        <translation>&amp;y:</translation>
+        <location line="-19"/>
+        <source>x:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+35"/>
+        <source>y:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>Y Coordinate</source>
         <translation>Координата Y</translation>
     </message>
@@ -11799,8 +11799,8 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+3"/>
-        <source>Relati&amp;ve</source>
-        <translation>Относител&amp;ьный</translation>
+        <source>Relative</source>
+        <translation type="unfinished">Относительно</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinateInit.js" line="+2"/>
@@ -11811,22 +11811,27 @@ is already in the list.</source>
 <context>
     <name>SnapCoordinatePolar</name>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+17"/>
-        <source>&amp;r:</source>
-        <translation>&amp;r:</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+39"/>
         <source>Radius (Distance)</source>
         <translation>Радиус (расстояние)</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>&amp;&lt;:</source>
-        <translation>&amp;&lt;:</translation>
+        <location line="-22"/>
+        <source>r:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+9"/>
+        <source>Radius</source>
+        <translation type="unfinished">Радиус</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>&lt;:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+22"/>
         <source>Angle</source>
         <translation>Угол</translation>
     </message>

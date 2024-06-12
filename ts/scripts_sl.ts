@@ -1087,13 +1087,13 @@ Ali jo želite obnoviti?</translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>Length &amp;1:</source>
-        <translation type="unfinished">Dolžina 1:</translation>
+        <source>Length 1:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+24"/>
-        <source>Length &amp;2:</source>
-        <translation type="unfinished">Dolžina 2:</translation>
+        <source>Length 2:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
@@ -4859,8 +4859,8 @@ je že na seznamu.</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+17"/>
-        <source>&amp;Radius:</source>
-        <translation>Polme&amp;r:</translation>
+        <source>Radius:</source>
+        <translation type="unfinished">Polmer:</translation>
     </message>
 </context>
 <context>
@@ -8367,8 +8367,8 @@ je že na seznamu.</translation>
     </message>
     <message>
         <location line="+30"/>
-        <source>&amp;Style:</source>
-        <translation>&amp;Slog:</translation>
+        <source>Style:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+11"/>
@@ -9290,16 +9290,6 @@ je že na seznamu.</translation>
 <context>
     <name>Offset</name>
     <message>
-        <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
-        <source>&amp;Distance:</source>
-        <translation>&amp;Razdalja:</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>&amp;Number:</source>
-        <translation>&amp;Število:</translation>
-    </message>
-    <message>
         <location filename="../scripts/Modify/Offset/OffsetInit.js" line="+2"/>
         <source>Offset (with Distance)</source>
         <translation>Odmik (z razdaljo)</translation>
@@ -9333,6 +9323,16 @@ je že na seznamu.</translation>
             <numerusform></numerusform>
             <numerusform>Polmer je padel pod 0.0 po %n kocentričnih lokih.</numerusform>
         </translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
+        <source>Distance:</source>
+        <translation type="unfinished">Razdalja:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Number:</source>
+        <translation type="unfinished">Število:</translation>
     </message>
 </context>
 <context>
@@ -10679,8 +10679,8 @@ je že na seznamu.</translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>&amp;Radius:</source>
-        <translation type="unfinished">Polme&amp;r:</translation>
+        <source>Radius:</source>
+        <translation type="unfinished">Polmer:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
@@ -11656,14 +11656,14 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSize.ui" line="+17"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+19"/>
-        <source>&amp;Width:</source>
-        <translation>Š&amp;irina:</translation>
+        <source>Width:</source>
+        <translation type="unfinished">Širina:</translation>
     </message>
     <message>
         <location line="+30"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+30"/>
-        <source>&amp;Height:</source>
-        <translation>&amp;Višina:</translation>
+        <source>Height:</source>
+        <translation type="unfinished">Višina:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -11779,22 +11779,22 @@ je že na seznamu.</translation>
         <translation type="unfinished">Vnesite</translation>
     </message>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+17"/>
-        <source>&amp;x:</source>
-        <translation>&amp;x:</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+36"/>
         <source>X Coordinate</source>
         <translation>X koordinata</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>&amp;y:</source>
-        <translation>&amp;y:</translation>
+        <location line="-19"/>
+        <source>x:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+35"/>
+        <source>y:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>Y Coordinate</source>
         <translation>Y koordinata</translation>
     </message>
@@ -11805,8 +11805,8 @@ je že na seznamu.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Relati&amp;ve</source>
-        <translation>Relati&amp;vno</translation>
+        <source>Relative</source>
+        <translation type="unfinished">Relativni</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinateInit.js" line="+2"/>
@@ -11817,22 +11817,27 @@ je že na seznamu.</translation>
 <context>
     <name>SnapCoordinatePolar</name>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+17"/>
-        <source>&amp;r:</source>
-        <translation>&amp;r:</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+39"/>
         <source>Radius (Distance)</source>
         <translation>Polmer (razdalja)</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>&amp;&lt;:</source>
-        <translation>&amp;&lt;:</translation>
+        <location line="-22"/>
+        <source>r:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+9"/>
+        <source>Radius</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>&lt;:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+22"/>
         <source>Angle</source>
         <translation>Kot</translation>
     </message>

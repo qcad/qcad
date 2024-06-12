@@ -1089,13 +1089,13 @@ Prajete si ho obnoviť?</translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>Length &amp;1:</source>
-        <translation type="unfinished">Dĺžka 1:</translation>
+        <source>Length 1:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+24"/>
-        <source>Length &amp;2:</source>
-        <translation type="unfinished">Dĺžka 2:</translation>
+        <source>Length 2:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
@@ -4859,8 +4859,8 @@ už existuje v zozname.</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+17"/>
-        <source>&amp;Radius:</source>
-        <translation>&amp;Polomer:</translation>
+        <source>Radius:</source>
+        <translation type="unfinished">Polomer:</translation>
     </message>
 </context>
 <context>
@@ -8340,7 +8340,12 @@ už existuje v zozname.</translation>
 <context>
     <name>LineBoxJoint</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui" line="+118"/>
+        <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui" line="+107"/>
+        <source>Style:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
         <source>Finger first</source>
         <translation>Výsek</translation>
     </message>
@@ -8378,11 +8383,6 @@ už existuje v zozname.</translation>
         <location line="-76"/>
         <source>Finger Width:</source>
         <translation>Šírka:</translation>
-    </message>
-    <message>
-        <location line="+60"/>
-        <source>&amp;Style:</source>
-        <translation>&amp;Spôsob:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js" line="+2"/>
@@ -9312,16 +9312,6 @@ už existuje v zozname.</translation>
         </translation>
     </message>
     <message>
-        <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
-        <source>&amp;Distance:</source>
-        <translation>&amp;Vzdialenosť:</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>&amp;Number:</source>
-        <translation>&amp;Počet:</translation>
-    </message>
-    <message>
         <location filename="../scripts/Modify/Offset/OffsetInit.js" line="+2"/>
         <source>Offset (with Distance)</source>
         <translation>Paralelka (so vzdialenosťou)</translation>
@@ -9330,6 +9320,16 @@ už existuje v zozname.</translation>
         <location line="+3"/>
         <source>Offset line, arc, circle or ellipse</source>
         <translation>Nakresliť paralelku existujúcej čiary alebo sústredného oblúku, kruhu</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
+        <source>Distance:</source>
+        <translation type="unfinished">Vzdialenosť:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Number:</source>
+        <translation type="unfinished">Počet:</translation>
     </message>
 </context>
 <context>
@@ -10676,8 +10676,8 @@ už existuje v zozname.</translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>&amp;Radius:</source>
-        <translation type="unfinished">&amp;Polomer:</translation>
+        <source>Radius:</source>
+        <translation type="unfinished">Polomer:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
@@ -11640,14 +11640,14 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSize.ui" line="+17"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+19"/>
-        <source>&amp;Width:</source>
-        <translation>&amp;Šírka (os X):</translation>
+        <source>Width:</source>
+        <translation type="unfinished">Šírka:</translation>
     </message>
     <message>
         <location line="+30"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+30"/>
-        <source>&amp;Height:</source>
-        <translation>&amp;Výška (os Y):</translation>
+        <source>Height:</source>
+        <translation type="unfinished">Výška:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -11773,22 +11773,22 @@ už existuje v zozname.</translation>
         <translation type="unfinished">Vstúpte na stránku</translation>
     </message>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+17"/>
-        <source>&amp;x:</source>
-        <translation>&amp;x:</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+36"/>
         <source>X Coordinate</source>
         <translation>Súradnica X</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>&amp;y:</source>
-        <translation>&amp;y:</translation>
+        <location line="-19"/>
+        <source>x:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+35"/>
+        <source>y:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>Y Coordinate</source>
         <translation>Súradnica Y</translation>
     </message>
@@ -11799,8 +11799,8 @@ už existuje v zozname.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Relati&amp;ve</source>
-        <translation>Relatí&amp;vne</translation>
+        <source>Relative</source>
+        <translation type="unfinished">Relatívny</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinateInit.js" line="+2"/>
@@ -11811,22 +11811,27 @@ už existuje v zozname.</translation>
 <context>
     <name>SnapCoordinatePolar</name>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+17"/>
-        <source>&amp;r:</source>
-        <translation>&amp;r:</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+39"/>
         <source>Radius (Distance)</source>
         <translation>Polomer (Dĺžka)</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>&amp;&lt;:</source>
-        <translation>&amp;&lt;:</translation>
+        <location line="-22"/>
+        <source>r:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+9"/>
+        <source>Radius</source>
+        <translation type="unfinished">Polomer</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>&lt;:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+22"/>
         <source>Angle</source>
         <translation>Uhol</translation>
     </message>

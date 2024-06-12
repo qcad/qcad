@@ -1090,13 +1090,13 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+17"/>
-        <source>Length &amp;1:</source>
-        <translation type="unfinished">长度1：</translation>
+        <source>Length 1:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+24"/>
-        <source>Length &amp;2:</source>
-        <translation type="unfinished">长度2：</translation>
+        <source>Length 2:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4851,7 +4851,7 @@ is already in the list.</source>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+17"/>
-        <source>&amp;Radius:</source>
+        <source>Radius:</source>
         <translation type="unfinished">半径：</translation>
     </message>
 </context>
@@ -8366,8 +8366,8 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+30"/>
-        <source>&amp;Style:</source>
-        <translation type="unfinished">风格：</translation>
+        <source>Style:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+11"/>
@@ -9309,12 +9309,12 @@ is already in the list.</source>
     </message>
     <message>
         <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
-        <source>&amp;Distance:</source>
+        <source>Distance:</source>
         <translation type="unfinished">距离：</translation>
     </message>
     <message>
         <location line="+23"/>
-        <source>&amp;Number:</source>
+        <source>Number:</source>
         <translation type="unfinished">号码：</translation>
     </message>
 </context>
@@ -10667,7 +10667,7 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+17"/>
-        <source>&amp;Radius:</source>
+        <source>Radius:</source>
         <translation type="unfinished">半径：</translation>
     </message>
 </context>
@@ -11630,13 +11630,13 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSize.ui" line="+17"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+19"/>
-        <source>&amp;Width:</source>
+        <source>Width:</source>
         <translation type="unfinished">宽度：</translation>
     </message>
     <message>
         <location line="+30"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+30"/>
-        <source>&amp;Height:</source>
+        <source>Height:</source>
         <translation type="unfinished">高度：</translation>
     </message>
     <message>
@@ -11758,22 +11758,22 @@ is already in the list.</source>
         <translation type="unfinished">协调</translation>
     </message>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+17"/>
-        <source>&amp;x:</source>
-        <translation type="unfinished">x:</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+36"/>
         <source>X Coordinate</source>
         <translation type="unfinished">X 坐标</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>&amp;y:</source>
-        <translation type="unfinished">y:</translation>
+        <location line="-19"/>
+        <source>x:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+35"/>
+        <source>y:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>Y Coordinate</source>
         <translation type="unfinished">Y坐标</translation>
     </message>
@@ -11784,8 +11784,8 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+3"/>
-        <source>Relati&amp;ve</source>
-        <translation type="unfinished">相对而言</translation>
+        <source>Relative</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -11796,22 +11796,27 @@ is already in the list.</source>
         <translation type="unfinished">极坐标</translation>
     </message>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+17"/>
-        <source>&amp;r:</source>
-        <translation type="unfinished">r:</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+39"/>
         <source>Radius (Distance)</source>
         <translation type="unfinished">半径（距离）</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>&amp;&lt;:</source>
-        <translation type="unfinished">&lt;:</translation>
+        <location line="-22"/>
+        <source>r:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+9"/>
+        <source>Radius</source>
+        <translation type="unfinished">半径</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>&lt;:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+22"/>
         <source>Angle</source>
         <translation type="unfinished">角度</translation>
     </message>

@@ -1087,13 +1087,13 @@ Wilt u deze herstellen?</translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>Length &amp;1:</source>
-        <translation>Lengte &amp;1:</translation>
+        <source>Length 1:</source>
+        <translation>Lengte 1:</translation>
     </message>
     <message>
         <location line="+24"/>
-        <source>Length &amp;2:</source>
-        <translation>Lengte &amp;2:</translation>
+        <source>Length 2:</source>
+        <translation>Lengte 2:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
@@ -4855,8 +4855,8 @@ is al in de lijst.</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+17"/>
-        <source>&amp;Radius:</source>
-        <translation>&amp;Straal:</translation>
+        <source>Radius:</source>
+        <translation>Straal:</translation>
     </message>
 </context>
 <context>
@@ -8361,8 +8361,8 @@ is al in de lijst.</translation>
     </message>
     <message>
         <location line="+30"/>
-        <source>&amp;Style:</source>
-        <translation>&amp;Stijl:</translation>
+        <source>Style:</source>
+        <translation>Stijl:</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -9284,16 +9284,6 @@ is al in de lijst.</translation>
 <context>
     <name>Offset</name>
     <message>
-        <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
-        <source>&amp;Distance:</source>
-        <translation>&amp;Afstand:</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>&amp;Number:</source>
-        <translation>&amp;Aantal:</translation>
-    </message>
-    <message>
         <location filename="../scripts/Modify/Offset/OffsetInit.js" line="+2"/>
         <source>Offset (with Distance)</source>
         <translation>Afzet (met afstand)</translation>
@@ -9323,6 +9313,16 @@ is al in de lijst.</translation>
             <numerusform>Radius gedaald tot onder 0 na een concentrische boog.</numerusform>
             <numerusform>Radius gedaald tot onder 0 na %n concentrische boogen.</numerusform>
         </translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
+        <source>Distance:</source>
+        <translation>Afstand:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Number:</source>
+        <translation>Aantal:</translation>
     </message>
 </context>
 <context>
@@ -10669,8 +10669,8 @@ is al in de lijst.</translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>&amp;Radius:</source>
-        <translation>&amp;Straal:</translation>
+        <source>Radius:</source>
+        <translation>Straal:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
@@ -11640,14 +11640,14 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSize.ui" line="+17"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+19"/>
-        <source>&amp;Width:</source>
-        <translation>&amp;Breedte:</translation>
+        <source>Width:</source>
+        <translation>Breedte:</translation>
     </message>
     <message>
         <location line="+30"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+30"/>
-        <source>&amp;Height:</source>
-        <translation>&amp;Hoogte:</translation>
+        <source>Height:</source>
+        <translation>Hoogte:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -11763,22 +11763,22 @@ is al in de lijst.</translation>
         <translation>Enter</translation>
     </message>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+17"/>
-        <source>&amp;x:</source>
-        <translation>&amp;x:</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+36"/>
         <source>X Coordinate</source>
         <translation>X-coördinaat</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>&amp;y:</source>
-        <translation>&amp;y:</translation>
+        <location line="-19"/>
+        <source>x:</source>
+        <translation>x:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+35"/>
+        <source>y:</source>
+        <translation>y:</translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>Y Coordinate</source>
         <translation>Y-coördinaat</translation>
     </message>
@@ -11789,8 +11789,8 @@ is al in de lijst.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Relati&amp;ve</source>
-        <translation>Relatie&amp;f</translation>
+        <source>Relative</source>
+        <translation>Relatief</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinateInit.js" line="+2"/>
@@ -11801,22 +11801,27 @@ is al in de lijst.</translation>
 <context>
     <name>SnapCoordinatePolar</name>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+17"/>
-        <source>&amp;r:</source>
-        <translation>&amp;r:</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+39"/>
         <source>Radius (Distance)</source>
         <translation>Radius (afstand)</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>&amp;&lt;:</source>
-        <translation>&amp;&lt;:</translation>
+        <location line="-22"/>
+        <source>r:</source>
+        <translation>r:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+9"/>
+        <source>Radius</source>
+        <translation>Straal</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>&lt;:</source>
+        <translation>&lt;:</translation>
+    </message>
+    <message>
+        <location line="+22"/>
         <source>Angle</source>
         <translation>Hoek</translation>
     </message>

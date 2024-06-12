@@ -1087,12 +1087,12 @@ Haluatko palauttaa sen?</translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>Length &amp;1:</source>
+        <source>Length 1:</source>
         <translation>Pituus 1:</translation>
     </message>
     <message>
         <location line="+24"/>
-        <source>Length &amp;2:</source>
+        <source>Length 2:</source>
         <translation>Pituus 2:</translation>
     </message>
     <message>
@@ -4855,8 +4855,8 @@ on jo luettelossa.</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+17"/>
-        <source>&amp;Radius:</source>
-        <translation>&amp;Säde:</translation>
+        <source>Radius:</source>
+        <translation>Säde:</translation>
     </message>
 </context>
 <context>
@@ -8371,8 +8371,8 @@ on jo luettelossa.</translation>
     </message>
     <message>
         <location line="+30"/>
-        <source>&amp;Style:</source>
-        <translation>&amp;Tyyli:</translation>
+        <source>Style:</source>
+        <translation>Tyyli:</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -9284,16 +9284,6 @@ on jo luettelossa.</translation>
 <context>
     <name>Offset</name>
     <message>
-        <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
-        <source>&amp;Distance:</source>
-        <translation>&amp;Etäisyys:</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>&amp;Number:</source>
-        <translation>&amp;Numero:</translation>
-    </message>
-    <message>
         <location filename="../scripts/Modify/Offset/OffsetInit.js" line="+2"/>
         <source>Offset (with Distance)</source>
         <translation>Poikkeama (etäisyydellä)</translation>
@@ -9323,6 +9313,16 @@ on jo luettelossa.</translation>
             <numerusform>Säde pieneni alle 0,0 %n samankeskisessä kaaressa.</numerusform>
             <numerusform>Säde pieneni alle 0,0 %n samankeskisissä kaarissa.</numerusform>
         </translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
+        <source>Distance:</source>
+        <translation>Etäisyys:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Number:</source>
+        <translation>Numero:</translation>
     </message>
 </context>
 <context>
@@ -10669,7 +10669,7 @@ on jo luettelossa.</translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>&amp;Radius:</source>
+        <source>Radius:</source>
         <translation>Säde:</translation>
     </message>
     <message>
@@ -11640,14 +11640,14 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSize.ui" line="+17"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+19"/>
-        <source>&amp;Width:</source>
-        <translation>&amp;Leveys:</translation>
+        <source>Width:</source>
+        <translation>Leveys:</translation>
     </message>
     <message>
         <location line="+30"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+30"/>
-        <source>&amp;Height:</source>
-        <translation>&amp;Korkeus:</translation>
+        <source>Height:</source>
+        <translation>Korkeus:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -11763,22 +11763,22 @@ on jo luettelossa.</translation>
         <translation>Kirjoita</translation>
     </message>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+17"/>
-        <source>&amp;x:</source>
-        <translation>&amp;x:</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+36"/>
         <source>X Coordinate</source>
         <translation>X Koordinaatti</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>&amp;y:</source>
-        <translation>&amp;y:</translation>
+        <location line="-19"/>
+        <source>x:</source>
+        <translation>x:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+35"/>
+        <source>y:</source>
+        <translation>y:</translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>Y Coordinate</source>
         <translation>Y Koordinaatti</translation>
     </message>
@@ -11789,8 +11789,8 @@ on jo luettelossa.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Relati&amp;ve</source>
-        <translation>Suhteelli&amp;nen</translation>
+        <source>Relative</source>
+        <translation>Suhteellinen</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinateInit.js" line="+2"/>
@@ -11801,22 +11801,27 @@ on jo luettelossa.</translation>
 <context>
     <name>SnapCoordinatePolar</name>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+17"/>
-        <source>&amp;r:</source>
-        <translation>&amp;r:</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+39"/>
         <source>Radius (Distance)</source>
         <translation>Säde (etäisyys)</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>&amp;&lt;:</source>
-        <translation>&amp;&lt;:</translation>
+        <location line="-22"/>
+        <source>r:</source>
+        <translation>r:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+9"/>
+        <source>Radius</source>
+        <translation>Säde</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>&lt;:</source>
+        <translation>&lt;:</translation>
+    </message>
+    <message>
+        <location line="+22"/>
         <source>Angle</source>
         <translation>Kulma</translation>
     </message>

@@ -1089,13 +1089,13 @@ Kurtarmak ister misiniz?</translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>Length &amp;1:</source>
-        <translation type="unfinished">Uzunluk 1:</translation>
+        <source>Length 1:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+24"/>
-        <source>Length &amp;2:</source>
-        <translation type="unfinished">Uzunluk 2:</translation>
+        <source>Length 2:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4850,7 +4850,7 @@ zaten listede.</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+17"/>
-        <source>&amp;Radius:</source>
+        <source>Radius:</source>
         <translation type="unfinished">Yarıçap:</translation>
     </message>
 </context>
@@ -8365,8 +8365,8 @@ zaten listede.</translation>
     </message>
     <message>
         <location line="+30"/>
-        <source>&amp;Style:</source>
-        <translation type="unfinished">Stil:</translation>
+        <source>Style:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+11"/>
@@ -9308,13 +9308,13 @@ zaten listede.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
-        <source>&amp;Distance:</source>
-        <translation type="unfinished">&amp;Ara</translation>
+        <source>Distance:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+23"/>
-        <source>&amp;Number:</source>
-        <translation type="unfinished">&amp;Sayı</translation>
+        <source>Number:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10666,7 +10666,7 @@ zaten listede.</translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>&amp;Radius:</source>
+        <source>Radius:</source>
         <translation type="unfinished">Yarıçap:</translation>
     </message>
 </context>
@@ -11619,14 +11619,14 @@ zaten listede.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSize.ui" line="+17"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+19"/>
-        <source>&amp;Width:</source>
-        <translation type="unfinished">Genişlik:</translation>
+        <source>Width:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+30"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+30"/>
-        <source>&amp;Height:</source>
-        <translation type="unfinished">Yükseklik:</translation>
+        <source>Height:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+30"/>
@@ -11752,22 +11752,22 @@ zaten listede.</translation>
         <translation type="unfinished">Girin</translation>
     </message>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+17"/>
-        <source>&amp;x:</source>
-        <translation>&amp;x:</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+36"/>
         <source>X Coordinate</source>
         <translation>X Koordinatı</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>&amp;y:</source>
-        <translation>&amp;y:</translation>
+        <location line="-19"/>
+        <source>x:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+35"/>
+        <source>y:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>Y Coordinate</source>
         <translation>Y Koordinatı </translation>
     </message>
@@ -11778,8 +11778,8 @@ zaten listede.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Relati&amp;ve</source>
-        <translation type="unfinished">Bağıl</translation>
+        <source>Relative</source>
+        <translation type="unfinished">Göreceli</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinateInit.js" line="+2"/>
@@ -11790,22 +11790,27 @@ zaten listede.</translation>
 <context>
     <name>SnapCoordinatePolar</name>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+17"/>
-        <source>&amp;r:</source>
-        <translation type="unfinished">r:</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+39"/>
         <source>Radius (Distance)</source>
         <translation type="unfinished">Yarıçap (Mesafe)</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>&amp;&lt;:</source>
-        <translation type="unfinished">&lt;:</translation>
+        <location line="-22"/>
+        <source>r:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+9"/>
+        <source>Radius</source>
+        <translation type="unfinished">Yarıçap</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>&lt;:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+22"/>
         <source>Angle</source>
         <translation>Açı</translation>
     </message>

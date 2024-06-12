@@ -1092,13 +1092,13 @@ Voulez-vous le récupérer ?</translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>Length &amp;1:</source>
-        <translation>Longueur &amp;1 :</translation>
+        <source>Length 1:</source>
+        <translation>Longueur 1 :</translation>
     </message>
     <message>
         <location line="+24"/>
-        <source>Length &amp;2:</source>
-        <translation>Longueur &amp;2 :</translation>
+        <source>Length 2:</source>
+        <translation>Longueur 2 :</translation>
     </message>
 </context>
 <context>
@@ -4855,8 +4855,8 @@ est déjà dans la liste.</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+17"/>
-        <source>&amp;Radius:</source>
-        <translation>&amp;Rayon :</translation>
+        <source>Radius:</source>
+        <translation>Rayon :</translation>
     </message>
 </context>
 <context>
@@ -8361,8 +8361,8 @@ est déjà dans la liste.</translation>
     </message>
     <message>
         <location line="+30"/>
-        <source>&amp;Style:</source>
-        <translation>&amp;Style :</translation>
+        <source>Style:</source>
+        <translation>Style :</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -9294,16 +9294,6 @@ est déjà dans la liste.</translation>
         <translation>Décalage d&apos;une ligne, d&apos;un arc, d&apos;un cercle ou d&apos;une ellipse</translation>
     </message>
     <message>
-        <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
-        <source>&amp;Distance:</source>
-        <translation>&amp;Distance :</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>&amp;Number:</source>
-        <translation>&amp;Nombre :</translation>
-    </message>
-    <message>
         <location filename="../scripts/Modify/Offset/Offset.js" line="+77"/>
         <source>Choose line, arc, circle or ellipse</source>
         <translation>Choisissez ligne, arc, cercle ou ellipse</translation>
@@ -9323,6 +9313,16 @@ est déjà dans la liste.</translation>
             <numerusform>Rayon chuté en dessous de zéro, après %n arc concentrique.</numerusform>
             <numerusform>Rayon chuté en dessous de zéro, après %n arcs concentriques.</numerusform>
         </translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
+        <source>Distance:</source>
+        <translation>Distance :</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Number:</source>
+        <translation>Nombre :</translation>
     </message>
 </context>
 <context>
@@ -10674,8 +10674,8 @@ est déjà dans la liste.</translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>&amp;Radius:</source>
-        <translation>&amp;Rayon :</translation>
+        <source>Radius:</source>
+        <translation>Rayon :</translation>
     </message>
 </context>
 <context>
@@ -11640,14 +11640,14 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSize.ui" line="+17"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+19"/>
-        <source>&amp;Width:</source>
-        <translation>&amp;Largeur :</translation>
+        <source>Width:</source>
+        <translation>Largeur :</translation>
     </message>
     <message>
         <location line="+30"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+30"/>
-        <source>&amp;Height:</source>
-        <translation>&amp;Hauteur :</translation>
+        <source>Height:</source>
+        <translation>Hauteur:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -11753,22 +11753,22 @@ est déjà dans la liste.</translation>
 <context>
     <name>SnapCoordinate</name>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+17"/>
-        <source>&amp;x:</source>
-        <translation>&amp;x :</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+36"/>
         <source>X Coordinate</source>
         <translation>Coordonnée X</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>&amp;y:</source>
-        <translation>&amp;y :</translation>
+        <location line="-19"/>
+        <source>x:</source>
+        <translation>x:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+35"/>
+        <source>y:</source>
+        <translation>y:</translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>Y Coordinate</source>
         <translation>Coordonnée Y</translation>
     </message>
@@ -11779,8 +11779,8 @@ est déjà dans la liste.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Relati&amp;ve</source>
-        <translation>Relati&amp;f</translation>
+        <source>Relative</source>
+        <translation>Relative</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.js" line="+88"/>
@@ -11801,22 +11801,27 @@ est déjà dans la liste.</translation>
 <context>
     <name>SnapCoordinatePolar</name>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+17"/>
-        <source>&amp;r:</source>
-        <translation>&amp;r :</translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+39"/>
         <source>Radius (Distance)</source>
         <translation>Rayon (distance)</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>&amp;&lt;:</source>
-        <translation>&amp;&lt; :</translation>
+        <location line="-22"/>
+        <source>r:</source>
+        <translation>r:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+9"/>
+        <source>Radius</source>
+        <translation>Rayon</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>&lt;:</source>
+        <translation>&lt;:</translation>
+    </message>
+    <message>
+        <location line="+22"/>
         <source>Angle</source>
         <translation>Angle</translation>
     </message>
