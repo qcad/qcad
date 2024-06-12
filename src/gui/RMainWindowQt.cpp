@@ -712,8 +712,8 @@ bool RMainWindowQt::event(QEvent* e) {
                     // focus with view, main window or tool button:
                     // repeat last command:
                     if (dynamic_cast<RGraphicsViewQt*>(w)!=NULL ||
-                            dynamic_cast<RMainWindowQt*>(w)!=NULL ||
-                            dynamic_cast<QToolButton*>(w)!=NULL) {
+                        dynamic_cast<RMainWindowQt*>(w)!=NULL ||
+                        dynamic_cast<QToolButton*>(w)!=NULL) {
 
                         emit enterPressed();
                         e->accept();
@@ -722,8 +722,8 @@ bool RMainWindowQt::event(QEvent* e) {
                         // enter pressed in toolbar but NOT in a line edit:
                         QWidget* parent = w->parentWidget();
                         if (dynamic_cast<QToolBar*>(parent)!=NULL &&
-                                dynamic_cast<QLineEdit*>(w)==NULL &&
-                                dynamic_cast<QComboBox*>(w)==NULL) {
+                            dynamic_cast<QLineEdit*>(w)==NULL &&
+                            dynamic_cast<QComboBox*>(w)==NULL) {
 
                             emit enterPressed();
                             e->accept();
@@ -748,8 +748,6 @@ bool RMainWindowQt::event(QEvent* e) {
                     }
                 }
             }
-
-            // shortcut handling:
             else {
                 if (ke->key()<128) {
                     if (keyTimeOut.elapsed()>RSettings::getIntValue("Keyboard/Timeout", 2000)) {
@@ -771,10 +769,8 @@ bool RMainWindowQt::event(QEvent* e) {
                         keyTimeOut.restart();
                     }
                 }
-                e->accept();
             }
         }
-        return true;
     }
 
     RSelectionChangedEvent* sce = dynamic_cast<RSelectionChangedEvent*>(e);
@@ -813,6 +809,7 @@ bool RMainWindowQt::event(QEvent* e) {
             // called when user changed a property in the property editor
             documentInterface->propertyChangeEvent(*pe);
         }
+        return true;
     }
 
     RCloseCurrentEvent* cce = dynamic_cast<RCloseCurrentEvent*>(e);
