@@ -2939,42 +2939,6 @@ function addActionsToWidgets() {
             }
             var w = appWin.findChild(wn);
             if (!isNull(w)) {
-
-                // workaround for QTBUG-38256 (action not triggered for letter based shortcuts in SUB menus):
-                // workaround for QTBUG-57990 (action not triggered for letter based shortcuts in ALL menus):
-                /*
-                if ((RSettings.getQtVersion()<0x050500 && RSettings.getQtVersion()>=0x050000) ||
-                    (RSettings.getQtVersion()===0x050800 && RS.getSystemId()==="linux")) {
-
-                    if (k===0) {
-                        var shortcuts = a.shortcuts();
-
-                        var scObjs = appWin.property("DelegatedShortcutsObjs");
-                        if (isNull(scObjs)) {
-                            scObjs=[];
-                        }
-                        for (var si=0; si<shortcuts.length; si++) {
-                            var scObj = new QShortcut(shortcuts[si], a.parentWidget(), 0, 0, Qt.WindowShortcut)
-                            scObj.activated.connect(a, a.trigger);
-                            scObjs.push(scObj);
-                        }
-                        appWin.setProperty("DelegatedShortcutsObjs", scObjs);
-
-                        var sc = a.shortcut.toString();
-                        if (sc.length>0) {
-                            if (RS.getSystemId()==="linux") {
-                                a.setShortcutText("[" + sc + "]");
-                            }
-                            else {
-                                a.setShortcutText(" " + sc);
-                            }
-                        }
-                        a.setProperty("DelegatedShortcuts", shortcuts);
-                        a.setDefaultShortcuts([]);
-                    }
-                }
-                */
-
                 if (visibility) {
                     RGuiAction.addToWidget(a, w);
                     addedToWidget = true;
