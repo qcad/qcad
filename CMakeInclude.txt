@@ -19,7 +19,7 @@ else()
 endif()
 
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
-set(CMAKE_DEBUG_POSTFIX "_debug")
+#set(CMAKE_DEBUG_POSTFIX "_debug")
 
 if(CMAKE_SIZEOF_VOID_P EQUAL 8)
     set(RWIN64 TRUE)
