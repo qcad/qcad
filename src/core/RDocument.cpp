@@ -1342,7 +1342,7 @@ QSet<RLayer::Id> RDocument::queryAllLayers() const {
  *
  * \return Set of layer state IDs.
  */
-QSet<RLayer::Id> RDocument::queryAllLayerStates() const {
+QSet<RLayerState::Id> RDocument::queryAllLayerStates() const {
     return storage.queryAllLayerStates();
 }
 
