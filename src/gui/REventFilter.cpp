@@ -33,6 +33,7 @@ bool REventFilter::eventFilter(QObject* obj, QEvent* e) {
             QObject* parent = obj->parent();
             if (parent!=NULL) {
                 QCoreApplication::sendEvent(parent, e);
+                e->accept();
             }
         }
         return true;
