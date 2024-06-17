@@ -1100,7 +1100,7 @@ RGuiAction* RGuiAction::getByScriptFile(const QString& scriptFile) {
         return actionsByScriptFile[pluginFilePath];
     }
 
-    qWarning() << "action not found:" << relFilePath;
+    //qWarning() << "action not found:" << relFilePath;
     return NULL;
 }
 
