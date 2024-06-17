@@ -342,20 +342,33 @@ AddOn.getClassTitle = function(cn) {
 AddOn.prototype.getParentTitles = function() {
     var ret = [];
 
-    var dir = new QDir(this.fileInfo.path());
-    ret.unshift(this.getTitle());
-    do {
-        if (!dir.cdUp()) {
-            break;
-        }
-        var dn = dir.dirName();
+    var path = this.fileInfo.path();
+
+    var tuples = path.split(/[\/\\]/);
+    if (tuples.length>0) {
+        // remove "scripts":
+        tuples.shift();
+    }
+    if (tuples.length>0) {
+        // remove action name self (e.g. AddLayer):
+        tuples.pop();
+    }
+
+    var action = this.getGuiAction();
+    if (!isNull(action.property("ToolCategory"))) {
+        tuples = action.property("ToolCategory").split("|");
+    }
+
+    ret.push(this.getTitle());
+
+    for (var i=tuples.length-1; i>=0; i--) {
+        var dn = tuples[i];
         var title = AddOn.getClassTitle(dn);
         if (isNull(title)) {
             break;
         }
         ret.unshift(title);
-
-    } while (true);
+    }
 
     return ret;
 };
