@@ -35,6 +35,8 @@ RTreeWidget::RTreeWidget(QWidget* parent) :
 //#endif
 
     if (RSettings::getBoolValue("Keyboard/EnableKeyboardNavigationInLists", false)!=true) {
+        // no keyboard navigation in lists:
+        // forward keyboard events to parent:
         installEventFilter(new REventFilter(QEvent::KeyPress, true));
         installEventFilter(new REventFilter(QEvent::KeyRelease, true));
     }
