@@ -47,10 +47,3 @@ ToolBarPreferences.applyPreferences = function(doc) {
         optionsToolBar.setFixedHeight(ftb.sizeHint.height());
     }
 };
-
-ToolBarPreferences.initPreferences = function(pageWidget, calledByPrefDialog, document) {
-    var widgets = getWidgets(pageWidget);
-    var prefixChar = widgets["PrefixChar"];
-    this.validator = createValidator("[^ \\+\\-]", prefixChar);
-    prefixChar.setValidator(this.validator);
-};
