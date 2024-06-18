@@ -6,6 +6,7 @@ SUBDIRS = \
     ExPostNewAction \
     ExRegisterFileExporter \
     ExRegisterFileImporter \
+    ExCsvExport \
     ExXmlImport \
     ExXmlExport
 
