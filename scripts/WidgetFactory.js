@@ -574,8 +574,8 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
 
         if (isOfType(c, QPlainTextEdit)) {
             if (!reset) {
-                WidgetFactory.connect(c.textChanged, signalReceiver, c.objectName);
-                WidgetFactory.connect(c.textChanged, WidgetFactory.topLevelWidget, "Setting");
+                WidgetFactory.connectSignal(c.textChanged, signalReceiver, c.objectName);
+                WidgetFactory.connectSignal(c.textChanged, WidgetFactory.topLevelWidget, "Setting");
             }
             if (isNull(c.property("defaultValue"))) {
                 c.setProperty("defaultValue", c.toPlainText());
@@ -587,8 +587,8 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
         }
         if (isOfType(c, RMathLineEdit)) {
             if (!reset) {
-                WidgetFactory.connect(c.valueChanged, signalReceiver, c.objectName);
-                WidgetFactory.connect(c.valueChanged, WidgetFactory.topLevelWidget, "Setting");
+                WidgetFactory.connectSignal(c.valueChanged, signalReceiver, c.objectName);
+                WidgetFactory.connectSignal(c.valueChanged, WidgetFactory.topLevelWidget, "Setting");
             }
             if (isNull(c.property("defaultValue"))) {
                 //c.defaultValue = [c.text, c.getDefaultUnit()];
@@ -618,8 +618,8 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
         }
         if (isOfType(c, RMathComboBox)) {
             if (!reset) {
-                WidgetFactory.connect(c.valueChanged, signalReceiver, c.objectName);
-                WidgetFactory.connect(c.valueChanged, WidgetFactory.topLevelWidget, "Setting");
+                WidgetFactory.connectSignal(c.valueChanged, signalReceiver, c.objectName);
+                WidgetFactory.connectSignal(c.valueChanged, WidgetFactory.topLevelWidget, "Setting");
             }
             if (isNull(c.property("defaultValue"))) {
                 //c.defaultValue = [c.text, c.getDefaultUnit()];
@@ -638,8 +638,8 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
         }
         if (isOfType(c, QLineEdit)) {
             if (!reset) {
-                WidgetFactory.connect(c.textChanged, signalReceiver, c.objectName);
-                WidgetFactory.connect(c.textChanged, WidgetFactory.topLevelWidget, "Setting");
+                WidgetFactory.connectSignal(c.textChanged, signalReceiver, c.objectName);
+                WidgetFactory.connectSignal(c.textChanged, WidgetFactory.topLevelWidget, "Setting");
             }
 
             if (isNull(c.property("defaultValue"))) {
@@ -655,8 +655,8 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             if (isNull(c.group()) && !c.autoExclusive) {
                 if (c.checkable) {
                     if (!reset) {
-                        WidgetFactory.connect(c.toggled, signalReceiver, c.objectName);
-                        WidgetFactory.connect(c.toggled, WidgetFactory.topLevelWidget, "Setting");
+                        WidgetFactory.connectSignal(c.toggled, signalReceiver, c.objectName);
+                        WidgetFactory.connectSignal(c.toggled, WidgetFactory.topLevelWidget, "Setting");
                     }
                     if (isNull(c.property("defaultValue"))) {
                         c.setProperty("defaultValue", c.checked);
@@ -667,21 +667,21 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
                 }
                 else {
                     if (!reset) {
-                        WidgetFactory.connect(c.clicked, signalReceiver, c.objectName, false);
+                        WidgetFactory.connectSignal(c.clicked, signalReceiver, c.objectName, false);
                     }
                 }
             }
             else {
                 if (!reset) {
-                    WidgetFactory.connect(c.toggled, signalReceiver, c.objectName);
+                    WidgetFactory.connectSignal(c.toggled, signalReceiver, c.objectName);
                 }
             }
             continue;
         }
         if (isOfType(c, QCheckBox)) {
             if (!reset) {
-                WidgetFactory.connect(c.toggled, signalReceiver, c.objectName);
-                WidgetFactory.connect(c.stateChanged, WidgetFactory.topLevelWidget, "Setting");
+                WidgetFactory.connectSignal(c.toggled, signalReceiver, c.objectName);
+                WidgetFactory.connectSignal(c.stateChanged, WidgetFactory.topLevelWidget, "Setting");
             }
             if (isNull(c.property("defaultValue"))) {
                 c.setProperty("defaultValue", c.checked);
@@ -699,8 +699,8 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
         }
         if (isOfType(c, QRadioButton)) {
             if (!c.group() && !c.autoExclusive) {
-                WidgetFactory.connect(c.toggled, signalReceiver, c.objectName);
-                WidgetFactory.connect(c.toggled, WidgetFactory.topLevelWidget, "Setting");
+                WidgetFactory.connectSignal(c.toggled, signalReceiver, c.objectName);
+                WidgetFactory.connectSignal(c.toggled, WidgetFactory.topLevelWidget, "Setting");
                 if (isNull(c.property("defaultValue"))) {
                     c.setProperty("defaultValue", c.checked);
                 }
@@ -709,8 +709,8 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
                 }
             }
             else {
-                WidgetFactory.connect(c.toggled, signalReceiver, c.objectName);
-                WidgetFactory.connect(c.toggled, WidgetFactory.topLevelWidget, "Setting");
+                WidgetFactory.connectSignal(c.toggled, signalReceiver, c.objectName);
+                WidgetFactory.connectSignal(c.toggled, WidgetFactory.topLevelWidget, "Setting");
                 if (value==="true") {
                     c.checked = true;
                 }
@@ -722,8 +722,8 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
         }
         if (isOfType(c, QButtonGroup)) {
             if (!reset) {
-                WidgetFactory.connect(c["buttonClicked(QAbstractButton*)"], signalReceiver, c.objectName);
-                WidgetFactory.connect(c["buttonClicked(QAbstractButton*)"], WidgetFactory.topLevelWidget, "Setting");
+                WidgetFactory.connectSignal(c["buttonClicked(QAbstractButton*)"], signalReceiver, c.objectName);
+                WidgetFactory.connectSignal(c["buttonClicked(QAbstractButton*)"], WidgetFactory.topLevelWidget, "Setting");
             }
             if (isNull(c.property("defaultValue"))) {
                 var button = c.checkedButton();
@@ -755,8 +755,8 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
         }
         if ((isOfType(c, QComboBox) /*|| isOfType(c, RComboBox)*/) && c.editable) {
             if (!reset) {
-                WidgetFactory.connect(c.editTextChanged, signalReceiver, c.objectName);
-                WidgetFactory.connect(c.editTextChanged, WidgetFactory.topLevelWidget, "Setting");
+                WidgetFactory.connectSignal(c.editTextChanged, signalReceiver, c.objectName);
+                WidgetFactory.connectSignal(c.editTextChanged, WidgetFactory.topLevelWidget, "Setting");
             }
             if (isNull(c.property("defaultValue"))) {
                 c.setProperty("defaultValue", c.currentText);
@@ -779,8 +779,8 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
         }
         if (((isOfType(c, QComboBox) /*|| isOfType(c, RComboBox)*/) && !c.editable) || isOfType(c, QFontComboBox)) {
             if (!reset) {
-                WidgetFactory.connect(c['currentIndexChanged(int)'], signalReceiver, c.objectName);
-                WidgetFactory.connect(c['currentIndexChanged(int)'], WidgetFactory.topLevelWidget, "Setting");
+                WidgetFactory.connectSignal(c['currentIndexChanged(int)'], signalReceiver, c.objectName);
+                WidgetFactory.connectSignal(c['currentIndexChanged(int)'], WidgetFactory.topLevelWidget, "Setting");
             }
             hasData = false;
             if (c.itemData(c.currentIndex)!=undefined || (c.count>0 && c.itemData(0)!=undefined)) {
@@ -832,8 +832,8 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
         }
         if (isOfType(c, RColorCombo)) {
             if (!reset) {
-                WidgetFactory.connect(c.editTextChanged, signalReceiver, c.objectName);
-                WidgetFactory.connect(c["currentIndexChanged(int)"], WidgetFactory.topLevelWidget, "Setting");
+                WidgetFactory.connectSignal(c.editTextChanged, signalReceiver, c.objectName);
+                WidgetFactory.connectSignal(c["currentIndexChanged(int)"], WidgetFactory.topLevelWidget, "Setting");
             }
             if (isNull(c.property("defaultValue"))) {
                 c.setProperty("defaultValue", c.getColor());
@@ -858,8 +858,8 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
         }
         if (isOfType(c, RLineweightCombo)) {
             if (!reset) {
-                WidgetFactory.connect(c.editTextChanged, signalReceiver, c.objectName);
-                WidgetFactory.connect(c["currentIndexChanged(int)"], WidgetFactory.topLevelWidget, "Setting");
+                WidgetFactory.connectSignal(c.editTextChanged, signalReceiver, c.objectName);
+                WidgetFactory.connectSignal(c["currentIndexChanged(int)"], WidgetFactory.topLevelWidget, "Setting");
             }
             if (isNull(c.property("defaultValue"))) {
                 c.setProperty("defaultValue", c.getLineweight());
@@ -874,8 +874,8 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
         }
         if (isOfType(c, RLinetypeCombo)) {
             if (!reset) {
-                WidgetFactory.connect(c.editTextChanged, signalReceiver, c.objectName);
-                WidgetFactory.connect(c["currentIndexChanged(int)"], WidgetFactory.topLevelWidget, "Setting");
+                WidgetFactory.connectSignal(c.editTextChanged, signalReceiver, c.objectName);
+                WidgetFactory.connectSignal(c["currentIndexChanged(int)"], WidgetFactory.topLevelWidget, "Setting");
             }
             if (isNull(c.property("defaultValue"))) {
                 c.setProperty("defaultValue", c.getLinetypePattern());
@@ -888,12 +888,12 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
         if (isOfType(c, QSpinBox) || isOfType(c, QDoubleSpinBox)) {
             if (!reset) {
                 if (isOfType(c, QSpinBox)) {
-                    WidgetFactory.connect(c["valueChanged(int)"], signalReceiver, c.objectName);
-                    WidgetFactory.connect(c["valueChanged(int)"], WidgetFactory.topLevelWidget, "Setting");
+                    WidgetFactory.connectSignal(c["valueChanged(int)"], signalReceiver, c.objectName);
+                    WidgetFactory.connectSignal(c["valueChanged(int)"], WidgetFactory.topLevelWidget, "Setting");
                 }
                 else {
-                    WidgetFactory.connect(c["valueChanged(double)"], signalReceiver, c.objectName);
-                    WidgetFactory.connect(c["valueChanged(double)"], WidgetFactory.topLevelWidget, "Setting");
+                    WidgetFactory.connectSignal(c["valueChanged(double)"], signalReceiver, c.objectName);
+                    WidgetFactory.connectSignal(c["valueChanged(double)"], WidgetFactory.topLevelWidget, "Setting");
                 }
             }
             if (isNull(c.property("defaultValue"))) {
@@ -917,8 +917,8 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
         }
         if (isOfType(c, QSlider)) {
             if (!reset) {
-                WidgetFactory.connect(c["valueChanged(int)"], signalReceiver, c.objectName);
-                WidgetFactory.connect(c["valueChanged(int)"], WidgetFactory.topLevelWidget, "Setting");
+                WidgetFactory.connectSignal(c["valueChanged(int)"], signalReceiver, c.objectName);
+                WidgetFactory.connectSignal(c["valueChanged(int)"], WidgetFactory.topLevelWidget, "Setting");
             }
             if (isNull(c.property("defaultValue"))) {
                 c.setProperty("defaultValue", c.value);
@@ -1003,7 +1003,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             }
 
             if (!reset) {
-                WidgetFactory.connect(c.itemChanged, signalReceiver, c.objectName);
+                WidgetFactory.connectSignal(c.itemChanged, signalReceiver, c.objectName);
                 c.itemSelectionChanged.connect(WidgetFactory.topLevelWidget, WidgetFactory.topLevelWidget.slotSettingChanged);
                 c.model().rowsInserted.connect(WidgetFactory.topLevelWidget, WidgetFactory.topLevelWidget.slotSettingChanged);
             }
@@ -1012,7 +1012,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
         }
         if (isOfType(c, RFontChooserWidget)) {
             if (!reset) {
-                WidgetFactory.connect(c.valueChanged, signalReceiver, c.objectName);
+                WidgetFactory.connectSignal(c.valueChanged, signalReceiver, c.objectName);
                 c.valueChanged.connect(WidgetFactory.topLevelWidget, WidgetFactory.topLevelWidget.slotSettingChanged);
             }
             if (isNull(c.property("defaultValue"))) {
@@ -1061,7 +1061,7 @@ WidgetFactory.processChildren = function(c) {
 /**
  * \internal
  */
-WidgetFactory.connect = function(sig, signalReceiver, objectName, isValue) {
+WidgetFactory.connectSignal = function(sig, signalReceiver, objectName, isValue) {
     if (isNull(signalReceiver)) {
         return;
     }
