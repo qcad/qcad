@@ -159,6 +159,10 @@ public:
         return RPolyline::getVertexAt(i);
     }
 
+    void setVertexAt(int i, const RVector& v) {
+        RPolyline::setVertexAt(i, v);
+    }
+
     void appendVertex(const RVector& vertex, double bulge = 0.0, double w1 = 0.0, double w2 = 0.0) {
         RPolyline::appendVertex(vertex, bulge, w1, w2);
     }
