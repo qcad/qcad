@@ -62,7 +62,7 @@ AbstractPreferences.prototype.beginEvent = function() {
     this.filterWidget.textChanged.connect(this, this.filterTree);
 
     var btApply = this.dialog.findChild("ButtonBox").button(QDialogButtonBox.Apply);
-    btApply.clicked.connect(this, this.apply);
+    btApply.clicked.connect(this, this.applyPreferences);
 
     this.addOns = AddOn.getAddOns();
 
@@ -77,7 +77,7 @@ AbstractPreferences.prototype.beginEvent = function() {
 
     if (this.dialog.exec() === QDialog.Accepted.valueOf()) {
         // apply calls save and apply:
-        this.apply();
+        this.applyPreferences();
     }
     this.uninit();
     destr(this.dialog);
@@ -183,7 +183,7 @@ AbstractPreferences.fillTreeWidget = function(addOns, treeWidget, appPreferences
  * Applies the settings of all preference pages by calling
  * 'applyPreferences' for every add-on class.
  */
-AbstractPreferences.prototype.apply = function() {
+AbstractPreferences.prototype.applyPreferences = function() {
     var mdiChild, document;
 
     // force all settings to be reloaded from RSettings when they are
@@ -242,7 +242,7 @@ AbstractPreferences.prototype.apply = function() {
             }
         } catch (e) {
             qWarning("AbstractPreferences.js:",
-                "apply(): Exception: %1; %2; %3"
+                "applyPreferences(): Exception: %1; %2; %3"
                 .arg(e.message).arg(e.fileName).arg(e.lineNumber));
             continue;
         }
