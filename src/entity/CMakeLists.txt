@@ -68,6 +68,8 @@ add_library(qcadentity SHARED
     RPointEntity.cpp RPointEntity.h
     RPolylineData.cpp RPolylineData.h
     RPolylineEntity.cpp RPolylineEntity.h
+    RWipeoutData.cpp RWipeoutData.h
+    RWipeoutEntity.cpp RWipeoutEntity.h
     RRayData.cpp RRayData.h
     RRayEntity.cpp RRayEntity.h
     RSolidData.cpp RSolidData.h

@@ -47,6 +47,8 @@ SOURCES = \
     RPointEntity.cpp \
     RPolylineData.cpp \
     RPolylineEntity.cpp \
+    RWipeoutData.cpp \
+    RWipeoutEntity.cpp \
     RRayData.cpp \
     RRayEntity.cpp \
     RSolidData.cpp \
@@ -111,6 +113,8 @@ HEADERS = \
     RPointEntity.h \
     RPolylineData.h \
     RPolylineEntity.h \
+    RWipeoutData.h \
+    RWipeoutEntity.h \
     RRayData.h \
     RRayEntity.h \
     RSolidData.h \

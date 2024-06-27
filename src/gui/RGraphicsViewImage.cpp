@@ -1818,6 +1818,10 @@ void RGraphicsViewImage::paintDrawableThread(RGraphicsViewWorker* worker, RGraph
     QPen pen = path.getPen();
     QBrush brush = path.getBrush();
 
+    if (path.getWipeout()) {
+        brush.setColor(backgroundColor);
+    }
+
     if (pen.style() != Qt::NoPen) {
         if (path.getPixelWidth()) {
             // use width of path pen:
@@ -1877,12 +1881,15 @@ void RGraphicsViewImage::paintDrawableThread(RGraphicsViewWorker* worker, RGraph
 
     // prevent black on black / white on white drawing
     applyColorCorrection(pen);
-    applyColorCorrection(brush);
+    if (!path.getWipeout()) {
+        applyColorCorrection(brush);
+    }
 
     // apply minimum line weight:
     applyMinimumLineweight(pen);
 
     // highlighted:
+    // don't highlight when printing
     if (!isPrintingOrExporting() && path.isHighlighted()) {
         if (pen.style() != Qt::NoPen) {
             pen.setColor(RColor::getHighlighted(pen.color(), QColor((QRgb)bgColorLightness), 100));
@@ -1906,14 +1913,18 @@ void RGraphicsViewImage::paintDrawableThread(RGraphicsViewWorker* worker, RGraph
         }
     }
 
+    if (path.isHighlighted() && path.getWipeout()) {
+        pen.setStyle(Qt::SolidLine);
+        pen.setCosmetic(true);
+        brush.setStyle(Qt::NoBrush);
+    }
+
     if (!path.getNoColorMode()) {
         applyColorMode(pen);
         applyColorMode(brush);
     }
 
-    //setBrush(brush);
     worker->setBrush(brush);
-    //setPen(pen);
     worker->setPen(pen);
 
     // 20210903: make sure screen-based linetypes are rendered as path to keep pattern visible:
@@ -1992,7 +2003,6 @@ void RGraphicsViewImage::paintDrawableThread(RGraphicsViewWorker* worker, RGraph
                                 qLine.setP2(QPointF(line.endPoint.x + d, line.endPoint.y));
                             }
 
-                            //qDebug() << "calling drawLine";
                             worker->drawLine(qLine);
 //                                if (pen2.style() != Qt::NoPen) {
 //                                    painter->setPen(pen2);

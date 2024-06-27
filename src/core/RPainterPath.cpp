@@ -455,6 +455,14 @@ bool RPainterPath::getScreenBasedLinetype() const {
     return getMode(RPainterPath::ScreenBasedLinetype);
 }
 
+void RPainterPath::setWipeout(bool on) {
+    setMode(RPainterPath::Wipeout, on);
+}
+
+bool RPainterPath::getWipeout() const {
+    return getMode(RPainterPath::Wipeout);
+}
+
 void RPainterPath::setPixelWidth(bool on) {
     setMode(RPainterPath::PixelWidth, on);
 }
