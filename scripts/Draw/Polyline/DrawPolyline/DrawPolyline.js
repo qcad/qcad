@@ -57,8 +57,8 @@ DrawPolyline.prototype.beginEvent = function() {
     this.updateButtonStates();
 };
 
-DrawPolyline.prototype.initState = function(state) {
-    Polyline.prototype.initState.call(this, state);
+DrawPolyline.prototype.initState = function() {
+    Polyline.prototype.initState.call(this);
 
     this.setCrosshairCursor();
 
