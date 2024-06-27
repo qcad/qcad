@@ -57,6 +57,8 @@ public:
         return RS::EntityWipeout;
     }
 
+    virtual QList<RBox> getBoundingBoxes(bool ignoreEmpty) const;
+
     virtual double getDistanceTo(const RVector& point, bool limited = true, double range = 0.0, bool draft = false, double strictRange = RMAXDOUBLE) const;
 
     bool getShowFrame() const {
@@ -66,6 +68,8 @@ public:
     void setShowFrame(bool on) {
         showFrame = on;
     }
+
+    RPolyline getBoundary() const;
 
 private:
     bool showFrame;

@@ -160,21 +160,7 @@ void RWipeoutEntity::exportEntity(RExporter& e, bool preview, bool forceSelected
     Q_UNUSED(preview);
     Q_UNUSED(forceSelected);
 
-    RPolyline pl;
-
-    // special case: two vertices form a rectangle:
-    if (data.countVertices()==2) {
-        RVector v1 = data.getVertexAt(0);
-        RVector v2 = data.getVertexAt(1);
-        pl.appendVertex(v1);
-        pl.appendVertex(RVector(v1.x, v2.y));
-        pl.appendVertex(v2);
-        pl.appendVertex(RVector(v2.x, v1.y));
-        pl.setClosed(true);
-    }
-    else {
-        pl = data;
-    }
+    RPolyline pl = data.getBoundary();
 
     e.setBrush(Qt::SolidPattern);
 

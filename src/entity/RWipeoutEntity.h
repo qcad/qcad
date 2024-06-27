@@ -151,6 +151,18 @@ public:
         return data.getVertexAt(i);
     }
 
+    void setVertexAt(int i, const RVector& v) {
+        data.setVertexAt(i, v);
+    }
+
+    double getBulgeAt(int i) const {
+        return data.getBulgeAt(i);
+    }
+
+    void setBulgeAt(int i, double b) {
+        data.setBulgeAt(i, b);
+    }
+
     void removeLastVertex() {
         data.removeLastVertex();
     }

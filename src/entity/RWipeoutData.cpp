@@ -26,22 +26,28 @@ RWipeoutData::RWipeoutData(RDocument* document, const RWipeoutData& data)
     : RPolylineData(document), showFrame(false) {
 
     *this = data;
+    setDocument(document);
+    setClosed(true);
 }
 
 RWipeoutData::RWipeoutData(const RPolyline& polyline) :
     RPolylineData(polyline), showFrame(false) {
+    setClosed(true);
+}
+
+QList<RBox> RWipeoutData::getBoundingBoxes(bool ignoreEmpty) const {
+    // don't use implementation of polyline which does not allow use to select wipeout in the center:
+    return REntityData::getBoundingBoxes(ignoreEmpty);
 }
 
 double RWipeoutData::getDistanceTo(const RVector& point, bool limited, double range, bool draft, double strictRange) const {
-    Q_UNUSED(range)
-    Q_UNUSED(draft)
-    Q_UNUSED(strictRange)
+    RPolyline boundary = getBoundary();
 
     double minDist = RPolyline::getDistanceTo(point, limited, strictRange);
 
     // point not close to frame:
     if (RMath::isNaN(minDist) || strictRange<minDist) {
-        if (RPolyline::contains(point)) {
+        if (boundary.contains(point)) {
             minDist = strictRange;
         }
     }
@@ -51,4 +57,23 @@ double RWipeoutData::getDistanceTo(const RVector& point, bool limited, double ra
     }
 
     return minDist;
+}
+
+RPolyline RWipeoutData::getBoundary() const {
+    // special case: two vertices form a rectangle:
+    if (countVertices()==2 && !hasArcSegments()) {
+        RVector v1 = getVertexAt(0);
+        RVector v2 = getVertexAt(1);
+
+        RPolyline pl;
+        pl.appendVertex(v1);
+        pl.appendVertex(RVector(v1.x, v2.y));
+        pl.appendVertex(v2);
+        pl.appendVertex(RVector(v2.x, v1.y));
+        pl.setClosed(true);
+        return pl;
+    }
+    else {
+        return *this;
+    }
 }
