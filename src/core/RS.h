@@ -601,6 +601,7 @@ public:
         FACETRES,
         FILLETRAD,
         FILLMODE,
+        IMAGEFRAME,
         INSBASE,
         INSUNITS,
         ISOLINES,
