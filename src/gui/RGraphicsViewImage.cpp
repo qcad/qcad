@@ -1913,10 +1913,16 @@ void RGraphicsViewImage::paintDrawableThread(RGraphicsViewWorker* worker, RGraph
         }
     }
 
-    if (path.isHighlighted() && path.getWipeout()) {
-        pen.setStyle(Qt::SolidLine);
-        pen.setCosmetic(true);
-        brush.setStyle(Qt::NoBrush);
+    if (path.getWipeout()) {
+        if (path.isHighlighted() || path.isSelected()) {
+            // highlighted or selected wipeout: always show frame:
+            pen.setStyle(Qt::SolidLine);
+        }
+
+        if (path.isHighlighted()) {
+            //pen.setCosmetic(true);
+            brush.setStyle(Qt::NoBrush);
+        }
     }
 
     if (!path.getNoColorMode()) {
