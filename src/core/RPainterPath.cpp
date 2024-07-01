@@ -463,6 +463,14 @@ bool RPainterPath::getWipeout() const {
     return getMode(RPainterPath::Wipeout);
 }
 
+void RPainterPath::setFrameless(bool on) {
+    setMode(RPainterPath::Frameless, on);
+}
+
+bool RPainterPath::getFrameless() const {
+    return getMode(RPainterPath::Frameless);
+}
+
 void RPainterPath::setPixelWidth(bool on) {
     setMode(RPainterPath::PixelWidth, on);
 }

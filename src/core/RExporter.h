@@ -101,6 +101,9 @@ public:
     virtual void setWipeout(bool on);
     bool getWipeout() const;
 
+    virtual void setFrameless(bool on);
+    bool getFrameless() const;
+
     virtual void setPen(const QPen& pen);
     virtual QPen getPen(const RPainterPath& path);
     virtual QPen getPen();
@@ -410,6 +413,7 @@ protected:
     bool pixelUnit;
     bool clipping;
     bool wipeout;
+    bool frameless;
     bool pixelWidth;
     Qt::PenCapStyle penCapStyle;
     bool enablePatterns;

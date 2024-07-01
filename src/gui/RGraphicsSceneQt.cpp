@@ -132,6 +132,7 @@ bool RGraphicsSceneQt::beginPath() {
     currentPainterPath.setNoClipping(!getClipping());
     currentPainterPath.setNoColorMode(getNoColorMode());
     currentPainterPath.setWipeout(getWipeout());
+    currentPainterPath.setFrameless(getFrameless());
 
     REntity* entity = getEntity();
     QSharedPointer<RLayer> layer;
@@ -1082,6 +1083,7 @@ QList<REntity::Id> RGraphicsSceneQt::getPreviewEntityIds() {
     for (int i=0; i<retWithDuplicates.length(); i++) {
         if (!set.contains(retWithDuplicates[i])) {
             ret.append(retWithDuplicates[i]);
+            set.insert(retWithDuplicates[i]);
         }
     }
 

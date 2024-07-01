@@ -59,6 +59,7 @@ RExporter::RExporter()
       pixelUnit(false),
       clipping(false),
       wipeout(false),
+      frameless(false),
       pixelWidth(false),
       penCapStyle(Qt::RoundCap),
       enablePatterns(true),
@@ -82,6 +83,7 @@ RExporter::RExporter(RDocument& document, RMessageHandler *messageHandler, RProg
       pixelUnit(false),
       clipping(false),
       wipeout(false),
+      frameless(false),
       pixelWidth(false),
       penCapStyle(Qt::RoundCap),
       enablePatterns(true),
@@ -228,6 +230,14 @@ void RExporter::setWipeout(bool on) {
 
 bool RExporter::getWipeout() const {
     return wipeout;
+}
+
+void RExporter::setFrameless(bool on) {
+    frameless = on;
+}
+
+bool RExporter::getFrameless() const {
+    return frameless;
 }
 
 /**

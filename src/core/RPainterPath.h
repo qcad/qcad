@@ -65,7 +65,8 @@ public:
         PolylineGen = 0x2000,           //!< use polyline pattern along whole path (polyline)
         NoPattern = 0x4000,             //!< no pattern (polyline with widths)
         ScreenBasedLinetype = 0x8000,   //!< force screen-based linetypes for this path
-        Wipeout = 0x10000               //!< path is a wipeout: render in background color
+        Wipeout = 0x10000,              //!< path is a wipeout: render in background color
+        Frameless = 0x20000             //!< path is frameless wipeout: show pseudo frame when selected, highlightes or preview
     };
     Q_DECLARE_FLAGS(Modes, Mode)
 
@@ -235,6 +236,9 @@ public:
 
     void setWipeout(bool on);
     bool getWipeout() const;
+
+    void setFrameless(bool on);
+    bool getFrameless() const;
 
     void setPixelWidth(bool on);
     bool getPixelWidth() const;
