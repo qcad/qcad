@@ -893,6 +893,7 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
                     // update block references if entity has been changed inside a block
                     // that is not the current block (in block editing):
                     if (entity->getBlockId()!=storage->getCurrentBlockId()) {
+                        // add block of entity to blocks that need a spatial index update:
                         affectedBlockReferenceIds.unite(storage->queryBlockReferences(entity->getBlockId()));
                     }
                 }
