@@ -64,7 +64,8 @@ public:
         SimplePointDisplay = 0x1000,    //!< simple point mode (for points in hatch patterns)
         PolylineGen = 0x2000,           //!< use polyline pattern along whole path (polyline)
         NoPattern = 0x4000,             //!< no pattern (polyline with widths)
-        ScreenBasedLinetype = 0x8000    //!< force screen-based linetypes for this path
+        ScreenBasedLinetype = 0x8000,   //!< force screen-based linetypes for this path
+        Wipeout = 0x10000               //!< path is a wipeout: render in background color
     };
     Q_DECLARE_FLAGS(Modes, Mode)
 
@@ -231,6 +232,9 @@ public:
 
     void setScreenBasedLinetype(bool on);
     bool getScreenBasedLinetype() const;
+
+    void setWipeout(bool on);
+    bool getWipeout() const;
 
     void setPixelWidth(bool on);
     bool getPixelWidth() const;

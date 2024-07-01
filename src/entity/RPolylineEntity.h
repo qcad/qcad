@@ -157,6 +157,10 @@ public:
         return data.getVertexAt(i);
     }
 
+    void setVertexAt(int i, const RVector& v) {
+        data.setVertexAt(i, v);
+    }
+
     void removeLastVertex() {
         data.removeLastVertex();
     }

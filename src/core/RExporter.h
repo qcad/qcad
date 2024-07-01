@@ -98,6 +98,9 @@ public:
     virtual void setClipping(bool on);
     bool getClipping() const;
 
+    virtual void setWipeout(bool on);
+    bool getWipeout() const;
+
     virtual void setPen(const QPen& pen);
     virtual QPen getPen(const RPainterPath& path);
     virtual QPen getPen();
@@ -406,6 +409,7 @@ protected:
     double pixelSizeHint;
     bool pixelUnit;
     bool clipping;
+    bool wipeout;
     bool pixelWidth;
     Qt::PenCapStyle penCapStyle;
     bool enablePatterns;

@@ -88,6 +88,7 @@
 #include "RToleranceEntity.h"
 #include "RTraceEntity.h"
 #include "RViewportEntity.h"
+#include "RWipeoutEntity.h"
 #include "RVersion.h"
 #include "RXLineEntity.h"
 
@@ -358,6 +359,7 @@ int main(int argc, char *argv[]) {
     RXLineEntity::init();
     RRayEntity::init();
     RViewportEntity::init();
+    RWipeoutEntity::init();
 
     RTextBasedEntity::init();
     RTextEntity::init();

@@ -691,6 +691,18 @@ function isPolylineEntity(obj) {
 }
 
 /**
+ * \return true if the given object is a wipeout entity (RWipeoutEntity).
+ */
+function isWipeoutEntity(obj) {
+    if (RSettings.getQtVersion() < 0x060000) {
+        return isOfType(obj, RWipeoutEntity) || isOfType(obj, RWipeoutEntityPointer);
+    }
+    else {
+        return isOfType(obj, RWipeoutEntity);
+    }
+}
+
+/**
  * \return true if the given object is a geometrically closed polyline entity.
  */
 function isClosedPolylineEntity(obj, tolerance) {
@@ -1235,6 +1247,10 @@ function entityTypeToClass(type) {
         return "RTextEntity";
     case RS.EntityViewport:
         return "RViewportEntity";
+    case RS.EntityWipeout:
+        return "RWipeoutEntity";
+    case RS.EntityXRef:
+        return "RXRefEntity";
     default:
         return undefined;
     }
@@ -1342,6 +1358,10 @@ function entityTypeToString(type, plural) {
         return plural ? qsTr("Texts") : qsTr("Text");
     case RS.EntityViewport:
         return plural ? qsTr("Viewports") : qsTr("Viewport");
+    case RS.EntityWipeout:
+        return plural ? qsTr("Wipeouts") : qsTr("Wipeout");
+    case RS.EntityXRef:
+        return plural ? qsTr("External References") : qsTr("External Reference");
     case RS.EntityUnknown:
     default:
         return plural ? qsTr("Unknown Entities") : qsTr("Unknown Entity");
@@ -1439,6 +1459,10 @@ function getEntityType(typeName) {
         return RS.EntityText;
     case "Viewport":
         return RS.EntityViewport;
+    case "Wipeout":
+        return RS.EntityWipeout;
+    case "External Reference":
+        return RS.EntityXRef;
     default:
         return RS.ObjectUnknown;
     }

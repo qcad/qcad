@@ -58,6 +58,7 @@ RExporter::RExporter()
       pixelSizeHint(0.5),
       pixelUnit(false),
       clipping(false),
+      wipeout(false),
       pixelWidth(false),
       penCapStyle(Qt::RoundCap),
       enablePatterns(true),
@@ -80,6 +81,7 @@ RExporter::RExporter(RDocument& document, RMessageHandler *messageHandler, RProg
       pixelSizeHint(0.5),
       pixelUnit(false),
       clipping(false),
+      wipeout(false),
       pixelWidth(false),
       penCapStyle(Qt::RoundCap),
       enablePatterns(true),
@@ -218,6 +220,14 @@ void RExporter::setClipping(bool on) {
 
 bool RExporter::getClipping() const {
     return clipping;
+}
+
+void RExporter::setWipeout(bool on) {
+    wipeout = on;
+}
+
+bool RExporter::getWipeout() const {
+    return wipeout;
 }
 
 /**

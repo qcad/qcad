@@ -281,6 +281,8 @@ public:
         EntitySpline,       /**< Spline */
         EntityViewport,     /**< Viewport */
         EntityTolerance,    /**< Tolerance */
+        EntityWipeout,      /**< Wipeout */
+        EntityXRef,         /**< XRef */
 
         EntityUser          /**< User defined entity. Use this to identify
                                  entities that are added in a separate library
@@ -599,6 +601,7 @@ public:
         FACETRES,
         FILLETRAD,
         FILLMODE,
+        IMAGEFRAME,
         INSBASE,
         INSUNITS,
         ISOLINES,

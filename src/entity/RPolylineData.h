@@ -49,6 +49,7 @@ protected:
 
 public:
     RPolylineData();
+    RPolylineData(RDocument* document);
     RPolylineData(const RPolyline& polyline);
 
     virtual RS::EntityType getType() const {
@@ -156,6 +157,10 @@ public:
 
     RVector getVertexAt(int i) const {
         return RPolyline::getVertexAt(i);
+    }
+
+    void setVertexAt(int i, const RVector& v) {
+        RPolyline::setVertexAt(i, v);
     }
 
     void appendVertex(const RVector& vertex, double bulge = 0.0, double w1 = 0.0, double w2 = 0.0) {
