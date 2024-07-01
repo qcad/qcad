@@ -192,8 +192,8 @@ double RLine::getAngleAt(double distance, RS::From from) const {
 
 RVector RLine::getVectorTo(const RVector& point, bool limited, double strictRange) const {
 
-    RVector ae = endPoint - startPoint;
-    RVector ap = point - startPoint;
+    RVector ae = (endPoint - startPoint).get2D();
+    RVector ap = (point - startPoint).get2D();
 
     if (ae.getMagnitude2D() < 1.0e-6) {
         return RVector::invalid;

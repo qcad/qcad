@@ -767,7 +767,7 @@ RVector REllipse::getVectorTo(const RVector& point, bool limited, double strictR
     bool swap = false;
     bool majorSwap = false;
 
-    RVector normalized = (point - center).rotate(-ang);
+    RVector normalized = (point - center).get2D().rotate(-ang);
 
     // special case: point in line with major axis:
     if (fabs(normalized.getAngle()) < RS::AngleTolerance || fabs(normalized.getAngle()) > 2*M_PI-RS::AngleTolerance) {

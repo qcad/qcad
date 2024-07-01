@@ -694,7 +694,7 @@ RVector RArc::getVectorTo(const RVector& point, bool limited, double strictRange
         return RVector::invalid;
     }
 
-    RVector v = point - center;
+    RVector v = (point - center).get2D();
     return RVector::createPolar(v.getMagnitude() - radius, v.getAngle());
 }
 

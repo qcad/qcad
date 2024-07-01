@@ -213,7 +213,7 @@ RVector RCircle::getVectorTo(const RVector& point, bool limited, double strictRa
     Q_UNUSED(limited)
     Q_UNUSED(strictRange)
 
-    RVector v = point - center;
+    RVector v = (point - center).get2D();
 
     // point is at the center of the circle, infinite solutions:
     if (v.getMagnitude()<RS::PointTolerance) {

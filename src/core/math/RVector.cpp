@@ -164,7 +164,7 @@ double RVector::getAngleTo(const RVector& v) const {
     if (!valid || !v.valid) {
         return RNANDOUBLE;
     } else {
-        return (v - (*this)).getAngle();
+        return (v.get2D() - get2D()).getAngle();
     }
 }
 
@@ -1128,7 +1128,7 @@ RVector RVector::getClosest(const QList<RVector>& list) const {
     if (index==-1) {
         return RVector::invalid;
     }
-    return list[index];
+    return list[index].get2D();
 }
 
 RVector RVector::getClosest2D(const QList<RVector>& list) const {

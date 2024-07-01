@@ -108,7 +108,7 @@ QList<RVector> RShape::filterOnShape(const QList<RVector>& pointList, bool limit
 RVector RShape::getVectorFromEndpointTo(const RVector& point) const {
     QList<RVector> endPoints = getEndPoints();
     RVector closest = point.getClosest(endPoints);
-    return point - closest;
+    return point.get2D() - closest;
 }
 
 /**
