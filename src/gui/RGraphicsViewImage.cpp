@@ -360,8 +360,14 @@ void RGraphicsViewImage::updateImage() {
         isSelected = false;
         QList<REntity::Id> ids = sceneQt->getPreviewEntityIds();
         for (int i=0; i<ids.length(); i++) {
-            paintEntityThread(decorationWorker, ids[i], true);
+            if (ids[i]!=REntity::INVALID_ID) {
+                paintEntityThread(decorationWorker, ids[i], true);
+            }
         }
+
+        // anonymous previews (aux preview, etc.) on top of everything else:
+        paintEntityThread(decorationWorker, REntity::INVALID_ID, true);
+
         //worker->end();
         // TODO: add function RGraphicsViewImage:
         //endPaint();
@@ -1435,7 +1441,8 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
  * Looks up entity drawable and paints it using the given worker.
  */
 void RGraphicsViewImage::paintEntityThread(RGraphicsViewWorker* worker, REntity::Id id, bool preview) {
-    if (!preview && !isPrintingOrExporting() && !isSelected && (getDocument()->isSelected(id) || getDocument()->isSelectedWorkingSet(id))) {
+    RDocument* doc = getDocument();
+    if (!preview && !isPrintingOrExporting() && !isSelected && (doc->isSelected(id) || doc->isSelectedWorkingSet(id))) {
         static QMutex m;
         m.lock();
         // remember selected entities to overlay in the end:
@@ -1914,14 +1921,26 @@ void RGraphicsViewImage::paintDrawableThread(RGraphicsViewWorker* worker, RGraph
     }
 
     if (path.getWipeout()) {
-        if (path.isHighlighted() || path.isSelected()) {
-            // highlighted or selected wipeout: always show frame:
-            pen.setStyle(Qt::SolidLine);
+        if (path.getFrameless() && (path.isHighlighted() || path.isSelected() || preview)) {
+            // highlighted or selected wipeout: always show frame outline:
+            QList<qreal> dashes;
+            dashes << 10 << 5 << 2 << 5;
+
+            pen.setStyle(Qt::CustomDashLine);
+            pen.setDashPattern(dashes.toVector());
+            pen.setWidth(1);
+            pen.setCosmetic(true);
         }
 
         if (path.isHighlighted()) {
-            //pen.setCosmetic(true);
             brush.setStyle(Qt::NoBrush);
+        }
+
+        if (path.isSelected() || preview) {
+            // preview wipeout is rendered on top: make transparent:
+            QColor col = brush.color();
+            col.setAlphaF(0.5);
+            brush.setColor(col);
         }
     }
 
