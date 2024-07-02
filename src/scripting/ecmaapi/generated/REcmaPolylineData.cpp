@@ -118,8 +118,6 @@
             
             REcmaHelper::registerFunction(&engine, proto, setVertices, "setVertices");
             
-            REcmaHelper::registerFunction(&engine, proto, setVertexAt, "setVertexAt");
-            
             REcmaHelper::registerFunction(&engine, proto, moveVertexAt, "moveVertexAt");
             
             REcmaHelper::registerFunction(&engine, proto, getVertexIndex, "getVertexIndex");
@@ -312,6 +310,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getVertexAt, "getVertexAt");
             
+            REcmaHelper::registerFunction(&engine, proto, setVertexAt, "setVertexAt");
+            
             REcmaHelper::registerFunction(&engine, proto, appendVertex, "appendVertex");
             
             REcmaHelper::registerFunction(&engine, proto, prependVertex, "prependVertex");
@@ -457,6 +457,56 @@
             // copyable class:
             RPolylineData
                     cppResult;
+                
+            result = engine->newVariant(
+            context->thisObject(), qVariantFromValue(cppResult));
+        
+    } else 
+
+    if( context->argumentCount() ==
+        1
+                && (
+                
+                        context->argument(
+                        0
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isNull()
+                ) /* type: RDocument * */
+            
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RDocument * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RDocument >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RPolylineData: Argument 0 is not of type RDocument *RDocument *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // copyable class:
+            RPolylineData
+                    cppResult(
+                    a0
+                    );
                 
             result = engine->newVariant(
             context->thisObject(), qVariantFromValue(cppResult));
@@ -1708,86 +1758,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolylineData::setVertices", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaPolylineData::setVertexAt
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaPolylineData::setVertexAt", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineData::setVertexAt";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RPolylineData* self = 
-                        getSelf("setVertexAt", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    2 && (
-            context->argument(0).isNumber()
-        ) /* type: int */
-     && (
-            context->argument(1).isVariant() || 
-            context->argument(1).isQObject() || 
-            context->argument(1).isNull()
-        ) /* type: RVector */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    int
-                    a0 =
-                    (int)
-                    
-                    context->argument( 0 ).
-                    toNumber();
-                
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RVector*
-                    ap1 =
-                    qscriptvalue_cast<
-                    RVector*
-                        >(
-                        context->argument(
-                        1
-                        )
-                    );
-                    if (ap1 == NULL) {
-                           return REcmaHelper::throwError("RPolyline: Argument 1 is not of type RVector.",
-                               context);                    
-                    }
-                    RVector 
-                    a1 = 
-                    *ap1;
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->setVertexAt(a0
-        ,
-    a1);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineData.setVertexAt().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaPolylineData::setVertexAt", context, engine);
             return result;
         }
          QScriptValue
@@ -10605,6 +10575,86 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolylineData::getVertexAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolylineData::setVertexAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolylineData::setVertexAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineData::setVertexAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolylineData* self = 
+                        getSelf("setVertexAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RPolylineData: Argument 1 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setVertexAt(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineData.setVertexAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolylineData::setVertexAt", context, engine);
             return result;
         }
          QScriptValue

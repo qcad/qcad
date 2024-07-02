@@ -50,6 +50,7 @@
 
 </protected><public>public:
     <constructor_decl><name>RPolylineData</name><parameter_list>()</parameter_list>;</constructor_decl>
+    <constructor_decl><name>RPolylineData</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>)</parameter_list>;</constructor_decl>
     <constructor_decl><name>RPolylineData</name><parameter_list>(<param><decl><type><name>const</name> <name>RPolyline</name>&amp;</type> <name>polyline</name></decl></param>)</parameter_list>;</constructor_decl>
 
     <function><type><name>virtual</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
@@ -157,6 +158,10 @@
 
     <function><type><name>RVector</name></type> <name>getVertexAt</name><parameter_list>(<param><decl><type><name>int</name></type> <name>i</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><call><name><name>RPolyline</name>::<name>getVertexAt</name></name><argument_list>(<argument><expr><name>i</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setVertexAt</name><parameter_list>(<param><decl><type><name>int</name></type> <name>i</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>RPolyline::setVertexAt</name><parameter_list>(<param><decl><type><name>i</name></type></decl></param>, <param><decl><type><name>v</name></type></decl></param>)</parameter_list>;</constructor_decl>
     }</block></function>
 
     <function><type><name>void</name></type> <name>appendVertex</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>vertex</name></decl></param>, <param><decl><type><name>double</name></type> <name>bulge</name> =<init> <expr>0.0</expr></init></decl></param>, <param><decl><type><name>double</name></type> <name>w1</name> =<init> <expr>0.0</expr></init></decl></param>, <param><decl><type><name>double</name></type> <name>w2</name> =<init> <expr>0.0</expr></init></decl></param>)</parameter_list> <block>{

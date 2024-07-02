@@ -18,8 +18,8 @@
  * along with QCAD.
  */</comment>
 
-<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RTABEVENTFILTER_H</name></cpp:ifndef>
-<cpp:define>#<cpp:directive>define</cpp:directive> <name>RTABEVENTFILTER_H</name></cpp:define>
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RTOOLOPTIONEVENTFILTER_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RTOOLOPTIONEVENTFILTER_H</name></cpp:define>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"gui_global.h"</cpp:file></cpp:include>
 
@@ -36,7 +36,7 @@
     <macro><name>Q_OBJECT</name></macro>
 
 </private><public>public:
-    <constructor_decl><name>RToolOptionEventFilter</name><parameter_list>(<param><decl><type><name>QObject</name> *</type><name>parent</name> =<init> <expr><name>nullptr</name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
+    <constructor_decl><name>RToolOptionEventFilter</name><parameter_list>(<param><decl><type><name>QObject</name> *</type><name>parent</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
 
 </public><protected>protected:
     <function_decl><type><name>bool</name></type> <name>eventFilter</name><parameter_list>(<param><decl><type><name>QObject</name>*</type> <name>obj</name></decl></param>, <param><decl><type><name>QEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>

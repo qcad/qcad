@@ -65,11 +65,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         typeName="RPropertyTypeId" name="propertyTypeId"
         isConst="false" />
         <arg type="bool" typeName="bool" name="humanReadable"
-        isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="noAttributes"
-        isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="showOnRequest"
-        isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="setProperty" cppName="setProperty"

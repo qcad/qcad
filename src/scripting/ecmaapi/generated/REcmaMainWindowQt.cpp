@@ -291,6 +291,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, handleUserCommand, "handleUserCommand");
             
+            REcmaHelper::registerFunction(&engine, proto, handleEnterKey, "handleEnterKey");
+            
+            REcmaHelper::registerFunction(&engine, proto, handleTabKey, "handleTabKey");
+            
             REcmaHelper::registerFunction(&engine, proto, postSelectionChangedEvent, "postSelectionChangedEvent");
             
             REcmaHelper::registerFunction(&engine, proto, postTransactionEvent, "postTransactionEvent");
@@ -5371,6 +5375,45 @@
             //REcmaHelper::functionEnd("REcmaMainWindowQt::eval", context, engine);
             return result;
         }
+         QScriptValue
+        REcmaMainWindowQt::hasProxy
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::hasProxy", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::hasProxy";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RMainWindow::
+       hasProxy();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.hasProxy().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::hasProxy", context, engine);
+            return result;
+        }
         
 
     // properties:
@@ -6365,6 +6408,175 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMainWindowQt::handleUserCommand", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindowQt::handleEnterKey
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::handleEnterKey", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::handleEnterKey";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("handleEnterKey", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isQObject()
+        ) /* type: QObject * */
+    
+    ){
+    // prepare arguments:
+    
+            // argument isQObject
+            QObject *
+            a0 =
+            qobject_cast<
+            QObject *>
+            ( context->argument(
+            0
+            ).
+            toQObject()
+            );
+        
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->handleEnterKey(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.handleEnterKey().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::handleEnterKey", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindowQt::handleTabKey
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::handleTabKey", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::handleTabKey";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("handleTabKey", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isQObject()
+        ) /* type: QObject * */
+    
+    ){
+    // prepare arguments:
+    
+            // argument isQObject
+            QObject *
+            a0 =
+            qobject_cast<
+            QObject *>
+            ( context->argument(
+            0
+            ).
+            toQObject()
+            );
+        
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->handleTabKey(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isQObject()
+        ) /* type: QObject * */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+            // argument isQObject
+            QObject *
+            a0 =
+            qobject_cast<
+            QObject *>
+            ( context->argument(
+            0
+            ).
+            toQObject()
+            );
+        
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->handleTabKey(a0
+        ,
+    a1);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.handleTabKey().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::handleTabKey", context, engine);
             return result;
         }
          QScriptValue

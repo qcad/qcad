@@ -196,6 +196,14 @@
             
             REcmaHelper::registerFunction(&engine, proto, getScreenBasedLinetype, "getScreenBasedLinetype");
             
+            REcmaHelper::registerFunction(&engine, proto, setWipeout, "setWipeout");
+            
+            REcmaHelper::registerFunction(&engine, proto, getWipeout, "getWipeout");
+            
+            REcmaHelper::registerFunction(&engine, proto, setFrameless, "setFrameless");
+            
+            REcmaHelper::registerFunction(&engine, proto, getFrameless, "getFrameless");
+            
             REcmaHelper::registerFunction(&engine, proto, setPixelWidth, "setPixelWidth");
             
             REcmaHelper::registerFunction(&engine, proto, getPixelWidth, "getPixelWidth");
@@ -359,6 +367,16 @@
 
     ctor.setProperty("ScreenBasedLinetype",
     QScriptValue(RPainterPath::ScreenBasedLinetype),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Wipeout",
+    QScriptValue(RPainterPath::Wipeout),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Frameless",
+    QScriptValue(RPainterPath::Frameless),
     QScriptValue::ReadOnly);
 
 
@@ -4495,6 +4513,214 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPainterPath::getScreenBasedLinetype", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPath::setWipeout
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::setWipeout", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::setWipeout";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPainterPath* self = 
+                        getSelf("setWipeout", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setWipeout(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.setWipeout().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::setWipeout", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPath::getWipeout
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::getWipeout", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getWipeout";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPainterPath* self = 
+                        getSelf("getWipeout", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getWipeout();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getWipeout().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::getWipeout", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPath::setFrameless
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::setFrameless", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::setFrameless";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPainterPath* self = 
+                        getSelf("setFrameless", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setFrameless(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.setFrameless().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::setFrameless", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPath::getFrameless
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::getFrameless", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getFrameless";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPainterPath* self = 
+                        getSelf("getFrameless", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getFrameless();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getFrameless().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::getFrameless", context, engine);
             return result;
         }
          QScriptValue

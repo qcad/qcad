@@ -140,6 +140,26 @@
             );
         
     
+      void setWipeout(
+                bool on
+            );
+        
+    
+      bool getWipeout(
+                
+            );
+        
+    
+      void setFrameless(
+                bool on
+            );
+        
+    
+      bool getFrameless(
+                
+            );
+        
+    
       void setPen(
                 const QPen & pen
             );

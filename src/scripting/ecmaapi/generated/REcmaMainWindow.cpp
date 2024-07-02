@@ -327,6 +327,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getDocumentInterfaceStatic, "getDocumentInterfaceStatic");
             
+            REcmaHelper::registerFunction(&engine, &ctor, hasProxy, "hasProxy");
+            
 
     // static properties:
     
@@ -7017,6 +7019,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMainWindow::eval", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindow::hasProxy
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindow::hasProxy", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::hasProxy";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RMainWindow::
+       hasProxy();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.hasProxy().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindow::hasProxy", context, engine);
             return result;
         }
          QScriptValue REcmaMainWindow::toString

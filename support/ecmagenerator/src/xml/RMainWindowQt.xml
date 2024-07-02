@@ -138,6 +138,24 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
+    <method name="handleEnterKey" cppName="handleEnterKey"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QObject *" typeName="QObject *" name="obj"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="handleTabKey" cppName="handleTabKey"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QObject *" typeName="QObject *" name="obj"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="backTab"
+        hasDefault="true" default="false" isConst="false" />
+      </variant>
+    </method>
     <method name="postSelectionChangedEvent"
     cppName="postSelectionChangedEvent" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">

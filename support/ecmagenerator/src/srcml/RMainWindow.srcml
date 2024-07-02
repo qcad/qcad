@@ -32,6 +32,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RInterTransactionListener.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTransactionListener.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPropertyEvent.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMainWindowProxy.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMessageHandler.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RProgressHandler.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RS.h"</cpp:file></cpp:include>
@@ -294,6 +295,27 @@
 
     <function_decl><type><name>QVariant</name></type> <name>eval</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>ext</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>script</name></decl></param>)</parameter_list>;</function_decl>
 
+    <function><type><name>static</name> <name>bool</name></type> <name>hasProxy</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>mainWindowProxy</name>!=<name>NULL</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function><type><name>static</name> <name>void</name></type> <name>setMainWindowProxy</name><parameter_list>(<param><decl><type><name>RMainWindowProxy</name>*</type> <name>p</name></decl></param>)</parameter_list> <block>{
+        <if>if <condition>(<expr><name>mainWindowProxy</name>!=<name>NULL</name></expr>)</condition><then> <block>{
+            <expr_stmt><expr>delete <name>mainWindowProxy</name></expr>;</expr_stmt>
+        }</block></then></if>
+        <expr_stmt><expr><name>mainWindowProxy</name> = <name>p</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function><type><name>static</name> <name>RMainWindowProxy</name>*</type> <name>getMainWindowProxy</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>mainWindowProxy</name></expr>;</return>
+    }</block></function>
+
 </public><protected>protected:
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>readSettings</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>writeSettings</name><parameter_list>()</parameter_list>;</function_decl>
@@ -323,6 +345,8 @@
     <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RPreferencesListener</name>*</argument>&gt;</argument_list></name></type> <name>preferencesListeners</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>QMutex</name></type> <name>mutex</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>static</name> <name>RMainWindowProxy</name>*</type> <name>mainWindowProxy</name></decl>;</decl_stmt>
 </protected>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RMainWindow*</argument>)</argument_list></macro>

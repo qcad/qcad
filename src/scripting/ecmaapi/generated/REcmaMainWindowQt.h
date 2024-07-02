@@ -268,6 +268,9 @@
         ;static  QScriptValue
         eval
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasProxy
+        (QScriptContext* context, QScriptEngine* engine) 
         ;
 
     // properties:
@@ -318,6 +321,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         handleUserCommand
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        handleEnterKey
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        handleTabKey
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         postSelectionChangedEvent

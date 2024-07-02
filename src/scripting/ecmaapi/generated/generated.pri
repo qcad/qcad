@@ -290,6 +290,7 @@ HEADERS += \
     $$PWD/REcmaSharedPointerUcs.h \
     $$PWD/REcmaSharedPointerView.h \
     $$PWD/REcmaSharedPointerViewportEntity.h \
+    $$PWD/REcmaSharedPointerWipeoutEntity.h \
     $$PWD/REcmaSharedPointerXLine.h \
     $$PWD/REcmaSharedPointerXLineEntity.h \
     $$PWD/REcmaShellActionAdapter.h \
@@ -345,6 +346,7 @@ HEADERS += \
     $$PWD/REcmaSplineEntity.h \
     $$PWD/REcmaStemmer.h \
     $$PWD/REcmaStorage.h \
+    $$PWD/REcmaTabEventFilter.h \
     $$PWD/REcmaTabletEvent.h \
     $$PWD/REcmaTerminateEvent.h \
     $$PWD/REcmaTextBasedData.h \
@@ -385,6 +387,8 @@ HEADERS += \
     $$PWD/REcmaViewportEntity.h \
     $$PWD/REcmaWheelEvent.h \
     $$PWD/REcmaWidget.h \
+    $$PWD/REcmaWipeoutData.h \
+    $$PWD/REcmaWipeoutEntity.h \
     $$PWD/REcmaXLine.h \
     $$PWD/REcmaXLineData.h \
     $$PWD/REcmaXLineEntity.h
@@ -680,6 +684,7 @@ SOURCES += \
     $$PWD/REcmaSharedPointerUcs.cpp \
     $$PWD/REcmaSharedPointerView.cpp \
     $$PWD/REcmaSharedPointerViewportEntity.cpp \
+    $$PWD/REcmaSharedPointerWipeoutEntity.cpp \
     $$PWD/REcmaSharedPointerXLine.cpp \
     $$PWD/REcmaSharedPointerXLineEntity.cpp \
     $$PWD/REcmaShellActionAdapter.cpp \
@@ -735,7 +740,7 @@ SOURCES += \
     $$PWD/REcmaSplineEntity.cpp \
     $$PWD/REcmaStemmer.cpp \
     $$PWD/REcmaStorage.cpp \
-    $$PWD/REcmaToolOptionEventFilter.cpp \
+    $$PWD/REcmaTabEventFilter.cpp \
     $$PWD/REcmaTabletEvent.cpp \
     $$PWD/REcmaTerminateEvent.cpp \
     $$PWD/REcmaTextBasedData.cpp \
@@ -751,6 +756,7 @@ SOURCES += \
     $$PWD/REcmaToleranceEntity.cpp \
     $$PWD/REcmaToolButton.cpp \
     $$PWD/REcmaToolMatrixItemDelegate.cpp \
+    $$PWD/REcmaToolOptionEventFilter.cpp \
     $$PWD/REcmaTraceData.cpp \
     $$PWD/REcmaTraceEntity.cpp \
     $$PWD/REcmaTransaction.cpp \
@@ -775,6 +781,8 @@ SOURCES += \
     $$PWD/REcmaViewportEntity.cpp \
     $$PWD/REcmaWheelEvent.cpp \
     $$PWD/REcmaWidget.cpp \
+    $$PWD/REcmaWipeoutData.cpp \
+    $$PWD/REcmaWipeoutEntity.cpp \
     $$PWD/REcmaXLine.cpp \
     $$PWD/REcmaXLineData.cpp \
     $$PWD/REcmaXLineEntity.cpp

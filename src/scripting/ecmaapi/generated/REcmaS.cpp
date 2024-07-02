@@ -673,6 +673,16 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("EntityWipeout",
+    QScriptValue(RS::EntityWipeout),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("EntityXRef",
+    QScriptValue(RS::EntityXRef),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("EntityUser",
     QScriptValue(RS::EntityUser),
     QScriptValue::ReadOnly);
@@ -1595,6 +1605,11 @@
 
     ctor.setProperty("FILLMODE",
     QScriptValue(RS::FILLMODE),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("IMAGEFRAME",
+    QScriptValue(RS::IMAGEFRAME),
     QScriptValue::ReadOnly);
 
 
