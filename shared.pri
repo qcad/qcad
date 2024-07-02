@@ -46,7 +46,7 @@ CONFIG(debug, debug|release) {
 
 CONFIG(plugin, plugin) {
     build_pass:CONFIG(debug, debug|release) {
-        TARGET = $$join(TARGET,,,_debug)
+        #TARGET = $$join(TARGET,,,_debug)
 
         # Qt uses '_debug' for unix and 'd' for Windows
         # which is not reliably detectable (e.g.: abcd.dll)
