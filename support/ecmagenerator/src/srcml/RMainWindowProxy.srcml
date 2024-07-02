@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RMainWindowProxy.h"><cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RMAINWINDOWPROXY_H_</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RMAINWINDOWPROXY_H_</name></cpp:define>
+
+<class_decl>class <name>QObject</name>;</class_decl>
+<class_decl>class <name>QString</name>;</class_decl>
+
+<class>class <name>RMainWindowProxy</name>
+<block>{<private type="default">
+</private><public>public:
+    <destructor><specifier>virtual</specifier> <name>~RMainWindowProxy</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>handleEnterKey</name><parameter_list>(<param><decl><type><name>QObject</name>*</type> <name>obj</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>handleTabKey</name><parameter_list>(<param><decl><type><name>QObject</name>*</type> <name>obj</name></decl></param>, <param><decl><type><name>bool</name></type> <name>backTab</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>handleOptionsShortcut</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>shortcut</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+</public>}</block>;</class>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>
