@@ -1459,6 +1459,8 @@
     <file alias="scripts/Misc/Examples/ExMinimal2/ExMinimal2.js">../../scripts/Misc/Examples/ExMinimal2/ExMinimal2.js</file>
     <file alias="scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui">../../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui</file>
     <file alias="scripts/Misc/Examples/Examples.js">../../scripts/Misc/Examples/Examples.js</file>
+    <file alias="scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExport.js">../../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExport.js</file>
+    <file alias="scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js">../../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js</file>
     <file alias="scripts/Misc/Examples/IOExamples/ExDumpPolyline/ExDumpPolyline.js">../../scripts/Misc/Examples/IOExamples/ExDumpPolyline/ExDumpPolyline.js</file>
     <file alias="scripts/Misc/Examples/IOExamples/ExPostNewAction/ExPostNewAction.js">../../scripts/Misc/Examples/IOExamples/ExPostNewAction/ExPostNewAction.js</file>
     <file alias="scripts/Misc/Examples/IOExamples/ExPostNewAction/ExPostNewActionInit.js">../../scripts/Misc/Examples/IOExamples/ExPostNewAction/ExPostNewActionInit.js</file>
