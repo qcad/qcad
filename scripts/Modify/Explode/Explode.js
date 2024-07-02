@@ -392,6 +392,10 @@ Explode.explodeEntity = function(entity, options) {
         }
     }
 
+    else if (isWipeoutEntity(entity)) {
+        ret.push(entity.getData().getBoundary());
+    }
+
     // explode spline into polyline with arc or line segments:
     else if (isSplineEntity(entity)) {
         var spline = entity.getData().castToShape();
