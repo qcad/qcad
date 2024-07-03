@@ -10,10 +10,6 @@ xmlns:rs="http://www.ribbonsoft.com">
     <constructor>
       <variant />
       <variant>
-        <arg type="RDocument *" typeName="RDocument *"
-        name="document" isConst="false" />
-      </variant>
-      <variant>
         <arg type="RPolyline &amp;" typeName="RPolyline"
         name="polyline" isConst="true" />
       </variant>

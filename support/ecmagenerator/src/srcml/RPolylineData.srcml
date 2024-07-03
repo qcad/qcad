@@ -50,7 +50,12 @@
 
 </protected><public>public:
     <constructor_decl><name>RPolylineData</name><parameter_list>()</parameter_list>;</constructor_decl>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
     <constructor_decl><name>RPolylineData</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>)</parameter_list>;</constructor_decl>
+
     <constructor_decl><name>RPolylineData</name><parameter_list>(<param><decl><type><name>const</name> <name>RPolyline</name>&amp;</type> <name>polyline</name></decl></param>)</parameter_list>;</constructor_decl>
 
     <function><type><name>virtual</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
