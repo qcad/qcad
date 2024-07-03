@@ -49,7 +49,12 @@ protected:
 
 public:
     RPolylineData();
+
+    /**
+     * \nonscriptable
+     */
     RPolylineData(RDocument* document);
+
     RPolylineData(const RPolyline& polyline);
 
     virtual RS::EntityType getType() const {
