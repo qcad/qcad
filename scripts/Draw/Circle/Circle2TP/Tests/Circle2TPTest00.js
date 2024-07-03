@@ -3,7 +3,7 @@
 // Timestamp   : 2015-04-21 16:57:02
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function Circle2TPTest00() {
     TdbTest.call(this, 'scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest00.js');

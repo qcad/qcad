@@ -3,7 +3,7 @@
 // Timestamp   : 2015-04-23 15:30:44
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function CutWithReferenceTest00() {
     TdbTest.call(this, 'scripts/Edit/CutWithReference/Tests/CutWithReferenceTest00.js');

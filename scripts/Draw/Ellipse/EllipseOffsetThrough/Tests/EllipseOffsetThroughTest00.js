@@ -3,7 +3,7 @@
 // Timestamp   : 2015-04-21 18:11:03
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function EllipseOffsetThroughTest00() {
     TdbTest.call(this, 'scripts/Draw/Ellipse/EllipseOffsetThrough/Tests/EllipseOffsetThroughTest00.js');

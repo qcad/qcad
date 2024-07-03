@@ -3,7 +3,7 @@
 // Timestamp   : 2016-12-19 10:19:26
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function SnapMiddleManualTest00() {
     TdbTest.call(this, 'scripts/Snap/SnapMiddleManual/Tests/SnapMiddleManualTest00.js');

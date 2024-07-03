@@ -3,7 +3,7 @@
 // Timestamp   : 2016-08-22 10:06:27
 // Description : explode with fixed tolerance (1)
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function ExplodeTest03() {
     TdbTest.call(this, 'scripts/Modify/Explode/Tests/ExplodeTest03.js');

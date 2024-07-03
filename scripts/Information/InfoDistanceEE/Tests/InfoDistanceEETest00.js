@@ -3,7 +3,7 @@
 // Timestamp   : 2016-03-16 09:34:30
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function InfoDistanceEETest00() {
     TdbTest.call(this, 'scripts/Information/InfoDistanceEE/Tests/InfoDistanceEETest00.js');

@@ -3,7 +3,7 @@
 // Timestamp   : 2015-03-05 14:06:40
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function LineRelativeAngleTest00() {
     TdbTest.call(this, 'scripts/Draw/Line/LineRelativeAngle/Tests/LineRelativeAngleTest00.js');

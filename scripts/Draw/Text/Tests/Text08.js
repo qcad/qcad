@@ -3,7 +3,7 @@
 // Timestamp   : 2015-10-05 16:34:35
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function Text08() {
     TdbTest.call(this, 'scripts/Draw/Text/Tests/Text08.js');

@@ -3,7 +3,7 @@
 // Timestamp   : 2016-08-22 10:06:27
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function ExplodeTest02() {
     TdbTest.call(this, 'scripts/Modify/Explode/Tests/ExplodeTest02.js');

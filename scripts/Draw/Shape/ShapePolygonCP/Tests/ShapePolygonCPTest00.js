@@ -21,7 +21,7 @@
 // Timestamp   : 2011-02-28 10:26:03
 // Description : Regular polygons with 3 up to 8 lines, defined by center
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function ShapePolygonCPTest00() {
     TdbTest.call(this, 'scripts/Draw/Shape/ShapePolygonCP/Tests/ShapePolygonCPTest00.js');

@@ -3,7 +3,7 @@
 // Timestamp   : 2015-11-24 14:42:44
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function HatchFromSelectionTest07() {
     TdbTest.call(this, 'scripts/Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest07.js');

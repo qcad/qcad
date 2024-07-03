@@ -3,7 +3,7 @@
 // Timestamp   : 2022-04-29 22:31:39
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function CopyWithReferenceTest01() {
     TdbTest.call(this, 'scripts/Edit/CopyWithReference/Tests/CopyWithReferenceTest01.js');

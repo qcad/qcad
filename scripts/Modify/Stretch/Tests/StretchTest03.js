@@ -3,7 +3,7 @@
 // Timestamp   : 2019-02-19 10:39:49
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function StretchTest03() {
     TdbTest.call(this, 'scripts/Modify/Stretch/Tests/StretchTest03.js');

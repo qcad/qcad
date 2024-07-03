@@ -3,7 +3,7 @@
 // Timestamp   : 2016-02-03 17:52:12
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function OffsetTest01() {
     TdbTest.call(this, 'scripts/Modify/Offset/Tests/OffsetTest01.js');

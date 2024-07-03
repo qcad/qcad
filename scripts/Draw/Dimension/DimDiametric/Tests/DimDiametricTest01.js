@@ -3,7 +3,7 @@
 // Timestamp   : 2021-11-15 14:32:28
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function DimDiametricTest01() {
     TdbTest.call(this, 'scripts/Draw/Dimension/DimDiametric/Tests/DimDiametricTest01.js');

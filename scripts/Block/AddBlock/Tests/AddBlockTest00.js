@@ -3,7 +3,7 @@
 // Timestamp   : 2015-04-20 16:38:57
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function AddBlockTest00() {
     TdbTest.call(this, 'scripts/Block/AddBlock/Tests/AddBlockTest00.js');

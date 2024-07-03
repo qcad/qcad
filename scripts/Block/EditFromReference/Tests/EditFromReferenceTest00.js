@@ -3,7 +3,7 @@
 // Timestamp   : 2015-04-21 13:47:55
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function EditFromReferenceTest00() {
     TdbTest.call(this, 'scripts/Block/EditFromReference/Tests/EditFromReferenceTest00.js');

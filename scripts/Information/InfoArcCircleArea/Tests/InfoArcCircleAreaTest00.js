@@ -3,7 +3,7 @@
 // Timestamp   : 2021-10-29 11:18:15
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function InfoArcCircleAreaTest00() {
     TdbTest.call(this, 'scripts/Information/InfoArcCircleArea/Tests/InfoArcCircleAreaTest00.js');

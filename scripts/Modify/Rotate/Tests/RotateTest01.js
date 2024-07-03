@@ -3,7 +3,7 @@
 // Timestamp   : 2016-12-22 10:54:48
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function RotateTest01() {
     TdbTest.call(this, 'scripts/Modify/Rotate/Tests/RotateTest01.js');

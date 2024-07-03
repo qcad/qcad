@@ -3,7 +3,7 @@
 // Timestamp   : 2015-04-23 15:01:41
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function SplineControlPointsTest00() {
     TdbTest.call(this, 'scripts/Draw/Spline/SplineControlPoints/Tests/SplineControlPointsTest00.js');

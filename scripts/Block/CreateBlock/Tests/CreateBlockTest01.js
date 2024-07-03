@@ -3,7 +3,7 @@
 // Timestamp   : 2015-10-13 14:49:59
 // Description : Overwrite block
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function CreateBlockTest01() {
     TdbTest.call(this, 'scripts/Block/CreateBlock/Tests/CreateBlockTest01.js');

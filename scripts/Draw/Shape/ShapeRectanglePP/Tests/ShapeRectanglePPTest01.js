@@ -3,7 +3,7 @@
 // Timestamp   : 2017-03-13 15:19:49
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function ShapeRectanglePPTest01() {
     TdbTest.call(this, 'scripts/Draw/Shape/ShapeRectanglePP/Tests/ShapeRectanglePPTest01.js');

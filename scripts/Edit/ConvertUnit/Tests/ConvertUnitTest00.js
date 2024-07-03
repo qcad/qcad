@@ -3,7 +3,7 @@
 // Timestamp   : 2021-12-06 10:14:19
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function ConvertUnitTest00() {
     TdbTest.call(this, 'scripts/Edit/ConvertUnit/Tests/ConvertUnitTest00.js');

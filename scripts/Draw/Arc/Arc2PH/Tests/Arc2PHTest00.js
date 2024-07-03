@@ -3,7 +3,7 @@
 // Timestamp   : 2015-09-25 12:38:50
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function Arc2PHTest00() {
     TdbTest.call(this, 'scripts/Draw/Arc/Arc2PH/Tests/Arc2PHTest00.js');

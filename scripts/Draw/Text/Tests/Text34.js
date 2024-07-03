@@ -3,7 +3,7 @@
 // Timestamp   : 2021-02-03
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function Text34() {
     TdbTest.call(this, 'scripts/Draw/Text/Tests/Text34.js');

@@ -3,7 +3,7 @@
 // Timestamp   : 2022-06-08 15:31:09
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function ReverseTest01() {
     TdbTest.call(this, 'scripts/Modify/Reverse/Tests/ReverseTest01.js');

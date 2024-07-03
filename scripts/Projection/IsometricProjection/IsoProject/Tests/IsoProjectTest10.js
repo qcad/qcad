@@ -3,7 +3,7 @@
 // Timestamp   : 2015-04-16 18:06:17
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function IsoProjectTest10() {
     TdbTest.call(this, 'scripts/Projection/IsometricProjection/IsoProject/Tests/IsoProjectTest10.js');

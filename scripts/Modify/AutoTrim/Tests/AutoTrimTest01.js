@@ -21,7 +21,7 @@
 // Timestamp   : 2011-07-27 16:40:49
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function AutoTrimTest01() {
     TdbTest.call(this, 'scripts/Modify/AutoTrim/Tests/AutoTrimTest01.js');

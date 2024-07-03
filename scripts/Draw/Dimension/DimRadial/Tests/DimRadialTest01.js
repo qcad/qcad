@@ -3,7 +3,7 @@
 // Timestamp   : 2021-11-15 14:34:19
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function DimRadialTest01() {
     TdbTest.call(this, 'scripts/Draw/Dimension/DimRadial/Tests/DimRadialTest01.js');

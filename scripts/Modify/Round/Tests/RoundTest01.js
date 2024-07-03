@@ -3,7 +3,7 @@
 // Timestamp   : 2015-11-04 16:14:41
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function RoundTest01() {
     TdbTest.call(this, 'scripts/Modify/Round/Tests/RoundTest01.js');
