@@ -240,3 +240,9 @@ contains(QMAKE_COMPILER_DEFINES, _MSC_VER=1929) {
 else {
     INCLUDEPATH += $$PWD/src/3rdparty/legacy/spatialindexnavel
 }
+
+R_DEV = $$system(echo $$QCAD_DEVELOPMENT)
+
+contains(R_DEV, "1") {
+    CONFIG += r_dev
+}

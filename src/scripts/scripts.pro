@@ -11,19 +11,12 @@ LIBS        += -l$${RLIBNAME}core
 
 CONFIG      += resources_big
 
-CONFIG(debug, debug|release) {
+r_dev {
     # include development scripts, tests:
     build_pass:message("Using development qrc")
     RESOURCES   = scripts.qrc
 }
 else {
-    # release:
-    rtest {
-        build_pass:message("Using development qrc")
-        RESOURCES   = scripts.qrc
-    }
-    else {
-        build_pass:message("Using release qrc")
-        RESOURCES   = scripts_release.qrc
-    }
+    build_pass:message("Using release qrc")
+    RESOURCES   = scripts_release.qrc
 }
