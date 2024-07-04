@@ -1070,7 +1070,7 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="OK">
+      <widget class="QPushButton" name="Ok">
        <property name="text">
         <string>OK</string>
        </property>
@@ -1096,7 +1096,7 @@ p, li { white-space: pre-wrap; }
  <resources/>
  <connections>
   <connection>
-   <sender>OK</sender>
+   <sender>Ok</sender>
    <signal>clicked()</signal>
    <receiver>TextDialog</receiver>
    <slot>accept()</slot>
