@@ -75,7 +75,7 @@ PropertyWatcher.prototype.propertyChanged = function(value) {
             if (this.sender.itemData(value)===PropertyEditor.varies) {
                 return;
             }
-            this.propertyEditor.propertyChanged(this.propertyType,
+            this.propertyEditor.propertyChanged(this.propertyType, 
                                                 this.sender.itemData(value));
             return;
         }
@@ -1337,7 +1337,8 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
             if (isNull(choicesData)/* && propertyTypeId.getId()!==REntity.PropertyLayer.getId()*/) {
                 var pw = new PropertyWatcher(this, control, propertyTypeId);
                 if (RSettings.getQtVersion() >= 0x060000) {
-                    control.textActivated.connect(pw, pw.propertyChanged);
+                    //control.textActivated.connect(pw, pw.propertyChanged);
+                    control.currentTextChanged.connect(pw, pw.propertyChanged);
                 }
                 else {
                     control['activated(QString)'].connect(pw, pw.propertyChanged);
@@ -1346,7 +1347,8 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
             else {
                 var pw = new PropertyWatcher(this, control, propertyTypeId);
                 if (RSettings.getQtVersion() >= 0x060000) {
-                    control.activated.connect(pw, pw.propertyChanged);
+                    //control.activated.connect(pw, pw.propertyChanged);
+                    control.currentIndexChanged.connect(pw, pw.propertyChanged);
                 }
                 else {
                     control['activated(int)'].connect(pw, pw.propertyChanged);
@@ -1356,14 +1358,20 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
 
     }
 
+    var signalsBlocked;
+
     if (propertyTypeId.getId()===REntity.PropertyLayer.getId()) {
         WidgetFactory.initLayerCombo(control, EAction.getDocument());
     }
     else if (propertyTypeId.getId()===RTextEntity.PropertyHAlign.getId()) {
+        signalsBlocked = control.blockSignals(true);
         WidgetFactory.initHAlignCombo(control);
+        control.blockSignals(signalsBlocked);
     }
     else if (propertyTypeId.getId()===RTextEntity.PropertyVAlign.getId()) {
+        signalsBlocked = control.blockSignals(true);
         WidgetFactory.initVAlignCombo(control);
+        control.blockSignals(signalsBlocked);
     }
     else if (propertyTypeId.getId()===RDimensionEntity.PropertyDimlunit.getId()) {
         WidgetFactory.initDimlunitCombo(control);
