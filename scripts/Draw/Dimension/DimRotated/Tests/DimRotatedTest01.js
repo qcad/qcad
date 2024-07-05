@@ -3,7 +3,7 @@
 // Timestamp   : 2021-11-15 14:35:07
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function DimRotatedTest01() {
     TdbTest.call(this, 'scripts/Draw/Dimension/DimRotated/Tests/DimRotatedTest01.js');

@@ -3,7 +3,7 @@
 // Timestamp   : 2017-10-30 10:07:58
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function LinesSnapIntersectionBlock() {
     TdbTest.call(this, 'scripts/Draw/Line/Line2P/Tests/LinesSnapIntersectionBlock.js');

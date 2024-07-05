@@ -3,7 +3,7 @@
 // Timestamp   : 2015-04-27 10:50:58
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function ShapePolygonAFCPTest00() {
     TdbTest.call(this, 'scripts/Draw/Shape/ShapePolygonAFCP/Tests/ShapePolygonAFCPTest00.js');

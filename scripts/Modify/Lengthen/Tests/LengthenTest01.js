@@ -3,7 +3,7 @@
 // Timestamp   : 2015-12-17 09:59:50
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function LengthenTest01() {
     TdbTest.call(this, 'scripts/Modify/Lengthen/Tests/LengthenTest01.js');

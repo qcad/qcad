@@ -99,6 +99,12 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setClipping</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>getClipping</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setWipeout</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>getWipeout</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setFrameless</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>getFrameless</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setPen</name><parameter_list>(<param><decl><type><name>const</name> <name>QPen</name>&amp;</type> <name>pen</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>QPen</name></type> <name>getPen</name><parameter_list>(<param><decl><type><name>const</name> <name>RPainterPath</name>&amp;</type> <name>path</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>QPen</name></type> <name>getPen</name><parameter_list>()</parameter_list>;</function_decl>
@@ -407,6 +413,8 @@
     <decl_stmt><decl><type><name>double</name></type> <name>pixelSizeHint</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>pixelUnit</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>clipping</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>wipeout</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>frameless</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>pixelWidth</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>Qt</name>::<name>PenCapStyle</name></name></type> <name>penCapStyle</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>enablePatterns</name></decl>;</decl_stmt>

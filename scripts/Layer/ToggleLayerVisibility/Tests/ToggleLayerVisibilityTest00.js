@@ -1,4 +1,4 @@
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function ToggleLayerVisibilityTest00() {
     TdbTest.call(this, 'scripts/Layer/ToggleLayerVisibility/Tests/ToggleLayerVisibilityTest00.js');

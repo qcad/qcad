@@ -3,7 +3,7 @@
 // Timestamp   : 2015-04-23 16:30:33
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function FlipHorizontalTest00() {
     TdbTest.call(this, 'scripts/Modify/FlipHorizontal/Tests/FlipHorizontalTest00.js');

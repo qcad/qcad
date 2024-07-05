@@ -3,7 +3,7 @@
 // Timestamp   : 2021-03-15 10:43:41
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function BreakOutManualTest06() {
     TdbTest.call(this, 'scripts/Modify/BreakOutManual/Tests/BreakOutManualTest06.js');

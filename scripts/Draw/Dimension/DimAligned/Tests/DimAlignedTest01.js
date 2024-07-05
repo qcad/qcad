@@ -3,7 +3,7 @@
 // Timestamp   : 2021-11-02 11:14:00
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function DimAlignedTest01() {
     TdbTest.call(this, 'scripts/Draw/Dimension/DimAligned/Tests/DimAlignedTest01.js');

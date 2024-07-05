@@ -369,6 +369,7 @@
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>maxReferencePointEntitiesDisplay</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>propertyEditorShowOnRequest</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>simpleTextAlignLeft</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>double</name></type> <name>devicePixelRatio</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>polarCoordinateSeparator</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>cartesianCoordinateSeparator</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>relativeCoordinatePrefix</name></decl>;</decl_stmt>

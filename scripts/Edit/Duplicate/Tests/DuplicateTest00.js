@@ -3,7 +3,7 @@
 // Timestamp   : 2015-05-13 09:51:54
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function DuplicateTest00() {
     TdbTest.call(this, 'scripts/Edit/Duplicate/Tests/DuplicateTest00.js');

@@ -110,9 +110,6 @@
         setVertices
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        setVertexAt
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         moveVertexAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -402,6 +399,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getVertexAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setVertexAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         appendVertex

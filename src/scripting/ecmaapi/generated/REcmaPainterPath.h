@@ -231,6 +231,18 @@
         getScreenBasedLinetype
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setWipeout
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getWipeout
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setFrameless
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getFrameless
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setPixelWidth
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

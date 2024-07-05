@@ -3,7 +3,7 @@
 // Timestamp   : 2016-02-09 21:13:05
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function SnapIntersectionTest01() {
     TdbTest.call(this, 'scripts/Snap/SnapIntersection/Tests/SnapIntersectionTest01.js');

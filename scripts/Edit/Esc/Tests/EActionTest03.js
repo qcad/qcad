@@ -3,7 +3,7 @@
 // Timestamp   : 2018-08-31 11:29:02
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function EActionTest03() {
     TdbTest.call(this, 'scripts/Edit/Esc/Tests/EActionTest03.js');

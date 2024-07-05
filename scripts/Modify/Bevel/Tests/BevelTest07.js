@@ -3,7 +3,7 @@
 // Timestamp   : 2016-02-25 10:05:48
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function BevelTest07() {
     TdbTest.call(this, 'scripts/Modify/Bevel/Tests/BevelTest07.js');

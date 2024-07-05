@@ -3,7 +3,7 @@
 // Timestamp   : 2015-04-23 15:29:24
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function CutTest00() {
     TdbTest.call(this, 'scripts/Edit/Cut/Tests/CutTest00.js');

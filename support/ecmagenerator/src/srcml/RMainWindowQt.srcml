@@ -87,6 +87,19 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>handleUserWarning</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>, <param><decl><type><name>bool</name></type> <name>messageBox</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>escape</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>handleUserCommand</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>, <param><decl><type><name>bool</name></type> <name>escape</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
+    <function><type><name>void</name></type> <name>handleEnterKey</name><parameter_list>(<param><decl><type><name>QObject</name>*</type> <name>obj</name></decl></param>)</parameter_list> <block>{
+        <if>if <condition>(<expr><name>mainWindowProxy</name></expr>)</condition><then> <block>{
+            <expr_stmt><expr><name>mainWindowProxy</name>-&gt;<call><name>handleEnterKey</name><argument_list>(<argument><expr><name>obj</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></then></if>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>handleTabKey</name><parameter_list>(<param><decl><type><name>QObject</name>*</type> <name>obj</name></decl></param>, <param><decl><type><name>bool</name></type> <name>backTab</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <block>{
+        <if>if <condition>(<expr><name>mainWindowProxy</name></expr>)</condition><then> <block>{
+            <return>return <expr><name>mainWindowProxy</name>-&gt;<call><name>handleTabKey</name><argument_list>(<argument><expr><name>obj</name></expr></argument>, <argument><expr><name>backTab</name></expr></argument>)</argument_list></call></expr>;</return>
+        }</block></then></if>
+        <return>return <expr><name>false</name></expr>;</return>
+    }</block></function>
+
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>postSelectionChangedEvent</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>postTransactionEvent</name><parameter_list>(
         <param><decl><type><name>RTransaction</name>&amp;</type> <name>t</name></decl></param>,

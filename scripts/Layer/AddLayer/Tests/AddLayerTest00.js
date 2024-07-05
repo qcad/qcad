@@ -3,7 +3,7 @@
 // Timestamp   : 2015-04-22 09:55:05
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function AddLayerTest00() {
     TdbTest.call(this, 'scripts/Layer/AddLayer/Tests/AddLayerTest00.js');

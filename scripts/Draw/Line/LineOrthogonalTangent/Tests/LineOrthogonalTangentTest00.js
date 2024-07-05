@@ -3,7 +3,7 @@
 // Timestamp   : 2015-04-21 18:15:19
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function LineOrthogonalTangentTest00() {
     TdbTest.call(this, 'scripts/Draw/Line/LineOrthogonalTangent/Tests/LineOrthogonalTangentTest00.js');

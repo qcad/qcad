@@ -840,6 +840,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="hasProxy" cppName="hasProxy" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="readSettings" cppName="readSettings"
     specifier="protected" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

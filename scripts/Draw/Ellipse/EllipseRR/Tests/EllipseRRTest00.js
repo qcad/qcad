@@ -3,7 +3,7 @@
 // Timestamp   : 2015-04-21 18:13:01
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function EllipseRRTest00() {
     TdbTest.call(this, 'scripts/Draw/Ellipse/EllipseRR/Tests/EllipseRRTest00.js');

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./entity" filename="RWipeoutEntity.h"><comment type="block">/**
+ * Copyright (c) 2011-2024 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RWIPEOUTENTITY_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RWIPEOUTENTITY_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"entity_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPolylineEntity.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RWipeoutData.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>RDocument</name>;</class_decl>
+<class_decl>class <name>RExporter</name>;</class_decl>
+<class_decl>class <name>RArc</name>;</class_decl>
+<class_decl>class <name>RLine</name>;</class_decl>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDEFAULT_MIN1</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_MIN1</name> -1</cpp:define>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
+<comment type="block">/**
+ * Polyline entity.
+ *
+ * \scriptable
+ * \sharedPointerSupport
+ * \ingroup entity
+ */</comment>
+<class>class <macro><name>QCADENTITY_EXPORT</name></macro> <name>RWipeoutEntity</name><super>: <specifier>public</specifier> <name>REntity</name></super> <block>{<private type="default">
+
+</private><public>public:
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyCustom</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyHandle</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyProtected</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyWorkingSet</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyType</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyBlock</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyLayer</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyLinetype</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyLinetypeScale</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyLineweight</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyColor</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyDisplayedColor</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyDrawOrder</name></decl>;</decl_stmt>
+
+<comment type="line">//    static RPropertyTypeId PropertyClosed;</comment>
+<comment type="line">//    static RPropertyTypeId PropertyPolylineGen;</comment>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyVertexNX</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyVertexNY</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyVertexNZ</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyBulgeN</name></decl>;</decl_stmt>
+<comment type="line">//    static RPropertyTypeId PropertyAngleN;</comment>
+<comment type="line">//    static RPropertyTypeId PropertyStartWidthN;</comment>
+<comment type="line">//    static RPropertyTypeId PropertyEndWidthN;</comment>
+<comment type="line">//    static RPropertyTypeId PropertyGlobalWidth;</comment>
+
+<comment type="line">//    static RPropertyTypeId PropertyOrientation;</comment>
+<comment type="line">//    static RPropertyTypeId PropertyLength;</comment>
+<comment type="line">//    static RPropertyTypeId PropertyTotalLength;</comment>
+<comment type="line">//    static RPropertyTypeId PropertyArea;</comment>
+<comment type="line">//    static RPropertyTypeId PropertyTotalArea;</comment>
+
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyBaseAngle</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertySize1</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertySize2</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyFrame</name></decl>;</decl_stmt>
+
+<comment type="line">//    static RPropertyTypeId PropertyElevation;</comment>
+
+<comment type="line">//    static QString TrClockwise;</comment>
+<comment type="line">//    static QString TrCounterclockwise;</comment>
+
+</public><public>public:
+    <constructor_decl><name>RWipeoutEntity</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>const</name> <name>RWipeoutData</name>&amp;</type> <name>data</name></decl></param>)</parameter_list>;</constructor_decl>
+    <constructor_decl><name>RWipeoutEntity</name><parameter_list>(<param><decl><type><name>const</name> <name>RWipeoutEntity</name>&amp;</type> <name>other</name></decl></param>)</parameter_list>;</constructor_decl>
+    <destructor_decl><specifier>virtual</specifier> <name>~RWipeoutEntity</name><parameter_list>()</parameter_list>;</destructor_decl>
+
+    <function_decl><type><name>static</name> <name>void</name></type> <name>init</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function><type><name>static</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getRtti</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name><name>RS</name>::<name>EntityWipeout</name></name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>static</name> <name>QSet<argument_list>&lt;<argument><name>RPropertyTypeId</name></argument>&gt;</argument_list></name></type> <name>getStaticPropertyTypeIds</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><call><name><name>RPropertyTypeId</name>::<name>getPropertyTypeIds</name></name><argument_list>(<argument><expr><call><name><name>RWipeoutEntity</name>::<name>getRtti</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>RWipeoutEntity</name>*</type> <name>clone</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr>new <call><name>RWipeoutEntity</name><argument_list>(<argument><expr>*<name>this</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>RWipeoutData</name>&amp;</type> <name>getData</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>data</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>const</name> <name>RWipeoutData</name>&amp;</type> <name>getData</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>setProperty</name><parameter_list>(<param><decl><type><name>RPropertyTypeId</name></type> <name>propertyTypeId</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>,
+                             <param><decl><type><name>RTransaction</name>*</type> <name>transaction</name>=<init><expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QPair<argument_list>&lt;<argument><name>QVariant</name></argument>, <argument><name>RPropertyAttributes</name></argument>&gt;</argument_list></name></type> <name>getProperty</name><parameter_list>(
+        <param><decl><type><name>RPropertyTypeId</name>&amp;</type> <name>propertyTypeId</name></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>humanReadable</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>noAttributes</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>showOnRequest</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportEntity</name><parameter_list>(<param><decl><type><name>RExporter</name>&amp;</type> <name>e</name></decl></param>, <param><decl><type><name>bool</name></type> <name>preview</name>=<init><expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>forceSelected</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setShape</name><parameter_list>(<param><decl><type><name>const</name> <name>RPolyline</name>&amp;</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function><type><name>bool</name></type> <name>getShowFrame</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>getShowFrame</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setShowFrame</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>data</name>.<call><name>setShowFrame</name><argument_list>(<argument><expr><name>on</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>int</name></type> <name>countVertices</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>countVertices</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>appendVertex</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>vertex</name></decl></param>, <param><decl><type><name>double</name></type> <name>bulge</name> =<init> <expr>0.0</expr></init></decl></param>, <param><decl><type><name>double</name></type> <name>w1</name> =<init> <expr>0.0</expr></init></decl></param>, <param><decl><type><name>double</name></type> <name>w2</name> =<init> <expr>0.0</expr></init></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>data</name>.<call><name>appendVertex</name><argument_list>(<argument><expr><name>vertex</name></expr></argument>, <argument><expr><name>bulge</name></expr></argument>, <argument><expr><name>w1</name></expr></argument>, <argument><expr><name>w2</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>RVector</name></type> <name>getEndPoint</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>getEndPoint</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>RVector</name></type> <name>getStartPoint</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>getStartPoint</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>RVector</name></type> <name>getVertexAt</name><parameter_list>(<param><decl><type><name>int</name></type> <name>i</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>getVertexAt</name><argument_list>(<argument><expr><name>i</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setVertexAt</name><parameter_list>(<param><decl><type><name>int</name></type> <name>i</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>data</name>.<call><name>setVertexAt</name><argument_list>(<argument><expr><name>i</name></expr></argument>, <argument><expr><name>v</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getBulgeAt</name><parameter_list>(<param><decl><type><name>int</name></type> <name>i</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>getBulgeAt</name><argument_list>(<argument><expr><name>i</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setBulgeAt</name><parameter_list>(<param><decl><type><name>int</name></type> <name>i</name></decl></param>, <param><decl><type><name>double</name></type> <name>b</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>data</name>.<call><name>setBulgeAt</name><argument_list>(<argument><expr><name>i</name></expr></argument>, <argument><expr><name>b</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>removeLastVertex</name><parameter_list>()</parameter_list> <block>{
+        <expr_stmt><expr><name>data</name>.<call><name>removeLastVertex</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+</public><protected>protected:
+    <decl_stmt><decl><type><name>RWipeoutData</name></type> <name>data</name></decl>;</decl_stmt>
+</protected>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RWipeoutEntity*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QSharedPointer&lt;RWipeoutEntity&gt;</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QSharedPointer&lt;RWipeoutEntity&gt;*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

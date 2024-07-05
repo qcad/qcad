@@ -3,7 +3,7 @@
 // Timestamp   : 2016-12-19 17:49:48
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function PasteTest02() {
     TdbTest.call(this, 'scripts/Edit/Paste/Tests/PasteTest02.js');

@@ -3,7 +3,7 @@
 // Timestamp   : 2021-11-15 14:31:17
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function DimAngularTest02() {
     TdbTest.call(this, 'scripts/Draw/Dimension/DimAngular/Tests/DimAngularTest02.js');

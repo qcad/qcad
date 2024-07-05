@@ -3,7 +3,7 @@
 // Timestamp   : 2015-09-02 11:50:28
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function BreakOutTest03() {
     TdbTest.call(this, 'scripts/Modify/BreakOut/Tests/BreakOutTest03.js');

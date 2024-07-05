@@ -171,6 +171,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="int" typeName="int" name="i" isConst="false" />
       </variant>
     </method>
+    <method name="setVertexAt" cppName="setVertexAt"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="i" isConst="false" />
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="removeLastVertex" cppName="removeLastVertex"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

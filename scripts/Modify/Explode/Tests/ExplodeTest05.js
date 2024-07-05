@@ -21,7 +21,7 @@
 // Timestamp   : 2011-07-28 15:27:20
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function ExplodeTest05() {
     TdbTest.call(this, 'scripts/Modify/Explode/Tests/ExplodeTest05.js');

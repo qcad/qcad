@@ -65,7 +65,9 @@
         <expr><name>SimplePointDisplay</name> = 0x1000</expr>,    <comment type="line">//!&lt; simple point mode (for points in hatch patterns)</comment>
         <expr><name>PolylineGen</name> = 0x2000</expr>,           <comment type="line">//!&lt; use polyline pattern along whole path (polyline)</comment>
         <expr><name>NoPattern</name> = 0x4000</expr>,             <comment type="line">//!&lt; no pattern (polyline with widths)</comment>
-        <expr><name>ScreenBasedLinetype</name> = 0x8000</expr>    <comment type="line">//!&lt; force screen-based linetypes for this path</comment>
+        <expr><name>ScreenBasedLinetype</name> = 0x8000</expr>,   <comment type="line">//!&lt; force screen-based linetypes for this path</comment>
+        <expr><name>Wipeout</name> = 0x10000</expr>,              <comment type="line">//!&lt; path is a wipeout: render in background color</comment>
+        <expr><name>Frameless</name> = 0x20000</expr>             <comment type="line">//!&lt; path is frameless wipeout: show pseudo frame when selected, highlightes or preview</comment>
     }</block>;</enum>
     <macro><name>Q_DECLARE_FLAGS</name><argument_list>(<argument>Modes</argument>, <argument>Mode</argument>)</argument_list></macro>
 
@@ -232,6 +234,12 @@
 
     <function_decl><type><name>void</name></type> <name>setScreenBasedLinetype</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>getScreenBasedLinetype</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setWipeout</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>getWipeout</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setFrameless</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>getFrameless</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>setPixelWidth</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>getPixelWidth</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>

@@ -314,6 +314,7 @@
 #include "REcmaSharedPointerUcs.h"
 #include "REcmaSharedPointerView.h"
 #include "REcmaSharedPointerViewportEntity.h"
+#include "REcmaSharedPointerWipeoutEntity.h"
 #include "REcmaSharedPointerXLine.h"
 #include "REcmaSharedPointerXLineEntity.h"
 #include "REcmaSnap.h"
@@ -380,6 +381,8 @@
 #include "REcmaViewListenerAdapter.h"
 #include "REcmaViewportData.h"
 #include "REcmaViewportEntity.h"
+#include "REcmaWipeoutData.h"
+#include "REcmaWipeoutEntity.h"
 #include "REcmaWheelEvent.h"
 #include "REcmaWidget.h"
 #include "REcmaXLine.h"
@@ -838,6 +841,10 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaViewportData::initEcma(*engine);
     REcmaViewportEntity::initEcma(*engine);
     REcmaSharedPointerViewportEntity::initEcma(*engine);
+
+    REcmaWipeoutData::initEcma(*engine);
+    REcmaWipeoutEntity::initEcma(*engine);
+    REcmaSharedPointerWipeoutEntity::initEcma(*engine);
 
     REcmaSplineData::initEcma(*engine);
     REcmaSplineEntity::initEcma(*engine);

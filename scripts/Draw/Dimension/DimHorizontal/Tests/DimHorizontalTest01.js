@@ -3,7 +3,7 @@
 // Timestamp   : 2021-11-15 14:33:34
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function DimHorizontalTest01() {
     TdbTest.call(this, 'scripts/Draw/Dimension/DimHorizontal/Tests/DimHorizontalTest01.js');

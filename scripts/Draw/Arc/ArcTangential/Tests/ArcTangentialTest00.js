@@ -3,7 +3,7 @@
 // Timestamp   : 2015-03-05 11:11:58
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function ArcTangentialTest00() {
     TdbTest.call(this, 'scripts/Draw/Arc/ArcTangential/Tests/ArcTangentialTest00.js');

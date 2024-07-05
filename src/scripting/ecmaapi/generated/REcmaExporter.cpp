@@ -97,6 +97,14 @@
             
             REcmaHelper::registerFunction(&engine, proto, getClipping, "getClipping");
             
+            REcmaHelper::registerFunction(&engine, proto, setWipeout, "setWipeout");
+            
+            REcmaHelper::registerFunction(&engine, proto, getWipeout, "getWipeout");
+            
+            REcmaHelper::registerFunction(&engine, proto, setFrameless, "setFrameless");
+            
+            REcmaHelper::registerFunction(&engine, proto, getFrameless, "getFrameless");
+            
             REcmaHelper::registerFunction(&engine, proto, setPen, "setPen");
             
             REcmaHelper::registerFunction(&engine, proto, getPen, "getPen");
@@ -789,6 +797,214 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaExporter::getClipping", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::setWipeout
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::setWipeout", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::setWipeout";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("setWipeout", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setWipeout(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.setWipeout().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::setWipeout", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::getWipeout
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::getWipeout", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::getWipeout";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("getWipeout", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getWipeout();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.getWipeout().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::getWipeout", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::setFrameless
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::setFrameless", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::setFrameless";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("setFrameless", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setFrameless(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.setFrameless().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::setFrameless", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::getFrameless
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::getFrameless", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::getFrameless";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("getFrameless", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getFrameless();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.getFrameless().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::getFrameless", context, engine);
             return result;
         }
          QScriptValue

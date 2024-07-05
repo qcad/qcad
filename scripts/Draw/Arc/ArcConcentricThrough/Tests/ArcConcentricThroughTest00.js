@@ -3,7 +3,7 @@
 // Timestamp   : 2015-03-05 10:52:48
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function ArcConcentricThroughTest00() {
     TdbTest.call(this, 'scripts/Draw/Arc/ArcConcentricThrough/Tests/ArcConcentricThroughTest00.js');

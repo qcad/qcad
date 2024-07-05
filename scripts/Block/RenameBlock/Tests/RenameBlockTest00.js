@@ -3,7 +3,7 @@
 // Timestamp   : 2015-04-21 13:53:12
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function RenameBlockTest00() {
     TdbTest.call(this, 'scripts/Block/RenameBlock/Tests/RenameBlockTest00.js');

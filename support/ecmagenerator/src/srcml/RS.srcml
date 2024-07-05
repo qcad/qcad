@@ -282,6 +282,8 @@
         <expr><name>EntitySpline</name></expr>,       <comment type="block">/**&lt; Spline */</comment>
         <expr><name>EntityViewport</name></expr>,     <comment type="block">/**&lt; Viewport */</comment>
         <expr><name>EntityTolerance</name></expr>,    <comment type="block">/**&lt; Tolerance */</comment>
+        <expr><name>EntityWipeout</name></expr>,      <comment type="block">/**&lt; Wipeout */</comment>
+        <expr><name>EntityXRef</name></expr>,         <comment type="block">/**&lt; XRef */</comment>
 
         <expr><name>EntityUser</name></expr>          <comment type="block">/**&lt; User defined entity. Use this to identify
                                  entities that are added in a separate library
@@ -600,6 +602,7 @@
         <expr><name>FACETRES</name></expr>,
         <expr><name>FILLETRAD</name></expr>,
         <expr><name>FILLMODE</name></expr>,
+        <expr><name>IMAGEFRAME</name></expr>,
         <expr><name>INSBASE</name></expr>,
         <expr><name>INSUNITS</name></expr>,
         <expr><name>ISOLINES</name></expr>,

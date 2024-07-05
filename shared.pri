@@ -46,7 +46,7 @@ CONFIG(debug, debug|release) {
 
 CONFIG(plugin, plugin) {
     build_pass:CONFIG(debug, debug|release) {
-        TARGET = $$join(TARGET,,,_debug)
+        #TARGET = $$join(TARGET,,,_debug)
 
         # Qt uses '_debug' for unix and 'd' for Windows
         # which is not reliably detectable (e.g.: abcd.dll)
@@ -239,4 +239,10 @@ contains(QMAKE_COMPILER_DEFINES, _MSC_VER=1929) {
 }
 else {
     INCLUDEPATH += $$PWD/src/3rdparty/legacy/spatialindexnavel
+}
+
+R_DEV = $$system(echo $$QCAD_DEVELOPMENT)
+
+contains(R_DEV, "1") {
+    CONFIG += r_dev
 }

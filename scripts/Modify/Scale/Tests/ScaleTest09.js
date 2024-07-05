@@ -3,7 +3,7 @@
 // Timestamp   : 2017-06-30 11:36:33
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function ScaleTest09() {
     TdbTest.call(this, 'scripts/Modify/Scale/Tests/ScaleTest09.js');

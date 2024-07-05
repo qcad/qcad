@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RDocument" />
+  <class_decl name="RExporter" />
+  <class_decl name="RArc" />
+  <class_decl name="RLine" />
+  <class name="RWipeoutEntity"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="true" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="REntity" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="RDocument *" typeName="RDocument *"
+        name="document" isConst="false" />
+        <arg type="RWipeoutData &amp;" typeName="RWipeoutData"
+        name="data" isConst="true" />
+      </variant>
+      <variant>
+        <arg type="RWipeoutEntity &amp;" typeName="RWipeoutEntity"
+        name="other" isConst="true" />
+      </variant>
+    </constructor>
+    <method name="init" cppName="init" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="getRtti" cppName="getRtti" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RS::EntityType" isPureVirtual="false" />
+    </method>
+    <method name="getStaticPropertyTypeIds"
+    cppName="getStaticPropertyTypeIds" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QSet &lt; RPropertyTypeId &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="clone" cppName="clone" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RWipeoutEntity *"
+      isPureVirtual="false" />
+    </method>
+    <method name="getData" cppName="getData" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RWipeoutData &amp;"
+      isPureVirtual="false" />
+      <variant returnType="const RWipeoutData &amp;"
+      isPureVirtual="false" />
+    </method>
+    <method name="setProperty" cppName="setProperty"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RPropertyTypeId" typeName="RPropertyTypeId"
+        name="propertyTypeId" isConst="false" />
+        <arg type="QVariant &amp;" typeName="QVariant" name="value"
+        isConst="true" />
+        <arg type="RTransaction *" typeName="RTransaction *"
+        name="transaction" hasDefault="true" default="NULL"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getProperty" cppName="getProperty"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QPair &lt; QVariant , RPropertyAttributes &gt;"
+      isPureVirtual="false">
+        <arg type="RPropertyTypeId &amp;"
+        typeName="RPropertyTypeId" name="propertyTypeId"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="humanReadable"
+        hasDefault="true" default="false" isConst="false" />
+        <arg type="bool" typeName="bool" name="noAttributes"
+        hasDefault="true" default="false" isConst="false" />
+        <arg type="bool" typeName="bool" name="showOnRequest"
+        hasDefault="true" default="false" isConst="false" />
+      </variant>
+    </method>
+    <method name="exportEntity" cppName="exportEntity"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RExporter &amp;" typeName="RExporter" name="e"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="preview"
+        hasDefault="true" default="false" isConst="false" />
+        <arg type="bool" typeName="bool" name="forceSelected"
+        hasDefault="true" default="false" isConst="false" />
+      </variant>
+    </method>
+    <method name="setShape" cppName="setShape" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RPolyline &amp;" typeName="RPolyline" name="l"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getShowFrame" cppName="getShowFrame"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setShowFrame" cppName="setShowFrame"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="countVertices" cppName="countVertices"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="appendVertex" cppName="appendVertex"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="vertex"
+        isConst="true" />
+        <arg type="double" typeName="double" name="bulge"
+        hasDefault="true" default="0.0" isConst="false" />
+        <arg type="double" typeName="double" name="w1"
+        hasDefault="true" default="0.0" isConst="false" />
+        <arg type="double" typeName="double" name="w2"
+        hasDefault="true" default="0.0" isConst="false" />
+      </variant>
+    </method>
+    <method name="getEndPoint" cppName="getEndPoint"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="getStartPoint" cppName="getStartPoint"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="getVertexAt" cppName="getVertexAt"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="int" typeName="int" name="i" isConst="false" />
+      </variant>
+    </method>
+    <method name="setVertexAt" cppName="setVertexAt"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="i" isConst="false" />
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getBulgeAt" cppName="getBulgeAt"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="int" typeName="int" name="i" isConst="false" />
+      </variant>
+    </method>
+    <method name="setBulgeAt" cppName="setBulgeAt"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="i" isConst="false" />
+        <arg type="double" typeName="double" name="b"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="removeLastVertex" cppName="removeLastVertex"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <property name="PropertyCustom" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyHandle" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyProtected" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyWorkingSet" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyType" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyBlock" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyLayer" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyLinetype" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyLinetypeScale" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyLineweight" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyColor" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDisplayedColor" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDrawOrder" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyVertexNX" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyVertexNY" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyVertexNZ" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyBulgeN" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyBaseAngle" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertySize1" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertySize2" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyFrame" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+  </class>
+</unit>

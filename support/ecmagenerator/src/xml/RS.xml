@@ -122,6 +122,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="EntitySpline" />
       <value name="EntityViewport" />
       <value name="EntityTolerance" />
+      <value name="EntityWipeout" />
+      <value name="EntityXRef" />
       <value name="EntityUser" />
     </enum>
     <enum name="ProjectionRenderingHint">
@@ -339,6 +341,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="FACETRES" />
       <value name="FILLETRAD" />
       <value name="FILLMODE" />
+      <value name="IMAGEFRAME" />
       <value name="INSBASE" />
       <value name="INSUNITS" />
       <value name="ISOLINES" />

@@ -169,7 +169,16 @@ void RWipeoutEntity::exportEntity(RExporter& e, bool preview, bool forceSelected
         pen.setStyle(Qt::NoPen);
         e.setPen(pen);
     }
+
     e.setWipeout(true);
+    if (!getShowFrame()) {
+        e.setFrameless(true);
+    }
+
     e.exportPolyline(pl);
+
+    if (!getShowFrame()) {
+        e.setFrameless(false);
+    }
     e.setWipeout(false);
 }

@@ -3,7 +3,7 @@
 // Timestamp   : 2016-12-19 10:17:39
 // Description : 
 
-include('scripts/Pro/Developer/TestingDashboard/TdbTest.js');
+include('scripts/Developer/TestingDashboard/TdbTest.js');
 
 function SnapDistanceManualTest00() {
     TdbTest.call(this, 'scripts/Snap/SnapDistanceManual/Tests/SnapDistanceManualTest00.js');
