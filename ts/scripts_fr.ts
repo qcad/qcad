@@ -4313,6 +4313,11 @@ est déjà dans la liste.</translation>
     </message>
     <message>
         <location line="+4"/>
+        <source>Entity is not a circle, ellipse, spline or polyline.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Entity is not a polyline.</source>
         <translation>L&apos;entité n&apos;est pas une polyligne.</translation>
     </message>
@@ -4711,6 +4716,14 @@ est déjà dans la liste.</translation>
         <location line="+13"/>
         <source>Add Layer</source>
         <translation>Ajouter un calque</translation>
+    </message>
+</context>
+<context>
+    <name>ExCsvExport</name>
+    <message>
+        <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
+        <source>&amp;Export CSV</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10130,7 +10143,7 @@ est déjà dans la liste.</translation>
         <translation>Afficher toutes les propriétés</translation>
     </message>
     <message>
-        <location line="+782"/>
+        <location line="+790"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -10140,7 +10153,7 @@ est déjà dans la liste.</translation>
         <translation>*VARIABLE*</translation>
     </message>
     <message>
-        <location line="-1446"/>
+        <location line="-1454"/>
         <source>:</source>
         <translation> :</translation>
     </message>
@@ -10185,7 +10198,7 @@ est déjà dans la liste.</translation>
         <translation>Non</translation>
     </message>
     <message>
-        <location line="+406"/>
+        <location line="+414"/>
         <location line="+71"/>
         <location line="+10"/>
         <source>Property Editor</source>
@@ -13939,7 +13952,7 @@ est déjà dans la liste.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1259"/>
+        <location filename="../scripts/library.js" line="+1275"/>
         <source>Objects</source>
         <translation>Objets</translation>
     </message>
@@ -14359,6 +14372,26 @@ est déjà dans la liste.</translation>
         <translation>Fenêtre</translation>
     </message>
     <message>
+        <location line="+2"/>
+        <source>Wipeouts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Wipeout</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>External References</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>External Reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+3"/>
         <source>Unknown Entities</source>
         <translation>Entités inconnues</translation>
@@ -14369,7 +14402,7 @@ est déjà dans la liste.</translation>
         <translation>Entité inconnue</translation>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+106"/>
         <source>All CAD Files</source>
         <translation>Tous les fichiers CAO</translation>
     </message>

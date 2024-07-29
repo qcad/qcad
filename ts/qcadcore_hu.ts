@@ -124,7 +124,7 @@
     <message>
         <location line="+1"/>
         <source>Red</source>
-        <translation type="unfinished">Red</translation>
+        <translation type="unfinished">Piros</translation>
     </message>
     <message>
         <location line="+1"/>

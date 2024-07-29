@@ -80,6 +80,7 @@
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
+        <location filename="../src/entity/RWipeoutEntity.cpp" line="+84"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="+79"/>
         <location line="+3"/>
         <location line="+4"/>
@@ -144,6 +145,7 @@
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
+        <location filename="../src/entity/RWipeoutEntity.cpp" line="+1"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="-6"/>
         <location line="+3"/>
         <location line="+4"/>
@@ -205,6 +207,7 @@
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
+        <location filename="../src/entity/RWipeoutEntity.cpp" line="+1"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="-6"/>
         <location line="+3"/>
         <location line="+4"/>
@@ -600,6 +603,10 @@
         <location line="+1"/>
         <location line="+2"/>
         <location line="+1"/>
+        <location filename="../src/entity/RWipeoutEntity.cpp" line="-2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Vertex</source>
         <translation>Oglišče</translation>
     </message>
@@ -682,6 +689,7 @@
     </message>
     <message>
         <location line="+4"/>
+        <location filename="../src/entity/RWipeoutEntity.cpp" line="+0"/>
         <source>Bulge</source>
         <translation>Izboklina</translation>
     </message>
@@ -709,21 +717,27 @@
         <location line="+9"/>
         <location line="+1"/>
         <location line="+1"/>
+        <location filename="../src/entity/RWipeoutEntity.cpp" line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Size</source>
         <translation>Velikost</translation>
     </message>
     <message>
         <location line="-2"/>
+        <location filename="../src/entity/RWipeoutEntity.cpp" line="-2"/>
         <source>Base Angle</source>
         <translation>Osnovni kot</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/entity/RWipeoutEntity.cpp" line="+1"/>
         <source>Size 1</source>
         <translation>Velikost 1</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/entity/RWipeoutEntity.cpp" line="+1"/>
         <source>Size 2</source>
         <translation>Velikost 2</translation>
     </message>
@@ -914,6 +928,11 @@
         <location line="+1"/>
         <source>Middle Point</source>
         <translation type="unfinished">Srednja točka</translation>
+    </message>
+    <message>
+        <location filename="../src/entity/RWipeoutEntity.cpp" line="+2"/>
+        <source>Frame</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

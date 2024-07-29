@@ -4313,6 +4313,11 @@ on jo luettelossa.</translation>
     </message>
     <message>
         <location line="+4"/>
+        <source>Entity is not a circle, ellipse, spline or polyline.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Entity is not a polyline.</source>
         <translation>Kohde ei ole murtoviiva.</translation>
     </message>
@@ -4711,6 +4716,14 @@ on jo luettelossa.</translation>
         <location line="+13"/>
         <source>Add Layer</source>
         <translation>Lisää taso</translation>
+    </message>
+</context>
+<context>
+    <name>ExCsvExport</name>
+    <message>
+        <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
+        <source>&amp;Export CSV</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10135,12 +10148,12 @@ on jo luettelossa.</translation>
         <translation>Näytä laajennetun ulottuvuuden tyylin ohitukset</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1672"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1680"/>
         <source>*VARIES*</source>
         <translation>*VAIHTELEVA*</translation>
     </message>
     <message>
-        <location line="-1446"/>
+        <location line="-1454"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10215,7 +10228,7 @@ on jo luettelossa.</translation>
         <translation>Ei</translation>
     </message>
     <message>
-        <location line="+406"/>
+        <location line="+414"/>
         <source>Widgets</source>
         <translation>Pienoisohjelmat</translation>
     </message>
@@ -13939,7 +13952,7 @@ on jo luettelossa.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1259"/>
+        <location filename="../scripts/library.js" line="+1275"/>
         <source>Objects</source>
         <translation>Esineet</translation>
     </message>
@@ -14359,6 +14372,26 @@ on jo luettelossa.</translation>
         <translation>Näkymäalue</translation>
     </message>
     <message>
+        <location line="+2"/>
+        <source>Wipeouts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Wipeout</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>External References</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>External Reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+3"/>
         <source>Unknown Entities</source>
         <translation>Tuntemattomat kohteet</translation>
@@ -14369,7 +14402,7 @@ on jo luettelossa.</translation>
         <translation>Tuntematon kohde</translation>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+106"/>
         <source>All CAD Files</source>
         <translation>Kaikki CAD -tiedostot</translation>
     </message>

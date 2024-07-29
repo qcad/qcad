@@ -4317,6 +4317,11 @@ jest już na liście.</translation>
     </message>
     <message>
         <location line="+4"/>
+        <source>Entity is not a circle, ellipse, spline or polyline.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Entity is not a polyline.</source>
         <translation>Podmiot nie jest polilinią.</translation>
     </message>
@@ -4715,6 +4720,14 @@ jest już na liście.</translation>
         <location line="+13"/>
         <source>Add Layer</source>
         <translation>Dodaj warstwę</translation>
+    </message>
+</context>
+<context>
+    <name>ExCsvExport</name>
+    <message>
+        <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
+        <source>&amp;Export CSV</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10107,12 +10120,12 @@ jest już na liście.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1672"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1680"/>
         <source>*VARIES*</source>
         <translation>*VARIES*</translation>
     </message>
     <message>
-        <location line="-1446"/>
+        <location line="-1454"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10162,12 +10175,12 @@ jest już na liście.</translation>
         <translation>Pokaż wszystkie nieruchomości</translation>
     </message>
     <message>
-        <location line="+782"/>
+        <location line="+790"/>
         <source>Widgets</source>
         <translation>Widżety</translation>
     </message>
     <message>
-        <location line="-828"/>
+        <location line="-836"/>
         <source>Add custom property to selected objects</source>
         <translation>Dodaj dostosowaną właściwość do zaznaczonych obiektów</translation>
     </message>
@@ -10192,7 +10205,7 @@ jest już na liście.</translation>
         <translation>Nie</translation>
     </message>
     <message>
-        <location line="+406"/>
+        <location line="+414"/>
         <location line="+71"/>
         <location line="+10"/>
         <source>Property Editor</source>
@@ -13949,7 +13962,7 @@ jest już na liście.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1259"/>
+        <location filename="../scripts/library.js" line="+1275"/>
         <source>Objects</source>
         <translation>Obiekty</translation>
     </message>
@@ -14369,6 +14382,26 @@ jest już na liście.</translation>
         <translation>Rzutnia</translation>
     </message>
     <message>
+        <location line="+2"/>
+        <source>Wipeouts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Wipeout</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>External References</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>External Reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+3"/>
         <source>Unknown Entities</source>
         <translation>Podmioty nieznane</translation>
@@ -14379,7 +14412,7 @@ jest już na liście.</translation>
         <translation>Podmiot nieznany</translation>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+106"/>
         <source>All CAD Files</source>
         <translation>Wszystkie pliki CAD</translation>
     </message>

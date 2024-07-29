@@ -4313,6 +4313,11 @@ is al in de lijst.</translation>
     </message>
     <message>
         <location line="+4"/>
+        <source>Entity is not a circle, ellipse, spline or polyline.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Entity is not a polyline.</source>
         <translation>Object is niet een polylijn.</translation>
     </message>
@@ -4711,6 +4716,14 @@ is al in de lijst.</translation>
         <location line="+13"/>
         <source>Add Layer</source>
         <translation>Laag toevoegen</translation>
+    </message>
+</context>
+<context>
+    <name>ExCsvExport</name>
+    <message>
+        <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
+        <source>&amp;Export CSV</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10100,12 +10113,12 @@ is al in de lijst.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1672"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1680"/>
         <source>*VARIES*</source>
         <translation>*VARIEERT*</translation>
     </message>
     <message>
-        <location line="-1446"/>
+        <location line="-1454"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10180,7 +10193,7 @@ is al in de lijst.</translation>
         <translation>Nee</translation>
     </message>
     <message>
-        <location line="+406"/>
+        <location line="+414"/>
         <location line="+71"/>
         <location line="+10"/>
         <source>Property Editor</source>
@@ -13939,7 +13952,7 @@ is al in de lijst.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1259"/>
+        <location filename="../scripts/library.js" line="+1275"/>
         <source>Objects</source>
         <translation>Objecten</translation>
     </message>
@@ -14359,6 +14372,26 @@ is al in de lijst.</translation>
         <translation>Weergave</translation>
     </message>
     <message>
+        <location line="+2"/>
+        <source>Wipeouts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Wipeout</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>External References</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>External Reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+3"/>
         <source>Unknown Entities</source>
         <translation>Onbekende objecten</translation>
@@ -14369,7 +14402,7 @@ is al in de lijst.</translation>
         <translation>Onbekende object</translation>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+106"/>
         <source>All CAD Files</source>
         <translation>Alle CAD bestanden</translation>
     </message>

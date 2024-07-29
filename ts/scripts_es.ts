@@ -4313,6 +4313,11 @@ ya está en la lista.</translation>
     </message>
     <message>
         <location line="+4"/>
+        <source>Entity is not a circle, ellipse, spline or polyline.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Entity is not a polyline.</source>
         <translation>La entidad no es una polilínea.</translation>
     </message>
@@ -4711,6 +4716,14 @@ ya está en la lista.</translation>
         <location line="+13"/>
         <source>Add Layer</source>
         <translation>Agregar capa</translation>
+    </message>
+</context>
+<context>
+    <name>ExCsvExport</name>
+    <message>
+        <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
+        <source>&amp;Export CSV</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10105,12 +10118,12 @@ ya está en la lista.</translation>
         <translation>Agregar una propiedad personalizada a los objetos seleccionados</translation>
     </message>
     <message>
-        <location line="+825"/>
+        <location line="+833"/>
         <source>*VARIES*</source>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1446"/>
+        <location line="-1454"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10160,12 +10173,12 @@ ya está en la lista.</translation>
         <translation>Mostrar todas las propiedades</translation>
     </message>
     <message>
-        <location line="+782"/>
+        <location line="+790"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="-647"/>
+        <location line="-655"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -10185,7 +10198,7 @@ ya está en la lista.</translation>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+406"/>
+        <location line="+414"/>
         <location line="+71"/>
         <location line="+10"/>
         <source>Property Editor</source>
@@ -13939,7 +13952,7 @@ ya está en la lista.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1259"/>
+        <location filename="../scripts/library.js" line="+1275"/>
         <source>Objects</source>
         <translation>Objetos</translation>
     </message>
@@ -14359,6 +14372,26 @@ ya está en la lista.</translation>
         <translation>Ventana</translation>
     </message>
     <message>
+        <location line="+2"/>
+        <source>Wipeouts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Wipeout</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>External References</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>External Reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+3"/>
         <source>Unknown Entities</source>
         <translation>Entidades desconocidas</translation>
@@ -14369,7 +14402,7 @@ ya está en la lista.</translation>
         <translation>Entidad desconocida</translation>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+106"/>
         <source>All CAD Files</source>
         <translation>Todos los archivos CAD</translation>
     </message>

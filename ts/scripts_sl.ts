@@ -4317,6 +4317,11 @@ je že na seznamu.</translation>
     </message>
     <message>
         <location line="+4"/>
+        <source>Entity is not a circle, ellipse, spline or polyline.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Entity is not a polyline.</source>
         <translation>Entiteta ni lomljenka.</translation>
     </message>
@@ -4715,6 +4720,14 @@ je že na seznamu.</translation>
         <location line="+13"/>
         <source>Add Layer</source>
         <translation>Dodaj plast</translation>
+    </message>
+</context>
+<context>
+    <name>ExCsvExport</name>
+    <message>
+        <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
+        <source>&amp;Export CSV</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10110,12 +10123,12 @@ je že na seznamu.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1672"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1680"/>
         <source>*VARIES*</source>
         <translation>*RAZLIČNO*</translation>
     </message>
     <message>
-        <location line="-1446"/>
+        <location line="-1454"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10170,12 +10183,12 @@ je že na seznamu.</translation>
         <translation>Prikaži vse lasnosti</translation>
     </message>
     <message>
-        <location line="+782"/>
+        <location line="+790"/>
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>
     <message>
-        <location line="-647"/>
+        <location line="-655"/>
         <source>Auto</source>
         <translation>Samodejno</translation>
     </message>
@@ -10195,7 +10208,7 @@ je že na seznamu.</translation>
         <translation>Ne</translation>
     </message>
     <message>
-        <location line="+406"/>
+        <location line="+414"/>
         <location line="+71"/>
         <location line="+10"/>
         <source>Property Editor</source>
@@ -13955,7 +13968,7 @@ je že na seznamu.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1259"/>
+        <location filename="../scripts/library.js" line="+1275"/>
         <source>Objects</source>
         <translation>Objekti</translation>
     </message>
@@ -14375,6 +14388,26 @@ je že na seznamu.</translation>
         <translation>Izzsek</translation>
     </message>
     <message>
+        <location line="+2"/>
+        <source>Wipeouts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Wipeout</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>External References</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>External Reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+3"/>
         <source>Unknown Entities</source>
         <translation>Neznane entitete</translation>
@@ -14385,7 +14418,7 @@ je že na seznamu.</translation>
         <translation>Neznana entiteta</translation>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+106"/>
         <source>All CAD Files</source>
         <translation>Vse CAD Datoteke</translation>
     </message>

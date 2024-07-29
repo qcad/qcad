@@ -4311,6 +4311,11 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+4"/>
+        <source>Entity is not a circle, ellipse, spline or polyline.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Entity is not a polyline.</source>
         <translation type="unfinished">Η οντότητα δεν είναι πολυγραμμή.</translation>
     </message>
@@ -4709,6 +4714,14 @@ is already in the list.</source>
         <location line="+13"/>
         <source>Add Layer</source>
         <translation type="unfinished">Προσθήκη στρώματος</translation>
+    </message>
+</context>
+<context>
+    <name>ExCsvExport</name>
+    <message>
+        <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
+        <source>&amp;Export CSV</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10208,7 +10221,7 @@ is already in the list.</source>
         <translation type="unfinished">Όχι</translation>
     </message>
     <message>
-        <location line="+403"/>
+        <location line="+411"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*ΔΙΑΦΟΡΕΣ*</translation>
     </message>
@@ -13937,7 +13950,7 @@ is already in the list.</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1259"/>
+        <location filename="../scripts/library.js" line="+1275"/>
         <source>Objects</source>
         <translation type="unfinished">Αντικείμενα</translation>
     </message>
@@ -14357,6 +14370,26 @@ is already in the list.</source>
         <translation type="unfinished">Προβολή</translation>
     </message>
     <message>
+        <location line="+2"/>
+        <source>Wipeouts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Wipeout</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>External References</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>External Reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+3"/>
         <source>Unknown Entities</source>
         <translation type="unfinished">Άγνωστες οντότητες</translation>
@@ -14367,7 +14400,7 @@ is already in the list.</source>
         <translation type="unfinished">Άγνωστη οντότητα</translation>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+106"/>
         <source>All CAD Files</source>
         <translation type="unfinished">Όλα τα αρχεία CAD</translation>
     </message>

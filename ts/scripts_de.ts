@@ -4313,6 +4313,11 @@ ist bereits in der Liste.</translation>
     </message>
     <message>
         <location line="+4"/>
+        <source>Entity is not a circle, ellipse, spline or polyline.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Entity is not a polyline.</source>
         <translation>Element ist keine Polylinie.</translation>
     </message>
@@ -4711,6 +4716,14 @@ ist bereits in der Liste.</translation>
         <location line="+13"/>
         <source>Add Layer</source>
         <translation>Layer hinzufügen</translation>
+    </message>
+</context>
+<context>
+    <name>ExCsvExport</name>
+    <message>
+        <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
+        <source>&amp;Export CSV</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10100,12 +10113,12 @@ ist bereits in der Liste.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1672"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1680"/>
         <source>*VARIES*</source>
         <translation>*VARIIERT*</translation>
     </message>
     <message>
-        <location line="-1446"/>
+        <location line="-1454"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10150,12 +10163,12 @@ ist bereits in der Liste.</translation>
         <translation>Alle Eigenschaften anzeigen</translation>
     </message>
     <message>
-        <location line="+782"/>
+        <location line="+790"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="-828"/>
+        <location line="-836"/>
         <source>Add custom property to selected objects</source>
         <translation>Benutzerdefinierte Eigenschaft an ausgewählte Objekte hinzufügen</translation>
     </message>
@@ -10180,7 +10193,7 @@ ist bereits in der Liste.</translation>
         <translation>Nein</translation>
     </message>
     <message>
-        <location line="+406"/>
+        <location line="+414"/>
         <location line="+71"/>
         <location line="+10"/>
         <source>Property Editor</source>
@@ -10217,7 +10230,7 @@ ist bereits in der Liste.</translation>
         <translation>Farbe:</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1283"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1291"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>
@@ -13939,7 +13952,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1259"/>
+        <location filename="../scripts/library.js" line="+1275"/>
         <source>Objects</source>
         <translation>Objekte</translation>
     </message>
@@ -14359,6 +14372,26 @@ ist bereits in der Liste.</translation>
         <translation>Ansichtsfenster</translation>
     </message>
     <message>
+        <location line="+2"/>
+        <source>Wipeouts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Wipeout</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>External References</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>External Reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+3"/>
         <source>Unknown Entities</source>
         <translation>Unbekannte Elemente</translation>
@@ -14369,7 +14402,7 @@ ist bereits in der Liste.</translation>
         <translation>Unbekanntes Element</translation>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+106"/>
         <source>All CAD Files</source>
         <translation>Alle CAD Dateien</translation>
     </message>

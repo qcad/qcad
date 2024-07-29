@@ -576,6 +576,8 @@ SOURCES = \
 ../scripts/Misc/Examples/ExMinimal/ExMinimal.js \
 ../scripts/Misc/Examples/ExMinimal2/ExMinimal2.js \
 ../scripts/Misc/Examples/Examples.js \
+../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExport.js \
+../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js \
 ../scripts/Misc/Examples/IOExamples/ExDumpPolyline/ExDumpPolyline.js \
 ../scripts/Misc/Examples/IOExamples/ExPostNewAction/ExPostNewAction.js \
 ../scripts/Misc/Examples/IOExamples/ExPostNewAction/ExPostNewActionInit.js \
@@ -1020,6 +1022,7 @@ SOURCES = \
 ../scripts/Widgets/FirstStart/FirstStartInit.js \
 ../scripts/Widgets/LayerList/LayerList.js \
 ../scripts/Widgets/MenuBar/MenuBar.js \
+../scripts/Widgets/MenuBar/MenuBarInit.js \
 ../scripts/Widgets/MouseDisplay/MouseDisplay.js \
 ../scripts/Widgets/OptionsToolBar/OptionsToolBar.js \
 ../scripts/Widgets/PenToolBar/PenToolBar.js \

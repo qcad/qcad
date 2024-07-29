@@ -4308,6 +4308,11 @@ zaten listede.</translation>
     </message>
     <message>
         <location line="+4"/>
+        <source>Entity is not a circle, ellipse, spline or polyline.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Entity is not a polyline.</source>
         <translation type="unfinished">Varlık bir çoklu çizgi değildir.</translation>
     </message>
@@ -4706,6 +4711,14 @@ zaten listede.</translation>
         <location line="+13"/>
         <source>Add Layer</source>
         <translation type="unfinished">Katman Ekle</translation>
+    </message>
+</context>
+<context>
+    <name>ExCsvExport</name>
+    <message>
+        <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
+        <source>&amp;Export CSV</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10202,7 +10215,7 @@ zaten listede.</translation>
         <translation>Hayır</translation>
     </message>
     <message>
-        <location line="+403"/>
+        <location line="+411"/>
         <source>*VARIES*</source>
         <translation type="unfinished">*DEĞİŞKENLER*</translation>
     </message>
@@ -13928,7 +13941,7 @@ zaten listede.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1259"/>
+        <location filename="../scripts/library.js" line="+1275"/>
         <source>Objects</source>
         <translation>Nesneler</translation>
     </message>
@@ -14348,6 +14361,26 @@ zaten listede.</translation>
         <translation type="unfinished">Görünüm Alanı</translation>
     </message>
     <message>
+        <location line="+2"/>
+        <source>Wipeouts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Wipeout</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>External References</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>External Reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+3"/>
         <source>Unknown Entities</source>
         <translation type="unfinished">Bilinmeyen Varlıklar</translation>
@@ -14358,7 +14391,7 @@ zaten listede.</translation>
         <translation type="unfinished">Bilinmeyen Varlık</translation>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+106"/>
         <source>All CAD Files</source>
         <translation type="unfinished">Tüm CAD Dosyaları</translation>
     </message>
