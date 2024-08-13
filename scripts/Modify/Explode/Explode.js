@@ -416,9 +416,20 @@ Explode.explodeEntity = function(entity, options) {
         if (entity.isSolid()) {
             for (k=0; k<entity.getLoopCount(); k++) {
                 var shapes = entity.getLoopBoundary(k);
-                for (n=0; n<shapes.length; n++) {
-                    shape = shapes[n];
+                if (shapes.length===1) {
+                    // polyline boundary:
+                    shape = shapes[0];
                     ret.push(shape.clone());
+                }
+                else {
+                    // loose segments:
+                    var pl = new RPolyline();
+                    for (n=0; n<shapes.length; n++) {
+                        shape = shapes[n];
+                        pl.appendShape(shape.clone());
+                        //ret.push(shape.clone());
+                    }
+                    ret.push(pl);
                 }
             }
         }
