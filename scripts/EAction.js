@@ -2289,6 +2289,10 @@ EAction.warnNotPolyline = function() {
     EAction.handleUserWarning(qsTr("Entity is not a polyline."));
 };
 
+EAction.warnNotClosedPolyline = function() {
+    EAction.handleUserWarning(qsTr("Entity is not a closed polyline."));
+};
+
 EAction.warnNotSplineWithFitPoints = function() {
     EAction.handleUserWarning(qsTr("Entity is not a spline with fit points."));
 };
