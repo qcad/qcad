@@ -63,33 +63,80 @@
     </widget>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
       <widget class="QLabel" name="label">
        <property name="text">
         <string>Decimals / precision for displayed property values:</string>
        </property>
       </widget>
      </item>
-     <item>
+     <item row="0" column="1">
       <widget class="QComboBox" name="Decimals">
        <property name="currentIndex">
         <number>-1</number>
        </property>
       </widget>
      </item>
-     <item>
-      <spacer name="horizontalSpacer">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Maximum complexity for automatic hatch length calculation:</string>
        </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QComboBox" name="MaxHatchComplexityForAutoLength">
+       <property name="editable">
+        <bool>true</bool>
        </property>
-      </spacer>
+       <property name="currentText">
+        <string>2000</string>
+       </property>
+       <property name="currentIndex">
+        <number>1</number>
+       </property>
+       <item>
+        <property name="text">
+         <string notr="true">1000</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">2000</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">3000</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">4000</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">5000</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">10000</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">50000</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">100000</string>
+        </property>
+       </item>
+      </widget>
      </item>
     </layout>
    </item>
@@ -101,7 +148,7 @@
      <property name="sizeHint" stdset="0">
       <size>
        <width>20</width>
-       <height>244</height>
+       <height>156</height>
       </size>
      </property>
     </spacer>

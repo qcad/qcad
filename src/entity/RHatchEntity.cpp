@@ -379,9 +379,24 @@ QPair<QVariant, RPropertyAttributes> RHatchEntity::getProperty(
     // human readable properties (not relevant for transactions):
     if (humanReadable) {
         if (propertyTypeId == PropertyLength) {
-            QVariant v;
-            v.setValue(data.getLength());
-            return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::ReadOnly));
+            int maxComplexity = RSettings::getIntValue("PropertyEditor/MaxHatchComplexityForAutoLength", 2000);
+            if (getComplexity()>maxComplexity) {
+                if (showOnRequest) {
+                    QVariant v;
+                    v.setValue(data.getLength());
+                    return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::ReadOnly));
+                }
+                else {
+                    QVariant v;
+                    v.setValue(0.0);
+                    return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::OnRequest));
+                }
+            }
+            else {
+                QVariant v;
+                v.setValue(data.getLength());
+                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::ReadOnly));
+            }
         } else if (propertyTypeId == PropertyTotalLength) {
             if (showOnRequest) {
                 QVariant v;
