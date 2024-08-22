@@ -23,7 +23,7 @@ RRayData::RRayData() {
 }
 
 RRayData::RRayData(RDocument* document, const RRayData& data)
-    : REntityData(document) {
+    : REntityData(document), fixedAngle(false) {
     *this = data;
     this->document = document;
     if (document!=NULL) {
@@ -32,11 +32,11 @@ RRayData::RRayData(RDocument* document, const RRayData& data)
 }
 
 RRayData::RRayData(const RRay &ray) :
-    RRay(ray) {
+    RRay(ray), fixedAngle(false) {
 }
 
 RRayData::RRayData(const RVector& basePoint, const RVector& dir) :
-    RRay(basePoint, dir) {
+    RRay(basePoint, dir), fixedAngle(false) {
 }
 
 QList<RRefPoint> RRayData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
