@@ -1920,6 +1920,12 @@ Array.prototype.remove = function(val, compareFunction) {
     }
 };
 
+Array.prototype.removeAt = function(index) {
+    var part1 = this.slice(0, index);
+    var part2 = this.slice(index + 1);
+    return (part1.concat(part2));
+};
+
 /**
  * Removes all matches of the given value from the array.
  * \param The value(s) to remove.

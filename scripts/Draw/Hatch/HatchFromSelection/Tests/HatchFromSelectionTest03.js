@@ -39,7 +39,7 @@ HatchFromSelectionTest03.prototype.test00 = function() {
     this.importFile('scripts/Draw/Hatch/HatchFromSelection/Tests/data/spline.dxf');
     this.selectAll();
     this.dlgStart();
-    this.dlgAppendCode('var map = new Map()');
+    this.dlgAppendCode('var map = new MapCompat()');
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Type', 'HatchPattern')");
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Pattern', 'GRAVEL')");
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Scale',  [ 1, 0 ] )");

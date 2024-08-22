@@ -49,7 +49,7 @@ RemoveBlockTest00.prototype.test00 = function() {
     var p = new RVector(10.3, 10.1);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.dlgStart();
-    this.dlgAppendCode('var map = new Map()');
+    this.dlgAppendCode('var map = new MapCompat()');
     this.dlgAppendCode("map.put('DialogOpenedByTdb/BlockName', 'block 1')");
     this.dlgAppendCode("WidgetFactory.restoreState(dialog, 'DialogOpenedByTdb', undefined, false, undefined, map)");
     this.dlgEnd();

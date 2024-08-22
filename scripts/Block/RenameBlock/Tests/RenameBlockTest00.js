@@ -53,7 +53,7 @@ RenameBlockTest00.prototype.test00 = function() {
     var p = new RVector(29.7, 20.2);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.dlgStart();
-    this.dlgAppendCode('var map = new Map()');
+    this.dlgAppendCode('var map = new MapCompat()');
     this.dlgAppendCode("map.put('DialogOpenedByTdb/BlockName', 'block 1')");
     this.dlgAppendCode("WidgetFactory.restoreState(dialog, 'DialogOpenedByTdb', undefined, false, undefined, map)");
     this.dlgEnd();
@@ -63,7 +63,7 @@ RenameBlockTest00.prototype.test00 = function() {
     var w = objectFromPath('MainWindow::BlockListDock::BlockListWidget::BlockList::qt_scrollarea_viewport');
     this.sendMouseEvent(w, QEvent.MouseButtonRelease, new QPoint(69, 45), Qt.LeftButton, 0, 0);
     this.dlgStart();
-    this.dlgAppendCode('var map = new Map()');
+    this.dlgAppendCode('var map = new MapCompat()');
     this.dlgAppendCode("map.put('DialogOpenedByTdb/BlockName', 'block 12')");
     this.dlgAppendCode("WidgetFactory.restoreState(dialog, 'DialogOpenedByTdb', undefined, false, undefined, map)");
     this.dlgEnd();

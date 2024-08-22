@@ -63,7 +63,7 @@ Rotate2Test01.prototype.test00 = function() {
     var p = new RVector(19.985793, 0.081841);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.dlgStart();
-    this.dlgAppendCode('var map = new Map()');
+    this.dlgAppendCode('var map = new MapCompat()');
     this.dlgAppendCode("map.put('DialogOpenedByTdb/groupBox', 'MultipleCopies')");
     this.dlgAppendCode("map.put('DialogOpenedByTdb/NumberOfCopies',  [ 10, 0 ] )");
     this.dlgAppendCode("map.put('DialogOpenedByTdb/PrimaryAngle',  [ 20, 0 ] )");

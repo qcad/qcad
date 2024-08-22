@@ -15,7 +15,7 @@ AddBlockTest00.prototype.test00 = function() {
     qDebug('running AddBlockTest00.test00()...');
     this.setUp();
     this.dlgStart();
-    this.dlgAppendCode('var map = new Map()');
+    this.dlgAppendCode('var map = new MapCompat()');
     this.dlgAppendCode("map.put('DialogOpenedByTdb/BlockName', 'block 1')");
     this.dlgAppendCode("WidgetFactory.restoreState(dialog, 'DialogOpenedByTdb', undefined, false, undefined, map)");
     this.dlgEnd();

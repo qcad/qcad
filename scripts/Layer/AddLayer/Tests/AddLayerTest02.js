@@ -15,14 +15,14 @@ AddLayerTest02.prototype.test00 = function() {
     qDebug('running AddLayerTest02.test00()...');
     this.setUp();
     this.dlgStart();
-    this.dlgAppendCode('var map = new Map()');
+    this.dlgAppendCode('var map = new MapCompat()');
     this.dlgAppendCode("map.put('DialogOpenedByTdb/LayerName', 'parent')");
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Parent', '')");
     this.dlgAppendCode("WidgetFactory.restoreState(dialog, 'DialogOpenedByTdb', undefined, false, undefined, map)");
     this.dlgEnd();
     TdbTest.clickOnWidget('MainWindow::LayerListProDock::LayerWidgetPro::Add');
     this.dlgStart();
-    this.dlgAppendCode('var map = new Map()');
+    this.dlgAppendCode('var map = new MapCompat()');
     this.dlgAppendCode("map.put('DialogOpenedByTdb/LayerName', 'sublayer')");
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Parent', 'parent')");
     this.dlgAppendCode("WidgetFactory.restoreState(dialog, 'DialogOpenedByTdb', undefined, false, undefined, map)");

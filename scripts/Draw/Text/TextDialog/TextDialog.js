@@ -1079,7 +1079,7 @@ TextDialog.prototype.updateRichText = function(force) {
 
 TextDialog.prototype.getSpecialCharsMap = function() {
     if (isNull(TextDialog.specialChars)) {
-        TextDialog.specialChars = new Map();
+        TextDialog.specialChars = new MapCompat();
         TextDialog.specialChars.put("degree", [ qsTr("Degree"), "\u00B0" ]);
         TextDialog.specialChars.put("plus_minus", [ qsTr("Plus-Minus"), "\u00B1" ]);
         //TextDialog.specialChars.put("diameter", [ qsTr("Diameter"), "\u2300" ]);

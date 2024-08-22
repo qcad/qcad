@@ -19,7 +19,7 @@ HatchFromSelectionTest06.prototype.test00 = function() {
     TdbTest.clickOnWidget('MainWindow::CadToolBar::SelectToolsPanel::SelectAllButton');
     TdbTest.clickOnWidget('MainWindow::CadToolBar::SelectToolsPanel::BackButton');
     this.dlgStart();
-    this.dlgAppendCode('var map = new Map()');
+    this.dlgAppendCode('var map = new MapCompat()');
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Type', 'HatchPattern')");
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Pattern', 'ANSI31')");
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Scale', '1.0')");

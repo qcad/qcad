@@ -49,7 +49,7 @@ RotateTest00.prototype.test00 = function() {
     var p = new RVector(0.626495, 3.41421);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.dlgStart();
-    this.dlgAppendCode('var map = new Map()');
+    this.dlgAppendCode('var map = new MapCompat()');
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Mode', 'MultipleCopies')");
     this.dlgAppendCode("map.put('DialogOpenedByTdb/NumberOfCopies',  [ 7, 0 ] )");
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Angle',  [ 45, 0 ] )");

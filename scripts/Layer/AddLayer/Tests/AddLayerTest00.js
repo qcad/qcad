@@ -15,7 +15,7 @@ AddLayerTest00.prototype.test00 = function() {
     qDebug('running AddLayerTest00.test00()...');
     this.setUp();
     this.dlgStart();
-    this.dlgAppendCode('var map = new Map()');
+    this.dlgAppendCode('var map = new MapCompat()');
     this.dlgAppendCode("map.put('DialogOpenedByTdb/LayerName', 'layer 1')");
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Color', new RColor(0,0,0,255,RColor.Fixed))");
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Lineweight', 25)");

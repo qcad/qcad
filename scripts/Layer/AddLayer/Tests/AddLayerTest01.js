@@ -15,7 +15,7 @@ AddLayerTest01.prototype.test00 = function() {
     qDebug('running AddLayerTest01.test00()...');
     this.setUp();
     this.dlgStart();
-    this.dlgAppendCode('var map = new Map()');
+    this.dlgAppendCode('var map = new MapCompat()');
     this.dlgAppendCode("map.put('DialogOpenedByTdb/LayerName', 'MyLayer')");
     this.dlgAppendCode("WidgetFactory.restoreState(dialog, 'DialogOpenedByTdb', undefined, false, undefined, map)");
     this.dlgEnd();

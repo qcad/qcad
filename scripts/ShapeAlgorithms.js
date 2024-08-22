@@ -1500,7 +1500,7 @@ ShapeAlgorithms.getCompleteQuadrilateralSegments = function(line1, line2, line3,
     var ret = [];
 
     // maps vertices to number of intersection points at that vertex:
-    var vertices = new Map(function(v1, v2) { return v1.equalsFuzzy(v2); });
+    var vertices = new MapCompat(function(v1, v2) { return v1.equalsFuzzy(v2); });
 
     var lines = ShapeAlgorithms.removeSharedPointer([ line1, line2, line3, line4 ]);
     var i, k;

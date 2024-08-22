@@ -42,7 +42,7 @@ MirrorTest01.prototype.test00 = function() {
     var p = new RVector(40.25, 19.688906);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.dlgStart();
-    this.dlgAppendCode('var map = new Map()');
+    this.dlgAppendCode('var map = new MapCompat()');
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Mode', 'KeepOriginal')");
     this.dlgAppendCode("map.put('DialogOpenedByTdb/UseCurrentAttributes', false)");
     this.dlgAppendCode("WidgetFactory.restoreState(dialog, 'DialogOpenedByTdb', undefined, false, undefined, map)");

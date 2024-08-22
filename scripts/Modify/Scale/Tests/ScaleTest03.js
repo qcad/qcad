@@ -46,7 +46,7 @@ ScaleTest03.prototype.test00 = function() {
     var p = new RVector(90.195122, 90.195122);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.dlgStart();
-    this.dlgAppendCode('var map = new Map()');
+    this.dlgAppendCode('var map = new MapCompat()');
     this.dlgAppendCode("map.put('DialogOpenedByTdb/groupBox', 'KeepOriginal')");
     this.dlgAppendCode("map.put('DialogOpenedByTdb/NumberOfCopies',  [ 2, 0 ] )");
     this.dlgAppendCode("map.put('DialogOpenedByTdb/FactorX',  [ 0.5, 0 ] )");

@@ -45,7 +45,7 @@ TranslateTest00.prototype.test00 = function() {
     var p = new RVector(-25.047325, 78.916667);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.dlgStart();
-    this.dlgAppendCode('var map = new Map()');
+    this.dlgAppendCode('var map = new MapCompat()');
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Mode', 'KeepOriginal')");
     this.dlgAppendCode("map.put('DialogOpenedByTdb/NumberOfCopies',  [ 10, 0 ] )");
     this.dlgAppendCode("map.put('DialogOpenedByTdb/UseCurrentAttributes', false)");
