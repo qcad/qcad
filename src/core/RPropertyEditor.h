@@ -60,6 +60,9 @@ public:
     virtual void updateFromDocument(RDocument* document, bool onlyChanges, RS::EntityType filter = RS::EntityUnknown, bool manual = false, bool showOnRequest = false);
 
 #if QT_VERSION >= 0x060000
+    /**
+     * \nonscriptable
+     */
     void sleep(QPromise<void>& promise, RDocument* document, bool onlyChanges, RS::EntityType filter, bool manual, bool showOnRequest);
 #endif
 
