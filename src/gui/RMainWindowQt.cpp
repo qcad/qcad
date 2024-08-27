@@ -650,7 +650,10 @@ bool RMainWindowQt::event(QEvent* e) {
         return false;
     }
 
-    if (e->type()==QEvent::ScreenChangeInternal) {
+    switch ((int)e->type()) {
+
+    case QEvent::ScreenChangeInternal:
+    {
         RDocumentInterface* di = getDocumentInterface();
         if (di!=NULL) {
             RGraphicsView* gv = di->getLastKnownViewWithFocus();
@@ -659,8 +662,11 @@ bool RMainWindowQt::event(QEvent* e) {
             }
         }
     }
+    break;
 
-    if (e->type()==QEvent::WindowActivate) {
+
+    case QEvent::WindowActivate:
+    {
         // hand keyboard focus to grphics view for various key events (tab, entering number, options shortcuts):
         RDocumentInterface* di = getDocumentInterface();
         if (di!=NULL) {
@@ -673,16 +679,11 @@ bool RMainWindowQt::event(QEvent* e) {
             }
         }
     }
+    break;
 
-    // TODO: never triggered on macOS when dragging title bar icon
-//    QIconDragEvent* ide = dynamic_cast<QIconDragEvent*>(e);
-//    if (ide!=NULL) {
-//        qDebug() << "QIconDragEvent";
-//        ide->accept();
-//        return true;
-//    }
-
-    if (e->type()==QEvent::PaletteChange || e->type()==QEvent::ApplicationPaletteChange) {
+    case QEvent::PaletteChange:
+    case QEvent::ApplicationPaletteChange:
+    {
         RSettings::resetDarkModeCache();
 
         static int darkMode = -1;
@@ -696,8 +697,10 @@ bool RMainWindowQt::event(QEvent* e) {
             darkMode = (int)RSettings::isDarkMode();
         }
     }
+    break;
 
-    if (e->type()==QEvent::KeyPress) {
+    case QEvent::KeyPress:
+    {
         QKeyEvent* ke = dynamic_cast<QKeyEvent*>(e);
         if (ke!=NULL) {
 
@@ -772,69 +775,109 @@ bool RMainWindowQt::event(QEvent* e) {
             }
         }
     }
+    break;
 
-    RSelectionChangedEvent* sce = dynamic_cast<RSelectionChangedEvent*>(e);
-    if (sce!=NULL) {
-        // selection changed: reset property editor filter to show all entities:
-        notifyPropertyListeners(getDocument(), false, RS::EntityAll);
-        notifySelectionListeners(getDocumentInterface());
-        return true;
+
+    case QEvent::IconDrag:
+    {
+        // TODO: never triggered on macOS when dragging title bar icon
+        //    QIconDragEvent* ide = dynamic_cast<QIconDragEvent*>(e);
+        //    if (ide!=NULL) {
+        //        qDebug() << "QIconDragEvent";
+        //        ide->accept();
+        //        return true;
+        //    }
     }
 
-    RCoordinateEvent* coe = dynamic_cast<RCoordinateEvent*>(e);
-    if (coe!=NULL) {
-        RDocumentInterface* di = getDocumentInterface();
-        if (di!=NULL) {
-            di->coordinateEvent(*coe);
-        }
-        return true;
-    }
 
-    RTransactionEvent* te = dynamic_cast<RTransactionEvent*>(e);
-    if (te!=NULL) {
-        // combined properties might have changed (deleted entities):
-        notifyPropertyListeners(getDocument(), te->hasOnlyChanges());
-        // selection might have changed (deleted entities):
-        notifySelectionListeners(getDocumentInterface());
-        // notify transaction listeners:
-        RTransaction t = te->getTransaction();
-        notifyTransactionListeners(getDocument(), &t);
-        return true;
-    }
-
-    RPropertyEvent* pe = dynamic_cast<RPropertyEvent*>(e);
-    if (pe!=NULL) {
-        RDocumentInterface* documentInterface = getDocumentInterface();
-        if (documentInterface!=NULL) {
-            // called when user changed a property in the property editor
-            documentInterface->propertyChangeEvent(*pe);
-        }
-        return true;
-    }
-
-    RCloseCurrentEvent* cce = dynamic_cast<RCloseCurrentEvent*>(e);
-    if (cce!=NULL) {
-        if (mdiArea==NULL) {
+    case QEvent::User+100:
+    {
+        RSelectionChangedEvent* sce = dynamic_cast<RSelectionChangedEvent*>(e);
+        if (sce!=NULL) {
+            // selection changed: reset property editor filter to show all entities:
+            notifyPropertyListeners(getDocument(), false, RS::EntityAll);
+            notifySelectionListeners(getDocumentInterface());
             return true;
         }
+    }
+    break;
 
-        // workaround for QMdiArea bug: last window cannot be closed sometimes:
-        if (mdiArea->activeSubWindow()==NULL) {
-            QList<QMdiSubWindow *> subWindows = mdiArea->subWindowList();
-            if (subWindows.size()==1) {
-                //mdiArea->setActiveSubWindow(subWindows.at(0));
-                qDebug() << "RMainWindowQt::event: closing subwindow";
-                subWindows.at(0)->close();
+
+    case QEvent::User+201:
+    {
+        RCoordinateEvent* coe = dynamic_cast<RCoordinateEvent*>(e);
+        if (coe!=NULL) {
+            RDocumentInterface* di = getDocumentInterface();
+            if (di!=NULL) {
+                di->coordinateEvent(*coe);
             }
+            return true;
         }
-        else {
-            qDebug() << "RMainWindowQt::event: closing active subwindow";
-            mdiArea->closeActiveSubWindow();
+    }
+    break;
+
+
+    case QEvent::User+300:
+    {
+        RTransactionEvent* te = dynamic_cast<RTransactionEvent*>(e);
+        if (te!=NULL) {
+            // combined properties might have changed (deleted entities):
+            notifyPropertyListeners(getDocument(), te->hasOnlyChanges());
+            // selection might have changed (deleted entities):
+            notifySelectionListeners(getDocumentInterface());
+            // notify transaction listeners:
+            RTransaction t = te->getTransaction();
+            notifyTransactionListeners(getDocument(), &t);
+            return true;
         }
-        if (RSettings::getBoolValue("TabBar/ShowAddTabButton", false)) {
-            mdiArea->updateTabBar();
+    }
+    break;
+
+
+    case QEvent::User+400:
+    {
+        RCloseCurrentEvent* cce = dynamic_cast<RCloseCurrentEvent*>(e);
+        if (cce!=NULL) {
+            if (mdiArea==NULL) {
+                return true;
+            }
+
+            // workaround for QMdiArea bug: last window cannot be closed sometimes:
+            if (mdiArea->activeSubWindow()==NULL) {
+                QList<QMdiSubWindow *> subWindows = mdiArea->subWindowList();
+                if (subWindows.size()==1) {
+                    //mdiArea->setActiveSubWindow(subWindows.at(0));
+                    qDebug() << "RMainWindowQt::event: closing subwindow";
+                    subWindows.at(0)->close();
+                }
+            }
+            else {
+                qDebug() << "RMainWindowQt::event: closing active subwindow";
+                mdiArea->closeActiveSubWindow();
+            }
+            if (RSettings::getBoolValue("TabBar/ShowAddTabButton", false)) {
+                mdiArea->updateTabBar();
+            }
+            return true;
         }
-        return true;
+    }
+    break;
+
+
+    case QEvent::User+500:
+    {
+        RPropertyEvent* pe = dynamic_cast<RPropertyEvent*>(e);
+        if (pe!=NULL) {
+            RDocumentInterface* documentInterface = getDocumentInterface();
+            if (documentInterface!=NULL) {
+                // called when user changed a property in the property editor
+                documentInterface->propertyChangeEvent(*pe);
+            }
+            return true;
+        }
+    }
+    break;
+
     }
 
 #if QT_VERSION < 0x050000 && (defined(Q_OS_MAC) || defined(Q_OS_WIN))
