@@ -73,7 +73,6 @@
     
     
     
-    
     // Constructors:
     
       REcmaShellPropertyEditor::REcmaShellPropertyEditor(

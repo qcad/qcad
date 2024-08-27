@@ -3,9 +3,8 @@
 xmlns:rs="http://www.ribbonsoft.com">
   <class name="RPropertyEditor"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
-  hasShell="true" sharedPointerSupport="false" isQObject="true"
+  hasShell="true" sharedPointerSupport="false" isQObject="false"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
-    <baseClass name="QObject" specifier="public" />
     <baseClass name="RPropertyListener" specifier="public" />
     <baseClass name="RLayerListener" specifier="public" />
     <constructor>

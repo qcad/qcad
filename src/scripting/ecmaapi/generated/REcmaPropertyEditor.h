@@ -31,9 +31,7 @@
     ;
 
     // conversion functions for base classes:
-    static  QScriptValue getQObject(QScriptContext *context,
-            QScriptEngine *engine)
-        ;static  QScriptValue getRPropertyListener(QScriptContext *context,
+    static  QScriptValue getRPropertyListener(QScriptContext *context,
             QScriptEngine *engine)
         ;static  QScriptValue getRLayerListener(QScriptContext *context,
             QScriptEngine *engine)
@@ -46,11 +44,6 @@
     // returns all base classes (in case of multiple inheritance):
     static  QScriptValue getBaseClasses(QScriptContext *context, QScriptEngine *engine) 
         ;
-        // properties of secondary base class RPropertyListener:
-        
-
-        // methods of secondary base class RPropertyListener:
-        
         // properties of secondary base class RLayerListener:
         
 
@@ -135,25 +128,6 @@
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RPropertyEditor* getSelf(const QString& fName, QScriptContext* context)
     ;static REcmaShellPropertyEditor* getSelfShell(const QString& fName, QScriptContext* context)
-    ;static  void fromScriptValue(const QScriptValue& value,
-        RPropertyEditor*
-        &out) {
-            QObject* o = value.toQObject();
-            out = qobject_cast<
-            RPropertyEditor*>(o);
-        }
-    static  QScriptValue toScriptValue(QScriptEngine *engine,
-        RPropertyEditor*
-        const &in){
-            QScriptValue s = engine->newQObject(in, QScriptEngine::QtOwnership,
-            QScriptEngine::PreferExistingWrapperObject);
-            /*
-            if(s.isNull()){
-               REcmaHelper::throwError("This object is null.", engine->currentContext());
-            }
-            */
-            return s;
-        }
-    };
+    ;};
     #endif
     

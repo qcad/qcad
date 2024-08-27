@@ -27,18 +27,17 @@
     }
 
     
-        // primary base class QObject:
+        // primary base class RPropertyListener:
         
             QScriptValue dpt = engine.defaultPrototype(
-                qMetaTypeId<QObject*>());
+                qMetaTypeId<RPropertyListener*>());
 
             if (dpt.isValid()) {
                 proto->setPrototype(dpt);
             }
           
         /*
-        REcmaPropertyListener::initEcma(engine, proto);
-          REcmaLayerListener::initEcma(engine, proto);
+        REcmaLayerListener::initEcma(engine, proto);
           
         */
     
@@ -52,9 +51,6 @@
     // destroy:
     REcmaHelper::registerFunction(&engine, proto, destroy, "destroy");
     
-        // conversion for base class QObject
-        REcmaHelper::registerFunction(&engine, proto, getQObject, "getQObject");
-        
         // conversion for base class RPropertyListener
         REcmaHelper::registerFunction(&engine, proto, getRPropertyListener, "getRPropertyListener");
         
@@ -69,12 +65,6 @@
     // conversion to all base classes (multiple inheritance):
     REcmaHelper::registerFunction(&engine, proto, getBaseClasses, "getBaseClasses");
     
-
-        // properties of secondary base class RPropertyListener:
-        
-
-        // methods of secondary base class RPropertyListener:
-        
 
         // properties of secondary base class RLayerListener:
         
@@ -131,10 +121,6 @@
             qMetaTypeId<RPropertyEditor*>(), *proto);
 
         
-                        qScriptRegisterMetaType<
-                        RPropertyEditor*>(
-                        &engine, toScriptValue, fromScriptValue, *proto);
-                    
     
 
     QScriptValue ctor = engine.newFunction(createEcma, *proto, 2);
@@ -196,7 +182,8 @@
                     REcmaShellPropertyEditor
                     ();
                 
-                    result = engine->newQObject(context->thisObject(), cppResult, QScriptEngine::QtOwnership);
+                    // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
+                    result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
                 
         cppResult->__qtscript_self = result;
     
@@ -213,16 +200,7 @@
     
 
     // conversion functions for base classes:
-     QScriptValue REcmaPropertyEditor::getQObject(QScriptContext *context,
-            QScriptEngine *engine)
-        
-            {
-                QObject* cppResult =
-                    qscriptvalue_cast<RPropertyEditor*> (context->thisObject());
-                QScriptValue result = qScriptValueFromValue(engine, cppResult);
-                return result;
-            }
-             QScriptValue REcmaPropertyEditor::getRPropertyListener(QScriptContext *context,
+     QScriptValue REcmaPropertyEditor::getRPropertyListener(QScriptContext *context,
             QScriptEngine *engine)
         
             {
@@ -256,8 +234,6 @@
     {
         QStringList list;
         
-        list.append("QObject");
-    
         list.append("RPropertyListener");
     
         list.append("RLayerListener");
@@ -266,11 +242,6 @@
         return qScriptValueFromSequence(engine, list);
     }
     
-        // properties of secondary base class RPropertyListener:
-        
-
-        // methods of secondary base class RPropertyListener:
-        
         // properties of secondary base class RLayerListener:
         
 
@@ -306,8 +277,8 @@
         RPropertyEditor::
        getInstance();
         // return type: RPropertyEditor *
-                // QObject
-                result = engine->newQObject(cppResult, QScriptEngine::QtOwnership);
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
             
     } else
 
@@ -2506,23 +2477,4 @@
 
 
         }
-         void fromScriptValue(const QScriptValue& value,
-        RPropertyEditor*
-        &out) {
-            QObject* o = value.toQObject();
-            out = qobject_cast<
-            RPropertyEditor*>(o);
-        }
-     QScriptValue toScriptValue(QScriptEngine *engine,
-        RPropertyEditor*
-        const &in){
-            QScriptValue s = engine->newQObject(in, QScriptEngine::QtOwnership,
-            QScriptEngine::PreferExistingWrapperObject);
-            /*
-            if(s.isNull()){
-               REcmaHelper::throwError("This object is null.", engine->currentContext());
-            }
-            */
-            return s;
-        }
-    
+        

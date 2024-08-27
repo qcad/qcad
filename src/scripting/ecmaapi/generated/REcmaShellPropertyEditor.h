@@ -31,7 +31,6 @@
     
     
     
-    
     // Constructors:
     
       REcmaShellPropertyEditor(
