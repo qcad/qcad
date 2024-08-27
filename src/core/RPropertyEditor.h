@@ -27,6 +27,7 @@
 #include <QMap>
 #include <QString>
 #include <QStringList>
+#include <QPromise>
 
 #include "RDocument.h"
 #include "RDocumentInterface.h"
@@ -44,9 +45,8 @@
  * \scriptable
  * \generateScriptShell
  */
-class QCADCORE_EXPORT RPropertyEditor: public RPropertyListener, public RLayerListener {
-
-    Q_DECLARE_TR_FUNCTIONS(RPropertyEditor)
+class QCADCORE_EXPORT RPropertyEditor: public QObject, public RPropertyListener, public RLayerListener {
+    Q_OBJECT
 
 public:
     RPropertyEditor();
@@ -56,6 +56,16 @@ public:
 
     // from RPropertyListener interface:
     virtual void updateFromDocument(RDocument* document, bool onlyChanges, RS::EntityType filter = RS::EntityUnknown, bool manual = false, bool showOnRequest = false);
+
+    void sleep(QPromise<void>& promise, RDocument* document, bool onlyChanges, RS::EntityType filter, bool manual, bool showOnRequest);
+
+signals:
+    void finished(RDocument* document, bool onlyChanges, RS::EntityType filter, bool manual, bool showOnRequest);
+
+public slots:
+    void updateFromDocumentSlot(RDocument* document, bool onlyChanges, RS::EntityType filter, bool manual, bool showOnRequest);
+
+public:
     virtual void updateFromObject(RObject* object, RDocument* document = NULL);
     virtual void clearEditor();
 
@@ -134,6 +144,10 @@ protected:
     RS::EntityType entityTypeFilter;
 
     static RPropertyEditor* instance;
+
+
+private:
+    bool terminate;
 };
 
 Q_DECLARE_METATYPE(RPropertyEditor*)

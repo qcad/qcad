@@ -42,9 +42,12 @@ RPropertyEditor* RPropertyEditor::instance = NULL;
 RPropertyEditor::RPropertyEditor()
     : guiUpToDate(false),
       updatesDisabled(false),
-      entityTypeFilter(RS::EntityAll) {
+      entityTypeFilter(RS::EntityAll),
+      terminate(false) {
 
     instance = this;
+
+    connect(this, &RPropertyEditor::finished, this, &RPropertyEditor::updateFromDocumentSlot);
 }
 
 /**
@@ -228,6 +231,27 @@ void RPropertyEditor::updateProperty(const RPropertyTypeId& propertyTypeId,
 //    }
 //}
 
+
+void RPropertyEditor::sleep(QPromise<void>& promise, RDocument* document, bool onlyChanges, RS::EntityType filter, bool manual, bool showOnRequest) {
+    terminate = false;
+
+    QElapsedTimer t;
+    t.start();
+    int delay = RSettings::getIntValue("PropertyEditor/LazyUpdateDelay", 200);
+    while (t.elapsed() < delay) {
+        QThread::msleep(10);
+        if (terminate) {
+            break;
+        }
+    }
+
+    if (terminate) {
+        return;
+    }
+
+    emit finished(document, onlyChanges, filter, manual, showOnRequest);
+}
+
 /**
  * Implements updateFromDocument from RPropertyListener to show properties for selected objects.
  *
@@ -247,9 +271,26 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
         return;
     }
 
-    //qDebug() << "RPropertyEditor::updateFromDocument";
-    //RDebug::startTimer();
+    int lazyUpdate = RSettings::getBoolValue("PropertyEditor/LazyUpdate", true);
 
+    if (lazyUpdate) {
+        // sleep, then update property editor if sleep was not interrupted by other call:
+        static QFuture<void> future = QFuture<void>();
+
+        if (future.isRunning()) {
+            terminate = true;
+            future.cancel();
+            future.waitForFinished();
+        }
+
+        future = QtConcurrent::run(&RPropertyEditor::sleep, this, document, onlyChanges, filter, manual, showOnRequest);
+    }
+    else {
+        updateFromDocumentSlot(document, onlyChanges, filter, manual, showOnRequest);
+    }
+}
+
+void RPropertyEditor::updateFromDocumentSlot(RDocument* document, bool onlyChanges, RS::EntityType filter, bool manual, bool showOnRequest) {
     if (filter!=RS::EntityUnknown) {
         setEntityTypeFilter(filter);
     }
