@@ -63,7 +63,7 @@ signals:
     void finished(RDocument* document, bool onlyChanges, RS::EntityType filter, bool manual, bool showOnRequest);
 
 public slots:
-    void updateFromDocumentSlot(RDocument* document, bool onlyChanges, RS::EntityType filter, bool manual, bool showOnRequest);
+    void updateFromDocumentNow(RDocument* document, bool onlyChanges, RS::EntityType filter = RS::EntityUnknown, bool manual = false, bool showOnRequest = false);
 
 public:
     virtual void updateFromObject(RObject* object, RDocument* document = NULL);

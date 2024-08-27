@@ -47,7 +47,7 @@ RPropertyEditor::RPropertyEditor()
 
     instance = this;
 
-    connect(this, &RPropertyEditor::finished, this, &RPropertyEditor::updateFromDocumentSlot);
+    connect(this, &RPropertyEditor::finished, this, &RPropertyEditor::updateFromDocumentNow);
 }
 
 /**
@@ -271,9 +271,11 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
         return;
     }
 
+    bool gotSelection = document->hasSelection();
+
     int lazyUpdate = RSettings::getBoolValue("PropertyEditor/LazyUpdate", true);
 
-    if (lazyUpdate) {
+    if (lazyUpdate && !showOnRequest && gotSelection) {
         // sleep, then update property editor if sleep was not interrupted by other call:
         static QFuture<void> future = QFuture<void>();
 
@@ -281,16 +283,29 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
             terminate = true;
             future.cancel();
             future.waitForFinished();
+
+            // don't clear
+            // call might be followed by update of values only:
+            //clearEditor();
         }
 
         future = QtConcurrent::run(&RPropertyEditor::sleep, this, document, onlyChanges, filter, manual, showOnRequest);
     }
     else {
-        updateFromDocumentSlot(document, onlyChanges, filter, manual, showOnRequest);
+        updateFromDocumentNow(document, onlyChanges, filter, manual, showOnRequest);
     }
 }
 
-void RPropertyEditor::updateFromDocumentSlot(RDocument* document, bool onlyChanges, RS::EntityType filter, bool manual, bool showOnRequest) {
+void RPropertyEditor::updateFromDocumentNow(RDocument* document, bool onlyChanges, RS::EntityType filter, bool manual, bool showOnRequest) {
+    if (updatesDisabled) {
+        return;
+    }
+
+    if (document == NULL) {
+        clearEditor();
+        return;
+    }
+
     if (filter!=RS::EntityUnknown) {
         setEntityTypeFilter(filter);
     }
@@ -741,12 +756,12 @@ void RPropertyEditor::updateLayers(RDocumentInterface* documentInterface) {
     if (documentInterface==NULL) {
         // 20190130: changed from false to true:
         // workaround for Qt 5.10.1 bug (crash when changing layer name in property editor)
-        updateFromDocument(NULL, true);
+        updateFromDocumentNow(NULL, true);
     }
     else {
         // 20190130: changed from false to true:
         // workaround for Qt 5.10.1 bug (crash when changing layer name in property editor)
-        updateFromDocument(&documentInterface->getDocument(), true);
+        updateFromDocumentNow(&documentInterface->getDocument(), true);
     }
 }
 

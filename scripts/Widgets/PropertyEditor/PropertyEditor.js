@@ -1538,7 +1538,7 @@ PropertyEditorImpl.prototype.filterChanged = function() {
         entityTypeFilter = RS.EntityAll;
     }
 
-    this.updateFromDocument(doc, false, entityTypeFilter, true);
+    this.updateFromDocumentNow(doc, false, entityTypeFilter, true);
 };
 
 /**
@@ -1556,7 +1556,7 @@ PropertyEditorImpl.prototype.requestAllProperties = function() {
         entityTypeFilter = RS.EntityAll;
     }
 
-    this.updateFromDocument(doc, false, entityTypeFilter, true, true);
+    this.updateFromDocumentNow(doc, false, entityTypeFilter, true, true);
 };
 
 PropertyEditorImpl.prototype.getAdjustedPropertyValue = function(propertyTypeId) {
