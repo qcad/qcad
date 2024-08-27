@@ -4314,7 +4314,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Entity is not a circle, ellipse, spline or polyline.</source>
-        <translation type="unfinished">L&apos;entità non è un cerchio, un&apos;ellisse, una spline o una polilinea.</translation>
+        <translation>L&apos;entità non è un cerchio, un&apos;ellisse, una spline o una polilinea.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4324,7 +4324,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Entity is not a closed polyline.</source>
-        <translation type="unfinished">L&apos;entità non è una polilinea chiusa.</translation>
+        <translation>L&apos;entità non è una polilinea chiusa.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4728,7 +4728,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
         <source>&amp;Export CSV</source>
-        <translation type="unfinished">Esportazione CSV</translation>
+        <translation>Esportazione &amp;CSV</translation>
     </message>
 </context>
 <context>
@@ -10257,12 +10257,12 @@ is already in the list.</source>
     <message>
         <location line="-17"/>
         <source>Maximum complexity for automatic hatch length calculation:</source>
-        <translation type="unfinished">Massima complessità per il calcolo automatico della lunghezza del tratteggio:</translation>
+        <translation>Massima complessità per il calcolo automatico della lunghezza del tratteggio:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Update delay [ms]:</source>
-        <translation type="unfinished">Ritardo di aggiornamento [ms]:</translation>
+        <translation>Ritardo di aggiornamento [ms]:</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -10277,7 +10277,7 @@ is already in the list.</source>
     <message>
         <location line="+113"/>
         <source>Only update when nothing changes during update delay</source>
-        <translation type="unfinished">Aggiornare solo quando non cambia nulla durante il ritardo dell&apos;aggiornamento</translation>
+        <translation>Aggiornare solo quando non cambia nulla durante il ritardo dell&apos;aggiornamento</translation>
     </message>
     <message>
         <location line="-154"/>
@@ -14395,22 +14395,22 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Wipeouts</source>
-        <translation type="unfinished">Spazzate via</translation>
+        <translation>Entità coprenti</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Wipeout</source>
-        <translation type="unfinished">Wipeout</translation>
+        <translation>Entità coprente</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>External References</source>
-        <translation type="unfinished">Riferimenti esterni</translation>
+        <translation>Riferimenti esterni</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>External Reference</source>
-        <translation type="unfinished">Riferimento esterno</translation>
+        <translation>Riferimento esterno</translation>
     </message>
     <message>
         <location line="+3"/>

@@ -4314,7 +4314,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a circle, ellipse, spline or polyline.</source>
-        <translation type="unfinished">L&apos;entité n&apos;est pas un cercle, une ellipse, une spline ou une polyligne.</translation>
+        <translation>L&apos;entité n&apos;est pas un cercle, une ellipse, une spline ou une polyligne.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4324,7 +4324,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a closed polyline.</source>
-        <translation type="unfinished">L&apos;entité n&apos;est pas une polyligne fermée.</translation>
+        <translation>L&apos;entité n&apos;est pas une polyligne fermée.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4728,7 +4728,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
         <source>&amp;Export CSV</source>
-        <translation type="unfinished">Exporter CSV</translation>
+        <translation>Exporter &amp;CSV</translation>
     </message>
 </context>
 <context>
@@ -10257,12 +10257,12 @@ est déjà dans la liste.</translation>
     <message>
         <location line="-17"/>
         <source>Maximum complexity for automatic hatch length calculation:</source>
-        <translation type="unfinished">Complexité maximale pour le calcul automatique de la longueur des hachures :</translation>
+        <translation>Complexité maximale pour le calcul automatique de la longueur des hachures :</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Update delay [ms]:</source>
-        <translation type="unfinished">Délai de mise à jour [ms] :</translation>
+        <translation>Délai de mise à jour [ms] :</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -10277,7 +10277,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+113"/>
         <source>Only update when nothing changes during update delay</source>
-        <translation type="unfinished">Ne mettre à jour que si rien ne change pendant le délai de mise à jour</translation>
+        <translation>Ne mettre à jour que si rien ne change pendant le délai de mise à jour</translation>
     </message>
     <message>
         <location line="-154"/>
@@ -14394,22 +14394,22 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+2"/>
         <source>Wipeouts</source>
-        <translation type="unfinished">Objet de nettoyage</translation>
+        <translation>Objets de nettoyage</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Wipeout</source>
-        <translation type="unfinished">Objet de nettoyage</translation>
+        <translation>Objet de nettoyage</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>External References</source>
-        <translation type="unfinished">Références externes</translation>
+        <translation>Références externes</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>External Reference</source>
-        <translation type="unfinished">Référence externe</translation>
+        <translation>Référence externe</translation>
     </message>
     <message>
         <location line="+3"/>

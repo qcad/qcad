@@ -4314,7 +4314,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a circle, ellipse, spline or polyline.</source>
-        <translation type="unfinished">Entiteetti ei ole ympyrä, ellipsi, spline tai polyline.</translation>
+        <translation>Entiteetti ei ole ympyrä, ellipsi, spline tai polyline.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4324,7 +4324,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a closed polyline.</source>
-        <translation type="unfinished">Entiteetti ei ole suljettu polylinja.</translation>
+        <translation>Entiteetti ei ole suljettu polylinja.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4728,7 +4728,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
         <source>&amp;Export CSV</source>
-        <translation type="unfinished">Vie CSV</translation>
+        <translation>Vie CSV</translation>
     </message>
 </context>
 <context>
@@ -10135,12 +10135,12 @@ on jo luettelossa.</translation>
     <message>
         <location line="-17"/>
         <source>Maximum complexity for automatic hatch length calculation:</source>
-        <translation type="unfinished">Automaattisen luukun pituuden laskennan suurin monimutkaisuus:</translation>
+        <translation>Automaattisen luukun pituuden laskennan suurin monimutkaisuus:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Update delay [ms]:</source>
-        <translation type="unfinished">Päivitysviive [ms]:</translation>
+        <translation>Päivitysviive [ms]:</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -10155,7 +10155,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+113"/>
         <source>Only update when nothing changes during update delay</source>
-        <translation type="unfinished">Päivitä vain, kun mikään ei muutu päivitysviiveen aikana</translation>
+        <translation>Päivitä vain, kun mikään ei muutu päivitysviiveen aikana</translation>
     </message>
     <message>
         <location line="-154"/>
@@ -14394,22 +14394,22 @@ on jo luettelossa.</translation>
     <message>
         <location line="+2"/>
         <source>Wipeouts</source>
-        <translation type="unfinished">Wipeouts</translation>
+        <translation>Wipeouts</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Wipeout</source>
-        <translation type="unfinished">Wipeout</translation>
+        <translation>Wipeout</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>External References</source>
-        <translation type="unfinished">Ulkoiset viitteet</translation>
+        <translation>Ulkoiset viitteet</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>External Reference</source>
-        <translation type="unfinished">Ulkoinen viite</translation>
+        <translation>Ulkoinen viite</translation>
     </message>
     <message>
         <location line="+3"/>

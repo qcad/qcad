@@ -4318,7 +4318,7 @@ jest już na liście.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a circle, ellipse, spline or polyline.</source>
-        <translation type="unfinished">Jednostka nie jest okręgiem, elipsą, splajnem ani polilinią.</translation>
+        <translation>Jednostka nie jest okręgiem, elipsą, splajnem ani polilinią.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4328,7 +4328,7 @@ jest już na liście.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a closed polyline.</source>
-        <translation type="unfinished">Podmiot nie jest zamkniętą polilinią.</translation>
+        <translation>Podmiot nie jest zamkniętą polilinią.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4732,7 +4732,7 @@ jest już na liście.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
         <source>&amp;Export CSV</source>
-        <translation type="unfinished">Eksport CSV</translation>
+        <translation>Eksport CSV</translation>
     </message>
 </context>
 <context>
@@ -10264,12 +10264,12 @@ jest już na liście.</translation>
     <message>
         <location line="-17"/>
         <source>Maximum complexity for automatic hatch length calculation:</source>
-        <translation type="unfinished">Maksymalna złożoność automatycznego obliczania długości kreskowania:</translation>
+        <translation>Maksymalna złożoność automatycznego obliczania długości kreskowania:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Update delay [ms]:</source>
-        <translation type="unfinished">Opóźnienie aktualizacji [ms]:</translation>
+        <translation>Opóźnienie aktualizacji [ms]:</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -10284,7 +10284,7 @@ jest już na liście.</translation>
     <message>
         <location line="+113"/>
         <source>Only update when nothing changes during update delay</source>
-        <translation type="unfinished">Aktualizuj tylko wtedy, gdy nic się nie zmieni podczas opóźnienia aktualizacji</translation>
+        <translation>Aktualizuj tylko wtedy, gdy nic się nie zmieni podczas opóźnienia aktualizacji</translation>
     </message>
     <message>
         <location line="-154"/>
@@ -14404,22 +14404,22 @@ jest już na liście.</translation>
     <message>
         <location line="+2"/>
         <source>Wipeouts</source>
-        <translation type="unfinished">Wipeouts</translation>
+        <translation>Wipeouts</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Wipeout</source>
-        <translation type="unfinished">Wipeout</translation>
+        <translation>Wipeout</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>External References</source>
-        <translation type="unfinished">Odniesienia zewnętrzne</translation>
+        <translation>Odniesienia zewnętrzne</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>External Reference</source>
-        <translation type="unfinished">Odniesienie zewnętrzne</translation>
+        <translation>Odniesienie zewnętrzne</translation>
     </message>
     <message>
         <location line="+3"/>

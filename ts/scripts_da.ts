@@ -4314,7 +4314,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a circle, ellipse, spline or polyline.</source>
-        <translation type="unfinished">Entiteten er ikke en cirkel, ellipse, spline eller polylinje.</translation>
+        <translation>Entiteten er ikke en cirkel, ellipse, spline eller polylinje.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4324,7 +4324,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a closed polyline.</source>
-        <translation type="unfinished">Entiteten er ikke en lukket polylinje.</translation>
+        <translation>Entiteten er ikke en lukket polylinje.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4728,7 +4728,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
         <source>&amp;Export CSV</source>
-        <translation type="unfinished">Eksporter CSV</translation>
+        <translation>Eksporter CSV</translation>
     </message>
 </context>
 <context>
@@ -10135,12 +10135,12 @@ er allerede på listen.</translation>
     <message>
         <location line="-17"/>
         <source>Maximum complexity for automatic hatch length calculation:</source>
-        <translation type="unfinished">Maksimal kompleksitet for automatisk beregning af lugelængde:</translation>
+        <translation>Maksimal kompleksitet for automatisk beregning af lugelængde:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Update delay [ms]:</source>
-        <translation type="unfinished">Opdateringsforsinkelse [ms]:</translation>
+        <translation>Opdateringsforsinkelse [ms]:</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -10155,7 +10155,7 @@ er allerede på listen.</translation>
     <message>
         <location line="+113"/>
         <source>Only update when nothing changes during update delay</source>
-        <translation type="unfinished">Opdater kun, når intet ændres under opdateringsforsinkelsen</translation>
+        <translation>Opdater kun, når intet ændres under opdateringsforsinkelsen</translation>
     </message>
     <message>
         <location line="-154"/>
@@ -14394,22 +14394,22 @@ er allerede på listen.</translation>
     <message>
         <location line="+2"/>
         <source>Wipeouts</source>
-        <translation type="unfinished">Wipeouts</translation>
+        <translation>Wipeouts</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Wipeout</source>
-        <translation type="unfinished">Wipeout</translation>
+        <translation>Wipeout</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>External References</source>
-        <translation type="unfinished">Eksterne referencer</translation>
+        <translation>Eksterne referencer</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>External Reference</source>
-        <translation type="unfinished">Ekstern reference</translation>
+        <translation>Ekstern reference</translation>
     </message>
     <message>
         <location line="+3"/>

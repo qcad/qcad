@@ -4312,7 +4312,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a circle, ellipse, spline or polyline.</source>
-        <translation type="unfinished">Entiteten är inte en cirkel, ellips, spline eller polylinje.</translation>
+        <translation>Entiteten är inte en cirkel, ellips, spline eller polylinje.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4322,7 +4322,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a closed polyline.</source>
-        <translation type="unfinished">Entiteten är inte en sluten polylinje.</translation>
+        <translation>Entiteten är inte en sluten polylinje.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4726,7 +4726,7 @@ finns redan i listan.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
         <source>&amp;Export CSV</source>
-        <translation type="unfinished">Exportera CSV</translation>
+        <translation>Exportera CSV</translation>
     </message>
 </context>
 <context>
@@ -10225,12 +10225,12 @@ finns redan i listan.</translation>
     <message>
         <location line="-17"/>
         <source>Maximum complexity for automatic hatch length calculation:</source>
-        <translation type="unfinished">Maximal komplexitet för automatisk beräkning av lucklängd:</translation>
+        <translation>Maximal komplexitet för automatisk beräkning av lucklängd:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Update delay [ms]:</source>
-        <translation type="unfinished">Fördröjning av uppdatering [ms]:</translation>
+        <translation>Fördröjning av uppdatering [ms]:</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -10245,7 +10245,7 @@ finns redan i listan.</translation>
     <message>
         <location line="+113"/>
         <source>Only update when nothing changes during update delay</source>
-        <translation type="unfinished">Uppdatera endast när inget ändras under uppdateringsfördröjningen</translation>
+        <translation>Uppdatera endast när inget ändras under uppdateringsfördröjningen</translation>
     </message>
     <message>
         <location line="-154"/>
@@ -14392,22 +14392,22 @@ finns redan i listan.</translation>
     <message>
         <location line="+2"/>
         <source>Wipeouts</source>
-        <translation type="unfinished">Wipeouts</translation>
+        <translation>Wipeouts</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Wipeout</source>
-        <translation type="unfinished">Wipeout</translation>
+        <translation>Wipeout</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>External References</source>
-        <translation type="unfinished">Externa referenser</translation>
+        <translation>Externa referenser</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>External Reference</source>
-        <translation type="unfinished">Extern referens</translation>
+        <translation>Extern referens</translation>
     </message>
     <message>
         <location line="+3"/>

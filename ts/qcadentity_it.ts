@@ -932,7 +932,7 @@
     <message>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+6"/>
         <source>Frame</source>
-        <translation type="unfinished">Telaio</translation>
+        <translation>Telaio</translation>
     </message>
 </context>
 </TS>

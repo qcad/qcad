@@ -4314,7 +4314,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a circle, ellipse, spline or polyline.</source>
-        <translation type="unfinished">De objecten zijn geen cirkel, ellips, spline of polylijn.</translation>
+        <translation>Object is niet een cirkel, ellips, spline of polylijn.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4324,7 +4324,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a closed polyline.</source>
-        <translation type="unfinished">Object is geen gesloten polylijn.</translation>
+        <translation>Object is niet een gesloten polylijn.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4728,7 +4728,7 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
         <source>&amp;Export CSV</source>
-        <translation type="unfinished">CSV exporteren</translation>
+        <translation>&amp;CSV exporteren</translation>
     </message>
 </context>
 <context>
@@ -10257,12 +10257,12 @@ is al in de lijst.</translation>
     <message>
         <location line="-17"/>
         <source>Maximum complexity for automatic hatch length calculation:</source>
-        <translation type="unfinished">Maximale complexiteit voor automatische berekening van de luiklengte:</translation>
+        <translation>Maximale complexiteit voor automatische berekening van de lengte van arceringen:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Update delay [ms]:</source>
-        <translation type="unfinished">Updatevertraging [ms]:</translation>
+        <translation>Updatevertraging [ms]:</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -10277,7 +10277,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+113"/>
         <source>Only update when nothing changes during update delay</source>
-        <translation type="unfinished">Alleen bijwerken als er niets verandert tijdens de updatevertraging</translation>
+        <translation>Alleen bijwerken als er niets verandert tijdens de updatevertraging</translation>
     </message>
     <message>
         <location line="-154"/>
@@ -14394,22 +14394,22 @@ is al in de lijst.</translation>
     <message>
         <location line="+2"/>
         <source>Wipeouts</source>
-        <translation type="unfinished">Afdekking</translation>
+        <translation>Afdekkingen</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Wipeout</source>
-        <translation type="unfinished">Afdekking</translation>
+        <translation>Afdekking</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>External References</source>
-        <translation type="unfinished">Externe referenties</translation>
+        <translation>Externe referenties</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>External Reference</source>
-        <translation type="unfinished">Externe referentie</translation>
+        <translation>Externe referentie</translation>
     </message>
     <message>
         <location line="+3"/>
