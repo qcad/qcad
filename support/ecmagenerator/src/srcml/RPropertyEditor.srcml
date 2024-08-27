@@ -28,6 +28,9 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QStringList&gt;</cpp:file></cpp:include>
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x060000</expr></cpp:if>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QPromise&gt;</cpp:file></cpp:include>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocument.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocumentInterface.h"</cpp:file></cpp:include>
@@ -45,9 +48,8 @@
  * \scriptable
  * \generateScriptShell
  */</comment>
-<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RPropertyEditor</name><super>: <specifier>public</specifier> <name>RPropertyListener</name>, <specifier>public</specifier> <name>RLayerListener</name></super> <block>{<private type="default">
-
-    <macro><name>Q_DECLARE_TR_FUNCTIONS</name><argument_list>(<argument>RPropertyEditor</argument>)</argument_list></macro>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RPropertyEditor</name><super>: <specifier>public</specifier> <name>QObject</name>, <specifier>public</specifier> <name>RPropertyListener</name>, <specifier>public</specifier> <name>RLayerListener</name></super> <block>{<private type="default">
+    <macro><name>Q_OBJECT</name></macro>
 
 </private><public>public:
     <constructor_decl><name>RPropertyEditor</name><parameter_list>()</parameter_list>;</constructor_decl>
@@ -57,6 +59,18 @@
 
     <comment type="line">// from RPropertyListener interface:</comment>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>updateFromDocument</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>bool</name></type> <name>onlyChanges</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>filter</name> =<init> <expr><name><name>RS</name>::<name>EntityUnknown</name></name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>manual</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>showOnRequest</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x060000</expr></cpp:if>
+    <function_decl><type><name>void</name></type> <name>sleep</name><parameter_list>(<param><decl><type><name>QPromise<argument_list>&lt;<argument><name>void</name></argument>&gt;</argument_list></name>&amp;</type> <name>promise</name></decl></param>, <param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>bool</name></type> <name>onlyChanges</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>filter</name></decl></param>, <param><decl><type><name>bool</name></type> <name>manual</name></decl></param>, <param><decl><type><name>bool</name></type> <name>showOnRequest</name></decl></param>)</parameter_list>;</function_decl>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
+<label><name>signals</name>:</label>
+    <function_decl><type><name>void</name></type> <name>finished</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>bool</name></type> <name>onlyChanges</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>filter</name></decl></param>, <param><decl><type><name>bool</name></type> <name>manual</name></decl></param>, <param><decl><type><name>bool</name></type> <name>showOnRequest</name></decl></param>)</parameter_list>;</function_decl>
+
+</public><public>public slots:
+    <function_decl><type><name>void</name></type> <name>updateFromDocumentNow</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>bool</name></type> <name>onlyChanges</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>filter</name> =<init> <expr><name><name>RS</name>::<name>EntityUnknown</name></name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>manual</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>showOnRequest</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+</public><public>public:
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>updateFromObject</name><parameter_list>(<param><decl><type><name>RObject</name>*</type> <name>object</name></decl></param>, <param><decl><type><name>RDocument</name>*</type> <name>document</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>clearEditor</name><parameter_list>()</parameter_list>;</function_decl>
 
@@ -135,7 +149,11 @@
     <decl_stmt><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>entityTypeFilter</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>static</name> <name>RPropertyEditor</name>*</type> <name>instance</name></decl>;</decl_stmt>
-</protected>}</block>;</class>
+
+
+</protected><private>private:
+    <decl_stmt><decl><type><name>bool</name></type> <name>terminate</name></decl>;</decl_stmt>
+</private>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RPropertyEditor*</argument>)</argument_list></macro>
 

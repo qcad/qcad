@@ -3,8 +3,9 @@
 xmlns:rs="http://www.ribbonsoft.com">
   <class name="RPropertyEditor"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
-  hasShell="true" sharedPointerSupport="false" isQObject="false"
+  hasShell="true" sharedPointerSupport="false" isQObject="true"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="QObject" specifier="public" />
     <baseClass name="RPropertyListener" specifier="public" />
     <baseClass name="RLayerListener" specifier="public" />
     <constructor>
@@ -19,6 +20,41 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="updateFromDocument" cppName="updateFromDocument"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocument *" typeName="RDocument *"
+        name="document" isConst="false" />
+        <arg type="bool" typeName="bool" name="onlyChanges"
+        isConst="false" />
+        <arg type="RS::EntityType" typeName="RS::EntityType"
+        name="filter" hasDefault="true"
+        default="RS :: EntityUnknown" isConst="false" />
+        <arg type="bool" typeName="bool" name="manual"
+        hasDefault="true" default="false" isConst="false" />
+        <arg type="bool" typeName="bool" name="showOnRequest"
+        hasDefault="true" default="false" isConst="false" />
+      </variant>
+    </method>
+    <method name="sleep" cppName="sleep" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QPromise &lt; void &gt; &amp;"
+        typeName="QPromise &lt; void &gt;" name="promise"
+        isConst="false" />
+        <arg type="RDocument *" typeName="RDocument *"
+        name="document" isConst="false" />
+        <arg type="bool" typeName="bool" name="onlyChanges"
+        isConst="false" />
+        <arg type="RS::EntityType" typeName="RS::EntityType"
+        name="filter" isConst="false" />
+        <arg type="bool" typeName="bool" name="manual"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="showOnRequest"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="updateFromDocumentNow"
+    cppName="updateFromDocumentNow" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RDocument *" typeName="RDocument *"
         name="document" isConst="false" />

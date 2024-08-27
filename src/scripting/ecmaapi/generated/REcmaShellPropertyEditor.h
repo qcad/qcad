@@ -31,6 +31,7 @@
     
     
     
+    
     // Constructors:
     
       REcmaShellPropertyEditor(
@@ -46,6 +47,21 @@
     
     
       void updateFromDocument(
+                RDocument * document, bool onlyChanges, RS::EntityType filter
+        = RS :: EntityUnknown, bool manual
+        = false, bool showOnRequest
+        = false
+            );
+        
+    
+    
+      void sleep(
+                QPromise < void > & promise, RDocument * document, bool onlyChanges, RS::EntityType filter, bool manual, bool showOnRequest
+            );
+        
+    
+    
+      void updateFromDocumentNow(
                 RDocument * document, bool onlyChanges, RS::EntityType filter
         = RS :: EntityUnknown, bool manual
         = false, bool showOnRequest
