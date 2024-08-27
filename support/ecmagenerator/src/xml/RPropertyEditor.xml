@@ -34,24 +34,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
-    <method name="sleep" cppName="sleep" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="QPromise &lt; void &gt; &amp;"
-        typeName="QPromise &lt; void &gt;" name="promise"
-        isConst="false" />
-        <arg type="RDocument *" typeName="RDocument *"
-        name="document" isConst="false" />
-        <arg type="bool" typeName="bool" name="onlyChanges"
-        isConst="false" />
-        <arg type="RS::EntityType" typeName="RS::EntityType"
-        name="filter" isConst="false" />
-        <arg type="bool" typeName="bool" name="manual"
-        isConst="false" />
-        <arg type="bool" typeName="bool" name="showOnRequest"
-        isConst="false" />
-      </variant>
-    </method>
     <method name="updateFromDocumentNow"
     cppName="updateFromDocumentNow" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

@@ -68,9 +68,6 @@
         updateFromDocument
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        sleep
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         updateFromDocumentNow
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
