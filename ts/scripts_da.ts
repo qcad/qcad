@@ -4314,12 +4314,17 @@ er allerede på listen.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a circle, ellipse, spline or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Entiteten er ikke en cirkel, ellipse, spline eller polylinje.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a polyline.</source>
         <translation>Enheden er ikke en polylinje.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a closed polyline.</source>
+        <translation type="unfinished">Entiteten er ikke en lukket polylinje.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4723,7 +4728,7 @@ er allerede på listen.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
         <source>&amp;Export CSV</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Eksporter CSV</translation>
     </message>
 </context>
 <context>
@@ -10113,37 +10118,52 @@ er allerede på listen.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+17"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+24"/>
         <source>Display Z coordinates</source>
         <translation>Visning af Z-koordinater</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+47"/>
         <source>Display properties of current block and current layer</source>
         <translation>Vis egenskaber for den aktuelle blok og det aktuelle lag</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-37"/>
         <source>Allow adding custom properties</source>
         <translation>Tillad tilføjelse af brugerdefinerede egenskaber</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-17"/>
+        <source>Maximum complexity for automatic hatch length calculation:</source>
+        <translation type="unfinished">Maksimal kompleksitet for automatisk beregning af lugelængde:</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Update delay [ms]:</source>
+        <translation type="unfinished">Opdateringsforsinkelse [ms]:</translation>
+    </message>
+    <message>
+        <location line="+34"/>
         <source>Always show all properties (this may slow down selection of entities)</source>
         <translation>Vis altid alle egenskaber (dette kan gøre udvælgelsen af enheder langsommere)</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+14"/>
         <source>Always format property values as decimal numbers</source>
         <translation>Formater altid egenskabsværdier som decimaltal</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+113"/>
+        <source>Only update when nothing changes during update delay</source>
+        <translation type="unfinished">Opdater kun, når intet ændres under opdateringsforsinkelsen</translation>
+    </message>
+    <message>
+        <location line="-154"/>
         <source>Decimals / precision for displayed property values:</source>
         <translation>Decimaler/præcision for de viste egenskabsværdier:</translation>
     </message>
     <message>
-        <location line="-19"/>
+        <location line="+101"/>
         <source>Display advanced dimension style overrides</source>
         <translation>Vis avancerede dimensionsstilsoverstyringer</translation>
     </message>
@@ -14374,22 +14394,22 @@ er allerede på listen.</translation>
     <message>
         <location line="+2"/>
         <source>Wipeouts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wipeouts</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Wipeout</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wipeout</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>External References</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Eksterne referencer</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>External Reference</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ekstern reference</translation>
     </message>
     <message>
         <location line="+3"/>

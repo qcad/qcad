@@ -4309,12 +4309,17 @@ zaten listede.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a circle, ellipse, spline or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varlık bir daire, elips, spline veya çoklu çizgi değildir.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a polyline.</source>
         <translation type="unfinished">Varlık bir çoklu çizgi değildir.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a closed polyline.</source>
+        <translation type="unfinished">Varlık kapalı bir çoklu çizgi değildir.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4718,7 +4723,7 @@ zaten listede.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
         <source>&amp;Export CSV</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">CSV&apos;yi Dışa Aktar</translation>
     </message>
 </context>
 <context>
@@ -10105,37 +10110,52 @@ zaten listede.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+17"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+24"/>
         <source>Display Z coordinates</source>
         <translation type="unfinished">Z koordinatlarını göster</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+47"/>
         <source>Display properties of current block and current layer</source>
         <translation type="unfinished">Geçerli blok ve geçerli katmanın özelliklerini görüntüleme</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-37"/>
         <source>Allow adding custom properties</source>
         <translation>Özel özellikler eklemeye izin ver</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-17"/>
+        <source>Maximum complexity for automatic hatch length calculation:</source>
+        <translation type="unfinished">Otomatik kapak uzunluğu hesaplaması için maksimum karmaşıklık:</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Update delay [ms]:</source>
+        <translation type="unfinished">Güncelleme gecikmesi [ms]:</translation>
+    </message>
+    <message>
+        <location line="+34"/>
         <source>Always show all properties (this may slow down selection of entities)</source>
         <translation>Her zaman tüm özellikleri göster (bu, varlıkların seçimini yavaşlatabilir)</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+14"/>
         <source>Always format property values as decimal numbers</source>
         <translation type="unfinished">Özellik değerlerini her zaman ondalık sayı olarak biçimlendirin</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+113"/>
+        <source>Only update when nothing changes during update delay</source>
+        <translation type="unfinished">Yalnızca güncelleme gecikmesi sırasında hiçbir şey değişmediğinde güncelleyin</translation>
+    </message>
+    <message>
+        <location line="-154"/>
         <source>Decimals / precision for displayed property values:</source>
         <translation type="unfinished">Görüntülenen özellik değerleri için ondalıklar / hassasiyet:</translation>
     </message>
     <message>
-        <location line="-19"/>
+        <location line="+101"/>
         <source>Display advanced dimension style overrides</source>
         <translation type="unfinished">Gelişmiş boyut stili geçersiz kılmalarını görüntüleme</translation>
     </message>
@@ -14363,22 +14383,22 @@ zaten listede.</translation>
     <message>
         <location line="+2"/>
         <source>Wipeouts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wipeouts</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Wipeout</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wipeout</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>External References</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dış Referanslar</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>External Reference</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dış Referans</translation>
     </message>
     <message>
         <location line="+3"/>

@@ -4310,12 +4310,17 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a circle, ellipse, spline or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Entitas bukan merupakan lingkaran, elips, spline, atau polyline.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a polyline.</source>
         <translation type="unfinished">Entitas bukanlah sebuah polyline.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a closed polyline.</source>
+        <translation type="unfinished">Entitas bukanlah polyline tertutup.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4719,7 +4724,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
         <source>&amp;Export CSV</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ekspor CSV</translation>
     </message>
 </context>
 <context>
@@ -10106,37 +10111,52 @@ sudah ada dalam daftar.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+17"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+24"/>
         <source>Display Z coordinates</source>
         <translation type="unfinished">Menampilkan koordinat Z</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+47"/>
         <source>Display properties of current block and current layer</source>
         <translation type="unfinished">Menampilkan properti blok saat ini dan lapisan saat ini</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-37"/>
         <source>Allow adding custom properties</source>
         <translation type="unfinished">Izinkan menambahkan properti khusus</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-17"/>
+        <source>Maximum complexity for automatic hatch length calculation:</source>
+        <translation type="unfinished">Kompleksitas maksimum untuk penghitungan panjang palka otomatis:</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Update delay [ms]:</source>
+        <translation type="unfinished">Penundaan pembaruan [ms]:</translation>
+    </message>
+    <message>
+        <location line="+34"/>
         <source>Always show all properties (this may slow down selection of entities)</source>
         <translation type="unfinished">Selalu tampilkan semua properti (hal ini dapat memperlambat pemilihan entitas)</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+74"/>
         <source>Display advanced dimension style overrides</source>
         <translation type="unfinished">Menampilkan penggantian gaya dimensi lanjutan</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+53"/>
+        <source>Only update when nothing changes during update delay</source>
+        <translation type="unfinished">Hanya perbarui jika tidak ada perubahan selama penundaan pembaruan</translation>
+    </message>
+    <message>
+        <location line="-113"/>
         <source>Always format property values as decimal numbers</source>
         <translation type="unfinished">Selalu memformat nilai properti sebagai angka desimal</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="-41"/>
         <source>Decimals / precision for displayed property values:</source>
         <translation type="unfinished">Desimal/presisi untuk nilai properti yang ditampilkan:</translation>
     </message>
@@ -14364,22 +14384,22 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="+2"/>
         <source>Wipeouts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wipeouts</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Wipeout</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wipeout</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>External References</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Referensi Eksternal</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>External Reference</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Referensi Eksternal</translation>
     </message>
     <message>
         <location line="+3"/>

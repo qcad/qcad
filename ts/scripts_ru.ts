@@ -4318,12 +4318,17 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Entity is not a circle, ellipse, spline or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Объект не является окружностью, эллипсом, сплайном или полилинией.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a polyline.</source>
         <translation>Объект не является ломаной.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a closed polyline.</source>
+        <translation type="unfinished">Объект не является замкнутой полилинией.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4727,7 +4732,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
         <source>&amp;Export CSV</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Экспорт CSV</translation>
     </message>
 </context>
 <context>
@@ -10242,37 +10247,52 @@ is already in the list.</source>
         <translation>Обработчик:</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+17"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+24"/>
         <source>Display Z coordinates</source>
         <translation>Отображать координаты Z</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+47"/>
         <source>Display properties of current block and current layer</source>
         <translation>Отображать свойства текущего блока и текущего слоя</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-37"/>
         <source>Allow adding custom properties</source>
         <translation>Разрешить добавление пользовательских свойств</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-17"/>
+        <source>Maximum complexity for automatic hatch length calculation:</source>
+        <translation type="unfinished">Максимальная сложность для автоматического расчета длины люка:</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Update delay [ms]:</source>
+        <translation type="unfinished">Задержка обновления [мс]:</translation>
+    </message>
+    <message>
+        <location line="+34"/>
         <source>Always show all properties (this may slow down selection of entities)</source>
         <translation>Всегда показывать все свойства (это может замедлить выбор объектов)</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+14"/>
         <source>Always format property values as decimal numbers</source>
         <translation>Всегда форматировать значения свойств как десятичные числа</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+113"/>
+        <source>Only update when nothing changes during update delay</source>
+        <translation type="unfinished">Обновляйте только тогда, когда ничего не меняется во время задержки обновления</translation>
+    </message>
+    <message>
+        <location line="-154"/>
         <source>Decimals / precision for displayed property values:</source>
         <translation>Десятичные разряды / точность отображаемых значений свойств:</translation>
     </message>
     <message>
-        <location line="-19"/>
+        <location line="+101"/>
         <source>Display advanced dimension style overrides</source>
         <translation>Отображать расширенные переопределения стиля размеров</translation>
     </message>
@@ -14384,22 +14404,22 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Wipeouts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wipeouts</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Wipeout</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wipeout</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>External References</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Внешние ссылки</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>External Reference</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Внешняя ссылка</translation>
     </message>
     <message>
         <location line="+3"/>

@@ -4308,12 +4308,17 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Entity is not a circle, ellipse, spline or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Entiteet ei ole ring, ellips, spliin või polügoon.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a polyline.</source>
         <translation type="unfinished">Entiteet ei ole polügoon.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a closed polyline.</source>
+        <translation type="unfinished">Entiteet ei ole suletud polügoon.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4717,7 +4722,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
         <source>&amp;Export CSV</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">CSV eksportimine</translation>
     </message>
 </context>
 <context>
@@ -10107,37 +10112,52 @@ is already in the list.</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+17"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+24"/>
         <source>Display Z coordinates</source>
         <translation type="unfinished">Z-koordinaatide kuvamine</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+47"/>
         <source>Display properties of current block and current layer</source>
         <translation type="unfinished">Praeguse ploki ja praeguse kihi omaduste kuvamine</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-37"/>
         <source>Allow adding custom properties</source>
         <translation type="unfinished">Võimaldab lisada kohandatud omadusi</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-17"/>
+        <source>Maximum complexity for automatic hatch length calculation:</source>
+        <translation type="unfinished">Automaatse luugi pikkuse arvutamise maksimaalne keerukus:</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Update delay [ms]:</source>
+        <translation type="unfinished">Uuendamisviivitus [ms]:</translation>
+    </message>
+    <message>
+        <location line="+34"/>
         <source>Always show all properties (this may slow down selection of entities)</source>
         <translation type="unfinished">Näita alati kõiki omadusi (see võib aeglustada objektide valimist)</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+74"/>
         <source>Display advanced dimension style overrides</source>
         <translation type="unfinished">Näita täiustatud mõõtmete stiili ületamise võimalust</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+53"/>
+        <source>Only update when nothing changes during update delay</source>
+        <translation type="unfinished">Uuendatakse ainult siis, kui midagi ei muutu uuendamise viivituse ajal</translation>
+    </message>
+    <message>
+        <location line="-113"/>
         <source>Always format property values as decimal numbers</source>
         <translation type="unfinished">Vormindage omaduste väärtused alati kümnendarvudena</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="-41"/>
         <source>Decimals / precision for displayed property values:</source>
         <translation type="unfinished">Kuvatud omaduste väärtuste kümnendmärgid / täpsus:</translation>
     </message>
@@ -14366,22 +14386,22 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Wipeouts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wipeouts</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Wipeout</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wipeout</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>External References</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välised viited</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>External Reference</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Väline viide</translation>
     </message>
     <message>
         <location line="+3"/>

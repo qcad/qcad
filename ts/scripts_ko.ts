@@ -4310,12 +4310,17 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Entity is not a circle, ellipse, spline or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">엔티티가 원, 타원, 스플라인 또는 폴리라인이 아닙니다.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a polyline.</source>
         <translation type="unfinished">엔티티가 폴리라인이 아닙니다.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a closed polyline.</source>
+        <translation type="unfinished">엔티티는 닫힌 폴리라인이 아닙니다.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4719,7 +4724,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
         <source>&amp;Export CSV</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">CSV 내보내기</translation>
     </message>
 </context>
 <context>
@@ -10106,37 +10111,52 @@ is already in the list.</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+17"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+24"/>
         <source>Display Z coordinates</source>
         <translation type="unfinished">Z 좌표 표시</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+47"/>
         <source>Display properties of current block and current layer</source>
         <translation type="unfinished">현재 블록 및 현재 레이어의 속성 표시</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-37"/>
         <source>Allow adding custom properties</source>
         <translation type="unfinished">사용자 지정 속성 추가 허용</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-17"/>
+        <source>Maximum complexity for automatic hatch length calculation:</source>
+        <translation type="unfinished">자동 해치 길이 계산을 위한 최대 복잡도:</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Update delay [ms]:</source>
+        <translation type="unfinished">업데이트 지연 [ms]:</translation>
+    </message>
+    <message>
+        <location line="+34"/>
         <source>Always show all properties (this may slow down selection of entities)</source>
         <translation type="unfinished">항상 모든 속성을 표시합니다(이렇게 하면 엔티티 선택 속도가 느려질 수 있음)</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+74"/>
         <source>Display advanced dimension style overrides</source>
         <translation type="unfinished">고급 차원 스타일 재정의 표시</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+53"/>
+        <source>Only update when nothing changes during update delay</source>
+        <translation type="unfinished">업데이트 지연 중 변경 사항이 없는 경우에만 업데이트</translation>
+    </message>
+    <message>
+        <location line="-113"/>
         <source>Always format property values as decimal numbers</source>
         <translation type="unfinished">속성 값의 형식은 항상 십진수로 지정</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="-41"/>
         <source>Decimals / precision for displayed property values:</source>
         <translation type="unfinished">표시되는 프로퍼티 값의 소수점/정밀도입니다:</translation>
     </message>
@@ -14364,22 +14384,22 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Wipeouts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">삭제</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Wipeout</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wipeout</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>External References</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">외부 참조</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>External Reference</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">외부 참조</translation>
     </message>
     <message>
         <location line="+3"/>

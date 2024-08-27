@@ -4310,12 +4310,17 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Entity is not a circle, ellipse, spline or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">实体不是圆、椭圆、样条线或折线。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a polyline.</source>
         <translation type="unfinished">实体不是折线。</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a closed polyline.</source>
+        <translation type="unfinished">实体不是封闭的多段线。</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4719,7 +4724,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
         <source>&amp;Export CSV</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">导出 CSV</translation>
     </message>
 </context>
 <context>
@@ -10198,37 +10203,52 @@ is already in the list.</source>
         <translation type="unfinished">属性编辑器</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+17"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+24"/>
         <source>Display Z coordinates</source>
         <translation type="unfinished">显示 Z 坐标</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+47"/>
         <source>Display properties of current block and current layer</source>
         <translation type="unfinished">显示当前块和当前层的属性</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-37"/>
         <source>Allow adding custom properties</source>
         <translation type="unfinished">允许添加自定义属性</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-17"/>
+        <source>Maximum complexity for automatic hatch length calculation:</source>
+        <translation type="unfinished">自动舱口长度计算的最大复杂度：</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Update delay [ms]:</source>
+        <translation type="unfinished">更新延迟 [毫秒]：</translation>
+    </message>
+    <message>
+        <location line="+34"/>
         <source>Always show all properties (this may slow down selection of entities)</source>
         <translation type="unfinished">始终显示所有属性（这可能会减慢选择实体的速度）。</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+14"/>
         <source>Always format property values as decimal numbers</source>
         <translation type="unfinished">始终将属性值格式化为十进制数字</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+113"/>
+        <source>Only update when nothing changes during update delay</source>
+        <translation type="unfinished">只有在更新延迟期间无变化时才更新</translation>
+    </message>
+    <message>
+        <location line="-154"/>
         <source>Decimals / precision for displayed property values:</source>
         <translation type="unfinished">显示的属性值的小数/精度：</translation>
     </message>
     <message>
-        <location line="-19"/>
+        <location line="+101"/>
         <source>Display advanced dimension style overrides</source>
         <translation type="unfinished">显示高级尺寸样式覆盖</translation>
     </message>
@@ -14364,22 +14384,22 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Wipeouts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">歼灭战</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Wipeout</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">歼灭战</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>External References</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">外部参考资料</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>External Reference</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">外部参考</translation>
     </message>
     <message>
         <location line="+3"/>

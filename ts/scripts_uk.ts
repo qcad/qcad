@@ -4315,12 +4315,17 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Entity is not a circle, ellipse, spline or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Сутність не є колом, еліпсом, сплайном або полілінією.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a polyline.</source>
         <translation type="unfinished">Сутність не є полілінією.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a closed polyline.</source>
+        <translation type="unfinished">Сутність не є замкненою ламаною.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4724,7 +4729,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
         <source>&amp;Export CSV</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Експорт CSV</translation>
     </message>
 </context>
 <context>
@@ -10117,37 +10122,52 @@ is already in the list.</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+17"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+24"/>
         <source>Display Z coordinates</source>
         <translation type="unfinished">Відображення координат Z</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+47"/>
         <source>Display properties of current block and current layer</source>
         <translation type="unfinished">Відображення властивостей поточного блоку і поточного шару</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-37"/>
         <source>Allow adding custom properties</source>
         <translation type="unfinished">Дозволити додавання користувацьких властивостей</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-17"/>
+        <source>Maximum complexity for automatic hatch length calculation:</source>
+        <translation type="unfinished">Максимальна складність для автоматичного розрахунку довжини люка:</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Update delay [ms]:</source>
+        <translation type="unfinished">Затримка оновлення [мс]:</translation>
+    </message>
+    <message>
+        <location line="+34"/>
         <source>Always show all properties (this may slow down selection of entities)</source>
         <translation type="unfinished">Завжди показувати всі властивості (це може уповільнити відбір об&apos;єктів)</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+74"/>
         <source>Display advanced dimension style overrides</source>
         <translation type="unfinished">Відображення розширених перевизначень стилів розмірів</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+53"/>
+        <source>Only update when nothing changes during update delay</source>
+        <translation type="unfinished">Оновлюйте лише тоді, коли під час затримки оновлення нічого не зміниться</translation>
+    </message>
+    <message>
+        <location line="-113"/>
         <source>Always format property values as decimal numbers</source>
         <translation type="unfinished">Завжди форматуйте значення властивостей у вигляді десяткових чисел</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="-41"/>
         <source>Decimals / precision for displayed property values:</source>
         <translation type="unfinished">Десяткові знаки / точність для відображуваних значень властивостей:</translation>
     </message>
@@ -14381,22 +14401,22 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Wipeouts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Винищення</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Wipeout</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Винищення</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>External References</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Зовнішні посилання</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>External Reference</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Зовнішнє посилання</translation>
     </message>
     <message>
         <location line="+3"/>

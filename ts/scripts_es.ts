@@ -4314,12 +4314,17 @@ ya está en la lista.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a circle, ellipse, spline or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">La entidad no es un círculo, elipse, spline o polilínea.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a polyline.</source>
         <translation>La entidad no es una polilínea.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a closed polyline.</source>
+        <translation type="unfinished">La entidad no es una polilínea cerrada.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4723,7 +4728,7 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
         <source>&amp;Export CSV</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Exportar CSV</translation>
     </message>
 </context>
 <context>
@@ -10235,37 +10240,52 @@ ya está en la lista.</translation>
         <translation>Handle:</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+17"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+24"/>
         <source>Display Z coordinates</source>
         <translation>Visualizar coordenadas z</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+47"/>
         <source>Display properties of current block and current layer</source>
         <translation>Mostrar las propiedades del bloque actual y la capa actual</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-37"/>
         <source>Allow adding custom properties</source>
         <translation>Permite agregar propiedades personalizadas</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-17"/>
+        <source>Maximum complexity for automatic hatch length calculation:</source>
+        <translation type="unfinished">Complejidad máxima para el cálculo automático de la longitud de la escotilla:</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Update delay [ms]:</source>
+        <translation type="unfinished">Retraso de actualización [ms]:</translation>
+    </message>
+    <message>
+        <location line="+34"/>
         <source>Always show all properties (this may slow down selection of entities)</source>
         <translation>Mostrar siempre todas las propiedades (esto puede ralentizar la selección de entidades)</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+14"/>
         <source>Always format property values as decimal numbers</source>
         <translation>Siempre formatea los valores de las propiedades como números decimales</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+113"/>
+        <source>Only update when nothing changes during update delay</source>
+        <translation type="unfinished">Actualizar sólo cuando nada cambie durante el retardo de actualización</translation>
+    </message>
+    <message>
+        <location line="-154"/>
         <source>Decimals / precision for displayed property values:</source>
         <translation>Decimales / precisión para los valores de las propiedades mostradas:</translation>
     </message>
     <message>
-        <location line="-19"/>
+        <location line="+101"/>
         <source>Display advanced dimension style overrides</source>
         <translation>Mostrar anulaciones de estilo de acotaciones avanzadas</translation>
     </message>
@@ -14374,22 +14394,22 @@ ya está en la lista.</translation>
     <message>
         <location line="+2"/>
         <source>Wipeouts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Objetos de cobertura</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Wipeout</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Objeto de cobertura</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>External References</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Referencias externas</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>External Reference</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Referencia externa</translation>
     </message>
     <message>
         <location line="+3"/>

@@ -4315,12 +4315,17 @@ jau yra sąraše.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a circle, ellipse, spline or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Elementas nėra apskritimas, elipsė, splaineris ar polilinija.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a polyline.</source>
         <translation type="unfinished">Subjektas nėra polilinija.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a closed polyline.</source>
+        <translation type="unfinished">Subjektas nėra uždara daugiakampė linija.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4724,7 +4729,7 @@ jau yra sąraše.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
         <source>&amp;Export CSV</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">CSV eksportas</translation>
     </message>
 </context>
 <context>
@@ -10209,37 +10214,52 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Turto redaktorius</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+17"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+24"/>
         <source>Display Z coordinates</source>
         <translation type="unfinished">Rodyti Z koordinates</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+47"/>
         <source>Display properties of current block and current layer</source>
         <translation type="unfinished">Rodyti dabartinio bloko ir dabartinio sluoksnio savybes</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-37"/>
         <source>Allow adding custom properties</source>
         <translation type="unfinished">Leidimas pridėti pasirinktines savybes</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-17"/>
+        <source>Maximum complexity for automatic hatch length calculation:</source>
+        <translation type="unfinished">Didžiausias automatinio liuko ilgio apskaičiavimo sudėtingumas:</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Update delay [ms]:</source>
+        <translation type="unfinished">Atnaujinimo vėlavimas [ms]:</translation>
+    </message>
+    <message>
+        <location line="+34"/>
         <source>Always show all properties (this may slow down selection of entities)</source>
         <translation type="unfinished">Visada rodyti visas savybes (tai gali sulėtinti subjektų pasirinkimą)</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+14"/>
         <source>Always format property values as decimal numbers</source>
         <translation type="unfinished">Visada formatuokite savybių vertes kaip dešimtainius skaičius</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+113"/>
+        <source>Only update when nothing changes during update delay</source>
+        <translation type="unfinished">Atnaujinti tik tada, kai per atnaujinimo atidėjimą niekas nesikeičia</translation>
+    </message>
+    <message>
+        <location line="-154"/>
         <source>Decimals / precision for displayed property values:</source>
         <translation type="unfinished">Rodomų savybių verčių dešimtainiai skaičiai / tikslumas:</translation>
     </message>
     <message>
-        <location line="-19"/>
+        <location line="+101"/>
         <source>Display advanced dimension style overrides</source>
         <translation type="unfinished">Rodyti išplėstinius matmenų stiliaus pakeitimus</translation>
     </message>
@@ -14381,22 +14401,22 @@ jau yra sąraše.</translation>
     <message>
         <location line="+2"/>
         <source>Wipeouts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nuvalymai</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Wipeout</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wipeout</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>External References</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Išorinės nuorodos</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>External Reference</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Išorinė nuoroda</translation>
     </message>
     <message>
         <location line="+3"/>

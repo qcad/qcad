@@ -932,7 +932,7 @@
     <message>
         <location filename="../src/entity/RWipeoutEntity.cpp" line="+2"/>
         <source>Frame</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kehys</translation>
     </message>
 </context>
 </TS>

@@ -4315,12 +4315,17 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a circle, ellipse, spline or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vienība nav aplis, elipse, spline vai polilīnija.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a polyline.</source>
         <translation type="unfinished">Vienība nav daudzlīnija.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a closed polyline.</source>
+        <translation type="unfinished">Vienība nav slēgta daudzlīnija.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4724,7 +4729,7 @@ jau ir sarakstā.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExCsvExport/ExCsvExportInit.js" line="+2"/>
         <source>&amp;Export CSV</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">CSV eksportēšana</translation>
     </message>
 </context>
 <context>
@@ -10117,37 +10122,52 @@ jau ir sarakstā.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+17"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+24"/>
         <source>Display Z coordinates</source>
         <translation type="unfinished">Parādīt Z koordinātas</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+47"/>
         <source>Display properties of current block and current layer</source>
         <translation type="unfinished">Parādīt pašreizējā bloka un pašreizējā slāņa īpašības</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-37"/>
         <source>Allow adding custom properties</source>
         <translation type="unfinished">Ļauj pievienot pielāgotas īpašības</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-17"/>
+        <source>Maximum complexity for automatic hatch length calculation:</source>
+        <translation type="unfinished">Maksimālā sarežģītība automātiskajam lūkas garuma aprēķinam:</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Update delay [ms]:</source>
+        <translation type="unfinished">Atjaunināšanas aizkave [ms]:</translation>
+    </message>
+    <message>
+        <location line="+34"/>
         <source>Always show all properties (this may slow down selection of entities)</source>
         <translation type="unfinished">Vienmēr parādīt visas īpašības (tas var palēnināt vienību atlasi)</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+74"/>
         <source>Display advanced dimension style overrides</source>
         <translation type="unfinished">Rādīt uzlaboto dimensiju stila pārspīlējumus</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+53"/>
+        <source>Only update when nothing changes during update delay</source>
+        <translation type="unfinished">Atjaunināt tikai tad, ja atjaunināšanas kavēšanās laikā nekas nemainās</translation>
+    </message>
+    <message>
+        <location line="-113"/>
         <source>Always format property values as decimal numbers</source>
         <translation type="unfinished">Vienmēr formatējiet īpašību vērtības kā decimālskaitļus</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="-41"/>
         <source>Decimals / precision for displayed property values:</source>
         <translation type="unfinished">Attēloto īpašību vērtību decimāldaļas / precizitāte:</translation>
     </message>
@@ -14381,22 +14401,22 @@ jau ir sarakstā.</translation>
     <message>
         <location line="+2"/>
         <source>Wipeouts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wipeouts</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Wipeout</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wipeout</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>External References</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ārējās atsauces</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>External Reference</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ārējā atsauce</translation>
     </message>
     <message>
         <location line="+3"/>
