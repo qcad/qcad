@@ -48,8 +48,16 @@
  * \scriptable
  * \generateScriptShell
  */</comment>
-<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RPropertyEditor</name><super>: <specifier>public</specifier> <name>QObject</name>, <specifier>public</specifier> <name>RPropertyListener</name>, <specifier>public</specifier> <name>RLayerListener</name></super> <block>{<private type="default">
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RPropertyEditor</name><super>:
+
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x060000</expr></cpp:if>
+        <specifier>public</specifier> <name>QObject</name>,
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+        <specifier>public</specifier> <name>RPropertyListener</name>, <specifier>public</specifier> <name>RLayerListener</name></super> <block>{<private type="default">
+
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x060000</expr></cpp:if>
     <macro><name>Q_OBJECT</name></macro>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 
 </private><public>public:
     <constructor_decl><name>RPropertyEditor</name><parameter_list>()</parameter_list>;</constructor_decl>
@@ -65,12 +73,16 @@
      * \nonscriptable
      */</comment>
     <function_decl><type><name>void</name></type> <name>sleep</name><parameter_list>(<param><decl><type><name>QPromise<argument_list>&lt;<argument><name>void</name></argument>&gt;</argument_list></name>&amp;</type> <name>promise</name></decl></param>, <param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>bool</name></type> <name>onlyChanges</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>filter</name></decl></param>, <param><decl><type><name>bool</name></type> <name>manual</name></decl></param>, <param><decl><type><name>bool</name></type> <name>showOnRequest</name></decl></param>)</parameter_list>;</function_decl>
-<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 
 <label><name>signals</name>:</label>
     <function_decl><type><name>void</name></type> <name>finished</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>bool</name></type> <name>onlyChanges</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>filter</name></decl></param>, <param><decl><type><name>bool</name></type> <name>manual</name></decl></param>, <param><decl><type><name>bool</name></type> <name>showOnRequest</name></decl></param>)</parameter_list>;</function_decl>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x060000</expr></cpp:if>
 </public><public>public slots:
+<cpp:else>#<cpp:directive>else</cpp:directive></cpp:else>
+</public><public>public:
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
     <function_decl><type><name>void</name></type> <name>updateFromDocumentNow</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>bool</name></type> <name>onlyChanges</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>filter</name> =<init> <expr><name><name>RS</name>::<name>EntityUnknown</name></name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>manual</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>showOnRequest</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
 </public><public>public:
