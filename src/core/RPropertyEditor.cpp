@@ -231,7 +231,7 @@ void RPropertyEditor::updateProperty(const RPropertyTypeId& propertyTypeId,
 //    }
 //}
 
-
+#if QT_VERSION >= 0x060000
 void RPropertyEditor::sleep(QPromise<void>& promise, RDocument* document, bool onlyChanges, RS::EntityType filter, bool manual, bool showOnRequest) {
     terminate = false;
 
@@ -251,6 +251,7 @@ void RPropertyEditor::sleep(QPromise<void>& promise, RDocument* document, bool o
 
     emit finished(document, onlyChanges, filter, manual, showOnRequest);
 }
+#endif
 
 /**
  * Implements updateFromDocument from RPropertyListener to show properties for selected objects.
@@ -271,10 +272,9 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
         return;
     }
 
+#if QT_VERSION >= 0x060000
     bool gotSelection = document->hasSelection();
-
     int lazyUpdate = RSettings::getBoolValue("PropertyEditor/LazyUpdate", true);
-
     if (lazyUpdate && !showOnRequest && gotSelection) {
         // sleep, then update property editor if sleep was not interrupted by other call:
         static QFuture<void> future = QFuture<void>();
@@ -292,8 +292,13 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
         future = QtConcurrent::run(&RPropertyEditor::sleep, this, document, onlyChanges, filter, manual, showOnRequest);
     }
     else {
+#endif
+
         updateFromDocumentNow(document, onlyChanges, filter, manual, showOnRequest);
+
+#if QT_VERSION >= 0x060000
     }
+#endif
 }
 
 void RPropertyEditor::updateFromDocumentNow(RDocument* document, bool onlyChanges, RS::EntityType filter, bool manual, bool showOnRequest) {

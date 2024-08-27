@@ -27,7 +27,9 @@
 #include <QMap>
 #include <QString>
 #include <QStringList>
+#if QT_VERSION >= 0x060000
 #include <QPromise>
+#endif
 
 #include "RDocument.h"
 #include "RDocumentInterface.h"
@@ -57,7 +59,9 @@ public:
     // from RPropertyListener interface:
     virtual void updateFromDocument(RDocument* document, bool onlyChanges, RS::EntityType filter = RS::EntityUnknown, bool manual = false, bool showOnRequest = false);
 
+#if QT_VERSION >= 0x060000
     void sleep(QPromise<void>& promise, RDocument* document, bool onlyChanges, RS::EntityType filter, bool manual, bool showOnRequest);
+#endif
 
 signals:
     void finished(RDocument* document, bool onlyChanges, RS::EntityType filter, bool manual, bool showOnRequest);
