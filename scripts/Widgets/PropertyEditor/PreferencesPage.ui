@@ -10,8 +10,15 @@
     <height>389</height>
    </rect>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
-   <item>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="7" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Maximum complexity for automatic hatch length calculation:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="2">
     <widget class="QCheckBox" name="ShowZCoordinates">
      <property name="text">
       <string>Display Z coordinates</string>
@@ -21,14 +28,7 @@
      </property>
     </widget>
    </item>
-   <item>
-    <widget class="QCheckBox" name="ShowBlockLayer">
-     <property name="text">
-      <string>Display properties of current block and current layer</string>
-     </property>
-    </widget>
-   </item>
-   <item>
+   <item row="2" column="0" colspan="2">
     <widget class="QCheckBox" name="AddCustomProperties">
      <property name="text">
       <string>Allow adding custom properties</string>
@@ -38,109 +38,21 @@
      </property>
     </widget>
    </item>
-   <item>
-    <widget class="QCheckBox" name="ShowOnRequest">
+   <item row="9" column="0">
+    <widget class="QLabel" name="LazyUpdateDelay_Label">
      <property name="text">
-      <string>Always show all properties (this may slow down selection of entities)</string>
+      <string>Update delay [ms]:</string>
      </property>
     </widget>
    </item>
-   <item>
-    <widget class="QCheckBox" name="DimStyleOverrides">
+   <item row="6" column="0">
+    <widget class="QLabel" name="label">
      <property name="text">
-      <string>Display advanced dimension style overrides</string>
-     </property>
-     <property name="checked">
-      <bool>true</bool>
+      <string>Decimals / precision for displayed property values:</string>
      </property>
     </widget>
    </item>
-   <item>
-    <widget class="QCheckBox" name="FormatAsDecimal">
-     <property name="text">
-      <string>Always format property values as decimal numbers</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <layout class="QGridLayout" name="gridLayout">
-     <item row="0" column="0">
-      <widget class="QLabel" name="label">
-       <property name="text">
-        <string>Decimals / precision for displayed property values:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QComboBox" name="Decimals">
-       <property name="currentIndex">
-        <number>-1</number>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="label_2">
-       <property name="text">
-        <string>Maximum complexity for automatic hatch length calculation:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QComboBox" name="MaxHatchComplexityForAutoLength">
-       <property name="editable">
-        <bool>true</bool>
-       </property>
-       <property name="currentText">
-        <string>2000</string>
-       </property>
-       <property name="currentIndex">
-        <number>1</number>
-       </property>
-       <item>
-        <property name="text">
-         <string notr="true">1000</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">2000</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">3000</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">4000</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">5000</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">10000</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">50000</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">100000</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item>
+   <item row="12" column="0" colspan="2">
     <spacer name="verticalSpacer">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
@@ -152,6 +64,144 @@
       </size>
      </property>
     </spacer>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <widget class="QCheckBox" name="ShowBlockLayer">
+     <property name="text">
+      <string>Display properties of current block and current layer</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="2">
+    <widget class="QCheckBox" name="ShowOnRequest">
+     <property name="text">
+      <string>Always show all properties (this may slow down selection of entities)</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1">
+    <widget class="QComboBox" name="Decimals">
+     <property name="currentIndex">
+      <number>-1</number>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0" colspan="2">
+    <widget class="QCheckBox" name="FormatAsDecimal">
+     <property name="text">
+      <string>Always format property values as decimal numbers</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1">
+    <widget class="QComboBox" name="MaxHatchComplexityForAutoLength">
+     <property name="editable">
+      <bool>true</bool>
+     </property>
+     <property name="currentText">
+      <string>2000</string>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <item>
+      <property name="text">
+       <string notr="true">1000</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">2000</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">3000</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">4000</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">5000</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">10000</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">50000</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">100000</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="4" column="0" colspan="2">
+    <widget class="QCheckBox" name="DimStyleOverrides">
+     <property name="text">
+      <string>Display advanced dimension style overrides</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="1">
+    <widget class="QComboBox" name="LazyUpdateDelay">
+     <property name="editable">
+      <bool>true</bool>
+     </property>
+     <property name="currentText">
+      <string>200</string>
+     </property>
+     <item>
+      <property name="text">
+       <string notr="true">50</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">100</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">200</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">300</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">400</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">500</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="8" column="0" colspan="2">
+    <widget class="QCheckBox" name="LazyUpdate">
+     <property name="text">
+      <string>Only update when nothing changes during update delay</string>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>
