@@ -903,97 +903,404 @@ Apollonius.getSolutionsLLL = function(line1, line2, line3) {
     return ret;
 };
 
-
 /**
- * \return Solutions for circles that are tangential to the two given circles
+ * \author Andrew Mustun, CVH © 2024
+ * \return Solutions for circles (<=4) that are tangential to the two given circles
  * and the given point.
  */
 Apollonius.getSolutionsPCC = function(point, circle1, circle2) {
-    var ret = [];
-    //Apollonius.constructionShapes = [];
-
     if (!isPointShape(point) ||
         !isCircleShape(circle1) ||
         !isCircleShape(circle2)) {
 
-        return ret;
+        return [];    // Empty, no solutions
     }
 
-    var p = point.getPosition();
+    // Relative sized inversion circle (FS#2590):
+    var rInv = circle1.getRadius();
+    if (circle2.radius > circle1.radius) {
+        rInv = circle2.getRadius();
+    }
+    var inversionCircle = new RCircle(point.getPosition(), rInv);
 
-    // reduce PCC to PPC case:
+    // Construct inversion shapes:
+    var c1Inverse = Apollonius.getInverseShape(circle1, inversionCircle);
+    var c2Inverse = Apollonius.getInverseShape(circle2, inversionCircle);
 
-    // find second point [P']:
+    // Get all tangent shapes for given inversion shapes:
+    // Exploits an enhanced algorithm by CVH
+    var tangents = Apollonius.getAllTangents(c1Inverse, c2Inverse);
 
-    // find two tangents of two circles:
-    var tangents = ShapeAlgorithms.getTangents(circle1, circle2);
-    if (tangents.length!==4) {
-        return ret;
+    // Return the re-inversion of all tangents (0-4 solutions):
+    return Apollonius.getInverseShapes(tangents, inversionCircle);
+};
+
+/**
+ * Especially intended to constructs all tangent shapes of inversed shapes for re-inversion.
+ * Supports RCirle and RLine shapes and additionally RPoint shapes as zero sized circles.
+ * Returned array is empty with invalid data or no solutions.
+ * All but the first tangent of 4 are undefined when non-existent.
+ * The first two are typically external tangents, the latter two are internal tangents.
+ * There is no guarantee on the order of external/internal tangents and none on the direction.
+ * There is no guarantee on the length when not ending on a circle circumference.
+ * \author CVH © 2024
+ *
+ * \param shape1                 First RShape, limited to a circle, a line or a point.
+ * \param shape1                 Second RShape, limited to a circle, a line or a point.
+ *
+ * \return An array with the 4 tangents from shape 1 to shape 2, at least empty or at least 1 defined.
+ */
+Apollonius.getAllTangents = function(shape1, shape2) {
+    var tangents = [];         // Collection of tangent lines to return
+    var c1, c2, cTemp;         // Normalized 2D circle shape clones, dummy to order c1-c2 on size
+    var c1Radius, c2Radius;    // Radii of circle shapes
+    var c1Center, c2Center;    // Centers of circle shapes
+    var dC1C2, rDiff, rSum;    // Distance between center points, difference of radii, sum of radii
+    var tangent;               // Tangent being constructed
+    var a1, a2, at;            // Angles
+    var offset1, offset2;      // Offset points
+    var line;                  // Line shape
+    var ips;                   // Intersection points
+    var item1, item2;          // Ifso, RPoints converted to RCircles or the original shape
+
+    // Most common usage: Handle 2 circle shapes first:
+    if (isCircleShape(shape1) && isCircleShape(shape2)) {
+        // Validate first circle shape:
+        if (isValidVector(shape1.center)) {
+            if (!isNumber(shape1.radius)) {
+                return tangents;    // Empty, invalid radius
+            }
+            else if (Math.abs(shape1.radius) < RS.PointTolerance) {
+                // Handle as zero sized 2D circle:
+                c1 = shape1.clone();
+                c1.to2D();
+                c1.setRadius(0.0);
+            }
+            else {
+                // Handle as normalized 2D circle:
+                c1 = shape1.clone();
+                c1.to2D();
+                c1.setRadius(Math.abs(shape1.getRadius()));
+            }
+        }
+        else {
+            return tangents;    // Empty, invalid center
+        }
+
+        // Validate second circle shape:
+        if (isValidVector(shape2.center)) {
+            if (!isNumber(shape2.radius)) {
+                return tangents;    // Empty, invalid radius
+            }
+            else if (Math.abs(shape2.radius) < RS.PointTolerance) {
+                // Handle as zero sized 2D circle:
+                c2 = shape2.clone();
+                c2.to2D();
+                c2.setRadius(0.0);
+            }
+            else {
+                // Handle as normalized 2D circle:
+                c2 = shape2.clone();
+                c2.to2D();
+                c2.setRadius(Math.abs(shape2.getRadius()));
+            }
+        }
+        else {
+            return tangents;    // Empty, invalid center
+        }
+
+        // Ensure that c1 is the smaller circle:
+        // Does not swap equal sized circles
+        if (c1.radius > c2.radius) {
+            cTemp = c1;
+            c1 = c2;
+            c2 = cTemp;
+        }
+
+        // With 2 valid circle shapes;
+        c1Radius = c1.getRadius();
+        c1Center = c1.getCenter();
+        c2Radius = c2.getRadius();
+        c2Center = c2.getCenter();
+        // Not expecting NaN with 2 valid circle shapes:
+        dC1C2 = c1Center.getDistanceTo2D(c2Center);
+
+        // Reject (almost) concentric circles:
+        if (dC1C2 < 1e-6) {
+            return tangents;    // Empty, no solutions
+        }
+
+        // (Almost) internally touching circles:
+        if (RMath.fuzzyCompare(dC1C2 + c1Radius, c2Radius)) {    // RS.PointTolerance
+            tangent = new RLine(c2Center, c1Center);
+            // With 2 radii larger than zero:
+            if (c1Radius > 0.0) {
+                tangent.setLength((dC1C2 + c1Radius) * 2, true);    // fromStart
+            }
+            // Handle point on circle here instead of externally touching:
+            // Ensuring that the single valid tangent is the first
+            else {
+                tangent.setLength(c2Radius * 2, true);    // fromStart
+            }
+            tangent.rotate(Math.PI/2, tangent.getMiddlePoint());
+
+            // First and final solution:
+            tangents.push(tangent);
+            tangents.push(undefined);
+            tangents.push(undefined);
+            tangents.push(undefined);
+
+            return tangents;    // One single solution
+        }
+
+        // Exclude other nested circles:
+        if (dC1C2 + c1Radius < c2Radius) {
+            return tangents;    // Empty, no solutions
+        }
+
+        // Include external tangents:
+        rDiff = c2Radius - c1Radius;
+        if (dC1C2 > rDiff) {
+            a1 = c1Center.getAngleTo(c2Center);
+            a2 = Math.asin(rDiff/dC1C2);
+            offset1 = new RVector();
+            offset2 = new RVector();
+
+            // First solution:
+            at = a1 + a2 + Math.PI/2.0;
+            offset1.setPolar(c1Radius, at);
+            offset2.setPolar(c2Radius, at);
+            tangents.push(new RLine(c1Center.operator_add(offset1),
+                                    c2Center.operator_add(offset2)));
+
+            // Second solution, exclude for R1=R2=zero:
+            if (c2Radius < RS.PointTolerance) {
+                tangents.push(undefined);
+            }
+            else {
+                at = a1 - a2 - Math.PI/2.0;
+                offset1.setPolar(c1Radius, at);
+                offset2.setPolar(c2Radius, at);
+                tangents.push(new RLine(c1Center.operator_add(offset1),
+                                    c2Center.operator_add(offset2)));
+            }
+        }
+        // No external tangents:
+        else {
+            tangents.push(undefined);
+            tangents.push(undefined);
+        }
+
+        // (Almost) externally touching circles:
+        rSum = c2Radius + c1Radius;
+        if (RMath.fuzzyCompare(dC1C2, rSum)) {    // RS.PointTolerance
+            tangent = new RLine(c2Center, c1Center);
+            tangent.setLength(c2Radius * 2, true);    // fromStart
+            tangent.rotate(Math.PI/2, tangent.getMiddlePoint());
+
+            // Third and final solution:
+            tangents.push(tangent);
+            tangents.push(undefined);
+
+            return tangents;    // 3 solutions
+        }
+
+        // Include internal tangents but only for radii larger than zero:
+        if (dC1C2 > rSum && c1Radius > 0.0) {
+            a1 = c1Center.getAngleTo(c2Center);
+            a2 = Math.asin(rSum/dC1C2);
+            offset1 = new RVector();
+            offset2 = new RVector();
+
+            // Third solution:
+            at = a1 + a2 + Math.PI/2.0;
+            offset1.setPolar(c1Radius, at);
+            offset2.setPolar(c2Radius, at);
+            tangents.push(new RLine(c1Center.operator_subtract(offset1),
+                                    c2Center.operator_add(offset2)));
+
+            // Fourth solution:
+            at = a1 - a2 - Math.PI/2.0;
+            offset1.setPolar(c1Radius, at);
+            offset2.setPolar(c2Radius, at);
+            tangents.push(new RLine(c1Center.operator_subtract(offset1),
+                                    c2Center.operator_add(offset2)));
+        }
+        // No internal tangents:
+        else {
+            tangents.push(undefined);
+            tangents.push(undefined);
+        }
+
+        return tangents;    // 4 solutions
+    } // End 2 circles
+
+    // With 2 line shapes (Circles with infinite radii):
+    else if (isLineBasedShape(shape1) && isLineBasedShape(shape2)) {
+        if (shape1.isValid() && shape2.isValid()) {
+            // Handle as 2D RLine shapes:
+            // This would convert RXLine and RRay shapes
+            c1 = new RLine(shape1.getStartPoint(), shape1.getEndPoint());
+            c1.to2D();
+            c2 = new RLine(shape2.getStartPoint(), shape2.getEndPoint());
+            c2.to2D();
+
+            // The angle of a near zero-length line is zero by default (RVector::getAngle())
+            // Exclude solutions for a line with almost no length:
+            if (c1.getLength() <= 1.0e-6 || c2.getLength() <= 1.0e-6) {
+                return tangents;    // Empty, not processable line(s)
+            }
+
+            // Diversify on crossing or not:
+            // RLine.isParallel(...) may fail (FS#2495)
+            ips = shape1.getIntersectionPoints(shape2, false);    // unlimited
+            if (ips.isEmpty()) {
+                dC1C2 = c1.getDistanceTo(c2.getStartPoint(), false);    // unlimited
+                // May return NaN, comparing with NaN is always false
+                if (!isNumber(dC1C2) || dC1C2 > RS.PointTolerance) {
+                    return tangents;    // Empty, incorrect data or parallel at a distance
+                }
+                else {
+                    // Include one representation of itself when collinear:
+                    ips = c1.getEndPoints();
+                    ips = ips.concat(c2.getEndPoints());
+                    ips = RVector.getSortedLeftRightTopBottom(ips);
+                    tangents.push(new RLine(ips[0], ips[3]));
+                    tangents.push(undefined);
+                }
+            }
+            // With an intersection point:
+            else {
+                a1 = (c1.getAngle() + c2.getAngle()) / 2;
+                a2 = a1 + Math.PI/2;
+                length = (c1.getLength() + c2.getLength()) / 2;
+                tangents.push(new RLine(ips[0], a1, length));
+                tangents.push(new RLine(ips[0], a2, length));
+            }
+
+            // Limited to 2 solutions:
+            tangents.push(undefined);
+            tangents.push(undefined);
+        }
+
+        return tangents;    // No or 1-2 solution(s)
+    } // End line-line
+
+    // With a circle and a line shape:
+    if (isCircleShape(shape1) && isLineBasedShape(shape2)) {
+        if (isValidVector(shape1.center) &&
+            isNumber(shape1.radius) &&
+            shape2.isValid()) {
+
+            // Handle second shape as 2D RLine:
+            // This would convert RXLine and RRay shapes
+            line = new RLine(shape2.getStartPoint(), shape2.getEndPoint());
+            line.to2D();
+
+            // The angle of a near zero-length line is zero by default (RVector::getAngle())
+            // Exclude solutions for a line with almost no length:
+            if (line.getLength() <= 1.0e-6) {
+                return tangents;    // Empty, not processable line
+            }
+
+            // Handle first shape as normalized 2D circle:
+            c2 = shape1.clone();
+            c2.to2D();
+            c2.setRadius(Math.abs(shape1.getRadius()));
+        }
+    } // End circle-line
+
+    // With a line and a circle shape:
+    else if (isLineBasedShape(shape1) && isCircleShape(shape2)) {
+        if (isValidVector(shape2.center) &&
+            isNumber(shape2.radius) &&
+            shape1.isValid()) {
+
+            // Handle first shape as 2D RLine:
+            // This would convert RXLine and RRay shapes
+            line = new RLine(shape1.getStartPoint(), shape1.getEndPoint());
+            line.to2D();
+
+            // The angle of a near zero-length line is zero by default (RVector::getAngle())
+            // Exclude solutions for a line with almost no length:
+            if (line.getLength() <= 1.0e-6) {
+                return tangents;    // Empty, not processable line
+            }
+
+            // Handle second shape as normalized 2D circle:
+            c2 = shape2.clone();
+            c2.to2D();
+            c2.setRadius(Math.abs(shape2.getRadius()));
+        }
+    } // End line-circle
+
+    // Least common usage: Support RPoint shapes as zero sized RCircle shapes:
+    // Circle shapes are not guaranteed to be valid circles
+    // Shapes are further validated and handled by a recursive call
+    else if (isPointShape(shape1) || isPointShape(shape2)) {
+        // Ifso, convert first point into an RCircle:
+        if (isPointShape(shape1)) {
+            item1 = new RCircle(shape1.getPosition(), 0.0)
+        }
+        else {
+            item1 = shape1;
+        }
+
+        // Ifso, convert second point into an RCircle:
+        if (isPointShape(shape2)) {
+            item2 = new RCircle(shape2.getPosition(), 0.0)
+        }
+        else {
+            item2 = shape2;
+        }
+
+        // Handle the occurrence of points as circles:
+        return Apollonius.getAllTangents(item1, item2);
     }
 
-    //Apollonius.constructionShapes.push(tangents[0]);
-    //Apollonius.constructionShapes.push(tangents[1]);
+    // With any unsupported shape:
+    else {
+        return tangents;    // Empty, incorrect data
+    }
 
-    // circle from 3P through two tangent points and P:
-    var p1 = tangents[0].getClosestPointOnShape(circle1.getCenter(), false);
-    var p2 = tangents[0].getClosestPointOnShape(circle2.getCenter(), false);
-    var c = RCircle.createFrom3Points(p1, p2, p);
+    // With validated line and circle shapes:
+    // Solutions are tangent to the circle and in special tangent to the line at infinity
+    c2Radius = c2.getRadius();
+    c2Center = c2.getCenter();
+    a1 = line.getAngle();
+    // Arbitrary tangent length
+    c1Radius = Math.max(c2Radius, line.getLength() / 2);
 
-    // find intersection of tangents:
-    var l;
-    var ips = tangents[0].getIntersectionPoints(tangents[1], false);
-    if (ips.length===1) {
-        // line from intersection to point [L]:
-        l = new RLine(ips[0], p);
-        //Apollonius.constructionShapes.push(l);
-
-        //Apollonius.constructionShapes.push(c);
+    // Define a perpendicular diameter:
+    ips = line.getClosestPointOnShape(c2Center, false);    // unlimited
+    if (ips.equalsFuzzy(c2Center)) {    // RS.PointTolerance
+        ips = c2.getIntersectionPoints(line, false);    // unlimited
+        line = new RLine(c2Center, ips[0]);
+        line.rotate(Math.PI/2, c2Center);
     }
     else {
-        // circles of equal size:
-        l = new RLine(p, tangents[0].getAngle(), 1.0);
+        line = new RLine(c2Center, ips);
+    }
+    line.setLength(c2Radius, true);    // fromStart
+    line.reverse();
+    line.setLength(c2Radius * 2, true);    // fromStart
+
+    // Include first parallels tangent at circle:
+    tangents.push(new RLine(line.getStartPoint(), a1, c1Radius));
+    // Include a second solution for R2>zero:
+    if (c2Radius > 0.0) {
+        a2 = a1 + Math.PI;
+        tangents.push(new RLine(line.getEndPoint(), a2, c1Radius));
+    }
+    else {
+        tangents.push(undefined);
     }
 
-    // intersections of circle with L are P and P':
-    ips = c.getIntersectionPoints(l, false);
-    if (ips.length===1) {
-        // point on the symetry axis between two circles of same size:
-        var l1 = new RLine(p, circle1.getCenter());
-        var l2 = new RLine(p, circle2.getCenter());
-        var ips1 = l1.getIntersectionPoints(circle1);
-        var ips2 = l2.getIntersectionPoints(circle2);
-        if (ips1.length===1 && ips2.length===1) {
-            ret.push(RCircle.createFrom3Points(ips1[0], ips2[0], p));
-        }
-    }
-    else if (ips.length===2) {
-        // solve PPC case for P, P', one of the circles:
-        ret = Apollonius.getSolutionsPPC(ips[0], ips[1], circle1);
-        ret = ret.concat(Apollonius.getSolutionsPPC(new RPoint(ips[0]), new RPoint(ips[1]), circle2));
-    }
+    // Limited to 2 solutions:
+    tangents.push(undefined);
+    tangents.push(undefined);
 
-    if (!circle1.isOnShape(point.position, false) &&
-        !circle2.isOnShape(point.position, false)) {
-
-        var inversionCircle = new RCircle(point.position, 10);
-        //Apollonius.constructionShapes.push(inversionCircle);
-
-        var circles = [];
-        circles.push(circle1.clone());
-        circles.push(circle2.clone());
-
-        var circlesInverse = Apollonius.getInverseShapes(circles, inversionCircle);
-        //Apollonius.constructionShapes = Apollonius.constructionShapes.concat(circlesInverse);
-
-        var tangents = Apollonius.getCommonTangents(circlesInverse[0], circlesInverse[1]);
-
-        ret = ret.concat(Apollonius.getInverseShapes(tangents, inversionCircle));
-    }
-
-    ret = Apollonius.removeDuplicates(ret);
-    ret = Apollonius.verify(ret, point, circle1, circle2);
-
-    return ret;
+    return tangents;    // 1-2 solutions
 };
 
 /**
