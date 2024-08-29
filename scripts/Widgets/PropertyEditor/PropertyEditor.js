@@ -1695,6 +1695,18 @@ PropertyEditor.initPreferences = function(pageWidget, calledByPrefDialog, docume
     w.addItem("7 (1/128)", 7);
     w.addItem("8 (1/256)", 8);
     w.currentIndex = 8;
+
+    // hide Qt 6 only options:
+    if (RSettings.getQtVersion() < 0x060000) {
+        var widgets = ["LazyUpdate", "LazyUpdateDelay_Label", "LazyUpdateDelay"];
+        for (var i=0; i<widgets.length; i++) {
+            w = pageWidget.findChild(widgets[i]);
+            if (!isNull(w)) {
+                w.visible = false;
+            }
+        }
+
+    }
 };
 
 PropertyEditor.applyPreferences = function(doc, mdiChild) {
