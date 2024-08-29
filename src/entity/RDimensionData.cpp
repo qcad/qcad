@@ -31,7 +31,7 @@ RDimensionData::RDimensionData(RDocument* document) :
     lineSpacingStyle(RS::Exact),
     lineSpacingFactor(1.0),
     defaultAngle(RNANDOUBLE),
-    textAngle(0.0),
+    textRotation(0.0),
     overrides(true),
 //    linearFactor(1.0),
 //    dimScaleOverride(0.0),
@@ -69,7 +69,7 @@ RDimensionData::RDimensionData(RDocument* document, const RDimensionData& data)
  *         or "<>" for the actual measurement or " " (one blank space).
  *         for suppressing the text.
  * \param style Dimension style name.
- * \param angle Rotation angle of dimension text away from
+ * \param textRotation Rotation angle of dimension text away from
  *         default orientation.
  */
 RDimensionData::RDimensionData(const RVector& definitionPoint,
@@ -80,7 +80,7 @@ RDimensionData::RDimensionData(const RVector& definitionPoint,
                                double lineSpacingFactor,
                                const QString& text,
                                const QString& style,
-                               double angle)
+                               double textRotation)
     : definitionPoint(definitionPoint),
       textPositionCenter(textPosition),
       textPositionSide(RVector::invalid),
@@ -91,7 +91,7 @@ RDimensionData::RDimensionData(const RVector& definitionPoint,
       text(text),
       fontName(style),
       defaultAngle(RNANDOUBLE),
-      textAngle(angle),
+      textRotation(textRotation),
       overrides(true),
       //linearFactor(1.0),
       //dimScaleOverride(0.0),
@@ -566,7 +566,7 @@ bool RDimensionData::rotate(double rotation, const RVector& center) {
     if (textPositionSide.isValid()) {
         textPositionSide.rotate(rotation, center);
     }
-    textAngle = RMath::getNormalizedAngle(textAngle+rotation);
+    textRotation = RMath::getNormalizedAngle(textRotation+rotation);
     update();
     return true;
 }

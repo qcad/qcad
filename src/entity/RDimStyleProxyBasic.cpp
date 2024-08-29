@@ -302,9 +302,15 @@ void RDimStyleProxyBasic::renderDimOrdinate() {
     RVector knee1;
     RVector knee2;
     RVector textOffsetV;   // normal vector in direction of text offset
+    double textAngle = 0.0;
+    double textRotation = dimensionData->getTextRotation();
     double legSize = dimensionData->getDimasz()*2;
     RVector definingPoint = data.getDefiningPoint();
     RVector leaderEndPoint = data.getLeaderEndPoint();
+
+    if (!definingPoint.isValid() || !leaderEndPoint.isValid()) {
+        return;
+    }
 
     // vertical, measuring X
     if (data.isMeasuringXAxis()) {
@@ -329,6 +335,8 @@ void RDimStyleProxyBasic::renderDimOrdinate() {
             knee2.y = leaderEndPoint.y + legSize;
             textOffsetV = RVector(0,-1);
         }
+
+        textAngle = M_PI / 2.0;
     }
 
     // horizontal, measuring Y
@@ -366,12 +374,13 @@ void RDimStyleProxyBasic::renderDimOrdinate() {
     }
 
     line = RLine(knee1, knee2);
+    qDebug() << "line:" << line;
     shapes.append(QSharedPointer<RLine>(new RLine(line)));
 
     line = RLine(knee2, leaderEndPoint);
     shapes.append(QSharedPointer<RLine>(new RLine(line)));
 
-    double textHeight = dimensionData->getDimtxt();
+    //double textHeight = dimensionData->getDimtxt();
     double dimgap = dimensionData->getDimgap();
 
     //double dimLineLength = RNANDOUBLE;
@@ -386,6 +395,10 @@ void RDimStyleProxyBasic::renderDimOrdinate() {
     //textData.getBoundingBox();
 
     RTextData& textData = data.initTextData();
+
+    textAngle = RMath::makeAngleReadable(textAngle + textRotation);
+    textData.setAngle(textAngle);
+
     double textWidth = textData.getWidth();
 
     RVector textPos;
@@ -394,15 +407,61 @@ void RDimStyleProxyBasic::renderDimOrdinate() {
         //textPos = textPositionCenter;
         //autoTextPos = false;
     } else {
-        if (!data.isMeasuringXAxis()) {
-            textPos = leaderEndPoint + textOffsetV * (textWidth/2.0+dimgap);
+
+        // text position in normal case (text label not rotated):
+        // needed for the following calculation of the actual position
+        //textPos = leaderEndPoint + textOffsetV * (textWidth/2.0+dimgap);
+        //dimensionData->updateTextPositionCenter(textPos);
+
+
+        // move to text position in normal case (text label not rotated):
+        // needed for the following calculation of the actual position
+        textPos = leaderEndPoint + textOffsetV * (textWidth/2.0+dimgap);
+        dimensionData->updateTextPositionCenter(textPos);
+
+        RPolyline textBox = getTextBox(*dimensionData);
+        textBox.move(leaderEndPoint + textOffsetV * (textWidth/2.0+dimgap));
+
+        qDebug() << "textBox:" << textBox;
+        qDebug() << "textPos:" << textPos;
+
+        // vertical or horizontal line in direction of text offset:
+        RLine ortho(leaderEndPoint, leaderEndPoint + textOffsetV);
+
+        // get all intersections of 'ortho' with the text box:
+        QList<RVector> ips;
+        for (int i=0; i<textBox.countVertices(); i++) {
+            QSharedPointer<RShape> segment = textBox.getSegmentAt(i);
+            QSharedPointer<RLine> line = segment.dynamicCast<RLine>();
+            if (line.isNull()) {
+                continue;
+            }
+
+            // for debugging:
+            //shapes.append(line);
+
+            ips.append(RShape::getIntersectionPointsLL(ortho, *line, false, true));
         }
-        else {
-            textPos = leaderEndPoint + textOffsetV * (textHeight/2.0+dimgap);
+
+        qDebug() << "ips:" << ips;
+
+        // closest intersection point:
+        RVector closest = leaderEndPoint.getClosest2D(ips);
+        qDebug() << "closest:" << closest;
+
+        double gap = 0.0;
+        if (closest.isValid()) {
+            gap = leaderEndPoint.getDistanceTo2D(closest);
+            if (RMath::isNaN(gap)) {
+                gap = 0.0;
+            }
         }
-        //RVector textPositionCenter = textPos;
-        //middleOfText = RVector::invalid;
-        //autoTextPos = true;
+
+        qDebug() << "gap:" << gap;
+
+        // move text within 'gap' distance of leader:
+        double correction = gap - dimgap;
+        textPos = textPos - textOffsetV * correction;
 
         dimensionData->updateTextPositionCenter(textPos);
     }

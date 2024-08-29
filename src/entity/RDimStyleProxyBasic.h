@@ -27,6 +27,7 @@
 
 #include "RDimStyleProxy.h"
 #include "RMath.h"
+#include "RPolyline.h"
 
 class RDimRotatedEntity;
 class RDocument;
@@ -65,6 +66,13 @@ protected:
     virtual void breakUpDimArc(QList<QSharedPointer<RShape> >& shapes, QSharedPointer<RArc> dimArc) {
         Q_UNUSED(shapes)
         Q_UNUSED(dimArc)
+    }
+
+    virtual RPolyline getTextBox(const RDimensionData& dimensionData, double* width = NULL) const {
+        Q_UNUSED(dimensionData)
+        Q_UNUSED(width)
+
+        return RPolyline();
     }
 
     virtual void updateTextPosition(const QString& text, double textWidth, const RVector& dimLine1, const RVector& dimLine2, bool corrected, double angleHint = RNANDOUBLE);

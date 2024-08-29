@@ -52,7 +52,7 @@ public:
                    double lineSpacingFactor,
                    const QString& text,
                    const QString& fontName,
-                   double textAngle);
+                   double textRotation);
 
 //    ~RDimensionData() {
 //        if (overrides!=NULL) {
@@ -542,8 +542,12 @@ public:
         return lineSpacingFactor;
     }
 
-    double getTextAngle() const {
-        return textAngle;
+    double getTextRotation() const {
+        return textRotation;
+    }
+
+    void setTextRotation(double r) {
+        textRotation = r;
     }
 
 //    QList<QSharedPointer<RShape> > getDimensionLineShapes(
@@ -605,7 +609,7 @@ protected:
 
     mutable double defaultAngle;
     /** Rotation angle of dimension text away from default orientation */
-    double textAngle;
+    double textRotation;
 
     // RDimStyleData for overrides:
     RDimStyleData overrides;

@@ -1237,7 +1237,7 @@ void RDxfExporter::writeDimension(const RDimensionEntity& d) {
                              (const char*)RDxfExporter::escapeUnicode(text),
                              // TODO: dim style:
                              (const char*)RDxfExporter::escapeUnicode(d.getFontName()),
-                             d.getTextAngle(),
+                             d.getTextRotation(),
                              d.getLinearFactor(),
                              d.getDimscale());
     dimData.arrow1Flipped = d.isArrow1Flipped();

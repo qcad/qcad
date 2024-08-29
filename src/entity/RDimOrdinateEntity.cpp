@@ -41,6 +41,7 @@ RPropertyTypeId RDimOrdinateEntity::PropertyUpperTolerance;
 RPropertyTypeId RDimOrdinateEntity::PropertyLowerTolerance;
 RPropertyTypeId RDimOrdinateEntity::PropertyMeasuredValue;
 RPropertyTypeId RDimOrdinateEntity::PropertyFontName;
+RPropertyTypeId RDimOrdinateEntity::PropertyTextRotation;
 //RPropertyTypeId RDimOrdinateEntity::PropertyArrow1Flipped;
 //RPropertyTypeId RDimOrdinateEntity::PropertyArrow2Flipped;
 
@@ -97,6 +98,7 @@ void RDimOrdinateEntity::init() {
     RDimOrdinateEntity::PropertyLowerTolerance.generateId(RDimOrdinateEntity::getRtti(), RDimensionEntity::PropertyLowerTolerance);
     RDimOrdinateEntity::PropertyMeasuredValue.generateId(RDimOrdinateEntity::getRtti(), RDimensionEntity::PropertyMeasuredValue);
     RDimOrdinateEntity::PropertyFontName.generateId(RDimOrdinateEntity::getRtti(), RDimensionEntity::PropertyFontName);
+    RDimOrdinateEntity::PropertyTextRotation.generateId(RDimOrdinateEntity::getRtti(), RDimensionEntity::PropertyTextRotation);
     //RDimOrdinateEntity::PropertyArrow1Flipped.generateId(RDimOrdinateEntity::getRtti(), RDimensionEntity::PropertyArrow1Flipped);
     //RDimOrdinateEntity::PropertyArrow2Flipped.generateId(RDimOrdinateEntity::getRtti(), RDimensionEntity::PropertyArrow2Flipped);
 

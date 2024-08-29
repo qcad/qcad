@@ -69,6 +69,7 @@ public:
     static RPropertyTypeId PropertyDimBlockName;
     static RPropertyTypeId PropertyAutoTextPos;
     static RPropertyTypeId PropertyFontName;
+    static RPropertyTypeId PropertyTextRotation;
     //static RPropertyTypeId PropertyTextColor;
     static RPropertyTypeId PropertyArrow1Flipped;
     static RPropertyTypeId PropertyArrow2Flipped;
@@ -76,7 +77,6 @@ public:
     static RPropertyTypeId PropertyExtLineFix;
     static RPropertyTypeId PropertyExtLineFixLength;
     //static RPropertyTypeId PropertyHeight;
-    //static RPropertyTypeId PropertyAngle;
     //static RPropertyTypeId PropertyLineSpacingFactor;
     //static RPropertyTypeId PropertyHAlign;
     //static RPropertyTypeId PropertyVAlign;
@@ -214,8 +214,8 @@ public:
         return getData().getLineSpacingFactor();
     }
 
-    double getTextAngle() const {
-        return getData().getTextAngle();
+    double getTextRotation() const {
+        return getData().getTextRotation();
     }
 
     double getLinearFactor() const {
