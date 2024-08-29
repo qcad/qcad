@@ -267,15 +267,3 @@ DrawBasedOnRectangleSize.prototype.updateOkButton = function() {
 
 
 
-///**
-// * Reacts to an assigned shortcut for the given index of the reference point combo box.
-// */
-//function KeyReactor(i) {
-//    this.i = i;
-//}
-
-//KeyReactor.prototype.activated = function() {
-//    var optionsToolBar = EAction.getOptionsToolBar();
-//    var refPointCombo = optionsToolBar.findChild("ReferencePoint");
-//    refPointCombo.currentIndex = this.i;
-//};
