@@ -42,35 +42,24 @@ Circle2TPTest11.prototype.test00 = function() {
     var p = new RVector(68.3, 42.4);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
-    TdbTest.clickOnWidget('MainWindow::CadToolBar::CircleToolsPanel::CircleT2PButton');
-    this.setZoom(10, new RVector(5,5));
-    var p = new RVector(40.3, 42.3);
-    this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
-    this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
-    this.setZoom(10, new RVector(5,5));
-    var p = new RVector(25.3, 41);
-    this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
-    this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
-    var p = new RVector(27.9, 22.4);
-    this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
-    this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
-    var p = new RVector(26.3, 21.6);
-    this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
-    this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
-    var p = new RVector(13.5, 23.5);
-    this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
-    this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
     TdbTest.clickOnWidget('MainWindow::CadToolBar::CircleToolsPanel::Circle2TPButton');
     this.setZoom(10, new RVector(5,5));
+    // choose first circle:
     var p = new RVector(24.7, 40.6);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setZoom(10, new RVector(5,5));
+    // choose second circle:
     var p = new RVector(40, 41.5);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
+    // choose point:
+    var p = new RVector(40, 40);
+    this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
+    this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setZoom(10, new RVector(5,5));
-    var p = new RVector(25.4, 40.4);
+    // choose solution:
+    var p = new RVector(37.14, 45.89);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.verifyDrawing('Circle2TPTest11_000.dxf');
