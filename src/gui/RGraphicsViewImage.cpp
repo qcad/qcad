@@ -1649,6 +1649,13 @@ void RGraphicsViewImage::paintDrawableThread(RGraphicsViewWorker* worker, RGraph
             text.scale(RVector(1/factor,1/factor), text.getAlignmentPoint());
         }
 
+        if (forceTextHeightThreshold) {
+            int featureSizePx = (int)mapDistanceToView(fabs(text.getTextHeight()));
+            if (featureSizePx<=textHeightThreshold) {
+                return;
+            }
+        }
+
         text.move(drawable.getOffset());
 
         //if (entityTransformThread[threadId].isEmpty()) {

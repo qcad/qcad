@@ -48,6 +48,7 @@ RGraphicsView::RGraphicsView(RGraphicsScene* scene) :
       currentStepScaleFactor(1.0),
       textHeightThresholdOverride(-1),
       textHeightThreshold(3),
+      forceTextHeightThreshold(false),
       viewportNumber(-1),
       antialiasing(false),
       gridVisible(-1),
@@ -1028,15 +1029,33 @@ bool RGraphicsView::isPathVisible(const RPainterPath &path) const {
 
     int featureSizePx = (int)mapDistanceToView(fabs(featureSize));
 
+    if (forceTextHeightThreshold) {
+        if (featureSize>RS::PointTolerance) {
+            if (featureSizePx<=textHeightThreshold) {
+                return false;
+            }
+        }
+        else if (featureSize<-RS::PointTolerance) {
+            if (featureSizePx>textHeightThreshold) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    // check if we should display the text:
     if (featureSize>RS::PointTolerance) {
-        // paths feature size is too small to be displayed (display real text):
+        // paths feature size is too small to be displayed (don't display text):
         if (!isPrintingOrExporting() && featureSizePx<=textHeightThreshold) {
             return false;
         }
     }
+
+    // check if we should display the bounding box of text instead:
     else if (featureSize<-RS::PointTolerance) {
-        // paths feature size is too large to be displayed (bounding box):
         if (isPrintingOrExporting() || featureSizePx>textHeightThreshold) {
+            // paths feature size is too large to be displayed (don't show bounding box):
             return false;
         }
     }

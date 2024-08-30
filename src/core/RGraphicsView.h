@@ -297,6 +297,14 @@ public:
         return textHeightThresholdOverride;
     }
 
+    void setForceTextHeightThreshold(bool on) {
+        forceTextHeightThreshold = on;
+    }
+
+    bool getForceTextHeightThreshold() const {
+        return forceTextHeightThreshold;
+    }
+
     void updateTextHeightThreshold();
 
     bool isPathVisible(const RPainterPath& path) const;
@@ -399,6 +407,7 @@ protected:
 
     int textHeightThresholdOverride;
     int textHeightThreshold;
+    bool forceTextHeightThreshold;
 
     int viewportNumber;
 
