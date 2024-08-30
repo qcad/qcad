@@ -47,7 +47,9 @@ RPropertyEditor::RPropertyEditor()
 
     instance = this;
 
+#if QT_VERSION >= 0x060000
     connect(this, &RPropertyEditor::finished, this, &RPropertyEditor::updateFromDocumentNow);
+#endif
 }
 
 /**

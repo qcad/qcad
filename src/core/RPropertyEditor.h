@@ -47,8 +47,16 @@
  * \scriptable
  * \generateScriptShell
  */
-class QCADCORE_EXPORT RPropertyEditor: public QObject, public RPropertyListener, public RLayerListener {
+class QCADCORE_EXPORT RPropertyEditor:
+
+#if QT_VERSION >= 0x060000
+        public QObject,
+#endif
+        public RPropertyListener, public RLayerListener {
+
+#if QT_VERSION >= 0x060000
     Q_OBJECT
+#endif
 
 public:
     RPropertyEditor();
@@ -60,13 +68,20 @@ public:
     virtual void updateFromDocument(RDocument* document, bool onlyChanges, RS::EntityType filter = RS::EntityUnknown, bool manual = false, bool showOnRequest = false);
 
 #if QT_VERSION >= 0x060000
+    /**
+     * \nonscriptable
+     */
     void sleep(QPromise<void>& promise, RDocument* document, bool onlyChanges, RS::EntityType filter, bool manual, bool showOnRequest);
-#endif
 
 signals:
     void finished(RDocument* document, bool onlyChanges, RS::EntityType filter, bool manual, bool showOnRequest);
+#endif
 
+#if QT_VERSION >= 0x060000
 public slots:
+#else
+public:
+#endif
     void updateFromDocumentNow(RDocument* document, bool onlyChanges, RS::EntityType filter = RS::EntityUnknown, bool manual = false, bool showOnRequest = false);
 
 public:

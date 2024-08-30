@@ -21,6 +21,12 @@ do
     xmlfile="$scope/xml/$basename.xml"
     #if [ "$f" -nt "$SPATH/$xmlfile" -o "../../srcml2xml.xsl" -nt "$SPATH/$xmlfile" -o ! -s "$SPATH/$xmlfile" ]; then
         sleep 0.01
+
+        if [ $basename == "RPropertyEditor" ]
+        then
+            continue;
+        fi
+
         echo "processing $srcmlfile ..."
         (
             xsltproc "../../srcml2xml.xsl" "$f" >"$SPATH/$xmlfile"

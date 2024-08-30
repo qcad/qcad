@@ -54,6 +54,15 @@
         
     
     
+      void updateFromDocumentNow(
+                RDocument * document, bool onlyChanges, RS::EntityType filter
+        = RS :: EntityUnknown, bool manual
+        = false, bool showOnRequest
+        = false
+            );
+        
+    
+    
       void updateFromObject(
                 RObject * object, RDocument * document
         = NULL

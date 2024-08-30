@@ -61,6 +61,9 @@
         updateFromDocument
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        updateFromDocumentNow
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         updateFromObject
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
