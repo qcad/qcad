@@ -61,7 +61,14 @@ function exportBitmap(doc, scene, fileName, properties, view) {
     view.setAlphaEnabled(true);
 
     view.setPaintOrigin(properties["origin"]==null ? false : properties["origin"]);
-    view.setTextHeightThresholdOverride(0);
+    if (typeof(properties["textHeightThreshold"])!=="undefined") {
+        view.setTextHeightThresholdOverride(properties["textHeightThreshold"]);
+        view.setForceTextHeightThreshold(true);
+    }
+    else {
+        view.setTextHeightThresholdOverride(0);
+    }
+
     view.setAntialiasing(antialiasing);
 
     if (properties["monochrome"]===true) {
