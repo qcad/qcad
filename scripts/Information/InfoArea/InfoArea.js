@@ -94,11 +94,15 @@ InfoArea.prototype.pickCoordinate = function(event, preview) {
     case InfoArea.State.Done:
         if (!preview) {
             this.reset();
+            this.point1 = pos;
+            this.polyline.appendVertex(pos);
+            di.setRelativeZero(pos);
         }
-        this.updatePreview();
-        if (preview) {
-            break;
+        else {
+            this.updatePreview();
         }
+        break;
+
     case InfoArea.State.SettingPoint:
         this.point1 = pos;
         this.polyline.appendVertex(pos);
