@@ -1649,13 +1649,6 @@ void RGraphicsViewImage::paintDrawableThread(RGraphicsViewWorker* worker, RGraph
             text.scale(RVector(1/factor,1/factor), text.getAlignmentPoint());
         }
 
-        if (forceTextHeightThreshold) {
-            int featureSizePx = (int)mapDistanceToView(fabs(text.getTextHeight()));
-            if (featureSizePx<=textHeightThreshold) {
-                return;
-            }
-        }
-
         text.move(drawable.getOffset());
 
         //if (entityTransformThread[threadId].isEmpty()) {
@@ -1757,13 +1750,20 @@ void RGraphicsViewImage::paintDrawableThread(RGraphicsViewWorker* worker, RGraph
 //                }
         }
 
-        // TODO: add function to RGraphicsViewImage:
-        // remove painter (member var):
+        // skip rendering of text with nominal height below threshold:
+        if (forceTextHeightThreshold) {
+            QTransform t = worker->getTransform();
+            double maxScale = qMax(t.m11(), t.m22());
+            int featureSizePx = (int)mapDistanceToView(fabs(text.getTextHeight() * maxScale));
+            if (featureSizePx<=textHeightThreshold) {
+                return;
+            }
+        }
+
         worker->paintText(text, workingSet);
 
         //if (!entityTransformThread[threadId].isEmpty()) {
         if (worker->hasTransforms()) {
-            // TODO: add function to RGraphicsViewImage:
             worker->restore();
         }
     }
