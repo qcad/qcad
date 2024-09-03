@@ -67,6 +67,8 @@ public:
     virtual void setCursor(Qt::CursorShape cursorShape);
     virtual void setCursor(const QCursor& cursor);
 
+    virtual QCursor getCursor();
+
     // TODO: these methods are not found in RGraphicsViewQt, due to the
     // multiple inheritance of RGraphicsViewQt (QWidget and RGraphicsViewImage)
     // unless they are re-declared here again:

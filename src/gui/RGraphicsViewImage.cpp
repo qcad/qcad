@@ -113,6 +113,12 @@ void RGraphicsViewImage::setCursor(const QCursor& cursor) {
     }
 }
 
+QCursor RGraphicsViewImage::getCursor() {
+    if (widget!=NULL) {
+        return widget->cursor();
+    }
+}
+
 void RGraphicsViewImage::setPaintOrigin(bool val) {
     doPaintOrigin = val;
 }
