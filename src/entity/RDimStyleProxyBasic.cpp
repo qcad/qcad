@@ -422,9 +422,6 @@ void RDimStyleProxyBasic::renderDimOrdinate() {
         RPolyline textBox = getTextBox(*dimensionData);
         textBox.move(leaderEndPoint + textOffsetV * (textWidth/2.0+dimgap));
 
-        qDebug() << "textBox:" << textBox;
-        qDebug() << "textPos:" << textPos;
-
         // vertical or horizontal line in direction of text offset:
         RLine ortho(leaderEndPoint, leaderEndPoint + textOffsetV);
 
@@ -443,11 +440,8 @@ void RDimStyleProxyBasic::renderDimOrdinate() {
             ips.append(RShape::getIntersectionPointsLL(ortho, *line, false, true));
         }
 
-        qDebug() << "ips:" << ips;
-
         // closest intersection point:
         RVector closest = leaderEndPoint.getClosest2D(ips);
-        qDebug() << "closest:" << closest;
 
         double gap = 0.0;
         if (closest.isValid()) {
@@ -456,8 +450,6 @@ void RDimStyleProxyBasic::renderDimOrdinate() {
                 gap = 0.0;
             }
         }
-
-        qDebug() << "gap:" << gap;
 
         // move text within 'gap' distance of leader:
         double correction = gap - dimgap;
