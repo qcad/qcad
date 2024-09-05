@@ -218,7 +218,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false" />
     </method>
-    <method name="getTextAngle" cppName="getTextAngle"
+    <method name="getTextRotation" cppName="getTextRotation"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false" />
@@ -384,6 +384,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="PropertyAutoTextPos" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyFontName" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyTextRotation" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyArrow1Flipped" type="RPropertyTypeId"
     isConst="false" isStatic="true" />

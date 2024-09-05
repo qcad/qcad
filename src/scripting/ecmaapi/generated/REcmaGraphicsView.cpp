@@ -276,6 +276,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getTextHeightThresholdOverride, "getTextHeightThresholdOverride");
             
+            REcmaHelper::registerFunction(&engine, proto, setForceTextHeightThreshold, "setForceTextHeightThreshold");
+            
+            REcmaHelper::registerFunction(&engine, proto, getForceTextHeightThreshold, "getForceTextHeightThreshold");
+            
             REcmaHelper::registerFunction(&engine, proto, updateTextHeightThreshold, "updateTextHeightThreshold");
             
             REcmaHelper::registerFunction(&engine, proto, isPathVisible, "isPathVisible");
@@ -7079,6 +7083,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsView::getTextHeightThresholdOverride", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsView::setForceTextHeightThreshold
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsView::setForceTextHeightThreshold", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsView::setForceTextHeightThreshold";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsView* self = 
+                        getSelf("setForceTextHeightThreshold", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setForceTextHeightThreshold(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsView.setForceTextHeightThreshold().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsView::setForceTextHeightThreshold", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsView::getForceTextHeightThreshold
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsView::getForceTextHeightThreshold", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsView::getForceTextHeightThreshold";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsView* self = 
+                        getSelf("getForceTextHeightThreshold", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getForceTextHeightThreshold();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsView.getForceTextHeightThreshold().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsView::getForceTextHeightThreshold", context, engine);
             return result;
         }
          QScriptValue

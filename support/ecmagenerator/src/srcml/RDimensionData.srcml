@@ -53,7 +53,7 @@
                    <param><decl><type><name>double</name></type> <name>lineSpacingFactor</name></decl></param>,
                    <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>text</name></decl></param>,
                    <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fontName</name></decl></param>,
-                   <param><decl><type><name>double</name></type> <name>textAngle</name></decl></param>)</parameter_list>;</constructor_decl>
+                   <param><decl><type><name>double</name></type> <name>textRotation</name></decl></param>)</parameter_list>;</constructor_decl>
 
 <comment type="line">//    ~RDimensionData() {</comment>
 <comment type="line">//        if (overrides!=NULL) {</comment>
@@ -543,8 +543,12 @@
         <return>return <expr><name>lineSpacingFactor</name></expr>;</return>
     }</block></function>
 
-    <function><type><name>double</name></type> <name>getTextAngle</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>textAngle</name></expr>;</return>
+    <function><type><name>double</name></type> <name>getTextRotation</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>textRotation</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setTextRotation</name><parameter_list>(<param><decl><type><name>double</name></type> <name>r</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>textRotation</name> = <name>r</name></expr>;</expr_stmt>
     }</block></function>
 
 <comment type="line">//    QList&lt;QSharedPointer&lt;RShape&gt; &gt; getDimensionLineShapes(</comment>
@@ -606,7 +610,7 @@
 
     <decl_stmt><decl><type><name>mutable</name> <name>double</name></type> <name>defaultAngle</name></decl>;</decl_stmt>
     <comment type="block">/** Rotation angle of dimension text away from default orientation */</comment>
-    <decl_stmt><decl><type><name>double</name></type> <name>textAngle</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>textRotation</name></decl>;</decl_stmt>
 
     <comment type="line">// RDimStyleData for overrides:</comment>
     <decl_stmt><decl><type><name>RDimStyleData</name></type> <name>overrides</name></decl>;</decl_stmt>

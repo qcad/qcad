@@ -185,8 +185,6 @@
             
             REcmaHelper::registerFunction(&engine, proto, paintGridPoints, "paintGridPoints");
             
-            REcmaHelper::registerFunction(&engine, proto, getCursor, "getCursor");
-            
             REcmaHelper::registerFunction(&engine, proto, getClosestReferencePoint, "getClosestReferencePoint");
             
             REcmaHelper::registerFunction(&engine, proto, getClosestEntity, "getClosestEntity");
@@ -245,6 +243,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getTextHeightThresholdOverride, "getTextHeightThresholdOverride");
             
+            REcmaHelper::registerFunction(&engine, proto, setForceTextHeightThreshold, "setForceTextHeightThreshold");
+            
+            REcmaHelper::registerFunction(&engine, proto, getForceTextHeightThreshold, "getForceTextHeightThreshold");
+            
             REcmaHelper::registerFunction(&engine, proto, updateTextHeightThreshold, "updateTextHeightThreshold");
             
             REcmaHelper::registerFunction(&engine, proto, isPathVisible, "isPathVisible");
@@ -270,6 +272,8 @@
             REcmaHelper::registerFunction(&engine, proto, clear, "clear");
             
             REcmaHelper::registerFunction(&engine, proto, setCursor, "setCursor");
+            
+            REcmaHelper::registerFunction(&engine, proto, getCursor, "getCursor");
             
             REcmaHelper::registerFunction(&engine, proto, simulateMouseMoveEvent, "simulateMouseMoveEvent");
             
@@ -3934,55 +3938,6 @@
             return result;
         }
          QScriptValue
-        REcmaGraphicsViewImage::getCursor
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaGraphicsViewImage::getCursor", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::getCursor";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RGraphicsViewImage* self = 
-                        getSelf("getCursor", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'QCursor'
-    QCursor cppResult =
-        
-               self->getCursor();
-        // return type: QCursor
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.getCursor().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::getCursor", context, engine);
-            return result;
-        }
-         QScriptValue
         REcmaGraphicsViewImage::getClosestReferencePoint
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -5828,6 +5783,110 @@
             return result;
         }
          QScriptValue
+        REcmaGraphicsViewImage::setForceTextHeightThreshold
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::setForceTextHeightThreshold", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::setForceTextHeightThreshold";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("setForceTextHeightThreshold", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setForceTextHeightThreshold(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.setForceTextHeightThreshold().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::setForceTextHeightThreshold", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::getForceTextHeightThreshold
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::getForceTextHeightThreshold", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::getForceTextHeightThreshold";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("getForceTextHeightThreshold", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getForceTextHeightThreshold();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.getForceTextHeightThreshold().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::getForceTextHeightThreshold", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaGraphicsViewImage::updateTextHeightThreshold
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -6399,6 +6458,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsViewImage::setCursor", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::getCursor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::getCursor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::getCursor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("getCursor", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QCursor'
+    QCursor cppResult =
+        
+               self->getCursor();
+        // return type: QCursor
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.getCursor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::getCursor", context, engine);
             return result;
         }
          QScriptValue

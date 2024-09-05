@@ -120,7 +120,7 @@
             
             REcmaHelper::registerFunction(&engine, proto, getLineSpacingFactor, "getLineSpacingFactor");
             
-            REcmaHelper::registerFunction(&engine, proto, getTextAngle, "getTextAngle");
+            REcmaHelper::registerFunction(&engine, proto, getTextRotation, "getTextRotation");
             
             REcmaHelper::registerFunction(&engine, proto, getLinearFactor, "getLinearFactor");
             
@@ -272,6 +272,10 @@
             
             ctor.setProperty("PropertyFontName",
                 qScriptValueFromValue(&engine, RDimensionEntity::PropertyFontName),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyTextRotation",
+                qScriptValueFromValue(&engine, RDimensionEntity::PropertyTextRotation),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyArrow1Flipped",
@@ -2714,19 +2718,19 @@
             return result;
         }
          QScriptValue
-        REcmaSharedPointerDimensionEntity::getTextAngle
+        REcmaSharedPointerDimensionEntity::getTextRotation
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerDimensionEntity::getTextAngle", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimensionEntity::getTextAngle";
+            //REcmaHelper::functionStart("REcmaSharedPointerDimensionEntity::getTextRotation", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimensionEntity::getTextRotation";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RDimensionEntity* self = 
-                        getSelf("getTextAngle", context);
+                        getSelf("getTextRotation", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -2746,7 +2750,7 @@
     // return type 'double'
     double cppResult =
         
-               self->getTextAngle();
+               self->getTextRotation();
         // return type: double
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -2756,10 +2760,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionEntity.getTextAngle().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionEntity.getTextRotation().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerDimensionEntity::getTextAngle", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimensionEntity::getTextRotation", context, engine);
             return result;
         }
          QScriptValue

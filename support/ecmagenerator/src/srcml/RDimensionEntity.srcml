@@ -70,6 +70,7 @@
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyDimBlockName</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyAutoTextPos</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyFontName</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyTextRotation</name></decl>;</decl_stmt>
     <comment type="line">//static RPropertyTypeId PropertyTextColor;</comment>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyArrow1Flipped</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyArrow2Flipped</name></decl>;</decl_stmt>
@@ -77,7 +78,6 @@
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyExtLineFix</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyExtLineFixLength</name></decl>;</decl_stmt>
     <comment type="line">//static RPropertyTypeId PropertyHeight;</comment>
-    <comment type="line">//static RPropertyTypeId PropertyAngle;</comment>
     <comment type="line">//static RPropertyTypeId PropertyLineSpacingFactor;</comment>
     <comment type="line">//static RPropertyTypeId PropertyHAlign;</comment>
     <comment type="line">//static RPropertyTypeId PropertyVAlign;</comment>
@@ -215,8 +215,8 @@
         <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getLineSpacingFactor</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function><type><name>double</name></type> <name>getTextAngle</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getTextAngle</name><argument_list>()</argument_list></call></expr>;</return>
+    <function><type><name>double</name></type> <name>getTextRotation</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getTextRotation</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name>double</name></type> <name>getLinearFactor</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{

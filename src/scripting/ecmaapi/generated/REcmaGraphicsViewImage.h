@@ -193,9 +193,6 @@
         paintGridPoints
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getCursor
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         getClosestReferencePoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -283,6 +280,12 @@
         getTextHeightThresholdOverride
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setForceTextHeightThreshold
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getForceTextHeightThreshold
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         updateTextHeightThreshold
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -317,6 +320,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setCursor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getCursor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         simulateMouseMoveEvent

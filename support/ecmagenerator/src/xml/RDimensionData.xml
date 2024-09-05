@@ -30,7 +30,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
         <arg type="QString &amp;" typeName="QString"
         name="fontName" isConst="true" />
-        <arg type="double" typeName="double" name="textAngle"
+        <arg type="double" typeName="double" name="textRotation"
         isConst="false" />
       </variant>
     </constructor>
@@ -823,10 +823,18 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false" />
     </method>
-    <method name="getTextAngle" cppName="getTextAngle"
+    <method name="getTextRotation" cppName="getTextRotation"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="setTextRotation" cppName="setTextRotation"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="r"
+        isConst="false" />
+      </variant>
     </method>
     <method name="getTextData" cppName="getTextData"
     specifier="public" isStatic="false" isVirtual="false"

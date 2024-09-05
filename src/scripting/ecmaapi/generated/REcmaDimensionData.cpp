@@ -297,7 +297,9 @@
             
             REcmaHelper::registerFunction(&engine, proto, getLineSpacingFactor, "getLineSpacingFactor");
             
-            REcmaHelper::registerFunction(&engine, proto, getTextAngle, "getTextAngle");
+            REcmaHelper::registerFunction(&engine, proto, getTextRotation, "getTextRotation");
+            
+            REcmaHelper::registerFunction(&engine, proto, setTextRotation, "setTextRotation");
             
             REcmaHelper::registerFunction(&engine, proto, getTextData, "getTextData");
             
@@ -8048,19 +8050,19 @@
             return result;
         }
          QScriptValue
-        REcmaDimensionData::getTextAngle
+        REcmaDimensionData::getTextRotation
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimensionData::getTextAngle", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getTextAngle";
+            //REcmaHelper::functionStart("REcmaDimensionData::getTextRotation", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getTextRotation";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RDimensionData* self = 
-                        getSelf("getTextAngle", context);
+                        getSelf("getTextRotation", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -8080,7 +8082,7 @@
     // return type 'double'
     double cppResult =
         
-               self->getTextAngle();
+               self->getTextRotation();
         // return type: double
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -8090,10 +8092,65 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getTextAngle().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getTextRotation().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimensionData::getTextAngle", context, engine);
+            //REcmaHelper::functionEnd("REcmaDimensionData::getTextRotation", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::setTextRotation
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::setTextRotation", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::setTextRotation";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("setTextRotation", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setTextRotation(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.setTextRotation().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::setTextRotation", context, engine);
             return result;
         }
          QScriptValue

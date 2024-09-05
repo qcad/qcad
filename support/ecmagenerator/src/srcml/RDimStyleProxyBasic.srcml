@@ -28,6 +28,7 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDimStyleProxy.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMath.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPolyline.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>RDimRotatedEntity</name>;</class_decl>
 <class_decl>class <name>RDocument</name>;</class_decl>
@@ -66,6 +67,13 @@
     <function><type><name>virtual</name> <name>void</name></type> <name>breakUpDimArc</name><parameter_list>(<param><decl><type><name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name>&amp;</type> <name>shapes</name></decl></param>, <param><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RArc</name></argument>&gt;</argument_list></name></type> <name>dimArc</name></decl></param>)</parameter_list> <block>{
         <macro><name>Q_UNUSED</name><argument_list>(<argument>shapes</argument>)</argument_list></macro>
         <macro><name>Q_UNUSED</name><argument_list>(<argument>dimArc</argument>)</argument_list></macro>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>RPolyline</name></type> <name>getTextBox</name><parameter_list>(<param><decl><type><name>const</name> <name>RDimensionData</name>&amp;</type> <name>dimensionData</name></decl></param>, <param><decl><type><name>double</name>*</type> <name>width</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>dimensionData</argument>)</argument_list></macro>
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>width</argument>)</argument_list></macro>
+
+        <return>return <expr><call><name>RPolyline</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>updateTextPosition</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>text</name></decl></param>, <param><decl><type><name>double</name></type> <name>textWidth</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>dimLine1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>dimLine2</name></decl></param>, <param><decl><type><name>bool</name></type> <name>corrected</name></decl></param>, <param><decl><type><name>double</name></type> <name>angleHint</name> =<init> <expr><name>RNANDOUBLE</name></expr></init></decl></param>)</parameter_list>;</function_decl>

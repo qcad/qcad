@@ -346,6 +346,12 @@
         getTextHeightThresholdOverride
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setForceTextHeightThreshold
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getForceTextHeightThreshold
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         updateTextHeightThreshold
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

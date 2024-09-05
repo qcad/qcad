@@ -396,7 +396,10 @@
         getLineSpacingFactor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getTextAngle
+        getTextRotation
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setTextRotation
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getTextData

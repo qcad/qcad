@@ -202,6 +202,10 @@
                 qScriptValueFromValue(&engine, RDimOrdinateEntity::PropertyFontName),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyTextRotation",
+                qScriptValueFromValue(&engine, RDimOrdinateEntity::PropertyTextRotation),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyDimscale",
                 qScriptValueFromValue(&engine, RDimOrdinateEntity::PropertyDimscale),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

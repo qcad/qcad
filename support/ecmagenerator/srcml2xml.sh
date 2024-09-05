@@ -22,6 +22,7 @@ do
     #if [ "$f" -nt "$SPATH/$xmlfile" -o "../../srcml2xml.xsl" -nt "$SPATH/$xmlfile" -o ! -s "$SPATH/$xmlfile" ]; then
         sleep 0.01
 
+        # ignore files that need manual updates:
         if [ $basename == "RPropertyEditor" ]
         then
             continue;

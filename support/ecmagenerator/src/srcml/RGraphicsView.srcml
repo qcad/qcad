@@ -298,6 +298,14 @@
         <return>return <expr><name>textHeightThresholdOverride</name></expr>;</return>
     }</block></function>
 
+    <function><type><name>void</name></type> <name>setForceTextHeightThreshold</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>forceTextHeightThreshold</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>getForceTextHeightThreshold</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>forceTextHeightThreshold</name></expr>;</return>
+    }</block></function>
+
     <function_decl><type><name>void</name></type> <name>updateTextHeightThreshold</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>bool</name></type> <name>isPathVisible</name><parameter_list>(<param><decl><type><name>const</name> <name>RPainterPath</name>&amp;</type> <name>path</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
@@ -400,6 +408,7 @@
 
     <decl_stmt><decl><type><name>int</name></type> <name>textHeightThresholdOverride</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>int</name></type> <name>textHeightThreshold</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>forceTextHeightThreshold</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>int</name></type> <name>viewportNumber</name></decl>;</decl_stmt>
 
