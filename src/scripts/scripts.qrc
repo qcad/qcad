@@ -2587,6 +2587,7 @@
     <file alias="scripts/Widgets/LayerList/layerstatus_11-inverse.svg">../../scripts/Widgets/LayerList/layerstatus_11-inverse.svg</file>
     <file alias="scripts/Widgets/LayerList/layerstatus_11.svg">../../scripts/Widgets/LayerList/layerstatus_11.svg</file>
     <file alias="scripts/Widgets/MenuBar/MenuBar.js">../../scripts/Widgets/MenuBar/MenuBar.js</file>
+    <file alias="scripts/Widgets/MenuBar/MenuBarInit.js">../../scripts/Widgets/MenuBar/MenuBarInit.js</file>
     <file alias="scripts/Widgets/MenuBar/PreferencesPage.ui">../../scripts/Widgets/MenuBar/PreferencesPage.ui</file>
     <file alias="scripts/Widgets/MouseDisplay/Mouse-inverse.svg">../../scripts/Widgets/MouseDisplay/Mouse-inverse.svg</file>
     <file alias="scripts/Widgets/MouseDisplay/Mouse.svg">../../scripts/Widgets/MouseDisplay/Mouse.svg</file>

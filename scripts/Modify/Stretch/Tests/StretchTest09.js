@@ -32,6 +32,8 @@ StretchTest09.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
     TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
     TdbTest.clickOnWidget('MainWindow::CadToolBar::ModifyToolsPanel::StretchProButton');
+    this.setToolOption('StretchPro/Mode', 'RectangleArea');
+    this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(10.9, 18.9);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
