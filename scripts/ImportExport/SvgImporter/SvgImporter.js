@@ -235,12 +235,7 @@ SvgHandler.prototype.startElement = function(namespaceURI, localName, qName, att
         break;
 
     case "g":
-        var id = atts.value("id");
-        qDebug("group found:" + id);
-        if (id!=="") {
-            // import group as layer:
-            this.svgImporter.currentLayerName = id;
-        }
+        this.svgImporter.importGroup(atts.value("id"));
         break;
 
     case "path":
@@ -314,6 +309,10 @@ SvgHandler.prototype.endElement = function(namespaceURI, localName, qName) {
     this.displayStack.pop();
     this.elementStack.pop();
 
+    if (localName==="g") {
+        this.svgImporter.groupEnd();
+    }
+
     return true;
 };
 
@@ -333,6 +332,10 @@ function SvgImporter(document, resolution) {
         resolution = 72;
     }
 
+    if (isNull(document)) {
+        return;
+    }
+
     RFileImporterAdapter.call(this, document);
     this.setDocument(document);
     this.transform = new QTransform();
@@ -341,8 +344,6 @@ function SvgImporter(document, resolution) {
     // resolution for pixel values in PPI (pixels / inch):
     this.resolution = resolution;
     this.resolutionScale = RUnit.convert(1/this.resolution, RS.Inch, document.getUnit());
-
-    this.currentLayerName = "";
 }
 
 SvgImporter.prototype = new RFileImporterAdapter();
@@ -436,16 +437,20 @@ SvgImporter.prototype.importShape = function(shape) {
         entity.setColor(new RColor(this.style.stroke));
     }
 
-    if (RSettings.getBoolValue("SvgImport/ImportGroupsAsLayers", true)===true) {
-        if (!isNull(this.currentLayerName) && this.currentLayerName!=="") {
-            // add layer on the fly:
-            var layer = new RLayer(this.getDocument(), this.currentLayerName, false, false);
-            this.importObject(layer);
-            entity.setLayerName(this.currentLayerName);
-        }
-    }
+    this.preImportObject(entity);
 
     this.importObject(entity);
+};
+
+SvgImporter.prototype.preImportObject = function(obj) {
+};
+
+SvgImporter.prototype.importGroup = function(name) {
+    // ignore groups
+};
+
+SvgImporter.prototype.groupEnd = function() {
+    // ignore groups
 };
 
 SvgImporter.prototype.importCircle = function(x, y, r) {
