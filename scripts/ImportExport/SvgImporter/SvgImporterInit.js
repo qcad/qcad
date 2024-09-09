@@ -18,8 +18,15 @@ SvgImporterFactory.prototype.canImport = function(fileName, nameFilter) {
 };
 
 SvgImporterFactory.prototype.instantiate = function(document, messageHandler, progressHandler) {
-    include(SvgImporterFactory.includeBasePath + "/SvgImporter.js");
-    return new SvgImporter(document);
+    if (hasPlugin("PROTOOLS")) {
+        include("scripts/Pro/ImportExport/SvgImporterPro/SvgImporterPro.js");
+        return new SvgImporterPro(document);
+    }
+    else {
+        qDebug("creating basic importer");
+        include(SvgImporterFactory.includeBasePath + "/SvgImporter.js");
+        return new SvgImporter(document);
+    }
 };
 
 function init(basePath) {
