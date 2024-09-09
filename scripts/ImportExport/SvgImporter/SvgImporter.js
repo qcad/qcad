@@ -235,6 +235,12 @@ SvgHandler.prototype.startElement = function(namespaceURI, localName, qName, att
         break;
 
     case "g":
+        var id = atts.value("id");
+        qDebug("group found:" + id);
+        if (id!=="") {
+            // import group as layer:
+            this.svgImporter.currentLayerName = id;
+        }
         break;
 
     case "path":
@@ -335,6 +341,8 @@ function SvgImporter(document, resolution) {
     // resolution for pixel values in PPI (pixels / inch):
     this.resolution = resolution;
     this.resolutionScale = RUnit.convert(1/this.resolution, RS.Inch, document.getUnit());
+
+    this.currentLayerName = "";
 }
 
 SvgImporter.prototype = new RFileImporterAdapter();
@@ -427,6 +435,16 @@ SvgImporter.prototype.importShape = function(shape) {
     if (!isNull(this.style.stroke)) {
         entity.setColor(new RColor(this.style.stroke));
     }
+
+    if (RSettings.getBoolValue("SvgImport/ImportGroupsAsLayers", true)===true) {
+        if (!isNull(this.currentLayerName) && this.currentLayerName!=="") {
+            // add layer on the fly:
+            var layer = new RLayer(this.getDocument(), this.currentLayerName, false, false);
+            this.importObject(layer);
+            entity.setLayerName(this.currentLayerName);
+        }
+    }
+
     this.importObject(entity);
 };
 
