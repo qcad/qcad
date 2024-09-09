@@ -12,7 +12,7 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>
-    <widget class="QGroupBox" name="groupBox_2">
+    <widget class="QGroupBox" name="GroupSplines">
      <property name="title">
       <string>Splines</string>
      </property>
@@ -31,7 +31,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QGroupBox" name="groupBox">
+    <widget class="QGroupBox" name="GroupLayers">
      <property name="title">
       <string>Layers</string>
      </property>

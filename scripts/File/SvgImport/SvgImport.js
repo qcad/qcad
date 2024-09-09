@@ -30,6 +30,15 @@ SvgImport.getPreferencesCategory = function() {
     return [ qsTr("File"), qsTr("SVG Import")];
 };
 
+SvgImport.initPreferences = function(pageWidget, calledByPrefDialog, document) {
+    if (!hasPlugin("PROTOOLS")) {
+        var w = pageWidget.findChild("GroupLayers");
+        if (!isNull(w)) {
+            w.visible = false;
+        }
+    }
+};
+
 SvgImport.includeBasePath = includeBasePath;
 
 SvgImport.prototype.beginEvent = function() {
