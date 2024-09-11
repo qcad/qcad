@@ -2549,6 +2549,10 @@ function stringToDirectDistanceEntry(relativeZero, cursorPosition, str) {
  * Creates and returns a new entity based on the given shape.
  */
 function shapeToEntity(document, shape) {
+    if (isNull(shape)) {
+        return undefined;
+    }
+
     var s = shape;
     if (isFunction(s.data)) {
         s = s.data();

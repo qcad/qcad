@@ -200,6 +200,9 @@ DrawBasedOnThreeCircles.prototype.getOperation = function(preview) {
     op.setText(this.getToolTitle());
 
     for (var i=0; i<shapes.length; i++) {
+        if (isNull(shapes[i])) {
+            continue;
+        }
         var entity = shapeToEntity(doc, shapes[i]);
         if (!isEntity(entity)) {
             continue;
