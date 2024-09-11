@@ -37,7 +37,7 @@
         <location filename="../src/entity/RDimLinearEntity.cpp" line="+151"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+111"/>
+        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+113"/>
         <location line="+5"/>
         <location line="+3"/>
         <location filename="../src/entity/RDimRadialEntity.cpp" line="-2"/>
@@ -466,7 +466,12 @@
         <translation type="unfinished">Tekst Posisjon</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
+        <source>Text Rotation</source>
+        <translation type="unfinished">Rotasjon av tekst</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Flip First Arrow</source>
         <translation type="unfinished">Snu første pil</translation>
     </message>
@@ -486,7 +491,7 @@
         <translation type="unfinished">Lengde på utvidelseslinje</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Auto Label</source>
         <translation type="unfinished">Auto Label</translation>
     </message>

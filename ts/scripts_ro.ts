@@ -412,7 +412,7 @@ modificările preferințelor să intre în vigoare.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1989"/>
+        <location filename="../scripts/Apollonius.js" line="+2296"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Raza invalidă</translation>
     </message>
@@ -1227,7 +1227,7 @@ Doriți să îl recuperați?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation type="unfinished">Dimensiunea nevalabilă a imaginii (lățimea x înălțimea trebuie să fie mai mică decât %1)</translation>
     </message>
@@ -6757,7 +6757,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Setați următorul colț de poligon</translation>
     </message>
     <message>
-        <location line="+121"/>
+        <location line="+125"/>
         <source>Polygon area:</source>
         <translation type="unfinished">Zona poligonală:</translation>
     </message>
@@ -10258,7 +10258,7 @@ este deja în listă.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+71"/>
+        <location line="+83"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation type="unfinished">Editor de proprietăți</translation>
@@ -12247,6 +12247,16 @@ este deja în listă.</translation>
         <translation type="unfinished">Conversia automată a spline-urilor în linii / arcuri, dacă este cazul</translation>
     </message>
     <message>
+        <location line="+13"/>
+        <source>Layers</source>
+        <translation type="unfinished">Straturi</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Import groups as layers</source>
+        <translation type="unfinished">Importul grupurilor ca straturi</translation>
+    </message>
+    <message>
         <location filename="../scripts/File/SvgImport/SvgImport.js" line="+30"/>
         <source>File</source>
         <translation type="unfinished">Fișier</translation>
@@ -12258,7 +12268,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Import SVG</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+44"/>
         <source>Import SVG</source>
         <translation type="unfinished">Import SVG</translation>
     </message>

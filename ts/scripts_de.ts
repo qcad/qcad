@@ -412,7 +412,7 @@ um die Änderungen zu übernehmen.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1989"/>
+        <location filename="../scripts/Apollonius.js" line="+2296"/>
         <source>Invalid radius</source>
         <translation>Ungültiger Radius</translation>
     </message>
@@ -1228,7 +1228,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Ungültige Bildgrösse (Breite x Höhe muss kleiner sein als %1)</translation>
     </message>
@@ -6750,7 +6750,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>InfoArea</name>
     <message>
-        <location filename="../scripts/Information/InfoArea/InfoArea.js" line="+191"/>
+        <location filename="../scripts/Information/InfoArea/InfoArea.js" line="+195"/>
         <source>Polygon area:</source>
         <translation>Polygonfläche:</translation>
     </message>
@@ -6765,7 +6765,7 @@ ist bereits in der Liste.</translation>
         <translation>&amp;Polygon Fläche</translation>
     </message>
     <message>
-        <location filename="../scripts/Information/InfoArea/InfoArea.js" line="-122"/>
+        <location filename="../scripts/Information/InfoArea/InfoArea.js" line="-126"/>
         <source>Set next polygon corner</source>
         <translation>Nächsten Eckpunkt setzen</translation>
     </message>
@@ -10199,7 +10199,7 @@ ist bereits in der Liste.</translation>
     </message>
     <message>
         <location line="+414"/>
-        <location line="+71"/>
+        <location line="+83"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation>Eigenschafteneditor</translation>
@@ -10235,7 +10235,7 @@ ist bereits in der Liste.</translation>
         <translation>Farbe:</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1291"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1303"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>
@@ -12235,7 +12235,7 @@ ist bereits in der Liste.</translation>
         <translation>Datei</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+44"/>
         <source>Import SVG</source>
         <translation>SVG Import</translation>
     </message>
@@ -12255,7 +12255,7 @@ ist bereits in der Liste.</translation>
         <translation>SVG &amp;Import...</translation>
     </message>
     <message>
-        <location filename="../scripts/File/SvgImport/SvgImport.js" line="-36"/>
+        <location filename="../scripts/File/SvgImport/SvgImport.js" line="-45"/>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+14"/>
         <source>SVG Import</source>
         <translation>SVG Import</translation>
@@ -12279,6 +12279,16 @@ ist bereits in der Liste.</translation>
         <location line="+6"/>
         <source>Automatically convert splines to lines / arcs if appropriate</source>
         <translation>Automatische Konvertierung von Splines in Linien / Bögen wenn möglich</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Layers</source>
+        <translation>Layer</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Import groups as layers</source>
+        <translation>Gruppen als Layer importieren</translation>
     </message>
 </context>
 <context>

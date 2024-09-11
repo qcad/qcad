@@ -412,7 +412,7 @@ para aplicar los cambios.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1989"/>
+        <location filename="../scripts/Apollonius.js" line="+2296"/>
         <source>Invalid radius</source>
         <translation>Radio no válido</translation>
     </message>
@@ -1228,7 +1228,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Tamaño de imagen no válido (anchura x altura debe ser menor que %1)</translation>
     </message>
@@ -6755,7 +6755,7 @@ ya está en la lista.</translation>
         <translation>Establecer la esquina siguiente polígono</translation>
     </message>
     <message>
-        <location line="+121"/>
+        <location line="+125"/>
         <source>Polygon area:</source>
         <translation>Área de un polígono:</translation>
     </message>
@@ -10204,7 +10204,7 @@ ya está en la lista.</translation>
     </message>
     <message>
         <location line="+414"/>
-        <location line="+71"/>
+        <location line="+83"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation>Editor de propiedades</translation>
@@ -12235,7 +12235,7 @@ ya está en la lista.</translation>
         <translation>Archivo</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+44"/>
         <source>Import SVG</source>
         <translation>Importar SVG</translation>
     </message>
@@ -12255,7 +12255,7 @@ ya está en la lista.</translation>
         <translation>SVG &amp;importación...</translation>
     </message>
     <message>
-        <location filename="../scripts/File/SvgImport/SvgImport.js" line="-36"/>
+        <location filename="../scripts/File/SvgImport/SvgImport.js" line="-45"/>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+14"/>
         <source>SVG Import</source>
         <translation>Importación SVG</translation>
@@ -12279,6 +12279,16 @@ ya está en la lista.</translation>
         <location line="+6"/>
         <source>Automatically convert splines to lines / arcs if appropriate</source>
         <translation>Convertir automáticamente las splines de líneas / arcos</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Layers</source>
+        <translation>Capas</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Import groups as layers</source>
+        <translation>Importar grupos como capas</translation>
     </message>
 </context>
 <context>

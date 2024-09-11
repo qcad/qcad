@@ -412,7 +412,7 @@ da bodo spremembe začele delovat.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1989"/>
+        <location filename="../scripts/Apollonius.js" line="+2296"/>
         <source>Invalid radius</source>
         <translation>Neveljavni polmer</translation>
     </message>
@@ -1228,7 +1228,7 @@ Ali jo želite obnoviti?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Neveljavna velikost slike (širina * višina mora biti manj kot %1)</translation>
     </message>
@@ -6761,7 +6761,7 @@ je že na seznamu.</translation>
         <translation>Nastavi naslednji kot poligona</translation>
     </message>
     <message>
-        <location line="+121"/>
+        <location line="+125"/>
         <source>Polygon area:</source>
         <translation>Ploščina poligona:</translation>
     </message>
@@ -10214,7 +10214,7 @@ je že na seznamu.</translation>
     </message>
     <message>
         <location line="+414"/>
-        <location line="+71"/>
+        <location line="+83"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation>Urejevalec lastnosti</translation>
@@ -12251,7 +12251,7 @@ je že na seznamu.</translation>
         <translation>Datoteka</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+44"/>
         <source>Import SVG</source>
         <translation>Uvozi SVG</translation>
     </message>
@@ -12266,7 +12266,7 @@ je že na seznamu.</translation>
         <translation>Vse datoteke</translation>
     </message>
     <message>
-        <location line="-36"/>
+        <location line="-45"/>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+14"/>
         <source>SVG Import</source>
         <translation>Uvozi SVG</translation>
@@ -12295,6 +12295,16 @@ je že na seznamu.</translation>
         <location line="+6"/>
         <source>Automatically convert splines to lines / arcs if appropriate</source>
         <translation>Samodejno pretvori krivulje v črte / loke če ustreza</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Layers</source>
+        <translation type="unfinished">Plasti</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Import groups as layers</source>
+        <translation type="unfinished">Uvoz skupin kot slojev</translation>
     </message>
 </context>
 <context>

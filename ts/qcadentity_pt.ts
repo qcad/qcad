@@ -37,7 +37,7 @@
         <location filename="../src/entity/RDimLinearEntity.cpp" line="+151"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+111"/>
+        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+113"/>
         <location line="+5"/>
         <location line="+3"/>
         <location filename="../src/entity/RDimRadialEntity.cpp" line="-2"/>
@@ -437,7 +437,12 @@
         <translation>Ponto de Definição</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
+        <source>Text Rotation</source>
+        <translation>Rotação de texto</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Flip First Arrow</source>
         <translation>Virar a primeira seta</translation>
     </message>
@@ -457,7 +462,7 @@
         <translation>Comprimento linha de extensão</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Auto Label</source>
         <translation>Rótulo Automático</translation>
     </message>
@@ -472,14 +477,14 @@
         <translation>Posição do Rótulo Automático</translation>
     </message>
     <message>
-        <location line="-22"/>
+        <location line="-24"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>
         <translation>Posição do Texto</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+18"/>
         <source>Measured Value</source>
         <translation>Valor Medido</translation>
     </message>

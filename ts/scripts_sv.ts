@@ -412,7 +412,7 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1989"/>
+        <location filename="../scripts/Apollonius.js" line="+2296"/>
         <source>Invalid radius</source>
         <translation>Ogiltig radie</translation>
     </message>
@@ -1226,7 +1226,7 @@ Vill du återställa den?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Ogiltig bildstorlek (bredd x höjd måste vara mindre än %1)</translation>
     </message>
@@ -6753,7 +6753,7 @@ finns redan i listan.</translation>
         <translation>Ställ in nästa polygonhörn</translation>
     </message>
     <message>
-        <location line="+121"/>
+        <location line="+125"/>
         <source>Polygon area:</source>
         <translation>Polygonområdet:</translation>
     </message>
@@ -10202,7 +10202,7 @@ finns redan i listan.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+71"/>
+        <location line="+83"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation>Egenskapsredigerare</translation>
@@ -12239,7 +12239,7 @@ finns redan i listan.</translation>
         <translation>Import av SVG</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+44"/>
         <source>Import SVG</source>
         <translation>Importera SVG</translation>
     </message>
@@ -12267,6 +12267,16 @@ finns redan i listan.</translation>
         <location line="+6"/>
         <source>Automatically convert splines to lines / arcs if appropriate</source>
         <translation>Konvertera automatiskt splines till linjer/bågar om det är lämpligt</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Layers</source>
+        <translation>Skikt</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Import groups as layers</source>
+        <translation>Importera grupper som lager</translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+8"/>

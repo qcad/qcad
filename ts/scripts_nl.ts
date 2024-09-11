@@ -412,7 +412,7 @@ de wijzigingen door te voeren.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1989"/>
+        <location filename="../scripts/Apollonius.js" line="+2296"/>
         <source>Invalid radius</source>
         <translation>Ongeldig straal</translation>
     </message>
@@ -1228,7 +1228,7 @@ Wilt u deze herstellen?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Ongeldige beeldformaat (breedte x hoogte moet kleiner zijn dan %1)</translation>
     </message>
@@ -6755,7 +6755,7 @@ is al in de lijst.</translation>
         <translation>Set volgende polygoon hoek</translation>
     </message>
     <message>
-        <location line="+121"/>
+        <location line="+125"/>
         <source>Polygon area:</source>
         <translation>Polygoonoppervlakte:</translation>
     </message>
@@ -10199,13 +10199,13 @@ is al in de lijst.</translation>
     </message>
     <message>
         <location line="+414"/>
-        <location line="+71"/>
+        <location line="+83"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation>Eigenschappen-editor</translation>
     </message>
     <message>
-        <location line="-81"/>
+        <location line="-93"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -12235,7 +12235,7 @@ is al in de lijst.</translation>
         <translation>Bestand</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+44"/>
         <source>Import SVG</source>
         <translation>SVG Importeren</translation>
     </message>
@@ -12250,7 +12250,7 @@ is al in de lijst.</translation>
         <translation>Alle bestanden</translation>
     </message>
     <message>
-        <location line="-36"/>
+        <location line="-45"/>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+14"/>
         <source>SVG Import</source>
         <translation>SVG Importeren</translation>
@@ -12279,6 +12279,16 @@ is al in de lijst.</translation>
         <location line="+6"/>
         <source>Automatically convert splines to lines / arcs if appropriate</source>
         <translation>Splines automatisch converteren naar lijnen / bogen indien van toepassing</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Layers</source>
+        <translation>Laagen</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Import groups as layers</source>
+        <translation>Groepen importeren als lagen</translation>
     </message>
 </context>
 <context>

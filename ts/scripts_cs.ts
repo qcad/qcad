@@ -412,7 +412,7 @@ aby se změny předvoleb projevily.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1989"/>
+        <location filename="../scripts/Apollonius.js" line="+2296"/>
         <source>Invalid radius</source>
         <translation>Neplatný poloměr</translation>
     </message>
@@ -1228,7 +1228,7 @@ Přejete si ho obnovit?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Vadná velikost obrázku (šířka x výška musí být menší než %1)</translation>
     </message>
@@ -6758,7 +6758,7 @@ již v seznamu je.</translation>
         <translation>Vyberte další roh polygonu</translation>
     </message>
     <message>
-        <location line="+121"/>
+        <location line="+125"/>
         <source>Polygon area:</source>
         <translation>Plocha polygonu:</translation>
     </message>
@@ -10259,7 +10259,7 @@ již v seznamu je.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+71"/>
+        <location line="+83"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation>Editor vlastností</translation>
@@ -12243,7 +12243,7 @@ již v seznamu je.</translation>
         <translation>Soubor</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+44"/>
         <source>Import SVG</source>
         <translation>Importovat SVG</translation>
     </message>
@@ -12258,7 +12258,7 @@ již v seznamu je.</translation>
         <translation>Všechny soubory</translation>
     </message>
     <message>
-        <location line="-36"/>
+        <location line="-45"/>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+14"/>
         <source>SVG Import</source>
         <translation>SVG Import</translation>
@@ -12287,6 +12287,16 @@ již v seznamu je.</translation>
         <location line="+6"/>
         <source>Automatically convert splines to lines / arcs if appropriate</source>
         <translation>Je-li to vhodné, automaticky konvertovat křivky na čáry / oblouky </translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Layers</source>
+        <translation type="unfinished">Vrstev</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Import groups as layers</source>
+        <translation type="unfinished">Importovat skupiny jako vrstvy</translation>
     </message>
 </context>
 <context>

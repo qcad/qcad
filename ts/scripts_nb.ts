@@ -412,7 +412,7 @@ preferanseendringene skal tre i kraft.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1989"/>
+        <location filename="../scripts/Apollonius.js" line="+2296"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Ugyldig radius</translation>
     </message>
@@ -1228,7 +1228,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation type="unfinished">Ugyldig bildestørrelse (bredde x høyde må være mindre enn %1)</translation>
     </message>
@@ -6755,7 +6755,7 @@ er allerede i listen.</translation>
         <translation type="unfinished">Angi neste polygonhjørne</translation>
     </message>
     <message>
-        <location line="+121"/>
+        <location line="+125"/>
         <source>Polygon area:</source>
         <translation type="unfinished">Polygonområde:</translation>
     </message>
@@ -10254,7 +10254,7 @@ er allerede i listen.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+71"/>
+        <location line="+83"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation type="unfinished">Eiendomsredaktør</translation>
@@ -12240,6 +12240,16 @@ er allerede i listen.</translation>
         <translation type="unfinished">Konverter automatisk splines til linjer / buer hvis det er hensiktsmessig</translation>
     </message>
     <message>
+        <location line="+13"/>
+        <source>Layers</source>
+        <translation type="unfinished">Lag</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Import groups as layers</source>
+        <translation type="unfinished">Importer grupper som lag</translation>
+    </message>
+    <message>
         <location filename="../scripts/File/SvgImport/SvgImport.js" line="+30"/>
         <source>File</source>
         <translation type="unfinished">Fil</translation>
@@ -12251,7 +12261,7 @@ er allerede i listen.</translation>
         <translation type="unfinished">SVG-import</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+44"/>
         <source>Import SVG</source>
         <translation type="unfinished">Importer SVG</translation>
     </message>

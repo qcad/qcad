@@ -412,7 +412,7 @@ the preference changes to take effect.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1989"/>
+        <location filename="../scripts/Apollonius.js" line="+2296"/>
         <source>Invalid radius</source>
         <translation>Invalid radius</translation>
     </message>
@@ -1228,7 +1228,7 @@ Do you wish to recover it?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Invalid image size (width x height must be less than %1)</translation>
     </message>
@@ -6755,7 +6755,7 @@ is already in the list.</translation>
         <translation>Set next polygon corner</translation>
     </message>
     <message>
-        <location line="+121"/>
+        <location line="+125"/>
         <source>Polygon area:</source>
         <translation>Polygon area:</translation>
     </message>
@@ -10254,7 +10254,7 @@ is already in the list.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+71"/>
+        <location line="+83"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation>Property Editor</translation>
@@ -12240,6 +12240,16 @@ is already in the list.</translation>
         <translation>Automatically convert splines to lines / arcs if appropriate</translation>
     </message>
     <message>
+        <location line="+13"/>
+        <source>Layers</source>
+        <translation>Layers</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Import groups as layers</source>
+        <translation>Import groups as layers</translation>
+    </message>
+    <message>
         <location filename="../scripts/File/SvgImport/SvgImport.js" line="+30"/>
         <source>File</source>
         <translation>File</translation>
@@ -12251,7 +12261,7 @@ is already in the list.</translation>
         <translation>SVG Import</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+44"/>
         <source>Import SVG</source>
         <translation>Import SVG</translation>
     </message>

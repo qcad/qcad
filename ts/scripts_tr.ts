@@ -412,7 +412,7 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1989"/>
+        <location filename="../scripts/Apollonius.js" line="+2296"/>
         <source>Invalid radius</source>
         <translation>Geçersiz yarıçap</translation>
     </message>
@@ -1225,7 +1225,7 @@ Kurtarmak ister misiniz?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Geçersiz resim boyutu (genişlik x yükseklik %1&apos;den az olmalıdır)</translation>
     </message>
@@ -6749,7 +6749,7 @@ zaten listede.</translation>
         <translation>Bir sonraki çokgen köşeyi ayarla</translation>
     </message>
     <message>
-        <location line="+121"/>
+        <location line="+125"/>
         <source>Polygon area:</source>
         <translation>Çokgen alanı:</translation>
     </message>
@@ -10246,7 +10246,7 @@ zaten listede.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+71"/>
+        <location line="+83"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation type="unfinished">Emlak Editörü</translation>
@@ -12229,6 +12229,16 @@ zaten listede.</translation>
         <translation>Uygunsa, eğri çizgileri otomatik olarak hatlara / yaylara dönüştürün</translation>
     </message>
     <message>
+        <location line="+13"/>
+        <source>Layers</source>
+        <translation type="unfinished">Katmanlar</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Import groups as layers</source>
+        <translation type="unfinished">Grupları katman olarak içe aktarma</translation>
+    </message>
+    <message>
         <location filename="../scripts/File/SvgImport/SvgImport.js" line="+30"/>
         <source>File</source>
         <translation>Dosya</translation>
@@ -12240,7 +12250,7 @@ zaten listede.</translation>
         <translation>SVG İçe Aktar</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+44"/>
         <source>Import SVG</source>
         <translation>SVG İçe Aktar </translation>
     </message>

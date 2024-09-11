@@ -412,7 +412,7 @@ asetuksien muutokset astuvat voimaan.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1989"/>
+        <location filename="../scripts/Apollonius.js" line="+2296"/>
         <source>Invalid radius</source>
         <translation>Virheellinen säde</translation>
     </message>
@@ -1228,7 +1228,7 @@ Haluatko palauttaa sen?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Väärä kuvan koko (leveys x korkeus on oltava pienempi kuin %1)</translation>
     </message>
@@ -6755,7 +6755,7 @@ on jo luettelossa.</translation>
         <translation>Aseta seuraava monikulmion kulma</translation>
     </message>
     <message>
-        <location line="+121"/>
+        <location line="+125"/>
         <source>Polygon area:</source>
         <translation>Monikulmion ala:</translation>
     </message>
@@ -10254,7 +10254,7 @@ on jo luettelossa.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+71"/>
+        <location line="+83"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation>Ominaisuuksien muokkaaminen</translation>
@@ -12235,7 +12235,7 @@ on jo luettelossa.</translation>
         <translation>Tiedosto</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+44"/>
         <source>Import SVG</source>
         <translation>Tuo SVG</translation>
     </message>
@@ -12250,7 +12250,7 @@ on jo luettelossa.</translation>
         <translation>Kaikki tiedostot</translation>
     </message>
     <message>
-        <location line="-36"/>
+        <location line="-45"/>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+14"/>
         <source>SVG Import</source>
         <translation>SVG-tuonti</translation>
@@ -12279,6 +12279,16 @@ on jo luettelossa.</translation>
         <location line="+6"/>
         <source>Automatically convert splines to lines / arcs if appropriate</source>
         <translation>Muunna käyrät tarvittaessa automaattisesti viivoiksi/kaariksi</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Layers</source>
+        <translation>Tasot</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Import groups as layers</source>
+        <translation>Tuo ryhmät kerroksina</translation>
     </message>
 </context>
 <context>

@@ -412,7 +412,7 @@ musíte znovu spustiť QCAD.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1989"/>
+        <location filename="../scripts/Apollonius.js" line="+2296"/>
         <source>Invalid radius</source>
         <translation>Neplatný polomer</translation>
     </message>
@@ -1230,7 +1230,7 @@ Prajete si ho obnoviť?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Neplatná veľkosť obrazu (šírka x výška musí byť menšia ako %1)</translation>
     </message>
@@ -6760,7 +6760,7 @@ už existuje v zozname.</translation>
         <translation>Nastavte roh polygónu</translation>
     </message>
     <message>
-        <location line="+121"/>
+        <location line="+125"/>
         <source>Polygon area:</source>
         <translation>Plocha polygónu:</translation>
     </message>
@@ -10261,7 +10261,7 @@ už existuje v zozname.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+71"/>
+        <location line="+83"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation>Vlastnosti</translation>
@@ -12245,7 +12245,7 @@ už existuje v zozname.</translation>
         <translation>Súbor</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+44"/>
         <source>Import SVG</source>
         <translation>Importovanie SVG</translation>
     </message>
@@ -12260,7 +12260,7 @@ už existuje v zozname.</translation>
         <translation>Všetky súbory</translation>
     </message>
     <message>
-        <location line="-36"/>
+        <location line="-45"/>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+14"/>
         <source>SVG Import</source>
         <translation>SVG Import</translation>
@@ -12289,6 +12289,16 @@ už existuje v zozname.</translation>
         <location line="+6"/>
         <source>Automatically convert splines to lines / arcs if appropriate</source>
         <translation>Automaticky previesť spline-y na čiary / oblúky ak je to vhodné</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Layers</source>
+        <translation type="unfinished">Vrstvy</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Import groups as layers</source>
+        <translation type="unfinished">Import skupín ako vrstiev</translation>
     </message>
 </context>
 <context>

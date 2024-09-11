@@ -412,7 +412,7 @@ QCADを再起動してください。</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1989"/>
+        <location filename="../scripts/Apollonius.js" line="+2296"/>
         <source>Invalid radius</source>
         <translation>無効な半径</translation>
     </message>
@@ -1226,7 +1226,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+129"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation> 無効な画像サイズ(幅x高さは%1よりも小さく)</translation>
     </message>
@@ -6750,7 +6750,7 @@ is already in the list.</source>
         <translation>次のポリゴン頂点を設定</translation>
     </message>
     <message>
-        <location line="+121"/>
+        <location line="+125"/>
         <source>Polygon area:</source>
         <translation>ポリゴンエリア（面積）:</translation>
     </message>
@@ -10197,7 +10197,7 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+414"/>
-        <location line="+71"/>
+        <location line="+83"/>
         <location line="+10"/>
         <source>Property Editor</source>
         <translation>プロパティエディタ</translation>
@@ -12225,7 +12225,7 @@ is already in the list.</source>
         <translation>ファイル</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+44"/>
         <source>Import SVG</source>
         <translation>SVGインポート</translation>
     </message>
@@ -12245,7 +12245,7 @@ is already in the list.</source>
         <translation>&amp;I SVGインポート...</translation>
     </message>
     <message>
-        <location filename="../scripts/File/SvgImport/SvgImport.js" line="-36"/>
+        <location filename="../scripts/File/SvgImport/SvgImport.js" line="-45"/>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+14"/>
         <source>SVG Import</source>
         <translation>SVGインポート</translation>
@@ -12269,6 +12269,16 @@ is already in the list.</source>
         <location line="+6"/>
         <source>Automatically convert splines to lines / arcs if appropriate</source>
         <translation>もし適当であればスプラインを線分・弧に自動コンバート</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Layers</source>
+        <translation type="unfinished">レイヤー</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Import groups as layers</source>
+        <translation type="unfinished">グループをレイヤーとしてインポートする</translation>
     </message>
 </context>
 <context>

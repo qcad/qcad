@@ -37,7 +37,7 @@
         <location filename="../src/entity/RDimLinearEntity.cpp" line="+151"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+111"/>
+        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+113"/>
         <location line="+5"/>
         <location line="+3"/>
         <location filename="../src/entity/RDimRadialEntity.cpp" line="-2"/>
@@ -455,7 +455,12 @@
         <translation>Положение текста</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
+        <source>Text Rotation</source>
+        <translation type="unfinished">Вращение текста</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Flip First Arrow</source>
         <translation>Кувыркающаяся первая стрелка</translation>
     </message>
@@ -475,7 +480,7 @@
         <translation>Длина удлинительной линии</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Auto Label</source>
         <translation>Автометка</translation>
     </message>
