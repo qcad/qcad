@@ -1340,12 +1340,20 @@ bool RPolyline::containsShape(const RShape& shape) const {
 
     if (RShape::isPolylineShape(shape)) {
         const RPolyline& pl = dynamic_cast<const RPolyline&>(shape);
+
+        RBox bbOuter = pl.getBoundingBox();
+        RBox bbInner = shape.getBoundingBox();
+
+        if (!bbOuter.contains(bbInner)) {
+            return false;
+        }
+
         for (int i=0; i<pl.countVertices() && i<5; i++) {
-            if (contains(pl.getVertexAt(i))) {
-                return true;
+            if (!contains(pl.getVertexAt(i))) {
+                return false;
             }
         }
-        return false;
+        return true;
     }
 
     // check if the shape is completely inside the polygon.
