@@ -220,7 +220,14 @@ bool RPolyline::appendShape(const RShape& shape, bool prepend) {
     else if (shape.getShapeType()==RShape::Arc) {
         const RArc* arc = dynamic_cast<const RArc*>(&shape);
         if (arc!=NULL && arc->isFullCircle()) {
-            appendShape(RCircle(arc->getCenter(), arc->getRadius()));
+            if (arc->isReversed()) {
+                appendShape(RArc(arc->getCenter(), arc->getRadius(), arc->getStartAngle(), arc->getStartAngle()-M_PI, true));
+                appendShape(RArc(arc->getCenter(), arc->getRadius(), arc->getStartAngle()-M_PI, arc->getStartAngle()-2*M_PI, true));
+            }
+            else {
+                appendShape(RArc(arc->getCenter(), arc->getRadius(), arc->getStartAngle(), arc->getStartAngle()+M_PI, false));
+                appendShape(RArc(arc->getCenter(), arc->getRadius(), arc->getStartAngle()+M_PI, arc->getStartAngle()+2*M_PI, false));
+            }
             return true;
         }
     }
@@ -886,6 +893,8 @@ RS::Orientation RPolyline::getOrientation(bool implicitelyClosed) const {
 
     if (hasArcSegments()) {
         RPolyline plSegmented = convertArcToLineSegments(16);
+        qDebug() << "RPolyline::getOrientation: polyline:";
+        plSegmented.dump();
         return plSegmented.getOrientation(implicitelyClosed);
     }
 
