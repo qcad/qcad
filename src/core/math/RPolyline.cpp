@@ -220,14 +220,7 @@ bool RPolyline::appendShape(const RShape& shape, bool prepend) {
     else if (shape.getShapeType()==RShape::Arc) {
         const RArc* arc = dynamic_cast<const RArc*>(&shape);
         if (arc!=NULL && arc->isFullCircle()) {
-            if (arc->isReversed()) {
-                appendShape(RArc(arc->getCenter(), arc->getRadius(), arc->getStartAngle(), arc->getStartAngle()-M_PI, true));
-                appendShape(RArc(arc->getCenter(), arc->getRadius(), arc->getStartAngle()-M_PI, arc->getStartAngle()-2*M_PI, true));
-            }
-            else {
-                appendShape(RArc(arc->getCenter(), arc->getRadius(), arc->getStartAngle(), arc->getStartAngle()+M_PI, false));
-                appendShape(RArc(arc->getCenter(), arc->getRadius(), arc->getStartAngle()+M_PI, arc->getStartAngle()+2*M_PI, false));
-            }
+            appendShape(RCircle(arc->getCenter(), arc->getRadius()));
             return true;
         }
     }
