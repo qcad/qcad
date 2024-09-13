@@ -5963,7 +5963,7 @@ er allerede i listen.</translation>
     <message>
         <location line="-519"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
-      <translation type="unfinished">Polylinjer med egendefinerte bredder skal alltid være minst 1 piksel brede</translation>
+        <translation type="unfinished">Polylinjer med egendefinerte bredder skal alltid være minst 1 piksel brede</translation>
     </message>
     <message>
         <location line="+750"/>
@@ -14579,4 +14579,3 @@ er allerede i listen.</translation>
     </message>
 </context>
 </TS>
-

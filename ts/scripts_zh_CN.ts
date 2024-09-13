@@ -5918,7 +5918,7 @@ is already in the list.</source>
     <message>
         <location line="-121"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
-      <translation type="unfinished">始终将自定义宽度的多段线渲染为至少 1 像素宽</translation>
+        <translation type="unfinished">始终将自定义宽度的多段线渲染为至少 1 像素宽</translation>
     </message>
     <message>
         <location line="+182"/>
@@ -14569,4 +14569,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

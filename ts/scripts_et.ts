@@ -293,6 +293,7 @@
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+86"/>
@@ -917,6 +918,7 @@ Do you wish to recover it/them?</source>
         <location line="+1"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+25"/>
@@ -3215,6 +3217,7 @@ Do you wish to recover it?</source>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -5954,7 +5957,7 @@ is already in the list.</source>
     <message>
         <location line="-519"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
-      <translation type="unfinished">Renderi alati vähemalt 1 piksli laiused kohandatud laiusega polügraanid</translation>
+        <translation type="unfinished">Renderi alati vähemalt 1 piksli laiused kohandatud laiusega polügraanid</translation>
     </message>
     <message>
         <location line="+750"/>
@@ -11430,6 +11433,7 @@ is already in the list.</source>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
@@ -12657,6 +12661,7 @@ is already in the list.</source>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+21"/>
@@ -14566,4 +14571,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

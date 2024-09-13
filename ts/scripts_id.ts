@@ -5958,7 +5958,7 @@ sudah ada dalam daftar.</translation>
     <message>
         <location line="-519"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
-      <translation type="unfinished">Selalu buat poligon dengan lebar khusus setidaknya selebar 1 piksel</translation>
+        <translation type="unfinished">Selalu buat poligon dengan lebar khusus setidaknya selebar 1 piksel</translation>
     </message>
     <message>
         <location line="+750"/>
@@ -14569,4 +14569,3 @@ sudah ada dalam daftar.</translation>
     </message>
 </context>
 </TS>
-

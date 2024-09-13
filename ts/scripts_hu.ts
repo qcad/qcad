@@ -5918,7 +5918,7 @@ már szerepel a listában.</translation>
     <message>
         <location line="-121"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
-      <translation type="unfinished">Az egyéni szélességű polivonalakat mindig legalább 1 pixel szélesre renderelje</translation>
+        <translation type="unfinished">Az egyéni szélességű polivonalakat mindig legalább 1 pixel szélesre renderelje</translation>
     </message>
     <message>
         <location line="+182"/>
@@ -14569,4 +14569,3 @@ már szerepel a listában.</translation>
     </message>
 </context>
 </TS>
-

@@ -5918,7 +5918,7 @@ is already in the list.</source>
     <message>
         <location line="+20"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
-      <translation type="unfinished">カスタム幅のポリラインは常に少なくとも1ピクセル幅でレンダリングされます。</translation>
+        <translation type="unfinished">カスタム幅のポリラインは常に少なくとも1ピクセル幅でレンダリングされます。</translation>
     </message>
     <message>
         <location line="+339"/>
@@ -14569,4 +14569,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

@@ -5897,7 +5897,7 @@ zaten listede.</translation>
     <message>
         <location line="-121"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
-      <translation type="unfinished">Özel genişliklere sahip çoklu çizgileri her zaman en az 1 piksel genişliğinde oluşturun</translation>
+        <translation type="unfinished">Özel genişliklere sahip çoklu çizgileri her zaman en az 1 piksel genişliğinde oluşturun</translation>
     </message>
     <message>
         <location line="+182"/>
@@ -14568,4 +14568,3 @@ zaten listede.</translation>
     </message>
 </context>
 </TS>
-

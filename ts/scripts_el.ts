@@ -5961,7 +5961,7 @@ is already in the list.</source>
     <message>
         <location line="-519"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
-      <translation type="unfinished">Να αποδίδετε πάντα πολυγραμμές με προσαρμοσμένο πλάτος τουλάχιστον 1 pixel πλάτος</translation>
+        <translation type="unfinished">Να αποδίδετε πάντα πολυγραμμές με προσαρμοσμένο πλάτος τουλάχιστον 1 pixel πλάτος</translation>
     </message>
     <message>
         <location line="+750"/>
@@ -14577,4 +14577,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

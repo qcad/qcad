@@ -5925,7 +5925,7 @@ jau yra sąraše.</translation>
     <message>
         <location line="-121"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
-      <translation type="unfinished">Visada atvaizduokite bent 1 pikselio pločio polilinijas su pasirinktiniais pikseliais</translation>
+        <translation type="unfinished">Visada atvaizduokite bent 1 pikselio pločio polilinijas su pasirinktiniais pikseliais</translation>
     </message>
     <message>
         <location line="+182"/>
@@ -14586,4 +14586,3 @@ jau yra sąraše.</translation>
     </message>
 </context>
 </TS>
-

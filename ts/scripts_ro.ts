@@ -5965,7 +5965,7 @@ este deja în listă.</translation>
     <message>
         <location line="-519"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
-      <translation type="unfinished">Redați întotdeauna polilinii cu lățimi personalizate cu o lățime de cel puțin 1 pixel</translation>
+        <translation type="unfinished">Redați întotdeauna polilinii cu lățimi personalizate cu o lățime de cel puțin 1 pixel</translation>
     </message>
     <message>
         <location line="+750"/>
@@ -14586,4 +14586,3 @@ este deja în listă.</translation>
     </message>
 </context>
 </TS>
-

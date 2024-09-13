@@ -5953,7 +5953,7 @@ is already in the list.</source>
     <message>
         <location line="+103"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
-      <translation type="unfinished">Всегда отображайте полилинии с пользовательской шириной не менее 1 пикселя</translation>
+        <translation type="unfinished">Всегда отображайте полилинии с пользовательской шириной не менее 1 пикселя</translation>
     </message>
     <message>
         <location line="+121"/>
@@ -14589,4 +14589,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

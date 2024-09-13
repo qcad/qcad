@@ -5939,7 +5939,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+20"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
-      <translation type="unfinished">Poliedri s širino po meri so vedno široki vsaj 1 piksel</translation>
+        <translation type="unfinished">Poliedri s širino po meri so vedno široki vsaj 1 piksel</translation>
     </message>
     <message>
         <location line="+339"/>
@@ -14595,4 +14595,3 @@ je že na seznamu.</translation>
     </message>
 </context>
 </TS>
-

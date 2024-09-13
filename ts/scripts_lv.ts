@@ -5965,7 +5965,7 @@ jau ir sarakstā.</translation>
     <message>
         <location line="-519"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
-      <translation type="unfinished">Vienmēr attēlot daudzlīnijas ar pielāgotu platumu, kas ir vismaz 1 pikseļa plats</translation>
+        <translation type="unfinished">Vienmēr attēlot daudzlīnijas ar pielāgotu platumu, kas ir vismaz 1 pikseļa plats</translation>
     </message>
     <message>
         <location line="+750"/>
@@ -14586,4 +14586,3 @@ jau ir sarakstā.</translation>
     </message>
 </context>
 </TS>
-

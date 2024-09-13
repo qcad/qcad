@@ -5923,7 +5923,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+20"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
-      <translation type="unfinished">Vždy vykresľujte polylinie s vlastnou šírkou aspoň 1 pixel</translation>
+        <translation type="unfinished">Vždy vykresľujte polylinie s vlastnou šírkou aspoň 1 pixel</translation>
     </message>
     <message>
         <location line="+121"/>
@@ -14589,4 +14589,3 @@ už existuje v zozname.</translation>
     </message>
 </context>
 </TS>
-

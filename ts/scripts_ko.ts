@@ -5958,7 +5958,7 @@ is already in the list.</source>
     <message>
         <location line="-519"/>
         <source>Always render polylines with custom widths at least 1 pixel wide</source>
-      <translation type="unfinished">항상 사용자 지정 너비가 1픽셀 이상인 폴리라인을 렌더링합니다</translation>
+        <translation type="unfinished">항상 사용자 지정 너비가 1픽셀 이상인 폴리라인을 렌더링합니다</translation>
     </message>
     <message>
         <location line="+750"/>
@@ -14569,4 +14569,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-
