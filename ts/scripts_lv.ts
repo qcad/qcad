@@ -5908,7 +5908,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Izmantojiet pilnu izšķirtspēju Retina / augstas izšķirtspējas displejam</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+19"/>
         <source>Number of threads:</source>
         <translation type="unfinished">Vītņu skaits:</translation>
     </message>
@@ -5948,7 +5948,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Maksimāli atlasītās vienības ar atskaites punktiem:</translation>
     </message>
     <message>
-        <location line="+70"/>
+        <location line="+140"/>
         <source>Reference point size (px):</source>
         <translation type="unfinished">Atsauces punkta izmērs (px):</translation>
     </message>
@@ -5958,12 +5958,17 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Teksta augstuma slieksnis (px):</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="-147"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation type="unfinished">Maksimāli atlasītās vienības ar attēlotajiem atskaites punktiem:</translation>
     </message>
     <message>
-        <location line="+73"/>
+        <location line="-519"/>
+        <source>Always render polylines with custom widths at least 1 pixel wide</source>
+      <translation type="unfinished">Vienmēr attēlot daudzlīnijas ar pielāgotu platumu, kas ir vismaz 1 pikseļa plats</translation>
+    </message>
+    <message>
+        <location line="+750"/>
         <source>Selection</source>
         <translation type="unfinished">Atlase</translation>
     </message>

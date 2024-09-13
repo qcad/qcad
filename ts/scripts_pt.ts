@@ -5856,7 +5856,7 @@ já se encontra na lista.</translation>
         <translation>Use resolução total para a exposição Retina / alta resolução</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+30"/>
         <source>auto</source>
         <translation>auto</translation>
     </message>
@@ -5866,17 +5866,17 @@ já se encontra na lista.</translation>
         <translation>Máximo de entidades selecionadas com pontos de referência:</translation>
     </message>
     <message>
-        <location line="+219"/>
+        <location line="+70"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation>Máximo de entidades selecionadas com pontos de referência exibidos:</translation>
     </message>
     <message>
-        <location line="-656"/>
+        <location line="-507"/>
         <source>Number of threads:</source>
         <translation>Número de threads:</translation>
     </message>
     <message>
-        <location line="+507"/>
+        <location line="+577"/>
         <source>Reference point size (px):</source>
         <translation>Tamanho do ponto de referência (px):</translation>
     </message>
@@ -5886,12 +5886,12 @@ já se encontra na lista.</translation>
         <translation>Limite da altura do texto (px):</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+90"/>
         <source>Persistent selection</source>
         <translation>Seleção Persistente</translation>
     </message>
     <message>
-        <location line="-930"/>
+        <location line="-951"/>
         <source>Color lightness threshold:</source>
         <translation>Limites para a luminosidade da cor:</translation>
     </message>
@@ -5921,7 +5921,12 @@ já se encontra na lista.</translation>
         <translation>Visualização e Desempenho</translation>
     </message>
     <message>
-        <location line="+347"/>
+        <location line="+20"/>
+        <source>Always render polylines with custom widths at least 1 pixel wide</source>
+        <translation>Renderizar sempre polilinhas com larguras personalizadas com pelo menos 1 pixel de largura</translation>
+    </message>
+    <message>
+        <location line="+339"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>Mostre entidades com mais de N traços como contínuas:</translation>
     </message>
@@ -5931,7 +5936,7 @@ já se encontra na lista.</translation>
         <translation>Passo mínimo de ângulo para renderização de arcos (graus):</translation>
     </message>
     <message>
-        <location line="-388"/>
+        <location line="-400"/>
         <source>Linetypes and Lineweights</source>
         <translation>Tipos de linha e pesos de linha</translation>
     </message>
@@ -5946,17 +5951,17 @@ já se encontra na lista.</translation>
         <translation>Suavização ativada como padrão</translation>
     </message>
     <message>
-        <location line="+386"/>
+        <location line="+398"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Tempo de espera para renderização de hachura:</translation>
     </message>
     <message>
-        <location line="-475"/>
+        <location line="-487"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Use automaticamente tipos de linha baseados em tela, na visão de modelagem</translation>
     </message>
     <message>
-        <location line="+212"/>
+        <location line="+224"/>
         <source>Number of preview entities:</source>
         <translation>Número de entidades para a prévia:</translation>
     </message>
@@ -5966,7 +5971,7 @@ já se encontra na lista.</translation>
         <translation>Exiba arcos como linhas, abaixo deste ângulo (graus):</translation>
     </message>
     <message>
-        <location line="+559"/>
+        <location line="+568"/>
         <source>Selection</source>
         <translation>Seleção</translation>
     </message>
@@ -14574,4 +14579,3 @@ já se encontra na lista.</translation>
     </message>
 </context>
 </TS>
-

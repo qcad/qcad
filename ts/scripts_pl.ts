@@ -5861,7 +5861,7 @@ jest już na liście.</translation>
         <translation>Użyj pełnej rozdzielczości dla wyświetlacza Retina / wysokiej rozdzielczości</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+30"/>
         <source>auto</source>
         <translation>auto</translation>
     </message>
@@ -5871,7 +5871,7 @@ jest już na liście.</translation>
         <translation>Liczba wątków:</translation>
     </message>
     <message>
-        <location line="+507"/>
+        <location line="+577"/>
         <source>Reference point size (px):</source>
         <translation>Rozmiar punktu odniesienia (px):</translation>
     </message>
@@ -5881,12 +5881,12 @@ jest już na liście.</translation>
         <translation>Próg wysokości tekstu (px):</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+90"/>
         <source>Persistent selection</source>
         <translation>Trwała selekcja</translation>
     </message>
     <message>
-        <location line="-930"/>
+        <location line="-951"/>
         <source>Color lightness threshold:</source>
         <translation>Próg jasności koloru:</translation>
     </message>
@@ -5916,7 +5916,12 @@ jest już na liście.</translation>
         <translation>Wyświetlanie i wydajność</translation>
     </message>
     <message>
-        <location line="+347"/>
+        <location line="+20"/>
+        <source>Always render polylines with custom widths at least 1 pixel wide</source>
+        <translation>Zawsze renderuj polilinie o niestandardowej szerokości co najmniej 1 piksela</translation>
+    </message>
+    <message>
+        <location line="+339"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>Liczba kresek obiektu powyżej, której obiekt wyświetlany będzie linią ciągłą:</translation>
     </message>
@@ -5926,7 +5931,7 @@ jest już na liście.</translation>
         <translation>Minimalny krok kątowy dla renderowania łuków (stopnie):</translation>
     </message>
     <message>
-        <location line="-388"/>
+        <location line="-400"/>
         <source>Linetypes and Lineweights</source>
         <translation>Rodzaje linii i wagi linii</translation>
     </message>
@@ -5941,17 +5946,17 @@ jest już na liście.</translation>
         <translation>Domyślnie włączony antyaliasing</translation>
     </message>
     <message>
-        <location line="+386"/>
+        <location line="+398"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Czas renderowania kreskowania:</translation>
     </message>
     <message>
-        <location line="-475"/>
+        <location line="-487"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Automatyczne użycie linii ekranowych w widoku modelu</translation>
     </message>
     <message>
-        <location line="+212"/>
+        <location line="+224"/>
         <source>Number of preview entities:</source>
         <translation>Liczba jednostek podglądu:</translation>
     </message>
@@ -5966,12 +5971,12 @@ jest już na liście.</translation>
         <translation>Maksymalnie wybrane jednostki z punktami odniesienia:</translation>
     </message>
     <message>
-        <location line="+219"/>
+        <location line="+70"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation>Maksymalnie wybrane jednostki z wyświetlonymi punktami odniesienia:</translation>
     </message>
     <message>
-        <location line="+73"/>
+        <location line="+231"/>
         <source>Selection</source>
         <translation>Wybór</translation>
     </message>
@@ -14584,4 +14589,3 @@ jest już na liście.</translation>
     </message>
 </context>
 </TS>
-

@@ -5859,7 +5859,7 @@ již v seznamu je.</translation>
         <translation type="unfinished">Použití plného rozlišení pro displej Retina / vysoké rozlišení</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+30"/>
         <source>auto</source>
         <translation type="unfinished">auto</translation>
     </message>
@@ -5874,17 +5874,17 @@ již v seznamu je.</translation>
         <translation type="unfinished">Počet vláken:</translation>
     </message>
     <message>
-        <location line="+507"/>
+        <location line="+577"/>
         <source>Reference point size (px):</source>
         <translation type="unfinished">Velikost referenčního bodu (px):</translation>
     </message>
     <message>
-        <location line="+228"/>
+        <location line="+167"/>
         <source>Persistent selection</source>
         <translation type="unfinished">Trvalý výběr</translation>
     </message>
     <message>
-        <location line="-930"/>
+        <location line="-951"/>
         <source>Color lightness threshold:</source>
         <translation>Prahová hodnota světla barvy:</translation>
     </message>
@@ -5919,7 +5919,12 @@ již v seznamu je.</translation>
         <translation>Displej a výkon</translation>
     </message>
     <message>
-        <location line="+129"/>
+        <location line="+20"/>
+        <source>Always render polylines with custom widths at least 1 pixel wide</source>
+      <translation type="unfinished">Vždy vykreslujte polylinie s vlastní šířkou alespoň 1 pixel širokou</translation>
+    </message>
+    <message>
+        <location line="+121"/>
         <source>Number of preview entities:</source>
         <translation>Počet prvků náhledu:</translation>
     </message>
@@ -5939,7 +5944,7 @@ již v seznamu je.</translation>
         <translation>Minimální krok úhlu pro vykreslení oblouků (stupně):</translation>
     </message>
     <message>
-        <location line="-256"/>
+        <location line="-268"/>
         <source>Anti-aliasing on by default</source>
         <translation>Vyhlazování hran je standardně zapnuto</translation>
     </message>
@@ -5954,22 +5959,22 @@ již v seznamu je.</translation>
         <translation type="unfinished">Výchozí váha řádku:</translation>
     </message>
     <message>
-        <location line="+510"/>
+        <location line="+522"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Časový limit pro vykreslení šrafování:</translation>
     </message>
     <message>
-        <location line="+212"/>
+        <location line="+282"/>
         <source>Text height threshold (px):</source>
         <translation type="unfinished">Práh výšky textu (px):</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="-147"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation type="unfinished">Maximum vybraných entit se zobrazenými referenčními body:</translation>
     </message>
     <message>
-        <location line="+73"/>
+        <location line="+231"/>
         <source>Selection</source>
         <translation>Výběr</translation>
     </message>

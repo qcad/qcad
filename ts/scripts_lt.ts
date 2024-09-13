@@ -5908,22 +5908,27 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Naudokite visą skiriamąją gebą &quot;Retina&quot; / didelės skiriamosios gebos ekranui</translation>
     </message>
     <message>
-        <location line="+514"/>
+        <location line="+596"/>
         <source>Reference point size (px):</source>
         <translation type="unfinished">Atskaitos taško dydis (px):</translation>
     </message>
     <message>
-        <location line="+228"/>
+        <location line="+167"/>
         <source>Persistent selection</source>
         <translation type="unfinished">Nuolatinė atranka</translation>
     </message>
     <message>
-        <location line="-626"/>
+        <location line="-635"/>
         <source>Number of preview entities:</source>
         <translation type="unfinished">Peržiūros subjektų skaičius:</translation>
     </message>
     <message>
-        <location line="+61"/>
+        <location line="-121"/>
+        <source>Always render polylines with custom widths at least 1 pixel wide</source>
+      <translation type="unfinished">Visada atvaizduokite bent 1 pikselio pločio polilinijas su pasirinktiniais pikseliais</translation>
+    </message>
+    <message>
+        <location line="+182"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation type="unfinished">Rodyti lankus kaip linijas, esančias žemiau šio kampo (laipsniais):</translation>
     </message>
@@ -5958,17 +5963,17 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Maksimaliai atrinktų subjektų su atskaitos taškais:</translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+217"/>
         <source>Text height threshold (px):</source>
         <translation type="unfinished">Teksto aukščio riba (px):</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="-147"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation type="unfinished">Didžiausias pasirinktų subjektų skaičius su rodomais atskaitos taškais:</translation>
     </message>
     <message>
-        <location line="+73"/>
+        <location line="+231"/>
         <source>Selection</source>
         <translation type="unfinished">Atranka</translation>
     </message>

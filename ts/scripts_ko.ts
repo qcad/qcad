@@ -5901,7 +5901,7 @@ is already in the list.</source>
         <translation type="unfinished">레티나/고해상도 디스플레이에 전체 해상도 사용</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+19"/>
         <source>Number of threads:</source>
         <translation type="unfinished">스레드 수입니다:</translation>
     </message>
@@ -5941,7 +5941,7 @@ is already in the list.</source>
         <translation type="unfinished">기준점이 있는 최대 선택된 엔티티입니다:</translation>
     </message>
     <message>
-        <location line="+70"/>
+        <location line="+140"/>
         <source>Reference point size (px):</source>
         <translation type="unfinished">기준점 크기(픽셀):</translation>
     </message>
@@ -5951,12 +5951,17 @@ is already in the list.</source>
         <translation type="unfinished">텍스트 높이 임계값(픽셀):</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="-147"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation type="unfinished">표시된 기준점이 있는 최대 선택된 엔티티입니다:</translation>
     </message>
     <message>
-        <location line="+73"/>
+        <location line="-519"/>
+        <source>Always render polylines with custom widths at least 1 pixel wide</source>
+      <translation type="unfinished">항상 사용자 지정 너비가 1픽셀 이상인 폴리라인을 렌더링합니다</translation>
+    </message>
+    <message>
+        <location line="+750"/>
         <source>Selection</source>
         <translation type="unfinished">선택</translation>
     </message>

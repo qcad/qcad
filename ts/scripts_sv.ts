@@ -5884,22 +5884,27 @@ finns redan i listan.</translation>
         <translation>Använd full upplösning för Retina- eller högupplösta skärmar</translation>
     </message>
     <message>
-        <location line="+514"/>
+        <location line="+596"/>
         <source>Reference point size (px):</source>
         <translation>Referenspunktsstorlek (px):</translation>
     </message>
     <message>
-        <location line="+228"/>
+        <location line="+167"/>
         <source>Persistent selection</source>
         <translation>Beständigt urval</translation>
     </message>
     <message>
-        <location line="-626"/>
+        <location line="-635"/>
         <source>Number of preview entities:</source>
         <translation>Antal förhandsvisade objekt:</translation>
     </message>
     <message>
-        <location line="+133"/>
+        <location line="-121"/>
+        <source>Always render polylines with custom widths at least 1 pixel wide</source>
+        <translation>Rendera alltid polylinjer med anpassade bredder som är minst 1 pixel breda</translation>
+    </message>
+    <message>
+        <location line="+254"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
         <translation>Minsta vinkelsteg för återgivning av bågar (grader):</translation>
     </message>
@@ -5929,22 +5934,22 @@ finns redan i listan.</translation>
         <translation>Maximalt antal valda enheter med referenspunkter:</translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+217"/>
         <source>Text height threshold (px):</source>
         <translation>Tröskelvärde för texthöjd (px):</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="-147"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation>Maximalt antal valda enheter med visade referenspunkter:</translation>
     </message>
     <message>
-        <location line="+73"/>
+        <location line="+231"/>
         <source>Selection</source>
         <translation>Urval</translation>
     </message>
     <message>
-        <location line="-559"/>
+        <location line="-568"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation>Visa bågar som linjer under denna vinkel (grader):</translation>
     </message>
@@ -14572,4 +14577,3 @@ finns redan i listan.</translation>
     </message>
 </context>
 </TS>
-

@@ -5856,7 +5856,7 @@ ya está en la lista.</translation>
         <translation>Utilice la resolución completa de la pantalla Retina / alta resolución</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+30"/>
         <source>auto</source>
         <translation>auto</translation>
     </message>
@@ -5866,17 +5866,17 @@ ya está en la lista.</translation>
         <translation>Máximo de entidades seleccionadas con puntos de referencia:</translation>
     </message>
     <message>
-        <location line="+219"/>
+        <location line="+70"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation>Máximo de entidades seleccionadas con puntos de referencia mostrados:</translation>
     </message>
     <message>
-        <location line="-656"/>
+        <location line="-507"/>
         <source>Number of threads:</source>
         <translation>Número de hilos:</translation>
     </message>
     <message>
-        <location line="+507"/>
+        <location line="+577"/>
         <source>Reference point size (px):</source>
         <translation>Tamaño del punto de referencia (px):</translation>
     </message>
@@ -5886,12 +5886,12 @@ ya está en la lista.</translation>
         <translation>Umbral de altura del texto (px):</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+90"/>
         <source>Persistent selection</source>
         <translation>Selección persistente</translation>
     </message>
     <message>
-        <location line="-930"/>
+        <location line="-951"/>
         <source>Color lightness threshold:</source>
         <translation>Umbral para la claridad del color:</translation>
     </message>
@@ -5921,7 +5921,12 @@ ya está en la lista.</translation>
         <translation>Visualización y rendimiento</translation>
     </message>
     <message>
-        <location line="+347"/>
+        <location line="+20"/>
+        <source>Always render polylines with custom widths at least 1 pixel wide</source>
+        <translation>Representar siempre las polilíneas con anchuras personalizadas de al menos 1 píxel de ancho</translation>
+    </message>
+    <message>
+        <location line="+339"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>Mostrar las entidades con más de N guiones como contínua:</translation>
     </message>
@@ -5931,7 +5936,7 @@ ya está en la lista.</translation>
         <translation>Paso ángulo mínimo para la prestación de arcos (grados):</translation>
     </message>
     <message>
-        <location line="-388"/>
+        <location line="-400"/>
         <source>Linetypes and Lineweights</source>
         <translation>Tipos de línea y luces de línea</translation>
     </message>
@@ -5946,17 +5951,17 @@ ya está en la lista.</translation>
         <translation>Antialiasing activado por defecto</translation>
     </message>
     <message>
-        <location line="+386"/>
+        <location line="+398"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Tiempo de espera para la representación rayado:</translation>
     </message>
     <message>
-        <location line="-475"/>
+        <location line="-487"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Usar automáticamente los tipos de línea base de la pantalla de visualización del modelo</translation>
     </message>
     <message>
-        <location line="+212"/>
+        <location line="+224"/>
         <source>Number of preview entities:</source>
         <translation>Número de entidades previsualizadas:</translation>
     </message>
@@ -5966,7 +5971,7 @@ ya está en la lista.</translation>
         <translation>Mostrar arcos como las líneas por debajo de este ángulo (grados):</translation>
     </message>
     <message>
-        <location line="+559"/>
+        <location line="+568"/>
         <source>Selection</source>
         <translation>Selección</translation>
     </message>
@@ -14574,4 +14579,3 @@ ya está en la lista.</translation>
     </message>
 </context>
 </TS>
-

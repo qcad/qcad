@@ -5876,7 +5876,7 @@ is already in the list.</translation>
         <translation>Use full resolution for Retina / high resolution display</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+30"/>
         <source>auto</source>
         <translation>auto</translation>
     </message>
@@ -5886,17 +5886,17 @@ is already in the list.</translation>
         <translation>Maximum selected entities with reference points:</translation>
     </message>
     <message>
-        <location line="+219"/>
+        <location line="+70"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation>Maximum selected entities with displayed reference points:</translation>
     </message>
     <message>
-        <location line="-656"/>
+        <location line="-507"/>
         <source>Number of threads:</source>
         <translation>Number of threads:</translation>
     </message>
     <message>
-        <location line="+507"/>
+        <location line="+577"/>
         <source>Reference point size (px):</source>
         <translation>Reference point size (px):</translation>
     </message>
@@ -5906,12 +5906,12 @@ is already in the list.</translation>
         <translation>Text height threshold (px):</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+90"/>
         <source>Persistent selection</source>
         <translation>Persistent selection</translation>
     </message>
     <message>
-        <location line="-838"/>
+        <location line="-859"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Automatically use screen based linetypes in model view</translation>
     </message>
@@ -5941,7 +5941,12 @@ is already in the list.</translation>
         <translation>Anti-aliasing on by default</translation>
     </message>
     <message>
-        <location line="+123"/>
+        <location line="+14"/>
+        <source>Always render polylines with custom widths at least 1 pixel wide</source>
+        <translation>Always render polylines with custom widths at least 1 pixel wide</translation>
+    </message>
+    <message>
+        <location line="+121"/>
         <source>Number of preview entities:</source>
         <translation>Number of preview entities:</translation>
     </message>
@@ -5966,7 +5971,7 @@ is already in the list.</translation>
         <translation>Timeout for hatch rendering:</translation>
     </message>
     <message>
-        <location line="+357"/>
+        <location line="+366"/>
         <source>Selection</source>
         <translation>Selection</translation>
     </message>

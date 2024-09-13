@@ -5906,22 +5906,27 @@ er allerede på listen.</translation>
         <translation>Brug fuld opløsning til Retina-skærm/skærm med høj opløsning</translation>
     </message>
     <message>
-        <location line="+514"/>
+        <location line="+596"/>
         <source>Reference point size (px):</source>
         <translation>Referencepunktets størrelse (px):</translation>
     </message>
     <message>
-        <location line="+228"/>
+        <location line="+167"/>
         <source>Persistent selection</source>
         <translation>Vedvarende udvælgelse</translation>
     </message>
     <message>
-        <location line="-626"/>
+        <location line="-635"/>
         <source>Number of preview entities:</source>
         <translation>Antal enheder i forhåndsvisningen:</translation>
     </message>
     <message>
-        <location line="+61"/>
+        <location line="-121"/>
+        <source>Always render polylines with custom widths at least 1 pixel wide</source>
+        <translation>Polylinjer med brugerdefinerede bredder skal altid være mindst 1 pixel brede</translation>
+    </message>
+    <message>
+        <location line="+182"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation>Vis buer som linjer under denne vinkel (grader):</translation>
     </message>
@@ -5956,17 +5961,17 @@ er allerede på listen.</translation>
         <translation>Maksimalt valgte enheder med referencepunkter:</translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+217"/>
         <source>Text height threshold (px):</source>
         <translation>Tærskel for teksthøjde (px):</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="-147"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation>Maksimalt valgte enheder med viste referencepunkter:</translation>
     </message>
     <message>
-        <location line="+73"/>
+        <location line="+231"/>
         <source>Selection</source>
         <translation>Udvælgelse</translation>
     </message>
@@ -14574,4 +14579,3 @@ er allerede på listen.</translation>
     </message>
 </context>
 </TS>
-

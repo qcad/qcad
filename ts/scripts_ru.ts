@@ -5861,7 +5861,7 @@ is already in the list.</source>
         <translation>Использовать полное разрешение для дисплея Retina / дисплея с высоким разрешением</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+30"/>
         <source>auto</source>
         <translation>авто</translation>
     </message>
@@ -5871,17 +5871,17 @@ is already in the list.</source>
         <translation>Максимальное количество выбранных объектов с точками привязки:</translation>
     </message>
     <message>
-        <location line="+219"/>
+        <location line="+70"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation>Максимальное количество выбранных объектов с отображаемыми точками привязки:</translation>
     </message>
     <message>
-        <location line="-656"/>
+        <location line="-507"/>
         <source>Number of threads:</source>
         <translation>Количество потоков:</translation>
     </message>
     <message>
-        <location line="+507"/>
+        <location line="+577"/>
         <source>Reference point size (px):</source>
         <translation>Размер точки привязки (пикс.):</translation>
     </message>
@@ -5891,12 +5891,12 @@ is already in the list.</source>
         <translation>Порог высоты текста (пикс.):</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+90"/>
         <source>Persistent selection</source>
         <translation>Постоянное выделение</translation>
     </message>
     <message>
-        <location line="-930"/>
+        <location line="-951"/>
         <source>Color lightness threshold:</source>
         <translation>Порог светлоты цвета:</translation>
     </message>
@@ -5926,12 +5926,12 @@ is already in the list.</source>
         <translation>Отображение и производительность</translation>
     </message>
     <message>
-        <location line="+347"/>
+        <location line="+359"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>Отображать объекты с более чем N тире как непрерывные:</translation>
     </message>
     <message>
-        <location line="-341"/>
+        <location line="-353"/>
         <source>Anti-aliasing on by default</source>
         <translation>Сглаживание по умолчанию</translation>
     </message>
@@ -5951,7 +5951,12 @@ is already in the list.</source>
         <translation>Автоматически использовать типы линий, оптимизированные для экрана, в просмотре моделей</translation>
     </message>
     <message>
-        <location line="+212"/>
+        <location line="+103"/>
+        <source>Always render polylines with custom widths at least 1 pixel wide</source>
+      <translation type="unfinished">Всегда отображайте полилинии с пользовательской шириной не менее 1 пикселя</translation>
+    </message>
+    <message>
+        <location line="+121"/>
         <source>Number of preview entities:</source>
         <translation>Количество объектов при предпросмотре:</translation>
     </message>
@@ -5971,7 +5976,7 @@ is already in the list.</source>
         <translation>Время ожидания для рендеринга штриховки:</translation>
     </message>
     <message>
-        <location line="+357"/>
+        <location line="+366"/>
         <source>Selection</source>
         <translation>Выделение</translation>
     </message>

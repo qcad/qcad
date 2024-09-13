@@ -5880,22 +5880,27 @@ zaten listede.</translation>
         <translation type="unfinished">Retina / yüksek çözünürlüklü ekran için tam çözünürlüğü kullanın</translation>
     </message>
     <message>
-        <location line="+514"/>
+        <location line="+596"/>
         <source>Reference point size (px):</source>
         <translation type="unfinished">Referans noktası boyutu (px):</translation>
     </message>
     <message>
-        <location line="+228"/>
+        <location line="+167"/>
         <source>Persistent selection</source>
         <translation type="unfinished">Kalıcı seçim</translation>
     </message>
     <message>
-        <location line="-626"/>
+        <location line="-635"/>
         <source>Number of preview entities:</source>
         <translation type="unfinished">Önizleme varlıklarının sayısı:</translation>
     </message>
     <message>
-        <location line="+61"/>
+        <location line="-121"/>
+        <source>Always render polylines with custom widths at least 1 pixel wide</source>
+      <translation type="unfinished">Özel genişliklere sahip çoklu çizgileri her zaman en az 1 piksel genişliğinde oluşturun</translation>
+    </message>
+    <message>
+        <location line="+182"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation type="unfinished">Yayları bu açının (derece) altında çizgiler olarak görüntüleyin:</translation>
     </message>
@@ -5930,17 +5935,17 @@ zaten listede.</translation>
         <translation type="unfinished">Referans noktaları ile maksimum seçilen varlıklar:</translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+217"/>
         <source>Text height threshold (px):</source>
         <translation type="unfinished">Metin yüksekliği eşiği (px):</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="-147"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation type="unfinished">Görüntülenen referans noktaları ile maksimum seçilen varlıklar:</translation>
     </message>
     <message>
-        <location line="+73"/>
+        <location line="+231"/>
         <source>Selection</source>
         <translation type="unfinished">Seçim</translation>
     </message>

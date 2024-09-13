@@ -5856,7 +5856,7 @@ is already in the list.</source>
         <translation>Utilizzare piena risoluzione per il display Retina / alta risoluzione</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+30"/>
         <source>auto</source>
         <translation>auto</translation>
     </message>
@@ -5866,17 +5866,17 @@ is already in the list.</source>
         <translation>Massimo di entità selezionate con punti di riferimento:</translation>
     </message>
     <message>
-        <location line="+219"/>
+        <location line="+70"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation>Massimo di entità selezionate con punti di riferimento visualizzati:</translation>
     </message>
     <message>
-        <location line="-656"/>
+        <location line="-507"/>
         <source>Number of threads:</source>
         <translation>Numero di thread:</translation>
     </message>
     <message>
-        <location line="+507"/>
+        <location line="+577"/>
         <source>Reference point size (px):</source>
         <translation>Dimensione del punto di riferimento (px):</translation>
     </message>
@@ -5886,12 +5886,12 @@ is already in the list.</source>
         <translation>Soglia di altezza del testo (px):</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+90"/>
         <source>Persistent selection</source>
         <translation>Selezione permanente</translation>
     </message>
     <message>
-        <location line="-930"/>
+        <location line="-951"/>
         <source>Color lightness threshold:</source>
         <translation>Soglia per la leggerezza del colore:</translation>
     </message>
@@ -5921,7 +5921,12 @@ is already in the list.</source>
         <translation>Visualizzazione e prestazioni</translation>
     </message>
     <message>
-        <location line="+347"/>
+        <location line="+20"/>
+        <source>Always render polylines with custom widths at least 1 pixel wide</source>
+        <translation>Renderizzare sempre le polilinee con larghezze personalizzate di almeno 1 pixel</translation>
+    </message>
+    <message>
+        <location line="+339"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>Visualizza entità con più di N trattini come continuo:</translation>
     </message>
@@ -5931,7 +5936,7 @@ is already in the list.</source>
         <translation>Passo angolo minimo per rendere archi (gradi):</translation>
     </message>
     <message>
-        <location line="-388"/>
+        <location line="-400"/>
         <source>Linetypes and Lineweights</source>
         <translation>Tipi di linee e pesi di linee</translation>
     </message>
@@ -5946,17 +5951,17 @@ is already in the list.</source>
         <translation>Antialiasing di default</translation>
     </message>
     <message>
-        <location line="+386"/>
+        <location line="+398"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Timeout per la rappresentazione tratteggio:</translation>
     </message>
     <message>
-        <location line="-475"/>
+        <location line="-487"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Utilizzare automaticamente i tipi di linea a base di schermo in vista del modello</translation>
     </message>
     <message>
-        <location line="+212"/>
+        <location line="+224"/>
         <source>Number of preview entities:</source>
         <translation>Numero di entità in anteprima:</translation>
     </message>
@@ -5966,7 +5971,7 @@ is already in the list.</source>
         <translation>Mostra archi come linee di sotto di questo angolo (gradi):</translation>
     </message>
     <message>
-        <location line="+559"/>
+        <location line="+568"/>
         <source>Selection</source>
         <translation>Selezione</translation>
     </message>
@@ -14575,4 +14580,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

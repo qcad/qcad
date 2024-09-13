@@ -5904,7 +5904,7 @@ is already in the list.</source>
         <translation type="unfinished">Χρήση πλήρους ανάλυσης για οθόνη Retina/υψηλής ανάλυσης</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+19"/>
         <source>Number of threads:</source>
         <translation type="unfinished">Αριθμός νημάτων:</translation>
     </message>
@@ -5944,7 +5944,7 @@ is already in the list.</source>
         <translation type="unfinished">Μέγιστες επιλεγμένες οντότητες με σημεία αναφοράς:</translation>
     </message>
     <message>
-        <location line="+70"/>
+        <location line="+140"/>
         <source>Reference point size (px):</source>
         <translation type="unfinished">Μέγεθος σημείου αναφοράς (px):</translation>
     </message>
@@ -5954,12 +5954,17 @@ is already in the list.</source>
         <translation type="unfinished">Κατώτατο όριο ύψους κειμένου (px):</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="-147"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation type="unfinished">Μέγιστες επιλεγμένες οντότητες με εμφανιζόμενα σημεία αναφοράς:</translation>
     </message>
     <message>
-        <location line="+73"/>
+        <location line="-519"/>
+        <source>Always render polylines with custom widths at least 1 pixel wide</source>
+      <translation type="unfinished">Να αποδίδετε πάντα πολυγραμμές με προσαρμοσμένο πλάτος τουλάχιστον 1 pixel πλάτος</translation>
+    </message>
+    <message>
+        <location line="+750"/>
         <source>Selection</source>
         <translation type="unfinished">Επιλογή</translation>
     </message>

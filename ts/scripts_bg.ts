@@ -5904,7 +5904,7 @@ is already in the list.</source>
         <translation type="unfinished">Използване на пълна резолюция за Retina / дисплей с висока резолюция</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+19"/>
         <source>Number of threads:</source>
         <translation type="unfinished">Брой нишки:</translation>
     </message>
@@ -5944,7 +5944,7 @@ is already in the list.</source>
         <translation type="unfinished">Максимално избрани обекти с референтни точки:</translation>
     </message>
     <message>
-        <location line="+70"/>
+        <location line="+140"/>
         <source>Reference point size (px):</source>
         <translation type="unfinished">Размер на референтната точка (px):</translation>
     </message>
@@ -5954,12 +5954,17 @@ is already in the list.</source>
         <translation type="unfinished">Праг на височината на текста (px):</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="-147"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation type="unfinished">Максимално избрани обекти с показани референтни точки:</translation>
     </message>
     <message>
-        <location line="+73"/>
+        <location line="-519"/>
+        <source>Always render polylines with custom widths at least 1 pixel wide</source>
+      <translation type="unfinished">Винаги визуализирайте полилинии с потребителски ширини с ширина поне 1 пиксел</translation>
+    </message>
+    <message>
+        <location line="+750"/>
         <source>Selection</source>
         <translation type="unfinished">Избор</translation>
     </message>

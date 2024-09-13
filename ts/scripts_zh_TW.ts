@@ -5901,22 +5901,27 @@ is already in the list.</source>
         <translation type="unfinished">对视网膜/高分辨率显示器使用全分辨率</translation>
     </message>
     <message>
-        <location line="+514"/>
+        <location line="+596"/>
         <source>Reference point size (px):</source>
         <translation type="unfinished">参考点尺寸（px）：</translation>
     </message>
     <message>
-        <location line="+228"/>
+        <location line="+167"/>
         <source>Persistent selection</source>
         <translation type="unfinished">持续性的选择</translation>
     </message>
     <message>
-        <location line="-626"/>
+        <location line="-635"/>
         <source>Number of preview entities:</source>
         <translation type="unfinished">预览实体的数量：</translation>
     </message>
     <message>
-        <location line="+61"/>
+        <location line="-121"/>
+        <source>Always render polylines with custom widths at least 1 pixel wide</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+182"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation type="unfinished">在这个角度（度数）以下以线的形式显示弧线：</translation>
     </message>
@@ -5951,17 +5956,17 @@ is already in the list.</source>
         <translation type="unfinished">有参考点的最大选定实体：</translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+217"/>
         <source>Text height threshold (px):</source>
         <translation type="unfinished">文本高度阈值（px）：</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="-147"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation type="unfinished">具有显示参考点的最大选定实体：</translation>
     </message>
     <message>
-        <location line="+73"/>
+        <location line="+231"/>
         <source>Selection</source>
         <translation type="unfinished">选择</translation>
     </message>

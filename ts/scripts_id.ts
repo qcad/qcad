@@ -5901,7 +5901,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Gunakan resolusi penuh untuk Retina / tampilan resolusi tinggi</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+19"/>
         <source>Number of threads:</source>
         <translation type="unfinished">Jumlah utas:</translation>
     </message>
@@ -5941,7 +5941,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Entitas maksimum yang dipilih dengan titik referensi:</translation>
     </message>
     <message>
-        <location line="+70"/>
+        <location line="+140"/>
         <source>Reference point size (px):</source>
         <translation type="unfinished">Ukuran titik referensi (px):</translation>
     </message>
@@ -5951,12 +5951,17 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Ambang batas tinggi teks (px):</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="-147"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation type="unfinished">Entitas maksimum yang dipilih dengan titik referensi yang ditampilkan:</translation>
     </message>
     <message>
-        <location line="+73"/>
+        <location line="-519"/>
+        <source>Always render polylines with custom widths at least 1 pixel wide</source>
+      <translation type="unfinished">Selalu buat poligon dengan lebar khusus setidaknya selebar 1 piksel</translation>
+    </message>
+    <message>
+        <location line="+750"/>
         <source>Selection</source>
         <translation type="unfinished">Seleksi</translation>
     </message>

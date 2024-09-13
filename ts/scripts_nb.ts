@@ -5906,7 +5906,7 @@ er allerede i listen.</translation>
         <translation type="unfinished">Bruk full oppløsning for Retina / høyoppløselig skjerm</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+19"/>
         <source>Number of threads:</source>
         <translation type="unfinished">Antall tråder:</translation>
     </message>
@@ -5946,7 +5946,7 @@ er allerede i listen.</translation>
         <translation type="unfinished">Maksimalt utvalgte enheter med referansepunkter:</translation>
     </message>
     <message>
-        <location line="+70"/>
+        <location line="+140"/>
         <source>Reference point size (px):</source>
         <translation type="unfinished">Referansepunktstørrelse (px):</translation>
     </message>
@@ -5956,12 +5956,17 @@ er allerede i listen.</translation>
         <translation type="unfinished">Terskel for teksthøyde (px):</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="-147"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation type="unfinished">Maksimalt antall valgte enheter med viste referansepunkter:</translation>
     </message>
     <message>
-        <location line="+73"/>
+        <location line="-519"/>
+        <source>Always render polylines with custom widths at least 1 pixel wide</source>
+      <translation type="unfinished">Polylinjer med egendefinerte bredder skal alltid være minst 1 piksel brede</translation>
+    </message>
+    <message>
+        <location line="+750"/>
         <source>Selection</source>
         <translation type="unfinished">Utvalg</translation>
     </message>

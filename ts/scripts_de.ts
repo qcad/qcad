@@ -5856,7 +5856,7 @@ ist bereits in der Liste.</translation>
         <translation>Volle Auflösung benutzen für Retina-Anzeige (hochauflösende Anzeige)</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+30"/>
         <source>auto</source>
         <translation>auto</translation>
     </message>
@@ -5866,17 +5866,17 @@ ist bereits in der Liste.</translation>
         <translation>Maximal ausgewählte Objekte mit Referenzpunkten:</translation>
     </message>
     <message>
-        <location line="+219"/>
+        <location line="+70"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation>Maximal ausgewählte Objekte mit angezeigten Referenzpunkten:</translation>
     </message>
     <message>
-        <location line="-656"/>
+        <location line="-507"/>
         <source>Number of threads:</source>
         <translation>Anzahl Threads:</translation>
     </message>
     <message>
-        <location line="+507"/>
+        <location line="+577"/>
         <source>Reference point size (px):</source>
         <translation>Referenzpunktgrösse (pix):</translation>
     </message>
@@ -5886,12 +5886,12 @@ ist bereits in der Liste.</translation>
         <translation>Schwellenwert für Textgrösse (pix):</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+90"/>
         <source>Persistent selection</source>
         <translation>Persistente Selektion</translation>
     </message>
     <message>
-        <location line="-930"/>
+        <location line="-951"/>
         <source>Color lightness threshold:</source>
         <translation>Farbgrenzwert:</translation>
     </message>
@@ -5921,7 +5921,12 @@ ist bereits in der Liste.</translation>
         <translation>Anzeige und Leistung</translation>
     </message>
     <message>
-        <location line="+347"/>
+        <location line="+20"/>
+        <source>Always render polylines with custom widths at least 1 pixel wide</source>
+        <translation>Polylinien mit benutzerdefinierten Breiten immer mit mindestens 1 Pixel Breite darstellen</translation>
+    </message>
+    <message>
+        <location line="+339"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>Gestrichelte Objekte mit mehr als N Strichen ausgezogen darstellen:</translation>
     </message>
@@ -5931,7 +5936,7 @@ ist bereits in der Liste.</translation>
         <translation>Minimaler Winkel für Bogensegmentierung in Anzeige (Grad):</translation>
     </message>
     <message>
-        <location line="-388"/>
+        <location line="-400"/>
         <source>Linetypes and Lineweights</source>
         <translation>Linientypen und Linienbreiten</translation>
     </message>
@@ -5946,17 +5951,17 @@ ist bereits in der Liste.</translation>
         <translation>Kantenglättung standardmässig an</translation>
     </message>
     <message>
-        <location line="+386"/>
+        <location line="+398"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Timeout für Schraffurwiedergabe:</translation>
     </message>
     <message>
-        <location line="-475"/>
+        <location line="-487"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Automatisch Bildschirmbasierte Linientypen verwenden in Modellansicht</translation>
     </message>
     <message>
-        <location line="+212"/>
+        <location line="+224"/>
         <source>Number of preview entities:</source>
         <translation>Anzahl Vorschau Objekte:</translation>
     </message>
@@ -5966,7 +5971,7 @@ ist bereits in der Liste.</translation>
         <translation>Bögen als Linien anzeigen falls Winkel kleiner als (Grad):</translation>
     </message>
     <message>
-        <location line="+559"/>
+        <location line="+568"/>
         <source>Selection</source>
         <translation>Selektion</translation>
     </message>
@@ -14574,4 +14579,3 @@ ist bereits in der Liste.</translation>
     </message>
 </context>
 </TS>
-

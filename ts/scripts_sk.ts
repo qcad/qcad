@@ -5861,7 +5861,7 @@ už existuje v zozname.</translation>
         <translation type="unfinished">Používanie plného rozlíšenia pre displej Retina / vysoké rozlíšenie</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+30"/>
         <source>auto</source>
         <translation type="unfinished">auto</translation>
     </message>
@@ -5876,17 +5876,17 @@ už existuje v zozname.</translation>
         <translation type="unfinished">Počet vlákien:</translation>
     </message>
     <message>
-        <location line="+507"/>
+        <location line="+577"/>
         <source>Reference point size (px):</source>
         <translation type="unfinished">Veľkosť referenčného bodu (px):</translation>
     </message>
     <message>
-        <location line="+228"/>
+        <location line="+167"/>
         <source>Persistent selection</source>
         <translation type="unfinished">Trvalý výber</translation>
     </message>
     <message>
-        <location line="-930"/>
+        <location line="-951"/>
         <source>Color lightness threshold:</source>
         <translation>Hranica svetlosti farby:</translation>
     </message>
@@ -5921,7 +5921,12 @@ už existuje v zozname.</translation>
         <translation>Obraz a výkon</translation>
     </message>
     <message>
-        <location line="+129"/>
+        <location line="+20"/>
+        <source>Always render polylines with custom widths at least 1 pixel wide</source>
+      <translation type="unfinished">Vždy vykresľujte polylinie s vlastnou šírkou aspoň 1 pixel</translation>
+    </message>
+    <message>
+        <location line="+121"/>
         <source>Number of preview entities:</source>
         <translation>Počet prvkov náhľadu:</translation>
     </message>
@@ -5941,7 +5946,7 @@ už existuje v zozname.</translation>
         <translation>Minimálny uhol kroku pre zobrazovanie oblúkov (v stupňoch):</translation>
     </message>
     <message>
-        <location line="-256"/>
+        <location line="-268"/>
         <source>Anti-aliasing on by default</source>
         <translation>Predvolené vyhladenie prvkov</translation>
     </message>
@@ -5956,22 +5961,22 @@ už existuje v zozname.</translation>
         <translation type="unfinished">Predvolená váha riadkov:</translation>
     </message>
     <message>
-        <location line="+510"/>
+        <location line="+522"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Časový limit pre zobrazenie šrafovania:</translation>
     </message>
     <message>
-        <location line="+212"/>
+        <location line="+282"/>
         <source>Text height threshold (px):</source>
         <translation type="unfinished">Prahová hodnota výšky textu (px):</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="-147"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation type="unfinished">Maximálne vybrané entity so zobrazenými referenčnými bodmi:</translation>
     </message>
     <message>
-        <location line="+73"/>
+        <location line="+231"/>
         <source>Selection</source>
         <translation>Výber</translation>
     </message>

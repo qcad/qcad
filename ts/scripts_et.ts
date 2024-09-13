@@ -5897,7 +5897,7 @@ is already in the list.</source>
         <translation type="unfinished">Kasutage täielikku eraldusvõimet Retina / suure eraldusvõimega ekraani jaoks</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+19"/>
         <source>Number of threads:</source>
         <translation type="unfinished">Niitide arv:</translation>
     </message>
@@ -5937,7 +5937,7 @@ is already in the list.</source>
         <translation type="unfinished">Maksimaalselt valitud üksused koos võrdluspunktidega:</translation>
     </message>
     <message>
-        <location line="+70"/>
+        <location line="+140"/>
         <source>Reference point size (px):</source>
         <translation type="unfinished">Võrdluspunkti suurus (px):</translation>
     </message>
@@ -5947,12 +5947,17 @@ is already in the list.</source>
         <translation type="unfinished">Teksti kõrguse künnis (px):</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="-147"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation type="unfinished">Maksimaalselt valitud üksused koos kuvatavate võrdluspunktidega:</translation>
     </message>
     <message>
-        <location line="+73"/>
+        <location line="-519"/>
+        <source>Always render polylines with custom widths at least 1 pixel wide</source>
+      <translation type="unfinished">Renderi alati vähemalt 1 piksli laiused kohandatud laiusega polügraanid</translation>
+    </message>
+    <message>
+        <location line="+750"/>
         <source>Selection</source>
         <translation type="unfinished">Valik</translation>
     </message>

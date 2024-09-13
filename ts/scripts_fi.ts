@@ -5871,17 +5871,17 @@ on jo luettelossa.</translation>
         <translation>Käytä täyttä resoluutiota Retina / korkean resoluution näyttöä varten</translation>
     </message>
     <message>
-        <location line="+444"/>
+        <location line="+456"/>
         <source>Maximum selected entities with reference points:</source>
         <translation>Valittujen kokonaisuuksien enimmäismäärä vertailupisteiden kanssa:</translation>
     </message>
     <message>
-        <location line="+219"/>
+        <location line="+70"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation>Valittujen kohteiden enimmäismäärä näytetyillä vertailupisteillä:</translation>
     </message>
     <message>
-        <location line="-149"/>
+        <location line="+70"/>
         <source>Reference point size (px):</source>
         <translation>Viitepisteen koko (px):</translation>
     </message>
@@ -5891,12 +5891,12 @@ on jo luettelossa.</translation>
         <translation>Tekstin korkeuskynnys (px):</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+90"/>
         <source>Persistent selection</source>
         <translation>Pysyvä valinta</translation>
     </message>
     <message>
-        <location line="-724"/>
+        <location line="-733"/>
         <source>auto</source>
         <translation>auto</translation>
     </message>
@@ -5906,7 +5906,7 @@ on jo luettelossa.</translation>
         <translation>Kierteiden määrä:</translation>
     </message>
     <message>
-        <location line="-195"/>
+        <location line="-207"/>
         <source>Color lightness threshold:</source>
         <translation>Värivaaleuden kynnys:</translation>
     </message>
@@ -5941,7 +5941,12 @@ on jo luettelossa.</translation>
         <translation>Automaattisesti käytä kuvaruudun viivoja muotoilunäkymässä</translation>
     </message>
     <message>
-        <location line="+212"/>
+        <location line="+103"/>
+        <source>Always render polylines with custom widths at least 1 pixel wide</source>
+        <translation>Renderöi aina vähintään 1 pikselin levyiset polyviivat mukautetuilla leveyksillä</translation>
+    </message>
+    <message>
+        <location line="+121"/>
         <source>Number of preview entities:</source>
         <translation>Esikatseltavien kohteiden määrä:</translation>
     </message>
@@ -5966,7 +5971,7 @@ on jo luettelossa.</translation>
         <translation>Aikakatkaisu kuvioinnin rendröintiin:</translation>
     </message>
     <message>
-        <location line="+357"/>
+        <location line="+366"/>
         <source>Selection</source>
         <translation>Valinta</translation>
     </message>
@@ -14574,4 +14579,3 @@ on jo luettelossa.</translation>
     </message>
 </context>
 </TS>
-

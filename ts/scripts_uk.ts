@@ -5908,7 +5908,7 @@ is already in the list.</source>
         <translation type="unfinished">Використовуйте повну роздільну здатність для дисплея Retina / високої роздільної здатності</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+19"/>
         <source>Number of threads:</source>
         <translation type="unfinished">Кількість ниток:</translation>
     </message>
@@ -5948,7 +5948,7 @@ is already in the list.</source>
         <translation type="unfinished">Максимально обрані об&apos;єкти з орієнтирами:</translation>
     </message>
     <message>
-        <location line="+70"/>
+        <location line="+140"/>
         <source>Reference point size (px):</source>
         <translation type="unfinished">Розмір опорної точки (px):</translation>
     </message>
@@ -5958,12 +5958,17 @@ is already in the list.</source>
         <translation type="unfinished">Поріг висоти тексту (px):</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="-147"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation type="unfinished">Максимальна кількість обраних об&apos;єктів з відображеними опорними точками:</translation>
     </message>
     <message>
-        <location line="+73"/>
+        <location line="-519"/>
+        <source>Always render polylines with custom widths at least 1 pixel wide</source>
+      <translation type="unfinished">Завжди рендерити полілінії з користувацькою шириною щонайменше 1 піксель</translation>
+    </message>
+    <message>
+        <location line="+750"/>
         <source>Selection</source>
         <translation type="unfinished">Відбір</translation>
     </message>

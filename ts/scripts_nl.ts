@@ -5856,7 +5856,7 @@ is al in de lijst.</translation>
         <translation>Gebruik volledige resolutie voor Retina-display (hoge resolutie)</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+30"/>
         <source>auto</source>
         <translation>auto</translation>
     </message>
@@ -5866,17 +5866,17 @@ is al in de lijst.</translation>
         <translation>Maximaal geselecteerde objecten met referentiepunten:</translation>
     </message>
     <message>
-        <location line="+219"/>
+        <location line="+70"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation>Maximaal geselecteerde objecten met weergegeven referentiepunten:</translation>
     </message>
     <message>
-        <location line="-656"/>
+        <location line="-507"/>
         <source>Number of threads:</source>
         <translation>Aantal threads:</translation>
     </message>
     <message>
-        <location line="+507"/>
+        <location line="+577"/>
         <source>Reference point size (px):</source>
         <translation>Referentiepuntgrootte (px):</translation>
     </message>
@@ -5886,12 +5886,12 @@ is al in de lijst.</translation>
         <translation>Drempel voor teksthoogte (px):</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+90"/>
         <source>Persistent selection</source>
         <translation>Blijvende selectie</translation>
     </message>
     <message>
-        <location line="-930"/>
+        <location line="-951"/>
         <source>Color lightness threshold:</source>
         <translation>Kleur lichtheid drempel:</translation>
     </message>
@@ -5921,12 +5921,17 @@ is al in de lijst.</translation>
         <translation>Weergave en prestatie</translation>
     </message>
     <message>
-        <location line="+347"/>
+        <location line="+20"/>
+        <source>Always render polylines with custom widths at least 1 pixel wide</source>
+        <translation>Polylijnen met aangepaste breedtes altijd minstens 1 pixel breed weergeven</translation>
+    </message>
+    <message>
+        <location line="+339"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>Objecten met meer dan N streepjes als doorlopend weergeven:</translation>
     </message>
     <message>
-        <location line="-473"/>
+        <location line="-485"/>
         <source>Linetypes and Lineweights</source>
         <translation>Lijntypen en lijnbreedtes</translation>
     </message>
@@ -5946,7 +5951,7 @@ is al in de lijst.</translation>
         <translation>Automatisch scherm gebaseerde lijntypen gebruiken in model weergave</translation>
     </message>
     <message>
-        <location line="+212"/>
+        <location line="+224"/>
         <source>Number of preview entities:</source>
         <translation>Aantal voorbeeld objecten:</translation>
     </message>
@@ -5966,7 +5971,7 @@ is al in de lijst.</translation>
         <translation>Time-out voor weergave van arcering:</translation>
     </message>
     <message>
-        <location line="+357"/>
+        <location line="+366"/>
         <source>Selection</source>
         <translation>Selectie</translation>
     </message>
@@ -14574,4 +14579,3 @@ is al in de lijst.</translation>
     </message>
 </context>
 </TS>
-

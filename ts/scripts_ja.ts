@@ -5851,7 +5851,7 @@ is already in the list.</source>
         <translation type="unfinished">Retina/高解像度ディスプレイではフル解像度を使用します。</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+30"/>
         <source>auto</source>
         <translation type="unfinished">オート</translation>
     </message>
@@ -5861,17 +5861,17 @@ is already in the list.</source>
         <translation type="unfinished">参照点を持つエンティティの最大選択。</translation>
     </message>
     <message>
-        <location line="+219"/>
+        <location line="+70"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation type="unfinished">表示されている参照点での最大選択実体。</translation>
     </message>
     <message>
-        <location line="-656"/>
+        <location line="-507"/>
         <source>Number of threads:</source>
         <translation type="unfinished">スレッドの数</translation>
     </message>
     <message>
-        <location line="+507"/>
+        <location line="+577"/>
         <source>Reference point size (px):</source>
         <translation type="unfinished">基準点の大きさ(px)。</translation>
     </message>
@@ -5881,12 +5881,12 @@ is already in the list.</source>
         <translation type="unfinished">テキストの高さの閾値(px)。</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+90"/>
         <source>Persistent selection</source>
         <translation type="unfinished">永続的な選択</translation>
     </message>
     <message>
-        <location line="-930"/>
+        <location line="-951"/>
         <source>Color lightness threshold:</source>
         <translation>色の明るさ閾値:</translation>
     </message>
@@ -5916,7 +5916,12 @@ is already in the list.</source>
         <translation>表示と性能</translation>
     </message>
     <message>
-        <location line="+347"/>
+        <location line="+20"/>
+        <source>Always render polylines with custom widths at least 1 pixel wide</source>
+      <translation type="unfinished">カスタム幅のポリラインは常に少なくとも1ピクセル幅でレンダリングされます。</translation>
+    </message>
+    <message>
+        <location line="+339"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>エンティティをこの数以上の連続点として表示する</translation>
     </message>
@@ -5926,7 +5931,7 @@ is already in the list.</source>
         <translation>弧を描く時に分割する最小角度（度）</translation>
     </message>
     <message>
-        <location line="-388"/>
+        <location line="-400"/>
         <source>Linetypes and Lineweights</source>
         <translation type="unfinished">線種と線幅</translation>
     </message>
@@ -5941,17 +5946,17 @@ is already in the list.</source>
         <translation>デフォルトでアンチエイリアスする</translation>
     </message>
     <message>
-        <location line="+386"/>
+        <location line="+398"/>
         <source>Timeout for hatch rendering:</source>
         <translation>ハッチング表示のタイムアウト:</translation>
     </message>
     <message>
-        <location line="-475"/>
+        <location line="-487"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>自動的にモデルビューの基本線種を使用</translation>
     </message>
     <message>
-        <location line="+212"/>
+        <location line="+224"/>
         <source>Number of preview entities:</source>
         <translation>プレビューエンティティの数:</translation>
     </message>
@@ -5961,7 +5966,7 @@ is already in the list.</source>
         <translation>この角度以下の弧を直線で表示 (度):</translation>
     </message>
     <message>
-        <location line="+559"/>
+        <location line="+568"/>
         <source>Selection</source>
         <translation>選択</translation>
     </message>

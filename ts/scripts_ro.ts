@@ -5908,7 +5908,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Utilizați rezoluția completă pentru afișajul Retina / de înaltă rezoluție</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+19"/>
         <source>Number of threads:</source>
         <translation type="unfinished">Numărul de fire:</translation>
     </message>
@@ -5948,7 +5948,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Maximum de entități selectate cu puncte de referință:</translation>
     </message>
     <message>
-        <location line="+70"/>
+        <location line="+140"/>
         <source>Reference point size (px):</source>
         <translation type="unfinished">Dimensiunea punctului de referință (px):</translation>
     </message>
@@ -5958,12 +5958,17 @@ este deja în listă.</translation>
         <translation type="unfinished">Pragul de înălțime a textului (px):</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="-147"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation type="unfinished">Numărul maxim de entități selectate cu puncte de referință afișate:</translation>
     </message>
     <message>
-        <location line="+73"/>
+        <location line="-519"/>
+        <source>Always render polylines with custom widths at least 1 pixel wide</source>
+      <translation type="unfinished">Redați întotdeauna polilinii cu lățimi personalizate cu o lățime de cel puțin 1 pixel</translation>
+    </message>
+    <message>
+        <location line="+750"/>
         <source>Selection</source>
         <translation type="unfinished">Selecție</translation>
     </message>

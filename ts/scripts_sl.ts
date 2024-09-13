@@ -5872,7 +5872,7 @@ je že na seznamu.</translation>
         <translation type="unfinished">Uporaba polne ločljivosti za zaslon Retina / visoko ločljivost</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+30"/>
         <source>auto</source>
         <translation type="unfinished">samodejno</translation>
     </message>
@@ -5882,17 +5882,17 @@ je že na seznamu.</translation>
         <translation type="unfinished">Največje izbrane entitete z referenčnimi točkami:</translation>
     </message>
     <message>
-        <location line="+219"/>
+        <location line="+70"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation type="unfinished">Največ izbranih entitet s prikazanimi referenčnimi točkami:</translation>
     </message>
     <message>
-        <location line="-656"/>
+        <location line="-507"/>
         <source>Number of threads:</source>
         <translation type="unfinished">Število niti:</translation>
     </message>
     <message>
-        <location line="+507"/>
+        <location line="+577"/>
         <source>Reference point size (px):</source>
         <translation type="unfinished">Velikost referenčne točke (px):</translation>
     </message>
@@ -5902,12 +5902,12 @@ je že na seznamu.</translation>
         <translation type="unfinished">Prag višine besedila (px):</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+90"/>
         <source>Persistent selection</source>
         <translation type="unfinished">Trajni izbor</translation>
     </message>
     <message>
-        <location line="-930"/>
+        <location line="-951"/>
         <source>Color lightness threshold:</source>
         <translation>Prag svetlosti barv:</translation>
     </message>
@@ -5937,7 +5937,12 @@ je že na seznamu.</translation>
         <translation>Prikaz in optimizacija</translation>
     </message>
     <message>
-        <location line="+347"/>
+        <location line="+20"/>
+        <source>Always render polylines with custom widths at least 1 pixel wide</source>
+      <translation type="unfinished">Poliedri s širino po meri so vedno široki vsaj 1 piksel</translation>
+    </message>
+    <message>
+        <location line="+339"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>Prikaži entitete z več kot N pikami kot neprekinjene:</translation>
     </message>
@@ -5947,22 +5952,22 @@ je že na seznamu.</translation>
         <translation>Najmanjši kot koraka za izris krivulje (stopinje):</translation>
     </message>
     <message>
-        <location line="-256"/>
+        <location line="-268"/>
         <source>Anti-aliasing on by default</source>
         <translation>Glajenje robov provzeto vklopljeno</translation>
     </message>
     <message>
-        <location line="+386"/>
+        <location line="+398"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Iztek časa za izris šrafur:</translation>
     </message>
     <message>
-        <location line="-475"/>
+        <location line="-487"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Samodejno uporabi zaslonske črte v prikazu modela</translation>
     </message>
     <message>
-        <location line="+212"/>
+        <location line="+224"/>
         <source>Number of preview entities:</source>
         <translation>Število entitet v predogledu:</translation>
     </message>
@@ -5972,7 +5977,7 @@ je že na seznamu.</translation>
         <translation>Prikaži loke kot črt, če je kot manjši od (stopinje): </translation>
     </message>
     <message>
-        <location line="+559"/>
+        <location line="+568"/>
         <source>Selection</source>
         <translation>Izbor</translation>
     </message>

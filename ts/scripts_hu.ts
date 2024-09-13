@@ -5901,22 +5901,27 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Teljes felbontás használata Retina / nagy felbontású kijelzőhöz</translation>
     </message>
     <message>
-        <location line="+514"/>
+        <location line="+596"/>
         <source>Reference point size (px):</source>
         <translation type="unfinished">Referenciapont mérete (px):</translation>
     </message>
     <message>
-        <location line="+228"/>
+        <location line="+167"/>
         <source>Persistent selection</source>
         <translation type="unfinished">Állandó kiválasztás</translation>
     </message>
     <message>
-        <location line="-626"/>
+        <location line="-635"/>
         <source>Number of preview entities:</source>
         <translation type="unfinished">Az előnézeti entitások száma:</translation>
     </message>
     <message>
-        <location line="+61"/>
+        <location line="-121"/>
+        <source>Always render polylines with custom widths at least 1 pixel wide</source>
+      <translation type="unfinished">Az egyéni szélességű polivonalakat mindig legalább 1 pixel szélesre renderelje</translation>
+    </message>
+    <message>
+        <location line="+182"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation type="unfinished">Az ívek megjelenítése vonalként ezen szög (fok) alatt:</translation>
     </message>
@@ -5951,17 +5956,17 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Maximálisan kiválasztott egységek referenciapontokkal:</translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+217"/>
         <source>Text height threshold (px):</source>
         <translation type="unfinished">Szövegmagassági küszöb (px):</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="-147"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation type="unfinished">Maximálisan kiválasztott entitások a megjelenített referenciapontokkal:</translation>
     </message>
     <message>
-        <location line="+73"/>
+        <location line="+231"/>
         <source>Selection</source>
         <translation type="unfinished">Kiválasztás</translation>
     </message>
