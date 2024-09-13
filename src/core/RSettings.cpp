@@ -102,6 +102,7 @@ int RSettings::maxReferencePointEntities = -1;
 int RSettings::maxReferencePointEntitiesDisplay = -1;
 int RSettings::propertyEditorShowOnRequest = -1;
 int RSettings::simpleTextAlignLeft = -1;
+int RSettings::renderThinPolylines1px = -1;
 double RSettings::devicePixelRatio = -1.0;
 QString RSettings::polarCoordinateSeparator = QString();
 QString RSettings::cartesianCoordinateSeparator = QString();
@@ -1069,6 +1070,16 @@ bool RSettings::getSimpleTextAlignLeft() {
 }
 
 /**
+ * \return True to render polylines with a very thin global width as 1 px.
+ */
+bool RSettings::getRenderThinPolylines1px() {
+    if (renderThinPolylines1px==-1) {
+        renderThinPolylines1px = getBoolValue("GraphicsView/RenderThinPolylines1px", true);
+    }
+    return renderThinPolylines1px;
+}
+
+/**
  * \return Polar coordinate separator (<).
  */
 QString RSettings::getPolarCoordinateSeparator() {
@@ -1984,6 +1995,7 @@ void RSettings::resetCache() {
     maxReferencePointEntitiesDisplay = -1;
     propertyEditorShowOnRequest = -1;
     simpleTextAlignLeft = -1;
+    renderThinPolylines1px = -1;
     minArcAngleStep = -1;
     dashThreshold = -1;
     textRenderedAsText = -1;

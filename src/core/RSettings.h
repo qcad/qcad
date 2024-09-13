@@ -293,6 +293,7 @@ public:
     static int getMaxReferencePointEntitiesDisplay();
     static bool getPropertyEditorShowOnRequest();
     static bool getSimpleTextAlignLeft();
+    static bool getRenderThinPolylines1px();
     static QString getPolarCoordinateSeparator();
     static QString getCartesianCoordinateSeparator();
     static QString getRelativeCoordinatePrefix();
@@ -368,6 +369,7 @@ private:
     static int maxReferencePointEntitiesDisplay;
     static int propertyEditorShowOnRequest;
     static int simpleTextAlignLeft;
+    static int renderThinPolylines1px;
     static double devicePixelRatio;
     static QString polarCoordinateSeparator;
     static QString cartesianCoordinateSeparator;

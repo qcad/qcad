@@ -404,7 +404,19 @@ void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline) {
 
         QPen p(Qt::SolidLine);
         p.setCosmetic(true);
-        p.setWidthF(0.001);
+        if (RSettings::getRenderThinPolylines1px()) {
+            RGraphicsViewImage* view = getGraphicsView();
+            if (view!=NULL && view->isPrintingOrExporting()) {
+                p.setWidthF(0.001);
+            }
+            else {
+                p.setWidth(0);
+                currentPainterPath.setPixelWidth(true);
+            }
+        }
+        else {
+            p.setWidthF(0.001);
+        }
         p.setColor(currentPen.color());
         currentPainterPath.setPen(p);
 
