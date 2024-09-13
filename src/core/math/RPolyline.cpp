@@ -886,8 +886,6 @@ RS::Orientation RPolyline::getOrientation(bool implicitelyClosed) const {
 
     if (hasArcSegments()) {
         RPolyline plSegmented = convertArcToLineSegments(16);
-        qDebug() << "RPolyline::getOrientation: polyline:";
-        plSegmented.dump();
         return plSegmented.getOrientation(implicitelyClosed);
     }
 
