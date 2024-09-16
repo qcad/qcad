@@ -374,7 +374,6 @@ void RDimStyleProxyBasic::renderDimOrdinate() {
     }
 
     line = RLine(knee1, knee2);
-    qDebug() << "line:" << line;
     shapes.append(QSharedPointer<RLine>(new RLine(line)));
 
     line = RLine(knee2, leaderEndPoint);
