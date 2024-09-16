@@ -666,87 +666,201 @@ Apollonius.getPole = function(circle, polarLine) {
 /**
  * \return Similarity axes of the tree given circles.
  */
+//Apollonius.getSimilarityAxes = function(c1, c2, c3) {
+//    var ret = [];
+//    var tangents12 = ShapeAlgorithms.getTangents(c1, c2);
+//    var tangents13 = ShapeAlgorithms.getTangents(c1, c3);
+//    var tangents23 = ShapeAlgorithms.getTangents(c2, c3);
+
+//    //Apollonius.constructionShapes = Apollonius.constructionShapes.concat(tangents12);
+//    //Apollonius.constructionShapes = Apollonius.constructionShapes.concat(tangents13);
+//    //Apollonius.constructionShapes = Apollonius.constructionShapes.concat(tangents23);
+
+//    var ips12o = [];
+//    var ips13o = [];
+//    var ips23o = [];
+//    var ips12i = [];
+//    var ips13i = [];
+//    var ips23i = [];
+
+//    // intersection of outer tangents circles 1,2:
+//    if (!isNull(tangents12[0]) && !isNull(tangents12[1])) {
+//        ips12o = tangents12[0].getIntersectionPoints(tangents12[1], false);
+//    }
+//    // intersection of outer tangents circles 1,3:
+//    if (!isNull(tangents13[0]) && !isNull(tangents13[1])) {
+//        ips13o = tangents13[0].getIntersectionPoints(tangents13[1], false);
+//    }
+//    // intersection of outer tangents circles 2,3:
+//    if (!isNull(tangents23[0]) && !isNull(tangents23[1])) {
+//        ips23o = tangents23[0].getIntersectionPoints(tangents23[1], false);
+//    }
+
+//    // intersection of inner tangents circles 1,2:
+//    if (!isNull(tangents12[2]) && !isNull(tangents12[3])) {
+//        ips12i = tangents12[2].getIntersectionPoints(tangents12[3], false);
+//    }
+//    else if (ips12o.length===0) {
+//        // two intersecting circles with same radius:
+//        ips12i = [RVector.getAverage(c1.center, c2.center)];
+//    }
+//    // intersection of inner tangents circles 1,3:
+//    if (!isNull(tangents13[2]) && !isNull(tangents13[3])) {
+//        ips13i = tangents13[2].getIntersectionPoints(tangents13[3], false);
+//    }
+//    else if (ips13o.length===0) {
+//        // two intersecting circles with same radius:
+//        ips13i = [RVector.getAverage(c1.center, c3.center)];
+//    }
+//    // intersection of inner tangents circles 2,3:
+//    if (!isNull(tangents23[2]) && !isNull(tangents23[3])) {
+//        ips23i = tangents23[2].getIntersectionPoints(tangents23[3], false);
+//    }
+//    else if (ips23o.length===0) {
+//        // two intersecting circles with same radius:
+//        ips23i = [RVector.getAverage(c2.center, c3.center)];
+//    }
+
+//    // alpha: - for inner / + for outer tangents of circles 2 and 3
+//    // beta: - for inner / + for outer tangents of circles 1 and 3
+//    // gamma: - for inner / + for outer tangents of circles 1 and 2
+
+//    var l;
+
+//    // outer, outer, outer:
+//    // alpha: +, beta: +, gamma: +
+//    l = Apollonius.getLine(ips12o, ips13o, ips23o);
+//    ret.push(l);
+
+//    // outer, inner, inner:
+//    // alpha: -, beta: -, gamma: +
+//    l = Apollonius.getLine(ips12o, ips13i, ips23i);
+//    ret.push(l);
+
+//    // inner, outer, inner:
+//    // alpha: -, beta: +, gamma: -
+//    l = Apollonius.getLine(ips12i, ips13o, ips23i);
+//    ret.push(l);
+
+//    // inner, inner, outer:
+//    // alpha: +, beta: -, gamma: -
+//    l = Apollonius.getLine(ips12i, ips13i, ips23o);
+//    ret.push(l);
+
+//    return ret;
+//};
+
+/**
+ * Returns the similarity axes (0-4) of a triplet of circle shapes.
+ * \author Original by Andrew Mustun, fully revised by CVH © 2024.
+ *
+ * \param c1        First RCircle shape.
+ * \param c2        Second RCircle shape.
+ * \param c3        Third RCircle shape.
+ *
+ * \return An array with RLine shapes, at least empty.
+ */
 Apollonius.getSimilarityAxes = function(c1, c2, c3) {
-    var ret = [];
-    var tangents12 = ShapeAlgorithms.getTangents(c1, c2);
-    var tangents13 = ShapeAlgorithms.getTangents(c1, c3);
-    var tangents23 = ShapeAlgorithms.getTangents(c2, c3);
+    var ret = [];         // Collection array for results
+    var hCenters12, hCenters13, hCenters23;     // External and internal homothetic centers per combination
+    var hExtC, hIntC;     // External and internal homothetic centers
+    var d12, d13, d23;    // Intermediate distances
+    var p1, p2;           // Positions to consider
+    var d1, d2;           // Intermediate distances with current external homothetic center
 
-    //Apollonius.constructionShapes = Apollonius.constructionShapes.concat(tangents12);
-    //Apollonius.constructionShapes = Apollonius.constructionShapes.concat(tangents13);
-    //Apollonius.constructionShapes = Apollonius.constructionShapes.concat(tangents23);
+    // Reject incorrect shape types:
+    if (!isCircleShape(c1) ||
+        !isCircleShape(c2) ||
+        !isCircleShape(c3)) {
 
-    var ips12o = [];
-    var ips13o = [];
-    var ips23o = [];
-    var ips12i = [];
-    var ips13i = [];
-    var ips23i = [];
-
-    // intersection of outer tangents circles 1,2:
-    if (!isNull(tangents12[0]) && !isNull(tangents12[1])) {
-        ips12o = tangents12[0].getIntersectionPoints(tangents12[1], false);
-    }
-    // intersection of outer tangents circles 1,3:
-    if (!isNull(tangents13[0]) && !isNull(tangents13[1])) {
-        ips13o = tangents13[0].getIntersectionPoints(tangents13[1], false);
-    }
-    // intersection of outer tangents circles 2,3:
-    if (!isNull(tangents23[0]) && !isNull(tangents23[1])) {
-        ips23o = tangents23[0].getIntersectionPoints(tangents23[1], false);
+        return ret;    // Empty, failed on incorrect data
     }
 
-    // intersection of inner tangents circles 1,2:
-    if (!isNull(tangents12[2]) && !isNull(tangents12[3])) {
-        ips12i = tangents12[2].getIntersectionPoints(tangents12[3], false);
+    // Get the homothetic centers for each pair of circles:
+    // Both invalid when a shape is not a circle
+    hCenters12 = Apollonius.getHomotheticCenters(c1, c2);
+    hCenters13 = Apollonius.getHomotheticCenters(c1, c3);
+    hCenters23 = Apollonius.getHomotheticCenters(c2, c3);
+
+    // External and internal homothetic centers, in 2D by default:
+    hExtC = [hCenters12[0], hCenters13[0], hCenters23[0]];
+    hIntC = [hCenters12[1], hCenters13[1], hCenters23[1]];
+
+    // Remove invalid external homothetic centers:
+    hExtC.clean(RVector.invalid);
+
+    // One solution is a line connecting all valid external homothetic centers
+    // With at least 2 valid external homothetic centers:
+    if (hExtC.length === 2) {
+        ret.push(new RLine(hExtC[0], hExtC[1]));
     }
-    else if (ips12o.length===0) {
-        // two intersecting circles with same radius:
-        ips12i = [RVector.getAverage(c1.center, c2.center)];
+    // With all 3 valid external homothetic centers:
+    else if (hExtC.length > 2) {
+        // Get all 3 intermediate distances:
+        d12 = hExtC[0].getDistanceTo2D(hExtC[1]);
+        d13 = hExtC[0].getDistanceTo2D(hExtC[2]);
+        d23 = hExtC[1].getDistanceTo2D(hExtC[2]);
+
+        // Comparing with NaN is always false
+        // Avoid false assumptions:
+        if (!isNumber(d12) || !isNumber(d13) || !isNumber(d23)) {
+            return ret;    // Failed, at least one distance is invalid
+        }
+
+        // Diversify on the longest segment, 1 out 3:
+        if (d13 > d12) {
+            if (RMath.fuzzyCompare(d23, d13)) {
+                ret.push(new RLine(RVector.getAverage(hExtC[0], hExtC[1]), hExtC[2]));
+            }
+            else if (d23 > d13) {
+                ret.push(new RLine(hExtC[1], hExtC[2]));
+            }
+            else {
+                ret.push(new RLine(hExtC[0], hExtC[2]));
+            }
+        }
+        else {
+            if (RMath.fuzzyCompare(d23, d12)) {
+                ret.push(new RLine(RVector.getAverage(hExtC[2], hExtC[0]), hExtC[1]));
+            }
+            else if (d23 > d12) {
+                ret.push(new RLine(hExtC[1], hExtC[2]));
+            }
+            else {
+                ret.push(new RLine(hExtC[0], hExtC[1]));
+            }
+        }
     }
-    // intersection of inner tangents circles 1,3:
-    if (!isNull(tangents13[2]) && !isNull(tangents13[3])) {
-        ips13i = tangents13[2].getIntersectionPoints(tangents13[3], false);
+
+    // Each valid external homothetic centers is crossed a second time
+    // This line emerges from one of the other internal homothetic centers
+    // Process each valid external homothetic center:
+    for (var i=0; i<hExtC.length; i++) {
+        // Get intermediate distances with internal homothetic centers, excluding it's own :
+        p1 = hIntC[(i+1)%3];
+        p2 = hIntC[(i+2)%3];
+        d1 = hExtC[i].getDistanceTo2D(p1);
+        d2 = hExtC[i].getDistanceTo2D(p2);
+
+        // Comparing with NaN is always false
+        // Avoid false assumptions:
+        if (!isNumber(d1) || !isNumber(d2)) {
+            continue;    // Failed, at least one distance is invalid
+        }
+
+        // Diversify on the longest segment:
+        if (RMath.fuzzyCompare(d1, d2)) {
+            ret.push(new RLine(hExtC[i], RVector.getAverage(p1, p2)));
+        }
+        else if (d1 > d2) {
+            ret.push(new RLine(hExtC[i], p1));
+        }
+        else {
+            ret.push(new RLine(hExtC[i], p2));
+        }
     }
-    else if (ips13o.length===0) {
-        // two intersecting circles with same radius:
-        ips13i = [RVector.getAverage(c1.center, c3.center)];
-    }
-    // intersection of inner tangents circles 2,3:
-    if (!isNull(tangents23[2]) && !isNull(tangents23[3])) {
-        ips23i = tangents23[2].getIntersectionPoints(tangents23[3], false);
-    }
-    else if (ips23o.length===0) {
-        // two intersecting circles with same radius:
-        ips23i = [RVector.getAverage(c2.center, c3.center)];
-    }
 
-    // alpha: - for inner / + for outer tangents of circles 2 and 3
-    // beta: - for inner / + for outer tangents of circles 1 and 3
-    // gamma: - for inner / + for outer tangents of circles 1 and 2
-
-    var l;
-
-    // outer, outer, outer:
-    // alpha: +, beta: +, gamma: +
-    l = Apollonius.getLine(ips12o, ips13o, ips23o);
-    ret.push(l);
-
-    // outer, inner, inner:
-    // alpha: -, beta: -, gamma: +
-    l = Apollonius.getLine(ips12o, ips13i, ips23i);
-    ret.push(l);
-
-    // inner, outer, inner:
-    // alpha: -, beta: +, gamma: -
-    l = Apollonius.getLine(ips12i, ips13o, ips23i);
-    ret.push(l);
-
-    // inner, inner, outer:
-    // alpha: +, beta: -, gamma: -
-    l = Apollonius.getLine(ips12i, ips13i, ips23o);
-    ret.push(l);
-
+    // Return the collected results (0-4):
     return ret;
 };
 
@@ -790,41 +904,85 @@ Apollonius.getPowerCenter = function(c1, c2, c3) {
 /**
  * \return Radical axis of circles c1 and c2 with given length.
  */
+//Apollonius.getRadicalAxis = function(c1, c2, length) {
+//    if (isNull(length)) {
+//        length = 100.0;
+//    }
+
+//    var c2c = new RLine(c1.center, c2.center);
+//    var dir = c2c.getAngle() + Math.PI/2;
+//    var center;
+
+//    var ips = c1.getIntersectionPoints(c2, false);
+//    if (ips.length===2) {
+//        center = RVector.getAverage(ips[0], ips[1]);
+//    }
+//    else {
+//        //Apollonius.constructionShapes.push(c2c);
+//        var v = RVector.createPolar(c1.radius, c2c.getAngle() + Math.PI/2);
+//        var p1 = c1.center.operator_add(v);
+//        v = RVector.createPolar(c2.radius, c2c.getAngle() + Math.PI/2);
+//        var p3 = c2.center.operator_add(v);
+//        var p2 = c2c.getMiddlePoint();
+//        var helperCircle = RCircle.createFrom3Points(p1, p2, p3);
+//        //Apollonius.constructionShapes.push(helperCircle);
+//        var ra1 = Apollonius.getRadicalAxis(c1, helperCircle);
+//        //Apollonius.constructionShapes.push(ra1);
+//        var ra2 = Apollonius.getRadicalAxis(c2, helperCircle);
+//        //Apollonius.constructionShapes.push(ra2);
+//        var rips = ra1.getIntersectionPoints(ra2, false);
+//        if (rips.length===0) {
+//            debugger;
+//        }
+//        center = c2c.getClosestPointOnShape(rips[0], false);
+//    }
+
+//    var dirV = RVector.createPolar(length*0.5, dir);
+//    return new RLine(center.operator_subtract(dirV), center.operator_add(dirV));
+//};
+
+/**
+ * \author Original by Andrew Mustun, hardened &amp; simplified by CVH © 2024.
+ * \return Radical axis of circles c1 and c2 with given length or undefined.
+ */
 Apollonius.getRadicalAxis = function(c1, c2, length) {
+    var v;         // An RVector
+    var d, dir;    // Length of v and direction
+    var d1;        // Distance to center of first circle
+    var offset;    // Offset vectors for a line with the given length
+
+    if (!isCircleShape(c1) ||
+        !isCircleShape(c2)) {
+        return undefined;    // Failed, incorrect data
+    }
+
+    if (!c1.center.isValid() || !c2.center.isValid() || !isNumber(c1.radius) || !isNumber(c2.radius)){
+        return undefined;    // Failed, invalid data
+    }
+
     if (isNull(length)) {
         length = 100.0;
     }
 
-    var c2c = new RLine(c1.center, c2.center);
-    var dir = c2c.getAngle() + Math.PI/2;
-    var center;
-
-    var ips = c1.getIntersectionPoints(c2, false);
-    if (ips.length===2) {
-        center = RVector.getAverage(ips[0], ips[1]);
+    // Define a vector from center to center in 2D, its orientation and length, reject concentric:
+    v = c2.center.operator_subtract(c1.center);
+    v.setZ(0.0);
+    d = v.getMagnitude2D();
+    if (d < RS.PointTolerance) {
+        return undefined;    // Failed, concentric circles
     }
-    else {
-        //Apollonius.constructionShapes.push(c2c);
-        var v = RVector.createPolar(c1.radius, c2c.getAngle() + Math.PI/2);
-        var p1 = c1.center.operator_add(v);
-        v = RVector.createPolar(c2.radius, c2c.getAngle() + Math.PI/2);
-        var p3 = c2.center.operator_add(v);
-        var p2 = c2c.getMiddlePoint();
-        var helperCircle = RCircle.createFrom3Points(p1, p2, p3);
-        //Apollonius.constructionShapes.push(helperCircle);
-        var ra1 = Apollonius.getRadicalAxis(c1, helperCircle);
-        //Apollonius.constructionShapes.push(ra1);
-        var ra2 = Apollonius.getRadicalAxis(c2, helperCircle);
-        //Apollonius.constructionShapes.push(ra2);
-        var rips = ra1.getIntersectionPoints(ra2, false);
-        if (rips.length===0) {
-            debugger;
-        }
-        center = c2c.getClosestPointOnShape(rips[0], false);
-    }
+    dir = v.getAngle();
 
-    var dirV = RVector.createPolar(length*0.5, dir);
-    return new RLine(center.operator_subtract(dirV), center.operator_add(dirV));
+    // Define distance to center of first circle:
+    d1 = (d + c1.radius / d * c1.radius - c2.radius / d * c2.radius) / 2;
+
+    // Define position on central axis:
+    v.setMagnitude2D(d1);
+    v.operator_add_assign(c1.center);
+
+    // Define an offset vector, construct and return the radical axis:
+    offset = RVector.createPolar(length / 2, dir + Math.PI/2);
+    return new RLine(v.operator_subtract(offset), v.operator_add(offset));
 };
 
 
@@ -2355,4 +2513,139 @@ Apollonius.getCircles2TR = function(shape1, shape2, radius, pos, candidates, pre
     }
 
     return [ ShapeAlgorithms.getClosestShape(candidates, pos) ];
+};
+
+/**
+ * Returns the homothetic centers of a pair of circle shapes.
+ * \author CVH © 2024.
+ *
+ * \param c1        First RCircle shape.
+ * \param c2        Second RCircle shape.
+ *
+ * \return An array with the external homothetic center and the internal homothetic center.
+ *         Each can be invalid, at least an array with 2 invalid positions.
+ */
+Apollonius.getHomotheticCenters = function(c1, c2) {
+    var ret = [undefined, undefined];    // Tri-state, nothing to start with, both an RVector when finished
+    var center1, center2;    // Circle centers in 2D
+    var radius1, radius2;    // Circle radii in absolute
+    var sameR, sameC;        // Equality flags
+    var zeroR1, zeroR2       // Zero radii flags
+    var pos;                 // An RVector
+    var axis, a;             // Central axis and angle
+    var v1, v2;              // Offset vectors, orthogonal to axis
+    var line;                // Line connecting the offsets of centers
+    var ips;                 // Intersections (0-1) of axis and line
+
+    // Reject incorrect shape types:
+    if (!isCircleShape(c1) ||
+        !isCircleShape(c2)) {
+
+        return [RVector.invalid, RVector.invalid];    // Failed, incorrect data
+    }
+
+    /* # Remark by CVH #
+    With some exceptions any pair of circles has 2 well defined homothetic centers
+
+    Exceptions based on: https://en.wikipedia.org/wiki/Homothetic_center#Special_cases
+    r1 == 0 && r2 != 0 -> ext = cc1 = int
+    r1 != 0 && r2 == 0 -> ext = cc2 = int
+    r1 == 0 && r2 == 0 -> ext = Null = int
+    r1 == r2 && cc1 != cc2 -> ext = @Inf; int = halfway or Null when r1 == r2 == 0
+    r1 == r2 && cc1 == cc2 -> ext = Null; int = cc1=cc2 or Null when r1 == r2 == 0
+    r1 != r2 && cc1 != cc2 -> ext = Math; int = Math or both cc1 when r1 == 0 or both cc2 when r2 == 0
+    r1 != r2 && cc1 == cc2 -> ext = cc1=cc2 = int or both cc1 when r1 == 0 or both cc2 when r2 == 0
+
+    v1 & v2 are best seen as offsets upwards and/or downwards (Wiki figure 9)
+    Both upwards for the external and only one downwards for the internal homothetic center
+    Of interest can be that v1 is always considered to be upwards regarding the center of c1
+    Rotating the vertical plane around the central axis we can do the math in XY using standard QCAD resources
+    */
+
+    // All in 2D, normalized, reject when invalid:
+    center1 = c1.center.get2D();
+    center2 = c2.center.get2D();
+    radius1 = Math.abs(c1.radius);
+    radius2 = Math.abs(c2.radius);
+    if (!center1.isValid() || !center2.isValid() || !isNumber(radius1) || !isNumber(radius1)) {
+        return [RVector.invalid, RVector.invalid];    // Failed, invalid data
+    }
+
+    // Define flags:
+    sameC = center1.equalsFuzzy2D(center2);    // RS.PointTolerance
+    sameR = RMath.fuzzyCompare(radius1, radius2);    // RS.PointTolerance
+    zeroR1 = radius1 < RS.PointTolerance;
+    zeroR2 = radius2 < RS.PointTolerance;
+
+    // Force a zero radius if nearly zero:
+    if (zeroR1) {
+        radius1 = 0.0;
+    }
+    if (zeroR2) {
+        radius2 = 0.0;
+    }
+
+    // Handle limit situations (Math won't solve most of these):
+    if (sameR) {
+        ret[0] = RVector.invalid;    // Infinite or None when cc1 == cc2
+        if (zeroR1 && zeroR2) {
+            ret[1] = RVector.invalid;    // None
+        }
+        else {
+            ret[1] = RVector.getAverage(center1, center2);    // cc1 or cc2 or halfway
+        }
+    }
+    else {
+        if (zeroR1) {
+            ret[0] = center1;    // Both cc1
+            ret[1] = center1;
+        }
+        else if (zeroR2) {
+            ret[0] = center2;    // Both cc2
+            ret[1] = center2;
+        }
+        else if (sameC) {
+            pos = RVector.getAverage(center1, center2);   // cc1 or cc2
+            ret[0] = pos;
+            ret[1] = pos;
+        }
+    }
+
+    // Shared Math for when one is still undefined at this point:
+    if (isNull(ret[0]) || isNull(ret[1])) {
+        axis = new RLine(center1, center2);
+        a = axis.getAngle() + Math.PI/2;
+        v1 = new RVector();
+        v1.setPolar(radius1, a);
+        v2 = new RVector();
+    }
+
+    // When still undefined get the external homothetic center by an intersection:
+    if (isNull(ret[0])) {
+        v2.setPolar(radius2, a);
+        line = new RLine(v1.operator_add(center1), v2.operator_add(center2));
+        ips = axis.getIntersectionPoints(line, false);    // Unlimited
+        if (ips.length === 1 && ips[0].isValid()) {
+            ret[0] = ips[0];
+        }
+        else {
+            ret[0] = RVector.invalid;
+        }
+    }
+
+    // When still undefined get the internal homothetic center by an intersection:
+    if (isNull(ret[1])) {
+        v2.setPolar(radius2, a + Math.PI);
+        line = new RLine(v1.operator_add(center1), v2.operator_add(center2));
+        ips = axis.getIntersectionPoints(line, false);    // Unlimited
+        if (ips.length === 1 && ips[0].isValid()) {
+            ret[1] = ips[0];
+        }
+        else {
+            ret[1] = RVector.invalid;
+        }
+    }
+
+    // Return both homothetic centers:
+    return ret;
 };
