@@ -1192,6 +1192,10 @@ void RDxfImporter::addDimOrdinate(const DL_DimensionData& data,
         d.setMeasuringYAxis();
     }
 
+    if (d.isMeasuringXAxis()) {
+        d.setTextRotation(-M_PI/2);
+    }
+
     QSharedPointer<RDimOrdinateEntity> entity(new RDimOrdinateEntity(document, d));
     importEntity(entity);
 }
