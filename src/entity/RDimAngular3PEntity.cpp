@@ -18,6 +18,7 @@
  */
 #include "RDimAngular3PEntity.h"
 #include "RExporter.h"
+#include "RPluginLoader.h"
 
 RPropertyTypeId RDimAngular3PEntity::PropertyCustom;
 RPropertyTypeId RDimAngular3PEntity::PropertyHandle;
@@ -121,36 +122,41 @@ void RDimAngular3PEntity::init() {
     RDimAngular3PEntity::PropertyLowerTolerance.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyLowerTolerance);
     RDimAngular3PEntity::PropertyMeasuredValue.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyMeasuredValue);
 
-    RDimAngular3PEntity::PropertyDimscale.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimscale);
-    //RDimAngular3PEntity::PropertyDimlfac.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimlfac);
-    RDimAngular3PEntity::PropertyDimtxt.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimtxt);
-    RDimAngular3PEntity::PropertyDimgap.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimgap);
-    RDimAngular3PEntity::PropertyDimasz.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimasz);
-    //RDimAngular3PEntity::PropertyDimdli.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimdli);
-    RDimAngular3PEntity::PropertyDimexe.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimexe);
-    RDimAngular3PEntity::PropertyDimexo.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimexo);
-    RDimAngular3PEntity::PropertyDimtad.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimtad);
-    RDimAngular3PEntity::PropertyDimtih.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimtih);
-    RDimAngular3PEntity::PropertyDimtsz.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimtsz);
-//    RDimAngular3PEntity::PropertyDimlunit.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimlunit);
-//    RDimAngular3PEntity::PropertyDimdec.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimdec);
-    RDimAngular3PEntity::PropertyDimdsep.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimdsep);
-//    RDimAngular3PEntity::PropertyDimzin.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimzin);
-    RDimAngular3PEntity::PropertyDimaunit.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimaunit);
-    RDimAngular3PEntity::PropertyDimadec.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimadec);
-    RDimAngular3PEntity::PropertyDimazin.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimazin);
-    RDimAngular3PEntity::PropertyArchTick.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyArchTick);
-    RDimAngular3PEntity::PropertyDimclrt.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimclrt);
+    if (RPluginLoader::hasPlugin("DWG")) {
+        RDimAngular3PEntity::PropertyDimscale.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimscale);
+        //RDimAngular3PEntity::PropertyDimlfac.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimlfac);
+        RDimAngular3PEntity::PropertyDimtxt.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimtxt);
+        RDimAngular3PEntity::PropertyDimgap.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimgap);
+        RDimAngular3PEntity::PropertyDimasz.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimasz);
+        //RDimAngular3PEntity::PropertyDimdli.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimdli);
+        RDimAngular3PEntity::PropertyDimexe.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimexe);
+        RDimAngular3PEntity::PropertyDimexo.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimexo);
+        RDimAngular3PEntity::PropertyDimtad.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimtad);
+        RDimAngular3PEntity::PropertyDimtih.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimtih);
+        RDimAngular3PEntity::PropertyDimtsz.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimtsz);
+    //    RDimAngular3PEntity::PropertyDimlunit.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimlunit);
+    //    RDimAngular3PEntity::PropertyDimdec.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimdec);
+        RDimAngular3PEntity::PropertyDimdsep.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimdsep);
+    //    RDimAngular3PEntity::PropertyDimzin.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimzin);
+        RDimAngular3PEntity::PropertyDimaunit.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimaunit);
+        RDimAngular3PEntity::PropertyDimadec.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimadec);
+        RDimAngular3PEntity::PropertyDimazin.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimazin);
+        RDimAngular3PEntity::PropertyArchTick.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyArchTick);
+        RDimAngular3PEntity::PropertyDimclrt.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimclrt);
+    }
 
     //RDimAngular3PEntity::PropertyDimScale.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimScale);
     RDimAngular3PEntity::PropertyDimBlockName.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimBlockName);
     RDimAngular3PEntity::PropertyAutoTextPos.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyAutoTextPos);
-    RDimAngular3PEntity::PropertyFontName.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyFontName);
-    RDimAngular3PEntity::PropertyArrow1Flipped.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyArrow1Flipped);
-    RDimAngular3PEntity::PropertyArrow2Flipped.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyArrow2Flipped);
 
-    RDimAngular3PEntity::PropertyExtLineFix.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyExtLineFix);
-    RDimAngular3PEntity::PropertyExtLineFixLength.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyExtLineFixLength);
+    if (RPluginLoader::hasPlugin("DWG")) {
+        RDimAngular3PEntity::PropertyFontName.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyFontName);
+        RDimAngular3PEntity::PropertyArrow1Flipped.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyArrow1Flipped);
+        RDimAngular3PEntity::PropertyArrow2Flipped.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyArrow2Flipped);
+
+        RDimAngular3PEntity::PropertyExtLineFix.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyExtLineFix);
+        RDimAngular3PEntity::PropertyExtLineFixLength.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyExtLineFixLength);
+    }
 
 //    RDimAngular3PEntity::PropertyCenterX.generateId(RDimAngular3PEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "X"), true, RPropertyAttributes::Geometry);
 //    RDimAngular3PEntity::PropertyCenterY.generateId(RDimAngular3PEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Y"), true, RPropertyAttributes::Geometry);

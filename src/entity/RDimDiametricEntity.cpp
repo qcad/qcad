@@ -18,6 +18,7 @@
  */
 #include "RDimDiametricEntity.h"
 #include "RExporter.h"
+#include "RPluginLoader.h"
 
 RPropertyTypeId RDimDiametricEntity::PropertyCustom;
 RPropertyTypeId RDimDiametricEntity::PropertyHandle;
@@ -114,37 +115,42 @@ void RDimDiametricEntity::init() {
     RDimDiametricEntity::PropertyLowerTolerance.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyLowerTolerance);
     RDimDiametricEntity::PropertyMeasuredValue.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyMeasuredValue);
 
-    RDimDiametricEntity::PropertyDimscale.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimscale);
-    RDimDiametricEntity::PropertyDimlfac.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimlfac);
-    RDimDiametricEntity::PropertyDimtxt.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimtxt);
-    RDimDiametricEntity::PropertyDimgap.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimgap);
-    RDimDiametricEntity::PropertyDimasz.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimasz);
-    //RDimDiametricEntity::PropertyDimdli.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimdli);
-    RDimDiametricEntity::PropertyDimexe.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimexe);
-    RDimDiametricEntity::PropertyDimexo.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimexo);
-    RDimDiametricEntity::PropertyDimtad.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimtad);
-    RDimDiametricEntity::PropertyDimtih.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimtih);
-    RDimDiametricEntity::PropertyDimtsz.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimtsz);
-    RDimDiametricEntity::PropertyDimlunit.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimlunit);
-    RDimDiametricEntity::PropertyDimdec.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimdec);
-    RDimDiametricEntity::PropertyDimdsep.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimdsep);
-    RDimDiametricEntity::PropertyDimzin.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimzin);
-//    RDimDiametricEntity::PropertyDimaunit.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimaunit);
-//    RDimDiametricEntity::PropertyDimadec.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimadec);
-//    RDimDiametricEntity::PropertyDimazin.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimazin);
-    RDimDiametricEntity::PropertyArchTick.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyArchTick);
-    RDimDiametricEntity::PropertyDimclrt.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimclrt);
+    if (RPluginLoader::hasPlugin("DWG")) {
+        RDimDiametricEntity::PropertyDimscale.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimscale);
+        RDimDiametricEntity::PropertyDimlfac.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimlfac);
+        RDimDiametricEntity::PropertyDimtxt.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimtxt);
+        RDimDiametricEntity::PropertyDimgap.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimgap);
+        RDimDiametricEntity::PropertyDimasz.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimasz);
+        //RDimDiametricEntity::PropertyDimdli.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimdli);
+        RDimDiametricEntity::PropertyDimexe.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimexe);
+        RDimDiametricEntity::PropertyDimexo.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimexo);
+        RDimDiametricEntity::PropertyDimtad.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimtad);
+        RDimDiametricEntity::PropertyDimtih.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimtih);
+        RDimDiametricEntity::PropertyDimtsz.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimtsz);
+        RDimDiametricEntity::PropertyDimlunit.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimlunit);
+        RDimDiametricEntity::PropertyDimdec.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimdec);
+        RDimDiametricEntity::PropertyDimdsep.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimdsep);
+        RDimDiametricEntity::PropertyDimzin.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimzin);
+    //    RDimDiametricEntity::PropertyDimaunit.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimaunit);
+    //    RDimDiametricEntity::PropertyDimadec.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimadec);
+    //    RDimDiametricEntity::PropertyDimazin.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimazin);
+        RDimDiametricEntity::PropertyArchTick.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyArchTick);
+        RDimDiametricEntity::PropertyDimclrt.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimclrt);
+    }
 
 //    RDimDiametricEntity::PropertyLinearFactor.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyLinearFactor);
 //    RDimDiametricEntity::PropertyDimScale.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimScale);
     RDimDiametricEntity::PropertyDimBlockName.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyDimBlockName);
     RDimDiametricEntity::PropertyAutoTextPos.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyAutoTextPos);
-    RDimDiametricEntity::PropertyFontName.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyFontName);
-    RDimDiametricEntity::PropertyArrow1Flipped.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyArrow1Flipped);
-    RDimDiametricEntity::PropertyArrow2Flipped.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyArrow2Flipped);
 
-    RDimDiametricEntity::PropertyExtLineFix.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyExtLineFix);
-    RDimDiametricEntity::PropertyExtLineFixLength.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyExtLineFixLength);
+    if (RPluginLoader::hasPlugin("DWG")) {
+        RDimDiametricEntity::PropertyFontName.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyFontName);
+        RDimDiametricEntity::PropertyArrow1Flipped.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyArrow1Flipped);
+        RDimDiametricEntity::PropertyArrow2Flipped.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyArrow2Flipped);
+
+        RDimDiametricEntity::PropertyExtLineFix.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyExtLineFix);
+        RDimDiametricEntity::PropertyExtLineFixLength.generateId(RDimDiametricEntity::getRtti(), RDimensionEntity::PropertyExtLineFixLength);
+    }
 
     RDimDiametricEntity::PropertyChordPointX.generateId(RDimDiametricEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Chord Point"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
     RDimDiametricEntity::PropertyChordPointY.generateId(RDimDiametricEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Chord Point"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);

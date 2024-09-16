@@ -18,6 +18,7 @@
  */
 #include "RDimRotatedEntity.h"
 #include "RExporter.h"
+#include "RPluginLoader.h"
 
 RPropertyTypeId RDimRotatedEntity::PropertyCustom;
 RPropertyTypeId RDimRotatedEntity::PropertyHandle;
@@ -120,37 +121,42 @@ void RDimRotatedEntity::init() {
 
     //RDimRotatedEntity::PropertyDimtxt.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimtxt);
 
-    RDimRotatedEntity::PropertyDimscale.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimscale);
-    RDimRotatedEntity::PropertyDimlfac.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimlfac);
-    RDimRotatedEntity::PropertyDimtxt.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimtxt);
-    RDimRotatedEntity::PropertyDimgap.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimgap);
-    RDimRotatedEntity::PropertyDimasz.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimasz);
-    //RDimRotatedEntity::PropertyDimdli.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimdli);
-    RDimRotatedEntity::PropertyDimexe.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimexe);
-    RDimRotatedEntity::PropertyDimexo.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimexo);
-    RDimRotatedEntity::PropertyDimtad.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimtad);
-    RDimRotatedEntity::PropertyDimtih.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimtih);
-    RDimRotatedEntity::PropertyDimtsz.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimtsz);
-    RDimRotatedEntity::PropertyDimlunit.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimlunit);
-    RDimRotatedEntity::PropertyDimdec.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimdec);
-    RDimRotatedEntity::PropertyDimdsep.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimdsep);
-    RDimRotatedEntity::PropertyDimzin.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimzin);
-//    RDimRotatedEntity::PropertyDimaunit.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimaunit);
-//    RDimRotatedEntity::PropertyDimadec.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimadec);
-//    RDimRotatedEntity::PropertyDimazin.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimazin);
-    RDimRotatedEntity::PropertyArchTick.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyArchTick);
-    RDimRotatedEntity::PropertyDimclrt.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimclrt);
+    if (RPluginLoader::hasPlugin("DWG")) {
+        RDimRotatedEntity::PropertyDimscale.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimscale);
+        RDimRotatedEntity::PropertyDimlfac.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimlfac);
+        RDimRotatedEntity::PropertyDimtxt.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimtxt);
+        RDimRotatedEntity::PropertyDimgap.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimgap);
+        RDimRotatedEntity::PropertyDimasz.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimasz);
+        //RDimRotatedEntity::PropertyDimdli.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimdli);
+        RDimRotatedEntity::PropertyDimexe.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimexe);
+        RDimRotatedEntity::PropertyDimexo.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimexo);
+        RDimRotatedEntity::PropertyDimtad.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimtad);
+        RDimRotatedEntity::PropertyDimtih.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimtih);
+        RDimRotatedEntity::PropertyDimtsz.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimtsz);
+        RDimRotatedEntity::PropertyDimlunit.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimlunit);
+        RDimRotatedEntity::PropertyDimdec.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimdec);
+        RDimRotatedEntity::PropertyDimdsep.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimdsep);
+        RDimRotatedEntity::PropertyDimzin.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimzin);
+    //    RDimRotatedEntity::PropertyDimaunit.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimaunit);
+    //    RDimRotatedEntity::PropertyDimadec.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimadec);
+    //    RDimRotatedEntity::PropertyDimazin.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimazin);
+        RDimRotatedEntity::PropertyArchTick.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyArchTick);
+        RDimRotatedEntity::PropertyDimclrt.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimclrt);
+    }
 
 //    RDimRotatedEntity::PropertyLinearFactor.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyLinearFactor);
 //    RDimRotatedEntity::PropertyDimScale.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimScale);
     RDimRotatedEntity::PropertyDimBlockName.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyDimBlockName);
     RDimRotatedEntity::PropertyAutoTextPos.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyAutoTextPos);
-    RDimRotatedEntity::PropertyFontName.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyFontName);
-    RDimRotatedEntity::PropertyArrow1Flipped.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyArrow1Flipped);
-    RDimRotatedEntity::PropertyArrow2Flipped.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyArrow2Flipped);
 
-    RDimRotatedEntity::PropertyExtLineFix.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyExtLineFix);
-    RDimRotatedEntity::PropertyExtLineFixLength.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyExtLineFixLength);
+    if (RPluginLoader::hasPlugin("DWG")) {
+        RDimRotatedEntity::PropertyFontName.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyFontName);
+        RDimRotatedEntity::PropertyArrow1Flipped.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyArrow1Flipped);
+        RDimRotatedEntity::PropertyArrow2Flipped.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyArrow2Flipped);
+
+        RDimRotatedEntity::PropertyExtLineFix.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyExtLineFix);
+        RDimRotatedEntity::PropertyExtLineFixLength.generateId(RDimRotatedEntity::getRtti(), RDimensionEntity::PropertyExtLineFixLength);
+    }
 
     RDimRotatedEntity::PropertyDimensionLinePosX.generateId(RDimRotatedEntity::getRtti(), RDimLinearEntity::PropertyDimensionLinePosX);
     RDimRotatedEntity::PropertyDimensionLinePosY.generateId(RDimRotatedEntity::getRtti(), RDimLinearEntity::PropertyDimensionLinePosY);

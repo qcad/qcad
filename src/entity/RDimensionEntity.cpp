@@ -121,16 +121,17 @@ void RDimensionEntity::init() {
     RDimensionEntity::PropertyMiddleOfTextX.generateId(RDimensionEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Text Position"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
     RDimensionEntity::PropertyMiddleOfTextY.generateId(RDimensionEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Text Position"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
     RDimensionEntity::PropertyMiddleOfTextZ.generateId(RDimensionEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Text Position"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
+
     if (RPluginLoader::hasPlugin("DWG")) {
         RDimensionEntity::PropertyTextRotation.generateId(RDimensionEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Text Rotation"), false, RPropertyAttributes::Geometry);
-    }
-//    RDimensionEntity::PropertyFontName.generateId(RDimensionEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Font"));
-//    RDimensionEntity::PropertyTextColor.generateId(RDimensionEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Text Color"));
-    RDimensionEntity::PropertyArrow1Flipped.generateId(RDimensionEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Flip First Arrow"));
-    RDimensionEntity::PropertyArrow2Flipped.generateId(RDimensionEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Flip Second Arrow"));
+    //    RDimensionEntity::PropertyFontName.generateId(RDimensionEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Font"));
+    //    RDimensionEntity::PropertyTextColor.generateId(RDimensionEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Text Color"));
+        RDimensionEntity::PropertyArrow1Flipped.generateId(RDimensionEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Flip First Arrow"));
+        RDimensionEntity::PropertyArrow2Flipped.generateId(RDimensionEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Flip Second Arrow"));
 
-    RDimensionEntity::PropertyExtLineFix.generateId(RDimensionEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Fixed Extension Line"));
-    RDimensionEntity::PropertyExtLineFixLength.generateId(RDimensionEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Extension Line Length"));
+        RDimensionEntity::PropertyExtLineFix.generateId(RDimensionEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Fixed Extension Line"));
+        RDimensionEntity::PropertyExtLineFixLength.generateId(RDimensionEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Extension Line Length"));
+    }
 
 //    RDimensionEntity::PropertyHeight.generateId(RDimensionEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Height"));
 //    RDimensionEntity::PropertyLineSpacingFactor.generateId(RDimensionEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Line Spacing"));
@@ -227,9 +228,9 @@ bool RDimensionEntity::setProperty(RPropertyTypeId propertyTypeId,
 
         ret = ret || RObject::setMember(getData().extLineFix, value, PropertyExtLineFix == propertyTypeId);
         ret = ret || RObject::setMember(getData().extLineFixLength, value, PropertyExtLineFixLength == propertyTypeId);
+        ret = ret || RObject::setMember(getData().textRotation, value, PropertyTextRotation == propertyTypeId);
     }
 //    ret = ret || RObject::setMember(getData().textHeight, value, PropertyHeight == propertyTypeId);
-    ret = ret || RObject::setMember(getData().textRotation, value, PropertyTextRotation == propertyTypeId);
 //    ret = ret || RObject::setMember(getData().lineSpacingFactor, value, PropertyLineSpacingFactor == propertyTypeId);
 //    ret = ret || RObject::setMember((int&)getData().horizontalAlignment, value.value<int>(), PropertyHAlign == propertyTypeId);
 //    ret = ret || RObject::setMember((int&)getData().verticalAlignment, value.value<int>(), PropertyVAlign == propertyTypeId);

@@ -18,6 +18,7 @@
  */
 #include "RDimOrdinateEntity.h"
 #include "RExporter.h"
+#include "RPluginLoader.h"
 
 RPropertyTypeId RDimOrdinateEntity::PropertyCustom;
 RPropertyTypeId RDimOrdinateEntity::PropertyHandle;
@@ -97,16 +98,19 @@ void RDimOrdinateEntity::init() {
     RDimOrdinateEntity::PropertyUpperTolerance.generateId(RDimOrdinateEntity::getRtti(), RDimensionEntity::PropertyUpperTolerance);
     RDimOrdinateEntity::PropertyLowerTolerance.generateId(RDimOrdinateEntity::getRtti(), RDimensionEntity::PropertyLowerTolerance);
     RDimOrdinateEntity::PropertyMeasuredValue.generateId(RDimOrdinateEntity::getRtti(), RDimensionEntity::PropertyMeasuredValue);
-    RDimOrdinateEntity::PropertyFontName.generateId(RDimOrdinateEntity::getRtti(), RDimensionEntity::PropertyFontName);
-    RDimOrdinateEntity::PropertyTextRotation.generateId(RDimOrdinateEntity::getRtti(), RDimensionEntity::PropertyTextRotation);
-    //RDimOrdinateEntity::PropertyArrow1Flipped.generateId(RDimOrdinateEntity::getRtti(), RDimensionEntity::PropertyArrow1Flipped);
-    //RDimOrdinateEntity::PropertyArrow2Flipped.generateId(RDimOrdinateEntity::getRtti(), RDimensionEntity::PropertyArrow2Flipped);
 
-    //RDimOrdinateEntity::PropertyExtLineFix.generateId(RDimOrdinateEntity::getRtti(), RDimensionEntity::PropertyExtLineFix);
-    //RDimOrdinateEntity::PropertyExtLineFixLength.generateId(RDimOrdinateEntity::getRtti(), RDimensionEntity::PropertyExtLineFixLength);
+    if (RPluginLoader::hasPlugin("DWG")) {
+        RDimOrdinateEntity::PropertyFontName.generateId(RDimOrdinateEntity::getRtti(), RDimensionEntity::PropertyFontName);
+        RDimOrdinateEntity::PropertyTextRotation.generateId(RDimOrdinateEntity::getRtti(), RDimensionEntity::PropertyTextRotation);
+        //RDimOrdinateEntity::PropertyArrow1Flipped.generateId(RDimOrdinateEntity::getRtti(), RDimensionEntity::PropertyArrow1Flipped);
+        //RDimOrdinateEntity::PropertyArrow2Flipped.generateId(RDimOrdinateEntity::getRtti(), RDimensionEntity::PropertyArrow2Flipped);
 
-    RDimOrdinateEntity::PropertyDimscale.generateId(RDimOrdinateEntity::getRtti(), RDimensionEntity::PropertyDimscale);
-    RDimOrdinateEntity::PropertyDimlfac.generateId(RDimOrdinateEntity::getRtti(), RDimensionEntity::PropertyDimlfac);
+        //RDimOrdinateEntity::PropertyExtLineFix.generateId(RDimOrdinateEntity::getRtti(), RDimensionEntity::PropertyExtLineFix);
+        //RDimOrdinateEntity::PropertyExtLineFixLength.generateId(RDimOrdinateEntity::getRtti(), RDimensionEntity::PropertyExtLineFixLength);
+
+        RDimOrdinateEntity::PropertyDimscale.generateId(RDimOrdinateEntity::getRtti(), RDimensionEntity::PropertyDimscale);
+        RDimOrdinateEntity::PropertyDimlfac.generateId(RDimOrdinateEntity::getRtti(), RDimensionEntity::PropertyDimlfac);
+    }
 
     RDimOrdinateEntity::PropertyDimBlockName.generateId(RDimOrdinateEntity::getRtti(), RDimensionEntity::PropertyDimBlockName);
 

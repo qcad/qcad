@@ -18,6 +18,7 @@
  */
 #include "RDimAngular2LEntity.h"
 #include "RExporter.h"
+#include "RPluginLoader.h"
 
 RPropertyTypeId RDimAngular2LEntity::PropertyCustom;
 RPropertyTypeId RDimAngular2LEntity::PropertyHandle;
@@ -125,36 +126,41 @@ void RDimAngular2LEntity::init() {
     RDimAngular2LEntity::PropertyLowerTolerance.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyLowerTolerance);
     RDimAngular2LEntity::PropertyMeasuredValue.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyMeasuredValue);
 
-    RDimAngular2LEntity::PropertyDimscale.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimscale);
-    //RDimAngular2LEntity::PropertyDimlfac.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimlfac);
-    RDimAngular2LEntity::PropertyDimtxt.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimtxt);
-    RDimAngular2LEntity::PropertyDimgap.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimgap);
-    RDimAngular2LEntity::PropertyDimasz.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimasz);
-    //RDimAngular2LEntity::PropertyDimdli.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimdli);
-    RDimAngular2LEntity::PropertyDimexe.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimexe);
-    RDimAngular2LEntity::PropertyDimexo.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimexo);
-    RDimAngular2LEntity::PropertyDimtad.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimtad);
-    RDimAngular2LEntity::PropertyDimtih.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimtih);
-    RDimAngular2LEntity::PropertyDimtsz.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimtsz);
-//    RDimAngular2LEntity::PropertyDimlunit.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimlunit);
-//    RDimAngular2LEntity::PropertyDimdec.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimdec);
-    RDimAngular2LEntity::PropertyDimdsep.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimdsep);
-//    RDimAngular2LEntity::PropertyDimzin.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimzin);
-    RDimAngular2LEntity::PropertyDimaunit.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimaunit);
-    RDimAngular2LEntity::PropertyDimadec.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimadec);
-    RDimAngular2LEntity::PropertyDimazin.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimazin);
-    RDimAngular2LEntity::PropertyArchTick.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyArchTick);
-    RDimAngular2LEntity::PropertyDimclrt.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimclrt);
+    if (RPluginLoader::hasPlugin("DWG")) {
+        RDimAngular2LEntity::PropertyDimscale.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimscale);
+        //RDimAngular2LEntity::PropertyDimlfac.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimlfac);
+        RDimAngular2LEntity::PropertyDimtxt.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimtxt);
+        RDimAngular2LEntity::PropertyDimgap.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimgap);
+        RDimAngular2LEntity::PropertyDimasz.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimasz);
+        //RDimAngular2LEntity::PropertyDimdli.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimdli);
+        RDimAngular2LEntity::PropertyDimexe.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimexe);
+        RDimAngular2LEntity::PropertyDimexo.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimexo);
+        RDimAngular2LEntity::PropertyDimtad.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimtad);
+        RDimAngular2LEntity::PropertyDimtih.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimtih);
+        RDimAngular2LEntity::PropertyDimtsz.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimtsz);
+    //    RDimAngular2LEntity::PropertyDimlunit.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimlunit);
+    //    RDimAngular2LEntity::PropertyDimdec.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimdec);
+        RDimAngular2LEntity::PropertyDimdsep.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimdsep);
+    //    RDimAngular2LEntity::PropertyDimzin.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimzin);
+        RDimAngular2LEntity::PropertyDimaunit.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimaunit);
+        RDimAngular2LEntity::PropertyDimadec.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimadec);
+        RDimAngular2LEntity::PropertyDimazin.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimazin);
+        RDimAngular2LEntity::PropertyArchTick.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyArchTick);
+        RDimAngular2LEntity::PropertyDimclrt.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimclrt);
+    }
 
     //RDimAngular2LEntity::PropertyDimScale.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimScale);
     RDimAngular2LEntity::PropertyDimBlockName.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimBlockName);
     RDimAngular2LEntity::PropertyAutoTextPos.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyAutoTextPos);
-    RDimAngular2LEntity::PropertyFontName.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyFontName);
-    RDimAngular2LEntity::PropertyArrow1Flipped.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyArrow1Flipped);
-    RDimAngular2LEntity::PropertyArrow2Flipped.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyArrow2Flipped);
 
-    RDimAngular2LEntity::PropertyExtLineFix.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyExtLineFix);
-    RDimAngular2LEntity::PropertyExtLineFixLength.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyExtLineFixLength);
+    if (RPluginLoader::hasPlugin("DWG")) {
+        RDimAngular2LEntity::PropertyFontName.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyFontName);
+        RDimAngular2LEntity::PropertyArrow1Flipped.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyArrow1Flipped);
+        RDimAngular2LEntity::PropertyArrow2Flipped.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyArrow2Flipped);
+
+        RDimAngular2LEntity::PropertyExtLineFix.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyExtLineFix);
+        RDimAngular2LEntity::PropertyExtLineFixLength.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyExtLineFixLength);
+    }
 
     RDimAngular2LEntity::PropertyExtensionLine1StartX.generateId(RDimAngular2LEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Line 1 Start"), QT_TRANSLATE_NOOP("REntity", "X"), true, RPropertyAttributes::Geometry);
     RDimAngular2LEntity::PropertyExtensionLine1StartY.generateId(RDimAngular2LEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Line 1 Start"), QT_TRANSLATE_NOOP("REntity", "Y"), true, RPropertyAttributes::Geometry);
