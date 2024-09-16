@@ -8604,7 +8604,7 @@ is already in the list.</source>
     <message>
         <location line="+106"/>
         <source>No solution</source>
-      <translation type="unfinished">解決策なし</translation>
+        <translation type="unfinished">解決策なし</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxisInit.js" line="+2"/>
@@ -14574,4 +14574,3 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
-

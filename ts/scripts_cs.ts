@@ -8612,7 +8612,7 @@ již v seznamu je.</translation>
     <message>
         <location line="+106"/>
         <source>No solution</source>
-      <translation type="unfinished">Žádné řešení</translation>
+        <translation type="unfinished">Žádné řešení</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.ui" line="+17"/>
@@ -14592,4 +14592,3 @@ již v seznamu je.</translation>
     </message>
 </context>
 </TS>
-
