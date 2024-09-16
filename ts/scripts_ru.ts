@@ -412,7 +412,7 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2296"/>
+        <location filename="../scripts/Apollonius.js" line="+2454"/>
         <source>Invalid radius</source>
         <translation>Недопустимый радиус</translation>
     </message>
@@ -8612,6 +8612,11 @@ is already in the list.</source>
         <translation>Вторая дуга или окружность</translation>
     </message>
     <message>
+        <location line="+106"/>
+        <source>No solution</source>
+        <translation type="unfinished">Нет решения</translation>
+    </message>
+    <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.ui" line="+17"/>
         <source>Length:</source>
         <translation>Длина:</translation>
@@ -14589,3 +14594,4 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
+

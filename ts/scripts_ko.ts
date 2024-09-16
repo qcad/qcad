@@ -412,7 +412,7 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2296"/>
+        <location filename="../scripts/Apollonius.js" line="+2454"/>
         <source>Invalid radius</source>
         <translation type="unfinished">잘못된 반경</translation>
     </message>
@@ -8602,6 +8602,11 @@ is already in the list.</source>
         <translation type="unfinished">두 번째 호 또는 원</translation>
     </message>
     <message>
+        <location line="+106"/>
+        <source>No solution</source>
+        <translation type="unfinished">솔루션 없음</translation>
+    </message>
+    <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.ui" line="+17"/>
         <source>Length:</source>
         <translation type="unfinished">길이:</translation>
@@ -14569,3 +14574,4 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
+

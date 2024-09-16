@@ -412,7 +412,7 @@ agar perubahan preferensi dapat diterapkan.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2296"/>
+        <location filename="../scripts/Apollonius.js" line="+2454"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Radius tidak valid</translation>
     </message>
@@ -8602,6 +8602,11 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Busur atau lingkaran kedua</translation>
     </message>
     <message>
+        <location line="+106"/>
+        <source>No solution</source>
+        <translation type="unfinished">Tidak ada solusi</translation>
+    </message>
+    <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.ui" line="+17"/>
         <source>Length:</source>
         <translation type="unfinished">Panjang:</translation>
@@ -14569,3 +14574,4 @@ sudah ada dalam daftar.</translation>
     </message>
 </context>
 </TS>
+

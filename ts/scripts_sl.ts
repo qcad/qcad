@@ -412,7 +412,7 @@ da bodo spremembe začele delovat.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2296"/>
+        <location filename="../scripts/Apollonius.js" line="+2454"/>
         <source>Invalid radius</source>
         <translation>Neveljavni polmer</translation>
     </message>
@@ -8613,6 +8613,11 @@ je že na seznamu.</translation>
         <translation>Drugi krog ali lok</translation>
     </message>
     <message>
+        <location line="+106"/>
+        <source>No solution</source>
+        <translation type="unfinished">Ni rešitve</translation>
+    </message>
+    <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxisInit.js" line="+2"/>
         <source>Radical Axis of 2 Circles</source>
         <translation>Korenska os dveh krogov</translation>
@@ -14595,3 +14600,4 @@ je že na seznamu.</translation>
     </message>
 </context>
 </TS>
+

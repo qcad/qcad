@@ -412,7 +412,7 @@ nuostatos pakeitimai įsigaliotų.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2296"/>
+        <location filename="../scripts/Apollonius.js" line="+2454"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Neteisingas spindulys</translation>
     </message>
@@ -8609,6 +8609,11 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Antrasis lankas arba apskritimas</translation>
     </message>
     <message>
+        <location line="+106"/>
+        <source>No solution</source>
+        <translation type="unfinished">Nėra sprendimo</translation>
+    </message>
+    <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxisInit.js" line="+2"/>
         <source>Radical Axis of 2 Circles</source>
         <translation type="unfinished">2 apskritimų radikalioji ašis</translation>
@@ -14586,3 +14591,4 @@ jau yra sąraše.</translation>
     </message>
 </context>
 </TS>
+

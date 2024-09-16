@@ -412,7 +412,7 @@ lai stātos spēkā preferenču izmaiņas.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2296"/>
+        <location filename="../scripts/Apollonius.js" line="+2454"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Nederīgs rādiuss</translation>
     </message>
@@ -8609,6 +8609,11 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Otrais loks vai aplis</translation>
     </message>
     <message>
+        <location line="+106"/>
+        <source>No solution</source>
+        <translation type="unfinished">Nav risinājuma</translation>
+    </message>
+    <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.ui" line="+17"/>
         <source>Length:</source>
         <translation type="unfinished">Garums:</translation>
@@ -14586,3 +14591,4 @@ jau ir sarakstā.</translation>
     </message>
 </context>
 </TS>
+

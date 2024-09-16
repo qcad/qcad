@@ -412,7 +412,7 @@ modificările preferințelor să intre în vigoare.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2296"/>
+        <location filename="../scripts/Apollonius.js" line="+2454"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Raza invalidă</translation>
     </message>
@@ -8609,6 +8609,11 @@ este deja în listă.</translation>
         <translation type="unfinished">Al doilea arc sau cerc</translation>
     </message>
     <message>
+        <location line="+106"/>
+        <source>No solution</source>
+        <translation type="unfinished">Nici o soluție</translation>
+    </message>
+    <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.ui" line="+17"/>
         <source>Length:</source>
         <translation type="unfinished">Lungime:</translation>
@@ -14586,3 +14591,4 @@ este deja în listă.</translation>
     </message>
 </context>
 </TS>
+

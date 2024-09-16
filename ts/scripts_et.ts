@@ -293,7 +293,6 @@
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
-        <translation></translation>
     </message>
     <message>
         <location line="+86"/>
@@ -411,7 +410,7 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2296"/>
+        <location filename="../scripts/Apollonius.js" line="+2454"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Vale raadius</translation>
     </message>
@@ -918,7 +917,6 @@ Do you wish to recover it/them?</source>
         <location line="+1"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
-        <translation></translation>
     </message>
     <message>
         <location line="+25"/>
@@ -3217,7 +3215,6 @@ Do you wish to recover it?</source>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
-        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -8601,6 +8598,11 @@ is already in the list.</source>
         <translation type="unfinished">Teine kaar või ring</translation>
     </message>
     <message>
+        <location line="+106"/>
+        <source>No solution</source>
+        <translation type="unfinished">Lahendus puudub</translation>
+    </message>
+    <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.ui" line="+17"/>
         <source>Length:</source>
         <translation type="unfinished">Pikkus:</translation>
@@ -11433,7 +11435,6 @@ is already in the list.</source>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
-        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
@@ -12661,7 +12662,6 @@ is already in the list.</source>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
-        <translation></translation>
     </message>
     <message>
         <location line="+21"/>
@@ -14571,3 +14571,4 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
+

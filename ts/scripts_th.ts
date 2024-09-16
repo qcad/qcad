@@ -411,7 +411,7 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2296"/>
+        <location filename="../scripts/Apollonius.js" line="+2454"/>
         <source>Invalid radius</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8594,6 +8594,11 @@ is already in the list.</source>
     <message>
         <location line="+9"/>
         <source>Second arc or circle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+106"/>
+        <source>No solution</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

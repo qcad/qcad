@@ -412,7 +412,7 @@ aby se změny předvoleb projevily.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2296"/>
+        <location filename="../scripts/Apollonius.js" line="+2454"/>
         <source>Invalid radius</source>
         <translation>Neplatný poloměr</translation>
     </message>
@@ -8610,6 +8610,11 @@ již v seznamu je.</translation>
         <translation>Druhý oblouk nebo kružnice</translation>
     </message>
     <message>
+        <location line="+106"/>
+        <source>No solution</source>
+      <translation type="unfinished">Žádné řešení</translation>
+    </message>
+    <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.ui" line="+17"/>
         <source>Length:</source>
         <translation>Délka:</translation>
@@ -14587,3 +14592,4 @@ již v seznamu je.</translation>
     </message>
 </context>
 </TS>
+

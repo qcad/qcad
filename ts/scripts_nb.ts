@@ -412,7 +412,7 @@ preferanseendringene skal tre i kraft.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2296"/>
+        <location filename="../scripts/Apollonius.js" line="+2454"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Ugyldig radius</translation>
     </message>
@@ -8607,6 +8607,11 @@ er allerede i listen.</translation>
         <translation type="unfinished">Andre bue eller sirkel</translation>
     </message>
     <message>
+        <location line="+106"/>
+        <source>No solution</source>
+        <translation type="unfinished">Ingen løsning</translation>
+    </message>
+    <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.ui" line="+17"/>
         <source>Length:</source>
         <translation type="unfinished">Lengde:</translation>
@@ -14579,3 +14584,4 @@ er allerede i listen.</translation>
     </message>
 </context>
 </TS>
+

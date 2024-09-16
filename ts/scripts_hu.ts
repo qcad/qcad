@@ -412,7 +412,7 @@ a beállítások módosításai hatályba lépjenek.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2296"/>
+        <location filename="../scripts/Apollonius.js" line="+2454"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Érvénytelen sugár</translation>
     </message>
@@ -8602,6 +8602,11 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Második ív vagy kör</translation>
     </message>
     <message>
+        <location line="+106"/>
+        <source>No solution</source>
+        <translation type="unfinished">Nincs megoldás</translation>
+    </message>
+    <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxisInit.js" line="+2"/>
         <source>Radical Axis of 2 Circles</source>
         <translation type="unfinished">2 kör radikális tengelye</translation>
@@ -14569,3 +14574,4 @@ már szerepel a listában.</translation>
     </message>
 </context>
 </TS>
+

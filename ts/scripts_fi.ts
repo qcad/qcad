@@ -412,7 +412,7 @@ asetuksien muutokset astuvat voimaan.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2296"/>
+        <location filename="../scripts/Apollonius.js" line="+2454"/>
         <source>Invalid radius</source>
         <translation>Virheellinen säde</translation>
     </message>
@@ -8605,6 +8605,11 @@ on jo luettelossa.</translation>
         <location line="+9"/>
         <source>Second arc or circle</source>
         <translation>Toinen kaari tai ympyrä</translation>
+    </message>
+    <message>
+        <location line="+106"/>
+        <source>No solution</source>
+        <translation>Ei ratkaisua</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxisInit.js" line="+2"/>

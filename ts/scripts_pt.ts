@@ -412,7 +412,7 @@ para que as mudanças de preferências entrem em vigor.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2296"/>
+        <location filename="../scripts/Apollonius.js" line="+2454"/>
         <source>Invalid radius</source>
         <translation>Raio inválido</translation>
     </message>
@@ -8605,6 +8605,11 @@ já se encontra na lista.</translation>
         <location line="+9"/>
         <source>Second arc or circle</source>
         <translation>Segundo arco ou círculo</translation>
+    </message>
+    <message>
+        <location line="+106"/>
+        <source>No solution</source>
+        <translation>Nenhuma solução</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.ui" line="+17"/>

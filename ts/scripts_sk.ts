@@ -412,7 +412,7 @@ musíte znovu spustiť QCAD.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2296"/>
+        <location filename="../scripts/Apollonius.js" line="+2454"/>
         <source>Invalid radius</source>
         <translation>Neplatný polomer</translation>
     </message>
@@ -8617,6 +8617,11 @@ už existuje v zozname.</translation>
         <translation>Druhý oblúk alebo kružnica</translation>
     </message>
     <message>
+        <location line="+106"/>
+        <source>No solution</source>
+      <translation type="unfinished">Žiadne riešenie</translation>
+    </message>
+    <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxisInit.js" line="+2"/>
         <source>Radical Axis of 2 Circles</source>
         <translation>Os medzi dvoma kružnicami (Chordála)</translation>
@@ -14589,3 +14594,4 @@ už existuje v zozname.</translation>
     </message>
 </context>
 </TS>
+

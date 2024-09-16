@@ -412,7 +412,7 @@ pour appliquer les modifications.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2296"/>
+        <location filename="../scripts/Apollonius.js" line="+2454"/>
         <source>Invalid radius</source>
         <translation>Rayon invalide</translation>
     </message>
@@ -8605,6 +8605,11 @@ est déjà dans la liste.</translation>
         <location line="+9"/>
         <source>Second arc or circle</source>
         <translation>Deuxième arc ou cercle</translation>
+    </message>
+    <message>
+        <location line="+106"/>
+        <source>No solution</source>
+        <translation>Pas de solution</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.ui" line="+17"/>

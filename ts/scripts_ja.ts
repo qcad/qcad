@@ -412,7 +412,7 @@ QCADを再起動してください。</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2296"/>
+        <location filename="../scripts/Apollonius.js" line="+2454"/>
         <source>Invalid radius</source>
         <translation>無効な半径</translation>
     </message>
@@ -8602,6 +8602,11 @@ is already in the list.</source>
         <translation type="unfinished">第2円弧または円</translation>
     </message>
     <message>
+        <location line="+106"/>
+        <source>No solution</source>
+      <translation type="unfinished">解決策なし</translation>
+    </message>
+    <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxisInit.js" line="+2"/>
         <source>Radical Axis of 2 Circles</source>
         <translation type="unfinished">2つの円のラジカル軸</translation>
@@ -14569,3 +14574,4 @@ is already in the list.</source>
     </message>
 </context>
 </TS>
+

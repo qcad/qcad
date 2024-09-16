@@ -412,7 +412,7 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2296"/>
+        <location filename="../scripts/Apollonius.js" line="+2454"/>
         <source>Invalid radius</source>
         <translation>Geçersiz yarıçap</translation>
     </message>
@@ -8601,6 +8601,11 @@ zaten listede.</translation>
         <translation type="unfinished">İkinci yay veya daire</translation>
     </message>
     <message>
+        <location line="+106"/>
+        <source>No solution</source>
+        <translation type="unfinished">Çözüm yok</translation>
+    </message>
+    <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxisInit.js" line="+2"/>
         <source>Radical Axis of 2 Circles</source>
         <translation type="unfinished">İki Dairenin Radikal Ekseni</translation>
@@ -14568,3 +14573,4 @@ zaten listede.</translation>
     </message>
 </context>
 </TS>
+
