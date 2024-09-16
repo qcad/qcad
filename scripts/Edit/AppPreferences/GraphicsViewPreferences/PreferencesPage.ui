@@ -20,7 +20,7 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>-187</y>
+     <y>0</y>
      <width>635</width>
      <height>1217</height>
     </rect>
@@ -433,7 +433,7 @@
        <item>
         <widget class="QCheckBox" name="RenderThinPolylines1px">
          <property name="text">
-          <string>Render polylines with small global width as 1 pixel wide</string>
+          <string>Always render polylines with custom widths at least 1 pixel wide</string>
          </property>
          <property name="checked">
           <bool>true</bool>
