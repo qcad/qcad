@@ -69,7 +69,7 @@ protected:
     }
 
     virtual RPolyline getTextBox(const RDimensionData& dimensionData, double* width = NULL) const {
-        Q_UNUSED(dimensionData)
+        //Q_UNUSED(dimensionData)
         Q_UNUSED(width)
 
         return RPolyline();
