@@ -52,9 +52,9 @@ void RDockWidget::hideEvent(QHideEvent* event) {
 // dock widget closes before close dialog is shown
 // dock widget state not persistent between sessions
 // dock widget closes if user cancels close dialog
-#ifdef Q_OS_MAC
-#if (QT_VERSION >= 0x050601 && QT_VERSION <= 0x050602) || QT_VERSION >= 0x050F00
 void RDockWidget::closeEvent(QCloseEvent* event) {
+#ifdef Q_OS_MAC
+#if (QT_VERSION >= 0x050601 && QT_VERSION <= 0x050602) || (QT_VERSION >= 0x050F00 && QT_VERSION < 0x060000)
     // remember that this dock was closed by this event:
     RMainWindowQt* mw = RMainWindowQt::getMainWindow();
     if (mw) {
@@ -71,10 +71,10 @@ void RDockWidget::closeEvent(QCloseEvent* event) {
         );
         mw->setProperty("ClosedDocks", closedDocks);
     }
+#endif
+#endif
     QDockWidget::closeEvent(event);
 }
-#endif
-#endif
 
 void RDockWidget::actionEvent(QActionEvent* event) {
     QAction* action = event->action();

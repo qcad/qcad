@@ -48,11 +48,7 @@ signals:
 protected:
     virtual void showEvent(QShowEvent* event);
     virtual void hideEvent(QHideEvent* event);
-#ifdef Q_OS_MAC
-#if (QT_VERSION >= 0x050601 && QT_VERSION <= 0x050602) || QT_VERSION >= 0x050F00
     virtual void closeEvent(QCloseEvent* event);
-#endif
-#endif
     virtual void actionEvent(QActionEvent *event);
 
     virtual bool event(QEvent* e);
