@@ -12577,7 +12577,7 @@ ist bereits in der Liste.</translation>
         <source>Simple text
 (one line, no formatting)</source>
         <translation>Einfacher Text
-(Eine Linie, keine Formatierung)</translation>
+(Eine Zeile, keine Formatierung)</translation>
     </message>
     <message>
         <location line="+57"/>
