@@ -557,7 +557,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Alignment</source>
-        <translation>Opstelling</translation>
+        <translation>Uilijning</translation>
     </message>
     <message>
         <location line="-1"/>
