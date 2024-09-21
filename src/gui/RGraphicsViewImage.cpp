@@ -1762,6 +1762,9 @@ void RGraphicsViewImage::paintDrawableThread(RGraphicsViewWorker* worker, RGraph
             double maxScale = qMax(t.m11(), t.m22());
             int featureSizePx = (int)mapDistanceToView(fabs(text.getTextHeight() * maxScale));
             if (featureSizePx<=textHeightThreshold) {
+                if (worker->hasTransforms()) {
+                    worker->restore();
+                }
                 return;
             }
         }
