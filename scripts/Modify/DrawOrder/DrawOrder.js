@@ -68,7 +68,7 @@ DrawOrder.getCadToolBarPanel = function() {
         action.objectName = actionName;
         action.setRequiresDocument(true);
         //action.setStatusTip(qsTr("Show projection tools"));
-        action.setDefaultShortcut(new QKeySequence("w,j"));
+        action.setDefaultShortcut(new QKeySequence(""));
         action.setNoState();
         action.setDefaultCommands(["projectmenu"]);
         action.setGroupSortOrder(50);
