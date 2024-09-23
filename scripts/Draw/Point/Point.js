@@ -73,7 +73,7 @@ Point.getCadToolBarPanel = function() {
         action.objectName = actionName;
         action.setRequiresDocument(true);
         //action.setStatusTip(qsTr("Show point tools"));
-        action.setDefaultShortcut(new QKeySequence("w,p"));
+        action.setDefaultShortcut(new QKeySequence("w,g"));
         action.setNoState();
         action.setDefaultCommands(["pointmenu"]);
         action.setGroupSortOrder(20);
