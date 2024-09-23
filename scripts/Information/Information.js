@@ -89,7 +89,7 @@ Information.prototype.formatAreaResult = function(area, rounded) {
     if (this.doc.getUnit()===RS.Inch) {
         var sqft = Math.floor(area/144);
         var sqin = area-sqft*144;
-        return "%1 (= %2ft² %3in²)".arg(area).arg(sqft, 0, 'f', prec).arg(sqin, 0, 'f', prec);
+        return "%1 (= %2ft² %3in²)".arg(area).arg(parseFloat(sqft.toFixed(prec))).arg(parseFloat(sqin.toFixed(prec)));
     }
     else {
         return RUnit.doubleToStringDec(parseFloat(area), prec, true, false, this.doc.getDecimalSeparator());
