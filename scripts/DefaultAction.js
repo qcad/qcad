@@ -757,3 +757,8 @@ DefaultAction.prototype.getAddToSelection = function(shiftPressed) {
     return shiftPressed;
 };
 
+DefaultAction.prototype.pickEntity = function(event, preview) {
+    // add entity to selection on pick entity event (may be triggered by action overrides):
+    var entityId = event.getEntityId();
+    this.selectEntity(entityId, true);
+};
