@@ -9600,7 +9600,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/Edit/Paste/Paste.js" line="+52"/>
         <source>Edit</source>
-        <translation>Éditer</translation>
+        <translation>Édition</translation>
     </message>
     <message>
         <location line="+0"/>
