@@ -59,21 +59,21 @@
         <location filename="../src/entity/RArcEntity.cpp" line="+95"/>
         <location line="+3"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+79"/>
-        <location filename="../src/entity/RDimAngular2LEntity.cpp" line="+159"/>
+        <location filename="../src/entity/RDimAngular2LEntity.cpp" line="+165"/>
         <location line="+12"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="+151"/>
+        <location filename="../src/entity/RDimAngularEntity.cpp" line="+157"/>
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+149"/>
+        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+155"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="+151"/>
+        <location filename="../src/entity/RDimLinearEntity.cpp" line="+157"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+113"/>
+        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+117"/>
         <location line="+5"/>
         <location line="+3"/>
-        <location filename="../src/entity/RDimRadialEntity.cpp" line="+147"/>
+        <location filename="../src/entity/RDimRadialEntity.cpp" line="+153"/>
         <location line="+4"/>
         <location filename="../src/entity/RDimensionEntity.cpp" line="+118"/>
         <location line="+3"/>
@@ -718,7 +718,7 @@
         <translation>Guia punto final</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+167"/>
+        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+173"/>
         <source>Dimension Angle</source>
         <translation>Ángulo de acotación</translation>
     </message>
@@ -758,12 +758,12 @@
         <translation>Posición del texto</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+3"/>
         <source>Text Rotation</source>
         <translation>Rotación del texto</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Flip First Arrow</source>
         <translation>Refleja la primera flecha</translation>
     </message>
@@ -783,7 +783,7 @@
         <translation>Longitud línea de extensión</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+8"/>
         <source>Auto Label</source>
         <translation>Auto etiqueta</translation>
     </message>
@@ -923,7 +923,7 @@
         <translation>Invisible</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+185"/>
+        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+191"/>
         <source>Arc Symbol Type</source>
         <translation>Símbolo de arco</translation>
     </message>
