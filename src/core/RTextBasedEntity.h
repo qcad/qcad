@@ -85,6 +85,10 @@ public:
 
     virtual const RTextBasedData& getData() const = 0;
 
+    QList<RVector> getRotatedBoundingBox() const {
+        return getData().getRotatedBoundingBox();
+    }
+
     virtual bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
         RTransaction* transaction=NULL);
     virtual QPair<QVariant, RPropertyAttributes> getProperty(
