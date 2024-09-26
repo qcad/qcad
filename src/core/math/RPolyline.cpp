@@ -2207,6 +2207,40 @@ QList<RVector> RPolyline::getConcaveVertices() const {
     return getConvexVertices(false);
 }
 
+/**
+ * \return Centroid of this polygon or invalid if polyline contains arc segments.
+ * The polyline is implicitely considered to be closed.
+ */
+RVector RPolyline::getCentroid() const {
+    if (hasArcSegments()) {
+        return RVector::invalid;
+    }
+
+    double xSum = 0;
+    double ySum = 0;
+    double signedArea = 0;
+    int n = vertices.size();
+
+    for (int i=0; i<n; i++) {
+        double x0 = vertices[i].x;
+        double y0 = vertices[i].y;
+        double x1 = vertices[(i + 1) % n].x;
+        double y1 = vertices[(i + 1) % n].y;
+
+        // calculate the cross product of the edges
+        double crossProduct = x0 * y1 - x1 * y0;
+        signedArea += crossProduct;
+        xSum += (x0 + x1) * crossProduct;
+        ySum += (y0 + y1) * crossProduct;
+    }
+
+    signedArea *= 0.5;
+    double centroidX = xSum / (6.0 * signedArea);
+    double centroidY = ySum / (6.0 * signedArea);
+
+    return RVector(centroidX, centroidY);
+}
+
 QList<RPolyline> RPolyline::splitAtDiscontinuities(double tolerance) const {
     if (polylineProxy!=NULL) {
         return polylineProxy->splitAtDiscontinuities(*this, tolerance);

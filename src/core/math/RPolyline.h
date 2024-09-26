@@ -267,6 +267,8 @@ public:
     QList<RVector> getConvexVertices(bool convex = true) const;
     QList<RVector> getConcaveVertices() const;
 
+    RVector getCentroid() const;
+
     QList<RPolyline> splitAtDiscontinuities(double tolerance) const;
     QList<RPolyline> splitAtSegmentTypeChange() const;
 
