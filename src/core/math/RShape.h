@@ -388,6 +388,7 @@ public:
 
     virtual QSharedPointer<RShape> getTransformed(const QTransform& transform) const = 0;
 
+    static QList<RPolyline> getPolylines(const QList<QSharedPointer<RShape> >& shapes);
     static QList<QSharedPointer<RShape> > getOrderedShapes(const QList<QSharedPointer<RShape> >& shapes);
     static bool order(QList<QList<QSharedPointer<RShape> > >& boundary);
 

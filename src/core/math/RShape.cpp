@@ -1755,6 +1755,14 @@ void RShape::print(QDebug dbg) const {
             << ")";
 }
 
+QList<RPolyline> RShape::getPolylines(const QList<QSharedPointer<RShape> >& shapes) {
+    QList<QSharedPointer<RShape> > orderedShapes = getOrderedShapes(shapes);
+
+    // TODO: implement
+
+    return QList<RPolyline>();
+}
+
 QList<QSharedPointer<RShape> > RShape::getOrderedShapes(const QList<QSharedPointer<RShape> >& shapes) {
     QList<QSharedPointer<RShape> > ret;
     //RVector cursor = RVector::invalid;
