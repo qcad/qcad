@@ -104,6 +104,8 @@ public:
     virtual bool isSane() const;
 
     virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
+    QList<RVector> getRotatedBoundingBox() const;
+
     double getWidth() const;
     double getHeight() const;
 

@@ -124,6 +124,17 @@ RBox RTextBasedData::getBoundingBox(bool ignoreEmpty) const {
     return boundingBox;
 }
 
+QList<RVector> RTextBasedData::getRotatedBoundingBox() const {
+    RTextBasedData normal = *this;
+    normal.rotate(-angle, alignmentPoint);
+    RBox bboxNormal = normal.getBoundingBox();
+
+    QList<RVector> ret = bboxNormal.getCorners();
+    RVector::rotateList(ret, angle, alignmentPoint);
+
+    return ret;
+}
+
 /**
  * Width of the text (this is not equal to the bounding box width as it is
  * the width of the text at 0 angle).
