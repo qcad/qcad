@@ -968,6 +968,11 @@ void RTextRenderer::render() {
                             continue;
                         }
 
+                        // replace special characters in sub/super script:
+                        script.replace(rxDiameter, chDiameter);
+                        script.replace(rxPlusMinus, chPlusMinus);
+                        script.replace(rxDegree, chDegree);
+
                         QList<RPainterPath> paths;
 
                         double ascent = 0.0;
