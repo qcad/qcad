@@ -10,10 +10,10 @@
         <location filename="../src/entity/RCircleEntity.cpp" line="+79"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="+151"/>
+        <location filename="../src/entity/RDimAngularEntity.cpp" line="+157"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RDimRadialEntity.cpp" line="+147"/>
+        <location filename="../src/entity/RDimRadialEntity.cpp" line="+153"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+82"/>
@@ -26,18 +26,18 @@
         <location line="-2"/>
         <location line="+3"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="-2"/>
-        <location filename="../src/entity/RDimAngular2LEntity.cpp" line="+159"/>
+        <location filename="../src/entity/RDimAngular2LEntity.cpp" line="+165"/>
         <location line="+12"/>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="-2"/>
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+149"/>
+        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+155"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="+151"/>
+        <location filename="../src/entity/RDimLinearEntity.cpp" line="+157"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+113"/>
+        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+117"/>
         <location line="+5"/>
         <location line="+3"/>
         <location filename="../src/entity/RDimRadialEntity.cpp" line="-2"/>
@@ -355,7 +355,7 @@
         <translation>Dimension Arc</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+185"/>
+        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+191"/>
         <source>Arc Symbol Type</source>
         <translation>Type af buesymbol</translation>
     </message>
@@ -426,7 +426,7 @@
         <translation>Leader slutpunkt</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+167"/>
+        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+173"/>
         <source>Dimension Angle</source>
         <translation>Dimension Vinkel</translation>
     </message>
@@ -466,12 +466,12 @@
         <translation>Tekst Position</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+3"/>
         <source>Text Rotation</source>
         <translation>Rotation af tekst</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>Flip First Arrow</source>
         <translation>Vend første pil</translation>
     </message>
@@ -491,7 +491,7 @@
         <translation>Længde af forlængerledning</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+8"/>
         <source>Auto Label</source>
         <translation>Automatisk mærke</translation>
     </message>
