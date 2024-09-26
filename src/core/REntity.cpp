@@ -189,6 +189,9 @@ void REntity::copyAttributesFrom(const REntity* entity, bool copyBlockId) {
     }
 
     copyAttributesFrom(entity->getData(), copyBlockId);
+
+    // make sure the new entity has also the same custom properties:
+    copyCustomPropertiesFrom(entity);
 }
 
 void REntity::copyAttributesFrom(const REntityData& entityData, bool copyBlockId) {
