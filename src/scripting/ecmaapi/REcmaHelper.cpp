@@ -582,6 +582,12 @@ void REcmaHelper::fromScriptValue(QScriptEngine* engine, QScriptValue scriptValu
             continue;
         }
 
+        QSharedPointer<RShape> pCircle = v.value<QSharedPointer<RCircle> >();
+        if (!pCircle.isNull()) {
+            cppValue.append(pCircle);
+            continue;
+        }
+
         QSharedPointer<RShape> pPl = v.value<QSharedPointer<RPolyline> >();
         if (!pPl.isNull()) {
             cppValue.append(pPl);
