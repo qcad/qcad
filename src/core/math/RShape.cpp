@@ -1757,10 +1757,27 @@ void RShape::print(QDebug dbg) const {
 
 QList<RPolyline> RShape::getPolylines(const QList<QSharedPointer<RShape> >& shapes) {
     QList<QSharedPointer<RShape> > orderedShapes = getOrderedShapes(shapes);
+    QList<RPolyline> ret;
 
-    // TODO: implement
+    RPolyline pl;
 
-    return QList<RPolyline>();
+    for (int i=0; i<shapes.length(); i++) {
+        QSharedPointer<RShape> shape = shapes.at(i);
+
+        if (!pl.isEmpty() && !pl.getEndPoint().equalsFuzzy(shape->getStartPoint())) {
+            // new polyline:
+            ret.append(pl);
+            pl = RPolyline();
+        }
+
+        pl.appendShape(*shape);
+
+        if (i==shapes.length()-1) {
+            ret.append(pl);
+        }
+    }
+
+    return ret;
 }
 
 QList<QSharedPointer<RShape> > RShape::getOrderedShapes(const QList<QSharedPointer<RShape> >& shapes) {
