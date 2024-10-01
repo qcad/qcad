@@ -53,11 +53,6 @@ AddLayer.prototype.beginEvent = function() {
     var di = this.getDocumentInterface();
     di.setCurrentLayer(this.layer);
 
-    // make new item the active, selected item
-    if (hasPlugin("PROTOOLS")) {
-        LayerListPro.selectCurrentLayer(di.getDocument());
-    }
-
     this.terminate();
 };
 
