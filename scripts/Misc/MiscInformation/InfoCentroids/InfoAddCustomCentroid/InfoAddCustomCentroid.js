@@ -173,7 +173,7 @@ InfoAddCustomCentroid.prototype.showDialog = function() {
     // Activate the AddCentroidDialog dialog:    Always modal on WinOS
         // dialog.exec() shows dialog, returns Accepted/Rejected
         if (!dialog.exec()) {    // When the dialog was rejected >
-            destr(dialog);
+            destrDialog(dialog);
             EAction.activateMainWindow();
             return false;    // Dialog rejected
             } // End dialog rejected
@@ -194,7 +194,7 @@ InfoAddCustomCentroid.prototype.showDialog = function() {
 
     // Save all dialog states persistent and finish:
     WidgetFactory.saveState(dialog);
-    destr(dialog);
+    destrDialog(dialog);
     EAction.activateMainWindow();
     return true;
 };

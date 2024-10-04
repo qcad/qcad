@@ -141,6 +141,19 @@ function destr(obj) {
     }
 }
 
+function destrDialog(dlg) {
+    if (RSettings.getQtVersion() >= 0x060000) {
+        // delete later in Qt 6
+        // immediate delete might cause unpredictable crashes in event processing:
+        dlg.deleteLater();
+    }
+    else {
+        if (isFunction(dlg.destroy)) {
+            dlg.destroy();
+        }
+    }
+}
+
 /**
  * Get pointer from shared pointer object using data() (Qt5) or implicitly (Qt6).
  */

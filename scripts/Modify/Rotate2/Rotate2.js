@@ -154,7 +154,7 @@ Rotate2.prototype.showDialog = function() {
     }
 
     if (!dialog.exec()) {
-        destr(dialog);
+        destrDialog(dialog);
         EAction.activateMainWindow();
         return false;
     }
@@ -176,7 +176,7 @@ Rotate2.prototype.showDialog = function() {
 
     WidgetFactory.saveState(dialog);
 
-    destr(dialog);
+    destrDialog(dialog);
     EAction.activateMainWindow();
     return true;
 };

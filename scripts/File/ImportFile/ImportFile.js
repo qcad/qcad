@@ -119,14 +119,14 @@ ImportFile.prototype.getFileName = function() {
     fileDialog.fileMode = QFileDialog.ExistingFiles;
     fileDialog.setLabelText(QFileDialog.FileType, qsTr("Format:"));
     if (!fileDialog.exec()) {
-        destr(fileDialog);
+        destrDialog(fileDialog);
         EAction.activateMainWindow();
         return undefined;
     }
 
     var fileNames = fileDialog.selectedFiles();
     if (fileNames.length===0) {
-        destr(fileDialog);
+        destrDialog(fileDialog);
         EAction.activateMainWindow();
         return undefined;
     }
@@ -154,7 +154,7 @@ ImportFile.prototype.getFileName = function() {
 
     var nameFilter = fileDialog.selectedNameFilter();
 
-    destr(fileDialog);
+    destrDialog(fileDialog);
     EAction.activateMainWindow();
 
     //this.blockName = new QFileInfo(fileNames[0]).baseName();

@@ -180,7 +180,7 @@ FirstStart.prototype.showDialog = function() {
         settings.sync();
     }
 
-    destr(this.dialog);
+    destrDialog(this.dialog);
     EAction.activateMainWindow();
 };
 

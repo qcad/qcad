@@ -130,7 +130,7 @@ LayerDialog.prototype.show = function() {
     leLayerName.selectAll();
 
     if (!this.dialog.exec()) {
-        destr(this.dialog);
+        destrDialog(this.dialog);
         EAction.activateMainWindow();
         return undefined;
     }
@@ -154,7 +154,7 @@ LayerDialog.prototype.show = function() {
 
     var layer = new RLayer(this.document, text, false, false, clr, ltId, lw);
     this.initLayer(this.dialog, layer);
-    destr(this.dialog);
+    destrDialog(this.dialog);
     EAction.activateMainWindow();
 
     return layer;

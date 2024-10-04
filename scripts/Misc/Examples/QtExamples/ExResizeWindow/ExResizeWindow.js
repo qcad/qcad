@@ -48,7 +48,7 @@ ExResizeWindow.prototype.beginEvent = function() {
         appWin.resize(parseInt(match[1], 10), parseInt(match[2], 10) - titleBarHeight);
     }
 
-    destr(dialog);
+    destrDialog(dialog);
     EAction.activateMainWindow();
     this.terminate();
 };

@@ -86,6 +86,6 @@ CheckForUpdates.prototype.beginEvent = function() {
     dialog.exec();
 
     WidgetFactory.saveState(dialog);
-    destr(dialog);
+    destrDialog(dialog);
     EAction.activateMainWindow();
 };

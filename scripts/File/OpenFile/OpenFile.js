@@ -88,7 +88,7 @@ OpenFile.prototype.beginEvent = function() {
     }
 
     if (!fileDialog.exec()) {
-        destr(fileDialog);
+        destrDialog(fileDialog);
         EAction.activateMainWindow();
         return;
     }
@@ -100,7 +100,7 @@ OpenFile.prototype.beginEvent = function() {
     for ( var i = 0; i < fileNames.length; ++i) {
         NewFile.createMdiChild(fileNames[i], nameFilter);
     }
-    destr(fileDialog);
+    destrDialog(fileDialog);
     EAction.activateMainWindow();
 };
 

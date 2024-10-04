@@ -214,14 +214,14 @@ Image.prototype.getFileName = function() {
     fileDialog.fileMode = QFileDialog.ExistingFiles;
     fileDialog.setLabelText(QFileDialog.FileType, qsTr("Format:"));
     if (!fileDialog.exec()) {
-        destr(fileDialog);
+        destrDialog(fileDialog);
         EAction.activateMainWindow();
         return undefined;
     }
 
     var files = fileDialog.selectedFiles();
     if (files.length===0) {
-        destr(fileDialog);
+        destrDialog(fileDialog);
         EAction.activateMainWindow();
         return undefined;
     }

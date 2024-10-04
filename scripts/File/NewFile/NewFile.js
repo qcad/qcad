@@ -198,7 +198,7 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
             if (!isNull(dialog)) {
                 dialog.text = text;
                 dialog.exec();
-                destr(dialog);
+                destrDialog(dialog);
                 EAction.activateMainWindow();
             }
 
@@ -487,7 +487,7 @@ NewFile.closeRequested = function(mdiChild) {
     else {
         mdiChild.setCloseEventRejected();
     }
-    destr(dialog);
+    destrDialog(dialog);
     EAction.activateMainWindow();
 };
 

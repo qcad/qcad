@@ -93,7 +93,7 @@ About.prototype.beginEvent = function() {
     this.initAboutLicenses(textBrowser);
 
     dialog.exec();
-    destr(dialog);
+    destrDialog(dialog);
     EAction.activateMainWindow();
 };
 

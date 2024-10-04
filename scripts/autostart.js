@@ -638,7 +638,7 @@ function main() {
 
     if (!isNull(splash)) {
         splash.close();
-        destr(splash);
+        destrDialog(splash);
     }
 
     postInitAddOns(addOns);

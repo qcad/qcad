@@ -57,14 +57,14 @@ DirectoryList.prototype.doInit = function(pageWidget, listWidgetName, fileDlgTit
         }
 
         if (!fileDialog.exec()) {
-            destr(fileDialog);
+            destrDialog(fileDialog);
             EAction.activateMainWindow();
             return;
         }
 
         var files = fileDialog.selectedFiles();
         if (files.length===0) {
-            destr(fileDialog);
+            destrDialog(fileDialog);
             EAction.activateMainWindow();
             return;
         }

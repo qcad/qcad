@@ -939,7 +939,7 @@ FlexPainter.prototype.showDialog = function() {
 
         // Activate FlexPainter dialog modal
         if (!dialog.exec()) {
-            destr(dialog);
+            destrDialog(dialog);
             EAction.activateMainWindow();
             return false;   // Dialog rejected
         }
@@ -1100,7 +1100,7 @@ FlexPainter.prototype.showDialog = function() {
     widgets["BeVerbose"].checked = true;    // Super persistent =checked
     widgets["DelEntity"].checked = false;    // Super persistent =unchecked
     WidgetFactory.saveState(dialog);
-    destr(dialog);
+    destrDialog(dialog);
     return true;   // Dialog accepted
 };
 

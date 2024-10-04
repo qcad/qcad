@@ -219,7 +219,7 @@ Scale.prototype.showDialog = function() {
     WidgetFactory.restoreState(dialog);
 
     if (!dialog.exec()) {
-        destr(dialog);
+        destrDialog(dialog);
         EAction.activateMainWindow();
         return false;
     }
@@ -254,7 +254,7 @@ Scale.prototype.showDialog = function() {
 
     WidgetFactory.saveState(dialog);
 
-    destr(dialog);
+    destrDialog(dialog);
     EAction.activateMainWindow();
     return true;
 };

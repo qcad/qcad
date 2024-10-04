@@ -188,7 +188,7 @@ BitmapExport.prototype.getProperties = function() {
     this.resolutionChanged(resolutionCombo.currentText);
 
     if (!this.dialog.exec()) {
-        destr(this.dialog);
+        destrDialog(this.dialog);
         EAction.activateMainWindow();
         return undefined;
     }
@@ -230,7 +230,7 @@ BitmapExport.prototype.getProperties = function() {
         ret["entityIds"] = doc.querySelectedEntities();
     }
 
-    destr(this.dialog);
+    destrDialog(this.dialog);
     EAction.activateMainWindow();
     return ret;
 };

@@ -65,14 +65,14 @@ RunScript.prototype.beginEvent = function() {
         fileDialog.fileMode = QFileDialog.ExistingFiles;
         //fileDialog.setLabelText(QFileDialog.FileType, qsTr("Format:"));
         if (!fileDialog.exec()) {
-            destr(fileDialog);
+            destrDialog(fileDialog);
             EAction.activateMainWindow();
             return;
         }
         RSettings.setValue("RunScript/Path", fileDialog.directory().absolutePath());
 
         fileNames = fileDialog.selectedFiles();
-        destr(fileDialog);
+        destrDialog(fileDialog);
         EAction.activateMainWindow();
 
         // show warning:
@@ -86,12 +86,12 @@ RunScript.prototype.beginEvent = function() {
             l.text = l.text.arg(fileNames.join("<br>"));
             var ret = dialog.exec();
             if (ret!==QDialog.Accepted.valueOf()) {
-                destr(dialog);
+                destrDialog(dialog);
                 EAction.activateMainWindow();
                 return;
             }
             WidgetFactory.saveState(dialog);
-            destr(dialog);
+            destrDialog(dialog);
             EAction.activateMainWindow();
         }
     }

@@ -121,7 +121,7 @@ HatchDialog.prototype.show =  function(hatchDataIn) {
     var res = this.dialog.exec();
     destr(this.previewDi);
     if (!res) {
-        destr(this.dialog);
+        destrDialog(this.dialog);
         EAction.activateMainWindow();
         return undefined;
     }
@@ -136,7 +136,7 @@ HatchDialog.prototype.show =  function(hatchDataIn) {
     hatchDataOut.setSolid(radioSolid.checked);
     hatchDataOut.setPatternName(radioSolid.checked ? "SOLID" : comboPattern.currentText);
 
-    destr(this.dialog);
+    destrDialog(this.dialog);
     EAction.activateMainWindow();
     return hatchDataOut;
 };

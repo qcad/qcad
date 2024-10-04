@@ -498,7 +498,7 @@ TextDialog.prototype.show =  function(textDataIn) {
     RSettings.setValue("TextDialog/HAlignment", textDataOut.getHAlign());
     RSettings.setValue("TextDialog/MainFont", textDataOut.getFontName());
 
-    destr(this.dialog);
+    destrDialog(this.dialog);
     EAction.activateMainWindow();
 
     if (res) {

@@ -651,7 +651,7 @@ EAction.prototype.showDialog = function() {
         noSyncWidgets[i].setProperty("Loaded", false);
     }
 
-    destr(this.dialog);
+    destrDialog(this.dialog);
     this.dialog = undefined;
 
 //    var view = EAction.getGraphicsView();

@@ -77,7 +77,7 @@ ExXmlImport.prototype.beginEvent = function() {
     fileDialog.setOption(QFileDialog.DontUseNativeDialog, getDontUseNativeDialog());
     fileDialog.fileMode = QFileDialog.ExistingFiles;
     if (!fileDialog.exec()) {
-        destr(fileDialog);
+        destrDialog(fileDialog);
         EAction.activateMainWindow();
         this.terminate();
         return;
@@ -85,13 +85,13 @@ ExXmlImport.prototype.beginEvent = function() {
 
     var files = fileDialog.selectedFiles();
     if (files.length===0) {
-        destr(fileDialog);
+        destrDialog(fileDialog);
         EAction.activateMainWindow();
         this.terminate();
         return;
     }
 
-    destr(fileDialog);
+    destrDialog(fileDialog);
     EAction.activateMainWindow();
 
     var fileName = files[0];

@@ -82,7 +82,7 @@ BlockDialog.prototype.show = function() {
     }
 
     if (!this.dialog.exec()) {
-        destr(this.dialog);
+        destrDialog(this.dialog);
         EAction.activateMainWindow();
         return undefined;
     }
@@ -91,7 +91,7 @@ BlockDialog.prototype.show = function() {
 	
     if (!creatingBlock) {
         // rename block:
-        destr(this.dialog);
+        destrDialog(this.dialog);
         EAction.activateMainWindow();
         this.block.setName(text);
         return this.block;
@@ -99,7 +99,7 @@ BlockDialog.prototype.show = function() {
     else {
         // create new block:
         var block = new RBlock(this.document, text, new RVector(0,0));
-        destr(this.dialog);
+        destrDialog(this.dialog);
         EAction.activateMainWindow();
         return block;
     }

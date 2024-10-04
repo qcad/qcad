@@ -38,7 +38,7 @@ SelectByHandle.prototype.beginEvent = function() {
     var dialog = WidgetFactory.createDialog(SelectByHandle.includeBasePath, "SelectByHandleDialog.ui");
 
     if (!dialog.exec()) {
-        destr(dialog);
+        destrDialog(dialog);
         EAction.activateMainWindow();
         this.terminate();
         return;
@@ -61,7 +61,7 @@ SelectByHandle.prototype.beginEvent = function() {
         EAction.handleUserMessage(qsTr("Object is not a drawing entity:") + " " + obj);
     }
 
-    destr(dialog);
+    destrDialog(dialog);
     EAction.activateMainWindow();
     this.terminate();
 };

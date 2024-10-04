@@ -161,7 +161,7 @@ SaveAs.prototype.beginEvent = function() {
         }
 
         if (!fileDialog.exec()) {
-            destr(fileDialog);
+            destrDialog(fileDialog);
             EAction.activateMainWindow();
             this.terminate();
             return;
@@ -170,7 +170,7 @@ SaveAs.prototype.beginEvent = function() {
         RSettings.setValue("SaveAs/Path", fileDialog.directory().absolutePath());
         file = fileDialog.selectedFiles()[0];
         nameFilter = fileDialog.selectedNameFilter();
-        destr(fileDialog);
+        destrDialog(fileDialog);
         EAction.activateMainWindow();
     }
 

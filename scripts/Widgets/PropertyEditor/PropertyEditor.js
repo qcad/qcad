@@ -1653,7 +1653,7 @@ PropertyEditorImpl.prototype.addCustomProperty = function() {
     var valueEdit = dialog.findChild("Value");
 
     if (!dialog.exec()) {
-        destr(dialog);
+        destrDialog(dialog);
         EAction.activateMainWindow();
         return;
     }
@@ -1665,7 +1665,7 @@ PropertyEditorImpl.prototype.addCustomProperty = function() {
     this.propertyChanged(new RPropertyTypeId(RSettings.getAppId(), name), value, this.getEntityTypeFilter());
     this.onlyChangesOverride = false;
 
-    destr(dialog);
+    destrDialog(dialog);
     EAction.activateMainWindow();
 };
 

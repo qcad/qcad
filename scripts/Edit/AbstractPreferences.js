@@ -80,7 +80,7 @@ AbstractPreferences.prototype.beginEvent = function() {
         this.applyPreferences();
     }
     this.uninit();
-    destr(this.dialog);
+    destrDialog(this.dialog);
     EAction.activateMainWindow();
     this.terminate();
 };
