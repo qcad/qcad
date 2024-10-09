@@ -87,6 +87,7 @@ void RFontChooserWidget::updateSizeCombo() {
         cbSize->addItem(QString("%1").arg(s), s);
     }
     cbSize->setCurrentIndex(cbSize->findData(s));
+    cbSize->setEditable(true);
 }
 
 void RFontChooserWidget::chosenFontChanged(const QFont& font) {
