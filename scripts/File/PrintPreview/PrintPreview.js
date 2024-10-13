@@ -129,7 +129,7 @@ PrintPreview.start = function(initialAction, instance) {
     // check if paper contains drawing:
     if (!bbPaper.containsBox(bbDoc) && !positionAccepted) {
         var initialZoom = appWin.property("PrintPreview/InitialZoom");
-        if (initialZoom!=="View") {
+        if (initialZoom!=="View" && initialZoom!=="Box") {
             var ret = QMessageBox.warning(appWin,
                 qsTr("Auto fit"),
                 qsTr("Auto fit drawing to paper?"),
@@ -242,7 +242,7 @@ PrintPreviewImpl.prototype.beginEvent = function() {
     var appWin = RMainWindowQt.getMainWindow();
     var initialZoom = appWin.property("PrintPreview/InitialZoom");
 
-    if (initialZoom==="View") {
+    if (initialZoom==="View" || initialZoom==="Box") {
         this.savedScale = Print.getScale(this.getDocument());
         this.savedOffset = Print.getOffset(this.getDocument());
         this.savedColumns = Print.getColumns(this.getDocument());
@@ -297,6 +297,17 @@ PrintPreviewImpl.prototype.beginEvent = function() {
         Print.setColumns(di, 1);
         Print.setRows(di, 1);
         this.slotAutoFitBox(this.view.getBox());
+
+        appWin.setProperty("PrintPreview/InitialZoom", "Stored");
+    }
+    else if (initialZoom==="Box") {
+        //Print.setColumns(di, 1);
+        //Print.setRows(di, 1);
+        var x1 = appWin.property("PrintPreview/InitialZoomBoxX1");
+        var y1 = appWin.property("PrintPreview/InitialZoomBoxY1");
+        var x2 = appWin.property("PrintPreview/InitialZoomBoxX2");
+        var y2 = appWin.property("PrintPreview/InitialZoomBoxY2");
+        this.slotAutoFitBox(new RBox(x1,y1, x2,y2));
 
         appWin.setProperty("PrintPreview/InitialZoom", "Stored");
     }
