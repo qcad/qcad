@@ -7,6 +7,14 @@ if(MSVC)
     add_definitions(-DNOMINMAX)
 endif()
 
+if(UNIX)
+    if(CMAKE_SYSTEM_PROCESSOR STREQUAL "aarch64")
+        set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+        add_compile_options(-fPIC)
+    endif()
+endif()
+
+
 if(BUILD_QT6)
     set(QT_VER Qt6)
 else()
