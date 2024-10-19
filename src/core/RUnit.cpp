@@ -428,7 +428,7 @@ QString RUnit::formatScientific(double length, RS::Unit unit,
     }
 
     char format[128];
-    sprintf(format, "%%.%dE%%s", prec);
+    snprintf(format, sizeof(format), "%%.%dE%%s", prec);
 #if QT_VERSION >= 0x060000
     ret = QString::asprintf(format, length, (const char*)unitString.toLatin1());
 #else
