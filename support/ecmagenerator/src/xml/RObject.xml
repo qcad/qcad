@@ -307,7 +307,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RObject *" typeName="RObject *" name="other"
-        isConst="false" />
+        isConst="true" />
         <arg type="QString &amp;" typeName="QString" name="title"
         hasDefault="true" default="RDEFAULT_QSTRING"
         isConst="true" />

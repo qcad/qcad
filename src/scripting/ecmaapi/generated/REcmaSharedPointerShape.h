@@ -252,6 +252,9 @@
         getTransformed
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getPolylines
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getOrderedShapes
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

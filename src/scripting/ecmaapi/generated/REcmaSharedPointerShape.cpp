@@ -222,6 +222,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, isRayShape, "isRayShape");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getPolylines, "getPolylines");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getOrderedShapes, "getOrderedShapes");
             
             REcmaHelper::registerFunction(&engine, &ctor, order, "order");
@@ -6440,6 +6442,57 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerShape::getTransformed", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerShape::getPolylines
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerShape::getPolylines", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerShape::getPolylines";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < QSharedPointer < RShape > > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray or QVariantMap
+                    QList < QSharedPointer < RShape > >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RPolyline >'
+    QList < RPolyline > cppResult =
+        RShape::
+       getPolylines(a0);
+        // return type: QList < RPolyline >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RShape.getPolylines().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerShape::getPolylines", context, engine);
             return result;
         }
          QScriptValue
