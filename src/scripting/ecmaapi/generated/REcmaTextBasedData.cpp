@@ -94,6 +94,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getBoundingBox, "getBoundingBox");
             
+            REcmaHelper::registerFunction(&engine, proto, getRotatedBoundingBox, "getRotatedBoundingBox");
+            
             REcmaHelper::registerFunction(&engine, proto, getWidth, "getWidth");
             
             REcmaHelper::registerFunction(&engine, proto, getHeight, "getHeight");
@@ -1242,6 +1244,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaTextBasedData::getBoundingBox", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextBasedData::getRotatedBoundingBox
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextBasedData::getRotatedBoundingBox", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextBasedData::getRotatedBoundingBox";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextBasedData* self = 
+                        getSelf("getRotatedBoundingBox", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        
+               self->getRotatedBoundingBox();
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getRotatedBoundingBox().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextBasedData::getRotatedBoundingBox", context, engine);
             return result;
         }
          QScriptValue

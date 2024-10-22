@@ -272,6 +272,9 @@
         getConcaveVertices
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getCentroid
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         splitAtDiscontinuities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
