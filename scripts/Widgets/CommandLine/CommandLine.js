@@ -540,14 +540,18 @@ CommandLine.init = function(basePath) {
         system = "Solaris";
         break;
     }
+    var platformName = "";
+    if (RSettings.getQtVersion() >= 0x060000) {
+        platformName = " / " + QGuiApplication.platformName();
+    }
     EAction.handleUserMessage(
-                "%1 %2 / Qt %3 / %4 %5 / %6"
+                "%1 %2 / Qt %3 / %4 %5%6"
                 .arg(qApp.applicationName)
                 .arg(RSettings.getVersionString())
                 .arg(RSettings.getQtVersionString())
                 .arg(system)
                 .arg(RS.getBuildCpuArchitecture())
-                .arg(QGuiApplication.platformName())
+                .arg(platformName)
                 );
 
     var pl = new RPaletteListenerAdapter();
