@@ -541,12 +541,13 @@ CommandLine.init = function(basePath) {
         break;
     }
     EAction.handleUserMessage(
-                "%1 %2 / Qt %3 / %4 %5"
+                "%1 %2 / Qt %3 / %4 %5 / %6"
                 .arg(qApp.applicationName)
                 .arg(RSettings.getVersionString())
                 .arg(RSettings.getQtVersionString())
                 .arg(system)
                 .arg(RS.getBuildCpuArchitecture())
+                .arg(QGuiApplication.platformName())
                 );
 
     var pl = new RPaletteListenerAdapter();
