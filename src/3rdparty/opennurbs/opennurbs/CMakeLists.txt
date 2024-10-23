@@ -153,6 +153,7 @@ if(WIN32)
     target_link_libraries(opennurbs PUBLIC
         gdi32
         user32
+        rpcrt4
     )
 endif()
 

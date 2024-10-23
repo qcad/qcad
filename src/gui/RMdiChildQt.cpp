@@ -139,7 +139,7 @@ void RMdiChildQt::closeEvent(QCloseEvent* closeEvent) {
     }
     closeEvent->accept();
 
-#ifndef Q_OS_WIN
+#if !defined(Q_OS_WIN) || QT_VERSION >= 0x060000
     // part of the workaround for QMdiArea bug
     // with events filtering through all stacked windows:
     RMdiArea* mdiArea = RMainWindowQt::getMainWindow()->getMdiArea();
