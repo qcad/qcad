@@ -28,6 +28,8 @@ include("scripts/Modify/OffsetThrough/OffsetThrough.js");
 function LineParallelThrough(guiAction) {
     OffsetThrough.call(this, guiAction);
 
+    this.segmentMode = true;
+
     if (!isNull(guiAction)) {
         this.setUiOptions(["../Line.ui", "LineParallelThrough.ui"]);
     }
