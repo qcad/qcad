@@ -333,6 +333,7 @@ function SvgImporter(document, resolution) {
     }
 
     if (isNull(document)) {
+        RFileImporterAdapter.call(this);
         return;
     }
 
