@@ -106,7 +106,13 @@ AddOn.prototype.initAddOn = function(splash, text) {
     if (new QFileInfo(initFilePath).exists()) {
         // include Init file of action (e.g. MyActionInit.js) and call global init function:
         include(initFilePath, className, true);
-        init(includeBasePath);
+        if (isFunction(init)) {
+            init(includeBasePath);
+        }
+        else {
+            qWarning("file " + initFilePath + " does not define init function");
+        }
+        init = undefined;
     }
     else {
         if (typeof(global[className])!=='undefined' && isFunction(global[className].init)) {
