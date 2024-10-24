@@ -412,7 +412,7 @@ lai stātos spēkā preferenču izmaiņas.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2454"/>
+        <location filename="../scripts/Apollonius.js" line="+2457"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Nederīgs rādiuss</translation>
     </message>
@@ -1833,7 +1833,7 @@ Vai vēlaties to atjaunot?</translation>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+86"/>
+        <location line="+84"/>
         <source>No solution</source>
         <translation type="unfinished">Nav risinājuma</translation>
     </message>
@@ -5968,7 +5968,12 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Vienmēr attēlot daudzlīnijas ar pielāgotu platumu, kas ir vismaz 1 pikseļa plats</translation>
     </message>
     <message>
-        <location line="+750"/>
+        <location line="+738"/>
+        <source>At large zoom levels, simplify solid fills with complexity of:</source>
+        <translation type="unfinished">Lielos tālummaiņas līmeņos vienkāršojiet vienlaidu aizpildījumus ar sarežģītību:</translation>
+    </message>
+    <message>
+        <location line="+72"/>
         <source>Selection</source>
         <translation type="unfinished">Atlase</translation>
     </message>
@@ -9360,7 +9365,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>OffsetThrough</name>
     <message>
-        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+70"/>
+        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+84"/>
         <source>Specify point</source>
         <translation type="unfinished">Norādiet punktu</translation>
     </message>
@@ -9975,7 +9980,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Automātiski pielāgot zīmējumu papīram?</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+210"/>
         <source>Drag to move paper</source>
         <translation type="unfinished">Velciet, lai pārvietotu papīru</translation>
     </message>
@@ -13999,7 +14004,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1275"/>
+        <location filename="../scripts/library.js" line="+1288"/>
         <source>Objects</source>
         <translation type="unfinished">Objekti</translation>
     </message>

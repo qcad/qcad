@@ -412,7 +412,7 @@ a beállítások módosításai hatályba lépjenek.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2454"/>
+        <location filename="../scripts/Apollonius.js" line="+2457"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Érvénytelen sugár</translation>
     </message>
@@ -1832,7 +1832,7 @@ Szeretné visszaállítani?</translation>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+86"/>
+        <location line="+84"/>
         <source>No solution</source>
         <translation>Nincs megoldás</translation>
     </message>
@@ -5906,12 +5906,17 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Referenciapont mérete (px):</translation>
     </message>
     <message>
-        <location line="+167"/>
+        <location line="+149"/>
+        <source>At large zoom levels, simplify solid fills with complexity of:</source>
+        <translation type="unfinished">Nagy zoom-szinteken egyszerűsítse a szilárd kitöltések összetettségét:</translation>
+    </message>
+    <message>
+        <location line="+78"/>
         <source>Persistent selection</source>
         <translation type="unfinished">Állandó kiválasztás</translation>
     </message>
     <message>
-        <location line="-635"/>
+        <location line="-695"/>
         <source>Number of preview entities:</source>
         <translation type="unfinished">Az előnézeti entitások száma:</translation>
     </message>
@@ -5966,7 +5971,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Maximálisan kiválasztott entitások a megjelenített referenciapontokkal:</translation>
     </message>
     <message>
-        <location line="+231"/>
+        <location line="+291"/>
         <source>Selection</source>
         <translation type="unfinished">Kiválasztás</translation>
     </message>
@@ -9349,7 +9354,7 @@ már szerepel a listában.</translation>
 <context>
     <name>OffsetThrough</name>
     <message>
-        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+70"/>
+        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+84"/>
         <source>Specify point</source>
         <translation type="unfinished">Pont megadása</translation>
     </message>
@@ -9964,7 +9969,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Automatikusan illeszkedő rajz a papírra?</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+210"/>
         <source>Drag to move paper</source>
         <translation type="unfinished">Húzás a papír mozgatásához</translation>
     </message>
@@ -13982,7 +13987,7 @@ már szerepel a listában.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1275"/>
+        <location filename="../scripts/library.js" line="+1288"/>
         <source>Objects</source>
         <translation type="unfinished">Tárgyak</translation>
     </message>

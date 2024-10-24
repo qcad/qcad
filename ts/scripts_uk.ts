@@ -412,7 +412,7 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2454"/>
+        <location filename="../scripts/Apollonius.js" line="+2457"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Неправильний радіус</translation>
     </message>
@@ -1833,7 +1833,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+86"/>
+        <location line="+84"/>
         <source>No solution</source>
         <translation type="unfinished">Немає рішення</translation>
     </message>
@@ -5968,7 +5968,12 @@ is already in the list.</source>
         <translation type="unfinished">Завжди рендерити полілінії з користувацькою шириною щонайменше 1 піксель</translation>
     </message>
     <message>
-        <location line="+750"/>
+        <location line="+738"/>
+        <source>At large zoom levels, simplify solid fills with complexity of:</source>
+        <translation type="unfinished">На великих рівнях масштабування спрощуйте суцільні заливки зі складністю:</translation>
+    </message>
+    <message>
+        <location line="+72"/>
         <source>Selection</source>
         <translation type="unfinished">Відбір</translation>
     </message>
@@ -9360,7 +9365,7 @@ is already in the list.</source>
 <context>
     <name>OffsetThrough</name>
     <message>
-        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+70"/>
+        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+84"/>
         <source>Specify point</source>
         <translation type="unfinished">Вкажіть точку</translation>
     </message>
@@ -9975,7 +9980,7 @@ is already in the list.</source>
         <translation type="unfinished">Автоматичне припасування креслення до паперу?</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+210"/>
         <source>Drag to move paper</source>
         <translation type="unfinished">Перетягування для переміщення паперу</translation>
     </message>
@@ -13999,7 +14004,7 @@ is already in the list.</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1275"/>
+        <location filename="../scripts/library.js" line="+1288"/>
         <source>Objects</source>
         <translation type="unfinished">Об&apos;єкти</translation>
     </message>

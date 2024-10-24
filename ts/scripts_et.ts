@@ -411,7 +411,7 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2454"/>
+        <location filename="../scripts/Apollonius.js" line="+2457"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Vale raadius</translation>
     </message>
@@ -1830,7 +1830,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+86"/>
+        <location line="+84"/>
         <source>No solution</source>
         <translation type="unfinished">Lahendus puudub</translation>
     </message>
@@ -5960,7 +5960,12 @@ is already in the list.</source>
         <translation type="unfinished">Renderi alati vähemalt 1 piksli laiused kohandatud laiusega polügraanid</translation>
     </message>
     <message>
-        <location line="+750"/>
+        <location line="+738"/>
+        <source>At large zoom levels, simplify solid fills with complexity of:</source>
+        <translation type="unfinished">Suurtel suumitasemetel lihtsustab tahke täitmine keerukust:</translation>
+    </message>
+    <message>
+        <location line="+72"/>
         <source>Selection</source>
         <translation type="unfinished">Valik</translation>
     </message>
@@ -9350,7 +9355,7 @@ is already in the list.</source>
 <context>
     <name>OffsetThrough</name>
     <message>
-        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+70"/>
+        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+84"/>
         <source>Specify point</source>
         <translation type="unfinished">Määrake punkt</translation>
     </message>
@@ -9965,7 +9970,7 @@ is already in the list.</source>
         <translation type="unfinished">Automaatselt paberile sobiv joonis?</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+210"/>
         <source>Drag to move paper</source>
         <translation type="unfinished">Paberi liigutamiseks lohistage</translation>
     </message>
@@ -13984,7 +13989,7 @@ is already in the list.</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1275"/>
+        <location filename="../scripts/library.js" line="+1288"/>
         <source>Objects</source>
         <translation type="unfinished">Objektid</translation>
     </message>

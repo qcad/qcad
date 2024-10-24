@@ -412,7 +412,7 @@ aby wprowadzić zmiany preferencji.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2454"/>
+        <location filename="../scripts/Apollonius.js" line="+2457"/>
         <source>Invalid radius</source>
         <translation>Nieprawidłowy promień</translation>
     </message>
@@ -1836,7 +1836,7 @@ Czy chcesz go odzyskać?</translation>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+86"/>
+        <location line="+84"/>
         <source>No solution</source>
         <translation>Brak rozwiązania</translation>
     </message>
@@ -5881,12 +5881,12 @@ jest już na liście.</translation>
         <translation>Próg wysokości tekstu (px):</translation>
     </message>
     <message>
-        <location line="+90"/>
+        <location line="+150"/>
         <source>Persistent selection</source>
         <translation>Trwała selekcja</translation>
     </message>
     <message>
-        <location line="-951"/>
+        <location line="-1011"/>
         <source>Color lightness threshold:</source>
         <translation>Próg jasności koloru:</translation>
     </message>
@@ -5976,7 +5976,12 @@ jest już na liście.</translation>
         <translation>Maksymalnie wybrane jednostki z wyświetlonymi punktami odniesienia:</translation>
     </message>
     <message>
-        <location line="+231"/>
+        <location line="+219"/>
+        <source>At large zoom levels, simplify solid fills with complexity of:</source>
+        <translation>Przy dużych poziomach powiększenia upraszcza wypełnienia bryłowe ze złożonością:</translation>
+    </message>
+    <message>
+        <location line="+72"/>
         <source>Selection</source>
         <translation>Wybór</translation>
     </message>
@@ -9363,7 +9368,7 @@ jest już na liście.</translation>
 <context>
     <name>OffsetThrough</name>
     <message>
-        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+70"/>
+        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+84"/>
         <source>Specify point</source>
         <translation>Proszę wskazać punkt</translation>
     </message>
@@ -9978,7 +9983,7 @@ jest już na liście.</translation>
         <translation>Automatyczne dopasowywanie rysunku do papieru?</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+210"/>
         <source>Drag to move paper</source>
         <translation>Przeciągnij, aby przesunąć papier</translation>
     </message>
@@ -14002,7 +14007,7 @@ jest już na liście.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1275"/>
+        <location filename="../scripts/library.js" line="+1288"/>
         <source>Objects</source>
         <translation>Obiekty</translation>
     </message>

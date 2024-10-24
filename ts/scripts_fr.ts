@@ -412,7 +412,7 @@ pour appliquer les modifications.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2454"/>
+        <location filename="../scripts/Apollonius.js" line="+2457"/>
         <source>Invalid radius</source>
         <translation>Rayon invalide</translation>
     </message>
@@ -1834,7 +1834,7 @@ Voulez-vous le récupérer ?</translation>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+86"/>
+        <location line="+84"/>
         <source>No solution</source>
         <translation>Aucune solution</translation>
     </message>
@@ -5886,12 +5886,17 @@ est déjà dans la liste.</translation>
         <translation>Seuil de hauteur du texte (px):</translation>
     </message>
     <message>
-        <location line="+90"/>
+        <location line="+72"/>
+        <source>At large zoom levels, simplify solid fills with complexity of:</source>
+        <translation>Zoom élevés : simplifier les remplissages avec une complexité de :</translation>
+    </message>
+    <message>
+        <location line="+78"/>
         <source>Persistent selection</source>
         <translation>Sélection persistante</translation>
     </message>
     <message>
-        <location line="-951"/>
+        <location line="-1011"/>
         <source>Color lightness threshold:</source>
         <translation>Seuil de couleur :</translation>
     </message>
@@ -5971,7 +5976,7 @@ est déjà dans la liste.</translation>
         <translation>Afficher arcs que les lignes ci-dessous cet angle (degrés):</translation>
     </message>
     <message>
-        <location line="+568"/>
+        <location line="+628"/>
         <source>Selection</source>
         <translation>Sélection</translation>
     </message>
@@ -9356,7 +9361,7 @@ est déjà dans la liste.</translation>
 <context>
     <name>OffsetThrough</name>
     <message>
-        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+70"/>
+        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+84"/>
         <source>Specify point</source>
         <translation>Indiquer le point</translation>
     </message>
@@ -9971,7 +9976,7 @@ est déjà dans la liste.</translation>
         <translation>Adapter automatiquement le dessin au papier ?</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+210"/>
         <source>Drag to move paper</source>
         <translation>Faites glisser pour déplacer le papier</translation>
     </message>
@@ -13992,7 +13997,7 @@ est déjà dans la liste.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1275"/>
+        <location filename="../scripts/library.js" line="+1288"/>
         <source>Objects</source>
         <translation>Objets</translation>
     </message>

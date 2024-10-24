@@ -412,7 +412,7 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2454"/>
+        <location filename="../scripts/Apollonius.js" line="+2457"/>
         <source>Invalid radius</source>
         <translation>Недопустимый радиус</translation>
     </message>
@@ -1836,7 +1836,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+86"/>
+        <location line="+84"/>
         <source>No solution</source>
         <translation>Нет решения</translation>
     </message>
@@ -5891,12 +5891,12 @@ is already in the list.</source>
         <translation>Порог высоты текста (пикс.):</translation>
     </message>
     <message>
-        <location line="+90"/>
+        <location line="+150"/>
         <source>Persistent selection</source>
         <translation>Постоянное выделение</translation>
     </message>
     <message>
-        <location line="-951"/>
+        <location line="-1011"/>
         <source>Color lightness threshold:</source>
         <translation>Порог светлоты цвета:</translation>
     </message>
@@ -5976,7 +5976,12 @@ is already in the list.</source>
         <translation>Время ожидания для рендеринга штриховки:</translation>
     </message>
     <message>
-        <location line="+366"/>
+        <location line="+354"/>
+        <source>At large zoom levels, simplify solid fills with complexity of:</source>
+        <translation type="unfinished">При большом увеличении упростите сплошные заливки со сложностью:</translation>
+    </message>
+    <message>
+        <location line="+72"/>
         <source>Selection</source>
         <translation>Выделение</translation>
     </message>
@@ -9363,7 +9368,7 @@ is already in the list.</source>
 <context>
     <name>OffsetThrough</name>
     <message>
-        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+70"/>
+        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+84"/>
         <source>Specify point</source>
         <translation>Указать точку</translation>
     </message>
@@ -9978,7 +9983,7 @@ is already in the list.</source>
         <translation type="unfinished">Автоматическая подгонка рисунка к бумаге?</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+210"/>
         <source>Drag to move paper</source>
         <translation>Для перемещения бумаги перетащите её</translation>
     </message>
@@ -14002,7 +14007,7 @@ is already in the list.</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1275"/>
+        <location filename="../scripts/library.js" line="+1288"/>
         <source>Objects</source>
         <translation>Объекты</translation>
     </message>

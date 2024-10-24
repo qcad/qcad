@@ -412,7 +412,7 @@ um die Änderungen zu übernehmen.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2454"/>
+        <location filename="../scripts/Apollonius.js" line="+2457"/>
         <source>Invalid radius</source>
         <translation>Ungültiger Radius</translation>
     </message>
@@ -1834,7 +1834,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+86"/>
+        <location line="+84"/>
         <source>No solution</source>
         <translation>Keine Lösung</translation>
     </message>
@@ -5886,12 +5886,17 @@ ist bereits in der Liste.</translation>
         <translation>Schwellenwert für Textgrösse (pix):</translation>
     </message>
     <message>
-        <location line="+90"/>
+        <location line="+72"/>
+        <source>At large zoom levels, simplify solid fills with complexity of:</source>
+        <translation>Bei grossen Zoomstufen Füllungen vereinfachen, wenn Komplexität:</translation>
+    </message>
+    <message>
+        <location line="+78"/>
         <source>Persistent selection</source>
         <translation>Persistente Selektion</translation>
     </message>
     <message>
-        <location line="-951"/>
+        <location line="-1011"/>
         <source>Color lightness threshold:</source>
         <translation>Farbgrenzwert:</translation>
     </message>
@@ -5971,7 +5976,7 @@ ist bereits in der Liste.</translation>
         <translation>Bögen als Linien anzeigen falls Winkel kleiner als (Grad):</translation>
     </message>
     <message>
-        <location line="+568"/>
+        <location line="+628"/>
         <source>Selection</source>
         <translation>Selektion</translation>
     </message>
@@ -9356,7 +9361,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>OffsetThrough</name>
     <message>
-        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+70"/>
+        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+84"/>
         <source>Specify point</source>
         <translation>Punkt angeben</translation>
     </message>
@@ -9951,7 +9956,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+335"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+346"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
@@ -9986,7 +9991,7 @@ ist bereits in der Liste.</translation>
         <translation>Drucken ...</translation>
     </message>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="-717"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="-728"/>
         <source>Auto Paper Size</source>
         <translation>Auto Papiergrösse</translation>
     </message>
@@ -10006,7 +10011,7 @@ ist bereits in der Liste.</translation>
         <translation>Automatische Skalierung der Zeichnung auf die Papiergrösse?</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+210"/>
         <source>Drag to move paper</source>
         <translation>Ziehen zum Verschieben des Papiers</translation>
     </message>
@@ -13992,7 +13997,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1275"/>
+        <location filename="../scripts/library.js" line="+1288"/>
         <source>Objects</source>
         <translation>Objekte</translation>
     </message>

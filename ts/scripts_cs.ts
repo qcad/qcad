@@ -412,7 +412,7 @@ aby se změny předvoleb projevily.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2454"/>
+        <location filename="../scripts/Apollonius.js" line="+2457"/>
         <source>Invalid radius</source>
         <translation>Neplatný poloměr</translation>
     </message>
@@ -1834,7 +1834,7 @@ Přejete si ho obnovit?</translation>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+86"/>
+        <location line="+84"/>
         <source>No solution</source>
         <translation>Žádné řešení</translation>
     </message>
@@ -5879,12 +5879,17 @@ již v seznamu je.</translation>
         <translation type="unfinished">Velikost referenčního bodu (px):</translation>
     </message>
     <message>
-        <location line="+167"/>
+        <location line="+149"/>
+        <source>At large zoom levels, simplify solid fills with complexity of:</source>
+        <translation type="unfinished">Při velkých úrovních zvětšení zjednodušte pevné výplně se složitostí:</translation>
+    </message>
+    <message>
+        <location line="+78"/>
         <source>Persistent selection</source>
         <translation type="unfinished">Trvalý výběr</translation>
     </message>
     <message>
-        <location line="-951"/>
+        <location line="-1011"/>
         <source>Color lightness threshold:</source>
         <translation>Prahová hodnota světla barvy:</translation>
     </message>
@@ -5974,7 +5979,7 @@ již v seznamu je.</translation>
         <translation type="unfinished">Maximum vybraných entit se zobrazenými referenčními body:</translation>
     </message>
     <message>
-        <location line="+231"/>
+        <location line="+291"/>
         <source>Selection</source>
         <translation>Výběr</translation>
     </message>
@@ -9361,7 +9366,7 @@ již v seznamu je.</translation>
 <context>
     <name>OffsetThrough</name>
     <message>
-        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+70"/>
+        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+84"/>
         <source>Specify point</source>
         <translation>Určete bod</translation>
     </message>
@@ -9976,7 +9981,7 @@ již v seznamu je.</translation>
         <translation type="unfinished">Automatické přizpůsobení výkresu papíru?</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+210"/>
         <source>Drag to move paper</source>
         <translation>Přetažením přesuňte papír</translation>
     </message>
@@ -14000,7 +14005,7 @@ již v seznamu je.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1275"/>
+        <location filename="../scripts/library.js" line="+1288"/>
         <source>Objects</source>
         <translation>Objektů</translation>
     </message>

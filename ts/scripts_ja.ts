@@ -412,7 +412,7 @@ QCADを再起動してください。</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2454"/>
+        <location filename="../scripts/Apollonius.js" line="+2457"/>
         <source>Invalid radius</source>
         <translation>無効な半径</translation>
     </message>
@@ -1832,7 +1832,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+86"/>
+        <location line="+84"/>
         <source>No solution</source>
         <translation>解がありません</translation>
     </message>
@@ -5881,12 +5881,17 @@ is already in the list.</source>
         <translation type="unfinished">テキストの高さの閾値(px)。</translation>
     </message>
     <message>
-        <location line="+90"/>
+        <location line="+72"/>
+        <source>At large zoom levels, simplify solid fills with complexity of:</source>
+        <translation type="unfinished">大きなズームレベルでは、複雑なソリッドフィルを単純化する：</translation>
+    </message>
+    <message>
+        <location line="+78"/>
         <source>Persistent selection</source>
         <translation type="unfinished">永続的な選択</translation>
     </message>
     <message>
-        <location line="-951"/>
+        <location line="-1011"/>
         <source>Color lightness threshold:</source>
         <translation>色の明るさ閾値:</translation>
     </message>
@@ -5966,7 +5971,7 @@ is already in the list.</source>
         <translation>この角度以下の弧を直線で表示 (度):</translation>
     </message>
     <message>
-        <location line="+568"/>
+        <location line="+628"/>
         <source>Selection</source>
         <translation>選択</translation>
     </message>
@@ -9349,7 +9354,7 @@ is already in the list.</source>
 <context>
     <name>OffsetThrough</name>
     <message>
-        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+70"/>
+        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+84"/>
         <source>Specify point</source>
         <translation>点を指定</translation>
     </message>
@@ -9964,7 +9969,7 @@ is already in the list.</source>
         <translation type="unfinished">図面を用紙にオートフィットさせる？</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+210"/>
         <source>Drag to move paper</source>
         <translation>用紙を移動するためドラッグしてください</translation>
     </message>
@@ -13982,7 +13987,7 @@ is already in the list.</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1275"/>
+        <location filename="../scripts/library.js" line="+1288"/>
         <source>Objects</source>
         <translation>オブジェクト</translation>
     </message>

@@ -412,7 +412,7 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2454"/>
+        <location filename="../scripts/Apollonius.js" line="+2457"/>
         <source>Invalid radius</source>
         <translation type="unfinished">无效半径</translation>
     </message>
@@ -1832,7 +1832,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+86"/>
+        <location line="+84"/>
         <source>No solution</source>
         <translation type="unfinished">没有解决方案</translation>
     </message>
@@ -5906,12 +5906,17 @@ is already in the list.</source>
         <translation type="unfinished">参考点尺寸（px）：</translation>
     </message>
     <message>
-        <location line="+167"/>
+        <location line="+149"/>
+        <source>At large zoom levels, simplify solid fills with complexity of:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+78"/>
         <source>Persistent selection</source>
         <translation type="unfinished">持续性的选择</translation>
     </message>
     <message>
-        <location line="-635"/>
+        <location line="-695"/>
         <source>Number of preview entities:</source>
         <translation type="unfinished">预览实体的数量：</translation>
     </message>
@@ -5966,7 +5971,7 @@ is already in the list.</source>
         <translation type="unfinished">具有显示参考点的最大选定实体：</translation>
     </message>
     <message>
-        <location line="+231"/>
+        <location line="+291"/>
         <source>Selection</source>
         <translation type="unfinished">选择</translation>
     </message>
@@ -9349,7 +9354,7 @@ is already in the list.</source>
 <context>
     <name>OffsetThrough</name>
     <message>
-        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+70"/>
+        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+84"/>
         <source>Specify point</source>
         <translation type="unfinished">指定点</translation>
     </message>
@@ -9964,7 +9969,7 @@ is already in the list.</source>
         <translation type="unfinished">自动将图画贴在纸上？</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+210"/>
         <source>Drag to move paper</source>
         <translation type="unfinished">拖动以移动纸张</translation>
     </message>
@@ -13982,7 +13987,7 @@ is already in the list.</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1275"/>
+        <location filename="../scripts/library.js" line="+1288"/>
         <source>Objects</source>
         <translation type="unfinished">物品</translation>
     </message>

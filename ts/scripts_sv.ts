@@ -412,7 +412,7 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2454"/>
+        <location filename="../scripts/Apollonius.js" line="+2457"/>
         <source>Invalid radius</source>
         <translation>Ogiltig radie</translation>
     </message>
@@ -1832,7 +1832,7 @@ Vill du återställa den?</translation>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+86"/>
+        <location line="+84"/>
         <source>No solution</source>
         <translation>Ingen lösning</translation>
     </message>
@@ -5889,12 +5889,17 @@ finns redan i listan.</translation>
         <translation>Referenspunktsstorlek (px):</translation>
     </message>
     <message>
-        <location line="+167"/>
+        <location line="+149"/>
+        <source>At large zoom levels, simplify solid fills with complexity of:</source>
+        <translation>Vid stora zoomnivåer förenklas solid fyllning med komplexitet av:</translation>
+    </message>
+    <message>
+        <location line="+78"/>
         <source>Persistent selection</source>
         <translation>Beständigt urval</translation>
     </message>
     <message>
-        <location line="-635"/>
+        <location line="-695"/>
         <source>Number of preview entities:</source>
         <translation>Antal förhandsvisade objekt:</translation>
     </message>
@@ -5944,12 +5949,12 @@ finns redan i listan.</translation>
         <translation>Maximalt antal valda enheter med visade referenspunkter:</translation>
     </message>
     <message>
-        <location line="+231"/>
+        <location line="+291"/>
         <source>Selection</source>
         <translation>Urval</translation>
     </message>
     <message>
-        <location line="-568"/>
+        <location line="-628"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation>Visa bågar som linjer under denna vinkel (grader):</translation>
     </message>
@@ -9354,7 +9359,7 @@ finns redan i listan.</translation>
 <context>
     <name>OffsetThrough</name>
     <message>
-        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+70"/>
+        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+84"/>
         <source>Specify point</source>
         <translation>Ange punkt</translation>
     </message>
@@ -9969,7 +9974,7 @@ finns redan i listan.</translation>
         <translation>Automatisk anpassning av ritning till papper?</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+210"/>
         <source>Drag to move paper</source>
         <translation>Dra för att flytta papper</translation>
     </message>
@@ -13990,7 +13995,7 @@ finns redan i listan.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1275"/>
+        <location filename="../scripts/library.js" line="+1288"/>
         <source>Objects</source>
         <translation>Objekt</translation>
     </message>

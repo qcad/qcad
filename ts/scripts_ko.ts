@@ -412,7 +412,7 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2454"/>
+        <location filename="../scripts/Apollonius.js" line="+2457"/>
         <source>Invalid radius</source>
         <translation type="unfinished">잘못된 반경</translation>
     </message>
@@ -1832,7 +1832,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+86"/>
+        <location line="+84"/>
         <source>No solution</source>
         <translation type="unfinished">솔루션 없음</translation>
     </message>
@@ -5961,7 +5961,12 @@ is already in the list.</source>
         <translation type="unfinished">항상 사용자 지정 너비가 1픽셀 이상인 폴리라인을 렌더링합니다</translation>
     </message>
     <message>
-        <location line="+750"/>
+        <location line="+738"/>
+        <source>At large zoom levels, simplify solid fills with complexity of:</source>
+        <translation type="unfinished">큰 확대/축소 수준에서는 복잡한 솔리드 채우기를 단순화합니다:</translation>
+    </message>
+    <message>
+        <location line="+72"/>
         <source>Selection</source>
         <translation type="unfinished">선택</translation>
     </message>
@@ -9349,7 +9354,7 @@ is already in the list.</source>
 <context>
     <name>OffsetThrough</name>
     <message>
-        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+70"/>
+        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+84"/>
         <source>Specify point</source>
         <translation type="unfinished">포인트 지정</translation>
     </message>
@@ -9964,7 +9969,7 @@ is already in the list.</source>
         <translation type="unfinished">도면을 종이에 자동으로 맞추시겠습니까?</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+210"/>
         <source>Drag to move paper</source>
         <translation type="unfinished">드래그하여 용지 이동</translation>
     </message>
@@ -13982,7 +13987,7 @@ is already in the list.</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1275"/>
+        <location filename="../scripts/library.js" line="+1288"/>
         <source>Objects</source>
         <translation type="unfinished">개체</translation>
     </message>
