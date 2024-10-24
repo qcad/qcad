@@ -177,7 +177,7 @@ double RHatchData::getDistanceTo(const RVector& point, bool limited, double rang
 
     // path is filled (solid) or very dens / huge or we're in draft mode:
     int comp = getComplexity();
-    if (isSolid() || comp>10000 || painterPaths.isEmpty() || draft) {
+    if (isSolid() || comp>1000 || painterPaths.isEmpty() || draft) {
         if (boundaryPath.contains(QPointF(point.x, point.y))) {
             if (RMath::isNaN(ret) || strictRange<ret) {
                 ret = strictRange;
@@ -682,6 +682,10 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft, double pixelSizeHint
     // for solids, return boundary path, which can be filled:
     // in draft mode, return boundary path to be shown without fill:
     if (isSolid() || draft) {
+        // prevent stalling at large zoom for complex solid fills (QPainterPath performance issue):
+        if (getComplexity()>RSettings::getMaxHatchComplexity() && pixelSizeHint<0.1) {
+            pixelSizeHint = 0.1;
+        }
         getBoundaryPath(pixelSizeHint);
         if (draft) {
             boundaryPath.setPen(QPen(Qt::SolidLine));
@@ -955,7 +959,7 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft, double pixelSizeHint
 
             //if (timer.elapsed()>500) {
                 if (timeOut==-1) {
-                    timeOut = RSettings::getIntValue("GraphicsView/MaxHatchTime", 2000);
+                    timeOut = RSettings::getMaxHatchTime();
                 }
                 if (timer.elapsed()>timeOut) {
                     qWarning() << "RHatchData::getPainterPaths: hatch pattern too dense. hatch pattern generation aborted (timeout set to " << timeOut << ")...";
@@ -1344,12 +1348,18 @@ QList<RPolyline> RHatchData::getBoundaryAsPolylines(double segmentLength) const 
 }
 
 int RHatchData::getComplexity() const {
-    QList<RPainterPath> pps = getPainterPaths(false);
+//    QList<RPainterPath> pps = getPainterPaths(false);
 
-    int ret = 0;
-    for (int i=0; i<pps.count(); i++) {
-        ret += pps[i].getElementCount();
+//    int ret = 0;
+//    for (int i=0; i<pps.count(); i++) {
+//        ret += pps[i].getElementCount();
+//    }
+
+//    return ret;
+
+    int total = 0;
+    for (int i=0; i<boundary.length(); i++) {
+        total += boundary[i].length();
     }
-
-    return ret;
+    return total;
 }

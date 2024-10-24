@@ -103,6 +103,8 @@ int RSettings::maxReferencePointEntitiesDisplay = -1;
 int RSettings::propertyEditorShowOnRequest = -1;
 int RSettings::simpleTextAlignLeft = -1;
 int RSettings::renderThinPolylines1px = -1;
+int RSettings::maxHatchTime = -1;
+int RSettings::maxHatchComplexity = -1;
 double RSettings::devicePixelRatio = -1.0;
 QString RSettings::polarCoordinateSeparator = QString();
 QString RSettings::cartesianCoordinateSeparator = QString();
@@ -1077,6 +1079,26 @@ bool RSettings::getRenderThinPolylines1px() {
         renderThinPolylines1px = getBoolValue("GraphicsView/RenderThinPolylines1px", true);
     }
     return renderThinPolylines1px;
+}
+
+/**
+ * \return Maximum render time for a single hatch in ms.
+ */
+int RSettings::getMaxHatchTime() {
+    if (maxHatchTime==-1) {
+        maxHatchTime = getIntValue("GraphicsView/MaxHatchTime", 2000);
+    }
+    return maxHatchTime;
+}
+
+/**
+ * \return Maximum complexity for a hatch to render at recommended arc resolution.
+ */
+int RSettings::getMaxHatchComplexity() {
+    if (maxHatchComplexity==-1) {
+        maxHatchComplexity = getIntValue("GraphicsView/MaxHatchComplexity", 2000);
+    }
+    return maxHatchComplexity;
 }
 
 /**
