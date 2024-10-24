@@ -2018,6 +2018,8 @@ void RSettings::resetCache() {
     propertyEditorShowOnRequest = -1;
     simpleTextAlignLeft = -1;
     renderThinPolylines1px = -1;
+    maxHatchTime = -1;
+    maxHatchComplexity = -1;
     minArcAngleStep = -1;
     dashThreshold = -1;
     textRenderedAsText = -1;
