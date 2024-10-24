@@ -1181,10 +1181,10 @@
             <bool>true</bool>
            </property>
            <property name="currentText">
-            <string>1000</string>
+            <string notr="true">2000</string>
            </property>
            <property name="currentIndex">
-            <number>2</number>
+            <number>3</number>
            </property>
            <item>
             <property name="text">
@@ -1199,6 +1199,11 @@
            <item>
             <property name="text">
              <string notr="true">1000</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">2000</string>
             </property>
            </item>
            <item>
