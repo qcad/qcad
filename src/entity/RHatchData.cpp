@@ -683,8 +683,14 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft, double pixelSizeHint
     // in draft mode, return boundary path to be shown without fill:
     if (isSolid() || draft) {
         // prevent stalling at large zoom for complex solid fills (QPainterPath performance issue):
-        if (getComplexity()>RSettings::getMaxHatchComplexity() && pixelSizeHint<0.1) {
-            pixelSizeHint = 0.1;
+        if (getComplexity()>RSettings::getMaxHatchComplexity()*100) {
+            pixelSizeHint*=100;
+        }
+        else if (getComplexity()>RSettings::getMaxHatchComplexity()) {
+            pixelSizeHint*=10;
+        }
+        if (getComplexity()>RSettings::getMaxHatchComplexity() && pixelSizeHint<0.001) {
+            pixelSizeHint = 0.001;
         }
         getBoundaryPath(pixelSizeHint);
         if (draft) {
