@@ -519,7 +519,10 @@ Apollonius.getSolutionsCCCAlt = function(c1, c2, c3) {
 
         for (var k=0; k<iSols[i].length; k++) {
             var obj = iSols[i][k];
-            candidates = candidates.concat(ShapeAlgorithms.getOffsetShapes(obj, circle1.radius, 1, RS.BothSides));
+            var offsetShapes = ShapeAlgorithms.getOffsetShapes(obj, circle1.radius, 1, RS.BothSides);
+            for (var n=0; n<offsetShapes.length; n++) {
+                candidates.push(getPtr(offsetShapes[n]));
+            }
         }
     }
 
