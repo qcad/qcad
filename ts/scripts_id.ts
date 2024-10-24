@@ -5951,7 +5951,12 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Ambang batas tinggi teks (px):</translation>
     </message>
     <message>
-        <location line="-147"/>
+        <location line="+72"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation type="unfinished">Kompleksitas maksimum untuk isian padat dengan kualitas tinggi:</translation>
+    </message>
+    <message>
+        <location line="-219"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation type="unfinished">Entitas maksimum yang dipilih dengan titik referensi yang ditampilkan:</translation>
     </message>
@@ -5961,12 +5966,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Selalu buat poligon dengan lebar khusus setidaknya selebar 1 piksel</translation>
     </message>
     <message>
-        <location line="+738"/>
-        <source>At large zoom levels, simplify solid fills with complexity of:</source>
-        <translation type="unfinished">Pada level zoom besar, sederhanakan isian padat dengan kerumitan:</translation>
-    </message>
-    <message>
-        <location line="+72"/>
+        <location line="+810"/>
         <source>Selection</source>
         <translation type="unfinished">Seleksi</translation>
     </message>

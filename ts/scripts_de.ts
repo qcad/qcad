@@ -5886,12 +5886,7 @@ ist bereits in der Liste.</translation>
         <translation>Schwellenwert für Textgrösse (pix):</translation>
     </message>
     <message>
-        <location line="+72"/>
-        <source>At large zoom levels, simplify solid fills with complexity of:</source>
-        <translation>Bei grossen Zoomstufen Füllungen vereinfachen, wenn Komplexität:</translation>
-    </message>
-    <message>
-        <location line="+78"/>
+        <location line="+150"/>
         <source>Persistent selection</source>
         <translation>Persistente Selektion</translation>
     </message>
@@ -5976,7 +5971,12 @@ ist bereits in der Liste.</translation>
         <translation>Bögen als Linien anzeigen falls Winkel kleiner als (Grad):</translation>
     </message>
     <message>
-        <location line="+628"/>
+        <location line="+556"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation>Maximale Komplexität für Füllungen in hoher Qualität:</translation>
+    </message>
+    <message>
+        <location line="+72"/>
         <source>Selection</source>
         <translation>Selektion</translation>
     </message>

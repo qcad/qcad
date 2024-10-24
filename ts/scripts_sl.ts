@@ -5902,12 +5902,7 @@ je že na seznamu.</translation>
         <translation type="unfinished">Prag višine besedila (px):</translation>
     </message>
     <message>
-        <location line="+72"/>
-        <source>At large zoom levels, simplify solid fills with complexity of:</source>
-        <translation type="unfinished">Pri velikih stopnjah povečave poenostavite polna polnila s kompleksnostjo:</translation>
-    </message>
-    <message>
-        <location line="+78"/>
+        <location line="+150"/>
         <source>Persistent selection</source>
         <translation type="unfinished">Trajni izbor</translation>
     </message>
@@ -5982,7 +5977,12 @@ je že na seznamu.</translation>
         <translation>Prikaži loke kot črt, če je kot manjši od (stopinje): </translation>
     </message>
     <message>
-        <location line="+628"/>
+        <location line="+556"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation type="unfinished">Največja zapletenost za trdna polnila visoke kakovosti:</translation>
+    </message>
+    <message>
+        <location line="+72"/>
         <source>Selection</source>
         <translation>Izbor</translation>
     </message>

@@ -5886,12 +5886,7 @@ est déjà dans la liste.</translation>
         <translation>Seuil de hauteur du texte (px):</translation>
     </message>
     <message>
-        <location line="+72"/>
-        <source>At large zoom levels, simplify solid fills with complexity of:</source>
-        <translation>Zoom élevés : simplifier les remplissages avec une complexité de :</translation>
-    </message>
-    <message>
-        <location line="+78"/>
+        <location line="+150"/>
         <source>Persistent selection</source>
         <translation>Sélection persistante</translation>
     </message>
@@ -5976,7 +5971,12 @@ est déjà dans la liste.</translation>
         <translation>Afficher arcs que les lignes ci-dessous cet angle (degrés):</translation>
     </message>
     <message>
-        <location line="+628"/>
+        <location line="+556"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation>Complexité maximale pour des remplissages solides de haute qualité :</translation>
+    </message>
+    <message>
+        <location line="+72"/>
         <source>Selection</source>
         <translation>Sélection</translation>
     </message>

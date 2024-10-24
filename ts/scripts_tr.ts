@@ -5885,12 +5885,7 @@ zaten listede.</translation>
         <translation type="unfinished">Referans noktası boyutu (px):</translation>
     </message>
     <message>
-        <location line="+149"/>
-        <source>At large zoom levels, simplify solid fills with complexity of:</source>
-        <translation type="unfinished">Büyük yakınlaştırma seviyelerinde, katı dolguları karmaşıklığı ile basitleştirin:</translation>
-    </message>
-    <message>
-        <location line="+78"/>
+        <location line="+227"/>
         <source>Persistent selection</source>
         <translation type="unfinished">Kalıcı seçim</translation>
     </message>
@@ -5950,7 +5945,12 @@ zaten listede.</translation>
         <translation type="unfinished">Görüntülenen referans noktaları ile maksimum seçilen varlıklar:</translation>
     </message>
     <message>
-        <location line="+291"/>
+        <location line="+219"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation type="unfinished">Yüksek kalitede katı dolgular için maksimum karmaşıklık:</translation>
+    </message>
+    <message>
+        <location line="+72"/>
         <source>Selection</source>
         <translation type="unfinished">Seçim</translation>
     </message>

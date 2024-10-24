@@ -5891,12 +5891,7 @@ on jo luettelossa.</translation>
         <translation>Tekstin korkeuskynnys (px):</translation>
     </message>
     <message>
-        <location line="+72"/>
-        <source>At large zoom levels, simplify solid fills with complexity of:</source>
-        <translation>Suurilla zoomaustasoilla yksinkertaista kiinteitä täytteitä monimutkaisuudella:</translation>
-    </message>
-    <message>
-        <location line="+78"/>
+        <location line="+150"/>
         <source>Persistent selection</source>
         <translation>Pysyvä valinta</translation>
     </message>
@@ -5976,7 +5971,12 @@ on jo luettelossa.</translation>
         <translation>Aikakatkaisu kuvioinnin rendröintiin:</translation>
     </message>
     <message>
-        <location line="+426"/>
+        <location line="+354"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation>Maksimaalinen monimutkaisuus kiinteitä täytteitä varten korkealla laadulla:</translation>
+    </message>
+    <message>
+        <location line="+72"/>
         <source>Selection</source>
         <translation>Valinta</translation>
     </message>

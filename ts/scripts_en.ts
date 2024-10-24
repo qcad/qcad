@@ -5906,7 +5906,12 @@ is already in the list.</translation>
         <translation>Text height threshold (px):</translation>
     </message>
     <message>
-        <location line="+150"/>
+        <location line="+72"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation>Maximum complexity for solid fills at high quality:</translation>
+    </message>
+    <message>
+        <location line="+78"/>
         <source>Persistent selection</source>
         <translation>Persistent selection</translation>
     </message>
@@ -5971,12 +5976,7 @@ is already in the list.</translation>
         <translation>Timeout for hatch rendering:</translation>
     </message>
     <message>
-        <location line="+354"/>
-        <source>At large zoom levels, simplify solid fills with complexity of:</source>
-        <translation>At large zoom levels, simplify solid fills with complexity of:</translation>
-    </message>
-    <message>
-        <location line="+72"/>
+        <location line="+426"/>
         <source>Selection</source>
         <translation>Selection</translation>
     </message>

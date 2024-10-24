@@ -5886,12 +5886,7 @@ ya está en la lista.</translation>
         <translation>Umbral de altura del texto (px):</translation>
     </message>
     <message>
-        <location line="+72"/>
-        <source>At large zoom levels, simplify solid fills with complexity of:</source>
-        <translation>A grandes niveles de zoom, simplificar rellenos con complejidad de:</translation>
-    </message>
-    <message>
-        <location line="+78"/>
+        <location line="+150"/>
         <source>Persistent selection</source>
         <translation>Selección persistente</translation>
     </message>
@@ -5976,7 +5971,12 @@ ya está en la lista.</translation>
         <translation>Mostrar arcos como las líneas por debajo de este ángulo (grados):</translation>
     </message>
     <message>
-        <location line="+628"/>
+        <location line="+556"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation>Máxima complejidad para rellenos sólidos de alta calidad:</translation>
+    </message>
+    <message>
+        <location line="+72"/>
         <source>Selection</source>
         <translation>Selección</translation>
     </message>

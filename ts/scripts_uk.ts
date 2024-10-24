@@ -5958,7 +5958,12 @@ is already in the list.</source>
         <translation type="unfinished">Поріг висоти тексту (px):</translation>
     </message>
     <message>
-        <location line="-147"/>
+        <location line="+72"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation type="unfinished">Максимальна складність для твердих пломб з високою якістю:</translation>
+    </message>
+    <message>
+        <location line="-219"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation type="unfinished">Максимальна кількість обраних об&apos;єктів з відображеними опорними точками:</translation>
     </message>
@@ -5968,12 +5973,7 @@ is already in the list.</source>
         <translation type="unfinished">Завжди рендерити полілінії з користувацькою шириною щонайменше 1 піксель</translation>
     </message>
     <message>
-        <location line="+738"/>
-        <source>At large zoom levels, simplify solid fills with complexity of:</source>
-        <translation type="unfinished">На великих рівнях масштабування спрощуйте суцільні заливки зі складністю:</translation>
-    </message>
-    <message>
-        <location line="+72"/>
+        <location line="+810"/>
         <source>Selection</source>
         <translation type="unfinished">Відбір</translation>
     </message>

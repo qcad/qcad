@@ -5910,12 +5910,7 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+149"/>
-        <source>At large zoom levels, simplify solid fills with complexity of:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+78"/>
+        <location line="+227"/>
         <source>Persistent selection</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5975,7 +5970,12 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+291"/>
+        <location line="+219"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+72"/>
         <source>Selection</source>
         <translation type="unfinished"></translation>
     </message>

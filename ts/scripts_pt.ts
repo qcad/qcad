@@ -5886,12 +5886,7 @@ já se encontra na lista.</translation>
         <translation>Limite da altura do texto (px):</translation>
     </message>
     <message>
-        <location line="+72"/>
-        <source>At large zoom levels, simplify solid fills with complexity of:</source>
-        <translation>Grandes níveis de zoom: simplifique os preenchimentos com a complexidade de:</translation>
-    </message>
-    <message>
-        <location line="+78"/>
+        <location line="+150"/>
         <source>Persistent selection</source>
         <translation>Seleção Persistente</translation>
     </message>
@@ -5976,7 +5971,12 @@ já se encontra na lista.</translation>
         <translation>Exiba arcos como linhas, abaixo deste ângulo (graus):</translation>
     </message>
     <message>
-        <location line="+628"/>
+        <location line="+556"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation>Máxima complexidade para preenchimentos sólidos de alta qualidade:</translation>
+    </message>
+    <message>
+        <location line="+72"/>
         <source>Selection</source>
         <translation>Seleção</translation>
     </message>

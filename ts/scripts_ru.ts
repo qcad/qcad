@@ -5891,7 +5891,12 @@ is already in the list.</source>
         <translation>Порог высоты текста (пикс.):</translation>
     </message>
     <message>
-        <location line="+150"/>
+        <location line="+72"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation type="unfinished">Максимальная сложность для сплошных заливок высокого качества:</translation>
+    </message>
+    <message>
+        <location line="+78"/>
         <source>Persistent selection</source>
         <translation>Постоянное выделение</translation>
     </message>
@@ -5976,12 +5981,7 @@ is already in the list.</source>
         <translation>Время ожидания для рендеринга штриховки:</translation>
     </message>
     <message>
-        <location line="+354"/>
-        <source>At large zoom levels, simplify solid fills with complexity of:</source>
-        <translation type="unfinished">При большом увеличении упростите сплошные заливки со сложностью:</translation>
-    </message>
-    <message>
-        <location line="+72"/>
+        <location line="+426"/>
         <source>Selection</source>
         <translation>Выделение</translation>
     </message>

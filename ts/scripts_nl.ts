@@ -5886,7 +5886,12 @@ is al in de lijst.</translation>
         <translation>Drempel voor teksthoogte (px):</translation>
     </message>
     <message>
-        <location line="+150"/>
+        <location line="+72"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation>Maximale complexiteit voor solide vullingen van hoge kwaliteit:</translation>
+    </message>
+    <message>
+        <location line="+78"/>
         <source>Persistent selection</source>
         <translation>Blijvende selectie</translation>
     </message>
@@ -5971,12 +5976,7 @@ is al in de lijst.</translation>
         <translation>Time-out voor weergave van arcering:</translation>
     </message>
     <message>
-        <location line="+354"/>
-        <source>At large zoom levels, simplify solid fills with complexity of:</source>
-        <translation>Vereenvoudig bij grote zoomniveaus vullingen met complexiteit van:</translation>
-    </message>
-    <message>
-        <location line="+72"/>
+        <location line="+426"/>
         <source>Selection</source>
         <translation>Selectie</translation>
     </message>

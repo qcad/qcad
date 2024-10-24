@@ -5958,7 +5958,12 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Teksta augstuma slieksnis (px):</translation>
     </message>
     <message>
-        <location line="-147"/>
+        <location line="+72"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation type="unfinished">Maksimāla sarežģītība, lai iegūtu augstas kvalitātes cietus aizpildījumus:</translation>
+    </message>
+    <message>
+        <location line="-219"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation type="unfinished">Maksimāli atlasītās vienības ar attēlotajiem atskaites punktiem:</translation>
     </message>
@@ -5968,12 +5973,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Vienmēr attēlot daudzlīnijas ar pielāgotu platumu, kas ir vismaz 1 pikseļa plats</translation>
     </message>
     <message>
-        <location line="+738"/>
-        <source>At large zoom levels, simplify solid fills with complexity of:</source>
-        <translation type="unfinished">Lielos tālummaiņas līmeņos vienkāršojiet vienlaidu aizpildījumus ar sarežģītību:</translation>
-    </message>
-    <message>
-        <location line="+72"/>
+        <location line="+810"/>
         <source>Selection</source>
         <translation type="unfinished">Atlase</translation>
     </message>

@@ -5958,7 +5958,12 @@ este deja în listă.</translation>
         <translation type="unfinished">Pragul de înălțime a textului (px):</translation>
     </message>
     <message>
-        <location line="-147"/>
+        <location line="+72"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation type="unfinished">Complexitate maximă pentru umpluturi solide la calitate ridicată:</translation>
+    </message>
+    <message>
+        <location line="-219"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation type="unfinished">Numărul maxim de entități selectate cu puncte de referință afișate:</translation>
     </message>
@@ -5968,12 +5973,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Redați întotdeauna polilinii cu lățimi personalizate cu o lățime de cel puțin 1 pixel</translation>
     </message>
     <message>
-        <location line="+738"/>
-        <source>At large zoom levels, simplify solid fills with complexity of:</source>
-        <translation type="unfinished">La niveluri mari de zoom, simplificați umpluturile solide cu complexitatea de:</translation>
-    </message>
-    <message>
-        <location line="+72"/>
+        <location line="+810"/>
         <source>Selection</source>
         <translation type="unfinished">Selecție</translation>
     </message>

@@ -5886,12 +5886,7 @@ is already in the list.</source>
         <translation>Soglia di altezza del testo (px):</translation>
     </message>
     <message>
-        <location line="+72"/>
-        <source>At large zoom levels, simplify solid fills with complexity of:</source>
-        <translation>A livelli di zoom elevati, semplificare i riempimenti con complessità di:</translation>
-    </message>
-    <message>
-        <location line="+78"/>
+        <location line="+150"/>
         <source>Persistent selection</source>
         <translation>Selezione permanente</translation>
     </message>
@@ -5976,7 +5971,12 @@ is already in the list.</source>
         <translation>Mostra archi come linee di sotto di questo angolo (gradi):</translation>
     </message>
     <message>
-        <location line="+628"/>
+        <location line="+556"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation>Massima complessità per riempimenti solidi di alta qualità:</translation>
+    </message>
+    <message>
+        <location line="+72"/>
         <source>Selection</source>
         <translation>Selezione</translation>
     </message>

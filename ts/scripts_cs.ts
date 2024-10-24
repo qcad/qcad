@@ -5879,12 +5879,7 @@ již v seznamu je.</translation>
         <translation type="unfinished">Velikost referenčního bodu (px):</translation>
     </message>
     <message>
-        <location line="+149"/>
-        <source>At large zoom levels, simplify solid fills with complexity of:</source>
-        <translation type="unfinished">Při velkých úrovních zvětšení zjednodušte pevné výplně se složitostí:</translation>
-    </message>
-    <message>
-        <location line="+78"/>
+        <location line="+227"/>
         <source>Persistent selection</source>
         <translation type="unfinished">Trvalý výběr</translation>
     </message>
@@ -5979,7 +5974,12 @@ již v seznamu je.</translation>
         <translation type="unfinished">Maximum vybraných entit se zobrazenými referenčními body:</translation>
     </message>
     <message>
-        <location line="+291"/>
+        <location line="+219"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation type="unfinished">Maximální složitost pro pevné výplně ve vysoké kvalitě:</translation>
+    </message>
+    <message>
+        <location line="+72"/>
         <source>Selection</source>
         <translation>Výběr</translation>
     </message>

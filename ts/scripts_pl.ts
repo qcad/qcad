@@ -5881,7 +5881,12 @@ jest już na liście.</translation>
         <translation>Próg wysokości tekstu (px):</translation>
     </message>
     <message>
-        <location line="+150"/>
+        <location line="+72"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation>Maksymalna złożoność dla solidnych wypełnień w wysokiej jakości:</translation>
+    </message>
+    <message>
+        <location line="+78"/>
         <source>Persistent selection</source>
         <translation>Trwała selekcja</translation>
     </message>
@@ -5976,12 +5981,7 @@ jest już na liście.</translation>
         <translation>Maksymalnie wybrane jednostki z wyświetlonymi punktami odniesienia:</translation>
     </message>
     <message>
-        <location line="+219"/>
-        <source>At large zoom levels, simplify solid fills with complexity of:</source>
-        <translation>Przy dużych poziomach powiększenia upraszcza wypełnienia bryłowe ze złożonością:</translation>
-    </message>
-    <message>
-        <location line="+72"/>
+        <location line="+291"/>
         <source>Selection</source>
         <translation>Wybór</translation>
     </message>

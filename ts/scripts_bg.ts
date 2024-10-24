@@ -5954,7 +5954,12 @@ is already in the list.</source>
         <translation type="unfinished">Праг на височината на текста (px):</translation>
     </message>
     <message>
-        <location line="-147"/>
+        <location line="+72"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation type="unfinished">Максимална сложност за плътни запълвания с високо качество:</translation>
+    </message>
+    <message>
+        <location line="-219"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation type="unfinished">Максимално избрани обекти с показани референтни точки:</translation>
     </message>
@@ -5964,12 +5969,7 @@ is already in the list.</source>
         <translation type="unfinished">Винаги визуализирайте полилинии с потребителски ширини с ширина поне 1 пиксел</translation>
     </message>
     <message>
-        <location line="+738"/>
-        <source>At large zoom levels, simplify solid fills with complexity of:</source>
-        <translation type="unfinished">При големи нива на мащабиране опростете плътните запълвания със сложност от:</translation>
-    </message>
-    <message>
-        <location line="+72"/>
+        <location line="+810"/>
         <source>Selection</source>
         <translation type="unfinished">Избор</translation>
     </message>

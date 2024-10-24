@@ -5906,12 +5906,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Referenciapont mérete (px):</translation>
     </message>
     <message>
-        <location line="+149"/>
-        <source>At large zoom levels, simplify solid fills with complexity of:</source>
-        <translation type="unfinished">Nagy zoom-szinteken egyszerűsítse a szilárd kitöltések összetettségét:</translation>
-    </message>
-    <message>
-        <location line="+78"/>
+        <location line="+227"/>
         <source>Persistent selection</source>
         <translation type="unfinished">Állandó kiválasztás</translation>
     </message>
@@ -5971,7 +5966,12 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Maximálisan kiválasztott entitások a megjelenített referenciapontokkal:</translation>
     </message>
     <message>
-        <location line="+291"/>
+        <location line="+219"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation type="unfinished">Maximális komplexitás a magas minőségű tömör kitöltésekhez:</translation>
+    </message>
+    <message>
+        <location line="+72"/>
         <source>Selection</source>
         <translation type="unfinished">Kiválasztás</translation>
     </message>

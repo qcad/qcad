@@ -5889,12 +5889,7 @@ finns redan i listan.</translation>
         <translation>Referenspunktsstorlek (px):</translation>
     </message>
     <message>
-        <location line="+149"/>
-        <source>At large zoom levels, simplify solid fills with complexity of:</source>
-        <translation>Vid stora zoomnivåer förenklas solid fyllning med komplexitet av:</translation>
-    </message>
-    <message>
-        <location line="+78"/>
+        <location line="+227"/>
         <source>Persistent selection</source>
         <translation>Beständigt urval</translation>
     </message>
@@ -5949,7 +5944,12 @@ finns redan i listan.</translation>
         <translation>Maximalt antal valda enheter med visade referenspunkter:</translation>
     </message>
     <message>
-        <location line="+291"/>
+        <location line="+219"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation>Maximal komplexitet för solida fyllningar med hög kvalitet:</translation>
+    </message>
+    <message>
+        <location line="+72"/>
         <source>Selection</source>
         <translation>Urval</translation>
     </message>

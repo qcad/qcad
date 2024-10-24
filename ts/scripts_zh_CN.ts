@@ -5906,12 +5906,7 @@ is already in the list.</source>
         <translation type="unfinished">参考点尺寸（px）：</translation>
     </message>
     <message>
-        <location line="+149"/>
-        <source>At large zoom levels, simplify solid fills with complexity of:</source>
-        <translation type="unfinished">在大幅缩放时，简化实体填充的复杂度：</translation>
-    </message>
-    <message>
-        <location line="+78"/>
+        <location line="+227"/>
         <source>Persistent selection</source>
         <translation type="unfinished">持续性的选择</translation>
     </message>
@@ -5971,7 +5966,12 @@ is already in the list.</source>
         <translation type="unfinished">具有显示参考点的最大选定实体：</translation>
     </message>
     <message>
-        <location line="+291"/>
+        <location line="+219"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation type="unfinished">最复杂的高质量固体填充：</translation>
+    </message>
+    <message>
+        <location line="+72"/>
         <source>Selection</source>
         <translation type="unfinished">选择</translation>
     </message>

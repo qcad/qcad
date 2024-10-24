@@ -5913,12 +5913,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Atskaitos taško dydis (px):</translation>
     </message>
     <message>
-        <location line="+149"/>
-        <source>At large zoom levels, simplify solid fills with complexity of:</source>
-        <translation type="unfinished">Esant dideliam priartinimo lygiui, supaprastinkite kietųjų užpildų sudėtingumą:</translation>
-    </message>
-    <message>
-        <location line="+78"/>
+        <location line="+227"/>
         <source>Persistent selection</source>
         <translation type="unfinished">Nuolatinė atranka</translation>
     </message>
@@ -5978,7 +5973,12 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Didžiausias pasirinktų subjektų skaičius su rodomais atskaitos taškais:</translation>
     </message>
     <message>
-        <location line="+291"/>
+        <location line="+219"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation type="unfinished">Didžiausias sudėtingumas, kad būtų galima kokybiškai užpildyti vientisą užpildą:</translation>
+    </message>
+    <message>
+        <location line="+72"/>
         <source>Selection</source>
         <translation type="unfinished">Atranka</translation>
     </message>

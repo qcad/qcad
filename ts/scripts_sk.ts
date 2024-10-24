@@ -5881,12 +5881,7 @@ už existuje v zozname.</translation>
         <translation type="unfinished">Veľkosť referenčného bodu (px):</translation>
     </message>
     <message>
-        <location line="+149"/>
-        <source>At large zoom levels, simplify solid fills with complexity of:</source>
-        <translation type="unfinished">Pri veľkých úrovniach priblíženia zjednodušte pevné výplne so zložitosťou:</translation>
-    </message>
-    <message>
-        <location line="+78"/>
+        <location line="+227"/>
         <source>Persistent selection</source>
         <translation type="unfinished">Trvalý výber</translation>
     </message>
@@ -5981,7 +5976,12 @@ už existuje v zozname.</translation>
         <translation type="unfinished">Maximálne vybrané entity so zobrazenými referenčnými bodmi:</translation>
     </message>
     <message>
-        <location line="+291"/>
+        <location line="+219"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation type="unfinished">Maximálna zložitosť pre pevné výplne vo vysokej kvalite:</translation>
+    </message>
+    <message>
+        <location line="+72"/>
         <source>Selection</source>
         <translation>Výber</translation>
     </message>

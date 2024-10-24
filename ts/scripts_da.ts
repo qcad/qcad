@@ -5911,12 +5911,7 @@ er allerede på listen.</translation>
         <translation>Referencepunktets størrelse (px):</translation>
     </message>
     <message>
-        <location line="+149"/>
-        <source>At large zoom levels, simplify solid fills with complexity of:</source>
-        <translation>Ved store zoomniveauer forenkles faste fyldninger med kompleksitet af:</translation>
-    </message>
-    <message>
-        <location line="+78"/>
+        <location line="+227"/>
         <source>Persistent selection</source>
         <translation>Vedvarende udvælgelse</translation>
     </message>
@@ -5976,7 +5971,12 @@ er allerede på listen.</translation>
         <translation>Maksimalt valgte enheder med viste referencepunkter:</translation>
     </message>
     <message>
-        <location line="+291"/>
+        <location line="+219"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation>Maksimal kompleksitet for solide fyldninger i høj kvalitet:</translation>
+    </message>
+    <message>
+        <location line="+72"/>
         <source>Selection</source>
         <translation>Udvælgelse</translation>
     </message>

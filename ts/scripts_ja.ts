@@ -5881,12 +5881,7 @@ is already in the list.</source>
         <translation type="unfinished">テキストの高さの閾値(px)。</translation>
     </message>
     <message>
-        <location line="+72"/>
-        <source>At large zoom levels, simplify solid fills with complexity of:</source>
-        <translation type="unfinished">大きなズームレベルでは、複雑なソリッドフィルを単純化する：</translation>
-    </message>
-    <message>
-        <location line="+78"/>
+        <location line="+150"/>
         <source>Persistent selection</source>
         <translation type="unfinished">永続的な選択</translation>
     </message>
@@ -5971,7 +5966,12 @@ is already in the list.</source>
         <translation>この角度以下の弧を直線で表示 (度):</translation>
     </message>
     <message>
-        <location line="+628"/>
+        <location line="+556"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation type="unfinished">ソリッドフィルを高品質で行うための最大限の複雑さ：</translation>
+    </message>
+    <message>
+        <location line="+72"/>
         <source>Selection</source>
         <translation>選択</translation>
     </message>

@@ -5950,7 +5950,12 @@ is already in the list.</source>
         <translation type="unfinished">Teksti kõrguse künnis (px):</translation>
     </message>
     <message>
-        <location line="-147"/>
+        <location line="+72"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation type="unfinished">Maksimaalne keerukus tahkete täidete jaoks kõrge kvaliteediga:</translation>
+    </message>
+    <message>
+        <location line="-219"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation type="unfinished">Maksimaalselt valitud üksused koos kuvatavate võrdluspunktidega:</translation>
     </message>
@@ -5960,12 +5965,7 @@ is already in the list.</source>
         <translation type="unfinished">Renderi alati vähemalt 1 piksli laiused kohandatud laiusega polügraanid</translation>
     </message>
     <message>
-        <location line="+738"/>
-        <source>At large zoom levels, simplify solid fills with complexity of:</source>
-        <translation type="unfinished">Suurtel suumitasemetel lihtsustab tahke täitmine keerukust:</translation>
-    </message>
-    <message>
-        <location line="+72"/>
+        <location line="+810"/>
         <source>Selection</source>
         <translation type="unfinished">Valik</translation>
     </message>
