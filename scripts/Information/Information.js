@@ -130,19 +130,14 @@ Information.prototype.addInfoLine = function(op, point1, point2, preview) {
         return;
     }
 
-    RDebug.startTimer(7);
-
     //RDebug.startTimer(8);
     //var di = this.getDocumentInterface();
     //RDebug.stopTimer(8, "get di");
 
-    RDebug.startTimer(8);
     var view = this.di.getLastKnownViewWithFocus();
     view = getRGraphicsView(view);
-    RDebug.stopTimer(8, "get view");
 
     // line
-    RDebug.startTimer(8);
     var line = new RLine(point1, point2);
     var angle = line.getAngle();
     this.addShape(op, line, preview);
@@ -150,17 +145,12 @@ Information.prototype.addInfoLine = function(op, point1, point2, preview) {
     this.addMajorTick(op, view, point1, angle, preview);
     this.addMajorTick(op, view, point2, angle, preview);
     this.addGridTicks(op, view, point1, point2, preview);
-    RDebug.stopTimer(8, "add line");
     
     // label
-    RDebug.startTimer(8);
     var lengthText = this.formatLinearResult(line.getLength());
     //var lengthText = sprintf("%0.3f", line.getLength());
     view.clearTextLabels();
     this.addTextLabel(op, view, point2, lengthText, preview);
-    RDebug.stopTimer(8, "add text");
-
-    RDebug.stopTimer(7, "addInfoLine");
 };
 
 Information.prototype.addTextLabel = function(op, view, pos, text, preview) {
