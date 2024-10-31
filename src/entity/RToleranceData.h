@@ -185,6 +185,8 @@ public:
 
     RVector getPointOnEntity() const;
 
+    virtual RVector getVectorTo(const RVector& point, bool limited=true, double strictRange = RMAXDOUBLE) const;
+
     void clearStyleOverrides() {
         dimscale = -1.0;
         dimtxt = -1.0;
