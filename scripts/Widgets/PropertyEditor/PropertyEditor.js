@@ -1058,6 +1058,10 @@ PropertyEditorImpl.prototype.initControls = function(propertyTypeId, onlyChanges
 PropertyEditorImpl.prototype.initNumberControls = function(objectName, propertyTypeId, onlyChanges, control, index) {
     var document = EAction.getDocument();
 
+    if (isNull(document)) {
+        return;
+    }
+
     var value = this.getAdjustedPropertyValue(propertyTypeId);
     if (isNumber(index)) {
         value = value[index];
