@@ -40,7 +40,7 @@ DrawingPreferences.prototype.beginEvent = function() {
 };
 
 DrawingPreferences.init = function(basePath) {
-    var action = new RGuiAction(qsTr("Drawing &Preferences"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTr("Drawing &Preferences") + "…", RMainWindowQt.getMainWindow());
     action.setDefaultCommands(["drawingpreferences"]);
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/DrawingPreferences.js");
