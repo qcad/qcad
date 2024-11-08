@@ -218,7 +218,7 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
 
     QSharedPointer<RBlock> model = doc->queryBlockDirect(doc->getModelSpaceBlockId());
 
-    model->setOrigin(data.viewCenter);
+    model->setOrigin(data.viewCenter + data.viewTarget);
 
     // create temporary block reference to model space block:
     RBlockReferenceData modelSpaceData(
