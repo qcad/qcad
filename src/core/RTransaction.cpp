@@ -1025,7 +1025,7 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object, bool force) {
         return;
     }
 
-    // if a layer is deleted, delete all entities on the layer:
+    // if a layer is deleted, delete all entities on that layer:
     QSharedPointer<RLayer> layer = object.dynamicCast<RLayer>();
     if (!layer.isNull()) {
         if (layer->getName() == "0") {
@@ -1043,10 +1043,37 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object, bool force) {
 
         // TODO: undeletable layers
 
-        QSet<REntity::Id> ids = storage->queryLayerEntities(objectId, true);
-        QSetIterator<REntity::Id> it(ids);
-        while (it.hasNext()) {
-            deleteObject(it.next(), true);
+        {
+            QSet<REntity::Id> ids = storage->queryLayerEntities(objectId, true);
+            QSetIterator<REntity::Id> it(ids);
+            while (it.hasNext()) {
+                deleteObject(it.next(), true);
+            }
+        }
+
+        // delete all viewport references to that layer:
+        // 202411
+        {
+            QSet<REntity::Id> ids = storage->queryAllEntities(false, true, RS::EntityViewport);
+            QSetIterator<REntity::Id> it(ids);
+            while (it.hasNext()) {
+                // remove layer from list of frozen layers:
+                REntity::Id viewportId = it.next();
+                QSharedPointer<REntity> e = storage->queryEntity(viewportId);
+                if (!e.isNull()) {
+                    QSharedPointer<RViewportEntity> viewport = e.dynamicCast<RViewportEntity>();
+                    if (!viewport.isNull()) {
+                        QList<RLayer::Id> frozenLayerIds = viewport->getFrozenLayerIds();
+
+                        if (!frozenLayerIds.isEmpty()) {
+                            frozenLayerIds.removeAll(layer->getId());
+                            viewport->setFrozenLayerIds(frozenLayerIds);
+
+                            addObject(viewport, false, false);
+                        }
+                    }
+                }
+            }
         }
 
         // current layer deleted, reset current layer to layer "0":
