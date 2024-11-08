@@ -1,5 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("AddBlock", "&Add Empty Block"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("AddBlock", "&Add Empty Block") + "…", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/AddBlock.js");
     action.setDefaultShortcut(new QKeySequence("b,a"));

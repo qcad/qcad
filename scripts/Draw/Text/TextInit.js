@@ -1,5 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("Text", "&Text"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("Text", "&Text") + "…", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/Text.js");
     action.setStatusTip(qsTranslate("Text", "Draw text"));
