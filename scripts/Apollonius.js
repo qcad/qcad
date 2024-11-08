@@ -197,7 +197,35 @@ Apollonius.getSolutionsCCC = function(c1, c2, c3, intersect) {
 
         ret = Apollonius.removeDuplicates(ret);    // Most likely none
         return ret;
-    }
+    } // End of enhancement by CVH
+
+    // Special case: All three circles intersect in one point:
+    // Exploits an enhanced algorithm by CVH
+    var commonIP = Apollonius.getCommonIntersectionPoint(c1, c2, c3);
+    if (!isNull(commonIP)) {
+        // # Remark by CVH # Better results with appropriate circle of inversion
+        // Relative sized inversion circle (FS#2590), opted for the local average radius:
+        var rInv = (Math.abs(c1.radius) + Math.abs(c2.radius) + Math.abs(c3.radius)) / 3;
+        var inversionCircle = new RCircle(commonIP, rInv);    // In 2D by default
+
+        // Construct inversion shapes:
+        var shapesInverse = Apollonius.getInverseShapes([c1, c2, c3], inversionCircle);
+
+        // Expecting nothing else than 3 line segments:
+        if (shapesInverse.length === 3 &&
+            isLineBasedShape(shapesInverse[0]) &&
+            isLineBasedShape(shapesInverse[1]) &&
+            isLineBasedShape(shapesInverse[2])) {
+
+            // Handle as LLL and get results (0-4):
+            var res = Apollonius.getSolutions(shapesInverse);
+            // Inverse the results back to solutions:
+            ret = Apollonius.getInverseShapes(res, inversionCircle);
+        }
+
+        // Return final results for any common intersection point case:
+        return ret;    // 0-4 solutions
+    } // End of enhancement by CVH
 
     // special case: three circles of equal size:
     if (RMath.fuzzyCompare(c1.radius, c2.radius) && RMath.fuzzyCompare(c1.radius, c3.radius)) {
@@ -213,6 +241,79 @@ Apollonius.getSolutionsCCC = function(c1, c2, c3, intersect) {
         }
     }
 
+    // circle1 is always the smallest:
+    // # Remark by CVH # Ideally r3 >= r2 >= r1
+    // When not of (almost) the same size then order circles by ascending size:
+    else {
+        circle1 = c1;
+        circle2 = c2;
+        circle3 = c3;
+        // Swap first two when c1 > c2:
+        if (c1.radius > c2.radius) {
+            circle1 = c2;
+            circle2 = c1;
+        }
+        // Swap last two when circle2 > circle3:
+        if (circle2.radius > circle3.radius) {
+            circle3 = circle2;
+            circle2 = c3;
+        }
+        // Swap first two when circle1 > circle2:
+        if (circle1.radius > circle2.radius) {
+            var cTemp = circle2
+            circle2 = circle1;
+            circle1 = cTemp;
+        }
+    }
+
+    // Count how many times circles are intersecting each other:
+    var nIps12 = circle1.getIntersectionPoints(circle2, false).length;    // Unlimited, avoids RBox test
+    var nIps13 = circle1.getIntersectionPoints(circle3, false).length;    // Unlimited, avoids RBox test
+    var nIps23 = circle2.getIntersectionPoints(circle3, false).length;    // Unlimited, avoids RBox test
+
+    // Special case: Each two circles are tangent:
+    // # Enhancement by CVH # Avoiding some to dozens false positive candidates
+    // Including the solution for the n=1 circles of a Pappus chain
+    if (nIps12 === 1 && nIps13 === 1 && nIps23 === 1) {
+        // Clear the return array (Has content with 3 circles of equal size):
+        ret = [];
+
+        // Get the tangent point of the smallest two circles:
+        var cInv = circle1.getIntersectionPoints(circle2, false)[0];    // Unlimited, avoids RBox test
+        // Relative sized inversion circle (FS#2590), opted for the average of radii:
+        var rInv = (c1.radius + c2.radius + c3.radius) / 3;
+        // With a valid center construct the circle of inversion:
+        if (!cInv.isValid()) {
+            return ret;    // Empty, failed on no valid inversion center
+        }
+        var inversionCircle = new RCircle(cInv, rInv);
+        
+        // Construct inversion shapes:
+        var shapesInverse = Apollonius.getInverseShapes([circle1, circle2, circle3], inversionCircle);
+        
+        // Expecting nothing else than 3 shapes (Two line segments and a circle):
+        if (shapesInverse.length !== 3) {
+           return ret;    // Empty, failed on no 3 inversions
+        }
+        else {
+            // Handle as LLC and get results (0-2):
+            var res = Apollonius.getSolutions(shapesInverse);
+
+            // Expecting nothing else than 2 circles:
+            if (res.length === 2 &&
+                isCircleShape(res[0]) &&
+                isCircleShape(res[1])) {
+
+                // Inverse the results back to solutions:
+                ret = Apollonius.getInverseShapes(res, inversionCircle);
+            }
+
+            // Return final results for any case of 3 touching circles:
+            return ret;    // 0-2 solutions
+        }
+    } // End of enhancement by CVH
+
+/*
     // circle1 is always the smallest:
     else {
         if (c2.radius <= c1.radius && c2.radius <= c3.radius) {
@@ -254,7 +355,10 @@ Apollonius.getSolutionsCCC = function(c1, c2, c3, intersect) {
     var nIps12 = circle1.getIntersectionPoints(circle2).length;
     var nIps13 = circle1.getIntersectionPoints(circle3).length;
     var nIps23 = circle2.getIntersectionPoints(circle3).length;
+*/
 
+    // special case: each circle intersects the other two,
+    // at least one intersects through two points:
     if (!intersect && nIps12>0 && nIps13>0 && nIps23>0 &&
         (nIps12===2 || nIps13===2 || nIps23===2)) {
 
@@ -2359,6 +2463,81 @@ Apollonius.getParallelLinesWithDistance = function(line, distance) {
 /**
  * \return Common intersection point of all three circles or undefined.
  */
+/**
+ * \author Original by Andrew Mustun, bug fixing, hardened and enhanced by CVH © 2024.
+ * \return A common intersection point (1) of all three circles or undefined.
+ */
+Apollonius.getCommonIntersectionPoint = function(c1, c2, c3) {
+    var cA, cB, cC;
+    var ips = [];
+    var i, j, k;
+    var pos1, pos2, pos3;
+    var common;
+
+    // Reject incorrect shape types:
+    if (!isCircleShape(c1) ||
+        !isCircleShape(c2) ||
+        !isCircleShape(c3)) {
+
+        return undefined;    // Failed, incorrect data
+    }
+
+    // Handle as normalized new circle shape in 2D, validate and reject when invalid:
+    cA = new RCircle(c1.center.get2D(), Math.abs(c1.radius));
+    if (!cA.center.isValid() || !isNumber(cA.radius) || cA.radius < RS.PointTolerance) {
+        return undefined;    // Failed, invalid circle shape
+    }
+    cB = new RCircle(c2.center.get2D(), Math.abs(c2.radius));
+    if (!cB.center.isValid() || !isNumber(cB.radius) || cB.radius < RS.PointTolerance) {
+        return undefined;    // Failed, invalid circle shape
+    }
+    cC = new RCircle(c3.center.get2D(), Math.abs(c3.radius));
+    if (!cC.center.isValid() || !isNumber(cC.radius) || cC.radius < RS.PointTolerance) {
+        return undefined;    // Failed, invalid circle shape
+    }
+
+    // Collect all mutual intersection points:
+    ips = ips.concat(cA.getIntersectionPoints(cB, false));    // Unlimited, avoids RBox test
+    ips = ips.concat(cA.getIntersectionPoints(cC, false));    // Unlimited, avoids RBox test
+    ips = ips.concat(cB.getIntersectionPoints(cC, false));    // Unlimited, avoids RBox test
+
+    // Fail on no 3 intersection points:
+    if (ips.length < 3) {
+        return undefined;
+    }
+
+    // Process all intersection points:
+    for (i=0; i<ips.length-2; i++) {
+        pos1 = ips[i];
+        // Skip to next when invalid:
+        if (!pos1.isValid()) {
+            continue;
+        }
+        // Process all next intersection points:
+        for (j=i+1; j<ips.length-1; j++) {
+            pos2 = ips[j];
+            // Skip to next when invalid or when not (almost) equal with pos1:
+            if (!pos2.isValid() || !pos2.equalsFuzzy2D(pos1)) {
+                continue;
+            }
+            // Process all remaining intersection points:
+            for (k=j+1; k<ips.length; k++) {
+                pos3 = ips[k];
+                // Skip to next when invalid or when not (almost) equal with pos2:
+                if (!pos3.isValid() || !pos3.equalsFuzzy2D(pos2)) {
+                    continue;
+                }
+                // Found a common intersection point, return average or undefined when invalid:
+                common = RVector.getAverage([pos1, pos2, pos3]);
+                return (common.isValid()) ? common : undefined;
+            }
+        }
+    }
+
+    // No common intersection point:
+    return undefined;
+};
+/*
 Apollonius.getCommonIntersectionPoint = function(c1, c2, c3) {
     if (!isCircleShape(c1) ||
         !isCircleShape(c2) ||
@@ -2389,6 +2568,7 @@ Apollonius.getCommonIntersectionPoint = function(c1, c2, c3) {
         return undefined;
     }
 };
+*/
 
 /**
  * \return Angle bisectors of the two given lines or empty array if
