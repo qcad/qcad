@@ -71,7 +71,7 @@ PersistentWidgets.prototype.beginEvent = function() {
 //! [beginEvent]
 
 PersistentWidgets.init = function(basePath) {
-    var action = new RGuiAction(qsTr("&Persistent Widgets"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTr("&Persistent Widgets") + "…", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/PersistentWidgets.js");
     action.setGroupSortOrder(80100);

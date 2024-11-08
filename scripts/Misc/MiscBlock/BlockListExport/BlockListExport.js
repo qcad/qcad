@@ -111,7 +111,7 @@ BlockListExport.prototype.getFileName = function() {
  * Adds a menu for this action to the Misc menu.
  */
 BlockListExport.init = function(basePath) {
-    var action = new RGuiAction(qsTr("&Export Block List"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTr("&Export Block List") + "…", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/BlockListExport.js");
     action.setGroupSortOrder(60100);

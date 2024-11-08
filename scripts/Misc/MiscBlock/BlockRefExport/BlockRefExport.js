@@ -115,7 +115,7 @@ BlockRefExport.prototype.getFileName = function() {
  * Adds a menu for this action to the Misc menu.
  */
 BlockRefExport.init = function(basePath) {
-    var action = new RGuiAction(qsTr("&Export Block References List"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTr("&Export Block References List") + "…", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/BlockRefExport.js");
     action.setGroupSortOrder(60100);

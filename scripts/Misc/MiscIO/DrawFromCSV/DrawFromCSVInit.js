@@ -3,7 +3,7 @@
  * Adds a menu for the DrawFromCSV action to Misc | Script Examples | Import/Export menu.
  */
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("DrawFromCSV", "&Draw from CSV"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("DrawFromCSV", "&Draw from CSV") + "…", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);    // Can't draw without a document
     action.setRequiresSelection(false);    // No selection required
     action.setScriptFile(basePath + "/DrawFromCSV.js");
