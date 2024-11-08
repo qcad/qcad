@@ -82,6 +82,66 @@ RPropertyChange::RPropertyChange(RPropertyTypeId propertyTypeId, QVariant oldVal
         return;
     }
 
+    if (oldValue.type()==QVariant::UserType &&
+        (oldValue.canConvert<QList<int> >() || !oldValue.isValid()) &&
+        (newValue.canConvert<QList<int> >() || !newValue.isValid())) {
+
+        QList<int> oldList;
+        if (oldValue.isValid()) {
+            oldList = oldValue.value<QList<int> >();
+        }
+        QList<int> newList;
+        if (newValue.isValid()) {
+            newList = newValue.value<QList<int> >();
+        }
+
+        QList<QPair<int, int> > oldCompact;
+        QList<QPair<int, int> > newCompact;
+
+        // entries were changed only:
+        if (oldList.size() == newList.size()) {
+            for (int i=0; i<oldList.size(); i++) {
+                if (oldList.at(i) != newList.at(i)) {
+                    oldCompact.append(QPair<int, int>(i, oldList.at(i)));
+                    newCompact.append(QPair<int, int>(i, newList.at(i)));
+                }
+            }
+        }
+
+        // entries were appended and possibly changed:
+        else if (oldList.size() < newList.size()) {
+            for (int i=0; i<newList.size(); i++) {
+                if (i>=oldList.size()) {
+                    oldCompact.append(QPair<int, int>(i, RMAXINT));
+                    newCompact.append(QPair<int, int>(i, newList.at(i)));
+                }
+                else if (oldList.at(i) != newList.at(i)) {
+                    oldCompact.append(QPair<int, int>(i, oldList.at(i)));
+                    newCompact.append(QPair<int, int>(i, newList.at(i)));
+                }
+            }
+        }
+
+        // entries were removed and possibly changed:
+        else if (oldList.size() > newList.size()) {
+            for (int i=0; i<oldList.size(); i++) {
+                if (i>=newList.size()) {
+                    oldCompact.append(QPair<int, int>(i, oldList.at(i)));
+                    newCompact.append(QPair<int, int>(i, RMAXINT));
+                }
+                else if (oldList.at(i) != newList.at(i)) {
+                    oldCompact.append(QPair<int, int>(i, oldList.at(i)));
+                    newCompact.append(QPair<int, int>(i, newList.at(i)));
+                }
+            }
+        }
+
+        this->oldValue.setValue(oldCompact);
+        this->newValue.setValue(newCompact);
+
+        return;
+    }
+
     else {
         if (oldValue.type()!=newValue.type() && oldValue.isValid() && newValue.isValid()) {
             qWarning() << "old and new property values for property " << propertyTypeId.getPropertyTitle() << " have different types:" << oldValue.typeName() << " vs. " << newValue.typeName();

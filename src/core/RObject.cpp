@@ -453,7 +453,7 @@ bool RObject::setMember(QList<int>& variable, const QVariant& value, bool condit
         int v = (*it).second;
 
         // entry was removed:
-        if (RMath::isNaN(v) && i-offset<variable.size()) {
+        if (v==RMAXINT && i-offset<variable.size()) {
             variable.removeLast();
             offset++;
         }
