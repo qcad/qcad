@@ -1,5 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("PdfExport", "P&DF Export"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("PdfExport", "P&DF Export") + "…", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setForceGlobal(true);
     action.setScriptFile(basePath + "/PdfExport.js");

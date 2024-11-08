@@ -1,5 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("Print", "&Print"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("Print", "&Print") + "…", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setForceGlobal(true);
     action.setScriptFile(basePath + "/Print.js");

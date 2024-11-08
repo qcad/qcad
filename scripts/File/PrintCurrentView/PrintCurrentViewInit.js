@@ -1,5 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("PrintCurrentView", "Print &Current View"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("PrintCurrentView", "Print &Current View") + "…", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setForceGlobal(true);
     action.setScriptFile(basePath + "/PrintCurrentView.js");
