@@ -229,6 +229,14 @@ public:
 
     virtual bool scale(const RVector& scaleFactors, const RVector& center);
 
+    QList<RLayer::Id> getFrozenLayerIds() const {
+        return frozenLayerIds;
+    }
+
+    void setFrozenLayerIds(const QList<RLayer::Id>& layerIds) {
+        frozenLayerIds = layerIds;
+    }
+
 protected:
     void setStatusFlag(Status s, bool on) {
         if (on) {
@@ -252,6 +260,8 @@ private:
 
     RVector viewCenter;
     RVector viewTarget;
+
+    QList<RLayer::Id> frozenLayerIds;
 
     bool overall;
 };
