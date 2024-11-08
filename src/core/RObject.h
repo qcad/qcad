@@ -327,6 +327,10 @@ protected:
     /**
      * \nonscriptable
      */
+    static bool setMember(QList<int>& variable, const QVariant& value, bool condition);
+    /**
+     * \nonscriptable
+     */
     static bool setMemberX(QList<RVector>& variable, const QVariant& value, bool condition = true);
     /**
      * \nonscriptable
