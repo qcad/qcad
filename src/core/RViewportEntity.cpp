@@ -250,19 +250,24 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
     // freeze viewport layers:
     QList<RLayer::Id> frozenLayerIds = getFrozenLayerIds();
     QList<QSharedPointer<RLayer> > defrostLayers;
+    QList<QSharedPointer<RLayer> > showLayers;
     for (int i=0; i<frozenLayerIds.length(); i++) {
         RLayer::Id frozenLayerId = frozenLayerIds[i];
         QSharedPointer<RLayer> layer = doc->queryLayerDirect(frozenLayerId);
         if (layer.isNull()) {
             continue;
         }
-        if (layer->isFrozen()) {
-            // layer is frozen for entire drawing anyway:
-            continue;
-        }
 
-        layer->setFrozen(true);
-        defrostLayers.append(layer);
+        // freeze layer:
+        if (!layer->isFrozen()) {
+            layer->setFrozen(true);
+            defrostLayers.append(layer);
+        }
+        // show layer:
+        if (!layer->isOff()) {
+            layer->setOff(true);
+            showLayers.append(layer);
+        }
     }
 
     // render model space block reference into viewport:
@@ -324,6 +329,14 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
         for (it=defrostLayers.begin(); it!=defrostLayers.end(); it++) {
             QSharedPointer<RLayer> defrostLayer = (*it);
             defrostLayer->setFrozen(false);
+        }
+    }
+    // show viewport layers that were hidden above:
+    {
+        QList<QSharedPointer<RLayer> >::iterator it;
+        for (it=showLayers.begin(); it!=showLayers.end(); it++) {
+            QSharedPointer<RLayer> showLayer = (*it);
+            showLayer->setOff(false);
         }
     }
 
