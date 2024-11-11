@@ -412,7 +412,7 @@ musíte znovu spustiť QCAD.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2457"/>
+        <location filename="../scripts/Apollonius.js" line="+2637"/>
         <source>Invalid radius</source>
         <translation>Neplatný polomer</translation>
     </message>
@@ -7405,7 +7405,7 @@ už existuje v zozname.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+360"/>
+        <location filename="../scripts/Information/Information.js" line="+350"/>
         <source>Information Tools</source>
         <translation>Informačné nástroje</translation>
     </message>
@@ -10190,12 +10190,12 @@ už existuje v zozname.</translation>
         <translation type="unfinished">Zobrazenie rozšíreného štýlu dimenzie</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1680"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1684"/>
         <source>*VARIES*</source>
         <translation>*Rôzne*</translation>
     </message>
     <message>
-        <location line="-1454"/>
+        <location line="-1458"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10255,7 +10255,7 @@ už existuje v zozname.</translation>
         <translation>automatický</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+201"/>
         <source>Use auto measurement</source>
         <translation>Použiť automatické meranie</translation>
     </message>

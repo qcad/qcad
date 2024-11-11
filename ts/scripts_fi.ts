@@ -412,7 +412,7 @@ asetuksien muutokset astuvat voimaan.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2457"/>
+        <location filename="../scripts/Apollonius.js" line="+2637"/>
         <source>Invalid radius</source>
         <translation>Virheellinen säde</translation>
     </message>
@@ -7400,7 +7400,7 @@ on jo luettelossa.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+360"/>
+        <location filename="../scripts/Information/Information.js" line="+350"/>
         <source>Information Tools</source>
         <translation>Tietotyökalut</translation>
     </message>
@@ -10183,12 +10183,12 @@ on jo luettelossa.</translation>
         <translation>Näytä laajennetun ulottuvuuden tyylin ohitukset</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1680"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1684"/>
         <source>*VARIES*</source>
         <translation>*VAIHTELEVA*</translation>
     </message>
     <message>
-        <location line="-1454"/>
+        <location line="-1458"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10248,7 +10248,7 @@ on jo luettelossa.</translation>
         <translation>Automaattinen</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+201"/>
         <source>Use auto measurement</source>
         <translation>Käytä automaattista mittausta</translation>
     </message>

@@ -412,7 +412,7 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2457"/>
+        <location filename="../scripts/Apollonius.js" line="+2637"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Неправильний радіус</translation>
     </message>
@@ -7402,7 +7402,7 @@ is already in the list.</source>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+360"/>
+        <location filename="../scripts/Information/Information.js" line="+350"/>
         <source>Information Tools</source>
         <translation type="unfinished">Інформаційні інструменти</translation>
     </message>
@@ -10247,7 +10247,7 @@ is already in the list.</source>
         <translation type="unfinished">Авто</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+201"/>
         <source>Use auto measurement</source>
         <translation type="unfinished">Використовуйте автоматичне вимірювання</translation>
     </message>

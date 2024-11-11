@@ -259,7 +259,7 @@
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="+95"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+73"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+75"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
@@ -654,6 +654,16 @@
         <location line="+2"/>
         <source>Overall</source>
         <translation type="unfinished">null</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Frozen Layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Layer ID</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="-23"/>

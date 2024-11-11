@@ -412,7 +412,7 @@ um die Änderungen zu übernehmen.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2457"/>
+        <location filename="../scripts/Apollonius.js" line="+2637"/>
         <source>Invalid radius</source>
         <translation>Ungültiger Radius</translation>
     </message>
@@ -7400,7 +7400,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+386"/>
+        <location filename="../scripts/Information/Information.js" line="+376"/>
         <source>&amp;Info</source>
         <translation>&amp;Info</translation>
     </message>
@@ -10133,12 +10133,12 @@ ist bereits in der Liste.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1680"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1684"/>
         <source>*VARIES*</source>
         <translation>*VARIIERT*</translation>
     </message>
     <message>
-        <location line="-1454"/>
+        <location line="-1458"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10183,12 +10183,12 @@ ist bereits in der Liste.</translation>
         <translation>Alle Eigenschaften anzeigen</translation>
     </message>
     <message>
-        <location line="+790"/>
+        <location line="+794"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="-836"/>
+        <location line="-840"/>
         <source>Add custom property to selected objects</source>
         <translation>Benutzerdefinierte Eigenschaft an ausgewählte Objekte hinzufügen</translation>
     </message>
@@ -10198,7 +10198,7 @@ ist bereits in der Liste.</translation>
         <translation>auto</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+201"/>
         <source>Use auto measurement</source>
         <translation>Automatisch</translation>
     </message>
@@ -10250,7 +10250,7 @@ ist bereits in der Liste.</translation>
         <translation>Farbe:</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1303"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1307"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>

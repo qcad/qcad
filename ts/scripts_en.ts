@@ -412,7 +412,7 @@ the preference changes to take effect.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2457"/>
+        <location filename="../scripts/Apollonius.js" line="+2637"/>
         <source>Invalid radius</source>
         <translation>Invalid radius</translation>
     </message>
@@ -7400,7 +7400,7 @@ is already in the list.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+360"/>
+        <location filename="../scripts/Information/Information.js" line="+350"/>
         <source>Information Tools</source>
         <translation>Information Tools</translation>
     </message>
@@ -10243,7 +10243,7 @@ is already in the list.</translation>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+201"/>
         <source>Use auto measurement</source>
         <translation>Use auto measurement</translation>
     </message>

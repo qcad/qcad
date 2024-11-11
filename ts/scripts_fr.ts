@@ -412,7 +412,7 @@ pour appliquer les modifications.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2457"/>
+        <location filename="../scripts/Apollonius.js" line="+2637"/>
         <source>Invalid radius</source>
         <translation>Rayon invalide</translation>
     </message>
@@ -7400,7 +7400,7 @@ est déjà dans la liste.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+360"/>
+        <location filename="../scripts/Information/Information.js" line="+350"/>
         <source>Information Tools</source>
         <translation>Outils d&apos;information</translation>
     </message>
@@ -10163,7 +10163,7 @@ est déjà dans la liste.</translation>
         <translation>Afficher toutes les propriétés</translation>
     </message>
     <message>
-        <location line="+790"/>
+        <location line="+794"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -10173,7 +10173,7 @@ est déjà dans la liste.</translation>
         <translation>*VARIABLE*</translation>
     </message>
     <message>
-        <location line="-1454"/>
+        <location line="-1458"/>
         <source>:</source>
         <translation> :</translation>
     </message>
@@ -10203,7 +10203,7 @@ est déjà dans la liste.</translation>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+201"/>
         <source>Use auto measurement</source>
         <translation>Utiliser la mesure automatique</translation>
     </message>

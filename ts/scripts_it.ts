@@ -412,7 +412,7 @@ applicare le modifiche.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2457"/>
+        <location filename="../scripts/Apollonius.js" line="+2637"/>
         <source>Invalid radius</source>
         <translation>Raggio non valido</translation>
     </message>
@@ -7400,7 +7400,7 @@ is already in the list.</source>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+360"/>
+        <location filename="../scripts/Information/Information.js" line="+350"/>
         <source>Information Tools</source>
         <translation>Strumenti informazione</translation>
     </message>
@@ -8796,7 +8796,7 @@ is already in the list.</source>
     <message>
         <location line="+35"/>
         <source>Scale of linetypes matches the scale of each viewport</source>
-        <translation>La scala dei linetypes corrisponde alla scala di ogni viewport</translation>
+        <translation>La scala dei linetypes corrisponde alla scala di ogni finestra di visualizzazione</translation>
     </message>
 </context>
 <context>
@@ -10138,12 +10138,12 @@ is already in the list.</source>
         <translation>Aggiungere una proprietà personalizzata per gli oggetti selezionati</translation>
     </message>
     <message>
-        <location line="+833"/>
+        <location line="+837"/>
         <source>*VARIES*</source>
         <translation>*VARIE*</translation>
     </message>
     <message>
-        <location line="-1454"/>
+        <location line="-1458"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10193,17 +10193,17 @@ is already in the list.</source>
         <translation>Mostra tutte le proprietà</translation>
     </message>
     <message>
-        <location line="+790"/>
+        <location line="+794"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="-655"/>
+        <location line="-659"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+201"/>
         <source>Use auto measurement</source>
         <translation>Utilizzare la misurazione automatica</translation>
     </message>
@@ -13466,7 +13466,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ViewportSettings/PreferencesPage.ui" line="+21"/>
         <source>Viewports</source>
-        <translation>Viewports</translation>
+        <translation>Finestre di visualizzazione</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -13489,7 +13489,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Layout - Viewports</source>
-        <translation>Layout - Viewports</translation>
+        <translation>Layout - Finestre di visualizzazione</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -13499,7 +13499,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Viewports</source>
-        <translation>Viewports</translation>
+        <translation>Finestre di visualizzazione</translation>
     </message>
 </context>
 <context>
@@ -14410,12 +14410,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Viewports</source>
-        <translation>Finestre</translation>
+        <translation>Finestre di visualizzazione</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Viewport</source>
-        <translation>Finestra</translation>
+        <translation>Finestra di visualizzazione</translation>
     </message>
     <message>
         <location line="+2"/>

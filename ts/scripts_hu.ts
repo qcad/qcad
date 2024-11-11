@@ -412,7 +412,7 @@ a beállítások módosításai hatályba lépjenek.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2457"/>
+        <location filename="../scripts/Apollonius.js" line="+2637"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Érvénytelen sugár</translation>
     </message>
@@ -7395,7 +7395,7 @@ már szerepel a listában.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+360"/>
+        <location filename="../scripts/Information/Information.js" line="+350"/>
         <source>Information Tools</source>
         <translation type="unfinished">Információs eszközök</translation>
     </message>
@@ -10186,7 +10186,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Auto</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+201"/>
         <source>Use auto measurement</source>
         <translation type="unfinished">Automatikus mérés használata</translation>
     </message>

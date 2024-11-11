@@ -412,7 +412,7 @@ preferanseendringene skal tre i kraft.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2457"/>
+        <location filename="../scripts/Apollonius.js" line="+2637"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Ugyldig radius</translation>
     </message>
@@ -7400,7 +7400,7 @@ er allerede i listen.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+360"/>
+        <location filename="../scripts/Information/Information.js" line="+350"/>
         <source>Information Tools</source>
         <translation type="unfinished">Informasjonsverktøy</translation>
     </message>
@@ -10243,7 +10243,7 @@ er allerede i listen.</translation>
         <translation type="unfinished">Auto</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+201"/>
         <source>Use auto measurement</source>
         <translation type="unfinished">Bruk automatisk måling</translation>
     </message>

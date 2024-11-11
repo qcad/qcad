@@ -412,7 +412,7 @@ nuostatos pakeitimai įsigaliotų.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2457"/>
+        <location filename="../scripts/Apollonius.js" line="+2637"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Neteisingas spindulys</translation>
     </message>
@@ -7402,7 +7402,7 @@ jau yra sąraše.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+360"/>
+        <location filename="../scripts/Information/Information.js" line="+350"/>
         <source>Information Tools</source>
         <translation type="unfinished">Informacinės priemonės</translation>
     </message>
@@ -10197,7 +10197,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Automatinis</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+201"/>
         <source>Use auto measurement</source>
         <translation type="unfinished">Naudokite automatinį matavimą</translation>
     </message>

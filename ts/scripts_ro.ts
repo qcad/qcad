@@ -412,7 +412,7 @@ modificările preferințelor să intre în vigoare.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2457"/>
+        <location filename="../scripts/Apollonius.js" line="+2637"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Raza invalidă</translation>
     </message>
@@ -7402,7 +7402,7 @@ este deja în listă.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+360"/>
+        <location filename="../scripts/Information/Information.js" line="+350"/>
         <source>Information Tools</source>
         <translation type="unfinished">Instrumente de informare</translation>
     </message>
@@ -10247,7 +10247,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Auto</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+201"/>
         <source>Use auto measurement</source>
         <translation type="unfinished">Utilizați măsurarea automată</translation>
     </message>
