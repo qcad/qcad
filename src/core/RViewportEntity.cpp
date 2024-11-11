@@ -153,7 +153,7 @@ QPair<QVariant, RPropertyAttributes> RViewportEntity::getProperty(
     } else if (propertyTypeId == PropertyFrozenLayerIds) {
         QVariant v;
         v.setValue(data.frozenLayerIds);
-        return qMakePair(v, RPropertyAttributes(RPropertyAttributes::List|RPropertyAttributes::ReadOnly|RPropertyAttributes::Integer));
+        return qMakePair(v, RPropertyAttributes(RPropertyAttributes::List|RPropertyAttributes::ReadOnly|RPropertyAttributes::Integer|RPropertyAttributes::Invisible));
     }
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
