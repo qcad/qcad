@@ -153,6 +153,12 @@
         ;static  QScriptValue
         setPosition
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getFrozenLayerIds
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setFrozenLayerIds
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

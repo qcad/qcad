@@ -236,6 +236,21 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="getFrozenLayerIds" cppName="getFrozenLayerIds"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RLayer::Id &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="setFrozenLayerIds" cppName="setFrozenLayerIds"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QList &lt; RLayer::Id &gt; &amp;"
+        typeName="QList &lt; RLayer::Id &gt;" name="ids"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="print" cppName="print" specifier="protected"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
@@ -292,6 +307,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="PropertyViewTargetZ" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyOverall" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyFrozenLayerIds" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
   </class>
 </unit>

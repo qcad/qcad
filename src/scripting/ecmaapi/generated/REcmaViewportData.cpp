@@ -209,6 +209,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, scale, "scale");
             
+            REcmaHelper::registerFunction(&engine, proto, getFrozenLayerIds, "getFrozenLayerIds");
+            
+            REcmaHelper::registerFunction(&engine, proto, setFrozenLayerIds, "setFrozenLayerIds");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RViewportData*>(), *proto);
 
@@ -6128,6 +6132,111 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaViewportData::scale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaViewportData::getFrozenLayerIds
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaViewportData::getFrozenLayerIds", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaViewportData::getFrozenLayerIds";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RViewportData* self = 
+                        getSelf("getFrozenLayerIds", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RLayer::Id >'
+    QList < RLayer::Id > cppResult =
+        
+               self->getFrozenLayerIds();
+        // return type: QList < RLayer::Id >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RViewportData.getFrozenLayerIds().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaViewportData::getFrozenLayerIds", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaViewportData::setFrozenLayerIds
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaViewportData::setFrozenLayerIds", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaViewportData::setFrozenLayerIds";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RViewportData* self = 
+                        getSelf("setFrozenLayerIds", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RLayer::Id > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray or QVariantMap
+                    QList < RLayer::Id >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setFrozenLayerIds(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RViewportData.setFrozenLayerIds().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaViewportData::setFrozenLayerIds", context, engine);
             return result;
         }
          QScriptValue REcmaViewportData::toString

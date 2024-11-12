@@ -136,6 +136,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setPosition, "setPosition");
             
+            REcmaHelper::registerFunction(&engine, proto, getFrozenLayerIds, "getFrozenLayerIds");
+            
+            REcmaHelper::registerFunction(&engine, proto, setFrozenLayerIds, "setFrozenLayerIds");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RViewportEntityPointer>(), *proto);
       
@@ -252,6 +256,10 @@
             
             ctor.setProperty("PropertyOverall",
                 qScriptValueFromValue(&engine, RViewportEntity::PropertyOverall),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyFrozenLayerIds",
+                qScriptValueFromValue(&engine, RViewportEntity::PropertyFrozenLayerIds),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
 
@@ -2782,6 +2790,111 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerViewportEntity::setPosition", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerViewportEntity::getFrozenLayerIds
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerViewportEntity::getFrozenLayerIds", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerViewportEntity::getFrozenLayerIds";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RViewportEntity* self = 
+                        getSelf("getFrozenLayerIds", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RLayer::Id >'
+    QList < RLayer::Id > cppResult =
+        
+               self->getFrozenLayerIds();
+        // return type: QList < RLayer::Id >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RViewportEntity.getFrozenLayerIds().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerViewportEntity::getFrozenLayerIds", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerViewportEntity::setFrozenLayerIds
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerViewportEntity::setFrozenLayerIds", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerViewportEntity::setFrozenLayerIds";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RViewportEntity* self = 
+                        getSelf("setFrozenLayerIds", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RLayer::Id > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray or QVariantMap
+                    QList < RLayer::Id >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setFrozenLayerIds(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RViewportEntity.setFrozenLayerIds().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerViewportEntity::setFrozenLayerIds", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerViewportEntity::toString
