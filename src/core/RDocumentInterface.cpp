@@ -257,6 +257,28 @@ void RDocumentInterface::notifyLayerListeners(QList<RLayer::Id>& layerIds) {
     }
 }
 
+void RDocumentInterface::addBlockListener(RBlockListener* l) {
+    blockListeners.push_back(l);
+}
+
+void RDocumentInterface::removeBlockListener(RBlockListener* l) {
+    blockListeners.removeAll(l);
+}
+
+void RDocumentInterface::notifyBlockListeners(RDocumentInterface* documentInterface) {
+    QList<RBlockListener*>::iterator it;
+    for (it = blockListeners.begin(); it != blockListeners.end(); ++it) {
+        (*it)->updateBlocks(documentInterface);
+    }
+}
+
+void RDocumentInterface::notifyBlockListenersCurrentBlock(RDocumentInterface* documentInterface) {
+    QList<RBlockListener*>::iterator it;
+    for (it = blockListeners.begin(); it != blockListeners.end(); ++it) {
+        (*it)->setCurrentBlock(documentInterface);
+    }
+}
+
 int RDocumentInterface::addTransactionListener(RTransactionListener* l) {
     // find first available key:
     for (int i=0; i<1e6; i++) {
@@ -1294,6 +1316,7 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importFile(
         mainWindow->notifyListeners();
         mainWindow->notifyImportListenersPost(this);
     }
+
     return ret;
 }
 
@@ -2441,6 +2464,9 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
     if (!changedLayerIds.isEmpty()) {
         notifyLayerListeners(changedLayerIdList);
     }
+    if (blockHasChanged) {
+        notifyBlockListeners(this);
+    }
 
     // notify global listeners if this is not the clipboard document interface:
     if (RMainWindow::hasMainWindow() && notifyGlobalListeners) {
@@ -2596,6 +2622,7 @@ void RDocumentInterface::setCurrentBlock(RBlock::Id blockId) {
     if (RMainWindow::hasMainWindow() && notifyGlobalListeners) {
         RMainWindow::getMainWindow()->notifyBlockListenersCurrentBlock(this);
     }
+    notifyBlockListenersCurrentBlock(this);
 
     QMap<int, RTransactionListener*>::iterator it;
     for (it = transactionListeners.begin(); it != transactionListeners.end(); ++it) {
