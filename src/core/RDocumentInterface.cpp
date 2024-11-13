@@ -2464,7 +2464,7 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
     if (!changedLayerIds.isEmpty()) {
         notifyLayerListeners(changedLayerIdList);
     }
-    if (blockHasChanged) {
+    if (blockHasChanged || layoutHasChanged) {
         notifyBlockListeners(this);
     }
 
