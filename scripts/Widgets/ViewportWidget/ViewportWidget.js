@@ -113,9 +113,11 @@ ViewportWidget.initMdiChild = function(mdiChild, uiFileName) {
     var w = WidgetFactory.createWidget("", ViewportWidget.templateDir + QDir.separator + uiFileName, mdiChild);
     w.setWindowTitle("");
 
-    for (var i=0; i<ViewportWidget.mdiInitFunctions.length; i++) {
-        if (isFunction(ViewportWidget.mdiInitFunctions[i])) {
-            ViewportWidget.mdiInitFunctions[i](w, mdiChild.getDocumentInterface());
+    if (!isNull(ViewportWidget.mdiInitFunctions)) {
+        for (var i=0; i<ViewportWidget.mdiInitFunctions.length; i++) {
+            if (isFunction(ViewportWidget.mdiInitFunctions[i])) {
+                ViewportWidget.mdiInitFunctions[i](w, mdiChild.getDocumentInterface());
+            }
         }
     }
 
