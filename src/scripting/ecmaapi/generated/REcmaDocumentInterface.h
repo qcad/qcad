@@ -79,6 +79,18 @@
         notifyLayerListeners
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        addBlockListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        removeBlockListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        notifyBlockListeners
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        notifyBlockListenersCurrentBlock
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         addTransactionListener
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

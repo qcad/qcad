@@ -35,6 +35,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QPinchGesture&gt;</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RAction.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RBlockListener.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RCommandEvent.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RCoordinateEvent.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RCoordinateListener.h"</cpp:file></cpp:include>
@@ -138,6 +139,11 @@
     <function_decl><type><name>void</name></type> <name>addLayerListener</name><parameter_list>(<param><decl><type><name>RLayerListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>removeLayerListener</name><parameter_list>(<param><decl><type><name>RLayerListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>notifyLayerListeners</name><parameter_list>(<param><decl><type><name>QList<argument_list>&lt;<argument><name><name>RLayer</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>layerIds</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>addBlockListener</name><parameter_list>(<param><decl><type><name>RBlockListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>removeBlockListener</name><parameter_list>(<param><decl><type><name>RBlockListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>notifyBlockListeners</name><parameter_list>(<param><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>notifyBlockListenersCurrentBlock</name><parameter_list>(<param><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>int</name></type> <name>addTransactionListener</name><parameter_list>(<param><decl><type><name>RTransactionListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>removeTransactionListener</name><parameter_list>(<param><decl><type><name>int</name></type> <name>key</name></decl></param>)</parameter_list>;</function_decl>
@@ -390,6 +396,7 @@
 
     <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RCoordinateListener</name>*</argument>&gt;</argument_list></name></type> <name>coordinateListeners</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RLayerListener</name>*</argument>&gt;</argument_list></name></type> <name>layerListeners</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RBlockListener</name>*</argument>&gt;</argument_list></name></type> <name>blockListeners</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>int</name></argument>, <argument><name>RTransactionListener</name>*</argument>&gt;</argument_list></name></type> <name>transactionListeners</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>RSnap</name>*</type> <name>currentSnap</name></decl>;</decl_stmt>
