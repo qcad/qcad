@@ -208,7 +208,14 @@ QPair<QVariant, RPropertyAttributes> RLeaderEntity::getProperty(
                     }
                 }
             }
-            return qMakePair(QVariant(v), RPropertyAttributes());
+
+            RPropertyAttributes attr;
+
+            if (propertyTypeId==PropertyDimscale) {
+                attr.setUnitLess(true);
+            }
+
+            return qMakePair(QVariant(v), attr);
         }
 
 //    else if (propertyTypeId == PropertyDimScale) {
