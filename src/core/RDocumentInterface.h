@@ -34,6 +34,7 @@
 #include <QPinchGesture>
 
 #include "RAction.h"
+#include "RBlockListener.h"
 #include "RCommandEvent.h"
 #include "RCoordinateEvent.h"
 #include "RCoordinateListener.h"
@@ -137,6 +138,11 @@ public:
     void addLayerListener(RLayerListener* l);
     void removeLayerListener(RLayerListener* l);
     void notifyLayerListeners(QList<RLayer::Id>& layerIds);
+
+    void addBlockListener(RBlockListener* l);
+    void removeBlockListener(RBlockListener* l);
+    void notifyBlockListeners(RDocumentInterface* documentInterface);
+    void notifyBlockListenersCurrentBlock(RDocumentInterface* documentInterface);
 
     int addTransactionListener(RTransactionListener* l);
     void removeTransactionListener(int key);
@@ -389,6 +395,7 @@ private:
 
     QList<RCoordinateListener*> coordinateListeners;
     QList<RLayerListener*> layerListeners;
+    QList<RBlockListener*> blockListeners;
     QMap<int, RTransactionListener*> transactionListeners;
 
     RSnap* currentSnap;

@@ -150,7 +150,14 @@ QPair<QVariant, RPropertyAttributes> RToleranceEntity::getProperty(
                 }
             }
         }
-        return qMakePair(QVariant(v), RPropertyAttributes());
+
+        RPropertyAttributes attr;
+
+        if (propertyTypeId==RToleranceEntity::PropertyDimscale) {
+            attr.setUnitLess(true);
+        }
+
+        return qMakePair(QVariant(v), attr);
     }
 //    else if (propertyTypeId == PropertyDimScale) {
 //        return qMakePair(QVariant(data.dimScaleOverride), RPropertyAttributes());
