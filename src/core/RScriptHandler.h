@@ -64,7 +64,7 @@ public:
      */
     virtual QList<QString> getSupportedFileExtensions() = 0;
 
-    virtual void init();
+    virtual void init(bool main = false);
 
     virtual void autostart(const QString& autostartFile = RDEFAULT_QSTRING, const QStringList& arguments = RDEFAULT_QSTRINGLIST);
 

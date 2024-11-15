@@ -27,7 +27,7 @@
 QString RScriptHandler::autostartScriptName = "autostart";
 
 
-void RScriptHandler::init() {
+void RScriptHandler::init(bool main) {
 }
 
 /**
