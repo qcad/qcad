@@ -110,6 +110,11 @@ ViewportWidget.addMdiInitFunction = function(f) {
 };
 
 ViewportWidget.initMdiChild = function(mdiChild, uiFileName) {
+    var oldWidget = mdiChild.widget();
+    if (!isNull(oldWidget)) {
+        destrDialog(oldWidget);
+    }
+
     var w = WidgetFactory.createWidget("", ViewportWidget.templateDir + QDir.separator + uiFileName, mdiChild);
     w.setWindowTitle("");
 
