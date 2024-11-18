@@ -84,6 +84,8 @@ public:
     virtual RVector getVectorTo(const RVector& point,
             bool limited = true, double strictRange = RMAXDOUBLE) const;
 
+    RVector getPointOnShape() const;
+
     RVector getCenter() const;
     void setCenter(const RVector& vector);
     double getRadius() const;
