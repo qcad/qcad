@@ -42,6 +42,12 @@ GraphicsViewPreferences.initPreferences = function(pageWidget, calledByPrefDialo
     widgets["Threads"].setItemText(0, widgets["Threads"].itemText(0) + " (" + Math.min(RS.getIdealThreadCount(), 6) + ")");
 
     widgets["DefaultLineweight"].setLineweight(RLineweight.Weight000);
+
+    if (RSettings.getQtVersion() < 0x060000) {
+        // bitmap allocation limit is available since Qt 6:
+        widgets["ImageAllocationLimit_Label"].visible = false;
+        widgets["ImageAllocationLimit"].visible = false;
+    }
 };
 
 GraphicsViewPreferences.applyPreferences = function(doc, mdiChild) {
@@ -51,6 +57,10 @@ GraphicsViewPreferences.applyPreferences = function(doc, mdiChild) {
 
     var numThreads = RSettings.getIntValue("GraphicsView/Threads", Math.min(RS.getIdealThreadCount(), 6));
     //EAction.handleUserMessage(qsTr("Threads:") + " " + numThreads);
+
+    if (RSettings.getQtVersion() >= 0x060000) {
+        QImageReader.setAllocationLimit(RSettings.getIntValue("GraphicsView/ImageAllocationLimit", 256));
+    }
 
     var di = mdiChild.getDocumentInterface();
     var scenes = di.getGraphicsScenes();
