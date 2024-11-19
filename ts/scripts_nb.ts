@@ -412,7 +412,7 @@ preferanseendringene skal tre i kraft.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2454"/>
+        <location filename="../scripts/Apollonius.js" line="+2637"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Ugyldig radius</translation>
     </message>
@@ -1834,7 +1834,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+86"/>
+        <location line="+84"/>
         <source>No solution</source>
         <translation type="unfinished">Ingen løsning</translation>
     </message>
@@ -5956,7 +5956,12 @@ er allerede i listen.</translation>
         <translation type="unfinished">Terskel for teksthøyde (px):</translation>
     </message>
     <message>
-        <location line="-147"/>
+        <location line="+72"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation type="unfinished">Maksimal kompleksitet for solide fyllinger av høy kvalitet:</translation>
+    </message>
+    <message>
+        <location line="-219"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation type="unfinished">Maksimalt antall valgte enheter med viste referansepunkter:</translation>
     </message>
@@ -5966,7 +5971,7 @@ er allerede i listen.</translation>
         <translation type="unfinished">Polylinjer med egendefinerte bredder skal alltid være minst 1 piksel brede</translation>
     </message>
     <message>
-        <location line="+750"/>
+        <location line="+810"/>
         <source>Selection</source>
         <translation type="unfinished">Utvalg</translation>
     </message>
@@ -7395,7 +7400,7 @@ er allerede i listen.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+360"/>
+        <location filename="../scripts/Information/Information.js" line="+350"/>
         <source>Information Tools</source>
         <translation type="unfinished">Informasjonsverktøy</translation>
     </message>
@@ -9356,7 +9361,7 @@ er allerede i listen.</translation>
 <context>
     <name>OffsetThrough</name>
     <message>
-        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+70"/>
+        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+84"/>
         <source>Specify point</source>
         <translation type="unfinished">Spesifiser punkt</translation>
     </message>
@@ -9971,7 +9976,7 @@ er allerede i listen.</translation>
         <translation type="unfinished">Automatisk tilpasning av tegning til papir?</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+210"/>
         <source>Drag to move paper</source>
         <translation type="unfinished">Dra for å flytte papir</translation>
     </message>
@@ -10238,7 +10243,7 @@ er allerede i listen.</translation>
         <translation type="unfinished">Auto</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+201"/>
         <source>Use auto measurement</source>
         <translation type="unfinished">Bruk automatisk måling</translation>
     </message>
@@ -13992,7 +13997,7 @@ er allerede i listen.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1275"/>
+        <location filename="../scripts/library.js" line="+1288"/>
         <source>Objects</source>
         <translation type="unfinished">Objekter</translation>
     </message>

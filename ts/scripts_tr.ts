@@ -412,7 +412,7 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2454"/>
+        <location filename="../scripts/Apollonius.js" line="+2637"/>
         <source>Invalid radius</source>
         <translation>Geçersiz yarıçap</translation>
     </message>
@@ -1831,7 +1831,7 @@ Kurtarmak ister misiniz?</translation>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+86"/>
+        <location line="+84"/>
         <source>No solution</source>
         <translation>Çözüm yok</translation>
     </message>
@@ -5885,12 +5885,12 @@ zaten listede.</translation>
         <translation type="unfinished">Referans noktası boyutu (px):</translation>
     </message>
     <message>
-        <location line="+167"/>
+        <location line="+227"/>
         <source>Persistent selection</source>
         <translation type="unfinished">Kalıcı seçim</translation>
     </message>
     <message>
-        <location line="-635"/>
+        <location line="-695"/>
         <source>Number of preview entities:</source>
         <translation type="unfinished">Önizleme varlıklarının sayısı:</translation>
     </message>
@@ -5945,7 +5945,12 @@ zaten listede.</translation>
         <translation type="unfinished">Görüntülenen referans noktaları ile maksimum seçilen varlıklar:</translation>
     </message>
     <message>
-        <location line="+231"/>
+        <location line="+219"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation type="unfinished">Yüksek kalitede katı dolgular için maksimum karmaşıklık:</translation>
+    </message>
+    <message>
+        <location line="+72"/>
         <source>Selection</source>
         <translation type="unfinished">Seçim</translation>
     </message>
@@ -7389,7 +7394,7 @@ zaten listede.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+360"/>
+        <location filename="../scripts/Information/Information.js" line="+350"/>
         <source>Information Tools</source>
         <translation>Bilgi Araçları</translation>
     </message>
@@ -9348,7 +9353,7 @@ zaten listede.</translation>
 <context>
     <name>OffsetThrough</name>
     <message>
-        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+70"/>
+        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+84"/>
         <source>Specify point</source>
         <translation type="unfinished">Noktayı belirtin</translation>
     </message>
@@ -9963,7 +9968,7 @@ zaten listede.</translation>
         <translation type="unfinished">Çizimi kağıda otomatik sığdırma?</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+210"/>
         <source>Drag to move paper</source>
         <translation>Kağıt taşımak için sürükleyin</translation>
     </message>
@@ -10230,7 +10235,7 @@ zaten listede.</translation>
         <translation>Oto</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+201"/>
         <source>Use auto measurement</source>
         <translation type="unfinished">Otomatik ölçümü kullanın</translation>
     </message>
@@ -13981,7 +13986,7 @@ zaten listede.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1275"/>
+        <location filename="../scripts/library.js" line="+1288"/>
         <source>Objects</source>
         <translation>Nesneler</translation>
     </message>

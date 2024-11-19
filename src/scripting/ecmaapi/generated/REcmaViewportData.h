@@ -235,6 +235,12 @@
         ;static  QScriptValue
         scale
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getFrozenLayerIds
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setFrozenLayerIds
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue copy

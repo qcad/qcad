@@ -80,14 +80,16 @@ QString RStemmer::stem(const QString& word, const QString& locale) {
     const sb_symbol* sbStemmed = sb_stemmer_stem(stemmer, sbWord, i);
     QString stemmed;
 
-    i=0;
-    while(1) {
-        if (sbStemmed[i]==0) {
-            break;
-        }
-        stemmed += QChar(sbStemmed[i]);
-        i++;
-    }
+    stemmed = QString::fromUtf8(QByteArray((const char*)sbStemmed, i));
+
+//    i=0;
+//    while(1) {
+//        if (sbStemmed[i]==0) {
+//            break;
+//        }
+//        stemmed += QChar(sbStemmed[i]);
+//        i++;
+//    }
 
     return stemmed;
 }

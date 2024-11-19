@@ -1,5 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("OpenFile", "&Open"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("OpenFile", "&Open") + "…", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/OpenFile.js");
     action.setDefaultShortcut(new QKeySequence(QKeySequence.Open));

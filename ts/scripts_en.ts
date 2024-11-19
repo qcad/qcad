@@ -412,7 +412,7 @@ the preference changes to take effect.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2454"/>
+        <location filename="../scripts/Apollonius.js" line="+2637"/>
         <source>Invalid radius</source>
         <translation>Invalid radius</translation>
     </message>
@@ -1834,7 +1834,7 @@ Do you wish to recover it?</translation>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+86"/>
+        <location line="+84"/>
         <source>No solution</source>
         <translation>No solution</translation>
     </message>
@@ -5906,12 +5906,17 @@ is already in the list.</translation>
         <translation>Text height threshold (px):</translation>
     </message>
     <message>
-        <location line="+90"/>
+        <location line="+72"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation>Maximum complexity for solid fills at high quality:</translation>
+    </message>
+    <message>
+        <location line="+78"/>
         <source>Persistent selection</source>
         <translation>Persistent selection</translation>
     </message>
     <message>
-        <location line="-859"/>
+        <location line="-919"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Automatically use screen based linetypes in model view</translation>
     </message>
@@ -5971,7 +5976,7 @@ is already in the list.</translation>
         <translation>Timeout for hatch rendering:</translation>
     </message>
     <message>
-        <location line="+366"/>
+        <location line="+426"/>
         <source>Selection</source>
         <translation>Selection</translation>
     </message>
@@ -7395,7 +7400,7 @@ is already in the list.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+360"/>
+        <location filename="../scripts/Information/Information.js" line="+350"/>
         <source>Information Tools</source>
         <translation>Information Tools</translation>
     </message>
@@ -9356,7 +9361,7 @@ is already in the list.</translation>
 <context>
     <name>OffsetThrough</name>
     <message>
-        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+70"/>
+        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+84"/>
         <source>Specify point</source>
         <translation>Specify point</translation>
     </message>
@@ -9971,7 +9976,7 @@ is already in the list.</translation>
         <translation>Auto fit drawing to paper?</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+210"/>
         <source>Drag to move paper</source>
         <translation>Drag to move paper</translation>
     </message>
@@ -10238,7 +10243,7 @@ is already in the list.</translation>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+201"/>
         <source>Use auto measurement</source>
         <translation>Use auto measurement</translation>
     </message>
@@ -13992,7 +13997,7 @@ is already in the list.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1275"/>
+        <location filename="../scripts/library.js" line="+1288"/>
         <source>Objects</source>
         <translation>Objects</translation>
     </message>

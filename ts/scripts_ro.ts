@@ -412,7 +412,7 @@ modificările preferințelor să intre în vigoare.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2454"/>
+        <location filename="../scripts/Apollonius.js" line="+2637"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Raza invalidă</translation>
     </message>
@@ -1833,7 +1833,7 @@ Doriți să îl recuperați?</translation>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+86"/>
+        <location line="+84"/>
         <source>No solution</source>
         <translation type="unfinished">Nici o soluție</translation>
     </message>
@@ -5958,7 +5958,12 @@ este deja în listă.</translation>
         <translation type="unfinished">Pragul de înălțime a textului (px):</translation>
     </message>
     <message>
-        <location line="-147"/>
+        <location line="+72"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation type="unfinished">Complexitate maximă pentru umpluturi solide la calitate ridicată:</translation>
+    </message>
+    <message>
+        <location line="-219"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation type="unfinished">Numărul maxim de entități selectate cu puncte de referință afișate:</translation>
     </message>
@@ -5968,7 +5973,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Redați întotdeauna polilinii cu lățimi personalizate cu o lățime de cel puțin 1 pixel</translation>
     </message>
     <message>
-        <location line="+750"/>
+        <location line="+810"/>
         <source>Selection</source>
         <translation type="unfinished">Selecție</translation>
     </message>
@@ -7397,7 +7402,7 @@ este deja în listă.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+360"/>
+        <location filename="../scripts/Information/Information.js" line="+350"/>
         <source>Information Tools</source>
         <translation type="unfinished">Instrumente de informare</translation>
     </message>
@@ -9360,7 +9365,7 @@ este deja în listă.</translation>
 <context>
     <name>OffsetThrough</name>
     <message>
-        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+70"/>
+        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+84"/>
         <source>Specify point</source>
         <translation type="unfinished">Specificați punctul</translation>
     </message>
@@ -9975,7 +9980,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Adaptarea automată a desenului la hârtie?</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+210"/>
         <source>Drag to move paper</source>
         <translation type="unfinished">Trageți pentru a muta hârtia</translation>
     </message>
@@ -10242,7 +10247,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Auto</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+201"/>
         <source>Use auto measurement</source>
         <translation type="unfinished">Utilizați măsurarea automată</translation>
     </message>
@@ -13999,7 +14004,7 @@ este deja în listă.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1275"/>
+        <location filename="../scripts/library.js" line="+1288"/>
         <source>Objects</source>
         <translation type="unfinished">Obiecte</translation>
     </message>

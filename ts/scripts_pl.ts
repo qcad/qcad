@@ -412,7 +412,7 @@ aby wprowadzić zmiany preferencji.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2454"/>
+        <location filename="../scripts/Apollonius.js" line="+2637"/>
         <source>Invalid radius</source>
         <translation>Nieprawidłowy promień</translation>
     </message>
@@ -1836,7 +1836,7 @@ Czy chcesz go odzyskać?</translation>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+86"/>
+        <location line="+84"/>
         <source>No solution</source>
         <translation>Brak rozwiązania</translation>
     </message>
@@ -5881,12 +5881,17 @@ jest już na liście.</translation>
         <translation>Próg wysokości tekstu (px):</translation>
     </message>
     <message>
-        <location line="+90"/>
+        <location line="+72"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation>Maksymalna złożoność dla solidnych wypełnień w wysokiej jakości:</translation>
+    </message>
+    <message>
+        <location line="+78"/>
         <source>Persistent selection</source>
         <translation>Trwała selekcja</translation>
     </message>
     <message>
-        <location line="-951"/>
+        <location line="-1011"/>
         <source>Color lightness threshold:</source>
         <translation>Próg jasności koloru:</translation>
     </message>
@@ -5976,7 +5981,7 @@ jest już na liście.</translation>
         <translation>Maksymalnie wybrane jednostki z wyświetlonymi punktami odniesienia:</translation>
     </message>
     <message>
-        <location line="+231"/>
+        <location line="+291"/>
         <source>Selection</source>
         <translation>Wybór</translation>
     </message>
@@ -7400,7 +7405,7 @@ jest już na liście.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+360"/>
+        <location filename="../scripts/Information/Information.js" line="+350"/>
         <source>Information Tools</source>
         <translation>Narzędzia informacyjne</translation>
     </message>
@@ -9363,7 +9368,7 @@ jest już na liście.</translation>
 <context>
     <name>OffsetThrough</name>
     <message>
-        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+70"/>
+        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+84"/>
         <source>Specify point</source>
         <translation>Proszę wskazać punkt</translation>
     </message>
@@ -9978,7 +9983,7 @@ jest już na liście.</translation>
         <translation>Automatyczne dopasowywanie rysunku do papieru?</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+210"/>
         <source>Drag to move paper</source>
         <translation>Przeciągnij, aby przesunąć papier</translation>
     </message>
@@ -10135,12 +10140,12 @@ jest już na liście.</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1680"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1684"/>
         <source>*VARIES*</source>
         <translation>*VARIES*</translation>
     </message>
     <message>
-        <location line="-1454"/>
+        <location line="-1458"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10190,12 +10195,12 @@ jest już na liście.</translation>
         <translation>Pokaż wszystkie nieruchomości</translation>
     </message>
     <message>
-        <location line="+790"/>
+        <location line="+794"/>
         <source>Widgets</source>
         <translation>Widżety</translation>
     </message>
     <message>
-        <location line="-836"/>
+        <location line="-840"/>
         <source>Add custom property to selected objects</source>
         <translation>Dodaj dostosowaną właściwość do zaznaczonych obiektów</translation>
     </message>
@@ -10205,7 +10210,7 @@ jest już na liście.</translation>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+201"/>
         <source>Use auto measurement</source>
         <translation>Użyj pomiaru automatycznego</translation>
     </message>
@@ -14002,7 +14007,7 @@ jest już na liście.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1275"/>
+        <location filename="../scripts/library.js" line="+1288"/>
         <source>Objects</source>
         <translation>Obiekty</translation>
     </message>

@@ -412,7 +412,7 @@ applicare le modifiche.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2454"/>
+        <location filename="../scripts/Apollonius.js" line="+2637"/>
         <source>Invalid radius</source>
         <translation>Raggio non valido</translation>
     </message>
@@ -1834,7 +1834,7 @@ Vuoi recuperarlo?</translation>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+86"/>
+        <location line="+84"/>
         <source>No solution</source>
         <translation>Nessuna soluzione</translation>
     </message>
@@ -5886,12 +5886,12 @@ is already in the list.</source>
         <translation>Soglia di altezza del testo (px):</translation>
     </message>
     <message>
-        <location line="+90"/>
+        <location line="+150"/>
         <source>Persistent selection</source>
         <translation>Selezione permanente</translation>
     </message>
     <message>
-        <location line="-951"/>
+        <location line="-1011"/>
         <source>Color lightness threshold:</source>
         <translation>Soglia per la leggerezza del colore:</translation>
     </message>
@@ -5971,7 +5971,12 @@ is already in the list.</source>
         <translation>Mostra archi come linee di sotto di questo angolo (gradi):</translation>
     </message>
     <message>
-        <location line="+568"/>
+        <location line="+556"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation>Massima complessità per riempimenti solidi di alta qualità:</translation>
+    </message>
+    <message>
+        <location line="+72"/>
         <source>Selection</source>
         <translation>Selezione</translation>
     </message>
@@ -7395,7 +7400,7 @@ is already in the list.</source>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+360"/>
+        <location filename="../scripts/Information/Information.js" line="+350"/>
         <source>Information Tools</source>
         <translation>Strumenti informazione</translation>
     </message>
@@ -8791,7 +8796,7 @@ is already in the list.</source>
     <message>
         <location line="+35"/>
         <source>Scale of linetypes matches the scale of each viewport</source>
-        <translation>La scala dei linetypes corrisponde alla scala di ogni viewport</translation>
+        <translation>La scala dei linetypes corrisponde alla scala di ogni finestra di visualizzazione</translation>
     </message>
 </context>
 <context>
@@ -9356,7 +9361,7 @@ is already in the list.</source>
 <context>
     <name>OffsetThrough</name>
     <message>
-        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+70"/>
+        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+84"/>
         <source>Specify point</source>
         <translation>Punto</translation>
     </message>
@@ -9971,7 +9976,7 @@ is already in the list.</source>
         <translation>Adattare automaticamente il disegno alla carta?</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+210"/>
         <source>Drag to move paper</source>
         <translation>Trascinare per spostare la carta</translation>
     </message>
@@ -10133,12 +10138,12 @@ is already in the list.</source>
         <translation>Aggiungere una proprietà personalizzata per gli oggetti selezionati</translation>
     </message>
     <message>
-        <location line="+833"/>
+        <location line="+837"/>
         <source>*VARIES*</source>
         <translation>*VARIE*</translation>
     </message>
     <message>
-        <location line="-1454"/>
+        <location line="-1458"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10188,17 +10193,17 @@ is already in the list.</source>
         <translation>Mostra tutte le proprietà</translation>
     </message>
     <message>
-        <location line="+790"/>
+        <location line="+794"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="-655"/>
+        <location line="-659"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+201"/>
         <source>Use auto measurement</source>
         <translation>Utilizzare la misurazione automatica</translation>
     </message>
@@ -13461,7 +13466,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ViewportSettings/PreferencesPage.ui" line="+21"/>
         <source>Viewports</source>
-        <translation>Viewports</translation>
+        <translation>Finestre di visualizzazione</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -13484,7 +13489,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Layout - Viewports</source>
-        <translation>Layout - Viewports</translation>
+        <translation>Layout - Finestre di visualizzazione</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -13494,7 +13499,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Viewports</source>
-        <translation>Viewports</translation>
+        <translation>Finestre di visualizzazione</translation>
     </message>
 </context>
 <context>
@@ -13993,7 +13998,7 @@ is already in the list.</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1275"/>
+        <location filename="../scripts/library.js" line="+1288"/>
         <source>Objects</source>
         <translation>Oggetti</translation>
     </message>
@@ -14405,12 +14410,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Viewports</source>
-        <translation>Finestre</translation>
+        <translation>Finestre di visualizzazione</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Viewport</source>
-        <translation>Finestra</translation>
+        <translation>Finestra di visualizzazione</translation>
     </message>
     <message>
         <location line="+2"/>

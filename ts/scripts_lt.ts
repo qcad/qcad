@@ -412,7 +412,7 @@ nuostatos pakeitimai įsigaliotų.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2454"/>
+        <location filename="../scripts/Apollonius.js" line="+2637"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Neteisingas spindulys</translation>
     </message>
@@ -1833,7 +1833,7 @@ Ar norite jį atkurti?</translation>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+86"/>
+        <location line="+84"/>
         <source>No solution</source>
         <translation type="unfinished">Nėra sprendimo</translation>
     </message>
@@ -5913,12 +5913,12 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Atskaitos taško dydis (px):</translation>
     </message>
     <message>
-        <location line="+167"/>
+        <location line="+227"/>
         <source>Persistent selection</source>
         <translation type="unfinished">Nuolatinė atranka</translation>
     </message>
     <message>
-        <location line="-635"/>
+        <location line="-695"/>
         <source>Number of preview entities:</source>
         <translation type="unfinished">Peržiūros subjektų skaičius:</translation>
     </message>
@@ -5973,7 +5973,12 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Didžiausias pasirinktų subjektų skaičius su rodomais atskaitos taškais:</translation>
     </message>
     <message>
-        <location line="+231"/>
+        <location line="+219"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation type="unfinished">Didžiausias sudėtingumas, kad būtų galima kokybiškai užpildyti vientisą užpildą:</translation>
+    </message>
+    <message>
+        <location line="+72"/>
         <source>Selection</source>
         <translation type="unfinished">Atranka</translation>
     </message>
@@ -7397,7 +7402,7 @@ jau yra sąraše.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+360"/>
+        <location filename="../scripts/Information/Information.js" line="+350"/>
         <source>Information Tools</source>
         <translation type="unfinished">Informacinės priemonės</translation>
     </message>
@@ -9360,7 +9365,7 @@ jau yra sąraše.</translation>
 <context>
     <name>OffsetThrough</name>
     <message>
-        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+70"/>
+        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+84"/>
         <source>Specify point</source>
         <translation type="unfinished">Nurodykite tašką</translation>
     </message>
@@ -9975,7 +9980,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Automatinis brėžinio pritaikymas prie popieriaus?</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+210"/>
         <source>Drag to move paper</source>
         <translation type="unfinished">Vilkite, kad perkeltumėte popierių</translation>
     </message>
@@ -10192,7 +10197,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Automatinis</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+201"/>
         <source>Use auto measurement</source>
         <translation type="unfinished">Naudokite automatinį matavimą</translation>
     </message>
@@ -13999,7 +14004,7 @@ jau yra sąraše.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1275"/>
+        <location filename="../scripts/library.js" line="+1288"/>
         <source>Objects</source>
         <translation type="unfinished">Objektai</translation>
     </message>

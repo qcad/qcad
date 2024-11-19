@@ -138,6 +138,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isParallel, "isParallel");
             
+            REcmaHelper::registerFunction(&engine, proto, isCollinear, "isCollinear");
+            
             REcmaHelper::registerFunction(&engine, proto, isVertical, "isVertical");
             
             REcmaHelper::registerFunction(&engine, proto, isHorizontal, "isHorizontal");
@@ -2206,6 +2208,78 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerLine::isParallel", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerLine::isCollinear
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerLine::isCollinear", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLine::isCollinear";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLine* self = 
+                        getSelf("isCollinear", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RLine */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RLine*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RLine*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RLine: Argument 0 is not of type RLine.",
+                               context);                    
+                    }
+                    RLine 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isCollinear(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLine.isCollinear().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerLine::isCollinear", context, engine);
             return result;
         }
          QScriptValue

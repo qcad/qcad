@@ -30,8 +30,8 @@ RToleranceData::RToleranceData()
       joinFirstField(false) {
 }
 
-RToleranceData::RToleranceData(RDocument* doc, const RToleranceData& data)
-    : REntityData(doc),
+RToleranceData::RToleranceData(RDocument* document, const RToleranceData& data)
+    : REntityData(document),
       direction(1,0,0) {
 
     *this = data;
@@ -468,4 +468,12 @@ QList<RLine> RToleranceData::getFrame() const {
 
 RVector RToleranceData::getPointOnEntity() const {
     return location;
+}
+
+RVector RToleranceData::getVectorTo(const RVector& point, bool limited, double strictRange) const {
+    RBox bbox = getBoundingBox();
+    if (bbox.containsPoint(point)) {
+        return RVector(0,0);
+    }
+    return RVector::invalid;
 }

@@ -103,6 +103,40 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="addBlockListener" cppName="addBlockListener"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RBlockListener *" typeName="RBlockListener *"
+        name="l" isConst="false" />
+      </variant>
+    </method>
+    <method name="removeBlockListener"
+    cppName="removeBlockListener" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RBlockListener *" typeName="RBlockListener *"
+        name="l" isConst="false" />
+      </variant>
+    </method>
+    <method name="notifyBlockListeners"
+    cppName="notifyBlockListeners" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocumentInterface *"
+        typeName="RDocumentInterface *" name="documentInterface"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="notifyBlockListenersCurrentBlock"
+    cppName="notifyBlockListenersCurrentBlock" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocumentInterface *"
+        typeName="RDocumentInterface *" name="documentInterface"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="addTransactionListener"
     cppName="addTransactionListener" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

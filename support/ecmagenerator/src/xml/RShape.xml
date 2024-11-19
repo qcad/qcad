@@ -600,6 +600,16 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="transform" isConst="true" />
       </variant>
     </method>
+    <method name="getPolylines" cppName="getPolylines"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RPolyline &gt;"
+      isPureVirtual="false">
+        <arg type="QList &lt; QSharedPointer &lt; RShape &gt; &gt; &amp;"
+        typeName="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
+        name="shapes" isConst="true" />
+      </variant>
+    </method>
     <method name="getOrderedShapes" cppName="getOrderedShapes"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">

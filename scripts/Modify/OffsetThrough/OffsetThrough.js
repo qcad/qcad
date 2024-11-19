@@ -19,13 +19,22 @@
 
 include("../Offset/Offset.js");
 
+if (hasPlugin("PROTOOLS")) {
+    include("scripts/Pro/Modify/OffsetPro/OffsetPro.js");
+}
+
 /**
  * \class OffsetThrough
  * \brief Offset through given position.
  * \ingroup ecma_modify
  */
 function OffsetThrough(guiAction) {
-    Offset.call(this, guiAction);
+    if (hasPlugin("PROTOOLS")) {
+        OffsetPro.call(this, guiAction);
+    }
+    else {
+        Offset.call(this, guiAction);
+    }
 
     this.entity = undefined;
     this.shape = undefined;
@@ -36,7 +45,12 @@ function OffsetThrough(guiAction) {
     }
 }
 
-OffsetThrough.prototype = new Offset();
+if (hasPlugin("PROTOOLS")) {
+    OffsetThrough.prototype = new OffsetPro();
+}
+else {
+    OffsetThrough.prototype = new Offset();
+}
 
 OffsetThrough.State = {
     ChoosingEntity : 0,

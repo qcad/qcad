@@ -406,6 +406,11 @@ int main(int argc, char *argv[]) {
         autostartFile = arguments.at(i+1);
     }
 
+#if QT_VERSION >= 0x060000
+    // allow loading of larger bitmaps (configurable):
+    QImageReader::setAllocationLimit(RSettings::getIntValue("GraphicsView/ImageAllocationLimit", 256));
+#endif
+
     int ret = 0;
 
 #if QT_VERSION >= 0x060000

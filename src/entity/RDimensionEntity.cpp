@@ -398,6 +398,11 @@ QPair<QVariant, RPropertyAttributes> RDimensionEntity::getProperty(
                 attr.setInteger(true);
             }
 
+            if (propertyTypeId==RDimensionEntity::PropertyDimscale ||
+                propertyTypeId==RDimensionEntity::PropertyDimlfac) {
+                attr.setUnitLess(true);
+            }
+
             // TODO: add advanced attribute to show / hide in PE
             return qMakePair(getData().getDimXVariant(pv.second), attr);
         }

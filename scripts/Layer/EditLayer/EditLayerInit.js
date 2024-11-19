@@ -1,5 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("EditLayer", "&Edit Layer"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("EditLayer", "&Edit Layer") + "…", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/EditLayer.js");
     action.setDefaultShortcut(new QKeySequence("y,e"));

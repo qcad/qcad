@@ -412,7 +412,7 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2454"/>
+        <location filename="../scripts/Apollonius.js" line="+2637"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Μη έγκυρη ακτίνα</translation>
     </message>
@@ -1832,7 +1832,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+86"/>
+        <location line="+84"/>
         <source>No solution</source>
         <translation type="unfinished">Δεν υπάρχει λύση</translation>
     </message>
@@ -5954,7 +5954,12 @@ is already in the list.</source>
         <translation type="unfinished">Κατώτατο όριο ύψους κειμένου (px):</translation>
     </message>
     <message>
-        <location line="-147"/>
+        <location line="+72"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation type="unfinished">Μέγιστη πολυπλοκότητα για συμπαγή γεμίσματα υψηλής ποιότητας:</translation>
+    </message>
+    <message>
+        <location line="-219"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation type="unfinished">Μέγιστες επιλεγμένες οντότητες με εμφανιζόμενα σημεία αναφοράς:</translation>
     </message>
@@ -5964,7 +5969,7 @@ is already in the list.</source>
         <translation type="unfinished">Να αποδίδετε πάντα πολυγραμμές με προσαρμοσμένο πλάτος τουλάχιστον 1 pixel πλάτος</translation>
     </message>
     <message>
-        <location line="+750"/>
+        <location line="+810"/>
         <source>Selection</source>
         <translation type="unfinished">Επιλογή</translation>
     </message>
@@ -7393,7 +7398,7 @@ is already in the list.</source>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+360"/>
+        <location filename="../scripts/Information/Information.js" line="+350"/>
         <source>Information Tools</source>
         <translation type="unfinished">Εργαλεία πληροφόρησης</translation>
     </message>
@@ -9354,7 +9359,7 @@ is already in the list.</source>
 <context>
     <name>OffsetThrough</name>
     <message>
-        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+70"/>
+        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+84"/>
         <source>Specify point</source>
         <translation type="unfinished">Καθορίστε το σημείο</translation>
     </message>
@@ -9969,7 +9974,7 @@ is already in the list.</source>
         <translation type="unfinished">Αυτόματη προσαρμογή σχεδίου στο χαρτί</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+210"/>
         <source>Drag to move paper</source>
         <translation type="unfinished">Σύρετε για να μετακινήσετε το χαρτί</translation>
     </message>
@@ -10236,7 +10241,7 @@ is already in the list.</source>
         <translation type="unfinished">Auto</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+201"/>
         <source>Use auto measurement</source>
         <translation type="unfinished">Χρήση αυτόματης μέτρησης</translation>
     </message>
@@ -13990,7 +13995,7 @@ is already in the list.</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1275"/>
+        <location filename="../scripts/library.js" line="+1288"/>
         <source>Objects</source>
         <translation type="unfinished">Αντικείμενα</translation>
     </message>

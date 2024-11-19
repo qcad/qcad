@@ -62,7 +62,7 @@ AppPreferences.init = function(basePath) {
         }
     }
 
-    action = new RGuiAction(qsTr("Application &Preferences"), RMainWindowQt.getMainWindow());
+    action = new RGuiAction(qsTr("Application &Preferences") + "…", RMainWindowQt.getMainWindow());
     if (RS.getSystemId() === "osx" && !gotPrefMenu) {
         action.setDefaultShortcut(new QKeySequence(QKeySequence.Preferences));
     }

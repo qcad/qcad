@@ -141,6 +141,9 @@
         getPointOnEntity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getVectorTo
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         clearStyleOverrides
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

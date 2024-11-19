@@ -2023,7 +2023,7 @@ EAction.enableCoordinateWidget = function(enable) {
 
 /**
  * \return ID of entity closest to the mouse cursor. No handling of ambiguous results.
- * \param event RRInputEvent
+ * \param event RInputEvent
  * \param range Cursor range in pixels
  */
 EAction.getEntityIdUnderCursor = function(di, event, range, selectable) {
@@ -2047,7 +2047,7 @@ EAction.getEntityIdUnderCursor = function(di, event, range, selectable) {
 
 /**
  * \return Array of entity IDs of entities closest to the mouse cursor.
- * \param event RRInputEvent
+ * \param event RInputEvent
  * \param range Cursor range in pixels
  */
 EAction.getEntityIdsUnderCursor = function(di, event, range, selectable) {

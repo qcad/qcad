@@ -76,6 +76,9 @@
         getBoundingBox
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getRotatedBoundingBox
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getWidth
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

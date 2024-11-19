@@ -257,7 +257,7 @@
         <location line="+3"/>
         <location line="+3"/>
         <location filename="../src/core/RTextBasedEntity.cpp" line="+75"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+73"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+75"/>
         <location line="+8"/>
         <location line="+2"/>
         <source>X</source>
@@ -606,6 +606,16 @@
         <location line="+2"/>
         <source>Overall</source>
         <translation>Global</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Frozen Layers</source>
+        <translation>Calques glacés</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Layer ID</source>
+        <translation>ID du calque</translation>
     </message>
     <message>
         <location filename="../src/core/RBlock.cpp" line="-6"/>

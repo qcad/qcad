@@ -246,7 +246,7 @@
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="+95"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+73"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+75"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
@@ -606,6 +606,16 @@
         <location line="+2"/>
         <source>Overall</source>
         <translation>顶层</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Frozen Layers</source>
+        <translation type="unfinished">冷冻层</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Layer ID</source>
+        <translation type="unfinished">层 ID</translation>
     </message>
     <message>
         <location filename="../src/core/RBlock.cpp" line="-6"/>

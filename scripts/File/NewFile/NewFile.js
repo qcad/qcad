@@ -291,6 +291,8 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
         ViewportWidget.updateViewports(viewports);
     }
 
+    documentInterface.notifyBlockListeners(documentInterface);
+
     var k, action;
     if (isOpen) {
         // trigger post open actions (actions configured by the user to be

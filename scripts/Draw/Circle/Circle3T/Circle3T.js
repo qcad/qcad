@@ -294,8 +294,6 @@ Circle3T.prototype.getShapes = function(preview) {
         return undefined;
     }
 
-    var i,k,ips;
-
     if (isNull(this.candidates)) {
         Apollonius.constructionShapes = [];
 

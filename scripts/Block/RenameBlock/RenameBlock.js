@@ -25,8 +25,14 @@ include("../BlockDialog.js");
  * \ingroup ecma_block
  * \brief Renames the active (selected) block.
  */
-function RenameBlock(guiAction) {
+function RenameBlock(guiAction, blockId) {
     Block.call(this, guiAction);
+
+    if (isNull(blockId)) {
+        blockId = RObject.INVALID_ID;
+    }
+
+    this.blockId = blockId;
 }
 
 RenameBlock.prototype = new Block();
@@ -34,7 +40,14 @@ RenameBlock.prototype = new Block();
 RenameBlock.prototype.beginEvent = function() {
     Block.prototype.beginEvent.call(this);
 
-    var blockId = Block.getActiveBlockId();
+    var blockId;
+    if (this.blockId!==RObject.INVALID_ID) {
+        blockId = this.blockId;
+    }
+    else {
+        blockId = Block.getActiveBlockId();
+    }
+
     if (blockId===RObject.INVALID_ID) {
         this.terminate();
         return;

@@ -230,6 +230,14 @@
 
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>scale</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>scaleFactors</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>center</name></decl></param>)</parameter_list>;</function_decl>
 
+    <function><type><name>QList<argument_list>&lt;<argument><name><name>RLayer</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>getFrozenLayerIds</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>frozenLayerIds</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setFrozenLayerIds</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name><name>RLayer</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>layerIds</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>frozenLayerIds</name> = <name>layerIds</name></expr>;</expr_stmt>
+    }</block></function>
+
 </public><protected>protected:
     <function><type><name>void</name></type> <name>setStatusFlag</name><parameter_list>(<param><decl><type><name>Status</name></type> <name>s</name></decl></param>, <param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
         <if>if <condition>(<expr><name>on</name></expr>)</condition><then> <block>{
@@ -253,6 +261,8 @@
 
     <decl_stmt><decl><type><name>RVector</name></type> <name>viewCenter</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RVector</name></type> <name>viewTarget</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name><name>RLayer</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>frozenLayerIds</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>bool</name></type> <name>overall</name></decl>;</decl_stmt>
 </private>}</block>;</class>

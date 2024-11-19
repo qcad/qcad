@@ -76,6 +76,13 @@ function requiresFramework(minVersion, maxVersion) {
     }
 }
 
+function checkMinVersion(minVersion) {
+    var frameworkV = getVersionNumber(RSettings.getMajorVersion(), RSettings.getMinorVersion(), RSettings.getRevisionVersion(), RSettings.getBuildVersion());
+    var minV = getVersionNumber(minVersion[0], minVersion[1], minVersion[2], minVersion[3]);
+
+    return frameworkV >= minV;
+}
+
 function getVersionNumber(major, minor, revision, build) {
     return major*1e9 + minor*1e6 + revision*1e3 + build;
 }

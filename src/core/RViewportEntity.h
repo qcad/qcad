@@ -66,6 +66,8 @@ public:
 
     static RPropertyTypeId PropertyOverall;
 
+    static RPropertyTypeId PropertyFrozenLayerIds;
+
 public:
     RViewportEntity(RDocument* document, const RViewportData& data);
     virtual ~RViewportEntity();
@@ -200,6 +202,14 @@ public:
 
     void setPosition(const RVector& p) {
         data.setPosition(p);
+    }
+
+    QList<RLayer::Id> getFrozenLayerIds() const {
+        return data.getFrozenLayerIds();
+    }
+
+    void setFrozenLayerIds(const QList<RLayer::Id>& ids) {
+        data.setFrozenLayerIds(ids);
     }
 
 protected:

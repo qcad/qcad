@@ -91,6 +91,7 @@ public:
     void setAngle(double a);
 
     bool isParallel(const RLine& line) const;
+    bool isCollinear(const RLine& line) const;
 
     bool isVertical(double tolerance = RS::PointTolerance) const;
     bool isHorizontal(double tolerance = RS::PointTolerance) const;

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2018 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2024 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-include("../DrawExamples.js");
+include("scripts/EAction.js");
 
 /**
  * \class ExText
@@ -24,13 +24,13 @@ include("../DrawExamples.js");
  * Adds a text entity to the drawing.
  */
 function ExText(guiAction) {
-    DrawExamples.call(this, guiAction);
+    EAction.call(this, guiAction);
 }
 
-ExText.prototype = new DrawExamples();
+ExText.prototype = new EAction();
 
 ExText.prototype.beginEvent = function() {
-    DrawExamples.prototype.beginEvent.call(this);
+    EAction.prototype.beginEvent.call(this);
 
     var pos = new RVector(5,10)
 

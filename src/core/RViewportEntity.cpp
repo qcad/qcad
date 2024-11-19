@@ -49,6 +49,8 @@ RPropertyTypeId RViewportEntity::PropertyViewTargetZ;
 
 RPropertyTypeId RViewportEntity::PropertyOverall;
 
+RPropertyTypeId RViewportEntity::PropertyFrozenLayerIds;
+
 
 RViewportEntity::RViewportEntity(RDocument* document, const RViewportData& data) :
     REntity(document), data(document, data) {
@@ -85,10 +87,13 @@ void RViewportEntity::init() {
     RViewportEntity::PropertyViewTargetZ.generateId(RViewportEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "View Target"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
 
     RViewportEntity::PropertyOverall.generateId(RViewportEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Overall"));
+
+    RViewportEntity::PropertyFrozenLayerIds.generateId(RViewportEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Frozen Layers"), QT_TRANSLATE_NOOP("REntity", "Layer ID"));
 }
 
 bool RViewportEntity::setProperty(RPropertyTypeId propertyTypeId,
         const QVariant& value, RTransaction* transaction) {
+
     bool ret = REntity::setProperty(propertyTypeId, value, transaction);
     ret = ret || RObject::setMember(data.position.x, value, PropertyCenterX == propertyTypeId);
     ret = ret || RObject::setMember(data.position.y, value, PropertyCenterY == propertyTypeId);
@@ -103,6 +108,7 @@ bool RViewportEntity::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMember(data.viewTarget.y, value, PropertyViewTargetY == propertyTypeId);
     ret = ret || RObject::setMember(data.viewTarget.z, value, PropertyViewTargetZ == propertyTypeId);
     ret = ret || RObject::setMember(data.overall, value, PropertyOverall == propertyTypeId);
+    ret = ret || RObject::setMember(data.frozenLayerIds, value, PropertyFrozenLayerIds == propertyTypeId);
 
     if (PropertyOn==propertyTypeId) {
         bool on = !data.isOff();
@@ -144,6 +150,10 @@ QPair<QVariant, RPropertyAttributes> RViewportEntity::getProperty(
         return qMakePair(QVariant(data.viewTarget.z), RPropertyAttributes());
     } else if (propertyTypeId == PropertyOverall) {
         return qMakePair(QVariant(data.overall), RPropertyAttributes(RPropertyAttributes::ReadOnly|RPropertyAttributes::Invisible));
+    } else if (propertyTypeId == PropertyFrozenLayerIds) {
+        QVariant v;
+        v.setValue(data.frozenLayerIds);
+        return qMakePair(v, RPropertyAttributes(RPropertyAttributes::List|RPropertyAttributes::ReadOnly|RPropertyAttributes::Integer|RPropertyAttributes::Invisible));
     }
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
@@ -207,7 +217,8 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
     //offset -= data.viewTarget * data.scale;
 
     QSharedPointer<RBlock> model = doc->queryBlockDirect(doc->getModelSpaceBlockId());
-    model->setOrigin(data.viewCenter);
+
+    model->setOrigin(data.viewCenter + data.viewTarget);
 
     // create temporary block reference to model space block:
     RBlockReferenceData modelSpaceData(
@@ -235,6 +246,29 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
 
     // start clipping from here:
     e.setClipping(true);
+
+    // freeze viewport layers:
+    QList<RLayer::Id> frozenLayerIds = getFrozenLayerIds();
+    QList<QSharedPointer<RLayer> > defrostLayers;
+    QList<QSharedPointer<RLayer> > showLayers;
+    for (int i=0; i<frozenLayerIds.length(); i++) {
+        RLayer::Id frozenLayerId = frozenLayerIds[i];
+        QSharedPointer<RLayer> layer = doc->queryLayerDirect(frozenLayerId);
+        if (layer.isNull()) {
+            continue;
+        }
+
+        // freeze layer:
+        if (!layer->isFrozen()) {
+            layer->setFrozen(true);
+            defrostLayers.append(layer);
+        }
+        // show layer:
+        if (!layer->isOff()) {
+            layer->setOff(true);
+            showLayers.append(layer);
+        }
+    }
 
     // render model space block reference into viewport:
     QSet<REntity::Id> ids = doc->queryBlockEntities(doc->getModelSpaceBlockId());
@@ -287,6 +321,23 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
         //RDebug::stopTimer(7, "export entity as part of viewport");
 
         i++;
+    }
+
+    // defrost viewport layers that were frozen above:
+    {
+        QList<QSharedPointer<RLayer> >::iterator it;
+        for (it=defrostLayers.begin(); it!=defrostLayers.end(); it++) {
+            QSharedPointer<RLayer> defrostLayer = (*it);
+            defrostLayer->setFrozen(false);
+        }
+    }
+    // show viewport layers that were hidden above:
+    {
+        QList<QSharedPointer<RLayer> >::iterator it;
+        for (it=showLayers.begin(); it!=showLayers.end(); it++) {
+            QSharedPointer<RLayer> showLayer = (*it);
+            showLayer->setOff(false);
+        }
     }
 
     e.setClipping(false);

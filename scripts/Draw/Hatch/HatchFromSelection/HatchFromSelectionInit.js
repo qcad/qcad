@@ -1,5 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("HatchFromSelection", "&Hatch from Selection"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("HatchFromSelection", "&Hatch from Selection") + "…", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/HatchFromSelection.js");

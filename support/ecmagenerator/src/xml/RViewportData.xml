@@ -431,6 +431,21 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="getFrozenLayerIds" cppName="getFrozenLayerIds"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RLayer::Id &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="setFrozenLayerIds" cppName="setFrozenLayerIds"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QList &lt; RLayer::Id &gt; &amp;"
+        typeName="QList &lt; RLayer::Id &gt;" name="layerIds"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="setStatusFlag" cppName="setStatusFlag"
     specifier="protected" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

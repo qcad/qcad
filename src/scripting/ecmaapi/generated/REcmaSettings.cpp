@@ -359,6 +359,12 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getSimpleTextAlignLeft, "getSimpleTextAlignLeft");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getRenderThinPolylines1px, "getRenderThinPolylines1px");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getMaxHatchTime, "getMaxHatchTime");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getMaxHatchComplexity, "getMaxHatchComplexity");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getPolarCoordinateSeparator, "getPolarCoordinateSeparator");
             
             REcmaHelper::registerFunction(&engine, &ctor, getCartesianCoordinateSeparator, "getCartesianCoordinateSeparator");
@@ -7810,6 +7816,123 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getSimpleTextAlignLeft", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getRenderThinPolylines1px
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getRenderThinPolylines1px", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getRenderThinPolylines1px";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSettings::
+       getRenderThinPolylines1px();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getRenderThinPolylines1px().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getRenderThinPolylines1px", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getMaxHatchTime
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getMaxHatchTime", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getMaxHatchTime";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        RSettings::
+       getMaxHatchTime();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getMaxHatchTime().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getMaxHatchTime", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getMaxHatchComplexity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getMaxHatchComplexity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getMaxHatchComplexity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        RSettings::
+       getMaxHatchComplexity();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getMaxHatchComplexity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getMaxHatchComplexity", context, engine);
             return result;
         }
          QScriptValue

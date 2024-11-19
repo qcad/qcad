@@ -338,6 +338,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getConcaveVertices, "getConcaveVertices");
             
+            REcmaHelper::registerFunction(&engine, proto, getCentroid, "getCentroid");
+            
             REcmaHelper::registerFunction(&engine, proto, splitAtDiscontinuities, "splitAtDiscontinuities");
             
             REcmaHelper::registerFunction(&engine, proto, splitAtSegmentTypeChange, "splitAtSegmentTypeChange");
@@ -10663,6 +10665,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolyline::getConcaveVertices", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolyline::getCentroid
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolyline::getCentroid", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::getCentroid";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("getCentroid", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getCentroid();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getCentroid().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolyline::getCentroid", context, engine);
             return result;
         }
          QScriptValue

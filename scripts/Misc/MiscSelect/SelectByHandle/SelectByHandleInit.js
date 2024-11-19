@@ -1,5 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("SelectByHandle", "By Handle"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("SelectByHandle", "By Handle") + "…", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/SelectByHandle.js");
     action.setDefaultShortcut(new QKeySequence("t,h"));

@@ -412,7 +412,7 @@ asetuksien muutokset astuvat voimaan.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2454"/>
+        <location filename="../scripts/Apollonius.js" line="+2637"/>
         <source>Invalid radius</source>
         <translation>Virheellinen säde</translation>
     </message>
@@ -1834,7 +1834,7 @@ Haluatko palauttaa sen?</translation>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+86"/>
+        <location line="+84"/>
         <source>No solution</source>
         <translation>Ei ratkaisua</translation>
     </message>
@@ -5891,12 +5891,12 @@ on jo luettelossa.</translation>
         <translation>Tekstin korkeuskynnys (px):</translation>
     </message>
     <message>
-        <location line="+90"/>
+        <location line="+150"/>
         <source>Persistent selection</source>
         <translation>Pysyvä valinta</translation>
     </message>
     <message>
-        <location line="-733"/>
+        <location line="-793"/>
         <source>auto</source>
         <translation>auto</translation>
     </message>
@@ -5971,7 +5971,12 @@ on jo luettelossa.</translation>
         <translation>Aikakatkaisu kuvioinnin rendröintiin:</translation>
     </message>
     <message>
-        <location line="+366"/>
+        <location line="+354"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation>Maksimaalinen monimutkaisuus kiinteitä täytteitä varten korkealla laadulla:</translation>
+    </message>
+    <message>
+        <location line="+72"/>
         <source>Selection</source>
         <translation>Valinta</translation>
     </message>
@@ -7395,7 +7400,7 @@ on jo luettelossa.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+360"/>
+        <location filename="../scripts/Information/Information.js" line="+350"/>
         <source>Information Tools</source>
         <translation>Tietotyökalut</translation>
     </message>
@@ -9356,7 +9361,7 @@ on jo luettelossa.</translation>
 <context>
     <name>OffsetThrough</name>
     <message>
-        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+70"/>
+        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+84"/>
         <source>Specify point</source>
         <translation>Määrittele piste</translation>
     </message>
@@ -9971,7 +9976,7 @@ on jo luettelossa.</translation>
         <translation>Sovita piirustus automaattisesti paperille?</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+210"/>
         <source>Drag to move paper</source>
         <translation>Siirrä paperia vetämällä</translation>
     </message>
@@ -10178,12 +10183,12 @@ on jo luettelossa.</translation>
         <translation>Näytä laajennetun ulottuvuuden tyylin ohitukset</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1680"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1684"/>
         <source>*VARIES*</source>
         <translation>*VAIHTELEVA*</translation>
     </message>
     <message>
-        <location line="-1454"/>
+        <location line="-1458"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10243,7 +10248,7 @@ on jo luettelossa.</translation>
         <translation>Automaattinen</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+201"/>
         <source>Use auto measurement</source>
         <translation>Käytä automaattista mittausta</translation>
     </message>
@@ -13992,7 +13997,7 @@ on jo luettelossa.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1275"/>
+        <location filename="../scripts/library.js" line="+1288"/>
         <source>Objects</source>
         <translation>Esineet</translation>
     </message>

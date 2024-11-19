@@ -89,6 +89,14 @@
             
             REcmaHelper::registerFunction(&engine, proto, notifyLayerListeners, "notifyLayerListeners");
             
+            REcmaHelper::registerFunction(&engine, proto, addBlockListener, "addBlockListener");
+            
+            REcmaHelper::registerFunction(&engine, proto, removeBlockListener, "removeBlockListener");
+            
+            REcmaHelper::registerFunction(&engine, proto, notifyBlockListeners, "notifyBlockListeners");
+            
+            REcmaHelper::registerFunction(&engine, proto, notifyBlockListenersCurrentBlock, "notifyBlockListenersCurrentBlock");
+            
             REcmaHelper::registerFunction(&engine, proto, addTransactionListener, "addTransactionListener");
             
             REcmaHelper::registerFunction(&engine, proto, removeTransactionListener, "removeTransactionListener");
@@ -1133,6 +1141,254 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocumentInterface::notifyLayerListeners", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentInterface::addBlockListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::addBlockListener", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::addBlockListener";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentInterface* self = 
+                        getSelf("addBlockListener", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RBlockListener * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RBlockListener * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RBlockListener >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RDocumentInterface: Argument 0 is not of type RBlockListener *RBlockListener *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->addBlockListener(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.addBlockListener().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::addBlockListener", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentInterface::removeBlockListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::removeBlockListener", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::removeBlockListener";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentInterface* self = 
+                        getSelf("removeBlockListener", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RBlockListener * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RBlockListener * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RBlockListener >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RDocumentInterface: Argument 0 is not of type RBlockListener *RBlockListener *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removeBlockListener(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.removeBlockListener().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::removeBlockListener", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentInterface::notifyBlockListeners
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::notifyBlockListeners", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::notifyBlockListeners";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentInterface* self = 
+                        getSelf("notifyBlockListeners", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RDocumentInterface * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RDocumentInterface * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RDocumentInterface >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RDocumentInterface: Argument 0 is not of type RDocumentInterface *RDocumentInterface *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->notifyBlockListeners(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.notifyBlockListeners().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::notifyBlockListeners", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentInterface::notifyBlockListenersCurrentBlock
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::notifyBlockListenersCurrentBlock", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::notifyBlockListenersCurrentBlock";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentInterface* self = 
+                        getSelf("notifyBlockListenersCurrentBlock", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RDocumentInterface * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RDocumentInterface * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RDocumentInterface >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RDocumentInterface: Argument 0 is not of type RDocumentInterface *RDocumentInterface *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->notifyBlockListenersCurrentBlock(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.notifyBlockListenersCurrentBlock().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::notifyBlockListenersCurrentBlock", context, engine);
             return result;
         }
          QScriptValue

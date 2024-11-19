@@ -412,7 +412,7 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2454"/>
+        <location filename="../scripts/Apollonius.js" line="+2637"/>
         <source>Invalid radius</source>
         <translation type="unfinished">잘못된 반경</translation>
     </message>
@@ -1832,7 +1832,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+86"/>
+        <location line="+84"/>
         <source>No solution</source>
         <translation type="unfinished">솔루션 없음</translation>
     </message>
@@ -5951,7 +5951,12 @@ is already in the list.</source>
         <translation type="unfinished">텍스트 높이 임계값(픽셀):</translation>
     </message>
     <message>
-        <location line="-147"/>
+        <location line="+72"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation type="unfinished">고품질의 솔리드 채우기를 위한 최대 복잡성:</translation>
+    </message>
+    <message>
+        <location line="-219"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation type="unfinished">표시된 기준점이 있는 최대 선택된 엔티티입니다:</translation>
     </message>
@@ -5961,7 +5966,7 @@ is already in the list.</source>
         <translation type="unfinished">항상 사용자 지정 너비가 1픽셀 이상인 폴리라인을 렌더링합니다</translation>
     </message>
     <message>
-        <location line="+750"/>
+        <location line="+810"/>
         <source>Selection</source>
         <translation type="unfinished">선택</translation>
     </message>
@@ -7390,7 +7395,7 @@ is already in the list.</source>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+360"/>
+        <location filename="../scripts/Information/Information.js" line="+350"/>
         <source>Information Tools</source>
         <translation type="unfinished">정보 도구</translation>
     </message>
@@ -9349,7 +9354,7 @@ is already in the list.</source>
 <context>
     <name>OffsetThrough</name>
     <message>
-        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+70"/>
+        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+84"/>
         <source>Specify point</source>
         <translation type="unfinished">포인트 지정</translation>
     </message>
@@ -9964,7 +9969,7 @@ is already in the list.</source>
         <translation type="unfinished">도면을 종이에 자동으로 맞추시겠습니까?</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+210"/>
         <source>Drag to move paper</source>
         <translation type="unfinished">드래그하여 용지 이동</translation>
     </message>
@@ -10231,7 +10236,7 @@ is already in the list.</source>
         <translation type="unfinished">자동</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+201"/>
         <source>Use auto measurement</source>
         <translation type="unfinished">자동 측정 사용</translation>
     </message>
@@ -13982,7 +13987,7 @@ is already in the list.</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1275"/>
+        <location filename="../scripts/library.js" line="+1288"/>
         <source>Objects</source>
         <translation type="unfinished">개체</translation>
     </message>

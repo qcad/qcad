@@ -21,6 +21,7 @@
 #include "RLine.h"
 #include "RBox.h"
 #include "RPolyline.h"
+#include "RTriangle.h"
 
 /**
  * Creates a line object with invalid start and end points.
@@ -88,6 +89,19 @@ bool RLine::isParallel(const RLine& line) const {
     double oa = line.getAngle();
 
     return RMath::isSameDirection(a, oa) || RMath::isSameDirection(a, oa + M_PI);
+}
+
+bool RLine::isCollinear(const RLine& line) const {
+    // two points are collinear with a third point if the area of the triangle formed by these three points is zero:
+    if (RTriangle(startPoint, endPoint, line.getStartPoint()).getArea() > RS::PointTolerance) {
+        return false;
+    }
+
+    if (RTriangle(startPoint, endPoint, line.getEndPoint()).getArea() > RS::PointTolerance) {
+        return false;
+    }
+
+    return true;
 }
 
 /**

@@ -499,6 +499,15 @@
         getSimpleTextAlignLeft
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getRenderThinPolylines1px
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getMaxHatchTime
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getMaxHatchComplexity
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getPolarCoordinateSeparator
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

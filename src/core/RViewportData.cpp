@@ -155,6 +155,7 @@ double RViewportData::getDistanceTo(const RVector& point, bool limited, double r
     double ret = RMAXDOUBLE;
 
     RBox viewportBox(position, width, height);
+    viewportBox.growXY(range);
     if (viewportBox.contains(point)) {
         ret = strictRange;
     }

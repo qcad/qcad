@@ -101,11 +101,34 @@ ViewportWidget.updateViewports = function(viewports) {
     }
 };
 
+ViewportWidget.addMdiInitFunction = function(f) {
+    if (isNull(ViewportWidget.mdiInitFunctions)) {
+        ViewportWidget.mdiInitFunctions = [];
+    }
+
+    ViewportWidget.mdiInitFunctions.push(f);
+};
+
 ViewportWidget.initMdiChild = function(mdiChild, uiFileName) {
+    var oldWidget = mdiChild.widget();
+    if (!isNull(oldWidget)) {
+        destrDialog(oldWidget);
+    }
+
     var w = WidgetFactory.createWidget("", ViewportWidget.templateDir + QDir.separator + uiFileName, mdiChild);
     w.setWindowTitle("");
+
+    if (!isNull(ViewportWidget.mdiInitFunctions)) {
+        for (var i=0; i<ViewportWidget.mdiInitFunctions.length; i++) {
+            if (isFunction(ViewportWidget.mdiInitFunctions[i])) {
+                ViewportWidget.mdiInitFunctions[i](w, mdiChild.getDocumentInterface());
+            }
+        }
+    }
+
     mdiChild.setWidget(w);
 };
+
 
 ViewportWidget.prototype.initEventHandler = function() {
     var self = this;

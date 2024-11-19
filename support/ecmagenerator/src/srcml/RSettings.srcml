@@ -294,6 +294,9 @@
     <function_decl><type><name>static</name> <name>int</name></type> <name>getMaxReferencePointEntitiesDisplay</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>getPropertyEditorShowOnRequest</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>getSimpleTextAlignLeft</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>getRenderThinPolylines1px</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>int</name></type> <name>getMaxHatchTime</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>int</name></type> <name>getMaxHatchComplexity</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QString</name></type> <name>getPolarCoordinateSeparator</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QString</name></type> <name>getCartesianCoordinateSeparator</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QString</name></type> <name>getRelativeCoordinatePrefix</name><parameter_list>()</parameter_list>;</function_decl>
@@ -369,6 +372,9 @@
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>maxReferencePointEntitiesDisplay</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>propertyEditorShowOnRequest</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>simpleTextAlignLeft</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>renderThinPolylines1px</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>maxHatchTime</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>maxHatchComplexity</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>double</name></type> <name>devicePixelRatio</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>polarCoordinateSeparator</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>cartesianCoordinateSeparator</name></decl>;</decl_stmt>

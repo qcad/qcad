@@ -412,7 +412,7 @@ agar perubahan preferensi dapat diterapkan.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+2454"/>
+        <location filename="../scripts/Apollonius.js" line="+2637"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Radius tidak valid</translation>
     </message>
@@ -1832,7 +1832,7 @@ Apakah Anda ingin memulihkannya?</translation>
     </message>
     <message>
         <location line="+126"/>
-        <location line="+86"/>
+        <location line="+84"/>
         <source>No solution</source>
         <translation type="unfinished">Tidak ada solusi</translation>
     </message>
@@ -5951,7 +5951,12 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Ambang batas tinggi teks (px):</translation>
     </message>
     <message>
-        <location line="-147"/>
+        <location line="+72"/>
+        <source>Maximum complexity for solid fills at high quality:</source>
+        <translation type="unfinished">Kompleksitas maksimum untuk isian padat dengan kualitas tinggi:</translation>
+    </message>
+    <message>
+        <location line="-219"/>
         <source>Maximum selected entities with displayed reference points:</source>
         <translation type="unfinished">Entitas maksimum yang dipilih dengan titik referensi yang ditampilkan:</translation>
     </message>
@@ -5961,7 +5966,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Selalu buat poligon dengan lebar khusus setidaknya selebar 1 piksel</translation>
     </message>
     <message>
-        <location line="+750"/>
+        <location line="+810"/>
         <source>Selection</source>
         <translation type="unfinished">Seleksi</translation>
     </message>
@@ -7390,7 +7395,7 @@ sudah ada dalam daftar.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+360"/>
+        <location filename="../scripts/Information/Information.js" line="+350"/>
         <source>Information Tools</source>
         <translation type="unfinished">Alat Informasi</translation>
     </message>
@@ -9349,7 +9354,7 @@ sudah ada dalam daftar.</translation>
 <context>
     <name>OffsetThrough</name>
     <message>
-        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+70"/>
+        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+84"/>
         <source>Specify point</source>
         <translation type="unfinished">Tentukan titik</translation>
     </message>
@@ -9964,7 +9969,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Menyesuaikan gambar secara otomatis ke kertas?</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+210"/>
         <source>Drag to move paper</source>
         <translation type="unfinished">Seret untuk memindahkan kertas</translation>
     </message>
@@ -10231,7 +10236,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Otomatis</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+201"/>
         <source>Use auto measurement</source>
         <translation type="unfinished">Gunakan pengukuran otomatis</translation>
     </message>
@@ -13982,7 +13987,7 @@ sudah ada dalam daftar.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1275"/>
+        <location filename="../scripts/library.js" line="+1288"/>
         <source>Objects</source>
         <translation type="unfinished">Objek</translation>
     </message>

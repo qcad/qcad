@@ -1,5 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("AddLayer", "&Add Layer"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("AddLayer", "&Add Layer") + "…", RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/AddLayer.js");
     action.setDefaultShortcut(new QKeySequence("y,a"));
