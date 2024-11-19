@@ -14,7 +14,7 @@ endif()
 set(app_icon_macos "${CMAKE_CURRENT_LIST_DIR}/qcad.icns")
 set_source_files_properties(${app_icon_macos} PROPERTIES MACOSX_PACKAGE_LOCATION "Resources")
 
-if (CMAKE_BUILD_TYPE STREQUAL "Release")
+if(CMAKE_BUILD_TYPE STREQUAL "Release")
     link_directories(${CMAKE_CURRENT_LIST_DIR}/../../release)
 else()
     link_directories(${CMAKE_CURRENT_LIST_DIR}/../../debug)
@@ -46,13 +46,13 @@ target_compile_definitions(${PROJECT_NAME} PRIVATE
     QCAD_DLL
 )
 
-if (CMAKE_BUILD_TYPE STREQUAL "Release")
+if(CMAKE_BUILD_TYPE STREQUAL "Release")
     set_target_properties(${PROJECT_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/../../release)
 else()
     set_target_properties(${PROJECT_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/../../debug)
 endif()
 
-if (UNIX AND !APPLE)
+if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
     set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME qcad-bin)
 endif()
 
