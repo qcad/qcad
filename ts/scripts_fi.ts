@@ -5891,12 +5891,17 @@ on jo luettelossa.</translation>
         <translation>Tekstin korkeuskynnys (px):</translation>
     </message>
     <message>
-        <location line="+150"/>
+        <location line="+132"/>
+        <source>Allocation limit for bitmaps (MB):</source>
+        <translation>Bittikarttojen jakorajoitus (MB):</translation>
+    </message>
+    <message>
+        <location line="+60"/>
         <source>Persistent selection</source>
         <translation>Pysyvä valinta</translation>
     </message>
     <message>
-        <location line="-793"/>
+        <location line="-835"/>
         <source>auto</source>
         <translation>auto</translation>
     </message>
@@ -5976,7 +5981,7 @@ on jo luettelossa.</translation>
         <translation>Maksimaalinen monimutkaisuus kiinteitä täytteitä varten korkealla laadulla:</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+114"/>
         <source>Selection</source>
         <translation>Valinta</translation>
     </message>
@@ -9281,7 +9286,7 @@ on jo luettelossa.</translation>
         <translation>Muoto:</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+143"/>
         <source>Untitled %1</source>
         <translation>Nimetön %1</translation>
     </message>
@@ -13504,7 +13509,7 @@ on jo luettelossa.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
         <source>Dropped data not supported</source>
         <translation>Poistettuja tietoja ei tueta</translation>
     </message>
@@ -13997,7 +14002,7 @@ on jo luettelossa.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1288"/>
+        <location filename="../scripts/library.js" line="+1295"/>
         <source>Objects</source>
         <translation>Esineet</translation>
     </message>

@@ -77,6 +77,11 @@ QStringList RPluginLoader::getPluginFiles() {
         pluginFiles.append(pluginsDir.absoluteFilePath(fileName));
     }
 
+    QDir localPluginsDir(RSettings::getDataLocation() + "/plugins");
+    foreach (QString fileName, localPluginsDir.entryList(nameFilter, QDir::Files)) {
+        pluginFiles.append(pluginsDir.absoluteFilePath(fileName));
+    }
+
     // make sure plugins which depend on other plugins are loaded last:
     pluginFiles.sort();
     QStringList lastPlugins;

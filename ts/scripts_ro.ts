@@ -5973,7 +5973,12 @@ este deja în listă.</translation>
         <translation type="unfinished">Redați întotdeauna polilinii cu lățimi personalizate cu o lățime de cel puțin 1 pixel</translation>
     </message>
     <message>
-        <location line="+810"/>
+        <location line="+798"/>
+        <source>Allocation limit for bitmaps (MB):</source>
+        <translation type="unfinished">Limita de alocare pentru bitmaps (MB):</translation>
+    </message>
+    <message>
+        <location line="+54"/>
         <source>Selection</source>
         <translation type="unfinished">Selecție</translation>
     </message>
@@ -9283,7 +9288,7 @@ este deja în listă.</translation>
         <translation type="unfinished">Format:</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+143"/>
         <source>Untitled %1</source>
         <translation type="unfinished">Fără titlu %1</translation>
     </message>
@@ -13511,7 +13516,7 @@ este deja în listă.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished">Nu se acceptă date abandonate</translation>
     </message>
@@ -14004,7 +14009,7 @@ este deja în listă.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1288"/>
+        <location filename="../scripts/library.js" line="+1295"/>
         <source>Objects</source>
         <translation type="unfinished">Obiecte</translation>
     </message>

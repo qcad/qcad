@@ -5886,12 +5886,12 @@ ya está en la lista.</translation>
         <translation>Umbral de altura del texto (px):</translation>
     </message>
     <message>
-        <location line="+150"/>
+        <location line="+192"/>
         <source>Persistent selection</source>
         <translation>Selección persistente</translation>
     </message>
     <message>
-        <location line="-1011"/>
+        <location line="-1053"/>
         <source>Color lightness threshold:</source>
         <translation>Umbral para la claridad del color:</translation>
     </message>
@@ -5976,7 +5976,12 @@ ya está en la lista.</translation>
         <translation>Máxima complejidad para rellenos sólidos de alta calidad:</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+60"/>
+        <source>Allocation limit for bitmaps (MB):</source>
+        <translation>Límite de asignación para mapas de bits (MB):</translation>
+    </message>
+    <message>
+        <location line="+54"/>
         <source>Selection</source>
         <translation>Selección</translation>
     </message>
@@ -9281,7 +9286,7 @@ ya está en la lista.</translation>
         <translation>Formato:</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+143"/>
         <source>Untitled %1</source>
         <translation>Sin título %1</translation>
     </message>
@@ -13504,7 +13509,7 @@ ya está en la lista.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
         <source>Dropped data not supported</source>
         <translation>Datos insertados no compatibles</translation>
     </message>
@@ -13997,7 +14002,7 @@ ya está en la lista.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1288"/>
+        <location filename="../scripts/library.js" line="+1295"/>
         <source>Objects</source>
         <translation>Objetos</translation>
     </message>

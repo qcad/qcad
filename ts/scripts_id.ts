@@ -5966,7 +5966,12 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Selalu buat poligon dengan lebar khusus setidaknya selebar 1 piksel</translation>
     </message>
     <message>
-        <location line="+810"/>
+        <location line="+798"/>
+        <source>Allocation limit for bitmaps (MB):</source>
+        <translation type="unfinished">Batas alokasi untuk bitmap (MB):</translation>
+    </message>
+    <message>
+        <location line="+54"/>
         <source>Selection</source>
         <translation type="unfinished">Seleksi</translation>
     </message>
@@ -9276,7 +9281,7 @@ sudah ada dalam daftar.</translation>
         <translation type="unfinished">Format:</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+143"/>
         <source>Untitled %1</source>
         <translation type="unfinished">Tanpa judul %1</translation>
     </message>
@@ -13494,7 +13499,7 @@ sudah ada dalam daftar.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished">Data yang dijatuhkan tidak didukung</translation>
     </message>
@@ -13987,7 +13992,7 @@ sudah ada dalam daftar.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1288"/>
+        <location filename="../scripts/library.js" line="+1295"/>
         <source>Objects</source>
         <translation type="unfinished">Objek</translation>
     </message>

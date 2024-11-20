@@ -5911,12 +5911,12 @@ is already in the list.</translation>
         <translation>Maximum complexity for solid fills at high quality:</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+120"/>
         <source>Persistent selection</source>
         <translation>Persistent selection</translation>
     </message>
     <message>
-        <location line="-919"/>
+        <location line="-961"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Automatically use screen based linetypes in model view</translation>
     </message>
@@ -5976,7 +5976,12 @@ is already in the list.</translation>
         <translation>Timeout for hatch rendering:</translation>
     </message>
     <message>
-        <location line="+426"/>
+        <location line="+414"/>
+        <source>Allocation limit for bitmaps (MB):</source>
+        <translation>Allocation limit for bitmaps (MB):</translation>
+    </message>
+    <message>
+        <location line="+54"/>
         <source>Selection</source>
         <translation>Selection</translation>
     </message>
@@ -9281,7 +9286,7 @@ is already in the list.</translation>
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+143"/>
         <source>Untitled %1</source>
         <translation>Untitled %1</translation>
     </message>
@@ -13504,7 +13509,7 @@ is already in the list.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
         <source>Dropped data not supported</source>
         <translation>Dropped data not supported</translation>
     </message>
@@ -13997,7 +14002,7 @@ is already in the list.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1288"/>
+        <location filename="../scripts/library.js" line="+1295"/>
         <source>Objects</source>
         <translation>Objects</translation>
     </message>

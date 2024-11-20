@@ -5966,7 +5966,12 @@ is already in the list.</source>
         <translation type="unfinished">항상 사용자 지정 너비가 1픽셀 이상인 폴리라인을 렌더링합니다</translation>
     </message>
     <message>
-        <location line="+810"/>
+        <location line="+798"/>
+        <source>Allocation limit for bitmaps (MB):</source>
+        <translation type="unfinished">비트맵 할당 한도(MB):</translation>
+    </message>
+    <message>
+        <location line="+54"/>
         <source>Selection</source>
         <translation type="unfinished">선택</translation>
     </message>
@@ -9276,7 +9281,7 @@ is already in the list.</source>
         <translation type="unfinished">형식:</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+143"/>
         <source>Untitled %1</source>
         <translation type="unfinished">제목 없음 %1</translation>
     </message>
@@ -13494,7 +13499,7 @@ is already in the list.</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished">삭제된 데이터는 지원되지 않습니다</translation>
     </message>
@@ -13987,7 +13992,7 @@ is already in the list.</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1288"/>
+        <location filename="../scripts/library.js" line="+1295"/>
         <source>Objects</source>
         <translation type="unfinished">개체</translation>
     </message>

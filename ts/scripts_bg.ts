@@ -5969,7 +5969,12 @@ is already in the list.</source>
         <translation type="unfinished">Винаги визуализирайте полилинии с потребителски ширини с ширина поне 1 пиксел</translation>
     </message>
     <message>
-        <location line="+810"/>
+        <location line="+798"/>
+        <source>Allocation limit for bitmaps (MB):</source>
+        <translation type="unfinished">Ограничение на разпределението за битови карти (MB):</translation>
+    </message>
+    <message>
+        <location line="+54"/>
         <source>Selection</source>
         <translation type="unfinished">Избор</translation>
     </message>
@@ -9279,7 +9284,7 @@ is already in the list.</source>
         <translation type="unfinished">Формат:</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+143"/>
         <source>Untitled %1</source>
         <translation type="unfinished">Без заглавие %1</translation>
     </message>
@@ -13502,7 +13507,7 @@ is already in the list.</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished">Не се поддържат отпаднали данни</translation>
     </message>
@@ -13995,7 +14000,7 @@ is already in the list.</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1288"/>
+        <location filename="../scripts/library.js" line="+1295"/>
         <source>Objects</source>
         <translation type="unfinished">Обекти</translation>
     </message>

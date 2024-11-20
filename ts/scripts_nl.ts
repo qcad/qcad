@@ -5891,12 +5891,12 @@ is al in de lijst.</translation>
         <translation>Maximale complexiteit voor solide vullingen van hoge kwaliteit:</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+120"/>
         <source>Persistent selection</source>
         <translation>Blijvende selectie</translation>
     </message>
     <message>
-        <location line="-1011"/>
+        <location line="-1053"/>
         <source>Color lightness threshold:</source>
         <translation>Kleur lichtheid drempel:</translation>
     </message>
@@ -5976,7 +5976,12 @@ is al in de lijst.</translation>
         <translation>Time-out voor weergave van arcering:</translation>
     </message>
     <message>
-        <location line="+426"/>
+        <location line="+414"/>
+        <source>Allocation limit for bitmaps (MB):</source>
+        <translation>Geheugenlimiet voor bitmaps (MB):</translation>
+    </message>
+    <message>
+        <location line="+54"/>
         <source>Selection</source>
         <translation>Selectie</translation>
     </message>
@@ -9281,7 +9286,7 @@ is al in de lijst.</translation>
         <translation>Formaat:</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+143"/>
         <source>Untitled %1</source>
         <translation>Naamloos %1</translation>
     </message>
@@ -13504,7 +13509,7 @@ is al in de lijst.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
         <source>Dropped data not supported</source>
         <translation>Ingevoegd bestand niet ondersteund</translation>
     </message>
@@ -13997,7 +14002,7 @@ is al in de lijst.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1288"/>
+        <location filename="../scripts/library.js" line="+1295"/>
         <source>Objects</source>
         <translation>Objecten</translation>
     </message>

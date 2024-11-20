@@ -5885,12 +5885,17 @@ zaten listede.</translation>
         <translation type="unfinished">Referans noktası boyutu (px):</translation>
     </message>
     <message>
-        <location line="+227"/>
+        <location line="+209"/>
+        <source>Allocation limit for bitmaps (MB):</source>
+        <translation type="unfinished">Bitmapler için ayırma sınırı (MB):</translation>
+    </message>
+    <message>
+        <location line="+60"/>
         <source>Persistent selection</source>
         <translation type="unfinished">Kalıcı seçim</translation>
     </message>
     <message>
-        <location line="-695"/>
+        <location line="-737"/>
         <source>Number of preview entities:</source>
         <translation type="unfinished">Önizleme varlıklarının sayısı:</translation>
     </message>
@@ -5950,7 +5955,7 @@ zaten listede.</translation>
         <translation type="unfinished">Yüksek kalitede katı dolgular için maksimum karmaşıklık:</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+114"/>
         <source>Selection</source>
         <translation type="unfinished">Seçim</translation>
     </message>
@@ -9275,7 +9280,7 @@ zaten listede.</translation>
         <translation>Biçim:</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+143"/>
         <source>Untitled %1</source>
         <translation>%1 isimsiz</translation>
     </message>
@@ -13493,7 +13498,7 @@ zaten listede.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
         <source>Dropped data not supported</source>
         <translation>Bırakılan veriler desteklenmiyor</translation>
     </message>
@@ -13986,7 +13991,7 @@ zaten listede.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1288"/>
+        <location filename="../scripts/library.js" line="+1295"/>
         <source>Objects</source>
         <translation>Nesneler</translation>
     </message>

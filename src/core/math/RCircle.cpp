@@ -223,6 +223,10 @@ RVector RCircle::getVectorTo(const RVector& point, bool limited, double strictRa
     return RVector::createPolar(v.getMagnitude() - radius, v.getAngle());
 }
 
+RVector RCircle::getPointOnShape() const {
+    return getCenter() + RVector(radius, 0);
+}
+
 bool RCircle::move(const RVector& offset) {
     if (!offset.isValid() || offset.getMagnitude() < RS::PointTolerance) {
         return false;

@@ -5902,12 +5902,12 @@ je že na seznamu.</translation>
         <translation type="unfinished">Prag višine besedila (px):</translation>
     </message>
     <message>
-        <location line="+150"/>
+        <location line="+192"/>
         <source>Persistent selection</source>
         <translation type="unfinished">Trajni izbor</translation>
     </message>
     <message>
-        <location line="-1011"/>
+        <location line="-1053"/>
         <source>Color lightness threshold:</source>
         <translation>Prag svetlosti barv:</translation>
     </message>
@@ -5982,7 +5982,12 @@ je že na seznamu.</translation>
         <translation type="unfinished">Največja zapletenost za trdna polnila visoke kakovosti:</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+60"/>
+        <source>Allocation limit for bitmaps (MB):</source>
+        <translation type="unfinished">Omejitev dodelitve za bitne slike (MB):</translation>
+    </message>
+    <message>
+        <location line="+54"/>
         <source>Selection</source>
         <translation>Izbor</translation>
     </message>
@@ -9287,7 +9292,7 @@ je že na seznamu.</translation>
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+143"/>
         <source>Untitled %1</source>
         <translation>Brez naslova %1</translation>
     </message>
@@ -13520,7 +13525,7 @@ je že na seznamu.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
         <source>Dropped data not supported</source>
         <translation>Odvrženi podatki niso podprti</translation>
     </message>
@@ -14013,7 +14018,7 @@ je že na seznamu.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1288"/>
+        <location filename="../scripts/library.js" line="+1295"/>
         <source>Objects</source>
         <translation>Objekti</translation>
     </message>
