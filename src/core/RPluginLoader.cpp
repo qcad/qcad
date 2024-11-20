@@ -19,6 +19,9 @@
 #include <QDir>
 #include <QDebug>
 #include <QPluginLoader>
+#include <QResource>
+#include <QJsonDocument>
+#include <QJsonObject>
 
 #include "RPluginInterface.h"
 #include "RPluginLoader.h"
@@ -53,6 +56,7 @@ QStringList RPluginLoader::getPluginFiles() {
     QStringList nameFilter;
 
     nameFilter.append(QString("*.%1").arg(getPluginSuffix()));
+    nameFilter.append(QString("*.rcc"));
 
     foreach (QString fileName, pluginsDir.entryList(nameFilter, QDir::Files)) {
         if (fileName.contains("_debug.")) {
@@ -150,9 +154,41 @@ void RPluginLoader::loadPlugins(bool init) {
             continue;
         }
 
-        QPluginLoader loader(fileName);
-        QObject* plugin = loader.instance();
-        loadPlugin(plugin, init, fileName, loader.errorString());
+        // load rcc plugins:
+        // TODO: decrypt resource from different file extension
+        if (QFileInfo(fileName).suffix().toLower()=="rcc") {
+            QResource::registerResource(fileName);
+
+            RPluginInfo info;
+            QString jsonFileName = ":" + baseName + ".json";
+            QFile file(jsonFileName);
+            if (file.open(QIODevice::ReadOnly)) {
+                QTextStream in(&file);
+                QString json = in.readAll();
+                file.close();
+
+                QJsonDocument jDoc = QJsonDocument::fromJson(json.toUtf8());
+                QJsonObject jObj = jDoc.object();
+                QStringList keys = jObj.keys();
+                for (int i=0; i<keys.length(); i++) {
+                    QString key = keys[i];
+                    qDebug() << "JSON value: " << key << ":" << jObj.value(key);
+                    info.set(key, jObj.value(key).toString());
+                }
+            }
+            else {
+                qWarning() << "No JSON file found in RCC plugin:" << fileName;
+                qWarning() << "JSON file name:" << jsonFileName;
+            }
+
+            info.set("FileName", fileName);
+            pluginsInfo.append(info);
+        }
+        else {
+            QPluginLoader loader(fileName);
+            QObject* plugin = loader.instance();
+            loadPlugin(plugin, init, fileName, loader.errorString());
+        }
     }
 
     // load statically compiled in plugins:

@@ -5881,12 +5881,17 @@ už existuje v zozname.</translation>
         <translation type="unfinished">Veľkosť referenčného bodu (px):</translation>
     </message>
     <message>
-        <location line="+227"/>
+        <location line="+209"/>
+        <source>Allocation limit for bitmaps (MB):</source>
+        <translation type="unfinished">Limit alokácie pre bitové mapy (MB):</translation>
+    </message>
+    <message>
+        <location line="+60"/>
         <source>Persistent selection</source>
         <translation type="unfinished">Trvalý výber</translation>
     </message>
     <message>
-        <location line="-1011"/>
+        <location line="-1053"/>
         <source>Color lightness threshold:</source>
         <translation>Hranica svetlosti farby:</translation>
     </message>
@@ -5981,7 +5986,7 @@ už existuje v zozname.</translation>
         <translation type="unfinished">Maximálna zložitosť pre pevné výplne vo vysokej kvalite:</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+114"/>
         <source>Selection</source>
         <translation>Výber</translation>
     </message>
@@ -9286,7 +9291,7 @@ už existuje v zozname.</translation>
         <translation>Formát:</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+143"/>
         <source>Untitled %1</source>
         <translation>Bez názvu %1</translation>
     </message>
@@ -13514,7 +13519,7 @@ už existuje v zozname.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
         <source>Dropped data not supported</source>
         <translation>Vložené údaje nie sú podporované</translation>
     </message>
@@ -14007,7 +14012,7 @@ už existuje v zozname.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1288"/>
+        <location filename="../scripts/library.js" line="+1295"/>
         <source>Objects</source>
         <translation>Objekty</translation>
     </message>

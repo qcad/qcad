@@ -91,20 +91,14 @@ ViewportSettings.applyPreferences = function(doc) {
     var mdiChild = EAction.getMdiChild();
     // doc preferences
     //qDebug("ViewportSettings.js:", "applyPreferences(): appPreferences: doc:",doc);
-//    var chs = mdiChild.children();
-//    for ( var i = 0; i < chs.length; ++i) {
-//        var child = chs[i];
-//        destr(child);
-//    }
-    
     var uiFileName = doc.getVariable("Viewport/ViewportList.data");
     if (uiFileName == undefined) {
         // fall back to application wide settings
         uiFileName = RSettings.getStringValue("Viewport/ViewportList.data", "00_Single.ui");
     }
-    
+
     ViewportWidget.initMdiChild(mdiChild, uiFileName);
-    
+
     var viewports = ViewportWidget.getViewports(mdiChild, mdiChild.getDocumentInterface());
     mdiChild.viewports = viewports;
     for ( var i = 0; i < viewports.length; ++i) {

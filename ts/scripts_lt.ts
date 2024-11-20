@@ -5913,12 +5913,17 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Atskaitos taško dydis (px):</translation>
     </message>
     <message>
-        <location line="+227"/>
+        <location line="+209"/>
+        <source>Allocation limit for bitmaps (MB):</source>
+        <translation type="unfinished">Bitinių atvaizdų paskirstymo riba (MB):</translation>
+    </message>
+    <message>
+        <location line="+60"/>
         <source>Persistent selection</source>
         <translation type="unfinished">Nuolatinė atranka</translation>
     </message>
     <message>
-        <location line="-695"/>
+        <location line="-737"/>
         <source>Number of preview entities:</source>
         <translation type="unfinished">Peržiūros subjektų skaičius:</translation>
     </message>
@@ -5978,7 +5983,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Didžiausias sudėtingumas, kad būtų galima kokybiškai užpildyti vientisą užpildą:</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+114"/>
         <source>Selection</source>
         <translation type="unfinished">Atranka</translation>
     </message>
@@ -9283,7 +9288,7 @@ jau yra sąraše.</translation>
         <translation type="unfinished">Formatas:</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+143"/>
         <source>Untitled %1</source>
         <translation type="unfinished">Be pavadinimo %1</translation>
     </message>
@@ -13511,7 +13516,7 @@ jau yra sąraše.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished">Nepalaikomi nutolę duomenys</translation>
     </message>
@@ -14004,7 +14009,7 @@ jau yra sąraše.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1288"/>
+        <location filename="../scripts/library.js" line="+1295"/>
         <source>Objects</source>
         <translation type="unfinished">Objektai</translation>
     </message>

@@ -5965,7 +5965,12 @@ is already in the list.</source>
         <translation type="unfinished">Renderi alati vähemalt 1 piksli laiused kohandatud laiusega polügraanid</translation>
     </message>
     <message>
-        <location line="+810"/>
+        <location line="+798"/>
+        <source>Allocation limit for bitmaps (MB):</source>
+        <translation type="unfinished">Bitkaartide eraldamise piirang (MB):</translation>
+    </message>
+    <message>
+        <location line="+54"/>
         <source>Selection</source>
         <translation type="unfinished">Valik</translation>
     </message>
@@ -9275,7 +9280,7 @@ is already in the list.</source>
         <translation type="unfinished">Formaat:</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+143"/>
         <source>Untitled %1</source>
         <translation type="unfinished">Ilma pealkirjata %1</translation>
     </message>
@@ -13496,7 +13501,7 @@ is already in the list.</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished">Andmete mahajäämine ei ole toetatud</translation>
     </message>
@@ -13989,7 +13994,7 @@ is already in the list.</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1288"/>
+        <location filename="../scripts/library.js" line="+1295"/>
         <source>Objects</source>
         <translation type="unfinished">Objektid</translation>
     </message>

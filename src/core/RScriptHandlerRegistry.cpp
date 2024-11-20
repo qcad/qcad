@@ -83,7 +83,7 @@ RScriptHandler* RScriptHandlerRegistry::getGlobalScriptHandler(const QString& ex
             return NULL;
         }
         globalScriptHandlers[extension] = handler;
-        globalScriptHandlers[extension]->init();
+        globalScriptHandlers[extension]->init(true);
     }
     return globalScriptHandlers[extension];
 }

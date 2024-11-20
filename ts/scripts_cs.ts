@@ -5879,12 +5879,17 @@ již v seznamu je.</translation>
         <translation type="unfinished">Velikost referenčního bodu (px):</translation>
     </message>
     <message>
-        <location line="+227"/>
+        <location line="+209"/>
+        <source>Allocation limit for bitmaps (MB):</source>
+        <translation type="unfinished">Alokační limit pro bitové mapy (MB):</translation>
+    </message>
+    <message>
+        <location line="+60"/>
         <source>Persistent selection</source>
         <translation type="unfinished">Trvalý výběr</translation>
     </message>
     <message>
-        <location line="-1011"/>
+        <location line="-1053"/>
         <source>Color lightness threshold:</source>
         <translation>Prahová hodnota světla barvy:</translation>
     </message>
@@ -5979,7 +5984,7 @@ již v seznamu je.</translation>
         <translation type="unfinished">Maximální složitost pro pevné výplně ve vysoké kvalitě:</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+114"/>
         <source>Selection</source>
         <translation>Výběr</translation>
     </message>
@@ -9284,7 +9289,7 @@ již v seznamu je.</translation>
         <translation>Formát:</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+143"/>
         <source>Untitled %1</source>
         <translation>Nepojmenovaný %1</translation>
     </message>
@@ -13512,7 +13517,7 @@ již v seznamu je.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
         <source>Dropped data not supported</source>
         <translation>Vložené údaje nejsou podporované</translation>
     </message>
@@ -14005,7 +14010,7 @@ již v seznamu je.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1288"/>
+        <location filename="../scripts/library.js" line="+1295"/>
         <source>Objects</source>
         <translation>Objektů</translation>
     </message>

@@ -5973,7 +5973,12 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Vienmēr attēlot daudzlīnijas ar pielāgotu platumu, kas ir vismaz 1 pikseļa plats</translation>
     </message>
     <message>
-        <location line="+810"/>
+        <location line="+798"/>
+        <source>Allocation limit for bitmaps (MB):</source>
+        <translation type="unfinished">Piešķīruma ierobežojums bitkartēm (MB):</translation>
+    </message>
+    <message>
+        <location line="+54"/>
         <source>Selection</source>
         <translation type="unfinished">Atlase</translation>
     </message>
@@ -9283,7 +9288,7 @@ jau ir sarakstā.</translation>
         <translation type="unfinished">Formāts:</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+143"/>
         <source>Untitled %1</source>
         <translation type="unfinished">Bez nosaukuma %1</translation>
     </message>
@@ -13511,7 +13516,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished">Nav atbalstīta datu atmešana</translation>
     </message>
@@ -14004,7 +14009,7 @@ jau ir sarakstā.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1288"/>
+        <location filename="../scripts/library.js" line="+1295"/>
         <source>Objects</source>
         <translation type="unfinished">Objekti</translation>
     </message>
