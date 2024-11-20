@@ -5910,12 +5910,17 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+227"/>
+        <location line="+209"/>
+        <source>Allocation limit for bitmaps (MB):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+60"/>
         <source>Persistent selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-695"/>
+        <location line="-737"/>
         <source>Number of preview entities:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5975,7 +5980,7 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+114"/>
         <source>Selection</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9280,7 +9285,7 @@ is already in the list.</source>
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+143"/>
         <source>Untitled %1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -13506,7 +13511,7 @@ is already in the list.</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished"></translation>
     </message>
@@ -13999,7 +14004,7 @@ is already in the list.</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1288"/>
+        <location filename="../scripts/library.js" line="+1295"/>
         <source>Objects</source>
         <translation type="unfinished"></translation>
     </message>

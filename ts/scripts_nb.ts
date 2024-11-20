@@ -5971,7 +5971,12 @@ er allerede i listen.</translation>
         <translation type="unfinished">Polylinjer med egendefinerte bredder skal alltid være minst 1 piksel brede</translation>
     </message>
     <message>
-        <location line="+810"/>
+        <location line="+798"/>
+        <source>Allocation limit for bitmaps (MB):</source>
+        <translation type="unfinished">Allokeringsgrense for bitmaps (MB):</translation>
+    </message>
+    <message>
+        <location line="+54"/>
         <source>Selection</source>
         <translation type="unfinished">Utvalg</translation>
     </message>
@@ -9281,7 +9286,7 @@ er allerede i listen.</translation>
         <translation type="unfinished">Format:</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+143"/>
         <source>Untitled %1</source>
         <translation type="unfinished">Uten tittel %1</translation>
     </message>
@@ -13504,7 +13509,7 @@ er allerede i listen.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished">Tapte data støttes ikke</translation>
     </message>
@@ -13997,7 +14002,7 @@ er allerede i listen.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1288"/>
+        <location filename="../scripts/library.js" line="+1295"/>
         <source>Objects</source>
         <translation type="unfinished">Objekter</translation>
     </message>

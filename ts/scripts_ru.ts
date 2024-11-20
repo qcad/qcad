@@ -5896,12 +5896,12 @@ is already in the list.</source>
         <translation type="unfinished">Максимальная сложность для сплошных заливок высокого качества:</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+120"/>
         <source>Persistent selection</source>
         <translation>Постоянное выделение</translation>
     </message>
     <message>
-        <location line="-1011"/>
+        <location line="-1053"/>
         <source>Color lightness threshold:</source>
         <translation>Порог светлоты цвета:</translation>
     </message>
@@ -5981,7 +5981,12 @@ is already in the list.</source>
         <translation>Время ожидания для рендеринга штриховки:</translation>
     </message>
     <message>
-        <location line="+426"/>
+        <location line="+414"/>
+        <source>Allocation limit for bitmaps (MB):</source>
+        <translation type="unfinished">Предел выделения для растровых изображений (МБ):</translation>
+    </message>
+    <message>
+        <location line="+54"/>
         <source>Selection</source>
         <translation>Выделение</translation>
     </message>
@@ -9286,7 +9291,7 @@ is already in the list.</source>
         <translation>Формат:</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+143"/>
         <source>Untitled %1</source>
         <translation>Без имени %1</translation>
     </message>
@@ -13514,7 +13519,7 @@ is already in the list.</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
         <source>Dropped data not supported</source>
         <translation>Удалённые данные не поддерживаются</translation>
     </message>
@@ -14007,7 +14012,7 @@ is already in the list.</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1288"/>
+        <location filename="../scripts/library.js" line="+1295"/>
         <source>Objects</source>
         <translation>Объекты</translation>
     </message>

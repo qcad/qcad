@@ -5911,12 +5911,17 @@ er allerede på listen.</translation>
         <translation>Referencepunktets størrelse (px):</translation>
     </message>
     <message>
-        <location line="+227"/>
+        <location line="+209"/>
+        <source>Allocation limit for bitmaps (MB):</source>
+        <translation>Allokeringsgrænse for bitmaps (MB):</translation>
+    </message>
+    <message>
+        <location line="+60"/>
         <source>Persistent selection</source>
         <translation>Vedvarende udvælgelse</translation>
     </message>
     <message>
-        <location line="-695"/>
+        <location line="-737"/>
         <source>Number of preview entities:</source>
         <translation>Antal enheder i forhåndsvisningen:</translation>
     </message>
@@ -5976,7 +5981,7 @@ er allerede på listen.</translation>
         <translation>Maksimal kompleksitet for solide fyldninger i høj kvalitet:</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+114"/>
         <source>Selection</source>
         <translation>Udvælgelse</translation>
     </message>
@@ -9281,7 +9286,7 @@ er allerede på listen.</translation>
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+143"/>
         <source>Untitled %1</source>
         <translation>Uden titel %1</translation>
     </message>
@@ -13504,7 +13509,7 @@ er allerede på listen.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
         <source>Dropped data not supported</source>
         <translation>Tabte data ikke understøttet</translation>
     </message>
@@ -13997,7 +14002,7 @@ er allerede på listen.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1288"/>
+        <location filename="../scripts/library.js" line="+1295"/>
         <source>Objects</source>
         <translation>Genstande</translation>
     </message>

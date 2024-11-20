@@ -5969,7 +5969,12 @@ is already in the list.</source>
         <translation type="unfinished">Να αποδίδετε πάντα πολυγραμμές με προσαρμοσμένο πλάτος τουλάχιστον 1 pixel πλάτος</translation>
     </message>
     <message>
-        <location line="+810"/>
+        <location line="+798"/>
+        <source>Allocation limit for bitmaps (MB):</source>
+        <translation type="unfinished">Όριο κατανομής για bitmaps (MB):</translation>
+    </message>
+    <message>
+        <location line="+54"/>
         <source>Selection</source>
         <translation type="unfinished">Επιλογή</translation>
     </message>
@@ -9279,7 +9284,7 @@ is already in the list.</source>
         <translation type="unfinished">Μορφή:</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+143"/>
         <source>Untitled %1</source>
         <translation type="unfinished">Χωρίς τίτλο %1</translation>
     </message>
@@ -13502,7 +13507,7 @@ is already in the list.</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished">Δεν υποστηρίζεται η απόρριψη δεδομένων</translation>
     </message>
@@ -13995,7 +14000,7 @@ is already in the list.</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1288"/>
+        <location filename="../scripts/library.js" line="+1295"/>
         <source>Objects</source>
         <translation type="unfinished">Αντικείμενα</translation>
     </message>

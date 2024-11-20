@@ -5889,12 +5889,17 @@ finns redan i listan.</translation>
         <translation>Referenspunktsstorlek (px):</translation>
     </message>
     <message>
-        <location line="+227"/>
+        <location line="+209"/>
+        <source>Allocation limit for bitmaps (MB):</source>
+        <translation>Gräns för allokering av bitmappar (MB):</translation>
+    </message>
+    <message>
+        <location line="+60"/>
         <source>Persistent selection</source>
         <translation>Beständigt urval</translation>
     </message>
     <message>
-        <location line="-695"/>
+        <location line="-737"/>
         <source>Number of preview entities:</source>
         <translation>Antal förhandsvisade objekt:</translation>
     </message>
@@ -5949,12 +5954,12 @@ finns redan i listan.</translation>
         <translation>Maximal komplexitet för solida fyllningar med hög kvalitet:</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+114"/>
         <source>Selection</source>
         <translation>Urval</translation>
     </message>
     <message>
-        <location line="-628"/>
+        <location line="-670"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation>Visa bågar som linjer under denna vinkel (grader):</translation>
     </message>
@@ -9279,7 +9284,7 @@ finns redan i listan.</translation>
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+143"/>
         <source>Untitled %1</source>
         <translation>Utan titel %1</translation>
     </message>
@@ -13502,7 +13507,7 @@ finns redan i listan.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
         <source>Dropped data not supported</source>
         <translation>Uppgifter som tappats bort stöds inte</translation>
     </message>
@@ -13995,7 +14000,7 @@ finns redan i listan.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1288"/>
+        <location filename="../scripts/library.js" line="+1295"/>
         <source>Objects</source>
         <translation>Objekt</translation>
     </message>

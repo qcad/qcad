@@ -5973,7 +5973,12 @@ is already in the list.</source>
         <translation type="unfinished">Завжди рендерити полілінії з користувацькою шириною щонайменше 1 піксель</translation>
     </message>
     <message>
-        <location line="+810"/>
+        <location line="+798"/>
+        <source>Allocation limit for bitmaps (MB):</source>
+        <translation type="unfinished">Ліміт виділення для растрових зображень (МБ):</translation>
+    </message>
+    <message>
+        <location line="+54"/>
         <source>Selection</source>
         <translation type="unfinished">Відбір</translation>
     </message>
@@ -9283,7 +9288,7 @@ is already in the list.</source>
         <translation type="unfinished">Формат:</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+143"/>
         <source>Untitled %1</source>
         <translation type="unfinished">Без назви %1</translation>
     </message>
@@ -13511,7 +13516,7 @@ is already in the list.</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished">Скинуті дані не підтримуються</translation>
     </message>
@@ -14004,7 +14009,7 @@ is already in the list.</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1288"/>
+        <location filename="../scripts/library.js" line="+1295"/>
         <source>Objects</source>
         <translation type="unfinished">Об&apos;єкти</translation>
     </message>

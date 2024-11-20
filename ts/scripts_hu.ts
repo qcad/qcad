@@ -5906,12 +5906,17 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Referenciapont mérete (px):</translation>
     </message>
     <message>
-        <location line="+227"/>
+        <location line="+209"/>
+        <source>Allocation limit for bitmaps (MB):</source>
+        <translation type="unfinished">A bitképek kiosztási korlátja (MB):</translation>
+    </message>
+    <message>
+        <location line="+60"/>
         <source>Persistent selection</source>
         <translation type="unfinished">Állandó kiválasztás</translation>
     </message>
     <message>
-        <location line="-695"/>
+        <location line="-737"/>
         <source>Number of preview entities:</source>
         <translation type="unfinished">Az előnézeti entitások száma:</translation>
     </message>
@@ -5971,7 +5976,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Maximális komplexitás a magas minőségű tömör kitöltésekhez:</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+114"/>
         <source>Selection</source>
         <translation type="unfinished">Kiválasztás</translation>
     </message>
@@ -9276,7 +9281,7 @@ már szerepel a listában.</translation>
         <translation type="unfinished">Formátum:</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+143"/>
         <source>Untitled %1</source>
         <translation type="unfinished">Cím nélkül %1</translation>
     </message>
@@ -13494,7 +13499,7 @@ már szerepel a listában.</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+331"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+354"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished">A megszakadt adatok nem támogatottak</translation>
     </message>
@@ -13987,7 +13992,7 @@ már szerepel a listában.</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+1288"/>
+        <location filename="../scripts/library.js" line="+1295"/>
         <source>Objects</source>
         <translation type="unfinished">Tárgyak</translation>
     </message>
