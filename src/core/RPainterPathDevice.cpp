@@ -67,7 +67,7 @@ int RPainterPathDevice::metric(PaintDeviceMetric metric) const {
 #if QT_VERSION >= 0x060800
     case QPaintDevice::PdmDevicePixelRatioF_EncodedA:
     case QPaintDevice::PdmDevicePixelRatioF_EncodedB:
-        return 1;
+        return QPaintDevice::encodeMetricF(metric, 1);
 #endif
     default:
         qWarning("RPainterPathDevice::metric(), unhandled metric %d\n", metric);
