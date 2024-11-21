@@ -77,9 +77,12 @@ QStringList RPluginLoader::getPluginFiles() {
         pluginFiles.append(pluginsDir.absoluteFilePath(fileName));
     }
 
+    QString appName = QCoreApplication::applicationName();
+    QCoreApplication::setApplicationName("QCAD");
     QDir localPluginsDir(RSettings::getDataLocation() + "/plugins");
+    QCoreApplication::setApplicationName(appName);
     foreach (QString fileName, localPluginsDir.entryList(nameFilter, QDir::Files)) {
-        pluginFiles.append(pluginsDir.absoluteFilePath(fileName));
+        pluginFiles.append(localPluginsDir.absoluteFilePath(fileName));
     }
 
     // make sure plugins which depend on other plugins are loaded last:
@@ -177,7 +180,7 @@ void RPluginLoader::loadPlugins(bool init) {
                 QStringList keys = jObj.keys();
                 for (int i=0; i<keys.length(); i++) {
                     QString key = keys[i];
-                    qDebug() << "JSON value: " << key << ":" << jObj.value(key);
+                    //qDebug() << "JSON value: " << key << ":" << jObj.value(key);
                     info.set(key, jObj.value(key).toString());
                 }
             }
