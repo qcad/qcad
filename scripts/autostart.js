@@ -435,11 +435,17 @@ function main() {
     var pluginInfo;
 
     // look up app name override:
+    var maxPri = 0;
     for (i=0; i<numPlugins; i++) {
         pluginInfo = RPluginLoader.getPluginInfo(i);
-        var n = pluginInfo.get("NameOverride", "");
-        if (n.length>0) {
-            qApp.applicationName = n;
+        var np = pluginInfo.get("OverridePriority", "0");
+        np = parseInt(np);
+        if (parseInt(np)>maxPri) {
+            maxPri = np;
+            var n = pluginInfo.get("NameOverride", "");
+            if (n.length>0) {
+                qApp.applicationName = n;
+            }
         }
     }
 
