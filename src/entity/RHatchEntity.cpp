@@ -372,6 +372,10 @@ QPair<QVariant, RPropertyAttributes> RHatchEntity::getProperty(
         }
 
         QVariant v;
+#if defined(Q_OS_LINUX) && defined(__aarch64__)
+        // TODO: a non-empty list crashes on Linux/arm64 for unknown reasons:
+        list.clear();
+#endif
         v.setValue(list);
         return qMakePair(v, RPropertyAttributes(RPropertyAttributes::List));
     }
