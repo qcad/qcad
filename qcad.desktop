@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=QCAD
+StartupWMClass=QCAD
 GenericName=CAD Software
 GenericName[da]=Computerhjulpet design (CAD)
 GenericName[de]=System für computerunterstütztes Zeichnen (CAD)
