@@ -23,21 +23,11 @@
 #include "RMainWindowQt.h"
 #include "RMathLineEdit.h"
 
-
-RToolOptionEventFilter* RToolOptionEventFilter::instance = NULL;
-
 /**
  * Event filter to catch enter and tab pressed in widgets.
  * This is necessary because some widgets (QLineEdit, QComboBox) handle these key strokes.
  */
 RToolOptionEventFilter::RToolOptionEventFilter(QObject* parent) {
-}
-
-RToolOptionEventFilter* RToolOptionEventFilter::getInstance() {
-    if (instance==NULL) {
-        instance = new RToolOptionEventFilter();
-    }
-    return instance;
 }
 
 bool RToolOptionEventFilter::eventFilter(QObject* obj, QEvent* event) {

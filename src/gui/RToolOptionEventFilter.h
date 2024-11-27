@@ -37,13 +37,8 @@ class QCADGUI_EXPORT RToolOptionEventFilter : public QObject {
 public:
     RToolOptionEventFilter(QObject *parent = NULL);
 
-    static RToolOptionEventFilter* getInstance();
-
 protected:
     bool eventFilter(QObject* obj, QEvent* event);
-
-private:
-    static RToolOptionEventFilter* instance;
 };
 
 Q_DECLARE_METATYPE(RToolOptionEventFilter*)
