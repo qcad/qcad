@@ -95,8 +95,8 @@ LineRelativeAngle.prototype.setState = function(state) {
     this.typeChanged();
 };
 
-LineRelativeAngle.prototype.initUiOptions = function(resume, restoreFromSettings) {
-    Line.prototype.initUiOptions.call(this, resume, restoreFromSettings);
+LineRelativeAngle.prototype.initUiOptions = function(resume, optionsToolBar, forDialog) {
+    Line.prototype.initUiOptions.call(this, resume, optionsToolBar, forDialog);
 
     var optionsToolBar = EAction.getOptionsToolBar();
     //var refPointCombo = optionsToolBar.findChild("ReferencePoint");

@@ -109,11 +109,11 @@ DrawBasedOnRectangleSize.prototype.setState = function(state) {
     EAction.showSnapTools();
 };
 
-DrawBasedOnRectangleSize.prototype.initUiOptions = function(resume, restoreFromSettings) {
-    EAction.prototype.initUiOptions.call(this, resume, restoreFromSettings);
+DrawBasedOnRectangleSize.prototype.initUiOptions = function(resume, optionsToolBar, forDialog) {
+    EAction.prototype.initUiOptions.call(this, resume, optionsToolBar, forDialog);
 
-    var optionsToolBar = EAction.getOptionsToolBar();
-    OptionsToolBar.initReferencePointCombo9(optionsToolBar, this);
+    var otb = EAction.getOptionsToolBar();
+    OptionsToolBar.initReferencePointCombo9(otb, this);
 };
 
 DrawBasedOnRectangleSize.prototype.pickCoordinate = function(event, preview) {

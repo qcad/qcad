@@ -115,8 +115,8 @@ Shape.init = function() {
     Shape.getToolMatrixPanel();
 };
 
-Shape.prototype.initUiOptions = function(resume, optionsToolBar) {
-    Draw.prototype.initUiOptions.call(this, resume, optionsToolBar);
+Shape.prototype.initUiOptions = function(resume, optionsToolBar, forDialog) {
+    Draw.prototype.initUiOptions.call(this, resume, optionsToolBar, forDialog);
 
     this.createPolyline = RSettings.getBoolValue(this.settingsGroup + "/CreatePolyline", false);
     this.fill = RSettings.getBoolValue(this.settingsGroup + "/Fill", false);

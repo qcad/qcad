@@ -99,8 +99,8 @@ ShapeRectanglePP.prototype.slotRotationChanged = function(value) {
     this.updatePreview(true);
 };
 
-ShapeRectanglePP.prototype.initUiOptions = function(resume, optionsToolBar) {
-    DrawBasedOnRectanglePP.prototype.initUiOptions.call(this, resume, optionsToolBar);
+ShapeRectanglePP.prototype.initUiOptions = function(resume, optionsToolBar, forDialog) {
+    DrawBasedOnRectanglePP.prototype.initUiOptions.call(this, resume, optionsToolBar, forDialog);
 
     var w;
 

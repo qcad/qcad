@@ -109,8 +109,8 @@ Scale.prototype.setState = function(state) {
     EAction.showSnapTools();
 };
 
-Scale.prototype.initUiOptions = function(resume, optionsToolBar) {
-    EAction.prototype.initUiOptions.call(this, resume, optionsToolBar);
+Scale.prototype.initUiOptions = function(resume, optionsToolBar, forDialog) {
+    EAction.prototype.initUiOptions.call(this, resume, optionsToolBar, forDialog);
 
     this.initWidgets(optionsToolBar, "Sq");
 };

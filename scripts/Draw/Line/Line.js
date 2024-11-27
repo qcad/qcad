@@ -138,8 +138,8 @@ Line.prototype.createLineEntity = function(doc, p1, p2) {
     return Line.createLineEntity(doc, p1, p2, this.lineType);
 };
 
-Line.prototype.initUiOptions = function(resume, optionsToolBar) {
-    Draw.prototype.initUiOptions.call(this, resume, optionsToolBar);
+Line.prototype.initUiOptions = function(resume, optionsToolBar, forDialog) {
+    Draw.prototype.initUiOptions.call(this, resume, optionsToolBar, forDialog);
 
     this.lineType = RSettings.getIntValue(this.settingsGroup + "/Type",
         this.showAutoLineType ? Line.LineType.Auto : Line.LineType.Line);

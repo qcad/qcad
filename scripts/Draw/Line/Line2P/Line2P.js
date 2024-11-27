@@ -104,8 +104,8 @@ Line2P.prototype.showUiOptions = function(resume, restoreFromSettings) {
     this.updateButtonStates();
 };
 
-Line2P.prototype.initUiOptions = function(resume, optionsToolBar) {
-    Line.prototype.initUiOptions.call(this, resume, optionsToolBar);
+Line2P.prototype.initUiOptions = function(resume, optionsToolBar, forDialog) {
+    Line.prototype.initUiOptions.call(this, resume, optionsToolBar, forDialog);
 
     var leLength = optionsToolBar.findChild("Length");
     var cbLength = optionsToolBar.findChild("UseLength");

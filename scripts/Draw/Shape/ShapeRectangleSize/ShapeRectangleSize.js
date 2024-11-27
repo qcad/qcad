@@ -62,8 +62,8 @@ ShapeRectangleSize.prototype.slotRadiusChanged = function(v) {
     Shape.slotRadiusChanged(this, v);
 };
 
-ShapeRectangleSize.prototype.initUiOptions = function(resume, optionsToolBar) {
-    DrawBasedOnRectangleSize.prototype.initUiOptions.call(this, resume, optionsToolBar);
+ShapeRectangleSize.prototype.initUiOptions = function(resume, optionsToolBar, forDialog) {
+    DrawBasedOnRectangleSize.prototype.initUiOptions.call(this, resume, optionsToolBar, forDialog);
 
     var w;
 
