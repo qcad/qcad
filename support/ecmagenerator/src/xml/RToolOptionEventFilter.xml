@@ -12,6 +12,12 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="NULL" isConst="false" />
       </variant>
     </constructor>
+    <method name="getInstance" cppName="getInstance"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RToolOptionEventFilter *"
+      isPureVirtual="false" />
+    </method>
     <method name="eventFilter" cppName="eventFilter"
     specifier="protected" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

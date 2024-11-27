@@ -38,9 +38,14 @@
 </private><public>public:
     <constructor_decl><name>RToolOptionEventFilter</name><parameter_list>(<param><decl><type><name>QObject</name> *</type><name>parent</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
 
+    <function_decl><type><name>static</name> <name>RToolOptionEventFilter</name>*</type> <name>getInstance</name><parameter_list>()</parameter_list>;</function_decl>
+
 </public><protected>protected:
     <function_decl><type><name>bool</name></type> <name>eventFilter</name><parameter_list>(<param><decl><type><name>QObject</name>*</type> <name>obj</name></decl></param>, <param><decl><type><name>QEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
-</protected>}</block>;</class>
+
+</protected><private>private:
+    <decl_stmt><decl><type><name>static</name> <name>RToolOptionEventFilter</name>*</type> <name>instance</name></decl>;</decl_stmt>
+</private>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RToolOptionEventFilter*</argument>)</argument_list></macro>
 

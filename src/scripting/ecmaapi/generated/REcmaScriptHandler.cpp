@@ -51,8 +51,6 @@
     
             REcmaHelper::registerFunction(&engine, proto, getSupportedFileExtensions, "getSupportedFileExtensions");
             
-            REcmaHelper::registerFunction(&engine, proto, init, "init");
-            
             REcmaHelper::registerFunction(&engine, proto, autostart, "autostart");
             
             REcmaHelper::registerFunction(&engine, proto, doScript, "doScript");
@@ -185,50 +183,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaScriptHandler::getSupportedFileExtensions", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaScriptHandler::init
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaScriptHandler::init", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaScriptHandler::init";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RScriptHandler* self = 
-                        getSelf("init", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->init();
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RScriptHandler.init().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaScriptHandler::init", context, engine);
             return result;
         }
          QScriptValue

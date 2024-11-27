@@ -85,6 +85,8 @@
     <function_decl><type><name>virtual</name> <name>RVector</name></type> <name>getVectorTo</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>point</name></decl></param>,
             <param><decl><type><name>bool</name></type> <name>limited</name> =<init> <expr><name>true</name></expr></init></decl></param>, <param><decl><type><name>double</name></type> <name>strictRange</name> =<init> <expr><name>RMAXDOUBLE</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <function_decl><type><name>RVector</name></type> <name>getPointOnShape</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
     <function_decl><type><name>RVector</name></type> <name>getCenter</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setCenter</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>vector</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>double</name></type> <name>getRadius</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>

@@ -47,7 +47,10 @@
     
 
     // public methods:
-    static  QScriptValue toString
+    static  QScriptValue
+        getInstance
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RToolOptionEventFilter* getSelf(const QString& fName, QScriptContext* context)

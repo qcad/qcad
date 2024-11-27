@@ -77,6 +77,8 @@
     
     // static methods:
     
+            REcmaHelper::registerFunction(&engine, &ctor, getInstance, "getInstance");
+            
 
     // static properties:
     
@@ -217,7 +219,46 @@
     
 
     // public methods:
-     QScriptValue REcmaToolOptionEventFilter::toString
+     QScriptValue
+        REcmaToolOptionEventFilter::getInstance
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaToolOptionEventFilter::getInstance", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaToolOptionEventFilter::getInstance";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RToolOptionEventFilter *'
+    RToolOptionEventFilter * cppResult =
+        RToolOptionEventFilter::
+       getInstance();
+        // return type: RToolOptionEventFilter *
+                // QObject
+                result = engine->newQObject(cppResult, QScriptEngine::QtOwnership);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RToolOptionEventFilter.getInstance().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaToolOptionEventFilter::getInstance", context, engine);
+            return result;
+        }
+         QScriptValue REcmaToolOptionEventFilter::toString
     (QScriptContext *context, QScriptEngine *engine)
     
     {

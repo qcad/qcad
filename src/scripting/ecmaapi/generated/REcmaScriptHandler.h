@@ -49,9 +49,6 @@
         getSupportedFileExtensions
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        init
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         autostart
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

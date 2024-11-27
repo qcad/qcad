@@ -88,6 +88,9 @@
         getPointAtAngle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getPointOnShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setCenter
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
