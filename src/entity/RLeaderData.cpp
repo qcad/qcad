@@ -60,18 +60,18 @@ void RLeaderData::setArrowHead(bool on) {
  * segment is >= DIMASZ * DIMSCALE * 2.
  */
 bool RLeaderData::canHaveArrowHead() const {
-    if (countSegments()==0) {
-        return false;
-    }
+//    if (countSegments()==0) {
+//        return false;
+//    }
 
-    QSharedPointer<RShape> firstSegment = getSegmentAt(0);
-    if (firstSegment.isNull()) {
-        return false;
-    }
+//    QSharedPointer<RShape> firstSegment = getSegmentAt(0);
+//    if (firstSegment.isNull()) {
+//        return false;
+//    }
 
-    if (firstSegment->getLength() < getDimasz() * 2) {
-        return false;
-    }
+//    if (firstSegment->getLength() < getDimasz() * 2) {
+//        return false;
+//    }
 
     return true;
 }
