@@ -125,6 +125,7 @@ public:
     virtual void setRightMouseTip(const QString& text = "");
 
     virtual void showContextMenu(RObject::Id entityId, const RVector& pos);
+    virtual void requestResourceBlockEditing(RObject::Id entityId, const RVector& pos);
     virtual void escapeEvent();
 
     virtual void setGraphicsViewCursor(const QCursor& cursor);
@@ -185,6 +186,10 @@ signals:
      * Emitted when a context menu is requested on top of the given entity.
      */
     void contextMenu(int entityId, const RVector& pos);
+    /**
+     * Emitted when resource block editing is requested (double-click, context menu, ...):
+     */
+    void editResourceBlock(int entityId, const RVector& pos);
     void escape();
     void drop(QDropEvent* event);
     void dragEnter(QDragEnterEvent* event);
