@@ -206,7 +206,6 @@ EcmaScriptShell.init = function(basePath) {
     var bracketsCountS = 0;
     lCommand.text = ">";
 
-    // user pressed enter, eval command:
     function countBraces(str) {
         for (var i=0, len=str.length; i<len; ++i) {
             switch(str[i]) {
@@ -234,6 +233,7 @@ EcmaScriptShell.init = function(basePath) {
         expression = "";
     });
 
+    // user pressed enter, eval command:
     leCommand.commandConfirmed.connect(function(command) {
         // save history:
         var h = leCommand.getHistory();
