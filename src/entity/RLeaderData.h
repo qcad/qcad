@@ -64,6 +64,9 @@ public:
     virtual void to2D() {
         RPolyline::to2D();
     }
+    virtual bool reverse() {
+        return RPolyline::reverse();
+    }
     virtual RBox getBoundingBox(bool ignoreEmpty=false) const {
         return REntityData::getBoundingBox();
     }
