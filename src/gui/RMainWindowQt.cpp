@@ -534,6 +534,10 @@ void RMainWindowQt::showContextMenu(RObject::Id entityId, const RVector& pos) {
     emit contextMenu((int)entityId, pos);
 }
 
+void RMainWindowQt::requestResourceBlockEditing(RObject::Id entityId, const RVector& pos) {
+    emit editResourceBlock((int)entityId, pos);
+}
+
 void RMainWindowQt::setGraphicsViewCursor(const QCursor& cursor) {
     if (mdiArea==NULL) {
         return;
@@ -732,8 +736,10 @@ bool RMainWindowQt::event(QEvent* e) {
                             e->accept();
                         }
                         else {
-                            // TODO: never reached?
-                            if (dynamic_cast<QLineEdit*>(w)!=NULL) {
+                            // enter pressed in a line edit in the options toolbar:
+                            if (dynamic_cast<QLineEdit*>(w)!=NULL &&
+                                dynamic_cast<QToolBar*>(parent)!=NULL) {
+
                                 // move focus from options toolbar line edit to graphics view:
                                 RDocumentInterface* di = getDocumentInterface();
                                 if (di!=NULL) {
