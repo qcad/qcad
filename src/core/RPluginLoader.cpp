@@ -77,10 +77,7 @@ QStringList RPluginLoader::getPluginFiles() {
         pluginFiles.append(pluginsDir.absoluteFilePath(fileName));
     }
 
-    QString appName = QCoreApplication::applicationName();
-    QCoreApplication::setApplicationName("QCAD");
-    QDir localPluginsDir(RSettings::getDataLocation() + "/plugins");
-    QCoreApplication::setApplicationName(appName);
+    QDir localPluginsDir(RSettings::getPluginsLocation());
     foreach (QString fileName, localPluginsDir.entryList(nameFilter, QDir::Files)) {
         pluginFiles.append(localPluginsDir.absoluteFilePath(fileName));
     }
