@@ -2281,6 +2281,26 @@ QList<QSharedPointer<RShape> > RShape::trim(
     // possible trim points:
     QList<RVector> sol = trimShapeSimple->getIntersectionPoints(*limitingShapeSimple, false);
     if (sol.isEmpty()) {
+        // check if two lines are in line and replace with one line
+        if (RShape::isLineShape(trimShape) && RShape::isLineShape(limitingShape)) {
+            const RLine& trimLine = dynamic_cast<const RLine&>(trimShape);
+            const RLine& limitingLine = dynamic_cast<const RLine&>(limitingShape);
+
+            if (trimLine.isCollinear(limitingLine)) {
+                QList<RVector> pts;
+                pts.append(trimLine.getStartPoint());
+                pts.append(trimLine.getEndPoint());
+                pts.append(limitingLine.getStartPoint());
+                pts.append(limitingLine.getEndPoint());
+                RVector minP = RVector::getMinimum(pts);
+                pts = RVector::getSortedByDistance(pts, minP);
+                RLine newTrimmedLine(pts[1], pts[3]);
+
+                return QList<QSharedPointer<RShape> >() << QSharedPointer<RShape>(newTrimmedLine.clone());
+            }
+        }
+
+
         return QList<QSharedPointer<RShape> >();
     }
 
