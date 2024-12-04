@@ -506,6 +506,17 @@ QString RSettings::getDataLocation() {
 }
 
 /**
+ * \return Path for local plugins, independent of application name set by a plugin.
+ */
+QString RSettings::getPluginsLocation() {
+    QString appName = QCoreApplication::applicationName();
+    QCoreApplication::setApplicationName("QCAD");
+    QString ret = RSettings::getDataLocation() + "/plugins";
+    QCoreApplication::setApplicationName(appName);
+    return ret;
+}
+
+/**
  * \return Standard path for temporary files.
  */
 QString RSettings::getTempLocation() {

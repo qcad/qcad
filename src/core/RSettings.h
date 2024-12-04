@@ -97,6 +97,7 @@ public:
     static QString getDesktopLocation();
     static QString getDocumentsLocation();
     static QString getHomeLocation();
+    static QString getPluginsLocation();
 
     //static void setEventBlocking(bool on);
     //static bool isEventBlockingEnabled();
