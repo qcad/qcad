@@ -63,6 +63,8 @@ public:
     static RPropertyTypeId PropertyDimscale;
     static RPropertyTypeId PropertyDimasz;
 
+    static RPropertyTypeId PropertyLength;
+    static RPropertyTypeId PropertyTotalLength;
 
 public:
     RLeaderEntity(RDocument* document, const RLeaderData& data);
@@ -99,6 +101,10 @@ public:
 
     virtual const RLeaderData& getData() const {
         return data;
+    }
+
+    bool reverse() {
+        return data.reverse();
     }
 
     void setArrowHead(bool on) {
