@@ -46,6 +46,9 @@ RPropertyTypeId RLeaderEntity::PropertyVertexNZ;
 RPropertyTypeId RLeaderEntity::PropertyDimscale;
 RPropertyTypeId RLeaderEntity::PropertyDimasz;
 
+RPropertyTypeId RLeaderEntity::PropertyLength;
+RPropertyTypeId RLeaderEntity::PropertyTotalLength;
+
 
 RLeaderEntity::RLeaderEntity(RDocument* document, const RLeaderData& data) :
     REntity(document), data(document, data) {
@@ -87,6 +90,9 @@ void RLeaderEntity::init() {
     if (RPluginLoader::hasPlugin("DWG")) {
         RLeaderEntity::PropertyDimasz.generateId(RLeaderEntity::getRtti(), RDimStyle::PropertyDimasz);
     }
+
+    RLeaderEntity::PropertyLength.generateId(RLeaderEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Length"));
+    RLeaderEntity::PropertyTotalLength.generateId(RLeaderEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Total Length"));
 }
 
 bool RLeaderEntity::setProperty(RPropertyTypeId propertyTypeId,
@@ -187,36 +193,55 @@ QPair<QVariant, RPropertyAttributes> RLeaderEntity::getProperty(
         return qMakePair(v, RPropertyAttributes(RPropertyAttributes::List));
     }
     else if (propertyTypeId == PropertyDimscale || propertyTypeId == PropertyDimasz) {
-            double v;
-            if (propertyTypeId == PropertyDimscale) {
-                v = data.dimscale;
-            }
-            else {
-                v = data.dimasz;
-            }
-            if (v<0.0) {
-                RDocument* doc = getDocument();
-                if (doc!=NULL) {
-                    QSharedPointer<RDimStyle> dimStyle = getDocument()->queryDimStyleDirect();
-                    if (!dimStyle.isNull()) {
-                        if (propertyTypeId == PropertyDimscale) {
-                            v = dimStyle->getDouble(RS::DIMSCALE);
-                        }
-                        else {
-                            v = dimStyle->getDouble(RS::DIMASZ);
-                        }
+        double v;
+        if (propertyTypeId == PropertyDimscale) {
+            v = data.dimscale;
+        }
+        else {
+            v = data.dimasz;
+        }
+        if (v<0.0) {
+            RDocument* doc = getDocument();
+            if (doc!=NULL) {
+                QSharedPointer<RDimStyle> dimStyle = getDocument()->queryDimStyleDirect();
+                if (!dimStyle.isNull()) {
+                    if (propertyTypeId == PropertyDimscale) {
+                        v = dimStyle->getDouble(RS::DIMSCALE);
+                    }
+                    else {
+                        v = dimStyle->getDouble(RS::DIMASZ);
                     }
                 }
             }
-
-            RPropertyAttributes attr;
-
-            if (propertyTypeId==PropertyDimscale) {
-                attr.setUnitLess(true);
-            }
-
-            return qMakePair(QVariant(v), attr);
         }
+
+        RPropertyAttributes attr;
+
+        if (propertyTypeId==PropertyDimscale) {
+            attr.setUnitLess(true);
+        }
+
+        return qMakePair(QVariant(v), attr);
+    }
+
+    if (humanReadable) {
+        if (propertyTypeId == PropertyLength) {
+            QVariant v;
+            v.setValue(data.getLength());
+            return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::ReadOnly));
+        } else if (propertyTypeId == PropertyTotalLength) {
+            if (showOnRequest) {
+                QVariant v;
+                v.setValue(data.getLength());
+                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Sum));
+            }
+            else {
+                QVariant v;
+                v.setValue(0.0);
+                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::OnRequest));
+            }
+        }
+    }
 
 //    else if (propertyTypeId == PropertyDimScale) {
 //        return qMakePair(QVariant(data.dimScaleOverride), RPropertyAttributes());
