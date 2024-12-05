@@ -115,6 +115,15 @@ public:
         clearCustomPattern();
     }
 
+    bool isWinding() const {
+        return winding;
+    }
+
+    void setWinding(bool on) {
+        winding = on;
+        clearCustomPattern();
+    }
+
     double getScale() const {
         return scaleFactor;
     }
@@ -252,6 +261,7 @@ protected:
 
 private:
     bool solid;
+    bool winding;
     double scaleFactor;
     double angle;
     QString patternName;

@@ -38,6 +38,7 @@ RHatchProxy* RHatchData::hatchProxy = NULL;
 
 RHatchData::RHatchData() :
     solid(true),
+    winding(false),
     scaleFactor(1.0),
     angle(0.0),
     patternName("SOLID"),
@@ -66,6 +67,7 @@ RHatchData::RHatchData(const RHatchData& other) : REntityData(other), RPainterPa
  */
 RHatchData::RHatchData(bool solid, double scaleFactor, double angle, const QString& patternName) :
     solid(solid),
+    winding(false),
     scaleFactor(scaleFactor),
     angle(angle),
     patternName(patternName),
@@ -77,6 +79,7 @@ RHatchData& RHatchData::operator =(const RHatchData& other) {
     REntityData::operator=(other);
 
     solid = other.solid;
+    winding = other.winding;
     scaleFactor = other.scaleFactor;
     angle = other.angle;
     transparency = other.transparency;
@@ -702,6 +705,9 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft, double pixelSizeHint
             boundaryPath.setBrush(QBrush(Qt::SolidPattern));
         }
         boundaryPath.setAutoRegen(true);
+        if (isWinding()) {
+            boundaryPath.setFillRule(Qt::WindingFill);
+        }
         painterPaths.append(boundaryPath);
         dirty = false;
         gotDraft = draft;

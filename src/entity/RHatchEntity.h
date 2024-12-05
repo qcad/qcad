@@ -57,6 +57,7 @@ public:
     static RPropertyTypeId PropertyDrawOrder;
 
     static RPropertyTypeId PropertySolid;
+    static RPropertyTypeId PropertyWinding;
     static RPropertyTypeId PropertyTransparency;
 
     static RPropertyTypeId PropertyPatternName;
@@ -153,6 +154,14 @@ public:
 
     void setSolid(bool on) {
         data.setSolid(on);
+    }
+
+    bool isWinding() const {
+        return data.isWinding();
+    }
+
+    void setWinding(bool on) {
+        data.setWinding(on);
     }
 
     double getScale() const {

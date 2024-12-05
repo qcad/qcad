@@ -42,6 +42,7 @@ RPropertyTypeId RHatchEntity::PropertyDisplayedColor;
 RPropertyTypeId RHatchEntity::PropertyDrawOrder;
 
 RPropertyTypeId RHatchEntity::PropertySolid;
+RPropertyTypeId RHatchEntity::PropertyWinding;
 RPropertyTypeId RHatchEntity::PropertyTransparency;
 
 RPropertyTypeId RHatchEntity::PropertyPatternName;
@@ -89,6 +90,7 @@ void RHatchEntity::init() {
     RHatchEntity::PropertyDrawOrder.generateId(RHatchEntity::getRtti(), REntity::PropertyDrawOrder);
 
     RHatchEntity::PropertySolid.generateId(RHatchEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Solid"));
+    RHatchEntity::PropertyWinding.generateId(RHatchEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Winding"));
     RHatchEntity::PropertyTransparency.generateId(RHatchEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Alpha"));
 
     RHatchEntity::PropertyPatternName.generateId(RHatchEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Pattern"), QT_TRANSLATE_NOOP("REntity", "Name"));
@@ -117,6 +119,7 @@ bool RHatchEntity::setProperty(RPropertyTypeId propertyTypeId, const QVariant& v
     bool ret = REntity::setProperty(propertyTypeId, value, transaction);
 
     ret = ret || RObject::setMember(data.solid, value, PropertySolid == propertyTypeId);
+    ret = ret || RObject::setMember(data.winding, value, PropertyWinding == propertyTypeId);
     ret = ret || RObject::setMember(data.transparency, value, PropertyTransparency == propertyTypeId);
 
     ret = ret || RObject::setMember(data.patternName, value, PropertyPatternName == propertyTypeId);
@@ -281,6 +284,10 @@ QPair<QVariant, RPropertyAttributes> RHatchEntity::getProperty(
     if (propertyTypeId == PropertySolid) {
         //return qMakePair(QVariant(data.solid), RPropertyAttributes(RPropertyAttributes::AffectsOtherProperties));
         return qMakePair(QVariant(data.solid), RPropertyAttributes());
+    }
+
+    if (propertyTypeId == PropertyWinding) {
+        return qMakePair(QVariant(data.winding), RPropertyAttributes(RPropertyAttributes::Invisible));
     }
 
     RPropertyAttributes::Option op = RPropertyAttributes::NoOptions;
@@ -452,6 +459,7 @@ void RHatchEntity::print(QDebug dbg) const {
     dbg.nospace() << "RHatchEntity(";
     REntity::print(dbg);
     dbg.nospace() << ", solid: " << data.solid
+                  << ", winding: " << data.winding
                   << ", scale: " << data.scaleFactor
                   << ", angle: " << RMath::rad2deg(data.angle)
                   << ", origin: " << data.originPoint
