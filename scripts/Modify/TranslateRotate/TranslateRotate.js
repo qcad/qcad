@@ -29,12 +29,22 @@ function TranslateRotate(guiAction) {
 
     this.angle = 0.0;
 
-    this.setUiOptions("TranslateRotate.ui");
+    this.useDialog = RSettings.getBoolValue("TranslateRotate/UseDialog", true);
+
+    if (this.useDialog) {
+        this.setUiOptions("TranslateRotate.ui");
+    }
+    else {
+        this.setUiOptions("TranslateRotateNoDialog.ui");
+    }
 }
 
 TranslateRotate.prototype = new Translate();
-
 TranslateRotate.includeBasePath = includeBasePath;
+
+TranslateRotate.getPreferencesCategory = function() {
+    return [qsTr("Modify"), qsTr("Move/Rotate")];
+};
 
 /**
  * Shows the translation rotation dialog.
