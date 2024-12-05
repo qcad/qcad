@@ -21,7 +21,7 @@
 RPainterPathEngine::RPainterPathEngine()
     // starting with Qt 4.8.0 we have to specify feature QPaintEngine::PrimitiveTransform here
     // see QPainterPrivate::updateEmulationSpecifier
-    : QPaintEngine(QPaintEngine::PainterPaths | QPaintEngine::PrimitiveTransform) {}
+    : QPaintEngine(QPaintEngine::PainterPaths | QPaintEngine::PrimitiveTransform), strokePolygon(false) {}
 
 RPainterPathEngine::~RPainterPathEngine() {}
 
@@ -111,8 +111,15 @@ void RPainterPathEngine::drawPolygon(const QPointF* points, int pointCount, Poly
     }
 
     path.moveTo(points[0]);
-    for (int i=0; i<pointCount; i++) {
+    for (int i=1; i<pointCount; i++) {
         path.lineTo(points[i]);
+    }
+
+    // stroke:
+    if (strokePolygon) {
+        QPainterPathStroker stroker(path.getPen());
+        QPainterPath p = stroker.createStroke(path);
+        path.setPath(p);
     }
 
     // required for Qt >= 4.8.0 for texts with unicode characters:

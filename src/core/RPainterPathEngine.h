@@ -38,6 +38,10 @@ public:
     RPainterPathEngine();
     virtual ~RPainterPathEngine();
 
+    void setStrokePolygon(bool on) {
+        strokePolygon = on;
+    }
+
     virtual bool begin(QPaintDevice *device);
     virtual bool end();
 
@@ -58,6 +62,7 @@ public:
 private:
     QList<RPainterPath> paths;
     QTransform transform;
+    bool strokePolygon;
 };
 
 #endif

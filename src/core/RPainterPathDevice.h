@@ -35,6 +35,11 @@
 class QCADCORE_EXPORT RPainterPathDevice : public QPaintDevice {
 public:
     RPainterPathDevice();
+
+    void setStrokePolygon(bool on) {
+        engine->setStrokePolygon(on);
+    }
+
     virtual ~RPainterPathDevice();
     QList<RPainterPath> getPainterPaths();
 
