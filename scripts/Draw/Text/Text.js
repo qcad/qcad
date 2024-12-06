@@ -58,9 +58,7 @@ Text.prototype.beginEvent = function() {
 
     var dialog = new TextDialog(this.mode);
     this.textData = dialog.show();
-    if (RSettings.getQtVersion() >= 0x060000) {
-        delete dialog;
-    }
+    destrDialog(dialog);
 
     if (isNull(this.textData)) {
         this.terminate();
