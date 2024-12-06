@@ -595,8 +595,8 @@ PrintPreviewImpl.prototype.showUiOptions = function(resume) {
 /**
  * Initializes the scale combo box in the options toolbar with defaults.
  */
-PrintPreviewImpl.prototype.initUiOptions = function(resume, optionsToolBar) {
-    EAction.prototype.initUiOptions.call(this, resume, optionsToolBar);
+PrintPreviewImpl.prototype.initUiOptions = function(resume, optionsToolBar, forDialog) {
+    EAction.prototype.initUiOptions.call(this, resume, optionsToolBar, forDialog);
     this.initScaleCombo();
 };
 

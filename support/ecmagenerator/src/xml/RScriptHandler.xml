@@ -15,10 +15,6 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QList &lt; QString &gt;"
       isPureVirtual="true" />
     </method>
-    <method name="init" cppName="init" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false" />
-    </method>
     <method name="autostart" cppName="autostart" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">

@@ -24,8 +24,8 @@
       </widget>
      </item>
      <item row="2" column="1">
-      <widget class="RMathLineEdit" name="Angle" native="true">
-       <property name="text" stdset="0">
+      <widget class="RMathLineEdit" name="Angle">
+       <property name="text">
         <string notr="true">0</string>
        </property>
        <property name="angle" stdset="0">
@@ -54,8 +54,8 @@
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="RMathLineEdit" name="Width" native="true">
-       <property name="text" stdset="0">
+      <widget class="RMathLineEdit" name="Width">
+       <property name="text">
         <string notr="true">0</string>
        </property>
        <property name="DefaultFocus" stdset="0">
@@ -64,8 +64,8 @@
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="RMathLineEdit" name="Height" native="true">
-       <property name="text" stdset="0">
+      <widget class="RMathLineEdit" name="Height">
+       <property name="text">
         <string notr="true">0</string>
        </property>
       </widget>
@@ -158,8 +158,8 @@
  <customwidgets>
   <customwidget>
    <class>RMathLineEdit</class>
-   <extends>QWidget</extends>
-   <header>rmathlineedit.h</header>
+   <extends>QLineEdit</extends>
+   <header>RMathLineEdit.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>

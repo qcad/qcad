@@ -190,9 +190,13 @@ OptionsToolBar.setIcon = function(fileNameOrIcon) {
 
 };
 
-OptionsToolBar.initShortcuts = function(optionsToolBar) {
+OptionsToolBar.initShortcuts = function(optionsToolBar, forDialog) {
+    if (isNull(forDialog)) {
+        forDialog = false;
+    }
+
     if (hasPlugin("PROTOOLS")) {
-        OptionsToolBarPro.initShortcuts(optionsToolBar);
+        OptionsToolBarPro.initShortcuts(optionsToolBar, forDialog);
     }
 };
 

@@ -33,8 +33,8 @@ IsoProject.prototype = new Projection();
 
 IsoProject.includeBasePath = includeBasePath;
 
-IsoProject.prototype.initUiOptions = function(resume, optionsToolBar) {
-    Projection.prototype.initUiOptions.call(this, resume, optionsToolBar);
+IsoProject.prototype.initUiOptions = function(resume, optionsToolBar, forDialog) {
+    Projection.prototype.initUiOptions.call(this, resume, optionsToolBar, forDialog);
 
     this.method = RSettings.getIntValue("IsoProject/Method", RS.Isometric);
 

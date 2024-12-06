@@ -112,6 +112,9 @@
         getVectorTo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getPointOnShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getCenter
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

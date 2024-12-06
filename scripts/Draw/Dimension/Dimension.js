@@ -51,8 +51,8 @@ Dimension.prototype.beginEvent = function() {
 /**
  * Reimplemented to reset all fields, unless we are resuming.
  */
-Dimension.prototype.initUiOptions = function(resume, optionsToolBar) {
-    EAction.prototype.initUiOptions.call(this, resume, optionsToolBar);
+Dimension.prototype.initUiOptions = function(resume, optionsToolBar, forDialog) {
+    EAction.prototype.initUiOptions.call(this, resume, optionsToolBar, forDialog);
 
     var prefixCombo = optionsToolBar.findChild("Prefix");
     if (!isNull(prefixCombo)) {

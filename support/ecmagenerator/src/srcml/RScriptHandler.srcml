@@ -65,7 +65,7 @@
      */</comment>
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>getSupportedFileExtensions</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>init</name><parameter_list>()</parameter_list>;</function_decl>
+    <decl_stmt><decl><type><name>virtual</name> <name>void</name></type> <name>init</name><argument_list>(<argument><expr><name>bool</name> main = <name>false</name></expr></argument>)</argument_list></decl>;</decl_stmt>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>autostart</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>autostartFile</name> =<init> <expr><name>RDEFAULT_QSTRING</name></expr></init></decl></param>, <param><decl><type><name>const</name> <name>QStringList</name>&amp;</type> <name>arguments</name> =<init> <expr><name>RDEFAULT_QSTRINGLIST</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 

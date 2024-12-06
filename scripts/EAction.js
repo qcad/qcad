@@ -422,12 +422,15 @@ EAction.prototype.showUiOptions = function(resume, restoreFromSettings) {
  * Overwrite to initialize combo boxes and other UI elements of the options tool
  * bar.
  */
-EAction.prototype.initUiOptions = function(resume, optionsToolBar) {
+EAction.prototype.initUiOptions = function(resume, optionsToolBar, forDialog) {
     if (isNull(optionsToolBar)) {
         return;
     }
+    if (isNull(forDialog)) {
+        forDialog = false;
+    }
 
-    OptionsToolBar.initShortcuts(optionsToolBar);
+    OptionsToolBar.initShortcuts(optionsToolBar, forDialog);
 };
 
 /**
@@ -599,7 +602,7 @@ EAction.prototype.showDialog = function() {
     }
 
     this.dialog = WidgetFactory.createDialog(this.includeBasePath, this.dialogUiFile, EAction.getMainWindow());
-    this.initUiOptions(false, this.dialog);
+    this.initUiOptions(false, this.dialog, true);
     WidgetFactory.restoreState(this.dialog, this.settingsGroup, this);
     var title = this.getToolTitle();
     if (title.indexOf("\t")!==-1) {

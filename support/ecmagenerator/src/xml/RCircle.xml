@@ -171,6 +171,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="RMAXDOUBLE" isConst="false" />
       </variant>
     </method>
+    <method name="getPointOnShape" cppName="getPointOnShape"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
     <method name="getCenter" cppName="getCenter" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false" />

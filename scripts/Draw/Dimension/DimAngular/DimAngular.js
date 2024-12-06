@@ -131,8 +131,8 @@ DimAngular.prototype.escapeEvent = function() {
     }
 };
 
-DimAngular.prototype.initUiOptions = function(resume, optionsToolBar) {
-    Dimension.prototype.initUiOptions.call(this, resume, optionsToolBar);
+DimAngular.prototype.initUiOptions = function(resume, optionsToolBar, forDialog) {
+    Dimension.prototype.initUiOptions.call(this, resume, optionsToolBar, forDialog);
 
     var widgetNames = [ "ScaleAction", "ScaleLabelAction", "ScaleSeparatorAction", "AutoScaleAction" ];
     for (var i=0; i<widgetNames.length; i++) {
