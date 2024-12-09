@@ -319,6 +319,8 @@ bool RTextBasedData::moveReferencePoint(const RVector& referencePoint, const RVe
 
     double w = textWidth;
     switch (horizontalAlignment) {
+    case RS::HAlignLeft:
+        break;
     case RS::HAlignCenter:
     case RS::HAlignMid:
         w=w/2;
@@ -338,6 +340,8 @@ bool RTextBasedData::moveReferencePoint(const RVector& referencePoint, const RVe
         double d = alignmentAxis.getDistanceTo(targetPoint, false);
 
         switch (horizontalAlignment) {
+        case RS::HAlignLeft:
+            break;
         case RS::HAlignCenter:
         case RS::HAlignMid:
             textWidth = d * 2;
