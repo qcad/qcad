@@ -1375,6 +1375,7 @@
     <file alias="scripts/Modify/Translate/TranslateDialog.svg">../../scripts/Modify/Translate/TranslateDialog.svg</file>
     <file alias="scripts/Modify/Translate/TranslateDialog.ui">../../scripts/Modify/Translate/TranslateDialog.ui</file>
     <file alias="scripts/Modify/Translate/TranslateInit.js">../../scripts/Modify/Translate/TranslateInit.js</file>
+    <file alias="scripts/Modify/TranslateRotate/PreferencesPage.ui">../../scripts/Modify/TranslateRotate/PreferencesPage.ui</file>
     <file alias="scripts/Modify/TranslateRotate/TranslateRotate-inverse.svg">../../scripts/Modify/TranslateRotate/TranslateRotate-inverse.svg</file>
     <file alias="scripts/Modify/TranslateRotate/TranslateRotate.js">../../scripts/Modify/TranslateRotate/TranslateRotate.js</file>
     <file alias="scripts/Modify/TranslateRotate/TranslateRotate.svg">../../scripts/Modify/TranslateRotate/TranslateRotate.svg</file>
@@ -1382,6 +1383,7 @@
     <file alias="scripts/Modify/TranslateRotate/TranslateRotateDialog.svg">../../scripts/Modify/TranslateRotate/TranslateRotateDialog.svg</file>
     <file alias="scripts/Modify/TranslateRotate/TranslateRotateDialog.ui">../../scripts/Modify/TranslateRotate/TranslateRotateDialog.ui</file>
     <file alias="scripts/Modify/TranslateRotate/TranslateRotateInit.js">../../scripts/Modify/TranslateRotate/TranslateRotateInit.js</file>
+    <file alias="scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui">../../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui</file>
     <file alias="scripts/Modify/Trim/Trim-inverse.svg">../../scripts/Modify/Trim/Trim-inverse.svg</file>
     <file alias="scripts/Modify/Trim/Trim.js">../../scripts/Modify/Trim/Trim.js</file>
     <file alias="scripts/Modify/Trim/Trim.svg">../../scripts/Modify/Trim/Trim.svg</file>

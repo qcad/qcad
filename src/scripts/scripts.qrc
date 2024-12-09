@@ -2141,6 +2141,7 @@
     <file alias="scripts/Modify/Translate/TranslateDialog.svg">../../scripts/Modify/Translate/TranslateDialog.svg</file>
     <file alias="scripts/Modify/Translate/TranslateDialog.ui">../../scripts/Modify/Translate/TranslateDialog.ui</file>
     <file alias="scripts/Modify/Translate/TranslateInit.js">../../scripts/Modify/Translate/TranslateInit.js</file>
+    <file alias="scripts/Modify/TranslateRotate/PreferencesPage.ui">../../scripts/Modify/TranslateRotate/PreferencesPage.ui</file>
     <file alias="scripts/Modify/TranslateRotate/Tests/TranslateRotateTest00.js">../../scripts/Modify/TranslateRotate/Tests/TranslateRotateTest00.js</file>
     <file alias="scripts/Modify/TranslateRotate/Tests/TranslateRotateTest01.js">../../scripts/Modify/TranslateRotate/Tests/TranslateRotateTest01.js</file>
     <file alias="scripts/Modify/TranslateRotate/Tests/TranslateRotateTest02.js">../../scripts/Modify/TranslateRotate/Tests/TranslateRotateTest02.js</file>
@@ -2155,6 +2156,7 @@
     <file alias="scripts/Modify/TranslateRotate/TranslateRotateDialog.svg">../../scripts/Modify/TranslateRotate/TranslateRotateDialog.svg</file>
     <file alias="scripts/Modify/TranslateRotate/TranslateRotateDialog.ui">../../scripts/Modify/TranslateRotate/TranslateRotateDialog.ui</file>
     <file alias="scripts/Modify/TranslateRotate/TranslateRotateInit.js">../../scripts/Modify/TranslateRotate/TranslateRotateInit.js</file>
+    <file alias="scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui">../../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui</file>
     <file alias="scripts/Modify/Trim/Tests/TrimTest00.js">../../scripts/Modify/Trim/Tests/TrimTest00.js</file>
     <file alias="scripts/Modify/Trim/Tests/TrimTest01.js">../../scripts/Modify/Trim/Tests/TrimTest01.js</file>
     <file alias="scripts/Modify/Trim/Tests/TrimTest02.js">../../scripts/Modify/Trim/Tests/TrimTest02.js</file>
