@@ -58,7 +58,6 @@ Text.prototype.beginEvent = function() {
 
     var dialog = new TextDialog(this.mode);
     this.textData = dialog.show();
-    destrDialog(dialog);
 
     if (isNull(this.textData)) {
         this.terminate();
