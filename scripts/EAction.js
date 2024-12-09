@@ -1643,8 +1643,9 @@ EAction.getScales = function(unit) {
 };
 
 /**
- * Called by updatePreview. Implementations must return an ROperation subclass
- * object for the operation that should be previewed.
+ * Called by updatePreview and applyOperation.
+ * Implementations must return an ROperation subclass
+ * object for the operation that should be previewed or applied.
  */
 EAction.prototype.getOperation = function(preview) {
     return undefined;
