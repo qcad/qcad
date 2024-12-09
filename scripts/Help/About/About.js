@@ -549,6 +549,7 @@ About.prototype.initAboutLicenses = function(textBrowser) {
     if (RSettings.getQtVersion() >= 0x060000) {
         html += "<h2>qtjsapi</h2>"
         html += "<p>Copyright 2024 RibbonSoft, GmbH</p>"
+              + "<p>The MIT License (MIT)</p>"
               + "<p>Permission is hereby granted, free of charge, to any person obtaining a "
               + "copy of this software and associated documentation files (the “Software”), "
               + "to deal in the Software without restriction, including without limitation "
