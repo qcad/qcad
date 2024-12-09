@@ -65,8 +65,7 @@ InsertBlockItem.State = {
 
 InsertBlockItem.prototype = new BlockInsert();
 
-InsertBlockItem.prototype.beginEvent = function() {
-    // part library item is loaded into this document:
+InsertBlockItem.prototype.initDocItem = function() {
     if (isNull(this.diItem)) {
         var ms = new RMemoryStorage();
         var si = createSpatialIndex();
@@ -74,6 +73,11 @@ InsertBlockItem.prototype.beginEvent = function() {
         this.diItem = new RDocumentInterface(this.docItem);
         this.diItem.setNotifyListeners(false);
     }
+};
+
+InsertBlockItem.prototype.beginEvent = function() {
+    // part library item is loaded into this document:
+    this.initDocItem();
 
     // TODO refactor
     BlockInsert.prototype.beginEvent.call(this);
@@ -105,17 +109,18 @@ InsertBlockItem.prototype.beginEvent = function() {
         }
     }
 
+    this.initItem();
+
+    var noBlockName = isNull(this.blockName) && isNull(path);
+
     // no block name given:
     // create block name from file name:
     if (isNull(this.blockName)) {
-        if (isNull(path)) {
-            this.terminate();
-            return;
+        if (!isNull(path)) {
+            this.blockName = new QFileInfo(path).completeBaseName();
+            // fix block name if necessary:
+            this.blockName = fixSymbolTableName(this.blockName);
         }
-        this.blockName = new QFileInfo(path).completeBaseName();
-
-        // fix block name if necessary:
-        this.blockName = fixSymbolTableName(this.blockName);
     }
 
     // invalid block name characters:
@@ -123,9 +128,12 @@ InsertBlockItem.prototype.beginEvent = function() {
         var doc = this.getDocument();
         var c = 1;
         while (isNull(this.blockName) || doc.hasBlock(this.blockName)) {
-            this.blockName = 'block_' + c++;
+            this.blockName = this.getBlockNamePrefix() + c++;
         }
-        EAction.handleUserMessage(qsTr("Adjusted invalid block name to \"%1\"").arg(this.blockName));
+        if (!noBlockName) {
+            // only warn if block name was given explicitely or from file name:
+            EAction.handleUserMessage(qsTr("Adjusted invalid block name to \"%1\"").arg(this.blockName));
+        }
     }
 
     if (this.docItem.hasBlock(this.blockName)) {
@@ -171,6 +179,19 @@ InsertBlockItem.prototype.beginEvent = function() {
     }
 
     this.setState(InsertBlockItem.State.SettingPosition);
+};
+
+/**
+ * Allows deriving classes to override the block prefix.
+ */
+InsertBlockItem.prototype.getBlockNamePrefix = function() {
+    return "block_";
+};
+
+/**
+ * Allows deriving classes to generate or adjust an item.
+ */
+InsertBlockItem.prototype.initItem = function() {
 };
 
 InsertBlockItem.prototype.initUiOptions = function(resume, optionsToolBar, forDialog) {
