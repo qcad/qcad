@@ -2001,6 +2001,14 @@ EAction.prototype.getToolTitle = function() {
     return guiAction.text.replace("&", "");
 };
 
+EAction.prototype.getClassName = function() {
+    var guiAction = this.getGuiAction();
+    if (isNull(guiAction)) {
+        return "";
+    }
+    return guiAction.getScriptClass();
+};
+
 EAction.disableCoordinateWidget = function() {
     EAction.enableCoordinateWidget(false);
 };
