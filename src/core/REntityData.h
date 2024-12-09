@@ -123,7 +123,7 @@ public:
      * Convenience function for scripts.
      */
     RObject::Id getClosestSubEntityId(const RVector& pos, double range, bool ignoreComplex) const {
-        RObject::Id ret;
+        RObject::Id ret = RObject::INVALID_ID;
         QSharedPointer<RShape> shape = getClosestShape(pos, range, ignoreComplex, &ret);
         return ret;
     }
