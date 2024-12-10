@@ -38,6 +38,9 @@ Makefile.SimulatorRelease
 qtcsettings.cmake
 
 .qmake2cmake
+.cmake
+.qtc_clangd
+.qtc
 .ninja_deps
 .ninja_log
 CMakeFiles
