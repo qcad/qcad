@@ -1117,13 +1117,13 @@ QString RMemoryStorage::getBlockNameFromLayout(RLayout::Id layoutId) const {
     return QString();
 }
 
-QSet<QString> RMemoryStorage::getBlockNames(const QString& rxStr) const {
+QSet<QString> RMemoryStorage::getBlockNames(const QString& rxStr, bool undone) const {
     QRegularExpression rx(rxStr);
     QSet<QString> ret;
     QHash<RObject::Id, QSharedPointer<RBlock> >::const_iterator it;
     for (it = blockMap.constBegin(); it != blockMap.constEnd(); ++it) {
         QSharedPointer<RBlock> b = *it;
-        if (!b.isNull() && !b->isUndone()) {
+        if (!b.isNull() && (undone || !b->isUndone())) {
             if (rxStr.isEmpty() || RS::exactMatch(rx, b->getName())) {
                 ret.insert(b->getName());
             }
@@ -1552,7 +1552,7 @@ bool RMemoryStorage::removeObject(QSharedPointer<RObject> object) {
     return ret;
 }
 
-bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockRecursion, bool keepHandles) {
+bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockRecursion, bool keepHandles, bool* overwrite) {
     if (object.isNull()) {
         qWarning() << "RMemoryStorage::saveObject: object is NULL";
         return false;
@@ -1574,6 +1574,8 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
             if (id != RLayer::INVALID_ID && id != layer->getId()) {
                 setObjectId(*layer, id);
 
+                if (overwrite!=NULL) *overwrite = true;
+
                 // never unprotect an existing protected layer:
                 QSharedPointer<RLayer> existingLayer = queryLayerDirect(id);
                 if (!existingLayer.isNull()) {
@@ -1593,6 +1595,8 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
             if (id != RLayerState::INVALID_ID && id != layerState->getId()) {
                 setObjectId(*layerState, id);
 
+                if (overwrite!=NULL) *overwrite = true;
+
                 // never unprotect an existing protected layerState:
                 QSharedPointer<RLayerState> existingLayerState = queryLayerStateDirect(id);
                 if (!existingLayerState.isNull()) {
@@ -1611,6 +1615,8 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
             RLayout::Id id = getLayoutId(layout->getName());
             if (id != RLayout::INVALID_ID && id != layout->getId()) {
                 setObjectId(*layout, id);
+
+                if (overwrite!=NULL) *overwrite = true;
             }
         }
     }
@@ -1622,6 +1628,8 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
             RBlock::Id id = getBlockId(block->getName());
             if (id != RBlock::INVALID_ID && id != block->getId()) {
                 setObjectId(*block, id);
+
+                if (overwrite!=NULL) *overwrite = true;
             }
         }
     }
@@ -1633,6 +1641,8 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
             RLinetype::Id id = getLinetypeId(linetype->getName());
             if (id != RLinetype::INVALID_ID && id != linetype->getId()) {
                 setObjectId(*linetype, id);
+
+                if (overwrite!=NULL) *overwrite = true;
             }
         }
     }

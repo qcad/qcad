@@ -468,7 +468,7 @@ public:
     virtual QString getBlockNameFromHandle(RBlock::Handle blockHandle) const = 0;
     virtual QString getBlockNameFromLayout(const QString& layoutName) const = 0;
     virtual QString getBlockNameFromLayout(RLayout::Id layoutId) const = 0;
-    virtual QSet<QString> getBlockNames(const QString& rxStr = RDEFAULT_QSTRING) const = 0;
+    virtual QSet<QString> getBlockNames(const QString& rxStr = RDEFAULT_QSTRING, bool undone = false) const = 0;
     virtual RBlock::Id getBlockId(const QString& blockName) const = 0;
     virtual RBlock::Id getBlockIdAuto(const QString& blockLayoutName) const = 0;
     virtual bool hasBlock(const QString& blockName) const;
@@ -735,7 +735,7 @@ public:
     /**
      * Saves the given object to the storage.
      */
-    virtual bool saveObject(QSharedPointer<RObject> object, bool checkBlockRecursion = true, bool keepHandles = false) = 0;
+    virtual bool saveObject(QSharedPointer<RObject> object, bool checkBlockRecursion = true, bool keepHandles = false, bool* overwrite = NULL) = 0;
 
     /**
      * Deletes the object with the given ID.

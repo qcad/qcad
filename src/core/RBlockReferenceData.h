@@ -100,6 +100,8 @@ public:
         return referencedBlockId;
     }
 
+    bool hasBlockOwnership() const;
+
     void setReferencedBlockName(const QString& blockName);
     QString getReferencedBlockName() const;
 

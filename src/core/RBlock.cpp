@@ -32,6 +32,7 @@ RPropertyTypeId RBlock::PropertyOriginX;
 RPropertyTypeId RBlock::PropertyOriginY;
 RPropertyTypeId RBlock::PropertyOriginZ;
 RPropertyTypeId RBlock::PropertyLayout;
+RPropertyTypeId RBlock::PropertyOwnedByReference;
 
 RBlock::RBlock() :
     RObject(),
@@ -39,7 +40,8 @@ RBlock::RBlock() :
     anonymous(false),
     pixelUnit(false),
     origin(RVector::invalid),
-    layoutId(RLayout::INVALID_ID) {
+    layoutId(RLayout::INVALID_ID),
+    ownedByReference(false) {
 }
 
 RBlock::RBlock(RDocument* document, const QString& name,
@@ -50,7 +52,8 @@ RBlock::RBlock(RDocument* document, const QString& name,
     anonymous(false),
     pixelUnit(false),
     origin(origin),
-    layoutId(RLayout::INVALID_ID) {
+    layoutId(RLayout::INVALID_ID),
+    ownedByReference(false) {
 }
 
 RBlock::~RBlock() {
@@ -67,6 +70,7 @@ void RBlock::init() {
     RBlock::PropertyOriginY.generateId(RBlock::getRtti(), QT_TRANSLATE_NOOP("REntity", "Origin"), QT_TRANSLATE_NOOP("REntity", "Y"));
     RBlock::PropertyOriginZ.generateId(RBlock::getRtti(), QT_TRANSLATE_NOOP("REntity", "Origin"), QT_TRANSLATE_NOOP("REntity", "Z"));
     RBlock::PropertyLayout.generateId(RBlock::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Layout"));
+    RBlock::PropertyOwnedByReference.generateId(RBlock::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Owned by Reference"));
 }
 
 RBlock* RBlock::clone() const {
@@ -117,6 +121,7 @@ bool RBlock::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, 
     ret = ret || RObject::setMember(origin.y, value, PropertyOriginY == propertyTypeId);
     ret = ret || RObject::setMember(origin.z, value, PropertyOriginZ == propertyTypeId);
     ret = ret || RObject::setMember(layoutId, value.toInt(), propertyTypeId == PropertyLayout);
+    ret = ret || RObject::setMember(ownedByReference, value.toBool(), propertyTypeId == PropertyOwnedByReference);
 
     return ret;
 }
@@ -147,6 +152,9 @@ QPair<QVariant, RPropertyAttributes> RBlock::getProperty(RPropertyTypeId& proper
             }
         }
         return qMakePair(QVariant(layoutId), RPropertyAttributes());
+    }
+    else if (propertyTypeId == PropertyOwnedByReference) {
+        return qMakePair(QVariant(ownedByReference), RPropertyAttributes());
     }
 
     return RObject::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);

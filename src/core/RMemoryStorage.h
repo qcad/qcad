@@ -136,7 +136,7 @@ public:
     virtual RBox getEntitiesBox(QSet<REntity::Id>& ids) const;
 
     virtual bool removeObject(QSharedPointer<RObject> object);
-    virtual bool saveObject(QSharedPointer<RObject> object, bool checkBlockRecursion = true, bool keepHandles = false);
+    virtual bool saveObject(QSharedPointer<RObject> object, bool checkBlockRecursion = true, bool keepHandles = false, bool *overwrite = NULL);
     bool checkRecursion(
         RBlock::Id blockId, RBlock::Id potentialChildBlockId
     );
@@ -178,7 +178,7 @@ public:
     virtual QString getBlockNameFromHandle(RBlock::Handle blockHandle) const;
     virtual QString getBlockNameFromLayout(const QString& layoutName) const;
     virtual QString getBlockNameFromLayout(RLayout::Id layoutId) const;
-    virtual QSet<QString> getBlockNames(const QString& rxStr = RDEFAULT_QSTRING) const;
+    virtual QSet<QString> getBlockNames(const QString& rxStr = RDEFAULT_QSTRING, bool undone = false) const;
     virtual RBlock::Id getBlockId(const QString& blockName) const;
     virtual RBlock::Id getBlockIdAuto(const QString& blockLayoutName) const;
 

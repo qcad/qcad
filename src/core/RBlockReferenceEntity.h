@@ -164,6 +164,10 @@ public:
         data.setReferencedBlockName(blockName);
     }
 
+    bool hasBlockOwnership() const {
+        return data.hasBlockOwnership();
+    }
+
     RBlock::Id getReferencedBlockId() const {
         return data.getReferencedBlockId();
     }

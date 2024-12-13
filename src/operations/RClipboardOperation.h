@@ -243,6 +243,10 @@ public:
         keepSelection = on;
     }
 
+    void setBlockOwnership(bool on) {
+        blockOwnership = on;
+    }
+
 private:
     QMap<QString, QSharedPointer<RLayer> > copiedLayers;
     QMap<QString, QSharedPointer<RLinetype> > copiedLinetypes;
@@ -251,6 +255,7 @@ private:
     bool copyEmptyBlocks;
     bool copyAllLayers;
     bool keepSelection;
+    bool blockOwnership;
 };
 
 Q_DECLARE_METATYPE(RClipboardOperation*)

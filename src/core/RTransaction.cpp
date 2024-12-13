@@ -41,6 +41,7 @@ RTransaction::RTransaction()
       existingBlockDetectionDisabled(false),
       existingLayerDetectionDisabled(false),
       blockRecursionDetectionDisabled(false),
+      deletingBlock(false),
       keepHandles(false),
       keepChildren(false),
       undoing(false),
@@ -66,6 +67,7 @@ RTransaction::RTransaction(RStorage& storage)
       existingBlockDetectionDisabled(false),
       existingLayerDetectionDisabled(false),
       blockRecursionDetectionDisabled(false),
+      deletingBlock(false),
       keepHandles(false),
       keepChildren(false),
       undoing(false),
@@ -102,6 +104,7 @@ RTransaction::RTransaction(
       existingBlockDetectionDisabled(false),
       existingLayerDetectionDisabled(false),
       blockRecursionDetectionDisabled(false),
+      deletingBlock(false),
       keepHandles(false),
       keepChildren(false),
       undoing(false),
@@ -139,6 +142,7 @@ RTransaction::RTransaction(
       existingBlockDetectionDisabled(false),
       existingLayerDetectionDisabled(false),
       blockRecursionDetectionDisabled(false),
+      deletingBlock(false),
       keepHandles(false),
       keepChildren(false),
       undoing(false),
@@ -686,13 +690,69 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
     bool objectIsBlock = false;
     if (object->getType()==RS::ObjectBlock) {
         QSharedPointer<RBlock> block = object.dynamicCast<RBlock>();
-        if (!block.isNull()) {
+        // blocks that are owned by references are copied with the reference:
+        if (!block.isNull() && !block->isOwnedByReference()) {
+            qDebug() << "addObject: block:" << block->getName();
             objectIsBlock = true;
 
             if (!existingBlockDetectionDisabled) {
                 QSharedPointer<RBlock> existingBlock = block->getDocument()->queryBlock(block->getName());
                 if (!existingBlock.isNull()) {
                     storage->setObjectId(*block, existingBlock->getId());
+                }
+            }
+        }
+    }
+
+    // if object is a new block reference that owns its block, add a new block for this block reference to own:
+    if (object->getId()==RObject::INVALID_ID) {
+        if (object->getType()==RS::EntityBlockRef) {
+            QSharedPointer<RBlockReferenceEntity> blockRef = object.dynamicCast<RBlockReferenceEntity>();
+            if (!blockRef.isNull()) {
+                QString referencedBlockName = blockRef->getReferencedBlockName();
+
+                // find out if the block we would clone was added in this very transaction:
+                bool blockAdded =
+                    affectedObjectIds.contains(blockRef->getReferencedBlockId()) && statusChanges.contains(blockRef->getReferencedBlockId());
+
+                // if (!storageIsLinked) {
+                //     qDebug() << "blockRef->hasBlockOwnership():" << blockRef->hasBlockOwnership();
+                //     qDebug() << "affectedObjectIds.contains(blockRef->getReferencedBlockId()):" << affectedObjectIds.contains(blockRef->getReferencedBlockId());
+                //     qDebug() << "blockRef->getReferencedBlockId():" << blockRef->getReferencedBlockId();
+                //     qDebug() << "statusChanges.contains(blockRef->getReferencedBlockId()):" << statusChanges.contains(blockRef->getReferencedBlockId());
+                //     qDebug() << "doc->hasBlock(referencedBlockName):" << doc->hasBlock(referencedBlockName);
+                // }
+
+                // only clone block if block reference owns block and block exists already and was not added in this transaction:
+                // block might not exist when copying from one document to another (e.g. clipboard):
+                if (blockRef->hasBlockOwnership() && doc->hasBlock(referencedBlockName) && !blockAdded) {
+                    QSharedPointer<RBlock> block = doc->queryBlock(blockRef->getReferencedBlockId());
+                    if (block.isNull()) {
+                        qWarning() << "RTransaction::addObject: "
+                            "block reference owns block that does not exist";
+                        fail();
+                        return false;
+                    }
+
+                    // clone block to avoid changing the original block:
+                    QSharedPointer<RBlock> newBlock = QSharedPointer<RBlock>(block->clone());
+                    QString newBlockName = doc->getUniqueBlockName(block->getName(), usedBlockNames);
+                    if (!storageIsLinked) qDebug() << "20241213: clone block " << referencedBlockName << " to " << newBlockName;
+                    //qDebug() << "newBlockName: " << newBlockName;
+                    newBlock->setName(newBlockName);
+                    usedBlockNames.append(newBlockName);
+                    addObject(newBlock, false, true);
+
+                    // copy block contents to new block:
+                    QSet<REntity::Id> entityIds = doc->queryBlockEntities(block->getId());
+                    for (QSet<REntity::Id>::iterator it=entityIds.begin(); it!=entityIds.end(); ++it) {
+                        QSharedPointer<REntity> entity = doc->queryEntityDirect(*it);
+                        QSharedPointer<REntity> entityClone = QSharedPointer<REntity>(entity->clone());
+                        entityClone->setBlockId(newBlock->getId());
+                        addObject(entityClone, false, true);
+                    }
+
+                    blockRef->setReferencedBlockId(newBlock->getId());
                 }
             }
         }
@@ -866,7 +926,9 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
             onlyChanges = false;
         }
 
-        ret = storage->saveObject(object, !blockRecursionDetectionDisabled, keepHandles);
+
+        bool overwrite = false;
+        ret = storage->saveObject(object, !blockRecursionDetectionDisabled, keepHandles, &overwrite);
 
         if (!ret) {
             qCritical() << "RTransaction::addObject: saveObject() failed for object: ";
@@ -899,7 +961,7 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
                 }
             }
 
-            if (!objectHasChanged) {
+            if (!objectHasChanged && !overwrite) {
                 statusChanges.insert(object->getId());
             }
         }
@@ -1082,7 +1144,7 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object, bool force) {
         }
     }
 
-    // if a block is deleted, delete all entities in the block:
+    // if a block is deleted, delete all block references and entities in the block:
     QSharedPointer<RBlock> block = object.dynamicCast<RBlock> ();
     if (!block.isNull()) {
         if (block->getName() == RBlock::modelSpaceName) {
@@ -1090,6 +1152,8 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object, bool force) {
                      "trying to delete the model space block";
             return;
         }
+
+        deletingBlock = true;
 
         // make sure entities / block references on locked layers are deleted:
         bool allowAllOri = allowAll;
@@ -1115,10 +1179,11 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object, bool force) {
         }
 
         allowAll = allowAllOri;
+
+        deletingBlock = false;
     }
 
     QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
-
     if (!entity.isNull()) {
         if (!allowAll && !force && !entity->isEditable(allowInvisible)) {
             qWarning() << "RTransaction::deleteObject: entity not editable (locked or hidden layer)";
@@ -1140,6 +1205,19 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object, bool force) {
         }
 
         allowAll = allowAllOri;
+    }
+
+    // prevent recursion while deleting block references with block ownership:
+    if (!entity.isNull() && !deletingBlock) {
+        QSharedPointer<RBlockReferenceEntity> blockRef = object.dynamicCast<RBlockReferenceEntity>();
+        if (!blockRef.isNull()) {
+            // if block reference with ownership of block is deleted, delete block:
+            if (blockRef->hasBlockOwnership()) {
+                // delete block:
+                deleteObject(blockRef->getReferencedBlockId(), true);
+                return;
+            }
+        }
     }
 
     // if the current view is deleted, reset current view:

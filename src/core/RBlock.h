@@ -53,6 +53,7 @@ public:
     static RPropertyTypeId PropertyOriginY;
     static RPropertyTypeId PropertyOriginZ;
     static RPropertyTypeId PropertyLayout;
+    static RPropertyTypeId PropertyOwnedByReference;
 
 public:
     RBlock();
@@ -78,6 +79,14 @@ public:
     }
 
     void setName(const QString& n);
+
+    void setOwnedByReference(bool on) {
+        ownedByReference = on;
+    }
+
+    bool isOwnedByReference() const {
+        return ownedByReference;
+    }
 
     bool isFrozen() const {
         return frozen;
@@ -157,6 +166,7 @@ private:
     bool pixelUnit;
     RVector origin;
     RLayout::Id layoutId;
+    bool ownedByReference;
 };
 
 

@@ -58,6 +58,18 @@ RBlockReferenceData::RBlockReferenceData(
         visualPropertiesScale(visualPropertiesScale) {
 }
 
+bool RBlockReferenceData::hasBlockOwnership() const {
+    if (document==NULL) {
+        return false;
+    }
+    QSharedPointer<RBlock> block = document->queryBlockDirect(referencedBlockId);
+    if (block.isNull()) {
+        return false;
+    }
+    return block->isOwnedByReference();
+}
+
+
 void RBlockReferenceData::setReferencedBlockName(const QString& blockName) {
     if (document == NULL) {
         qWarning("RBlockReferenceData::setReferencedBlockName(): "
@@ -97,6 +109,7 @@ RVector RBlockReferenceData::getVectorTo(const RVector& point, bool limited, dou
     QSet<REntity::Id> ids = document->queryBlockEntities(referencedBlockId);
     QSet<REntity::Id>::iterator it;
     double minDist = RMAXDOUBLE;
+
     RVector res(RVector::invalid);
 
     // TODO: narrow down col / row using bounding boxes
@@ -168,6 +181,11 @@ double RBlockReferenceData::getDistanceTo(const RVector& point,
 
     QSet<REntity::Id>::iterator it;
     double minDist = RNANDOUBLE;
+
+    if (hasBlockOwnership() && getBoundingBox().contains(point)) {
+        minDist = strictRange;
+    }
+
     for (int col=0; col<columnCount; col++) {
         for (int row=0; row<rowCount; row++) {
             for (it = ids.begin(); it != ids.end(); it++) {

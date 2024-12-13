@@ -942,6 +942,25 @@ QString RDocument::getTempBlockName() const {
     } while(true);
 }
 
+QString RDocument::getUniqueBlockName(const QString& currentName, const QStringList& usedBlockNames) const {
+    QString baseName = currentName;
+
+    // all block names, including undone ones:
+    QSet<QString> blockNames = getBlockNames("", true);
+
+    QRegularExpression re("_(\\d+)$");
+    baseName.replace(re, "");
+
+    QString blockName = currentName;
+    int i = 1;
+    while (blockNames.contains(blockName) || usedBlockNames.contains(blockName)) {
+        blockName = QString("%1_%2").arg(baseName).arg(i);
+        i++;
+    }
+
+    return blockName;
+}
+
 /**
  * \copydoc RStorage::getBlockName
  */
@@ -964,8 +983,8 @@ QString RDocument::getBlockNameFromLayout(RLayout::Id layoutId) const {
 /**
  * \copydoc RStorage::getBlockNames
  */
-QSet<QString> RDocument::getBlockNames(const QString& rxStr) const {
-    return storage.getBlockNames(rxStr);
+QSet<QString> RDocument::getBlockNames(const QString& rxStr, bool undone) const {
+    return storage.getBlockNames(rxStr, undone);
 }
 
 QList<RBlock::Id> RDocument::sortBlocks(const QList<RBlock::Id>& blockIds) const {

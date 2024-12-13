@@ -574,8 +574,8 @@ RLinetype::Id RLinkedStorage::getCurrentLinetypeId() const {
     return backStorage->getCurrentLinetypeId();
 }
 
-QSet<QString> RLinkedStorage::getBlockNames(const QString& rxStr) const {
-    return RMemoryStorage::getBlockNames(rxStr).unite(backStorage->getBlockNames(rxStr));
+QSet<QString> RLinkedStorage::getBlockNames(const QString& rxStr, bool undone) const {
+    return RMemoryStorage::getBlockNames(rxStr, undone).unite(backStorage->getBlockNames(rxStr, undone));
 }
 
 QSet<QString> RLinkedStorage::getViewNames() const {

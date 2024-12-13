@@ -51,6 +51,10 @@ class RStorage;
 #define RDEFAULT_QLIST_RBOX QList<RBox>()
 #endif
 
+#ifndef RDEFAULT_QSTRINGLIST
+#define RDEFAULT_QSTRINGLIST QStringList()
+#endif
+
 #ifndef RDEFAULT_MIN1
 #define RDEFAULT_MIN1 -1
 #endif
@@ -369,11 +373,12 @@ public:
     RView::Id getCurrentViewId() const;
 
     QString getTempBlockName() const;
+    QString getUniqueBlockName(const QString& currentName, const QStringList& usedBlockNames = RDEFAULT_QSTRINGLIST) const;
     QString getBlockName(RBlock::Id blockId) const;
     QString getBlockNameFromHandle(RBlock::Handle blockHandle) const;
     QString getBlockNameFromLayout(const QString& layoutName) const;
     QString getBlockNameFromLayout(RLayout::Id layoutId) const;
-    QSet<QString> getBlockNames(const QString& rxStr = RDEFAULT_QSTRING) const;
+    QSet<QString> getBlockNames(const QString& rxStr = RDEFAULT_QSTRING, bool undone = false) const;
     QList<RBlock::Id> sortBlocks(const QList<RBlock::Id>& blockIds) const;
     QList<RLayer::Id> sortLayers(const QList<RLayer::Id>& layerIds) const;
     QString getLayerName(RLayer::Id layerId) const;

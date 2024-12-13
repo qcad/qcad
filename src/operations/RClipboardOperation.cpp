@@ -27,7 +27,11 @@
 #include "RUnit.h"
 
 
-RClipboardOperation::RClipboardOperation() : copyEmptyBlocks(false), copyAllLayers(false), keepSelection(false) {
+RClipboardOperation::RClipboardOperation() :
+    copyEmptyBlocks(false),
+    copyAllLayers(false),
+    keepSelection(false),
+    blockOwnership(false) {
 }
 
 void RClipboardOperation::copy(RDocument& src, RDocument& dest,
@@ -96,6 +100,9 @@ void RClipboardOperation::copy(RDocument& src, RDocument& dest,
             block = QSharedPointer<RBlock> (new RBlock(&dest, blockName,
                     RVector(0, 0, 0)));
             block->setCustomProperties(blockProperties);
+            if (blockOwnership) {
+                block->setOwnedByReference(true);
+            }
             transaction.overwriteBlock(block);
         }
 

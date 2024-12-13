@@ -412,6 +412,16 @@ protected:
     bool blockRecursionDetectionDisabled;
 
     /**
+     * True if a block is being deleted to prevent recursion in deleteObject.
+     */
+    bool deletingBlock;
+
+    /**
+     * List of block names that have been already used in this transaction.
+     */
+    QStringList usedBlockNames;
+
+    /**
      * True to keep existing object handles (importers).
      */
     bool keepHandles;
