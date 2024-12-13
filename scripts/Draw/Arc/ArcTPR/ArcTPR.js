@@ -265,14 +265,22 @@ ArcTPR.prototype.getShapes = function(preview) {
 
         // parallel to shape:
         var parallels = ShapeAlgorithms.getOffsetShapes(this.shape1, this.radius, 1, this.pos);
-        if (parallels.length===1) {
-            // circle around pos:
-            var circle = new RCircle(this.pos, this.radius);
+
+        // for arcs / circles, add concentric circle for inside tangential arcs:
+        if ((isArcShape(this.shape1) || isCircleShape(this.shape1)) && this.radius > 2*this.shape1.getRadius()) {
+            parallels = parallels.concat(ShapeAlgorithms.getOffsetShapes(this.shape1, this.radius - 2*this.shape1.getRadius(), 1, this.pos));
+        }
+
+        // circle around pos:
+        var circle = new RCircle(this.pos, this.radius);
+
+        for (var i=0; i<parallels.length; i++) {
+            var parallel = parallels[i];
 
             // find potential centers for arc:
-            var ips = parallels[0].getIntersectionPoints(circle, false);
-            for (var i=0; i<ips.length; i++) {
-                var ip = ips[i];
+            var ips = parallel.getIntersectionPoints(circle, false);
+            for (var k=0; k<ips.length; k++) {
+                var ip = ips[k];
 
                 if (this.fullCircle) {
                     this.candidates.push(new RCircle(ip, this.radius));
