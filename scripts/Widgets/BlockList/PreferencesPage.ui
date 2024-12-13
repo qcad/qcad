@@ -12,25 +12,25 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QCheckBox" name="HideInternalBlocks">
-     <property name="text">
-      <string>Hide internal blocks</string>
-     </property>
-     <property name="checked">
-      <bool>false</bool>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0" colspan="3">
+      <widget class="QCheckBox" name="HideInternalBlocks">
+       <property name="text">
+        <string>Hide internal blocks</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
       <widget class="QCheckBox" name="EnableAlternatingRowColor">
        <property name="text">
         <string>Enable alternating row colors</string>
        </property>
       </widget>
      </item>
-     <item>
+     <item row="1" column="1">
       <widget class="RColorCombo" name="AlternatingRowColor">
        <property name="enabled">
         <bool>false</bool>
@@ -53,7 +53,7 @@
        </property>
       </widget>
      </item>
-     <item>
+     <item row="1" column="2">
       <spacer name="horizontalSpacer">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
