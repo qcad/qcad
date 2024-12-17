@@ -248,7 +248,7 @@
         <translation>Referenzierter Block</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="+66"/>
+        <location filename="../src/core/RBlock.cpp" line="+69"/>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="+1"/>
         <location line="+3"/>
         <location filename="../src/core/RLayout.cpp" line="+84"/>
@@ -320,6 +320,11 @@
         <location line="+1"/>
         <source>Layout</source>
         <translation>Layout</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Owned by Reference</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
@@ -618,7 +623,7 @@
         <translation>Layer ID</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="-6"/>
+        <location filename="../src/core/RBlock.cpp" line="-7"/>
         <location filename="../src/core/RLayer.cpp" line="-8"/>
         <location filename="../src/core/RLayerState.cpp" line="+46"/>
         <location filename="../src/core/RLayout.cpp" line="-24"/>
@@ -706,7 +711,7 @@
         <translation>Max Ausmass</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+856"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+874"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Circuläre (rekursive) Blockreferenzierung detektiert:</translation>
     </message>

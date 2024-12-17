@@ -78,6 +78,10 @@ SOURCES = \
 ../scripts/Draw/Arc/ArcTPR/ArcTPR.js \
 ../scripts/Draw/Arc/ArcTPR/ArcTPRInit.js \
 ../scripts/Draw/Arc/ArcTPR/Tests/ArcTPRTest00.js \
+../scripts/Draw/Arc/ArcTPR/Tests/ArcTPRTest01.js \
+../scripts/Draw/Arc/ArcTPR/Tests/ArcTPRTest02.js \
+../scripts/Draw/Arc/ArcTPR/Tests/ArcTPRTest03.js \
+../scripts/Draw/Arc/ArcTPR/Tests/ArcTPRTest04.js \
 ../scripts/Draw/Arc/ArcTangential/ArcTangential.js \
 ../scripts/Draw/Arc/ArcTangential/ArcTangentialInit.js \
 ../scripts/Draw/Arc/ArcTangential/Tests/ArcTangentialTest00.js \
@@ -1204,8 +1208,10 @@ SOURCES = \
 ../scripts/Modify/Translate/PreferencesPage.ui \
 ../scripts/Modify/Translate/Translate.ui \
 ../scripts/Modify/Translate/TranslateDialog.ui \
+../scripts/Modify/TranslateRotate/PreferencesPage.ui \
 ../scripts/Modify/TranslateRotate/TranslateRotate.ui \
 ../scripts/Modify/TranslateRotate/TranslateRotateDialog.ui \
+../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui \
 ../scripts/Navigation/DefaultNavigation/PreferencesPage.ui \
 ../scripts/Projection/IsometricProjection/IsoProject/IsoProject.ui \
 ../scripts/Select/SelectContour/SelectContour.ui \

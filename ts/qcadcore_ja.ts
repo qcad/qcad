@@ -253,7 +253,7 @@
         <translation>位置</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="+65"/>
+        <location filename="../src/core/RBlock.cpp" line="+68"/>
         <source>Pixel Unit</source>
         <translation type="unfinished">画素数単位</translation>
     </message>
@@ -315,6 +315,11 @@
         <location line="+1"/>
         <source>Layout</source>
         <translation>レイアウト</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Owned by Reference</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
@@ -618,7 +623,7 @@
         <translation type="unfinished">レイヤーID</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="-6"/>
+        <location filename="../src/core/RBlock.cpp" line="-7"/>
         <location filename="../src/core/RLayer.cpp" line="-8"/>
         <location filename="../src/core/RLayerState.cpp" line="+46"/>
         <location filename="../src/core/RLayout.cpp" line="-24"/>
@@ -706,7 +711,7 @@
         <translation>最大範囲</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+856"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+874"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>循環的な（再帰的な）ブロック参照が検出されました:</translation>
     </message>

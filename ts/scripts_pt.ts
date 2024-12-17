@@ -55,12 +55,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+449"/>
+        <location line="+450"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="-424"/>
+        <location line="-425"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -816,7 +816,7 @@ para que as mudanças de preferências entrem em vigor.</translation>
     </message>
     <message>
         <location line="+128"/>
-        <location line="+65"/>
+        <location line="+73"/>
         <source>No solution</source>
         <translation>Nenhuma solução</translation>
     </message>
@@ -1326,12 +1326,12 @@ Você deseja recuperá-lo?</translation>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/BlockList/PreferencesPage.ui" line="+17"/>
+        <location filename="../scripts/Widgets/BlockList/PreferencesPage.ui" line="+19"/>
         <source>Hide internal blocks</source>
         <translation>Oculte os Blocos internos</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+10"/>
         <source>Enable alternating row colors</source>
         <translation>Ative alternando as cores das linhas</translation>
     </message>
@@ -4186,18 +4186,18 @@ já se encontra na lista.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2111"/>
+        <location line="+2123"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location line="-2110"/>
+        <location line="-2122"/>
         <source>Done</source>
         <translation>Concluído</translation>
     </message>
     <message>
         <location line="+280"/>
-        <location line="+124"/>
+        <location line="+127"/>
         <source>Active Tool:</source>
         <translation>Ferramenta Ativa:</translation>
     </message>
@@ -4222,7 +4222,7 @@ já se encontra na lista.</translation>
         <translation>Ferramentas CAD</translation>
     </message>
     <message>
-        <location line="+577"/>
+        <location line="+578"/>
         <source>Invalid position</source>
         <translation>Posição inválida</translation>
     </message>
@@ -4237,7 +4237,7 @@ já se encontra na lista.</translation>
         <translation>A entidade está em uma camada trancada.</translation>
     </message>
     <message>
-        <location line="+225"/>
+        <location line="+233"/>
         <source>Length:</source>
         <translation>Comprimento:</translation>
     </message>
@@ -7677,17 +7677,17 @@ já se encontra na lista.</translation>
         <translation>Sobregravar blocos existentes&lt;br&gt;no desenho com&lt;br&gt;blocos da prancheta</translation>
     </message>
     <message>
-        <location filename="../scripts/Block/InsertBlockItem/InsertBlockItem.js" line="+102"/>
+        <location filename="../scripts/Block/InsertBlockItem/InsertBlockItem.js" line="+106"/>
         <source>Cannot import file from URL: </source>
         <translation>Não consigo importar arquivo da URL: </translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Adjusted invalid block name to &quot;%1&quot;</source>
         <translation>Ajustado o nome do Bloco inválido para &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+83"/>
         <source>Position</source>
         <translation>Posição</translation>
     </message>
@@ -12340,7 +12340,7 @@ já se encontra na lista.</translation>
 <context>
     <name>Text</name>
     <message>
-        <location filename="../scripts/Draw/Text/Text.js" line="+92"/>
+        <location filename="../scripts/Draw/Text/Text.js" line="+89"/>
         <source>Position</source>
         <translation>Posição</translation>
     </message>
@@ -13116,8 +13116,34 @@ já se encontra na lista.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.ui" line="+17"/>
+        <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+17"/>
         <source>Angle:</source>
         <translation>Ângulo:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.js" line="+46"/>
+        <source>Modify</source>
+        <translation type="unfinished">Modifique</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Move/Rotate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
+        <source>Copy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Number of Copies:</source>
+        <translation type="unfinished">Número de cópias:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Use Current Layer and Attributes</source>
+        <translation type="unfinished">Utilizar a camada e os atributos actuais</translation>
     </message>
 </context>
 <context>
@@ -13156,6 +13182,14 @@ já se encontra na lista.</translation>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Use a camada e os &amp;atributos atuais</translation>
+    </message>
+</context>
+<context>
+    <name>TranslateiRotate</name>
+    <message>
+        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation type="unfinished">Usar diálogo para opções de ferramentas</translation>
     </message>
 </context>
 <context>

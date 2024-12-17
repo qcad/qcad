@@ -119,12 +119,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+449"/>
+        <location line="+450"/>
         <source>Plugin:</source>
         <translation>Eklenti:</translation>
     </message>
     <message>
-        <location line="-424"/>
+        <location line="-425"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -816,7 +816,7 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
     </message>
     <message>
         <location line="+128"/>
-        <location line="+65"/>
+        <location line="+73"/>
         <source>No solution</source>
         <translation>Çözüm yok</translation>
     </message>
@@ -1323,12 +1323,12 @@ Kurtarmak ister misiniz?</translation>
         <translation type="unfinished">Blok Listesi</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/BlockList/PreferencesPage.ui" line="+17"/>
+        <location filename="../scripts/Widgets/BlockList/PreferencesPage.ui" line="+19"/>
         <source>Hide internal blocks</source>
         <translation type="unfinished">Dahili blokları gizle</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+10"/>
         <source>Enable alternating row colors</source>
         <translation>Alternatif satır renklerini etkinleştir</translation>
     </message>
@@ -4181,18 +4181,18 @@ zaten listede.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2111"/>
+        <location line="+2123"/>
         <source>Cancel</source>
         <translation type="unfinished">İptal</translation>
     </message>
     <message>
-        <location line="-2110"/>
+        <location line="-2122"/>
         <source>Done</source>
         <translation type="unfinished">Bitti</translation>
     </message>
     <message>
         <location line="+280"/>
-        <location line="+124"/>
+        <location line="+127"/>
         <source>Active Tool:</source>
         <translation type="unfinished">Aktif Araç:</translation>
     </message>
@@ -4217,7 +4217,7 @@ zaten listede.</translation>
         <translation type="unfinished">CAD Araçları</translation>
     </message>
     <message>
-        <location line="+577"/>
+        <location line="+578"/>
         <source>Invalid position</source>
         <translation type="unfinished">Geçersiz konum</translation>
     </message>
@@ -4232,7 +4232,7 @@ zaten listede.</translation>
         <translation type="unfinished">Varlık kilitli bir katmanda.</translation>
     </message>
     <message>
-        <location line="+225"/>
+        <location line="+233"/>
         <source>Length:</source>
         <translation type="unfinished">Uzunluk:</translation>
     </message>
@@ -7621,17 +7621,17 @@ zaten listede.</translation>
 <context>
     <name>InsertBlockItem</name>
     <message>
-        <location filename="../scripts/Block/InsertBlockItem/InsertBlockItem.js" line="+102"/>
+        <location filename="../scripts/Block/InsertBlockItem/InsertBlockItem.js" line="+106"/>
         <source>Cannot import file from URL: </source>
         <translation>URL’den dosya alınamıyor:</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Adjusted invalid block name to &quot;%1&quot;</source>
         <translation type="unfinished">Geçersiz blok adı &quot;%1&quot; olarak ayarlandı</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+83"/>
         <source>Position</source>
         <translation>Konum</translation>
     </message>
@@ -12329,7 +12329,7 @@ zaten listede.</translation>
 <context>
     <name>Text</name>
     <message>
-        <location filename="../scripts/Draw/Text/Text.js" line="+92"/>
+        <location filename="../scripts/Draw/Text/Text.js" line="+89"/>
         <source>Position</source>
         <translation>Konum</translation>
     </message>
@@ -13105,8 +13105,34 @@ zaten listede.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.ui" line="+17"/>
+        <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+17"/>
         <source>Angle:</source>
         <translation type="unfinished">Açı:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.js" line="+46"/>
+        <source>Modify</source>
+        <translation type="unfinished">Değiştirmek</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Move/Rotate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
+        <source>Copy</source>
+        <translation type="unfinished">Kopyala</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Number of Copies:</source>
+        <translation type="unfinished">Kopya Sayısı:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Use Current Layer and Attributes</source>
+        <translation type="unfinished">Geçerli Katmanı ve Öznitelikleri Kullan</translation>
     </message>
 </context>
 <context>
@@ -13145,6 +13171,14 @@ zaten listede.</translation>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
         <translation type="unfinished">Geçerli katmanı ve öznitelikleri kullan</translation>
+    </message>
+</context>
+<context>
+    <name>TranslateiRotate</name>
+    <message>
+        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation type="unfinished">Araç seçenekleri için iletişim kutusunu kullanma</translation>
     </message>
 </context>
 <context>

@@ -119,12 +119,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+449"/>
+        <location line="+450"/>
         <source>Plugin:</source>
         <translation type="unfinished">Plugin:</translation>
     </message>
     <message>
-        <location line="-424"/>
+        <location line="-425"/>
         <source>ID:</source>
         <translation type="unfinished">ID:</translation>
     </message>
@@ -815,7 +815,7 @@ the preference changes to take effect.</source>
     </message>
     <message>
         <location line="+128"/>
-        <location line="+65"/>
+        <location line="+73"/>
         <source>No solution</source>
         <translation type="unfinished">Lahendus puudub</translation>
     </message>
@@ -1322,12 +1322,12 @@ Do you wish to recover it?</source>
         <translation type="unfinished">Plokkide nimekiri</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/BlockList/PreferencesPage.ui" line="+17"/>
+        <location filename="../scripts/Widgets/BlockList/PreferencesPage.ui" line="+19"/>
         <source>Hide internal blocks</source>
         <translation type="unfinished">Peida sisemised plokid</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+10"/>
         <source>Enable alternating row colors</source>
         <translation type="unfinished">Lubage vahelduvad reavärvid</translation>
     </message>
@@ -4180,18 +4180,18 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2111"/>
+        <location line="+2123"/>
         <source>Cancel</source>
         <translation type="unfinished">Tühista</translation>
     </message>
     <message>
-        <location line="-2110"/>
+        <location line="-2122"/>
         <source>Done</source>
         <translation type="unfinished">Valmis</translation>
     </message>
     <message>
         <location line="+280"/>
-        <location line="+124"/>
+        <location line="+127"/>
         <source>Active Tool:</source>
         <translation type="unfinished">Aktiivne tööriist:</translation>
     </message>
@@ -4216,7 +4216,7 @@ is already in the list.</source>
         <translation type="unfinished">CAD tööriistad</translation>
     </message>
     <message>
-        <location line="+577"/>
+        <location line="+578"/>
         <source>Invalid position</source>
         <translation type="unfinished">Vale asend</translation>
     </message>
@@ -4231,7 +4231,7 @@ is already in the list.</source>
         <translation type="unfinished">Entiteet on lukustatud kihil.</translation>
     </message>
     <message>
-        <location line="+225"/>
+        <location line="+233"/>
         <source>Length:</source>
         <translation type="unfinished">Pikkus:</translation>
     </message>
@@ -7621,17 +7621,17 @@ is already in the list.</source>
 <context>
     <name>InsertBlockItem</name>
     <message>
-        <location filename="../scripts/Block/InsertBlockItem/InsertBlockItem.js" line="+102"/>
+        <location filename="../scripts/Block/InsertBlockItem/InsertBlockItem.js" line="+106"/>
         <source>Cannot import file from URL: </source>
         <translation type="unfinished">Faili ei saa importida URL-ilt:</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Adjusted invalid block name to &quot;%1&quot;</source>
         <translation type="unfinished">Korrigeeritud vigane ploki nimi &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+83"/>
         <source>Position</source>
         <translation type="unfinished">Positsioon</translation>
     </message>
@@ -12333,7 +12333,7 @@ is already in the list.</source>
 <context>
     <name>Text</name>
     <message>
-        <location filename="../scripts/Draw/Text/Text.js" line="+92"/>
+        <location filename="../scripts/Draw/Text/Text.js" line="+89"/>
         <source>Position</source>
         <translation type="unfinished">Positsioon</translation>
     </message>
@@ -13103,6 +13103,7 @@ is already in the list.</source>
     <name>TranslateRotate</name>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.ui" line="+17"/>
+        <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+17"/>
         <source>Angle:</source>
         <translation type="unfinished">Nurk:</translation>
     </message>
@@ -13110,6 +13111,31 @@ is already in the list.</source>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateInit.js" line="+2"/>
         <source>M&amp;ove and Rotate</source>
         <translation type="unfinished">Liikumine ja pööramine</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.js" line="+46"/>
+        <source>Modify</source>
+        <translation type="unfinished">Muuda</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Move/Rotate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
+        <source>Copy</source>
+        <translation type="unfinished">Koopia</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Number of Copies:</source>
+        <translation type="unfinished">Eksemplaride arv:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Use Current Layer and Attributes</source>
+        <translation type="unfinished">Kasutage praegust kihti ja atribuute</translation>
     </message>
 </context>
 <context>
@@ -13148,6 +13174,14 @@ is already in the list.</source>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
         <translation type="unfinished">Kasutage praegust kihti ja atribuute</translation>
+    </message>
+</context>
+<context>
+    <name>TranslateiRotate</name>
+    <message>
+        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation type="unfinished">Kasutage dialoogi tööriista valikute jaoks</translation>
     </message>
 </context>
 <context>

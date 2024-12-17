@@ -253,7 +253,7 @@
         <translation>Postavitev</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="+65"/>
+        <location filename="../src/core/RBlock.cpp" line="+68"/>
         <source>Pixel Unit</source>
         <translation>Enota kot slikovna pika</translation>
     </message>
@@ -315,6 +315,11 @@
         <location line="+1"/>
         <source>Layout</source>
         <translation>Razporeditev</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Owned by Reference</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-6"/>
@@ -618,7 +623,7 @@
         <translation type="unfinished">ID plasti</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="-6"/>
+        <location filename="../src/core/RBlock.cpp" line="-7"/>
         <location filename="../src/core/RLayer.cpp" line="-8"/>
         <location filename="../src/core/RLayerState.cpp" line="+46"/>
         <location filename="../src/core/RLayout.cpp" line="-24"/>
@@ -706,7 +711,7 @@
         <translation>Najv. podaljšanja</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+856"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+874"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Zaznano krožno (rekurzivno) sklicevanje zbirov:</translation>
     </message>

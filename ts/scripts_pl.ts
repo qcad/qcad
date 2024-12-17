@@ -35,12 +35,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+449"/>
+        <location line="+450"/>
         <source>Plugin:</source>
         <translation>Wtyczka:</translation>
     </message>
     <message>
-        <location line="-424"/>
+        <location line="-425"/>
         <source>ID:</source>
         <translation>Identyfikator:</translation>
     </message>
@@ -816,7 +816,7 @@ aby wprowadzić zmiany preferencji.</translation>
     </message>
     <message>
         <location line="+128"/>
-        <location line="+65"/>
+        <location line="+73"/>
         <source>No solution</source>
         <translation>Brak rozwiązania</translation>
     </message>
@@ -1328,12 +1328,12 @@ Czy chcesz go odzyskać?</translation>
         <translation>Widżety</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/BlockList/PreferencesPage.ui" line="+17"/>
+        <location filename="../scripts/Widgets/BlockList/PreferencesPage.ui" line="+19"/>
         <source>Hide internal blocks</source>
         <translation>Ukrycie wewnętrznych bloków</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+10"/>
         <source>Enable alternating row colors</source>
         <translation>Naprzemienne kolory wierszy</translation>
     </message>
@@ -4190,18 +4190,18 @@ jest już na liście.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2111"/>
+        <location line="+2123"/>
         <source>Cancel</source>
         <translation>Anuluj</translation>
     </message>
     <message>
-        <location line="-2110"/>
+        <location line="-2122"/>
         <source>Done</source>
         <translation>Gotowe</translation>
     </message>
     <message>
         <location line="+280"/>
-        <location line="+124"/>
+        <location line="+127"/>
         <source>Active Tool:</source>
         <translation>Aktywne narzędzie:</translation>
     </message>
@@ -4226,7 +4226,7 @@ jest już na liście.</translation>
         <translation>Narzędzia CAD</translation>
     </message>
     <message>
-        <location line="+577"/>
+        <location line="+578"/>
         <source>Invalid position</source>
         <translation>Nieprawidłowa pozycja</translation>
     </message>
@@ -4241,7 +4241,7 @@ jest już na liście.</translation>
         <translation>Podmiot znajduje się na zablokowanej warstwie.</translation>
     </message>
     <message>
-        <location line="+225"/>
+        <location line="+233"/>
         <source>Length:</source>
         <translation>Długość:</translation>
     </message>
@@ -7632,17 +7632,17 @@ jest już na liście.</translation>
 <context>
     <name>InsertBlockItem</name>
     <message>
-        <location filename="../scripts/Block/InsertBlockItem/InsertBlockItem.js" line="+102"/>
+        <location filename="../scripts/Block/InsertBlockItem/InsertBlockItem.js" line="+106"/>
         <source>Cannot import file from URL: </source>
         <translation>Nie można zaimportować pliku z adresu URL:</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Adjusted invalid block name to &quot;%1&quot;</source>
         <translation>Dostosowano nieprawidłową nazwę bloku do &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+83"/>
         <source>Position</source>
         <translation>Pozycja</translation>
     </message>
@@ -12350,7 +12350,7 @@ jest już na liście.</translation>
 <context>
     <name>Text</name>
     <message>
-        <location filename="../scripts/Draw/Text/Text.js" line="+92"/>
+        <location filename="../scripts/Draw/Text/Text.js" line="+89"/>
         <source>Position</source>
         <translation>Pozycja</translation>
     </message>
@@ -13121,6 +13121,7 @@ jest już na liście.</translation>
     <name>TranslateRotate</name>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.ui" line="+17"/>
+        <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+17"/>
         <source>Angle:</source>
         <translation>Kąt:</translation>
     </message>
@@ -13128,6 +13129,31 @@ jest już na liście.</translation>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateInit.js" line="+2"/>
         <source>M&amp;ove and Rotate</source>
         <translation>Przesuwanie i obracanie</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.js" line="+46"/>
+        <source>Modify</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Move/Rotate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
+        <source>Copy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Number of Copies:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Use Current Layer and Attributes</source>
+        <translation type="unfinished">Użyj bieżącej warstwy i atrybutów</translation>
     </message>
 </context>
 <context>
@@ -13166,6 +13192,14 @@ jest już na liście.</translation>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Użyj bieżącej warstwy i atrybutów</translation>
+    </message>
+</context>
+<context>
+    <name>TranslateiRotate</name>
+    <message>
+        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

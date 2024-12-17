@@ -40,12 +40,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+449"/>
+        <location line="+450"/>
         <source>Plugin:</source>
         <translation>Vtičnik:</translation>
     </message>
     <message>
-        <location line="-424"/>
+        <location line="-425"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -816,7 +816,7 @@ da bodo spremembe začele delovat.</translation>
     </message>
     <message>
         <location line="+128"/>
-        <location line="+65"/>
+        <location line="+73"/>
         <source>No solution</source>
         <translation>Ni rešitve</translation>
     </message>
@@ -1326,12 +1326,12 @@ Ali jo želite obnoviti?</translation>
         <translation>Gradniki</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/BlockList/PreferencesPage.ui" line="+17"/>
+        <location filename="../scripts/Widgets/BlockList/PreferencesPage.ui" line="+19"/>
         <source>Hide internal blocks</source>
         <translation>Skrij interne bloke</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+10"/>
         <source>Enable alternating row colors</source>
         <translation>Omogoči alternirane barve vrstic</translation>
     </message>
@@ -4190,18 +4190,18 @@ je že na seznamu.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2111"/>
+        <location line="+2123"/>
         <source>Cancel</source>
         <translation>Prekliči</translation>
     </message>
     <message>
-        <location line="-2110"/>
+        <location line="-2122"/>
         <source>Done</source>
         <translation>Končano</translation>
     </message>
     <message>
         <location line="+280"/>
-        <location line="+124"/>
+        <location line="+127"/>
         <source>Active Tool:</source>
         <translation>Aktivno orodje:</translation>
     </message>
@@ -4226,7 +4226,7 @@ je že na seznamu.</translation>
         <translation>CAD orodja</translation>
     </message>
     <message>
-        <location line="+577"/>
+        <location line="+578"/>
         <source>Invalid position</source>
         <translation type="unfinished">Nepravilen položaj</translation>
     </message>
@@ -4241,7 +4241,7 @@ je že na seznamu.</translation>
         <translation>Entiteta je na zaklenjeni plasti.</translation>
     </message>
     <message>
-        <location line="+225"/>
+        <location line="+233"/>
         <source>Length:</source>
         <translation>Dolžina:</translation>
     </message>
@@ -7633,17 +7633,17 @@ je že na seznamu.</translation>
 <context>
     <name>InsertBlockItem</name>
     <message>
-        <location filename="../scripts/Block/InsertBlockItem/InsertBlockItem.js" line="+102"/>
+        <location filename="../scripts/Block/InsertBlockItem/InsertBlockItem.js" line="+106"/>
         <source>Cannot import file from URL: </source>
         <translation>Ne morem uvozit datoteke iz URL-ja: </translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Adjusted invalid block name to &quot;%1&quot;</source>
         <translation>Priagojeno neveljavno ime bloka v &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+83"/>
         <source>Position</source>
         <translation>Pozicija</translation>
     </message>
@@ -12356,7 +12356,7 @@ je že na seznamu.</translation>
 <context>
     <name>Text</name>
     <message>
-        <location filename="../scripts/Draw/Text/Text.js" line="+92"/>
+        <location filename="../scripts/Draw/Text/Text.js" line="+89"/>
         <source>Position</source>
         <translation>Pozicija</translation>
     </message>
@@ -13127,6 +13127,7 @@ je že na seznamu.</translation>
     <name>TranslateRotate</name>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.ui" line="+17"/>
+        <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+17"/>
         <source>Angle:</source>
         <translation>Kot:</translation>
     </message>
@@ -13134,6 +13135,31 @@ je že na seznamu.</translation>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateInit.js" line="+2"/>
         <source>M&amp;ove and Rotate</source>
         <translation>Premakni in r&amp;otiraj</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.js" line="+46"/>
+        <source>Modify</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Move/Rotate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
+        <source>Copy</source>
+        <translation type="unfinished">Kopiraj</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Number of Copies:</source>
+        <translation type="unfinished">Število kopij:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Use Current Layer and Attributes</source>
+        <translation type="unfinished">Uporaba trenutnega sloja in atributov</translation>
     </message>
 </context>
 <context>
@@ -13172,6 +13198,14 @@ je že na seznamu.</translation>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Uporabi trenutno plast in &amp;atribute</translation>
+    </message>
+</context>
+<context>
+    <name>TranslateiRotate</name>
+    <message>
+        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -253,7 +253,7 @@
         <translation>Posição</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="+65"/>
+        <location filename="../src/core/RBlock.cpp" line="+68"/>
         <source>Pixel Unit</source>
         <translation>Pixel unidade</translation>
     </message>
@@ -315,6 +315,11 @@
         <location line="+1"/>
         <source>Layout</source>
         <translation>Layout</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Owned by Reference</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
@@ -618,7 +623,7 @@
         <translation>ID da camada</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="-6"/>
+        <location filename="../src/core/RBlock.cpp" line="-7"/>
         <location filename="../src/core/RLayer.cpp" line="-8"/>
         <location filename="../src/core/RLayerState.cpp" line="+46"/>
         <location filename="../src/core/RLayout.cpp" line="-24"/>
@@ -706,7 +711,7 @@
         <translation>Extensões máximos</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+856"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+874"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Foi detectada uma referência de bloco circular (recursiva):</translation>
     </message>

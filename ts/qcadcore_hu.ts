@@ -6,107 +6,107 @@
     <message>
         <location filename="../src/core/RUnit.cpp" line="+273"/>
         <source>None</source>
-        <translation type="unfinished">Nincs</translation>
+        <translation>Nincs</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inch</source>
-        <translation type="unfinished">Inch</translation>
+        <translation>Hüvelyk</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Foot</source>
-        <translation type="unfinished">Láb</translation>
+        <translation>Láb</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Mile</source>
-        <translation type="unfinished">Mile</translation>
+        <translation>Mérföld</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Millimeter</source>
-        <translation type="unfinished">Milliméter</translation>
+        <translation>Milliméter</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Centimeter</source>
-        <translation type="unfinished">Centiméter</translation>
+        <translation>Centiméter</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Meter</source>
-        <translation type="unfinished">Meter</translation>
+        <translation>Méter</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Kilometer</source>
-        <translation type="unfinished">Kilométer</translation>
+        <translation>Kilométer</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Microinch</source>
-        <translation type="unfinished">Microinch</translation>
+        <translation>Mikrohüvelyk</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Mil</source>
-        <translation type="unfinished">Mil</translation>
+        <translation>Thou</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Yard</source>
-        <translation type="unfinished">Yard</translation>
+        <translation>Yard</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Angstrom</source>
-        <translation type="unfinished">Angström</translation>
+        <translation>Angström</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Nanometer</source>
-        <translation type="unfinished">Nanométer</translation>
+        <translation>Nanométer</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Micron</source>
-        <translation type="unfinished">Micron</translation>
+        <translation>Mikron</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Decimeter</source>
-        <translation type="unfinished">Deciméter</translation>
+        <translation>Deciméter</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Decameter</source>
-        <translation type="unfinished">Decameter</translation>
+        <translation>Dekaméter</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Hectometer</source>
-        <translation type="unfinished">Hektométer</translation>
+        <translation>Hektométer</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Gigameter</source>
-        <translation type="unfinished">Gigameter</translation>
+        <translation>Gigaméter</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Astro</source>
-        <translation type="unfinished">Astro</translation>
+        <translation>Csillagászati egység</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Lightyear</source>
-        <translation type="unfinished">Lightyear</translation>
+        <translation>Fényév</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Parsec</source>
-        <translation type="unfinished">Parsec</translation>
+        <translation>Parszek</translation>
     </message>
 </context>
 <context>
@@ -114,102 +114,102 @@
     <message>
         <location filename="../src/core/RColor.cpp" line="+340"/>
         <source>By Layer</source>
-        <translation type="unfinished">Rétegenként</translation>
+        <translation>Réteg szerint</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished">By Block</translation>
+        <translation>Blokk szerint</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Red</source>
-        <translation type="unfinished">Piros</translation>
+        <translation>Piros</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Green</source>
-        <translation type="unfinished">Zöld</translation>
+        <translation>Zöld</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Blue</source>
-        <translation type="unfinished">Kék</translation>
+        <translation>Kék</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cyan</source>
-        <translation type="unfinished">Cyan</translation>
+        <translation>Cián</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Magenta</source>
-        <translation type="unfinished">Magenta</translation>
+        <translation>Magenta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Yellow</source>
-        <translation type="unfinished">Sárga</translation>
+        <translation>Sárga</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Orange</source>
-        <translation type="unfinished">Narancs</translation>
+        <translation>Narancssárga</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Red</source>
-        <translation type="unfinished">Sötétvörös</translation>
+        <translation>Sötétvörös</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Green</source>
-        <translation type="unfinished">Sötétzöld</translation>
+        <translation>Sötétzöld</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Blue</source>
-        <translation type="unfinished">Sötétkék</translation>
+        <translation>Sötétkék</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Cyan</source>
-        <translation type="unfinished">Sötét cián</translation>
+        <translation>Sötétcián</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Magenta</source>
-        <translation type="unfinished">Sötét magenta</translation>
+        <translation>Sötétmagenta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Yellow</source>
-        <translation type="unfinished">Sötét sárga</translation>
+        <translation>Sötétsárga</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Black</source>
-        <translation type="unfinished">Fekete</translation>
+        <translation>Fekete</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gray</source>
-        <translation type="unfinished">Szürke</translation>
+        <translation>Szürke</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Light Gray</source>
-        <translation type="unfinished">Világosszürke</translation>
+        <translation>Világosszürke</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>White</source>
-        <translation type="unfinished">Fehér</translation>
+        <translation>Fehér</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Others...</source>
-        <translation type="unfinished">Mások...</translation>
+        <translation>Továbbiak...</translation>
     </message>
 </context>
 <context>
@@ -217,22 +217,22 @@
     <message>
         <location filename="../src/core/RDocumentVariables.cpp" line="+48"/>
         <source>Current Layer ID</source>
-        <translation type="unfinished">Jelenlegi réteg azonosítója</translation>
+        <translation>Jelenlegi réteg azonosítója</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Drawing Unit</source>
-        <translation type="unfinished">Rajzoló egység</translation>
+        <translation>Rajzolási mértékegység</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation type="unfinished">Vonaltípus skála</translation>
+        <translation>Vonaltípus léptéke</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension Font</source>
-        <translation type="unfinished">Dimension Font</translation>
+        <translation>Méretvonalak betűtípusa</translation>
     </message>
 </context>
 <context>
@@ -240,7 +240,7 @@
     <message>
         <location filename="../src/core/REntity.cpp" line="+97"/>
         <source>Block</source>
-        <translation type="unfinished">Blokk</translation>
+        <translation>Blokk</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="+95"/>
@@ -250,12 +250,12 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
-        <translation type="unfinished">Pozíció</translation>
+        <translation>Pozíció</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="+65"/>
+        <location filename="../src/core/RBlock.cpp" line="+68"/>
         <source>Pixel Unit</source>
-        <translation type="unfinished">Pixel egység</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -271,14 +271,14 @@
         <location line="+8"/>
         <location line="+2"/>
         <source>X</source>
-        <translation type="unfinished">X</translation>
+        <translation>X</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Origin</source>
-        <translation type="unfinished">Eredet</translation>
+        <translation>Origó</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -294,7 +294,7 @@
         <location line="+8"/>
         <location line="+2"/>
         <source>Y</source>
-        <translation type="unfinished">Y</translation>
+        <translation>Y</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -309,17 +309,22 @@
         <location filename="../src/core/RViewportEntity.cpp" line="-9"/>
         <location line="+10"/>
         <source>Z</source>
-        <translation type="unfinished">Z</translation>
+        <translation>Z</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Layout</source>
-        <translation type="unfinished">Elrendezés</translation>
+        <translation>Elrendezés</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Owned by Reference</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-6"/>
         <source>Referenced Block</source>
-        <translation type="unfinished">Hivatkozott blokk</translation>
+        <translation>Hivatkozott blokk</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -327,86 +332,91 @@
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-7"/>
         <source>Scale</source>
-        <translation type="unfinished">Skála</translation>
+        <translatorcomment>Blokk beszúrásakor használja, az eredetinél kisebb vagy nagyobb mérethez</translatorcomment>
+        <translation>Lépték</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angle</source>
-        <translation type="unfinished">Szög</translation>
+        <translation>Szög</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Columns</source>
-        <translation type="unfinished">Oszlopok</translation>
+        <translatorcomment>Blokkok többszörös beszúrásakor</translatorcomment>
+        <translation>Oszlopok</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Rows</source>
-        <translation type="unfinished">Sorok</translation>
+        <translatorcomment>Blokkok többszörös beszúrásakor</translatorcomment>
+        <translation>Sorok</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Column Spacing</source>
-        <translation type="unfinished">Oszloptávolság</translation>
+        <translatorcomment>Blokkok többszörös beszúrásakor</translatorcomment>
+        <translation>Oszloptávolság</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Row Spacing</source>
-        <translation type="unfinished">Sorok távolsága</translation>
+        <translatorcomment>Blokkok többszörös beszúrásakor</translatorcomment>
+        <translation>Sortávolság</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Attributes</source>
-        <translation type="unfinished">Attribútumok</translation>
+        <translation>Attribútumok</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="-1"/>
         <location filename="../src/core/RObject.cpp" line="+69"/>
         <source>Type</source>
-        <translation type="unfinished">Típus</translation>
+        <translation>Típus</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Layer</source>
-        <translation type="unfinished">Réteg</translation>
+        <translation>Réteg</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="+102"/>
         <source>Linetype</source>
-        <translation type="unfinished">Linetype</translation>
+        <translation>Vonaltípus</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation type="unfinished">Vonaltípus skála</translation>
+        <translation>Vonaltípus léptéke</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Lineweight</source>
-        <translation type="unfinished">Vonalsúly</translation>
+        <translation>Vonalvastagság</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="-2"/>
         <source>Color</source>
-        <translation type="unfinished">Színes</translation>
+        <translation>Szín</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Displayed Color</source>
-        <translation type="unfinished">Megjelenített szín</translation>
+        <translation>Megjelenített szín</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Draw Order</source>
-        <translation type="unfinished">Sorsolási sorrend</translation>
+        <translation>Rajzolási sorrend</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Parent Id</source>
-        <translation type="unfinished">Szülői azonosító</translation>
+        <translation>Szülő azonosító</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -414,426 +424,429 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Boundary</source>
-        <translation type="unfinished">Boundary</translation>
+        <translation>Befoglaló</translation>
     </message>
     <message>
         <location line="-3"/>
         <location filename="../src/core/RLayout.cpp" line="+3"/>
         <source>Left</source>
-        <translation type="unfinished">Balra</translation>
+        <translation>Balra</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished">Alul</translation>
+        <translation>Alul</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Right</source>
-        <translation type="unfinished">Jobbra</translation>
+        <translation>Jobbra</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Top</source>
-        <translation type="unfinished">Top</translation>
+        <translation>Felül</translation>
     </message>
     <message>
         <location filename="../src/core/RObject.cpp" line="-1"/>
         <location filename="../src/core/RPropertyTypeId.cpp" line="+161"/>
         <source>Custom</source>
-        <translation type="unfinished">Custom</translation>
+        <translation>Egyéni</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Handle</source>
-        <translation type="unfinished">Fogantyú</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Protected</source>
-        <translation type="unfinished">Védett</translation>
+        <translation>Védett</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Selected</source>
-        <translation type="unfinished">Kiválasztott</translation>
+        <translation>Kijelölt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Object Invisible</source>
-        <translation type="unfinished">Láthatatlan tárgy</translation>
+        <translation>Láthatatlan tárgy</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Working Set</source>
-        <translation type="unfinished">Munkakészlet</translation>
+        <translation>Munkakészlet</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
         <source>Width</source>
-        <translation type="unfinished">Szélesség</translation>
+        <translation>Szélesség</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+1"/>
         <source>Size</source>
-        <translation type="unfinished">Méret</translation>
+        <translation>Méret</translation>
     </message>
     <message>
         <location line="+0"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+1"/>
         <source>Height</source>
-        <translation type="unfinished">Magasság</translation>
+        <translation>Magasság</translation>
     </message>
     <message>
         <location filename="../src/core/RTextBasedEntity.cpp" line="-3"/>
         <source>Simple</source>
-        <translation type="unfinished">Egyszerű</translation>
+        <translation>Egyszerű</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>
-        <translation type="unfinished">Szöveg pozíció</translation>
+        <translation>Szövegpozíció</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text</source>
-        <translation type="unfinished">Szöveg</translation>
+        <translation>Szöveg</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plain Text</source>
-        <translation type="unfinished">Egyszerű szöveg</translation>
+        <translation>Egyszerű szöveg</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Font Name</source>
-        <translation type="unfinished">Betűtípus neve</translation>
+        <translation>Betűtípus neve</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text Height</source>
-        <translation type="unfinished">Szövegmagasság</translation>
+        <translation>Szöveg magassága</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text Width</source>
-        <translation type="unfinished">Szövegszélesség</translation>
+        <translation>Szöveg szélessége</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text Angle</source>
-        <translation type="unfinished">Szövegszög</translation>
+        <translation>Szöveg szöge</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>X Scale</source>
-        <translation type="unfinished">X skála</translation>
+        <translation>X lépték</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bold</source>
-        <translation type="unfinished">Bold</translation>
+        <translation>Félkövér</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Italic</source>
-        <translation type="unfinished">Italic</translation>
+        <translation>Dőlt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Line Spacing</source>
-        <translation type="unfinished">Vonaltávolság</translation>
+        <translation>Sortávolság</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>Alignment</source>
-        <translation type="unfinished">Kiegyenlítés</translation>
+        <translation>Igazítás</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Horizontal</source>
-        <translation type="unfinished">Vízszintes</translation>
+        <translation>Vízszintes</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Vertical</source>
-        <translation type="unfinished">Függőleges</translation>
+        <translation>Függőleges</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Backward</source>
-        <translation type="unfinished">Visszafelé</translation>
+        <translation>Visszafelé</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Upside Down</source>
-        <translation type="unfinished">Fejjel lefelé</translation>
+        <translation>Fejjel lefelé</translation>
     </message>
     <message>
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
         <source>Rotation</source>
-        <translation type="unfinished">Forgatás</translation>
+        <translation>Forgatás</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>On</source>
-        <translation type="unfinished">A oldalon</translation>
+        <translation>Bekapcsolva</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Center</source>
-        <translation type="unfinished">Központ megtekintése</translation>
+        <translation>Nézet középpontja</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation type="unfinished">Célpont megtekintése</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Overall</source>
-        <translation type="unfinished">Általános</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Frozen Layers</source>
-        <translation type="unfinished">Fagyasztott rétegek</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layer ID</source>
-        <translation type="unfinished">Réteg azonosítója</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="-6"/>
+        <location filename="../src/core/RBlock.cpp" line="-7"/>
         <location filename="../src/core/RLayer.cpp" line="-8"/>
         <location filename="../src/core/RLayerState.cpp" line="+46"/>
         <location filename="../src/core/RLayout.cpp" line="-24"/>
         <source>Name</source>
-        <translation type="unfinished">Név</translation>
+        <translation>Név</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation type="unfinished">Rejtett</translation>
+        <translation>Rejtett</translation>
     </message>
     <message>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Off</source>
-        <translation type="unfinished">Off</translation>
+        <translation>Ki</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Frozen</source>
-        <translation type="unfinished">Fagyasztott</translation>
+        <translation>Fagyasztott</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Locked</source>
-        <translation type="unfinished">Zárva</translation>
+        <translation>Zárolt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Collapsed</source>
-        <translation type="unfinished">Összeomlott</translation>
+        <translation>Összecsukott</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plottable</source>
-        <translation type="unfinished">Plottable</translation>
+        <translation>Nyomtatható</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Snappable</source>
-        <translation type="unfinished">Elkapható</translation>
+        <translation>Illesztést fogad</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Off is Freeze</source>
-        <translation type="unfinished">Off is Freeze</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Tab Order</source>
-        <translation type="unfinished">Tab Sorrend</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Min Limits</source>
-        <translation type="unfinished">Minimális határértékek</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Max Limits</source>
-        <translation type="unfinished">Maximális határértékek</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Insertion Base</source>
-        <translation type="unfinished">Beillesztési alap</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Min Extents</source>
-        <translation type="unfinished">Minimális kiterjedés</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Max Extents</source>
-        <translation type="unfinished">Maximális kiterjedés</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+856"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+874"/>
         <source>Circular (recursive) block referencing detected:</source>
-        <translation type="unfinished">Körkörös (rekurzív) blokkreferencia észlelve:</translation>
+        <translation>Körkörös (rekurzív) blokkreferencia észlelve:</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block name:</source>
-        <translation type="unfinished">Blokk neve:</translation>
+        <translation>Blokk neve:</translation>
     </message>
     <message>
         <location filename="../src/core/RDimStyle.cpp" line="+71"/>
         <source>Style</source>
-        <translation type="unfinished">Stílus</translation>
+        <translation>Stílus</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Overall scale</source>
-        <translation type="unfinished">Általános skála</translation>
+        <translation>Általános lépték</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linear measurement factor</source>
-        <translation type="unfinished">Lineáris mérési tényező</translation>
+        <translation>Lineáris mérési tényező</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text height</source>
-        <translation type="unfinished">Szöveg magassága</translation>
+        <translation>Szöveg magassága</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation type="unfinished">Méretvonal hézag</translation>
+        <translation>Méretvonal hézag</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow size</source>
-        <translation type="unfinished">Nyíl mérete</translation>
+        <translatorcomment>Nyíl vagy </translatorcomment>
+        <translation>Méretvonal határoló mérete</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension line increment</source>
-        <translation type="unfinished">Méretvonal növekmény</translation>
+        <translation>Méretvonal növekmény</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line extension</source>
-        <translation type="unfinished">Hosszabbítás vonalhosszabbítás</translation>
+        <translation>Méretsegédvonal hosszabbítása</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line offset</source>
-        <translation type="unfinished">Hosszabbító vonal eltolása</translation>
+        <translation>Méretsegédvonal eltolása</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text position vertical</source>
-        <translation type="unfinished">Szöveg pozíciója függőlegesen</translation>
+        <translation>Szöveg pozíciója függőlegesen</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text horizontal</source>
-        <translation type="unfinished">Vízszintes szöveg</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tick size</source>
-        <translation type="unfinished">Pipa mérete</translation>
+        <translatorcomment>A méretvonal végén nyíl helyett használható ferde vonalszakasz mérete</translatorcomment>
+        <translation>Ferde vonalka mérete</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linear format</source>
-        <translation type="unfinished">Lineáris formátum</translation>
+        <translatorcomment>Azt adja meg, hogy a méretvonalra írt számot pl 1.5 vagy 1 1/2 stb formátumban írja rá</translatorcomment>
+        <translation>Számformátum</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal places</source>
-        <translation type="unfinished">Tizedesjegyek</translation>
+        <translation>Tizedesjegyek</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal separator</source>
-        <translation type="unfinished">Tizedesválasztó</translation>
+        <translation>Tizedeselválasztó</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Zero suppression</source>
-        <translation type="unfinished">Zéró elnyomás</translation>
+        <translation>Nullák elhagyása</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular format</source>
-        <translation type="unfinished">Szögletes formátum</translation>
+        <translation>Szög formátum</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular decimal places</source>
-        <translation type="unfinished">Szögletes tizedesjegyek</translation>
+        <translation>Szög tizedesjegyek</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular zero suppression</source>
-        <translation type="unfinished">Szögletes nulla elnyomása</translation>
+        <translation>Szög nullák elhagyása</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation type="unfinished">Architectur kullancs</translation>
+        <translation>Határolók ferde vonalkával</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text color</source>
-        <translation type="unfinished">Szöveg színe</translation>
+        <translation>Szöveg színe</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block</source>
-        <translation type="unfinished">Nyílblokk</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 1</source>
-        <translation type="unfinished">Nyílblokk 1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 2</source>
-        <translation type="unfinished">Nyílblokk 2</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -841,7 +854,7 @@
     <message>
         <location filename="../src/core/RGuiAction.cpp" line="+202"/>
         <source>Requires selection</source>
-        <translation type="unfinished">Kiválasztást igényel</translation>
+        <translation>Kijelölést igényel</translation>
     </message>
 </context>
 <context>
@@ -849,22 +862,22 @@
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+54"/>
         <source>Name</source>
-        <translation type="unfinished">Név</translation>
+        <translation>Név</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Description</source>
-        <translation type="unfinished">Leírás</translation>
+        <translation>Leírás</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Metric</source>
-        <translation type="unfinished">Metrikus</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pattern</source>
-        <translation type="unfinished">Mintázat</translation>
+        <translation>Mintázat</translation>
     </message>
 </context>
 <context>
@@ -872,233 +885,233 @@
     <message>
         <location filename="../src/core/RLinetypePattern.cpp" line="+912"/>
         <source>By Layer</source>
-        <translation type="unfinished">Rétegenként</translation>
+        <translation>Réteg szerint</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished">By Block</translation>
+        <translation>Blokk szerint</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Continuous</source>
-        <translation type="unfinished">Folyamatos</translation>
+        <translation>Folytonos</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Border</source>
-        <translation type="unfinished">Határ</translation>
+        <translation>Határ</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Center</source>
-        <translation type="unfinished">Központ</translation>
+        <translation>Középvonal</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dash dot</source>
-        <translation type="unfinished">Kötőjeles pont</translation>
+        <translation>Pontvonal</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dashed</source>
-        <translation type="unfinished">Szaggatott</translation>
+        <translation>Szaggatott</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Divide</source>
-        <translation type="unfinished">Oszd meg</translation>
+        <translation>Kétpontvonal</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dot</source>
-        <translation type="unfinished">Dot</translation>
+        <translation>Pontozott</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation type="unfinished">Rejtett</translation>
+        <translation>Rejtett</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Phantom</source>
-        <translation type="unfinished">Fantom</translation>
+        <translation>Fantom</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>ISO dash</source>
-        <translation type="unfinished">ISO kötőjel</translation>
+        <translation>ISO szaggatott</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash space</source>
-        <translation type="unfinished">ISO kötőjel tér</translation>
+        <translation>ISO szaggatott ritka</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash dot</source>
-        <translation type="unfinished">ISO hosszú kötőjeles pont</translation>
+        <translation>ISO hosszú pontvonal</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-dot</source>
-        <translation type="unfinished">ISO hosszú kötőjel dupla pont</translation>
+        <translation>ISO kétpontos hosszú pontvonal</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash triple-dot</source>
-        <translation type="unfinished">ISO hosszú kötőjel hármas pont</translation>
+        <translation>ISO hárompontos-hosszú pontvonal</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dot</source>
-        <translation type="unfinished">ISO pont</translation>
+        <translation>ISO pontozott</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash short-dash</source>
-        <translation type="unfinished">ISO hosszú-kötőjel rövid-kötőjel</translation>
+        <translation>ISO hosszú-rövid szaggatott</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-short-dash</source>
-        <translation type="unfinished">ISO hosszú-kötőjel dupla-rövid-kötőjel</translation>
+        <translation>ISO hosszú és két rövid szaggatott</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash dot</source>
-        <translation type="unfinished">ISO kötőjel pont</translation>
+        <translation>ISO pontvonal</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash dot</source>
-        <translation type="unfinished">ISO kettős kötőjeles pont</translation>
+        <translation>ISO kétvonalas pontvonal</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash double-dot</source>
-        <translation type="unfinished">ISO kötőjel dupla pont</translation>
+        <translation>ISO kétpontvonal</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash double-dot</source>
-        <translation type="unfinished">ISO dupla-vonalkázott dupla pont</translation>
+        <translation>ISO kétvonalas kétpontvonal</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash triple-dot</source>
-        <translation type="unfinished">ISO kötőjel hármas pont</translation>
+        <translation>ISO hárompontos pontvonal</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash triple-dot</source>
-        <translation type="unfinished">ISO dupla-vonalkázott hármas pont</translation>
+        <translation>ISO hárompontos két vonalas pontvonal</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Hot Water Supply</source>
-        <translation type="unfinished">Melegvíz-ellátás</translation>
+        <translation>Meleg víz betáp</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hot Water</source>
-        <translation type="unfinished">Meleg víz</translation>
+        <translation>Meleg víz</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gas Line</source>
-        <translation type="unfinished">Gázvezeték</translation>
+        <translation>Gázvezeték</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Batting</source>
-        <translation type="unfinished">Ütés</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Zig Zag</source>
-        <translation type="unfinished">Zig Zag</translation>
+        <translation>Cikkcakk</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tracks</source>
-        <translation type="unfinished">Nyomok</translation>
+        <translation>Pálya</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fenceline 1</source>
-        <translation type="unfinished">Fenceline 1</translation>
+        <translation>Kerítés 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fenceline 2</source>
-        <translation type="unfinished">Fenceline 2</translation>
+        <translation>Kerítés 2</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Water</source>
-        <translation type="unfinished">Víz</translation>
+        <translation>Víz</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Drainage</source>
-        <translation type="unfinished">Vízelvezetés</translation>
+        <translation>Vízelvezetés</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Drainage Reversed</source>
-        <translation type="unfinished">Vízelvezetés megfordítva</translation>
+        <translation>Vízelvezetés megfordítva</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Communication</source>
-        <translation type="unfinished">Kommunikáció</translation>
+        <translation>Kommunikáció</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Electric</source>
-        <translation type="unfinished">Elektromos</translation>
+        <translation>Elektromos</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Low Voltage</source>
-        <translation type="unfinished">Alacsony feszültség</translation>
+        <translation>Alacsony feszültség</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>High Voltage</source>
-        <translation type="unfinished">Nagyfeszültség</translation>
+        <translation>Nagyfeszültség</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Overhead Power</source>
-        <translation type="unfinished">Overhead Power</translation>
+        <translation>Elektromos légvezeték</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Foul</source>
-        <translation type="unfinished">Foul</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foul Rising</source>
-        <translation type="unfinished">Foul Rising</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1106,137 +1119,137 @@
     <message>
         <location filename="../src/core/RLineweight.cpp" line="+35"/>
         <source>By Layer</source>
-        <translation type="unfinished">Rétegenként</translation>
+        <translation>Réteg szerint</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished">By Block</translation>
+        <translation>Blokk szerint</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Default</source>
-        <translation type="unfinished">Alapértelmezett</translation>
+        <translation>Alapértelmezett</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.00mm</source>
-        <translation type="unfinished">0.00mm</translation>
+        <translation>0.00 mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.05mm</source>
-        <translation type="unfinished">0.05mm</translation>
+        <translation>0.05 mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.09mm</source>
-        <translation type="unfinished">0.09mm</translation>
+        <translation>0.09 mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.13mm (ISO)</source>
-        <translation type="unfinished">0.13mm (ISO)</translation>
+        <translation>0.13 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.15mm</source>
-        <translation type="unfinished">0.15mm</translation>
+        <translation>0.15 mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.18mm (ISO)</source>
-        <translation type="unfinished">0.18mm (ISO)</translation>
+        <translation>0.18 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.20mm</source>
-        <translation type="unfinished">0.20mm</translation>
+        <translation>0.20 mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.25mm (ISO)</source>
-        <translation type="unfinished">0.25mm (ISO)</translation>
+        <translation>0.25 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.30mm</source>
-        <translation type="unfinished">0.30mm</translation>
+        <translation>0.30 mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.35mm (ISO)</source>
-        <translation type="unfinished">0.35mm (ISO)</translation>
+        <translation>0.35 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.40mm</source>
-        <translation type="unfinished">0.40mm</translation>
+        <translation>0.40 mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.50mm (ISO)</source>
-        <translation type="unfinished">0.50mm (ISO)</translation>
+        <translation>0.50 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.53mm</source>
-        <translation type="unfinished">0.53mm</translation>
+        <translation>0.53 mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.60mm</source>
-        <translation type="unfinished">0.60mm</translation>
+        <translation>0.60 mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.70mm (ISO)</source>
-        <translation type="unfinished">0.70mm (ISO)</translation>
+        <translation>0.70 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.80mm</source>
-        <translation type="unfinished">0.80mm</translation>
+        <translation>0.80 mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.90mm</source>
-        <translation type="unfinished">0.90mm</translation>
+        <translation>0.90 mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.00mm (ISO)</source>
-        <translation type="unfinished">1.00mm (ISO)</translation>
+        <translation>1.00 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.06mm</source>
-        <translation type="unfinished">1.06mm</translation>
+        <translation>1.06 mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.20mm</source>
-        <translation type="unfinished">1.20mm</translation>
+        <translation>1.20 mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.40mm (ISO)</source>
-        <translation type="unfinished">1.40mm (ISO)</translation>
+        <translation>1.40 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.58mm</source>
-        <translation type="unfinished">1.58mm</translation>
+        <translation>1.58 mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>2.00mm (ISO)</source>
-        <translation type="unfinished">2.00mm (ISO)</translation>
+        <translation>2.00 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>2.11mm</source>
-        <translation type="unfinished">2.11mm</translation>
+        <translation>2.11 mm</translation>
     </message>
 </context>
 </TS>

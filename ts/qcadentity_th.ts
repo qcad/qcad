@@ -52,12 +52,12 @@
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+99"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+101"/>
         <location line="+3"/>
         <location filename="../src/entity/RImageEntity.cpp" line="+94"/>
         <location line="+4"/>
         <location line="+3"/>
-        <location filename="../src/entity/RLeaderEntity.cpp" line="+82"/>
+        <location filename="../src/entity/RLeaderEntity.cpp" line="+85"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+87"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -256,6 +256,7 @@
         <location filename="../src/entity/REllipseEntity.cpp" line="+9"/>
         <location filename="../src/entity/RFaceEntity.cpp" line="+2"/>
         <location filename="../src/entity/RHatchEntity.cpp" line="+3"/>
+        <location filename="../src/entity/RLeaderEntity.cpp" line="+7"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+3"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+10"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="+2"/>
@@ -268,6 +269,7 @@
         <location line="+1"/>
         <location filename="../src/entity/RFaceEntity.cpp" line="+1"/>
         <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RLeaderEntity.cpp" line="+1"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="+1"/>
@@ -610,8 +612,13 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-6"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-7"/>
         <source>Solid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Winding</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -651,7 +658,7 @@
         <location line="+6"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RLeaderEntity.cpp" line="-2"/>
+        <location filename="../src/entity/RLeaderEntity.cpp" line="-10"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-4"/>
@@ -669,7 +676,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+196"/>
+        <location line="+201"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>

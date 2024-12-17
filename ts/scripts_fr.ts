@@ -55,12 +55,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+449"/>
+        <location line="+450"/>
         <source>Plugin:</source>
         <translation>Plugin :</translation>
     </message>
     <message>
-        <location line="-424"/>
+        <location line="-425"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -816,7 +816,7 @@ pour appliquer les modifications.</translation>
     </message>
     <message>
         <location line="+128"/>
-        <location line="+65"/>
+        <location line="+73"/>
         <source>No solution</source>
         <translation>Aucune solution</translation>
     </message>
@@ -1326,12 +1326,12 @@ Voulez-vous le récupérer ?</translation>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/BlockList/PreferencesPage.ui" line="+17"/>
+        <location filename="../scripts/Widgets/BlockList/PreferencesPage.ui" line="+19"/>
         <source>Hide internal blocks</source>
         <translation>Cacher blocs internes</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+10"/>
         <source>Enable alternating row colors</source>
         <translation>Activer alternant couleurs des lignes</translation>
     </message>
@@ -4186,18 +4186,18 @@ est déjà dans la liste.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2111"/>
+        <location line="+2123"/>
         <source>Cancel</source>
         <translation>Annuler</translation>
     </message>
     <message>
-        <location line="-2110"/>
+        <location line="-2122"/>
         <source>Done</source>
         <translation>Terminer</translation>
     </message>
     <message>
         <location line="+280"/>
-        <location line="+124"/>
+        <location line="+127"/>
         <source>Active Tool:</source>
         <translation>Outil actif:</translation>
     </message>
@@ -4222,7 +4222,7 @@ est déjà dans la liste.</translation>
         <translation>Outils de CAO</translation>
     </message>
     <message>
-        <location line="+577"/>
+        <location line="+578"/>
         <source>Invalid position</source>
         <translation>Position non valide</translation>
     </message>
@@ -4237,7 +4237,7 @@ est déjà dans la liste.</translation>
         <translation>L&apos;entité se trouve sur une calque verrouillé.</translation>
     </message>
     <message>
-        <location line="+225"/>
+        <location line="+233"/>
         <source>Length:</source>
         <translation>Longueur :</translation>
     </message>
@@ -7677,17 +7677,17 @@ est déjà dans la liste.</translation>
         <translation>Ecraser les blocs existants&lt;br&gt;dans le dessin avec des&lt;br&gt;blocs du presse-papiers</translation>
     </message>
     <message>
-        <location filename="../scripts/Block/InsertBlockItem/InsertBlockItem.js" line="+102"/>
+        <location filename="../scripts/Block/InsertBlockItem/InsertBlockItem.js" line="+106"/>
         <source>Cannot import file from URL: </source>
         <translation>Ne peux pas importer le fichier depuis l&apos;URL : </translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+29"/>
         <source>Adjusted invalid block name to &quot;%1&quot;</source>
         <translation>Corrigé nom de bloc invalide &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+83"/>
         <source>Position</source>
         <translation>Position</translation>
     </message>
@@ -12340,7 +12340,7 @@ est déjà dans la liste.</translation>
 <context>
     <name>Text</name>
     <message>
-        <location filename="../scripts/Draw/Text/Text.js" line="+92"/>
+        <location filename="../scripts/Draw/Text/Text.js" line="+89"/>
         <source>Position</source>
         <translation>Position</translation>
     </message>
@@ -13116,8 +13116,34 @@ est déjà dans la liste.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.ui" line="+17"/>
+        <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+17"/>
         <source>Angle:</source>
         <translation>Angle :</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.js" line="+46"/>
+        <source>Modify</source>
+        <translation type="unfinished">Modifier</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Move/Rotate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/TranslateRotate/TranslateRotateNoDialog.ui" line="+27"/>
+        <source>Copy</source>
+        <translation type="unfinished">Copier</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Number of Copies:</source>
+        <translation type="unfinished">Nombre de copies :</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Use Current Layer and Attributes</source>
+        <translation type="unfinished">Utiliser le calque et les attributs actuels</translation>
     </message>
 </context>
 <context>
@@ -13156,6 +13182,14 @@ est déjà dans la liste.</translation>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Utiliser calque et &amp;attributs actuel</translation>
+    </message>
+</context>
+<context>
+    <name>TranslateiRotate</name>
+    <message>
+        <location filename="../scripts/Modify/TranslateRotate/PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation type="unfinished">Utiliser dialogue pour options de l&apos;outil</translation>
     </message>
 </context>
 <context>

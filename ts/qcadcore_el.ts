@@ -238,7 +238,7 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="+63"/>
+        <location filename="../src/core/RBlock.cpp" line="+66"/>
         <location filename="../src/core/RLayer.cpp" line="+93"/>
         <location filename="../src/core/RLayerState.cpp" line="+46"/>
         <location filename="../src/core/RLayout.cpp" line="+82"/>
@@ -315,7 +315,12 @@
         <translation type="unfinished">Διάταξη</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+856"/>
+        <location line="+1"/>
+        <source>Owned by Reference</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+874"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation type="unfinished">Εντοπίστηκε κυκλική (αναδρομική) αναφορά σε μπλοκ:</translation>
     </message>
