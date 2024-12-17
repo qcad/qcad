@@ -504,7 +504,7 @@ function addObject(obj) {
         // make sure returned object carries ID of added object:
         var ret = obj.clone();
         var ids = t.getAffectedObjects();
-        for (var i=0; i<ids.length; i++) {
+        for (var i=ids.length; i>=0; i--) {
             var id = ids[i];
             var e = doc.queryObject(id);
             if (e.getType()===type) {
