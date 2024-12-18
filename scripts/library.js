@@ -2578,38 +2578,31 @@ function shapeToEntity(document, shape) {
         s = s.data();
     }
 
-    if (isPointShape(s)) {
+    switch (s.getShapeType()) {
+    case RShape.Point:
         return new RPointEntity(document, new RPointData(s.getPosition()));
-    }
-    else if (isLineShape(s)) {
+    case RShape.Line:
         return new RLineEntity(document, new RLineData(s));
-    }
-    else if (isRayShape(s)) {
+    case RShape.Ray:
         return new RRayEntity(document, new RRayData(s));
-    }
-    else if (isXLineShape(s)) {
+    case RShape.XLine:
         return new RXLineEntity(document, new RXLineData(s));
-    }
-    else if (isArcShape(s)) {
+    case RShape.Arc:
         return new RArcEntity(document, new RArcData(s));
-    }
-    else if (isCircleShape(s)) {
+    case RShape.Circle:
         return new RCircleEntity(document, new RCircleData(s));
-    }
-    else if (isEllipseShape(s)) {
+    case RShape.Ellipse:
         return new REllipseEntity(document, new REllipseData(s));
-    }
-    else if (isPolylineShape(s)) {
+    case RShape.Polyline:
         return new RPolylineEntity(document, new RPolylineData(s));
-    }
-    else if (isSplineShape(s)) {
+    case RShape.Spline:
         return new RSplineEntity(document, new RSplineData(s));
-    }
-    else if (isTriangleShape(s)) {
+    case RShape.Triangle:
         return new RSolidEntity(document, new RSolidData(s));
+    default:
+        return undefined;
     }
 
-    qWarning("shapeToEntity: unknown shape: ", s);
     return undefined;
 }
 
