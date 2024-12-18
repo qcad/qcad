@@ -205,7 +205,16 @@
     <file alias="scripts/Draw/Arc/ArcTPR/ArcTPR.ui">../../scripts/Draw/Arc/ArcTPR/ArcTPR.ui</file>
     <file alias="scripts/Draw/Arc/ArcTPR/ArcTPRInit.js">../../scripts/Draw/Arc/ArcTPR/ArcTPRInit.js</file>
     <file alias="scripts/Draw/Arc/ArcTPR/Tests/ArcTPRTest00.js">../../scripts/Draw/Arc/ArcTPR/Tests/ArcTPRTest00.js</file>
+    <file alias="scripts/Draw/Arc/ArcTPR/Tests/ArcTPRTest01.js">../../scripts/Draw/Arc/ArcTPR/Tests/ArcTPRTest01.js</file>
+    <file alias="scripts/Draw/Arc/ArcTPR/Tests/ArcTPRTest02.js">../../scripts/Draw/Arc/ArcTPR/Tests/ArcTPRTest02.js</file>
+    <file alias="scripts/Draw/Arc/ArcTPR/Tests/ArcTPRTest03.js">../../scripts/Draw/Arc/ArcTPR/Tests/ArcTPRTest03.js</file>
+    <file alias="scripts/Draw/Arc/ArcTPR/Tests/ArcTPRTest04.js">../../scripts/Draw/Arc/ArcTPR/Tests/ArcTPRTest04.js</file>
+    <file alias="scripts/Draw/Arc/ArcTPR/Tests/data/four_solutions.dxf">../../scripts/Draw/Arc/ArcTPR/Tests/data/four_solutions.dxf</file>
     <file alias="scripts/Draw/Arc/ArcTPR/Tests/required/ArcTPRTest00_000.dxf">../../scripts/Draw/Arc/ArcTPR/Tests/required/ArcTPRTest00_000.dxf</file>
+    <file alias="scripts/Draw/Arc/ArcTPR/Tests/required/ArcTPRTest01_000.dxf">../../scripts/Draw/Arc/ArcTPR/Tests/required/ArcTPRTest01_000.dxf</file>
+    <file alias="scripts/Draw/Arc/ArcTPR/Tests/required/ArcTPRTest02_000.dxf">../../scripts/Draw/Arc/ArcTPR/Tests/required/ArcTPRTest02_000.dxf</file>
+    <file alias="scripts/Draw/Arc/ArcTPR/Tests/required/ArcTPRTest03_000.dxf">../../scripts/Draw/Arc/ArcTPR/Tests/required/ArcTPRTest03_000.dxf</file>
+    <file alias="scripts/Draw/Arc/ArcTPR/Tests/required/ArcTPRTest04_000.dxf">../../scripts/Draw/Arc/ArcTPR/Tests/required/ArcTPRTest04_000.dxf</file>
     <file alias="scripts/Draw/Arc/ArcTangential/ArcTangential-inverse.svg">../../scripts/Draw/Arc/ArcTangential/ArcTangential-inverse.svg</file>
     <file alias="scripts/Draw/Arc/ArcTangential/ArcTangential.js">../../scripts/Draw/Arc/ArcTangential/ArcTangential.js</file>
     <file alias="scripts/Draw/Arc/ArcTangential/ArcTangential.svg">../../scripts/Draw/Arc/ArcTangential/ArcTangential.svg</file>
