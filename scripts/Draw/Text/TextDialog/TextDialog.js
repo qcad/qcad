@@ -74,6 +74,8 @@ function TextDialog(mode) {
     this.actionCopy = undefined;
     this.actionPaste = undefined;
 
+    this.actionOk = undefined;
+
     this.comboFont = undefined;
     this.comboSize = undefined;
 
@@ -124,6 +126,11 @@ TextDialog.prototype.show =  function(textDataIn) {
     }
 
     this.dialog = WidgetFactory.createDialog(TextDialog.basePath, "TextDialog.ui", EAction.getMainWindow());
+
+    this.actionOk = new QAction(this.dialog);
+    this.actionOk.shortcut = new QKeySequence("Ctrl+Return");
+    this.actionOk.triggered.connect(this, this.dialog.accept);
+    this.dialog.addAction(this.actionOk);
 
     // initialize dialog controls:
     this.textEdit = this.dialog.findChild("Text");
