@@ -128,10 +128,12 @@ if(linux-g++)
 endif()
 
 
-if(MACOS)
-    target_link_libraries(${PROJECT_NAME} PRIVATE
-        Qt::MacExtras
-    )
+if(${CMAKE_SYSTEM_NAME} STREQUAL "Darwin")
+    #target_link_libraries(${PROJECT_NAME} PRIVATE
+    #    Qt::MacExtras
+    #)
+    # not working:
+    #set(MACOSX_BUNDLE_INFO_PLIST "${CMAKE_SOURCE_DIR}/Info.plist")
 endif()
 
 if(r_no_opennurbs)
