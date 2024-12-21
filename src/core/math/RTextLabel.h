@@ -45,8 +45,8 @@ public:
     RTextLabel(const RVector& position, const QString& text, const QVariant& userData = RDEFAULT_QVARIANT);
     virtual ~RTextLabel();
 
-    virtual RTextLabel* clone() const {
-        return new RTextLabel(*this);
+    virtual QSharedPointer<RShape> clone() const {
+        return QSharedPointer<RShape>(new RTextLabel(*this));
     }
 
     QString getText() const {

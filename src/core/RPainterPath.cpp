@@ -62,7 +62,7 @@ RPainterPath::RPainterPath(const RPainterPath& other) :
     // detach original shapes:
     for (int i=0; i<other.originalShapes.length(); i++) {
         QSharedPointer<RShape> originalShape = other.originalShapes[i];
-        originalShapes.append(QSharedPointer<RShape>(originalShape->clone()));
+        originalShapes.append(originalShape->clone());
 
 //        QSharedPointer<RLine> originalLine = originalShape.dynamicCast<RLine>();
 //        if (!originalLine.isNull()) {

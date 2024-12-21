@@ -50,8 +50,12 @@ public:
         return Arc;
     }
 
-    virtual RArc* clone() const {
-        return new RArc(*this);
+    virtual QSharedPointer<RShape> clone() const {
+        return QSharedPointer<RShape>(new RArc(*this));
+    }
+
+    QSharedPointer<RArc> cloneToArc() const {
+        return QSharedPointer<RArc>(new RArc(*this));
     }
 
     virtual bool isDirected() const {

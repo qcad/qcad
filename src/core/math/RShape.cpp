@@ -1846,9 +1846,9 @@ QList<QSharedPointer<RShape> > RShape::getOrderedShapes(const QList<QSharedPoint
                         found = true;
                     }
                     if (ep.equalsFuzzy(shape2->getEndPoint())) {
-                        RShape* s = shape2->clone();
+                        QSharedPointer<RShape> s = shape2->clone();
                         s->reverse();
-                        contour.append(QSharedPointer<RShape>(s));
+                        contour.append(s);
                         traversed.insert(k);
                         found = true;
                     }
@@ -1858,9 +1858,9 @@ QList<QSharedPointer<RShape> > RShape::getOrderedShapes(const QList<QSharedPoint
                         found = true;
                     }
                     if (sp.equalsFuzzy(shape2->getStartPoint())) {
-                        RShape* s = shape2->clone();
+                        QSharedPointer<RShape> s = shape2->clone();
                         s->reverse();
-                        contour.append(QSharedPointer<RShape>(s));
+                        contour.append(s);
                         traversed.insert(k);
                         found = true;
                     }
@@ -2095,9 +2095,9 @@ QList<QSharedPointer<RShape> > RShape::getOffsetLines(const RShape& shape, doubl
         RVector distanceV;
         for (int n=1; n<=number; ++n) {
             distanceV.setPolar(distance * n, a);
-            RShape* parallel = shape.clone();
+            QSharedPointer<RShape> parallel = shape.clone();
             parallel->move(distanceV);
-            ret.append(QSharedPointer<RShape>(parallel));
+            ret.append(parallel);
         }
     }
     return ret;
@@ -2166,7 +2166,7 @@ QList<QSharedPointer<RShape> > RShape::getOffsetArcs(const RShape& shape, double
         }
 
         for (int n=1; n<=number; ++n) {
-            QSharedPointer<RShape> s = QSharedPointer<RShape>(shape.clone());
+            QSharedPointer<RShape> s = shape.clone();
 
             if (arc!=NULL) {
                 QSharedPointer<RArc> concentric = s.dynamicCast<RArc>();
@@ -2209,7 +2209,7 @@ QList<QSharedPointer<RShape> > RShape::getReversedShapeList(const QList<QSharedP
     QList<QSharedPointer<RShape> > ret;
 
     for (int i=shapes.length()-1; i>=0; i--) {
-        QSharedPointer<RShape> shape = QSharedPointer<RShape>(shapes[i]->clone());
+        QSharedPointer<RShape> shape = shapes[i]->clone();
         shape->reverse();
         ret.append(shape);
     }
@@ -2227,7 +2227,7 @@ QList<QSharedPointer<RShape> > RShape::splitAt(const QList<RVector>& points) con
     Q_UNUSED(points)
 
     QList<QSharedPointer<RShape> > ret;
-    ret.append(QSharedPointer<RShape>(clone()));
+    ret.append(clone());
     return ret;
 }
 
@@ -2249,7 +2249,7 @@ QList<QSharedPointer<RShape> > RShape::trim(
 
     int i1=0;
     QSharedPointer<RShape> segment;
-    QSharedPointer<RShape> trimShapeSimple = QSharedPointer<RShape>(trimShape.clone());
+    QSharedPointer<RShape> trimShapeSimple = trimShape.clone();
     if (isPolylineShape(trimShape)) {
         const RPolyline& polyline = dynamic_cast<const RPolyline&>(trimShape);
         i1 = polyline.getClosestSegment(trimClickPos);
@@ -2264,7 +2264,7 @@ QList<QSharedPointer<RShape> > RShape::trim(
     }
 
     int i2=0;
-    QSharedPointer<RShape> limitingShapeSimple = QSharedPointer<RShape>(limitingShape.clone());
+    QSharedPointer<RShape> limitingShapeSimple = limitingShape.clone();
     if (isPolylineShape(limitingShape)) {
         const RPolyline& polyline = dynamic_cast<const RPolyline&>(limitingShape);
         i2 = polyline.getClosestSegment(limitingClickPos);
@@ -2332,10 +2332,10 @@ QList<QSharedPointer<RShape> > RShape::trim(
     }
     else {
         if (samePolyline) {
-            trimmedTrimShape = QSharedPointer<RShape>(trimShapeSimple->clone());
+            trimmedTrimShape = trimShapeSimple->clone();
         }
         else {
-            trimmedTrimShape = QSharedPointer<RShape>(trimShape.clone());
+            trimmedTrimShape = trimShape.clone();
         }
     }
 
@@ -2352,10 +2352,10 @@ QList<QSharedPointer<RShape> > RShape::trim(
         }
         else {
             if (samePolyline) {
-                trimmedLimitingShape = QSharedPointer<RShape>(limitingShapeSimple->clone());
+                trimmedLimitingShape = limitingShapeSimple->clone();
             }
             else {
-                trimmedLimitingShape = QSharedPointer<RShape>(limitingShape.clone());
+                trimmedLimitingShape = limitingShape.clone();
             }
         }
     }
@@ -2564,12 +2564,12 @@ QList<QSharedPointer<RShape> > RShape::roundShapes(
 
     QSharedPointer<RShape> trimmed1, trimmed2;
     if (samePolyline) {
-        trimmed1 = QSharedPointer<RShape>(simpleShape1->clone());
-        trimmed2 = QSharedPointer<RShape>(simpleShape2->clone());
+        trimmed1 = simpleShape1->clone();
+        trimmed2 = simpleShape2->clone();
     }
     else {
-        trimmed1 = QSharedPointer<RShape>(shape1->clone());
-        trimmed2 = QSharedPointer<RShape>(shape2->clone());
+        trimmed1 = shape1->clone();
+        trimmed2 = shape2->clone();
     }
 
     RS::Ending ending1 = RS::EndingNone;

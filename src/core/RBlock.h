@@ -72,7 +72,13 @@ public:
         return RS::ObjectBlock;
     }
 
-    virtual RBlock* clone() const;
+    virtual QSharedPointer<RObject> clone() const {
+        return QSharedPointer<RObject>(new RBlock(*this));
+    }
+
+    QSharedPointer<RBlock> cloneToBlock() const {
+        return QSharedPointer<RBlock>(new RBlock(*this));
+    }
 
     QString getName() const {
         return name;

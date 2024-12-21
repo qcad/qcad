@@ -101,8 +101,12 @@ public:
         return RPropertyTypeId::getPropertyTypeIds(RWipeoutEntity::getRtti());
     }
 
-    virtual RWipeoutEntity* clone() const {
-        return new RWipeoutEntity(*this);
+    virtual QSharedPointer<RObject> clone() const {
+        return QSharedPointer<RObject>(new RWipeoutEntity(*this));
+    }
+
+    QSharedPointer<RWipeoutEntity> cloneToWipeoutEntity() const {
+        return QSharedPointer<RWipeoutEntity>(new RWipeoutEntity(*this));
     }
 
     virtual RWipeoutData& getData() {

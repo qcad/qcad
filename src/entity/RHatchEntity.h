@@ -91,7 +91,13 @@ public:
         return RPropertyTypeId::getPropertyTypeIds(RHatchEntity::getRtti());
     }
 
-    virtual RHatchEntity* clone() const;
+    virtual QSharedPointer<RObject> clone() const {
+        return QSharedPointer<RObject>(new RHatchEntity(*this));
+    }
+
+    QSharedPointer<RHatchEntity> cloneToHatchEntity() const {
+        return QSharedPointer<RHatchEntity>(new RHatchEntity(*this));
+    }
 
     void setData(RHatchData& d) {
         data = d;

@@ -81,8 +81,12 @@ public:
         return RS::ObjectUcs;
     }
 
-    virtual RUcs* clone() const {
-        return new RUcs(*this);
+    virtual QSharedPointer<RObject> clone() const {
+        return QSharedPointer<RObject>(new RUcs(*this));
+    }
+
+    QSharedPointer<RUcs> cloneToUcs() const {
+        return QSharedPointer<RUcs>(new RUcs(*this));
     }
 
     virtual QPair<QVariant, RPropertyAttributes> getProperty(

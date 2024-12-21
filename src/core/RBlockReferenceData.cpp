@@ -128,9 +128,13 @@ RVector RBlockReferenceData::getVectorTo(const RVector& point, bool limited, dou
 
                 if (col!=0 || row!=0) {
                     // entity might be from cache: clone:
-                    entity = QSharedPointer<REntity>(entity->clone());
+                    entity = entity->cloneToEntity();
+                    if (entity.isNull()) {
+                        continue;
+                    }
                     applyColumnRowOffsetTo(*entity, col, row, true);
                 }
+
                 RVector v = entity->getVectorTo(point, limited);
                 double dist = v.getMagnitude();
                 if (dist < minDist) {
@@ -200,7 +204,10 @@ double RBlockReferenceData::getDistanceTo(const RVector& point,
 
                 if (col!=0 || row!=0) {
                     // entity might be from cache: clone:
-                    entity = QSharedPointer<REntity>(entity->clone());
+                    entity = entity->cloneToEntity();
+                    if (entity.isNull()) {
+                        continue;
+                    }
                     applyColumnRowOffsetTo(*entity, col, row, true);
                 }
                 // TODO: range might have to be scaled here:
@@ -777,7 +784,10 @@ QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryB
                     if (col>0 || row>0) {
                         // entity might be from cache:
                         // clone and transform to col / row coordinates:
-                        entity = QSharedPointer<REntity>(entity->clone());
+                        entity = entity->cloneToEntity();
+                        if (entity.isNull()) {
+                            continue;
+                        }
                         applyColumnRowOffsetTo(*entity, col, row, true);
                     }
                 }

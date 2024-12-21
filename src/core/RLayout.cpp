@@ -121,10 +121,6 @@ void RLayout::init() {
     RLayout::PropertyCanonicalMediaName.generateId(RLayout::getRtti(), "", "Media Name");
 }
 
-RLayout* RLayout::clone() const {
-    return new RLayout(*this);
-}
-
 void RLayout::setName(const QString& n) {
     name = n.trimmed();
 }

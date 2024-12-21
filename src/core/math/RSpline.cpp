@@ -1325,7 +1325,10 @@ bool RSpline::stretch(const RPolyline& area, const RVector& offset) {
 }
 
 QSharedPointer<RShape> RSpline::getTransformed(const QTransform& transform) const {
-    QSharedPointer<RSpline> ret = QSharedPointer<RSpline>(clone());
+    QSharedPointer<RSpline> ret = clone().dynamicCast<RSpline>();
+    if (ret.isNull()) {
+        return QSharedPointer<RShape>();
+    }
 
     for (int i=0; i<ret->controlPoints.size(); i++) {
         ret->controlPoints[i].transform2D(transform);

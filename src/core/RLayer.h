@@ -101,7 +101,13 @@ public:
         return RS::ObjectLayer;
     }
 
-    virtual RLayer* clone() const;
+    virtual QSharedPointer<RObject> clone() const {
+        return QSharedPointer<RObject>(new RLayer(*this));
+    }
+
+    QSharedPointer<RLayer> cloneToLayer() const {
+        return QSharedPointer<RLayer>(new RLayer(*this));
+    }
 
     RLayer::Id getParentLayerId() const;
 

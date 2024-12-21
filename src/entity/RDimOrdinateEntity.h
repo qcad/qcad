@@ -104,8 +104,12 @@ public:
         return RPropertyTypeId::getPropertyTypeIds(RDimOrdinateEntity::getRtti());
     }
 
-    virtual RDimOrdinateEntity* clone() const {
-        return new RDimOrdinateEntity(*this);
+    virtual QSharedPointer<RObject> clone() const {
+        return QSharedPointer<RObject>(new RDimOrdinateEntity(*this));
+    }
+
+    QSharedPointer<RDimOrdinateEntity> cloneToDimOrdinateEntity() const {
+        return QSharedPointer<RDimOrdinateEntity>(new RDimOrdinateEntity(*this));
     }
 
     virtual bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,

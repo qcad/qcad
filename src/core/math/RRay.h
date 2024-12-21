@@ -51,8 +51,8 @@ public:
         return Ray;
     }
 
-    virtual RRay* clone() const {
-        return new RRay(*this);
+    virtual QSharedPointer<RShape> clone() const {
+        return QSharedPointer<RShape>(new RRay(*this));
     }
 
     virtual QList<RVector> getVectorProperties() const;

@@ -80,8 +80,12 @@ public:
         return RPropertyTypeId::getPropertyTypeIds(RRayEntity::getRtti());
     }
 
-    virtual RRayEntity* clone() const {
-        return new RRayEntity(*this);
+    virtual QSharedPointer<RObject> clone() const {
+        return QSharedPointer<RObject>(new RRayEntity(*this));
+    }
+
+    QSharedPointer<RRayEntity> cloneToRayEntity() const {
+        return QSharedPointer<RRayEntity>(new RRayEntity(*this));
     }
 
     virtual bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,

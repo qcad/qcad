@@ -60,7 +60,13 @@ public:
         return RS::ObjectLayerState;
     }
 
-    virtual RLayerState* clone() const;
+    virtual QSharedPointer<RObject> clone() const {
+        return QSharedPointer<RObject>(new RLayerState(*this));
+    }
+
+    QSharedPointer<RLayerState> cloneToLayerState() const {
+        return QSharedPointer<RLayerState>(new RLayerState(*this));
+    }
 
     virtual bool mustAlwaysClone() const {
         return true;

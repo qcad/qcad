@@ -80,8 +80,12 @@ public:
         return RPropertyTypeId::getPropertyTypeIds(RToleranceEntity::getRtti());
     }
 
-    virtual RToleranceEntity* clone() const {
-        return new RToleranceEntity(*this);
+    virtual QSharedPointer<RObject> clone() const {
+        return QSharedPointer<RObject>(new RToleranceEntity(*this));
+    }
+
+    QSharedPointer<RToleranceEntity> cloneToToleranceEntity() const {
+        return QSharedPointer<RToleranceEntity>(new RToleranceEntity(*this));
     }
 
     virtual bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,

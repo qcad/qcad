@@ -118,8 +118,12 @@ public:
         return RPropertyTypeId::getPropertyTypeIds(RDimAlignedEntity::getRtti());
     }
 
-    virtual RDimAlignedEntity* clone() const {
-        return new RDimAlignedEntity(*this);
+    virtual QSharedPointer<RObject> clone() const {
+        return QSharedPointer<RObject>(new RDimAlignedEntity(*this));
+    }
+
+    QSharedPointer<RDimAlignedEntity> cloneToDimAlignedEntity() const {
+        return QSharedPointer<RDimAlignedEntity>(new RDimAlignedEntity(*this));
     }
 
     virtual bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,

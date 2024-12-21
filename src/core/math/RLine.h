@@ -49,8 +49,12 @@ public:
         return Line;
     }
 
-    virtual RLine* clone() const {
-        return new RLine(*this);
+    virtual QSharedPointer<RShape> clone() const {
+        return QSharedPointer<RShape>(new RLine(*this));
+    }
+
+    QSharedPointer<RLine> cloneToLine() const {
+        return QSharedPointer<RLine>(new RLine(*this));
     }
 
     virtual bool isDirected() const {

@@ -73,10 +73,6 @@ void RBlock::init() {
     RBlock::PropertyOwnedByReference.generateId(RBlock::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Owned by Reference"));
 }
 
-RBlock* RBlock::clone() const {
-    return new RBlock(*this);
-}
-
 void RBlock::setName(const QString& n) {
     name = n.trimmed();
 }

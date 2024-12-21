@@ -241,7 +241,7 @@ QSharedPointer<REntity> RArcEntity::scaleNonUniform(REntity& entity, const RVect
         if (arcEntity==NULL) {
             return QSharedPointer<REntity>();
         }
-        RArcEntity* cl = arcEntity->clone();
+        QSharedPointer<RArcEntity> cl = arcEntity->cloneToArc();
         cl->copyAttributesFrom(entity.getData());
         cl->setShape(*arcT);
         return QSharedPointer<REntity>(cl);

@@ -122,8 +122,12 @@ public:
         return RPropertyTypeId::getPropertyTypeIds(RDimRotatedEntity::getRtti());
     }
 
-    virtual RDimRotatedEntity* clone() const {
-        return new RDimRotatedEntity(*this);
+    virtual QSharedPointer<RObject> clone() const {
+        return QSharedPointer<RObject>(new RDimRotatedEntity(*this));
+    }
+
+    QSharedPointer<RDimRotatedEntity> cloneToDimRotatedEntity() const {
+        return QSharedPointer<RDimRotatedEntity>(new RDimRotatedEntity(*this));
     }
 
     virtual bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,

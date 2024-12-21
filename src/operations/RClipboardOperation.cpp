@@ -480,7 +480,7 @@ void RClipboardOperation::copyEntity(
     }
 
     // add entity self:
-    QSharedPointer<REntity> destEntity = QSharedPointer<REntity>(entity.clone());
+    QSharedPointer<REntity> destEntity = entity.cloneToEntity();
     //dest.getStorage().setObjectId(*destEntity.data(), RObject::INVALID_ID);
     dest.getStorage().setObjectHandle(*destEntity.data(), RObject::INVALID_HANDLE);
 
@@ -618,7 +618,7 @@ QSharedPointer<RBlock> RClipboardOperation::copyBlock(
             }
         }
         if (!dest.hasBlock(destBlockName) || (overwriteBlocks && blockName.isNull())) {
-            destBlock = QSharedPointer<RBlock> (srcBlock->clone());
+            destBlock = srcBlock->cloneToBlock();
             dest.getStorage().setObjectId(*destBlock.data(), RObject::INVALID_ID);
             dest.getStorage().setObjectHandle(*destBlock.data(), RObject::INVALID_HANDLE);
             destBlock->setDocument(&dest);
@@ -694,7 +694,7 @@ QSharedPointer<RLayer> RClipboardOperation::copyLayer(
     }
     else {
         if (!dest.hasLayer(srcLayerName) || overwriteLayers) {
-            destLayer = QSharedPointer<RLayer>(srcLayer->clone());
+            destLayer = srcLayer->cloneToLayer();
             destLayer->setDocument(&dest);
             if (destLayer->getDocument()!=srcLayer->getDocument()) {
                 dest.getStorage().setObjectId(*destLayer.data(), RObject::INVALID_ID);
@@ -748,7 +748,7 @@ QSharedPointer<RLinetype> RClipboardOperation::copyLinetype(
     }
     else {
         if (!dest.hasLinetype(srcLinetypeName) || overwriteLinetypes) {
-            destLinetype = QSharedPointer<RLinetype>(srcLinetype->clone());
+            destLinetype = srcLinetype->cloneToLinetype();
             destLinetype->setDocument(&dest);
             if (destLinetype->getDocument()!=srcLinetype->getDocument()) {
                 dest.getStorage().setObjectId(*destLinetype.data(), RObject::INVALID_ID);

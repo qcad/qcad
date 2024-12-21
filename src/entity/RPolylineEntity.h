@@ -99,8 +99,12 @@ public:
         return RPropertyTypeId::getPropertyTypeIds(RPolylineEntity::getRtti());
     }
 
-    virtual RPolylineEntity* clone() const {
-        return new RPolylineEntity(*this);
+    virtual QSharedPointer<RObject> clone() const {
+        return QSharedPointer<RObject>(new RPolylineEntity(*this));
+    }
+
+    QSharedPointer<RPolylineEntity> cloneToPolylineEntity() const {
+        return QSharedPointer<RPolylineEntity>(new RPolylineEntity(*this));
     }
 
     void setShape(const RPolyline& l);

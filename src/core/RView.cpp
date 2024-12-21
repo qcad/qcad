@@ -44,10 +44,6 @@ void RView::init() {
     RView::PropertyHeight.generateId(RView::getRtti(), "", "Height");
 }
 
-RView* RView::clone() const {
-    return new RView(*this);
-}
-
 bool RView::setProperty(RPropertyTypeId propertyTypeId,
     const QVariant& value, RTransaction* transaction) {
     bool ret = RObject::setProperty(propertyTypeId, value, transaction);

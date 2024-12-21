@@ -117,8 +117,12 @@ public:
         return RPropertyTypeId::getPropertyTypeIds(RDimDiametricEntity::getRtti());
     }
 
-    virtual RDimDiametricEntity* clone() const {
-        return new RDimDiametricEntity(*this);
+    virtual QSharedPointer<RObject> clone() const {
+        return QSharedPointer<RObject>(new RDimDiametricEntity(*this));
+    }
+
+    QSharedPointer<RDimDiametricEntity> cloneToDimDiametricEntity() const {
+        return QSharedPointer<RDimDiametricEntity>(new RDimDiametricEntity(*this));
     }
 
     virtual bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,

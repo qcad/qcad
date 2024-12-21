@@ -91,8 +91,12 @@ public:
         return RPropertyTypeId::getPropertyTypeIds(RAttributeEntity::getRtti());
     }
 
-    virtual RAttributeEntity* clone() const {
-        return new RAttributeEntity(*this);
+    virtual QSharedPointer<RObject> clone() const {
+        return QSharedPointer<RObject>(new RAttributeEntity(*this));
+    }
+
+    QSharedPointer<RAttributeEntity> cloneToAttributeEntity() {
+        return QSharedPointer<RAttributeEntity>(new RAttributeEntity(*this));
     }
 
     virtual RAttributeData& getData() {

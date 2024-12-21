@@ -1886,7 +1886,7 @@ void RDocumentInterface::addShapeToPreview(RShape& shape, const RColor& color,
         scene->setLinetypeId(document.getLinetypeId("CONTINUOUS"));
 
         // ignore color mode for this preview (selection rectangle, zoom box, etc):
-        scene->exportShape(QSharedPointer<RShape>(shape.clone()));
+        scene->exportShape(shape.clone());
 
         scene->endNoColorMode();
         scene->setPen(QPen());

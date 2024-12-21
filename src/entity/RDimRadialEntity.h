@@ -116,8 +116,12 @@ public:
         return RPropertyTypeId::getPropertyTypeIds(RDimRadialEntity::getRtti());
     }
 
-    virtual RDimRadialEntity* clone() const {
-        return new RDimRadialEntity(*this);
+    virtual QSharedPointer<RObject> clone() const {
+        return QSharedPointer<RObject>(new RDimRadialEntity(*this));
+    }
+
+    QSharedPointer<RDimRadialEntity> cloneToDimRadialEntity() const {
+        return QSharedPointer<RDimRadialEntity>(new RDimRadialEntity(*this));
     }
 
     virtual bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,

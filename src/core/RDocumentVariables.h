@@ -59,8 +59,12 @@ public:
         return RS::ObjectDocumentVariable;
     }
 
-    virtual RDocumentVariables* clone() const {
-        return new RDocumentVariables(*this);
+    virtual QSharedPointer<RObject> clone() const {
+        return QSharedPointer<RObject>(new RDocumentVariables(*this));
+    }
+
+    QSharedPointer<RDocumentVariables> cloneToDocumentVariables() const {
+        return QSharedPointer<RDocumentVariables>(new RDocumentVariables(*this));
     }
 
     virtual QPair<QVariant, RPropertyAttributes>

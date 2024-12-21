@@ -80,8 +80,12 @@ public:
         return RPropertyTypeId::getPropertyTypeIds(RBlockReferenceEntity::getRtti());
     }
 
-    virtual RBlockReferenceEntity* clone() const {
-        return new RBlockReferenceEntity(*this);
+    virtual QSharedPointer<RObject> clone() const {
+        return QSharedPointer<RObject>(new RBlockReferenceEntity(*this));
+    }
+
+    QSharedPointer<RBlockReferenceEntity> cloneToBlockReferenceEntity() const {
+        return QSharedPointer<RBlockReferenceEntity>(new RBlockReferenceEntity(*this));
     }
 
     virtual QSet<RPropertyTypeId> getPropertyTypeIds(RPropertyAttributes::Option option = RPropertyAttributes::NoOptions) const;

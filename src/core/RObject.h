@@ -106,7 +106,7 @@ public:
         return RS::ObjectUnknown;
     }
 
-    virtual RObject* clone() const = 0;
+    virtual QSharedPointer<RObject> clone() const = 0;
 
     /**
      * \return True to always clone object instead of saving diff when object changes.

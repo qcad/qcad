@@ -76,11 +76,13 @@ public:
         return RPropertyTypeId::getPropertyTypeIds(RCircleEntity::getRtti());
     }
 
-    virtual RCircleEntity* clone() const {
-        return new RCircleEntity(*this);
+    virtual QSharedPointer<RObject> clone() const {
+        return QSharedPointer<RObject>(new RCircleEntity(*this));
     }
 
-    
+    QSharedPointer<RCircleEntity> cloneToCircleEntity() const {
+        return QSharedPointer<RCircleEntity>(new RCircleEntity(*this));
+    }
 
     virtual bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
         RTransaction* transaction=NULL);

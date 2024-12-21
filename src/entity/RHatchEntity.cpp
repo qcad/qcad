@@ -70,10 +70,6 @@ RHatchEntity::RHatchEntity(RDocument* document, const RHatchData& data) :
 RHatchEntity::~RHatchEntity() {
 }
 
-RHatchEntity* RHatchEntity::clone() const {
-    return new RHatchEntity(*this);
-}
-
 void RHatchEntity::init() {
     RHatchEntity::PropertyCustom.generateId(RHatchEntity::getRtti(), RObject::PropertyCustom);
     RHatchEntity::PropertyHandle.generateId(RHatchEntity::getRtti(), RObject::PropertyHandle);

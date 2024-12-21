@@ -49,8 +49,12 @@ public:
         return Circle;
     }
 
-    virtual RCircle* clone() const {
-        return new RCircle(*this);
+    virtual QSharedPointer<RShape> clone() const {
+        return QSharedPointer<RShape>(new RCircle(*this));
+    }
+
+    QSharedPointer<RCircle> cloneToCircle() const {
+        return QSharedPointer<RCircle>(new RCircle(*this));
     }
 
     static RCircle createFrom2Points(const RVector& p1, const RVector& p2);

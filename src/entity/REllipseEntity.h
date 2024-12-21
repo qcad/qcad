@@ -89,8 +89,12 @@ public:
         return RPropertyTypeId::getPropertyTypeIds(REllipseEntity::getRtti());
     }
 
-    virtual REllipseEntity* clone() const {
-        return new REllipseEntity(*this);
+    virtual QSharedPointer<RObject> clone() const {
+        return QSharedPointer<RObject>(new REllipseEntity(*this));
+    }
+
+    QSharedPointer<REllipseEntity> cloneToEllipseEntity() const {
+        return QSharedPointer<REllipseEntity>(new REllipseEntity(*this));
     }
 
     void setShape(const REllipse& e);

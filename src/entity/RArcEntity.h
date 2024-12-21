@@ -86,8 +86,12 @@ public:
         return RPropertyTypeId::getPropertyTypeIds(RArcEntity::getRtti());
     }
 
-    virtual RArcEntity* clone() const {
-        return new RArcEntity(*this);
+    virtual QSharedPointer<RObject> clone() const {
+        return QSharedPointer<RObject>(new RArcEntity(*this));
+    }
+
+    QSharedPointer<RArcEntity> cloneToArc() const {
+        return QSharedPointer<RArcEntity>(new RArcEntity(*this));
     }
 
     void setShape(const RArc& a);

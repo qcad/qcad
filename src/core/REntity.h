@@ -112,7 +112,13 @@ public:
         getData().setDocument(document);
     }
 
-    virtual REntity* clone() const = 0;
+    virtual QSharedPointer<RObject> clone() const = 0;
+
+    QSharedPointer<REntity> cloneToEntity() const {
+        QSharedPointer<REntity> ret = clone().dynamicCast<REntity>();
+        Q_ASSERT(!ret.isNull());
+        return ret;
+    }
 
     virtual RS::EntityType getType() const {
         return getData().getType();

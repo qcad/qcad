@@ -142,7 +142,7 @@ void RShapesExporter::exportShapesBetween(int i1, const RVector& p1, int i2, con
             continue;
         }
 
-        QSharedPointer<RShape> shape = QSharedPointer<RShape>(shapes[i]->clone());
+        QSharedPointer<RShape> shape = shapes[i]->clone();
         if (!shape->isDirected()) {
             continue;
         }

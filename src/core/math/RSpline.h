@@ -66,8 +66,12 @@ public:
         return Spline;
     }
 
-    virtual RSpline* clone() const {
-        return new RSpline(*this);
+    virtual QSharedPointer<RShape> clone() const {
+        return QSharedPointer<RShape>(new RSpline(*this));
+    }
+
+    QSharedPointer<RSpline> cloneToSpline() const {
+        return QSharedPointer<RSpline>(new RSpline(*this));
     }
 
     virtual bool isDirected() const {

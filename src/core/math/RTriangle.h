@@ -56,8 +56,12 @@ public:
         return Triangle;
     }
 
-    virtual RTriangle* clone() const {
-        return new RTriangle(*this);
+    virtual QSharedPointer<RShape> clone() const {
+        return QSharedPointer<RShape>(new RTriangle(*this));
+    }
+
+    QSharedPointer<RTriangle> cloneToTriangle() const {
+        return QSharedPointer<RTriangle>(new RTriangle(*this));
     }
 
     virtual void setZ(double z);

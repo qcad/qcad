@@ -1233,8 +1233,8 @@ RPolyline REllipse::approximateWithArcs(int segments) const {
 QList<QSharedPointer<RShape> > REllipse::getOffsetShapes(double distance, int number, RS::Side side, const RVector& position) {
     errorCode = 0;
     QList<QSharedPointer<RShape> > ret;
-    REllipse* ellipse = dynamic_cast<REllipse*>(clone());
-    if (ellipse==NULL) {
+    QSharedPointer<REllipse> ellipse = clone().dynamicCast<REllipse>();
+    if (ellipse.isNull()) {
         return ret;
     }
 
@@ -1374,10 +1374,13 @@ QList<QSharedPointer<RShape> > REllipse::splitAt(const QList<RVector>& points) c
             continue;
         }
 
-        REllipse* seg = clone();
+        QSharedPointer<REllipse> seg = clone().dynamicCast<REllipse>();
+        if (seg.isNull()) {
+            continue;
+        }
         seg->setStartParam(seg->getParamTo(sortedPoints[i]));
         seg->setEndParam(seg->getParamTo(sortedPoints[i+1]));
-        ret.append(QSharedPointer<RShape>(seg));
+        ret.append(seg);
     }
 
     return ret;

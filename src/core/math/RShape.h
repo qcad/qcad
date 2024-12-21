@@ -132,11 +132,11 @@ public:
         return s.getShapeType()==RShape::Ray;
     }
 
-    virtual RShape* clone() const = 0;
+    virtual QSharedPointer<RShape> clone() const = 0;
 
-    virtual QSharedPointer<RShape> cloneToSharedPointer() const {
-        return QSharedPointer<RShape>(clone());
-    }
+    // virtual QSharedPointer<RShape> cloneToSharedPointer() const {
+    //     return QSharedPointer<RShape>(clone());
+    // }
 
     /**
      * Reimplement and return true if this shape relies on interpolation

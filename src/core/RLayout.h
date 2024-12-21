@@ -166,7 +166,13 @@ public:
         return RS::ObjectLayout;
     }
 
-    virtual RLayout* clone() const;
+    QSharedPointer<RObject> clone() const {
+        return QSharedPointer<RLayout>(new RLayout(*this));
+    }
+
+    QSharedPointer<RLayout> cloneToLayout() const {
+        return QSharedPointer<RLayout>(new RLayout(*this));
+    }
 
     QString getName() const {
         return name;

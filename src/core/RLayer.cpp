@@ -103,10 +103,6 @@ void RLayer::init() {
     RLayer::PropertyLineweight.generateId(RLayer::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Lineweight"));
 }
 
-RLayer* RLayer::clone() const {
-    return new RLayer(*this);
-}
-
 RLayer::Id RLayer::getParentLayerId() const {
     QString parentLayerName = getParentLayerName();
     if (parentLayerName.isEmpty()) {

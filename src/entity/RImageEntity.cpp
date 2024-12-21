@@ -70,10 +70,6 @@ RImageEntity::~RImageEntity() {
     RDebug::decCounter("RImageEntity");
 }
 
-RImageEntity* RImageEntity::clone() const {
-    return new RImageEntity(*this);
-}
-
 void RImageEntity::init() {
     RImageEntity::PropertyCustom.generateId(RImageEntity::getRtti(), RObject::PropertyCustom);
     RImageEntity::PropertyHandle.generateId(RImageEntity::getRtti(), RObject::PropertyHandle);

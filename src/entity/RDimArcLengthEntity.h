@@ -126,8 +126,12 @@ public:
         return RPropertyTypeId::getPropertyTypeIds(RDimArcLengthEntity::getRtti());
     }
 
-    virtual RDimArcLengthEntity* clone() const {
-        return new RDimArcLengthEntity(*this);
+    virtual QSharedPointer<RObject> clone() const {
+        return QSharedPointer<RObject>(new RDimArcLengthEntity(*this));
+    }
+
+    QSharedPointer<RDimArcLengthEntity> cloneToDimArcLengthEntity() const {
+        return QSharedPointer<RDimArcLengthEntity>(new RDimArcLengthEntity(*this));
     }
 
     virtual bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,

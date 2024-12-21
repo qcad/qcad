@@ -81,8 +81,12 @@ public:
         return RPropertyTypeId::getPropertyTypeIds(RLeaderEntity::getRtti());
     }
 
-    virtual RLeaderEntity* clone() const {
-        return new RLeaderEntity(*this);
+    virtual QSharedPointer<RObject> clone() const {
+        return QSharedPointer<RObject>(new RLeaderEntity(*this));
+    }
+
+    QSharedPointer<RLeaderEntity> cloneToLeaderEntity() const {
+        return QSharedPointer<RLeaderEntity>(new RLeaderEntity(*this));
     }
 
     virtual bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,

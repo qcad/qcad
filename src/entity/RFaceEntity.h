@@ -82,8 +82,12 @@ public:
         return RPropertyTypeId::getPropertyTypeIds(RFaceEntity::getRtti());
     }
 
-    virtual RFaceEntity* clone() const {
-        return new RFaceEntity(*this);
+    virtual QSharedPointer<RObject> clone() const {
+        return QSharedPointer<RObject>(new RFaceEntity(*this));
+    }
+
+    QSharedPointer<RFaceEntity> cloneToFaceEntity() const {
+        return QSharedPointer<RFaceEntity>(new RFaceEntity(*this));
     }
 
     virtual bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,

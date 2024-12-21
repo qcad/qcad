@@ -465,7 +465,10 @@ bool REntity::isSelectable() const {
 }
 
 QSharedPointer<REntity> REntity::scaleNonUniform(const RVector& scaleFactors, const RVector& center) {
-    QSharedPointer<REntity> cl(clone());
+    QSharedPointer<REntity> cl = cloneToEntity();
+    if (cl.isNull()) {
+        return QSharedPointer<REntity>();
+    }
     RShape* s = cl->castToShape();
     if (s==NULL) {
         return QSharedPointer<REntity>();

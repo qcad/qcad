@@ -55,8 +55,12 @@ public:
         return RLine(basePoint, basePoint + directionVector);
     }
 
-    virtual RXLine* clone() const {
-        return new RXLine(*this);
+    virtual QSharedPointer<RShape> clone() const {
+        return QSharedPointer<RShape>(new RXLine(*this));
+    }
+
+    QSharedPointer<RXLine> cloneToXLine() const {
+        return QSharedPointer<RXLine>(new RXLine(*this));
     }
 
     virtual bool isDirected() const {

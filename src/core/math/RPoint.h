@@ -48,8 +48,12 @@ public:
         return Point;
     }
 
-    virtual RPoint* clone() const {
-        return new RPoint(*this);
+    virtual QSharedPointer<RShape> clone() const {
+        return QSharedPointer<RShape>(new RPoint(*this));
+    }
+
+    QSharedPointer<RPoint> cloneToPoint() const {
+        return QSharedPointer<RPoint>(new RPoint(*this));
     }
 
     virtual void setZ(double z);

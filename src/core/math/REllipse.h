@@ -56,8 +56,12 @@ public:
         return Ellipse;
     }
 
-    virtual REllipse* clone() const {
-        return new REllipse(*this);
+    virtual QSharedPointer<RShape> clone() const {
+        return QSharedPointer<RShape>(new REllipse(*this));
+    }
+
+    QSharedPointer<REllipse> cloneToEllipse() const {
+        return QSharedPointer<REllipse>(new REllipse(*this));
     }
 
     virtual bool isDirected() const {

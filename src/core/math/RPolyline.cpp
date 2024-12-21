@@ -324,7 +324,7 @@ bool RPolyline::appendShapeAuto(const RShape& shape) {
     }
 
     if (countVertices()>0 && getEndPoint().equalsFuzzy(shape.getEndPoint())) {
-        QSharedPointer<RShape> rev = QSharedPointer<RShape>(shape.clone());
+        QSharedPointer<RShape> rev = shape.clone();
         rev->reverse();
         return appendShape(*rev);
     }
@@ -342,7 +342,7 @@ bool RPolyline::appendShapeTrim(const RShape& shape) {
             return appendShape(shape);
         }
         if (getEndPoint().equalsFuzzy(shape.getEndPoint())) {
-            QSharedPointer<RShape> rev = QSharedPointer<RShape>(shape.clone());
+            QSharedPointer<RShape> rev = shape.clone();
             rev->reverse();
             return appendShape(*rev);
         }
@@ -353,7 +353,7 @@ bool RPolyline::appendShapeTrim(const RShape& shape) {
             if (ips.length()==1) {
                 RVector ip = ips[0];
                 moveEndPoint(ip);
-                QSharedPointer<RShape> trimmed = QSharedPointer<RShape>(shape.clone());
+                QSharedPointer<RShape> trimmed = shape.clone();
                 trimmed->trimStartPoint(ip);
                 return appendShape(*trimmed);
             }
@@ -446,7 +446,7 @@ void RPolyline::insertVertexAt(const RVector& point) {
 
     RVector p = seg1->getClosestPointOnShape(point, false);
 
-    QSharedPointer<RShape> seg2 = QSharedPointer<RShape>(seg1->clone());
+    QSharedPointer<RShape> seg2 = seg1->clone();
 
     if (!seg1->isDirected() || !seg2->isDirected()) {
         return;

@@ -620,7 +620,7 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
     // through transactions:
     // TODO: check if entity is editable:
     if (mustClone) {
-        QSharedPointer<RObject> clone = QSharedPointer<RObject>(object->clone());
+        QSharedPointer<RObject> clone = object->clone();
 
         objectStorage->setObjectId(*clone, RObject::INVALID_ID);
         // note that we delete the OLD entity here
@@ -735,7 +735,7 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
                     }
 
                     // clone block to avoid changing the original block:
-                    QSharedPointer<RBlock> newBlock = QSharedPointer<RBlock>(block->clone());
+                    QSharedPointer<RBlock> newBlock = block->cloneToBlock();
                     QString newBlockName = doc->getUniqueBlockName(block->getName(), usedBlockNames);
                     if (!storageIsLinked) qDebug() << "20241213: clone block " << referencedBlockName << " to " << newBlockName;
                     //qDebug() << "newBlockName: " << newBlockName;
@@ -747,7 +747,7 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
                     QSet<REntity::Id> entityIds = doc->queryBlockEntities(block->getId());
                     for (QSet<REntity::Id>::iterator it=entityIds.begin(); it!=entityIds.end(); ++it) {
                         QSharedPointer<REntity> entity = doc->queryEntityDirect(*it);
-                        QSharedPointer<REntity> entityClone = QSharedPointer<REntity>(entity->clone());
+                        QSharedPointer<REntity> entityClone = entity->cloneToEntity();
                         entityClone->setBlockId(newBlock->getId());
                         addObject(entityClone, false, true);
                     }

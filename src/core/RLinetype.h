@@ -74,8 +74,12 @@ public:
         return RS::ObjectLinetype;
     }
 
-    virtual RLinetype* clone() const {
-        return new RLinetype(*this);
+    virtual QSharedPointer<RObject> clone() const {
+        return QSharedPointer<RObject>(new RLinetype(*this));
+    }
+
+    QSharedPointer<RLinetype> cloneToLinetype() const {
+        return QSharedPointer<RLinetype>(new RLinetype(*this));
     }
 
     QString getName() const {

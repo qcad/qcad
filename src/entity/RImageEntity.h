@@ -86,7 +86,13 @@ public:
         return RPropertyTypeId::getPropertyTypeIds(RImageEntity::getRtti());
     }
 
-    virtual RImageEntity* clone() const;
+    virtual QSharedPointer<RObject> clone() const {
+        return QSharedPointer<RObject>(new RImageEntity(*this));
+    }
+
+    QSharedPointer<RImageEntity> cloneToImageEntity() const {
+        return QSharedPointer<RImageEntity>(new RImageEntity(*this));
+    }
 
     virtual bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
         RTransaction* transaction=NULL);

@@ -123,8 +123,12 @@ public:
         return RPropertyTypeId::getPropertyTypeIds(RDimAngular3PEntity::getRtti());
     }
 
-    virtual RDimAngular3PEntity* clone() const {
-        return new RDimAngular3PEntity(*this);
+    virtual QSharedPointer<RObject> clone() const {
+        return QSharedPointer<RObject>(new RDimAngular3PEntity(*this));
+    }
+
+    QSharedPointer<RDimAngular3PEntity> cloneToDimAngular3PEntity() const {
+        return QSharedPointer<RDimAngular3PEntity>(new RDimAngular3PEntity(*this));
     }
 
     virtual bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,

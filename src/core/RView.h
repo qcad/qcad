@@ -64,7 +64,13 @@ public:
         return RS::ObjectView;
     }
 
-    virtual RView* clone() const;
+    virtual QSharedPointer<RObject> clone() const {
+        return QSharedPointer<RObject>(new RView(*this));
+    }
+
+    QSharedPointer<RView> cloneToView() const {
+        return QSharedPointer<RView>(new RView(*this));
+    }
 
     QString getName() const {
         return name;

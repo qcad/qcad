@@ -768,7 +768,7 @@ QSharedPointer<RDocumentVariables> RMemoryStorage::queryDocumentVariables() cons
         //qWarning() << "RMemoryStorage::queryDocumentVariables: document variables is NULL";
         return QSharedPointer<RDocumentVariables>();
     }
-    return QSharedPointer<RDocumentVariables>(documentVariables->clone());
+    return documentVariables->clone().dynamicCast<RDocumentVariables>();
 }
 
 QSharedPointer<RDocumentVariables> RMemoryStorage::queryDocumentVariablesDirect() const {
@@ -783,7 +783,7 @@ QSharedPointer<RDimStyle> RMemoryStorage::queryDimStyle() const {
         //qWarning() << "RMemoryStorage::queryDimStyle: document variables is NULL";
         return QSharedPointer<RDimStyle>();
     }
-    return QSharedPointer<RDimStyle>(dimStyle->clone());
+    return dimStyle->cloneToDimStyle();
 }
 
 QSharedPointer<RDimStyle> RMemoryStorage::queryDimStyleDirect() const {
@@ -798,7 +798,7 @@ QSharedPointer<RObject> RMemoryStorage::queryObject(RObject::Id objectId) const 
         return QSharedPointer<RObject> ();
     }
     if (!objectMap[objectId].isNull()) {
-        return QSharedPointer<RObject>(objectMap[objectId]->clone());
+        return objectMap[objectId]->clone();
     }
     return QSharedPointer<RObject>();
 }
@@ -827,7 +827,7 @@ QSharedPointer<RObject> RMemoryStorage::queryObjectByHandle(RObject::Handle obje
         return QSharedPointer<RObject>();
     }
     if (!objectHandleMap[objectHandle].isNull()) {
-        return QSharedPointer<RObject>(objectHandleMap[objectHandle]->clone());
+        return objectHandleMap[objectHandle]->clone();
     }
     return QSharedPointer<RObject>();
 
@@ -862,7 +862,7 @@ QSharedPointer<REntity> RMemoryStorage::queryEntity(REntity::Id objectId) const 
         return QSharedPointer<REntity> ();
     }
     if (!entityMap[objectId].isNull()) {
-        return QSharedPointer<RObject>(entityMap[objectId]->clone()).dynamicCast<REntity>();
+        return entityMap[objectId]->cloneToEntity();
     }
     return QSharedPointer<REntity>();
 }
@@ -898,7 +898,7 @@ QSharedPointer<RLayer> RMemoryStorage::queryLayer(RLayer::Id layerId) const {
         return QSharedPointer<RLayer> ();
     }
     //if (!layer.dynamicCast<RLayer>().isNull()) {
-        return QSharedPointer<RLayer>(layer->clone());
+        return layer->clone().dynamicCast<RLayer>();
     //}
 
 //    qWarning() << "RMemoryStorage::queryLayer: should never be reached: " << layerId;
@@ -917,7 +917,7 @@ QSharedPointer<RLayer> RMemoryStorage::queryLayer(const QString& layerName) cons
     if (layer->isUndone()) {
         return QSharedPointer<RLayer> ();
     }
-    return QSharedPointer<RLayer>(layer->clone());
+    return layer->clone().dynamicCast<RLayer>();
     //return layerNameMap[layerName.toLower()].dynamicCast<RLayer>();
 
 
@@ -925,7 +925,7 @@ QSharedPointer<RLayer> RMemoryStorage::queryLayer(const QString& layerName) cons
 //    for (it = layerMap.constBegin(); it != layerMap.constEnd(); ++it) {
 //        QSharedPointer<RLayer> l = *it;
 //        if (!l.isNull() && l->getName().compare(layerName, Qt::CaseInsensitive)==0 && !l->isUndone()) {
-//            return QSharedPointer<RLayer> (l->clone());
+//            return l->clone().dynamicCast<RLayer >();
 //        }
 //    }
 //    return QSharedPointer<RLayer>();
@@ -946,7 +946,7 @@ QSharedPointer<RLayerState> RMemoryStorage::queryLayerState(RLayerState::Id laye
         return QSharedPointer<RLayerState> ();
     }
     if (!layerStateMap[layerStateId].dynamicCast<RLayerState>().isNull()) {
-        return QSharedPointer<RLayerState>((RLayerState*)layerStateMap[layerStateId]->clone());
+        return layerStateMap[layerStateId]->clone().dynamicCast<RLayerState>();
     }
 
     qWarning() << "RMemoryStorage::queryLayerState: should never be reached: " << layerStateId;
@@ -959,7 +959,7 @@ QSharedPointer<RLayerState> RMemoryStorage::queryLayerState(const QString& layer
     for (it = layerStateMap.constBegin(); it != layerStateMap.constEnd(); ++it) {
         QSharedPointer<RLayerState> l = *it;
         if (!l.isNull() && l->getName().compare(layerStateName, Qt::CaseInsensitive)==0 && !l->isUndone()) {
-            return QSharedPointer<RLayerState> (l->clone());
+            return l->clone().dynamicCast<RLayerState >();
         }
     }
     return QSharedPointer<RLayerState>();
@@ -980,7 +980,7 @@ QSharedPointer<RLayout> RMemoryStorage::queryLayout(RLayout::Id layoutId) const 
         return QSharedPointer<RLayout> ();
     }
     if (!layoutMap[layoutId].dynamicCast<RLayout>().isNull()) {
-        return QSharedPointer<RLayout>((RLayout*)layoutMap[layoutId]->clone());
+        return layoutMap[layoutId]->clone().dynamicCast<RLayout>();
     }
 
     qWarning() << "RMemoryStorage::queryLayout: should never be reached: " << layoutId;
@@ -993,7 +993,7 @@ QSharedPointer<RLayout> RMemoryStorage::queryLayout(const QString& layoutName) c
     for (it = layoutMap.constBegin(); it != layoutMap.constEnd(); ++it) {
         QSharedPointer<RLayout> l = *it;
         if (!l.isNull() && l->getName().compare(layoutName, Qt::CaseInsensitive)==0 && !l->isUndone()) {
-            return QSharedPointer<RLayout> (l->clone());
+            return l->clone().dynamicCast<RLayout >();
         }
     }
     return QSharedPointer<RLayout>();
@@ -1007,7 +1007,7 @@ QSharedPointer<RBlock> RMemoryStorage::queryBlock(RBlock::Id blockId) const {
         return QSharedPointer<RBlock> ();
     }
     if (!blockMap[blockId].dynamicCast<RBlock>().isNull()) {
-        return QSharedPointer<RBlock>((RBlock*)blockMap[blockId]->clone());
+        return blockMap[blockId]->clone().dynamicCast<RBlock>();
     }
     return QSharedPointer<RBlock>();
 }
@@ -1057,7 +1057,7 @@ QSharedPointer<RBlock> RMemoryStorage::queryBlock(const QString& blockName) cons
     for (it = blockMap.constBegin(); it != blockMap.constEnd(); ++it) {
         QSharedPointer<RBlock> b = *it;
         if (!b.isNull() && !b->isUndone() && b->getName().compare(blockName, Qt::CaseInsensitive)==0) {
-            return QSharedPointer<RBlock> (b->clone());
+            return b->clone().dynamicCast<RBlock >();
         }
     }
     return QSharedPointer<RBlock>();
@@ -1160,7 +1160,7 @@ QSharedPointer<RView> RMemoryStorage::queryView(RView::Id viewId) const {
         return QSharedPointer<RView> ();
     }
     if (!objectMap[viewId].dynamicCast<RView>().isNull()) {
-        return QSharedPointer<RView>((RView*)objectMap[viewId]->clone());
+        return objectMap[viewId]->clone().dynamicCast<RView>();
     }
     return QSharedPointer<RView>();
 }
@@ -1170,7 +1170,7 @@ QSharedPointer<RView> RMemoryStorage::queryView(const QString& viewName) const {
     for (it = objectMap.constBegin(); it != objectMap.constEnd(); ++it) {
         QSharedPointer<RView> l = it->dynamicCast<RView>();
         if (!l.isNull() && l->getName() == viewName && !l->isUndone()) {
-            return QSharedPointer<RView> (l->clone());
+            return l->clone().dynamicCast<RView >();
         }
     }
     return QSharedPointer<RView>();
@@ -1188,7 +1188,7 @@ QSharedPointer<RUcs> RMemoryStorage::queryUcs(RUcs::Id ucsId) const {
         return QSharedPointer<RUcs> ();
     }
     if (!objectMap[ucsId].dynamicCast<RUcs>().isNull()) {
-        return QSharedPointer<RObject>(objectMap[ucsId]->clone()).dynamicCast<RUcs>();
+        return objectMap[ucsId]->clone().dynamicCast<RUcs>();;
     }
     return QSharedPointer<RUcs>();
 }
@@ -1198,7 +1198,7 @@ QSharedPointer<RUcs> RMemoryStorage::queryUcs(const QString& ucsName) const {
     for (it = objectMap.constBegin(); it != objectMap.constEnd(); ++it) {
         QSharedPointer<RUcs> u = it->dynamicCast<RUcs>();
         if (!u.isNull() && u->name==ucsName) {
-            return QSharedPointer<RUcs> (u->clone());
+            return u->clone().dynamicCast<RUcs >();
         }
     }
 
@@ -1220,7 +1220,7 @@ QSharedPointer<RLinetype> RMemoryStorage::queryLinetype(RLinetype::Id linetypeId
         return QSharedPointer<RLinetype> ();
     }
     if (!linetypeMap[linetypeId].dynamicCast<RLinetype>().isNull()) {
-        return QSharedPointer<RLinetype>(linetypeMap[linetypeId]->clone());
+        return linetypeMap[linetypeId]->clone().dynamicCast<RLinetype>();
     }
     return QSharedPointer<RLinetype>();
 }
@@ -1230,7 +1230,7 @@ QSharedPointer<RLinetype> RMemoryStorage::queryLinetype(const QString& linetypeN
     for (it = linetypeMap.constBegin(); it != linetypeMap.constEnd(); ++it) {
         QSharedPointer<RLinetype> l = it->dynamicCast<RLinetype>();
         if (!l.isNull() && l->getName().compare(linetypeName, Qt::CaseInsensitive)==0) {
-            return QSharedPointer<RLinetype> (l->clone());
+            return l->clone().dynamicCast<RLinetype >();
         }
     }
 

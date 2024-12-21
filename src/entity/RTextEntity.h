@@ -87,8 +87,12 @@ public:
         return RPropertyTypeId::getPropertyTypeIds(RTextEntity::getRtti());
     }
 
-    virtual RTextEntity* clone() const {
-        return new RTextEntity(*this);
+    virtual QSharedPointer<RObject> clone() const {
+        return QSharedPointer<RObject>(new RTextEntity(*this));
+    }
+
+    QSharedPointer<RTextEntity> cloneToTextEntity() const {
+        return QSharedPointer<RTextEntity>(new RTextEntity(*this));
     }
 
     virtual RTextData& getData() {

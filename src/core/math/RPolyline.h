@@ -58,8 +58,12 @@ public:
         return Polyline;
     }
 
-    virtual RPolyline* clone() const {
-        return new RPolyline(*this);
+    virtual QSharedPointer<RShape> clone() const {
+        return QSharedPointer<RShape>(new RPolyline(*this));
+    }
+
+    QSharedPointer<RPolyline> cloneToPolyline() const {
+        return QSharedPointer<RPolyline>(new RPolyline(*this));
     }
 
     virtual bool isDirected() const {

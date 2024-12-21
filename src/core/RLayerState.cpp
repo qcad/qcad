@@ -46,10 +46,6 @@ void RLayerState::init() {
     RLayerState::PropertyName.generateId(RLayerState::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Name"));
 }
 
-RLayerState* RLayerState::clone() const {
-    return new RLayerState(*this);
-}
-
 void RLayerState::addLayer(QSharedPointer<RLayer> layer) {
     if (layer.isNull()) {
         qWarning() << "layer is NULL";

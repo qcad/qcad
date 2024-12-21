@@ -87,8 +87,12 @@ public:
         return RS::ObjectDimStyle;
     }
 
-    virtual RDimStyle* clone() const {
-        return new RDimStyle(*this);
+    virtual QSharedPointer<RObject> clone() const {
+        return QSharedPointer<RObject>(new RDimStyle(*this));
+    }
+
+    QSharedPointer<RDimStyle> cloneToDimStyle() const {
+        return QSharedPointer<RDimStyle>(new RDimStyle(*this));
     }
 
     void updateDocumentVariables();

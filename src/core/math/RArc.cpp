@@ -1030,15 +1030,17 @@ QList<QSharedPointer<RShape> > RArc::splitAt(const QList<RVector>& points) const
             continue;
         }
 
-        RArc* seg = clone();
-        double a1 = center.getAngleTo(sortedPoints[i]);
-        double a2 = center.getAngleTo(sortedPoints[i+1]);
-        if (fabs(RMath::getAngleDifference180(a1, a2)*radius)<0.001) {
-            continue;
+        QSharedPointer<RArc> seg = clone().dynamicCast<RArc>();
+        if (!seg.isNull()) {
+            double a1 = center.getAngleTo(sortedPoints[i]);
+            double a2 = center.getAngleTo(sortedPoints[i+1]);
+            if (fabs(RMath::getAngleDifference180(a1, a2)*radius)<0.001) {
+                continue;
+            }
+            seg->setStartAngle(a1);
+            seg->setEndAngle(a2);
+            ret.append(seg);
         }
-        seg->setStartAngle(a1);
-        seg->setEndAngle(a2);
-        ret.append(QSharedPointer<RShape>(seg));
     }
 
     return ret;
