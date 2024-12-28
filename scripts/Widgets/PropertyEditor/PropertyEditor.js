@@ -949,7 +949,9 @@ PropertyEditorImpl.prototype.initControls = function(propertyTypeId, onlyChanges
     // Hatch pattern: combo box with hatch names:
     else if (propertyTypeId.getId()===RHatchEntity.PropertyPatternName.getId()) {
         var patternNames = undefined;
-        if (RUnit.isMetric(EAction.getDocument().getUnit())) {
+        // Use the document measurement setting (as indicated by the UI) instead
+        // of the document unit.
+        if (EAction.getDocument().isMetric()) {
             patternNames = RPatternListMetric.getNames();
         }
         else {

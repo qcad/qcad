@@ -73,7 +73,9 @@ HatchDialog.prototype.show =  function(hatchDataIn) {
     imageView.setMargin(10);
 
     var patternNames;
-    if (RUnit.isMetric(EAction.getDocument().getUnit())) {
+    // Use the document measurement setting (as indicated by the UI) instead
+    // of the document unit.
+    if (EAction.getDocument().isMetric()) {
         patternNames = RPatternListMetric.getNames();
     }
     else {

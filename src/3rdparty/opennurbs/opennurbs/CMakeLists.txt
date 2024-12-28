@@ -5,7 +5,8 @@ IF(WIN32)
 	#SET(RC ../opennurbs.rc)
 ENDIF()
 
-add_library(opennurbs SHARED
+# Make this library static to agree with the qmake .pro file
+add_library(opennurbs STATIC
     ../opennurbs.h
     ../opennurbs_3dm.h
     ../opennurbs_3dm_attributes.cpp ../opennurbs_3dm_attributes.h
