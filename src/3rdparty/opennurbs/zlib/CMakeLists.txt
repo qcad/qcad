@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.16)
 project(zlib VERSION 1.0 LANGUAGES C)
 
-add_library(zlib SHARED
+# Make this library static to agree with the qmake .pro file
+add_library(zlib STATIC
     adler32.c
     compress.c
     crc32.c crc32.h

@@ -204,7 +204,6 @@ void RDocument::init(bool beforeLoad) {
         // default variables:
         docVars->setUnit(defaultUnit);
         docVars->setMeasurement(measurement);
-        initLinetypes(&transaction);
         docVars->setLinetypeScale(RSettings::getDoubleValue("LinetypeSettings/Scale", 1.0));
 
         // point display:
@@ -363,7 +362,10 @@ void RDocument::init(bool beforeLoad) {
     }
 
     transaction.addObject(docVars);
-
+    // The linetypes cannot be initialized until the docVars are added to
+    // the transaction.
+    initLinetypes(&transaction);
+    
     QSharedPointer<RDimStyle> dimStyle = QSharedPointer<RDimStyle>(new RDimStyle(this));
     transaction.addObject(dimStyle);
 
@@ -394,7 +396,9 @@ QList<QSharedPointer<RObject> > RDocument::getDefaultLinetypes() {
 
     // read patterns from file system and add to doc:
     QStringList patternList;
-    if (RUnit::isMetric(getUnit())) {
+    // Use the measurement setting instead of the unit as defined
+    // in the user interface.
+    if (isMetric()) {
         patternList = RLinetypeListMetric::getNames();
     }
     else {
@@ -404,7 +408,9 @@ QList<QSharedPointer<RObject> > RDocument::getDefaultLinetypes() {
         QString name = patternList[i];
 
         RLinetypePattern* pattern = NULL;
-        if (RUnit::isMetric(getUnit())) {
+        // Use the measurement setting instead of the unit as defined
+        // in the user interface.
+        if (isMetric()) {
             pattern = RLinetypeListMetric::get(name);
         }
         else {

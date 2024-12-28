@@ -69,8 +69,10 @@ QStringList RPluginLoader::getPluginFiles() {
         else {
 #ifdef QT_DEBUG
             // release plugin but built in debug mode: skip:
-            qDebug() << "Ignoring release plugin built in debug mode: " << fileName;
-            continue;
+            // CMAKE and QMAKE build rules removed building debug version
+            // with _debug suffix.            
+            // qDebug() << "Ignoring release plugin built in debug mode: " << fileName;
+            // continue;
 #endif
         }
 
