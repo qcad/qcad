@@ -204,7 +204,6 @@ void RDocument::init(bool beforeLoad) {
         // default variables:
         docVars->setUnit(defaultUnit);
         docVars->setMeasurement(measurement);
-        initLinetypes(&transaction);
         docVars->setLinetypeScale(RSettings::getDoubleValue("LinetypeSettings/Scale", 1.0));
 
         // point display:
@@ -363,6 +362,8 @@ void RDocument::init(bool beforeLoad) {
     }
 
     transaction.addObject(docVars);
+
+    initLinetypes(&transaction);
 
     QSharedPointer<RDimStyle> dimStyle = QSharedPointer<RDimStyle>(new RDimStyle(this));
     transaction.addObject(dimStyle);
