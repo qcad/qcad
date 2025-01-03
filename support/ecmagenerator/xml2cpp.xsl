@@ -1594,8 +1594,21 @@
                         )
                     );
                     if( ap<xsl:value-of select="$index" /> == NULL ){
-                           return REcmaHelper::throwError("<xsl:value-of select="$name"/>: Argument <xsl:value-of select="$index" /> is not of type <xsl:value-of select="$typeName" />*.",
-                               context);                    
+
+                      // try to cast to QSharedPointer:
+                      QSharedPointer&lt;<xsl:value-of select="$typeName" />&gt;
+                      ap<xsl:value-of select="$index" />sp =
+                      qscriptvalue_cast&lt;
+                      QSharedPointer&lt;<xsl:value-of select="$typeName" />&gt;
+                          &gt;(
+                          context-&gt;argument(
+                          <xsl:value-of select="$index" />
+                          )
+                      );
+                      if( ap<xsl:value-of select="$index" />sp.isNull() ){
+                           return REcmaHelper::throwError("<xsl:value-of select="$name"/>: Argument <xsl:value-of select="$index" /> is not of type <xsl:value-of select="$typeName" />* or QSharedPointer&lt;<xsl:value-of select="$typeName" />&gt;.",
+                               context);
+                      }
                     }
                     <xsl:value-of select="$typeName" />&amp; a<xsl:value-of select="$index" /> = *ap<xsl:value-of select="$index" />;
                 </xsl:otherwise>
