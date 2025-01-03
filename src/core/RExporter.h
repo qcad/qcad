@@ -129,17 +129,17 @@ public:
     virtual void setLinetypePattern(const RLinetypePattern& ltPattern);
     virtual RLinetypePattern getLinetypePattern();
 
-    virtual REntity* getBlockRefOrEntity();
+    virtual QSharedPointer<REntity> getBlockRefOrEntity();
     virtual REntity::Id getBlockRefOrEntityId();
-    virtual REntity* getEntity();
-    virtual REntity* getCurrentBlockRef() const;
-    virtual RViewportEntity* getCurrentViewport() const;
-    virtual QStack<REntity*> getBlockRefViewportStack() const;
+    virtual QSharedPointer<REntity> getEntity();
+    virtual QSharedPointer<REntity> getCurrentBlockRef() const;
+    virtual QSharedPointer<RViewportEntity> getCurrentViewport() const;
+    virtual QStack<QSharedPointer<REntity> > getBlockRefViewportStack() const;
 
     /**
      * \nonscriptable
      */
-    virtual const REntity* getEntity() const;
+    virtual QSharedPointer<REntity> getEntity() const;
 
     virtual bool isEntitySelected();
     virtual bool isPatternContinuous(const RLinetypePattern& p);
@@ -159,22 +159,22 @@ public:
     virtual void exportViews();
     virtual void exportLinetypes();
 
-    virtual void exportLayer(RLayer& /*layer*/) {}
+    virtual void exportLayer(QSharedPointer<RLayer> /*layer*/) {}
     virtual void exportLayer(RLayer::Id layerId);
-    virtual void exportLayerState(RLayerState& /*layerState*/) {}
-    virtual void exportBlock(RBlock& /*block*/) {}
+    virtual void exportLayerState(QSharedPointer<RLayerState> /*layerState*/) {}
+    virtual void exportBlock(QSharedPointer<RBlock> /*block*/) {}
     virtual void exportBlock(RBlock::Id blockId);
-    virtual void exportView(RView& /*view*/) {}
+    virtual void exportView(QSharedPointer<RView> /*view*/) {}
     virtual void exportView(RView::Id viewId);
-    virtual void exportLinetype(RLinetype& /*linetype*/) {}
+    virtual void exportLinetype(QSharedPointer<RLinetype> /*linetype*/) {}
 
     virtual void exportEntities(bool allBlocks = true, bool undone = false, bool invisible = false);
     virtual void exportEntities(const RBox& box);
     virtual void exportEntities(QSet<REntity::Id>& entityIds, bool allBlocks = true);
-    virtual void exportEntity(REntity& entity, bool preview = false, bool allBlocks = true, bool forceSelected = false, bool invisible = false);
+    virtual void exportEntity(QSharedPointer<REntity> entity, bool preview = false, bool allBlocks = true, bool forceSelected = false, bool invisible = false);
     virtual void exportEntity(REntity::Id entityId, bool allBlocks = true, bool forceSelected = false);
-    virtual QSharedPointer<RLayer> getEntityLayer(REntity& entity);
-    virtual bool isVisible(REntity& entity);
+    virtual QSharedPointer<RLayer> getEntityLayer(QSharedPointer<REntity> entity);
+    virtual bool isVisible(QSharedPointer<REntity> entity);
     virtual void startEntity(bool /*topLevelEntity*/) {}
     virtual void endEntity() {}
     virtual void exportCurrentEntity(bool preview = false, bool forceSelected = false);
@@ -301,9 +301,9 @@ public:
         return RSettings::isTextRenderedAsText();
     }
 
-    QStack<REntity*> getEntityStack();
+    QStack<QSharedPointer<REntity> > getEntityStack();
 
-    void pushEntity(REntity* e);
+    void pushEntity(QSharedPointer<REntity> e);
     void popEntity();
 
     void setDraftMode(bool on);
@@ -398,9 +398,9 @@ protected:
     QPen currentPen;
     RLinetypePattern currentLinetypePattern;
     QBrush currentBrush;
-    QStack<REntity*> entityStack;
+    QStack<QSharedPointer<REntity> > entityStack;
     RLayer* currentLayer;
-    QStack<REntity*> blockRefViewportStack;
+    QStack<QSharedPointer<REntity> > blockRefViewportStack;
     RDocument* layerSource;
     RDocument* blockSource;
     bool draftMode;

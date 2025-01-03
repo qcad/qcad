@@ -317,7 +317,7 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
         }
 
         //RDebug::startTimer(7);
-        e.exportEntity(*entity, preview, true);
+        e.exportEntity(entity, preview, true);
         //RDebug::stopTimer(7, "export entity as part of viewport");
 
         i++;

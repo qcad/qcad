@@ -72,13 +72,13 @@ QString REntityData::getBlockName() const {
 }
 
 // TODO: fix
-double REntityData::getLineweightInUnits(const QStack<REntity*>& blockRefStack) const {
+double REntityData::getLineweightInUnits(const QStack<QSharedPointer<REntity> >& blockRefStack) const {
     RLineweight::Lineweight lw = getLineweight(true, blockRefStack);
     // TODO: unit conversion:
     return lw / 100.0;
 }
 
-RColor REntityData::getColor(const RColor& unresolvedColor, const QStack<REntity*>& blockRefStack) const {
+RColor REntityData::getColor(const RColor& unresolvedColor, const QStack<QSharedPointer<REntity> >& blockRefStack) const {
     if (unresolvedColor.isByLayer()) {
         if (document==NULL) {
             qWarning() << "REntityData::getColor: "
@@ -124,7 +124,7 @@ RColor REntityData::getColor(const RColor& unresolvedColor, const QStack<REntity
  *
  * \param resolve Resolve color if ByLayer or ByBlock.
  */
-RColor REntityData::getColor(bool resolve, const QStack<REntity*>& blockRefStack) const {
+RColor REntityData::getColor(bool resolve, const QStack<QSharedPointer<REntity> >& blockRefStack) const {
     if (!resolve) {
         return getColor();
     }
@@ -157,7 +157,7 @@ RColor REntityData::getColor(bool resolve, const QStack<REntity*>& blockRefStack
  * \param blockRef Block reference to use for resolving if known,
  *      NULL otherwise.
  */
-RLineweight::Lineweight REntityData::getLineweight(bool resolve, const QStack<REntity*>& blockRefStack) const {
+RLineweight::Lineweight REntityData::getLineweight(bool resolve, const QStack<QSharedPointer<REntity> >& blockRefStack) const {
 
     if (!resolve) {
         return getLineweight();
@@ -217,7 +217,7 @@ RLineweight::Lineweight REntityData::getLineweight(bool resolve, const QStack<RE
     return lw;
 }
 
-RLinetype::Id REntityData::getLinetypeId(bool resolve, const QStack<REntity*>& blockRefStack) const {
+RLinetype::Id REntityData::getLinetypeId(bool resolve, const QStack<QSharedPointer<REntity> >& blockRefStack) const {
 
     if (!resolve) {
         return getLinetypeId();

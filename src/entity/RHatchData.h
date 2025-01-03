@@ -224,12 +224,12 @@ public:
         return c;
     }
 
-    virtual RColor getColor(const RColor& unresolvedColor, const QStack<REntity *>& blockRefStack) const {
+    virtual RColor getColor(const RColor& unresolvedColor, const QStack<QSharedPointer<REntity> >& blockRefStack) const {
         RColor c = REntityData::getColor(unresolvedColor, blockRefStack);
         c.setAlpha(transparency);
         return c;
     }
-    virtual RColor getColor(bool resolve, const QStack<REntity *>& blockRefStack) const {
+    virtual RColor getColor(bool resolve, const QStack<QSharedPointer<REntity> >& blockRefStack) const {
         RColor c = REntityData::getColor(resolve, blockRefStack);
         c.setAlpha(transparency);
         return c;

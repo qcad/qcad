@@ -317,7 +317,7 @@ void RGraphicsScene::exportReferencePoints() {
         return;
     }
 
-    const REntity* entity = getBlockRefOrEntity();
+    QSharedPointer<REntity> entity = getBlockRefOrEntity();
     if (entity==NULL) {
         return;
     }

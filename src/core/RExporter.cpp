@@ -142,18 +142,18 @@ RDocument& RExporter::getDocument() const {
  *      if no block reference is being exported, the current entity
  *      that is being exported.
  */
-REntity* RExporter::getBlockRefOrEntity() {
+QSharedPointer<REntity> RExporter::getBlockRefOrEntity() {
     if (blockRefViewportStack.isEmpty()) {
         return getEntity();
     }
 
     // return the top block reference in the hierarchy. this is the
     // first in the stack, NOT the stack top:
-    return blockRefViewportStack.first();
+    return blockRefViewportStack.first()->cloneToEntity();
 }
 
 REntity::Id RExporter::getBlockRefOrEntityId() {
-    REntity* entity = getBlockRefOrEntity();
+    QSharedPointer<REntity> entity = getBlockRefOrEntity();
     if (entity==NULL) {
         return REntity::INVALID_ID;
     }
@@ -165,11 +165,11 @@ REntity::Id RExporter::getBlockRefOrEntityId() {
 /**
  * \return Pointer to the entity that is currently being exported.
  */
-const REntity* RExporter::getEntity() const {
+QSharedPointer<REntity> RExporter::getEntity() const {
     if (entityStack.isEmpty()) {
-        return NULL;
+        return QSharedPointer<REntity>();
     }
-    return entityStack.top();
+    return entityStack.top()->cloneToEntity();
 }
 
 /**
@@ -303,7 +303,7 @@ QBrush RExporter::getBrush(const RPainterPath& path) {
         // color fixed to "by block" (which really means by block reference):
         if (color==RColor::CompatByBlock) {
             if (!blockRefViewportStack.isEmpty()) {
-                QStack<REntity*> newBlockRefStack;
+                QStack<QSharedPointer<REntity> > newBlockRefStack;
                 newBlockRefStack = blockRefViewportStack;
                 newBlockRefStack.pop();
                 color = blockRefViewportStack.top()->getColor(true, newBlockRefStack);
@@ -315,7 +315,7 @@ QBrush RExporter::getBrush(const RPainterPath& path) {
                 //Q_ASSERT(false);
             }
         }
-        REntity* e = getEntity();
+        QSharedPointer<REntity> e = getEntity();
         if (e!=NULL && (e->isSelected() || e->isSelectedWorkingSet())) {
             brush.setColor(RSettings::getSelectionColor());
         }
@@ -341,7 +341,7 @@ QBrush RExporter::getBrush() {
 }
 
 RColor RExporter::getColor(const RColor& unresolvedColor) {
-    REntity* currentEntity = getEntity();
+    QSharedPointer<REntity> currentEntity = getEntity();
     if (currentEntity == NULL) {
         qWarning() << "no current entity";
         return RColor();
@@ -351,7 +351,7 @@ RColor RExporter::getColor(const RColor& unresolvedColor) {
 }
 
 RColor RExporter::getColor(bool resolve) {
-    REntity* currentEntity = getEntity();
+    QSharedPointer<REntity> currentEntity = getEntity();
     if (currentEntity == NULL) {
         qWarning() << "no current entity";
         return RColor();
@@ -361,7 +361,7 @@ RColor RExporter::getColor(bool resolve) {
 }
 
 void RExporter::setEntityAttributes(bool forceSelected) {
-    REntity* currentEntity = getEntity();
+    QSharedPointer<REntity> currentEntity = getEntity();
     if (currentEntity == NULL) {
         return;
     }
@@ -394,36 +394,36 @@ void RExporter::setDashPattern(const QVector<qreal>& dashes) {
 /**
  * \return Pointer to the entity that is currently being exported.
  */
-REntity* RExporter::getEntity() {
+QSharedPointer<REntity> RExporter::getEntity() {
     if (entityStack.size()>0) {
-        return entityStack.top();
+        return entityStack.top()->cloneToEntity();
     }
     return NULL;
 }
 
-REntity* RExporter::getCurrentBlockRef() const {
+QSharedPointer<REntity> RExporter::getCurrentBlockRef() const {
     for (int i=blockRefViewportStack.size()-1; i>=0; i--) {
-        REntity* e = blockRefViewportStack.at(i);
-        RBlockReferenceEntity* v = dynamic_cast<RBlockReferenceEntity*>(e);
-        if (v!=NULL) {
-            return v;
+        QSharedPointer<REntity> e = blockRefViewportStack.at(i);
+        QSharedPointer<RBlockReferenceEntity> v = e.dynamicCast<RBlockReferenceEntity>();
+        if (!v.isNull()) {
+            return v->cloneToEntity();
         }
     }
-    return NULL;
+    return QSharedPointer<REntity>();
 }
 
-RViewportEntity* RExporter::getCurrentViewport() const {
+QSharedPointer<RViewportEntity> RExporter::getCurrentViewport() const {
     for (int i=blockRefViewportStack.size()-1; i>=0; i--) {
-        REntity* e = blockRefViewportStack.at(i);
-        RViewportEntity* v = dynamic_cast<RViewportEntity*>(e);
-        if (v!=NULL) {
-            return v;
+        QSharedPointer<REntity> e = blockRefViewportStack.at(i);
+        QSharedPointer<RViewportEntity> v = e.dynamicCast<RViewportEntity>();
+        if (!v.isNull()) {
+            return v->cloneToViewportEntity();;
         }
     }
-    return NULL;
+    return QSharedPointer<RViewportEntity>();
 }
 
-QStack<REntity*> RExporter::getBlockRefViewportStack() const {
+QStack<QSharedPointer<REntity> > RExporter::getBlockRefViewportStack() const {
     return blockRefViewportStack;
 }
 
@@ -505,15 +505,15 @@ bool RExporter::exportDocument() {
     if (!exportDocumentSettings()) {
         return false;
     }
-    //qDebug() << "exporting linetypes";
+    qDebug() << "exporting linetypes";
     exportLinetypes();
-    //qDebug() << "exporting layers";
+    qDebug() << "exporting layers";
     exportLayers();
-    //qDebug() << "exporting layer states";
+    qDebug() << "exporting layer states";
     exportLayerStates();
-    //qDebug() << "exporting blocks";
+    qDebug() << "exporting blocks";
     exportBlocks();
-    //qDebug() << "exporting views";
+    qDebug() << "exporting views";
     exportViews();
     //qDebug() << "exporting entities";
     if (isVisualExporter()) {
@@ -566,7 +566,7 @@ void RExporter::exportEntities(bool allBlocks, bool undone, bool invisible) {
     for (it=list.begin(); it!=list.end(); it++) {
         QSharedPointer<REntity> e = document->queryEntityDirect(*it);
         if (!e.isNull()) {
-            exportEntity(*e, false, true, false, invisible);
+            exportEntity(e, false, true, false, invisible);
         }
     }
 }
@@ -579,7 +579,7 @@ void RExporter::exportLayers() {
         // 20110715: queryLayer -> queryLayerDirect
         QSharedPointer<RLayer> e = document->queryLayerDirect(*it);
         if (!e.isNull()) {
-            exportLayer(*e);
+            exportLayer(e);
         }
     }
 }
@@ -590,7 +590,7 @@ void RExporter::exportLayerStates() {
     for (it = ids.begin(); it != ids.end(); it++) {
         QSharedPointer<RLayerState> ls = document->queryLayerStateDirect(*it);
         if (!ls.isNull()) {
-            exportLayerState(*ls);
+            exportLayerState(ls);
         }
     }
 }
@@ -602,7 +602,7 @@ void RExporter::exportBlocks() {
     for (it = idsSorted.begin(); it != idsSorted.end(); it++) {
         QSharedPointer<RBlock> e = document->queryBlock(*it);
         if (!e.isNull()) {
-            exportBlock(*e);
+            exportBlock(e);
         }
     }
 }
@@ -613,7 +613,7 @@ void RExporter::exportViews() {
     for (it = ids.begin(); it != ids.end(); it++) {
         QSharedPointer<RView> e = document->queryView(*it);
         if (!e.isNull()) {
-            exportView(*e);
+            exportView(e);
         }
     }
 }
@@ -624,7 +624,7 @@ void RExporter::exportLinetypes() {
     for (it = ids.begin(); it != ids.end(); it++) {
         QSharedPointer<RLinetype> e = document->queryLinetype(*it);
         if (!e.isNull()) {
-            exportLinetype(*e);
+            exportLinetype(e);
         }
     }
 }
@@ -646,21 +646,21 @@ void RExporter::exportEntities(const RBox& box) {
 void RExporter::exportLayer(RLayer::Id layerId) {
     QSharedPointer<RLayer> layer = getDocument().queryLayer(layerId);
     if (layer.isNull() || !layer->isOffOrFrozen()) {
-        exportLayer(*layer);
+        exportLayer(layer);
     }
 }
 
 void RExporter::exportBlock(RBlock::Id blockId) {
     QSharedPointer<RBlock> block = getDocument().queryBlock(blockId);
     if (block.isNull() || !block->isFrozen()) {
-        exportBlock(*block);
+        exportBlock(block);
     }
 }
 
 void RExporter::exportView(RView::Id viewId) {
     QSharedPointer<RView> view = getDocument().queryView(viewId);
     if (view.isNull()) {
-        exportView(*view);
+        exportView(view);
     }
 }
 
@@ -678,20 +678,24 @@ void RExporter::exportView(RView::Id viewId) {
  *
  * \forceSelected Force selection, used to export entities as part of a selected block reference.
  */
-void RExporter::exportEntity(REntity& entity, bool preview, bool allBlocks, bool forceSelected, bool invisible) {
-    RDocument* doc = entity.getDocument();
+void RExporter::exportEntity(QSharedPointer<REntity> entity, bool preview, bool allBlocks, bool forceSelected, bool invisible) {
+    if (entity.isNull()) {
+        return;
+    }
+
+    RDocument* doc = entity->getDocument();
     if (doc==NULL) {
         doc = document;
     }
 
     // entity not on current block and allBlocks==false, break:
-    if (!allBlocks && doc->getCurrentBlockId()!=entity.getBlockId()) {
-        qDebug() << "entity on block " << entity.getBlockId() << "[" << entity.getBlockName() << "]" << " (not on current block" << doc->getCurrentBlockId() << "[" << doc->getCurrentBlockName() <<  "])";
+    if (!allBlocks && doc->getCurrentBlockId()!=entity->getBlockId()) {
+        qDebug() << "entity on block " << entity->getBlockId() << "[" << entity->getBlockName() << "]" << " (not on current block" << doc->getCurrentBlockId() << "[" << doc->getCurrentBlockName() <<  "])";
         //unexportEntity(entity.getId());
         return;
     }
 
-    entityStack.push(&entity);
+    entityStack.push(entity);
 
     // find layer of the current entity
     QSharedPointer<RLayer> layer = getEntityLayer(entity);
@@ -703,8 +707,8 @@ void RExporter::exportEntity(REntity& entity, bool preview, bool allBlocks, bool
     bool blockRefOrViewportSet = false;
     // check if this entity is a block reference, viewport or leader
     // (which can all serve as container for other entities):
-    if (entity.getType()==RS::EntityBlockRef || entity.getType()==RS::EntityViewport || entity.getType()==RS::EntityLeader) {
-        blockRefViewportStack.push(&entity);
+    if (entity->getType()==RS::EntityBlockRef || entity->getType()==RS::EntityViewport || entity->getType()==RS::EntityLeader) {
+        blockRefViewportStack.push(entity);
         blockRefOrViewportSet = true;
     }
 
@@ -726,7 +730,7 @@ void RExporter::exportEntity(REntity& entity, bool preview, bool allBlocks, bool
     if (!skip) {
         setEntityAttributes(forceSelected);
 
-        if ((forceSelected || (entity.isSelected() || entity.isSelectedWorkingSet())) && RSettings::getUseSecondarySelectionColor()) {
+        if ((forceSelected || (entity->isSelected() || entity->isSelectedWorkingSet())) && RSettings::getUseSecondarySelectionColor()) {
             // first part of two color selection:
             twoColorSelectedMode = true;
         }
@@ -737,18 +741,18 @@ void RExporter::exportEntity(REntity& entity, bool preview, bool allBlocks, bool
 
         // export again, with secondary selection color:
         if (visualExporter) {
-            if ((forceSelected || (entity.isSelected() || entity.isSelectedWorkingSet())) &&
+            if ((forceSelected || (entity->isSelected() || entity->isSelectedWorkingSet())) &&
                 RSettings::getUseSecondarySelectionColor() &&
-                entity.getType()!=RS::EntityBlockRef &&
-                entity.getType()!=RS::EntityText &&
-                entity.getType()!=RS::EntityAttribute &&
-                entity.getType()!=RS::EntityAttributeDefinition) {
+                entity->getType()!=RS::EntityBlockRef &&
+                entity->getType()!=RS::EntityText &&
+                entity->getType()!=RS::EntityAttribute &&
+                entity->getType()!=RS::EntityAttributeDefinition) {
 
                 RColor secondarySelectionColor = RSettings::getColor("GraphicsViewColors/SecondarySelectionColor", RColor(Qt::white));
                 setColor(secondarySelectionColor);
                 //setStyle(Qt::CustomDashLine);
                 setDashPattern(QVector<qreal>() << 2 << 3);
-                entity.exportEntity(*this, preview, forceSelected);
+                entity->exportEntity(*this, preview, forceSelected);
             }
         }
         twoColorSelectedMode = false;
@@ -769,30 +773,34 @@ void RExporter::exportEntity(REntity& entity, bool preview, bool allBlocks, bool
 void RExporter::exportEntity(REntity::Id entityId, bool allBlocks, bool forceSelected) {
     QSharedPointer<REntity> e = document->queryEntityDirect(entityId);
     if (!e.isNull() && !e->isUndone()) {
-        exportEntity(*e, false, allBlocks, forceSelected);
+        exportEntity(e, false, allBlocks, forceSelected);
     }
     else {
         unexportEntity(entityId);
     }
 }
 
-QSharedPointer<RLayer> RExporter::getEntityLayer(REntity& entity) {
-    RDocument* doc = entity.getDocument();
+QSharedPointer<RLayer> RExporter::getEntityLayer(QSharedPointer<REntity> entity) {
+    if (entity.isNull()) {
+        return QSharedPointer<RLayer>();
+    }
+
+    RDocument* doc = entity->getDocument();
     if (doc==NULL) {
         doc = document;
     }
 
     QSharedPointer<RLayer> layer;
     if (layerSource!=NULL) {
-        RLayer::Id layerId = entity.getLayerId();
+        RLayer::Id layerId = entity->getLayerId();
         layer = layerSource->queryLayerDirect(layerId);
         Q_ASSERT(!layer.isNull());
     }
     else {
-        layer = doc->queryLayerDirect(entity.getLayerId());
+        layer = doc->queryLayerDirect(entity->getLayerId());
         if (layer.isNull()) {
             qDebug() << "Document: " << *doc;
-            qDebug() << "Layer ID: " << entity.getLayerId();
+            qDebug() << "Layer ID: " << entity->getLayerId();
             Q_ASSERT_X(false, "RExporter::getEntityLayer", "layer is NULL");
         }
     }
@@ -800,8 +808,12 @@ QSharedPointer<RLayer> RExporter::getEntityLayer(REntity& entity) {
     return layer;
 }
 
-bool RExporter::isVisible(REntity& entity) {
-    return entity.isVisible();
+bool RExporter::isVisible(QSharedPointer<REntity> entity) {
+    if (entity.isNull()) {
+        return false;
+    }
+
+    return entity->isVisible();
 
     /*
     // only export entities on visible layers:
@@ -865,7 +877,7 @@ bool RExporter::isVisible(REntity& entity) {
  * a specific platform).
  */
 void RExporter::exportCurrentEntity(bool preview, bool forceSelected) {
-    REntity* entity = getEntity();
+    QSharedPointer<REntity> entity = getEntity();
     if (entity==NULL) {
         return;
     }
@@ -880,7 +892,7 @@ void RExporter::exportCurrentEntity(bool preview, bool forceSelected) {
  *      otherwise.
  */
 bool RExporter::isEntitySelected() {
-    const REntity* entity = getEntity();
+    QSharedPointer<REntity> entity = getEntity();
     if (entity!=NULL) {
         return entity->isSelected();
     }
@@ -1699,7 +1711,7 @@ double RExporter::getLineTypePatternScale(const RLinetypePattern& p) const {
     //qDebug() << "factor (unit): " << factor;
 
     // entity line type scale:
-    const REntity* entity = getEntity();
+    QSharedPointer<REntity> entity = getEntity();
     if (entity!=NULL) {
         double entityLinetypeScale = entity->getLinetypeScale();
         if (!RMath::fuzzyCompare(entityLinetypeScale, 1.0)) {
@@ -1711,10 +1723,10 @@ double RExporter::getLineTypePatternScale(const RLinetypePattern& p) const {
 
     if (blockRefViewportStack.size()>1) {
         // if top level entity is viewport and second level entity is block ref, we are rendering a block reference in a viewport:
-        REntity* topLevel0 = blockRefViewportStack[0];
-        REntity* topLevel1 = blockRefViewportStack[1];
-        if (topLevel0!=NULL && topLevel0->getType()==RS::EntityViewport &&
-            topLevel1!=NULL && topLevel1->getType()==RS::EntityBlockRef) {
+        QSharedPointer<REntity> topLevel0 = blockRefViewportStack[0];
+        QSharedPointer<REntity> topLevel1 = blockRefViewportStack[1];
+        if (!topLevel0.isNull() && topLevel0->getType()==RS::EntityViewport &&
+            !topLevel1.isNull() && topLevel1->getType()==RS::EntityBlockRef) {
 
             factor *= topLevel1->getLinetypeScale();
         }
@@ -1759,11 +1771,11 @@ void RExporter::setScreenBasedLinetypes(bool on) {
     }
 }
 
-QStack<REntity*> RExporter::getEntityStack() {
+QStack<QSharedPointer<REntity> > RExporter::getEntityStack() {
     return entityStack;
 }
 
-void RExporter::pushEntity(REntity* e) {
+void RExporter::pushEntity(QSharedPointer<REntity> e) {
     entityStack.push(e);
 }
 
@@ -1871,11 +1883,15 @@ double RExporter::getCurrentPixelSizeHint() const {
 
     // adjust pixel size hint, based on block or viewport context:
     for (int i=0; i<entityStack.size(); i++) {
-        REntity* e = entityStack[i];
+        QSharedPointer<REntity> e = entityStack[i];
+
+        if (e.isNull()) {
+            continue;
+        }
 
         if (e->getType()==RS::EntityBlockRef) {
-            RBlockReferenceEntity* br = dynamic_cast<RBlockReferenceEntity*>(e);
-            if (br!=NULL) {
+            QSharedPointer<RBlockReferenceEntity> br = e.dynamicCast<RBlockReferenceEntity>();
+            if (!br.isNull()) {
                 double sf = qMax(br->getScaleFactors().x, br->getScaleFactors().y);
                 if (sf>RS::PointTolerance) {
                     ret /= sf;
@@ -1883,8 +1899,8 @@ double RExporter::getCurrentPixelSizeHint() const {
             }
         }
         else if (e->getType()==RS::EntityViewport) {
-            RViewportEntity* vp = dynamic_cast<RViewportEntity*>(e);
-            if (vp!=NULL) {
+            QSharedPointer<RViewportEntity> vp = e.dynamicCast<RViewportEntity>();
+            if (!vp.isNull()) {
                 double sf = vp->getScale();
                 if (sf>RS::PointTolerance) {
                     ret /= sf;

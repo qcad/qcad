@@ -461,12 +461,12 @@ void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview, bool forceS
                 // if entity is on layer 0 and rendered in the context of a block reference
                 // which is off, then entity is off:
                 if (entity->getLayerId()==layer0Id) {
-                    QStack<REntity*> blockRefStack = e.getBlockRefViewportStack();
+                    QStack<QSharedPointer<REntity> > blockRefStack = e.getBlockRefViewportStack();
                     bool skip = false;
                     for (int i=blockRefStack.size()-1; i>=0; i--) {
-                        REntity* ent = blockRefStack.at(i);
-                        RBlockReferenceEntity* blockRef = dynamic_cast<RBlockReferenceEntity*>(ent);
-                        if (blockRef==NULL) {
+                        QSharedPointer<REntity> ent = blockRefStack.at(i);
+                        QSharedPointer<RBlockReferenceEntity> blockRef = ent.dynamicCast<RBlockReferenceEntity>();
+                        if (blockRef.isNull()) {
                             continue;
                         }
 
@@ -484,7 +484,7 @@ void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview, bool forceS
                     }
                 }
 
-                e.exportEntity(*entity, preview, true, isSelected() || isSelectedWorkingSet() || forceSelected);
+                e.exportEntity(entity, preview, true, isSelected() || isSelectedWorkingSet() || forceSelected);
             }
 
             // clear transform:

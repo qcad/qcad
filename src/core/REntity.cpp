@@ -118,10 +118,10 @@ void REntity::init() {
  * \copydoc REntityData::getLineweight
  */
 RLineweight::Lineweight REntity::getLineweight(bool resolve,
-    const QStack<REntity*>& blockRefStack) const {
+    const QStack<QSharedPointer<REntity> >& blockRefStack) const {
 
-    QStack<REntity*> newBlockRefStack = blockRefStack;
-    if (!newBlockRefStack.isEmpty() && this==(REntity*)newBlockRefStack.top()) {
+    QStack<QSharedPointer<REntity> > newBlockRefStack = blockRefStack;
+    if (!newBlockRefStack.isEmpty() && this==(REntity*)newBlockRefStack.top().data()) {
         newBlockRefStack.pop();
     }
 
@@ -131,9 +131,9 @@ RLineweight::Lineweight REntity::getLineweight(bool resolve,
 /**
  * \copydoc REntityData::getColor
  */
-RColor REntity::getColor(const RColor& unresolvedColor, const QStack<REntity*>& blockRefStack) {
-    QStack<REntity*> newBlockRefStack = blockRefStack;
-    if (!newBlockRefStack.isEmpty() && this==(REntity*)newBlockRefStack.top()) {
+RColor REntity::getColor(const RColor& unresolvedColor, const QStack<QSharedPointer<REntity> > &blockRefStack) {
+    QStack<QSharedPointer<REntity> > newBlockRefStack = blockRefStack;
+    if (!newBlockRefStack.isEmpty() && this==(REntity*)newBlockRefStack.top().data()) {
         newBlockRefStack.pop();
     }
 
@@ -143,9 +143,9 @@ RColor REntity::getColor(const RColor& unresolvedColor, const QStack<REntity*>& 
 /**
  * \copydoc REntityData::getColor
  */
-RColor REntity::getColor(bool resolve, const QStack<REntity*>& blockRefStack) {
-    QStack<REntity*> newBlockRefStack = blockRefStack;
-    if (!newBlockRefStack.isEmpty() && this==(REntity*)newBlockRefStack.top()) {
+RColor REntity::getColor(bool resolve, const QStack<QSharedPointer<REntity> >& blockRefStack) {
+    QStack<QSharedPointer<REntity> > newBlockRefStack = blockRefStack;
+    if (!newBlockRefStack.isEmpty() && this==(REntity*)newBlockRefStack.top().data()) {
         newBlockRefStack.pop();
     }
 
@@ -155,9 +155,9 @@ RColor REntity::getColor(bool resolve, const QStack<REntity*>& blockRefStack) {
 /**
  * \copydoc REntityData::getLineweightInUnits
  */
-double REntity::getLineweightInUnits(const QStack<REntity*>& blockRefStack) const {
-    QStack<REntity*> newBlockRefStack = blockRefStack;
-    if (!newBlockRefStack.isEmpty() && this==(REntity*)newBlockRefStack.top()) {
+double REntity::getLineweightInUnits(const QStack<QSharedPointer<REntity> >& blockRefStack) const {
+    QStack<QSharedPointer<REntity> > newBlockRefStack = blockRefStack;
+    if (!newBlockRefStack.isEmpty() && this==(REntity*)newBlockRefStack.top().data()) {
         newBlockRefStack.pop();
     }
     return getData().getLineweightInUnits(newBlockRefStack);
@@ -166,9 +166,9 @@ double REntity::getLineweightInUnits(const QStack<REntity*>& blockRefStack) cons
 /**
  * \copydoc REntityData::getLinetypeId
  */
-RLinetype::Id REntity::getLinetypeId(bool resolve, const QStack<REntity*>& blockRefStack) const {
-    QStack<REntity*> newBlockRefStack = blockRefStack;
-    if (!newBlockRefStack.isEmpty() && this==(REntity*)newBlockRefStack.top()) {
+RLinetype::Id REntity::getLinetypeId(bool resolve, const QStack<QSharedPointer<REntity> >& blockRefStack) const {
+    QStack<QSharedPointer<REntity> > newBlockRefStack = blockRefStack;
+    if (!newBlockRefStack.isEmpty() && this==(REntity*)newBlockRefStack.top().data()) {
         newBlockRefStack.pop();
     }
     return getData().getLinetypeId(resolve, newBlockRefStack);

@@ -38,6 +38,15 @@ double RShape::epsTolerance = 1.0e-02;
 int RShape::errorCode = 0;
 RShapeProxy* RShape::shapeProxy = NULL;
 
+
+RShape::RShape() {
+    //RDebug::incCounter("RShape");
+}
+
+RShape::~RShape() {
+    //RDebug::decCounter("RShape");
+}
+
 bool RShape::isFullEllipseShape(const RShape& s) {
     return s.getShapeType()==RShape::Ellipse && dynamic_cast<const REllipse&>(s).isFullEllipse();
 }

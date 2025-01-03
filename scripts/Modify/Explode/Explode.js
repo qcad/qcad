@@ -104,6 +104,7 @@ Explode.explodeSelection = function(di, toolTitle) {
         //var newShapes = [];
         //var newEntities = [];
 
+        // list of new entities and shapes:
         var news = Explode.explodeEntity(entity, options);
 
         if (isNull(news)) {
@@ -122,7 +123,6 @@ Explode.explodeSelection = function(di, toolTitle) {
                     op.addObject(newEntity, false, true);
 
                     if (isBlockReferenceEntity(newEntity)) {
-                        qDebug("old block ref id: ", newEntity.getId());
                         blockReferenceMap[newEntity.getId()] = newEntity;
                     }
                     else if (isAttributeEntity(newEntity)) {
@@ -168,22 +168,24 @@ Explode.explodeSelection = function(di, toolTitle) {
         for (i=0; i<attributeEntities.length; i++) {
             var attributeEntity = attributeEntities[i].clone();
 
-            if (RSettings.getQtVersion()>=0x060000) {
-                var newAttributeId = t.getNewObjectId(attributeEntity.getId());
-                storage.setObjectId(attributeEntity, newAttributeId);
-            }
+            // 20250102: not needed anymore, since using QSharedPointer:
+            // if (RSettings.getQtVersion()>=0x060000) {
+            //     var newAttributeId = t.getNewObjectId(attributeEntity.getId());
+            //     storage.setObjectId(attributeEntity, newAttributeId);
+            // }
 
             // find parent entity of attribute:
             var blockReferenceEntity = blockReferenceMap[attributeEntity.getParentId()];
             if (!isNull(blockReferenceEntity)) {
                 // update parent ID:
-                if (RSettings.getQtVersion()>=0x060000) {
-                    var newAttributeParentId = t.getNewObjectId(blockReferenceEntity.getId());
-                    storage.setEntityParentId(attributeEntity, newAttributeParentId);
-                }
-                else {
+                // 20250102: not needed anymore, since using QSharedPointer:
+                // if (RSettings.getQtVersion()>=0x060000) {
+                //     var newAttributeParentId = t.getNewObjectId(blockReferenceEntity.getId());
+                //     storage.setEntityParentId(attributeEntity, newAttributeParentId);
+                // }
+                // else {
                     storage.setEntityParentId(attributeEntity, blockReferenceEntity.getId());
-                }
+                // }
                 op.addObject(attributeEntity, false);
             }
         }

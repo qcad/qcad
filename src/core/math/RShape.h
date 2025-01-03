@@ -86,11 +86,8 @@ public:
     };
 
 public:
-    RShape() {
-    }
-
-    virtual ~RShape() {
-    }
+    RShape();
+    virtual ~RShape();
 
     virtual bool isValid() const {
         return true;

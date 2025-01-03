@@ -292,8 +292,7 @@ public:
         return getData().getLinetypeId();
     }
 
-    RLinetype::Id getLinetypeId(bool resolve,
-        const QStack<REntity*>& blockRefStack) const;
+    RLinetype::Id getLinetypeId(bool resolve, const QStack<QSharedPointer<REntity> >& blockRefStack) const;
 
     /**
      * \copydoc REntityData::getLinetypePattern
@@ -330,10 +329,9 @@ public:
         return getData().getLineweight();
     }
 
-    RLineweight::Lineweight getLineweight(bool resolve,
-        const QStack<REntity*>& blockRefStack) const;
+    RLineweight::Lineweight getLineweight(bool resolve, const QStack<QSharedPointer<REntity> >& blockRefStack) const;
 
-    double getLineweightInUnits(const QStack<REntity*>& blockRefStack) const;
+    double getLineweightInUnits(const QStack<QSharedPointer<REntity> >& blockRefStack) const;
 
     /**
      * \copydoc REntityData::setColor
@@ -349,8 +347,8 @@ public:
         return getData().getColor();
     }
 
-    RColor getColor(const RColor& unresolvedColor, const QStack<REntity*>& blockRefStack);
-    RColor getColor(bool resolve, const QStack<REntity*>& blockRefStack);
+    RColor getColor(const RColor& unresolvedColor, const QStack<QSharedPointer<REntity> >& blockRefStack);
+    RColor getColor(bool resolve, const QStack<QSharedPointer<REntity> >& blockRefStack);
 
     RColor getDisplayColor() {
         return getData().getDisplayColor();
@@ -695,7 +693,7 @@ protected:
 Q_DECLARE_METATYPE(REntity*)
 Q_DECLARE_METATYPE(QSharedPointer<REntity>)
 Q_DECLARE_METATYPE(QSharedPointer<REntity>*)
-Q_DECLARE_METATYPE(QStack<REntity*>)
-Q_DECLARE_METATYPE(QStack<REntity*>*)
+Q_DECLARE_METATYPE(QStack<QSharedPointer<REntity> >)
+Q_DECLARE_METATYPE(QStack<QSharedPointer<REntity> >*)
 
 #endif

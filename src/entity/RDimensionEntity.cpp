@@ -423,7 +423,7 @@ void RDimensionEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
     QSharedPointer<RBlockReferenceEntity> dimBlockReference = data.getDimensionBlockReference();
     if (!dimBlockReference.isNull()) {
         getDocument()->getStorage().setObjectId(*dimBlockReference, getId());
-        e.exportEntity(*dimBlockReference, preview, false, isSelected());
+        e.exportEntity(dimBlockReference, preview, false, isSelected());
         return;
     }
 

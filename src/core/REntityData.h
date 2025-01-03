@@ -281,7 +281,7 @@ public:
     virtual RLinetypePattern getLinetypePattern() const;
 
     virtual RLinetype::Id getLinetypeId(bool resolve,
-        const QStack<REntity*>& blockRefStack) const;
+        const QStack<QSharedPointer<REntity> >& blockRefStack) const;
 
     virtual void setLinetypeScale(double linetypeScale) {
         this->linetypeScale = linetypeScale;
@@ -296,9 +296,9 @@ public:
     }
 
     virtual RLineweight::Lineweight getLineweight(bool resolve,
-        const QStack<REntity*>& blockRefStack) const;
+        const QStack<QSharedPointer<REntity> >& blockRefStack) const;
 
-    double getLineweightInUnits(const QStack<REntity*>& blockRefStack) const;
+    double getLineweightInUnits(const QStack<QSharedPointer<REntity> >& blockRefStack) const;
 
     void setLineweight(RLineweight::Lineweight lineweight) {
         this->lineweight = lineweight;
@@ -315,11 +315,11 @@ public:
         return color;
     }
 
-    virtual RColor getColor(const RColor& unresolvedColor, const QStack<REntity *>& blockRefStack) const;
-    virtual RColor getColor(bool resolve, const QStack<REntity *>& blockRefStack) const;
+    virtual RColor getColor(const RColor& unresolvedColor, const QStack<QSharedPointer<REntity> >& blockRefStack) const;
+    virtual RColor getColor(bool resolve, const QStack<QSharedPointer<REntity> >& blockRefStack) const;
 
     virtual RColor getDisplayColor() {
-        QStack<REntity*> stack;
+        QStack<QSharedPointer<REntity> > stack;
         return getColor(true, stack);
     }
 

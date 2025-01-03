@@ -1911,14 +1911,14 @@ void RDocumentInterface::addAuxShapeToPreview(RShape& shape) {
 /**
  * Adds the given entity to the preview of all scenes / view.
  */
-void RDocumentInterface::addEntityToPreview(REntity& entity) {
-    QList<RGraphicsScene*>::iterator it;
-    for (it=scenes.begin(); it!=scenes.end(); it++) {
-        (*it)->beginPreview();
-        (*it)->exportEntity(entity, true, false);
-        (*it)->endPreview();
-    }
-}
+// void RDocumentInterface::addEntityToPreview(REntity& entity) {
+//     QList<RGraphicsScene*>::iterator it;
+//     for (it=scenes.begin(); it!=scenes.end(); it++) {
+//         (*it)->beginPreview();
+//         (*it)->exportEntity(entity, true, false);
+//         (*it)->endPreview();
+//     }
+// }
 
 void RDocumentInterface::addDrawableToPreview(RGraphicsSceneDrawable& drawable) {
     QList<RGraphicsScene*>::iterator it;
@@ -2230,7 +2230,7 @@ void RDocumentInterface::previewOperation(ROperation* operation) {
                 continue;
             }
 
-            (*it)->exportEntity(*e.data(), true /* preview */, false /* not all blocks*/);
+            (*it)->exportEntity(e, true /* preview */, false /* not all blocks*/);
         }
 
         (*it)->endPreview();

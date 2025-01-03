@@ -134,7 +134,7 @@ bool RGraphicsSceneQt::beginPath() {
     currentPainterPath.setWipeout(getWipeout());
     currentPainterPath.setFrameless(getFrameless());
 
-    REntity* entity = getEntity();
+    QSharedPointer<REntity> entity = getEntity();
     QSharedPointer<RLayer> layer;
     if (entity!=NULL) {
         layer = document->queryLayerDirect(entity->getLayerId());
@@ -215,7 +215,7 @@ bool RGraphicsSceneQt::beginPath() {
 }
 
 void RGraphicsSceneQt::endPath() {
-    REntity* entity = getEntity();
+    QSharedPointer<REntity> entity = getEntity();
 
     if (!currentPainterPath.isEmpty()) {
         transformAndApplyPatternPath(currentPainterPath);
@@ -234,7 +234,7 @@ void RGraphicsSceneQt::endPath() {
                 RMainWindow* appWin = RMainWindow::getMainWindow();
                 // start separate path for entity decoration:
                 decorating = true;
-                appWin->notifyEntityExportListeners(this, entity);
+                appWin->notifyEntityExportListeners(this, entity.data());
                 decorating = false;
             }
         }
@@ -282,8 +282,8 @@ void RGraphicsSceneQt::transformAndApplyPatternPath(RPainterPath& path) const {
 
         // detect viewport context:
         double scaleHint = 1.0;
-        RViewportEntity* vp = getCurrentViewport();
-        if (vp!=NULL) {
+        QSharedPointer<RViewportEntity> vp = getCurrentViewport();
+        if (!vp.isNull()) {
             scaleHint = vp->getScale();
         }
 
@@ -1001,9 +1001,9 @@ void RGraphicsSceneQt::addDrawable(REntity::Id entityId, RGraphicsSceneDrawable&
 
     // this is the current entity being exported:
     // this might be in the context of the block reference or viewport indicated by entityId:
-    REntity* entity = getEntity();
+    QSharedPointer<REntity> entity = getEntity();
     if (entity!=NULL) {
-        QSharedPointer<RLayer> layer = getEntityLayer(*entity);
+        QSharedPointer<RLayer> layer = getEntityLayer(entity);
         if (!layer.isNull()) {
             if (!layer->isPlottable()) {
                 drawable.setNoPlot(true);
@@ -1014,15 +1014,15 @@ void RGraphicsSceneQt::addDrawable(REntity::Id entityId, RGraphicsSceneDrawable&
     // check block ref stack for non-plottable layer:
     if (drawable.getNoPlot()==false) {
         for (int i=blockRefViewportStack.size()-1; i>=0; i--) {
-            REntity* e = blockRefViewportStack[i];
-            if (e==NULL) {
+            QSharedPointer<REntity> e = blockRefViewportStack[i];
+            if (e.isNull()) {
                 continue;
             }
             if (e->getType()==RS::EntityViewport) {
                 // entities in non-plottable viewports are plottable:
                 continue;
             }
-            QSharedPointer<RLayer> layer = getEntityLayer(*e);
+            QSharedPointer<RLayer> layer = getEntityLayer(e);
             if (!layer.isNull()) {
                 if (!layer->isPlottable()) {
                     drawable.setNoPlot(true);
@@ -1032,9 +1032,9 @@ void RGraphicsSceneQt::addDrawable(REntity::Id entityId, RGraphicsSceneDrawable&
         }
     }
 
-    REntity* blockRefEntity = getBlockRefOrEntity();
+    QSharedPointer<REntity> blockRefEntity = getBlockRefOrEntity();
     if (blockRefEntity!=NULL && blockRefEntity->getType()==RS::EntityBlockRef) {
-        RBlockReferenceEntity* blockRef = dynamic_cast<RBlockReferenceEntity*>(blockRefEntity);
+        QSharedPointer<RBlockReferenceEntity> blockRef = blockRefEntity.dynamicCast<RBlockReferenceEntity>();
         if (blockRef!=NULL) {
             //qDebug() << "exporting entity in blockref:" << blockRef->getId();
             RBlock::Id blockId = blockRef->getReferencedBlockId();
@@ -1212,7 +1212,7 @@ void RGraphicsSceneQt::exportEntityThread(int threadId, REntity::Id id) {
     //qDebug() << "export:" << id;
     QSharedPointer<REntity> e = document->queryEntityDirect(id);
     if (!e.isNull()) {
-        threadScenes[threadId]->exportEntity(*e, false);
+        threadScenes[threadId]->exportEntity(e, false);
     }
 }
     

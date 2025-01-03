@@ -274,7 +274,7 @@ public:
             const QBrush& brush, RLineweight::Lineweight lineweight,
             Qt::PenStyle style, const QList<qreal>& dashValues = RDEFAULT_QLIST_QREAL);
     void addAuxShapeToPreview(RShape& shape);
-    void addEntityToPreview(REntity& entity);
+    //void addEntityToPreview(REntity& entity);
     void addDrawableToPreview(RGraphicsSceneDrawable& drawable);
     void beginPreview();
     void endPreview();
